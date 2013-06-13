@@ -1,0 +1,20 @@
+
+
+var multiverseids [..., ...];
+loopThrough and get a multiverseDoc for each one.
+
+var multiverseDoc = getMultiverseDoc(multiverseid);
+var variationIds = getVariationIds(multiverseDoc);	// May have alternate art
+If have variationIds, get a multiverseDoc for each of those as well
+
+put all in a map multiverseDocs[multiverseid] = multiverseDoc;
+
+Now process each multiverseDoc.
+var cardParts = getCardParts(multiverseDoc);
+cardParts is always an array, usually it is only 1 length, but in the case of some cards (flip/side-by-side/etc) there may be 2 parts.
+
+var cardDetails = processCardPart(cardPart);
+Finally we have the Hash map of the card details
+
+
+

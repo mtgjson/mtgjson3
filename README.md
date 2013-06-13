@@ -1,0 +1,1 @@
+Any date fields are in the ISO8601 format: YYYY-MM-DD
