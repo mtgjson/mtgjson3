@@ -256,7 +256,7 @@
 		},
 		{
 			name : "Time Spiral",
-			code : "TSP/TSB",
+			code : "TSP",
 			releaseDate : "2006-10-06"
 		},
 		{

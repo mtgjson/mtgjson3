@@ -10,7 +10,11 @@ var base = require("node-base"),
 	moment = require("moment"),
 	tiptoe = require("tiptoe");
 
+//C.SETS.forEach(function(SET) { console.log(SET.code); });
+
 rip.tmp(function(err) { if(err) { base.error(err); } process.exit(); });
+
+
 
 //base.info(querystring.parse(url.parse("../Card/Details.aspx?multiverseid=923").query).multiverseid);
 
