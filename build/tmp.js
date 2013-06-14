@@ -10,19 +10,7 @@ var base = require("node-base"),
 	moment = require("moment"),
 	tiptoe = require("tiptoe");
 
-base.info(C.TYPES);
-rip.card(915, function(err, card)
-{
-	if(err)
-	{
-		base.error(process.error);
-		process.exit(1);
-	}
-
-	base.info(card);
-
-	process.exit();
-});
+rip.tmp(function(err) { if(err) { base.error(err); } process.exit(); });
 
 //base.info(querystring.parse(url.parse("../Card/Details.aspx?multiverseid=923").query).multiverseid);
 

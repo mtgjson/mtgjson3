@@ -7,6 +7,7 @@ var base = require("node-base"),
 	request = require("request"),
 	fs = require("fs"),
 	url = require("url"),
+	moment = require("moment"),
 	path = require("path"),
 	querystring = require("querystring"),
 	tiptoe = require("tiptoe");
@@ -77,38 +78,220 @@ function ripCards(setName, cb)
 }
 exports.cards = ripCards;
 
-function processCardPart(cardPart, cb)
+var SYMBOL_CONVERSION_MAP =
 {
-	/*
+	"white"              : "W",
+	"black"              : "B",
+	"red"                : "R",
+	"blue"               : "U",
+	"green"              : "G",
+	"zero"               : "0",
+	"one"                : "1",
+	"two"                : "2",
+	"three"              : "3",
+	"four"               : "4",
+	"five"               : "5",
+	"six"                : "6",
+	"seven"              : "7",
+	"eight"              : "8",
+	"nine"               : "9",
+	"ten"                : "10",
+	"eleven"             : "11",
+	"twelve"             : "12",
+	"thirteen"           : "13",
+	"fourteen"           : "14",
+	"fifteen"            : "15",
+	"sixteen"            : "16",
+	"0"                  : "0",
+	"1"                  : "1",
+	"2"                  : "2",
+	"3"                  : "3",
+	"4"                  : "4",
+	"5"                  : "5",
+	"6"                  : "6",
+	"7"                  : "7",
+	"8"                  : "8",
+	"9"                  : "9",
+	"10"                 : "10",
+	"11"                 : "11",
+	"12"                 : "12",
+	"13"                 : "13",
+	"14"                 : "14",
+	"15"                 : "15",
+	"16"                 : "16",
+	"tap"                : "T",
+	"untap"              : "Q",
+	"snow"               : "S",
+	"phyrexian white"    : "PW",
+	"phyrexian black"    : "PB",
+	"phyrexian red"      : "PR",
+	"phyrexian blue"     : "PU",
+	"phyrexian green"    : "PG",
+	"variable colorless" : "X"
+};
 
-			var card = {
-				multiverseid : multiverseid,
-				supertypes   : [],
-				types        : []
-			};
+function processSymbol(symbol)
+{
+	var symbols = symbol.toLowerCase().split(" or ").map(function(symbolPart)
+	{
+		symbolPart = symbolPart.trim();
+		if(!SYMBOL_CONVERSION_MAP.hasOwnProperty(symbolPart))
+		{
+			base.warn("Invalid symbolPart [%s] with full value: %s", symbolPart, symbol);
+			return "UNKNOWN";
+		}
 
-			// Get our card types
-			var rawTypes = cardDoc("div#ctl00_ctl00_ctl00_MainContent_SubContent_SubContent_typeRow div.value").text().trim().split("—");
-			rawTypes[0].split(" ").filterEmpty().forEach(function(rawType)
-			{
-				rawType = rawType.trim().toProperCase();
-				if(C.SUPERTYPES.contains(rawType))
-					card.supertypes.push(rawType);
-				else if(C.TYPES.contains(rawType))
-					card.types.push(rawType);
-				else
-					base.warn("Raw type not found: %s", rawType);
-			});
-			if(rawTypes.length>1)
-				card.subtypes = card.types.contains("Plane") ? [rawTypes[1].trim()] : rawTypes[1].split(" ").filterEmpty().map(function(subtype) { return subtype.trim(); });	// 205.3b Planes have just a single subtype
+		return SYMBOL_CONVERSION_MAP[symbolPart];
+	});
 
-			*/
-		
+	return "{" + (symbols.length>1 ? symbols.join("/") : symbols[0]) + "}";
 }
 
-function getCardParts(pageDoc, cb)
+function processCardPart(doc, cardPart, cb)
 {
+	var card =
+	{
+		supertypes : [],
+		type       : "",
+		types      : []
+	};
 
+	var idPrefix = "#" + cardPart.find(".rightCol").attr("id").replaceAll("_rightCol", "");
+
+	// Card Name
+	card.name = cardPart.find(idPrefix + "_nameRow .value").text().trim();
+
+	// Card Type
+	var rawTypes = cardPart.find(idPrefix + "_typeRow .value").text().trim().split("—");
+	rawTypes[0].split(" ").filterEmpty().forEach(function(rawType, i)
+	{
+		card.type += (i>0 ? " " : "") + rawType;
+
+		rawType = rawType.trim().toProperCase();
+		if(C.SUPERTYPES.contains(rawType))
+			card.supertypes.push(rawType);
+		else if(C.TYPES.contains(rawType))
+			card.types.push(rawType);
+		else
+			base.warn("Raw type not found: %s", rawType);
+	});
+	if(rawTypes.length>1)
+	{
+		card.subtypes = card.types.contains("Plane") ? [rawTypes[1].trim()] : rawTypes[1].split(" ").filterEmpty().map(function(subtype) { return subtype.trim(); });	// 205.3b Planes have just a single subtype
+		card.type += " - " + card.subtypes.join(" ");
+	}
+
+	// Converted Mana Cost (CMC)
+	card.cmc = +cardPart.find(idPrefix + "_cmcRow .value").text().trim();
+
+	// Rarity
+	card.rarity = cardPart.find(idPrefix + "_rarityRow .value").text().trim();
+
+	// Artist
+	card.artist = cardPart.find(idPrefix + "_artistRow .value a").text().trim();
+
+	// Power/Toughness or Loyalty
+	var powerToughnessValue = cardPart.find(idPrefix + "_ptRow .value").text().trim();
+	if(powerToughnessValue)
+	{
+		// Loyalty
+		if(card.types.contains("Planeswalker"))
+		{
+			card.loyalty = +powerToughnessValue.trim();
+		}
+		else
+		{
+			// Power/Toughness
+			var powerToughnessParts = powerToughnessValue.split("/");
+			if(powerToughnessParts.length!==2)
+			{
+				base.warn("Power toughness invalid: %s", powerToughnessValue);
+			}
+			else
+			{
+				card.power = +powerToughnessParts[0].trim();
+				card.toughness = +powerToughnessParts[1].trim();
+			}
+		}
+	}
+
+	// Mana Cost
+	card.manaCost = cardPart.find(idPrefix + "_manaRow .value img").map(function(i, item) { return doc(item); }).map(function(manaCost) { return processSymbol(manaCost.attr("alt")); }).join("");
+
+	// Text
+	var cardText = processTextBlocks(doc, cardPart.find(idPrefix + "_textRow .value .cardtextbox")).trim();
+	if(cardText)
+		card.text = cardText;
+
+	// Flavor Text
+	var cardFlavor = processTextBlocks(doc, cardPart.find(idPrefix + "_flavorRow .value .cardtextbox")).trim();
+	if(cardFlavor)
+		card.flavor = cardFlavor;
+
+	// Card Number
+	var cardNumberValue = cardPart.find(idPrefix + "_numberRow .value").text().trim();
+	if(cardNumberValue)
+		card.number = +cardNumberValue;
+
+	// Rulings
+	var rulingRows = cardPart.find(idPrefix + "_rulingsContainer table tr.post");
+	if(rulingRows.length)
+		card.rulings = rulingRows.map(function(i, item) { return doc(item); }).map(function(rulingRow) { return { date : moment(rulingRow.find("td:first-child").text().trim(), "MM/DD/YYYY").format("YYYY-MM-DD"), text : rulingRow.find("td:last-child").text().trim()}; });
+
+	return card;
+}
+
+function processTextBlocks(doc, textBlocks)
+{
+	var result = "";
+
+	textBlocks.map(function(i, item) { return doc(item); }).forEach(function(textBox, i)
+	{
+		if(i>0)
+			result += "\n\n";
+
+		textBox.toArray().forEach(function(child)
+		{
+			result += processTextBoxChildren(doc, child.children);
+		});
+	});
+
+	return result;
+}
+
+function processTextBoxChildren(doc, children)
+{
+	var result = "";
+
+	children.forEach(function(child)
+	{
+		if(child.type==="tag")
+		{
+			if(child.name==="img")
+				result += processSymbol(doc(child).attr("alt"));
+			else if(child.name==="i")
+			{
+				result += processTextBoxChildren(doc, child.children);
+			}
+			else
+				base.warn("Unsupported text child tag name: %s", child.name);
+		}
+		else if(child.type==="text")
+		{
+			result += child.data;
+		}
+		else
+		{
+			base.warn("Unknown text child type: %s", child.type);
+		}
+	});
+
+	return result;
+}
+
+function getCardParts(pageDoc)
+{
+	return pageDoc("table.cardDetails").map(function(i, item) { return pageDoc(item); });
 }
 
 function getVariationIds(pageDoc, cb)
@@ -154,81 +337,22 @@ function getDoc(multiverseid, cb)
 	);
 }
 
-
-
-
-
-
-
-
-
-
-
-			/*
-			String cardType = xpathText(root, "//html:div[@id='ctl00_ctl00_ctl00_MainContent_SubContent_SubContent_typeRow']/html:div[@class='value']", nsMap);
-		if(cardType.startsWith("Basic Land"))
+exports.tmp = function(cb)
+{
+	tiptoe(
+		function step1()
 		{
-			log.info("Skipping " + cardType);
-			return false;
-		}
-		
-		String switchLinkText = XMLUtilities.xpathSelectAll(root, "//html:a[@id='cardTextSwitchLink1']", nsMap).get(0).attributeValue("href");
-		cardDetails.put("multiverseid", switchLinkText.substring(switchLinkText.indexOf("multiverseid=")+("multiverseid=".length())));
-		
-		cardDetails.put("name", xpathText(root, "//html:div[@id='ctl00_ctl00_ctl00_MainContent_SubContent_SubContent_nameRow']/html:div[@class='value']", nsMap));
-		cardDetails.put("cmc", xpathText(root, "//html:div[@id='ctl00_ctl00_ctl00_MainContent_SubContent_SubContent_cmcRow']/html:div[@class='value']", nsMap));
-		cardDetails.put("type", cardType);
-		cardDetails.put("text", processCardTextElements(XMLUtilities.xpathSelectAll(root, "//html:div[@id='ctl00_ctl00_ctl00_MainContent_SubContent_SubContent_textRow']/html:div[@class='value']/html:div[@class='cardtextbox']", nsMap)));
-
-		cardDetails.put("flavor", processCardTextElements(XMLUtilities.xpathSelectAll(root, "//html:div[@id='ctl00_ctl00_ctl00_MainContent_SubContent_SubContent_FlavorText']/html:div[@class='cardtextbox']", nsMap)));
-		
-		cardDetails.put("power", "");
-		cardDetails.put("toughness", "");
-		String powerToughness = xpathText(root, "//html:div[@id='ctl00_ctl00_ctl00_MainContent_SubContent_SubContent_ptRow']/html:div[@class='value']", nsMap);
-		if(powerToughness.contains("/"))
+			getDoc(process.argv[2], this);
+		},
+		function step2(doc)
 		{
-			String[] powerToughnessArray = powerToughness.split("/");
-			if(powerToughnessArray.length==2)
-			{
-				cardDetails.put("power", powerToughnessArray[0].trim());
-				cardDetails.put("toughness", powerToughnessArray[1].trim());
-			}
-		}
-		
-		cardDetails.put("cardNumber", xpathText(root, "//html:div[@id='ctl00_ctl00_ctl00_MainContent_SubContent_SubContent_numberRow']/html:div[@class='value']", nsMap));
-		cardDetails.put("rarity", xpathText(root, "//html:div[@id='ctl00_ctl00_ctl00_MainContent_SubContent_SubContent_rarityRow']/html:div[@class='value']/html:span", nsMap));
-		cardDetails.put("artist", xpathText(root, "//html:div[@id='ctl00_ctl00_ctl00_MainContent_SubContent_SubContent_ArtistCredit']/html:a", nsMap));
-		
-		StringBuilder manaCost = new StringBuilder("");
-		List<Element> manaElements = XMLUtilities.xpathSelectAll(root, "//html:div[@id='ctl00_ctl00_ctl00_MainContent_SubContent_SubContent_manaRow']/html:div[@class='value']/html:img", nsMap);
-		for(Element manaElement : manaElements)
+			var cardParts = getCardParts(doc);
+			cardParts.forEach(function(cardPart) { base.info(processCardPart(doc, cardPart)); });
+			this();
+		},
+		function finish(err)
 		{
-			manaCost.append(processManaElement(manaElement, false));
+			setImmediate(function() { cb(err); });
 		}
-		cardDetails.put("manaCost", manaCost.toString());
-		
-		// rulings
-		List<Element> rulingElements = XMLUtilities.xpathSelectAll(root, "//html:tr[contains(@class, 'post')]", nsMap);
-		for(Element rulingElement : rulingElements)
-		{
-			List<Element> rulingElementColumns = XMLUtilities.xpathSelectAll(rulingElement, "html:td", nsMap);
-			if(rulingElementColumns.size()!=2)
-			{
-				log.warn("Don't have expected number of ruling elements. Expected 2, got [" + rulingElementColumns.size() + "]");
-				continue;
-			}
-			
-			Map<String, String> ruling = new HashMap<String, String>();
-			ruling.put("date", rulingElementColumns.get(0).getTextTrim());
-			ruling.put("text", rulingElementColumns.get(1).getTextTrim());
-			
-			cardRulings.add(ruling);
-		}
-		
-		cardDetails.put("loyalty", xpathText(root, "//html:div[@id='ctl00_ctl00_ctl00_MainContent_SubContent_SubContent_ptRow']/html:div[@class='label'][contains(text(), 'Loyalty')]/../html:div[@class='value']", nsMap));
-		
-		ProcessUtilities.generateKey(cardDetails);
-
-		log.info(cardDetails.get("name") + " " + cardDetails.get("manaCost") + "\t\t\t" + cardDetails.get("type") + ": " + StringUtilities.innerTrim(cardDetails.get("text")));
-			 */
-			
+	);
+};

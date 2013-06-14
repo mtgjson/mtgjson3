@@ -1,3 +1,66 @@
+Special Cards:
+
+ID			Name					Description
+--			----					-----------
+289327		Forest					Is a basic land with 5 alternate arts
+
+205275		Ancient Den				Is an artifact land
+
+85106		Brothers Yamazaki		Has 2 alternate arts for the card
+1911		Elvish Hunter			Has 3 alternate arts for the card
+
+247372		Boros Guildmage			Has mana cost that is eithe Red or White
+205399		Beseech the Queen		Has mana that costs either 2 coloreless or 1 black
+230076		Act of Aggression		Has phyrexian mana symbols (paid with mana or 2 life)
+178018		Draco					Has huge 16 mana cost
+
+153317		Umbral Mantle			Has untap symbol
+121268		Adarkar Windform		Has an activation cost with snow mana
+
+221209		Civilized Scholar		Is a double-faced card that has rulings for both sides
+369009		Breaking // Entering	Is a split card with rulings
+87599		Erayo, Soratami Ascendant	Is a flip card with rulings
+
+243486		Ghostfire				Is considered a colorless card despite costing red mana
+
+130676		Blade of the Sixth Pride	Has no card text or flavor text
+
+
+
+
+For Webpage:
+- Have downloads to the JSON files (as zip and raw .json)
+Make one with rulings and one without
+
+- Have the JSON files be versioned and have a changelog and 'Last Updated' date
+
+- Have a picture of a card with the JSON for the card next to it.
+Each line of the JSON may have a comment next to it (such as cmc : 3     // Converted Mana Cost)
+Each key of the JSON should have a line outline that leads to a line outline surrounding the corresponding card part
+So easily at a glance you can see where all the parts of a card come from.
+Use the 'Sen Triplets' card for the example card
+For the JSON, mention that some fields may not be present
+- loyalty only appears in the case of a planeswalker
+- power/toughness only appear if a creature
+- flavor - may not have flavor text
+- text - may not have any card text
+- number - Early sets didn't have card numbers
+
+- Have a table of all symbols and what they mean {PG}  Phyrexian Green - Can be paid with 2 life or G
+
+
+
+
+
+Helpful links:
+file:///mnt/compendium/legacy/DevLab/mtg-new/visualmtg-process/json/cards-ARN.json
+http://gatherer.wizards.com/Pages/Search/Default.aspx?sort=cn+&output=checklist&set=[%22Arabian%20Nights%22]
+http://wiki.mtgsalvation.com/article/Alara_Reborn
+
+
+
+
+
 
 
 var multiverseids [..., ...];
