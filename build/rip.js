@@ -12,7 +12,7 @@ var base = require("node-base"),
 	querystring = require("querystring"),
 	tiptoe = require("tiptoe");
 
-function ripCards(setName, cb)
+function ripSet(setName, cb)
 {
 	tiptoe(
 		function getListHTML()
@@ -26,57 +26,61 @@ function ripCards(setName, cb)
 				{
 					output : "checklist",
 					sort   : "cn+",
-					set    : "[" + JSON.stringify("Arabian Nights") + "]"
+					set    : "[" + JSON.stringify(setName) + "]"
 				}
 			});
 
 			request(listURL, this);
 		},
-		function parseListPage(response, listHTML)
+		function processFirstBatch(response, listHTML)
 		{
 			var listDoc = cheerio.load(listHTML);
 
-			var multiverseids = listDoc("table.checklist tr.cardItem a.nameLink").map(function(i, itemRaw) { return +querystring.parse(url.parse(listDoc(itemRaw).attr("href")).query).multiverseid; }).unique();
-			this.data.multiverseids = [];
+			this.data.set = base.clone(C.SETS.mutateOnce(function(SET) { return SET.name===setName ? SET : undefined; }));
 
-			multiverseids = [915, 970];	// TEMPORARY
-
-			multiverseids.serialForEach(function(multiverseid, subcb)
-			{
-				tiptoe(
-					function getCard()
-					{
-						ripCard(multiverseid, this);
-					},
-					function processCard(err, card)
-					{
-						if(err || !card)
-						{
-							setImmediate(function() { subcb(err || new Error("Invalid card response")); });
-							return;
-						}
-
-						base.info(card);
-
-						this.data.multiverseids.push(card.multiverseid);
-						if(card.variationids && card.variationids.length)
-							this.data.multiverseids.concat(card.variationids);
-
-						setImmediate(subcb);
-					}.bind(this)
-				);
-			}.bind(this), this);
+			processMultiverseids(listDoc("table.checklist tr.cardItem a.nameLink").map(function(i, itemRaw) { return +querystring.parse(url.parse(listDoc(itemRaw).attr("href")).query).multiverseid; }).unique(), this);
 		},
-		function finish(err)
+		function processVariations(cards)
+		{
+			this.data.set.cards = cards;
+			processMultiverseids(cards.map(function(card) { return (card.variations && card.variations.length) ? card.variations : []; }).flatten().unique().subtract(cards.map(function(card) { return card.multiverseid; })), this);
+		},
+		function finish(err, cards)
 		{
 			if(err)
-				setImmediate(function() { cb(err); });
-			else
-				setImmediate(function() { cb(err, this.data.multiverseids); }.bind(this));
+				return setImmediate(function() { cb(err); });
+
+			this.data.set.cards = this.data.set.cards.concat(cards);
+
+			setImmediate(function() { cb(err, this.data.set); }.bind(this));
 		}
 	);
 }
-exports.cards = ripCards;
+exports.ripSet = ripSet;
+
+function processMultiverseids(multiverseids, cb)
+{
+	var cards = [];
+
+	multiverseids.unique().serialForEach(function(multiverseid, subcb)
+	{
+		tiptoe(
+			function getMultiverseDoc()
+			{
+				getDoc(multiverseid, this);
+			},
+			function finish(err, multiverseDoc)
+			{
+				if(err || !multiverseDoc)
+					return setImmediate(function() { subcb(err || new Error("Invalid multiverse response")); });
+
+				getCardParts(multiverseDoc).forEach(function(cardPart) { cards.push(processCardPart(multiverseDoc, cardPart)); });
+
+				setImmediate(subcb);
+			}
+		);
+	}, function(err) { return cb(err, cards); });
+}
 
 var SYMBOL_CONVERSION_MAP =
 {
@@ -147,7 +151,7 @@ function processSymbol(symbol)
 	return "{" + (symbols.length>1 ? symbols.join("/") : symbols[0]) + "}";
 }
 
-function processCardPart(doc, cardPart, cb)
+function processCardPart(doc, cardPart)
 {
 	var card =
 	{
@@ -157,6 +161,9 @@ function processCardPart(doc, cardPart, cb)
 	};
 
 	var idPrefix = "#" + cardPart.find(".rightCol").attr("id").replaceAll("_rightCol", "");
+
+	// Multiverseid
+	card.multiverseid = +querystring.parse(url.parse(doc("#aspnetForm").attr("action")).query).multiverseid.trim();
 
 	// Card Name
 	card.name = cardPart.find(idPrefix + "_nameRow .value").text().trim();
@@ -180,9 +187,15 @@ function processCardPart(doc, cardPart, cb)
 		card.subtypes = card.types.contains("Plane") ? [rawTypes[1].trim()] : rawTypes[1].split(" ").filterEmpty().map(function(subtype) { return subtype.trim(); });	// 205.3b Planes have just a single subtype
 		card.type += " - " + card.subtypes.join(" ");
 	}
+	if(!card.supertypes.length)
+		delete card.supertypes;
+	if(!card.types.length)
+		delete card.types;
 
 	// Converted Mana Cost (CMC)
-	card.cmc = +cardPart.find(idPrefix + "_cmcRow .value").text().trim();
+	var cardCMC = cardPart.find(idPrefix + "_cmcRow .value").text().trim();
+	if(cardCMC)
+		card.cmc = +cardCMC;
 
 	// Rarity
 	card.rarity = cardPart.find(idPrefix + "_rarityRow .value").text().trim();
@@ -216,7 +229,9 @@ function processCardPart(doc, cardPart, cb)
 	}
 
 	// Mana Cost
-	card.manaCost = cardPart.find(idPrefix + "_manaRow .value img").map(function(i, item) { return doc(item); }).map(function(manaCost) { return processSymbol(manaCost.attr("alt")); }).join("");
+	var cardManaCost = cardPart.find(idPrefix + "_manaRow .value img").map(function(i, item) { return doc(item); }).map(function(manaCost) { return processSymbol(manaCost.attr("alt")); }).join("");
+	if(cardManaCost)
+		card.manaCost = cardManaCost;
 
 	// Text
 	var cardText = processTextBlocks(doc, cardPart.find(idPrefix + "_textRow .value .cardtextbox")).trim();
@@ -237,6 +252,11 @@ function processCardPart(doc, cardPart, cb)
 	var rulingRows = cardPart.find(idPrefix + "_rulingsContainer table tr.post");
 	if(rulingRows.length)
 		card.rulings = rulingRows.map(function(i, item) { return doc(item); }).map(function(rulingRow) { return { date : moment(rulingRow.find("td:first-child").text().trim(), "MM/DD/YYYY").format("YYYY-MM-DD"), text : rulingRow.find("td:last-child").text().trim()}; });
+
+	// Variations
+	var variationLinks = cardPart.find(idPrefix + "_variationLinks a.variationLink").map(function(i, item) { return doc(item); });
+	if(variationLinks.length)
+		card.variations = variationLinks.map(function(variationLink) { return +variationLink.attr("id").trim(); }).filter(function(variation) { return variation!==card.multiverseid; });
 
 	return card;
 }
@@ -289,14 +309,9 @@ function processTextBoxChildren(doc, children)
 	return result;
 }
 
-function getCardParts(pageDoc)
+function getCardParts(doc)
 {
-	return pageDoc("table.cardDetails").map(function(i, item) { return pageDoc(item); });
-}
-
-function getVariationIds(pageDoc, cb)
-{
-
+	return doc("table.cardDetails").map(function(i, item) { return doc(item); });
 }
 
 function getDoc(multiverseid, cb)
@@ -324,10 +339,7 @@ function getDoc(multiverseid, cb)
 		function createDoc(err, response, pageHTML)
 		{
 			if(err)
-			{
-				setImmediate(function() { cb(err); });
-				return;
-			}
+				return setImmediate(function() { cb(err); });
 
 			if(!fs.existsSync(path.join("/", "tmp", multiverseid + ".html")))
 				fs.writeFileSync(path.join("/", "tmp", multiverseid + ".html"), pageHTML, {encoding:"utf8"});

@@ -1,12 +1,11 @@
 "use strict";
 
 var base = require("node-base"),
+	C = require("C"),
 	fs = require("fs"),
 	path = require("path"),
 	tiptoe = require("tiptoe"),
 	rip = require("./rip.js");
-
-var sets = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "json", "sets.json"), {encoding:"utf8"}));
 
 function usage()
 {
@@ -17,7 +16,7 @@ function usage()
 if(process.argv.length<3 || !process.argv[2].length)
 	usage();
 
-var targetSet = sets.mutateOnce(function(set) { if(set.name.toLowerCase()===process.argv[2].toLowerCase() || set.code.toLowerCase()===process.argv[2].toLowerCase()) { return set; } });
+var targetSet = C.SETS.mutateOnce(function(SET) { if(SET.name.toLowerCase()===process.argv[2].toLowerCase() || SET.code.toLowerCase()===process.argv[2].toLowerCase()) { return SET; } });
 if(!targetSet)
 {
 	base.error("Set %s not found!", process.argv[2]);
@@ -25,14 +24,13 @@ if(!targetSet)
 }
 
 tiptoe(
-	function getCards()
+	function build()
 	{
-		rip.cards(targetSet.name, this);
+		rip.ripSet(targetSet.name, this);
 	},
-	function processCards(cards)
+	function save(set)
 	{
-		base.info(cards);
-		this();
+		fs.writeFile(path.join(__dirname, "..", "json", set.code + ".json"), JSON.stringify(set), {encoding:"utf8"}, this);
 	},
 	function finish(err)
 	{
