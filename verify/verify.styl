@@ -1,0 +1,92 @@
+@import "conform"
+
+body
+	background-color black
+	color white
+	overflow hidden
+
+#cards
+	width 90%
+	margin-left 5%
+
+	tr.card
+		display none
+
+		&.visible
+			display table-row
+
+		td.card
+			width 490px
+			vertical-align top
+
+			pre
+				font-size 150%
+				margin-left 1.0em
+				line-height 1.6
+
+		td.data
+			vertical-align top
+
+			.textCard
+				position relative
+				width 900px
+				height 780px
+				border 1px solid #aaaaaa
+
+				span
+					position absolute
+					font-size 150%
+					background-color #3B3C2B
+
+				.name, .type, .supertypes, .types, .subtypes, .text, .flavor, .artist, .number
+					left 0.5em
+
+				.manaCost, .cmc, .rarity, .powerToughnessLoyalty
+					right 0.5em
+
+				.name, .manaCost
+					top 0.5em
+
+				.artist, .powerToughnessLoyalty
+					bottom 0.5em
+
+				.cmc
+					top 2.0em
+
+				.supertypes
+					top 9.0em
+
+				.types
+					top 10.5em
+
+				.subtypes
+					top 12.0em
+
+				.type, .rarity
+					top 15.0em
+
+				.text
+					top 16.5em
+
+				.flavor
+					bottom 2.0em
+					font-style italic
+
+				.number
+					bottom -1.0em
+
+			.rulings
+				margin-top 3.0em
+				font-size 109%
+
+				.ruling
+					&:nth-child(even)
+						background-color #3B3C2B
+
+					.date
+						vertical-align top
+						white-space nowrap
+						text-align right
+
+					.text
+						padding-left 1.0em

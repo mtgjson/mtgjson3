@@ -1,29 +1,14 @@
-Special Cards:
+BEFORE ANY OF THIS: Check to see if there are updates to the scanned cards, see if there are larger/better scans available or if what I have is the best still.
+Then create images/cards/ARN/<card>.jpg  (see what image format the original is in and ensure I keep perfect image quality)
 
-ID			Name					Description
---			----					-----------
-289327		Forest					Is a basic land with 5 alternate arts
+Have it show the card (from my files) on the left and my JSON (nicely formatted) on the right.
 
-205275		Ancient Den				Is an artifact land
+Sort the cards by name.
 
-85106		Brothers Yamazaki		Has 2 alternate arts for the card
-1911		Elvish Hunter			Has 3 alternate arts for the card
+Then I can simply press right arrow to check the next card or previous card. Nice and simple.
 
-247372		Boros Guildmage			Has mana cost that is eithe Red or White
-205399		Beseech the Queen		Has mana that costs either 2 coloreless or 1 black
-230076		Act of Aggression		Has phyrexian mana symbols (paid with mana or 2 life)
-178018		Draco					Has huge 16 mana cost
+This will both allow me to ensure that I ripped the card right AND I have a matching card.
 
-153317		Umbral Mantle			Has untap symbol
-121268		Adarkar Windform		Has an activation cost with snow mana
-
-221209		Civilized Scholar		Is a double-faced card that has rulings for both sides
-369009		Breaking // Entering	Is a split card with rulings
-87599		Erayo, Soratami Ascendant	Is a flip card with rulings
-
-243486		Ghostfire				Is considered a colorless card despite costing red mana
-
-130676		Blade of the Sixth Pride	Has no card text or flavor text
 
 
 
@@ -50,28 +35,4 @@ Helpful links:
 file:///mnt/compendium/legacy/DevLab/mtg-new/visualmtg-process/json/cards-ARN.json
 http://gatherer.wizards.com/Pages/Search/Default.aspx?sort=cn+&output=checklist&set=[%22Arabian%20Nights%22]
 http://wiki.mtgsalvation.com/article/Alara_Reborn
-
-
-
-
-
-
-
-var multiverseids [..., ...];
-loopThrough and get a multiverseDoc for each one.
-
-var multiverseDoc = getMultiverseDoc(multiverseid);
-var variationIds = getVariationIds(multiverseDoc);	// May have alternate art
-If have variationIds, get a multiverseDoc for each of those as well
-
-put all in a map multiverseDocs[multiverseid] = multiverseDoc;
-
-Now process each multiverseDoc.
-var cardParts = getCardParts(multiverseDoc);
-cardParts is always an array, usually it is only 1 length, but in the case of some cards (flip/side-by-side/etc) there may be 2 parts.
-
-var cardDetails = processCardPart(cardPart);
-Finally we have the Hash map of the card details
-
-
 

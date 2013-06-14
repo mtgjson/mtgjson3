@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!--[if IE]><![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>{title}</title>
+		<link type="text/css" rel="stylesheet" href="verify.css">
+	</head>
+	<body>
+		<table id="cards">
+			{#cards}
+				<tr class="card">
+					<td class="card">
+						<img src="images/cards/{code}/{imageName}" alt="{name}">
+						<pre>
+							{json}
+						</pre>
+					</td>
+					<td class="data">
+						<div class="textCard">
+							<span class="name">{name}</span>
+							<span class="manaCost">{manaCost}</span>
+							<span class="cmc">{?cmc}cmc: {cmc}{/cmc}</span>
+							<span class="type">{type}</span>
+							<span class="supertypes">{?supertypes}supertypes: {#supertypes}{.}{@sep}, {/sep}{/supertypes}{/supertypes}</span>
+							<span class="types">{?types}types: {#types}{.}{@sep}, {/sep}{/types}{/types}</span>
+							<span class="subtypes">{?subtypes}subtypes: {#subtypes}{.}{@sep}, {/sep}{/subtypes}{/subtypes}</span>
+							<span class="rarity">{rarity}</span>
+							<span class="text">{text|s}</span>
+							<span class="flavor">{flavor|s}</span>
+							<span class="artist">{artist}</span>
+							<span class="number">{number}</span>
+							<span class="powerToughnessLoyalty">{?power}{loyalty}{power} / {toughness}{/power}{^power}{loyalty}{/power}</span>
+						</div>
+						<table class="rulings">
+							{#rulings}
+								<tr class="ruling">
+									<td class="date">{date}</td>
+									<td class="text">{text}</td>
+								</tr>
+							{/rulings}
+						</table>
+					</td>
+				</tr>
+			{/cards}
+		</table>
+		<script type="text/javascript" src="sizzle.js"></script>
+		<script type="text/javascript" src="mousetrap.js"></script>
+		<script type="text/javascript" src="DOM.js"></script>
+		<script type="text/javascript" src="verify.js"></script>
+	</body>
+</html>

@@ -1,0 +1,104 @@
+body {
+  background-color: #000;
+  color: #fff;
+  overflow: hidden;
+}
+#cards {
+  width: 90%;
+  margin-left: 5%;
+}
+#cards tr.card {
+  display: none;
+}
+#cards tr.card.visible {
+  display: table-row;
+}
+#cards tr.card td.card {
+  width: 490px;
+  vertical-align: top;
+}
+#cards tr.card td.card pre {
+  font-size: 150%;
+  margin-left: 1em;
+  line-height: 1.6;
+}
+#cards tr.card td.data {
+  vertical-align: top;
+}
+#cards tr.card td.data .textCard {
+  position: relative;
+  width: 900px;
+  height: 780px;
+  border: 1px solid #aaa;
+}
+#cards tr.card td.data .textCard span {
+  position: absolute;
+  font-size: 150%;
+  background-color: #3b3c2b;
+}
+#cards tr.card td.data .textCard .name,
+#cards tr.card td.data .textCard .type,
+#cards tr.card td.data .textCard .supertypes,
+#cards tr.card td.data .textCard .types,
+#cards tr.card td.data .textCard .subtypes,
+#cards tr.card td.data .textCard .text,
+#cards tr.card td.data .textCard .flavor,
+#cards tr.card td.data .textCard .artist,
+#cards tr.card td.data .textCard .number {
+  left: 0.5em;
+}
+#cards tr.card td.data .textCard .manaCost,
+#cards tr.card td.data .textCard .cmc,
+#cards tr.card td.data .textCard .rarity,
+#cards tr.card td.data .textCard .powerToughnessLoyalty {
+  right: 0.5em;
+}
+#cards tr.card td.data .textCard .name,
+#cards tr.card td.data .textCard .manaCost {
+  top: 0.5em;
+}
+#cards tr.card td.data .textCard .artist,
+#cards tr.card td.data .textCard .powerToughnessLoyalty {
+  bottom: 0.5em;
+}
+#cards tr.card td.data .textCard .cmc {
+  top: 2em;
+}
+#cards tr.card td.data .textCard .supertypes {
+  top: 9em;
+}
+#cards tr.card td.data .textCard .types {
+  top: 10.5em;
+}
+#cards tr.card td.data .textCard .subtypes {
+  top: 12em;
+}
+#cards tr.card td.data .textCard .type,
+#cards tr.card td.data .textCard .rarity {
+  top: 15em;
+}
+#cards tr.card td.data .textCard .text {
+  top: 16.5em;
+}
+#cards tr.card td.data .textCard .flavor {
+  bottom: 2em;
+  font-style: italic;
+}
+#cards tr.card td.data .textCard .number {
+  bottom: -1em;
+}
+#cards tr.card td.data .rulings {
+  margin-top: 3em;
+  font-size: 109%;
+}
+#cards tr.card td.data .rulings .ruling:nth-child(even) {
+  background-color: #3b3c2b;
+}
+#cards tr.card td.data .rulings .ruling .date {
+  vertical-align: top;
+  white-space: nowrap;
+  text-align: right;
+}
+#cards tr.card td.data .rulings .ruling .text {
+  padding-left: 1em;
+}
