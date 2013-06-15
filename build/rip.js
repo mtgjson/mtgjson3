@@ -81,6 +81,32 @@ var SET_CORRECTIONS =
 		{ renumberImages : "Sengir Bats", order : [2930, 2929] },
 		{ renumberImages : "Willow Faerie", order : [2982, 2983] }
 	],
+	ALL :
+	[
+		{ renumberImages : "Astrolabe", order : [3044, 3043] },
+		{ renumberImages : "Balduvian War-Makers", order : [3162, 3163] },
+		{ renumberImages : "Benthic Explorers", order : [3102, 3101] },
+		{ renumberImages : "Deadly Insect", order : [3129, 3130] },
+		{ renumberImages : "Enslaved Scout", order : [3169, 3170] },
+		{ renumberImages : "Errand of Duty", order : [3193, 3192] },
+		{ renumberImages : "False Demise", order : [3106, 3105] },
+		{ renumberImages : "Foresight", order : [3108, 3109] },
+		{ renumberImages : "Gift of the Woods", order : [3138, 3139] },
+		{ renumberImages : "Gorilla Berserkers", order : [3140, 3141] },
+		{ renumberImages : "Gorilla Chieftain", order : [3143, 3142] },
+		{ renumberImages : "Gorilla War Cry", order : [3173, 3174] },
+		{ renumberImages : "Kjeldoran Pride", order : [3201, 3202] },
+		{ renumberImages : "Lim-Dûl's High Guard", order : [3083, 3082] },
+		{ renumberImages : "Phyrexian War Beast", order : [3053, 3054] },
+		{ renumberImages : "Royal Herbalist", order : [3213, 3212] },
+		{ renumberImages : "Soldevi Sage", order : [3117, 3116] },
+		{ renumberImages : "Soldevi Steam Beast", order : [3061, 3062] },
+		{ renumberImages : "Taste of Paradise", order : [3150, 3149] },
+		{ renumberImages : "Varchild's Crusader", order : [3186, 3185] },
+		{ renumberImages : "Viscerid Armor", order : [3126, 3125] },
+		{ renumberImages : "Whip Vine", order : [3154, 3155] },
+		{ renumberImages : "Wild Aesthir", order : [3220, 3219] }
+	],	
 	XYZ :
 	[
 		{ renumberImages : "", order : [] },
