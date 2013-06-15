@@ -117,7 +117,7 @@ var SET_CORRECTIONS =
 	],
 	TMP :
 	[
-		{ renumberImages : "Plains", order : [] }
+		{ renumberImages : "Plains", order : [4953, 4954, 4955, 4956] }
 	],
 	XYZ :
 	[
