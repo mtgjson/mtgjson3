@@ -107,6 +107,14 @@ var SET_CORRECTIONS =
 		{ renumberImages : "Whip Vine", order : [3154, 3155] },
 		{ renumberImages : "Wild Aesthir", order : [3220, 3219] }
 	],	
+	MIR :
+	[
+		{ renumberImages : "Forest", order : [3569, 3567, 3568, 3566] },
+		{ renumberImages : "Island", order : [3584, 3582, 3583, 3581] },
+		{ renumberImages : "Mountain", order : [3580, 3578, 3579, 3577] },
+		{ renumberImages : "Plains", order : [3585, 3587, 3586, 3588] },
+		{ renumberImages : "Swamp", order : [3562, 3563, 3564, 3565] }
+	],	
 	XYZ :
 	[
 		{ renumberImages : "", order : [] },
