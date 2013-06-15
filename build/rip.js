@@ -114,7 +114,11 @@ var SET_CORRECTIONS =
 		{ renumberImages : "Mountain", order : [3580, 3578, 3579, 3577] },
 		{ renumberImages : "Plains", order : [3585, 3587, 3586, 3588] },
 		{ renumberImages : "Swamp", order : [3562, 3563, 3564, 3565] }
-	],	
+	],
+	TMP :
+	[
+		{ renumberImages : "Plains", order : [] }
+	],
 	XYZ :
 	[
 		{ renumberImages : "", order : [] },
@@ -122,7 +126,7 @@ var SET_CORRECTIONS =
 		{ renumberImages : "", order : [] },
 		{ renumberImages : "", order : [] },
 		{ renumberImages : "", order : [] }
-	],	
+	],
 	XXX :
 	[
 		{ renumberImages : "Forest", order : [] },
@@ -525,6 +529,11 @@ function processTextBlocks(doc, textBlocks)
 			result += processTextBoxChildren(doc, child.children);
 		});
 	});
+
+	while(result.contains("\n\n\n"))
+	{
+		result = result.replaceAll("\n\n\n", "\n\n");
+	}
 
 	return result;
 }
