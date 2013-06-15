@@ -175,7 +175,7 @@ function ripSet(setName, cb)
 			if(err)
 				return setImmediate(function() { cb(err); });
 
-			this.data.set.cards = this.data.set.cards.concat(cards).sort(function(a, b) { return a.name.localeCompare(b.name); });
+			this.data.set.cards = this.data.set.cards.concat(cards).sort(function(a, b) { var nameResult = a.name.localeCompare(b.name); return (nameResult===0 && a.hasOwnProperty("number")) ? b.number.localeCompare(a.number) : nameResult; });
 
 			// Image Name
 			var cardNameCounts = {};
