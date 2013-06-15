@@ -18,7 +18,45 @@ var SET_CORRECTIONS =
 	[
 		{ match : {name: "Bazaar of Baghdad"}, replace : {artist : "Jeff A. Menges"} },
 		{ match : {name: "Library of Alexandria"}, replace : {artist : "Mark Poole"} }
-	]
+	],
+	LEG :
+	[
+		{ match : {name: "The Tabernacle at Pendrell Vale"}, replace : {artist : "Nicola Leonard"} }
+	],
+	FEM :
+	[
+		{ renumberImages : "Armor Thrull", order : [1841, 1840, 1838, 1839] },
+		{ renumberImages : "Basal Thrull", order : [1842, 1844, 1843, 1845] },
+		{ renumberImages : "Brassclaw Orcs", order : [1966, 1938, 1937, 1940] },
+		{ renumberImages : "Combat Medic", order : [1971, 1972, 1970, 1973] },
+		{ renumberImages : "Elven Fortress", order : [1905, 1904, 1906, 1907] },
+		{ renumberImages : "Elvish Hunter", order : [1910, 1911, 1909] },
+		{ renumberImages : "Elvish Scout", order : [1913, 1912, 1914] },
+		{ renumberImages : "Goblin Chirurgeon", order : [1948, 1949, 1947] },
+		{ renumberImages : "Goblin War Drums", order : [1955, 1957, 1956, 1958] },
+		{ renumberImages : "High Tide", order : [1873, 1872, 1874] },
+		{ renumberImages : "Homarid Warrior", order : [1882, 1881, 1883] },
+		{ renumberImages : "Homarid", order : [1875, 1876, 1877, 1878] },
+		{ renumberImages : "Hymn to Tourach", order : [1850, 1849, 1851, 1852] },
+		{ renumberImages : "Icatian Infantry", order : [1981, 1982, 1983, 1984] },
+		{ renumberImages : "Icatian Moneychanger", order : [1989, 1990, 1991] },
+		{ renumberImages : "Icatian Scout", order : [1994, 1997, 1996, 1995] },
+		{ renumberImages : "Initiates of the Ebon Hand", order : [1855, 1854, 1853] },
+		{ renumberImages : "Merseine", order : [1884, 1885, 1887, 1886] },
+		{ renumberImages : "Mindstab Thrull", order : [1857, 1856, 1858] },
+		{ renumberImages : "Necrite", order : [1860, 1859, 1861] },
+		{ renumberImages : "Night Soil", order : [1918, 1917, 1919] },
+		{ renumberImages : "Orcish Spy", order : [1962, 1961, 1963] },
+		{ renumberImages : "Orcish Veteran", order : [1967, 1965, 1939, 1964] },
+		{ renumberImages : "Order of Leitbur", order : [2001, 2000, 2002] },
+		{ renumberImages : "Order of the Ebon Hand", order : [1863, 1862, 1864] },
+		{ renumberImages : "Spore Cloud", order : [1920, 1922, 1921] },
+		{ renumberImages : "Thallid", order : [1924, 1926, 1927, 1925] },
+		{ renumberImages : "Thorn Thallid", order : [1933, 1934, 1935, 1936] },
+		{ renumberImages : "Tidal Flats", order : [1891, 1892, 1893] },
+		{ renumberImages : "Vodalian Mage", order : [1896, 1898, 1897] },
+		{ renumberImages : "Vodalian Soldiers", order : [1899, 1901, 1900, 1902] }
+	]	
 };
 
 function ripSet(setName, cb)
@@ -79,28 +117,42 @@ function ripSet(setName, cb)
 					cardNameCounts[key]++;
 			});
 
+			var setCorrections = SET_CORRECTIONS[this.data.set.code];
+
 			this.data.set.cards.forEach(function(card)
 			{
 				card.imageName = unicode_to_ascii(card.name);
 
 				if(cardNameCounts.hasOwnProperty(card.name))
-					card.imageName += cardNameCounts[card.name]--;
+				{
+					var imageNumber = cardNameCounts[card.name]--;
+					if(setCorrections)
+					{
+						var numberOrder = setCorrections.mutateOnce(function(setCorrection) { return setCorrection.renumberImages===card.name ? setCorrection.order : undefined; });
+						if(numberOrder)
+							imageNumber = numberOrder.indexOf(card.multiverseid)+1;
+					}
+					
+					card.imageName += imageNumber;
+				}
 
 				card.imageName = card.imageName.strip(":").toLowerCase();
 			});
 
 			// Set Corrections
-			if(SET_CORRECTIONS.hasOwnProperty(this.data.set.code))
+			if(setCorrections)
 			{
-				SET_CORRECTIONS[this.data.set.code].forEach(function(SET_CORRECTION)
+				setCorrections.forEach(function(setCorrection)
 				{
 					this.data.set.cards.forEach(function(card)
 					{
-						if(Object.every(SET_CORRECTION.match, function(key, value) { return card[key]===value; }))
-							Object.forEach(SET_CORRECTION.replace, function(key, value) { card[key] = value; });
+						if(setCorrection.match && setCorrection.replace && Object.every(setCorrection.match, function(key, value) { return card[key]===value; }))
+							Object.forEach(setCorrection.replace, function(key, value) { card[key] = value; });
 					});
 				}.bind(this));
 			}
+
+			this.data.set.cards = this.data.set.cards.sort(function(a, b) { return a.imageName.localeCompare(b.imageName); });
 
 			// Warn about missing fields
 			this.data.set.cards.forEach(function(card)
