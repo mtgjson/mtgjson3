@@ -56,7 +56,23 @@ var SET_CORRECTIONS =
 		{ renumberImages : "Tidal Flats", order : [1891, 1892, 1893] },
 		{ renumberImages : "Vodalian Mage", order : [1896, 1898, 1897] },
 		{ renumberImages : "Vodalian Soldiers", order : [1899, 1901, 1900, 1902] }
-	]	
+	],
+	ICE :
+	[
+		{ renumberImages : "Forest", order : [2748, 2746, 2747] },
+		{ renumberImages : "Island", order : [2768, 2767, 2769] },
+		{ renumberImages : "Mountain", order : [2763, 2765, 2764] },
+		{ renumberImages : "Plains", order : [2773, 2771, 2772] },
+		{ renumberImages : "Swamp", order : [2744, 2743, 2745] }
+	],
+	XXX :
+	[
+		{ renumberImages : "Forest", order : [] },
+		{ renumberImages : "Island", order : [] },
+		{ renumberImages : "Mountain", order : [] },
+		{ renumberImages : "Plains", order : [] },
+		{ renumberImages : "Swamp", order : [] }
+	]
 };
 
 function ripSet(setName, cb)
@@ -386,7 +402,7 @@ function processCardPart(doc, cardPart)
 		// Loyalty
 		if(card.types.contains("Planeswalker"))
 		{
-			card.loyalty = +powerToughnessValue.trim();
+			card.loyalty = powerToughnessValue.trim();
 		}
 		else
 		{
@@ -398,8 +414,8 @@ function processCardPart(doc, cardPart)
 			}
 			else
 			{
-				card.power = +powerToughnessParts[0].trim();
-				card.toughness = +powerToughnessParts[1].trim();
+				card.power = powerToughnessParts[0].trim();
+				card.toughness = powerToughnessParts[1].trim();
 			}
 		}
 	}
@@ -422,7 +438,7 @@ function processCardPart(doc, cardPart)
 	// Card Number
 	var cardNumberValue = cardPart.find(idPrefix + "_numberRow .value").text().trim();
 	if(cardNumberValue)
-		card.number = +cardNumberValue;
+		card.number = cardNumberValue;
 
 	// Rulings
 	var rulingRows = cardPart.find(idPrefix + "_rulingsContainer table tr.post");
