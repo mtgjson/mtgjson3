@@ -11,7 +11,7 @@
 			{#cards}
 				<tr class="card">
 					<td class="card">
-						<img src="images/cards/{code}/{imageName}" alt="{name}">
+						<img src="images/cards/{code}/{imageName}.jpg" alt="{name}">
 						<span class="json">
 							{json}
 						</span>
@@ -21,10 +21,8 @@
 							<span class="name">{name}</span>
 							<span class="manaCost">{manaCost}</span>
 							<span class="cmc">{?cmc}cmc: {cmc}{/cmc}</span>
+							<span class="types">{?supertypes}[{#supertypes}{.}{@sep}, {/sep}{/supertypes}] {/supertypes}[{#types}{.}{@sep}, {/sep}{/types}]{?subtypes} - [{#subtypes}{.}{@sep}, {/sep}{/subtypes}]{/subtypes}</span>
 							<span class="type">{type}</span>
-							<span class="supertypes">{?supertypes}supertypes: {#supertypes}{.}{@sep}, {/sep}{/supertypes}{/supertypes}</span>
-							<span class="types">{?types}types: {#types}{.}{@sep}, {/sep}{/types}{/types}</span>
-							<span class="subtypes">{?subtypes}subtypes: {#subtypes}{.}{@sep}, {/sep}{/subtypes}{/subtypes}</span>
 							<span class="rarity">{rarity}</span>
 							<span class="text">{text|s}</span>
 							<span class="flavor">{flavor|s}</span>

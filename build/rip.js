@@ -14,7 +14,11 @@ var base = require("node-base"),
 
 var SET_CORRECTIONS =
 {
-	ARN : [{match : {name: "Bazaar of Baghdad"}, replace : {artist : "Jeff A. Menges"} }]
+	ARN :
+	[
+		{ match : {name: "Bazaar of Baghdad"}, replace : {artist : "Jeff A. Menges"} },
+		{ match : {name: "Library of Alexandria"}, replace : {artist : "Mark Poole"} }
+	]
 };
 
 function ripSet(setName, cb)
@@ -82,7 +86,7 @@ function ripSet(setName, cb)
 				if(cardNameCounts.hasOwnProperty(card.name))
 					card.imageName += cardNameCounts[card.name]--;
 
-				card.imageName += ".full.jpg";
+				card.imageName = card.imageName.strip(":").toLowerCase();
 			});
 
 			// Set Corrections
@@ -97,6 +101,15 @@ function ripSet(setName, cb)
 					});
 				}.bind(this));
 			}
+
+			// Warn about missing fields
+			this.data.set.cards.forEach(function(card)
+			{
+				if(!card.rarity)
+					base.warn("Rarity not found for card: %s", card.name);
+				if(!card.artist)
+					base.warn("Artist not found for card: %s", card.name);
+			});
 
 			setImmediate(function() { cb(err, this.data.set); }.bind(this));
 		}
@@ -291,7 +304,7 @@ function processCardPart(doc, cardPart)
 		else if(C.TYPES.contains(rawType))
 			card.types.push(rawType);
 		else
-			base.warn("Raw type not found: %s", rawType);
+			base.warn("Raw type not found [%s] for card: %s", rawType, card.name);
 	});
 	if(rawTypes.length>1)
 	{
@@ -329,7 +342,7 @@ function processCardPart(doc, cardPart)
 			var powerToughnessParts = powerToughnessValue.split("/");
 			if(powerToughnessParts.length!==2)
 			{
-				base.warn("Power toughness invalid: %s", powerToughnessValue);
+				base.warn("Power toughness invalid [%s] for card: %s", powerToughnessValue, card.name);
 			}
 			else
 			{
