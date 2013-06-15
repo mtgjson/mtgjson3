@@ -120,6 +120,11 @@ var SET_CORRECTIONS =
 	[
 		{ renumberImages : "Plains", order : [4953, 4954, 4955, 4956] }
 	],
+	PLS :
+	[
+		{ renumberImages : "Ertai, the Corrupted", order : [25614, 29292] },
+		{ renumberImages : "Skyship Weatherlight", order : [26480, 29293] }
+	],
 	XYZ :
 	[
 		{ renumberImages : "", order : [] },
