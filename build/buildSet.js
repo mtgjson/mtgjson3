@@ -1,4 +1,5 @@
 "use strict";
+/*global setImmediate: true*/
 
 var base = require("node-base"),
 	C = require("C"),
@@ -13,33 +14,41 @@ function usage()
 	process.exit(1);
 }
 
-if(process.argv.length<3 || !process.argv[2].length)
+if(process.argv.length<3)
 	usage();
 
-var targetSet = C.SETS.mutateOnce(function(SET) { if(SET.name.toLowerCase()===process.argv[2].toLowerCase() || SET.code.toLowerCase()===process.argv[2].toLowerCase()) { return SET; } });
-if(!targetSet)
+process.argv.slice(2).serialForEach(function(arg, subcb)
 {
-	base.error("Set %s not found!", process.argv[2]);
-	usage();
-}
-
-tiptoe(
-	function build()
+	var targetSet = C.SETS.mutateOnce(function(SET) { if(SET.name.toLowerCase()===arg.toLowerCase() || SET.code.toLowerCase()===arg.toLowerCase()) { return SET; } });
+	if(!targetSet)
 	{
-		rip.ripSet(targetSet.name, this);
-	},
-	function save(set)
-	{
-		fs.writeFile(path.join(__dirname, "..", "json", set.code + ".json"), JSON.stringify(set), {encoding:"utf8"}, this);
-	},
-	function finish(err)
-	{
-		if(err)
-		{
-			base.error(err);
-			process.exit(1);
-		}
-
-		process.exit(0);
+		base.error("Set %s not found!", arg);
+		setImmediate(subcb);
+		return;
 	}
-);
+
+	tiptoe(
+		function build()
+		{
+			rip.ripSet(targetSet.name, this);
+		},
+		function save(set)
+		{
+			fs.writeFile(path.join(__dirname, "..", "json", set.code + ".json"), JSON.stringify(set), {encoding:"utf8"}, this);
+		},
+		function finish(err)
+		{
+			subcb(err);
+		}
+	);
+}, function exit(err)
+{
+	if(err)
+	{
+		base.error(err);
+		process.exit(1);
+	}
+
+	process.exit(0);
+});
+

@@ -8,6 +8,7 @@ var base = require("node-base"),
 	fs = require("fs"),
 	url = require("url"),
 	moment = require("moment"),
+	hash = require("mhash").hash,
 	path = require("path"),
 	querystring = require("querystring"),
 	tiptoe = require("tiptoe");
@@ -137,8 +138,26 @@ var SET_CORRECTIONS =
 	]
 };
 
+function cardComparator(a, b)
+{
+	var result = unicode_to_ascii(a.name).toLowerCase().localeCompare(unicode_to_ascii(b.name).toLowerCase());
+	if(result!==0)
+		return result;
+
+	if(a.imageName && b.imageName)
+		return a.imageName.localeCompare(b.imageName);
+
+	if(a.hasOwnProperty("number"))
+		return b.number.localeCompare(a.number);
+
+	return 0;
+}
+
 function ripSet(setName, cb)
 {
+	base.info("================================================================");
+	base.info("Ripping Set: %s", setName);
+
 	tiptoe(
 		function getListHTML()
 		{
@@ -175,7 +194,7 @@ function ripSet(setName, cb)
 			if(err)
 				return setImmediate(function() { cb(err); });
 
-			this.data.set.cards = this.data.set.cards.concat(cards).sort(function(a, b) { var nameResult = a.name.localeCompare(b.name); return (nameResult===0 && a.hasOwnProperty("number")) ? b.number.localeCompare(a.number) : nameResult; });
+			this.data.set.cards = this.data.set.cards.concat(cards).sort(cardComparator);
 
 			// Image Name
 			var cardNameCounts = {};
@@ -199,7 +218,7 @@ function ripSet(setName, cb)
 
 			this.data.set.cards.forEach(function(card)
 			{
-				card.imageName = unicode_to_ascii(card.name);
+				card.imageName = unicode_to_ascii((card.layout==="split" ? card.names.join("") : card.name));
 
 				if(cardNameCounts.hasOwnProperty(card.name))
 				{
@@ -230,7 +249,7 @@ function ripSet(setName, cb)
 				}.bind(this));
 			}
 
-			this.data.set.cards = this.data.set.cards.sort(function(a, b) { return a.imageName.localeCompare(b.imageName); });
+			this.data.set.cards = this.data.set.cards.sort(cardComparator);
 
 			// Warn about missing fields
 			this.data.set.cards.forEach(function(card)
@@ -254,167 +273,49 @@ function processMultiverseids(multiverseids, cb)
 	multiverseids.unique().serialForEach(function(multiverseid, subcb)
 	{
 		tiptoe(
-			function getMultiverseDoc()
+			function getMultiverseUrls()
 			{
-				getDoc(multiverseid, this);
+				getURLsForMultiverseid(multiverseid, this);
 			},
-			function finish(err, multiverseDoc)
+			function getMultiverseDocs(urls)
 			{
-				if(err || !multiverseDoc)
-					return setImmediate(function() { subcb(err || new Error("Invalid multiverse response")); });
+				urls.forEach(function(url)
+				{
+					getURLAsDoc(url, this.parallel());
+				}.bind(this));
+			},
+			function processMultiverseDocs()
+			{
+				Array.prototype.slice.call(arguments).forEach(function(multiverseDoc)
+				{
+					getCardParts(multiverseDoc).forEach(function(cardPart) { cards.push(processCardPart(multiverseDoc, cardPart)); });
+				});
 
-				getCardParts(multiverseDoc).forEach(function(cardPart) { cards.push(processCardPart(multiverseDoc, cardPart)); });
-
-				setImmediate(subcb);
-			}
+				this();
+			},
+			function finish(err) { setImmediate(function() { subcb(err); }); }
 		);
 	}, function(err) { return cb(err, cards); });
-}
-
-var UNICODE_CONVERSION_MAP =
-{
-	// latin
-	'À': 'A', 'Á': 'A', 'Â': 'A', 'Ã': 'A', 'Ä': 'A', 'Å': 'A', 'Æ': 'AE',
-	'Ç': 'C', 'È': 'E', 'É': 'E', 'Ê': 'E', 'Ë': 'E', 'Ì': 'I', 'Í': 'I',
-	'Î': 'I', 'Ï': 'I', 'Ð': 'D', 'Ñ': 'N', 'Ò': 'O', 'Ó': 'O', 'Ô': 'O',
-	'Õ': 'O', 'Ö': 'O', 'Ő': 'O', 'Ø': 'O', 'Ù': 'U', 'Ú': 'U', 'Û': 'U',
-	'Ü': 'U', 'Ű': 'U', 'Ý': 'Y', 'Þ': 'TH', 'ß': 'ss', 'à':'a', 'á':'a',
-	'â': 'a', 'ã': 'a', 'ä': 'a', 'å': 'a', 'æ': 'ae', 'ç': 'c', 'è': 'e',
-	'é': 'e', 'ê': 'e', 'ë': 'e', 'ì': 'i', 'í': 'i', 'î': 'i', 'ï': 'i',
-	'ð': 'd', 'ñ': 'n', 'ò': 'o', 'ó': 'o', 'ô': 'o', 'õ': 'o', 'ö': 'o',
-	'ő': 'o', 'ø': 'o', 'ù': 'u', 'ú': 'u', 'û': 'u', 'ü': 'u', 'ű': 'u',
-	'ý': 'y', 'þ': 'th', 'ÿ': 'y', 'ẞ': 'SS',
-	// greek
-	'α':'a', 'β':'b', 'γ':'g', 'δ':'d', 'ε':'e', 'ζ':'z', 'η':'h', 'θ':'8',
-	'ι':'i', 'κ':'k', 'λ':'l', 'μ':'m', 'ν':'n', 'ξ':'3', 'ο':'o', 'π':'p',
-	'ρ':'r', 'σ':'s', 'τ':'t', 'υ':'y', 'φ':'f', 'χ':'x', 'ψ':'ps', 'ω':'w',
-	'ά':'a', 'έ':'e', 'ί':'i', 'ό':'o', 'ύ':'y', 'ή':'h', 'ώ':'w', 'ς':'s',
-	'ϊ':'i', 'ΰ':'y', 'ϋ':'y', 'ΐ':'i',
-	'Α':'A', 'Β':'B', 'Γ':'G', 'Δ':'D', 'Ε':'E', 'Ζ':'Z', 'Η':'H', 'Θ':'8',
-	'Ι':'I', 'Κ':'K', 'Λ':'L', 'Μ':'M', 'Ν':'N', 'Ξ':'3', 'Ο':'O', 'Π':'P',
-	'Ρ':'R', 'Σ':'S', 'Τ':'T', 'Υ':'Y', 'Φ':'F', 'Χ':'X', 'Ψ':'PS', 'Ω':'W',
-	'Ά':'A', 'Έ':'E', 'Ί':'I', 'Ό':'O', 'Ύ':'Y', 'Ή':'H', 'Ώ':'W', 'Ϊ':'I',
-	'Ϋ':'Y',
-	// turkish
-	'ş':'s', 'Ş':'S', 'ı':'i', 'İ':'I', 'ğ':'g', 'Ğ':'G',
-	// russian
-	'а':'a', 'б':'b', 'в':'v', 'г':'g', 'д':'d', 'е':'e', 'ё':'yo', 'ж':'zh',
-	'з':'z', 'и':'i', 'й':'j', 'к':'k', 'л':'l', 'м':'m', 'н':'n', 'о':'o',
-	'п':'p', 'р':'r', 'с':'s', 'т':'t', 'у':'u', 'ф':'f', 'х':'h', 'ц':'c',
-	'ч':'ch', 'ш':'sh', 'щ':'sh', 'ъ':'u', 'ы':'y', 'ь':'', 'э':'e', 'ю':'yu',
-	'я':'ya',
-	'А':'A', 'Б':'B', 'В':'V', 'Г':'G', 'Д':'D', 'Е':'E', 'Ё':'Yo', 'Ж':'Zh',
-	'З':'Z', 'И':'I', 'Й':'J', 'К':'K', 'Л':'L', 'М':'M', 'Н':'N', 'О':'O',
-	'П':'P', 'Р':'R', 'С':'S', 'Т':'T', 'У':'U', 'Ф':'F', 'Х':'H', 'Ц':'C',
-	'Ч':'Ch', 'Ш':'Sh', 'Щ':'Sh', 'Ъ':'U', 'Ы':'Y', 'Ь':'', 'Э':'E', 'Ю':'Yu',
-	'Я':'Ya',
-	// ukranian
-	'Є':'Ye', 'І':'I', 'Ї':'Yi', 'Ґ':'G', 'є':'ye', 'і':'i', 'ї':'yi', 'ґ':'g',
-	// czech
-	'č':'c', 'ď':'d', 'ě':'e', 'ň': 'n', 'ř':'r', 'š':'s', 'ť':'t', 'ů':'u',
-	'ž':'z', 'Č':'C', 'Ď':'D', 'Ě':'E', 'Ň': 'N', 'Ř':'R', 'Š':'S', 'Ť':'T',
-	'Ů':'U', 'Ž':'Z',
-	// polish
-	'ą':'a', 'ć':'c', 'ę':'e', 'ł':'l', 'ń':'n', 'ś':'s', 'ź':'z',
-	'ż':'z', 'Ą':'A', 'Ć':'C', 'Ę':'e', 'Ł':'L', 'Ń':'N', 'Ś':'S',
-	'Ź':'Z', 'Ż':'Z',
-	// latvian
-	'ā':'a', 'ē':'e', 'ģ':'g', 'ī':'i', 'ķ':'k', 'ļ':'l', 'ņ':'n', 'ū':'u',
-	'Ā':'A', 'Ē':'E', 'Ģ':'G', 'Ī':'i', 'Ķ':'k', 'Ļ':'L', 'Ņ':'N', 'Ū':'u'
-};
-
-function unicode_to_ascii(text)
-{
-	var result = "";
-
-	for(var i=0,len=text.length;i<len;i++)
-	{
-		var c = text.charAt(i);
-		result += UNICODE_CONVERSION_MAP.hasOwnProperty(c) ? UNICODE_CONVERSION_MAP[c] : c;
-	}
-
-	return result;
-}
-
-var SYMBOL_CONVERSION_MAP =
-{
-	"white"              : "W",
-	"black"              : "B",
-	"red"                : "R",
-	"blue"               : "U",
-	"green"              : "G",
-	"zero"               : "0",
-	"one"                : "1",
-	"two"                : "2",
-	"three"              : "3",
-	"four"               : "4",
-	"five"               : "5",
-	"six"                : "6",
-	"seven"              : "7",
-	"eight"              : "8",
-	"nine"               : "9",
-	"ten"                : "10",
-	"eleven"             : "11",
-	"twelve"             : "12",
-	"thirteen"           : "13",
-	"fourteen"           : "14",
-	"fifteen"            : "15",
-	"sixteen"            : "16",
-	"0"                  : "0",
-	"1"                  : "1",
-	"2"                  : "2",
-	"3"                  : "3",
-	"4"                  : "4",
-	"5"                  : "5",
-	"6"                  : "6",
-	"7"                  : "7",
-	"8"                  : "8",
-	"9"                  : "9",
-	"10"                 : "10",
-	"11"                 : "11",
-	"12"                 : "12",
-	"13"                 : "13",
-	"14"                 : "14",
-	"15"                 : "15",
-	"16"                 : "16",
-	"tap"                : "T",
-	"untap"              : "Q",
-	"snow"               : "S",
-	"phyrexian white"    : "PW",
-	"phyrexian black"    : "PB",
-	"phyrexian red"      : "PR",
-	"phyrexian blue"     : "PU",
-	"phyrexian green"    : "PG",
-	"variable colorless" : "X"
-};
-
-function processSymbol(symbol)
-{
-	var symbols = symbol.toLowerCase().split(" or ").map(function(symbolPart)
-	{
-		symbolPart = symbolPart.trim();
-		if(!SYMBOL_CONVERSION_MAP.hasOwnProperty(symbolPart))
-		{
-			base.warn("Invalid symbolPart [%s] with full value: %s", symbolPart, symbol);
-			return "UNKNOWN";
-		}
-
-		return SYMBOL_CONVERSION_MAP[symbolPart];
-	});
-
-	return "{" + (symbols.length>1 ? symbols.join("/") : symbols[0]) + "}";
 }
 
 function processCardPart(doc, cardPart)
 {
 	var card =
 	{
+		layout     : "normal",
 		supertypes : [],
 		type       : "",
 		types      : []
 	};
 
 	var idPrefix = "#" + cardPart.find(".rightCol").attr("id").replaceAll("_rightCol", "");
+
+	var fullCardName = doc("#ctl00_ctl00_ctl00_MainContent_SubContent_SubContentHeader_subtitleDisplay").text().trim();
+	if(fullCardName.contains(" // "))
+	{
+		card.layout = "split";
+		card.names = fullCardName.split(" // ").filter(function(splitName) { return splitName.trim(); });
+	}
 
 	// Multiverseid
 	card.multiverseid = +querystring.parse(url.parse(doc("#aspnetForm").attr("action")).query).multiverseid.trim();
@@ -508,11 +409,259 @@ function processCardPart(doc, cardPart)
 		card.rulings = rulingRows.map(function(i, item) { return doc(item); }).map(function(rulingRow) { return { date : moment(rulingRow.find("td:first-child").text().trim(), "MM/DD/YYYY").format("YYYY-MM-DD"), text : rulingRow.find("td:last-child").text().trim()}; });
 
 	// Variations
-	var variationLinks = cardPart.find(idPrefix + "_variationLinks a.variationLink").map(function(i, item) { return doc(item); });
-	if(variationLinks.length)
-		card.variations = variationLinks.map(function(variationLink) { return +variationLink.attr("id").trim(); }).filter(function(variation) { return variation!==card.multiverseid; });
+	if(card.layout==="normal")
+	{
+		var variationLinks = cardPart.find(idPrefix + "_variationLinks a.variationLink").map(function(i, item) { return doc(item); });
+		if(variationLinks.length)
+			card.variations = variationLinks.map(function(variationLink) { return +variationLink.attr("id").trim(); }).filter(function(variation) { return variation!==card.multiverseid; });
+	}
 
 	return card;
+}
+
+function getCardParts(doc)
+{
+	return doc("table.cardDetails").map(function(i, item) { return doc(item); });
+}
+
+function getURLsForMultiverseid(multiverseid, cb)
+{
+	tiptoe(
+		function getDefaultDoc()
+		{
+			getURLAsDoc(buildMultiverseURL(multiverseid), this);
+		},
+		function processDefaultDoc(err, doc)
+		{
+			if(err)
+				return setImmediate(function() { cb(err); });
+
+			var urls = [];
+			getCardParts(doc).forEach(function(cardPart)
+			{
+				var card = processCardPart(doc, cardPart);
+				if(card.layout==="split")
+				{
+					urls.push(buildMultiverseURL(multiverseid, card.names[0]));
+					urls.push(buildMultiverseURL(multiverseid, card.names[1]));
+				}
+				else
+				{
+					urls.push(buildMultiverseURL(multiverseid));
+				}
+			});
+
+			setImmediate(function() { cb(null, urls); }.bind(this));
+		}
+	);
+}
+
+function buildMultiverseURL(multiverseid, part)
+{
+	var urlConfig = 
+	{
+		protocol : "http",
+		host     : "gatherer.wizards.com",
+		pathname : "/Pages/Card/Details.aspx",
+		query    :
+		{
+			multiverseid : multiverseid,
+			printed      : "false"
+		}
+	};
+	if(part)
+		urlConfig.query.part = part;
+
+	return url.format(urlConfig);
+}
+
+function getURLAsDoc(url, cb)
+{
+	var cachePath = path.join(__dirname, "..", "cache", hash("whirlpool", url));
+
+	tiptoe(
+		function get()
+		{
+			if(fs.existsSync(cachePath))
+				fs.readFile(cachePath, {encoding:"utf8"}, function(err, data) { this(null, null, data); }.bind(this));
+			else
+				request(url, this);
+		},
+		function createDoc(err, response, pageHTML)
+		{
+			if(err)
+				return setImmediate(function() { cb(err); });
+
+			if(!fs.existsSync(cachePath))
+				fs.writeFileSync(cachePath, pageHTML, {encoding:"utf8"});
+
+			setImmediate(function() { cb(null, cheerio.load(pageHTML)); }.bind(this));
+		}
+	);
+}
+
+exports.tmp = function(cb)
+{
+	tiptoe(
+		function step1()
+		{
+			getURLsForMultiverseid(process.argv[2], this);
+		},
+		function step2(urls)
+		{
+			urls.forEach(function(url)
+			{
+				getURLAsDoc(url, this.parallel());
+			}.bind(this));
+		},
+		function step3()
+		{
+			Array.prototype.slice.call(arguments).forEach(function(doc)
+			{
+				getCardParts(doc).forEach(function(cardPart) { base.info(processCardPart(doc, cardPart)); });
+			});
+
+			this();
+		},
+		function finish(err)
+		{
+			setImmediate(function() { cb(err); });
+		}
+	);
+};
+
+var SYMBOL_CONVERSION_MAP =
+{
+	"white"              : "W",
+	"black"              : "B",
+	"red"                : "R",
+	"blue"               : "U",
+	"green"              : "G",
+	"zero"               : "0",
+	"one"                : "1",
+	"two"                : "2",
+	"three"              : "3",
+	"four"               : "4",
+	"five"               : "5",
+	"six"                : "6",
+	"seven"              : "7",
+	"eight"              : "8",
+	"nine"               : "9",
+	"ten"                : "10",
+	"eleven"             : "11",
+	"twelve"             : "12",
+	"thirteen"           : "13",
+	"fourteen"           : "14",
+	"fifteen"            : "15",
+	"sixteen"            : "16",
+	"0"                  : "0",
+	"1"                  : "1",
+	"2"                  : "2",
+	"3"                  : "3",
+	"4"                  : "4",
+	"5"                  : "5",
+	"6"                  : "6",
+	"7"                  : "7",
+	"8"                  : "8",
+	"9"                  : "9",
+	"10"                 : "10",
+	"11"                 : "11",
+	"12"                 : "12",
+	"13"                 : "13",
+	"14"                 : "14",
+	"15"                 : "15",
+	"16"                 : "16",
+	"tap"                : "T",
+	"untap"              : "Q",
+	"snow"               : "S",
+	"phyrexian white"    : "PW",
+	"phyrexian black"    : "PB",
+	"phyrexian red"      : "PR",
+	"phyrexian blue"     : "PU",
+	"phyrexian green"    : "PG",
+	"variable colorless" : "X"
+};
+
+function processSymbol(symbol)
+{
+	var symbols = symbol.toLowerCase().split(" or ").map(function(symbolPart)
+	{
+		symbolPart = symbolPart.trim();
+		if(!SYMBOL_CONVERSION_MAP.hasOwnProperty(symbolPart))
+		{
+			base.warn("Invalid symbolPart [%s] with full value: %s", symbolPart, symbol);
+			return "UNKNOWN";
+		}
+
+		return SYMBOL_CONVERSION_MAP[symbolPart];
+	});
+
+	return "{" + (symbols.length>1 ? symbols.join("/") : symbols[0]) + "}";
+}
+
+var UNICODE_CONVERSION_MAP =
+{
+	// latin
+	'À': 'A', 'Á': 'A', 'Â': 'A', 'Ã': 'A', 'Ä': 'A', 'Å': 'A', 'Æ': 'AE',
+	'Ç': 'C', 'È': 'E', 'É': 'E', 'Ê': 'E', 'Ë': 'E', 'Ì': 'I', 'Í': 'I',
+	'Î': 'I', 'Ï': 'I', 'Ð': 'D', 'Ñ': 'N', 'Ò': 'O', 'Ó': 'O', 'Ô': 'O',
+	'Õ': 'O', 'Ö': 'O', 'Ő': 'O', 'Ø': 'O', 'Ù': 'U', 'Ú': 'U', 'Û': 'U',
+	'Ü': 'U', 'Ű': 'U', 'Ý': 'Y', 'Þ': 'TH', 'ß': 'ss', 'à':'a', 'á':'a',
+	'â': 'a', 'ã': 'a', 'ä': 'a', 'å': 'a', 'æ': 'ae', 'ç': 'c', 'è': 'e',
+	'é': 'e', 'ê': 'e', 'ë': 'e', 'ì': 'i', 'í': 'i', 'î': 'i', 'ï': 'i',
+	'ð': 'd', 'ñ': 'n', 'ò': 'o', 'ó': 'o', 'ô': 'o', 'õ': 'o', 'ö': 'o',
+	'ő': 'o', 'ø': 'o', 'ù': 'u', 'ú': 'u', 'û': 'u', 'ü': 'u', 'ű': 'u',
+	'ý': 'y', 'þ': 'th', 'ÿ': 'y', 'ẞ': 'SS',
+	// greek
+	'α':'a', 'β':'b', 'γ':'g', 'δ':'d', 'ε':'e', 'ζ':'z', 'η':'h', 'θ':'8',
+	'ι':'i', 'κ':'k', 'λ':'l', 'μ':'m', 'ν':'n', 'ξ':'3', 'ο':'o', 'π':'p',
+	'ρ':'r', 'σ':'s', 'τ':'t', 'υ':'y', 'φ':'f', 'χ':'x', 'ψ':'ps', 'ω':'w',
+	'ά':'a', 'έ':'e', 'ί':'i', 'ό':'o', 'ύ':'y', 'ή':'h', 'ώ':'w', 'ς':'s',
+	'ϊ':'i', 'ΰ':'y', 'ϋ':'y', 'ΐ':'i',
+	'Α':'A', 'Β':'B', 'Γ':'G', 'Δ':'D', 'Ε':'E', 'Ζ':'Z', 'Η':'H', 'Θ':'8',
+	'Ι':'I', 'Κ':'K', 'Λ':'L', 'Μ':'M', 'Ν':'N', 'Ξ':'3', 'Ο':'O', 'Π':'P',
+	'Ρ':'R', 'Σ':'S', 'Τ':'T', 'Υ':'Y', 'Φ':'F', 'Χ':'X', 'Ψ':'PS', 'Ω':'W',
+	'Ά':'A', 'Έ':'E', 'Ί':'I', 'Ό':'O', 'Ύ':'Y', 'Ή':'H', 'Ώ':'W', 'Ϊ':'I',
+	'Ϋ':'Y',
+	// turkish
+	'ş':'s', 'Ş':'S', 'ı':'i', 'İ':'I', 'ğ':'g', 'Ğ':'G',
+	// russian
+	'а':'a', 'б':'b', 'в':'v', 'г':'g', 'д':'d', 'е':'e', 'ё':'yo', 'ж':'zh',
+	'з':'z', 'и':'i', 'й':'j', 'к':'k', 'л':'l', 'м':'m', 'н':'n', 'о':'o',
+	'п':'p', 'р':'r', 'с':'s', 'т':'t', 'у':'u', 'ф':'f', 'х':'h', 'ц':'c',
+	'ч':'ch', 'ш':'sh', 'щ':'sh', 'ъ':'u', 'ы':'y', 'ь':'', 'э':'e', 'ю':'yu',
+	'я':'ya',
+	'А':'A', 'Б':'B', 'В':'V', 'Г':'G', 'Д':'D', 'Е':'E', 'Ё':'Yo', 'Ж':'Zh',
+	'З':'Z', 'И':'I', 'Й':'J', 'К':'K', 'Л':'L', 'М':'M', 'Н':'N', 'О':'O',
+	'П':'P', 'Р':'R', 'С':'S', 'Т':'T', 'У':'U', 'Ф':'F', 'Х':'H', 'Ц':'C',
+	'Ч':'Ch', 'Ш':'Sh', 'Щ':'Sh', 'Ъ':'U', 'Ы':'Y', 'Ь':'', 'Э':'E', 'Ю':'Yu',
+	'Я':'Ya',
+	// ukranian
+	'Є':'Ye', 'І':'I', 'Ї':'Yi', 'Ґ':'G', 'є':'ye', 'і':'i', 'ї':'yi', 'ґ':'g',
+	// czech
+	'č':'c', 'ď':'d', 'ě':'e', 'ň': 'n', 'ř':'r', 'š':'s', 'ť':'t', 'ů':'u',
+	'ž':'z', 'Č':'C', 'Ď':'D', 'Ě':'E', 'Ň': 'N', 'Ř':'R', 'Š':'S', 'Ť':'T',
+	'Ů':'U', 'Ž':'Z',
+	// polish
+	'ą':'a', 'ć':'c', 'ę':'e', 'ł':'l', 'ń':'n', 'ś':'s', 'ź':'z',
+	'ż':'z', 'Ą':'A', 'Ć':'C', 'Ę':'e', 'Ł':'L', 'Ń':'N', 'Ś':'S',
+	'Ź':'Z', 'Ż':'Z',
+	// latvian
+	'ā':'a', 'ē':'e', 'ģ':'g', 'ī':'i', 'ķ':'k', 'ļ':'l', 'ņ':'n', 'ū':'u',
+	'Ā':'A', 'Ē':'E', 'Ģ':'G', 'Ī':'i', 'Ķ':'k', 'Ļ':'L', 'Ņ':'N', 'Ū':'u'
+};
+
+function unicode_to_ascii(text)
+{
+	var result = "";
+
+	for(var i=0,len=text.length;i<len;i++)
+	{
+		var c = text.charAt(i);
+		result += UNICODE_CONVERSION_MAP.hasOwnProperty(c) ? UNICODE_CONVERSION_MAP[c] : c;
+	}
+
+	return result;
 }
 
 function processTextBlocks(doc, textBlocks)
@@ -567,63 +716,3 @@ function processTextBoxChildren(doc, children)
 
 	return result;
 }
-
-function getCardParts(doc)
-{
-	return doc("table.cardDetails").map(function(i, item) { return doc(item); });
-}
-
-function getDoc(multiverseid, cb)
-{
-	tiptoe(
-		function getHTML()
-		{
-			var pageURL = url.format(
-			{
-				protocol : "http",
-				host     : "gatherer.wizards.com",
-				pathname : "/Pages/Card/Details.aspx",
-				query    :
-				{
-					multiverseid : multiverseid,
-					printed      : "false"
-				}
-			});
-
-			if(fs.existsSync(path.join("/", "tmp", multiverseid + ".html")))
-				fs.readFile(path.join("/", "tmp", multiverseid + ".html"), {encoding:"utf8"}, function(err, data) { this(null, null, data); }.bind(this));
-			else
-				request(pageURL, this);
-		},
-		function createDoc(err, response, pageHTML)
-		{
-			if(err)
-				return setImmediate(function() { cb(err); });
-
-			if(!fs.existsSync(path.join("/", "tmp", multiverseid + ".html")))
-				fs.writeFileSync(path.join("/", "tmp", multiverseid + ".html"), pageHTML, {encoding:"utf8"});
-
-			setImmediate(function() { cb(null, cheerio.load(pageHTML)); }.bind(this));
-		}
-	);
-}
-
-exports.tmp = function(cb)
-{
-	tiptoe(
-		function step1()
-		{
-			getDoc(process.argv[2], this);
-		},
-		function step2(doc)
-		{
-			var cardParts = getCardParts(doc);
-			cardParts.forEach(function(cardPart) { base.info(processCardPart(doc, cardPart)); });
-			this();
-		},
-		function finish(err)
-		{
-			setImmediate(function() { cb(err); });
-		}
-	);
-};
