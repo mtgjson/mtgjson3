@@ -65,6 +65,30 @@ var SET_CORRECTIONS =
 		{ renumberImages : "Plains", order : [2773, 2771, 2772] },
 		{ renumberImages : "Swamp", order : [2744, 2743, 2745] }
 	],
+	HML :
+	[
+		{ renumberImages : "Abbey Matron", order : [3011, 3012] },
+		{ renumberImages : "Ambush Party", order : [2989, 2988] },
+		{ renumberImages : "Anaba Bodyguard", order : [2992, 2993] },
+		{ renumberImages : "Anaba Shaman", order : [2995, 2994] },
+		{ renumberImages : "Carapace", order : [2963, 2964] },
+		{ renumberImages : "Dark Maze", order : [2940, 2939] },
+		{ renumberImages : "Dwarven Trader", order : [3000, 3001] },
+		{ renumberImages : "Folk of An-Havva", order : [2968, 2967] },
+		{ renumberImages : "Hungry Mist", order : [2969, 2970] },
+		{ renumberImages : "Mesa Falcon", order : [3022, 3021] },
+		{ renumberImages : "Reef Pirates", order : [2955, 2954] },
+		{ renumberImages : "Sengir Bats", order : [2930, 2929] },
+		{ renumberImages : "Willow Faerie", order : [2982, 2983] }
+	],
+	XYZ :
+	[
+		{ renumberImages : "", order : [] },
+		{ renumberImages : "", order : [] },
+		{ renumberImages : "", order : [] },
+		{ renumberImages : "", order : [] },
+		{ renumberImages : "", order : [] }
+	],	
 	XXX :
 	[
 		{ renumberImages : "Forest", order : [] },
