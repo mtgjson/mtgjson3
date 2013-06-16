@@ -135,6 +135,93 @@ var SET_CORRECTIONS =
 		{ match : {multiverseid: 78968}, replace : {number : "160a"} },
 		{ match : {multiverseid: 85106}, replace : {number : "160b"} }
 	],
+	BOK :
+	[
+		{ match : {name: "Budoka Pupil"}, replace :
+			{
+				number : "122a", layout : "flip", names : ["Budoka Pupil", "Ichiga, Who Topples Oaks"]
+			}
+		},
+		{ copyCard : "Budoka Pupil", replace :
+			{
+				name       : "Ichiga, Who Topples Oaks",
+				number     : "122b",
+				text       : "Trample\n\nRemove a ki counter from Ichiga, Who Topples Oaks: Target creature gets +2/+2 until end of turn.",
+				type       : "Legendary Creature - Spirit",
+				supertypes : ["Legendary"],
+				types      : ["Creature"],
+				subtypes   : ["Spirit"],
+				power      : "4",
+				toughness  : "4",
+				imageName  : "ichiga, who topples oaks"
+			}
+		},
+		{ match : {name: "Callow Jushi"}, replace :
+			{
+				number : "31a",
+				layout : "flip",
+				names : ["Callow Jushi", "Jaraku the Interloper"],
+				text : "Whenever you cast a Spirit or Arcane spell, you may put a ki counter on Callow Jushi.\n\nAt the beginning of the end step, if there are two or more ki counters on Callow Jushi, you may flip it."
+			}
+		},
+		{ copyCard : "Callow Jushi", replace :
+			{
+				name       : "Jaraku the Interloper",
+				number     : "31b",
+				text       : "Remove a ki counter from Jaraku the Interloper: Counter target spell unless its controller pays {2}.",
+				type       : "Legendary Creature - Spirit",
+				supertypes : ["Legendary"],
+				types      : ["Creature"],
+				subtypes   : ["Spirit"],
+				power      : "3",
+				toughness  : "4",
+				imageName  : "jaraku the interloper"
+			}
+		},
+		{ match : {name: "Cunning Bandit"}, replace :
+			{
+				number : "99a",
+				layout : "flip",
+				names : ["Cunning Bandit", "Azamuki, Treachery Incarnate"]
+			}
+		},
+		{ copyCard : "Cunning Bandit", replace :
+			{
+				name       : "Azamuki, Treachery Incarnate",
+				number     : "99b",
+				text       : "Remove a ki counter from Azamuki, Treachery Incarnate: Gain control of target creature until end of turn.",
+				type       : "Legendary Creature - Spirit",
+				supertypes : ["Legendary"],
+				types      : ["Creature"],
+				subtypes   : ["Spirit"],
+				power      : "5",
+				toughness  : "2",
+				imageName  : "azamuki, treachery incarnate"
+			}
+		},
+		{ match : {name: "Hired Muscle"}, replace :
+			{
+				number : "69a",
+				layout : "flip",
+				names : ["Hired Muscle", "Scarmaker"],
+				text : "Whenever you cast a Spirit or Arcane spell, you may put a ki counter on Hired Muscle.\n\nAt the beginning of the end step, if there are two or more ki counters on Hired Muscle, you may flip it."
+			}
+		},
+		{ copyCard : "Hired Muscle", replace :
+			{
+				name       : "Scarmaker",
+				number     : "69b",
+				text       : "Remove a ki counter from Scarmaker: Target creature gains fear until end of turn. (It can't be blocked except by artifact creatures and/or black creatures.)",
+				type       : "Legendary Creature - Spirit",
+				supertypes : ["Legendary"],
+				types      : ["Creature"],
+				subtypes   : ["Spirit"],
+				power      : "4",
+				toughness  : "4",
+				imageName  : "scarmaker"
+			}
+		}
+	],
 	XYZ :
 	[
 		{ renumberImages : "", order : [] },
@@ -261,6 +348,15 @@ function ripSet(setName, cb)
 						if(setCorrection.match && setCorrection.replace && Object.every(setCorrection.match, function(key, value) { return card[key]===value; }))
 							Object.forEach(setCorrection.replace, function(key, value) { card[key] = value; });
 					});
+
+					if(setCorrection.copyCard)
+					{
+						var newCard = base.clone(this.data.set.cards.mutateOnce(function(card) { return card.name===setCorrection.copyCard ? card : undefined; }), true);
+						if(setCorrection.replace)
+							Object.forEach(setCorrection.replace, function(key, value) { newCard[key] = value; });
+
+						this.data.set.cards.push(newCard);
+					}
 				}.bind(this));
 			}
 
