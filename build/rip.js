@@ -456,7 +456,7 @@ exports.ripSet = ripSet;
 function processMultiverseids(multiverseids, cb)
 {
 	var cards = [];
-	var dualCardNames = [];
+	var doubleFacedCardNames = [];
 
 	multiverseids.unique().serialForEach(function(multiverseid, subcb)
 	{
@@ -482,11 +482,11 @@ function processMultiverseids(multiverseids, cb)
 						newCards.push(processCardPart(multiverseDoc, cardPart));
 					});
 
-					if(newCards.length===2 && newCards[0].layout==="dual")
+					if(newCards.length===2 && newCards[0].layout==="double-faced")
 					{
-						var dualCardName = newCards[0].names.join(":::");
-						if(!dualCardNames.contains(dualCardName))
-							dualCardNames.push(dualCardName);
+						var doubleFacedCardName = newCards[0].names.join(":::");
+						if(!doubleFacedCardNames.contains(doubleFacedCardName))
+							doubleFacedCardNames.push(doubleFacedCardName);
 						else
 							newCards = [];
 					}
@@ -530,7 +530,7 @@ function processCardPart(doc, cardPart)
 		card.names = fullCardName.split(" // ").filter(function(splitName) { return splitName.trim(); });
 	}
 
-	// Check for flip or dual card
+	// Check for flip or double-faced card
 	var cardParts = getCardParts(doc);
 	if(cardParts.length===2)
 	{
@@ -538,7 +538,7 @@ function processCardPart(doc, cardPart)
 		if(firstCardText.contains("flip"))
 			card.layout = "flip";
 		else if(firstCardText.contains("transform"))
-			card.layout = "dual";
+			card.layout = "double-faced";
 		else
 			base.warn("Unknown card layout for multiverseid: %s", card.multiverseid);
 

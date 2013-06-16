@@ -1,0 +1,212 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!--[if IE]><![endif]-->
+<html>
+	<head>
+		<title>Magic the Gathering card data in JSON format</title>
+		<link type="text/css" rel="stylesheet" href="index.css">
+		<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+		<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+		<link type="text/css" rel="stylesheet" href="solarized-dark.css">
+	</head>
+	<body>
+		<script type="text/javascript" src="rainbow-custom.min.js"></script>
+		Abc 123
+		<h1>Example Card</h1>
+		<img src="sentriplets.jpg" id="cardExample">
+		<pre><code data-language="javascript">
+    {
+                name : "Sen Triplets",
+
+            manaCost : "{2}",
+                 cmc : 5,
+              colors : ["White", "Blue", "Black"],
+
+                type : "Legendary Artifact Creature - Human Wizard",
+          supertypes : ["Legendary"],
+               types : ["Artifact", "Creature"],
+            subtypes : ["Human", "Wizard"],
+
+              rarity : "Mythic Rare",
+
+                text : "At the beginning of your upkeep, choose target opponent.
+                        This turn, that player can't cast spells or activate
+                        abilities and plays with his or her hand revealed.
+                        You may play cards from that player's hand this turn.",
+
+              flavor : "They are the masters of your mind.",
+
+              artist : "Greg Staples",
+              number : "109",
+
+               power : "3",
+           toughness : "3",
+
+              layout : "normal",
+        multiverseid : 180607,
+           imageName : "sen triplets",
+    }
+		</code></pre>
+		<p>Here a list of all possible fields for a card:</p>
+		<table id="docs">
+			<thead>
+				<tr>
+					<th>Key</th>
+					<th>Example</th>
+					<th>Description</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>name</td>
+					<td>"Research"</td>
+					<td>The card name. For split cards, just the name of one side of the card.</td>
+				</tr>
+				<tr>
+					<td>names</td>
+					<td>["Research", "Development"]</td>
+					<td>Only used for split, flip and dual cards. Will contain all the names on this card, front or back.</td>
+				</tr>
+				<tr>
+					<td>manaCost</td>
+					<td>"{G}{U}"</td>
+					<td>The mana cost of this card. Consists of one or more <a href="#manaSymbolsTable">mana symbols</a>.</td>
+				</tr>
+				<tr>
+					<td>cmc</td>
+					<td>2</td>
+					<td>Converted mana cost. Always a number.</td>
+				</tr>
+				<tr>
+					<td>colors</td>
+					<td>["Blue", "Green"]</td>
+					<td>The card colors. Usually this is derived from the casting cost, but some cards are special (like the back of dual sided cards and Ghostfire).</td>
+				</tr>
+				<tr>
+					<td>type</td>
+					<td>"Legendary Creature - Angel"</td>
+					<td>The card type. This is the type you would see on the card if printed today.</td>
+				</tr>
+				<tr>
+					<td>supertypes</td>
+					<td>["Legendary"]</td>
+					<td>The supertypes of the card. These appear to the far left of the card type. Possible values (not exhaustive): Basic, Legendary, Snow, World</td>
+				</tr>
+				<tr>
+					<td>types</td>
+					<td>["Creature"]</td>
+					<td>The types of the card. These appear to the left of the dash in a card type. Possible values (not exhaustive): Instant, Sorcery, Artifact, Creature, Enchantment, Land, Planeswalker</td>
+				</tr>
+				<tr>
+					<td>subtypes</td>
+					<td>["Angel"]</td>
+					<td>The subtypes of the card. These appear to the right of the dash in a card type. Usually each word is it's own subtype. Possible values (not exhaustive): Trap, Arcane, Equipment, Aura, Human, Rat, Squirrel, etc.</td>
+				</tr>
+				<tr>
+					<td>rarity</td>
+					<td>"Rare"</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+		<p>Keys will not exist if they would have no value, such as manaCost for Basic Lands.</p>
+		<a name="manaSymbolsTable"></a>
+		<table id="manaSymbols">
+			<thead>
+					<tr>
+						<th>Symbol</th>
+						<th>Text</th>
+					</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th></th>
+					<th></th>
+				</tr>
+			</tbody>
+		</table>
+		<table id="otherSymbols">
+			<thead>
+					<tr>
+						<th>Symbol</th>
+						<th>Text</th>
+					</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th></th>
+					<th></th>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>
