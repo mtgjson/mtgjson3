@@ -222,6 +222,14 @@ var SET_CORRECTIONS =
 			}
 		}
 	],
+	SOK :
+	[
+		{ match : {name: "Erayo's Essence"}, remove : ["power", "toughness"] },
+		{ match : {name: "Homura's Essence"}, remove : ["power", "toughness"] },
+		{ match : {name: "Kuon's Essence"}, remove : ["power", "toughness"] },
+		{ match : {name: "Rune-Tail's Essence"}, remove : ["power", "toughness"] },
+		{ match : {name: "Sasaya's Essence"}, remove : ["power", "toughness"] }
+	],
 	XYZ :
 	[
 		{ renumberImages : "", order : [] },
@@ -345,8 +353,13 @@ function ripSet(setName, cb)
 				{
 					this.data.set.cards.forEach(function(card)
 					{
-						if(setCorrection.match && setCorrection.replace && Object.every(setCorrection.match, function(key, value) { return card[key]===value; }))
-							Object.forEach(setCorrection.replace, function(key, value) { card[key] = value; });
+						if(setCorrection.match && Object.every(setCorrection.match, function(key, value) { return card[key]===value; }))
+						{
+							if(setCorrection.replace)
+								Object.forEach(setCorrection.replace, function(key, value) { card[key] = value; });
+							if(setCorrection.remove)
+								setCorrection.remove.forEach(function(removeKey) { delete card[removeKey]; });
+						}
 					});
 
 					if(setCorrection.copyCard)
