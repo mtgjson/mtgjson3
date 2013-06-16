@@ -58,6 +58,14 @@ var SET_CORRECTIONS =
 		{ renumberImages : "Vodalian Mage", order : [1896, 1898, 1897] },
 		{ renumberImages : "Vodalian Soldiers", order : [1899, 1901, 1900, 1902] }
 	],
+	"4ED" :
+	[
+		{ renumberImages : "Forest", order : [2377, 2378, 2379] },
+		{ renumberImages : "Island", order : [2390, 2389, 2391] },
+		{ renumberImages : "Mountain", order : [2383, 2381, 2382] },
+		{ renumberImages : "Plains", order : [2386, 2385, 2384] },
+		{ renumberImages : "Swamp", order : [2375, 2376, 2374] }
+	],	
 	ICE :
 	[
 		{ renumberImages : "Forest", order : [2748, 2746, 2747] },
@@ -115,6 +123,14 @@ var SET_CORRECTIONS =
 		{ renumberImages : "Mountain", order : [3580, 3578, 3579, 3577] },
 		{ renumberImages : "Plains", order : [3585, 3587, 3586, 3588] },
 		{ renumberImages : "Swamp", order : [3562, 3563, 3564, 3565] }
+	],
+	"5ED" :
+	[
+		{ renumberImages : "Forest", order : [4171, 4172, 4173, 4174] },
+		{ renumberImages : "Island", order : [4199, 4200, 4201, 4202] },
+		{ renumberImages : "Mountain", order : [4195, 4196, 4197, 4198] },
+		{ renumberImages : "Plains", order : [4204, 4206, 4205, 4203] },
+		{ renumberImages : "Swamp", order : [4169, 4168, 4167, 4170] }
 	],
 	TMP :
 	[

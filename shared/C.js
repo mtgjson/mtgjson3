@@ -142,7 +142,7 @@
 			border : "black"
 		},
 		{
-			name : "Sixth Edition",
+			name : "Classic Sixth Edition",
 			code : "6ED",
 			releaseDate : "1999-04-21",
 			border : "white"
