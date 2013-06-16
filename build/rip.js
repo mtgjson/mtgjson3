@@ -125,6 +125,16 @@ var SET_CORRECTIONS =
 		{ renumberImages : "Ertai, the Corrupted", order : [25614, 29292] },
 		{ renumberImages : "Skyship Weatherlight", order : [26480, 29293] }
 	],
+	TOR :
+	[
+		{ match : {name: "Cabal Coffers"}, replace : {artist : "Don Hazeltine"} }
+	],
+	CHK :
+	[
+		{ renumberImages : "Brothers Yamazaki", order : [78968, 85106] },
+		{ match : {multiverseid: 78968}, replace : {number : "160a"} },
+		{ match : {multiverseid: 85106}, replace : {number : "160b"} }
+	],
 	XYZ :
 	[
 		{ renumberImages : "", order : [] },
@@ -303,6 +313,11 @@ function processMultiverseids(multiverseids, cb)
 	}, function(err) { return cb(err, cards); });
 }
 
+function getCardPartIDPrefix(cardPart)
+{
+	return "#" + cardPart.find(".rightCol").attr("id").replaceAll("_rightCol", "");
+}
+
 function processCardPart(doc, cardPart)
 {
 	var card =
@@ -313,8 +328,12 @@ function processCardPart(doc, cardPart)
 		types      : []
 	};
 
-	var idPrefix = "#" + cardPart.find(".rightCol").attr("id").replaceAll("_rightCol", "");
+	var idPrefix = getCardPartIDPrefix(cardPart);
 
+	// Multiverseid
+	card.multiverseid = +querystring.parse(url.parse(doc("#aspnetForm").attr("action")).query).multiverseid.trim();
+
+	// Check for split card
 	var fullCardName = doc("#ctl00_ctl00_ctl00_MainContent_SubContent_SubContentHeader_subtitleDisplay").text().trim();
 	if(fullCardName.contains(" // "))
 	{
@@ -322,8 +341,20 @@ function processCardPart(doc, cardPart)
 		card.names = fullCardName.split(" // ").filter(function(splitName) { return splitName.trim(); });
 	}
 
-	// Multiverseid
-	card.multiverseid = +querystring.parse(url.parse(doc("#aspnetForm").attr("action")).query).multiverseid.trim();
+	// Check for flip or dual card
+	var cardParts = getCardParts(doc);
+	if(cardParts.length===2)
+	{
+		var firstCardText = processTextBlocks(doc, cardParts[0].find(getCardPartIDPrefix(cardParts[0]) + "_textRow .value .cardtextbox")).trim().toLowerCase();
+		if(firstCardText.contains("flip"))
+			card.layout = "flip";
+		else if(firstCardText.contains("transform"))
+			card.layout = "dual";
+		else
+			base.warn("Unknown card layout for multiverseid: %s", card.multiverseid);
+
+		card.names = [cardParts[0].find(getCardPartIDPrefix(cardParts[0]) + "_nameRow .value").text().trim(), cardParts[1].find(getCardPartIDPrefix(cardParts[1]) + "_nameRow .value").text().trim()];
+	}
 
 	// Card Name
 	card.name = cardPart.find(idPrefix + "_nameRow .value").text().trim();
@@ -455,6 +486,7 @@ function getURLsForMultiverseid(multiverseid, cb)
 					urls.push(buildMultiverseURL(multiverseid));
 				}
 			});
+			urls = urls.unique();
 
 			setImmediate(function() { cb(null, urls); }.bind(this));
 		}
