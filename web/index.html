@@ -57,6 +57,11 @@
 			</thead>
 			<tbody>
 				<tr>
+					<td>layout</td>
+					<td>"normal"</td>
+					<td>The card layout. Possible values: normal, split, flip, dual-faced</td>
+				</tr>
+				<tr>
 					<td>name</td>
 					<td>"Research"</td>
 					<td>The card name. For split cards, just the name of one side of the card.</td>
@@ -104,81 +109,63 @@
 				<tr>
 					<td>rarity</td>
 					<td>"Rare"</td>
-					<td></td>
+					<td>The rarity of the card. Possible values (not exhaustive): Common, Uncommon, Rare, Mythic Rare</td>
 				</tr>
 				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
+					<td>text</td>
+					<td>"{T}: You gain 1 life."</td>
+					<td>The text of the card. May contain <a href="#manaSymbolsTable">mana symbols</a> and <a href="#otherSymbols">other symbols</a>.</td>
 				</tr>
 				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
+					<td>flavor</td>
+					<td>"I'd like to buy a bowel."</td>
+					<td>The flavor text of the card.</td>
 				</tr>
 				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
+					<td>artist</td>
+					<td>"Mark Poole"</td>
+					<td>The artist of the card.</td>
 				</tr>
 				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
+					<td>number</td>
+					<td>"148a"</td>
+					<td>The card number. This is printed at the bottom-center of the card in small text. This is a string, not an integer, because some cards have letters in their numbers.</td>
 				</tr>
 				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
+					<td>power</td>
+					<td>"4"</td>
+					<td>The power of the card. This is only present for creatures. This is a string, not an integer, because some cards have powers like: "1+*"</td>
 				</tr>
 				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
+					<td>toughness</td>
+					<td>"5"</td>
+					<td>The toughness of the card. This is only present for creatures. This is a string, not an integer, because some cards have toughness like: "1+*"</td>
 				</tr>
 				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
+					<td>loyalty</td>
+					<td>4</td>
+					<td>The loyalty of the card. This is only present for planeswalkers.</td>
 				</tr>
 				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
+					<td>multiverseid</td>
+					<td>2479</td>
+					<td>The multiverseid of the card on Wizard's Gatherer web page.</td>
 				</tr>
 				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
+					<td>variations</td>
+					<td>[78968, 85106]</td>
+					<td>If a card has alternate art (for example, 4 different Forests, or the 2 Brothers Yamazaki) then each variation's multiverseid will be listed here, including the current card's multiverseid.</td>
 				</tr>
 			</tbody>
 		</table>
-		<p>Keys will not exist if they would have no value, such as manaCost for Basic Lands.</p>
+		<p>Keys will not exist if they would have no value, such as manaCost for Basic Lands.<br>
+		<br>
+		All cards are the latest Oracle text, not the original printed text.<br>
+		<br>
+		Can you think of more to add?<br>
+		<br>
+		Any bugs or problems or suggestions? E-mail me at <a href="mailto:robert@cosmicrealms.com">robert@cosmicrealms.com</a>
+		</p>
 		<a name="manaSymbolsTable"></a>
 		<table id="manaSymbols">
 			<thead>

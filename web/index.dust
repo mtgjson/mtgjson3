@@ -11,6 +11,7 @@
 	<body>
 		<script type="text/javascript" src="rainbow-custom.min.js"></script>
 		Abc 123
+		<a name="exampleCard"></a>
 		<h1>Example Card</h1>
 		<img src="sentriplets.jpg" id="cardExample">
 		<pre><code data-language="javascript">
@@ -46,7 +47,9 @@
            imageName : "sen triplets",
     }
 		</code></pre>
-		<p>Here a list of all possible fields for a card:</p>
+		
+		<a name="docsTable"></a>
+		<h1>Documentation</h1>
 		<table id="docs">
 			<thead>
 				<tr>
@@ -56,6 +59,11 @@
 				</tr>
 			</thead>
 			<tbody>
+				<tr>
+					<td>layout</td>
+					<td>"normal"</td>
+					<td>The card layout. Possible values: normal, split, flip, dual-faced</td>
+				</tr>
 				<tr>
 					<td>name</td>
 					<td>"Research"</td>
@@ -108,77 +116,59 @@
 				</tr>
 				<tr>
 					<td>text</td>
-					<td>"{~lb}T{~rb}: Prodigal Sorcerer deals 1 damage to target creature or player."</td>
+					<td>"{~lb}T{~rb}: You gain 1 life."</td>
 					<td>The text of the card. May contain <a href="#manaSymbolsTable">mana symbols</a> and <a href="#otherSymbols">other symbols</a>.</td>
 				</tr>
 				<tr>
 					<td>flavor</td>
-					<td>"He wastes his amazing talents on proving how amazing he really is."</td>
+					<td>"I'd like to buy a bowel."</td>
 					<td>The flavor text of the card.</td>
 				</tr>
 				<tr>
 					<td>artist</td>
 					<td>"Mark Poole"</td>
-					<td></td>
+					<td>The artist of the card.</td>
 				</tr>
 				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
+					<td>number</td>
+					<td>"148a"</td>
+					<td>The card number. This is printed at the bottom-center of the card in small text. This is a string, not an integer, because some cards have letters in their numbers.</td>
 				</tr>
 				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
+					<td>power</td>
+					<td>"4"</td>
+					<td>The power of the card. This is only present for creatures. This is a string, not an integer, because some cards have powers like: "1+*"</td>
 				</tr>
 				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
+					<td>toughness</td>
+					<td>"5"</td>
+					<td>The toughness of the card. This is only present for creatures. This is a string, not an integer, because some cards have toughness like: "1+*"</td>
 				</tr>
 				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
+					<td>loyalty</td>
+					<td>4</td>
+					<td>The loyalty of the card. This is only present for planeswalkers.</td>
 				</tr>
 				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
+					<td>multiverseid</td>
+					<td>2479</td>
+					<td>The multiverseid of the card on Wizard's Gatherer web page.</td>
 				</tr>
 				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
+					<td>variations</td>
+					<td>[78968, 85106]</td>
+					<td>If a card has alternate art (for example, 4 different Forests, or the 2 Brothers Yamazaki) then each variation's multiverseid will be listed here, including the current card's multiverseid.</td>
 				</tr>
 			</tbody>
 		</table>
-		<p>Keys will not exist if they would have no value, such as manaCost for Basic Lands.</p>
+		<p>Keys will not exist if they would have no value, such as manaCost for Basic Lands.<br>
+		<br>
+		All cards are the latest Oracle text, not the original printed text.<br>
+		<br>
+		Can you think of more to add?<br>
+		<br>
+		Any bugs or problems or suggestions? E-mail me at <a href="mailto:robert@cosmicrealms.com">robert@cosmicrealms.com</a>
+		</p>
 		<a name="manaSymbolsTable"></a>
 		<table id="manaSymbols">
 			<thead>
@@ -189,8 +179,65 @@
 			</thead>
 			<tbody>
 				<tr>
-					<th></th>
-					<th>{W}</th>
+					<td><img src="w.png"></td>
+					<td>{W}</td>
+				</tr>
+				<tr>
+					<td><img src="u.png"></td>
+					<td>{U}</td>
+				</tr>
+				<tr>
+					<td><img src="b.png"></td>
+					<td>{B}</td>
+				</tr>
+				<tr>
+					<td><img src="r.png"></td>
+					<td>{R}</td>
+				</tr>
+				<tr>
+					<td><img src="g.png"></td>
+					<td>{G}</td>
+				</tr>
+				<tr>
+					<td><img src="0.png"></td>
+					<td>{0}</td>
+				</tr>
+				<tr>
+					<td><img src="1.png"></td>
+					<td>{1}</td>
+				</tr>
+				<tr><td colspan="2" style="text-align: center;">other numbers...</td></tr>
+				<tr>
+					<td><img src="x.png"></td>
+					<td>{X}</td>
+				</tr>
+				<tr>
+					<td><img src="p.png"></td>
+					<td>{P}</td>
+				</tr>
+				<tr>
+					<td><img src="pw.png"></td>
+					<td>{PW}</td>
+				</tr>
+				<tr>
+					<td><img src="pu.png"></td>
+					<td>{PU}</td>
+				</tr>
+				<tr>
+					<td><img src="pb.png"></td>
+					<td>{PB}</td>
+				</tr>
+				<tr>
+					<td><img src="pr.png"></td>
+					<td>{PR}</td>
+				</tr>
+				<tr>
+					<td><img src="pg.png"></td>
+					<td>{PG}</td>
+				</tr>
+				<tr>
+					<td><img src="s.png"></td>
+					<td>{S}</td>
 				</tr>
 			</tbody>
 		</table>

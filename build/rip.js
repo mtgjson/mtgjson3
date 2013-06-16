@@ -590,7 +590,7 @@ function processCardPart(doc, cardPart)
 		// Loyalty
 		if(card.types.contains("Planeswalker"))
 		{
-			card.loyalty = powerToughnessValue.trim();
+			card.loyalty = +powerToughnessValue.trim();
 		}
 		else
 		{
