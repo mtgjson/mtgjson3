@@ -440,6 +440,7 @@ exports.ripSet = ripSet;
 function processMultiverseids(multiverseids, cb)
 {
 	var cards = [];
+	var dualCardNames = [];
 
 	multiverseids.unique().serialForEach(function(multiverseid, subcb)
 	{
@@ -459,7 +460,22 @@ function processMultiverseids(multiverseids, cb)
 			{
 				Array.prototype.slice.call(arguments).forEach(function(multiverseDoc)
 				{
-					getCardParts(multiverseDoc).forEach(function(cardPart) { cards.push(processCardPart(multiverseDoc, cardPart)); });
+					var newCards = [];
+					getCardParts(multiverseDoc).forEach(function(cardPart)
+					{
+						newCards.push(processCardPart(multiverseDoc, cardPart));
+					});
+
+					if(newCards.length===2 && newCards[0].layout==="dual")
+					{
+						var dualCardName = newCards[0].names.join(":::");
+						if(!dualCardNames.contains(dualCardName))
+							dualCardNames.push(dualCardName);
+						else
+							newCards = [];
+					}
+
+					cards = cards.concat(newCards);
 				});
 
 				this();
@@ -591,7 +607,15 @@ function processCardPart(doc, cardPart)
 				card.colors.push(colorName);
 		});
 	});
-	card.colors = card.colors.unique().sort(function(a, b) { return COLOR_ORDER.indexOf(a)-COLOR_ORDER.indexOf(b); });
+
+	var cardColorIndicators = cardPart.find(idPrefix + "_colorIndicatorRow .value").text().trim().toLowerCase().split(",").map(function(cardColorIndicator) { return cardColorIndicator.trim(); }) || [];
+	cardColorIndicators.forEach(function(cardColorIndicator)
+	{
+		if(cardColorIndicator && COLOR_ORDER.contains(cardColorIndicator))
+			card.colors.push(cardColorIndicator);
+	});
+
+	card.colors = card.colors.unique().sort(function(a, b) { return COLOR_ORDER.indexOf(a)-COLOR_ORDER.indexOf(b); }).map(function(color) { return color.toProperCase(); });
 
 	// Text
 	var cardText = processTextBlocks(doc, cardPart.find(idPrefix + "_textRow .value .cardtextbox")).trim();
@@ -740,15 +764,15 @@ exports.tmp = function(cb)
 	);
 };
 
-var COLOR_ORDER = ["White", "Blue", "Black", "Red", "Green"];
+var COLOR_ORDER = ["white", "blue", "black", "red", "green"];
 
 var COLOR_SYMBOL_TO_NAME_MAP =
 {
-	"W" : "White",
-	"U" : "Blue",
-	"B" : "Black",
-	"R" : "Red",
-	"G" : "Green"
+	"W" : "white",
+	"U" : "blue",
+	"B" : "black",
+	"R" : "red",
+	"G" : "green"
 };
 
 var SYMBOL_CONVERSION_MAP =

@@ -21,6 +21,7 @@
 					<td class="data">
 						<div class="textCard">
 							<span class="name">{name}</span>
+							<span class="names">{?names}[{#names}{.}{@sep}, {/sep}{/names}]{/names}</span>
 							<span class="manaCost">{manaCost}</span>
 							<span class="cmc">{?cmc}cmc: {cmc}{/cmc}</span>
 							<span class="colors">{?colors}[{#colors}{.}{@sep}, {/sep}{/colors}]{/colors}</span>
