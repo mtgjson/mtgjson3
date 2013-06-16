@@ -230,6 +230,10 @@ var SET_CORRECTIONS =
 		{ match : {name: "Rune-Tail's Essence"}, remove : ["power", "toughness"] },
 		{ match : {name: "Sasaya's Essence"}, remove : ["power", "toughness"] }
 	],
+	FUT :
+	[
+		{ match : {name : "Ghostfire"}, remove : ["colors"] }
+	],
 	XYZ :
 	[
 		{ renumberImages : "", order : [] },
