@@ -434,7 +434,8 @@ function processCardPart(doc, cardPart)
 		layout     : "normal",
 		supertypes : [],
 		type       : "",
-		types      : []
+		types      : [],
+		colors     : []
 	};
 
 	var idPrefix = getCardPartIDPrefix(cardPart);
@@ -529,9 +530,21 @@ function processCardPart(doc, cardPart)
 	}
 
 	// Mana Cost
-	var cardManaCost = cardPart.find(idPrefix + "_manaRow .value img").map(function(i, item) { return doc(item); }).map(function(manaCost) { return processSymbol(manaCost.attr("alt")); }).join("");
+	var cardManaCosts = cardPart.find(idPrefix + "_manaRow .value img").map(function(i, item) { return doc(item); }).map(function(manaCost) { return processSymbol(manaCost.attr("alt")); });
+	var cardManaCost = cardManaCosts.join("");
 	if(cardManaCost)
 		card.manaCost = cardManaCost;
+
+	// Colors
+	cardManaCosts.forEach(function(manaCost)
+	{
+		Object.forEach(COLOR_SYMBOL_TO_NAME_MAP, function(colorSymbol, colorName)
+		{
+			if(manaCost.contains(colorSymbol))
+				card.colors.push(colorName);
+		});
+	});
+	card.colors = card.colors.unique().sort(function(a, b) { return COLOR_ORDER.indexOf(a)-COLOR_ORDER.indexOf(b); });
 
 	// Text
 	var cardText = processTextBlocks(doc, cardPart.find(idPrefix + "_textRow .value .cardtextbox")).trim();
@@ -676,12 +689,23 @@ exports.tmp = function(cb)
 	);
 };
 
+var COLOR_ORDER = ["White", "Blue", "Black", "Red", "Green"];
+
+var COLOR_SYMBOL_TO_NAME_MAP =
+{
+	"W" : "White",
+	"U" : "Blue",
+	"B" : "Black",
+	"R" : "Red",
+	"G" : "Green"
+};
+
 var SYMBOL_CONVERSION_MAP =
 {
 	"white"              : "W",
+	"blue"               : "U",
 	"black"              : "B",
 	"red"                : "R",
-	"blue"               : "U",
 	"green"              : "G",
 	"zero"               : "0",
 	"one"                : "1",

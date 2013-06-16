@@ -52,7 +52,8 @@ body {
 #cards tr.card td.data .textCard .manaCost,
 #cards tr.card td.data .textCard .cmc,
 #cards tr.card td.data .textCard .rarity,
-#cards tr.card td.data .textCard .powerToughnessLoyalty {
+#cards tr.card td.data .textCard .powerToughnessLoyalty,
+#cards tr.card td.data .textCard .colors {
   right: 0.5em;
 }
 #cards tr.card td.data .textCard .name,
@@ -65,6 +66,9 @@ body {
 }
 #cards tr.card td.data .textCard .cmc {
   top: 2em;
+}
+#cards tr.card td.data .textCard .colors {
+  top: 3.5em;
 }
 #cards tr.card td.data .textCard .types {
   top: 13.5em;
