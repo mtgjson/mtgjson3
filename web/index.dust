@@ -74,7 +74,7 @@
     {
                 name : "Sen Triplets",
 
-            manaCost : "{2}{W}{U}{B}",
+            manaCost : "{~lb}2{~rb}{~lb}W{~rb}{~lb}U{~rb}{~lb}B{~rb}",
                  cmc : 5,
               colors : ["White", "Blue", "Black"],
 
@@ -132,7 +132,7 @@
 				<tr>
 					<td>name</td>
 					<td>"Research"</td>
-					<td>The card name. For split cards, just the name of one side of the card.</td>
+					<td>The card name. For split, dual-faced and flip cards, just the name of one side of the card. Basically each 'sub-card' has it's own record.</td>
 				</tr>
 				<tr>
 					<td>names</td>
@@ -382,6 +382,7 @@
 			<li>There is no image extension such as .jpg</li>
 			<li>The set 'code' names from CCGHQ are not the standard ones. I use the code names from <a href="http://wiki.mtgsalvation.com/article/Main_Page">MTG Salvation Wiki</a></li>
 		</ul>
+		<br>
 		<p>Also, there were a few inconsistencies with the CCGHQ images. These need to be fixed:</p>
 		<ul>
 			<li>Alpha and Revised spelled "will-o'-the-wisp" incorrectly. They forgot the apostrophe. (Funny enough, they got it right for Beta and Unlimited)</li>
@@ -392,11 +393,11 @@
 		<hr>
 		<a name="thanks"></a>
 		<h1>Thanks<a href="#top">(back to top)</a></h1>
-		<p>Thanks a lot to:</p>
 		<ul>
 			<li><a href="http://wiki.mtgsalvation.com/article/Main_Page">MTG Salvation Wiki</a> for an AWESOME resource</li>
 			<li>The kind soul who provided the <a href="http://www.slightlymagic.net/forum/viewtopic.php?t=4430">mana symbols</a> in SVG vector format</li>
 			<li><a href="http://www.slightlymagic.net/forum/viewforum.php?f=15">CCGHQ</a> images are amazingly useful for helping me visually verify that card data is correct</li>
+			<li><a href="http://ethanschoonover.com/solarized">Solarized</a> is a great color scheme, I used a bunch of those colors here on this page</li>
 			<li><a href="http://company.wizards.com/">Wizards of the Coast</a> for continuing to support and develop game that I first started playing back in 1994!</li>
 		</ul>
 	</body>
