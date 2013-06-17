@@ -8,12 +8,68 @@
 		<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 		<link type="text/css" rel="stylesheet" href="solarized-dark.css">
 	</head>
-	<body>
+	<body><a name="top"></a>
 		<script type="text/javascript" src="rainbow-custom.min.js"></script>
-		Abc 123
+		<center><h1>MTG JSON</h1></center>
+		<p style="margin-top: 1.0em;">This project provides up to date <a href="http://www.wizards.com/Magic/">Magic the Gathering</a> card data in <a href="http://www.json.org/">JSON</a> format for developers to easily use in their projects.<br>
+		<br>
+		Any bugs or feedback, e-mail me at <a href="mailto:robert@cosmicrealms.com">robert@cosmicrealms.com</a><br>
+		<br>
+		For more details see: <a href="#exampleCard">Example Card</a> and <a href="#documentation">Documentation</a>
+		</p>
+		<br>
+		<br>
+		<h2>Current Version: <span class="value">1.0</span></h2>
+		<h2>&nbsp;&nbsp;&nbsp;Last Updated: <span class="value">Jun 16, 2013</span><a href="#changeLog">(change log)</a></h2>
+		<br>
+		<br>
+		<br>
+		<table class="downloads">
+			<thead>
+				<tr>
+					<th colspan="2">All Sets</th>
+				</tr>
+				<tr>
+					<th>Card Data Only</th>
+					<th>Card Data with Rulings</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><a href="json/AllSets.json">AllSets.json</a><span class="size">{allSize}</span></td>
+					<td><a href="json/AllSets-r.json">AllSets-r.json</a><span class="size">{allSizeR}</span></td>
+				</tr>
+			</tbody>
+		</table>
+		<table class="downloads downloadsIndividual">
+			<thead>
+				<tr>
+					<th colspan="2">Individual Sets</th>
+				</tr>
+				<tr>
+					<th>Card Data Only</th>
+					<th>Card Data with Rulings</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						{#sets}
+							<a href="json/{code}.json">{code}.json</a><span class="size">{size|s}</span>
+						{/sets}
+					</td>
+					<td>
+						{#sets}
+							<a href="json/{code}-r.json">{code}-r.json</a><span class="size">{sizer|s}</span>
+						{/sets}
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<hr>
 		<a name="exampleCard"></a>
-		<h1>Example Card</h1>
-		<img src="sentriplets.jpg" id="cardExample">
+		<h1>Example Card<a href="#top">(back to top)</a></h1>
+		<img src="images/sentriplets.jpg" id="cardExample">
 		<pre><code data-language="javascript">
     {
                 name : "Sen Triplets",
@@ -48,9 +104,18 @@
     }
 		</code></pre>
 		
-		<a name="docsTable"></a>
-		<h1>Documentation</h1>
-		<table id="docs">
+		<hr>
+		<a name="documentation"></a>
+		<h1>Documentation<a href="#top">(back to top)</a></h1>
+		<p>Each individual set is a JSON object with key/value pairs. Below you will find a table detailing each key.<br>
+		<br>
+		If a value would be empty (such as manaCost for Basic Lands), then the key will not exist in the object.<br>
+		<br>
+		All cards are from the latest Oracle text, not the original printed text.<br>
+		<br>
+
+		</p>
+		<table>
 			<thead>
 				<tr>
 					<th>Key</th>
@@ -77,7 +142,7 @@
 				<tr>
 					<td>manaCost</td>
 					<td>"{~lb}G{~rb}{~lb}U{~rb}"</td>
-					<td>The mana cost of this card. Consists of one or more <a href="#manaSymbolsTable">mana symbols</a>.</td>
+					<td>The mana cost of this card. Consists of one or more <a href="#manaSymbols">mana symbols</a>.</td>
 				</tr>
 				<tr>
 					<td>cmc</td>
@@ -117,7 +182,7 @@
 				<tr>
 					<td>text</td>
 					<td>"{~lb}T{~rb}: You gain 1 life."</td>
-					<td>The text of the card. May contain <a href="#manaSymbolsTable">mana symbols</a> and <a href="#otherSymbols">other symbols</a>.</td>
+					<td>The text of the card. May contain <a href="#manaSymbols">mana symbols</a> and <a href="#otherSymbols">other symbols</a>.</td>
 				</tr>
 				<tr>
 					<td>flavor</td>
@@ -159,18 +224,115 @@
 					<td>[78968, 85106]</td>
 					<td>If a card has alternate art (for example, 4 different Forests, or the 2 Brothers Yamazaki) then each variation's multiverseid will be listed here, including the current card's multiverseid.</td>
 				</tr>
+				<tr>
+					<td>imageName</td>
+					<td>ajani goldmane</td>
+					<td>The corresponding <a href="http://www.slightlymagic.net/forum/viewforum.php?f=15">CCGHQ</a> image file. See <a href="#imageInfo">Image Info</a> for more details.</td> 
+				</tr>
 			</tbody>
 		</table>
-		<p>Keys will not exist if they would have no value, such as manaCost for Basic Lands.<br>
-		<br>
-		All cards are the latest Oracle text, not the original printed text.<br>
-		<br>
-		Can you think of more to add?<br>
-		<br>
-		Any bugs or problems or suggestions? E-mail me at <a href="mailto:robert@cosmicrealms.com">robert@cosmicrealms.com</a>
-		</p>
-		<a name="manaSymbolsTable"></a>
-		<table id="manaSymbols">
+		<hr>
+		<a name="manaSymbols"></a>
+		<h1>Mana Symbols<a href="#top">(back to top)</a></h1>
+		<table class="symbols">
+			<thead>
+					<tr>
+						<th>Symbol</th>
+						<th>Text</th>
+						<th class="spacer"></th>
+						<th>Symbol</th>
+						<th>Text</th>
+						<th class="spacer"></th>
+						<th>Symbol</th>
+						<th>Text</th>
+						<th class="spacer"></th>
+						<th>Symbol</th>
+						<th>Text</th>
+					</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><img src="images/w.png"></td>
+					<td>{~lb}W{~rb}</td>
+					<td class="spacer">&nbsp;</td>
+					<td><img src="images/x.png"></td>
+					<td>{~lb}X{~rb}</td>
+					<td class="spacer">&nbsp;</td>
+					<td><img src="images/gw.png"></td>
+					<td>{~lb}G/W{~rb}</td>
+					<td class="spacer">&nbsp;</td>
+					<td><img src="images/pw.png"></td>
+					<td>{~lb}P/W{~rb}</td>
+				</tr>
+				<tr>
+					<td><img src="images/u.png"></td>
+					<td>{~lb}U{~rb}</td>
+					<td class="spacer">&nbsp;</td>
+					<td><img src="images/0.png"></td>
+					<td>{~lb}0{~rb}</td>
+					<td class="spacer">&nbsp;</td>
+					<td><img src="images/br.png"></td>
+					<td>{~lb}B/R{~rb}</td>
+					<td class="spacer">&nbsp;</td>
+					<td><img src="images/pu.png"></td>
+					<td>{~lb}P/U{~rb}</td>
+				</tr>
+				<tr>
+					<td><img src="images/b.png"></td>
+					<td>{~lb}B{~rb}</td>
+					<td class="spacer">&nbsp;</td>
+					<td><img src="images/1.png"></td>
+					<td>{~lb}1{~rb}</td>
+					<td class="spacer">&nbsp;</td>
+					<td><img src="images/wb.png"></td>
+					<td>{~lb}W/B{~rb}</td>
+					<td class="spacer">&nbsp;</td>
+					<td><img src="images/pb.png"></td>
+					<td>{~lb}P/B{~rb}</td>
+				</tr>
+				<tr>
+					<td><img src="images/r.png"></td>
+					<td>{~lb}R{~rb}</td>
+					<td class="spacer">&nbsp;</td>
+					<td><img src="images/2.png"></td>
+					<td>{~lb}2{~rb}</td>
+					<td class="spacer">&nbsp;</td>
+					<td><img src="images/ur.png"></td>
+					<td>{~lb}U/R{~rb}</td>
+					<td class="spacer">&nbsp;</td>
+					<td><img src="images/pr.png"></td>
+					<td>{~lb}P/R{~rb}</td>
+				</tr>
+				<tr>
+					<td><img src="images/g.png"></td>
+					<td>{~lb}G{~rb}</td>
+					<td class="spacer">&nbsp;</td>
+					<td><img src="images/3.png"></td>
+					<td>{~lb}3{~rb}</td>
+					<td class="spacer">&nbsp;</td>
+					<td><img src="images/gu.png"></td>
+					<td>{~lb}G/U{~rb}</td>
+					<td class="spacer">&nbsp;</td>
+					<td><img src="images/pg.png"></td>
+					<td>{~lb}P/G{~rb}</td>
+				</tr>
+				<tr>
+					<td><img src="images/s.png"></td>
+					<td>{~lb}S{~rb}</td>
+					<td class="spacer">&nbsp;</td>
+					<td colspan="2" style="text-align: center;">etc...</td>
+					<td class="spacer">&nbsp;</td>
+					<td colspan="2" style="text-align: center;">etc...</td>
+					<td class="spacer">&nbsp;</td>
+					<td><img src="images/p.png"></td>
+					<td>{~lb}P{~rb}</td>
+				</tr>
+			</tbody>
+		</table>
+		<hr>
+		<a name="otherSymbols"></a>
+		<h1>Other Symbols<a href="#top">(back to top)</a></h1>
+		<table class="symbols">
 			<thead>
 					<tr>
 						<th>Symbol</th>
@@ -179,81 +341,63 @@
 			</thead>
 			<tbody>
 				<tr>
-					<td><img src="w.png"></td>
-					<td>{W}</td>
+					<th><img src="images/t.png"></th>
+					<th>{~lb}T{~rb}</th>
 				</tr>
 				<tr>
-					<td><img src="u.png"></td>
-					<td>{U}</td>
-				</tr>
-				<tr>
-					<td><img src="b.png"></td>
-					<td>{B}</td>
-				</tr>
-				<tr>
-					<td><img src="r.png"></td>
-					<td>{R}</td>
-				</tr>
-				<tr>
-					<td><img src="g.png"></td>
-					<td>{G}</td>
-				</tr>
-				<tr>
-					<td><img src="0.png"></td>
-					<td>{0}</td>
-				</tr>
-				<tr>
-					<td><img src="1.png"></td>
-					<td>{1}</td>
-				</tr>
-				<tr><td colspan="2" style="text-align: center;">other numbers...</td></tr>
-				<tr>
-					<td><img src="x.png"></td>
-					<td>{X}</td>
-				</tr>
-				<tr>
-					<td><img src="p.png"></td>
-					<td>{P}</td>
-				</tr>
-				<tr>
-					<td><img src="pw.png"></td>
-					<td>{PW}</td>
-				</tr>
-				<tr>
-					<td><img src="pu.png"></td>
-					<td>{PU}</td>
-				</tr>
-				<tr>
-					<td><img src="pb.png"></td>
-					<td>{PB}</td>
-				</tr>
-				<tr>
-					<td><img src="pr.png"></td>
-					<td>{PR}</td>
-				</tr>
-				<tr>
-					<td><img src="pg.png"></td>
-					<td>{PG}</td>
-				</tr>
-				<tr>
-					<td><img src="s.png"></td>
-					<td>{S}</td>
+					<th><img src="images/q.png"></th>
+					<th>{~lb}Q{~rb}</th>
 				</tr>
 			</tbody>
 		</table>
-		<table id="otherSymbols">
+		<hr>
+		<a name="changeLog"></a>
+		<h1>Change Log<a href="#top">(back to top)</a></h1>
+		<table class="changeLog">
 			<thead>
-					<tr>
-						<th>Symbol</th>
-						<th>Text</th>
-					</tr>
+				<tr>
+					<th>Version</th>
+					<th>Date</th>
+					<th>Changes</th>
+				</tr>
 			</thead>
 			<tbody>
 				<tr>
-					<th></th>
-					<th>{T}</th>
+					<td>1.0</td>
+					<td>Jun 16, 2013</td>
+					<td>First release!</td>
 				</tr>
 			</tbody>
 		</table>
+		<hr>
+		<a name="imageInfo"></a>
+		<h1>Image Info<a href="#top">(back to top)</a></h1>
+		<p>
+		The 'imageName' field in the JSON matches the names from the <a href="http://www.slightlymagic.net/forum/viewforum.php?f=15">CCGHQ</a> images.<br>
+		<br>
+		There are some differences:</p>
+		<ul>
+			<li>All file names have been converted to lowercase</li>
+			<li>The '.full' part has been removed</li>
+			<li>There is no image extension such as .jpg</li>
+			<li>The set 'code' names from CCGHQ are not the standard ones. I use the code names from <a href="http://wiki.mtgsalvation.com/article/Main_Page">MTG Salvation Wiki</a></li>
+		</ul>
+		<p>Also, there were a few inconsistencies with the CCGHQ images. These need to be fixed:</p>
+		<ul>
+			<li>Alpha and Revised spelled "will-o'-the-wisp" incorrectly. They forgot the apostrophe. (Funny enough, they got it right for Beta and Unlimited)</li>
+			<li>Planeshift's "ertai, the corrupted1.jpg" "skyship weatherlight1" and "tahngarth, talruum hero1" didn't have a 1 next to it for the first version of the cards</li>
+			<li>Ravnica's basic lands were missing the number 1 for the first card of each basic land type</li>
+			<li>Dark Ascension forgot to de-unicode séance correctly as seance.</li>
+		</ul>
+		<hr>
+		<a name="thanks"></a>
+		<h1>Thanks<a href="#top">(back to top)</a></h1>
+		<p>Thanks a lot to:</p>
+		<ul>
+			<li><a href="http://wiki.mtgsalvation.com/article/Main_Page">MTG Salvation Wiki</a> for an AWESOME resource</li>
+			<li>The kind soul who provided the <a href="http://www.slightlymagic.net/forum/viewtopic.php?t=4430">mana symbols</a> in SVG vector format</li>
+			<li><a href="http://www.slightlymagic.net/forum/viewforum.php?f=15">CCGHQ</a> images are amazingly useful for helping me visually verify that card data is correct</li>
+			<li><a href="http://company.wizards.com/">Wizards of the Coast</a> for continuing to support and develop game that I first started playing back in 1994!</li>
+		</ul>
 	</body>
 </html>

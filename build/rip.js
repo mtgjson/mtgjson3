@@ -835,11 +835,11 @@ var SYMBOL_CONVERSION_MAP =
 	"tap"                : "T",
 	"untap"              : "Q",
 	"snow"               : "S",
-	"phyrexian white"    : "PW",
-	"phyrexian black"    : "PB",
-	"phyrexian red"      : "PR",
-	"phyrexian blue"     : "PU",
-	"phyrexian green"    : "PG",
+	"phyrexian white"    : "P/W",
+	"phyrexian blue"     : "P/U",
+	"phyrexian black"    : "P/B",
+	"phyrexian red"      : "P/R",
+	"phyrexian green"    : "P/G",
 	"phyrexian"          : "P",
 	"variable colorless" : "X"
 };

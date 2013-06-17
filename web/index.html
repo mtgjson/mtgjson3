@@ -8,11 +8,368 @@
 		<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 		<link type="text/css" rel="stylesheet" href="solarized-dark.css">
 	</head>
-	<body>
+	<body><a name="top"></a>
 		<script type="text/javascript" src="rainbow-custom.min.js"></script>
-		Abc 123
-		<h1>Example Card</h1>
-		<img src="sentriplets.jpg" id="cardExample">
+		<center><h1>MTG JSON</h1></center>
+		<p style="margin-top: 1.0em;">This project provides up to date <a href="http://www.wizards.com/Magic/">Magic the Gathering</a> card data in <a href="http://www.json.org/">JSON</a> format for developers to easily use in their projects.<br>
+		<br>
+		Any bugs or feedback, e-mail me at <a href="mailto:robert@cosmicrealms.com">robert@cosmicrealms.com</a><br>
+		<br>
+		For more details see: <a href="#exampleCard">Example Card</a> and <a href="#documentation">Documentation</a>
+		</p>
+		<br>
+		<br>
+		<h2>Current Version: <span class="value">1.0</span></h2>
+		<h2>&nbsp;&nbsp;&nbsp;Last Updated: <span class="value">Jun 16, 2013</span><a href="#changeLog">(change log)</a></h2>
+		<br>
+		<br>
+		<br>
+		<table class="downloads">
+			<thead>
+				<tr>
+					<th colspan="2">All Sets</th>
+				</tr>
+				<tr>
+					<th>Card Data Only</th>
+					<th>Card Data with Rulings</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><a href="json/AllSets.json">AllSets.json</a><span class="size">7.9MB</span></td>
+					<td><a href="json/AllSets-r.json">AllSets-r.json</a><span class="size">11.9MB</span></td>
+				</tr>
+			</tbody>
+		</table>
+		<table class="downloads downloadsIndividual">
+			<thead>
+				<tr>
+					<th colspan="2">Individual Sets</th>
+				</tr>
+				<tr>
+					<th>Card Data Only</th>
+					<th>Card Data with Rulings</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						
+							<a href="json/10E.json">10E.json</a><span class="size">&nbsp;174KB</span>
+						
+							<a href="json/2ED.json">2ED.json</a><span class="size">&nbsp;117KB</span>
+						
+							<a href="json/3ED.json">3ED.json</a><span class="size">&nbsp;121KB</span>
+						
+							<a href="json/4ED.json">4ED.json</a><span class="size">&nbsp;157KB</span>
+						
+							<a href="json/5DN.json">5DN.json</a><span class="size">&nbsp;&nbsp;77KB</span>
+						
+							<a href="json/5ED.json">5ED.json</a><span class="size">&nbsp;193KB</span>
+						
+							<a href="json/6ED.json">6ED.json</a><span class="size">&nbsp;143KB</span>
+						
+							<a href="json/7ED.json">7ED.json</a><span class="size">&nbsp;141KB</span>
+						
+							<a href="json/8ED.json">8ED.json</a><span class="size">&nbsp;149KB</span>
+						
+							<a href="json/9ED.json">9ED.json</a><span class="size">&nbsp;153KB</span>
+						
+							<a href="json/ALA.json">ALA.json</a><span class="size">&nbsp;123KB</span>
+						
+							<a href="json/ALL.json">ALL.json</a><span class="size">&nbsp;100KB</span>
+						
+							<a href="json/APC.json">APC.json</a><span class="size">&nbsp;&nbsp;67KB</span>
+						
+							<a href="json/ARB.json">ARB.json</a><span class="size">&nbsp;&nbsp;75KB</span>
+						
+							<a href="json/ARN.json">ARN.json</a><span class="size">&nbsp;&nbsp;39KB</span>
+						
+							<a href="json/ATQ.json">ATQ.json</a><span class="size">&nbsp;&nbsp;47KB</span>
+						
+							<a href="json/AVR.json">AVR.json</a><span class="size">&nbsp;113KB</span>
+						
+							<a href="json/BOK.json">BOK.json</a><span class="size">&nbsp;&nbsp;89KB</span>
+						
+							<a href="json/CHK.json">CHK.json</a><span class="size">&nbsp;158KB</span>
+						
+							<a href="json/CON.json">CON.json</a><span class="size">&nbsp;&nbsp;73KB</span>
+						
+							<a href="json/CSP.json">CSP.json</a><span class="size">&nbsp;&nbsp;82KB</span>
+						
+							<a href="json/DGM.json">DGM.json</a><span class="size">&nbsp;&nbsp;82KB</span>
+						
+							<a href="json/DIS.json">DIS.json</a><span class="size">&nbsp;&nbsp;94KB</span>
+						
+							<a href="json/DKA.json">DKA.json</a><span class="size">&nbsp;&nbsp;86KB</span>
+						
+							<a href="json/DRK.json">DRK.json</a><span class="size">&nbsp;&nbsp;52KB</span>
+						
+							<a href="json/DST.json">DST.json</a><span class="size">&nbsp;&nbsp;77KB</span>
+						
+							<a href="json/EVE.json">EVE.json</a><span class="size">&nbsp;&nbsp;92KB</span>
+						
+							<a href="json/EXO.json">EXO.json</a><span class="size">&nbsp;&nbsp;65KB</span>
+						
+							<a href="json/FEM.json">FEM.json</a><span class="size">&nbsp;100KB</span>
+						
+							<a href="json/FUT.json">FUT.json</a><span class="size">&nbsp;&nbsp;92KB</span>
+						
+							<a href="json/GPT.json">GPT.json</a><span class="size">&nbsp;&nbsp;83KB</span>
+						
+							<a href="json/GTC.json">GTC.json</a><span class="size">&nbsp;125KB</span>
+						
+							<a href="json/HML.json">HML.json</a><span class="size">&nbsp;&nbsp;67KB</span>
+						
+							<a href="json/ICE.json">ICE.json</a><span class="size">&nbsp;181KB</span>
+						
+							<a href="json/INV.json">INV.json</a><span class="size">&nbsp;155KB</span>
+						
+							<a href="json/ISD.json">ISD.json</a><span class="size">&nbsp;136KB</span>
+						
+							<a href="json/JUD.json">JUD.json</a><span class="size">&nbsp;&nbsp;68KB</span>
+						
+							<a href="json/LEA.json">LEA.json</a><span class="size">&nbsp;115KB</span>
+						
+							<a href="json/LEB.json">LEB.json</a><span class="size">&nbsp;117KB</span>
+						
+							<a href="json/LEG.json">LEG.json</a><span class="size">&nbsp;140KB</span>
+						
+							<a href="json/LGN.json">LGN.json</a><span class="size">&nbsp;&nbsp;72KB</span>
+						
+							<a href="json/LRW.json">LRW.json</a><span class="size">&nbsp;154KB</span>
+						
+							<a href="json/M10.json">M10.json</a><span class="size">&nbsp;109KB</span>
+						
+							<a href="json/M11.json">M11.json</a><span class="size">&nbsp;110KB</span>
+						
+							<a href="json/M12.json">M12.json</a><span class="size">&nbsp;112KB</span>
+						
+							<a href="json/M13.json">M13.json</a><span class="size">&nbsp;113KB</span>
+						
+							<a href="json/MBS.json">MBS.json</a><span class="size">&nbsp;&nbsp;71KB</span>
+						
+							<a href="json/MIR.json">MIR.json</a><span class="size">&nbsp;161KB</span>
+						
+							<a href="json/MMQ.json">MMQ.json</a><span class="size">&nbsp;150KB</span>
+						
+							<a href="json/MOR.json">MOR.json</a><span class="size">&nbsp;&nbsp;79KB</span>
+						
+							<a href="json/MRD.json">MRD.json</a><span class="size">&nbsp;135KB</span>
+						
+							<a href="json/NMS.json">NMS.json</a><span class="size">&nbsp;&nbsp;66KB</span>
+						
+							<a href="json/NPH.json">NPH.json</a><span class="size">&nbsp;&nbsp;83KB</span>
+						
+							<a href="json/ODY.json">ODY.json</a><span class="size">&nbsp;151KB</span>
+						
+							<a href="json/ONS.json">ONS.json</a><span class="size">&nbsp;159KB</span>
+						
+							<a href="json/PCY.json">PCY.json</a><span class="size">&nbsp;&nbsp;65KB</span>
+						
+							<a href="json/PLC.json">PLC.json</a><span class="size">&nbsp;&nbsp;87KB</span>
+						
+							<a href="json/PLS.json">PLS.json</a><span class="size">&nbsp;&nbsp;68KB</span>
+						
+							<a href="json/RAV.json">RAV.json</a><span class="size">&nbsp;148KB</span>
+						
+							<a href="json/ROE.json">ROE.json</a><span class="size">&nbsp;118KB</span>
+						
+							<a href="json/RTR.json">RTR.json</a><span class="size">&nbsp;128KB</span>
+						
+							<a href="json/SCG.json">SCG.json</a><span class="size">&nbsp;&nbsp;67KB</span>
+						
+							<a href="json/SHM.json">SHM.json</a><span class="size">&nbsp;147KB</span>
+						
+							<a href="json/SOK.json">SOK.json</a><span class="size">&nbsp;&nbsp;85KB</span>
+						
+							<a href="json/SOM.json">SOM.json</a><span class="size">&nbsp;117KB</span>
+						
+							<a href="json/STH.json">STH.json</a><span class="size">&nbsp;&nbsp;63KB</span>
+						
+							<a href="json/TMP.json">TMP.json</a><span class="size">&nbsp;148KB</span>
+						
+							<a href="json/TOR.json">TOR.json</a><span class="size">&nbsp;&nbsp;66KB</span>
+						
+							<a href="json/TSP.json">TSP.json</a><span class="size">&nbsp;155KB</span>
+						
+							<a href="json/UDS.json">UDS.json</a><span class="size">&nbsp;&nbsp;64KB</span>
+						
+							<a href="json/ULG.json">ULG.json</a><span class="size">&nbsp;&nbsp;64KB</span>
+						
+							<a href="json/USG.json">USG.json</a><span class="size">&nbsp;151KB</span>
+						
+							<a href="json/VIS.json">VIS.json</a><span class="size">&nbsp;&nbsp;80KB</span>
+						
+							<a href="json/WTH.json">WTH.json</a><span class="size">&nbsp;&nbsp;77KB</span>
+						
+							<a href="json/WWK.json">WWK.json</a><span class="size">&nbsp;&nbsp;71KB</span>
+						
+							<a href="json/ZEN.json">ZEN.json</a><span class="size">&nbsp;125KB</span>
+						
+					</td>
+					<td>
+						
+							<a href="json/10E-r.json">10E-r.json</a><span class="size">&nbsp;231KB</span>
+						
+							<a href="json/2ED-r.json">2ED-r.json</a><span class="size">&nbsp;188KB</span>
+						
+							<a href="json/3ED-r.json">3ED-r.json</a><span class="size">&nbsp;183KB</span>
+						
+							<a href="json/4ED-r.json">4ED-r.json</a><span class="size">&nbsp;225KB</span>
+						
+							<a href="json/5DN-r.json">5DN-r.json</a><span class="size">&nbsp;&nbsp;98KB</span>
+						
+							<a href="json/5ED-r.json">5ED-r.json</a><span class="size">&nbsp;279KB</span>
+						
+							<a href="json/6ED-r.json">6ED-r.json</a><span class="size">&nbsp;179KB</span>
+						
+							<a href="json/7ED-r.json">7ED-r.json</a><span class="size">&nbsp;171KB</span>
+						
+							<a href="json/8ED-r.json">8ED-r.json</a><span class="size">&nbsp;181KB</span>
+						
+							<a href="json/9ED-r.json">9ED-r.json</a><span class="size">&nbsp;192KB</span>
+						
+							<a href="json/ALA-r.json">ALA-r.json</a><span class="size">&nbsp;261KB</span>
+						
+							<a href="json/ALL-r.json">ALL-r.json</a><span class="size">&nbsp;136KB</span>
+						
+							<a href="json/APC-r.json">APC-r.json</a><span class="size">&nbsp;&nbsp;74KB</span>
+						
+							<a href="json/ARB-r.json">ARB-r.json</a><span class="size">&nbsp;151KB</span>
+						
+							<a href="json/ARN-r.json">ARN-r.json</a><span class="size">&nbsp;&nbsp;58KB</span>
+						
+							<a href="json/ATQ-r.json">ATQ-r.json</a><span class="size">&nbsp;&nbsp;71KB</span>
+						
+							<a href="json/AVR-r.json">AVR-r.json</a><span class="size">&nbsp;166KB</span>
+						
+							<a href="json/BOK-r.json">BOK-r.json</a><span class="size">&nbsp;119KB</span>
+						
+							<a href="json/CHK-r.json">CHK-r.json</a><span class="size">&nbsp;188KB</span>
+						
+							<a href="json/CON-r.json">CON-r.json</a><span class="size">&nbsp;126KB</span>
+						
+							<a href="json/CSP-r.json">CSP-r.json</a><span class="size">&nbsp;122KB</span>
+						
+							<a href="json/DGM-r.json">DGM-r.json</a><span class="size">&nbsp;219KB</span>
+						
+							<a href="json/DIS-r.json">DIS-r.json</a><span class="size">&nbsp;125KB</span>
+						
+							<a href="json/DKA-r.json">DKA-r.json</a><span class="size">&nbsp;126KB</span>
+						
+							<a href="json/DRK-r.json">DRK-r.json</a><span class="size">&nbsp;&nbsp;76KB</span>
+						
+							<a href="json/DST-r.json">DST-r.json</a><span class="size">&nbsp;105KB</span>
+						
+							<a href="json/EVE-r.json">EVE-r.json</a><span class="size">&nbsp;186KB</span>
+						
+							<a href="json/EXO-r.json">EXO-r.json</a><span class="size">&nbsp;&nbsp;86KB</span>
+						
+							<a href="json/FEM-r.json">FEM-r.json</a><span class="size">&nbsp;140KB</span>
+						
+							<a href="json/FUT-r.json">FUT-r.json</a><span class="size">&nbsp;171KB</span>
+						
+							<a href="json/GPT-r.json">GPT-r.json</a><span class="size">&nbsp;116KB</span>
+						
+							<a href="json/GTC-r.json">GTC-r.json</a><span class="size">&nbsp;252KB</span>
+						
+							<a href="json/HML-r.json">HML-r.json</a><span class="size">&nbsp;&nbsp;84KB</span>
+						
+							<a href="json/ICE-r.json">ICE-r.json</a><span class="size">&nbsp;256KB</span>
+						
+							<a href="json/INV-r.json">INV-r.json</a><span class="size">&nbsp;191KB</span>
+						
+							<a href="json/ISD-r.json">ISD-r.json</a><span class="size">&nbsp;188KB</span>
+						
+							<a href="json/JUD-r.json">JUD-r.json</a><span class="size">&nbsp;&nbsp;85KB</span>
+						
+							<a href="json/LEA-r.json">LEA-r.json</a><span class="size">&nbsp;186KB</span>
+						
+							<a href="json/LEB-r.json">LEB-r.json</a><span class="size">&nbsp;188KB</span>
+						
+							<a href="json/LEG-r.json">LEG-r.json</a><span class="size">&nbsp;206KB</span>
+						
+							<a href="json/LGN-r.json">LGN-r.json</a><span class="size">&nbsp;&nbsp;91KB</span>
+						
+							<a href="json/LRW-r.json">LRW-r.json</a><span class="size">&nbsp;201KB</span>
+						
+							<a href="json/M10-r.json">M10-r.json</a><span class="size">&nbsp;175KB</span>
+						
+							<a href="json/M11-r.json">M11-r.json</a><span class="size">&nbsp;194KB</span>
+						
+							<a href="json/M12-r.json">M12-r.json</a><span class="size">&nbsp;188KB</span>
+						
+							<a href="json/M13-r.json">M13-r.json</a><span class="size">&nbsp;176KB</span>
+						
+							<a href="json/MBS-r.json">MBS-r.json</a><span class="size">&nbsp;101KB</span>
+						
+							<a href="json/MIR-r.json">MIR-r.json</a><span class="size">&nbsp;200KB</span>
+						
+							<a href="json/MMQ-r.json">MMQ-r.json</a><span class="size">&nbsp;167KB</span>
+						
+							<a href="json/MOR-r.json">MOR-r.json</a><span class="size">&nbsp;141KB</span>
+						
+							<a href="json/MRD-r.json">MRD-r.json</a><span class="size">&nbsp;172KB</span>
+						
+							<a href="json/NMS-r.json">NMS-r.json</a><span class="size">&nbsp;&nbsp;76KB</span>
+						
+							<a href="json/NPH-r.json">NPH-r.json</a><span class="size">&nbsp;144KB</span>
+						
+							<a href="json/ODY-r.json">ODY-r.json</a><span class="size">&nbsp;170KB</span>
+						
+							<a href="json/ONS-r.json">ONS-r.json</a><span class="size">&nbsp;192KB</span>
+						
+							<a href="json/PCY-r.json">PCY-r.json</a><span class="size">&nbsp;&nbsp;75KB</span>
+						
+							<a href="json/PLC-r.json">PLC-r.json</a><span class="size">&nbsp;162KB</span>
+						
+							<a href="json/PLS-r.json">PLS-r.json</a><span class="size">&nbsp;&nbsp;96KB</span>
+						
+							<a href="json/RAV-r.json">RAV-r.json</a><span class="size">&nbsp;200KB</span>
+						
+							<a href="json/ROE-r.json">ROE-r.json</a><span class="size">&nbsp;324KB</span>
+						
+							<a href="json/RTR-r.json">RTR-r.json</a><span class="size">&nbsp;224KB</span>
+						
+							<a href="json/SCG-r.json">SCG-r.json</a><span class="size">&nbsp;100KB</span>
+						
+							<a href="json/SHM-r.json">SHM-r.json</a><span class="size">&nbsp;258KB</span>
+						
+							<a href="json/SOK-r.json">SOK-r.json</a><span class="size">&nbsp;114KB</span>
+						
+							<a href="json/SOM-r.json">SOM-r.json</a><span class="size">&nbsp;222KB</span>
+						
+							<a href="json/STH-r.json">STH-r.json</a><span class="size">&nbsp;&nbsp;83KB</span>
+						
+							<a href="json/TMP-r.json">TMP-r.json</a><span class="size">&nbsp;193KB</span>
+						
+							<a href="json/TOR-r.json">TOR-r.json</a><span class="size">&nbsp;&nbsp;73KB</span>
+						
+							<a href="json/TSP-r.json">TSP-r.json</a><span class="size">&nbsp;278KB</span>
+						
+							<a href="json/UDS-r.json">UDS-r.json</a><span class="size">&nbsp;&nbsp;87KB</span>
+						
+							<a href="json/ULG-r.json">ULG-r.json</a><span class="size">&nbsp;&nbsp;88KB</span>
+						
+							<a href="json/USG-r.json">USG-r.json</a><span class="size">&nbsp;211KB</span>
+						
+							<a href="json/VIS-r.json">VIS-r.json</a><span class="size">&nbsp;107KB</span>
+						
+							<a href="json/WTH-r.json">WTH-r.json</a><span class="size">&nbsp;126KB</span>
+						
+							<a href="json/WWK-r.json">WWK-r.json</a><span class="size">&nbsp;156KB</span>
+						
+							<a href="json/ZEN-r.json">ZEN-r.json</a><span class="size">&nbsp;221KB</span>
+						
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<hr>
+		<a name="exampleCard"></a>
+		<h1>Example Card<a href="#top">(back to top)</a></h1>
+		<img src="images/sentriplets.jpg" id="cardExample">
 		<pre><code data-language="javascript">
     {
                 name : "Sen Triplets",
@@ -46,8 +403,19 @@
            imageName : "sen triplets",
     }
 		</code></pre>
-		<p>Here a list of all possible fields for a card:</p>
-		<table id="docs">
+		
+		<hr>
+		<a name="documentation"></a>
+		<h1>Documentation<a href="#top">(back to top)</a></h1>
+				<p>Keys will not exist if they would have no value, such as manaCost for Basic Lands.<br>
+		<br>
+		All cards are the latest Oracle text, not the original printed text.<br>
+		<br>
+		Can you think of more to add?<br>
+		<br>
+		Any bugs or problems or suggestions? E-mail me at <a href="mailto:robert@cosmicrealms.com">robert@cosmicrealms.com</a>
+		</p>
+		<table>
 			<thead>
 				<tr>
 					<th>Key</th>
@@ -74,7 +442,7 @@
 				<tr>
 					<td>manaCost</td>
 					<td>"{G}{U}"</td>
-					<td>The mana cost of this card. Consists of one or more <a href="#manaSymbolsTable">mana symbols</a>.</td>
+					<td>The mana cost of this card. Consists of one or more <a href="#manaSymbols">mana symbols</a>.</td>
 				</tr>
 				<tr>
 					<td>cmc</td>
@@ -114,7 +482,7 @@
 				<tr>
 					<td>text</td>
 					<td>"{T}: You gain 1 life."</td>
-					<td>The text of the card. May contain <a href="#manaSymbolsTable">mana symbols</a> and <a href="#otherSymbols">other symbols</a>.</td>
+					<td>The text of the card. May contain <a href="#manaSymbols">mana symbols</a> and <a href="#otherSymbols">other symbols</a>.</td>
 				</tr>
 				<tr>
 					<td>flavor</td>
@@ -158,30 +526,108 @@
 				</tr>
 			</tbody>
 		</table>
-		<p>Keys will not exist if they would have no value, such as manaCost for Basic Lands.<br>
-		<br>
-		All cards are the latest Oracle text, not the original printed text.<br>
-		<br>
-		Can you think of more to add?<br>
-		<br>
-		Any bugs or problems or suggestions? E-mail me at <a href="mailto:robert@cosmicrealms.com">robert@cosmicrealms.com</a>
-		</p>
-		<a name="manaSymbolsTable"></a>
-		<table id="manaSymbols">
+		<hr>
+		<a name="manaSymbols"></a>
+		<h1>Mana Symbols<a href="#top">(back to top)</a></h1>
+		<table class="symbols">
 			<thead>
 					<tr>
+						<th>Symbol</th>
+						<th>Text</th>
+						<th class="spacer"></th>
+						<th>Symbol</th>
+						<th>Text</th>
+						<th class="spacer"></th>
+						<th>Symbol</th>
+						<th>Text</th>
+						<th class="spacer"></th>
 						<th>Symbol</th>
 						<th>Text</th>
 					</tr>
 			</thead>
 			<tbody>
 				<tr>
-					<th></th>
-					<th></th>
+					<td><img src="images/w.png"></td>
+					<td>{W}</td>
+					<td class="spacer">&nbsp;</td>
+					<td><img src="images/x.png"></td>
+					<td>{X}</td>
+					<td class="spacer">&nbsp;</td>
+					<td><img src="images/gw.png"></td>
+					<td>{G/W}</td>
+					<td class="spacer">&nbsp;</td>
+					<td><img src="images/pw.png"></td>
+					<td>{P/W}</td>
+				</tr>
+				<tr>
+					<td><img src="images/u.png"></td>
+					<td>{U}</td>
+					<td class="spacer">&nbsp;</td>
+					<td><img src="images/0.png"></td>
+					<td>{0}</td>
+					<td class="spacer">&nbsp;</td>
+					<td><img src="images/br.png"></td>
+					<td>{B/R}</td>
+					<td class="spacer">&nbsp;</td>
+					<td><img src="images/pu.png"></td>
+					<td>{P/U}</td>
+				</tr>
+				<tr>
+					<td><img src="images/b.png"></td>
+					<td>{B}</td>
+					<td class="spacer">&nbsp;</td>
+					<td><img src="images/1.png"></td>
+					<td>{1}</td>
+					<td class="spacer">&nbsp;</td>
+					<td><img src="images/wb.png"></td>
+					<td>{W/B}</td>
+					<td class="spacer">&nbsp;</td>
+					<td><img src="images/pb.png"></td>
+					<td>{P/B}</td>
+				</tr>
+				<tr>
+					<td><img src="images/r.png"></td>
+					<td>{R}</td>
+					<td class="spacer">&nbsp;</td>
+					<td><img src="images/2.png"></td>
+					<td>{2}</td>
+					<td class="spacer">&nbsp;</td>
+					<td><img src="images/ur.png"></td>
+					<td>{U/R}</td>
+					<td class="spacer">&nbsp;</td>
+					<td><img src="images/pr.png"></td>
+					<td>{P/R}</td>
+				</tr>
+				<tr>
+					<td><img src="images/g.png"></td>
+					<td>{G}</td>
+					<td class="spacer">&nbsp;</td>
+					<td><img src="images/3.png"></td>
+					<td>{3}</td>
+					<td class="spacer">&nbsp;</td>
+					<td><img src="images/gu.png"></td>
+					<td>{G/U}</td>
+					<td class="spacer">&nbsp;</td>
+					<td><img src="images/pg.png"></td>
+					<td>{P/G}</td>
+				</tr>
+				<tr>
+					<td><img src="images/s.png"></td>
+					<td>{S}</td>
+					<td class="spacer">&nbsp;</td>
+					<td colspan="2" style="text-align: center;">etc...</td>
+					<td class="spacer">&nbsp;</td>
+					<td colspan="2" style="text-align: center;">etc...</td>
+					<td class="spacer">&nbsp;</td>
+					<td><img src="images/p.png"></td>
+					<td>{P}</td>
 				</tr>
 			</tbody>
 		</table>
-		<table id="otherSymbols">
+		<hr>
+		<a name="otherSymbols"></a>
+		<h1>Other Symbols<a href="#top">(back to top)</a></h1>
+		<table class="symbols">
 			<thead>
 					<tr>
 						<th>Symbol</th>
@@ -190,8 +636,31 @@
 			</thead>
 			<tbody>
 				<tr>
-					<th></th>
-					<th></th>
+					<th><img src="images/t.png"></th>
+					<th>{T}</th>
+				</tr>
+				<tr>
+					<th><img src="images/q.png"></th>
+					<th>{Q}</th>
+				</tr>
+			</tbody>
+		</table>
+		<hr>
+		<a name="changeLog"></a>
+		<h1>Change Log<a href="#top">(back to top)</a></h1>
+		<table class="changeLog">
+			<thead>
+				<tr>
+					<th>Version</th>
+					<th>Date</th>
+					<th>Changes</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1.0</td>
+					<td>Jun 16, 2013</td>
+					<td>First release!</td>
 				</tr>
 			</tbody>
 		</table>

@@ -8,21 +8,48 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	vertical-align baseline
 
 body, html
-	background-color #515152
+	background-color #313131
 	font-family 'Monaco', courier, monospace
 	color #cccccc
 
 body
-	padding 1.0em
+	padding 0 1.5em 1.5em 1.5em
 	font-size 120%
 
+ul
+	margin-left 1.5em
+
+h2
+	font-size 160%
+	font-weight bold
+
+	.value
+		color #cb4b16
+
+	a
+		font-size 50%
+		margin-left 2.0em
+
 h1
-	font-size 140%
+	font-size 160%
 	padding 0.5em
 	font-weight bold
 
+	a
+		font-size 40%
+		margin-left 2.0em
+
 a, a:visited
 	color #268bd2
+
+p, li
+	line-height 1.4
+	font-size 120%
+
+hr
+	height 1px
+	border 0
+	background-linear-gradient left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)
 
 pre
 	border 1px solid black
@@ -31,24 +58,62 @@ table
 	color #839496
 	border-spacing 0
 	border-collapse collapse
+	margin-bottom 4.0em
 
 	th, td
 		border 1px solid black
-		padding 0.2em 0.5em 1.0em 1.0em
-		vertical-align top
 
 	th
 		background-color #073642
 		font-weight bold
+		vertical-align bottom
+		padding 0.5em 1.0em 0.2em 1.0em
 
 	td
 		background-color #002b36
 		text-align right
 		white-space nowrap
+		vertical-align top
+		padding 0.2em 0.5em 1.0em 1.0em
 
 	td:last-child
 		text-align left
 		white-space normal
+
+table.downloads
+	tr:first-child th
+		font-size 140%
+
+	th.spacer
+		width auto
+
+	td
+		width 28.0em
+		padding 0.5em 1.0em
+		text-align center
+
+		.size
+			margin-left 1.0em
+			line-height 1.2em
+
+table.downloadsIndividual
+	td
+		white-space normal
+
+		.size
+			margin-right 3.0em
+
+
+table.symbols
+	td.spacer, th.spacer
+		padding 0
+		width 1.0em
+
+	td
+		text-align center
+		font-size 150%
+		padding 1.0em
+		vertical-align middle
 
 #cardExample
 	float left
