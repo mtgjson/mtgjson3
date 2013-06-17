@@ -8,6 +8,7 @@ var base = require("node-base"),
 	fs = require("fs"),
 	path = require("path"),
 	dustUtil = require("node-utils").dust,
+	moment = require("moment"),
 	tiptoe = require("tiptoe");
 
 var dustData = 
@@ -57,10 +58,10 @@ tiptoe(
 			var setXSize = printUtil.toSize(JSON.stringify(setWithExtras).length, 0);
 			setXSize = "&nbsp;".repeat(6-setXSize.length) + setXSize;
 
-			dustData.sets.push({code : SET.code, name : SET.name, size : setSize, sizeX : setXSize});
+			dustData.sets.push({code : SET.code, name : SET.name, releaseDate : SET.releaseDate, size : setSize, sizeX : setXSize});
 		}.bind(this));
 
-		dustData.sets = dustData.sets.sort(function(a, b) { return a.code.localeCompare(b.code); });
+		dustData.sets = dustData.sets.sort(function(a, b) { return moment(a.releaseDate, "YYYY-MM-DD").unix()-moment(b.releaseDate, "YYYY-MM-DD").unix(); });
 
 		dustData.allSize = printUtil.toSize(JSON.stringify(allSets).length, 1);
 		dustData.allSizeX = printUtil.toSize(JSON.stringify(allSetsWithExtras).length, 1);

@@ -810,9 +810,12 @@ function addForeignNamesToCards(cards, cb)
 			{
 				delete card.foreignNames;
 
-				var cardForeignNames = cardsForeignNames[i];
-				if(cardForeignNames && cardForeignNames.length)
-					card.foreignNames = cardForeignNames;
+				if(card.layout==="normal")
+				{
+					var cardForeignNames = cardsForeignNames[i];
+					if(cardForeignNames && cardForeignNames.length)
+						card.foreignNames = cardForeignNames;
+				}
 			});
 
 			setImmediate(function() { cb(); });
@@ -844,7 +847,7 @@ function getForeignNamesForCardName(sets, cardName, cb)
 				{
 					var language = cardRow.find("td:nth-child(2)").text().trim();
 					var foreignCardName = cardRow.find("td:nth-child(1) a").text().trim();
-					if(language && foreignCardName && !seenLanguages.contains(language))
+					if(language && foreignCardName && !seenLanguages.contains(language) && cardName!==foreignCardName)
 					{
 						seenLanguages.push(language);
 						foreignLanguages.push({language : language, name : foreignCardName});

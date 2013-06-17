@@ -23,7 +23,7 @@
 		<br>
 		<br>
 		<h2>Current Version: <span class="value">1.1</span></h2>
-		<h2>&nbsp;&nbsp;&nbsp;Last Updated: <span class="value">Jun 16, 2013</span><a href="#changeLog">(change log)</a></h2>
+		<h2>&nbsp;&nbsp;&nbsp;Last Updated: <span class="value">Jun 17, 2013</span><a href="#changeLog">(change log)</a></h2>
 		<br>
 		<br>
 		<br>
@@ -45,31 +45,10 @@
 				</tr>
 			</tbody>
 		</table>
-		<table class="downloads downloadsIndividual">
-			<thead>
-				<tr>
-					<th colspan="2">Individual Sets</th>
-				</tr>
-				<tr>
-					<th>Card Data Only</th>
-					<th>Card Data with Extras</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>
-						{#sets}
-							<a href="json/{code}.json">{code}.json</a><span class="size">{size|s}</span>
-						{/sets}
-					</td>
-					<td>
-						{#sets}
-							<a href="json/{code}-x.json">{code}-x.json</a><span class="size">{sizeX|s}</span>
-						{/sets}
-					</td>
-				</tr>
-			</tbody>
-		</table>
+		<p style="margin-left: 10.5em; font-size: 150%; margin-top: -1.5em; "><a href="#individualSets">Click Here for Individual Sets</a></p>
+		<br>
+		<br>
+		<br>
 		<hr>
 		<a name="exampleCard"></a>
 		<h1>Example Card<a href="#top">(back to top)</a></h1>
@@ -233,6 +212,16 @@
 					<td>ajani goldmane</td>
 					<td>The corresponding <a href="http://www.slightlymagic.net/forum/viewforum.php?f=15">CCGHQ</a> image file. See <a href="#imageInfo">Image Info</a> for more details.</td> 
 				</tr>
+				<tr>
+					<td>rulings</td>
+					<td>[{date : "2003-04-15",<br>text : "Does not tap."}]</td>
+					<td>The rulings for the card. An array of objects, each object having 'date' and 'text' keys. This key is only present in the 'extras' version.</td>
+				</tr>
+				<tr>
+					<td>foreignNames</td>
+					<td>[{language : "Italian",<br>name : "Wurm Devastatore"}]</td>
+					<td>Foreign language names for the card. An array of objects, each object having 'language' and 'name' keys. Not available for split, flip and dual-faced cards. This key is only present in the 'extras' version.</td>
+				</tr>
 			</tbody>
 		</table>
 		<hr>
@@ -355,35 +344,6 @@
 			</tbody>
 		</table>
 		<hr>
-		<a name="changeLog"></a>
-		<h1>Change Log<a href="#top">(back to top)</a></h1>
-		<table class="changeLog">
-			<thead>
-				<tr>
-					<th>Version</th>
-					<th>Date</th>
-					<th>Changes</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>1.1</td>
-					<td>Jun 17, 2013</td>
-					<td>
-						<ul>
-							<li>Changed file names from -r (for rulings) to -x (for extras)</li>
-							<li>Added foreign language names for each card. Available in extras JSON files</li>
-						</ul>
-					</td>
-				</tr>
-				<tr>
-					<td>1.0</td>
-					<td>Jun 16, 2013</td>
-					<td>First release!</td>
-				</tr>
-			</tbody>
-		</table>
-		<hr>
 		<a name="imageInfo"></a>
 		<h1>Image Info<a href="#top">(back to top)</a></h1>
 		<p>
@@ -404,6 +364,65 @@
 			<li>Ravnica's basic lands were missing the number 1 for the first card of each basic land type</li>
 			<li>Dark Ascension forgot to de-unicode séance correctly as seance.</li>
 		</ul>
+		<hr>
+		<a name="changeLog"></a>
+		<h1>Change Log<a href="#top">(back to top)</a></h1>
+		<table class="changeLog">
+			<thead>
+				<tr>
+					<th>Version</th>
+					<th>Date</th>
+					<th>Changes</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1.1</td>
+					<td>Jun 17, 2013</td>
+					<td>
+						<ul>
+							<li>Changed file names from -r (for rulings) to -x (for extras)</li>
+							<li>Added foreign language names for each card. Available in extras JSON files</li>
+							<li>Added documentation for rulings and foreignNames keys</li>
+							<li>Made a better "Individual Sets" download table and sorted it by release date</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>1.0</td>
+					<td>Jun 16, 2013</td>
+					<td><ul><li>First release!</li></ul></td>
+				</tr>
+			</tbody>
+		</table>
+		<hr>
+		<a name="individualSets"></a>
+		<h1>Individual Sets<a href="#top">(back to top)</a></h1>
+		<table class="downloads downloadsIndividual">
+			<thead>
+				<tr>
+					<th colspan="5">Individual Sets</th>
+				</tr>
+				<tr>
+					<th>Name</th>
+					<th>Code</th>
+					<th>Release Date</th>
+					<th>Card Data Only</th>
+					<th>Card Data with Extras</th>
+				</tr>
+			</thead>
+			<tbody>
+				{#sets}
+					<tr>
+						<td>{name}</td>
+						<td>{code}</td>
+						<td>{releaseDate}</td>
+						<td><a href="json/{code}.json">{code}.json</a><span class="size">{size|s}</span></td>
+						<td><a href="json/{code}-x.json">{code}-x.json</a><span class="size">{sizeX|s}</span></td>
+					</tr>
+				{/sets}
+			</tbody>
+		</table>
 		<hr>
 		<a name="thanks"></a>
 		<h1>Thanks<a href="#top">(back to top)</a></h1>
