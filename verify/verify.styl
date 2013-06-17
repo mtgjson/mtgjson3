@@ -75,18 +75,26 @@ body
 					left 50%
 					bottom 0.5em
 
-			.rulings
-				margin-top 3.0em
+			.foreignNames, .rulings
 				font-size 109%
 
-				.ruling
-					&:nth-child(even)
-						background-color #3B3C2B
+				tr:nth-child(even)
+					background-color #3B3C2B
 
-					.date
+				tr
+					.left
 						vertical-align top
 						white-space nowrap
 						text-align right
 
-					.text
+					.right
 						padding-left 1.0em
+
+			.foreignNames
+				position absolute
+				top 1.0em
+				left 1550px
+
+
+			.rulings
+				margin-top 3.0em

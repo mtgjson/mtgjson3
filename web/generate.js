@@ -37,36 +37,36 @@ tiptoe(
 		var args=arguments;
 
 		var allSets = {};
-		var allSetsWithRulings = {};
+		var allSetsWithExtras = {};
 
 		C.SETS.forEach(function(SET, i)
 		{
-			var setWithRulings = JSON.parse(args[i]);
-			allSetsWithRulings[SET.code] = setWithRulings;
+			var setWithExtras = JSON.parse(args[i]);
+			allSetsWithExtras[SET.code] = setWithExtras;
 			
-			var set = base.clone(setWithRulings, true);
-			set.cards.forEach(function(card) { delete card.rulings; });
+			var set = base.clone(setWithExtras, true);
+			set.cards.forEach(function(card) { delete card.rulings; delete card.foreignNames; });
 			allSets[SET.code] = set;
 
 			fs.writeFile(path.join(__dirname, "json", SET.code + ".json"), JSON.stringify(set), {encoding : "utf8"}, this.parallel());
-			fs.writeFile(path.join(__dirname, "json", SET.code + "-r.json"), JSON.stringify(setWithRulings), {encoding : "utf8"}, this.parallel());
+			fs.writeFile(path.join(__dirname, "json", SET.code + "-x.json"), JSON.stringify(setWithExtras), {encoding : "utf8"}, this.parallel());
 
 			var setSize = printUtil.toSize(JSON.stringify(set).length, 0);
 			setSize = "&nbsp;".repeat(6-setSize.length) + setSize;
 
-			var setRSize = printUtil.toSize(JSON.stringify(setWithRulings).length, 0);
-			setRSize = "&nbsp;".repeat(6-setRSize.length) + setRSize;
+			var setXSize = printUtil.toSize(JSON.stringify(setWithExtras).length, 0);
+			setXSize = "&nbsp;".repeat(6-setXSize.length) + setXSize;
 
-			dustData.sets.push({code : SET.code, name : SET.name, size : setSize, sizer : setRSize});
+			dustData.sets.push({code : SET.code, name : SET.name, size : setSize, sizeX : setXSize});
 		}.bind(this));
 
 		dustData.sets = dustData.sets.sort(function(a, b) { return a.code.localeCompare(b.code); });
 
 		dustData.allSize = printUtil.toSize(JSON.stringify(allSets).length, 1);
-		dustData.allSizeR = printUtil.toSize(JSON.stringify(allSetsWithRulings).length, 1);
+		dustData.allSizeX = printUtil.toSize(JSON.stringify(allSetsWithExtras).length, 1);
 
 		fs.writeFile(path.join(__dirname, "json", "AllSets.json"), JSON.stringify(allSets), {encoding : "utf8"}, this.parallel());
-		fs.writeFile(path.join(__dirname, "json", "AllSets-r.json"), JSON.stringify(allSetsWithRulings), {encoding : "utf8"}, this.parallel());
+		fs.writeFile(path.join(__dirname, "json", "AllSets-x.json"), JSON.stringify(allSetsWithExtras), {encoding : "utf8"}, this.parallel());
 	},
 	function render()
 	{

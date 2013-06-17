@@ -334,6 +334,8 @@ function ripSet(setName, cb)
 	tiptoe(
 		function getListHTML()
 		{
+			base.info("Getting card list...");
+
 			var listURL = url.format(
 			{
 				protocol : "http",
@@ -353,19 +355,22 @@ function ripSet(setName, cb)
 		{
 			var listDoc = cheerio.load(listHTML);
 
+			base.info("Processing first batch...");
+
 			this.data.set = base.clone(C.SETS.mutateOnce(function(SET) { return SET.name===setName ? SET : undefined; }));
 
 			processMultiverseids(listDoc("table.checklist tr.cardItem a.nameLink").map(function(i, itemRaw) { return +querystring.parse(url.parse(listDoc(itemRaw).attr("href")).query).multiverseid; }).unique(), this);
 		},
 		function processVariations(cards)
 		{
+			base.info("Processing variations...");
+
 			this.data.set.cards = cards;
 			processMultiverseids(cards.map(function(card) { return (card.variations && card.variations.length) ? card.variations : []; }).flatten().unique().subtract(cards.map(function(card) { return card.multiverseid; })), this);
 		},
-		function finish(err, cards)
+		function addAdditionalFields(cards)
 		{
-			if(err)
-				return setImmediate(function() { cb(err); });
+			base.info("Adding additional fields...");
 
 			this.data.set.cards = this.data.set.cards.concat(cards).sort(cardComparator);
 
@@ -408,6 +413,20 @@ function ripSet(setName, cb)
 
 				card.imageName = card.imageName.strip(":").toLowerCase();
 			});
+
+			// Foreign Languages
+			base.info("Adding foreign languages to cards...");
+
+			addForeignNamesToCards(this.data.set.cards, this);
+		},
+		function finish(err)
+		{
+			if(err)
+				return setImmediate(function() { cb(err); });
+
+			base.info("Doing set corrections...");
+
+			var setCorrections = SET_CORRECTIONS[this.data.set.code];
 
 			// Set Corrections
 			if(setCorrections)
@@ -727,15 +746,21 @@ function buildMultiverseURL(multiverseid, part)
 
 function getURLAsDoc(url, cb)
 {
-	var cachePath = path.join(__dirname, "..", "cache", hash("whirlpool", url));
+	var urlHash = hash("whirlpool", url);
+	var cachePath = path.join(__dirname, "..", "cache", urlHash.charAt(0), urlHash);
 
 	tiptoe(
 		function get()
 		{
 			if(fs.existsSync(cachePath))
+			{
 				fs.readFile(cachePath, {encoding:"utf8"}, function(err, data) { this(null, null, data); }.bind(this));
+			}
 			else
+			{
+				base.info("Requesting from web: %s", url);
 				request(url, this);
+			}
 		},
 		function createDoc(err, response, pageHTML)
 		{
@@ -750,8 +775,118 @@ function getURLAsDoc(url, cb)
 	);
 }
 
+function addForeignNamesToCards(cards, cb)
+{
+	var sets = {};
+
+	tiptoe(
+		function loadJSON()
+		{
+			C.SETS.forEach(function(SET)
+			{
+				fs.readFile(path.join(__dirname, "..", "json", SET.code + ".json"), {encoding : "utf8"}, this.parallel());
+			}.bind(this));
+		},
+		function processCards()
+		{
+			var args=arguments;
+
+			C.SETS.forEach(function(SET, i)
+			{
+				sets[SET.code] = JSON.parse(args[i]);
+			});
+
+			cards.serialForEach(function(card, subcb)
+			{
+				getForeignNamesForCardName(sets, card.name, subcb);
+			}, this);
+		},
+		function applyForeignLanguages(err, cardsForeignNames)
+		{
+			if(err)
+				return setImmediate(function() { cb(err); });
+
+			cards.forEach(function(card, i)
+			{
+				delete card.foreignNames;
+
+				var cardForeignNames = cardsForeignNames[i];
+				if(cardForeignNames && cardForeignNames.length)
+					card.foreignNames = cardForeignNames;
+			});
+
+			setImmediate(function() { cb(); });
+		}
+	);
+}
+
+function getForeignNamesForCardName(sets, cardName, cb)
+{
+	var seenLanguages = [];
+	var foreignLanguages = [];
+	tiptoe(
+		function fetchLanguagePages()
+		{
+			var multiverseids = getMultiverseidsForCardName(sets, cardName);
+			multiverseids.serialForEach(function(multiverseid, subcb)
+			{
+				getURLAsDoc(buildMultiverseLanguagesURL(multiverseid), subcb);
+			}, this);
+		},
+		function processDocs(err, docs)
+		{
+			if(err)
+				return setImmediate(function() { cb(err); });
+
+			docs.forEach(function(doc)
+			{
+				doc("table.cardList tr.cardItem").map(function(i, item) { return doc(item); }).forEach(function(cardRow)
+				{
+					var language = cardRow.find("td:nth-child(2)").text().trim();
+					var foreignCardName = cardRow.find("td:nth-child(1) a").text().trim();
+					if(language && foreignCardName && !seenLanguages.contains(language))
+					{
+						seenLanguages.push(language);
+						foreignLanguages.push({language : language, name : foreignCardName});
+					}
+				});
+			});
+
+			foreignLanguages = foreignLanguages.sort(function(a, b) { var al = a.language.toLowerCase().charAt(0); var bl = b.language.toLowerCase().charAt(0); return (al<bl ? -1 : (al>bl ? 1 : 0)); });
+
+			setImmediate(function() { cb(null, foreignLanguages); });
+		}
+	);
+}
+
+function buildMultiverseLanguagesURL(multiverseid)
+{
+	var urlConfig = 
+	{
+		protocol : "http",
+		host     : "gatherer.wizards.com",
+		pathname : "/Pages/Card/Languages.aspx",
+		query    : { multiverseid : multiverseid }
+	};
+
+	return url.format(urlConfig);
+}
+
+function getMultiverseidsForCardName(sets, cardName)
+{
+	var multiverseids = [];
+
+	Object.forEach(sets, function(setCode, set)
+	{
+		multiverseids = multiverseids.concat(set.cards.filter(function(card) { return card.name===cardName; }).map(function(card) { return card.multiverseid; }));
+	});
+
+	return multiverseids.unique();
+}
+
 exports.tmp = function(cb)
 {
+	var cards = [];
 	tiptoe(
 		function step1()
 		{
@@ -768,13 +903,18 @@ exports.tmp = function(cb)
 		{
 			Array.prototype.slice.call(arguments).forEach(function(doc)
 			{
-				getCardParts(doc).forEach(function(cardPart) { base.info(processCardPart(doc, cardPart)); });
+				getCardParts(doc).forEach(function(cardPart)
+				{
+					var card = processCardPart(doc, cardPart);
+					cards.push(card);
+				});
 			});
 
-			this();
+			addForeignNamesToCards(cards, this);
 		},
 		function finish(err)
 		{
+			base.info(cards);
 			setImmediate(function() { cb(err); });
 		}
 	);

@@ -35,7 +35,7 @@ tiptoe(
 		set.cards.forEach(function(card)
 		{
 			var dup = base.clone(card, true);
-			["name", "manaCost", "cmc", "type", "supertypes", "types", "subtypes", "rarity", "artist", "number", "loyalty", "power", "toughness", "text", "flavor", "imageName", "rulings", "layout", "multiverseid", "colors", "names"].forEach(function(key) { delete dup[key]; });
+			["name", "manaCost", "cmc", "type", "supertypes", "types", "subtypes", "rarity", "artist", "number", "loyalty", "power", "toughness", "text", "flavor", "imageName", "rulings", "layout", "multiverseid", "colors", "names", "foreignNames"].forEach(function(key) { delete dup[key]; });
 			card.json = util.inspect(dup);
 
 			if(card.text)

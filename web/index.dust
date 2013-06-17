@@ -13,14 +13,18 @@
 		<center><h1>MTG JSON</h1></center>
 		<p style="margin-top: 1.0em;">This project provides up to date <a href="http://www.wizards.com/Magic/">Magic the Gathering</a> card data in <a href="http://www.json.org/">JSON</a> format for developers to easily use in their projects.<br>
 		<br>
+		Data available in <strong>Card Data Only</strong> and <strong>Card Data with Extras</strong> formats.<br>
+		<strong>Extras</strong> include: Rulings, Foreign Language Names<br>
+		<br>
 		Any bugs or feedback, e-mail me at <a href="mailto:robert@cosmicrealms.com">robert@cosmicrealms.com</a><br>
 		<br>
 		For more details see: <a href="#exampleCard">Example Card</a> and <a href="#documentation">Documentation</a>
 		</p>
 		<br>
 		<br>
-		<h2>Current Version: <span class="value">1.0</span></h2>
+		<h2>Current Version: <span class="value">1.1</span></h2>
 		<h2>&nbsp;&nbsp;&nbsp;Last Updated: <span class="value">Jun 16, 2013</span><a href="#changeLog">(change log)</a></h2>
+		<br>
 		<br>
 		<br>
 		<br>
@@ -31,13 +35,13 @@
 				</tr>
 				<tr>
 					<th>Card Data Only</th>
-					<th>Card Data with Rulings</th>
+					<th>Card Data with Extras</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr>
 					<td><a href="json/AllSets.json">AllSets.json</a><span class="size">{allSize}</span></td>
-					<td><a href="json/AllSets-r.json">AllSets-r.json</a><span class="size">{allSizeR}</span></td>
+					<td><a href="json/AllSets-x.json">AllSets-x.json</a><span class="size">{allSizeX}</span></td>
 				</tr>
 			</tbody>
 		</table>
@@ -48,7 +52,7 @@
 				</tr>
 				<tr>
 					<th>Card Data Only</th>
-					<th>Card Data with Rulings</th>
+					<th>Card Data with Extras</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -60,7 +64,7 @@
 					</td>
 					<td>
 						{#sets}
-							<a href="json/{code}-r.json">{code}-r.json</a><span class="size">{sizer|s}</span>
+							<a href="json/{code}-x.json">{code}-x.json</a><span class="size">{sizeX|s}</span>
 						{/sets}
 					</td>
 				</tr>
@@ -362,6 +366,16 @@
 				</tr>
 			</thead>
 			<tbody>
+				<tr>
+					<td>1.1</td>
+					<td>Jun 17, 2013</td>
+					<td>
+						<ul>
+							<li>Changed file names from -r (for rulings) to -x (for extras)</li>
+							<li>Added foreign language names for each card. Available in extras JSON files</li>
+						</ul>
+					</td>
+				</tr>
 				<tr>
 					<td>1.0</td>
 					<td>Jun 16, 2013</td>

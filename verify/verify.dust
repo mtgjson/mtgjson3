@@ -34,11 +34,19 @@
 							<span class="number">{number}</span>
 							<span class="powerToughnessLoyalty">{?power}{loyalty}{power} / {toughness}{/power}{^power}{loyalty}{/power}</span>
 						</div>
+						<table class="foreignNames">
+							{#foreignNames}
+								<tr class="foreignName">
+									<td class="left">{language}</td>
+									<td class="right">{name}</td>
+								</tr>
+							{/foreignNames}
+						</table>
 						<table class="rulings">
 							{#rulings}
 								<tr class="ruling">
-									<td class="date">{date}</td>
-									<td class="text">{text}</td>
+									<td class="left">{date}</td>
+									<td class="right">{text}</td>
 								</tr>
 							{/rulings}
 						</table>
