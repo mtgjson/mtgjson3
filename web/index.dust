@@ -3,6 +3,15 @@
 <html>
 	<head>
 		<title>{title}</title>
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-26058758-3', 'mtgjson.com');
+			ga('send', 'pageview');
+		</script>
 		<link type="text/css" rel="stylesheet" href="index.css">
 		<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 		<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
@@ -10,18 +19,18 @@
 	</head>
 	<body><a name="top"></a>
 		<script type="text/javascript" src="rainbow-custom.min.js"></script>
-		<center><h1>MTG JSON</h1></center>
+		<center><h1 style="font-size: 240%;">MTG JSON</h1></center>
 		<p style="margin-top: 1.0em;">This project provides up to date <a href="http://www.wizards.com/Magic/">Magic the Gathering</a> card data in <a href="http://www.json.org/">JSON</a> format for developers to easily use in their projects.<br>
 		<br>
 		For more details see: <a href="#exampleCard">Example Card</a> and <a href="#documentation">Documentation</a><br>
 		<br>
 		Any bugs or feedback, e-mail me at <a href="mailto:robert@cosmicrealms.com">robert@cosmicrealms.com</a><br>
 		<br>
-		<strong>Extras</strong> include: Rulings, Foreign Language Names<br>
+		<strong>Extras</strong> include: Rulings, Printings, Foreign Language Names<br>
 		</p>
 		<br>
 		<br>
-		<h2>Current Version: <span class="value">1.1</span></h2>
+		<h2>Current Version: <span class="value">1.2</span></h2>
 		<h2>&nbsp;&nbsp;&nbsp;Last Updated: <span class="value">Jun 17, 2013</span><a href="#changeLog">(change log)</a></h2>
 		<br>
 		<br>
@@ -89,7 +98,20 @@
 		<hr>
 		<a name="documentation"></a>
 		<h1>Documentation<a href="#top">(back to top)</a></h1>
-		<p>Each individual set is a JSON object with key/value pairs. Below you will find a table detailing each key.<br>
+		<p>All JSON files are UTF8 encoded. There are UTF8 characters (such as Æther Adept) in many of the files.<br>
+		<br>Each individual set is a JSON object like this:</p>
+		<pre><code data-language="javascript">
+    {
+               name : "Dissension",         // The name of the set
+               code : "DIS",                // The code name of the set
+        releaseDate : "2006-05-05"          // When the set was released
+             border : "black",              // The type of border on the cards, either "white" or "black"
+               type : "expansion",          // Type of set. One of: "core", "expansion", "reprint", "box"
+              block : "Ravnica":,           // The block this set is in
+              cards : [ {}, {}, {}, ... ]   // The cards in the set
+    }
+		</code></pre>
+		<p>The cards value is an Array of cards, each being a JSON object with key/value pairs. Below you will find a table detailing each key.<br>
 		<br>
 		If a value would be empty (such as manaCost for Basic Lands), then the key will not exist in the object.<br>
 		<br>
@@ -108,12 +130,12 @@
 				<tr>
 					<td>layout</td>
 					<td>"normal"</td>
-					<td>The card layout. Possible values: normal, split, flip, dual-faced</td>
+					<td>The card layout. Possible values: normal, split, flip, double-faced</td>
 				</tr>
 				<tr>
 					<td>name</td>
 					<td>"Research"</td>
-					<td>The card name. For split, dual-faced and flip cards, just the name of one side of the card. Basically each 'sub-card' has it's own record.</td>
+					<td>The card name. For split, double-faced and flip cards, just the name of one side of the card. Basically each 'sub-card' has it's own record.</td>
 				</tr>
 				<tr>
 					<td>names</td>
@@ -210,16 +232,34 @@
 					<td>ajani goldmane</td>
 					<td>The corresponding <a href="http://www.slightlymagic.net/forum/viewforum.php?f=15">CCGHQ</a> image file. See <a href="#imageInfo">Image Info</a> for more details.</td> 
 				</tr>
+			</tbody>
+		</table>
+		<table>
+			<thead>
+				<tr>
+					<th colspan="3">Extras Only Fields</th>
+				</tr>
+				<tr>
+					<th>Key</th>
+					<th>Example</th>
+					<th>Description</th>
+				</tr>
+			</thead>
+			<tbody>		
 				<tr>
 					<td>rulings</td>
 					<td>[{date : "2003-04-15",<br>text : "Does not tap."}]</td>
-					<td>The rulings for the card. An array of objects, each object having 'date' and 'text' keys. This key is only present in the 'extras' version.</td>
+					<td>The rulings for the card. An array of objects, each object having 'date' and 'text' keys.</td>
 				</tr>
 				<tr>
 					<td>foreignNames</td>
 					<td>[{language : "Italian",<br>name : "Wurm Devastatore"}]</td>
-					<td>Foreign language names for the card. An array of objects, each object having 'language' and 'name' keys. Not available for split, flip and dual-faced cards. This key is only present in the 'extras' version.</td>
+					<td>Foreign language names for the card. An array of objects, each object having 'language' and 'name' keys. Not available for split, flip and double-faced cards.</td>
 				</tr>
+				<tr>
+					<td>printings</td>
+					<td>["Ice Age", "Chronicles"]</td>
+					<td>The sets that this card was printed in. Note: This is a complete list of printings, so it may contain sets that are not available on MTG JSON.</td>
 			</tbody>
 		</table>
 		<hr>
@@ -375,12 +415,31 @@
 			</thead>
 			<tbody>
 				<tr>
+					<td>1.2</td>
+					<td>Jun 17, 2013</td>
+					<td>
+						<ul>
+							<li>Added 'printings' field to each card that show which sets the card was printed in. Available in 'extras' JSON files</li>
+							<li>Added sets:
+								<ul>
+									<li>Chronicles</li>
+									<li>Battle Royale Box Set</li>
+									<li>Beatdown Box Set</li>
+									<li>Modern Masters</li>
+								</ul>
+							</li>
+							<li>Added an example JSON object for a set object</li>
+							<li>Added "type" and "block" to each set object.</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
 					<td>1.1</td>
 					<td>Jun 17, 2013</td>
 					<td>
 						<ul>
 							<li>Changed file names from -r (for rulings) to -x (for extras)</li>
-							<li>Added foreign language names for each card. Available in extras JSON files</li>
+							<li>Added foreign language names for each card. Available in 'extras' JSON files</li>
 							<li>Added documentation for rulings and foreignNames keys</li>
 							<li>Made a better "Individual Sets" download table and sorted it by release date</li>
 						</ul>

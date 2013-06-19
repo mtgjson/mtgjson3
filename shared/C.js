@@ -13,457 +13,616 @@
 			name : "Limited Edition Alpha",
 			code : "LEA",
 			releaseDate : "1993-08-05",
-			border : "black"
+			border : "black",
+			type : "core"
 		},
 		{
 			name : "Limited Edition Beta",
 			code : "LEB",
 			releaseDate : "1993-10-01",
-			border : "black"
+			border : "black",
+			type : "core"
 		},
 		{
 			name : "Arabian Nights",
 			code : "ARN",
 			releaseDate : "1993-12-01",
-			border : "black"
+			border : "black",
+			type : "expansion"
 		},
 		{
 			name : "Unlimited Edition",
 			code : "2ED",
 			releaseDate : "1993-12-01",
-			border : "white"
+			border : "white",
+			type : "core"
 		},
 		{
 			name : "Antiquities",
 			code : "ATQ",
 			releaseDate : "1994-03-01",
-			border : "black"
+			border : "black",
+			type : "expansion"
 		},
 		{
 			name : "Revised Edition",
 			code : "3ED",
 			releaseDate : "1994-04-01",
-			border : "white"
+			border : "white",
+			type : "core"
 		},
 		{
 			name : "Legends",
 			code : "LEG",
 			releaseDate : "1994-06-01",
-			border : "black"
+			border : "black",
+			type : "expansion"
 		},
 		{
 			name : "The Dark",
 			code : "DRK",
 			releaseDate : "1994-08-01",
-			border : "black"
+			border : "black",
+			type : "expansion"
 		},
 		{
 			name : "Fallen Empires",
 			code : "FEM",
 			releaseDate : "1994-11-01",
-			border : "black"
+			border : "black",
+			type : "expansion"
 		},
 		{
 			name : "Fourth Edition",
 			code : "4ED",
 			releaseDate : "1995-04-01",
-			border : "white"
+			border : "white",
+			type : "core"
 		},
 		{
 			name : "Ice Age",
 			code : "ICE",
 			releaseDate : "1995-06-01",
-			border : "black"
+			border : "black",
+			type : "expansion",
+			block : "Ice Age"
+		},
+		{
+			name : "Chronicles",
+			code : "CHR",
+			releaseDate : "1995-07-01",
+			border : "white",
+			type : "reprint"
 		},
 		{
 			name : "Homelands",
 			code : "HML",
 			releaseDate : "1995-10-01",
-			border : "black"
+			border : "black",
+			type : "expansion"
 		},
 		{
 			name : "Alliances",
 			code : "ALL",
 			releaseDate : "1996-06-10",
-			border : "black"
+			border : "black",
+			type : "expansion",
+			block : "Ice Age"
 		},
 		{
 			name : "Mirage",
 			code : "MIR",
 			releaseDate : "1996-10-08",
-			border : "black"
+			border : "black",
+			type : "expansion",
+			block : "Mirage"
 		},
 		{
 			name : "Visions",
 			code : "VIS",
 			releaseDate : "1997-02-03",
-			border : "black"
+			border : "black",
+			type : "expansion",
+			block : "Mirage"
 		},
 		{
 			name : "Fifth Edition",
 			code : "5ED",
 			releaseDate : "1997-03-24",
-			border : "white"
+			border : "white",
+			type : "core"
 		},
 		{
 			name : "Weatherlight",
 			code : "WTH",
 			releaseDate : "1997-06-09",
-			border : "black"
+			border : "black",
+			type : "expansion",
+			block : "Mirage"
 		},
 		{
 			name : "Tempest",
 			code : "TMP",
 			releaseDate : "1997-10-14",
-			border : "black"
+			border : "black",
+			type : "expansion",
+			block : "Tempest"
 		},
 		{
 			name : "Stronghold",
 			code : "STH",
 			releaseDate : "1998-03-02",
-			border : "black"
+			border : "black",
+			type : "expansion",
+			block : "Tempest"
 		},
 		{
 			name : "Exodus",
 			code : "EXO",
 			releaseDate : "1998-06-15",
-			border : "black"
+			border : "black",
+			type : "expansion",
+			block : "Tempest"
 		},
 		{
 			name : "Urza's Saga",
 			code : "USG",
 			releaseDate : "1998-10-12",
-			border : "black"
+			border : "black",
+			type : "expansion",
+			block : "Urza's"
 		},
 		{
 			name : "Urza's Legacy",
 			code : "ULG",
 			releaseDate : "1999-02-15",
-			border : "black"
+			border : "black",
+			type : "expansion",
+			block : "Urza's"
 		},
 		{
 			name : "Classic Sixth Edition",
 			code : "6ED",
 			releaseDate : "1999-04-21",
-			border : "white"
+			border : "white",
+			type : "core"
 		},
 		{
 			name : "Urza's Destiny",
 			code : "UDS",
 			releaseDate : "1999-06-07",
-			border : "black"
+			border : "black",
+			type : "expansion",
+			block : "Urza's"
 		},
 		{
 			name : "Mercadian Masques",
 			code : "MMQ",
 			releaseDate : "1999-10-04",
-			border : "black"
+			border : "black",
+			type : "expansion",
+			block : "Masques"
+		},
+		{
+			name : "Battle Royale Box Set",
+			code : "BRB",
+			releaseDate : "1999-11-12",
+			border : "white",
+			type : "box"
 		},
 		{
 			name : "Nemesis",
 			code : "NMS",
 			releaseDate : "2000-02-14",
-			border : "black"
+			border : "black",
+			type : "expansion",
+			block : "Masques"			
 		},
 		{
 			name : "Prophecy",
 			code : "PCY",
 			releaseDate : "2000-06-05",
-			border : "black"
+			border : "black",
+			type : "expansion",
+			block : "Masques"
+		},
+		{
+			name : "Beatdown Box Set",
+			code : "BTD",
+			releaseDate : "2000-10-01",
+			border : "white",
+			type : "box"
 		},
 		{
 			name : "Invasion",
 			code : "INV",
 			releaseDate : "2000-10-02",
-			border : "black"
+			border : "black",
+			type : "expansion",
+			block : "Invasion"
 		},
 		{
 			name : "Planeshift",
 			code : "PLS",
 			releaseDate : "2001-02-05",
-			border : "black"
+			border : "black",
+			type : "expansion",
+			block : "Invasion"
 		},
 		{
 			name : "Seventh Edition",
 			code : "7ED",
 			releaseDate : "2001-04-11",
-			border : "white"
+			border : "white",
+			type : "core"
 		},
 		{
 			name : "Apocalypse",
 			code : "APC",
 			releaseDate : "2001-06-04",
-			border : "black"
+			border : "black",
+			type : "expansion",
+			block : "Invasion"
 		},
 		{
 			name : "Odyssey",
 			code : "ODY",
 			releaseDate : "2001-10-01",
-			border : "black"
+			border : "black",
+			type : "expansion",
+			block : "Odyssey"
 		},
 		{
 			name : "Torment",
 			code : "TOR",
 			releaseDate : "2002-02-04",
-			border : "black"
+			border : "black",
+			type : "expansion",
+			block : "Odyssey"
 		},
 		{
 			name : "Judgment",
 			code : "JUD",
 			releaseDate : "2002-05-27",
-			border : "black"
+			border : "black",
+			type : "expansion",
+			block : "Odyssey"
 		},
 		{
 			name : "Onslaught",
 			code : "ONS",
 			releaseDate : "2002-10-07",
-			border : "black"
+			border : "black",
+			type : "expansion",
+			block : "Onslaught"
 		},
 		{
 			name : "Legions",
 			code : "LGN",
 			releaseDate : "2003-02-03",
-			border : "black"
+			border : "black",
+			type : "expansion",
+			block : "Onslaught"
 		},
 		{
 			name : "Scourge",
 			code : "SCG",
 			releaseDate : "2003-05-26",
-			border : "black"
+			border : "black",
+			type : "expansion",
+			block : "Onslaught"
 		},
 		{
 			name : "Eighth Edition",
 			code : "8ED",
 			releaseDate : "2003-07-28",
-			border : "white"
+			border : "white",
+			type : "core"
 		},
 		{
 			name : "Mirrodin",
 			code : "MRD",
 			releaseDate : "2003-10-02",
-			border : "black"
+			border : "black",
+			type : "expansion",
+			block : "Mirrodin"
 		},
 		{
 			name : "Darksteel",
 			code : "DST",
 			releaseDate : "2004-02-06",
-			border : "black"
+			border : "black",
+			type : "expansion",
+			block : "Mirrodin"
 		},
 		{
 			name : "Fifth Dawn",
 			code : "5DN",
 			releaseDate : "2004-06-04",
-			border : "black"
+			border : "black",
+			type : "expansion",
+			block : "Mirrodin"
 		},
 		{
 			name : "Champions of Kamigawa",
 			code : "CHK",
 			releaseDate : "2004-10-01",
-			border : "black"
+			border : "black",
+			type : "expansion",
+			block : "Kamigawa"
 		},
 		{
 			name : "Betrayers of Kamigawa",
 			code : "BOK",
 			releaseDate : "2005-02-04",
-			border : "black"
+			border : "black",
+			type : "expansion",
+			block : "Kamigawa"
 		},
 		{
 			name : "Saviors of Kamigawa",
 			code : "SOK",
 			releaseDate : "2005-06-03",
-			border : "black"
+			border : "black",
+			type : "expansion",
+			block : "Kamigawa"
 		},
 		{
 			name : "Ninth Edition",
 			code : "9ED",
 			releaseDate : "2005-07-29",
-			border : "white"
+			border : "white",
+			type : "core"
 		},
 		{
 			name : "Ravnica: City of Guilds",
 			code : "RAV",
 			releaseDate : "2005-10-07",
-			border : "black"
+			border : "black",
+			type : "expansion",
+			block : "Ravnica"
 		},
 		{
 			name : "Guildpact",
 			code : "GPT",
 			releaseDate : "2006-02-03",
-			border : "black"
+			border : "black",
+			type : "expansion",
+			block : "Ravnica"
 		},
 		{
 			name : "Dissension",
 			code : "DIS",
 			releaseDate : "2006-05-05",
-			border : "black"
+			border : "black",
+			type : "expansion",
+			block : "Ravnica"
 		},
 		{
 			name : "Coldsnap",
 			code : "CSP",
 			releaseDate : "2006-07-21",
-			border : "black"
+			border : "black",
+			type : "expansion",
+			block : "Ice Age"
 		},
 		{
 			name : "Time Spiral",
 			code : "TSP",
 			releaseDate : "2006-10-06",
-			border : "black"
+			border : "black",
+			type : "expansion",
+			block : "Time Spiral"
 		},
 		{
 			name : "Planar Chaos",
 			code : "PLC",
 			releaseDate : "2007-02-02",
-			border : "black"
+			border : "black",
+			type : "expansion",
+			block : "Time Spiral"
 		},
 		{
 			name : "Future Sight",
 			code : "FUT",
 			releaseDate : "2007-05-04",
-			border : "black"
+			border : "black",
+			type : "expansion",
+			block : "Time Spiral"
 		},
 		{
 			name : "Tenth Edition",
 			code : "10E",
 			releaseDate : "2007-07-13",
-			border : "black"
+			border : "black",
+			type : "core"
 		},
 		{
 			name : "Lorwyn",
 			code : "LRW",
 			releaseDate : "2007-10-12",
-			border : "black"
+			border : "black",
+			type : "expansion",
+			block : "Lorwyn"
 		},
 		{
 			name : "Morningtide",
 			code : "MOR",
 			releaseDate : "2008-02-01",
-			border : "black"
+			border : "black",
+			type : "expansion",
+			block : "Lorwyn"
 		},
 		{
 			name : "Shadowmoor",
 			code : "SHM",
 			releaseDate : "2008-05-02",
-			border : "black"
+			border : "black",
+			type : "expansion",
+			block : "Shadowmoor"
 		},
 		{
 			name : "Eventide",
 			code : "EVE",
 			releaseDate : "2008-07-25",
-			border : "black"
+			border : "black",
+			type : "expansion",
+			block : "Shadowmoor"
 		},
 		{
 			name : "Shards of Alara",
 			code : "ALA",
 			releaseDate : "2008-10-03",
-			border : "black"
+			border : "black",
+			type : "expansion",
+			block : "Alara"
 		},
 		{
 			name : "Conflux",
 			code : "CON",
 			releaseDate : "2009-02-06",
-			border : "black"
+			border : "black",
+			type : "expansion",
+			block : "Alara"
 		},
 		{
 			name : "Alara Reborn",
 			code : "ARB",
 			releaseDate : "2009-04-30",
-			border : "black"
+			border : "black",
+			type : "expansion",
+			block : "Alara"
 		},
 		{
 			name : "Magic 2010",
 			code : "M10",
 			releaseDate : "2009-07-17",
-			border : "black"
+			border : "black",
+			type : "core"
 		},
 		{
 			name : "Zendikar",
 			code : "ZEN",
 			releaseDate : "2009-10-02",
-			border : "black"
+			border : "black",
+			type : "expansion",
+			block : "Zendikar"
 		},
 		{
 			name : "Worldwake",
 			code : "WWK",
 			releaseDate : "2010-02-05",
-			border : "black"
+			border : "black",
+			type : "expansion",
+			block : "Zendikar"
 		},
 		{
 			name : "Rise of the Eldrazi",
 			code : "ROE",
 			releaseDate : "2010-04-23",
-			border : "black"
+			border : "black",
+			type : "expansion",
+			block : "Zendikar"
 		},
 		{
 			name : "Magic 2011",
 			code : "M11",
 			releaseDate : "2010-07-16",
-			border : "black"
+			border : "black",
+			type : "core"
 		},
 		{
 			name : "Scars of Mirrodin",
 			code : "SOM",
 			releaseDate : "2010-10-01",
-			border : "black"
+			border : "black",
+			type : "expansion",
+			block : "Scars of Mirrodin"
 		},
 		{
 			name : "Mirrodin Besieged",
 			code : "MBS",
 			releaseDate : "2011-02-04",
-			border : "black"
+			border : "black",
+			type : "expansion",
+			block : "Scars of Mirrodin"
 		},
 		{
 			name : "New Phyrexia",
 			code : "NPH",
 			releaseDate : "2011-05-13",
-			border : "black"
+			border : "black",
+			type : "expansion",
+			block : "Scars of Mirrodin"
 		},
 		{
 			name : "Magic 2012",
 			code : "M12",
 			releaseDate : "2011-07-15",
-			border : "black"
+			border : "black",
+			type : "core"
 		},
 		{
 			name : "Innistrad",
 			code : "ISD",
 			releaseDate : "2011-09-30",
-			border : "black"
+			border : "black",
+			type : "expansion",
+			block : "Innistrad"
 		},
 		{
 			name : "Dark Ascension",
 			code : "DKA",
 			releaseDate : "2012-02-03",
-			border : "black"
+			border : "black",
+			type : "expansion",
+			block : "Innistrad"
 		},
 		{
 			name : "Avacyn Restored",
 			code : "AVR",
 			releaseDate : "2012-05-04",
-			border : "black"
+			border : "black",
+			type : "expansion",
+			block : "Innistrad"
 		},
 		{
 			name : "Magic 2013",
 			code : "M13",
 			releaseDate : "2012-07-13",
-			border : "black"
+			border : "black",
+			type : "core"
 		},
 		{
 			name : "Return to Ravnica",
 			code : "RTR",
 			releaseDate : "2012-10-05",
-			border : "black"
+			border : "black",
+			type : "expansion",
+			block : "Return to Ravnica"
 		},
 		{
 			name : "Gatecrash",
 			code : "GTC",
 			releaseDate : "2013-02-01",
-			border : "black"
+			border : "black",
+			type : "expansion",
+			block : "Return to Ravnica"
 		},
 		{
 			name : "Dragon's Maze",
 			code : "DGM",
 			releaseDate : "2013-05-03",
-			border : "black"
+			border : "black",
+			type : "expansion",
+			block : "Return to Ravnica"
+		},
+		{
+			name : "Modern Masters",
+			code : "MMA",
+			releaseDate : "2013-06-07",
+			border : "black",
+			tpe : "reprint"
 		}
 	];
 })(typeof exports==="undefined" ? window.C={} : exports);

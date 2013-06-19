@@ -17,7 +17,11 @@ function usage()
 if(process.argv.length<3)
 	usage();
 
-process.argv.slice(2).serialForEach(function(arg, subcb)
+var setsToDo = process.argv.slice(2);
+if(setsToDo.length===1 && setsToDo[0].toLowerCase()==="allsets")
+	setsToDo = C.SETS.map(function(SET) { return SET.code; });
+
+setsToDo.serialForEach(function(arg, subcb)
 {
 	var targetSet = C.SETS.mutateOnce(function(SET) { if(SET.name.toLowerCase()===arg.toLowerCase() || SET.code.toLowerCase()===arg.toLowerCase()) { return SET; } });
 	if(!targetSet)

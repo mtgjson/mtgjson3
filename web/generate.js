@@ -46,7 +46,7 @@ tiptoe(
 			allSetsWithExtras[SET.code] = setWithExtras;
 			
 			var set = base.clone(setWithExtras, true);
-			set.cards.forEach(function(card) { delete card.rulings; delete card.foreignNames; });
+			set.cards.forEach(function(card) { delete card.rulings; delete card.foreignNames; delete card.printings; });
 			allSets[SET.code] = set;
 
 			fs.writeFile(path.join(__dirname, "json", SET.code + ".json"), JSON.stringify(set), {encoding : "utf8"}, this.parallel());

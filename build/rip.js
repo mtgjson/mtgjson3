@@ -9,6 +9,7 @@ var base = require("node-base"),
 	url = require("url"),
 	moment = require("moment"),
 	hash = require("mhash").hash,
+	unicodeUtil = require("node-utils").unicode,
 	path = require("path"),
 	querystring = require("querystring"),
 	tiptoe = require("tiptoe");
@@ -135,6 +136,22 @@ var SET_CORRECTIONS =
 	TMP :
 	[
 		{ renumberImages : "Plains", order : [4953, 4954, 4955, 4956] }
+	],
+	BRB :
+	[
+		{ renumberImages : "Forest", order : [21119, 22347, 22351, 22349, 22348, 22352, 22355, 22353, 22354] },
+		{ renumberImages : "Island", order : [21144, 22364, 22366, 22367, 22365] },
+		{ renumberImages : "Mountain", order : [22344, 22335, 22336, 22339, 22342, 22334, 22343, 21118, 22340] },
+		{ renumberImages : "Plains", order : [22357, 22356, 21145, 22362, 22361, 22363, 22360, 22358, 22359] },
+		{ renumberImages : "Swamp", order : [21171, 22370, 22369, 22368] },
+		{ match : {multiverseid : 22339}, replace : {artist : "Rob Alexander"} }
+	],
+	BTD :
+	[
+		{ renumberImages : "Forest", order : [27242, 27243, 27244] },
+		{ renumberImages : "Island", order : [27236, 27237, 27238] },
+		{ renumberImages : "Mountain", order : [27239, 27240, 27241] },
+		{ renumberImages : "Swamp", order : [27233, 27234, 27235] }
 	],
 	PLS :
 	[
@@ -313,7 +330,7 @@ var SET_CORRECTIONS =
 
 function cardComparator(a, b)
 {
-	var result = unicode_to_ascii(a.name).toLowerCase().localeCompare(unicode_to_ascii(b.name).toLowerCase());
+	var result = unicodeUtil.unicodeToAscii(a.name).toLowerCase().localeCompare(unicodeUtil.unicodeToAscii(b.name).toLowerCase());
 	if(result!==0)
 		return result;
 
@@ -396,7 +413,7 @@ function ripSet(setName, cb)
 
 			this.data.set.cards.forEach(function(card)
 			{
-				card.imageName = unicode_to_ascii((card.layout==="split" ? card.names.join("") : card.name));
+				card.imageName = unicodeUtil.unicodeToAscii((card.layout==="split" ? card.names.join("") : card.name));
 
 				if(cardNameCounts.hasOwnProperty(card.name))
 				{
@@ -415,9 +432,22 @@ function ripSet(setName, cb)
 			});
 
 			// Foreign Languages
-			base.info("Adding foreign languages to cards...");
+			if(!fs.existsSync(path.join(__dirname, "..", "json", this.data.set.code + ".json")))
+			{
+				base.warn("SKIPPING foreign languages...");
+				this();
+			}
+			else
+			{
+				base.info("Adding foreign languages to cards...");
+				addForeignNamesToCards(this.data.set.cards, this);
+			}
+		},
+		function addPrintings()
+		{
+			base.info("Adding printings to cards...");
 
-			addForeignNamesToCards(this.data.set.cards, this);
+			addPrintingsToCards(this.data.set.cards, this);
 		},
 		function finish(err)
 		{
@@ -875,6 +905,76 @@ function buildMultiverseLanguagesURL(multiverseid)
 	return url.format(urlConfig);
 }
 
+function addPrintingsToCards(cards, cb)
+{
+	tiptoe(
+		function fetchPrintingsPages()
+		{
+			var args=arguments;
+
+			cards.serialForEach(function(card, subcb)
+			{
+				getURLAsDoc(buildMultiversePrintingsURL(card.multiverseid), subcb);
+			}, this);
+		},
+		function applyPrintings(err, docs)
+		{
+			if(err)
+				return setImmediate(function() { cb(err); });
+
+			cards.forEach(function(card, i)
+			{
+				var printings = [];
+				var doc = docs[i];
+				doc("table.cardList tr.cardItem").map(function(i, item) { return doc(item); }).forEach(function(cardRow)
+				{
+					var printing = cardRow.find("td:nth-child(3)").text().trim();
+					if(printing)
+						printings.push(printing);
+				});
+
+				delete card.printings;
+
+				printings = printings.unique().sort(function(a, b) { return moment(getReleaseDateForSet(a), "YYYY-MM-DD").unix()-moment(getReleaseDateForSet(b), "YYYY-MM-DD").unix(); });
+				if(printings && printings.length)
+					card.printings = printings;
+			});
+			/*			docs.forEach(function(doc)
+			{
+				doc("table.cardList tr.cardItem").map(function(i, item) { return doc(item); }).forEach(function(cardRow)
+				{
+					var language = cardRow.find("td:nth-child(2)").text().trim();
+					var foreignCardName = cardRow.find("td:nth-child(1) a").text().trim();
+					if(language && foreignCardName && !seenLanguages.contains(language) && cardName!==foreignCardName)
+					{
+						seenLanguages.push(language);
+						foreignLanguages.push({language : language, name : foreignCardName});
+					}
+				});
+			});*/
+
+			//foreignLanguages = foreignLanguages.sort(function(a, b) { var al = a.language.toLowerCase().charAt(0); var bl = b.language.toLowerCase().charAt(0); return (al<bl ? -1 : (al>bl ? 1 : 0)); });
+
+
+			setImmediate(function() { cb(); });
+		}
+	);
+}
+
+function buildMultiversePrintingsURL(multiverseid)
+{
+	var urlConfig = 
+	{
+		protocol : "http",
+		host     : "gatherer.wizards.com",
+		pathname : "/Pages/Card/Printings.aspx",
+		query    : { multiverseid : multiverseid }
+	};
+
+	return url.format(urlConfig);
+}
+
+
 function getMultiverseidsForCardName(sets, cardName)
 {
 	var multiverseids = [];
@@ -914,6 +1014,10 @@ exports.tmp = function(cb)
 			});
 
 			addForeignNamesToCards(cards, this);
+		},
+		function step4()
+		{
+			addPrintingsToCards(cards, this);
 		},
 		function finish(err)
 		{
@@ -1004,71 +1108,6 @@ function processSymbol(symbol)
 	return "{" + (symbols.length>1 ? symbols.join("/") : symbols[0]) + "}";
 }
 
-var UNICODE_CONVERSION_MAP =
-{
-	// latin
-	'À': 'A', 'Á': 'A', 'Â': 'A', 'Ã': 'A', 'Ä': 'A', 'Å': 'A', 'Æ': 'AE',
-	'Ç': 'C', 'È': 'E', 'É': 'E', 'Ê': 'E', 'Ë': 'E', 'Ì': 'I', 'Í': 'I',
-	'Î': 'I', 'Ï': 'I', 'Ð': 'D', 'Ñ': 'N', 'Ò': 'O', 'Ó': 'O', 'Ô': 'O',
-	'Õ': 'O', 'Ö': 'O', 'Ő': 'O', 'Ø': 'O', 'Ù': 'U', 'Ú': 'U', 'Û': 'U',
-	'Ü': 'U', 'Ű': 'U', 'Ý': 'Y', 'Þ': 'TH', 'ß': 'ss', 'à':'a', 'á':'a',
-	'â': 'a', 'ã': 'a', 'ä': 'a', 'å': 'a', 'æ': 'ae', 'ç': 'c', 'è': 'e',
-	'é': 'e', 'ê': 'e', 'ë': 'e', 'ì': 'i', 'í': 'i', 'î': 'i', 'ï': 'i',
-	'ð': 'd', 'ñ': 'n', 'ò': 'o', 'ó': 'o', 'ô': 'o', 'õ': 'o', 'ö': 'o',
-	'ő': 'o', 'ø': 'o', 'ù': 'u', 'ú': 'u', 'û': 'u', 'ü': 'u', 'ű': 'u',
-	'ý': 'y', 'þ': 'th', 'ÿ': 'y', 'ẞ': 'SS',
-	// greek
-	'α':'a', 'β':'b', 'γ':'g', 'δ':'d', 'ε':'e', 'ζ':'z', 'η':'h', 'θ':'8',
-	'ι':'i', 'κ':'k', 'λ':'l', 'μ':'m', 'ν':'n', 'ξ':'3', 'ο':'o', 'π':'p',
-	'ρ':'r', 'σ':'s', 'τ':'t', 'υ':'y', 'φ':'f', 'χ':'x', 'ψ':'ps', 'ω':'w',
-	'ά':'a', 'έ':'e', 'ί':'i', 'ό':'o', 'ύ':'y', 'ή':'h', 'ώ':'w', 'ς':'s',
-	'ϊ':'i', 'ΰ':'y', 'ϋ':'y', 'ΐ':'i',
-	'Α':'A', 'Β':'B', 'Γ':'G', 'Δ':'D', 'Ε':'E', 'Ζ':'Z', 'Η':'H', 'Θ':'8',
-	'Ι':'I', 'Κ':'K', 'Λ':'L', 'Μ':'M', 'Ν':'N', 'Ξ':'3', 'Ο':'O', 'Π':'P',
-	'Ρ':'R', 'Σ':'S', 'Τ':'T', 'Υ':'Y', 'Φ':'F', 'Χ':'X', 'Ψ':'PS', 'Ω':'W',
-	'Ά':'A', 'Έ':'E', 'Ί':'I', 'Ό':'O', 'Ύ':'Y', 'Ή':'H', 'Ώ':'W', 'Ϊ':'I',
-	'Ϋ':'Y',
-	// turkish
-	'ş':'s', 'Ş':'S', 'ı':'i', 'İ':'I', 'ğ':'g', 'Ğ':'G',
-	// russian
-	'а':'a', 'б':'b', 'в':'v', 'г':'g', 'д':'d', 'е':'e', 'ё':'yo', 'ж':'zh',
-	'з':'z', 'и':'i', 'й':'j', 'к':'k', 'л':'l', 'м':'m', 'н':'n', 'о':'o',
-	'п':'p', 'р':'r', 'с':'s', 'т':'t', 'у':'u', 'ф':'f', 'х':'h', 'ц':'c',
-	'ч':'ch', 'ш':'sh', 'щ':'sh', 'ъ':'u', 'ы':'y', 'ь':'', 'э':'e', 'ю':'yu',
-	'я':'ya',
-	'А':'A', 'Б':'B', 'В':'V', 'Г':'G', 'Д':'D', 'Е':'E', 'Ё':'Yo', 'Ж':'Zh',
-	'З':'Z', 'И':'I', 'Й':'J', 'К':'K', 'Л':'L', 'М':'M', 'Н':'N', 'О':'O',
-	'П':'P', 'Р':'R', 'С':'S', 'Т':'T', 'У':'U', 'Ф':'F', 'Х':'H', 'Ц':'C',
-	'Ч':'Ch', 'Ш':'Sh', 'Щ':'Sh', 'Ъ':'U', 'Ы':'Y', 'Ь':'', 'Э':'E', 'Ю':'Yu',
-	'Я':'Ya',
-	// ukranian
-	'Є':'Ye', 'І':'I', 'Ї':'Yi', 'Ґ':'G', 'є':'ye', 'і':'i', 'ї':'yi', 'ґ':'g',
-	// czech
-	'č':'c', 'ď':'d', 'ě':'e', 'ň': 'n', 'ř':'r', 'š':'s', 'ť':'t', 'ů':'u',
-	'ž':'z', 'Č':'C', 'Ď':'D', 'Ě':'E', 'Ň': 'N', 'Ř':'R', 'Š':'S', 'Ť':'T',
-	'Ů':'U', 'Ž':'Z',
-	// polish
-	'ą':'a', 'ć':'c', 'ę':'e', 'ł':'l', 'ń':'n', 'ś':'s', 'ź':'z',
-	'ż':'z', 'Ą':'A', 'Ć':'C', 'Ę':'e', 'Ł':'L', 'Ń':'N', 'Ś':'S',
-	'Ź':'Z', 'Ż':'Z',
-	// latvian
-	'ā':'a', 'ē':'e', 'ģ':'g', 'ī':'i', 'ķ':'k', 'ļ':'l', 'ņ':'n', 'ū':'u',
-	'Ā':'A', 'Ē':'E', 'Ģ':'G', 'Ī':'i', 'Ķ':'k', 'Ļ':'L', 'Ņ':'N', 'Ū':'u'
-};
-
-function unicode_to_ascii(text)
-{
-	var result = "";
-
-	for(var i=0,len=text.length;i<len;i++)
-	{
-		var c = text.charAt(i);
-		result += UNICODE_CONVERSION_MAP.hasOwnProperty(c) ? UNICODE_CONVERSION_MAP[c] : c;
-	}
-
-	return result;
-}
-
 function processTextBlocks(doc, textBlocks)
 {
 	var result = "";
@@ -1120,4 +1159,9 @@ function processTextBoxChildren(doc, children)
 	});
 
 	return result;
+}
+
+function getReleaseDateForSet(setName)
+{
+	return C.SETS.mutateOnce(function(SET) { return SET.name===setName ? SET.releaseDate : undefined; }) || moment().format("YYYY-MM-DD");
 }
