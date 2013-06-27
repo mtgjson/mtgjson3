@@ -109,7 +109,7 @@
                code : "DIS",                // The code name of the set
         releaseDate : "2006-05-05"          // When the set was released
              border : "black",              // The type of border on the cards, either "white", "black" or "silver"
-               type : "expansion",          // Type of set. One of: "core", "expansion", "reprint", "box", "un-set"
+               type : "expansion",          // Type of set. One of: "core", "expansion", "reprint", "box", "un", "from the vault", "premium deck", "duel deck"
               block : "Ravnica":,           // The block this set is in
               cards : [ {}, {}, {}, ... ]   // The cards in the set
     }
@@ -424,16 +424,36 @@
 			<tbody>
 				<tr>
 					<td>1.3</td>
-					<td>Jun 17, 2013</td>
+					<td>Jun 27, 2013</td>
 					<td>
 						<ul>
 							<li>Added sets:
 								<ul>
 									<li>Unglued</li>
 									<li>Unhinged</li>
+									<li>From the Vault: Dragons</li>
+									<li>From the Vault: Exiled</li>
+									<li>From the Vault: Relics</li>
+									<li>From the Vault: Legends</li>
+									<li>From the Vault: Realms</li>
+									<li>Premium Deck Series: Slivers</li>
+									<li>Premium Deck Series: Fire &amp; Lightning</li>
+									<li>Premium Deck Series: Graveborn</li>
+									<li>Duel Decks: Elves vs. Goblins</li>
+									<li>Duel Decks: Jace vs. Chandra</li>
+									<li>Duel Decks: Divine vs. Demonic</li>
+									<li>Duel Decks: Garruk vs. Liliana</li>
+									<li>Duel Decks: Phyrexia vs. The Coalition</li>
+									<li>Duel Decks: Elspeth vs. Tezzeret</li>
+									<li>Duel Decks: Knights vs. Dragons</li>
+									<li>Duel Decks: Ajani vs. Nicol Bolas</li>
+									<li>Duel Decks: Venser vs. Koth</li>
+									<li>Duel Decks: Izzet vs. Golgari</li>
+									<li>Duel Decks: Sorin vs. Tibalt</li>
 								</ul>
 							</li>
 							<li>Each card may now have a "border" key if the border is different than the rest of the set. See the <a href="#documentation">documentation</a> for more details.</li>
+							<li>Planeshift: Fixed a bug with 'Draco' text having {1}0 in the text rather than {10}</li>
 						</ul>
 					</td>
 				</tr>

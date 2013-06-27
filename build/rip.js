@@ -334,6 +334,10 @@ var SET_CORRECTIONS =
 		{ match : {name : "Plains"}, replace : {border : "black"}},
 		{ match : {name : "Swamp"}, replace : {border : "black"}}
 	],
+	"*" :
+	[
+		{ match : { name : "Draco" }, replace : {text : "Domain — Draco costs {2} less to cast for each basic land type among lands you control.\n\nFlying\n\nDomain — At the beginning of your upkeep, sacrifice Draco unless you pay {10}. This cost is reduced by {2} for each basic land type among lands you control."}}
+	],
 	XYZ :
 	[
 		{ renumberImages : "", order : [] },
@@ -387,7 +391,7 @@ function ripSet(setName, cb)
 					output : "checklist",
 					sort   : "cn+",
 					action : "advanced",
-					set    : "[" + JSON.stringify(setName) + "]"
+					set    : "[" + JSON.stringify(setName.replaceAll("&", "and")) + "]"
 				}
 			});
 
@@ -432,7 +436,9 @@ function ripSet(setName, cb)
 					cardNameCounts[key]++;
 			});
 
-			var setCorrections = SET_CORRECTIONS[this.data.set.code];
+			var setCorrections = SET_CORRECTIONS["*"];
+			if(SET_CORRECTIONS.hasOwnProperty(this.data.set.code))
+				setCorrections = setCorrections.concat(SET_CORRECTIONS[this.data.set.code]);
 
 			this.data.set.cards.forEach(function(card)
 			{
@@ -441,12 +447,10 @@ function ripSet(setName, cb)
 				if(cardNameCounts.hasOwnProperty(card.name))
 				{
 					var imageNumber = cardNameCounts[card.name]--;
-					if(setCorrections)
-					{
-						var numberOrder = setCorrections.mutateOnce(function(setCorrection) { return setCorrection.renumberImages===card.name ? setCorrection.order : undefined; });
-						if(numberOrder)
-							imageNumber = numberOrder.indexOf(card.multiverseid)+1;
-					}
+
+					var numberOrder = setCorrections.mutateOnce(function(setCorrection) { return setCorrection.renumberImages===card.name ? setCorrection.order : undefined; });
+					if(numberOrder)
+						imageNumber = numberOrder.indexOf(card.multiverseid)+1;
 					
 					card.imageName += imageNumber;
 				}
@@ -481,34 +485,33 @@ function ripSet(setName, cb)
 
 			base.info("Doing set corrections...");
 
-			var setCorrections = SET_CORRECTIONS[this.data.set.code];
+			var setCorrections = SET_CORRECTIONS["*"];
+			if(SET_CORRECTIONS.hasOwnProperty(this.data.set.code))
+				setCorrections = setCorrections.concat(SET_CORRECTIONS[this.data.set.code]);
 
 			// Set Corrections
-			if(setCorrections)
+			setCorrections.forEach(function(setCorrection)
 			{
-				setCorrections.forEach(function(setCorrection)
+				this.data.set.cards.forEach(function(card)
 				{
-					this.data.set.cards.forEach(function(card)
+					if(setCorrection.match && Object.every(setCorrection.match, function(key, value) { return card[key]===value; }))
 					{
-						if(setCorrection.match && Object.every(setCorrection.match, function(key, value) { return card[key]===value; }))
-						{
-							if(setCorrection.replace)
-								Object.forEach(setCorrection.replace, function(key, value) { card[key] = value; });
-							if(setCorrection.remove)
-								setCorrection.remove.forEach(function(removeKey) { delete card[removeKey]; });
-						}
-					});
-
-					if(setCorrection.copyCard)
-					{
-						var newCard = base.clone(this.data.set.cards.mutateOnce(function(card) { return card.name===setCorrection.copyCard ? card : undefined; }), true);
 						if(setCorrection.replace)
-							Object.forEach(setCorrection.replace, function(key, value) { newCard[key] = value; });
-
-						this.data.set.cards.push(newCard);
+							Object.forEach(setCorrection.replace, function(key, value) { card[key] = value; });
+						if(setCorrection.remove)
+							setCorrection.remove.forEach(function(removeKey) { delete card[removeKey]; });
 					}
-				}.bind(this));
-			}
+				});
+
+				if(setCorrection.copyCard)
+				{
+					var newCard = base.clone(this.data.set.cards.mutateOnce(function(card) { return card.name===setCorrection.copyCard ? card : undefined; }), true);
+					if(setCorrection.replace)
+						Object.forEach(setCorrection.replace, function(key, value) { newCard[key] = value; });
+
+					this.data.set.cards.push(newCard);
+				}
+			}.bind(this));
 
 			this.data.set.cards = this.data.set.cards.sort(cardComparator);
 

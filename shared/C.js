@@ -173,7 +173,7 @@
 			code : "UGL",
 			releaseDate : "1998-08-11",
 			border : "silver",
-			type : "un-set"
+			type : "un"
 		},
 		{
 			name : "Urza's Saga",
@@ -367,7 +367,7 @@
 			code : "UNH",
 			releaseDate : "2004-11-20",
 			border : "silver",
-			type : "un-set"
+			type : "un"
 		},
 		{
 			name : "Betrayers of Kamigawa",
@@ -488,6 +488,13 @@
 			block : "Shadowmoor"
 		},
 		{
+			name : "From the Vault: Dragons",
+			code : "DRB",
+			releaseDate : "2008-08-29",
+			border : "black",
+			type : "from the vault"
+		},
+		{
 			name : "Shards of Alara",
 			code : "ALA",
 			releaseDate : "2008-10-03",
@@ -519,12 +526,26 @@
 			type : "core"
 		},
 		{
+			name : "From the Vault: Exiled",
+			code : "V09",
+			releaseDate : "2009-08-28",
+			border : "black",
+			type : "from the vault"
+		},
+		{
 			name : "Zendikar",
 			code : "ZEN",
 			releaseDate : "2009-10-02",
 			border : "black",
 			type : "expansion",
 			block : "Zendikar"
+		},
+		{
+			name : "Premium Deck Series: Slivers",
+			code : "H09",
+			releaseDate : "2009-11-20",
+			border : "black",
+			type : "premium deck"
 		},
 		{
 			name : "Worldwake",
@@ -550,12 +571,26 @@
 			type : "core"
 		},
 		{
+			name : "From the Vault: Relics",
+			code : "V10",
+			releaseDate : "2010-08-27",
+			border : "black",
+			type : "from the vault"
+		},
+		{
 			name : "Scars of Mirrodin",
 			code : "SOM",
 			releaseDate : "2010-10-01",
 			border : "black",
 			type : "expansion",
 			block : "Scars of Mirrodin"
+		},
+		{
+			name : "Premium Deck Series: Fire & Lightning",
+			code : "PD2",
+			releaseDate : "2010-11-19",
+			border : "black",
+			type : "premium deck"
 		},
 		{
 			name : "Mirrodin Besieged",
@@ -581,12 +616,26 @@
 			type : "core"
 		},
 		{
+			name : "From the Vault: Legends",
+			code : "V11",
+			releaseDate : "2011-08-26",
+			border : "black",
+			type : "from the vault"
+		},
+		{
 			name : "Innistrad",
 			code : "ISD",
 			releaseDate : "2011-09-30",
 			border : "black",
 			type : "expansion",
 			block : "Innistrad"
+		},
+		{
+			name : "Premium Deck Series: Graveborn",
+			code : "PD3",
+			releaseDate : "2011-11-18",
+			border : "black",
+			type : "premium deck"
 		},
 		{
 			name : "Dark Ascension",
@@ -610,6 +659,13 @@
 			releaseDate : "2012-07-13",
 			border : "black",
 			type : "core"
+		},
+		{
+			name : "From the Vault: Realms",
+			code : "V12",
+			releaseDate : "2012-08-31",
+			border : "black",
+			type : "from the vault"
 		},
 		{
 			name : "Return to Ravnica",
