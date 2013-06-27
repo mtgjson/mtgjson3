@@ -622,7 +622,7 @@
 			code : "MMA",
 			releaseDate : "2013-06-07",
 			border : "black",
-			tpe : "reprint"
+			type : "reprint"
 		}
 	];
 })(typeof exports==="undefined" ? window.C={} : exports);
