@@ -7,6 +7,10 @@
 
 	exports.SUPERTYPES = ["Basic", "Legendary", "Snow", "World"];
 	exports.TYPES = ["Instant", "Sorcery", "Artifact", "Creature", "Enchantment", "Land", "Planeswalker", "Tribal", "Plane", "Phenomenon", "Scheme", "Vanguard"];
+
+	// Unglued/Unhinged types
+	exports.TYPES.push("Enchant", "Player", "Summon", "Interrupt", "Scariest", "You'll", "Ever", "See", "Eaturecray");
+
 	exports.SETS =
 	[
 		{
@@ -163,6 +167,13 @@
 			border : "black",
 			type : "expansion",
 			block : "Tempest"
+		},
+		{
+			name : "Unglued",
+			code : "UGL",
+			releaseDate : "1998-08-11",
+			border : "silver",
+			type : "un-set"
 		},
 		{
 			name : "Urza's Saga",
@@ -350,6 +361,13 @@
 			border : "black",
 			type : "expansion",
 			block : "Kamigawa"
+		},
+		{
+			name : "Unhinged",
+			code : "UNH",
+			releaseDate : "2004-11-20",
+			border : "silver",
+			type : "un-set"
 		},
 		{
 			name : "Betrayers of Kamigawa",

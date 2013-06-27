@@ -310,6 +310,30 @@ var SET_CORRECTIONS =
 		{ match : {imageName : "swamp7"}, replace : {imageName : "swamp4",  number : "241"} },
 		{ match : {imageName : "swamp8"}, replace : {imageName : "swamp4a", number : "241a"} }
 	],
+	UGL :
+	[
+		{ match : {name : "B.F.M. (Big Furry Monster)", number : "28b"}, replace : {imageName : "b.f.m. 1", number : "28"}},
+		{ match : {name : "B.F.M. (Big Furry Monster)", number : "29b"}, replace : {imageName : "b.f.m. 2", number : "29"}},
+		{ match : {name : "The Ultimate Nightmare of Wizards of the Coast® Customer Service"}, replace : {imageName : "the ultimate nightmare of wizards of the coastr customer service", manaCost : "{X}{Y}{Z}{R}{R}"}},
+		{ match : {name : "Forest"}, replace : {border : "black"}},
+		{ match : {name : "Island"}, replace : {border : "black"}},
+		{ match : {name : "Mountain"}, replace : {border : "black"}},
+		{ match : {name : "Plains"}, replace : {border : "black"}},
+		{ match : {name : "Swamp"}, replace : {border : "black"}}
+	],
+	UNH :
+	[
+		{ match : {name : "Cheap Ass"}, replace : {text : "Spells you play cost {½} less to play."}},
+		{ match : {name : "Flaccify"}, replace : {text : "Counter target spell unless its controller pays {3}{½}."}},
+		{ match : {name : "Kill Destroy"}, replace : {name : "Kill! Destroy!", imageName : "kill! destroy!"}},
+		{ match : {name : "Little Girl"}, replace : {manaCost : "{hw}"}},
+		{ match : {name : "Our Market Research Shows That Players Like Really Long Card Names So We Made this Card to Have the Absolute Longest Card Name Ever Elemental"}, replace : {imageName : "our market research shows that players like really long card names so we made"}},
+		{ match : {name : "Forest"}, replace : {border : "black"}},
+		{ match : {name : "Island"}, replace : {border : "black"}},
+		{ match : {name : "Mountain"}, replace : {border : "black"}},
+		{ match : {name : "Plains"}, replace : {border : "black"}},
+		{ match : {name : "Swamp"}, replace : {border : "black"}}
+	],
 	XYZ :
 	[
 		{ renumberImages : "", order : [] },
@@ -362,16 +386,15 @@ function ripSet(setName, cb)
 				{
 					output : "checklist",
 					sort   : "cn+",
+					action : "advanced",
 					set    : "[" + JSON.stringify(setName) + "]"
 				}
 			});
 
-			request(listURL, this);
+			getURLAsDoc(listURL, this);
 		},
-		function processFirstBatch(response, listHTML)
+		function processFirstBatch(listDoc)
 		{
-			var listDoc = cheerio.load(listHTML);
-
 			base.info("Processing first batch...");
 
 			this.data.set = base.clone(C.SETS.mutateOnce(function(SET) { return SET.name===setName ? SET : undefined; }));
@@ -428,7 +451,9 @@ function ripSet(setName, cb)
 					card.imageName += imageNumber;
 				}
 
-				card.imageName = card.imageName.strip(":").toLowerCase();
+				card.imageName = card.imageName.replaceAll("/", " ");
+
+				card.imageName = card.imageName.strip(":\"?").replaceAll(" token card", "").toLowerCase();
 			});
 
 			// Foreign Languages
@@ -507,6 +532,8 @@ function processMultiverseids(multiverseids, cb)
 	var cards = [];
 	var doubleFacedCardNames = [];
 
+	base.info("Processing %d multiverseids", multiverseids.unique().length);
+
 	multiverseids.unique().serialForEach(function(multiverseid, subcb)
 	{
 		tiptoe(
@@ -555,6 +582,12 @@ function getCardPartIDPrefix(cardPart)
 	return "#" + cardPart.find(".rightCol").attr("id").replaceAll("_rightCol", "");
 }
 
+var POWER_TOUGHNESS_REPLACE_MAP =
+{
+	"{1/2}" : ".5",
+	"{\\^2}"  : "²"
+};
+
 function processCardPart(doc, cardPart)
 {
 	var card =
@@ -597,11 +630,17 @@ function processCardPart(doc, cardPart)
 	// Card Name
 	card.name = cardPart.find(idPrefix + "_nameRow .value").text().trim();
 
+	//base.info("Processing card: " + card.name);
+
 	// Card Type
-	var rawTypes = cardPart.find(idPrefix + "_typeRow .value").text().trim().split("—");
+	var skipped = 0;
+	var rawTypes = cardPart.find(idPrefix + "_typeRow .value").text().trim().split(/[—-]/);
 	rawTypes[0].split(" ").filterEmpty().forEach(function(rawType, i)
 	{
-		card.type += (i>0 ? " " : "") + rawType;
+		if(rawType.trim().toLowerCase()==="(none)")
+			return;
+
+		card.type += ((i-skipped)>0 ? " " : "") + rawType;
 
 		rawType = rawType.trim().toProperCase();
 		if(C.SUPERTYPES.contains(rawType))
@@ -644,10 +683,15 @@ function processCardPart(doc, cardPart)
 		else
 		{
 			// Power/Toughness
+			Object.forEach(POWER_TOUGHNESS_REPLACE_MAP, function(find, replace)
+			{
+				powerToughnessValue = powerToughnessValue.replaceAll(find, replace);
+			});
+
 			var powerToughnessParts = powerToughnessValue.split("/");
 			if(powerToughnessParts.length!==2)
 			{
-				base.warn("Power toughness invalid [%s] for card: %s", powerToughnessValue, card.name);
+				base.warn("Power toughness invalid [%s] for card: %s", cardPart.find(idPrefix + "_ptRow .value").text().trim(), card.name);
 			}
 			else
 			{
@@ -1088,7 +1132,30 @@ var SYMBOL_CONVERSION_MAP =
 	"phyrexian red"      : "P/R",
 	"phyrexian green"    : "P/G",
 	"phyrexian"          : "P",
-	"variable colorless" : "X"
+	"variable colorless" : "X",
+
+	// Unglued, Unhinged
+	"100"                : "100",
+	"500"                : "500",
+	"1000000"            : "1000000",
+	"infinite"           : "∞",
+	"half a red"         : "hr"
+};
+
+var TEXT_TO_SYMBOL_MAP =
+{
+	"ocT" : "T",
+	"oW"  : "W",
+	"oU"  : "U",
+	"oB"  : "B",
+	"oR"  : "R",
+	"oG"  : "G",
+	"oX"  : "X",
+	"o1"  : "1",
+	"o2"  : "2",
+	"o3"  : "3",
+	"o4"  : "4",
+	"o7"  : "7"
 };
 
 function processSymbol(symbol)
@@ -1145,12 +1212,25 @@ function processTextBoxChildren(doc, children)
 			{
 				result += processTextBoxChildren(doc, child.children);
 			}
+			else if(child.name==="<")
+			{
+				result += "<";
+			}
+			else if(child.name===">")
+			{
+				result += ">";
+			}
 			else
-				base.warn("Unsupported text child tag name: %s", child.name);
+				base.warn("Unsupported text child tag name %s", child.name);
 		}
 		else if(child.type==="text")
 		{
-			result += child.data;
+			var childText = child.data;
+			Object.forEach(TEXT_TO_SYMBOL_MAP, function(text, symbol)
+			{
+				childText = childText.replaceAll(text, "{" + symbol + "}");
+			});
+			result += childText;
 		}
 		else
 		{

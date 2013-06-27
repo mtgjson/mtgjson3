@@ -30,8 +30,11 @@
 		</p>
 		<br>
 		<br>
-		<h2>Current Version: <span class="value">1.2.1</span></h2>
+		<h2>Current Version: <span class="value">1.3</span></h2>
 		<h2>&nbsp;&nbsp;&nbsp;Last Updated: <span class="value">Jun 27, 2013</span><a href="#changeLog">(change log)</a></h2>
+		<br>
+		<br>
+		<h2 style="display: none;"><span style="color: red; text-decoration: underline;">ALERT:</span> alert message goes here</h2>
 		<br>
 		<br>
 		<br>
@@ -105,8 +108,8 @@
                name : "Dissension",         // The name of the set
                code : "DIS",                // The code name of the set
         releaseDate : "2006-05-05"          // When the set was released
-             border : "black",              // The type of border on the cards, either "white" or "black"
-               type : "expansion",          // Type of set. One of: "core", "expansion", "reprint", "box"
+             border : "black",              // The type of border on the cards, either "white", "black" or "silver"
+               type : "expansion",          // Type of set. One of: "core", "expansion", "reprint", "box", "un-set"
               block : "Ravnica":,           // The block this set is in
               cards : [ {}, {}, {}, ... ]   // The cards in the set
     }
@@ -231,6 +234,11 @@
 					<td>imageName</td>
 					<td>ajani goldmane</td>
 					<td>The corresponding <a href="http://www.slightlymagic.net/forum/viewforum.php?f=15">CCGHQ</a> image file. See <a href="#imageInfo">Image Info</a> for more details.</td> 
+				</tr>
+				<tr>
+					<td>border</td>
+					<td>black</td>
+					<td>If the border for this specific card is DIFFERENT than the border specified in the top level set JSON, then it will be specified here. (Example: Unglued has silver borders, except for the lands which are black bordered)</td>
 				</tr>
 			</tbody>
 		</table>
@@ -414,6 +422,26 @@
 				</tr>
 			</thead>
 			<tbody>
+				<tr>
+					<td>1.3</td>
+					<td>Jun 17, 2013</td>
+					<td>
+						<ul>
+							<li>Added sets:
+								<ul>
+									<li>Unglued</li>
+									<li>Unhinged</li>
+								</ul>
+							</li>
+							<li>Each card may now have a "border" key if the border is different than the rest of the set. See the <a href="#documentation">documentation</a> for more details.</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>1.2.2</td>
+					<td>Jun 27, 2013</td>
+					<td><ul><li>Fixed a bug in the 'Modern Masters' set, where it contained no cards</li></ul></td>
+				</tr>
 				<tr>
 					<td>1.2.1</td>
 					<td>Jun 27, 2013</td>
