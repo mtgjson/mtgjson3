@@ -1,14 +1,24 @@
+Intro
+-----
+
 This is the code used to generate the JSON for [mtgjson.com](http://mtgjson.com/)
 
 I didn't plan on open-sourcing this, so there are rough edges.
 
-Setup:
+Setup
+-----
+
     mkdir cache
     npm install
 
-To create a JSON file:
+Usage
+-----
+
     cd build
     node buildSet.js <expansion code>
+
+Other
+-----
 
 This will create json/<expansion code>.json
 
