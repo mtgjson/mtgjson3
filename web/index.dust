@@ -31,7 +31,7 @@
 		<br>
 		<br>
 		<h2>Current Version: <span class="value">1.3</span></h2>
-		<h2>&nbsp;&nbsp;&nbsp;Last Updated: <span class="value">Jun 27, 2013</span><a href="#changeLog">(change log)</a></h2>
+		<h2>&nbsp;&nbsp;&nbsp;Last Updated: <span class="value">Jun 28, 2013</span><a href="#changeLog">(change log)</a></h2>
 		<br>
 		<br>
 		<h2 style="display: none;"><span style="color: red; text-decoration: underline;">ALERT:</span> alert message goes here</h2>
@@ -109,7 +109,8 @@
                code : "DIS",                // The code name of the set
         releaseDate : "2006-05-05"          // When the set was released
              border : "black",              // The type of border on the cards, either "white", "black" or "silver"
-               type : "expansion",          // Type of set. One of: "core", "expansion", "reprint", "box", "un", "from the vault", "premium deck", "duel deck"
+               type : "expansion",          // Type of set. One of: "core", "expansion", "reprint", "box", "un",
+                                            //                      "from the vault", "premium deck", "duel deck"
               block : "Ravnica":,           // The block this set is in
               cards : [ {}, {}, {}, ... ]   // The cards in the set
     }
@@ -133,7 +134,7 @@
 				<tr>
 					<td>layout</td>
 					<td>"normal"</td>
-					<td>The card layout. Possible values: normal, split, flip, double-faced</td>
+					<td>The card layout. Possible values: normal, split, flip, double-faced, token</td>
 				</tr>
 				<tr>
 					<td>name</td>
@@ -234,6 +235,11 @@
 					<td>imageName</td>
 					<td>ajani goldmane</td>
 					<td>The corresponding <a href="http://www.slightlymagic.net/forum/viewforum.php?f=15">CCGHQ</a> image file. See <a href="#imageInfo">Image Info</a> for more details.</td> 
+				</tr>
+				<tr>
+					<td>watermark</td>
+					<td>Selesnya</td>
+					<td>The watermark on the card. Note: Split cards don't currently have this field set, despite having a watermark on each side of the split card.</td>
 				</tr>
 				<tr>
 					<td>border</td>
@@ -409,6 +415,8 @@
 			<li>Planeshift's "ertai, the corrupted1.jpg" "skyship weatherlight1" and "tahngarth, talruum hero1" didn't have a 1 next to it for the first version of the cards</li>
 			<li>Ravnica's basic lands were missing the number 1 for the first card of each basic land type</li>
 			<li>Dark Ascension forgot to de-unicode séance correctly as seance.</li>
+			<li>Duel Decks: Ajani vs. Nicol Bolas and Duel Decks: Izzet vs. Golgari had either " - " or "-" in between split card names but they should not have anything between the names</li>
+			<li>Duel Decks: Ajani vs. Nicol Bolas island and plains both had a 1 at the end when it shouldn't have any number since there is only one version</li>
 		</ul>
 		<hr>
 		<a name="changeLog"></a>
@@ -424,9 +432,10 @@
 			<tbody>
 				<tr>
 					<td>1.3</td>
-					<td>Jun 27, 2013</td>
+					<td>Jun 28, 2013</td>
 					<td>
 						<ul>
+							<li>Added 'watermark' to each card</li>
 							<li>Added sets:
 								<ul>
 									<li>Unglued</li>
@@ -454,6 +463,7 @@
 							</li>
 							<li>Each card may now have a "border" key if the border is different than the rest of the set. See the <a href="#documentation">documentation</a> for more details.</li>
 							<li>Planeshift: Fixed a bug with 'Draco' text having {1}0 in the text rather than {10}</li>
+							<li>The 'printings' field on each card is now ordered by release date in ascending order</li>
 						</ul>
 					</td>
 				</tr>

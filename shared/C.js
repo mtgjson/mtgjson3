@@ -464,6 +464,13 @@
 			block : "Lorwyn"
 		},
 		{
+			name : "Duel Decks: Elves vs. Goblins",
+			code : "EVG",
+			releaseDate : "2007-11-16",
+			border : "black",
+			type : "duel deck"
+		},
+		{
 			name : "Morningtide",
 			code : "MOR",
 			releaseDate : "2008-02-01",
@@ -503,12 +510,26 @@
 			block : "Alara"
 		},
 		{
+			name : "Duel Decks: Jace vs. Chandra",
+			code : "DD2",
+			releaseDate : "2008-11-07",
+			border : "black",
+			type : "duel deck"
+		},
+		{
 			name : "Conflux",
 			code : "CON",
 			releaseDate : "2009-02-06",
 			border : "black",
 			type : "expansion",
 			block : "Alara"
+		},
+		{
+			name : "Duel Decks: Divine vs. Demonic",
+			code : "DDC",
+			releaseDate : "2009-04-10",
+			border : "black",
+			type : "duel deck"
 		},
 		{
 			name : "Alara Reborn",
@@ -541,6 +562,13 @@
 			block : "Zendikar"
 		},
 		{
+			name : "Duel Decks: Garruk vs. Liliana",
+			code : "DDD",
+			releaseDate : "2009-10-30",
+			border : "black",
+			type : "duel deck"
+		},
+		{
 			name : "Premium Deck Series: Slivers",
 			code : "H09",
 			releaseDate : "2009-11-20",
@@ -554,6 +582,13 @@
 			border : "black",
 			type : "expansion",
 			block : "Zendikar"
+		},
+		{
+			name : "Duel Decks: Phyrexia vs. the Coalition",
+			code : "DDE",
+			releaseDate : "2010-03-19",
+			border : "black",
+			type : "duel deck"
 		},
 		{
 			name : "Rise of the Eldrazi",
@@ -576,6 +611,13 @@
 			releaseDate : "2010-08-27",
 			border : "black",
 			type : "from the vault"
+		},
+		{
+			name : "Duel Decks: Elspeth vs. Tezzeret",
+			code : "DDF",
+			releaseDate : "2010-09-03",
+			border : "black",
+			type : "duel deck"
 		},
 		{
 			name : "Scars of Mirrodin",
@@ -601,6 +643,13 @@
 			block : "Scars of Mirrodin"
 		},
 		{
+			name : "Duel Decks: Knights vs. Dragons",
+			code : "DDG",
+			releaseDate : "2011-04-01",
+			border : "black",
+			type : "duel deck"
+		},
+		{
 			name : "New Phyrexia",
 			code : "NPH",
 			releaseDate : "2011-05-13",
@@ -621,6 +670,13 @@
 			releaseDate : "2011-08-26",
 			border : "black",
 			type : "from the vault"
+		},
+		{
+			name : "Duel Decks: Ajani vs. Nicol Bolas",
+			code : "DDH",
+			releaseDate : "2011-09-02",
+			border : "black",
+			type : "duel deck"
 		},
 		{
 			name : "Innistrad",
@@ -646,6 +702,13 @@
 			block : "Innistrad"
 		},
 		{
+			name : "Duel Decks: Venser vs. Koth",
+			code : "DDI",
+			releaseDate : "2012-03-30",
+			border : "black",
+			type : "duel deck"
+		},
+		{
 			name : "Avacyn Restored",
 			code : "AVR",
 			releaseDate : "2012-05-04",
@@ -668,6 +731,13 @@
 			type : "from the vault"
 		},
 		{
+			name : "Duel Decks: Izzet vs. Golgari",
+			code : "DDJ",
+			releaseDate : "2012-09-07",
+			border : "black",
+			type : "duel deck"
+		},
+		{
 			name : "Return to Ravnica",
 			code : "RTR",
 			releaseDate : "2012-10-05",
@@ -682,6 +752,13 @@
 			border : "black",
 			type : "expansion",
 			block : "Return to Ravnica"
+		},
+		{
+			name : "Duel Decks: Sorin vs. Tibalt",
+			code : "SVT",
+			releaseDate : "2013-09-07",
+			border : "black",
+			type : "duel deck"
 		},
 		{
 			name : "Dragon's Maze",

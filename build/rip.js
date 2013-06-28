@@ -334,6 +334,34 @@ var SET_CORRECTIONS =
 		{ match : {name : "Plains"}, replace : {border : "black"}},
 		{ match : {name : "Swamp"}, replace : {border : "black"}}
 	],
+	EVG :
+	[
+		{ match : {name : "Elemental"}, replace : {number : "T1", layout : "token"}},
+		{ match : {name : "Elf Warrior"}, replace : {number : "T2", layout : "token"}},
+		{ match : {name : "Goblin"}, replace : {number : "T3", layout : "token"}}
+	],
+	DD2 :
+	[
+		{ match : {name : "Elemental Shaman"}, replace : {number : "T1", layout : "token"}}
+	],
+	DDC :
+	[
+		{ match : {name : "Demon"}, replace : {number : "T2", layout : "token"}},
+		{ match : {name : "Spirit"}, replace : {number : "T1", layout : "token"}},
+		{ match : {name : "Thrull"}, replace : {number : "T3", layout : "token"}}
+	],
+	DDD :
+	[
+		{ match : {name : "Beast", number : "1"}, replace : {number : "T1", layout : "token"}},
+		{ match : {name : "Beast", number : "2"}, replace : {number : "T2", layout : "token"}},
+		{ match : {name : "Elephant"}, replace : {number : "T3", layout : "token"}}
+	],
+	DDE :
+	[
+		{ match : {name : "Hornet"}, replace : {number : "T1", layout : "token"}},
+		{ match : {name : "Minion"}, replace : {number : "T2", layout : "token"}},
+		{ match : {name : "Saproling"}, replace : {number : "T3", layout : "token"}}
+	],
 	"*" :
 	[
 		{ match : { name : "Draco" }, replace : {text : "Domain — Draco costs {2} less to cast for each basic land type among lands you control.\n\nFlying\n\nDomain — At the beginning of your upkeep, sacrifice Draco unless you pay {10}. This cost is reduced by {2} for each basic land type among lands you control."}}
@@ -556,9 +584,13 @@ function processMultiverseids(multiverseids, cb)
 				Array.prototype.slice.call(arguments).forEach(function(multiverseDoc)
 				{
 					var newCards = [];
-					getCardParts(multiverseDoc).forEach(function(cardPart)
+					getCardParts(multiverseDoc).forEach(function(cardPart, i)
 					{
-						newCards.push(processCardPart(multiverseDoc, cardPart));
+						var newCard = processCardPart(multiverseDoc, cardPart);
+						if(newCard.layout==="split" && i===1)
+							return;
+
+						newCards.push(newCard);
 					});
 
 					if(newCards.length===2 && newCards[0].layout==="double-faced")
@@ -617,7 +649,7 @@ function processCardPart(doc, cardPart)
 
 	// Check for flip or double-faced card
 	var cardParts = getCardParts(doc);
-	if(cardParts.length===2)
+	if(card.layout!=="split" && cardParts.length===2)
 	{
 		var firstCardText = processTextBlocks(doc, cardParts[0].find(getCardPartIDPrefix(cardParts[0]) + "_textRow .value .cardtextbox")).trim().toLowerCase();
 		if(firstCardText.contains("flip"))
@@ -632,6 +664,9 @@ function processCardPart(doc, cardPart)
 
 	// Card Name
 	card.name = cardPart.find(idPrefix + "_nameRow .value").text().trim();
+
+	if(card.name.endsWith(" token card"))
+		card.layout = "token";
 
 	//base.info("Processing card: " + card.name);
 
@@ -747,6 +782,11 @@ function processCardPart(doc, cardPart)
 	var cardNumberValue = cardPart.find(idPrefix + "_numberRow .value").text().trim();
 	if(cardNumberValue)
 		card.number = cardNumberValue;
+
+	// Watermark
+	var cardWatermark = processTextBlocks(doc, cardPart.find(idPrefix + "_markRow .value .cardtextbox")).trim();
+	if(cardWatermark)
+		card.watermark = cardWatermark;
 
 	// Rulings
 	var rulingRows = cardPart.find(idPrefix + "_rulingsContainer table tr.post");
