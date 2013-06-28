@@ -3,12 +3,12 @@ This is the code used to generate the JSON for [mtgjson.com](http://mtgjson.com/
 I didn't plan on open-sourcing this, so there are rough edges.
 
 Setup:
-mkdir cache
-npm install
+    mkdir cache
+    npm install
 
 To create a JSON file:
-cd build
-node buildSet.js <expansion code>
+    cd build
+    node buildSet.js <expansion code>
 
 This will create json/<expansion code>.json
 
