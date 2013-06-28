@@ -1,4 +1,4 @@
-This is the code used to generate the JSON for mtgjson.com
+This is the code used to generate the JSON for [mtgjson.com](http://mtgjson.com/)
 
 I didn't plan on open-sourcing this, so there are rough edges.
 
