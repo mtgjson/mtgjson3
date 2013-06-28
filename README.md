@@ -17,12 +17,14 @@ Usage
     cd build
     node buildSet.js <expansion code>
 
+This creates the file:
+
+    json/<expansion code>.json
+
+You will need to run this twice for any 'new' sets. First pass doesn't include foreign langauges.
+
 Other
 -----
-
-This will create json/<expansion code>.json
-
-You want to run it twice for any 'new' sets, because first pass won't include foreign languages.
 
 All gatherer page requests are cached to the cache directory and any future requests will use the cached version instead.
 
