@@ -2,8 +2,7 @@
 
 (function(exports)
 {
-    var isNode = typeof process!=="undefined" && typeof process.versions!=="undefined" && typeof process.versions.node!=="undefined";
-    var base = isNode ? require("node-base") : window.base;
+    var base = (typeof process!=="undefined" && typeof process.versions!=="undefined" && typeof process.versions.node!=="undefined") ? require("base") : window.base;
 
 	exports.SUPERTYPES = ["Basic", "Legendary", "Snow", "World"];
 	exports.TYPES = ["Instant", "Sorcery", "Artifact", "Creature", "Enchantment", "Land", "Planeswalker", "Tribal", "Plane", "Phenomenon", "Scheme", "Vanguard"];
@@ -137,6 +136,13 @@
 			type : "core"
 		},
 		{
+			name : "Portal",
+			code : "POR",
+			releaseDate : "1997-05-01",
+			border : "black",
+			type : "starter"
+		},
+		{
 			name : "Weatherlight",
 			code : "WTH",
 			releaseDate : "1997-06-09",
@@ -159,6 +165,13 @@
 			border : "black",
 			type : "expansion",
 			block : "Tempest"
+		},
+		{
+			name : "Portal Second Age",
+			code : "PO2",
+			releaseDate : "1998-06-01",
+			border : "black",
+			type : "starter"
 		},
 		{
 			name : "Exodus",
@@ -199,12 +212,26 @@
 			type : "core"
 		},
 		{
+			name : "Portal Three Kingdoms",
+			code : "PTK",
+			releaseDate : "1999-05-01",
+			border : "white",
+			type : "starter"
+		},
+		{
 			name : "Urza's Destiny",
 			code : "UDS",
 			releaseDate : "1999-06-07",
 			border : "black",
 			type : "expansion",
 			block : "Urza's"
+		},
+		{
+			name : "Starter 1999",
+			code : "S99",
+			releaseDate : "1999-07-01",
+			border : "white",
+			type : "starter"
 		},
 		{
 			name : "Mercadian Masques",
@@ -228,6 +255,13 @@
 			border : "black",
 			type : "expansion",
 			block : "Masques"			
+		},
+		{
+			name : "Starter 2000",
+			code : "S00",
+			releaseDate : "2000-04-01",
+			border : "white",
+			type : "starter"
 		},
 		{
 			name : "Prophecy",
@@ -658,6 +692,13 @@
 			block : "Scars of Mirrodin"
 		},
 		{
+			name : "Commander",
+			code : "CMD",
+			releaseDate : "2011-06-17",
+			border : "black",
+			type : "commander"
+		},
+		{
 			name : "Magic 2012",
 			code : "M12",
 			releaseDate : "2011-07-15",
@@ -746,6 +787,13 @@
 			block : "Return to Ravnica"
 		},
 		{
+			name : "Commander's Arsenal",
+			code : "CMA",
+			releaseDate : "2012-11-02",
+			border : "black",
+			type : "commander"
+		},
+		{
 			name : "Gatecrash",
 			code : "GTC",
 			releaseDate : "2013-02-01",
@@ -774,6 +822,13 @@
 			releaseDate : "2013-06-07",
 			border : "black",
 			type : "reprint"
+		},
+		{
+			name : "Magic 2014 Core Set",
+			code : "M14",
+			releaseDate : "2013-07-19",
+			border : "black",
+			type : "core"
 		}
 	];
 })(typeof exports==="undefined" ? window.C={} : exports);

@@ -1,7 +1,7 @@
 "use strict";
 /*global setImmediate: true*/
 
-var base = require("node-base"),
+var base = require("base"),
 	C = require("C"),
 	cheerio = require("cheerio"),
 	request = require("request"),
@@ -13,6 +13,11 @@ var base = require("node-base"),
 	path = require("path"),
 	querystring = require("querystring"),
 	tiptoe = require("tiptoe");
+
+var GATHERER_NAME_CHANGES =
+{
+	"Commander" : "Magic: The Gathering-Commander"
+};
 
 var SET_CORRECTIONS =
 {
@@ -66,7 +71,7 @@ var SET_CORRECTIONS =
 		{ renumberImages : "Mountain", order : [2383, 2381, 2382] },
 		{ renumberImages : "Plains", order : [2386, 2385, 2384] },
 		{ renumberImages : "Swamp", order : [2375, 2376, 2374] }
-	],	
+	],
 	ICE :
 	[
 		{ renumberImages : "Forest", order : [2748, 2746, 2747] },
@@ -362,6 +367,44 @@ var SET_CORRECTIONS =
 		{ match : {name : "Minion"}, replace : {number : "T2", layout : "token"}},
 		{ match : {name : "Saproling"}, replace : {number : "T3", layout : "token"}}
 	],
+	POR :
+	[
+		{ renumberImages : "Anaconda", order : [4287, 4288] },
+		{ renumberImages : "Blaze", order : [4328, 4329] },
+		{ renumberImages : "Forest", order : [4413, 4414, 4415, 4416] },
+		{ renumberImages : "Island", order : [4421, 4422, 4423, 4424] },
+		{ renumberImages : "Monstrous Growth", order : [4304, 4305] },
+		{ renumberImages : "Mountain", order : [4417, 4419, 4418, 4420] },
+		{ renumberImages : "Plains", order : [4425, 4426, 4427, 4428] },
+		{ renumberImages : "Swamp", order : [4409, 4410, 4411, 4412] }
+	],
+	PO2 :
+	[
+		{ renumberImages : "Forest", order : [8409, 8410, 8408] },
+		{ renumberImages : "Island", order : [8387, 8390, 8391] },
+		{ renumberImages : "Mountain", order : [8395, 8406, 8407] },
+		{ renumberImages : "Plains", order : [8380, 8374, 8354] },
+		{ renumberImages : "Swamp", order : [8394, 8392, 8393] }
+	],
+	S99 :
+	[
+		{ match : {imageName : "forest1"}, replace : {number : "170", artist : "Quinton Hoover"} },
+		{ match : {imageName : "forest2"}, replace : {number : "171", artist : "Quinton Hoover"} },
+		{ match : {imageName : "forest3"}, replace : {number : "172", artist : "John Avon"} },
+		{ match : {imageName : "forest4"}, replace : {number : "173", artist : "John Avon"} },
+		{ match : {imageName : "mountain1"}, replace : {number : "166"} },
+		{ match : {imageName : "mountain2"}, replace : {number : "167", artist : "John Avon"} },
+		{ match : {imageName : "mountain3"}, replace : {number : "168"} },
+		{ match : {imageName : "mountain4"}, replace : {number : "169", artist : "Brian Durfee"} },
+		{ match : {imageName : "plains1"}, replace : {number : "154"} },
+		{ match : {imageName : "plains2"}, replace : {number : "155", artist : "Tom Wänerstrand"} },
+		{ match : {imageName : "plains3"}, replace : {number : "156"} },
+		{ match : {imageName : "plains4"}, replace : {number : "157", artist : "Fred Fields"} },
+		{ match : {imageName : "swamp1"}, replace : {number : "162", artist : "Romas"} },
+		{ match : {imageName : "swamp2"}, replace : {number : "163", artist : "Dan Frazier"} },
+		{ match : {imageName : "swamp3"}, replace : {number : "164", artist : "Douglas Shuler"} },
+		{ match : {imageName : "swamp4"}, replace : {number : "165", artist : "Romas"} }
+	],
 	"*" :
 	[
 		{ match : { name : "Draco" }, replace : {text : "Domain — Draco costs {2} less to cast for each basic land type among lands you control.\n\nFlying\n\nDomain — At the beginning of your upkeep, sacrifice Draco unless you pay {10}. This cost is reduced by {2} for each basic land type among lands you control."}}
@@ -419,7 +462,7 @@ function ripSet(setName, cb)
 					output : "checklist",
 					sort   : "cn+",
 					action : "advanced",
-					set    : "[" + JSON.stringify(setName.replaceAll("&", "and")) + "]"
+					set    : "[" + JSON.stringify((GATHERER_NAME_CHANGES[setName] || setName).replaceAll("&", "and")) + "]"
 				}
 			});
 

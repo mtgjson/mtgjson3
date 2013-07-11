@@ -26,12 +26,14 @@
 		<br>
 		Any bugs or feedback, e-mail me at <a href="mailto:robert@cosmicrealms.com">robert@cosmicrealms.com</a><br>
 		<br>
+		Other links: <a href="http://forums.mtgsalvation.com/showthread.php?p=10438578">Discussion Thread</a><br>
+		<br>
 		<strong>Extras</strong> include: Rulings, Printings, Foreign Language Names<br>
 		</p>
 		<br>
 		<br>
-		<h2>Current Version: <span class="value">1.3</span></h2>
-		<h2>&nbsp;&nbsp;&nbsp;Last Updated: <span class="value">Jun 28, 2013</span><a href="#changeLog">(change log)</a></h2>
+		<h2>Current Version: <span class="value">1.4</span></h2>
+		<h2>&nbsp;&nbsp;&nbsp;Last Updated: <span class="value">Jul 11, 2013</span><a href="#changeLog">(change log)</a></h2>
 		<br>
 		<br>
 		<h2 style="display: none;"><span style="color: red; text-decoration: underline;">ALERT:</span> alert message goes here</h2>
@@ -110,7 +112,8 @@
         releaseDate : "2006-05-05"          // When the set was released
              border : "black",              // The type of border on the cards, either "white", "black" or "silver"
                type : "expansion",          // Type of set. One of: "core", "expansion", "reprint", "box", "un",
-                                            //                      "from the vault", "premium deck", "duel deck"
+                                            //                      "from the vault", "premium deck", "duel deck",
+                                            //                      "starter", "commander"
               block : "Ravnica":,           // The block this set is in
               cards : [ {}, {}, {}, ... ]   // The cards in the set
     }
@@ -154,7 +157,7 @@
 				<tr>
 					<td>cmc</td>
 					<td>2</td>
-					<td>Converted mana cost. Always a number.</td>
+					<td>Converted mana cost. Always a number. NOTE: cmc may have a decimal point as cards from unhinged may contain "half mana" (such as 'Little Girl' with a cmc of 0.5)</td>
 				</tr>
 				<tr>
 					<td>colors</td>
@@ -417,6 +420,9 @@
 			<li>Dark Ascension forgot to de-unicode séance correctly as seance.</li>
 			<li>Duel Decks: Ajani vs. Nicol Bolas and Duel Decks: Izzet vs. Golgari had either " - " or "-" in between split card names but they should not have anything between the names</li>
 			<li>Duel Decks: Ajani vs. Nicol Bolas island and plains both had a 1 at the end when it shouldn't have any number since there is only one version</li>
+			<li>Starter 2000 has several cards that were exact copies (including symbol) of cards from Sixth Edition. You should use the images from Sixth Editon. Copied cards are: Armored Pegasus, Bog Imp, Coercion, Counterspell, Disenchant, Drudge Skeletons, Flame Spirit, Flight, forest3, forest4, Giant Growth, Goblin Hero, Hero's Resolve, Inspiration, island1, island4, Llanowar Elves, Merfolk of the Pearl Trident, mountain2, mountain4, Obsianus Golem, Orcish Oriflamme, plains3, plains4, Prodigal Sorcer, Python, Rod of Ruin, Samite Healer, Scathe Zombies, Shock, Soul Net, Stone Rain, swamp2, swamp3, Terror, Venerable Monk, Wind Drake</li>
+			<li>Starter 2000 image set is missing the Spined Wurm card.</li>
+			<li>Commander is missing "Nighteyes the Desecrator" which is the flip side of "Nezumi Graverobber"</li>
 		</ul>
 		<hr>
 		<a name="changeLog"></a>
@@ -430,6 +436,26 @@
 				</tr>
 			</thead>
 			<tbody>
+				<tr>
+					<td>1.4</td>
+					<td>Jul 11, 2013</td>
+					<td>
+						<ul>
+							<li>Added sets:
+								<ul>
+									<li>Magic 2014 Core Set</li>
+									<li>Portal</li>
+									<li>Portal Second Age</li>
+									<li>Portal Three Kingdoms</li>
+									<li>Starter 1999</li>
+									<li>Starter 2000</li>
+									<li>Commander</li>
+									<li>Commander's Arsenal</li>
+								</ul>
+							</li>
+						</ul>
+					</td>
+				</tr>
 				<tr>
 					<td>1.3</td>
 					<td>Jun 28, 2013</td>
@@ -559,6 +585,17 @@
 			<li><a href="http://www.slightlymagic.net/forum/viewforum.php?f=15">CCGHQ</a> images are amazingly useful for helping me visually verify that card data is correct</li>
 			<li><a href="http://ethanschoonover.com/solarized">Solarized</a> is a great color scheme, I used a bunch of those colors here on this page</li>
 			<li><a href="http://company.wizards.com/">Wizards of the Coast</a> for continuing to support and develop game that I first started playing back in 1994!</li>
+		</ul>
+		<br>
+		<br>
+		<hr>
+		<a name="todo"></a>
+		<h1>To-Do List<a href="#top">(back to top)</a></h1>
+		<ul>
+			<li>Add any remaining missing sets (Just Planechase?)</li>
+			<li>Add token cards</li>
+			<li>Add more complete foreign language names, right now several cards are missing their foreign names</li>
+			<li>Add full foreign language JSON</li>
 		</ul>
 	</body>
 </html>
