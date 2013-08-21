@@ -26,14 +26,14 @@
 		<br>
 		Any bugs or feedback, e-mail me at <a href="mailto:robert@cosmicrealms.com">robert@cosmicrealms.com</a><br>
 		<br>
-		Other links: <a href="http://forums.mtgsalvation.com/showthread.php?p=10438578">Discussion Thread</a><br>
+		Other links: <a href="http://forums.mtgsalvation.com/showthread.php?p=10438578">Discussion Thread</a> <a href="http://www.reddit.com/r/magicTCG/comments/1ghmdx/mtg_json_new_website_provides_mtg_card_data_in/">Reddit Thread</a><br>
 		<br>
 		<strong>Extras</strong> include: Rulings, Printings, Foreign Language Names<br>
 		</p>
 		<br>
 		<br>
-		<h2>Current Version: <span class="value">1.4</span></h2>
-		<h2>&nbsp;&nbsp;&nbsp;Last Updated: <span class="value">Jul 11, 2013</span><a href="#changeLog">(change log)</a></h2>
+		<h2>Current Version: <span class="value">1.5</span></h2>
+		<h2>&nbsp;&nbsp;&nbsp;Last Updated: <span class="value">Aug 21, 2013</span><a href="#changeLog">(change log)</a></h2>
 		<br>
 		<br>
 		<h2 style="display: none;"><span style="color: red; text-decoration: underline;">ALERT:</span> alert message goes here</h2>
@@ -113,7 +113,7 @@
              border : "black",              // The type of border on the cards, either "white", "black" or "silver"
                type : "expansion",          // Type of set. One of: "core", "expansion", "reprint", "box", "un",
                                             //                      "from the vault", "premium deck", "duel deck",
-                                            //                      "starter", "commander"
+                                            //                      "starter", "commander", "planechase", "archenemy"
               block : "Ravnica":,           // The block this set is in
               cards : [ {}, {}, {}, ... ]   // The cards in the set
     }
@@ -410,6 +410,7 @@
 			<li>The '.full' part has been removed</li>
 			<li>There is no image extension such as .jpg</li>
 			<li>The set 'code' names from CCGHQ are not the standard ones. I use the code names from <a href="http://wiki.mtgsalvation.com/article/Main_Page">MTG Salvation Wiki</a></li>
+			<li>Split cards like Assault/Battery have had any spaces between the card names removed</li>
 		</ul>
 		<br>
 		<p>Also, there were a few inconsistencies with the CCGHQ images. These need to be fixed:</p>
@@ -436,6 +437,24 @@
 				</tr>
 			</thead>
 			<tbody>
+				<tr>
+					<td>1.5</td>
+					<td>Aug 21, 2013</td>
+					<td>
+						<ul>
+							<li>Added sets:
+								<ul>
+									<li>From the Vault: Twenty</li>
+									<li>Planechase</li>
+									<li>Plancechase 2012 Edition</li>
+									<li>Archenemy</li>
+								</ul>
+							</li>
+							<li>Corrected the 'Duel Decks: Sorin vs. Tibalt' release date</li>
+							<li>Updated all JSON to have more accurate 'printings' and some additional foreign language names</li>
+						</ul>
+					</td>
+				</tr>
 				<tr>
 					<td>1.4</td>
 					<td>Jul 11, 2013</td>
@@ -592,10 +611,25 @@
 		<a name="todo"></a>
 		<h1>To-Do List<a href="#top">(back to top)</a></h1>
 		<ul>
-			<li>Add any remaining missing sets (Just Planechase?)</li>
 			<li>Add token cards</li>
 			<li>Add more complete foreign language names, right now several cards are missing their foreign names</li>
 			<li>Add full foreign language JSON</li>
 		</ul>
+		<br>
+		<br>
+		<hr>
+		<a name="missing-sets"></a>
+		<h1>Missing Sets<a href="#top">(back to top)</a></h1>
+		<ul>
+			<li>Master's Edition Series (Magic Online)</li>
+			<li>Deck Builder's Toolkit Series</li>
+			<li>Deckmasters 2001</li>
+			<li>Renaissance (Non-English)</li>
+			<li>Anthologies</li>
+			<li>Rivals Quick Start Set</li>
+			<li>Introductory Two-Player Set</li>
+		</ul>
+		<br>
+		<p>I do not plan on adding the above missing sets. They are either Magic Online only or are not on Gatherer.</p>
 	</body>
 </html>

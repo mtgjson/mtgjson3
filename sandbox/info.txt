@@ -1,3 +1,28 @@
+/----------------------\
+| New Set Instructions |
+\----------------------/
+# Add new set to C.js
+# Run buildSet.js TWICE (first pass gets data, second pass gets foreign langauge names)
+node build/buildSet.js <expansion code>
+node build/buildSet.js <expansion code>
+
+# Get images. Two options
+
+# Option #1: Download full images from links below.
+# Move files to /mnt/compendium/DevLab/common/images/mtg/cards/<expansion code>
+# Also run:
+rename ".full.jpg" ".jpg" *
+bfr eval "newFilename = filename.toLowerCase();" *.jpg
+
+# Option #2: Download small images from gatherer. Run:
+node build/downloadImages.js <expansion code>
+
+# Now verify
+node verify/generate.js <expansion code>
+
+
+
+
 /---------------\
 | Special Cards |
 \---------------/
@@ -39,7 +64,9 @@ ID			Name					Description
 /-------\
 | Links |
 \-------/
-Images: http://www.mediafire.com/folder/qifk53rxg2dhx/Magic_The_Gathering_sets
+Images:
+http://www.slightlymagic.net/forum/viewforum.php?f=15
+http://www.mediafire.com/folder/qifk53rxg2dhx/Magic_The_Gathering_sets
 
 
 /--------------------\

@@ -588,6 +588,13 @@
 			type : "from the vault"
 		},
 		{
+			name : "Planechase",
+			code : "HOP",
+			releaseDate : "2009-09-04",
+			border : "black",
+			type : "planechase"
+		},
+		{
 			name : "Zendikar",
 			code : "ZEN",
 			releaseDate : "2009-10-02",
@@ -631,6 +638,13 @@
 			border : "black",
 			type : "expansion",
 			block : "Zendikar"
+		},
+		{
+			name : "Archenemy",
+			code : "ARC",
+			releaseDate : "2010-06-18",
+			border : "black",
+			type : "archenemy"
 		},
 		{
 			name : "Magic 2011",
@@ -758,6 +772,13 @@
 			block : "Innistrad"
 		},
 		{
+			name : "Planechase 2012 Edition",
+			code : "PC2",
+			releaseDate : "2012-06-01",
+			border : "black",
+			type : "planechase"
+		},
+		{
 			name : "Magic 2013",
 			code : "M13",
 			releaseDate : "2012-07-13",
@@ -804,7 +825,7 @@
 		{
 			name : "Duel Decks: Sorin vs. Tibalt",
 			code : "SVT",
-			releaseDate : "2013-09-07",
+			releaseDate : "2013-03-15",
 			border : "black",
 			type : "duel deck"
 		},
@@ -829,6 +850,13 @@
 			releaseDate : "2013-07-19",
 			border : "black",
 			type : "core"
+		},
+		{
+			name : "From the Vault: Twenty",
+			code : "V13",
+			releaseDate : "2013-08-23",
+			border : "black",
+			type : "from the vault"
 		}
 	];
 })(typeof exports==="undefined" ? window.C={} : exports);
