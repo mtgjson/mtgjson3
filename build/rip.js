@@ -824,7 +824,12 @@ function processCardPart(doc, cardPart)
 	// Card Number
 	var cardNumberValue = cardPart.find(idPrefix + "_numberRow .value").text().trim();
 	if(cardNumberValue)
+	{
+		if(card.layout==="split")
+			cardNumberValue = cardNumberValue.replace(/[^\d.]/g, "") + ["a", "b"][card.names.indexOf(card.name)];
+		
 		card.number = cardNumberValue;
+	}
 
 	// Watermark
 	var cardWatermark = processTextBlocks(doc, cardPart.find(idPrefix + "_markRow .value .cardtextbox")).trim();
@@ -914,6 +919,7 @@ function getURLAsDoc(url, cb)
 		{
 			if(fs.existsSync(cachePath))
 			{
+				//base.info("URL [%s] is file: %s", url, cachePath);
 				fs.readFile(cachePath, {encoding:"utf8"}, function(err, data) { this(null, null, data); }.bind(this));
 			}
 			else
