@@ -857,6 +857,13 @@
 			releaseDate : "2013-08-23",
 			border : "black",
 			type : "from the vault"
+		},
+		{
+			name : "Duel Decks: Heroes vs. Monsters",
+			code : "HVM",
+			releaseDate : "2013-09-06",
+			border : "black",
+			type : "duel deck"
 		}
 	];
 })(typeof exports==="undefined" ? window.C={} : exports);
