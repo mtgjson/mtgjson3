@@ -272,6 +272,10 @@ var SET_CORRECTIONS =
 	[
 		{ match : {name : "Ghostfire"}, remove : ["colors"] }
 	],
+	DDG :
+	[
+		{ match : {name : "Ghostfire"}, remove : ["colors"] }
+	],
 	ZEN :
 	[
 		{ match : {imageName : "forest1"}, replace : {imageName : "forest1",  number : "246"} },
