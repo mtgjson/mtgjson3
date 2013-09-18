@@ -864,6 +864,14 @@
 			releaseDate : "2013-09-06",
 			border : "black",
 			type : "duel deck"
+		},
+		{
+			name : "Theros",
+			code : "THS",
+			releaseDate : "2013-09-27",
+			border : "black",
+			type : "expansion",
+			block : "Theros"
 		}
 	];
 })(typeof exports==="undefined" ? window.C={} : exports);

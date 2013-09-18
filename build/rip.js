@@ -416,6 +416,11 @@ var SET_CORRECTIONS =
 		{ match : { name : "Ordeal of Purphoros" }, replace : {text : "Enchant creature\n\nWhenever enchanted creature attacks, put a +1/+1 counter on it. Then if it has three or more +1/+1 counters on it, sacrifice Ordeal of Purphoros.\n\nWhen you sacrifice Ordeal of Purphoros, it deals 3 damage to target creature or player."}},
 		{ match : { name : "Polukranos, World Eater" }, replace : {text : "{X}{X}{G}: Monstrosity X. (If this creature isn't monstrous, put X +1/+1 counters on it and it becomes monstrous.)\n\nWhen Polukranos, World Eater becomes monstrous, it deals X damage divided as you choose among any number of target creatures your opponents control. Each of those creatures deals damage equal to its power to Polukranos."}}
 	],
+	THS :
+	[
+		{ match : { name : "Colossus of Akros" }, replace : {text : "Defender, indestructible\n\n{10}: Monstrosity 10. (If this creature isn't monstrous, put ten +1/+1 counters on it and it becomes monstrous.)\n\nAs long as Colossus of Akros is monstrous, it has trample and can attack as though it didn't have defender."}},
+		{ match : { name : "Time to Feed" }, replace : {text : "Choose target creature an opponent controls. When that creature dies this turn, you gain 3 life. Target creature you control fights that creature. (Each deals damage equal to its power to the other.)"}}
+	],
 	"*" :
 	[
 		{ match : { name : "Draco" }, replace : {text : "Domain — Draco costs {2} less to cast for each basic land type among lands you control.\n\nFlying\n\nDomain — At the beginning of your upkeep, sacrifice Draco unless you pay {10}. This cost is reduced by {2} for each basic land type among lands you control."}}
