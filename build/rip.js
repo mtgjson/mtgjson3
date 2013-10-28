@@ -928,7 +928,7 @@ function buildMultiverseURL(multiverseid, part)
 function getURLAsDoc(url, cb)
 {
 	var urlHash = hash("whirlpool", url);
-	var cachePath = path.join(__dirname, "..", "cache", urlHash.charAt(0), urlHash);
+	var cachePath = path.join(__dirname, "..", "cache", urlHash);
 
 	tiptoe(
 		function get()
