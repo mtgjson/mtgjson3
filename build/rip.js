@@ -731,7 +731,7 @@ function processCardPart(doc, cardPart)
 
 	// Card Type
 	var skipped = 0;
-	var rawTypes = cardPart.find(idPrefix + "_typeRow .value").text().trim().split(/[—-]/);
+	var rawTypes = cardPart.find(idPrefix + "_typeRow .value").text().trim().split(/[—]/);
 	rawTypes[0].split(" ").filterEmpty().forEach(function(rawType, i)
 	{
 		if(rawType.trim().toLowerCase()==="(none)")
