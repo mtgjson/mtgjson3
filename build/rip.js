@@ -731,7 +731,7 @@ function processCardPart(doc, cardPart)
 
 	// Card Type
 	var skipped = 0;
-	var rawTypes = cardPart.find(idPrefix + "_typeRow .value").text().trim().split(/[—-]/);
+	var rawTypes = cardPart.find(idPrefix + "_typeRow .value").text().trim().split(/[—]/);
 	rawTypes[0].split(" ").filterEmpty().forEach(function(rawType, i)
 	{
 		if(rawType.trim().toLowerCase()==="(none)")
@@ -928,7 +928,7 @@ function buildMultiverseURL(multiverseid, part)
 function getURLAsDoc(url, cb)
 {
 	var urlHash = hash("whirlpool", url);
-	var cachePath = path.join(__dirname, "..", "cache", urlHash.charAt(0), urlHash);
+	var cachePath = path.join(__dirname, "..", "cache", urlHash);
 
 	tiptoe(
 		function get()
