@@ -336,6 +336,7 @@ var SET_CORRECTIONS =
 		{ match : {name : "Flaccify"}, replace : {text : "Counter target spell unless its controller pays {3}{½}."}},
 		{ match : {name : "Kill Destroy"}, replace : {name : "Kill! Destroy!", imageName : "kill! destroy!"}},
 		{ match : {name : "Little Girl"}, replace : {manaCost : "{hw}"}},
+		{ match : {name : "Look at Me, I'm R&D"}, replace : {artist : "spork;"} },
 		{ match : {name : "Our Market Research Shows That Players Like Really Long Card Names So We Made this Card to Have the Absolute Longest Card Name Ever Elemental"}, replace : {imageName : "our market research shows that players like really long card names so we made"}},
 		{ match : {name : "Forest"}, replace : {border : "black"}},
 		{ match : {name : "Island"}, replace : {border : "black"}},
@@ -696,7 +697,7 @@ function processCardPart(doc, cardPart)
 	var idPrefix = getCardPartIDPrefix(cardPart);
 
 	// Multiverseid
-	card.multiverseid = +querystring.parse(url.parse(doc("#aspnetForm").attr("action")).query).multiverseid.trim();
+	card.multiverseid = +querystring.parse(url.parse(cardPart.find(idPrefix + "_setRow .value a").attr("href")).query).multiverseid.trim();
 
 	// Check for split card
 	var fullCardName = doc("#ctl00_ctl00_ctl00_MainContent_SubContent_SubContentHeader_subtitleDisplay").text().trim();
@@ -731,7 +732,13 @@ function processCardPart(doc, cardPart)
 
 	// Card Type
 	var skipped = 0;
-	var rawTypes = cardPart.find(idPrefix + "_typeRow .value").text().trim().split(/[—-]/);
+	var rawTypeFull = cardPart.find(idPrefix + "_typeRow .value").text().trim();
+	if(!rawTypeFull.contains("—") && rawTypeFull.contains(" - "))  // Some gatherer entries have a regular dash instead of a 'long dash'
+	{
+		base.warn("Raw type for card [%s] does not contain a long dash for type [%s] but does contain a small dash surrounded by spaces ' - '. Auto-correcting!", card.name, rawTypeFull);
+		rawTypeFull = rawTypeFull.replace(" - ", "—");
+	}
+	var rawTypes = rawTypeFull.split(/[—]/);
 	rawTypes[0].split(" ").filterEmpty().forEach(function(rawType, i)
 	{
 		if(rawType.trim().toLowerCase()==="(none)")
@@ -750,7 +757,7 @@ function processCardPart(doc, cardPart)
 	if(rawTypes.length>1)
 	{
 		card.subtypes = card.types.contains("Plane") ? [rawTypes[1].trim()] : rawTypes[1].split(" ").filterEmpty().map(function(subtype) { return subtype.trim(); });	// 205.3b Planes have just a single subtype
-		card.type += " - " + card.subtypes.join(" ");
+		card.type += " — " + card.subtypes.join(" ");
 	}
 	if(!card.supertypes.length)
 		delete card.supertypes;

@@ -32,8 +32,8 @@
 		</p>
 		<br>
 		<br>
-		<h2>Current Version: <span class="value">1.7</span></h2>
-		<h2>&nbsp;&nbsp;&nbsp;Last Updated: <span class="value">Sep 18, 2013</span><a href="#changeLog">(change log)</a></h2>
+		<h2>Current Version: <span class="value">1.8</span></h2>
+		<h2>&nbsp;&nbsp;&nbsp;Last Updated: <span class="value">Oct 29, 2013</span><a href="#changeLog">(change log)</a></h2>
 		<br>
 		<br>
 		<h2 style="display: none;"><span style="color: red; text-decoration: underline;">ALERT:</span> alert message goes here</h2>
@@ -74,7 +74,7 @@
                  cmc : 5,
               colors : ["White", "Blue", "Black"],
 
-                type : "Legendary Artifact Creature - Human Wizard",
+                type : "Legendary Artifact Creature — Human Wizard",
           supertypes : ["Legendary"],
                types : ["Artifact", "Creature"],
             subtypes : ["Human", "Wizard"],
@@ -166,8 +166,8 @@
 				</tr>
 				<tr>
 					<td>type</td>
-					<td>"Legendary Creature - Angel"</td>
-					<td>The card type. This is the type you would see on the card if printed today.</td>
+					<td>"Legendary Creature — Angel"</td>
+					<td>The card type. This is the type you would see on the card if printed today. Note: The dash is a UTF8 'long dash' as per the MTG rules</td>
 				</tr>
 				<tr>
 					<td>supertypes</td>
@@ -236,17 +236,17 @@
 				</tr>
 				<tr>
 					<td>imageName</td>
-					<td>ajani goldmane</td>
+					<td>"ajani goldmane"</td>
 					<td>The corresponding <a href="http://www.slightlymagic.net/forum/viewforum.php?f=15">CCGHQ</a> image file. See <a href="#imageInfo">Image Info</a> for more details.</td> 
 				</tr>
 				<tr>
 					<td>watermark</td>
-					<td>Selesnya</td>
+					<td>"Selesnya"</td>
 					<td>The watermark on the card. Note: Split cards don't currently have this field set, despite having a watermark on each side of the split card.</td>
 				</tr>
 				<tr>
 					<td>border</td>
-					<td>black</td>
+					<td>"black"</td>
 					<td>If the border for this specific card is DIFFERENT than the border specified in the top level set JSON, then it will be specified here. (Example: Unglued has silver borders, except for the lands which are black bordered)</td>
 				</tr>
 			</tbody>
@@ -437,6 +437,19 @@
 				</tr>
 			</thead>
 			<tbody>
+				<tr>
+					<td>1.8</td>
+					<td>Oct 29, 2013</td>
+					<td>
+						<ul>
+							<li>The 'type' field of each card now uses a UTF8 'long dash' instead of an ASCII dash. This was changed to align with official MTG <a href="http://rules.wizards.com/rulebook.aspx?game=Magic">rule 205.3b</a></li>
+							<li>Fixed a bug with "Urza's Power-Plant" where the sub-types and type incorrectly had just "Power" instead of "Power-Plant"</li>
+							<li>Fixed a bug with "Assembly-Worker" (Time Spiral) where the sub-types and type incorrectly had just "Assembly" instead of "Assembly-Worker"</li>
+							<li>Fixed a bug with "Look at Me, I'm R&D" (Unhinged) where the artist was missing</li>
+							<li>Fixed a bug with all "double-faced" layout cards where the dark side had the wrong multiverseid</li>
+						</ul>
+					</td>
+				</tr>
 				<tr>
 					<td>1.7</td>
 					<td>Sep 18, 2013</td>
