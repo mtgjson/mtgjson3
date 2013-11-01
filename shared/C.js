@@ -872,6 +872,13 @@
 			border : "black",
 			type : "expansion",
 			block : "Theros"
+		},
+		{
+			name : "Commander 2013 Edition",
+			code : "C13",
+			releaseDate : "2013-11-01",
+			border : "black",
+			type : "commander"
 		}
 	];
 })(typeof exports==="undefined" ? window.C={} : exports);
