@@ -868,7 +868,11 @@
 		},
 		{
 			name : "Duel Decks: Heroes vs. Monsters",
+<<<<<<< HEAD
 			code : "DDL",
+=======
+			code : "HVM",
+>>>>>>> 97ffdd56bcfc97584d961bc48638ff94d90a4f6b
 			releaseDate : "2013-09-06",
 			border : "black",
 			type : "duel deck"
