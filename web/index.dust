@@ -32,8 +32,8 @@
 		</p>
 		<br>
 		<br>
-		<h2>Current Version: <span class="value">1.5</span></h2>
-		<h2>&nbsp;&nbsp;&nbsp;Last Updated: <span class="value">Aug 21, 2013</span><a href="#changeLog">(change log)</a></h2>
+		<h2>Current Version: <span class="value">1.11</span></h2>
+		<h2>&nbsp;&nbsp;&nbsp;Last Updated: <span class="value">Nov 15, 2013</span><a href="#changeLog">(change log)</a></h2>
 		<br>
 		<br>
 		<h2 style="display: none;"><span style="color: red; text-decoration: underline;">ALERT:</span> alert message goes here</h2>
@@ -74,7 +74,7 @@
                  cmc : 5,
               colors : ["White", "Blue", "Black"],
 
-                type : "Legendary Artifact Creature - Human Wizard",
+                type : "Legendary Artifact Creature — Human Wizard",
           supertypes : ["Legendary"],
                types : ["Artifact", "Creature"],
             subtypes : ["Human", "Wizard"],
@@ -166,8 +166,8 @@
 				</tr>
 				<tr>
 					<td>type</td>
-					<td>"Legendary Creature - Angel"</td>
-					<td>The card type. This is the type you would see on the card if printed today.</td>
+					<td>"Legendary Creature — Angel"</td>
+					<td>The card type. This is the type you would see on the card if printed today. Note: The dash is a UTF8 'long dash' as per the MTG rules</td>
 				</tr>
 				<tr>
 					<td>supertypes</td>
@@ -236,17 +236,17 @@
 				</tr>
 				<tr>
 					<td>imageName</td>
-					<td>ajani goldmane</td>
-					<td>The corresponding <a href="http://www.slightlymagic.net/forum/viewforum.php?f=15">CCGHQ</a> image file. See <a href="#imageInfo">Image Info</a> for more details.</td> 
+					<td>"ajani goldmane"</td>
+					<td>The corresponding image file. See <a href="#imageInfo">Image Info</a> for more details.</td> 
 				</tr>
 				<tr>
 					<td>watermark</td>
-					<td>Selesnya</td>
+					<td>"Selesnya"</td>
 					<td>The watermark on the card. Note: Split cards don't currently have this field set, despite having a watermark on each side of the split card.</td>
 				</tr>
 				<tr>
 					<td>border</td>
-					<td>black</td>
+					<td>"black"</td>
 					<td>If the border for this specific card is DIFFERENT than the border specified in the top level set JSON, then it will be specified here. (Example: Unglued has silver borders, except for the lands which are black bordered)</td>
 				</tr>
 			</tbody>
@@ -402,29 +402,19 @@
 		<a name="imageInfo"></a>
 		<h1>Image Info<a href="#top">(back to top)</a></h1>
 		<p>
-		The 'imageName' field in the JSON matches the names from the <a href="http://www.slightlymagic.net/forum/viewforum.php?f=15">CCGHQ</a> images.<br>
-		<br>
-		There are some differences:</p>
+		The 'imageName' field is formatted similarly to <a href="http://www.slightlymagic.net/forum/viewforum.php?f=15">CCGHQ</a> image names.<br>
+		<br>There are some general differences:</p>
 		<ul>
-			<li>All file names have been converted to lowercase</li>
+			<li>Names have been converted to lowercase</li>
 			<li>The '.full' part has been removed</li>
 			<li>There is no image extension such as .jpg</li>
-			<li>The set 'code' names from CCGHQ are not the standard ones. I use the code names from <a href="http://wiki.mtgsalvation.com/article/Main_Page">MTG Salvation Wiki</a></li>
-			<li>Split cards like Assault/Battery have had any spaces between the card names removed</li>
+			<li>Split cards like Assault/Battery have had spaces and dashes between the card names removed</li>
+			<li>Various CCGHQ naming inconsitencies have been corrected</li>
 		</ul>
 		<br>
-		<p>Also, there were a few inconsistencies with the CCGHQ images. These need to be fixed:</p>
-		<ul>
-			<li>Alpha and Revised spelled "will-o'-the-wisp" incorrectly. They forgot the apostrophe. (Funny enough, they got it right for Beta and Unlimited)</li>
-			<li>Planeshift's "ertai, the corrupted1.jpg" "skyship weatherlight1" and "tahngarth, talruum hero1" didn't have a 1 next to it for the first version of the cards</li>
-			<li>Ravnica's basic lands were missing the number 1 for the first card of each basic land type</li>
-			<li>Dark Ascension forgot to de-unicode séance correctly as seance.</li>
-			<li>Duel Decks: Ajani vs. Nicol Bolas and Duel Decks: Izzet vs. Golgari had either " - " or "-" in between split card names but they should not have anything between the names</li>
-			<li>Duel Decks: Ajani vs. Nicol Bolas island and plains both had a 1 at the end when it shouldn't have any number since there is only one version</li>
-			<li>Starter 2000 has several cards that were exact copies (including symbol) of cards from Sixth Edition. You should use the images from Sixth Editon. Copied cards are: Armored Pegasus, Bog Imp, Coercion, Counterspell, Disenchant, Drudge Skeletons, Flame Spirit, Flight, forest3, forest4, Giant Growth, Goblin Hero, Hero's Resolve, Inspiration, island1, island4, Llanowar Elves, Merfolk of the Pearl Trident, mountain2, mountain4, Obsianus Golem, Orcish Oriflamme, plains3, plains4, Prodigal Sorcer, Python, Rod of Ruin, Samite Healer, Scathe Zombies, Shock, Soul Net, Stone Rain, swamp2, swamp3, Terror, Venerable Monk, Wind Drake</li>
-			<li>Starter 2000 image set is missing the Spined Wurm card.</li>
-			<li>Commander is missing "Nighteyes the Desecrator" which is the flip side of "Nezumi Graverobber"</li>
-		</ul>
+		I also provide all the card images on <a href="http://mtgimage.com">mtgimage.com</a><br>
+		<br>
+		</p>
 		<hr>
 		<a name="changeLog"></a>
 		<h1>Change Log<a href="#top">(back to top)</a></h1>
@@ -437,6 +427,87 @@
 				</tr>
 			</thead>
 			<tbody>
+				<tr>
+					<td>1.11</td>
+					<td>Nov 15, 2013</td>
+					<td>
+						<ul>
+							<li>Changed the expansion code for two sets to match the official MTG set codes:
+								<ul>
+									<li>"Duel Deck: Sorin vs. Tibalt" from SVT to DDK</li>
+									<li>"Duel Deck: Heroes vs. Monsters" from HVM to DDL</li>
+								</ul>
+							</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>1.10</td>
+					<td>Nov 6, 2013</td>
+					<td>
+						<ul>
+							<li>Added set:
+								<ul>
+									<li>Timespiral "Timeshifted"</li>
+								</ul>
+							</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>1.9</td>
+					<td>Nov 1, 2013</td>
+					<td>
+						<ul>
+							<li>Added set:
+								<ul>
+									<li>Commander 2013 Edition</li>
+								</ul>
+							</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>1.8</td>
+					<td>Oct 29, 2013</td>
+					<td>
+						<ul>
+							<li>The 'type' field of each card now uses a UTF8 'long dash' instead of an ASCII dash. This was changed to align with official MTG <a href="http://rules.wizards.com/rulebook.aspx?game=Magic">rule 205.3b</a></li>
+							<li>Fixed a bug with "Urza's Power-Plant" where the sub-types and type incorrectly had just "Power" instead of "Power-Plant"</li>
+							<li>Fixed a bug with "Assembly-Worker" (Time Spiral) where the sub-types and type incorrectly had just "Assembly" instead of "Assembly-Worker"</li>
+							<li>Fixed a bug with "Look at Me, I'm R&D" (Unhinged) where the artist was missing</li>
+							<li>Fixed a bug with all "double-faced" layout cards where the dark side had the wrong multiverseid</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>1.7</td>
+					<td>Sep 18, 2013</td>
+					<td>
+						<ul>
+							<li>Added set:
+								<ul>
+									<li>Theros</li>
+								</ul>
+							</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>1.6</td>
+					<td>Sep 9, 2013</td>
+					<td>
+						<ul>
+							<li>Added set:
+								<ul>
+									<li>Duel Decks: Heroes vs. Monsters</li>
+								</ul>
+							</li>
+							<li>Cards with split layouts now correctly have 'a' or 'b' suffixed card numbers such as 127a and 127b instead of just 127. The following sets contain split cards: APC, ARC, CMD, DDH, DDJ, DGM, DIS, HOP, INV, PLC</li>
+							<li>Fixed a bug in DDG where Ghostfire was listing 'red' as a color, even though it is a colorless card</li>
+						</ul>
+					</td>
+				</tr>
 				<tr>
 					<td>1.5</td>
 					<td>Aug 21, 2013</td>
@@ -593,12 +664,22 @@
 		<h1>License and Copyright<a href="#top">(back to top)</a></h1>
 		<p>Card names and text are all copyright Wizards of the Coast.<br>
 		<br>
+		This website is not affiliated with Wizards of the Coast in any way.<br>
+		<br>
 		I am providing the JSON files under the public domain license.<br>
 		<br></p>
 		<hr>
 		<a name="thanks"></a>
 		<h1>Thanks<a href="#top">(back to top)</a></h1>
 		<ul>
+			<li>Thank you <strong>VERY MUCH</strong> to those who found data errors and let me know so I could fix them:
+				<ul>
+					<li>Bobby Wertman</li>
+					<li>rotaercz</li>
+					<li>Chris Bush</li>
+					<li>Patrick Rogers</li>
+				</ul>
+			</li>
 			<li><a href="http://wiki.mtgsalvation.com/article/Main_Page">MTG Salvation Wiki</a> for an AWESOME resource</li>
 			<li>The kind soul who provided the <a href="http://www.slightlymagic.net/forum/viewtopic.php?t=4430">mana symbols</a> in SVG vector format</li>
 			<li><a href="http://www.slightlymagic.net/forum/viewforum.php?f=15">CCGHQ</a> images are amazingly useful for helping me visually verify that card data is correct</li>

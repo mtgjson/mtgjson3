@@ -13,6 +13,12 @@ function showLast() { hide(); current = $("#cards tr.card:last-child")[0]; show(
 function hide() { current.removeClass("visible"); }
 function show() { current.addClass("visible"); }
 
+var slideshowTimeout = null;
+function startSlideshow() { if(slideshowTimeout!==null) { clearTimeout(slideshowTimeout); slideshowTimeout = null; return; } slideshow(); }
+function slideshow() { showNext(); slideshowTimeout = setTimeout(slideshow, 120); }
+
+Mousetrap.bind("space", startSlideshow);
+
 Mousetrap.bind("left", showPrevious);
 Mousetrap.bind("right", showNext);
 

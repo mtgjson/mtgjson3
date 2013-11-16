@@ -467,6 +467,14 @@
 			block : "Time Spiral"
 		},
 		{
+			name : 'Time Spiral "Timeshifted"',
+			code : "TSB",
+			releaseDate : "2006-10-06",
+			border : "black",
+			type : "expansion",
+			block : "Time Spiral"
+		},
+		{
 			name : "Planar Chaos",
 			code : "PLC",
 			releaseDate : "2007-02-02",
@@ -824,7 +832,7 @@
 		},
 		{
 			name : "Duel Decks: Sorin vs. Tibalt",
-			code : "SVT",
+			code : "DDK",
 			releaseDate : "2013-03-15",
 			border : "black",
 			type : "duel deck"
@@ -857,6 +865,28 @@
 			releaseDate : "2013-08-23",
 			border : "black",
 			type : "from the vault"
+		},
+		{
+			name : "Duel Decks: Heroes vs. Monsters",
+			code : "DDL",
+			releaseDate : "2013-09-06",
+			border : "black",
+			type : "duel deck"
+		},
+		{
+			name : "Theros",
+			code : "THS",
+			releaseDate : "2013-09-27",
+			border : "black",
+			type : "expansion",
+			block : "Theros"
+		},
+		{
+			name : "Commander 2013 Edition",
+			code : "C13",
+			releaseDate : "2013-11-01",
+			border : "black",
+			type : "commander"
 		}
 	];
 })(typeof exports==="undefined" ? window.C={} : exports);

@@ -272,6 +272,10 @@ var SET_CORRECTIONS =
 	[
 		{ match : {name : "Ghostfire"}, remove : ["colors"] }
 	],
+	DDG :
+	[
+		{ match : {name : "Ghostfire"}, remove : ["colors"] }
+	],
 	ZEN :
 	[
 		{ match : {imageName : "forest1"}, replace : {imageName : "forest1",  number : "246"} },
@@ -332,6 +336,7 @@ var SET_CORRECTIONS =
 		{ match : {name : "Flaccify"}, replace : {text : "Counter target spell unless its controller pays {3}{½}."}},
 		{ match : {name : "Kill Destroy"}, replace : {name : "Kill! Destroy!", imageName : "kill! destroy!"}},
 		{ match : {name : "Little Girl"}, replace : {manaCost : "{hw}"}},
+		{ match : {name : "Look at Me, I'm R&D"}, replace : {artist : "spork;"} },
 		{ match : {name : "Our Market Research Shows That Players Like Really Long Card Names So We Made this Card to Have the Absolute Longest Card Name Ever Elemental"}, replace : {imageName : "our market research shows that players like really long card names so we made"}},
 		{ match : {name : "Forest"}, replace : {border : "black"}},
 		{ match : {name : "Island"}, replace : {border : "black"}},
@@ -405,6 +410,18 @@ var SET_CORRECTIONS =
 		{ match : {imageName : "swamp3"}, replace : {number : "164", artist : "Douglas Shuler"} },
 		{ match : {imageName : "swamp4"}, replace : {number : "165", artist : "Romas"} }
 	],
+	DDL :
+	[
+		{ match : { name : "Anax and Cymede" }, replace : {text : "First strike, vigilance\n\nHeroic — Whenever you cast a spell that targets Anax and Cymede, creatures you control get +1/+1 and gain trample until end of turn."}},
+		{ match : { name : "Cavalry Pegasus" }, replace : {text : "Flying\n\nWhenever Cavalry Pegasus attacks, each attacking Human gains flying until end of turn."}},
+		{ match : { name : "Ordeal of Purphoros" }, replace : {text : "Enchant creature\n\nWhenever enchanted creature attacks, put a +1/+1 counter on it. Then if it has three or more +1/+1 counters on it, sacrifice Ordeal of Purphoros.\n\nWhen you sacrifice Ordeal of Purphoros, it deals 3 damage to target creature or player."}},
+		{ match : { name : "Polukranos, World Eater" }, replace : {text : "{X}{X}{G}: Monstrosity X. (If this creature isn't monstrous, put X +1/+1 counters on it and it becomes monstrous.)\n\nWhen Polukranos, World Eater becomes monstrous, it deals X damage divided as you choose among any number of target creatures your opponents control. Each of those creatures deals damage equal to its power to Polukranos."}}
+	],
+	THS :
+	[
+		{ match : { name : "Colossus of Akros" }, replace : {text : "Defender, indestructible\n\n{10}: Monstrosity 10. (If this creature isn't monstrous, put ten +1/+1 counters on it and it becomes monstrous.)\n\nAs long as Colossus of Akros is monstrous, it has trample and can attack as though it didn't have defender."}},
+		{ match : { name : "Time to Feed" }, replace : {text : "Choose target creature an opponent controls. When that creature dies this turn, you gain 3 life. Target creature you control fights that creature. (Each deals damage equal to its power to the other.)"}}
+	],
 	"*" :
 	[
 		{ match : { name : "Draco" }, replace : {text : "Domain — Draco costs {2} less to cast for each basic land type among lands you control.\n\nFlying\n\nDomain — At the beginning of your upkeep, sacrifice Draco unless you pay {10}. This cost is reduced by {2} for each basic land type among lands you control."}}
@@ -465,6 +482,9 @@ function ripSet(setName, cb)
 					set    : "[" + JSON.stringify((GATHERER_NAME_CHANGES[setName] || setName).replaceAll("&", "and")) + "]"
 				}
 			});
+
+			listURL = listURL.replaceAll("%5C", "");
+			base.info(listURL);
 
 			getURLAsDoc(listURL, this);
 		},
@@ -680,7 +700,7 @@ function processCardPart(doc, cardPart)
 	var idPrefix = getCardPartIDPrefix(cardPart);
 
 	// Multiverseid
-	card.multiverseid = +querystring.parse(url.parse(doc("#aspnetForm").attr("action")).query).multiverseid.trim();
+	card.multiverseid = +querystring.parse(url.parse(cardPart.find(idPrefix + "_setRow .value a").attr("href")).query).multiverseid.trim();
 
 	// Check for split card
 	var fullCardName = doc("#ctl00_ctl00_ctl00_MainContent_SubContent_SubContentHeader_subtitleDisplay").text().trim();
@@ -715,7 +735,13 @@ function processCardPart(doc, cardPart)
 
 	// Card Type
 	var skipped = 0;
-	var rawTypes = cardPart.find(idPrefix + "_typeRow .value").text().trim().split(/[—-]/);
+	var rawTypeFull = cardPart.find(idPrefix + "_typeRow .value").text().trim();
+	if(!rawTypeFull.contains("—") && rawTypeFull.contains(" - "))  // Some gatherer entries have a regular dash instead of a 'long dash'
+	{
+		base.warn("Raw type for card [%s] does not contain a long dash for type [%s] but does contain a small dash surrounded by spaces ' - '. Auto-correcting!", card.name, rawTypeFull);
+		rawTypeFull = rawTypeFull.replace(" - ", "—");
+	}
+	var rawTypes = rawTypeFull.split(/[—]/);
 	rawTypes[0].split(" ").filterEmpty().forEach(function(rawType, i)
 	{
 		if(rawType.trim().toLowerCase()==="(none)")
@@ -734,7 +760,7 @@ function processCardPart(doc, cardPart)
 	if(rawTypes.length>1)
 	{
 		card.subtypes = card.types.contains("Plane") ? [rawTypes[1].trim()] : rawTypes[1].split(" ").filterEmpty().map(function(subtype) { return subtype.trim(); });	// 205.3b Planes have just a single subtype
-		card.type += " - " + card.subtypes.join(" ");
+		card.type += " — " + card.subtypes.join(" ");
 	}
 	if(!card.supertypes.length)
 		delete card.supertypes;
@@ -824,7 +850,12 @@ function processCardPart(doc, cardPart)
 	// Card Number
 	var cardNumberValue = cardPart.find(idPrefix + "_numberRow .value").text().trim();
 	if(cardNumberValue)
+	{
+		if(card.layout==="split")
+			cardNumberValue = cardNumberValue.replace(/[^\d.]/g, "") + ["a", "b"][card.names.indexOf(card.name)];
+		
 		card.number = cardNumberValue;
+	}
 
 	// Watermark
 	var cardWatermark = processTextBlocks(doc, cardPart.find(idPrefix + "_markRow .value .cardtextbox")).trim();
@@ -914,6 +945,7 @@ function getURLAsDoc(url, cb)
 		{
 			if(fs.existsSync(cachePath))
 			{
+				//base.info("URL [%s] is file: %s", url, cachePath);
 				fs.readFile(cachePath, {encoding:"utf8"}, function(err, data) { this(null, null, data); }.bind(this));
 			}
 			else
