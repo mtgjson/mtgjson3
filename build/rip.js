@@ -410,11 +410,7 @@ var SET_CORRECTIONS =
 		{ match : {imageName : "swamp3"}, replace : {number : "164", artist : "Douglas Shuler"} },
 		{ match : {imageName : "swamp4"}, replace : {number : "165", artist : "Romas"} }
 	],
-<<<<<<< HEAD
 	DDL :
-=======
-	HVM :
->>>>>>> 97ffdd56bcfc97584d961bc48638ff94d90a4f6b
 	[
 		{ match : { name : "Anax and Cymede" }, replace : {text : "First strike, vigilance\n\nHeroic — Whenever you cast a spell that targets Anax and Cymede, creatures you control get +1/+1 and gain trample until end of turn."}},
 		{ match : { name : "Cavalry Pegasus" }, replace : {text : "Flying\n\nWhenever Cavalry Pegasus attacks, each attacking Human gains flying until end of turn."}},
