@@ -1,23 +1,29 @@
 /---------------\
 | High Priority |
 \---------------/
-* Download high quality images:
-Magic 2014
-From the Vault: Twenty
+* Create a twice daily cron job at home on cobbleton that will get the current list of sets on gatherer (in the advanced search page drop down) and compare it to the previous run. If different, email me an alert on what was added, removed or changed (so manually get the list of each set and go through each name in an array)
+
+* The 'printings' field is nice, but it doesn't use set codes but full set names which can be a pain for others to convert.
+  Add like a printings-code field or something that is the same, but with the names converted to SET codes.
+  Once added, e-mail michael herbig and let him know :)
+
+* Add full foreign language scrapes. Need to use ?printed=true on Gatherer to get this data.
+  If the cards have unique multiverseids probably have totally seperate json. Files like AllCards-x-ch.json or what not for each language.
+  Then e-mail rubens w2net
+  Also of course reply on MTGSalvation
 
 
-
+/-----------------\
+| Medium Priority |
+\-----------------/
+* Add tokens. Can look at the test_urls.js to get a head start.
+  Will likely need to add these manually for each set, looking at the picture and entering in the data.
+  In addition to test_urls.js I need to look at the tokens folder in DevLab/images/originals/mtg/CCGHQ/full/
 
 
 /----------------\
 | Lower Priority |
 \----------------/
-* Add token cards from other sets? May have to do this manually
-If manually, then simply download all *TOKENS* zip files and look at the cards
-
-* Get more complete foreign card names from magiccards.info
-
-* Add full foreign language scrapes. Need to use ?printed=true on Gatherer to get this data.
 
 
 /-----------\
@@ -34,3 +40,5 @@ http://wiki.mtgsalvation.com/article/Deck_Builder%27s_Toolkit
 http://wiki.mtgsalvation.com/article/Deck_Builder%27s_Toolkit_2011
 http://wiki.mtgsalvation.com/article/Deck_Builder%27s_Toolkit_2012
 http://wiki.mtgsalvation.com/article/Deck_Builder%27s_Toolkit_2014
+
+

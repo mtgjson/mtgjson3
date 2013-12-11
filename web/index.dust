@@ -32,8 +32,8 @@
 		</p>
 		<br>
 		<br>
-		<h2>Current Version: <span class="value">1.11</span></h2>
-		<h2>&nbsp;&nbsp;&nbsp;Last Updated: <span class="value">Nov 15, 2013</span><a href="#changeLog">(change log)</a></h2>
+		<h2>Current Version: <span class="value">1.12</span></h2>
+		<h2>&nbsp;&nbsp;&nbsp;Last Updated: <span class="value">Dec 10, 2013</span><a href="#changeLog">(change log)</a></h2>
 		<br>
 		<br>
 		<h2 style="display: none;"><span style="color: red; text-decoration: underline;">ALERT:</span> alert message goes here</h2>
@@ -113,7 +113,8 @@
              border : "black",              // The type of border on the cards, either "white", "black" or "silver"
                type : "expansion",          // Type of set. One of: "core", "expansion", "reprint", "box", "un",
                                             //                      "from the vault", "premium deck", "duel deck",
-                                            //                      "starter", "commander", "planechase", "archenemy"
+                                            //                      "starter", "commander", "planechase", "archenemy",
+                                            //                      "promo"
               block : "Ravnica":,           // The block this set is in
               cards : [ {}, {}, {}, ... ]   // The cards in the set
     }
@@ -237,7 +238,7 @@
 				<tr>
 					<td>imageName</td>
 					<td>"ajani goldmane"</td>
-					<td>The corresponding image file. See <a href="#imageInfo">Image Info</a> for more details.</td> 
+					<td>The <a href="http://mtgimage.com">mtgimage.com</a> file name for this card. Note this is not the same format as CCGHQ. See <a href="http://mtgimage.com">mtgimage.com</a> for more details.</td>
 				</tr>
 				<tr>
 					<td>watermark</td>
@@ -399,20 +400,6 @@
 			</tbody>
 		</table>
 		<hr>
-		<a name="imageInfo"></a>
-		<h1>Image Info<a href="#top">(back to top)</a></h1>
-		<p>
-		The 'imageName' field is formatted similarly to <a href="http://www.slightlymagic.net/forum/viewforum.php?f=15">CCGHQ</a> image names.<br>
-		<br>There are some general differences:</p>
-		<ul>
-			<li>Names have been converted to lowercase</li>
-			<li>The '.full' part has been removed</li>
-			<li>There is no image extension such as .jpg</li>
-			<li>Split cards like Assault/Battery have had spaces and dashes between the card names removed</li>
-			<li>Various CCGHQ naming inconsitencies have been corrected</li>
-		</ul>
-		<br>
-		I also provide all the card images on <a href="http://mtgimage.com">mtgimage.com</a><br>
 		<br>
 		</p>
 		<hr>
@@ -427,6 +414,20 @@
 				</tr>
 			</thead>
 			<tbody>
+				<tr>
+					<td>1.12</td>
+					<td>Dec 10, 2013</td>
+					<td>
+						<ul>
+							<li>Added set:
+								<ul>
+									<li>Promo set for Gatherer</li>
+								</ul>
+							</li>
+							<li>Added 'promo' as a new possible value for the 'type' field of the set object</li>
+						</ul>
+					</td>
+				</tr>
 				<tr>
 					<td>1.11</td>
 					<td>Nov 15, 2013</td>

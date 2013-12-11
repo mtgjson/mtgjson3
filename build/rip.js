@@ -422,6 +422,10 @@ var SET_CORRECTIONS =
 		{ match : { name : "Colossus of Akros" }, replace : {text : "Defender, indestructible\n\n{10}: Monstrosity 10. (If this creature isn't monstrous, put ten +1/+1 counters on it and it becomes monstrous.)\n\nAs long as Colossus of Akros is monstrous, it has trample and can attack as though it didn't have defender."}},
 		{ match : { name : "Time to Feed" }, replace : {text : "Choose target creature an opponent controls. When that creature dies this turn, you gain 3 life. Target creature you control fights that creature. (Each deals damage equal to its power to the other.)"}}
 	],
+	PPR :
+	[
+		{ match : {name : "Shield of Kaldra"}, replace : {rarity : "Rare"}}
+	],
 	"*" :
 	[
 		{ match : { name : "Draco" }, replace : {text : "Domain — Draco costs {2} less to cast for each basic land type among lands you control.\n\nFlying\n\nDomain — At the beginning of your upkeep, sacrifice Draco unless you pay {10}. This cost is reduced by {2} for each basic land type among lands you control."}}
