@@ -12,6 +12,7 @@
 			ga('create', 'UA-26058758-3', 'mtgjson.com');
 			ga('send', 'pageview');
 		</script>
+		<link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> 
 		<link type="text/css" rel="stylesheet" href="index.css">
 		<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 		<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
@@ -22,18 +23,16 @@
 		<center><h1 style="font-size: 240%;">MTG JSON</h1></center>
 		<p style="margin-top: 1.0em;">This project provides up to date <a href="http://www.wizards.com/Magic/">Magic the Gathering</a> card data in <a href="http://www.json.org/">JSON</a> format for developers to easily use in their projects.<br>
 		<br>
-		For more details see: <a href="#exampleCard">Example Card</a> and <a href="#documentation">Documentation</a><br>
+		For more details see: <a href="#exampleCard">Example Card</a> and <a href="#documentation">Documentation</a> and <a href="http://forums.mtgsalvation.com/showthread.php?t=517971">Discussion Thread</a><br>
 		<br>
 		Any bugs or feedback, e-mail me at <a href="mailto:robert@cosmicrealms.com">robert@cosmicrealms.com</a><br>
-		<br>
-		Other links: <a href="http://forums.mtgsalvation.com/showthread.php?p=10438578">Discussion Thread</a> <a href="http://www.reddit.com/r/magicTCG/comments/1ghmdx/mtg_json_new_website_provides_mtg_card_data_in/">Reddit Thread</a><br>
 		<br>
 		<strong>Extras</strong> include: Rulings, Printings, Foreign Language Names<br>
 		</p>
 		<br>
 		<br>
-		<h2>Current Version: <span class="value">1.12</span></h2>
-		<h2>&nbsp;&nbsp;&nbsp;Last Updated: <span class="value">Dec 10, 2013</span><a href="#changeLog">(change log)</a></h2>
+		<h2>Current Version: <span class="value">1.15</span></h2>
+		<h2>&nbsp;&nbsp;&nbsp;Last Updated: <span class="value">Dec 16, 2013</span><a href="#changeLog">(change log)</a></h2>
 		<br>
 		<br>
 		<h2 style="display: none;"><span style="color: red; text-decoration: underline;">ALERT:</span> alert message goes here</h2>
@@ -114,7 +113,7 @@
                type : "expansion",          // Type of set. One of: "core", "expansion", "reprint", "box", "un",
                                             //                      "from the vault", "premium deck", "duel deck",
                                             //                      "starter", "commander", "planechase", "archenemy",
-                                            //                      "promo"
+                                            //                      "promo", "vanguard", "masters"
               block : "Ravnica":,           // The block this set is in
               cards : [ {}, {}, {}, ... ]   // The cards in the set
     }
@@ -138,7 +137,7 @@
 				<tr>
 					<td>layout</td>
 					<td>"normal"</td>
-					<td>The card layout. Possible values: normal, split, flip, double-faced, token</td>
+					<td>The card layout. Possible values: normal, split, flip, double-faced, token, plane, scheme, phenomenon</td>
 				</tr>
 				<tr>
 					<td>name</td>
@@ -173,22 +172,22 @@
 				<tr>
 					<td>supertypes</td>
 					<td>["Legendary"]</td>
-					<td>The supertypes of the card. These appear to the far left of the card type. Possible values (not exhaustive): Basic, Legendary, Snow, World</td>
+					<td>The supertypes of the card. These appear to the far left of the card type. Example values: Basic, Legendary, Snow, World, Ongoing</td>
 				</tr>
 				<tr>
 					<td>types</td>
 					<td>["Creature"]</td>
-					<td>The types of the card. These appear to the left of the dash in a card type. Possible values (not exhaustive): Instant, Sorcery, Artifact, Creature, Enchantment, Land, Planeswalker</td>
+					<td>The types of the card. These appear to the left of the dash in a card type. Example values: Instant, Sorcery, Artifact, Creature, Enchantment, Land, Planeswalker</td>
 				</tr>
 				<tr>
 					<td>subtypes</td>
 					<td>["Angel"]</td>
-					<td>The subtypes of the card. These appear to the right of the dash in a card type. Usually each word is it's own subtype. Possible values (not exhaustive): Trap, Arcane, Equipment, Aura, Human, Rat, Squirrel, etc.</td>
+					<td>The subtypes of the card. These appear to the right of the dash in a card type. Usually each word is it's own subtype. Example values: Trap, Arcane, Equipment, Aura, Human, Rat, Squirrel, etc.</td>
 				</tr>
 				<tr>
 					<td>rarity</td>
 					<td>"Rare"</td>
-					<td>The rarity of the card. Possible values (not exhaustive): Common, Uncommon, Rare, Mythic Rare</td>
+					<td>The rarity of the card. Example values: Common, Uncommon, Rare, Mythic Rare, Special</td>
 				</tr>
 				<tr>
 					<td>text</td>
@@ -249,6 +248,16 @@
 					<td>border</td>
 					<td>"black"</td>
 					<td>If the border for this specific card is DIFFERENT than the border specified in the top level set JSON, then it will be specified here. (Example: Unglued has silver borders, except for the lands which are black bordered)</td>
+				</tr>
+				<tr>
+					<td>hand</td>
+					<td>-3</td>
+					<td>Maximum hand size modifier. Only exists for Vanguard cards.</td>
+				</tr>
+				<tr>
+					<td>life</td>
+					<td>-10</td>
+					<td>Starting life total modifier. Only exists for Vanguard cards.</td>
 				</tr>
 			</tbody>
 		</table>
@@ -386,16 +395,24 @@
 					<tr>
 						<th>Symbol</th>
 						<th>Text</th>
+						<th>Name</th>
 					</tr>
 			</thead>
 			<tbody>
 				<tr>
-					<th><img src="images/t.png"></th>
-					<th>{~lb}T{~rb}</th>
+					<td><img src="images/t.png"></td>
+					<td>{~lb}T{~rb}</td>
+					<td>Tap</td>
 				</tr>
 				<tr>
-					<th><img src="images/q.png"></th>
-					<th>{~lb}Q{~rb}</th>
+					<td><img src="images/q.png"></td>
+					<td>{~lb}Q{~rb}</td>
+					<td>Untap</td>
+				</tr>
+				<tr>
+					<td><img src="images/c.png"></td>
+					<td>{~lb}C{~rb}</td>
+					<td>Chaos</td>
 				</tr>
 			</tbody>
 		</table>
@@ -414,6 +431,55 @@
 				</tr>
 			</thead>
 			<tbody>
+				<tr>
+					<td>1.15</td>
+					<td>Dec 16, 2013</td>
+					<td>
+						<ul>
+							<li>Added new layout: phenomenon</li>
+							<li>Changed Planechase 'Phenomenon' cards to have the layout 'phenomenon' instead of 'normal'</li>
+							<li>Fixed some bugs in PC2 where the chaos symbol wasn't appearing as {C}</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>1.14</td>
+					<td>Dec 16, 2013</td>
+					<td>
+						<ul>
+							<li>Added sets:
+								<ul>
+									<li>Masters Edition</li>
+									<li>Masters Edition II</li>
+									<li>Masters Edition III</li>
+									<li>Masters Edition IV</li>
+								</ul>
+							</li>
+							<li>Added new set type: masters</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>1.13</td>
+					<td>Dec 16, 2013</td>
+					<td>
+						<ul>
+							<li>Added set:
+								<ul>
+									<li>Vanguard</li>
+								</ul>
+							</li>
+							<li>Added 'Plane' cards to sets :Planechase and Planechase 2012</li>
+							<li>Added 'Scheme' cards to set: Archenemy</li>
+							<li>Added new symbol: {~lb}C{~rb} for "chaos"</li>
+							<li>Added new layouts: plane and scheme</li>
+							<li>Added new rarity: Special</li>
+							<li>Added new supertype: Ongoing</li>
+							<li>Added new fields: hand and life</li>
+							<li>Added new set type: vanguard</li>
+						</ul>
+					</td>
+				</tr>
 				<tr>
 					<td>1.12</td>
 					<td>Dec 10, 2013</td>
@@ -703,7 +769,6 @@
 		<a name="missing-sets"></a>
 		<h1>Missing Sets<a href="#top">(back to top)</a></h1>
 		<ul>
-			<li>Master's Edition Series (Magic Online)</li>
 			<li>Deck Builder's Toolkit Series</li>
 			<li>Deckmasters 2001</li>
 			<li>Renaissance (Non-English)</li>
@@ -712,6 +777,6 @@
 			<li>Introductory Two-Player Set</li>
 		</ul>
 		<br>
-		<p>I do not plan on adding the above missing sets. They are either Magic Online only or are not on Gatherer.</p>
+		<p>These sets are non-english or do not have data on Gatherer. Due to this I have no immediate plans on adding these sets.</p>
 	</body>
 </html>
