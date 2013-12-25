@@ -1,12 +1,16 @@
 "use strict";
 /*global setImmediate: true*/
 
-var base = require("base"),
+var base = require("xbase"),
 	C = require("C"),
 	fs = require("fs"),
+	optimist = require("optimist"),
 	path = require("path"),
 	tiptoe = require("tiptoe"),
 	rip = require("./rip.js");
+
+optimist = optimist.boolean("forcePrintings");
+var argv = optimist.argv;
 
 function usage()
 {
@@ -14,10 +18,12 @@ function usage()
 	process.exit(1);
 }
 
-if(process.argv.length<3)
+if(argv._.length<1)
 	usage();
 
-var setsToDo = process.argv.slice(2);
+var forcePrintings = !!argv.forcePrintings;
+
+var setsToDo = argv._;
 if(setsToDo.length===1 && setsToDo[0].toLowerCase()==="allsets")
 	setsToDo = C.SETS.map(function(SET) { return SET.code; });
 
@@ -34,7 +40,7 @@ setsToDo.serialForEach(function(arg, subcb)
 	tiptoe(
 		function build()
 		{
-			rip.ripSet(targetSet.name, this);
+			rip.ripSet(targetSet.name, {forcePrintings : forcePrintings}, this);
 		},
 		function save(set)
 		{
@@ -55,4 +61,3 @@ setsToDo.serialForEach(function(arg, subcb)
 
 	process.exit(0);
 });
-

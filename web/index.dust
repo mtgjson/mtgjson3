@@ -31,8 +31,8 @@
 		</p>
 		<br>
 		<br>
-		<h2>Current Version: <span class="value">1.15</span></h2>
-		<h2>&nbsp;&nbsp;&nbsp;Last Updated: <span class="value">Dec 16, 2013</span><a href="#changeLog">(change log)</a></h2>
+		<h2>Current Version: <span class="value">1.16</span></h2>
+		<h2>&nbsp;&nbsp;&nbsp;Last Updated: <span class="value">Dec 19, 2013</span><a href="#changeLog">(change log)</a></h2>
 		<br>
 		<br>
 		<h2 style="display: none;"><span style="color: red; text-decoration: underline;">ALERT:</span> alert message goes here</h2>
@@ -431,6 +431,21 @@
 				</tr>
 			</thead>
 			<tbody>
+				<tr>
+					<td>1.16</td>
+					<td>Dec 19, 2013</td>
+					<td>
+						<ul>
+							<li>The 'printings' field has been updated for all sets and cards. Several bugs were fixed:
+								<ul>
+									<li>If a card had more than 25 printings, it was only showing the first 25. It now shows all printings</li>
+									<li>Some cards had invalid data in the printings listing (eg "Banned as Commander")</li>
+									<li>The data for older sets wasn't updated if the card appeared in more recent sets</li>
+								</ul>
+							</li>
+						</ul>
+					</td>
+				</tr>
 				<tr>
 					<td>1.15</td>
 					<td>Dec 16, 2013</td>

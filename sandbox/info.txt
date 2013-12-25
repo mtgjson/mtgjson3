@@ -6,23 +6,27 @@
 node build/buildSet.js <expansion code>
 node build/buildSet.js <expansion code>
 
-# Get images. Two options
+# Run buildSet.js with -forcePrintings and a list of all codes output by 'Other Printings' at the end of the previous buildSet for our new set
+# This will update printings for all other sets that have cards from this new set
 
-# Option #1: Download full images from links below.
-# Move files to /mnt/compendium/DevLab/common/images/mtg/cards/<expansion code>
-# Also run:
-rename ".full.jpg" ".jpg" *
-bfr eval "newFilename = filename.toLowerCase();" *.jpg
-
-# Option #2: Download small images from gatherer. Run:
-node build/downloadImages.js <expansion code>
+# Ensure images are in mtgimage.com
 
 # Now verify
 node verify/generate.js <expansion code>
 
-* Now Open in browser:
+# Now Open in browser:
 file:///mnt/compendium/DevLab/mtgjson/verify/verify.html
 
+# Now generate web
+cd web
+node generate.js
+
+# Test in browser
+http://dev.mtgjson.com
+
+# Deploy
+cd deploy
+./deploy.sh
 
 /---------------\
 | Special Cards |

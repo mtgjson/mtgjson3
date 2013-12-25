@@ -3,7 +3,7 @@
 "use strict";
 /*global setImmediate: true*/
 
-var base = require("node-base"),
+var base = require("xbase"),
 	cheerio = require("cheerio"),
 	request = require("request"),
 	fs = require("fs"),

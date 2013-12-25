@@ -1,7 +1,7 @@
 "use strict";
 /*global setImmediate: true*/
 
-var base = require("base"),
+var base = require("xbase"),
 	C = require("C"),
 	cheerio = require("cheerio"),
 	request = require("request"),
@@ -9,7 +9,7 @@ var base = require("base"),
 	url = require("url"),
 	moment = require("moment"),
 	hash = require("mhash").hash,
-	unicodeUtil = require("node-utils").unicode,
+	unicodeUtil = require("xutil").unicode,
 	path = require("path"),
 	querystring = require("querystring"),
 	tiptoe = require("tiptoe");

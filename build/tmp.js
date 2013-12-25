@@ -1,6 +1,6 @@
 "use strict";
 
-var base = require("base"),
+var base = require("xbase"),
 	C = require("C"),
 	fs = require("fs"),
 	path = require("path"),
@@ -10,9 +10,24 @@ var base = require("base"),
 	moment = require("moment"),
 	tiptoe = require("tiptoe");
 
-//C.SETS.forEach(function(SET) { console.log(SET.code); });
+C.SETS.forEach(function(SET) { console.log("node buildSet.js --forcePrintings %s", SET.code); });
 
-rip.tmp(function(err) { if(err) { base.error(err); } process.exit(); });
+//rip.tmp(function(err) { if(err) { base.error(err); } process.exit(); });
+/*
+var card = {multiverseid : 2479};
+rip.getPrintingsForCard(card, true, finish);
+
+function finish(err)
+{
+	if(err)
+	{
+		base.error(err);
+		process.exit(1);
+	}
+
+	base.info(card);
+	process.exit(0);
+}*/
 
 
 

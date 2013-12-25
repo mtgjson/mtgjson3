@@ -1,7 +1,7 @@
 "use strict";
 /*global setImmediate: true*/
 
-var base = require("base"),
+var base = require("xbase"),
 	C = require("C"),
 	cheerio = require("cheerio"),
 	request = require("request"),
@@ -9,7 +9,7 @@ var base = require("base"),
 	url = require("url"),
 	moment = require("moment"),
 	hash = require("mhash").hash,
-	unicodeUtil = require("node-utils").unicode,
+	unicodeUtil = require("xutil").unicode,
 	path = require("path"),
 	querystring = require("querystring"),
 	tiptoe = require("tiptoe");
@@ -549,7 +549,7 @@ function cardComparator(a, b)
 	return 0;
 }
 
-function ripSet(setName, cb)
+function ripSet(setName, ripSetOptions, cb)
 {
 	base.info("================================================================");
 	base.info("Ripping Set: %s", setName);
@@ -658,7 +658,7 @@ function ripSet(setName, cb)
 		{
 			base.info("Adding printings to cards...");
 
-			addPrintingsToCards(this.data.set.cards, this);
+			addPrintingsToCards(this.data.set.cards, !!ripSetOptions.forcePrintings, this);
 		},
 		function finish(err)
 		{
@@ -705,6 +705,8 @@ function ripSet(setName, cb)
 				if(!card.artist)
 					base.warn("Artist not found for card: %s", card.name);
 			});
+
+			base.info("Other Printings: %s", this.data.set.cards.map(function(card) { return card.printings; }).flatten().unique().map(function(setName) { return C.SETS.mutateOnce(function(SET) { return SET.name===setName ? SET.code : undefined; }); }).remove(this.data.set.code).join(" "));
 
 			setImmediate(function() { cb(err, this.data.set); }.bind(this));
 		}
@@ -1048,15 +1050,21 @@ function buildMultiverseURL(multiverseid, part)
 	return url.format(urlConfig);
 }
 
-function getURLAsDoc(url, cb)
+function getURLAsDoc(url, options, cb)
 {
+	if(!cb)
+	{
+		cb = options;
+		options = {};
+	}
+
 	var urlHash = hash("whirlpool", url);
 	var cachePath = path.join(__dirname, "..", "cache", urlHash.charAt(0), urlHash);
 
 	tiptoe(
 		function get()
 		{
-			if(fs.existsSync(cachePath))
+			if(!options.force && fs.existsSync(cachePath))
 			{
 				//base.info("URL [%s] is file: %s", url, cachePath);
 				fs.readFile(cachePath, {encoding:"utf8"}, function(err, data) { this(null, null, data); }.bind(this));
@@ -1072,7 +1080,7 @@ function getURLAsDoc(url, cb)
 			if(err)
 				return setImmediate(function() { cb(err); });
 
-			if(!fs.existsSync(cachePath))
+			if(!fs.existsSync(cachePath) || options.force)
 				fs.writeFileSync(cachePath, pageHTML, {encoding:"utf8"});
 
 			setImmediate(function() { cb(null, cheerio.load(pageHTML)); }.bind(this));
@@ -1180,70 +1188,68 @@ function buildMultiverseLanguagesURL(multiverseid)
 	return url.format(urlConfig);
 }
 
-function addPrintingsToCards(cards, cb)
+function addPrintingsToCards(cards, force, cb)
+{
+	cards.serialForEach(function(card, subcb)
+	{
+		addPrintingsToCard(card, force, subcb);
+	}, cb);
+}
+
+function addPrintingsToCard(card, force, cb)
 {
 	tiptoe(
-		function fetchPrintingsPages()
+		function getFirstPage()
 		{
-			var args=arguments;
-
-			cards.serialForEach(function(card, subcb)
-			{
-				getURLAsDoc(buildMultiversePrintingsURL(card.multiverseid), subcb);
-			}, this);
+			getURLAsDoc(buildMultiversePrintingsURL(card.multiverseid, 0), {force : force}, this);
 		},
-		function applyPrintings(err, docs)
+		function getAllPages(doc)
 		{
-			if(err)
-				return setImmediate(function() { cb(err); });
-
-			cards.forEach(function(card, i)
+			var pageLinks = doc("#ctl00_ctl00_ctl00_MainContent_SubContent_SubContent_PrintingsList_pagingControlsContainer a").map(function(i, item) { return doc(item); });
+			var numPages = pageLinks.length>0 ? pageLinks.length : 1;
+			for(var i=0;i<numPages;i++)
 			{
-				var printings = [];
-				var doc = docs[i];
-				doc("table.cardList tr.cardItem").map(function(i, item) { return doc(item); }).forEach(function(cardRow)
+				getURLAsDoc(buildMultiversePrintingsURL(card.multiverseid, i), {force : (i===0 ? false : force)}, this.parallel());
+			}
+		},
+		function processPrintings()
+		{
+			var docs = Array.prototype.slice.apply(arguments);
+
+			var printings = [];
+			docs.forEach(function(doc)
+			{
+				doc("table.cardList").map(function(i, item) { return doc(item); })[0].find("tr.cardItem").map(function(i, item) { return doc(item); }).forEach(function(cardRow)
 				{
 					var printing = cardRow.find("td:nth-child(3)").text().trim();
 					if(printing)
 						printings.push(printing);
 				});
-
-				delete card.printings;
-
-				printings = printings.unique().sort(function(a, b) { return moment(getReleaseDateForSet(a), "YYYY-MM-DD").unix()-moment(getReleaseDateForSet(b), "YYYY-MM-DD").unix(); });
-				if(printings && printings.length)
-					card.printings = printings;
 			});
-			/*			docs.forEach(function(doc)
-			{
-				doc("table.cardList tr.cardItem").map(function(i, item) { return doc(item); }).forEach(function(cardRow)
-				{
-					var language = cardRow.find("td:nth-child(2)").text().trim();
-					var foreignCardName = cardRow.find("td:nth-child(1) a").text().trim();
-					if(language && foreignCardName && !seenLanguages.contains(language) && cardName!==foreignCardName)
-					{
-						seenLanguages.push(language);
-						foreignLanguages.push({language : language, name : foreignCardName});
-					}
-				});
-			});*/
 
-			//foreignLanguages = foreignLanguages.sort(function(a, b) { var al = a.language.toLowerCase().charAt(0); var bl = b.language.toLowerCase().charAt(0); return (al<bl ? -1 : (al>bl ? 1 : 0)); });
+			delete card.printings;
 
+			printings = printings.unique().sort(function(a, b) { return moment(getReleaseDateForSet(a), "YYYY-MM-DD").unix()-moment(getReleaseDateForSet(b), "YYYY-MM-DD").unix(); });
+			if(printings && printings.length)
+				card.printings = printings;
 
-			setImmediate(function() { cb(); });
+			this();
+		},
+		function finish(err)
+		{
+			setImmediate(function() { cb(err); });
 		}
 	);
 }
 
-function buildMultiversePrintingsURL(multiverseid)
+function buildMultiversePrintingsURL(multiverseid, page)
 {
 	var urlConfig = 
 	{
 		protocol : "http",
 		host     : "gatherer.wizards.com",
 		pathname : "/Pages/Card/Printings.aspx",
-		query    : { multiverseid : multiverseid }
+		query    : { multiverseid : multiverseid, page : ("" + (page || 0)) }
 	};
 
 	return url.format(urlConfig);
@@ -1262,45 +1268,6 @@ function getMultiverseidsForCardName(sets, cardName)
 	return multiverseids.unique();
 }
 
-exports.tmp = function(cb)
-{
-	var cards = [];
-	tiptoe(
-		function step1()
-		{
-			getURLsForMultiverseid(process.argv[2], this);
-		},
-		function step2(urls)
-		{
-			urls.forEach(function(url)
-			{
-				getURLAsDoc(url, this.parallel());
-			}.bind(this));
-		},
-		function step3()
-		{
-			Array.prototype.slice.call(arguments).forEach(function(doc)
-			{
-				getCardParts(doc).forEach(function(cardPart)
-				{
-					var card = processCardPart(doc, cardPart);
-					cards.push(card);
-				});
-			});
-
-			addForeignNamesToCards(cards, this);
-		},
-		function step4()
-		{
-			addPrintingsToCards(cards, this);
-		},
-		function finish(err)
-		{
-			base.info(cards);
-			setImmediate(function() { cb(err); });
-		}
-	);
-};
 
 var COLOR_ORDER = ["white", "blue", "black", "red", "green"];
 

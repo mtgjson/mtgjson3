@@ -37,5 +37,3 @@ The 'verify' directory is a little private local webpage I use to verify that my
 The 'web' directory is used to generate the mtgjson.com website.
 
 Note that both verify and web have some symbolic links to files that only exist on my local dev workstation. Sorry.
-
-You will need some files in node_modules, you can get them from: https://github.com/Sembiance/common/tree/master/js  (see symlink.sh)

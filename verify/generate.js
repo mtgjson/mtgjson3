@@ -1,11 +1,11 @@
 "use strict";
 
-var base = require("base"),
+var base = require("xbase"),
 	C = require("C"),
 	util = require("util"),
 	fs = require("fs"),
 	path = require("path"),
-	dustUtil = require("node-utils").dust,
+	dustUtil = require("xutil").dust,
 	tiptoe = require("tiptoe");
 
 function usage()

@@ -1,13 +1,13 @@
 "use strict";
 
-var base = require("base"),
+var base = require("xbase"),
 	C = require("C"),
 	util = require("util"),
 	rimraf = require("rimraf"),
-	printUtil = require("node-utils").print,
+	printUtil = require("xutil").print,
 	fs = require("fs"),
 	path = require("path"),
-	dustUtil = require("node-utils").dust,
+	dustUtil = require("xutil").dust,
 	moment = require("moment"),
 	tiptoe = require("tiptoe");
 
