@@ -83,6 +83,16 @@ table
 		text-align left
 		white-space normal
 
+table.downloadsAll
+	width 40.0em
+	margin-bottom 1.5em
+
+	tbody td
+		padding-left 2.0em
+
+		&.sizeColLeft
+			padding-right 0
+
 table.downloads
 	tr:first-child th
 		font-size 140%
@@ -94,10 +104,25 @@ table.downloads
 		width 28.0em
 		padding 0.5em 1.0em
 		text-align center
+		vertical-align middle
 
-		.size
-			margin-left 1.0em
-			line-height 1.2em
+	td.sizeColLeft
+		text-align left
+		line-height 1.2em
+		border-right 0
+
+	td.sizeColRight
+		text-align right
+		line-height 1.2em
+		border-left 0
+
+	tr.firstRow
+		td.sizeColLeft, td.sizeColRight
+			border-bottom 0
+
+	tr.secondRow
+		td.sizeColLeft, td.sizeColRight
+			border-top 0
 
 table.downloadsIndividual
 	td:first-child

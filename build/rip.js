@@ -514,7 +514,8 @@ var SET_CORRECTIONS =
 	],
 	"*" :
 	[
-		{ match : { name : "Draco" }, replace : {text : "Domain — Draco costs {2} less to cast for each basic land type among lands you control.\n\nFlying\n\nDomain — At the beginning of your upkeep, sacrifice Draco unless you pay {10}. This cost is reduced by {2} for each basic land type among lands you control."}}
+		{ match : { name : "Draco" }, replace : {text : "Domain — Draco costs {2} less to cast for each basic land type among lands you control.\n\nFlying\n\nDomain — At the beginning of your upkeep, sacrifice Draco unless you pay {10}. This cost is reduced by {2} for each basic land type among lands you control."}},
+		{ match : { name : "Spawnsire of Ulamog" }, replace : {text : "Annihilator 1 (Whenever this creature attacks, defending player sacrifices a permanent.)\n\n{4}: Put two 0/1 colorless Eldrazi Spawn creature tokens onto the battlefield. They have \"Sacrifice this creature: Add {1} to your mana pool.\"\n\n{20}: Cast any number of Eldrazi cards you own from outside the game without paying their mana costs."}}
 	],
 	XYZ :
 	[

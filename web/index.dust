@@ -31,33 +31,55 @@
 		</p>
 		<br>
 		<br>
-		<h2>Current Version: <span class="value">1.16</span></h2>
-		<h2>&nbsp;&nbsp;&nbsp;Last Updated: <span class="value">Dec 19, 2013</span><a href="#changeLog">(change log)</a></h2>
+		<h2>Current Version: <span class="value">{version}</span></h2>
+		<h2>&nbsp;&nbsp;&nbsp;Last Updated: <span class="value">Jan 13, 2014</span><a href="#changeLog">(change log)</a></h2>
 		<br>
 		<br>
 		<h2 style="display: none;"><span style="color: red; text-decoration: underline;">ALERT:</span> alert message goes here</h2>
 		<br>
 		<br>
-		<br>
-		<br>
-		<table class="downloads">
+		<table class="downloads downloadsAll">
 			<thead>
 				<tr>
-					<th colspan="2">All Sets</th>
+					<th colspan="4">All Sets</th>
 				</tr>
 				<tr>
-					<th>Card Data Only</th>
-					<th>Card Data with Extras</th>
+					<th colspan="2">Card Data Only</th>
+					<th colspan="2">Card Data with Extras</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr>
-					<td><a href="json/AllSets.json">AllSets.json</a><span class="size">{allSize}</span></td>
-					<td><a href="json/AllSets-x.json">AllSets-x.json</a><span class="size">{allSizeX}</span></td>
+					<td class="sizeColLeft">
+						<a href="json/AllSets.json">AllSets.json</a>
+					</td>
+					<td class="sizeColRight">
+						<span class="size">{allSize}</span>
+					</td>
+					<td class="sizeColLeft">
+						<a href="json/AllSets-x.json">AllSets-x.json</a>
+					</td>
+					<td class="sizeColRight">
+						<span class="size">{allSizeX}</span>
+					</td>
+				</tr>
+				<tr>
+					<td class="sizeColLeft">
+						<a href="json/AllSets.json.zip">AllSets.json.zip</a>
+					</td>
+					<td class="sizeColRight">
+						<span class="size">{allSizeZip}</span>
+					</td>
+					<td class="sizeColLeft">
+						<a href="json/AllSets-x.json.zip">AllSets-x.json.zip</a>
+					</td>
+					<td class="sizeColRight">
+						<span class="size">{allSizeXZip}</span>
+					</td>
 				</tr>
 			</tbody>
 		</table>
-		<p style="margin-left: 10.5em; font-size: 150%; margin-top: -1.5em; "><a href="#individualSets">Click Here for Individual Sets</a></p>
+		<p style="margin-left: 10.5em; font-size: 150%;"><a href="#individualSets">Click Here for Individual Sets</a></p>
 		<br>
 		<br>
 		<br>
@@ -290,6 +312,17 @@
 			</tbody>
 		</table>
 		<hr>
+		<a name="additionalJSON"></a>
+		<h1>Additional JSON Files<a href="#top">(back to top)</a></h1>
+		<p>Two additional JSON files are available and will be updated whenever card data is added or updated:</p>
+		<ul>
+			<li><a href="/json/SetCodes.json">/json/SetCodes.json</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;An array of set codes currently available</li>
+			<li><a href="/json/version.json">/json/version.json</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Current version number</li>
+		</ul>
+		<br>
+		<br>
+		<br>
+		<hr>
 		<a name="manaSymbols"></a>
 		<h1>Mana Symbols<a href="#top">(back to top)</a></h1>
 		<table class="symbols">
@@ -431,6 +464,16 @@
 				</tr>
 			</thead>
 			<tbody>
+				<tr>
+					<td>1.17</td>
+					<td>Jan 13, 2014</td>
+					<td>
+						<ul>
+							<li>Added a .zip file for each JSON file</li>
+							<li>ROE: Fixed a the card "Spawnsire of Ulamog" so it's text correctly has {~lb}20{~rb} instead of {~lb}2{~rb}0. Thanks Pouncing Kavu!</li>
+						</ul>
+					</td>
+				</tr>
 				<tr>
 					<td>1.16</td>
 					<td>Dec 19, 2013</td>
@@ -719,24 +762,48 @@
 		<table class="downloads downloadsIndividual">
 			<thead>
 				<tr>
-					<th colspan="5">Individual Sets</th>
+					<th colspan="7">Individual Sets</th>
 				</tr>
 				<tr>
 					<th>Name</th>
 					<th>Code</th>
 					<th>Release Date</th>
-					<th>Card Data Only</th>
-					<th>Card Data with Extras</th>
+					<th colspan="2">Card Data Only</th>
+					<th colspan="2">Card Data with Extras</th>
 				</tr>
 			</thead>
 			<tbody>
 				{#sets}
-					<tr>
-						<td>{name}</td>
-						<td>{code}</td>
-						<td>{releaseDate}</td>
-						<td><a href="json/{code}.json">{code}.json</a><span class="size">{size|s}</span></td>
-						<td><a href="json/{code}-x.json">{code}-x.json</a><span class="size">{sizeX|s}</span></td>
+					<tr class="firstRow">
+						<td rowspan="2">{name}</td>
+						<td rowspan="2">{code}</td>
+						<td rowspan="2">{releaseDate}</td>
+						<td class="sizeColLeft">
+							<a href="json/{code}.json">{code}.json</a>
+						</td>
+						<td class="sizeColRight">
+							<span class="size">{size|s}</span>
+						</td>
+						<td class="sizeColLeft">
+							<a href="json/{code}-x.json">{code}-x.json</a>
+						</td>
+						<td class="sizeColRight">
+							<span class="size">{sizeX|s}</span>
+						</td>
+					</tr>
+					<tr class="secondRow">
+						<td class="sizeColLeft">
+							<a href="json/{code}.json.zip">{code}.json.zip</a>
+						</td>
+						<td class="sizeColRight">
+							<span class="size">{sizeZip|s}</span>
+						</td>
+						<td class="sizeColLeft">
+							<a href="json/{code}-x.json.zip">{code}-x.json.zip</a>
+						</td>
+						<td class="sizeColRight">
+							<span class="size">{sizeXZip|s}</span>
+						</td>
 					</tr>
 				{/sets}
 			</tbody>

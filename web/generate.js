@@ -3,6 +3,7 @@
 var base = require("xbase"),
 	C = require("C"),
 	util = require("util"),
+	runUtil = require("xutil").run,
 	rimraf = require("rimraf"),
 	printUtil = require("xutil").print,
 	fs = require("fs"),
@@ -14,7 +15,8 @@ var base = require("xbase"),
 var dustData = 
 {
 	title : "Magic the Gathering card data in JSON format",
-	sets  : []
+	sets  : [],
+	version : 1.17
 };
 
 tiptoe(
@@ -43,6 +45,8 @@ tiptoe(
 		C.SETS.forEach(function(SET, i)
 		{
 			var setWithExtras = JSON.parse(args[i]);
+			delete setWithExtras.cropsMissing;
+			delete setWithExtras.tokenCropsMissing;
 			allSetsWithExtras[SET.code] = setWithExtras;
 			
 			var set = base.clone(setWithExtras, true);
@@ -68,9 +72,36 @@ tiptoe(
 
 		fs.writeFile(path.join(__dirname, "json", "AllSets.json"), JSON.stringify(allSets), {encoding : "utf8"}, this.parallel());
 		fs.writeFile(path.join(__dirname, "json", "AllSets-x.json"), JSON.stringify(allSetsWithExtras), {encoding : "utf8"}, this.parallel());
+		
+		fs.writeFile(path.join(__dirname, "json", "SetCodes.json"), JSON.stringify(C.SETS.map(function(SET) { return SET.code; })), {encoding : "utf8"}, this.parallel());
+		fs.writeFile(path.join(__dirname, "json", "version.json"), JSON.stringify(dustData.version), {encoding : "utf8"}, this.parallel());
+	},
+	function zipJSON()
+	{
+		runUtil.run("zip", ["-9", path.join(__dirname, "json", "AllSets.json.zip"), path.join(__dirname, "json", "AllSets.json")], { silent : true }, this.parallel());
+		runUtil.run("zip", ["-9", path.join(__dirname, "json", "AllSets-x.json.zip"), path.join(__dirname, "json", "AllSets-x.json")], { silent : true }, this.parallel());
+
+		C.SETS.serialForEach(function(SET, cb)
+		{
+			runUtil.run("zip", ["-9", path.join(__dirname, "json", SET.code + ".json.zip"), path.join(__dirname, "json", SET.code + ".json")], { silent : true }, cb);
+		}, this.parallel());
+
+		C.SETS.serialForEach(function(SET, cb)
+		{
+			runUtil.run("zip", ["-9", path.join(__dirname, "json", SET.code + "-x.json.zip"), path.join(__dirname, "json", SET.code + "-x.json")], { silent : true }, cb);
+		}, this.parallel());
 	},
 	function render()
 	{
+		dustData.allSizeZip = printUtil.toSize(fs.statSync(path.join(__dirname, "json", "AllSets.json.zip")).size, 1);
+		dustData.allSizeXZip = printUtil.toSize(fs.statSync(path.join(__dirname, "json", "AllSets-x.json.zip")).size, 1);
+
+		C.SETS.forEach(function(SET, i)
+		{
+			dustData.sets[i].sizeZip = printUtil.toSize(fs.statSync(path.join(__dirname, "json", SET.code + ".json.zip")).size, 1);
+			dustData.sets[i].sizeXZip = printUtil.toSize(fs.statSync(path.join(__dirname, "json", SET.code + "-x.json.zip")).size, 1);
+		});
+
 		dustUtil.render(__dirname, "index", dustData, { keepWhitespace : true }, this);
 		//dustUtils.render(post.contentPath, "content", post, { keepWhitespace : true }, this);
 	},
