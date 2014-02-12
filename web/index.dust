@@ -32,7 +32,7 @@
 		<br>
 		<br>
 		<h2>Current Version: <span class="value">{version}</span></h2>
-		<h2>&nbsp;&nbsp;&nbsp;Last Updated: <span class="value">Jan 13, 2014</span><a href="#changeLog">(change log)</a></h2>
+		<h2>&nbsp;&nbsp;&nbsp;Last Updated: <span class="value">Jan 29, 2014</span><a href="#changeLog">(change log)</a></h2>
 		<br>
 		<br>
 		<h2 style="display: none;"><span style="color: red; text-decoration: underline;">ALERT:</span> alert message goes here</h2>
@@ -314,10 +314,11 @@
 		<hr>
 		<a name="additionalJSON"></a>
 		<h1>Additional JSON Files<a href="#top">(back to top)</a></h1>
-		<p>Two additional JSON files are available and will be updated whenever card data is added or updated:</p>
+		<p>Three additional JSON files are available and will be updated whenever card data is added or updated:</p>
 		<ul>
-			<li><a href="/json/SetCodes.json">/json/SetCodes.json</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;An array of set codes currently available</li>
-			<li><a href="/json/version.json">/json/version.json</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Current version number</li>
+			<li><a href="/json/SetCodes.json">/json/SetCodes.json</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;An array of set codes currently available</li>
+			<li><a href="/json/version.json">/json/version.json</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Current version number as a quoted string</li>
+			<li><a href="/json/version-full.json">/json/version-full.json</a>&nbsp;&nbsp;&nbsp;&nbsp;Current version number as a JSON object</li>
 		</ul>
 		<br>
 		<br>
@@ -328,6 +329,9 @@
 		<table class="symbols">
 			<thead>
 					<tr>
+						<th>Symbol</th>
+						<th>Text</th>
+						<th class="spacer"></th>
 						<th>Symbol</th>
 						<th>Text</th>
 						<th class="spacer"></th>
@@ -354,6 +358,9 @@
 					<td class="spacer">&nbsp;</td>
 					<td><img src="images/pw.png"></td>
 					<td>{~lb}P/W{~rb}</td>
+					<td class="spacer">&nbsp;</td>
+					<td><img src="images/2w.png"></td>
+					<td>{~lb}2/W{~rb}</td>
 				</tr>
 				<tr>
 					<td><img src="images/u.png"></td>
@@ -367,6 +374,9 @@
 					<td class="spacer">&nbsp;</td>
 					<td><img src="images/pu.png"></td>
 					<td>{~lb}P/U{~rb}</td>
+					<td class="spacer">&nbsp;</td>
+					<td><img src="images/2u.png"></td>
+					<td>{~lb}2/U{~rb}</td>
 				</tr>
 				<tr>
 					<td><img src="images/b.png"></td>
@@ -380,6 +390,9 @@
 					<td class="spacer">&nbsp;</td>
 					<td><img src="images/pb.png"></td>
 					<td>{~lb}P/B{~rb}</td>
+					<td class="spacer">&nbsp;</td>
+					<td><img src="images/2b.png"></td>
+					<td>{~lb}2/B{~rb}</td>
 				</tr>
 				<tr>
 					<td><img src="images/r.png"></td>
@@ -393,6 +406,9 @@
 					<td class="spacer">&nbsp;</td>
 					<td><img src="images/pr.png"></td>
 					<td>{~lb}P/R{~rb}</td>
+					<td class="spacer">&nbsp;</td>
+					<td><img src="images/2r.png"></td>
+					<td>{~lb}2/R{~rb}</td>
 				</tr>
 				<tr>
 					<td><img src="images/g.png"></td>
@@ -406,6 +422,9 @@
 					<td class="spacer">&nbsp;</td>
 					<td><img src="images/pg.png"></td>
 					<td>{~lb}P/G{~rb}</td>
+					<td class="spacer">&nbsp;</td>
+					<td><img src="images/2g.png"></td>
+					<td>{~lb}2/G{~rb}</td>
 				</tr>
 				<tr>
 					<td><img src="images/s.png"></td>
@@ -417,6 +436,8 @@
 					<td class="spacer">&nbsp;</td>
 					<td><img src="images/p.png"></td>
 					<td>{~lb}P{~rb}</td>
+					<td class="spacer">&nbsp;</td>
+					<td colspan="2" style="text-align: center;">etc...</td>
 				</tr>
 			</tbody>
 		</table>
@@ -449,9 +470,15 @@
 				</tr>
 			</tbody>
 		</table>
-		<hr>
+		<p>Looking to download these and other symbols to use in your app/site?<br>
 		<br>
-		</p>
+		Here are two really great resources for them:<br>
+		<ul>
+			<li><a href="http://www.mtgsalvation.com/forums/creativity/artwork/494438-baconcatbugs-set-and-mana-symbol-megapack">BaconCatBug's Set and Mana Symbol Megapack</a></li>
+			<li><a href="http://www.slightlymagic.net/forum/viewtopic.php?f=15&t=7010">Vector Set Symbols and Watermarks</a></li>
+		</ul>
+		<br>
+		<br>
 		<hr>
 		<a name="changeLog"></a>
 		<h1>Change Log<a href="#top">(back to top)</a></h1>
@@ -464,6 +491,38 @@
 				</tr>
 			</thead>
 			<tbody>
+				<tr>
+					<td>1.20</td>
+					<td>Jan 29, 2014</td>
+					<td>
+						<ul>
+							<li>LEA, LEB, 2ED: Jade Statue had power/toughness fields. This was wrong and these fields have been removed. Thanks Pouncing Kavu!</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>1.19</td>
+					<td>Jan 29, 2014</td>
+					<td>
+
+						<ul>
+							<li>Added set:
+								<ul>
+									<li>Born of the Gods</li>
+								</ul>
+							</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>1.18</td>
+					<td>Jan 21, 2014</td>
+					<td>
+						<ul>
+							<li>DGM: Several rulings were missing or out of date. They have been updated. Thanks Florian!</li>
+						</ul>
+					</td>
+				</tr>
 				<tr>
 					<td>1.17</td>
 					<td>Jan 13, 2014</td>

@@ -21,9 +21,9 @@ tiptoe(
 	{
 		var sets = [];
 
-		var doc = cheerio.load(currentHTML);
+		var doc = cheerio.load(currentHTML[0].body);
 
-		doc("select#ctl00_ctl00_MainContent_Content_SearchControls_setAddText option").map(function(i, item) { return doc(item); }).forEach(function(option)
+		doc("select#ctl00_ctl00_MainContent_Content_SearchControls_setAddText option").map(function(i, item) { return doc(item); }).each(function(i, option)
 		{
 			var value = option.attr("value").trim();
 			if(!value)
