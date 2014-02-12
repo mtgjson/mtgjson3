@@ -515,7 +515,8 @@ var SET_CORRECTIONS =
 	"*" :
 	[
 		{ match : { name : "Draco" }, replace : {text : "Domain — Draco costs {2} less to cast for each basic land type among lands you control.\n\nFlying\n\nDomain — At the beginning of your upkeep, sacrifice Draco unless you pay {10}. This cost is reduced by {2} for each basic land type among lands you control."}},
-		{ match : { name : "Spawnsire of Ulamog" }, replace : {text : "Annihilator 1 (Whenever this creature attacks, defending player sacrifices a permanent.)\n\n{4}: Put two 0/1 colorless Eldrazi Spawn creature tokens onto the battlefield. They have \"Sacrifice this creature: Add {1} to your mana pool.\"\n\n{20}: Cast any number of Eldrazi cards you own from outside the game without paying their mana costs."}}
+		{ match : { name : "Spawnsire of Ulamog" }, replace : {text : "Annihilator 1 (Whenever this creature attacks, defending player sacrifices a permanent.)\n\n{4}: Put two 0/1 colorless Eldrazi Spawn creature tokens onto the battlefield. They have \"Sacrifice this creature: Add {1} to your mana pool.\"\n\n{20}: Cast any number of Eldrazi cards you own from outside the game without paying their mana costs."}},
+		{ match : { name : "Jade Statue" }, remove : ["power", "toughness"] }
 	],
 	XYZ :
 	[
@@ -731,9 +732,9 @@ function processMultiverseids(multiverseids, cb)
 			},
 			function getMultiverseDocs(urls)
 			{
-				urls.forEach(function(url)
+				urls.forEach(function(multiverseURL)
 				{
-					getURLAsDoc(url, this.parallel());
+					getURLAsDoc(multiverseURL, this.parallel());
 				}.bind(this));
 			},
 			function processMultiverseDocs()
@@ -1051,7 +1052,7 @@ function buildMultiverseURL(multiverseid, part)
 	return url.format(urlConfig);
 }
 
-function getURLAsDoc(url, options, cb)
+function getURLAsDoc(targetURL, options, cb)
 {
 	if(!cb)
 	{
@@ -1059,7 +1060,7 @@ function getURLAsDoc(url, options, cb)
 		options = {};
 	}
 
-	var urlHash = hash("whirlpool", url);
+	var urlHash = hash("whirlpool", targetURL);
 	var cachePath = path.join(__dirname, "..", "cache", urlHash.charAt(0), urlHash);
 
 	tiptoe(
@@ -1072,8 +1073,8 @@ function getURLAsDoc(url, options, cb)
 			}
 			else
 			{
-				base.info("Requesting from web: %s", url);
-				request(url, this);
+				base.info("Requesting from web: %s", targetURL);
+				request(targetURL, this);
 			}
 		},
 		function createDoc(err, response, pageHTML)
