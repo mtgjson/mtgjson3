@@ -7,12 +7,16 @@
 /-----------------\
 | Medium Priority |
 \-----------------/
-* Add 'originalText' and 'originalType' to extras that has the non-oracle original text and then e-mail: webmaster@rdwonline.com
-  http://gatherer.wizards.com/Pages/Card/Details.aspx?printed=true&multiverseid=1230
+* Add tokens. Can look at the test_urls.js to get a head start.
+  Will likely need to add these manually for each set, looking at the picture and entering in the data.
+  In addition to test_urls.js I need to look at the tokens folder in DevLab/images/originals/mtg/CCGHQ/full/
+  Could potentially scrape the data from: http://magiccards.info/extras.html
 
-* Add a 'foilable' boolean for sets/cards on whether foils are available or not. Then e-mail machael herbig
 
-* The 'printings' field is nice, but it doesn't use set codes but full set names which can be a pain for others to convert.
+/--------------\
+| Low Priority |
+\--------------/
+* The 'printing' field is nice, but it doesn't use set codes but full set names which can be a pain for others to convert.
   Add like a printings-code field or something that is the same, but with the names converted to SET codes.
   Once added, e-mail michael herbig and let him know :)
 
@@ -20,16 +24,14 @@
   If the cards have unique multiverseids probably have totally seperate json. Files like AllCards-x-ch.json or what not for each language.
   Then e-mail rubens w2net
   Also of course reply on MTGSalvation
-
-* Add tokens. Can look at the test_urls.js to get a head start.
-  Will likely need to add these manually for each set, looking at the picture and entering in the data.
-  In addition to test_urls.js I need to look at the tokens folder in DevLab/images/originals/mtg/CCGHQ/full/
-  Could potentially scrape the data from: http://magiccards.info/extras.html
+  When doing this, keep the 'foreignNames' field, and make sure it includes 'English' in non-english printings
 
 
-/----------------\
-| Lower Priority |
-\----------------/
+/-----------------\
+| Lowest Priority |
+\-----------------/
+* Add a 'foilable' boolean for sets/cards on whether foils are available or not. Then e-mail machael herbig
+
 
 
 /-----------\
@@ -46,5 +48,4 @@ http://wiki.mtgsalvation.com/article/Deck_Builder%27s_Toolkit
 http://wiki.mtgsalvation.com/article/Deck_Builder%27s_Toolkit_2011
 http://wiki.mtgsalvation.com/article/Deck_Builder%27s_Toolkit_2012
 http://wiki.mtgsalvation.com/article/Deck_Builder%27s_Toolkit_2014
-
 

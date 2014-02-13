@@ -11,6 +11,7 @@ var base = require("xbase"),
 	hash = require("mhash").hash,
 	unicodeUtil = require("xutil").unicode,
 	path = require("path"),
+	urlUtil = require("xutil").url,
 	querystring = require("querystring"),
 	tiptoe = require("tiptoe");
 
@@ -553,7 +554,7 @@ function cardComparator(a, b)
 
 function ripSet(setName, ripSetOptions, cb)
 {
-	base.info("================================================================");
+	base.info("====================================================================================================================");
 	base.info("Ripping Set: %s", setName);
 
 	tiptoe(
@@ -577,7 +578,6 @@ function ripSet(setName, ripSetOptions, cb)
 			});
 
 			listURL = listURL.replaceAll("%5C", "");
-			base.info(listURL);
 
 			getURLAsDoc(listURL, this);
 		},
@@ -708,7 +708,7 @@ function ripSet(setName, ripSetOptions, cb)
 					base.warn("Artist not found for card: %s", card.name);
 			});
 
-			base.info("Other Printings: %s", this.data.set.cards.map(function(card) { return card.printings; }).flatten().unique().map(function(setName) { return C.SETS.mutateOnce(function(SET) { return SET.name===setName ? SET.code : undefined; }); }).remove(this.data.set.code).join(" "));
+			base.info("Other Printings: %s", (this.data.set.cards.map(function(card) { return card.printings; }).flatten().unique().map(function(setName) { return C.SETS.mutateOnce(function(SET) { return SET.name===setName ? SET.code : undefined; }); }).remove(this.data.set.code) || []).join(" "));
 
 			setImmediate(function() { cb(err, this.data.set); }.bind(this));
 		}
@@ -735,16 +735,24 @@ function processMultiverseids(multiverseids, cb)
 				urls.forEach(function(multiverseURL)
 				{
 					getURLAsDoc(multiverseURL, this.parallel());
+					getURLAsDoc(urlUtil.setQueryParam(multiverseURL, "printed", "true"), this.parallel());
 				}.bind(this));
 			},
 			function processMultiverseDocs()
 			{
-				Array.prototype.slice.call(arguments).forEach(function(multiverseDoc)
+				Array.prototype.slice.call(arguments).forEachBatch(function(multiverseDoc, printedMultiverseDoc)
 				{
 					var newCards = [];
-					getCardParts(multiverseDoc).forEach(function(cardPart, i)
+					var multiverseDocCardParts = getCardParts(multiverseDoc);
+					var printedMultiverseDocCardParts = getCardParts(printedMultiverseDoc);
+					if(multiverseDocCardParts.length!==printedMultiverseDocCardParts.length)
 					{
-						var newCard = processCardPart(multiverseDoc, cardPart);
+						throw new Error("multiverseDocCardParts length [" + multiverseDocCardParts.length + "] does not equal printedMultiverseDocCardParts length [" + printedMultiverseDocCardParts.length + "]");
+					}
+
+					multiverseDocCardParts.forEach(function(cardPart, i)
+					{
+						var newCard = processCardPart(multiverseDoc, cardPart, printedMultiverseDoc, printedMultiverseDocCardParts[i]);
 						if(newCard.layout==="split" && i===1)
 							return;
 
@@ -761,7 +769,7 @@ function processMultiverseids(multiverseids, cb)
 					}
 
 					cards = cards.concat(newCards);
-				});
+				}, 2);
 
 				this();
 			},
@@ -781,7 +789,7 @@ var POWER_TOUGHNESS_REPLACE_MAP =
 	"{\\^2}"  : "²"
 };
 
-function processCardPart(doc, cardPart)
+function processCardPart(doc, cardPart, printedDoc, printedCardPart)
 {
 	var card =
 	{
@@ -862,14 +870,20 @@ function processCardPart(doc, cardPart)
 	if(!card.types.length)
 		delete card.types;
 
-	if(card.types.contains("Plane"))
-		card.layout = "plane";
-	else if(card.types.contains("Scheme"))
-		card.layout = "scheme";
-	else if(card.types.contains("Phenomenon"))
-		card.layout = "phenomenon";
-	else if(card.types.contains("Vanguard") && card.name.endsWith(" Avatar"))
-		card.name = card.name.substring(0, (card.name.length-" Avatar".length));
+	if(card.types)
+	{
+		if(card.types.contains("Plane"))
+			card.layout = "plane";
+		else if(card.types.contains("Scheme"))
+			card.layout = "scheme";
+		else if(card.types.contains("Phenomenon"))
+			card.layout = "phenomenon";
+		else if(card.types.contains("Vanguard") && card.name.endsWith(" Avatar"))
+			card.name = card.name.substring(0, (card.name.length-" Avatar".length));
+	}
+
+	// Original type
+	card.originalType = printedCardPart.find(idPrefix + "_typeRow .value").text().trim().replaceAll(" -", " —");
 
 	// Converted Mana Cost (CMC)
 	var cardCMC = cardPart.find(idPrefix + "_cmcRow .value").text().trim();
@@ -956,7 +970,16 @@ function processCardPart(doc, cardPart)
 	{
 		card.text = cardText;
 		if(card.text.contains("{UNKNOWN}"))
-			base.warn("Invalid symbol in card text for card: %s", card.name);
+			base.warn("Invalid symbol in oracle card text for card: %s", card.name);
+	}
+
+	// Original Printed Text
+	var originalCardText = processTextBlocks(printedDoc, printedCardPart.find(idPrefix + "_textRow .value .cardtextbox")).trim();
+	if(originalCardText)
+	{
+		card.originalText = originalCardText;
+		if(card.originalText.contains("{UNKNOWN}"))
+			base.warn("Invalid symbol in printed card text for card: %s", card.name);
 	}
 
 	// Flavor Text
@@ -1005,17 +1028,24 @@ function getURLsForMultiverseid(multiverseid, cb)
 	tiptoe(
 		function getDefaultDoc()
 		{
-			getURLAsDoc(buildMultiverseURL(multiverseid), this);
+			getURLAsDoc(buildMultiverseURL(multiverseid), this.parallel());
+			getURLAsDoc(urlUtil.setQueryParam(buildMultiverseURL(multiverseid), "printed", "true"), this.parallel());
 		},
-		function processDefaultDoc(err, doc)
+		function processDefaultDoc(err, doc, printedDoc)
 		{
 			if(err)
 				return setImmediate(function() { cb(err); });
 
 			var urls = [];
-			getCardParts(doc).forEach(function(cardPart)
+
+			var cardParts = getCardParts(doc);
+			var printedCardParts = getCardParts(printedDoc);
+			if(cardParts.length!==printedCardParts.length)
+				throw new Error("multiverseid [" + multiverseid + "] cardParts length [" + cardParts.length + "] does not equal printedCardParts length [" + printedCardParts.length + "]");
+
+			cardParts.forEach(function(cardPart, i)
 			{
-				var card = processCardPart(doc, cardPart);
+				var card = processCardPart(doc, cardPart, printedDoc, printedCardParts[i]);
 				if(card.layout==="split")
 				{
 					urls.push(buildMultiverseURL(multiverseid, card.names[0]));
@@ -1059,6 +1089,9 @@ function getURLAsDoc(targetURL, options, cb)
 		cb = options;
 		options = {};
 	}
+
+	//if(targetURL.startsWith("http://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid="))
+	//	options.force = true;
 
 	var urlHash = hash("whirlpool", targetURL);
 	var cachePath = path.join(__dirname, "..", "cache", urlHash.charAt(0), urlHash);
@@ -1125,7 +1158,7 @@ function addForeignNamesToCards(cards, cb)
 			{
 				delete card.foreignNames;
 
-				if(card.layout==="normal")
+				if(card.layout==="normal" || (card.layout==="flip" && card.names && card.names.length>=1 && card.names[0]===card.name))
 				{
 					var cardForeignNames = cardsForeignNames[i];
 					if(cardForeignNames && cardForeignNames.length)
@@ -1359,7 +1392,11 @@ var TEXT_TO_SYMBOL_MAP =
 	"o2"  : "2",
 	"o3"  : "3",
 	"o4"  : "4",
-	"o7"  : "7"
+	"o5"  : "5",
+	"o6"  : "6",
+	"o7"  : "7",
+	"o8"  : "8",
+	"o9"  : "9"
 };
 
 function processSymbol(symbol)
@@ -1432,6 +1469,7 @@ function processTextBoxChildren(doc, children)
 			var childText = child.data;
 			Object.forEach(TEXT_TO_SYMBOL_MAP, function(text, symbol)
 			{
+				childText = childText.replaceAll("o" + text, "{" + symbol + "}");
 				childText = childText.replaceAll(text, "{" + symbol + "}");
 			});
 			

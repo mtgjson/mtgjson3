@@ -25,7 +25,17 @@ var forcePrintings = !!argv.forcePrintings;
 
 var setsToDo = argv._;
 if(setsToDo.length===1 && setsToDo[0].toLowerCase()==="allsets")
+{
 	setsToDo = C.SETS.map(function(SET) { return SET.code; });
+}
+else if(setsToDo.length===1 && setsToDo[0].toLowerCase().startsWith("startat"))
+{
+	var targetSetCode = setsToDo[0].substring("startat".length);
+	setsToDo = C.SETS.map(function(SET) { return SET.code; });
+	setsToDo = setsToDo.slice(setsToDo.indexOf(targetSetCode));
+}
+
+base.info("Doing sets: %s", setsToDo);
 
 setsToDo.serialForEach(function(arg, subcb)
 {

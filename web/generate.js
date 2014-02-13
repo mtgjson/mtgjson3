@@ -16,7 +16,7 @@ var dustData =
 {
 	title : "Magic the Gathering card data in JSON format",
 	sets  : [],
-	version : "1.20"
+	version : "1.21"
 };
 
 tiptoe(
@@ -45,12 +45,23 @@ tiptoe(
 		C.SETS.forEach(function(SET, i)
 		{
 			var setWithExtras = JSON.parse(args[i]);
+
+			// Strip out private data
 			delete setWithExtras.cropsMissing;
 			delete setWithExtras.tokenCropsMissing;
+
 			allSetsWithExtras[SET.code] = setWithExtras;
 			
 			var set = base.clone(setWithExtras, true);
-			set.cards.forEach(function(card) { delete card.rulings; delete card.foreignNames; delete card.printings; });
+			set.cards.forEach(function(card)
+			{
+				// Strip out extras
+				delete card.rulings;
+				delete card.foreignNames;
+				delete card.printings;
+				delete card.originalText;
+				delete card.originalType;
+			});
 			allSets[SET.code] = set;
 
 			fs.writeFile(path.join(__dirname, "json", SET.code + ".json"), JSON.stringify(set), {encoding : "utf8"}, this.parallel());

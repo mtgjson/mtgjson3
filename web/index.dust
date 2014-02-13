@@ -32,7 +32,7 @@
 		<br>
 		<br>
 		<h2>Current Version: <span class="value">{version}</span></h2>
-		<h2>&nbsp;&nbsp;&nbsp;Last Updated: <span class="value">Jan 29, 2014</span><a href="#changeLog">(change log)</a></h2>
+		<h2>&nbsp;&nbsp;&nbsp;Last Updated: <span class="value">Feb 12, 2014</span><a href="#changeLog">(change log)</a></h2>
 		<br>
 		<br>
 		<h2 style="display: none;"><span style="color: red; text-decoration: underline;">ALERT:</span> alert message goes here</h2>
@@ -309,6 +309,17 @@
 					<td>printings</td>
 					<td>["Ice Age", "Chronicles"]</td>
 					<td>The sets that this card was printed in. Note: This is a complete list of printings, so it may contain sets that are not available on MTG JSON.</td>
+				</tr>
+				<tr>
+					<td>originalText</td>
+					<td>{~lb}8{~rb}: Do 4 damage to any target.</td>
+					<td>The original text on the card at the time it was printed.</td>
+				</tr>
+				<tr>
+					<td>oringinalType</td>
+					<td>Mono Artifact</td>
+					<td>The original type on the card at the time it was printed.</td>
+				</tr>
 			</tbody>
 		</table>
 		<hr>
@@ -491,6 +502,16 @@
 				</tr>
 			</thead>
 			<tbody>
+				<tr>
+					<td>1.21</td>
+					<td>Feb 12, 2014</td>
+					<td>
+						<ul>
+							<li>Every card in every set has been updated with the latest text, type and rulings.</li>
+							<li>Added card fields 'originalText' and 'originalType' to the extras files. These contain the original text and type on the card at the time it was printed.</li>
+						</ul>
+					</td>
+				</tr>
 				<tr>
 					<td>1.20</td>
 					<td>Jan 29, 2014</td>

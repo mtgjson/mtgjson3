@@ -31,33 +31,13 @@ tiptoe(
 	},
 	function render(setRaw)
 	{
-		var set = JSON.parse(setRaw);
-		set.cards.forEach(function(card)
-		{
-			var dup = base.clone(card, true);
-			["name", "manaCost", "cmc", "type", "supertypes", "types", "subtypes", "rarity", "artist", "number", "loyalty",
-			 "power", "toughness", "text", "flavor", "imageName", "rulings", "layout", "multiverseid", "colors", "names",
-			 "foreignNames", "printings"].forEach(function(key) { delete dup[key]; });
-			card.json = util.inspect(dup);
-
-			if(card.text)
-				card.text = card.text.replaceAll("\n", "<br>");
-			if(card.flavor)
-				card.flavor = card.flavor.replaceAll("\n", "<br>");
-		});
-
-		var dustData =
-		{
-			title : "[" + set.code + "] " + set.name + " (" + set.cards.length + " cards)",
-			code : set.code,
-			cards : set.cards
-		};
-
-		dustUtil.render(__dirname, "verify", dustData, this);
+		renderSet(setRaw, false, this.parallel());
+		renderSet(setRaw, true, this.parallel());
 	},
-	function save(html)
+	function save(html, htmlOriginal)
 	{
 		fs.writeFile(path.join(__dirname, "verify.html"), html, {encoding:"utf8"}, this);
+		fs.writeFile(path.join(__dirname, "verifyOriginal.html"), htmlOriginal, {encoding:"utf8"}, this);
 	},
 	function finish(err)
 	{
@@ -70,3 +50,39 @@ tiptoe(
 		process.exit(0);
 	}
 );
+
+function renderSet(setRaw, original, cb)
+{
+	var set = JSON.parse(setRaw);
+	set.cards.forEach(function(card)
+	{
+		if(original)
+		{
+			card.text = card.originalText;
+			card.type = card.originalType;
+		}
+
+		delete card.originalText;
+		delete card.originalType;
+
+		var dup = base.clone(card, true);
+		["name", "manaCost", "cmc", "type", "supertypes", "types", "subtypes", "rarity", "artist", "number", "loyalty",
+		 "power", "toughness", "text", "flavor", "imageName", "rulings", "layout", "multiverseid", "colors", "names",
+		 "foreignNames", "printings"].forEach(function(key) { delete dup[key]; });
+		card.json = util.inspect(dup);
+
+		if(card.text)
+			card.text = card.text.replaceAll("\n", "<br>");
+		if(card.flavor)
+			card.flavor = card.flavor.replaceAll("\n", "<br>");
+	});
+
+	var dustData =
+	{
+		title : "[" + set.code + "] " + set.name + " (" + set.cards.length + " cards)",
+		code : set.code,
+		cards : set.cards
+	};
+
+	dustUtil.render(__dirname, "verify", dustData, cb);
+}
