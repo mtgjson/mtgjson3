@@ -15,11 +15,6 @@ var base = require("xbase"),
 	querystring = require("querystring"),
 	tiptoe = require("tiptoe");
 
-var GATHERER_NAME_CHANGES =
-{
-	"Commander" : "Magic: The Gathering-Commander"
-};
-
 var SET_CORRECTIONS =
 {
 	ARN :
@@ -269,14 +264,6 @@ var SET_CORRECTIONS =
 		{ match : {name: "Rune-Tail's Essence"}, remove : ["power", "toughness"] },
 		{ match : {name: "Sasaya's Essence"}, remove : ["power", "toughness"] }
 	],
-	FUT :
-	[
-		{ match : {name : "Ghostfire"}, remove : ["colors"] }
-	],
-	DDG :
-	[
-		{ match : {name : "Ghostfire"}, remove : ["colors"] }
-	],
 	ZEN :
 	[
 		{ match : {imageName : "forest1"}, replace : {imageName : "forest1",  number : "246"} },
@@ -517,7 +504,8 @@ var SET_CORRECTIONS =
 	[
 		{ match : { name : "Draco" }, replace : {text : "Domain — Draco costs {2} less to cast for each basic land type among lands you control.\n\nFlying\n\nDomain — At the beginning of your upkeep, sacrifice Draco unless you pay {10}. This cost is reduced by {2} for each basic land type among lands you control."}},
 		{ match : { name : "Spawnsire of Ulamog" }, replace : {text : "Annihilator 1 (Whenever this creature attacks, defending player sacrifices a permanent.)\n\n{4}: Put two 0/1 colorless Eldrazi Spawn creature tokens onto the battlefield. They have \"Sacrifice this creature: Add {1} to your mana pool.\"\n\n{20}: Cast any number of Eldrazi cards you own from outside the game without paying their mana costs."}},
-		{ match : { name : "Jade Statue" }, remove : ["power", "toughness"] }
+		{ match : { name : "Jade Statue" }, remove : ["power", "toughness"] },
+		{ match : { name : "Ghostfire" }, remove : ["colors"] }
 	],
 	XYZ :
 	[
@@ -573,7 +561,7 @@ function ripSet(setName, ripSetOptions, cb)
 					sort    : "cn+",
 					action  : "advanced",
 					special : "true",
-					set     : "[" + JSON.stringify((GATHERER_NAME_CHANGES[setName] || setName).replaceAll("&", "and")) + "]"
+					set     : "[" + JSON.stringify(setName.replaceAll("&", "and")) + "]"
 				}
 			});
 
@@ -963,6 +951,8 @@ function processCardPart(doc, cardPart, printedDoc, printedCardPart)
 	});
 
 	card.colors = card.colors.unique().sort(function(a, b) { return COLOR_ORDER.indexOf(a)-COLOR_ORDER.indexOf(b); }).map(function(color) { return color.toProperCase(); });
+	if(card.colors.length===0)
+		delete card.colors;
 
 	// Text
 	var cardText = processTextBlocks(doc, cardPart.find(idPrefix + "_textRow .value .cardtextbox")).trim();

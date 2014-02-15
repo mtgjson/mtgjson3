@@ -14,11 +14,6 @@ var base = require("xbase"),
 	querystring = require("querystring"),
 	tiptoe = require("tiptoe");
 
-var GATHERER_NAME_CHANGES =
-{
-	"Commander" : "Magic: The Gathering-Commander"
-};
-
 C.SETS.serialForEach(function(SET, subcb)
 {
 	tiptoe(
@@ -34,7 +29,7 @@ C.SETS.serialForEach(function(SET, subcb)
 					output  : "checklist",
 					sort    : "cn+",
 					action  : "advanced",
-					set     : "[" + JSON.stringify((GATHERER_NAME_CHANGES[SET.name] || SET.name).replaceAll("&", "and")) + "]"
+					set     : "[" + JSON.stringify(SET.name.replaceAll("&", "and")) + "]"
 				}
 			});
 			getURLAsDoc(listURL.replaceAll("%5C", ""), this.parallel());
@@ -50,7 +45,7 @@ C.SETS.serialForEach(function(SET, subcb)
 					sort    : "cn+",
 					action  : "advanced",
 					special : "true",
-					set     : "[" + JSON.stringify((GATHERER_NAME_CHANGES[SET.name] || SET.name).replaceAll("&", "and")) + "]"
+					set     : "[" + JSON.stringify(SET.name.replaceAll("&", "and")) + "]"
 				}
 			});
 			getURLAsDoc(listSpecialURL.replaceAll("%5C", ""), this.parallel());

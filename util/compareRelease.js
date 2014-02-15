@@ -76,6 +76,16 @@ function compareSets(oldSet, newSet)
 	var oldCardsMap = oldSet.cards.mutate(function(card, result) { result[(card.name + " (" + card.multiverseid + ")")] = card; return result; }, {});
 	var newCardsMap = newSet.cards.mutate(function(card, result) { result[(card.name + " (" + card.multiverseid + ")")] = card; return result; }, {});
 
+	delete oldSet.cards;
+	delete newSet.cards;
+
+	var setChanged = diffUtil.diff(oldSet, newSet);
+	if(setChanged)
+	{
+		result += "SET CHANGED : ";
+		result += setChanged;
+	}
+
 	var cardsChanged = diffUtil.diff(Object.keys(oldCardsMap), Object.keys(newCardsMap));
 	if(cardsChanged)
 	{

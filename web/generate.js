@@ -16,7 +16,7 @@ var dustData =
 {
 	title : "Magic the Gathering card data in JSON format",
 	sets  : [],
-	version : "1.22"
+	version : "1.23"
 };
 
 tiptoe(

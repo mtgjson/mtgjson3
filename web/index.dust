@@ -128,23 +128,71 @@
 		<br>Each individual set is a JSON object like this:</p>
 		<pre><code data-language="javascript">
     {
-               name : "Dissension",         // The name of the set
-               code : "DIS",                // The code name of the set
-        releaseDate : "2006-05-05"          // When the set was released
-             border : "black",              // The type of border on the cards, either "white", "black" or "silver"
-               type : "expansion",          // Type of set. One of: "core", "expansion", "reprint", "box", "un",
-                                            //                      "from the vault", "premium deck", "duel deck",
-                                            //                      "starter", "commander", "planechase", "archenemy",
-                                            //                      "promo", "vanguard", "masters"
-              block : "Ravnica":,           // The block this set is in
-              cards : [ {}, {}, {}, ... ]   // The cards in the set
+                 name : "Dissension",         // The name of the set
+                 code : "DIS",                // The code name of the set
+          releaseDate : "2006-05-05"          // When the set was released
+               border : "black",              // The type of border on the cards, either "white", "black" or "silver"
+                 type : "expansion",          // Type of set. One of: "core", "expansion", "reprint", "box", "un",
+                                              //                      "from the vault", "premium deck", "duel deck",
+                                              //                      "starter", "commander", "planechase", "archenemy",
+                                              //                      "promo", "vanguard", "masters"
+                block : "Ravnica":,           // The block this set is in,
+              booster : [ "rare", ... ]       // Booster contents for this set, see below for details
+                cards : [ {}, {}, {}, ... ]   // The cards in the set
     }
 		</code></pre>
+		<br>
+		<a name="booster"></a>
+		<h2>Booster Field</h2>
+		The 'booster' key is present for each set that has physical boosters (so not present for box sets, duel decks, digital masters editions, etc.)<br>
+		<br>
+		It is an array containing one item per card in the booster. Thus the array length is how many cards are in a booster.<br>
+		<br>
+		Each item in the array is either a string representing the type of booster card or an array of strings representing possible types for that booster card.<br>
+		<br>
+		For example, 'Magic 2013' contains 1 land, 1 marketing card, 10 commons, 3 uncommons and 1 rare or mythic rare:<br>
+		<pre><code data-language="javascript">
+    {
+    	   name : "Magic 2013",
+        booster : [ "land",
+                    "marketing",
+                    "common", "common", "common", "common", "common", "common", "common", "common", "common", "common",
+                    "uncommon", "uncommon", "uncommon",
+                    ["rare", "mythic rare"]
+                  ]
+    }
+		</code></pre>
+		<br>
+		The common booster card types are:<br>
+		<ul>
+			<li>common</li>
+			<li>uncommon</li>
+			<li>rare</li>
+			<li>mythic rare</li>
+			<li>land</li>
+			<li>marketing</li>
+			<li>checklist</li>
+			<li>double faced</li>
+		</ul>
+		<br>The Time Spiral block has some additional types:<br>
+		<ul>
+			<li>timeshifted common</li>
+			<li>timeshifted uncommon</li>
+			<li>timeshifted rare</li>
+			<li>timeshifted purple</li>
+		</ul>
+		<br>
+		Note that the 'Time Spiral "Timeshifted"' set does not have a booster field. This 'set' was actually a subset of the 'Time Spiral' set and it's cards are the 'timeshifted purple' booster card type mentioned above.<br>
+		<br>
+		Foils are not explictily mentioned, except for 'Modern Masters' where a slot is guaranteed a foil. So that set has four additional possible booster card types: foil common, foil uncommon, foil rare and foil mythic rare<br>
+		<br>
+		<br>
+		<h2>Cards</h2>
 		<p>The cards value is an Array of cards, each being a JSON object with key/value pairs. Below you will find a table detailing each key.<br>
 		<br>
 		If a value would be empty (such as manaCost for Basic Lands), then the key will not exist in the object.<br>
 		<br>
-		All cards are from the latest Oracle text, not the original printed text.<br>
+		All cards are from the latest Oracle text, not the original printed text (the 'extras' file has the originalText which is the non-oracle text).<br>
 		<br>
 		</p>
 		<table>
@@ -504,6 +552,17 @@
 			</thead>
 			<tbody>
 				<tr>
+					<td>1.23</td>
+					<td>Feb 15, 2014</td>
+					<td>
+						<ul>
+							<li>The set 'Commander' has been re-named to 'Magic: The Gathering-Commander' to match the official set name and to match what has always been in the 'printings' field of cards.</li>
+							<li>Each set object now has a 'booster' property describing it's booster pack properties. See the <a href="#booster">Booster Documentation</a> for more details.</li>
+							<li>The 'colors' field is no longer present on cards that have no colors (it used to be present, but as an empty array)</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
 					<td>1.22</td>
 					<td>Feb 15, 2014</td>
 					<td>
@@ -754,7 +813,7 @@
 									<li>Portal Three Kingdoms</li>
 									<li>Starter 1999</li>
 									<li>Starter 2000</li>
-									<li>Commander</li>
+									<li>Magic: The Gathering-Commander</li>
 									<li>Commander's Arsenal</li>
 								</ul>
 							</li>
@@ -917,6 +976,7 @@
 					<li>rotaercz</li>
 					<li>Chris Bush</li>
 					<li>Patrick Rogers</li>
+					<li>Everyone else I mentioned in the Changelog!</li>
 				</ul>
 			</li>
 			<li><a href="http://wiki.mtgsalvation.com/article/Main_Page">MTG Salvation Wiki</a> for an AWESOME resource</li>
