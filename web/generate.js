@@ -16,7 +16,7 @@ var dustData =
 {
 	title : "Magic the Gathering card data in JSON format",
 	sets  : [],
-	version : "1.21"
+	version : "1.22"
 };
 
 tiptoe(
@@ -47,7 +47,6 @@ tiptoe(
 			var setWithExtras = JSON.parse(args[i]);
 
 			// Strip out private data
-			delete setWithExtras.cropsMissing;
 			delete setWithExtras.tokenCropsMissing;
 
 			allSetsWithExtras[SET.code] = setWithExtras;
@@ -85,22 +84,23 @@ tiptoe(
 		fs.writeFile(path.join(__dirname, "json", "AllSets-x.json"), JSON.stringify(allSetsWithExtras), {encoding : "utf8"}, this.parallel());
 		
 		fs.writeFile(path.join(__dirname, "json", "SetCodes.json"), JSON.stringify(C.SETS.map(function(SET) { return SET.code; })), {encoding : "utf8"}, this.parallel());
+		fs.writeFile(path.join(__dirname, "json", "SetList.json"), JSON.stringify(C.SETS.map(function(SET) { return {name : SET.name, code : SET.code}; })), {encoding : "utf8"}, this.parallel());
 		fs.writeFile(path.join(__dirname, "json", "version-full.json"), JSON.stringify({version:dustData.version}), {encoding : "utf8"}, this.parallel());
 		fs.writeFile(path.join(__dirname, "json", "version.json"), JSON.stringify(dustData.version), {encoding : "utf8"}, this.parallel());
 	},
 	function zipJSON()
 	{
-		runUtil.run("zip", ["-9", path.join(__dirname, "json", "AllSets.json.zip"), path.join(__dirname, "json", "AllSets.json")], { silent : true }, this.parallel());
-		runUtil.run("zip", ["-9", path.join(__dirname, "json", "AllSets-x.json.zip"), path.join(__dirname, "json", "AllSets-x.json")], { silent : true }, this.parallel());
+		runUtil.run("zip", ["-9", "AllSets.json.zip", "AllSets.json"], { cwd:  path.join(__dirname, "json"), silent : true }, this.parallel());
+		runUtil.run("zip", ["-9", "AllSets-x.json.zip", "AllSets-x.json"], { cwd:  path.join(__dirname, "json"), silent : true }, this.parallel());
 
 		C.SETS.serialForEach(function(SET, cb)
 		{
-			runUtil.run("zip", ["-9", path.join(__dirname, "json", SET.code + ".json.zip"), path.join(__dirname, "json", SET.code + ".json")], { silent : true }, cb);
+			runUtil.run("zip", ["-9", SET.code + ".json.zip", SET.code + ".json"], { cwd:  path.join(__dirname, "json"), silent : true }, cb);
 		}, this.parallel());
 
 		C.SETS.serialForEach(function(SET, cb)
 		{
-			runUtil.run("zip", ["-9", path.join(__dirname, "json", SET.code + "-x.json.zip"), path.join(__dirname, "json", SET.code + "-x.json")], { silent : true }, cb);
+			runUtil.run("zip", ["-9", SET.code + "-x.json.zip", SET.code + "-x.json"], { cwd:  path.join(__dirname, "json"), silent : true }, cb);
 		}, this.parallel());
 	},
 	function render()
