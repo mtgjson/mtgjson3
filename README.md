@@ -32,6 +32,8 @@ Other
 
 All gatherer page requests are cached to the cache directory and any future requests will use the cached version instead.
 
+A key file in the 'shared' directory (C.js) is missing here. Without it, this project can't run. Sorry.
+
 The 'verify' directory is a little private local webpage I use to verify that my JSON is correct by comparing it side by side with card images.
 
 The 'web' directory is used to generate the mtgjson.com website.
