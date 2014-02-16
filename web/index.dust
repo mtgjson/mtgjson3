@@ -552,13 +552,22 @@
 			</thead>
 			<tbody>
 				<tr>
+					<td>1.24</td>
+					<td>Feb 15, 2014</td>
+					<td>
+						<ul>
+							<li>S99, RTR: Added missing booster info</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
 					<td>1.23</td>
 					<td>Feb 15, 2014</td>
 					<td>
 						<ul>
-							<li>The set 'Commander' has been re-named to 'Magic: The Gathering-Commander' to match the official set name and to match what has always been in the 'printings' field of cards.</li>
+							<li>The set 'Commander' has been re-named to 'Magic: The Gathering-Commander' to match the official set name and to match what has always been in the 'printings' field of cards. Thanks Lewis!</li>
 							<li>Each set object now has a 'booster' property describing it's booster pack properties. See the <a href="#booster">Booster Documentation</a> for more details.</li>
-							<li>The 'colors' field is no longer present on cards that have no colors (it used to be present, but as an empty array)</li>
+							<li>The 'colors' field is no longer present on cards that have no colors (it used to be present, but as an empty array) Thanks aeosynth!</li>
 						</ul>
 					</td>
 				</tr>
