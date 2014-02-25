@@ -35,6 +35,8 @@ else if(setsToDo.length===1 && setsToDo[0].toLowerCase().startsWith("startat"))
 	setsToDo = setsToDo.slice(setsToDo.indexOf(targetSetCode));
 }
 
+C.FAKE_SETS.forEach(function(FAKE_SET) { setsToDo.remove(FAKE_SET); });
+
 base.info("Doing sets: %s", setsToDo);
 
 setsToDo.serialForEach(function(arg, subcb)

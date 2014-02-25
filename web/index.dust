@@ -32,7 +32,7 @@
 		<br>
 		<br>
 		<h2>Current Version: <span class="value">{version}</span></h2>
-		<h2>&nbsp;&nbsp;&nbsp;Last Updated: <span class="value">Feb 15, 2014</span><a href="#changeLog">(change log)</a></h2>
+		<h2>&nbsp;&nbsp;&nbsp;Last Updated: <span class="value">Feb 25, 2014</span><a href="#changeLog">(change log)</a></h2>
 		<br>
 		<br>
 		<h2 style="display: none;"><span style="color: red; text-decoration: underline;">ALERT:</span> alert message goes here</h2>
@@ -128,15 +128,16 @@
 		<br>Each individual set is a JSON object like this:</p>
 		<pre><code data-language="javascript">
     {
-                 name : "Dissension",         // The name of the set
-                 code : "DIS",                // The code name of the set
-          releaseDate : "2006-05-05"          // When the set was released
+                 name : "Ice Age",            // The name of the set
+                 code : "ICE",                // The code name of the set
+         gathererCode : "IA",                 // The code that Gatherer uses for the set. Only present if different than 'code'
+          releaseDate : "1995-06-01"          // When the set was released (YYYY-MM-DD)
                border : "black",              // The type of border on the cards, either "white", "black" or "silver"
                  type : "expansion",          // Type of set. One of: "core", "expansion", "reprint", "box", "un",
                                               //                      "from the vault", "premium deck", "duel deck",
                                               //                      "starter", "commander", "planechase", "archenemy",
                                               //                      "promo", "vanguard", "masters"
-                block : "Ravnica":,           // The block this set is in,
+                block : "Ice Age",            // The block this set is in,
               booster : [ "rare", ... ]       // Booster contents for this set, see below for details
                 cards : [ {}, {}, {}, ... ]   // The cards in the set
     }
@@ -552,6 +553,25 @@
 			</thead>
 			<tbody>
 				<tr>
+					<td>1.26</td>
+					<td>Feb 25, 2014</td>
+					<td>
+						<ul>
+							<li>Added set: HHO</li>
+							<li>UNH: The 'Who/What/When/Where/Why' card has been split into 5 seperate cards and has been marked as a 'split' card.</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>1.25</td>
+					<td>Feb 22, 2014</td>
+					<td>
+						<ul>
+							<li>Several sets now have a 'gathererCode' field. This is the code that gatherer uses for the set. This key is only present if the gatherer code is different than the regular 3-letter set code.</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
 					<td>1.24</td>
 					<td>Feb 15, 2014</td>
 					<td>
@@ -565,9 +585,9 @@
 					<td>Feb 15, 2014</td>
 					<td>
 						<ul>
-							<li>The set 'Commander' has been re-named to 'Magic: The Gathering-Commander' to match the official set name and to match what has always been in the 'printings' field of cards. Thanks Lewis!</li>
+							<li>The set 'Commander' has been re-named to 'Magic: The Gathering-Commander' to match the official set name and to match what has always been in the 'printings' field of cards.</li>
 							<li>Each set object now has a 'booster' property describing it's booster pack properties. See the <a href="#booster">Booster Documentation</a> for more details.</li>
-							<li>The 'colors' field is no longer present on cards that have no colors (it used to be present, but as an empty array) Thanks aeosynth!</li>
+							<li>The 'colors' field is no longer present on cards that have no colors (it used to be present, but as an empty array)</li>
 						</ul>
 					</td>
 				</tr>
@@ -576,7 +596,7 @@
 					<td>Feb 15, 2014</td>
 					<td>
 						<ul>
-							<li>Fixed a bug where the zip files extracted a bunch of sub directories instead of just the JSON. Whoops! Thanks aeosynth!</li>
+							<li>Fixed a bug where the zip files extracted a bunch of sub directories instead of just the JSON. Whoops!</li>
 						</ul>
 					</td>
 				</tr>
@@ -595,7 +615,7 @@
 					<td>Jan 29, 2014</td>
 					<td>
 						<ul>
-							<li>LEA, LEB, 2ED: Jade Statue had power/toughness fields. This was wrong and these fields have been removed. Thanks Pouncing Kavu!</li>
+							<li>LEA, LEB, 2ED: Jade Statue had power/toughness fields. This was wrong and these fields have been removed.</li>
 						</ul>
 					</td>
 				</tr>
@@ -618,7 +638,7 @@
 					<td>Jan 21, 2014</td>
 					<td>
 						<ul>
-							<li>DGM: Several rulings were missing or out of date. They have been updated. Thanks Florian!</li>
+							<li>DGM: Several rulings were missing or out of date. They have been updated.</li>
 						</ul>
 					</td>
 				</tr>
@@ -628,7 +648,7 @@
 					<td>
 						<ul>
 							<li>Added a .zip file for each JSON file</li>
-							<li>ROE: Fixed a the card "Spawnsire of Ulamog" so it's text correctly has {~lb}20{~rb} instead of {~lb}2{~rb}0. Thanks Pouncing Kavu!</li>
+							<li>ROE: Fixed a the card "Spawnsire of Ulamog" so it's text correctly has {~lb}20{~rb} instead of {~lb}2{~rb}0.</li>
 						</ul>
 					</td>
 				</tr>
@@ -985,7 +1005,10 @@
 					<li>rotaercz</li>
 					<li>Chris Bush</li>
 					<li>Patrick Rogers</li>
-					<li>Everyone else I mentioned in the Changelog!</li>
+					<li>Lewis</li>
+					<li>aeosynth</li>
+					<li>Pouncing Kavu</li>
+					<li>Florian</li>
 				</ul>
 			</li>
 			<li><a href="http://wiki.mtgsalvation.com/article/Main_Page">MTG Salvation Wiki</a> for an AWESOME resource</li>

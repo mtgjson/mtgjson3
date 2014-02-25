@@ -330,7 +330,57 @@ var SET_CORRECTIONS =
 		{ match : {name : "Island"}, replace : {border : "black"}},
 		{ match : {name : "Mountain"}, replace : {border : "black"}},
 		{ match : {name : "Plains"}, replace : {border : "black"}},
-		{ match : {name : "Swamp"}, replace : {border : "black"}}
+		{ match : {name : "Swamp"}, replace : {border : "black"}},
+		{ match : {name : "Who/What/When/Where/Why"}, replace : { layout : "split", names : ["Who", "What", "When", "Where", "Why"] }},
+		{ copyCard : "Who/What/When/Where/Why", replace :
+			{
+				name         : "Who",
+				number       : "120a",
+				text         : "Target player gains X life.",
+				originalText : "Target player gains X life.",
+				manaCost     : "{X}{W}",
+				cmc          : 1,
+				colors       : ["White"],
+				foreignNames : [{language : "French", name : "Qui"}]
+			}
+		},
+		{ copyCard : "Who/What/When/Where/Why", replace :
+			{
+				name         : "What",
+				number       : "120b",
+				text         : "Destroy target artifact.",
+				originalText : "Destroy target artifact.",
+				manaCost     : "{2}{R}",
+				cmc          : 3,
+				colors       : ["Red"],
+				foreignNames : [{language : "French", name : "Quoi"}]
+			}
+		},
+		{ copyCard : "Who/What/When/Where/Why", replace :
+			{
+				name         : "When",
+				number       : "120c",
+				text         : "Counter target creature spell.",
+				originalText : "Counter target creature spell.",
+				manaCost     : "{2}{U}",
+				cmc          : 3,
+				colors       : ["Blue"],
+				foreignNames : [{language : "French", name : "Quand"}]
+			}
+		},
+		{ copyCard : "Who/What/When/Where/Why", replace :
+			{
+				name         : "Where",
+				number       : "120d",
+				text         : "Destroy target land.",
+				originalText : "Destroy target land.",
+				manaCost     : "{3}{B}",
+				cmc          : 4,
+				colors       : ["Black"],
+				foreignNames : [{language : "French", name : "Où"}]
+			}
+		},
+		{ match : {name : "Who/What/When/Where/Why"}, replace : { name : "Why", number : "120e", text : "Destroy target enchantment.", originalText : "Destroy target enchantment.", manaCost : "{1}{G}", cmc : 2, colors : ["Green"], foreignNames : [{language : "French", name : "Pourquoi"}] }},
 	],
 	EVG :
 	[

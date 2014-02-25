@@ -9,52 +9,43 @@ var base = require("xbase"),
 	color = require("cli-color"),
 	fileUtil = require("xutil").file,
 	diffUtil = require("xutil").diff,
+	httpUtil = require("xutil").http,
 	path = require("path"),
 	tiptoe = require("tiptoe");
 
-var types = [];
+//http://gatherer.wizards.com/Handlers/Image.ashx?type=symbol&set=GU&size=large&rarity=C
 
-C.SETS.forEach(function(SET)
+C.SETS.serialForEach(processSet, function finish(err)
 {
-	if(SET.booster)
-		types = types.concat(SET.booster.flatten());
+	if(err)
+	{
+		base.error(err);
+		process.exit(1);
+	}
+
+	process.exit(0);
 });
 
-base.info(types.uniqueBySort());
+function processSet(SET, cb)
+{
+	if(!SET.hasOwnProperty("gathererCode"))
+		return setImmediate(cb);
 
-/*
-tiptoe(
-	function loadJSON()
-	{
-		fs.readFile(path.join(__dirname, "..", "web", "json", "AllSets.json"), {encoding:"utf8"}, this);
-	},
-	function analyze(setsJSON)
-	{
-		var notPresent = 0;
-		var empty = 0;
-		var hasItems = 0;
-
-		Object.values(JSON.parse(setsJSON)).map(function(set) { return set.cards; }).flatten().forEach(function(card)
+	tiptoe(
+		function loadJSON()
 		{
-			if(!card.hasOwnProperty("colors") || !Array.isArray(card.colors))
-				base.info(card.name);
-			else if(card.colors.length===0)
-				empty++;
-			else
-				hasItems++;
-		});
-
-		base.info("notPresent: %s\nempty: %s\nhasItems: %s\n", notPresent, empty, hasItems);
-		this();
-	},
-	function finish(err)
-	{
-		if(err)
+			fs.readFile(path.join(__dirname, "..", "json", SET.code + ".json"), {encoding : "utf8"}, this);
+		},
+		function modifyAndSave(setRaw)
 		{
-			base.error(err);
-			process.exit(1);
+			var setData = JSON.parse(setRaw);
+			setData.gathererCode = SET.gathererCode;
+
+			fs.writeFile(path.join(__dirname, "..", "json", SET.code + ".json"), JSON.stringify(setData), {encoding : "utf8"}, this);
+		},
+		function finish(err)
+		{
+			setImmediate(function() { cb(err); });
 		}
-
-		process.exit(0);
-	}
-);*/
+	);
+}
