@@ -12,11 +12,17 @@ var base = require("xbase"),
 	path = require("path"),
 	tiptoe = require("tiptoe");
 
-var setsToDo = process.argv.slice(2);
-if(setsToDo.length===1 && setsToDo[0].toLowerCase()==="allsets")
+var argsToCheck = process.argv.slice(2);
+var setsToDo = [];
+argsToCheck.forEach(function(argToCheck)
 {
-	setsToDo = C.SETS.map(function(SET) { return SET.code; });
-}
+	if(argToCheck==="allsets")
+		setsToDo = setsToDo.concat(C.SETS.map(function(SET) { return SET.code; }));
+	else if(argToCheck.startsWith("not"))
+		setsToDo.remove(argToCheck.substring(3));
+	else
+		setsToDo.push(argToCheck);
+});
 
 tiptoe(
 	function processSets()

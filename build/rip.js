@@ -402,7 +402,9 @@ var SET_CORRECTIONS =
 	[
 		{ match : {name : "Beast", number : "1"}, replace : {number : "T1", layout : "token"}},
 		{ match : {name : "Beast", number : "2"}, replace : {number : "T2", layout : "token"}},
-		{ match : {name : "Elephant"}, replace : {number : "T3", layout : "token"}}
+		{ match : {name : "Elephant"}, replace : {number : "T3", layout : "token"}},
+		{ match : {name : "Basking Rootwalla"}, replace : {layout : "normal"}},
+		{ match : {name : "Garruk Wildspeaker"}, replace : {layout : "normal"}}
 	],
 	DDE :
 	[
@@ -746,7 +748,7 @@ function ripSet(setName, ripSetOptions, cb)
 					base.warn("Artist not found for card: %s", card.name);
 			});
 
-			base.info("Other Printings: %s", (this.data.set.cards.map(function(card) { return card.printings; }).flatten().unique().map(function(setName) { return C.SETS.mutateOnce(function(SET) { return SET.name===setName ? SET.code : undefined; }); }).remove(this.data.set.code) || []).join(" "));
+			//base.info("Other Printings: %s", (this.data.set.cards.map(function(card) { return card.printings; }).flatten().unique().map(function(setName) { return C.SETS.mutateOnce(function(SET) { return SET.name===setName ? SET.code : undefined; }); }).remove(this.data.set.code) || []).join(" "));
 
 			setImmediate(function() { cb(err, this.data.set); }.bind(this));
 		}
@@ -1265,6 +1267,8 @@ function buildMultiverseLanguagesURL(multiverseid)
 
 function addPrintingsToCards(cards, force, cb)
 {
+	base.info("Adding printings with force: %s", force);
+
 	cards.serialForEach(function(card, subcb)
 	{
 		addPrintingsToCard(card, force, subcb);

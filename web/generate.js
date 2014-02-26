@@ -16,7 +16,7 @@ var dustData =
 {
 	title : "Magic the Gathering card data in JSON format",
 	sets  : [],
-	version : "1.26"
+	version : "1.29"
 };
 
 tiptoe(
@@ -45,9 +45,6 @@ tiptoe(
 		C.SETS.forEach(function(SET, i)
 		{
 			var setWithExtras = JSON.parse(args[i]);
-
-			// Strip out private data
-			delete setWithExtras.tokenCropsMissing;
 
 			allSetsWithExtras[SET.code] = setWithExtras;
 			

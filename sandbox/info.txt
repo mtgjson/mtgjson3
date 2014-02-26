@@ -6,20 +6,25 @@
 node build/buildSet.js <expansion code>
 node build/buildSet.js <expansion code>
 
-# Run buildSet.js with -forcePrintings and a list of all codes output by 'Other Printings' at the end of the previous buildSet for our new set
-# This will update printings for all other sets that have cards from this new set
+# Now run
+cd util
+node addNewSetPrintings.js <expansion code>
 
-# Ensure images are in mtgimage.com
-
-# Now verify
-node verify/generate.js <expansion code>
-
-# Now Open in browser:
-file:///mnt/compendium/DevLab/mtgjson/verify/verify.html
+# Update generate.js with new version number and index.dust with new change log entry
 
 # Now generate web
 cd web
 node generate.js
+
+# Now examine JSON changes
+cd util
+node compareRelease.js allsets not<expansion code> | more
+
+# Add images to dev.mtgimage.com
+
+# Now verify data against images, run then open in browser
+node verify/generate.js <expansion code>
+file:///mnt/compendium/DevLab/mtgjson/verify/verify.html
 
 # Test in browser
 http://dev.mtgjson.com
@@ -27,6 +32,11 @@ http://dev.mtgjson.com
 # Deploy
 cd deploy
 ./deploy.sh
+
+# Check live site
+
+# Update MTGSalvation thread
+http://www.mtgsalvation.com/forums/magic-fundamentals/digital-magic-and-mtg-software/494332-mtg-json-new-website-provides-mtg-card-data-in
 
 /---------------\
 | Special Cards |
