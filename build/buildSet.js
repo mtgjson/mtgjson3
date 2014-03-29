@@ -4,35 +4,14 @@
 var base = require("xbase"),
 	C = require("C"),
 	fs = require("fs"),
-	optimist = require("optimist"),
 	path = require("path"),
+	shared = require("shared"),
 	tiptoe = require("tiptoe"),
 	rip = require("./rip.js");
 
-var argv = optimist.argv;
+var setsToDo = shared.getSetsToDo();
 
-function usage()
-{
-	base.error("Usage: node %s <set code or name>", process.argv[1]);
-	process.exit(1);
-}
-
-if(argv._.length<1)
-	usage();
-
-var setsToDo = argv._;
-if(setsToDo.length===1 && setsToDo[0].toLowerCase()==="allsets")
-{
-	setsToDo = C.SETS.map(function(SET) { return SET.code; });
-}
-else if(setsToDo.length===1 && setsToDo[0].toLowerCase().startsWith("startat"))
-{
-	var targetSetCode = setsToDo[0].substring("startat".length);
-	setsToDo = C.SETS.map(function(SET) { return SET.code; });
-	setsToDo = setsToDo.slice(setsToDo.indexOf(targetSetCode));
-}
-
-C.FAKE_SETS.forEach(function(FAKE_SET) { setsToDo.remove(FAKE_SET); });
+setsToDo.removeAll(C.SETS_NOT_ON_GATHERER);
 
 base.info("Doing sets: %s", setsToDo);
 

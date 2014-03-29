@@ -6,23 +6,14 @@ var base = require("xbase"),
 	request = require("request"),
 	fs = require("fs"),
 	url = require("url"),
+	shared = require("shared"),
 	color = require("cli-color"),
 	fileUtil = require("xutil").file,
 	diffUtil = require("xutil").diff,
 	path = require("path"),
 	tiptoe = require("tiptoe");
 
-var argsToCheck = process.argv.slice(2);
-var setsToDo = [];
-argsToCheck.forEach(function(argToCheck)
-{
-	if(argToCheck==="allsets")
-		setsToDo = setsToDo.concat(C.SETS.map(function(SET) { return SET.code; }));
-	else if(argToCheck.startsWith("not"))
-		setsToDo.remove(argToCheck.substring(3));
-	else
-		setsToDo.push(argToCheck);
-});
+var setsToDo = shared.getSetsToDo();
 
 tiptoe(
 	function processSets()

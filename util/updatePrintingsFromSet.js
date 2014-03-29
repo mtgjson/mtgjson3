@@ -7,18 +7,13 @@ var base = require("xbase"),
 	fs = require("fs"),
 	url = require("url"),
 	color = require("cli-color"),
+	shared = require("shared"),
 	fileUtil = require("xutil").file,
 	diffUtil = require("xutil").diff,
 	path = require("path"),
 	tiptoe = require("tiptoe");
 
-var setsToDo = process.argv.slice(2);
-if(setsToDo.length===1 && setsToDo[0].toLowerCase()==="allsets")
-{
-	setsToDo = C.SETS.map(function(SET) { return SET.code; });
-}
-
-setsToDo.serialForEach(processSet, function(err)
+shared.getSetsToDo().serialForEach(processSet, function(err)
 {
 	if(err)
 	{

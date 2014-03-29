@@ -11,6 +11,7 @@ var base = require("xbase"),
 	hash = require("mhash").hash,
 	unicodeUtil = require("xutil").unicode,
 	path = require("path"),
+	shared = require("shared"),
 	urlUtil = require("xutil").url,
 	querystring = require("querystring"),
 	tiptoe = require("tiptoe");
@@ -549,21 +550,6 @@ var SET_CORRECTIONS =
 	]
 };
 
-function cardComparator(a, b)
-{
-	var result = unicodeUtil.unicodeToAscii(a.name).toLowerCase().localeCompare(unicodeUtil.unicodeToAscii(b.name).toLowerCase());
-	if(result!==0)
-		return result;
-
-	if(a.imageName && b.imageName)
-		return a.imageName.localeCompare(b.imageName);
-
-	if(a.hasOwnProperty("number"))
-		return b.number.localeCompare(a.number);
-
-	return 0;
-}
-
 function ripSet(setName, cb)
 {
 	base.info("====================================================================================================================");
@@ -612,7 +598,7 @@ function ripSet(setName, cb)
 		{
 			base.info("Adding additional fields...");
 
-			this.data.set.cards = this.data.set.cards.concat(cards).sort(cardComparator);
+			this.data.set.cards = this.data.set.cards.concat(cards).sort(shared.cardComparator);
 
 			// Image Name
 			var cardNameCounts = {};
@@ -715,7 +701,7 @@ function ripSet(setName, cb)
 				}
 			}.bind(this));
 
-			this.data.set.cards = this.data.set.cards.sort(cardComparator);
+			this.data.set.cards = this.data.set.cards.sort(shared.cardComparator);
 
 			// Warn about missing fields
 			this.data.set.cards.forEach(function(card)
@@ -1048,8 +1034,8 @@ function getURLsForMultiverseid(multiverseid, cb)
 	tiptoe(
 		function getDefaultDoc()
 		{
-			getURLAsDoc(buildMultiverseURL(multiverseid), this.parallel());
-			getURLAsDoc(urlUtil.setQueryParam(buildMultiverseURL(multiverseid), "printed", "true"), this.parallel());
+			getURLAsDoc(shared.buildMultiverseURL(multiverseid), this.parallel());
+			getURLAsDoc(urlUtil.setQueryParam(shared.buildMultiverseURL(multiverseid), "printed", "true"), this.parallel());
 		},
 		function processDefaultDoc(err, doc, printedDoc)
 		{
@@ -1068,12 +1054,12 @@ function getURLsForMultiverseid(multiverseid, cb)
 				var card = processCardPart(doc, cardPart, printedDoc, printedCardParts[i]);
 				if(card.layout==="split")
 				{
-					urls.push(buildMultiverseURL(multiverseid, card.names[0]));
-					urls.push(buildMultiverseURL(multiverseid, card.names[1]));
+					urls.push(shared.buildMultiverseURL(multiverseid, card.names[0]));
+					urls.push(shared.buildMultiverseURL(multiverseid, card.names[1]));
 				}
 				else
 				{
-					urls.push(buildMultiverseURL(multiverseid));
+					urls.push(shared.buildMultiverseURL(multiverseid));
 				}
 			});
 			urls = urls.unique();
@@ -1081,25 +1067,6 @@ function getURLsForMultiverseid(multiverseid, cb)
 			setImmediate(function() { cb(null, urls); }.bind(this));
 		}
 	);
-}
-
-function buildMultiverseURL(multiverseid, part)
-{
-	var urlConfig = 
-	{
-		protocol : "http",
-		host     : "gatherer.wizards.com",
-		pathname : "/Pages/Card/Details.aspx",
-		query    :
-		{
-			multiverseid : multiverseid,
-			printed      : "false"
-		}
-	};
-	if(part)
-		urlConfig.query.part = part;
-
-	return url.format(urlConfig);
 }
 
 function getURLAsDoc(targetURL, cb)
@@ -1192,7 +1159,7 @@ function getForeignNamesForCardName(sets, cardName, cb)
 			var multiverseids = getMultiverseidsForCardName(sets, cardName);
 			multiverseids.serialForEach(function(multiverseid, subcb)
 			{
-				getURLAsDoc(buildMultiverseLanguagesURL(multiverseid), subcb);
+				getURLAsDoc(shared.buildMultiverseLanguagesURL(multiverseid), subcb);
 			}, this);
 		},
 		function processDocs(err, docs)
@@ -1221,19 +1188,6 @@ function getForeignNamesForCardName(sets, cardName, cb)
 	);
 }
 
-function buildMultiverseLanguagesURL(multiverseid)
-{
-	var urlConfig = 
-	{
-		protocol : "http",
-		host     : "gatherer.wizards.com",
-		pathname : "/Pages/Card/Languages.aspx",
-		query    : { multiverseid : multiverseid }
-	};
-
-	return url.format(urlConfig);
-}
-
 function addLegalitiesToCards(cards, cb)
 {
 	cards.serialForEach(function(card, subcb)
@@ -1247,7 +1201,7 @@ function addLegalitiesToCard(card, cb)
 	tiptoe(
 		function getFirstPage()
 		{
-			getURLAsDoc(buildMultiverseLegalitiesURL(card.multiverseid), this);
+			getURLAsDoc(shared.buildMultiverseLegalitiesURL(card.multiverseid), this);
 		},
 		function processLegalities(doc)
 		{
@@ -1271,19 +1225,6 @@ function addLegalitiesToCard(card, cb)
 	);
 }
 
-function buildMultiverseLegalitiesURL(multiverseid)
-{
-	var urlConfig = 
-	{
-		protocol : "http",
-		host     : "gatherer.wizards.com",
-		pathname : "/Pages/Card/Printings.aspx",
-		query    : { multiverseid : multiverseid, page : "0" }
-	};
-
-	return url.format(urlConfig);
-}
-
 function addPrintingsToCards(cards, cb)
 {
 	cards.serialForEach(function(card, subcb)
@@ -1297,7 +1238,7 @@ function addPrintingsToCard(card, cb)
 	tiptoe(
 		function getFirstPage()
 		{
-			getURLAsDoc(buildMultiversePrintingsURL(card.multiverseid, 0), this);
+			getURLAsDoc(shared.buildMultiversePrintingsURL(card.multiverseid, 0), this);
 		},
 		function getAllPages(doc)
 		{
@@ -1305,7 +1246,7 @@ function addPrintingsToCard(card, cb)
 			var numPages = pageLinks.length>0 ? pageLinks.length : 1;
 			for(var i=0;i<numPages;i++)
 			{
-				getURLAsDoc(buildMultiversePrintingsURL(card.multiverseid, i), this.parallel());
+				getURLAsDoc(shared.buildMultiversePrintingsURL(card.multiverseid, i), this.parallel());
 			}
 		},
 		function processPrintings()
@@ -1325,6 +1266,12 @@ function addPrintingsToCard(card, cb)
 
 			delete card.printings;
 
+			Object.forEach(C.EXTRA_SET_CARD_PRINTINGS, function(extraSetName, extraCardNames)
+			{
+				if(extraCardNames.contains(card.name))
+					printings.push(extraSetName);
+			});
+
 			printings = printings.unique().sort(function(a, b) { return moment(getReleaseDateForSet(a), "YYYY-MM-DD").unix()-moment(getReleaseDateForSet(b), "YYYY-MM-DD").unix(); });
 			if(printings && printings.length)
 				card.printings = printings;
@@ -1336,19 +1283,6 @@ function addPrintingsToCard(card, cb)
 			setImmediate(function() { cb(err); });
 		}
 	);
-}
-
-function buildMultiversePrintingsURL(multiverseid, page)
-{
-	var urlConfig = 
-	{
-		protocol : "http",
-		host     : "gatherer.wizards.com",
-		pathname : "/Pages/Card/Printings.aspx",
-		query    : { multiverseid : multiverseid, page : ("" + (page || 0)) }
-	};
-
-	return url.format(urlConfig);
 }
 
 function getMultiverseidsForCardName(sets, cardName)

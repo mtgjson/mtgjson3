@@ -8,7 +8,7 @@
 	// Unglued/Unhinged types
 	exports.TYPES.push("Enchant", "Player", "Summon", "Interrupt", "Scariest", "You'll", "Ever", "See", "Eaturecray");
 
-	exports.FAKE_SETS = ["HHO"];
+	exports.SETS_NOT_ON_GATHERER = ["HHO", "ATH"];
 	
 	exports.SETS =
 	[
@@ -259,6 +259,13 @@
 			type : "expansion",
 			block : "Urza's",
 			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"]
+		},
+		{
+			name : "Anthologies",
+			code : "ATH",
+			releaseDate : "1998-11-01",
+			border : "white",
+			type : "box"
 		},
 		{
 			name : "Urza's Legacy",
@@ -840,7 +847,7 @@
 			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"]
 		},
 		{
-			name : "Premium Deck Series: Fire & Lightning",
+			name : "Premium Deck Series: Fire and Lightning",
 			code : "PD2",
 			releaseDate : "2010-11-19",
 			border : "black",
@@ -1096,5 +1103,10 @@
 		"FVL" : "V11",
 		"FVE" : "V09",
 		"CFX" : "CON"
+	};
+
+	exports.EXTRA_SET_CARD_PRINTINGS =
+	{
+		"Anthologies" : [ "Aesthir Glider", "Armageddon", "Armored Pegasus", "Benalish Knight", "Black Knight", "Brushland", "Canopy Spider", "Carnivorous Plant", "Combat Medic", "Cuombajj Witches", "Disenchant", "Drifting Meadow", "Erhnam Djinn", "Feast of the Unicorn", "Fireball", "Forest", "Freewind Falcon", "Giant Growth", "Giant Spider", "Goblin Balloon Brigade", "Goblin Digging Team", "Goblin Grenade", "Goblin Hero", "Goblin King", "Goblin Matron", "Goblin Mutant", "Goblin Offensive", "Goblin Recruiter", "Goblin Snowman", "Goblin Tinkerer", "Goblin Vandal", "Goblin Warrens", "Gorilla Chieftain", "Hurricane", "Hymn to Tourach", "Hypnotic Specter", "Icatian Javelineers", "Ihsan's Shade", "Infantry Veteran", "Jalum Tome", "Knight of Stromgald", "Lady Orca", "Lightning Bolt", "Llanowar Elves", "Mirri, Cat Warrior", "Mogg Fanatic", "Mogg Flunkies", "Mogg Raider", "Mountain", "Nevinyrral's Disk", "Order of the White Shield", "Overrun", "Pacifism", "Pegasus Charger", "Pegasus Stampede", "Pendelhaven", "Plains", "Polluted Mire", "Pyrokinesis", "Pyrotechnics", "Raging Goblin", "Ranger en-Vec", "Samite Healer", "Scavenger Folk", "Serra Angel", "Serrated Arrows", "Slippery Karst", "Smoldering Crater", "Spectral Bears", "Strip Mine", "Swamp", "Swords to Plowshares", "Terror", "Unholy Strength", "Uthden Troll", "Volcanic Dragon", "Warrior's Honor", "White Knight", "Woolly Spider", "Youthful Knight" ]
 	};
 })(typeof exports==="undefined" ? window.C={} : exports);

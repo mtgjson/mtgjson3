@@ -68,7 +68,7 @@ function renderSet(setRaw, original, cb)
 		var dup = base.clone(card, true);
 		["name", "manaCost", "cmc", "type", "supertypes", "types", "subtypes", "rarity", "artist", "number", "loyalty",
 		 "power", "toughness", "text", "flavor", "imageName", "rulings", "layout", "multiverseid", "colors", "names",
-		 "foreignNames", "printings"].forEach(function(key) { delete dup[key]; });
+		 "foreignNames", "printings", "legalities"].forEach(function(key) { delete dup[key]; });
 		card.json = util.inspect(dup);
 
 		if(card.text)
