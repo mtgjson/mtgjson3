@@ -14,12 +14,14 @@ var base = require("xbase"),
 
 if(process.argv.length<4)
 {
-	base.error("Usage: node %s <oracle|original|languages|printings> <set codes>", process.argv[1]);
+	base.error("Usage: node %s <oracle|original|languages|printings|legalities> <set codes>", process.argv[1]);
 	process.exit(1);
 }
 
+var VALID_TYPES = ["oracle", "original", "languages", "printings", "legalities"];
+
 var cacheType = process.argv[2];
-if(cacheType!=="oracle" && cacheType!=="original" && cacheType!=="languages" && cacheType!=="printings")
+if(!VALID_TYPES.contains(cacheType))
 {
 	base.error("Invalid cacheType: %s", cacheType);
 	process.exit(1);
@@ -74,6 +76,10 @@ function clearCacheForSet(code, cb)
 				{
 					buildMultiverseAllPrintingsURL(card.multiverseid, self.parallel());
 				}
+				else if(cacheType==="legalities")
+				{
+					self.data.urls.push(buildMultiverseLegalitiesURL(card.multiverseid));
+				}
 			});
 
 			if(cacheType!=="printings")
@@ -121,6 +127,19 @@ function buildMultiverseURL(multiverseid, part)
 	};
 	if(part)
 		urlConfig.query.part = part;
+
+	return url.format(urlConfig);
+}
+
+function buildMultiverseLegalitiesURL(multiverseid)
+{
+	var urlConfig = 
+	{
+		protocol : "http",
+		host     : "gatherer.wizards.com",
+		pathname : "/Pages/Card/Printings.aspx",
+		query    : { multiverseid : multiverseid, page : "0" }
+	};
 
 	return url.format(urlConfig);
 }

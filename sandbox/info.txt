@@ -7,10 +7,16 @@ node build/buildSet.js <expansion code>
 node build/buildSet.js <expansion code>
 
 # Now run
-cd util
-node addNewSetPrintings.js <expansion code>
+node util/updatePrintingsFromSet.js <expansion code>
+node util/updateLegalitiesFromSet.js <expansion code>
 
-# Update generate.js with new version number and index.dust with new change log entry
+# If the new set is a CORE set, or the first set of a new block:
+node util/clearCacheForSet.js legalities <set codes that rotated out>
+node build/buildSet.js <set codes that rotated out>
+node util/updateLegalitiesFromSet.js <set codes that rotated out>
+
+# Update generate.js with new version number and lastUpdated date
+# Update index.dust with new change log entry
 
 # Now generate web
 cd web

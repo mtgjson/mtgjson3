@@ -12,17 +12,22 @@ var base = require("xbase"),
 	path = require("path"),
 	tiptoe = require("tiptoe");
 
-processSet(process.argv[2],
-	function finish(err)
-	{
-		if(err)
-		{
-			base.error(err);
-			process.exit(1);
-		}
+var setsToDo = process.argv.slice(2);
+if(setsToDo.length===1 && setsToDo[0].toLowerCase()==="allsets")
+{
+	setsToDo = C.SETS.map(function(SET) { return SET.code; });
+}
 
-		process.exit(0);
-	});
+setsToDo.serialForEach(processSet, function(err)
+{
+	if(err)
+	{
+		base.error(err);
+		process.exit(1);
+	}
+
+	process.exit(0);
+});
 
 function processSet(code, cb)
 {
@@ -37,12 +42,15 @@ function processSet(code, cb)
 		{
 			var set = JSON.parse(setRaw);
 
+			var cardLegalitiesByName = {};
 			var setCards = {};
 			set.cards.forEach(function(card)
 			{
 				card.printings.remove(set.name);
 				if(!card.printings || !card.printings.length)
 					return;
+
+				cardLegalitiesByName[card.name] = card.legalities;
 
 				card.printings.forEach(function(printing)
 				{
@@ -58,7 +66,7 @@ function processSet(code, cb)
 
 			Object.keys(setCards).serialForEach(function(setCode, subcb)
 			{
-				addPrintingToSetCards(setCode, setCards[setCode], set.name, subcb);
+				updateLegalitiesForSetCards(setCode, setCards[setCode], cardLegalitiesByName, subcb);
 			}, this);
 		},
 		function finish(err)
@@ -68,9 +76,9 @@ function processSet(code, cb)
 	);
 }
 
-function addPrintingToSetCards(setCode, targetCardNames, printingName, cb)
+function updateLegalitiesForSetCards(setCode, targetCardNames, cardLegalitiesByName, cb)
 {
-	base.info("Adding printing [%s] to set [%s] for all cards: %s", printingName, setCode, targetCardNames.join(", "));
+	base.info("Adding legalities to set [%s] for all cards: %s", setCode, targetCardNames.join(", "));
 
 	tiptoe(
 		function getJSON()
@@ -86,10 +94,10 @@ function addPrintingToSetCards(setCode, targetCardNames, printingName, cb)
 				if(!targetCardNames.contains(card.name))
 					return;
 
-				if(card.printings.contains(printingName))
+				if(!cardLegalitiesByName.hasOwnProperty(card.name))
 					return;
 
-				card.printings.push(printingName);
+				card.legalities = cardLegalitiesByName[card.name];
 			});
 
 			fs.writeFile(path.join(__dirname, "..", "json", setCode + ".json"), JSON.stringify(set), {encoding : "utf8"}, this);

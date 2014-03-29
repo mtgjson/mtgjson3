@@ -16,7 +16,8 @@ var dustData =
 {
 	title : "Magic the Gathering card data in JSON format",
 	sets  : [],
-	version : "1.30"
+	version : "2.0.0",
+	lastUpdated : "Mar 29, 2014"
 };
 
 tiptoe(
@@ -57,6 +58,7 @@ tiptoe(
 				delete card.printings;
 				delete card.originalText;
 				delete card.originalType;
+				delete card.legalities;
 			});
 			allSets[SET.code] = set;
 

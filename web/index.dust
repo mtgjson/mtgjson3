@@ -32,7 +32,7 @@
 		<br>
 		<br>
 		<h2>Current Version: <span class="value">{version}</span></h2>
-		<h2>&nbsp;&nbsp;&nbsp;Last Updated: <span class="value">Mar 10, 2014</span><a href="#changeLog">(change log)</a></h2>
+		<h2>&nbsp;&nbsp;&nbsp;Last Updated: <span class="value">{lastUpdated}</span><a href="#changeLog">(change log)</a></h2>
 		<br>
 		<br>
 		<h2 style="display: none;"><span style="color: red; text-decoration: underline;">ALERT:</span> alert message goes here</h2>
@@ -219,7 +219,7 @@
 				</tr>
 				<tr>
 					<td>names</td>
-					<td>["Research", "Development"]</td>
+					<td>[ "Research", "Development" ]</td>
 					<td>Only used for split, flip and dual cards. Will contain all the names on this card, front or back.</td>
 				</tr>
 				<tr>
@@ -234,7 +234,7 @@
 				</tr>
 				<tr>
 					<td>colors</td>
-					<td>["Blue", "Green"]</td>
+					<td>[ "Blue", "Green" ]</td>
 					<td>The card colors. Usually this is derived from the casting cost, but some cards are special (like the back of dual sided cards and Ghostfire).</td>
 				</tr>
 				<tr>
@@ -244,17 +244,17 @@
 				</tr>
 				<tr>
 					<td>supertypes</td>
-					<td>["Legendary"]</td>
+					<td>[ "Legendary" ]</td>
 					<td>The supertypes of the card. These appear to the far left of the card type. Example values: Basic, Legendary, Snow, World, Ongoing</td>
 				</tr>
 				<tr>
 					<td>types</td>
-					<td>["Creature"]</td>
+					<td>[ "Creature" ]</td>
 					<td>The types of the card. These appear to the left of the dash in a card type. Example values: Instant, Sorcery, Artifact, Creature, Enchantment, Land, Planeswalker</td>
 				</tr>
 				<tr>
 					<td>subtypes</td>
-					<td>["Angel"]</td>
+					<td>[ "Angel" ]</td>
 					<td>The subtypes of the card. These appear to the right of the dash in a card type. Usually each word is it's own subtype. Example values: Trap, Arcane, Equipment, Aura, Human, Rat, Squirrel, etc.</td>
 				</tr>
 				<tr>
@@ -304,7 +304,7 @@
 				</tr>
 				<tr>
 					<td>variations</td>
-					<td>[78968, 85106]</td>
+					<td>[ 78968, 85106 ]</td>
 					<td>If a card has alternate art (for example, 4 different Forests, or the 2 Brothers Yamazaki) then each variation's multiverseid will be listed here, including the current card's multiverseid.</td>
 				</tr>
 				<tr>
@@ -348,28 +348,33 @@
 			<tbody>		
 				<tr>
 					<td>rulings</td>
-					<td>[{date : "2003-04-15",<br>text : "Does not tap."}]</td>
+					<td>[ {~lb} date : "2003-04-15",&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>text : "Does not tap." {~rb} ]</td>
 					<td>The rulings for the card. An array of objects, each object having 'date' and 'text' keys.</td>
 				</tr>
 				<tr>
 					<td>foreignNames</td>
-					<td>[{language : "Italian",<br>name : "Wurm Devastatore"}]</td>
+					<td>[ {~lb} language : "Italian",&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>name : "Wurm Devastatore" {~rb} ]</td>
 					<td>Foreign language names for the card. An array of objects, each object having 'language' and 'name' keys. Not available for split, flip and double-faced cards.</td>
 				</tr>
 				<tr>
 					<td>printings</td>
-					<td>["Ice Age", "Chronicles"]</td>
+					<td>[ "Ice Age", "Chronicles" ]</td>
 					<td>The sets that this card was printed in. Note: This is a complete list of printings, so it may contain sets that are not available on MTG JSON.</td>
 				</tr>
 				<tr>
 					<td>originalText</td>
-					<td>{~lb}8{~rb}: Do 4 damage to any target.</td>
+					<td>"{~lb}8{~rb}: Do 4 damage to any target."</td>
 					<td>The original text on the card at the time it was printed.</td>
 				</tr>
 				<tr>
 					<td>oringinalType</td>
-					<td>Mono Artifact</td>
+					<td>"Mono Artifact"</td>
 					<td>The original type on the card at the time it was printed.</td>
+				</tr>
+				<tr>
+					<td>legalities</td>
+					<td>{~lb} "Legacy" : "Banned",&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>"Vintage" : "Restricted",&nbsp;&nbsp;&nbsp;<br>"Commander" : "Legal" {~rb}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+					<td>Which formats this card is legal, restricted or banned in. The object's keys are the format and the values are the legality.</td>
 				</tr>
 			</tbody>
 		</table>
@@ -554,6 +559,17 @@
 				</tr>
 			</thead>
 			<tbody>
+				<tr>
+					<td>2.0.0</td>
+					<td>Mar 29, 2014</td>
+					<td>
+						<ul>
+							<li>Added 'legalities' field for every card in every set. Only present in the 'extras' JSON.</li>
+							<li>Version number is now three digits in major.minor.bug format. "minor" will be updated whenever a new set is added. "bug" will be updated when small changes take place, like fixing a card typo.</li>
+							<li>Several cards from older sets now correctly have 'Born of the Gods' in their 'printings' fields where appropriate</li>
+						</ul>
+					</td>
+				</tr>
 				<tr>
 					<td>1.30</td>
 					<td>Mar 10, 2014</td>

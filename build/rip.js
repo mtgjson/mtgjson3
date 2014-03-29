@@ -668,6 +668,12 @@ function ripSet(setName, cb)
 				addForeignNamesToCards(this.data.set.cards, this);
 			}
 		},
+		function addLegalities()
+		{
+			base.info("Adding legalities to cards...");
+
+			addLegalitiesToCards(this.data.set.cards, this);
+		},
 		function addPrintings()
 		{
 			base.info("Adding printings to cards...");
@@ -1228,6 +1234,56 @@ function buildMultiverseLanguagesURL(multiverseid)
 	return url.format(urlConfig);
 }
 
+function addLegalitiesToCards(cards, cb)
+{
+	cards.serialForEach(function(card, subcb)
+	{
+		addLegalitiesToCard(card, subcb);
+	}, cb);
+}
+
+function addLegalitiesToCard(card, cb)
+{
+	tiptoe(
+		function getFirstPage()
+		{
+			getURLAsDoc(buildMultiverseLegalitiesURL(card.multiverseid), this);
+		},
+		function processLegalities(doc)
+		{
+			delete card.legalities;
+			card.legalities = {};
+
+			doc("table.cardList").map(function(i, item) { return doc(item); })[1].find("tr.cardItem").map(function(i, item) { return doc(item); }).forEach(function(cardRow)
+			{
+				var format = cardRow.find("td:nth-child(1)").text().trim();
+				var legality = cardRow.find("td:nth-child(2)").text().trim();
+				if(format && legality)
+					card.legalities[format] = legality;
+			});
+
+			this();
+		},
+		function finish(err)
+		{
+			setImmediate(function() { cb(err); });
+		}
+	);
+}
+
+function buildMultiverseLegalitiesURL(multiverseid)
+{
+	var urlConfig = 
+	{
+		protocol : "http",
+		host     : "gatherer.wizards.com",
+		pathname : "/Pages/Card/Printings.aspx",
+		query    : { multiverseid : multiverseid, page : "0" }
+	};
+
+	return url.format(urlConfig);
+}
+
 function addPrintingsToCards(cards, cb)
 {
 	cards.serialForEach(function(card, subcb)
@@ -1294,7 +1350,6 @@ function buildMultiversePrintingsURL(multiverseid, page)
 
 	return url.format(urlConfig);
 }
-
 
 function getMultiverseidsForCardName(sets, cardName)
 {
