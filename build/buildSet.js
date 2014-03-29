@@ -9,7 +9,6 @@ var base = require("xbase"),
 	tiptoe = require("tiptoe"),
 	rip = require("./rip.js");
 
-optimist = optimist.boolean("forcePrintings");
 var argv = optimist.argv;
 
 function usage()
@@ -20,8 +19,6 @@ function usage()
 
 if(argv._.length<1)
 	usage();
-
-var forcePrintings = !!argv.forcePrintings;
 
 var setsToDo = argv._;
 if(setsToDo.length===1 && setsToDo[0].toLowerCase()==="allsets")
@@ -52,7 +49,7 @@ setsToDo.serialForEach(function(arg, subcb)
 	tiptoe(
 		function build()
 		{
-			rip.ripSet(targetSet.name, {forcePrintings : forcePrintings}, this);
+			rip.ripSet(targetSet.name, this);
 		},
 		function save(set)
 		{

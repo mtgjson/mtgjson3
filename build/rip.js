@@ -176,20 +176,6 @@ var SET_CORRECTIONS =
 				number : "122a", layout : "flip", names : ["Budoka Pupil", "Ichiga, Who Topples Oaks"]
 			}
 		},
-		{ copyCard : "Budoka Pupil", replace :
-			{
-				name       : "Ichiga, Who Topples Oaks",
-				number     : "122b",
-				text       : "Trample\n\nRemove a ki counter from Ichiga, Who Topples Oaks: Target creature gets +2/+2 until end of turn.",
-				type       : "Legendary Creature - Spirit",
-				supertypes : ["Legendary"],
-				types      : ["Creature"],
-				subtypes   : ["Spirit"],
-				power      : "4",
-				toughness  : "4",
-				imageName  : "ichiga, who topples oaks"
-			}
-		},
 		{ match : {name: "Callow Jushi"}, replace :
 			{
 				number : "31a",
@@ -203,7 +189,7 @@ var SET_CORRECTIONS =
 				name       : "Jaraku the Interloper",
 				number     : "31b",
 				text       : "Remove a ki counter from Jaraku the Interloper: Counter target spell unless its controller pays {2}.",
-				type       : "Legendary Creature - Spirit",
+				type       : "Legendary Creature — Spirit",
 				supertypes : ["Legendary"],
 				types      : ["Creature"],
 				subtypes   : ["Spirit"],
@@ -219,20 +205,6 @@ var SET_CORRECTIONS =
 				names : ["Cunning Bandit", "Azamuki, Treachery Incarnate"]
 			}
 		},
-		{ copyCard : "Cunning Bandit", replace :
-			{
-				name       : "Azamuki, Treachery Incarnate",
-				number     : "99b",
-				text       : "Remove a ki counter from Azamuki, Treachery Incarnate: Gain control of target creature until end of turn.",
-				type       : "Legendary Creature - Spirit",
-				supertypes : ["Legendary"],
-				types      : ["Creature"],
-				subtypes   : ["Spirit"],
-				power      : "5",
-				toughness  : "2",
-				imageName  : "azamuki, treachery incarnate"
-			}
-		},
 		{ match : {name: "Hired Muscle"}, replace :
 			{
 				number : "69a",
@@ -246,7 +218,7 @@ var SET_CORRECTIONS =
 				name       : "Scarmaker",
 				number     : "69b",
 				text       : "Remove a ki counter from Scarmaker: Target creature gains fear until end of turn. (It can't be blocked except by artifact creatures and/or black creatures.)",
-				type       : "Legendary Creature - Spirit",
+				type       : "Legendary Creature — Spirit",
 				supertypes : ["Legendary"],
 				types      : ["Creature"],
 				subtypes   : ["Spirit"],
@@ -592,7 +564,7 @@ function cardComparator(a, b)
 	return 0;
 }
 
-function ripSet(setName, ripSetOptions, cb)
+function ripSet(setName, cb)
 {
 	base.info("====================================================================================================================");
 	base.info("Ripping Set: %s", setName);
@@ -700,7 +672,7 @@ function ripSet(setName, ripSetOptions, cb)
 		{
 			base.info("Adding printings to cards...");
 
-			addPrintingsToCards(this.data.set.cards, !!ripSetOptions.forcePrintings, this);
+			addPrintingsToCards(this.data.set.cards, this);
 		},
 		function finish(err)
 		{
@@ -1124,24 +1096,15 @@ function buildMultiverseURL(multiverseid, part)
 	return url.format(urlConfig);
 }
 
-function getURLAsDoc(targetURL, options, cb)
+function getURLAsDoc(targetURL, cb)
 {
-	if(!cb)
-	{
-		cb = options;
-		options = {};
-	}
-
-	//if(targetURL.startsWith("http://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid="))
-	//	options.force = true;
-
 	var urlHash = hash("whirlpool", targetURL);
 	var cachePath = path.join(__dirname, "..", "cache", urlHash.charAt(0), urlHash);
 
 	tiptoe(
 		function get()
 		{
-			if(!options.force && fs.existsSync(cachePath))
+			if(fs.existsSync(cachePath))
 			{
 				//base.info("URL [%s] is file: %s", url, cachePath);
 				fs.readFile(cachePath, {encoding:"utf8"}, function(err, data) { this(null, null, data); }.bind(this));
@@ -1157,7 +1120,7 @@ function getURLAsDoc(targetURL, options, cb)
 			if(err)
 				return setImmediate(function() { cb(err); });
 
-			if(!fs.existsSync(cachePath) || options.force)
+			if(!fs.existsSync(cachePath))
 				fs.writeFileSync(cachePath, pageHTML, {encoding:"utf8"});
 
 			setImmediate(function() { cb(null, cheerio.load(pageHTML)); }.bind(this));
@@ -1265,22 +1228,20 @@ function buildMultiverseLanguagesURL(multiverseid)
 	return url.format(urlConfig);
 }
 
-function addPrintingsToCards(cards, force, cb)
+function addPrintingsToCards(cards, cb)
 {
-	base.info("Adding printings with force: %s", force);
-
 	cards.serialForEach(function(card, subcb)
 	{
-		addPrintingsToCard(card, force, subcb);
+		addPrintingsToCard(card, subcb);
 	}, cb);
 }
 
-function addPrintingsToCard(card, force, cb)
+function addPrintingsToCard(card, cb)
 {
 	tiptoe(
 		function getFirstPage()
 		{
-			getURLAsDoc(buildMultiversePrintingsURL(card.multiverseid, 0), {force : force}, this);
+			getURLAsDoc(buildMultiversePrintingsURL(card.multiverseid, 0), this);
 		},
 		function getAllPages(doc)
 		{
@@ -1288,7 +1249,7 @@ function addPrintingsToCard(card, force, cb)
 			var numPages = pageLinks.length>0 ? pageLinks.length : 1;
 			for(var i=0;i<numPages;i++)
 			{
-				getURLAsDoc(buildMultiversePrintingsURL(card.multiverseid, i), {force : (i===0 ? false : force)}, this.parallel());
+				getURLAsDoc(buildMultiversePrintingsURL(card.multiverseid, i), this.parallel());
 			}
 		},
 		function processPrintings()
