@@ -16,7 +16,7 @@ var dustData =
 {
 	title : "Magic the Gathering card data in JSON format",
 	sets  : [],
-	version : "1.29"
+	version : "1.30"
 };
 
 tiptoe(
@@ -85,6 +85,10 @@ tiptoe(
 		fs.writeFile(path.join(__dirname, "json", "version-full.json"), JSON.stringify({version:dustData.version}), {encoding : "utf8"}, this.parallel());
 		fs.writeFile(path.join(__dirname, "json", "version.json"), JSON.stringify(dustData.version), {encoding : "utf8"}, this.parallel());
 	},
+	function verifyJSON()
+	{
+		checkSetsForDups(this);
+	},
 	function zipJSON()
 	{
 		runUtil.run("zip", ["-9", "AllSets.json.zip", "AllSets.json"], { cwd:  path.join(__dirname, "json"), silent : true }, this.parallel());
@@ -129,3 +133,54 @@ tiptoe(
 		process.exit(0);
 	}
 );
+
+function checkSetsForDups(cb)
+{
+	tiptoe(
+		function processSets()
+		{
+			C.SETS.map(function(SET) { return SET.code; }).serialForEach(function(code, subcb)
+			{
+				checkSetForDups(code, subcb);
+			}, this);
+		},
+		function finish(err)
+		{
+			setImmediate(function() { cb(err); });
+		}
+	);
+}
+
+function checkSetForDups(setCode, cb)
+{
+	var ALLOWED_DUPS = ["B.F.M. (Big Furry Monster)"];
+	
+	tiptoe(
+		function getJSON()
+		{
+			fs.readFile(path.join(__dirname, "..", "web", "json", setCode + ".json"), {encoding : "utf8"}, this);
+		},
+		function compare(setRaw)
+		{
+			var setData = JSON.parse(setRaw);
+			var cardsByName = {};
+
+			setData.cards.forEach(function(card)
+			{
+				if(card.hasOwnProperty("variations") || ALLOWED_DUPS.contains(card.name))
+					return;
+
+				if(cardsByName.hasOwnProperty(card.name))
+					base.info("%s DUP: %s\n%s", setCode, card.name, diffUtil.diff(cardsByName[card.name], card));
+				else
+					cardsByName[card.name] = card;
+			});
+
+			this();
+		},
+		function finish(err)
+		{
+			setImmediate(function() { cb(err); });
+		}
+	);
+}
