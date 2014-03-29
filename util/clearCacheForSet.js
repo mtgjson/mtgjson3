@@ -4,6 +4,8 @@
 var base = require("xbase"),
 	C = require("C"),
 	fs = require("fs"),
+	cheerio = require("cheerio"),
+	request = require("request"),
 	url = require("url"),
 	hash = require("mhash").hash,
 	fileUtil = require("xutil").file,
@@ -12,12 +14,12 @@ var base = require("xbase"),
 
 if(process.argv.length<4)
 {
-	base.error("Usage: node %s <oracle|original|languages> <set codes>", process.argv[1]);
+	base.error("Usage: node %s <oracle|original|languages|printings> <set codes>", process.argv[1]);
 	process.exit(1);
 }
 
 var cacheType = process.argv[2];
-if(cacheType!=="oracle" && cacheType!=="original" && cacheType!=="languages")
+if(cacheType!=="oracle" && cacheType!=="original" && cacheType!=="languages" && cacheType!=="printings")
 {
 	base.error("Invalid cacheType: %s", cacheType);
 	process.exit(1);
@@ -47,29 +49,42 @@ function clearCacheForSet(code, cb)
 		{
 			fs.readFile(path.join(__dirname, "..", "json", code + ".json"), {encoding : "utf8"}, this);
 		},
-		function clearCacheFiles(setRaw)
+		function getCacheURLS(setRaw)
 		{
-			var urls = [];
+			this.data.urls = [];
 			var set = JSON.parse(setRaw);
+			var self=this;
+			base.info("%d cards found.", set.cards.length);
 			set.cards.forEach(function(card)
 			{
 				if(cacheType==="oracle")
 				{
-					urls.push(buildMultiverseURL(card.multiverseid));
+					self.data.urls.push(buildMultiverseURL(card.multiverseid));
 					if(card.layout==="split")
 					{
-						urls.push(buildMultiverseURL(card.multiverseid, card.names[0]));
-						urls.push(buildMultiverseURL(card.multiverseid, card.names[1]));
+						self.data.urls.push(buildMultiverseURL(card.multiverseid, card.names[0]));
+						self.data.urls.push(buildMultiverseURL(card.multiverseid, card.names[1]));
 					}
 				}
 				else if(cacheType==="languages")
 				{
-					urls.push(buildMultiverseLanguagesURL(card.multiverseid));
+					self.data.urls.push(buildMultiverseLanguagesURL(card.multiverseid));
 				}
-				//urlUtil.setQueryParam(buildMultiverseURL(multiverseid), "printed", "true")
+				else if(cacheType==="printings")
+				{
+					buildMultiverseAllPrintingsURL(card.multiverseid, self.parallel());
+				}
 			});
 
-			urls.serialForEach(clearCacheFile, this);
+			if(cacheType!=="printings")
+				this();
+		},
+		function clearCacheFiles()
+		{
+			if(cacheType==="printings")
+				this.data.urls = this.data.urls.concat(Array.prototype.slice.apply(arguments).flatten().uniqueBySort());
+
+			this.data.urls.serialForEach(clearCacheFile, this);
 		},
 		function finish(err)
 		{
@@ -118,6 +133,45 @@ function buildMultiverseLanguagesURL(multiverseid)
 		host     : "gatherer.wizards.com",
 		pathname : "/Pages/Card/Languages.aspx",
 		query    : { multiverseid : multiverseid }
+	};
+
+	return url.format(urlConfig);
+}
+
+function buildMultiverseAllPrintingsURL(multiverseid, cb)
+{
+	tiptoe(
+		function getFirstPage()
+		{
+			request(buildMultiversePrintingsURL(multiverseid, 0), this);
+		},
+		function getAllPages(err, response, pageHTML)
+		{
+			if(err)
+				return setImmediate(function() { cb(err); });
+
+			var urls = [];
+			var doc = cheerio.load(pageHTML);
+			var pageLinks = doc("#ctl00_ctl00_ctl00_MainContent_SubContent_SubContent_PrintingsList_pagingControlsContainer a").map(function(i, item) { return doc(item); });
+			var numPages = pageLinks.length>0 ? pageLinks.length : 1;
+			for(var i=0;i<numPages;i++)
+			{
+				urls.push(buildMultiversePrintingsURL(multiverseid, i));
+			}
+
+			return setImmediate(function() { cb(undefined, urls); });
+		}
+	);
+}
+
+function buildMultiversePrintingsURL(multiverseid, page)
+{
+	var urlConfig = 
+	{
+		protocol : "http",
+		host     : "gatherer.wizards.com",
+		pathname : "/Pages/Card/Printings.aspx",
+		query    : { multiverseid : multiverseid, page : ("" + (page || 0)) }
 	};
 
 	return url.format(urlConfig);
