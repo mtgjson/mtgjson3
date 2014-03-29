@@ -32,7 +32,7 @@
 		<br>
 		<br>
 		<h2>Current Version: <span class="value">{version}</span></h2>
-		<h2>&nbsp;&nbsp;&nbsp;Last Updated: <span class="value">Feb 25, 2014</span><a href="#changeLog">(change log)</a></h2>
+		<h2>&nbsp;&nbsp;&nbsp;Last Updated: <span class="value">Mar 10, 2014</span><a href="#changeLog">(change log)</a></h2>
 		<br>
 		<br>
 		<h2 style="display: none;"><span style="color: red; text-decoration: underline;">ALERT:</span> alert message goes here</h2>
@@ -190,6 +190,8 @@
 		<br>
 		<h2>Cards</h2>
 		<p>The cards value is an Array of cards, each being a JSON object with key/value pairs. Below you will find a table detailing each key.<br>
+		<br>
+		I order the cards first by 'name', then by 'imageName' and finally by 'number'<br>
 		<br>
 		If a value would be empty (such as manaCost for Basic Lands), then the key will not exist in the object.<br>
 		<br>
@@ -552,6 +554,15 @@
 				</tr>
 			</thead>
 			<tbody>
+				<tr>
+					<td>1.30</td>
+					<td>Mar 10, 2014</td>
+					<td>
+						<ul>
+							<li>BOK: 2 cards were listed twice, "Ichiga, Who Topples Oaks" and "Azamuki, Treachery Incarnate". There is now correctly only one of each of these cards. Also, one of the duplicate "Ichiga, Who Topples Oaks" entries had an incorrect toughness value and each duplicate had a regular ascii dash instead of a UTF8 'long dash' in the 'type' field.</li>
+						</ul>
+					</td>
+				</tr>
 				<tr>
 					<td>1.29</td>
 					<td>Feb 26, 2014</td>
@@ -1043,6 +1054,7 @@
 					<li>aeosynth</li>
 					<li>Pouncing Kavu</li>
 					<li>Florian</li>
+					<li>Carlo Luchessa</li>
 				</ul>
 			</li>
 			<li><a href="http://wiki.mtgsalvation.com/article/Main_Page">MTG Salvation Wiki</a> for an AWESOME resource</li>
