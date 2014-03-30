@@ -42,7 +42,12 @@
 								</tr>
 							{/foreignNames}
 						</table>
-						<span class="printings">printings: {?printings}[{#printings}{.}{@sep}, {/sep}{/printings}]{/printings}</span>
+						<span class="printings">printings: {?printings}[{#printings}{.}{@sep}, {/sep}{/printings}]{/printings}</span><br>
+						<hr>
+						<span class="printings" style="margin-top: 0;">originalType: {originalType|s}</span><br>
+						<hr>
+						<span class="printings" style="margin-top: 0;">originalText:<br>{originalText|s}</span><br>
+						<hr>
 						<table class="rulings">
 							{#rulings}
 								<tr class="ruling">

@@ -120,3 +120,38 @@ exports.buildMultiversePrintingsURL = function(multiverseid, page)
 
 	return url.format(urlConfig);
 };
+
+exports.getSetCorrections = function(setCode)
+{
+	var setCorrections = C.SET_CORRECTIONS["*"];
+	if(C.SET_CORRECTIONS.hasOwnProperty(setCode))
+		setCorrections = setCorrections.concat(C.SET_CORRECTIONS[setCode]);
+
+	return setCorrections;
+};
+
+exports.performSetCorrections = function(setCorrections, cards)
+{
+	setCorrections.forEach(function(setCorrection)
+	{
+		cards.forEach(function(card)
+		{
+			if(setCorrection.match && Object.every(setCorrection.match, function(key, value) { return card[key]===value; }))
+			{
+				if(setCorrection.replace)
+					Object.forEach(setCorrection.replace, function(key, value) { card[key] = value; });
+				if(setCorrection.remove)
+					setCorrection.remove.forEach(function(removeKey) { delete card[removeKey]; });
+			}
+		});
+
+		if(setCorrection.copyCard)
+		{
+			var newCard = base.clone(cards.mutateOnce(function(card) { return card.name===setCorrection.copyCard ? card : undefined; }), true);
+			if(setCorrection.replace)
+				Object.forEach(setCorrection.replace, function(key, value) { newCard[key] = value; });
+
+			cards.push(newCard);
+		}
+	});
+};

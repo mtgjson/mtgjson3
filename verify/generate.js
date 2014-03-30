@@ -62,17 +62,16 @@ function renderSet(setRaw, original, cb)
 			card.type = card.originalType;
 		}
 
-		delete card.originalText;
-		delete card.originalType;
-
 		var dup = base.clone(card, true);
 		["name", "manaCost", "cmc", "type", "supertypes", "types", "subtypes", "rarity", "artist", "number", "loyalty",
-		 "power", "toughness", "text", "flavor", "imageName", "rulings", "layout", "multiverseid", "colors", "names",
+		 "power", "toughness", "text", "originalText", "originalType", "flavor", "imageName", "rulings", "layout", "multiverseid", "colors", "names",
 		 "foreignNames", "printings", "legalities"].forEach(function(key) { delete dup[key]; });
 		card.json = util.inspect(dup);
 
 		if(card.text)
 			card.text = card.text.replaceAll("\n", "<br>");
+		if(card.originalText)
+			card.originalText = card.originalText.replaceAll("\n", "<br>");
 		if(card.flavor)
 			card.flavor = card.flavor.replaceAll("\n", "<br>");
 	});
