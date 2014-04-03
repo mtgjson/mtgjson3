@@ -9,7 +9,7 @@
 	exports.TYPES.push("Enchant", "Player", "Summon", "Interrupt", "Scariest", "You'll", "Ever", "See", "Eaturecray");
 
 	exports.SETS_NOT_ON_GATHERER = ["HHO", "ATH", "ITP", "DKM", "RQS"];
-	exports.SETS_WITH_NO_IMAGES = ["RQS"];
+	exports.SETS_WITH_NO_IMAGES = [];
 	
 	exports.SETS =
 	[
