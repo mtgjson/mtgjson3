@@ -448,7 +448,11 @@ function processCardPart(doc, cardPart, printedDoc, printedCardPart)
 	// Rulings
 	var rulingRows = cardPart.find(idPrefix + "_rulingsContainer table tr.post");
 	if(rulingRows.length)
+	{
 		card.rulings = rulingRows.map(function(i, item) { return doc(item); }).map(function(rulingRow) { return { date : moment(rulingRow.find("td:first-child").text().trim(), "MM/DD/YYYY").format("YYYY-MM-DD"), text : rulingRow.find("td:last-child").text().trim()}; });
+		var seenRulings = [];
+		card.rulings = card.rulings.reverse().filter(function(ruling) { if(seenRulings.contains(ruling.text)) { return false; } seenRulings.push(ruling.text); return true; }).reverse();
+	}
 
 	// Variations
 	if(card.layout==="normal")
