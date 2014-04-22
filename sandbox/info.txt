@@ -1,12 +1,26 @@
-/----------------------\
-| New Set Instructions |
-\----------------------/
+/-----------------------------------\
+| Non-Gatherer New Set Instructions |
+\-----------------------------------/
+# Add new set to C.js in all places needed
+node build/createNonGathererSet.js <expansion code>
+
+# Update printings
+node util/updatePrintingsFromSet.js nongatherersets
+node util/updatePrintingsFromSet.js <expansion code>
+
+# Goto: Any New Set Final Instructions
+
+
+/-------------------------------\
+| Gatherer New Set Instructions |
+\-------------------------------/
 # Add new set to C.js
 # Run buildSet.js TWICE (first pass gets data, second pass gets foreign langauge names)
 node build/buildSet.js <expansion code>
 node build/buildSet.js <expansion code>
 
 # Now run
+node util/updatePrintingsFromSet.js nongatherersets
 node util/updatePrintingsFromSet.js <expansion code>
 node util/updateLegalitiesFromSet.js <expansion code>
 
@@ -15,6 +29,12 @@ node util/clearCacheForSet.js legalities <set codes that rotated out>
 node build/buildSet.js <set codes that rotated out>
 node util/updateLegalitiesFromSet.js <set codes that rotated out>
 
+# Goto: Any New Set Final Instructions
+
+
+/--------------------------------\
+| Any New Set Final Instructions |
+\--------------------------------/
 # Update generate.js with new version number and lastUpdated date
 # Update index.dust with new change log entry
 

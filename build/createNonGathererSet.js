@@ -131,6 +131,11 @@ function getMultiverseidsForSet(setCode, cb)
 			"Swamp" : 2743,
 			"Unholy Strength" : 2133,
 			"Warrior's Honor" : 3731
+		},
+		DPA :
+		{
+			"Elvish Warrior" : 153003,
+			"Shock": 83261
 		}
 	};
 

@@ -16,7 +16,7 @@ var dustData =
 {
 	title : "Magic the Gathering card data in JSON format",
 	sets  : [],
-	version : "2.2.3",
+	version : "2.3.0",
 	lastUpdated : "Apr 18, 2014"
 };
 

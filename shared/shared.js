@@ -24,6 +24,10 @@ exports.getSetsToDo = function(startAt)
 		{
 			setsToDo = C.SETS.map(function(SET) { return SET.code; });
 		}
+		else if(arg==="nongatherersets")
+		{
+			setsToDo = C.SETS_NOT_ON_GATHERER.slice();
+		}
 		else if(arg.toLowerCase().startsWith("startat"))
 		{
 			setsToDo = C.SETS.map(function(SET) { return SET.code; });
@@ -134,24 +138,36 @@ exports.performSetCorrections = function(setCorrections, cards)
 {
 	setCorrections.forEach(function(setCorrection)
 	{
-		cards.forEach(function(card)
+		if(setCorrection==="numberCards")
 		{
-			if(setCorrection.match && Object.every(setCorrection.match, function(key, value) { return card[key]===value; }))
+			var COLOR_ORDER = ["Blue", "Black", "Red", "Green", "White"];
+			var LAND_ORDER = ["Island", "Swamp", "Mountain", "Forest", "Plains"];
+			var cardNumber = 1;
+			cards.multiSort([function(card) { return (card.hasOwnProperty("colors") ? COLOR_ORDER.indexOf(card.colors[0]) : 999); },
+									function(card) { return (card.types.contains("Artifact") ? -1 : 1); },
+									function(card) { return card.name; }]).forEach(function(card) { card.number = cardNumber++; });
+		}
+		else
+		{
+			cards.forEach(function(card)
 			{
+				if(setCorrection.match && Object.every(setCorrection.match, function(key, value) { return card[key]===value; }))
+				{
+					if(setCorrection.replace)
+						Object.forEach(setCorrection.replace, function(key, value) { card[key] = value; });
+					if(setCorrection.remove)
+						setCorrection.remove.forEach(function(removeKey) { delete card[removeKey]; });
+				}
+			});
+
+			if(setCorrection.copyCard)
+			{
+				var newCard = base.clone(cards.mutateOnce(function(card) { return card.name===setCorrection.copyCard ? card : undefined; }), true);
 				if(setCorrection.replace)
-					Object.forEach(setCorrection.replace, function(key, value) { card[key] = value; });
-				if(setCorrection.remove)
-					setCorrection.remove.forEach(function(removeKey) { delete card[removeKey]; });
+					Object.forEach(setCorrection.replace, function(key, value) { newCard[key] = value; });
+
+				cards.push(newCard);
 			}
-		});
-
-		if(setCorrection.copyCard)
-		{
-			var newCard = base.clone(cards.mutateOnce(function(card) { return card.name===setCorrection.copyCard ? card : undefined; }), true);
-			if(setCorrection.replace)
-				Object.forEach(setCorrection.replace, function(key, value) { newCard[key] = value; });
-
-			cards.push(newCard);
 		}
 	});
 };
