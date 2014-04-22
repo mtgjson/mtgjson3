@@ -5,6 +5,11 @@ This is the code used to generate the JSON for [mtgjson.com](http://mtgjson.com/
 
 I didn't plan on open-sourcing this, so there are rough edges. See 'Other' section below.
 
+Pre-Reg
+-------
+
+    Requires [Node.js](http://nodejs.org/) v0.10.0 or later. It will NOT work with 0.9.9 or earlier.
+
 Setup
 -----
 
