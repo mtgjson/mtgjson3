@@ -1116,6 +1116,15 @@
 			releaseDate : "2014-03-14",
 			border : "black",
 			type : "duel deck"
+		},
+		{
+			name : "Journey into Nyx",
+			code : "JOU",
+			releaseDate : "2014-05-02",
+			border : "black",
+			type : "expansion",
+			block : "Theros",
+			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"]
 		}
 	];
 

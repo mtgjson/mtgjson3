@@ -145,7 +145,7 @@ exports.performSetCorrections = function(setCorrections, cards)
 			var cardNumber = 1;
 			cards.multiSort([function(card) { return (card.hasOwnProperty("colors") ? COLOR_ORDER.indexOf(card.colors[0]) : 999); },
 									function(card) { return (card.types.contains("Artifact") ? -1 : 1); },
-									function(card) { return card.name; }]).forEach(function(card) { card.number = cardNumber++; });
+									function(card) { return card.name; }]).forEach(function(card) { card.number = "" + (cardNumber++); });
 		}
 		else
 		{

@@ -16,8 +16,8 @@ var dustData =
 {
 	title : "Magic the Gathering card data in JSON format",
 	sets  : [],
-	version : "2.3.0",
-	lastUpdated : "Apr 18, 2014"
+	version : "2.4.1",
+	lastUpdated : "May 1, 2014"
 };
 
 tiptoe(
@@ -79,6 +79,8 @@ tiptoe(
 		dustData.allSize = printUtil.toSize(JSON.stringify(allSets).length, 1);
 		dustData.allSizeX = printUtil.toSize(JSON.stringify(allSetsWithExtras).length, 1);
 
+		dustData.changeLog = fs.readFileSync(path.join(__dirname, "changelog.html"), {encoding : "utf8"});
+
 		fs.writeFile(path.join(__dirname, "json", "AllSets.json"), JSON.stringify(allSets), {encoding : "utf8"}, this.parallel());
 		fs.writeFile(path.join(__dirname, "json", "AllSets-x.json"), JSON.stringify(allSetsWithExtras), {encoding : "utf8"}, this.parallel());
 		
@@ -89,7 +91,8 @@ tiptoe(
 	},
 	function verifyJSON()
 	{
-		checkSetsForDups(this);
+		checkSetsForDups(this.parallel());
+		checkCardDataTypes(this.parallel());
 	},
 	function zipJSON()
 	{
@@ -176,6 +179,113 @@ function checkSetForDups(setCode, cb)
 					base.info("%s DUP: %s\n%s", setCode, card.name, diffUtil.diff(cardsByName[card.name], card));
 				else
 					cardsByName[card.name] = card;
+			});
+
+			this();
+		},
+		function finish(err)
+		{
+			setImmediate(function() { cb(err); });
+		}
+	);
+}
+
+function checkCardDataTypes(cb)
+{
+	tiptoe(
+		function processSets()
+		{
+			C.SETS.map(function(SET) { return SET.code; }).serialForEach(function(code, subcb)
+			{
+				checkSetCardDataTypes(code, subcb);
+			}, this);
+		},
+		function finish(err)
+		{
+			setImmediate(function() { cb(err); });
+		}
+	);
+}
+
+function checkSetCardDataTypes(setCode, cb)
+{
+	var VALID_TYPES =
+	{
+		layout       : "string",
+		name         : "string",
+		names        : ["string"],
+		manaCost     : "string",
+		cmc          : "number",
+		colors       : ["string"],
+		type         : "string",
+		supertypes   : ["string"],
+		types        : ["string"],
+		subtypes     : ["string"],
+		rarity       : "string",
+		text         : "string",
+		flavor       : "string",
+		artist       : "string",
+		number       : "string",
+		power        : "string",
+		toughness    : "string",
+		loyalty      : "number",
+		multiverseid : "number",
+		variations   : ["number"],
+		imageName    : "string",
+		watermark    : "string",
+		border       : "string",
+		hand         : "number",
+		life         : "number",
+		rulings      : ["object"],
+		foreignNames : ["object"],
+		printings    : ["string"],
+		originalText : "string",
+		originalType : "string",
+		legalities   : {}
+	};
+
+	tiptoe(
+		function getJSON()
+		{
+			fs.readFile(path.join(__dirname, "..", "web", "json", setCode + ".json"), {encoding : "utf8"}, this);
+		},
+		function check(setRaw)
+		{
+			var setData = JSON.parse(setRaw);
+			var cardsByName = {};
+
+			setData.cards.forEach(function(card)
+			{
+				Object.forEach(card, function(key, val)
+				{
+					if(!VALID_TYPES.hasOwnProperty(key))
+					{
+						base.info("%s (%s) NO KNOWN TYPE REFERENCE: [%s] : [%s]", setCode, card.name, key, val);
+						return;
+					}
+
+					if(Array.isArray(VALID_TYPES[key]))
+					{
+						if(val.some(function(v) { return typeof v!==VALID_TYPES[key][0]; }))
+							base.info("%s (%s) HAS A NON-%s IN ARRAY: [%s] : [%s]", setCode, card.name, VALID_TYPES[key][0], key, val);
+
+						return;
+					}
+
+					if(Object.isObject(VALID_TYPES[key]))
+					{
+						if(!Object.isObject(val))
+							base.info("%s (%s) INVALID TYPE: [%s] : [%s] (Not an object)", setCode, card.name, key, val);
+
+						return;
+					}
+
+					if(typeof val!==VALID_TYPES[key])
+					{
+						base.info("%s (%s) INVALID TYPE: [%s] : [%s] (%s !== %s)", setCode, card.name, key, val, typeof val, VALID_TYPES[key]);
+						return;
+					}
+				});
 			});
 
 			this();
