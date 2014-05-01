@@ -416,6 +416,9 @@ function processCardPart(doc, cardPart, printedDoc, printedCardPart)
 			base.warn("Invalid symbol in oracle card text for card: %s", card.name);
 	}
 
+	if(cardText.toLowerCase().startsWith("level up {"))
+		card.layout = "leveler";
+
 	// Original Printed Text
 	var originalCardText = processTextBlocks(printedDoc, printedCardPart.find(idPrefix + "_textRow .value .cardtextbox")).trim();
 	if(originalCardText)
@@ -455,7 +458,7 @@ function processCardPart(doc, cardPart, printedDoc, printedCardPart)
 	}
 
 	// Variations
-	if(card.layout==="normal")
+	if(card.layout!=="split" && card.layout!=="double-faced" && card.layout!=="flip")
 	{
 		var variationLinks = cardPart.find(idPrefix + "_variationLinks a.variationLink").map(function(i, item) { return doc(item); });
 		if(variationLinks.length)
@@ -577,7 +580,7 @@ function addForeignNamesToCards(cards, cb)
 			{
 				delete card.foreignNames;
 
-				if(card.layout==="normal" || (card.layout==="flip" && card.names && card.names.length>=1 && card.names[0]===card.name))
+				if(card.layout!=="split" && card.layout!=="double-faced" && (card.layout!=="flip" || (card.layout==="flip" && card.names && card.names.length>=1 && card.names[0]===card.name)))
 				{
 					var cardForeignNames = cardsForeignNames[i];
 					if(cardForeignNames && cardForeignNames.length)

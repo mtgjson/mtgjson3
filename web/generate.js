@@ -6,6 +6,7 @@ var base = require("xbase"),
 	runUtil = require("xutil").run,
 	rimraf = require("rimraf"),
 	printUtil = require("xutil").print,
+	diffUtil = require("xutil").diff,
 	fs = require("fs"),
 	path = require("path"),
 	dustUtil = require("xutil").dust,
@@ -16,7 +17,7 @@ var dustData =
 {
 	title : "Magic the Gathering card data in JSON format",
 	sets  : [],
-	version : "2.4.1",
+	version : "2.4.2",
 	lastUpdated : "May 1, 2014"
 };
 
