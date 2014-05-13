@@ -128,16 +128,17 @@
 		<br>Each individual set is a JSON object like this:</p>
 		<pre><code data-language="javascript">
     {
-                 name : "Ice Age",            // The name of the set
-                 code : "ICE",                // The code name of the set
-         gathererCode : "IA",                 // The code that Gatherer uses for the set. Only present if different than 'code'
-          releaseDate : "1995-06-01"          // When the set was released (YYYY-MM-DD)
+                 name : "Nemesis",            // The name of the set
+                 code : "NMS",                // The code name of the set
+         gathererCode : "NE",                 // The code that Gatherer uses for the set. Only present if different than 'code'
+              oldCode : "NEM",                // An old style code that some legacy Magic software uses. Only present if different than 'gathererCode' and 'code'
+          releaseDate : "2000-02-14"          // When the set was released (YYYY-MM-DD)
                border : "black",              // The type of border on the cards, either "white", "black" or "silver"
                  type : "expansion",          // Type of set. One of: "core", "expansion", "reprint", "box", "un",
                                               //                      "from the vault", "premium deck", "duel deck",
                                               //                      "starter", "commander", "planechase", "archenemy",
                                               //                      "promo", "vanguard", "masters"
-                block : "Ice Age",            // The block this set is in,
+                block : "Masques",            // The block this set is in,
               booster : [ "rare", ... ]       // Booster contents for this set, see below for details
                 cards : [ {}, {}, {}, ... ]   // The cards in the set
     }
@@ -381,7 +382,7 @@
 		<hr>
 		<a name="additionalJSON"></a>
 		<h1>Additional JSON Files<a href="#top">(back to top)</a></h1>
-		<p>Three additional JSON files are available and will be updated whenever card data is added or updated:</p>
+		<p>Several additional JSON files are available and will be updated whenever card data is added or updated:</p>
 		<ul>
 			<li><a href="/json/SetCodes.json">/json/SetCodes.json</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;An array of set codes currently available</li>
 			<li><a href="/json/SetList.json">/json/SetList.json</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;An array of sets (code and name) currently available</li>

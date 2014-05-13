@@ -3,38 +3,55 @@
 
 var base = require("xbase"),
 	C = require("C"),
-	shared = require("shared"),
+	request = require("request"),
 	fs = require("fs"),
+	url = require("url"),
+	color = require("cli-color"),
+	fileUtil = require("xutil").file,
+	diffUtil = require("xutil").diff,
 	path = require("path"),
 	tiptoe = require("tiptoe");
 
+checkSets(function() { process.exit(0); });
 
-tiptoe(
-	function loadJSON()
-	{
-		fs.readFile(path.join(__dirname, "..", "json", "RQS.json"), {encoding:"utf8"}, this);
-	},
-	function parseJSON(rawJSON)
-	{
-		var set = JSON.parse(rawJSON);
-		set.cards.forEach(function(card)
+function checkSets(cb)
+{
+	tiptoe(
+		function processSets()
 		{
-			base.info("cp \"4ed/%s.jpg\" rqs/", card.imageName);
-			base.info("cp \"4ed/%s.crop.jpg\" rqs/", card.imageName);
-			base.info("cp \"4ed/%s.hq.jpg\" rqs/", card.imageName);
-			base.info("cp \"4ed/%s.crop.hq.jpg\" rqs/", card.imageName);
-		});
-
-		this();
-	},
-	function finish(err)
-	{
-		if(err)
+			C.SETS.map(function(SET) { return SET.code; }).serialForEach(function(code, subcb)
+			{
+				checkSet(code, subcb);
+			}, this);
+		},
+		function finish(err)
 		{
-			base.error(err);
-			process.exit(1);
+			setImmediate(function() { cb(err); });
 		}
+	);
+}
 
-		process.exit(0);
-	}
-);
+function checkSet(setCode, cb)
+{
+	tiptoe(
+		function getJSON()
+		{
+			fs.readFile(path.join(__dirname, "..", "json", setCode + ".json"), {encoding : "utf8"}, this);
+		},
+		function compare(setRaw)
+		{
+			var targetSet = C.SETS.mutateOnce(function(SET) { if(SET.code===setCode) { return SET; } });
+			if(!targetSet.hasOwnProperty("oldCode"))
+				return this();
+
+			var set = JSON.parse(setRaw);
+			set.oldCode = targetSet.oldCode;
+
+			fs.writeFile(path.join(__dirname, "..", "json", setCode + ".json"), JSON.stringify(set), {encoding : "utf8"}, this);
+		},
+		function finish(err)
+		{
+			setImmediate(function() { cb(err); });
+		}
+	);
+}

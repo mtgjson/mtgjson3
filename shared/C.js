@@ -241,6 +241,7 @@
 			name : "Portal Second Age",
 			code : "PO2",
 			gathererCode : "P2",
+			oldCode : "P02",
 			releaseDate : "1998-06-01",
 			border : "black",
 			type : "starter",
@@ -351,6 +352,7 @@
 			name : "Nemesis",
 			code : "NMS",
 			gathererCode : "NE",
+			oldCode : "NEM",
 			releaseDate : "2000-02-14",
 			border : "black",
 			type : "expansion",
@@ -487,6 +489,7 @@
 		{
 			name : "Eighth Edition",
 			code : "8ED",
+			oldCode : "8E",
 			releaseDate : "2003-07-28",
 			border : "white",
 			type : "core",
@@ -557,6 +560,7 @@
 		{
 			name : "Ninth Edition",
 			code : "9ED",
+			oldCode : "9E",
 			releaseDate : "2005-07-29",
 			border : "white",
 			type : "core",
@@ -724,6 +728,7 @@
 		{
 			name : "Duel Decks: Jace vs. Chandra",
 			code : "DD2",
+			oldCode : "D2",
 			releaseDate : "2008-11-07",
 			border : "black",
 			type : "duel deck"
@@ -731,6 +736,7 @@
 		{
 			name : "Conflux",
 			code : "CON",
+			oldCode : "CFX",
 			releaseDate : "2009-02-06",
 			border : "black",
 			type : "expansion",
@@ -764,6 +770,7 @@
 		{
 			name : "From the Vault: Exiled",
 			code : "V09",
+			oldCode : "FVE",
 			releaseDate : "2009-08-28",
 			border : "black",
 			type : "from the vault"
@@ -771,6 +778,7 @@
 		{
 			name : "Planechase",
 			code : "HOP",
+			oldCode : "PCH",
 			releaseDate : "2009-09-04",
 			border : "black",
 			type : "planechase"
@@ -917,6 +925,7 @@
 		{
 			name : "Magic: The Gathering-Commander",
 			code : "CMD",
+			oldCode : "COM",
 			releaseDate : "2011-06-17",
 			border : "black",
 			type : "commander"
@@ -932,6 +941,7 @@
 		{
 			name : "From the Vault: Legends",
 			code : "V11",
+			oldCode : "FVL",
 			releaseDate : "2011-08-26",
 			border : "black",
 			type : "from the vault"
@@ -1002,6 +1012,7 @@
 		{
 			name : "From the Vault: Realms",
 			code : "V12",
+			oldCode : "FVR",
 			releaseDate : "2012-08-31",
 			border : "black",
 			type : "from the vault"
@@ -1127,21 +1138,6 @@
 			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"]
 		}
 	];
-
-	exports.OLD_SET_CODE_MAP =
-	{
-		"9E" : "9ED",
-		"8E" : "8ED",
-		"D2" : "DD2",
-		"COM" : "CMD",
-		"P02" : "PO2",
-		"NEM" : "NMS",
-		"PCH" : "HOP",
-		"FVR" : "V12",
-		"FVL" : "V11",
-		"FVE" : "V09",
-		"CFX" : "CON"
-	};
 
 	exports.EXTRA_SET_CARD_PRINTINGS =
 	{
