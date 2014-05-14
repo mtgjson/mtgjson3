@@ -8,6 +8,8 @@
 	// Unglued/Unhinged types
 	exports.TYPES.push("Enchant", "Player", "Summon", "Interrupt", "Scariest", "You'll", "Ever", "See", "Eaturecray");
 
+	exports.LAST_PRINTINGS_RESET = "BNG";
+
 	exports.SETS_NOT_ON_GATHERER = ["HHO", "ATH", "ITP", "DKM", "RQS", "DPA"];
 	exports.SETS_WITH_NO_IMAGES = [];
 	
@@ -1136,6 +1138,13 @@
 			type : "expansion",
 			block : "Theros",
 			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"]
+		},
+		{
+			name : "Modern Event Deck 2014",
+			code : "MD1",
+			releaseDate : "2014-05-30",
+			border : "black",
+			type : "box"
 		}
 	];
 

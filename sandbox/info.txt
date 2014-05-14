@@ -21,13 +21,15 @@ node build/buildSet.js <expansion code>
 
 # Now run
 node util/updatePrintingsFromSet.js nongatherersets
-node util/updatePrintingsFromSet.js <expansion code>
+node util/updatePrintingsFromSet.js sincelastprintingreset
 node util/updateLegalitiesFromSet.js <expansion code>
 
 # If the new set is a CORE set, or the first set of a new block:
 node util/clearCacheForSet.js legalities <set codes that rotated out>
 node build/buildSet.js <set codes that rotated out>
 node util/updateLegalitiesFromSet.js <set codes that rotated out>
+node util/updatePrintingsFromSet.js nongatherersets
+node util/updatePrintingsFromSet.js sincelastprintingreset
 
 # Goto: Any New Set Final Instructions
 

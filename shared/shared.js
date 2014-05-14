@@ -28,6 +28,17 @@ exports.getSetsToDo = function(startAt)
 		{
 			setsToDo = C.SETS_NOT_ON_GATHERER.slice();
 		}
+		else if(arg==="sincelastprintingreset")
+		{
+			var seenLastPrintingResetSet = false;
+			C.SETS.forEach(function(SET)
+			{
+				if(SET.code===C.LAST_PRINTINGS_RESET)
+					seenLastPrintingResetSet = true;
+				else if(seenLastPrintingResetSet)
+					setsToDo.push(SET.code);
+			});
+		}
 		else if(arg.toLowerCase().startsWith("startat"))
 		{
 			setsToDo = C.SETS.map(function(SET) { return SET.code; });
