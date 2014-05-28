@@ -27,6 +27,8 @@
 		<br>
 		Any bugs or feedback, e-mail me at <a href="mailto:robert@cosmicrealms.com">robert@cosmicrealms.com</a><br>
 		<br>
+		Card images and set and mana symbols are available here: <a href="http://mtgimage.com">mtgimage.com</a><br>
+		<br>
 		<strong>Extras</strong> include: Rulings, Printings, Foreign Language Names<br>
 		</p>
 		<br>
@@ -88,7 +90,7 @@
 		<h1>Example Card<a href="#top">(back to top)</a></h1>
 		<img src="images/sentriplets.jpg" id="cardExample">
 		<pre><code data-language="javascript">
-    {
+    {~lb}
                 name : "Sen Triplets",
 
             manaCost : "{~lb}2{~rb}{~lb}W{~rb}{~lb}U{~rb}{~lb}B{~rb}",
@@ -118,20 +120,30 @@
               layout : "normal",
         multiverseid : 180607,
            imageName : "sen triplets",
-    }
+    {~rb}
 		</code></pre>
-		
 		<hr>
 		<a name="documentation"></a>
 		<h1>Documentation<a href="#top">(back to top)</a></h1>
 		<p>All JSON files are UTF8 encoded. There are UTF8 characters (such as Æther Adept) in many of the files.<br>
-		<br>Each individual set is a JSON object like this:</p>
-		<pre><code data-language="javascript">
-    {
+		<br>
+		The <strong>AllSets.json</strong> file is an object that looks like this:<br></p>
+<pre><code data-language="javascript">	{~lb}
+		"LEA" : {~lb} /* set data */ {~rb},
+		"LEB" : {~lb} /* set data */ {~rb},
+		"2ED" : {~lb} /* set data */ {~rb},
+		...
+	{~rb}</code></pre>
+		<p>
+		<br>
+		A flat array of all sets is also available: <a href="json/AllSetsArray.json">AllSetsArray.json</a> and <a href="json/AllSetsArray-x.json">AllSetsArray-x.json</a><br>
+		<br>
+		Each individual set is a JSON object like this:</p>
+<pre><code data-language="javascript">    {~lb}
                  name : "Nemesis",            // The name of the set
                  code : "NMS",                // The code name of the set
          gathererCode : "NE",                 // The code that Gatherer uses for the set. Only present if different than 'code'
-              oldCode : "NEM",                // An old style code that some legacy Magic software uses. Only present if different than 'gathererCode' and 'code'
+              oldCode : "NEM",                // An old style code used by some Magic software. Only present if different than 'gathererCode' and 'code'
           releaseDate : "2000-02-14"          // When the set was released (YYYY-MM-DD)
                border : "black",              // The type of border on the cards, either "white", "black" or "silver"
                  type : "expansion",          // Type of set. One of: "core", "expansion", "reprint", "box", "un",
@@ -141,20 +153,22 @@
                 block : "Masques",            // The block this set is in,
               booster : [ "rare", ... ]       // Booster contents for this set, see below for details
                 cards : [ {}, {}, {}, ... ]   // The cards in the set
-    }
-		</code></pre>
+    {~rb}</code></pre>
+		<p>
+		Some software (Magic Workstation) uses non-standard set codes. You can find those <a href="http://www.slightlymagic.net/forum/viewtopic.php?f=2&t=581#p6454">in this post</a><br>
 		<br>
+		<br>
+		</p>
 		<a name="booster"></a>
 		<h2>Booster Field</h2>
-		The 'booster' key is present for each set that has physical boosters (so not present for box sets, duel decks, digital masters editions, etc.)<br>
+		<p>The 'booster' key is present for each set that has physical boosters (so not present for box sets, duel decks, digital masters editions, etc.)<br>
 		<br>
 		It is an array containing one item per card in the booster. Thus the array length is how many cards are in a booster.<br>
 		<br>
 		Each item in the array is either a string representing the type of booster card or an array of strings representing possible types for that booster card.<br>
 		<br>
-		For example, 'Magic 2013' contains 1 land, 1 marketing card, 10 commons, 3 uncommons and 1 rare or mythic rare:<br>
-		<pre><code data-language="javascript">
-    {
+		For example, 'Magic 2013' contains 1 land, 1 marketing card, 10 commons, 3 uncommons and 1 rare or mythic rare:</p>
+<pre><code data-language="javascript">    {~lb}
     	   name : "Magic 2013",
         booster : [ "land",
                     "marketing",
@@ -162,10 +176,9 @@
                     "uncommon", "uncommon", "uncommon",
                     ["rare", "mythic rare"]
                   ]
-    }
-		</code></pre>
-		<br>
-		The common booster card types are:<br>
+    {~rb}</code></pre>
+		<p><br>
+		The common booster card types are:</p>
 		<ul>
 			<li>common</li>
 			<li>uncommon</li>
@@ -176,19 +189,20 @@
 			<li>checklist</li>
 			<li>double faced</li>
 		</ul>
-		<br>The Time Spiral block has some additional types:<br>
+		<p><br>The Time Spiral block has some additional types:</p>
 		<ul>
 			<li>timeshifted common</li>
 			<li>timeshifted uncommon</li>
 			<li>timeshifted rare</li>
 			<li>timeshifted purple</li>
 		</ul>
-		<br>
+		<p><br>
 		Note that the 'Time Spiral "Timeshifted"' set does not have a booster field. This 'set' was actually a subset of the 'Time Spiral' set and it's cards are the 'timeshifted purple' booster card type mentioned above.<br>
 		<br>
 		Foils are not explictily mentioned, except for 'Modern Masters' where a slot is guaranteed a foil. So that set has four additional possible booster card types: foil common, foil uncommon, foil rare and foil mythic rare<br>
 		<br>
 		<br>
+		</p>
 		<h2>Cards</h2>
 		<p>The cards value is an Array of cards, each being a JSON object with key/value pairs. Below you will find a table detailing each key.<br>
 		<br>

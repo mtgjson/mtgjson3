@@ -1840,4 +1840,90 @@
 			{ renumberImages : "Swamp", order : [] }
 		]
 	};
+
+	exports.SYMBOL_RARITIES = {c:["common"], u : ["uncommon"], r : ["rare"], m : ["mythic", "mythic rare", "mythicrare"], s : ["special"]};
+	exports.SYMBOL_SIZES = [8, 16, 24, 32, 48, 64, 96, 128, 256, 512, 768, 1024];
+
+	exports.SYMBOL_MANA =
+	{
+		w : ["white"],
+		u : ["blue"],
+		b : ["black"],
+		r : ["red"],
+		g : ["green"],
+		s : ["snow"],
+		"0" : ["zero"],
+		"1" : ["one"],
+		"2" : ["two"],
+		"3" : ["three"],
+		"4" : ["four"],
+		"5" : ["five"],
+		"6" : ["six"],
+		"7" : ["seven"],
+		"8" : ["eight"],
+		"9" : ["nine"],
+		"10" : ["ten"],
+		"11" : ["eleven"],
+		"12" : ["twelve"],
+		"13" : ["thirteen"],
+		"14" : ["fourteen"],
+		"15" : ["fifteen"],
+		"16" : ["sixteen"],
+		"17" : ["seventeen"],
+		"18" : ["eighteen"],
+		"19" : ["nineteen"],
+		"20" : ["twenty"],
+		"100" : ["onehundred", "hundred"],
+		"1000000" : ["onemillion", "million"],
+		x : [],
+		y : [],
+		z : [],
+		wu : ["whiteblue", "bluewhite", "uw"],
+		wb : ["whiteblack", "blackwhite", "bw"],
+		ub : ["blueblack", "blackblue", "bu"],
+		ur : ["bluered", "redblue", "ru"],
+		br : ["blackred", "redblack", "rb"],
+		bg : ["blackgreen", "greenblack", "gb"],
+		rg : ["redgreen", "greenred", "gr"],
+		rw : ["redwhite", "whitered", "wr"],
+		gw : ["greenwhite", "whitegreen", "wg"],
+		gu : ["greenblue", "bluegreen", "ug"],
+		"2w" : ["twowhite", "2white", "whitetwo", "w2", "white2"],
+		"2u" : ["twoblue", "2blue", "bluetwo", "u2", "blue2"],
+		"2b" : ["twoblack", "2black", "blacktwo", "b2", "black2"],
+		"2r" : ["twored", "2red", "redtwo", "r2", "red2"],
+		"2g" : ["twogreen", "2green", "greentwo", "g2", "green2"],
+		p : ["phyrexian"],
+		pw : ["phyrexianwhite", "pwhite", "whitephyrexian", "whitep", "wp", "wphyrexian"],
+		pu : ["phyrexianblue", "pblue", "bluephyrexian", "bluep", "up", "uphyrexian"],
+		pb : ["phyrexianblack", "pblack", "blackphyrexian", "blackp", "bp", "bphyrexian"],
+		pr : ["phyrexianred", "pred", "redphyrexian", "redp", "rp", "rphyrexian"],
+		pg : ["phyrexiangreen", "pgreen", "greenphyrexian", "greenp", "gp", "gphyrexian"],
+		"∞" : ["infinity"],
+		h : ["half", "halfcolorless", "colorlesshalf"],
+		hw : ["halfwhite", "halfw", "whitehalf", "whalf", "wh", "whiteh"],
+		hu : ["halfblue", "halfu", "bluehalf", "uhalf", "uh", "blueh"],
+		hb : ["halfblack", "halfb", "blackhalf", "bhalf", "bh", "blackh"],
+		hr : ["halfred", "halfr", "redhalf", "rhalf", "rh", "redh"],
+		hg : ["halfgreen", "halfg", "greenhalf", "ghalf", "gh", "greenh"]
+	};
+
+	exports.SYMBOL_OTHER =
+	{
+		t : ["tap"],
+		q : ["untap"],
+		artifact : [],
+		creature : [],
+		enchantment : [],
+		instant : [],
+		land : [],
+		multiple : [],
+		planeswalker : [],
+		sorcery : [],
+		power : [],
+		toughness : [],
+		chaosdice : [],
+		planeswalk : [],
+		forwardslash : []
+	};
 })(typeof exports==="undefined" ? window.C={} : exports);

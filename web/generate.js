@@ -42,13 +42,17 @@ tiptoe(
 		var args=arguments;
 
 		var allSets = {};
+		var allSetsArray = [];
+
 		var allSetsWithExtras = {};
+		var allSetsArrayWithExtras = [];
 
 		C.SETS.forEach(function(SET, i)
 		{
 			var setWithExtras = JSON.parse(args[i]);
 
 			allSetsWithExtras[SET.code] = setWithExtras;
+			allSetsArrayWithExtras.push(setWithExtras);
 			
 			var set = base.clone(setWithExtras, true);
 			set.cards.forEach(function(card)
@@ -61,7 +65,9 @@ tiptoe(
 				delete card.originalType;
 				delete card.legalities;
 			});
+
 			allSets[SET.code] = set;
+			allSetsArray.push(set);
 
 			fs.writeFile(path.join(__dirname, "json", SET.code + ".json"), JSON.stringify(set), {encoding : "utf8"}, this.parallel());
 			fs.writeFile(path.join(__dirname, "json", SET.code + "-x.json"), JSON.stringify(setWithExtras), {encoding : "utf8"}, this.parallel());
@@ -83,7 +89,10 @@ tiptoe(
 		dustData.changeLog = fs.readFileSync(path.join(__dirname, "changelog.html"), {encoding : "utf8"});
 
 		fs.writeFile(path.join(__dirname, "json", "AllSets.json"), JSON.stringify(allSets), {encoding : "utf8"}, this.parallel());
+		fs.writeFile(path.join(__dirname, "json", "AllSetsArray.json"), JSON.stringify(allSetsArray), {encoding : "utf8"}, this.parallel());
+
 		fs.writeFile(path.join(__dirname, "json", "AllSets-x.json"), JSON.stringify(allSetsWithExtras), {encoding : "utf8"}, this.parallel());
+		fs.writeFile(path.join(__dirname, "json", "AllSetsArray-x.json"), JSON.stringify(allSetsArrayWithExtras), {encoding : "utf8"}, this.parallel());
 		
 		fs.writeFile(path.join(__dirname, "json", "SetCodes.json"), JSON.stringify(C.SETS.map(function(SET) { return SET.code; })), {encoding : "utf8"}, this.parallel());
 		fs.writeFile(path.join(__dirname, "json", "SetList.json"), JSON.stringify(C.SETS.map(function(SET) { return {name : SET.name, code : SET.code}; })), {encoding : "utf8"}, this.parallel());
