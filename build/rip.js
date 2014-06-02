@@ -321,6 +321,9 @@ function processCardPart(doc, cardPart, printedDoc, printedCardPart)
 			card.layout = "phenomenon";
 		else if(card.types.contains("Vanguard") && card.name.endsWith(" Avatar"))
 			card.name = card.name.substring(0, (card.name.length-" Avatar".length));
+		
+		if(card.types.map(function(type) { return type.toLowerCase(); }).contains("vanguard"))
+			card.layout = "vanguard";
 	}
 
 	// Original type
