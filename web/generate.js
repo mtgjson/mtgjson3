@@ -6,6 +6,7 @@ var base = require("xbase"),
 	runUtil = require("xutil").run,
 	rimraf = require("rimraf"),
 	printUtil = require("xutil").print,
+	fileUtil = require("xutil").file,
 	diffUtil = require("xutil").diff,
 	fs = require("fs"),
 	path = require("path"),
@@ -86,7 +87,7 @@ tiptoe(
 		dustData.allSize = printUtil.toSize(JSON.stringify(allSets).length, 1);
 		dustData.allSizeX = printUtil.toSize(JSON.stringify(allSetsWithExtras).length, 1);
 
-		dustData.changeLog = fs.readFileSync(path.join(__dirname, "changelog.html"), {encoding : "utf8"});
+		dustData.changeLog = JSON.parse(fs.readFileSync(path.join(__dirname, "changelog.json"), {encoding : "utf8"})).map(function(o) { o.when = moment(o.when, "YYYY-MM-DD").format("MMM D, YYYY"); return o; });
 
 		fs.writeFile(path.join(__dirname, "json", "AllSets.json"), JSON.stringify(allSets), {encoding : "utf8"}, this.parallel());
 		fs.writeFile(path.join(__dirname, "json", "AllSetsArray.json"), JSON.stringify(allSetsArray), {encoding : "utf8"}, this.parallel());
@@ -98,6 +99,8 @@ tiptoe(
 		fs.writeFile(path.join(__dirname, "json", "SetList.json"), JSON.stringify(C.SETS.map(function(SET) { return {name : SET.name, code : SET.code}; })), {encoding : "utf8"}, this.parallel());
 		fs.writeFile(path.join(__dirname, "json", "version-full.json"), JSON.stringify({version:dustData.version}), {encoding : "utf8"}, this.parallel());
 		fs.writeFile(path.join(__dirname, "json", "version.json"), JSON.stringify(dustData.version), {encoding : "utf8"}, this.parallel());
+
+		fileUtil.copy(path.join(__dirname, "changelog.json"), path.join(__dirname, "json", "changelog.json"), this.parallel());
 	},
 	function verifyJSON()
 	{

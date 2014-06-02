@@ -1,0 +1,401 @@
+[
+	{
+		"version": "2.5.0",
+		"when": "2014-05-13",
+		"changes": [
+			"Added set: Modern Event Deck 2014 (MD1)"
+		]
+	},
+	{
+		"version": "2.4.3",
+		"when": "2014-05-12",
+		"changes": [
+			"Added an 'oldCode' field to several sets. See the documentation for more details."
+		]
+	},
+	{
+		"version": "2.4.2",
+		"when": "2014-05-01",
+		"changes": [
+			"As per rule 702.86 and rule 710, Level Up cards now have the layout: \"leveler\" (ROE, DDG, C13)",
+			"ARC, HOP, PC2: Planes, Schemes and Phenomenon cards now correctly have foreignName fields (where available)"
+		]
+	},
+	{
+		"version": "2.4.1",
+		"when": "2014-05-01",
+		"changes": [
+			"DPA: Fixed a bug where the 'number' field was a number rather than a 'string' like it's supposed to be"
+		]
+	},
+	{
+		"version": "2.4.0",
+		"when": "2014-04-25",
+		"changes": [
+			"Added set: Journey into Nyx (JOU)"
+		]
+	},
+	{
+		"version": "2.3.0",
+		"when": "2014-04-18",
+		"changes": [
+			"Added set: Duels of the Planeswalkers (DPA)",
+			"Some of the non-gatherer sets didn't have correct printings. This has been corrected."
+		]
+	},
+	{
+		"version": "2.2.3",
+		"when": "2014-04-18",
+		"changes": [
+			"Cards no longer have duplicate rulings. The most recent duplicate ruling is kept. Updated sets: INV PLC EVE ALA WWK NPH DDM"
+		]
+	},
+	{
+		"version": "2.2.2",
+		"when": "2014-03-30",
+		"changes": [
+			"RQS: Added the imageName field back for all cards. Turns out RQS cards are just 4th edition cards, so scans do exist"
+		]
+	},
+	{
+		"version": "2.2.1",
+		"when": "2014-03-30",
+		"changes": [
+			"RQS: Removed the imageName field from all cards, since I know of no available image scans of these cards"
+		]
+	},
+	{
+		"version": "2.2.0",
+		"when": "2014-03-29",
+		"changes": [
+			"Added set: Introductory Two-Player Set (ITP)",
+			"Added set: Deckmasters (DKM)",
+			"Added set: Rivals Quick Start Set (RQS)",
+			"ATH: Updated 'originalText', 'originalType', 'flavor' and 'artist' fields so they are correct for all cards.",
+			"4ED, 5ED, 6ED, LEG: Pyrotechnics now has the correct 'flavor' text",
+			"VAN: Nekrataal now has the proper hand size of -1"
+		]
+	},
+	{
+		"version": "2.1.0",
+		"when": "2014-03-29",
+		"changes": [
+			"Added set: Anthologies (ATH)",
+			"PD2: Name changed from 'Premium Deck Series: Fire & Lightning' to the official name 'Premium Deck Series: Fire and Lightning' which also now correctly matches the 'printings' field name"
+		]
+	},
+	{
+		"version": "2.0.0",
+		"when": "2014-03-29",
+		"changes": [
+			"Added 'legalities' field for every card in every set. Only present in the 'extras' JSON.",
+			"Version number is now three digits in major.minor.bug format. \"minor\" will be updated whenever a new set is added. \"bug\" will be updated when small changes take place, like fixing a card typo.",
+			"Several cards from older sets now correctly have 'Born of the Gods' in their 'printings' fields where appropriate."
+		]
+	},
+	{
+		"version": "1.30",
+		"when": "2014-03-10",
+		"changes": [
+			"BOK: 2 cards were listed twice, \"Ichiga, Who Topples Oaks\" and \"Azamuki, Treachery Incarnate\". There is now correctly only one of each of these cards. Also, one of the duplicate \"Ichiga, Who Topples Oaks\" entries had an incorrect toughness value and each duplicate had a regular ascii dash instead of a UTF8 'long dash' in the 'type' field."
+		]
+	},
+	{
+		"version": "1.29",
+		"when": "2014-02-26",
+		"changes": [
+			"Added set: Duel Decks: Jace vs. Vraska (DDM)"
+		]
+	},
+	{
+		"version": "1.28",
+		"when": "2014-02-25",
+		"changes": [
+			"DDD: Basking Rootwalla and Garruk Wildspeaker incorrectly had 'token' for the 'layout' property instead of 'normal'"
+		]
+	},
+	{
+		"version": "1.27",
+		"when": "2014-02-25",
+		"changes": [
+			"HHO: The Naughty/Nice split cards were missing the 'names' field."
+		]
+	},
+	{
+		"version": "1.26",
+		"when": "2014-02-25",
+		"changes": [
+			"Added set: Happy Holidays (HHO)",
+			"UNH: The 'Who/What/When/Where/Why' card has been split into 5 separate cards and has been marked as a 'split' card."
+		]
+	},
+	{
+		"version": "1.25",
+		"when": "2014-02-22",
+		"changes": [
+			"Several sets now have a 'gathererCode' field. This is the code that gatherer uses for the set. This key is only present if the gatherer code is different than the regular 3-letter set code."
+		]
+	},
+	{
+		"version": "1.24",
+		"when": "2014-02-15",
+		"changes": [
+			"S99, RTR: Added missing booster info"
+		]
+	},
+	{
+		"version": "1.23",
+		"when": "2014-02-15",
+		"changes": [
+			"The set 'Commander' has been re-named to 'Magic: The Gathering-Commander' to match the official set name and to match what has always been in the 'printings' field of cards.",
+			"Each set object now has a 'booster' property describing it's booster pack properties. See the Booster Documentation for more details.",
+			"The 'colors' field is no longer present on cards that have no colors (it used to be present, but as an empty array)"
+		]
+	},
+	{
+		"version": "1.22",
+		"when": "2014-02-15",
+		"changes": [
+			"Fixed a bug where the zip files extracted a bunch of sub directories instead of just the JSON. Whoops!"
+		]
+	},
+	{
+		"version": "1.21",
+		"when": "2014-02-12",
+		"changes": [
+			"Every card in every set has been updated with the latest text, type and rulings.",
+			"Added card fields 'originalText' and 'originalType' to the extras files. These contain the original text and type on the card at the time it was printed."
+		]
+	},
+	{
+		"version": "1.20",
+		"when": "2014-01-29",
+		"changes": [
+			"LEA, LEB, 2ED: Jade Statue had power/toughness fields. This was wrong and these fields have been removed."
+		]
+	},
+	{
+		"version": "1.19",
+		"when": "2014-01-29",
+		"changes": [
+			"Added set: Born of the Gods (BNG)"
+		]
+	},
+	{
+		"version": "1.18",
+		"when": "2014-01-21",
+		"changes": [
+			"DGM: Several rulings were missing or out of date. They have been updated."
+		]
+	},
+	{
+		"version": "1.17",
+		"when": "2014-01-13",
+		"changes": [
+			"Added a .zip file for each JSON file",
+			"ROE: Fixed the card \"Spawnsire of Ulamog\" so it's text correctly has {~lb}20{~rb} instead of {~lb}2{~rb}0."
+		]
+	},
+	{
+		"version": "1.16",
+		"when": "2013-12-19",
+		"changes": [
+			"Added set: If a card had more than 25 printings, it was only showing the first 25. It now shows all printings",
+			"Added set: Some cards had invalid data in the printings listing (eg \"Banned as Commander\")",
+			"Added set: The data for older sets wasn't updated if the card appeared in more recent sets"
+		]
+	},
+	{
+		"version": "1.15",
+		"when": "2013-12-16",
+		"changes": [
+			"Added new layout: phenomenon",
+			"Changed Planechase 'Phenomenon' cards to have the layout 'phenomenon' instead of 'normal'",
+			"Fixed some bugs in PC2 where the chaos symbol wasn't appearing as {C}"
+		]
+	},
+	{
+		"version": "1.14",
+		"when": "2013-12-16",
+		"changes": [
+			"Added set: Masters Edition (MED)",
+			"Added set: Masters Edition II (ME2)",
+			"Added set: Masters Edition III (ME3)",
+			"Added set: Masters Edition IV (ME4)",
+			"Added new set type: masters"
+		]
+	},
+	{
+		"version": "1.13",
+		"when": "2013-12-16",
+		"changes": [
+			"Added set: Vanguard (VAN)",
+			"Added 'Plane' cards to sets :Planechase and Planechase 2012",
+			"Added 'Scheme' cards to set: Archenemy",
+			"Added new symbol: {~lb}C{~rb} for \"chaos\"",
+			"Added new layouts: plane and scheme",
+			"Added new rarity: Special",
+			"Added new supertype: Ongoing",
+			"Added new fields: hand and life",
+			"Added new set type: vanguard"
+		]
+	},
+	{
+		"version": "1.12",
+		"when": "2013-12-10",
+		"changes": [
+			"Added set: Promo set for Gatherer (PPR)",
+			"Added 'promo' as a new possible value for the 'type' field of the set object"
+		]
+	},
+	{
+		"version": "1.11",
+		"when": "2013-11-15",
+		"changes": [
+			"Added set: \"Duel Deck: Sorin vs. Tibalt\" from SVT to DDK",
+			"Added set: \"Duel Deck: Heroes vs. Monsters\" from HVM to DDL"
+		]
+	},
+	{
+		"version": "1.10",
+		"when": "2013-11-06",
+		"changes": [
+			"Added set: Timespiral \"Timeshifted\" (TSB)"
+		]
+	},
+	{
+		"version": "1.9",
+		"when": "2013-11-01",
+		"changes": [
+			"Added set: Commander 2013 Edition (C13)"
+		]
+	},
+	{
+		"version": "1.8",
+		"when": "2013-10-29",
+		"changes": [
+			"The 'type' field of each card now uses a UTF8 'long dash' instead of an ASCII dash. This was changed to align with official MTG rule 205.3b",
+			"Fixed a bug with \"Urza's Power-Plant\" where the sub-types and type incorrectly had just \"Power\" instead of \"Power-Plant\"",
+			"Fixed a bug with \"Assembly-Worker\" (Time Spiral) where the sub-types and type incorrectly had just \"Assembly\" instead of \"Assembly-Worker\"",
+			"Fixed a bug with \"Look at Me, I'm R&D\" (Unhinged) where the artist was missing",
+			"Fixed a bug with all \"double-faced\" layout cards where the dark side had the wrong multiverseid"
+		]
+	},
+	{
+		"version": "1.7",
+		"when": "2013-09-18",
+		"changes": [
+			"Added set: Theros (THS)"
+		]
+	},
+	{
+		"version": "1.6",
+		"when": "2013-09-09",
+		"changes": [
+			"Added set: Duel Decks: Heroes vs. Monsters (DDL)",
+			"Cards with split layouts now correctly have 'a' or 'b' suffixed card numbers such as 127a and 127b instead of just 127. The following sets contain split cards: APC, ARC, CMD, DDH, DDJ, DGM, DIS, HOP, INV, PLC",
+			"Fixed a bug in DDG where Ghostfire was listing 'red' as a color, even though it is a colorless card"
+		]
+	},
+	{
+		"version": "1.5",
+		"when": "2013-08-21",
+		"changes": [
+			"Added set: From the Vault: Twenty",
+			"Added set: Planechase",
+			"Added set: Planechase 2012 Edition",
+			"Added set: Archenemy",
+			"Corrected the 'Duel Decks: Sorin vs. Tibalt' release date",
+			"Updated all JSON to have more accurate 'printings' and some additional foreign language names"
+		]
+	},
+	{
+		"version": "1.4",
+		"when": "2013-07-11",
+		"changes": [
+			"Added set: Magic 2014 Core Set",
+			"Added set: Portal",
+			"Added set: Portal Second Age",
+			"Added set: Portal Three Kingdoms",
+			"Added set: Starter 1999",
+			"Added set: Starter 2000",
+			"Added set: Magic: The Gathering-Commander",
+			"Added set: Commander's Arsenal"
+		]
+	},
+	{
+		"version": "1.3",
+		"when": "2013-06-28",
+		"changes": [
+			"Added 'watermark' to each card",
+			"Added set: Unglued",
+			"Added set: Unhinged",
+			"Added set: From the Vault: Dragons",
+			"Added set: From the Vault: Exiled",
+			"Added set: From the Vault: Relics",
+			"Added set: From the Vault: Legends",
+			"Added set: From the Vault: Realms",
+			"Added set: Premium Deck Series: Slivers",
+			"Added set: Premium Deck Series: Fire & Lightning",
+			"Added set: Premium Deck Series: Graveborn",
+			"Added set: Duel Decks: Elves vs. Goblins",
+			"Added set: Duel Decks: Jace vs. Chandra",
+			"Added set: Duel Decks: Divine vs. Demonic",
+			"Added set: Duel Decks: Garruk vs. Liliana",
+			"Added set: Duel Decks: Phyrexia vs. The Coalition",
+			"Added set: Duel Decks: Elspeth vs. Tezzeret",
+			"Added set: Duel Decks: Knights vs. Dragons",
+			"Added set: Duel Decks: Ajani vs. Nicol Bolas",
+			"Added set: Duel Decks: Venser vs. Koth",
+			"Added set: Duel Decks: Izzet vs. Golgari",
+			"Added set: Duel Decks: Sorin vs. Tibalt",
+			"Each card may now have a \"border\" key if the border is different than the rest of the set. See the documentation for more details.",
+			"Planeshift: Fixed a bug with 'Draco' text having {1}0 in the text rather than {10}",
+			"The 'printings' field on each card is now ordered by release date in ascending order"
+		]
+	},
+	{
+		"version": "1.2.2",
+		"when": "2013-06-27",
+		"changes": [
+			"Fixed a bug in the 'Modern Masters' set, where it contained no cards"
+		]
+	},
+	{
+		"version": "1.2.1",
+		"when": "2013-06-27",
+		"changes": [
+			"Fixed a typo in the 'Modern Masters' set, where it had 'tpe' : 'reprint' instead of 'type' : 'reprint'"
+		]
+	},
+	{
+		"version": "1.2",
+		"when": "2013-06-17",
+		"changes": [
+			"Added 'printings' field to each card that show which sets the card was printed in. Available in 'extras' JSON files",
+			"Added set: Chronicles",
+			"Added set: Battle Royale Box Set",
+			"Added set: Beatdown Box Set",
+			"Added set: Modern Masters",
+			"Added an example JSON object for a set object",
+			"Added \"type\" and \"block\" to each set object."
+		]
+	},
+	{
+		"version": "1.1",
+		"when": "2013-06-17",
+		"changes": [
+			"Changed file names from -r (for rulings) to -x (for extras)",
+			"Added foreign language names for each card. Available in 'extras' JSON files",
+			"Added documentation for rulings and foreignNames keys",
+			"Made a better \"Individual Sets\" download table and sorted it by release date"
+		]
+	},
+	{
+		"version": "1.0",
+		"when": "2013-06-16",
+		"changes": [
+			"First release!"
+		]
+	}
+]

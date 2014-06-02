@@ -573,7 +573,21 @@
 					<th>Changes</th>
 				</tr>
 			</thead>
-			<tbody>{changeLog|s}</tbody>
+			<tbody>
+				{#changeLog}
+					<tr>
+						<td>{version}</td>
+						<td>{when}</td>
+						<td>
+							<ul>
+								{#changes}
+									<li>{.}</li>
+								{/changes}
+							</ul>
+						</td>
+					</tr>
+				{/changeLog}
+			</tbody>
 		</table>
 		<hr>
 		<a name="individualSets"></a>
