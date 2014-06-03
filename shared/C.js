@@ -1841,6 +1841,26 @@
 		]
 	};
 
+	exports.ARTIST_CORRECTIONS =
+	{
+		"Brian Snõddy" : ["Brian Snōddy", "Brian Snoddy", "Brian Snøddy"],
+		"Dennis Detwiller" : ["Dennis Detwiler", "Denise Detwiler"],
+		"Diana Vick" : ["Diane Vick"],
+		"Douglas Shuler" : ["Douglas Schuler"],
+		"Edward P. Beard, Jr." : ["Edward P. Beard, Jr", "Edward Beard, Jr."],
+		"Jon J. Muth" : ["Jon J Muth"],
+		"Ken Meyer, Jr." : ["Ken Meyer Jr."],
+		"Kerstin Kaman" : ["Kersten Kaman"],
+		"L. A. Williams" : ["L.A. Williams"],
+		"Melissa A. Benson" : ["Melissa Benson"],
+		"Ron Spencer" : ["ROn Spencer"],
+		"Richard Kane Ferguson" : ["Richard Kane-Ferguson"],
+		"Sam Wood" : ["Sam Woods"],
+		"Steve White" : ["Steven White"],
+		"Tim Hildebrandt" : ["Tim Hilderbrandt"],
+		"Zoltan Boros & Gabor Szikszai" : ["Zoltan Boras & Gabor Szikszai"]
+	};
+
 	exports.SYMBOL_RARITIES = {c:["common"], u : ["uncommon"], r : ["rare"], m : ["mythic", "mythic rare", "mythicrare"], s : ["special"]};
 	exports.SYMBOL_SIZES = [8, 16, 24, 32, 48, 64, 96, 128, 256, 512, 768, 1024];
 

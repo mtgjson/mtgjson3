@@ -18,8 +18,8 @@ var dustData =
 {
 	title : "Magic the Gathering card data in JSON format",
 	sets  : [],
-	version : "2.5.2",
-	lastUpdated : "June 2, 2014"
+	version : "2.5.3",
+	lastUpdated : "June 3, 2014"
 };
 
 tiptoe(

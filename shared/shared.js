@@ -181,4 +181,18 @@ exports.performSetCorrections = function(setCorrections, cards)
 			}
 		}
 	});
+
+	// Artist corrections
+	cards.forEach(function(card)
+	{
+		if(!card.artist)
+			return;
+
+		card.artist = card.artist.replaceAll(" and ", " & ");
+		Object.forEach(C.ARTIST_CORRECTIONS, function(correctArtist, artistAliases)
+		{
+			if(artistAliases.contains(card.artist))
+				card.artist = correctArtist;
+		});
+	});
 };

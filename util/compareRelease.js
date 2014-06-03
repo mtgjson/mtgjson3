@@ -14,6 +14,7 @@ var base = require("xbase"),
 	tiptoe = require("tiptoe");
 
 var setsToDo = shared.getSetsToDo();
+var updatedSetFiles = [];
 
 tiptoe(
 	function processSets()
@@ -32,6 +33,8 @@ tiptoe(
 	},
 	function finish(err)
 	{
+		base.info(JSON.stringify(updatedSetFiles.uniqueBySort().sort()));
+
 		if(err)
 		{
 			base.error(err);
@@ -54,7 +57,7 @@ function processSet(code, cb)
 		},
 		function compare(oldJSONArgs, newJSON)
 		{
-			var result = compareSets(JSON.parse(oldJSONArgs[1]), JSON.parse(newJSON));
+			var result = compareSets(JSON.parse(oldJSONArgs[1]), JSON.parse(newJSON), code);
 			if(result)
 				console.log(result);
 
@@ -67,7 +70,7 @@ function processSet(code, cb)
 	);
 }
 
-function compareSets(oldSet, newSet)
+function compareSets(oldSet, newSet, filename)
 {
 	var result = "";
 	var oldCardsMap = oldSet.cards.mutate(function(card, result) { result[(card.name + " (" + card.multiverseid + ")")] = card; return result; }, {});
@@ -79,6 +82,7 @@ function compareSets(oldSet, newSet)
 	var setChanged = diffUtil.diff(oldSet, newSet);
 	if(setChanged)
 	{
+		updatedSetFiles.push(filename);
 		result += "SET CHANGED : ";
 		result += setChanged;
 	}
@@ -86,6 +90,7 @@ function compareSets(oldSet, newSet)
 	var cardsChanged = diffUtil.diff(Object.keys(oldCardsMap), Object.keys(newCardsMap));
 	if(cardsChanged)
 	{
+		updatedSetFiles.push(filename);
 		result += "Cards Changed : ";
 		result += cardsChanged;
 	}
@@ -100,6 +105,7 @@ function compareSets(oldSet, newSet)
 		var subResult = diffUtil.diff(oldCard, newCard);
 		if(subResult)
 		{
+			updatedSetFiles.push(filename);
 			result += color.magenta(JSON.stringify(key)) + " : \n";
 			result += subResult;
 		}
