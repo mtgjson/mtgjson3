@@ -659,8 +659,9 @@ function addLegalitiesToCard(card, cb)
 			{
 				var format = cardRow.find("td:nth-child(1)").text().trim();
 				var legality = cardRow.find("td:nth-child(2)").text().trim();
+				var condition = cardRow.find("td:nth-child(3)").text().trim();
 				if(format && legality)
-					card.legalities[format] = legality;
+					card.legalities[format] = legality + (condition && condition.length>0 ? (" (" + condition + ")") : "");
 			});
 
 			this();

@@ -47,6 +47,11 @@ function processSet(code, cb)
 				card.printings.forEach(function(printing)
 				{
 					var printingCode = getSetCodeByName(printing);
+					if(!printingCode)
+					{
+						base.error("Unknown printing: %s", printing);
+						return;
+					}
 
 					if(!setCards.hasOwnProperty(printingCode))
 						setCards[printingCode] = [];

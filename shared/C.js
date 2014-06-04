@@ -3,7 +3,7 @@
 (function(exports)
 {
 	exports.SUPERTYPES = ["Basic", "Legendary", "Snow", "World", "Ongoing"];
-	exports.TYPES = ["Instant", "Sorcery", "Artifact", "Creature", "Enchantment", "Land", "Planeswalker", "Tribal", "Plane", "Phenomenon", "Scheme", "Vanguard"];
+	exports.TYPES = ["Instant", "Sorcery", "Artifact", "Creature", "Enchantment", "Land", "Planeswalker", "Tribal", "Plane", "Phenomenon", "Scheme", "Vanguard", "Conspiracy"];
 
 	// Unglued/Unhinged types
 	exports.TYPES.push("Enchant", "Player", "Summon", "Interrupt", "Scariest", "You'll", "Ever", "See", "Eaturecray");
@@ -170,6 +170,7 @@
 		{
 			name : "Introductory Two-Player Set",
 			code : "ITP",
+			oldCode : "I2P",
 			releaseDate : "1996-12-31",
 			border : "white",
 			type : "starter"
@@ -1145,6 +1146,14 @@
 			releaseDate : "2014-05-30",
 			border : "black",
 			type : "box"
+		},
+		{
+			name : "Magic: The Gathering—Conspiracy",
+			code : "CNS",
+			releaseDate : "2014-06-06",
+			border : "black",
+			type : "expansion",
+			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "draft-matters", "marketing"]
 		}
 	];
 
