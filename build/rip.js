@@ -543,6 +543,11 @@ function getURLAsDoc(targetURL, cb)
 			if(!fs.existsSync(cachePath))
 				fs.writeFileSync(cachePath, pageHTML, {encoding:"utf8"});
 
+			// June 14, 2014: New gatherer has invalid HTML, this regex fixes it so cheerio can parse code correctly.
+			// See difference between 373328 and 221209. In the first one, they don't have a <tr> following the cardDetails table
+			// We don't save the modified HTML to disk cache, always store original HTML to disk cache
+			pageHTML = pageHTML.replace(/(<table class="cardDetails"[^>]+>)[^<]+<div([^>]*)>/g, "$1<tr><div$2>");
+
 			setImmediate(function() { cb(null, cheerio.load(pageHTML)); }.bind(this));
 		}
 	);
