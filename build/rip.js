@@ -697,7 +697,12 @@ function addPrintingsToCard(card, cb)
 		function getAllPages(doc)
 		{
 			var pageLinks = doc("#ctl00_ctl00_ctl00_MainContent_SubContent_SubContent_PrintingsList_pagingControlsContainer a").map(function(i, item) { return doc(item); });
-			var numPages = pageLinks.length>0 ? pageLinks.length : 1;
+			var numPages = 1;
+			if(pageLinks.length>0)
+			{
+				var lastPageHREF = pageLinks.last().attr("href");
+				numPages += +querystring.parse(lastPageHREF.substring(lastPageHREF.indexOf("?")+1)).page;
+			}
 			for(var i=0;i<numPages;i++)
 			{
 				getURLAsDoc(shared.buildMultiversePrintingsURL(card.multiverseid, i), this.parallel());
