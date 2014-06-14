@@ -1154,6 +1154,13 @@
 			border : "black",
 			type : "expansion",
 			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "draft-matters", "marketing"]
+		},
+		{
+			name : "Vintage Masters",
+			code : "VMA",
+			releaseDate : "2014-06-16",
+			border : "black",
+			type : "masters"
 		}
 	];
 

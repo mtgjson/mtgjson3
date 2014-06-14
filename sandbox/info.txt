@@ -22,6 +22,8 @@ node build/buildSet.js <expansion code>
 # Now run
 node util/updatePrintingsFromSet.js nongatherersets
 node util/updatePrintingsFromSet.js sincelastprintingreset
+
+# Then IF the set was some how BEFORE our lastprinting reset (HIGHLY UNLIKELY) run:
 node util/updateLegalitiesFromSet.js <expansion code>
 
 # If the new set is a CORE set, or the first set of a new block:
@@ -38,21 +40,23 @@ node util/updatePrintingsFromSet.js sincelastprintingreset
 | Any New Set Final Instructions |
 \--------------------------------/
 # Update generate.js with new version number and lastUpdated date
-# Update index.dust with new change log entry
+# Update changelog.json with new change log entry
 
 # Now generate web
 cd web
 node generate.js
-
-# Now examine JSON changes
-cd util
-node compareRelease.js allsets not<expansion code> | more
 
 # Add images to dev.mtgimage.com
 
 # Now verify data against images, run then open in browser
 node verify/generate.js <expansion code>
 file:///mnt/compendium/DevLab/mtgjson/verify/verify.html
+
+# Now examine JSON changes
+cd util
+node compareRelease.js allsets not<expansion code> | more
+
+# Update changelog.json entry's "updatedSetFiles" field with the files listed at the end of the compareRelease.js execution
 
 # Test in browser
 http://dev.mtgjson.com
