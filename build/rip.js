@@ -242,6 +242,7 @@ function processCardPart(doc, cardPart, printedDoc, printedCardPart)
 	};
 
 	var idPrefix = getCardPartIDPrefix(cardPart);
+	var idPrefixPrinted = getCardPartIDPrefix(printedCardPart);
 
 	// Multiverseid
 	card.multiverseid = +querystring.parse(url.parse(cardPart.find(idPrefix + "_setRow .value a").attr("href")).query).multiverseid.trim();
@@ -327,7 +328,7 @@ function processCardPart(doc, cardPart, printedDoc, printedCardPart)
 	}
 
 	// Original type
-	card.originalType = printedCardPart.find(idPrefix + "_typeRow .value").text().trim().replaceAll(" -", " —");
+	card.originalType = printedCardPart.find(idPrefixPrinted + "_typeRow .value").text().trim().replaceAll(" -", " —");
 
 	// Converted Mana Cost (CMC)
 	var cardCMC = cardPart.find(idPrefix + "_cmcRow .value").text().trim();
@@ -423,7 +424,7 @@ function processCardPart(doc, cardPart, printedDoc, printedCardPart)
 		card.layout = "leveler";
 
 	// Original Printed Text
-	var originalCardText = processTextBlocks(printedDoc, printedCardPart.find(idPrefix + "_textRow .value .cardtextbox")).trim();
+	var originalCardText = processTextBlocks(printedDoc, printedCardPart.find(idPrefixPrinted + "_textRow .value .cardtextbox")).trim();
 	if(originalCardText)
 	{
 		card.originalText = originalCardText;
