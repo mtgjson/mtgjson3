@@ -660,7 +660,9 @@
 			code : "MED",
 			releaseDate : "2007-09-10",
 			border : "black",
-			type : "masters"
+			type : "masters",
+			onlineOnly : true,
+			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land"]
 		},
 		{
 			name : "Lorwyn",
@@ -669,7 +671,7 @@
 			border : "black",
 			type : "expansion",
 			block : "Lorwyn",
-			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "marketing"]
+			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"]
 		},
 		{
 			name : "Duel Decks: Elves vs. Goblins",
@@ -717,7 +719,9 @@
 			code : "ME2",
 			releaseDate : "2008-09-22",
 			border : "black",
-			type : "masters"
+			type : "masters",
+			onlineOnly : true,
+			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land"]
 		},
 		{
 			name : "Shards of Alara",
@@ -791,7 +795,9 @@
 			code : "ME3",
 			releaseDate : "2009-09-07",
 			border : "black",
-			type : "masters"
+			type : "masters",
+			onlineOnly : true,
+			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land"]
 		},		
 		{
 			name : "Zendikar",
@@ -898,7 +904,9 @@
 			code : "ME4",
 			releaseDate : "2011-01-10",
 			border : "black",
-			type : "masters"
+			type : "masters",
+			onlineOnly : true,
+			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "urza land"]
 		},
 		{
 			name : "Mirrodin Besieged",
@@ -1160,7 +1168,9 @@
 			code : "VMA",
 			releaseDate : "2014-06-16",
 			border : "black",
-			type : "masters"
+			type : "masters",
+			onlineOnly : true,
+			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", ["power nine", "foil"]]
 		}
 	];
 

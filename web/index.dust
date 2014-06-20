@@ -151,6 +151,7 @@
                                               //                      "starter", "commander", "planechase", "archenemy",
                                               //                      "promo", "vanguard", "masters"
                 block : "Masques",            // The block this set is in,
+           onlineOnly : false,                // Present and set to true if the set was only released online
               booster : [ "rare", ... ]       // Booster contents for this set, see below for details
                 cards : [ {}, {}, {}, ... ]   // The cards in the set
     {~rb}</code></pre>
@@ -200,6 +201,8 @@
 		Note that the 'Time Spiral "Timeshifted"' set does not have a booster field. This 'set' was actually a subset of the 'Time Spiral' set and it's cards are the 'timeshifted purple' booster card type mentioned above.<br>
 		<br>
 		The "Magic: The Gathering—Conspiracy" expansion has an additional "draft-matters" type which can either be a "Conspiracy" type card or a card that affects drafting.<br>
+		<br>
+		The "Vintage Masters" set has one slot that can contain either a power nine card or a guaranteed foil, so it has additional types "power nine" and "foil".<br>
 		<br>
 		Foils are not explictily mentioned, except for 'Modern Masters' where a slot is guaranteed a foil. So that set has four additional possible booster card types: foil common, foil uncommon, foil rare and foil mythic rare<br>
 		<br>
