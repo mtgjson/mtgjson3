@@ -337,6 +337,8 @@ function processCardPart(doc, cardPart, printedDoc, printedCardPart)
 
 	// Rarity
 	card.rarity = cardPart.find(idPrefix + "_rarityRow .value").text().trim();
+	if(card.rarity==="Bonus")
+		card.rarity = "Special";
 
 	// Artist
 	card.artist = cardPart.find(idPrefix + "_artistRow .value a").text().trim();
