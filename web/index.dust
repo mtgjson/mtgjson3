@@ -125,6 +125,12 @@
 		<hr>
 		<a name="documentation"></a>
 		<h1>Documentation<a href="#top">(back to top)</a></h1>
+		<p>Topics: <a href="#sets">Sets</a>, <a href="#booster">Booster Field</a>, <a href="#cards">Cards</a>, <a href="#additionalJSON">Additional JSON Files</a>, <a href="#manaSymbols">Mana Symbols</a>, <a href="#otherSymbols">Other Symbols</a>
+		<br>
+		<br>
+		</p>
+		<a name="sets"></a>
+		<h2>Sets<a href="#top">(back to top)</a></h1>
 		<p>All JSON files are UTF8 encoded. There are UTF8 characters (such as Æther Adept) in many of the files.<br>
 		<br>
 		The <strong>AllSets.json</strong> file is an object that looks like this:<br></p>
@@ -153,7 +159,7 @@
                 block : "Masques",            // The block this set is in,
            onlineOnly : false,                // Present and set to true if the set was only released online
               booster : [ "rare", ... ]       // Booster contents for this set, see below for details
-                cards : [ {}, {}, {}, ... ]   // The cards in the set
+                cards : [ {~lb}{~rb}, {~lb}{~rb}, {~lb}{~rb}, ... ]  // The cards in the set
     {~rb}</code></pre>
 		<p>
 		Some software (Magic Workstation) uses non-standard set codes. You can find those <a href="http://www.slightlymagic.net/forum/viewtopic.php?f=2&t=581#p6454">in this post</a><br>
@@ -161,7 +167,7 @@
 		<br>
 		</p>
 		<a name="booster"></a>
-		<h2>Booster Field</h2>
+		<h2>Booster Field<a href="#top">(back to top)</a></h2>
 		<p>The 'booster' key is present for each set that has physical boosters (so not present for box sets, duel decks, digital masters editions, etc.)<br>
 		<br>
 		It is an array containing one item per card in the booster. Thus the array length is how many cards are in a booster.<br>
@@ -208,7 +214,8 @@
 		<br>
 		<br>
 		</p>
-		<h2>Cards</h2>
+		<a name="cards"></a>
+		<h2>Cards<a href="#top">(back to top)</a></h2>
 		<p>The cards value is an Array of cards, each being a JSON object with key/value pairs. Below you will find a table detailing each key.<br>
 		<br>
 		I order the cards first by 'name', then by 'imageName' and finally by 'number'<br>
