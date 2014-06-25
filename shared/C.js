@@ -1549,9 +1549,7 @@
 		[
 			{ match : {name : "Beast", number : "1"}, replace : {number : "T1", layout : "token"}},
 			{ match : {name : "Beast", number : "2"}, replace : {number : "T2", layout : "token"}},
-			{ match : {name : "Elephant"}, replace : {number : "T3", layout : "token"}},
-			{ match : {name : "Basking Rootwalla"}, replace : {layout : "normal"}},
-			{ match : {name : "Garruk Wildspeaker"}, replace : {layout : "normal"}}
+			{ match : {name : "Elephant"}, replace : {number : "T3", layout : "token"}}
 		],
 		DDE :
 		[

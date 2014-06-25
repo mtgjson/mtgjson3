@@ -37,6 +37,14 @@ This creates the file:
 
 You will need to run this twice for any 'new' sets. First pass doesn't include foreign langauges.
 
+Troubleshooting
+---------------
+
+If something doesn't work after doing a `git pull` update, make sure you also update NPM modules with
+
+    npm update
+
+
 Other
 -----
 
