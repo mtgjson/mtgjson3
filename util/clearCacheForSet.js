@@ -15,31 +15,37 @@ var base = require("xbase"),
 
 if(process.argv.length<4)
 {
-	base.error("Usage: node %s <oracle|original|languages|printings|legalities> <set codes>", process.argv[1]);
+	base.error("Usage: node %s <all|oracle|original|languages|printings|legalities> <set codes>", process.argv[1]);
 	process.exit(1);
 }
 
 var VALID_TYPES = ["oracle", "original", "languages", "printings", "legalities"];
 
-var cacheType = process.argv[2];
-if(!VALID_TYPES.contains(cacheType))
+var cacheTypes = process.argv[2].toLowerCase()==="all" ? VALID_TYPES : Array.toArray(process.argv[2]);
+cacheTypes.serialForEach(function(cacheType, cb)
 {
-	base.error("Invalid cacheType: %s", cacheType);
-	process.exit(1);
-}
-
-shared.getSetsToDo(3).serialForEach(clearCacheForSet, function(err)
-{
-	if(err)
+	if(!VALID_TYPES.contains(cacheType))
 	{
-		base.error(err);
-		process.exit(1);
+		base.error("Invalid cacheType: %s", cacheType);
+		return;
 	}
 
-	process.exit(0);
-});
+	base.info("Clearing cache type: %s", cacheType);
 
-function clearCacheForSet(code, cb)
+	shared.getSetsToDo(3).serialForEach(function(code, subcb) { clearCacheForSet(code, cacheType, subcb); }, cb);
+}, function(err)
+	{
+		if(err)
+		{
+			base.error(err);
+			process.exit(1);
+		}
+
+		process.exit(0);
+	}
+);
+
+function clearCacheForSet(code, cacheType, cb)
 {
 	tiptoe(
 		function loadSetJSON()
