@@ -26,10 +26,11 @@ node util/updatePrintingsFromSet.js sincelastprintingreset
 # Then IF the set was some how BEFORE our lastprinting reset (HIGHLY UNLIKELY) run:
 node util/updateLegalitiesFromSet.js <expansion code>
 
-# If the new set is a CORE set, or the first set of a new block:
-node util/clearCacheForSet.js legalities <set codes that rotated out>
-node build/buildSet.js <set codes that rotated out>
-node util/updateLegalitiesFromSet.js <set codes that rotated out>
+# If the new set is a CORE set, or the first set of a new block
+# SET A CALENDAR REMINDER AFTER THE RELEASE DATE TO DO THE FOLLOWING
+node util/clearCacheForSet.js legalities <set codes that rotated out and the new set code>
+node build/buildSet.js <set codes that rotated out and the new set code>
+node util/updateLegalitiesFromSet.js <set codes that rotated out and the new set code>
 node util/updatePrintingsFromSet.js nongatherersets
 node util/updatePrintingsFromSet.js sincelastprintingreset
 
