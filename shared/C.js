@@ -1160,7 +1160,7 @@
 			code : "CNS",
 			releaseDate : "2014-06-06",
 			border : "black",
-			type : "expansion",
+			type : "conspiracy",
 			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "draft-matters", "marketing"]
 		},
 		{
@@ -1171,6 +1171,14 @@
 			type : "masters",
 			onlineOnly : true,
 			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", ["power nine", "foil"]]
+		},
+		{
+			name : "Magic 2015 Core Set",
+			code : "M15",
+			releaseDate : "2014-07-18",
+			border : "black",
+			type : "core",
+			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"]
 		}
 	];
 
