@@ -671,7 +671,7 @@
 			border : "black",
 			type : "expansion",
 			block : "Lorwyn",
-			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"]
+			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "marketing"]
 		},
 		{
 			name : "Duel Decks: Elves vs. Goblins",
