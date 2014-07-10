@@ -1,30 +1,23 @@
+[quote from="SpideR »" url="http://www.mtgsalvation.com/forums/magic-fundamentals/digital-magic-and-mtg-software/494332-mtg-json-new-website-provides-mtg-card-data-in?comment=194"]Thanks very much for those M15 data, i just have a little probkem with them : planeswalkers have non-printable characters (ord() 226, 136 and 146) instead of the "-" in loyalty costs, and i didn't get them in previous imports[/quote]
+
+Thanks for letting me know about this.
+
+It appears that the gatherer redesign they did a few weeks ago introduced this change as well.
+
+Gatherer now uses the UTF8 unicode 'minus' character '−' (http://unicode-table.com/en/2212/) for negative loyalty abilities instead of the plain ascii 'hyphon-minus' character '-' (http://unicode-table.com/en/002D/) that they used before.
+
+They have retroactively applied this for Planeswalkers in older sets too, such as Zendikar: http://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=195402
+
+This was clearly intentional on their part. It makes sense since the new character is officially a 'minus' character which aligns to the MTG rules that specify the ability is a 'negative' ability. Additionally this symbols appearance is a bit wider which more closely matches the appearance on the card.
+
+I have just updated mtgjson.com so that previous sets with Planeswalkers now use the new official symbol instead of the older ascii dash.
 
 
 
-Then create images/cards/ARN/<card>.jpg  (see what image format the original is in and ensure I keep perfect image quality)
 
-Have it show the card (from my files) on the left and my JSON (nicely formatted) on the right.
-
-Sort the cards by name.
-
-Then I can simply press right arrow to check the next card or previous card. Nice and simple.
-
-This will both allow me to ensure that I ripped the card right AND I have a matching card.
+iwconfig wlan0 mode monitor
+iwconfig wlan0
+managed
 
 
-
-
-
-For Webpage:
-- THANK: MTG Salvation wiki http://wiki.mtgsalvation.com/article/Loyalty
-Gatherer
-#mtg  reddit?
-Thank for the vector mana symbols: http://www.slightlymagic.net/forum/viewtopic.php?t=4430
-
-
-
-Helpful links:
-file:///mnt/compendium/legacy/DevLab/mtg-new/visualmtg-process/json/cards-ARN.json
-http://gatherer.wizards.com/Pages/Search/Default.aspx?sort=cn+&output=checklist&set=[%22Arabian%20Nights%22]
-http://wiki.mtgsalvation.com/article/Alara_Reborn
-
+LRW ALA DD2 CON M10 ZEN DDD WWK ROE M11 DDF SOM MBS NPH CMD M12 DDH ISD DKA DDI AVR M13 RTR GTC DDK DGM MMA M14 V13 THS BNG DDM JOU MD1 CNS VMA

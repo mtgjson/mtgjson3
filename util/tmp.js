@@ -3,6 +3,7 @@
 
 var base = require("xbase"),
 	C = require("C"),
+	shared = require("shared"),
 	request = require("request"),
 	fs = require("fs"),
 	url = require("url"),
@@ -11,11 +12,6 @@ var base = require("xbase"),
 	diffUtil = require("xutil").diff,
 	path = require("path"),
 	tiptoe = require("tiptoe");
-
-process.exit(0);
-
-var artists = [];
-var artistCounts = {};
 
 tiptoe(
 	function processSets()
@@ -33,10 +29,6 @@ tiptoe(
 			process.exit(1);
 		}
 
-		artists.uniqueBySort().sort().forEach(function(artist)
-		{
-			base.info("%s (%d)", artist, artistCounts[artist]);
-		});
 		process.exit(0);
 	}
 );
@@ -51,28 +43,18 @@ function checkSet(setCode, cb)
 		},
 		function compare(setRaw)
 		{
-			var targetSet = C.SETS.mutateOnce(function(SET) { if(SET.code===setCode) { return SET; } });
-			var set = JSON.parse(setRaw);
-
-			set.cards.forEach(function(card)
+			JSON.parse(setRaw).cards.forEach(function(card)
 			{
-				if(card.artist)
+				if(card.types && card.types.contains("Planeswalker"))
 				{
-					card.artist = card.artist.replaceAll(" and ", " & ");
-					Object.forEach(C.ARTIST_CORRECTIONS, function(correctArtist, artistAliases)
-					{
-						if(artistAliases.contains(card.artist))
-							card.artist = correctArtist;
-					});
-
-					artists.push(card.artist);
-					if(!artistCounts.hasOwnProperty(card.artist))
-						artistCounts[card.artist] = 0;
-					artistCounts[card.artist] = artistCounts[card.artist] + 1;
+					if(card.text.contains("-"))
+						base.info(" BAD %s: %s", setCode, card.name);
+					if(card.text.contains("−"))
+						base.info("GOOD %s: %s", setCode, card.name);
 				}
 			});
 
-			fs.writeFile(path.join(__dirname, "..", "json", setCode + ".json"), JSON.stringify(set), {encoding : "utf8"}, this);
+			this();
 		},
 		function finish(err)
 		{
@@ -80,8 +62,3 @@ function checkSet(setCode, cb)
 		}
 	);
 }
-
-
-
-// Replace any artists that have " and " with " & "
-
