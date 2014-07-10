@@ -3,6 +3,9 @@
 
 var base = require("xbase"),
 	C = require("C"),
+	hash = require("mhash").hash,
+	path = require("path"),
+	fs = require("fs"),
 	url = require("url"),
 	unicodeUtil = require("xutil").unicode;
 
@@ -195,4 +198,16 @@ exports.performSetCorrections = function(setCorrections, cards)
 				card.artist = correctArtist;
 		});
 	});
+};
+
+exports.clearCacheFile = function(targetUrl, cb)
+{
+	var urlHash = hash("whirlpool", targetUrl);
+	var cachePath = path.join(__dirname, "..", "cache", urlHash.charAt(0), urlHash);
+	if(!fs.existsSync(cachePath))
+		return setImmediate(cb);
+
+	base.info("Clearing: %s for %s", urlHash, targetUrl);
+
+	fs.unlink(cachePath, cb);
 };

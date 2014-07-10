@@ -8,7 +8,7 @@ var base = require("xbase"),
 	request = require("request"),
 	url = require("url"),
 	shared = require("shared"),
-	hash = require("mhash").hash,
+	querystring = require("querystring"),
 	fileUtil = require("xutil").file,
 	path = require("path"),
 	tiptoe = require("tiptoe");
@@ -91,25 +91,13 @@ function clearCacheForSet(code, cacheType, cb)
 			if(cacheType==="printings")
 				this.data.urls = this.data.urls.concat(Array.prototype.slice.apply(arguments).flatten().uniqueBySort());
 
-			this.data.urls.serialForEach(clearCacheFile, this);
+			this.data.urls.serialForEach(shared.clearCacheFile, this);
 		},
 		function finish(err)
 		{
 			setImmediate(function() { cb(err); });
 		}
 	);
-}
-
-function clearCacheFile(targetUrl, cb)
-{
-	var urlHash = hash("whirlpool", targetUrl);
-	var cachePath = path.join(__dirname, "..", "cache", urlHash.charAt(0), urlHash);
-	if(!fs.existsSync(cachePath))
-		return setImmediate(cb);
-
-	base.info("Clearing: %s for %s", urlHash, targetUrl);
-
-	fs.unlink(cachePath, cb);
 }
 
 function buildMultiverseAllPrintingsURL(multiverseid, cb)
@@ -126,8 +114,14 @@ function buildMultiverseAllPrintingsURL(multiverseid, cb)
 
 			var urls = [];
 			var doc = cheerio.load(pageHTML);
+
 			var pageLinks = doc("#ctl00_ctl00_ctl00_MainContent_SubContent_SubContent_PrintingsList_pagingControlsContainer a").map(function(i, item) { return doc(item); });
-			var numPages = pageLinks.length>0 ? pageLinks.length : 1;
+			var numPages = 1;
+			if(pageLinks.length>0)
+			{
+				var lastPageHREF = pageLinks.last().attr("href");
+				numPages += +querystring.parse(lastPageHREF.substring(lastPageHREF.indexOf("?")+1)).page;
+			}
 			for(var i=0;i<numPages;i++)
 			{
 				urls.push(shared.buildMultiversePrintingsURL(multiverseid, i));
