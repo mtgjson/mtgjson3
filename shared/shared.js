@@ -221,16 +221,8 @@ exports.getPrintingsDocNumPages = function(doc)
 	var numPages = 1;
 	if(pageLinks.length>0)
 	{
-		var lastPageLink = pageLinks.last();
-		if(lastPageLink.text().trim()===">>")
-		{
-			var lastPageHREF = lastPageLink.attr("href");
-			numPages += +querystring.parse(lastPageHREF.substring(lastPageHREF.indexOf("?")+1)).page;
-		}
-		else
-		{
-			numPages = pageLinks.length;
-		}
+		var lastPageHREF = pageLinks.last().attr("href");
+		numPages += +querystring.parse(lastPageHREF.substring(lastPageHREF.indexOf("?")+1)).page;
 	}
 
 	return numPages;

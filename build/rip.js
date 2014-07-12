@@ -133,7 +133,10 @@ function ripSet(setName, cb)
 		function finish(err)
 		{
 			if(err)
+			{
+				base.error("Error ripping: %s", setName);
 				return setImmediate(function() { cb(err); });
+			}
 
 			base.info("Doing set corrections...");
 			shared.performSetCorrections(shared.getSetCorrections(this.data.set.code), this.data.set.cards);

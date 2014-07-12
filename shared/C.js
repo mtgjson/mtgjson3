@@ -8,7 +8,7 @@
 	// Unglued/Unhinged types
 	exports.TYPES.push("Enchant", "Player", "Summon", "Interrupt", "Scariest", "You'll", "Ever", "See", "Eaturecray");
 
-	exports.LAST_PRINTINGS_RESET = "BNG";
+	exports.LAST_PRINTINGS_RESET = "M15";
 
 	exports.SETS_NOT_ON_GATHERER = ["HHO", "ATH", "ITP", "DKM", "RQS", "DPA"];
 	exports.SETS_WITH_NO_IMAGES = [];
