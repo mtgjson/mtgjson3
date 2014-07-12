@@ -115,13 +115,7 @@ function buildMultiverseAllPrintingsURL(multiverseid, cb)
 			var urls = [];
 			var doc = cheerio.load(pageHTML);
 
-			var pageLinks = doc("#ctl00_ctl00_ctl00_MainContent_SubContent_SubContent_PrintingsList_pagingControlsContainer a").map(function(i, item) { return doc(item); });
-			var numPages = 1;
-			if(pageLinks.length>0)
-			{
-				var lastPageHREF = pageLinks.last().attr("href");
-				numPages += +querystring.parse(lastPageHREF.substring(lastPageHREF.indexOf("?")+1)).page;
-			}
+			var numPages = shared.getPrintingsDocNumPages(doc);
 			for(var i=0;i<numPages;i++)
 			{
 				urls.push(shared.buildMultiversePrintingsURL(multiverseid, i));

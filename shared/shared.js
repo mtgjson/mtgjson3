@@ -5,6 +5,7 @@ var base = require("xbase"),
 	C = require("C"),
 	hash = require("mhash").hash,
 	path = require("path"),
+	querystring = require("querystring"),
 	fs = require("fs"),
 	url = require("url"),
 	unicodeUtil = require("xutil").unicode;
@@ -210,4 +211,27 @@ exports.clearCacheFile = function(targetUrl, cb)
 	base.info("Clearing: %s for %s", urlHash, targetUrl);
 
 	fs.unlink(cachePath, cb);
+};
+
+
+exports.getPrintingsDocNumPages = function(doc)
+{
+	var pageLinks = doc("#ctl00_ctl00_ctl00_MainContent_SubContent_SubContent_PrintingsList_pagingControlsContainer a").map(function(i, item) { return doc(item); });
+
+	var numPages = 1;
+	if(pageLinks.length>0)
+	{
+		var lastPageLink = pageLinks.last();
+		if(lastPageLink.text().trim()===">>")
+		{
+			var lastPageHREF = lastPageLink.attr("href");
+			numPages += +querystring.parse(lastPageHREF.substring(lastPageHREF.indexOf("?")+1)).page;
+		}
+		else
+		{
+			numPages = pageLinks.length;
+		}
+	}
+
+	return numPages;
 };
