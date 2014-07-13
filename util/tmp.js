@@ -13,6 +13,8 @@ var base = require("xbase"),
 	path = require("path"),
 	tiptoe = require("tiptoe");
 
+var MATCH_NAMES = ["Ancestral Vision", "Archdemon of Greed", "Bane of Hanweir", "Dryad Arbor", "Evermind", "Garruk, the Veil-Cursed", "Gatstaf Howler", "Ghastly Haunting", "Hinterland Scourge", "Homicidal Brute", "Howlpack Alpha", "Howlpack of Estwald", "Hypergenesis", "Insectile Aberration", "Ironfang", "Krallenhorde Killer", "Krallenhorde Wantons", "Living End", "Lord of Lineage", "Ludevic's Abomination", "Markov's Servant", "Merciless Predator", "Moonscarred Werewolf", "Nightfall Predator", "Rampaging Werewolf", "Ravager of the Fells", "Restore Balance", "Silverpelt Werewolf", "Stalking Vampire", "Terror of Kruin Pass", "Thraben Militia", "Tovolar's Magehunter", "Ulvenwald Primordials", "Unhallowed Cathar", "Unholy Fiend", "Werewolf Ransacker", "Wheel of Fate", "Wildblood Pack", "Withengar Unbound"];
+
 tiptoe(
 	function processSets()
 	{
@@ -33,7 +35,6 @@ tiptoe(
 	}
 );
 
-
 function checkSet(setCode, cb)
 {
 	tiptoe(
@@ -45,12 +46,9 @@ function checkSet(setCode, cb)
 		{
 			JSON.parse(setRaw).cards.forEach(function(card)
 			{
-				if(card.types && card.types.contains("Planeswalker"))
+				if(MATCH_NAMES.contains(card.name))
 				{
-					if(card.text.contains("-"))
-						base.info(" BAD %s: %s", setCode, card.name);
-					if(card.text.contains("−"))
-						base.info("GOOD %s: %s", setCode, card.name);
+					base.info(card.colors.join(", "));
 				}
 			});
 

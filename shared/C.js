@@ -1046,8 +1046,7 @@
 		},
 		{
 			name : "Commander's Arsenal",
-			code : "CMA",
-			gathererCode : "CM1",
+			code : "CM1",
 			releaseDate : "2012-11-02",
 			border : "black",
 			type : "commander"
@@ -1685,8 +1684,6 @@
 			{ match : {name : "Raksha Golden Cub"}, replace : {artist : "Pete Venters", flavor : "Some believe that Raksha, yougnest of the kha, is the reincarnation of Dakan, the first and mightiest of leonin leaders."}},
 			{ match : {name : "Reaper King"}, replace : {flavor : "It's harvest time."}},
 			{ match : {name : "Rith, the Awakener"}, replace : {flavor : ""}},
-			{ match : {multiverseid : 214827}, replace : {life : -3, artist : "Mark Zug", flavor : "Trained in the arts of stealth, royal assassins choose their victims carefully, relying on timing and precision rather than brute force."}},
-			{ match : {multiverseid : 182260}, replace : {flavor : "Trained in the arts of stealth, royal assassins choose their victims carefully, relying on timing and precision rather than brute force."}},
 			{ match : {name : "Rumbling Slum"}, replace : {artist : "Carl Critchlow", flavor : "The Orzhov contract the Izzet to animate slum districts and banish them to the wastes. The Gruul adopt them and send them back to the city for vengeance."}},
 			{ match : {name : "Sakashima the Impostor"}, replace : {artist : "rk post", flavor : ""}},
 			{ match : {multiverseid : 182282}, replace : {artist : "Greg Staples", flavor : "Her sword sings more beautifully than any choir."}},
