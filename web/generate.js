@@ -18,8 +18,8 @@ var dustData =
 {
 	title : "Magic the Gathering card data in JSON format",
 	sets  : [],
-	version : "2.8.3",
-	lastUpdated : "Jul 12, 2014",
+	version : "2.8.4",
+	lastUpdated : "Jul 13, 2014",
 	setCodesNotOnGatherer : C.SETS_NOT_ON_GATHERER.join(", ")
 };
 
@@ -112,6 +112,8 @@ tiptoe(
 	{
 		runUtil.run("zip", ["-9", "AllSets.json.zip", "AllSets.json"], { cwd:  path.join(__dirname, "json"), silent : true }, this.parallel());
 		runUtil.run("zip", ["-9", "AllSets-x.json.zip", "AllSets-x.json"], { cwd:  path.join(__dirname, "json"), silent : true }, this.parallel());
+		runUtil.run("zip", ["-9", "AllSetFiles.zip"].concat(C.SETS.map(function(SET) { return SET.code + ".json"; })), { cwd:  path.join(__dirname, "json"), silent : true }, this.parallel());
+		runUtil.run("zip", ["-9", "AllSetFiles-x.zip"].concat(C.SETS.map(function(SET) { return SET.code + "-x.json"; })), { cwd:  path.join(__dirname, "json"), silent : true }, this.parallel());
 
 		C.SETS.serialForEach(function(SET, cb)
 		{
@@ -127,6 +129,8 @@ tiptoe(
 	{
 		dustData.allSizeZip = printUtil.toSize(fs.statSync(path.join(__dirname, "json", "AllSets.json.zip")).size, 1);
 		dustData.allSizeXZip = printUtil.toSize(fs.statSync(path.join(__dirname, "json", "AllSets-x.json.zip")).size, 1);
+		dustData.allSetFilesZipSize = printUtil.toSize(fs.statSync(path.join(__dirname, "json", "AllSetFiles.zip")).size, 1);
+		dustData.allSetFilesXZipSize = printUtil.toSize(fs.statSync(path.join(__dirname, "json", "AllSetFiles-x.zip")).size, 1);
 
 		C.SETS.forEach(function(SET, i)
 		{
