@@ -1047,6 +1047,7 @@
 		{
 			name : "Commander's Arsenal",
 			code : "CM1",
+			oldCode : "CMA",
 			releaseDate : "2012-11-02",
 			border : "black",
 			type : "commander"
