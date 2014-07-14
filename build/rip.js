@@ -628,7 +628,7 @@ function getForeignNamesForCardName(sets, cardName, cb)
 				doc("table.cardList tr.cardItem").map(function(i, item) { return doc(item); }).forEach(function(cardRow)
 				{
 					var language = cardRow.find("td:nth-child(2)").text().trim();
-					var foreignCardName = cardRow.find("td:nth-child(1) a").text().trim();
+					var foreignCardName = cardRow.find("td:nth-child(1) a").text().innerTrim().trim();
 					if(language && foreignCardName && !seenLanguages.contains(language) && cardName!==foreignCardName)
 					{
 						seenLanguages.push(language);
