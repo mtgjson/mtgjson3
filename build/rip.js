@@ -592,7 +592,33 @@ function addForeignNamesToCards(cards, cb)
 			{
 				delete card.foreignNames;
 
-				if(card.layout!=="split" && card.layout!=="double-faced" && (card.layout!=="flip" || (card.layout==="flip" && card.names && card.names.length>=1 && card.names[0]===card.name)))
+				if(card.layout==="split" || card.layout==="double-faced" || card.layout==="flip")
+				{
+					if(card.names.length===2)
+					{
+						card.foreignNames = [];
+						(cardsForeignNames[i] || []).forEach(function(cardForeignName)
+						{
+							if(cardForeignName.name.contains("//"))
+							{
+								var cardForeignNameParts = cardForeignName.name.split("//").map(function(cardForeignNamePart) { return cardForeignNamePart.trim(); });
+								if(cardForeignNameParts.length===card.names.length)
+								{
+									cardForeignName.name = cardForeignNameParts[card.names.indexOf(card.name)];
+									if(cardForeignName.name!==card.name)
+										card.foreignNames.push(cardForeignName);
+								}
+							}
+							else if(card.names[0]===card.name && card.name!==cardForeignName.name)
+							{
+								card.foreignNames.push(cardForeignName);
+							}
+						});
+						if(!card.foreignNames.length)
+							delete card.foreignNames;
+					}
+				}
+				else
 				{
 					var cardForeignNames = cardsForeignNames[i];
 					if(cardForeignNames && cardForeignNames.length)
