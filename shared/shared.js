@@ -166,7 +166,7 @@ exports.performSetCorrections = function(setCorrections, cards)
 		{
 			cards.forEach(function(card)
 			{
-				if(setCorrection.match && Object.every(setCorrection.match, function(key, value) { return card[key]===value; }))
+				if(setCorrection.match && (setCorrection.match==="*" || (Object.every(setCorrection.match, function(key, value) { return card[key]===value; }))))
 				{
 					if(setCorrection.replace)
 						Object.forEach(setCorrection.replace, function(key, value) { card[key] = value; });
