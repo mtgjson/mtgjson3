@@ -16,10 +16,7 @@ var base = require("xbase"),
 
 var dustData = 
 {
-	title : "Magic the Gathering card data in JSON format",
 	sets  : [],
-	version : "2.8.7",
-	lastUpdated : "Jul 22, 2014",
 	setCodesNotOnGatherer : C.SETS_NOT_ON_GATHERER.join(", ")
 };
 
@@ -89,6 +86,8 @@ tiptoe(
 		dustData.allSizeX = printUtil.toSize(JSON.stringify(allSetsWithExtras).length, 1);
 
 		dustData.changeLog = JSON.parse(fs.readFileSync(path.join(__dirname, "changelog.json"), {encoding : "utf8"})).map(function(o) { o.when = moment(o.when, "YYYY-MM-DD").format("MMM D, YYYY"); return o; });
+		dustData.lastUpdated = dustData.changeLog[0].when;
+		dustData.version = dustData.changeLog[0].version;
 
 		fs.writeFile(path.join(__dirname, "json", "AllSets.json"), JSON.stringify(allSets), {encoding : "utf8"}, this.parallel());
 		fs.writeFile(path.join(__dirname, "json", "AllSetsArray.json"), JSON.stringify(allSetsArray), {encoding : "utf8"}, this.parallel());
