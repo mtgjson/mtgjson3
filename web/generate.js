@@ -50,6 +50,9 @@ tiptoe(
 		{
 			var setWithExtras = JSON.parse(args[i]);
 
+			// Strip out internal only data
+			delete setWithExtras.magicCardsInfoCode;
+
 			allSetsWithExtras[SET.code] = setWithExtras;
 			allSetsArrayWithExtras.push(setWithExtras);
 			

@@ -3,13 +3,13 @@
 
 var base = require("xbase"),
 	C = require("C"),
-	cheerio = require("cheerio"),
 	request = require("request"),
 	fs = require("fs"),
 	url = require("url"),
 	moment = require("moment"),
-	hash = require("mhash").hash,
+	domino = require("domino"),
 	unicodeUtil = require("xutil").unicode,
+	diffUtil = require("xutil").diff,
 	path = require("path"),
 	shared = require("shared"),
 	urlUtil = require("xutil").url,
@@ -51,7 +51,7 @@ function ripSet(setName, cb)
 
 			this.data.set = base.clone(C.SETS.mutateOnce(function(SET) { return SET.name===setName ? SET : undefined; }));
 
-			processMultiverseids(listDoc("table.checklist tr.cardItem a.nameLink").map(function(i, itemRaw) { return +querystring.parse(url.parse(listDoc(itemRaw).attr("href")).query).multiverseid; }).unique(), this);
+			processMultiverseids(Array.toArray(listDoc.querySelectorAll("table.checklist tr.cardItem a.nameLink")).map(function(o) {  return +querystring.parse(url.parse(o.getAttribute("href")).query).multiverseid; }).unique(), this);
 		},
 		function processVariations(cards)
 		{
@@ -130,6 +130,19 @@ function ripSet(setName, cb)
 
 			addPrintingsToCards(this.data.set.cards, this);
 		},
+		function performCorrections()
+		{
+			base.info("Doing set corrections...");
+			shared.performSetCorrections(shared.getSetCorrections(this.data.set.code), this.data.set.cards);
+
+			this();
+		},
+		function compareToMagicCardsInfo()
+		{
+			base.info("Comparing cards to MagicCards.info...");
+
+			compareCardsToMCI(this.data.set, this);
+		},
 		function finish(err)
 		{
 			if(err)
@@ -137,9 +150,6 @@ function ripSet(setName, cb)
 				base.error("Error ripping: %s", setName);
 				return setImmediate(function() { cb(err); });
 			}
-
-			base.info("Doing set corrections...");
-			shared.performSetCorrections(shared.getSetCorrections(this.data.set.code), this.data.set.cards);
 
 			this.data.set.cards = this.data.set.cards.sort(shared.cardComparator);
 
@@ -224,7 +234,7 @@ function processMultiverseids(multiverseids, cb)
 
 function getCardPartIDPrefix(cardPart)
 {
-	return "#" + cardPart.find(".rightCol").attr("id").replaceAll("_rightCol", "");
+	return "#" + cardPart.querySelector(".rightCol").getAttribute("id").replaceAll("_rightCol", "");
 }
 
 var POWER_TOUGHNESS_REPLACE_MAP =
@@ -248,10 +258,10 @@ function processCardPart(doc, cardPart, printedDoc, printedCardPart)
 	var idPrefixPrinted = getCardPartIDPrefix(printedCardPart);
 
 	// Multiverseid
-	card.multiverseid = +querystring.parse(url.parse(cardPart.find(idPrefix + "_setRow .value a").attr("href")).query).multiverseid.trim();
+	card.multiverseid = +querystring.parse(url.parse(cardPart.querySelector(idPrefix + "_setRow .value a").getAttribute("href")).query).multiverseid.trim();
 
 	// Check for split card
-	var fullCardName = doc("#ctl00_ctl00_ctl00_MainContent_SubContent_SubContentHeader_subtitleDisplay").text().trim();
+	var fullCardName = getTextContent(doc.querySelector("#ctl00_ctl00_ctl00_MainContent_SubContent_SubContentHeader_subtitleDisplay")).trim();
 	if(fullCardName.contains(" // "))
 	{
 		card.layout = "split";
@@ -262,7 +272,7 @@ function processCardPart(doc, cardPart, printedDoc, printedCardPart)
 	var cardParts = getCardParts(doc);
 	if(card.layout!=="split" && cardParts.length===2)
 	{
-		var firstCardText = processTextBlocks(doc, cardParts[0].find(getCardPartIDPrefix(cardParts[0]) + "_textRow .value .cardtextbox")).trim().toLowerCase();
+		var firstCardText = processTextBlocks(doc, cardParts[0].querySelectorAll(getCardPartIDPrefix(cardParts[0]) + "_textRow .value .cardtextbox")).trim().toLowerCase();
 		if(firstCardText.contains("flip"))
 			card.layout = "flip";
 		else if(firstCardText.contains("transform"))
@@ -270,11 +280,11 @@ function processCardPart(doc, cardPart, printedDoc, printedCardPart)
 		else
 			base.warn("Unknown card layout for multiverseid: %s", card.multiverseid);
 
-		card.names = [cardParts[0].find(getCardPartIDPrefix(cardParts[0]) + "_nameRow .value").text().trim(), cardParts[1].find(getCardPartIDPrefix(cardParts[1]) + "_nameRow .value").text().trim()];
+		card.names = [getTextContent(cardParts[0].querySelector(getCardPartIDPrefix(cardParts[0]) + "_nameRow .value")).trim(), getTextContent(cardParts[1].querySelector(getCardPartIDPrefix(cardParts[1]) + "_nameRow .value")).trim()];
 	}
 
 	// Card Name
-	card.name = cardPart.find(idPrefix + "_nameRow .value").text().trim();
+	card.name = getTextContent(cardPart.querySelector(idPrefix + "_nameRow .value")).trim();
 
 	if(card.name.endsWith(" token card"))
 		card.layout = "token";
@@ -283,7 +293,7 @@ function processCardPart(doc, cardPart, printedDoc, printedCardPart)
 
 	// Card Type
 	var skipped = 0;
-	var rawTypeFull = cardPart.find(idPrefix + "_typeRow .value").text().trim();
+	var rawTypeFull = getTextContent(cardPart.querySelector(idPrefix + "_typeRow .value")).trim();
 	if(!rawTypeFull.contains("—") && rawTypeFull.contains(" - "))  // Some gatherer entries have a regular dash instead of a 'long dash'
 	{
 		base.warn("Raw type for card [%s] does not contain a long dash for type [%s] but does contain a small dash surrounded by spaces ' - '. Auto-correcting!", card.name, rawTypeFull);
@@ -329,23 +339,23 @@ function processCardPart(doc, cardPart, printedDoc, printedCardPart)
 	}
 
 	// Original type
-	card.originalType = printedCardPart.find(idPrefixPrinted + "_typeRow .value").text().trim().replaceAll(" -", " —");
+	card.originalType = getTextContent(printedCardPart.querySelector(idPrefixPrinted + "_typeRow .value")).trim().replaceAll(" -", " —");
 
 	// Converted Mana Cost (CMC)
-	var cardCMC = cardPart.find(idPrefix + "_cmcRow .value").text().trim();
+	var cardCMC = getTextContent(cardPart.querySelector(idPrefix + "_cmcRow .value")).trim();
 	if(cardCMC)
 		card.cmc = +cardCMC;
 
 	// Rarity
-	card.rarity = cardPart.find(idPrefix + "_rarityRow .value").text().trim();
+	card.rarity = getTextContent(cardPart.querySelector(idPrefix + "_rarityRow .value")).trim();
 	if(card.rarity==="Bonus")
 		card.rarity = "Special";
 
 	// Artist
-	card.artist = cardPart.find(idPrefix + "_artistRow .value a").text().trim();
+	card.artist = getTextContent(cardPart.querySelector(idPrefix + "_artistRow .value a")).trim();
 
 	// Power/Toughness or Loyalty
-	var powerToughnessValue = cardPart.find(idPrefix + "_ptRow .value").text().trim();
+	var powerToughnessValue = getTextContent(cardPart.querySelector(idPrefix + "_ptRow .value")).trim();
 	if(powerToughnessValue)
 	{
 		// Loyalty
@@ -358,7 +368,7 @@ function processCardPart(doc, cardPart, printedDoc, printedCardPart)
 			var handLifeParts = powerToughnessValue.trim().strip("+)(").replaceAll("Hand Modifier: ", "").replaceAll("Life Modifier: ", "").split(",").map(function(a) { return a.trim(); });
 			if(handLifeParts.length!==2)
 			{
-				base.warn("Power toughness invalid [%s] for card: %s", cardPart.find(idPrefix + "_ptRow .value").text().trim(), card.name);
+				base.warn("Power toughness invalid [%s] for card: %s", getTextContent(cardPart.querySelector(idPrefix + "_ptRow .value")).trim(), card.name);
 			}
 			else
 			{
@@ -377,7 +387,7 @@ function processCardPart(doc, cardPart, printedDoc, printedCardPart)
 			var powerToughnessParts = powerToughnessValue.split("/");
 			if(powerToughnessParts.length!==2)
 			{
-				base.warn("Power toughness invalid [%s] for card: %s", cardPart.find(idPrefix + "_ptRow .value").text().trim(), card.name);
+				base.warn("Power toughness invalid [%s] for card: %s", getTextContent(cardPart.querySelector(idPrefix + "_ptRow .value")).trim(), card.name);
 			}
 			else
 			{
@@ -388,7 +398,7 @@ function processCardPart(doc, cardPart, printedDoc, printedCardPart)
 	}
 
 	// Mana Cost
-	var cardManaCosts = cardPart.find(idPrefix + "_manaRow .value img").map(function(i, item) { return doc(item); }).map(function(manaCost) { return processSymbol(manaCost.attr("alt")); });
+	var cardManaCosts = Array.toArray(cardPart.querySelectorAll(idPrefix + "_manaRow .value img")).map(function(o) { return processSymbol(o.getAttribute("alt")); });
 	var cardManaCost = cardManaCosts.join("");
 	if(cardManaCost)
 		card.manaCost = cardManaCost;
@@ -403,7 +413,7 @@ function processCardPart(doc, cardPart, printedDoc, printedCardPart)
 		});
 	});
 
-	var cardColorIndicators = cardPart.find(idPrefix + "_colorIndicatorRow .value").text().trim().toLowerCase().split(",").map(function(cardColorIndicator) { return cardColorIndicator.trim(); }) || [];
+	var cardColorIndicators = getTextContent(cardPart.querySelector(idPrefix + "_colorIndicatorRow .value")).trim().toLowerCase().split(",").map(function(cardColorIndicator) { return cardColorIndicator.trim(); }) || [];
 	cardColorIndicators.forEach(function(cardColorIndicator)
 	{
 		if(cardColorIndicator && COLOR_ORDER.contains(cardColorIndicator))
@@ -415,7 +425,7 @@ function processCardPart(doc, cardPart, printedDoc, printedCardPart)
 		delete card.colors;
 
 	// Text
-	var cardText = processTextBlocks(doc, cardPart.find(idPrefix + "_textRow .value .cardtextbox")).trim();
+	var cardText = processTextBlocks(doc, cardPart.querySelectorAll(idPrefix + "_textRow .value .cardtextbox")).trim();
 	if(cardText)
 	{
 		card.text = cardText;
@@ -427,7 +437,7 @@ function processCardPart(doc, cardPart, printedDoc, printedCardPart)
 		card.layout = "leveler";
 
 	// Original Printed Text
-	var originalCardText = processTextBlocks(printedDoc, printedCardPart.find(idPrefixPrinted + "_textRow .value .cardtextbox")).trim();
+	var originalCardText = processTextBlocks(printedDoc, printedCardPart.querySelectorAll(idPrefixPrinted + "_textRow .value .cardtextbox")).trim();
 	if(originalCardText)
 	{
 		card.originalText = originalCardText;
@@ -436,12 +446,12 @@ function processCardPart(doc, cardPart, printedDoc, printedCardPart)
 	}
 
 	// Flavor Text
-	var cardFlavor = processTextBlocks(doc, cardPart.find(idPrefix + "_flavorRow .value .cardtextbox")).trim();
+	var cardFlavor = processTextBlocks(doc, cardPart.querySelectorAll(idPrefix + "_flavorRow .value .cardtextbox")).trim();
 	if(cardFlavor)
 		card.flavor = cardFlavor;
 
 	// Card Number
-	var cardNumberValue = cardPart.find(idPrefix + "_numberRow .value").text().trim();
+	var cardNumberValue = getTextContent(cardPart.querySelector(idPrefix + "_numberRow .value")).trim();
 	if(cardNumberValue)
 	{
 		if(card.layout==="split")
@@ -451,15 +461,15 @@ function processCardPart(doc, cardPart, printedDoc, printedCardPart)
 	}
 
 	// Watermark
-	var cardWatermark = processTextBlocks(doc, cardPart.find(idPrefix + "_markRow .value .cardtextbox")).trim();
+	var cardWatermark = processTextBlocks(doc, cardPart.querySelectorAll(idPrefix + "_markRow .value .cardtextbox")).trim();
 	if(cardWatermark)
 		card.watermark = cardWatermark;
 
 	// Rulings
-	var rulingRows = cardPart.find(idPrefix + "_rulingsContainer table tr.post");
+	var rulingRows = cardPart.querySelectorAll(idPrefix + "_rulingsContainer table tr.post");
 	if(rulingRows.length)
 	{
-		card.rulings = rulingRows.map(function(i, item) { return doc(item); }).map(function(rulingRow) { return { date : moment(rulingRow.find("td:first-child").text().trim(), "MM/DD/YYYY").format("YYYY-MM-DD"), text : rulingRow.find("td:last-child").text().trim()}; });
+		card.rulings = Array.toArray(rulingRows).map(function(rulingRow) { return { date : moment(getTextContent(rulingRow.querySelector("td:first-child")).trim(), "MM/DD/YYYY").format("YYYY-MM-DD"), text : getTextContent(rulingRow.querySelector("td:last-child")).trim()}; });
 		var seenRulings = [];
 		card.rulings = card.rulings.reverse().filter(function(ruling) { if(seenRulings.contains(ruling.text)) { return false; } seenRulings.push(ruling.text); return true; }).reverse();
 	}
@@ -467,9 +477,9 @@ function processCardPart(doc, cardPart, printedDoc, printedCardPart)
 	// Variations
 	if(card.layout!=="split" && card.layout!=="double-faced" && card.layout!=="flip")
 	{
-		var variationLinks = cardPart.find(idPrefix + "_variationLinks a.variationLink").map(function(i, item) { return doc(item); });
+		var variationLinks = cardPart.querySelectorAll(idPrefix + "_variationLinks a.variationLink");
 		if(variationLinks.length)
-			card.variations = variationLinks.map(function(variationLink) { return +variationLink.attr("id").trim(); }).filter(function(variation) { return variation!==card.multiverseid; });
+			card.variations = Array.toArray(variationLinks).map(function(variationLink) { return +variationLink.getAttribute("id").trim(); }).filter(function(variation) { return variation!==card.multiverseid; });
 	}
 
 	return card;
@@ -477,7 +487,7 @@ function processCardPart(doc, cardPart, printedDoc, printedCardPart)
 
 function getCardParts(doc)
 {
-	return doc("table.cardDetails").map(function(i, item) { return doc(item); });
+	return Array.toArray(doc.querySelectorAll("table.cardDetails"));
 }
 
 function getURLsForMultiverseid(multiverseid, cb)
@@ -522,8 +532,7 @@ function getURLsForMultiverseid(multiverseid, cb)
 
 function getURLAsDoc(targetURL, cb)
 {
-	var urlHash = hash("whirlpool", targetURL);
-	var cachePath = path.join(__dirname, "..", "cache", urlHash.charAt(0), urlHash);
+	var cachePath = shared.generateCacheFilePath(targetURL);
 
 	tiptoe(
 		function get()
@@ -547,12 +556,7 @@ function getURLAsDoc(targetURL, cb)
 			if(!fs.existsSync(cachePath))
 				fs.writeFileSync(cachePath, pageHTML, {encoding:"utf8"});
 
-			// June 14, 2014: New gatherer has invalid HTML, this regex fixes it so cheerio can parse code correctly.
-			// See difference between 373328 and 221209. In the first one, they don't have a <tr> following the cardDetails table
-			// We don't save the modified HTML to disk cache, always store original HTML to disk cache
-			pageHTML = pageHTML.replace(/(<table class="cardDetails"[^>]+>)[^<]+<div([^>]*)>/g, "$1<tr><div$2>");
-
-			setImmediate(function() { cb(null, cheerio.load(pageHTML)); }.bind(this));
+			setImmediate(function() { cb(null, domino.createWindow(pageHTML).document); }.bind(this));
 		}
 	);
 }
@@ -635,6 +639,7 @@ function getForeignNamesForCardName(sets, cardName, cb)
 {
 	var seenLanguages = [];
 	var foreignLanguages = [];
+
 	tiptoe(
 		function fetchLanguagePages()
 		{
@@ -651,10 +656,10 @@ function getForeignNamesForCardName(sets, cardName, cb)
 
 			docs.forEach(function(doc)
 			{
-				doc("table.cardList tr.cardItem").map(function(i, item) { return doc(item); }).forEach(function(cardRow)
+				Array.toArray(doc.querySelectorAll("table.cardList tr.cardItem")).forEach(function(cardRow)
 				{
-					var language = cardRow.find("td:nth-child(2)").text().trim();
-					var foreignCardName = cardRow.find("td:nth-child(1) a").text().innerTrim().trim();
+					var language = getTextContent(cardRow.querySelector("td:nth-child(2)")).trim();
+					var foreignCardName = getTextContent(cardRow.querySelector("td:nth-child(1) a")).innerTrim().trim();
 					if(language && foreignCardName && !seenLanguages.contains(language) && cardName!==foreignCardName)
 					{
 						seenLanguages.push(language);
@@ -690,11 +695,11 @@ function addLegalitiesToCard(card, cb)
 			delete card.legalities;
 			card.legalities = {};
 
-			doc("table.cardList").map(function(i, item) { return doc(item); })[1].find("tr.cardItem").map(function(i, item) { return doc(item); }).forEach(function(cardRow)
+			Array.toArray(doc.querySelectorAll("table.cardList")[1].querySelectorAll("tr.cardItem")).forEach(function(cardRow)
 			{
-				var format = cardRow.find("td:nth-child(1)").text().trim();
-				var legality = cardRow.find("td:nth-child(2)").text().trim();
-				var condition = cardRow.find("td:nth-child(3)").text().trim();
+				var format = getTextContent(cardRow.querySelector("td:nth-child(1)")).trim();
+				var legality = getTextContent(cardRow.querySelector("td:nth-child(2)")).trim();
+				var condition = getTextContent(cardRow.querySelector("td:nth-child(3)")).trim();
 				if(format && legality)
 					card.legalities[format] = legality + (condition && condition.length>0 ? (" (" + condition + ")") : "");
 			});
@@ -710,13 +715,31 @@ function addLegalitiesToCard(card, cb)
 
 function addPrintingsToCards(cards, cb)
 {
-	cards.serialForEach(function(card, subcb)
-	{
-		addPrintingsToCard(card, subcb);
-	}, cb);
+	tiptoe(
+		function loadNonGathererJSON()
+		{
+			C.SETS_NOT_ON_GATHERER.serialForEach(function(code, subcb)
+			{
+				fs.readFile(path.join(__dirname, "..", "json", code + ".json"), "utf8", subcb);
+			}, this);
+		},
+		function addPrintings(nonGathererSetsJSONRaw)
+		{
+			var nonGathererSets = nonGathererSetsJSONRaw.map(function(nonGathererSetJSONRaw) { return JSON.parse(nonGathererSetJSONRaw); });
+
+			cards.serialForEach(function(card, subcb)
+			{
+				addPrintingsToCard(nonGathererSets, card, subcb);
+			}, this);
+		},
+		function finish(err)
+		{
+			setImmediate(function() { cb(err); });
+		}
+	);
 }
 
-function addPrintingsToCard(card, cb)
+function addPrintingsToCard(nonGathererSets, card, cb)
 {
 	tiptoe(
 		function getFirstPage()
@@ -738,9 +761,9 @@ function addPrintingsToCard(card, cb)
 			var printings = [];
 			docs.forEach(function(doc)
 			{
-				doc("table.cardList").map(function(i, item) { return doc(item); })[0].find("tr.cardItem").map(function(i, item) { return doc(item); }).forEach(function(cardRow)
+				Array.toArray(doc.querySelectorAll("table.cardList")[0].querySelectorAll("tr.cardItem")).forEach(function(cardRow)
 				{
-					var printing = cardRow.find("td:nth-child(3)").text().trim();
+					var printing = getTextContent(cardRow.querySelector("td:nth-child(3)")).trim();
 					if(printing)
 						printings.push(printing);
 				});
@@ -748,10 +771,10 @@ function addPrintingsToCard(card, cb)
 
 			delete card.printings;
 
-			Object.forEach(C.EXTRA_SET_CARD_PRINTINGS, function(extraSetName, extraCardNames)
+			nonGathererSets.forEach(function(nonGathererSet)
 			{
-				if(extraCardNames.contains(card.name))
-					printings.push(extraSetName);
+				if(nonGathererSet.cards.map(function(extraSetCard) { return extraSetCard.name; }).contains(card.name))
+					printings.push(nonGathererSet.name);
 			});
 
 			printings = printings.unique().sort(function(a, b) { return moment(getReleaseDateForSet(a), "YYYY-MM-DD").unix()-moment(getReleaseDateForSet(b), "YYYY-MM-DD").unix(); });
@@ -779,6 +802,75 @@ function getMultiverseidsForCardName(sets, cardName)
 	return multiverseids.unique();
 }
 
+function compareCardsToMCI(set, cb)
+{	
+	tiptoe(
+		function getSetCardList()
+		{
+			getURLAsDoc("http://magiccards.info/" + (set.magicCardsInfoCode || set.code).toLowerCase() + "/en.html", this);
+		},
+		function processSetCardList(listDoc)
+		{
+			var mciCardLinks = Array.toArray(listDoc.querySelectorAll("table tr td a"));
+			set.cards.serialForEach(function(card, subcb)
+			{
+				if(card.variations)
+					return setImmediate(subcb);
+
+				var mciCardLink = mciCardLinks.filter(function(link) { return link.textContent.trim().toLowerCase()===card.name.toLowerCase(); });
+				if(mciCardLink.length!==1)
+				{
+					base.warn("MISSING: Could not find MagicCards.info match for card: %s", card.name);
+					return setImmediate(subcb);
+				}
+
+				compareCardToMCI(card, mciCardLink[0].getAttribute("href"), subcb);
+			}, this);
+		},
+		function finish(err)
+		{
+			setImmediate(function() { cb(err); });
+		}
+	);
+}
+
+function compareCardToMCI(card, mciCardURL, cb)
+{
+	tiptoe(
+		function getMCICardDoc()
+		{
+			getURLAsDoc("http://magiccards.info" + mciCardURL, this);
+		},
+		function compareProperties(mciCardDoc)
+		{
+			// Compare flavor
+			var cardFlavor = (card.flavor || "").trim().replaceAll("\n", " ").innerTrim();
+			var mciFlavor = processTextBlocks(mciCardDoc, mciCardDoc.querySelector("table tr td p i")).trim().replaceAll("\n", " ").innerTrim();
+			if(!mciFlavor && cardFlavor)
+				base.warn("FLAVOR: %s (%s) has flavor but MagicCardsInfo (%s) does not.", card.name, card.multiverseid, mciCardURL);
+			else if(mciFlavor && !cardFlavor)
+				base.warn("FLAVOR: %s (%s) does not have flavor but MagicCardsInfo (%s) does.", card.name, card.multiverseid, mciCardURL);
+			else if(mciFlavor!==cardFlavor)
+				base.warn("FLAVOR: %s (%s) flavor does not match MagicCardsInfo (%s).\n%s", card.name, card.multiverseid, mciCardURL, diffUtil.diff(cardFlavor, mciFlavor));
+
+			// Compare artist
+			var mciArtist = mciCardDoc.querySelectorAll("table tr td p").filter(function(p) { return p.textContent.startsWith("Illus."); })[0].textContent.substring(7).trim().replaceAll("\n", " ").innerTrim();
+			var cardArtist = (card.artist || "").trim().replaceAll("\n", " ").innerTrim();
+			if(!mciArtist && cardArtist)
+				base.warn("ARTIST: %s (%s) has artist but MagicCardsInfo (%s) does not.", card.name, card.multiverseid, mciCardURL);
+			else if(mciArtist && !cardArtist)
+				base.warn("ARTIST: %s (%s) does not have artist but MagicCardsInfo (%s) does.", card.name, card.multiverseid, mciCardURL);
+			else if(mciArtist!==cardArtist && !C.ARTIST_CORRECTIONS.hasOwnProperty(cardArtist))
+				base.warn("ARTIST: %s (%s) artist does not match MagicCardsInfo (%s).\n%s", card.name, card.multiverseid, mciCardURL, diffUtil.diff(cardArtist, mciArtist));
+
+			this();
+		},
+		function finish(err)
+		{
+			setImmediate(function() { cb(err); });
+		}
+	);
+}
 
 var COLOR_ORDER = ["white", "blue", "black", "red", "green"];
 
@@ -895,16 +987,15 @@ function processSymbol(symbol)
 function processTextBlocks(doc, textBlocks)
 {
 	var result = "";
+	if(!textBlocks)
+		return result;
 
-	textBlocks.map(function(i, item) { return doc(item); }).forEach(function(textBox, i)
+	Array.toArray(textBlocks).forEach(function(textBox, i)
 	{
 		if(i>0)
 			result += "\n\n";
 
-		textBox.toArray().forEach(function(child)
-		{
-			result += processTextBoxChildren(doc, child.children);
-		});
+		result += processTextBoxChildren(doc, textBox.childNodes);
 	});
 
 	while(result.contains("\n\n\n"))
@@ -919,28 +1010,33 @@ function processTextBoxChildren(doc, children)
 {
 	var result = "";
 
-	children.forEach(function(child)
+	Array.toArray(children).forEach(function(child)
 	{
-		if(child.type==="tag")
+		if(child.nodeType!==3)
 		{
-			if(child.name==="img")
-				result += processSymbol(doc(child).attr("alt"));
-			else if(child.name==="i")
+			var childNodeName = child.nodeName.toLowerCase();
+			if(childNodeName==="img")
+				result += processSymbol(child.getAttribute("alt"));
+			else if(childNodeName==="i")
 			{
-				result += processTextBoxChildren(doc, child.children);
+				result += processTextBoxChildren(doc, child.childNodes);
 			}
-			else if(child.name==="<")
+			else if(childNodeName==="<")
 			{
 				result += "<";
 			}
-			else if(child.name===">")
+			else if(childNodeName===">")
 			{
 				result += ">";
 			}
+			else if(childNodeName==="br")
+			{
+				result += "\n";
+			}
 			else
-				base.warn("Unsupported text child tag name %s", child.name);
+				base.warn("Unsupported text child tag name %s", childNodeName);
 		}
-		else if(child.type==="text")
+		else if(child.nodeType===3)
 		{
 			var childText = child.data;
 			Object.forEach(TEXT_TO_SYMBOL_MAP, function(text, symbol)
@@ -956,7 +1052,7 @@ function processTextBoxChildren(doc, children)
 		}
 		else
 		{
-			base.warn("Unknown text child type: %s", child.type);
+			base.warn("Unknown text child type: %s", child.nodeType);
 		}
 	});
 
@@ -966,4 +1062,9 @@ function processTextBoxChildren(doc, children)
 function getReleaseDateForSet(setName)
 {
 	return C.SETS.mutateOnce(function(SET) { return SET.name===setName ? SET.releaseDate : undefined; }) || moment().format("YYYY-MM-DD");
+}
+
+function getTextContent(item)
+{
+	return (item && item.textContent ? item.textContent : "");
 }

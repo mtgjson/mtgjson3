@@ -19,6 +19,7 @@
 			name : "Limited Edition Alpha",
 			code : "LEA",
 			gathererCode : "1E",
+			magicCardsInfoCode : "al",
 			releaseDate : "1993-08-05",
 			border : "black",
 			type : "core",
@@ -28,6 +29,7 @@
 			name : "Limited Edition Beta",
 			code : "LEB",
 			gathererCode : "2E",
+			magicCardsInfoCode : "be",
 			releaseDate : "1993-10-01",
 			border : "black",
 			type : "core",
@@ -37,6 +39,7 @@
 			name : "Arabian Nights",
 			code : "ARN",
 			gathererCode : "AN",
+			magicCardsInfoCode : "an",
 			releaseDate : "1993-12-01",
 			border : "black",
 			type : "expansion",
@@ -1193,10 +1196,33 @@
 
 	exports.SET_CORRECTIONS =
 	{
+		LEA :
+		[
+			{ match : {name : "Elvish Archers"}, replace : {flavor : "I tell you, there was so many arrows flying about you couldn't hardly see the sun. So I says to young Angus, \"Well, at least now we're fighting in the shade!\""}},
+			{ match : {name : "Goblin Balloon Brigade"}, replace : {flavor : "\"From up here we can drop rocks and arrows and more rocks!\" \"Uh, yeah boss, but how do we get down?\""}},
+			{ match : {name : "Jade Statue"}, replace : {flavor : "\"Some of the other guys dared me to touch it, but I knew it weren't no ordinary hunk o' rock.\" —Norin the Wary"}},
+			{ match : {name : "Mahamoti Djinn"}, replace : {flavor : "Of royal blood among the spirits of the air, the Mahamoti Djinn rides on the wings of the winds. As dangerous in the gambling hall as he is in battle, he is a master of trickery and misdirection."}},
+			{ match : {name : "Pearled Unicorn"}, replace : {flavor : "\"‘Do you know, I always thought Unicorns were fabulous monsters, too? I never saw one alive before!' ‘Well, now that we have seen each other,' said the Unicorn, ‘if you'll believe in me, I'll believe in you.'\"\n—Lewis Carroll"}},
+			{ match : {name : "Roc of Kher Ridges"}, replace : {flavor : "We encountered a valley topped with immense boulders and eerie rock formations. Suddenly one of these boulders toppled from its perch and sprouted gargantuan wings, casting a shadow of darkness and sending us fleeing in terror."}},
+			{ match : {name : "Scathe Zombies"}, replace : {flavor : "\"They groaned, they stirred, they all uprose,/ Nor spake, nor moved their eyes;/ It had been strange, even in a dream,/ To have seen those dead men rise.\"/—Samuel Coleridge, \"The Rime of the Ancient Mariner\""}},
+			{ match : {name : "Wall of Air"}, replace : {flavor : "\"This ‘standing windstorm' can hold us off indefinitely? Ridiculous!\" Saying nothing, she put a pinch of salt on the table. With a bang she clapped her hands, and the salt disappeared, blown away."}},
+			{ match : {name : "Wall of Brambles"}, replace : {flavor : "\"What else, when chaos draws all forces inward to shape a single leaf.\"\n—Conrad Aiken"}},
+			{ match : {name : "Wall of Ice"}, replace : {flavor : "\"And through the drifts the snowy cliffs/ Did send a dismal sheen:/ Nor shapes of men nor beasts we ken—/ The ice was all between.\"/—Samuel Coleridge, \"The Rime of the Ancient Mariner\""}}
+		],
+		LEB : 
+		[
+			{ match : {name : "Ley Druid"}, replace : {flavor : "After years of training, the Druid becomes one with nature, drawing power from the land and returning it when needed."}}
+			// All of LEA rules are copied into LEB below
+		],
 		ARN :
 		[
 			{ match : {name: "Bazaar of Baghdad"}, replace : {artist : "Jeff A. Menges"} },
-			{ match : {name: "Library of Alexandria"}, replace : {artist : "Mark Poole"} }
+			{ match : {name: "Library of Alexandria"}, replace : {artist : "Mark Poole"} },
+			{ match : {name: "Aladdin's Ring"}, replace : {flavor : "\"After these words the magician drew a ring off his finger, and put it on one of Aladdin's, saying: 'It is a talisman against all evil, so long as you obey me.'\" —The Arabian Nights, Junior Classics trans."} },
+			{ match : {name: "Ali Baba"}, replace : {flavor : "\"When he reached the entrance of the cavern, he pronounced the words, ‘Open, Sesame!'\" —The Arabian Nights, Junior Classics trans."} },
+			{ match : {name: "Juzám Djinn"}, replace : {flavor : "\"Expect my visit when the darkness comes. The night I think is best for hiding all.\" —Ouallada"} },
+			{ match : {name: "King Suleiman"}, replace : {flavor : "\"We made tempestuous winds obedient to Solomon . . . And many of the devils We also made obedient to him.\" —The Qur'an, 21:81"} },
+			{ match : {name: "Repentant Blacksmith"}, replace : {flavor : "\"For my confession they burned me with fire And found that I was for endurance made.\" —The Arabian Nights, trans. Haddawy"} }			
 		],
 		LEG :
 		[
@@ -2006,6 +2032,8 @@
 			{ renumberImages : "Swamp", order : [] }
 		]
 	};
+
+	exports.SET_CORRECTIONS["LEB"].pushAll(exports.SET_CORRECTIONS["LEA"]);	// All of LEA rules apply to LEB
 
 	exports.ARTIST_CORRECTIONS =
 	{

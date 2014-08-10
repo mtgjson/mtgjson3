@@ -4,12 +4,9 @@
 var base = require("xbase"),
 	C = require("C"),
 	fs = require("fs"),
-	cheerio = require("cheerio"),
+	domino = require("domino"),
 	request = require("request"),
-	url = require("url"),
 	shared = require("shared"),
-	querystring = require("querystring"),
-	fileUtil = require("xutil").file,
 	path = require("path"),
 	tiptoe = require("tiptoe");
 
@@ -107,15 +104,14 @@ function buildMultiverseAllPrintingsURL(multiverseid, cb)
 		{
 			request(shared.buildMultiversePrintingsURL(multiverseid, 0), this);
 		},
-		function getAllPages(err, response, pageHTML)
+		function getAllPages(err, response, rawHTML)
 		{
 			if(err)
 				return setImmediate(function() { cb(err); });
 
 			var urls = [];
-			var doc = cheerio.load(pageHTML);
 
-			var numPages = shared.getPrintingsDocNumPages(doc);
+			var numPages = shared.getPrintingsDocNumPages(domino.createWindow(rawHTML).document);
 			for(var i=0;i<numPages;i++)
 			{
 				urls.push(shared.buildMultiversePrintingsURL(multiverseid, i));

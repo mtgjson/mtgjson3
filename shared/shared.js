@@ -79,7 +79,6 @@ exports.cardComparator = function(a, b)
 	return 0;
 };
 
-
 exports.buildMultiverseLanguagesURL = function(multiverseid)
 {
 	var urlConfig = 
@@ -92,7 +91,6 @@ exports.buildMultiverseLanguagesURL = function(multiverseid)
 
 	return url.format(urlConfig);
 };
-
 
 exports.buildMultiverseURL = function(multiverseid, part)
 {
@@ -112,7 +110,6 @@ exports.buildMultiverseURL = function(multiverseid, part)
 
 	return url.format(urlConfig);
 };
-
 
 exports.buildMultiverseLegalitiesURL = function(multiverseid)
 {
@@ -201,14 +198,20 @@ exports.performSetCorrections = function(setCorrections, cards)
 	});
 };
 
-exports.clearCacheFile = function(targetUrl, cb)
+exports.generateCacheFilePath = generateCacheFilePath;
+function generateCacheFilePath(targetUrl)
 {
 	var urlHash = hash("whirlpool", targetUrl);
-	var cachePath = path.join(__dirname, "..", "cache", urlHash.charAt(0), urlHash);
+	return  path.join(__dirname, "..", "cache", urlHash.charAt(0), urlHash);
+}
+
+exports.clearCacheFile = function(targetUrl, cb)
+{
+	var cachePath = generateCacheFilePath(targetUrl);
 	if(!fs.existsSync(cachePath))
 		return setImmediate(cb);
 
-	base.info("Clearing: %s for %s", urlHash, targetUrl);
+	base.info("Clearing: %s for %s", cachePath, targetUrl);
 
 	fs.unlink(cachePath, cb);
 };
@@ -216,12 +219,12 @@ exports.clearCacheFile = function(targetUrl, cb)
 
 exports.getPrintingsDocNumPages = function(doc)
 {
-	var pageLinks = doc("#ctl00_ctl00_ctl00_MainContent_SubContent_SubContent_PrintingsList_pagingControlsContainer a").map(function(i, item) { return doc(item); });
+	var pageLinks = Array.toArray(doc.querySelectorAll("#ctl00_ctl00_ctl00_MainContent_SubContent_SubContent_PrintingsList_pagingControlsContainer a"));
 
 	var numPages = 1;
 	if(pageLinks.length>0)
 	{
-		var lastPageHREF = pageLinks.last().attr("href");
+		var lastPageHREF = pageLinks.last().getAttribute("href");
 		numPages += +querystring.parse(lastPageHREF.substring(lastPageHREF.indexOf("?")+1)).page;
 	}
 
