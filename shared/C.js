@@ -49,6 +49,7 @@
 			name : "Unlimited Edition",
 			code : "2ED",
 			gathererCode : "2U",
+			magicCardsInfoCode : "un",
 			releaseDate : "1993-12-01",
 			border : "white",
 			type : "core",
@@ -58,6 +59,7 @@
 			name : "Antiquities",
 			code : "ATQ",
 			gathererCode : "AQ",
+			magicCardsInfoCode : "aq",
 			releaseDate : "1994-03-01",
 			border : "black",
 			type : "expansion",
@@ -67,6 +69,7 @@
 			name : "Revised Edition",
 			code : "3ED",
 			gathererCode : "3E",
+			magicCardsInfoCode : "rv",
 			releaseDate : "1994-04-01",
 			border : "white",
 			type : "core",
@@ -76,6 +79,7 @@
 			name : "Legends",
 			code : "LEG",
 			gathererCode : "LE",
+			magicCardsInfoCode : "lg",
 			releaseDate : "1994-06-01",
 			border : "black",
 			type : "expansion",
@@ -92,6 +96,7 @@
 			name : "The Dark",
 			code : "DRK",
 			gathererCode : "DK",
+			magicCardsInfoCode : "dk",
 			releaseDate : "1994-08-01",
 			border : "black",
 			type : "expansion",
@@ -1198,37 +1203,183 @@
 	{
 		LEA :
 		[
-			{ match : {name : "Elvish Archers"}, replace : {flavor : "I tell you, there was so many arrows flying about you couldn't hardly see the sun. So I says to young Angus, \"Well, at least now we're fighting in the shade!\""}},
-			{ match : {name : "Goblin Balloon Brigade"}, replace : {flavor : "\"From up here we can drop rocks and arrows and more rocks!\" \"Uh, yeah boss, but how do we get down?\""}},
-			{ match : {name : "Jade Statue"}, replace : {flavor : "\"Some of the other guys dared me to touch it, but I knew it weren't no ordinary hunk o' rock.\" —Norin the Wary"}},
+			{ match : {name : "Elvish Archers"}, flavorAddExclamation : true},
+			{ match : {name : "Goblin Balloon Brigade"}, flavorAddExclamation : true},
+			{ match : {name : "Jade Statue"}, flavorAddDash : true},
 			{ match : {name : "Mahamoti Djinn"}, replace : {flavor : "Of royal blood among the spirits of the air, the Mahamoti Djinn rides on the wings of the winds. As dangerous in the gambling hall as he is in battle, he is a master of trickery and misdirection."}},
 			{ match : {name : "Pearled Unicorn"}, replace : {flavor : "\"‘Do you know, I always thought Unicorns were fabulous monsters, too? I never saw one alive before!' ‘Well, now that we have seen each other,' said the Unicorn, ‘if you'll believe in me, I'll believe in you.'\"\n—Lewis Carroll"}},
 			{ match : {name : "Roc of Kher Ridges"}, replace : {flavor : "We encountered a valley topped with immense boulders and eerie rock formations. Suddenly one of these boulders toppled from its perch and sprouted gargantuan wings, casting a shadow of darkness and sending us fleeing in terror."}},
-			{ match : {name : "Scathe Zombies"}, replace : {flavor : "\"They groaned, they stirred, they all uprose,/ Nor spake, nor moved their eyes;/ It had been strange, even in a dream,/ To have seen those dead men rise.\"/—Samuel Coleridge, \"The Rime of the Ancient Mariner\""}},
-			{ match : {name : "Wall of Air"}, replace : {flavor : "\"This ‘standing windstorm' can hold us off indefinitely? Ridiculous!\" Saying nothing, she put a pinch of salt on the table. With a bang she clapped her hands, and the salt disappeared, blown away."}},
-			{ match : {name : "Wall of Brambles"}, replace : {flavor : "\"What else, when chaos draws all forces inward to shape a single leaf.\"\n—Conrad Aiken"}},
-			{ match : {name : "Wall of Ice"}, replace : {flavor : "\"And through the drifts the snowy cliffs/ Did send a dismal sheen:/ Nor shapes of men nor beasts we ken—/ The ice was all between.\"/—Samuel Coleridge, \"The Rime of the Ancient Mariner\""}}
+			{ match : {name : "Scathe Zombies"}, flavorAddDash : true},
+			{ match : {name : "Wall of Air"}, flavorAddExclamation : true},
+			{ match : {name : "Wall of Brambles"}, flavorAddDashWithNewline : true},
+			{ match : {name : "Wall of Ice"}, replace : {flavor : "\"And through the drifts the snowy cliffs/ Did send a dismal sheen:/ Nor shapes of men nor beasts we ken—/ The ice was all between.\"/—Samuel Coleridge, \"The Rime of the Ancient Mariner\""}},
+			// Using multiverseid here because these rules get copied into LEB and 2ED
+			{ match : {multiverseid: 243}, replace : {artist : "Mark Tedin"} },
+			{ match : {multiverseid: 248}, replace : {artist : "Mark Poole"} },
+			{ match : {multiverseid: 220}, replace : {artist : "Dan Frazier"} },
+			{ match : {multiverseid: 285}, replace : {artist : "Jesper Myrfors"} }
 		],
 		LEB : 
 		[
 			{ match : {name : "Ley Druid"}, replace : {flavor : "After years of training, the Druid becomes one with nature, drawing power from the land and returning it when needed."}}
-			// All of LEA rules are copied into LEB below
+			// All of LEA rules are copied into here (see below)
 		],
 		ARN :
 		[
-			{ match : {name: "Bazaar of Baghdad"}, replace : {artist : "Jeff A. Menges"} },
-			{ match : {name: "Library of Alexandria"}, replace : {artist : "Mark Poole"} },
-			{ match : {name: "Aladdin's Ring"}, replace : {flavor : "\"After these words the magician drew a ring off his finger, and put it on one of Aladdin's, saying: 'It is a talisman against all evil, so long as you obey me.'\" —The Arabian Nights, Junior Classics trans."} },
-			{ match : {name: "Ali Baba"}, replace : {flavor : "\"When he reached the entrance of the cavern, he pronounced the words, ‘Open, Sesame!'\" —The Arabian Nights, Junior Classics trans."} },
-			{ match : {name: "Juzám Djinn"}, replace : {flavor : "\"Expect my visit when the darkness comes. The night I think is best for hiding all.\" —Ouallada"} },
-			{ match : {name: "King Suleiman"}, replace : {flavor : "\"We made tempestuous winds obedient to Solomon . . . And many of the devils We also made obedient to him.\" —The Qur'an, 21:81"} },
-			{ match : {name: "Repentant Blacksmith"}, replace : {flavor : "\"For my confession they burned me with fire And found that I was for endurance made.\" —The Arabian Nights, trans. Haddawy"} }			
+			{ match : {name : "Bazaar of Baghdad"}, replace : {artist : "Jeff A. Menges"} },
+			{ match : {name : "Library of Alexandria"}, replace : {artist : "Mark Poole"} },
+			{ match : {name : "Aladdin's Ring"}, flavorAddDash : true},
+			{ match : {name : "Ali Baba"}, replace : {flavor : "\"When he reached the entrance of the cavern, he pronounced the words, ‘Open, Sesame!'\" —The Arabian Nights, Junior Classics trans."} },
+			{ match : {name : "Juzám Djinn"}, flavorAddDash : true},
+			{ match : {name : "King Suleiman"}, flavorAddDash : true},
+			{ match : {name : "Repentant Blacksmith"}, flavorAddDash : true}
+		],
+		"2ED" :
+		[
+			// All of LEA rules are copied into here (see below)
+		],
+		ATQ :
+		[
+			{ match : {name : "Gate to Phyrexia"}, flavorAddDash : true },
+			{ match : {name : "Triskelion"}, replace : {flavor : "A brainchild of Tawnos, the Triskelion proved its versatility and usefulness in many of the later battles between the brothers."} }
+		],
+		"3ED" :
+		[
+			{ match : {name : "Aladdin's Ring"}, flavorAddDash : true},
+			{ match : {name : "Dwarven Weaponsmith"}, replace : {flavor : "\"Work with zeal as hammers peal! Melt, anneal, and pound the steel!\"\n—Old Dwarvish forge-chant"} },
+			{ match : {name : "Elvish Archers"}, flavorAddExclamation : true},
+			{ match : {name : "Goblin Balloon Brigade"}, flavorAddExclamation : true},
+			{ match : {name : "Mahamoti Djinn"}, replace : {flavor : "Of royal blood among the spirits of the air, the Mahamoti Djinn rides on the wings of the winds. As dangerous in the gambling hall as he is in battle, he is a master of trickery and misdirection."}},
+			{ match : {name : "Pearled Unicorn"}, replace : {flavor : "\"‘Do you know, I always thought Unicorns were fabulous monsters, too? I never saw one alive before!' ‘Well, now that we have seen each other,' said the Unicorn, ‘if you'll believe in me, I'll believe in you.'\" —Lewis Carroll"}},
+			{ match : {name : "Hypnotic Specter"}, flavorAddDash : true},
+			{ match : {name : "Roc of Kher Ridges"}, replace : {flavor : "We encountered a valley topped with immense boulders and eerie rock formations. Suddenly one of these boulders toppled from its perch and sprouted gargantuan wings, casting a shadow of darkness and sending us fleeing in terror."}},
+			{ match : {name : "Wall of Air"}, flavorAddExclamation : true},
+			{ match : {name : "Wall of Wood"}, replace : {flavor : "Everybody knows that to ward off trouble, you knock on wood. But usually it's better to make a wall out of the wood and let trouble do the knocking."} },
+			{ match : {name : "Onulet"}, replace : {artist : "Anson Maddocks"} },
+			{ match : {name : "Plateau"}, replace : {artist : "Cornelius Brudi"} }
 		],
 		LEG :
 		[
-			{ match : {name : "Pyrotechnics" }, replace : {flavor : "\"Hi! ni! ya! Behold the man of flint, that's me! / Four lightnings zigzag from me, strike and return.\"\n\n—Navajo war chant"}},
-			{ match : {name: "The Tabernacle at Pendrell Vale"}, replace : {artist : "Nicola Leonard"} }
+			{ match : {name : "The Tabernacle at Pendrell Vale"}, replace : {artist : "Nicola Leonard"} },
+			{ match : {name : "Active Volcano"}, replace : {artist : "Justin Hampton"} },
+			{ match : {name : "Disharmony"}, replace : {artist : "Bryon Wackwitz"} },
+			{ match : {name : "Psionic Entity"}, replace : {artist : "Justin Hampton"} },
+			{ match : {name : "Adun Oakenshield"}, flavorAddDash : true},
+			{ match : {name : "Alabaster Potion"}, flavorAddDash : true},
+			{ match : {name : "Angus Mackenzie"}, flavorAddDash : true},
+			{ match : {name : "Barktooth Warbeard"}, replace : {flavor : "He is devious and cunning, in both appearance and deed. Beware the Warbeard, for this brute bites as well as he barks!"}},
+			{ match : {name : "Boomerang"}, replace : {flavor : "\"O! call back yesterday, bid time return.\" —William Shakespeare, King Richard the Second"} },
+			{ match : {name : "Carrion Ants"}, flavorAddDash : true},
+			{ match : {name : "Craw Giant"}, replace : {flavor : "Harthag gave a jolly laugh as he surveyed the army before him. \"Ho ho ho! Midgets! You think you can stand in my way?\""} },
+			{ match : {name : "Dakkon Blackblade"}, flavorAddDash : true},
+			{ match : {name : "Darkness"}, flavorAddDash : true},
+			{ match : {name : "Devouring Deep"}, flavorAddDash : true},
+			{ match : {name : "Dream Coat"}, flavorAddDash : true},
+			{ match : {name : "Durkwood Boars"}, flavorAddDash : true},
+			{ match : {name : "Elven Riders"}, flavorAddDash : true},
+			{ match : {name : "Firestorm Phoenix"}, flavorAddDash : true},
+			{ match : {name : "Flash Counter"}, flavorAddDash : true},
+			{ match : {name : "Gaseous Form"}, replace : {flavor : "\". . . [A]nd gives to airy nothing/ A local habitation and a name.\" —William Shakespeare, A Midsummer-Night's Dream"} },
+			{ match : {name : "Giant Strength"}, replace : {flavor : "\"O! it is excellent/ To have a giant's strength, but it is tyrannous/ To use it like a giant.\" —William Shakespeare, Measure for Measure"} },
+			{ match : {name : "Giant Turtle"}, flavorAddDash : true},
+			{ match : {name : "Glyph of Doom"}, flavorAddDash : true},
+			{ match : {name : "Greed"}, flavorAddDash : true},
+			{ match : {name : "Hammerheim"}, replace : {flavor : "\"‘Tis distance lends enchantment to the view,/ And robes the mountain in its azure hue.\" —Thomas Campbell, \"Pleasures of Hope\""} },
+			{ match : {name : "Headless Horseman"}, flavorAddDash : true},
+			{ match : {name : "Hellfire"}, flavorAddDash : true},
+			{ match : {name : "Holy Day"}, flavorAddExclamation : true, flavorAddDash : true},
+			{ match : {name : "Hornet Cobra"}, flavorAddDash : true},
+			{ match : {name : "Horror of Horrors"}, flavorAddDash : true},
+			{ match : {name : "Hyperion Blacksmith"}, flavorAddDash : true},
+			{ match : {name : "Karakas"}, flavorAddDash : true},
+			{ match : {name : "Keepers of the Faith"}, replace : {flavor : "And then the Archangel Anthius spoke to them, saying, \"Fear shall be vanquished— by the Sword of Faith.\""} },
+			{ match : {name : "Kobold Overlord"}, flavorAddExclamation : true, flavorAddDash : true},
+			{ match : {name : "Lady Evangela"}, flavorAddDash : true},
+			{ match : {name : "Lady Orca"}, flavorAddDash : true},
+			{ match : {name : "Lifeblood"}, replace : {flavor : "\"Foolish wizard! As you tap the power of your lofty keep, so grows my strength.\" —Malvern Xelionos, Letters"}},
+			{ match : {name : "Part Water"}, flavorAddDash : true},
+			{ match : {name : "Pendelhaven"}, replace : {flavor : "\"This is the forest primeval. The murmuring pines and the hemlocks . . . / Stand like Druids of old.\" —Henry Wadsworth Longfellow, \"Evangeline\""} },
+			{ match : {name : "Pyrotechnics" }, replace : {flavor : "\"Hi! ni! ya! Behold the man of flint, that's me!/ Four lightnings zigzag from me, strike and return.\"\n—Navajo war chant"}},
+			{ match : {name : "Quarum Trench Gnomes"}, flavorAddDash : true},
+			{ match : {name : "Raging Bull"}, flavorAddDash : true},
+			{ match : {name : "Remove Soul"}, replace : {flavor : "Nethya stiffened suddenly, head cocked as if straining to hear some distant sound, then fell lifeless to the ground."} },
+			{ match : {name : "Revelation"}, flavorAddDash : true},
+			{ match : {name : "Rust"}, replace : {flavor : "\"How dull it is to pause, to make an end,/ To rust unburnished, not to shine in use,/ As though to breathe were life!\" —Alfred, Lord Tennyson, \"Ulysses\""} },
+			{ match : {name : "Segovian Leviathan"}, replace : {flavor : "\"Leviathan, too! Can you catch him with a fish-hook/ or run a line round his tongue?\" —Job 40:25"} },
+			{ match : {name : "Shimian Night Stalker"}, flavorAddDash : true},
+			{ match : {name : "Sir Shandlar of Eberyn"}, replace : {flavor : "\"Remember Sir Shandlar! Remember and stand firm!\" —rallying cry of the Eberyn militia"} },
+			{ match : {name : "Spinal Villain"}, flavorAddDash : true},
+			{ match : {name : "Syphon Soul"}, flavorAddExclamation : true},
+			{ match : {name : "The Abyss"}, flavorAddDash : true},
+			{ match : {name : "The Brute"}, flavorAddDash : true},
+			{ match : {name : "Thunder Spirit"}, flavorAddDash : true},
+			{ match : {name : "Tolaria"}, flavorAddDash : true},
+			{ match : {name : "Touch of Darkness"}, flavorAddDash : true},
+			{ match : {name : "Transmutation"}, flavorAddExclamation : true},
+			{ match : {name : "Underworld Dreams"}, flavorAddDash : true},
+			{ match : {name : "Urborg"}, flavorAddDash : true},
+			{ match : {name : "Vampire Bats"}, flavorAddDash : true},
+			{ match : {name : "Visions"}, flavorAddExclamation : true},
+			{ match : {name : "Wall of Caltrops"}, replace : {flavor : "\"Ow! Ow ow ow! Oooh, ow, OW!\""} },
+			{ match : {name : "Wall of Vapor"}, flavorAddDash : true},
+			{ match : {name : "Wall of Wonder"}, replace : {flavor : "So confusing is the Wall's appearance that few of its victims even see it move."} },
+			{ match : {name : "Winds of Change"}, flavorAddDash : true},
+			{ match : {name : "Winter Blast"}, replace : {flavor : "\"Blow, winds, and crack your cheeks! rage! blow!\" —William Shakespeare, King Lear"} },
+			{ match : {name : "Wolverine Pack"}, flavorAddDash : true }
 		],
+		DRK :
+		[
+			{ match : {name : ""}, replace : {flavor : ""} },
+			{ match : {name : ""}, replace : {flavor : ""} },
+			{ match : {name : ""}, replace : {flavor : ""} },
+			{ match : {name : ""}, replace : {flavor : ""} },
+			{ match : {name : ""}, replace : {flavor : ""} },
+			{ match : {name : ""}, replace : {flavor : ""} },
+			{ match : {name : ""}, replace : {flavor : ""} },
+			{ match : {name : ""}, replace : {flavor : ""} },
+			{ match : {name : ""}, replace : {flavor : ""} },
+			{ match : {name : ""}, replace : {flavor : ""} },
+			{ match : {name : ""}, replace : {flavor : ""} },
+			{ match : {name : ""}, replace : {flavor : ""} },
+			{ match : {name : ""}, replace : {flavor : ""} },
+			{ match : {name : ""}, replace : {flavor : ""} },
+			{ match : {name : ""}, replace : {flavor : ""} },
+			{ match : {name : ""}, replace : {flavor : ""} },
+			{ match : {name : ""}, replace : {flavor : ""} },
+			{ match : {name : ""}, replace : {flavor : ""} },
+			{ match : {name : ""}, replace : {flavor : ""} },
+			{ match : {name : ""}, replace : {flavor : ""} },
+			{ match : {name : ""}, replace : {flavor : ""} },
+			{ match : {name : ""}, replace : {flavor : ""} },
+			{ match : {name : ""}, replace : {flavor : ""} },
+			{ match : {name : ""}, replace : {flavor : ""} },
+			{ match : {name : ""}, replace : {flavor : ""} },
+			{ match : {name : ""}, replace : {flavor : ""} },
+			{ match : {name : ""}, replace : {flavor : ""} },
+			{ match : {name : ""}, replace : {flavor : ""} },
+			{ match : {name : ""}, replace : {flavor : ""} },
+			{ match : {name : ""}, replace : {flavor : ""} },
+			{ match : {name : ""}, replace : {flavor : ""} },
+			{ match : {name : ""}, replace : {flavor : ""} },
+			{ match : {name : ""}, replace : {flavor : ""} },
+			{ match : {name : ""}, replace : {flavor : ""} },
+			{ match : {name : ""}, replace : {flavor : ""} }
+		],
+
+		/*ATQ :
+		[
+			{ match : {name : ""}, replace : {flavor : ""} },
+		],*/
+
+
+
+
+
+
+
+
+
+
 		FEM :
 		[
 			{ renumberImages : "Armor Thrull", order : [1841, 1840, 1838, 1839] },
@@ -1641,10 +1792,6 @@
 			{ match : { name : "Colossus of Akros" }, replace : {text : "Defender, indestructible\n\n{10}: Monstrosity 10. (If this creature isn't monstrous, put ten +1/+1 counters on it and it becomes monstrous.)\n\nAs long as Colossus of Akros is monstrous, it has trample and can attack as though it didn't have defender."}},
 			{ match : { name : "Time to Feed" }, replace : {text : "Choose target creature an opponent controls. When that creature dies this turn, you gain 3 life. Target creature you control fights that creature. (Each deals damage equal to its power to the other.)"}}
 		],
-		PPR :
-		[
-			{ match : {name : "Shield of Kaldra"}, replace : {rarity : "Special"}}
-		],
 		VAN :
 		[
 			{ match : {name : "Akroma, Angel of Wrath"}, replace : {artist : "Ron Spears", flavor : "No rest. No mercy. No matter what."}},
@@ -2008,6 +2155,10 @@
 			{ match : {name : "The Rack"}, replace : {artist : "Nic Klein"}, remove : ["flavor"]},
 			{ match : {name : "Troll Ascetic"}, remove : ["flavor"] }
 		],
+		PPR :
+		[
+			{ match : {name : "Shield of Kaldra"}, replace : {rarity : "Special"}}
+		],
 		"*" :
 		[
 			{ match : {name : "Draco"}, replace : {text : "Domain — Draco costs {2} less to cast for each basic land type among lands you control.\n\nFlying\n\nDomain — At the beginning of your upkeep, sacrifice Draco unless you pay {10}. This cost is reduced by {2} for each basic land type among lands you control."}},
@@ -2034,6 +2185,7 @@
 	};
 
 	exports.SET_CORRECTIONS["LEB"].pushAll(exports.SET_CORRECTIONS["LEA"]);	// All of LEA rules apply to LEB
+	exports.SET_CORRECTIONS["2ED"].pushAll(exports.SET_CORRECTIONS["LEA"]);	// All of LEA rules apply to 2ED
 
 	exports.ARTIST_CORRECTIONS =
 	{

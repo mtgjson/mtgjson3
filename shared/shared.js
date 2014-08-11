@@ -167,8 +167,21 @@ exports.performSetCorrections = function(setCorrections, cards)
 				{
 					if(setCorrection.replace)
 						Object.forEach(setCorrection.replace, function(key, value) { card[key] = value; });
+					
 					if(setCorrection.remove)
 						setCorrection.remove.forEach(function(removeKey) { delete card[removeKey]; });
+
+					if(setCorrection.flavorAddExclamation)
+						card.flavor = card.flavor.replace(/([A-Za-z])"/, "$1!\"", "gm");
+
+					if((setCorrection.flavorAddDash || setCorrection.flavorAddDashWithNewline) && card.flavor)
+					{
+						card.flavor = card.flavor.replace(/([.!?,'])(["][/]?[\n]?)(\s*)([A-Za-z])/, (setCorrection.flavorAddDashWithNewline ? "$1$2$3\n—$4" : "$1$2$3 —$4"), "gm");
+						while(card.flavor.contains("  —"))
+						{
+							card.flavor = card.flavor.replace("  —", " —");
+						}
+					}
 				}
 			});
 
