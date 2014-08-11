@@ -139,9 +139,16 @@ function ripSet(setName, cb)
 		},
 		function compareToMagicCardsInfo()
 		{
-			base.info("Comparing cards to MagicCards.info...");
-
-			compareCardsToMCI(this.data.set, this);
+			if(!this.data.set.magicCardsInfoCode)
+			{
+				base.warn("SKIPPING comparing to MagicCards.info (no MCI code)...");
+				this();
+			}
+			else
+			{
+				base.info("Comparing cards to MagicCards.info...");
+				compareCardsToMCI(this.data.set, this);
+			}
 		},
 		function finish(err)
 		{
@@ -807,7 +814,7 @@ function compareCardsToMCI(set, cb)
 	tiptoe(
 		function getSetCardList()
 		{
-			getURLAsDoc("http://magiccards.info/" + (set.magicCardsInfoCode || set.code).toLowerCase() + "/en.html", this);
+			getURLAsDoc("http://magiccards.info/" + set.magicCardsInfoCode.toLowerCase() + "/en.html", this);
 		},
 		function processSetCardList(listDoc)
 		{
@@ -993,14 +1000,14 @@ function processTextBlocks(doc, textBlocks)
 	Array.toArray(textBlocks).forEach(function(textBox, i)
 	{
 		if(i>0)
-			result += "\n\n";
+			result += "\n";
 
 		result += processTextBoxChildren(doc, textBox.childNodes);
 	});
 
-	while(result.contains("\n\n\n"))
+	while(result.contains("\n\n"))
 	{
-		result = result.replaceAll("\n\n\n", "\n\n");
+		result = result.replaceAll("\n\n", "\n");
 	}
 
 	return result;
