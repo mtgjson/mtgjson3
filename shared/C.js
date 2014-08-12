@@ -186,6 +186,7 @@
 			name : "Introductory Two-Player Set",
 			code : "ITP",
 			oldCode : "I2P",
+			magicCardsInfoCode : "itp",
 			releaseDate : "1996-12-31",
 			border : "white",
 			type : "starter"
@@ -715,6 +716,7 @@
 		{
 			name : "Tenth Edition",
 			code : "10E",
+			magicCardsInfoCode : "10e",
 			releaseDate : "2007-07-13",
 			border : "black",
 			type : "core",
@@ -723,6 +725,7 @@
 		{
 			name : "Masters Edition",
 			code : "MED",
+			magicCardsInfoCode : "med",
 			releaseDate : "2007-09-10",
 			border : "black",
 			type : "masters",
@@ -732,6 +735,7 @@
 		{
 			name : "Lorwyn",
 			code : "LRW",
+			magicCardsInfoCode : "lw",
 			releaseDate : "2007-10-12",
 			border : "black",
 			type : "expansion",
@@ -741,6 +745,7 @@
 		{
 			name : "Duel Decks: Elves vs. Goblins",
 			code : "EVG",
+			magicCardsInfoCode : "evg",
 			releaseDate : "2007-11-16",
 			border : "black",
 			type : "duel deck"
@@ -748,6 +753,7 @@
 		{
 			name : "Morningtide",
 			code : "MOR",
+			magicCardsInfoCode : "mt",
 			releaseDate : "2008-02-01",
 			border : "black",
 			type : "expansion",
@@ -757,6 +763,7 @@
 		{
 			name : "Shadowmoor",
 			code : "SHM",
+			magicCardsInfoCode : "shm",
 			releaseDate : "2008-05-02",
 			border : "black",
 			type : "expansion",
@@ -766,6 +773,7 @@
 		{
 			name : "Eventide",
 			code : "EVE",
+			magicCardsInfoCode : "eve",
 			releaseDate : "2008-07-25",
 			border : "black",
 			type : "expansion",
@@ -775,6 +783,7 @@
 		{
 			name : "From the Vault: Dragons",
 			code : "DRB",
+			magicCardsInfoCode : "fvd",
 			releaseDate : "2008-08-29",
 			border : "black",
 			type : "from the vault"
@@ -782,6 +791,7 @@
 		{
 			name : "Masters Edition II",
 			code : "ME2",
+			magicCardsInfoCode : "me2",
 			releaseDate : "2008-09-22",
 			border : "black",
 			type : "masters",
@@ -791,6 +801,7 @@
 		{
 			name : "Shards of Alara",
 			code : "ALA",
+			magicCardsInfoCode : "ala",
 			releaseDate : "2008-10-03",
 			border : "black",
 			type : "expansion",
@@ -801,6 +812,7 @@
 			name : "Duel Decks: Jace vs. Chandra",
 			code : "DD2",
 			oldCode : "D2",
+			magicCardsInfoCode : "jvc",
 			releaseDate : "2008-11-07",
 			border : "black",
 			type : "duel deck"
@@ -809,6 +821,7 @@
 			name : "Conflux",
 			code : "CON",
 			oldCode : "CFX",
+			magicCardsInfoCode : "cfx",
 			releaseDate : "2009-02-06",
 			border : "black",
 			type : "expansion",
@@ -818,6 +831,7 @@
 		{
 			name : "Duel Decks: Divine vs. Demonic",
 			code : "DDC",
+			magicCardsInfoCode : "dvd",
 			releaseDate : "2009-04-10",
 			border : "black",
 			type : "duel deck"
@@ -825,6 +839,7 @@
 		{
 			name : "Alara Reborn",
 			code : "ARB",
+			magicCardsInfoCode : "arb",
 			releaseDate : "2009-04-30",
 			border : "black",
 			type : "expansion",
@@ -834,6 +849,7 @@
 		{
 			name : "Magic 2010",
 			code : "M10",
+			magicCardsInfoCode : "m10",
 			releaseDate : "2009-07-17",
 			border : "black",
 			type : "core",
@@ -843,6 +859,7 @@
 			name : "From the Vault: Exiled",
 			code : "V09",
 			oldCode : "FVE",
+			magicCardsInfoCode : "fve",
 			releaseDate : "2009-08-28",
 			border : "black",
 			type : "from the vault"
@@ -851,6 +868,7 @@
 			name : "Planechase",
 			code : "HOP",
 			oldCode : "PCH",
+			magicCardsInfoCode : "pch",
 			releaseDate : "2009-09-04",
 			border : "black",
 			type : "planechase"
@@ -858,6 +876,7 @@
 		{
 			name : "Masters Edition III",
 			code : "ME3",
+			magicCardsInfoCode : "me3",
 			releaseDate : "2009-09-07",
 			border : "black",
 			type : "masters",
@@ -867,6 +886,7 @@
 		{
 			name : "Zendikar",
 			code : "ZEN",
+			magicCardsInfoCode : "zen",
 			releaseDate : "2009-10-02",
 			border : "black",
 			type : "expansion",
@@ -876,6 +896,7 @@
 		{
 			name : "Duel Decks: Garruk vs. Liliana",
 			code : "DDD",
+			magicCardsInfoCode : "gvl",
 			releaseDate : "2009-10-30",
 			border : "black",
 			type : "duel deck"
@@ -883,6 +904,7 @@
 		{
 			name : "Premium Deck Series: Slivers",
 			code : "H09",
+			magicCardsInfoCode : "pds",
 			releaseDate : "2009-11-20",
 			border : "black",
 			type : "premium deck"
@@ -890,6 +912,7 @@
 		{
 			name : "Worldwake",
 			code : "WWK",
+			magicCardsInfoCode : "wwk",
 			releaseDate : "2010-02-05",
 			border : "black",
 			type : "expansion",
@@ -899,6 +922,7 @@
 		{
 			name : "Duel Decks: Phyrexia vs. the Coalition",
 			code : "DDE",
+			magicCardsInfoCode : "pvc",
 			releaseDate : "2010-03-19",
 			border : "black",
 			type : "duel deck"
@@ -906,6 +930,7 @@
 		{
 			name : "Rise of the Eldrazi",
 			code : "ROE",
+			magicCardsInfoCode : "roe",
 			releaseDate : "2010-04-23",
 			border : "black",
 			type : "expansion",
@@ -915,6 +940,7 @@
 		{
 			name : "Duels of the Planeswalkers",
 			code : "DPA",
+			magicCardsInfoCode : "dpa",
 			releaseDate : "2010-06-04",
 			border : "black",
 			type : "box"
@@ -922,6 +948,7 @@
 		{
 			name : "Archenemy",
 			code : "ARC",
+			magicCardsInfoCode : "arc",
 			releaseDate : "2010-06-18",
 			border : "black",
 			type : "archenemy"
@@ -929,6 +956,7 @@
 		{
 			name : "Magic 2011",
 			code : "M11",
+			magicCardsInfoCode : "m11",
 			releaseDate : "2010-07-16",
 			border : "black",
 			type : "core",
@@ -937,6 +965,7 @@
 		{
 			name : "From the Vault: Relics",
 			code : "V10",
+			magicCardsInfoCode : "fvr",
 			releaseDate : "2010-08-27",
 			border : "black",
 			type : "from the vault"
@@ -944,6 +973,7 @@
 		{
 			name : "Duel Decks: Elspeth vs. Tezzeret",
 			code : "DDF",
+			magicCardsInfoCode : "ddf",
 			releaseDate : "2010-09-03",
 			border : "black",
 			type : "duel deck"
@@ -951,6 +981,7 @@
 		{
 			name : "Scars of Mirrodin",
 			code : "SOM",
+			magicCardsInfoCode : "som",
 			releaseDate : "2010-10-01",
 			border : "black",
 			type : "expansion",
@@ -960,6 +991,7 @@
 		{
 			name : "Premium Deck Series: Fire and Lightning",
 			code : "PD2",
+			magicCardsInfoCode : "pd2",
 			releaseDate : "2010-11-19",
 			border : "black",
 			type : "premium deck"
@@ -967,6 +999,7 @@
 		{
 			name : "Masters Edition IV",
 			code : "ME4",
+			magicCardsInfoCode : "me4",
 			releaseDate : "2011-01-10",
 			border : "black",
 			type : "masters",
@@ -976,6 +1009,7 @@
 		{
 			name : "Mirrodin Besieged",
 			code : "MBS",
+			magicCardsInfoCode : "mbs",
 			releaseDate : "2011-02-04",
 			border : "black",
 			type : "expansion",
@@ -985,6 +1019,7 @@
 		{
 			name : "Duel Decks: Knights vs. Dragons",
 			code : "DDG",
+			magicCardsInfoCode : "ddg",
 			releaseDate : "2011-04-01",
 			border : "black",
 			type : "duel deck"
@@ -992,6 +1027,7 @@
 		{
 			name : "New Phyrexia",
 			code : "NPH",
+			magicCardsInfoCode : "nph",
 			releaseDate : "2011-05-13",
 			border : "black",
 			type : "expansion",
@@ -1002,6 +1038,7 @@
 			name : "Magic: The Gathering-Commander",
 			code : "CMD",
 			oldCode : "COM",
+			magicCardsInfoCode : "cmd",
 			releaseDate : "2011-06-17",
 			border : "black",
 			type : "commander"
@@ -1009,6 +1046,7 @@
 		{
 			name : "Magic 2012",
 			code : "M12",
+			magicCardsInfoCode : "m12",
 			releaseDate : "2011-07-15",
 			border : "black",
 			type : "core",
@@ -1018,6 +1056,7 @@
 			name : "From the Vault: Legends",
 			code : "V11",
 			oldCode : "FVL",
+			magicCardsInfoCode : "fvl",
 			releaseDate : "2011-08-26",
 			border : "black",
 			type : "from the vault"
@@ -1025,6 +1064,7 @@
 		{
 			name : "Duel Decks: Ajani vs. Nicol Bolas",
 			code : "DDH",
+			magicCardsInfoCode : "ddh",
 			releaseDate : "2011-09-02",
 			border : "black",
 			type : "duel deck"
@@ -1032,6 +1072,7 @@
 		{
 			name : "Innistrad",
 			code : "ISD",
+			magicCardsInfoCode : "isd",
 			releaseDate : "2011-09-30",
 			border : "black",
 			type : "expansion",
@@ -1041,6 +1082,7 @@
 		{
 			name : "Premium Deck Series: Graveborn",
 			code : "PD3",
+			magicCardsInfoCode : "pd3",
 			releaseDate : "2011-11-18",
 			border : "black",
 			type : "premium deck"
@@ -1048,6 +1090,7 @@
 		{
 			name : "Dark Ascension",
 			code : "DKA",
+			magicCardsInfoCode : "dka",
 			releaseDate : "2012-02-03",
 			border : "black",
 			type : "expansion",
@@ -1057,6 +1100,7 @@
 		{
 			name : "Duel Decks: Venser vs. Koth",
 			code : "DDI",
+			magicCardsInfoCode : "ddi",
 			releaseDate : "2012-03-30",
 			border : "black",
 			type : "duel deck"
@@ -1064,6 +1108,7 @@
 		{
 			name : "Avacyn Restored",
 			code : "AVR",
+			magicCardsInfoCode : "avr",
 			releaseDate : "2012-05-04",
 			border : "black",
 			type : "expansion",
@@ -1073,6 +1118,7 @@
 		{
 			name : "Planechase 2012 Edition",
 			code : "PC2",
+			magicCardsInfoCode : "pc2",
 			releaseDate : "2012-06-01",
 			border : "black",
 			type : "planechase"
@@ -1080,6 +1126,7 @@
 		{
 			name : "Magic 2013",
 			code : "M13",
+			magicCardsInfoCode : "m13",
 			releaseDate : "2012-07-13",
 			border : "black",
 			type : "core",
@@ -1089,6 +1136,7 @@
 			name : "From the Vault: Realms",
 			code : "V12",
 			oldCode : "FVR",
+			magicCardsInfoCode : "v12",
 			releaseDate : "2012-08-31",
 			border : "black",
 			type : "from the vault"
@@ -1096,6 +1144,7 @@
 		{
 			name : "Duel Decks: Izzet vs. Golgari",
 			code : "DDJ",
+			magicCardsInfoCode : "ddj",
 			releaseDate : "2012-09-07",
 			border : "black",
 			type : "duel deck"
@@ -1103,6 +1152,7 @@
 		{
 			name : "Return to Ravnica",
 			code : "RTR",
+			magicCardsInfoCode : "rtr",
 			releaseDate : "2012-10-05",
 			border : "black",
 			type : "expansion",
@@ -1113,6 +1163,7 @@
 			name : "Commander's Arsenal",
 			code : "CM1",
 			oldCode : "CMA",
+			magicCardsInfoCode : "cma",
 			releaseDate : "2012-11-02",
 			border : "black",
 			type : "commander"
@@ -1120,6 +1171,7 @@
 		{
 			name : "Gatecrash",
 			code : "GTC",
+			magicCardsInfoCode : "gtc",
 			releaseDate : "2013-02-01",
 			border : "black",
 			type : "expansion",
@@ -1129,6 +1181,7 @@
 		{
 			name : "Duel Decks: Sorin vs. Tibalt",
 			code : "DDK",
+			magicCardsInfoCode : "ddk",
 			releaseDate : "2013-03-15",
 			border : "black",
 			type : "duel deck"
@@ -1136,6 +1189,7 @@
 		{
 			name : "Dragon's Maze",
 			code : "DGM",
+			magicCardsInfoCode : "dgm",
 			releaseDate : "2013-05-03",
 			border : "black",
 			type : "expansion",
@@ -1145,6 +1199,7 @@
 		{
 			name : "Modern Masters",
 			code : "MMA",
+			magicCardsInfoCode : "mma",
 			releaseDate : "2013-06-07",
 			border : "black",
 			type : "reprint",
@@ -1153,6 +1208,7 @@
 		{
 			name : "Magic 2014 Core Set",
 			code : "M14",
+			magicCardsInfoCode : "m14",
 			releaseDate : "2013-07-19",
 			border : "black",
 			type : "core",
@@ -1161,6 +1217,7 @@
 		{
 			name : "From the Vault: Twenty",
 			code : "V13",
+			magicCardsInfoCode : "v13",
 			releaseDate : "2013-08-23",
 			border : "black",
 			type : "from the vault"
@@ -1168,6 +1225,7 @@
 		{
 			name : "Duel Decks: Heroes vs. Monsters",
 			code : "DDL",
+			magicCardsInfoCode : "ddl",
 			releaseDate : "2013-09-06",
 			border : "black",
 			type : "duel deck"
@@ -1175,6 +1233,7 @@
 		{
 			name : "Theros",
 			code : "THS",
+			magicCardsInfoCode : "ths",
 			releaseDate : "2013-09-27",
 			border : "black",
 			type : "expansion",
@@ -1184,6 +1243,7 @@
 		{
 			name : "Commander 2013 Edition",
 			code : "C13",
+			magicCardsInfoCode : "c13",
 			releaseDate : "2013-11-01",
 			border : "black",
 			type : "commander"
@@ -1191,6 +1251,7 @@
 		{
 			name : "Born of the Gods",
 			code : "BNG",
+			magicCardsInfoCode : "bng",
 			releaseDate : "2014-02-07",
 			border : "black",
 			type : "expansion",
@@ -1200,6 +1261,7 @@
 		{
 			name : "Duel Decks: Jace vs. Vraska",
 			code : "DDM",
+			magicCardsInfoCode : "ddm",
 			releaseDate : "2014-03-14",
 			border : "black",
 			type : "duel deck"
@@ -1207,6 +1269,7 @@
 		{
 			name : "Journey into Nyx",
 			code : "JOU",
+			magicCardsInfoCode : "jou",
 			releaseDate : "2014-05-02",
 			border : "black",
 			type : "expansion",
@@ -1216,6 +1279,7 @@
 		{
 			name : "Modern Event Deck 2014",
 			code : "MD1",
+			magicCardsInfoCode : "md1",
 			releaseDate : "2014-05-30",
 			border : "black",
 			type : "box"
@@ -1223,6 +1287,7 @@
 		{
 			name : "Magic: The Gathering—Conspiracy",
 			code : "CNS",
+			magicCardsInfoCode : "cns",
 			releaseDate : "2014-06-06",
 			border : "black",
 			type : "conspiracy",
@@ -1231,6 +1296,7 @@
 		{
 			name : "Vintage Masters",
 			code : "VMA",
+			magicCardsInfoCode : "vma",
 			releaseDate : "2014-06-16",
 			border : "black",
 			type : "masters",
@@ -1240,6 +1306,7 @@
 		{
 			name : "Magic 2015 Core Set",
 			code : "M15",
+			magicCardsInfoCode : "m15",
 			releaseDate : "2014-07-18",
 			border : "black",
 			type : "core",
@@ -2117,27 +2184,49 @@
 			{ match : {name : "Rites of Flourishing"}, replace : {flavor : "\"Dance, and bring forth the coil! It is an umbilical to Gaea herself, fattening us with the earth's rich bounty.\""}},
 			{ match : {name : "Steamflogger Boss"}, replace : {flavor : "\"Whip the Xs ! Pinch the Os!\nWhat we're building, no one knows!\""}}
 		],
-		/*
-		ZZZ :
+		"10E" :
 		[
-			{ match : {name : [""]}, flavorAddExclamation : true },
-			{ match : {name : [""]}, flavorAddDash : true },
-			{ match : {name : ""}, replace : {flavor : ""}},
+			{ match : {name : ["Condemn", "Duct Crawler", "Horseshoe Crab", "Lava Axe", "Might of Oaks", "Squee, Goblin Nabob"]}, flavorAddExclamation : true },
+			{ match : {name : "Flashfreeze"}, replace : {flavor : "\"Nature? Fire? Bah! Both are chaotic and difficult to control. Ice is structured, latticed, light as a feather, massive as a glacier. In ice, there is power!\"\n—Heidar, Rimewind master"}},
+			{ match : {name : "Mogg Fanatic"}, replace : {flavor : "\"I got it! I got it! I—\""}},
+			{ match : {name : "Overgrowth"}, replace : {flavor : "\"Let the forest spread! From salt, stone, and fen, let the new trees rise.\"\n—Molimo, maro-sorcerer"}}
 		],
-		*/
-
-
-
-
-
-
-
-
-
-
-
-		
-
+		MED :
+		[
+			{ match : {name : "Order of Leitbur"}, replace : {artist : "Randy Asplund-Faith"}}
+		],
+		LRW :
+		[
+			{ match : {name : ["Blades of Velis Vel"]}, flavorAddExclamation : true },
+			{ match : {name : "Boggart Birth Rite"}, replace : {flavor : "Auntie excitedly held up the squalling newborn. \"This one looks like Byoog! Maybe he'll tell us what he saw and felt in the beyond.\""}},
+			{ match : {name : "Elvish Branchbender"}, replace : {flavor : "\"How do the vinebred feel? Fah! We do not ask the puppet how it feels when the puppeteer bids it dance.\""}},
+			{ match : {name : "Hamletback Goliath"}, replace : {artist : "Parente & Brian Snõddy"}}
+		],
+		EVG :
+		[
+			{ match : {name : "Elemental"}, replace : {number : "T1", layout : "token"}},
+			{ match : {name : "Elf Warrior"}, replace : {number : "T2", layout : "token"}},
+			{ match : {name : "Goblin"}, replace : {number : "T3", layout : "token"}}
+		],
+		MOR :
+		[
+			{ match : {name : "Sage's Dousing"}, replace : {flavor : "\"Curse these merrows and their meddling! Since coming near the river, I can't so much as sneeze without being soaked.\"\n—Ashling the Pilgrim"}},
+			{ match : {name : "Sensation Gorger"}, replace : {flavor : "More, more, more!"}}
+		],
+		SHM :
+		[
+			{ match : {name : ["Ember Gale"]}, flavorAddExclamation : true }
+		],
+		DD2 :
+		[
+			{ match : {name : "Elemental Shaman"}, replace : {number : "T1", layout : "token"}}
+		],
+		DDC :
+		[
+			{ match : {name : "Demon"}, replace : {number : "T2", layout : "token"}},
+			{ match : {name : "Spirit"}, replace : {number : "T1", layout : "token"}},
+			{ match : {name : "Thrull"}, replace : {number : "T3", layout : "token"}}
+		],
 		ZEN :
 		[
 			{ match : {imageName : "forest1"}, replace : {imageName : "forest1",  number : "246"} },
@@ -2180,23 +2269,7 @@
 			{ match : {imageName : "swamp6"}, replace : {imageName : "swamp3a", number : "240a"} },
 			{ match : {imageName : "swamp7"}, replace : {imageName : "swamp4",  number : "241"} },
 			{ match : {imageName : "swamp8"}, replace : {imageName : "swamp4a", number : "241a"} }
-		],
-		EVG :
-		[
-			{ match : {name : "Elemental"}, replace : {number : "T1", layout : "token"}},
-			{ match : {name : "Elf Warrior"}, replace : {number : "T2", layout : "token"}},
-			{ match : {name : "Goblin"}, replace : {number : "T3", layout : "token"}}
-		],
-		DD2 :
-		[
-			{ match : {name : "Elemental Shaman"}, replace : {number : "T1", layout : "token"}}
-		],
-		DDC :
-		[
-			{ match : {name : "Demon"}, replace : {number : "T2", layout : "token"}},
-			{ match : {name : "Spirit"}, replace : {number : "T1", layout : "token"}},
-			{ match : {name : "Thrull"}, replace : {number : "T3", layout : "token"}}
-		],
+		],		
 		DDD :
 		[
 			{ match : {name : "Beast", number : "1"}, replace : {number : "T1", layout : "token"}},
@@ -2208,6 +2281,19 @@
 			{ match : {name : "Hornet"}, replace : {number : "T1", layout : "token"}},
 			{ match : {name : "Minion"}, replace : {number : "T2", layout : "token"}},
 			{ match : {name : "Saproling"}, replace : {number : "T3", layout : "token"}}
+		],
+		DPA :
+		[
+			"numberCards",
+			{ match : {name : ["Duskdale Wurm", "Molimo, Maro-Sorcerer", "Mortivore", "Roughshod Mentor", "Talara's Battalion", "Troll Ascetic"]}, remove : ["flavor"] },
+			{ match : {name : "Forest"}, replace : {number : "110"}},
+			{ match : {name : "Island"}, replace : {number : "98"}},
+			{ match : {name : "Mind Control"}, replace : {artist : "Ryan Pancoast"}},
+			{ match : {name : "Mountain"}, replace : {number : "106"}},
+			{ match : {name : "River Boa"}, replace : {artist : "Paul Bonner"}, remove : ["flavor"]},
+			{ match : {name : "Shock"}, replace : {artist : "Jon Foster"}},
+			{ match : {name : "Swamp"}, replace : {number : "102"}},
+			{ match : {name : "The Rack"}, replace : {artist : "Nic Klein"}, remove : ["flavor"]}
 		],
 		DDL :
 		[
@@ -2221,24 +2307,6 @@
 			{ match : { name : "Colossus of Akros" }, replace : {text : "Defender, indestructible\n{10}: Monstrosity 10. (If this creature isn't monstrous, put ten +1/+1 counters on it and it becomes monstrous.)\nAs long as Colossus of Akros is monstrous, it has trample and can attack as though it didn't have defender."}},
 			{ match : { name : "Time to Feed" }, replace : {text : "Choose target creature an opponent controls. When that creature dies this turn, you gain 3 life. Target creature you control fights that creature. (Each deals damage equal to its power to the other.)"}}
 		],
-		DPA :
-		[
-			"numberCards",
-			{ match : {name : "Duskdale Wurm"}, remove : ["flavor"] },
-			{ match : {name : "Forest"}, replace : {number : "110"}},
-			{ match : {name : "Island"}, replace : {number : "98"}},
-			{ match : {name : "Mind Control"}, replace : {artist : "Ryan Pancoast"}},
-			{ match : {name : "Molimo, Maro-Sorcerer"}, remove : ["flavor"] },
-			{ match : {name : "Mortivore"}, remove : ["flavor"] },
-			{ match : {name : "Mountain"}, replace : {number : "106"}},
-			{ match : {name : "River Boa"}, replace : {artist : "Paul Bonner"}, remove : ["flavor"]},
-			{ match : {name : "Roughshod Mentor"}, remove : ["flavor"] },
-			{ match : {name : "Shock"}, replace : {artist : "Jon Foster"}},
-			{ match : {name : "Swamp"}, replace : {number : "102"}},
-			{ match : {name : "Talara's Battalion"}, remove : ["flavor"] },
-			{ match : {name : "The Rack"}, replace : {artist : "Nic Klein"}, remove : ["flavor"]},
-			{ match : {name : "Troll Ascetic"}, remove : ["flavor"] }
-		],
 		PPR :
 		[
 			{ match : {name : "Shield of Kaldra"}, replace : {rarity : "Special"}}
@@ -2249,22 +2317,6 @@
 			{ match : {name : "Spawnsire of Ulamog"}, replace : {text : "Annihilator 1 (Whenever this creature attacks, defending player sacrifices a permanent.)\n{4}: Put two 0/1 colorless Eldrazi Spawn creature tokens onto the battlefield. They have \"Sacrifice this creature: Add {1} to your mana pool.\"\n{20}: Cast any number of Eldrazi cards you own from outside the game without paying their mana costs."}},
 			{ match : {name : "Jade Statue"}, remove : ["power", "toughness"] },
 			{ match : {name : "Ghostfire"}, remove : ["colors"] }
-		],
-		XYZ :
-		[
-			{ renumberImages : "", order : [] },
-			{ renumberImages : "", order : [] },
-			{ renumberImages : "", order : [] },
-			{ renumberImages : "", order : [] },
-			{ renumberImages : "", order : [] }
-		],
-		XXX :
-		[
-			{ renumberImages : "Forest", order : [] },
-			{ renumberImages : "Island", order : [] },
-			{ renumberImages : "Mountain", order : [] },
-			{ renumberImages : "Plains", order : [] },
-			{ renumberImages : "Swamp", order : [] }
 		]
 	};
 
