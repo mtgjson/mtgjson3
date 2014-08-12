@@ -824,7 +824,7 @@ function compareCardsToMCI(set, cb)
 				if(card.variations || card.layout==="token")
 					return setImmediate(subcb);
 
-				var mciCardLink = mciCardLinks.filter(function(link) { return link.textContent.trim().toLowerCase()===card.name.toLowerCase(); });
+				var mciCardLink = mciCardLinks.filter(function(link) { return link.textContent.trim().toLowerCase()===createMCICardName(card).toLowerCase(); });
 				if(mciCardLink.length!==1)
 				{
 					base.warn("MISSING: Could not find MagicCards.info match for card: %s", card.name);
@@ -839,6 +839,14 @@ function compareCardsToMCI(set, cb)
 			setImmediate(function() { cb(err); });
 		}
 	);
+}
+
+function createMCICardName(card)
+{
+	if(card.layout==="split")
+		return card.name + " (" + card.names.join("/") + ")";
+
+	return card.name;
 }
 
 function compareCardToMCI(card, mciCardURL, cb)

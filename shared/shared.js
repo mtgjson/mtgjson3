@@ -208,6 +208,8 @@ exports.performSetCorrections = function(setCorrections, cards)
 			if(artistAliases.contains(card.artist))
 				card.artist = correctArtist;
 		});
+
+		card.artist = card.artist.replace(/^([^"]*)"([^"]*)"(.*)$/, "$1“$2”$3", "m");
 	});
 };
 

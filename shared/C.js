@@ -388,6 +388,7 @@
 			name : "Nemesis",
 			code : "NMS",
 			gathererCode : "NE",
+			magicCardsInfoCode : "ne",
 			oldCode : "NEM",
 			releaseDate : "2000-02-14",
 			border : "black",
@@ -399,6 +400,7 @@
 			name : "Starter 2000",
 			code : "S00",
 			gathererCode : "P4",
+			magicCardsInfoCode : "st2k",
 			releaseDate : "2000-04-01",
 			border : "white",
 			type : "starter"
@@ -407,6 +409,7 @@
 			name : "Prophecy",
 			code : "PCY",
 			gathererCode : "PR",
+			magicCardsInfoCode : "pr",
 			releaseDate : "2000-06-05",
 			border : "black",
 			type : "expansion",
@@ -417,6 +420,7 @@
 			name : "Beatdown Box Set",
 			code : "BTD",
 			gathererCode : "BD",
+			magicCardsInfoCode : "bd",
 			releaseDate : "2000-10-01",
 			border : "white",
 			type : "box"
@@ -425,6 +429,7 @@
 			name : "Invasion",
 			code : "INV",
 			gathererCode : "IN",
+			magicCardsInfoCode : "in",
 			releaseDate : "2000-10-02",
 			border : "black",
 			type : "expansion",
@@ -435,6 +440,7 @@
 			name : "Planeshift",
 			code : "PLS",
 			gathererCode : "PS",
+			magicCardsInfoCode : "ps",
 			releaseDate : "2001-02-05",
 			border : "black",
 			type : "expansion",
@@ -445,6 +451,7 @@
 			name : "Seventh Edition",
 			code : "7ED",
 			gathererCode : "7E",
+			magicCardsInfoCode : "7e",
 			releaseDate : "2001-04-11",
 			border : "white",
 			type : "core",
@@ -454,6 +461,7 @@
 			name : "Apocalypse",
 			code : "APC",
 			gathererCode : "AP",
+			magicCardsInfoCode : "ap",
 			releaseDate : "2001-06-04",
 			border : "black",
 			type : "expansion",
@@ -464,6 +472,7 @@
 			name : "Odyssey",
 			code : "ODY",
 			gathererCode : "OD",
+			magicCardsInfoCode : "od",
 			releaseDate : "2001-10-01",
 			border : "black",
 			type : "expansion",
@@ -473,6 +482,7 @@
 		{
 			name : "Deckmasters",
 			code : "DKM",
+			magicCardsInfoCode : "dm",
 			releaseDate : "2001-12-01",
 			border : "white",
 			type : "box"
@@ -480,6 +490,7 @@
 		{
 			name : "Torment",
 			code : "TOR",
+			magicCardsInfoCode : "tr",
 			releaseDate : "2002-02-04",
 			border : "black",
 			type : "expansion",
@@ -489,6 +500,7 @@
 		{
 			name : "Judgment",
 			code : "JUD",
+			magicCardsInfoCode : "ju",
 			releaseDate : "2002-05-27",
 			border : "black",
 			type : "expansion",
@@ -498,6 +510,7 @@
 		{
 			name : "Onslaught",
 			code : "ONS",
+			magicCardsInfoCode : "on",
 			releaseDate : "2002-10-07",
 			border : "black",
 			type : "expansion",
@@ -507,6 +520,7 @@
 		{
 			name : "Legions",
 			code : "LGN",
+			magicCardsInfoCode : "le",
 			releaseDate : "2003-02-03",
 			border : "black",
 			type : "expansion",
@@ -516,6 +530,7 @@
 		{
 			name : "Scourge",
 			code : "SCG",
+			magicCardsInfoCode : "sc",
 			releaseDate : "2003-05-26",
 			border : "black",
 			type : "expansion",
@@ -526,6 +541,7 @@
 			name : "Eighth Edition",
 			code : "8ED",
 			oldCode : "8E",
+			magicCardsInfoCode : "8e",
 			releaseDate : "2003-07-28",
 			border : "white",
 			type : "core",
@@ -534,6 +550,7 @@
 		{
 			name : "Mirrodin",
 			code : "MRD",
+			magicCardsInfoCode : "mi",
 			releaseDate : "2003-10-02",
 			border : "black",
 			type : "expansion",
@@ -543,6 +560,7 @@
 		{
 			name : "Darksteel",
 			code : "DST",
+			magicCardsInfoCode : "ds",
 			releaseDate : "2004-02-06",
 			border : "black",
 			type : "expansion",
@@ -552,6 +570,7 @@
 		{
 			name : "Fifth Dawn",
 			code : "5DN",
+			magicCardsInfoCode : "5dn",
 			releaseDate : "2004-06-04",
 			border : "black",
 			type : "expansion",
@@ -561,6 +580,7 @@
 		{
 			name : "Champions of Kamigawa",
 			code : "CHK",
+			magicCardsInfoCode : "chk",
 			releaseDate : "2004-10-01",
 			border : "black",
 			type : "expansion",
@@ -570,6 +590,7 @@
 		{
 			name : "Unhinged",
 			code : "UNH",
+			magicCardsInfoCode : "uh",
 			releaseDate : "2004-11-20",
 			border : "silver",
 			type : "un",
@@ -578,6 +599,7 @@
 		{
 			name : "Betrayers of Kamigawa",
 			code : "BOK",
+			magicCardsInfoCode : "bok",
 			releaseDate : "2005-02-04",
 			border : "black",
 			type : "expansion",
@@ -587,6 +609,7 @@
 		{
 			name : "Saviors of Kamigawa",
 			code : "SOK",
+			magicCardsInfoCode : "sok",
 			releaseDate : "2005-06-03",
 			border : "black",
 			type : "expansion",
@@ -597,6 +620,7 @@
 			name : "Ninth Edition",
 			code : "9ED",
 			oldCode : "9E",
+			magicCardsInfoCode : "9e",
 			releaseDate : "2005-07-29",
 			border : "white",
 			type : "core",
@@ -605,6 +629,7 @@
 		{
 			name : "Ravnica: City of Guilds",
 			code : "RAV",
+			magicCardsInfoCode : "rav",
 			releaseDate : "2005-10-07",
 			border : "black",
 			type : "expansion",
@@ -614,6 +639,7 @@
 		{
 			name : "Guildpact",
 			code : "GPT",
+			magicCardsInfoCode : "gp",
 			releaseDate : "2006-02-03",
 			border : "black",
 			type : "expansion",
@@ -623,6 +649,7 @@
 		{
 			name : "Dissension",
 			code : "DIS",
+			magicCardsInfoCode : "di",
 			releaseDate : "2006-05-05",
 			border : "black",
 			type : "expansion",
@@ -632,6 +659,7 @@
 		{
 			name : "Coldsnap",
 			code : "CSP",
+			magicCardsInfoCode : "cs",
 			releaseDate : "2006-07-21",
 			border : "black",
 			type : "expansion",
@@ -641,6 +669,7 @@
 		{
 			name : "Time Spiral",
 			code : "TSP",
+			magicCardsInfoCode : "ts",
 			releaseDate : "2006-10-06",
 			border : "black",
 			type : "expansion",
@@ -650,6 +679,7 @@
 		{
 			name : 'Time Spiral "Timeshifted"',
 			code : "TSB",
+			magicCardsInfoCode : "tsts",
 			releaseDate : "2006-10-06",
 			border : "black",
 			type : "expansion",
@@ -665,6 +695,7 @@
 		{
 			name : "Planar Chaos",
 			code : "PLC",
+			magicCardsInfoCode : "pc",
 			releaseDate : "2007-02-02",
 			border : "black",
 			type : "expansion",
@@ -674,6 +705,7 @@
 		{
 			name : "Future Sight",
 			code : "FUT",
+			magicCardsInfoCode : "fut",
 			releaseDate : "2007-05-04",
 			border : "black",
 			type : "expansion",
@@ -1277,9 +1309,8 @@
 		LEG :
 		[
 			{ match : {name : "The Tabernacle at Pendrell Vale"}, replace : {artist : "Nicola Leonard"} },
-			{ match : {name : "Active Volcano"}, replace : {artist : "Justin Hampton"} },
+			{ match : {name : ["Active Volcano", "Psionic Entity"]}, replace : {artist : "Justin Hampton"} },
 			{ match : {name : "Disharmony"}, replace : {artist : "Bryon Wackwitz"} },
-			{ match : {name : "Psionic Entity"}, replace : {artist : "Justin Hampton"} },
 			{ match : {name : "Barktooth Warbeard"}, replace : {flavor : "He is devious and cunning, in both appearance and deed. Beware the Warbeard, for this brute bites as well as he barks!"}},
 			{ match : {name : "Boomerang"}, replace : {flavor : "\"O! call back yesterday, bid time return.\" —William Shakespeare, King Richard the Second"} },
 			{ match : {name : "Craw Giant"}, replace : {flavor : "Harthag gave a jolly laugh as he surveyed the army before him. \"Ho ho ho! Midgets! You think you can stand in my way?\""} },
@@ -1389,9 +1420,7 @@
 			{ match : {name : ["Goblin Digging Team", "Transmutation"]}, flavorAddExclamation : true },
 			{ match : {name : ["Goblin Shrine", "Revelation"]}, flavorAddDash : true },
 			{ match : {name : "Divine Offering"}, replace : {flavor : "D'Haren stared at the twisted lump of metal that had been a prized artifact. The fight was getting ugly."}},
-			{ match : {name : "Xira Arien"}, replace : {flavor : "A regular guest at the Royal Masquerade, Arien is the envy of the Court. She appears in a new costume every hour."}},
-			{ match : {name : ""}, replace : {flavor : ""}},
-			{ match : {name : ""}, replace : {flavor : ""}}
+			{ match : {name : "Xira Arien"}, replace : {flavor : "A regular guest at the Royal Masquerade, Arien is the envy of the Court. She appears in a new costume every hour."}}
 		],
 		HML :
 		[
@@ -1494,7 +1523,6 @@
 		VIS :
 		[
 			{ match : {name : ["Goblin Recruiter", "Helm of Awakening", "Scalebane's Elite"]}, flavorAddExclamation : true },
-			{ match : {name : [""]}, flavorAddDash : true },
 			{ match : {name : "Daraja Griffin"}, replace : {flavor : "\"And the flamingos said, ‘Get out of our nest—we can't be seen with the likes of you!' So, the griffin ate them.\"\n—Azeworai, \"The Ugly Bird\""}},
 			{ match : {name : "Freewind Falcon"}, replace : {flavor : "\"That does it! I'm going back to hunting chickens!\"\n—Rhirhok, goblin archer"}},
 			{ match : {name : "Guiding Spirit"}, replace : {flavor : "\"Retainer of eternal Sun! Life flash again upon thy wings.\"\n—\"Song to the Sun,\" Femeref song"}},
@@ -1510,7 +1538,6 @@
 			{ renumberImages : "Plains", order : [4204, 4206, 4205, 4203] },
 			{ renumberImages : "Swamp", order : [4169, 4168, 4167, 4170] },
 			{ match : {name : ["Ambush Party", "Conquer", "Death Speakers", "Elvish Archers", "Goblin Digging Team", "Goblin Hero", "Goblin War Drums", "Knight of Stromgald", "Sabretooth Tiger"]}, flavorAddExclamation : true },
-			{ match : {name : [""]}, flavorAddDash : true },
 			{ match : {name : "Blinking Spirit"}, replace : {flavor : "\"Don't look at it! Maybe it'll go away!\"\n—Ib Halfheart, goblin tactician"}},
 			{ match : {name : "Boomerang"}, replace : {flavor : "\"O! call back yesterday, bid time return.\" —William Shakespeare, King Richard the Second"} },
 			{ match : {name : "Craw Giant"}, replace : {flavor : "Harthag gave a jolly laugh as he surveyed the army before him. \"Ho ho ho! Midgets! You think you can stand in my way?\""} },
@@ -1543,10 +1570,11 @@
 		],
 		VAN :
 		[
+			{ match : {name : ["Ashling the Pilgrim", "Enigma Sphinx", "Figure of Destiny", "Jaya Ballard", "Maelstrom Archangel", "Maralen of the Mornsong", "Master of the Wild Hunt", "Murderous Redcap", "Necropotence", "Orcish Squatters",
+							   "Rith, the Awakener", "Stonehewer Giant"]}, replace : {flavor : ""}},
 			{ match : {name : "Akroma, Angel of Wrath"}, replace : {artist : "Ron Spears", flavor : "No rest. No mercy. No matter what."}},
 			{ match : {name : "Arcanis, the Omnipotent"}, replace : {artist : "Justin Sweet", flavor : "Do not concern yourself with my origin, my race, or my ancestry. Seek my record in the pits, and then make your wager."}},
 			{ match : {name : "Arcbound Overseer"}, replace : {artist : "Carl Critchlow", flavor : ""}},
-			{ match : {name : "Ashling the Pilgrim"}, replace : {flavor : ""}},
 			{ match : {name : "Ashling, the Extinguisher"}, replace : {flavor : "The Aurora had transformed her into a relentless force of destruction."}},
 			{ match : {multiverseid : 214824}, replace : {artist : "Marcelo Vignali", flavor : "Long ago, birds of paradise littered the skies. Thanks to the city's sprawl, most now exist as pets of society's elite."}},
 			{ match : {multiverseid : 182291}, replace : {flavor : "Long ago, birds of paradise littered the skies. Thanks to the city's sprawl, most now exist as pets of society's elite."}},
@@ -1559,12 +1587,10 @@
 			{ match : {name : "Eight-and-a-Half-Tails"}, replace : {artist : "Daren Bader", flavor : "Virtue is an inner light that can prevail in every soul."}},
 			{ match : {name : "Eladamri, Lord of Leaves"}, replace : {flavor : "\"We have been patient. We have planned our attack. We are ready... now.\" — Eladamri, Lord of Leaves"}},
 			{ match : {name : "Elvish Champion"}, replace : {artist : "Mark Zug", flavor : "\"For what are leaves but countless blades to fight a countless foe on high\" — Elvish hymn"}},
-			{ match : {name : "Enigma Sphinx"}, replace : {flavor : ""}},
 			{ match : {multiverseid : 182259}, replace : {artist : "Greg Staples", flavor : "He provides a safe path to nowhere."}},
 			{ match : {multiverseid : 210148}, replace : {flavor : "He provides a safe path to nowhere."}},
 			{ match : {name : "Etched Oracle"}, replace : {artist : "Matt Cavotta", flavor : ""}},
 			{ match : {name : "Fallen Angel"}, replace : {artist : "Mathew D. Wilson", flavor : "Why do you weep for the dead? I rejoice, for they have died for me."}},
-			{ match : {name : "Figure of Destiny"}, replace : {flavor : ""}},
 			{ match : {name : "Flametongue Kavu"}, replace : {artist : "Pete Venters", flavor : "\"For dim-witted, thick-skulled genetic mutants, they have pretty good aim.\" — Sisay"}},
 			{ match : {name : "Frenetic Efreet"}, replace : {artist : "Tom Gianni", flavor : ""}},
 			{ match : {multiverseid : 182251}, replace : {artist : "Tim Hilderbrandt", flavor : "They poured from the Skirk Ridge like lava, burning and devouring everything in their path."}},
@@ -1577,27 +1603,20 @@
 			{ match : {name : "Hermit Druid"}, replace : {flavor : "Seeking the company of plants ensures that your wits will go to seed."}},
 			{ match : {name : "Higure, the Still Wind"}, replace : {artist : "Christopher Moeller", flavor : ""}},
 			{ match : {name : "Ink-Eyes, Servant of Oni"}, replace : {artist : "Wayne Reynolds", flavor : ""}},
-			{ match : {name : "Jaya Ballard"}, replace : {flavor : ""}},
 			{ match : {name : "Jhoira of the Ghitu"}, replace : {life : 3, artist : "Kev Walker", flavor : ""}},
 			{ match : {name : "Karona, False God"}, replace : {artist : "Matthew D. Wilson", flavor : ""}},
 			{ match : {name : "Kresh the Bloodbraided"}, replace : {flavor : "Each of his twenty-two braids is bound with bone and leather from a foe."}},
 			{ match : {name : "Loxodon Hierarch"}, replace : {artist : "Kev Walker", flavor : "I have lived long, and I remember how this city once was. If my death serves to bring back the Ravnica in my memory, then so be it."}},
 			{ match : {name : "Lyzolda, the Blood Witch"}, replace : {artist : "Jim Nelson", flavor : "Sacrificial rites take place before an audience of cheerign cultists, each begging to be the next on stage."}},
-			{ match : {name : "Maelstrom Archangel"}, replace : {flavor : ""}},
 			{ match : {name : "Malfegor"}, replace : {flavor : "The blood of the demons quickened as their master rose over the battlefield. The blood of the angels also quickened: here was the chance to finally end the war started millennia ago."}},
-			{ match : {name : "Maralen of the Mornsong"}, replace : {flavor : ""}},
 			{ match : {name : "Maro"}, replace : {hand : 1, artist : "Stuart Griffin", flavor : "No two see the same Maro."}},
-			{ match : {name : "Master of the Wild Hunt"}, replace : {flavor : ""}},
 			{ match : {name : "Mayael the Anima"}, replace : {flavor : "The sacred Anima's eyes are blind to all but the grandest truths."}},
 			{ match : {name : "Mirri the Cursed"}, replace : {hand : 0, life : -5, artist : "Kev Walker", flavor : "A hero fails, a martyr falls. Time twists and destinies interchange."}},
 			{ match : {name : "Mirror Entity"}, replace : {flavor : "Unaware of Lorwyn's diversity, it sees only itself, refelected a thousand times over."}},
 			{ match : {name : "Momir Vig, Simic Visionary"}, replace : {artist : "Zoltan Boras & Gabor Szikszai", flavor : ""}},
 			{ match : {name : "Morinfen"}, replace : {flavor : "\"I looked into its eyes, and its soul was so empty I saw no reflection, no light there.\" — Crovax"}},
-			{ match : {name : "Murderous Redcap"}, replace : {flavor : ""}},
-			{ match : {name : "Necropotence"}, replace : {flavor : ""}},
 			{ match : {name : "Nekrataal"}, replace : {hand : -1, artist : "Adrian Smith", flavor : "\"I have seen the horrors Kaervek has freed. My betrayal is certain — but of Kaervek or of Jamuraa, I cannot say.\" — Jolrael"}},
 			{ match : {name : "Oni of Wild Places"}, replace : {artist : "Mark Tedin", flavor : "The oni leapt easily from peak to peak, toying with its victims, its voice a purry frmo the rumbling depths of nightmare."}},
-			{ match : {name : "Orcish Squatters"}, replace : {flavor : ""}},
 			{ match : {name : "Peacekeeper"}, replace : {flavor : "\"I have always imagined my mother as such a woman, strong and wise.\" — Sisay, journal"}},
 			{ match : {name : "Phage the Untouchable"}, replace : {artist : "Ron Spears", flavor : ""}},
 			{ match : {multiverseid : 214825}, replace : {artist : "Brom", flavor : "In its heart lies the secret of immortality."}},
@@ -1606,7 +1625,6 @@
 			{ match : {multiverseid : 210151}, replace : {artist : "Tony Szczudlo", flavor : "He wastes his amazing talents on proving how amazing he really is."}},
 			{ match : {name : "Raksha Golden Cub"}, replace : {artist : "Pete Venters", flavor : "Some believe that Raksha, yougnest of the kha, is the reincarnation of Dakan, the first and mightiest of leonin leaders."}},
 			{ match : {name : "Reaper King"}, replace : {flavor : "It's harvest time."}},
-			{ match : {name : "Rith, the Awakener"}, replace : {flavor : ""}},
 			{ match : {name : "Rumbling Slum"}, replace : {artist : "Carl Critchlow", flavor : "The Orzhov contract the Izzet to animate slum districts and banish them to the wastes. The Gruul adopt them and send them back to the city for vengeance."}},
 			{ match : {name : "Sakashima the Impostor"}, replace : {artist : "rk post", flavor : ""}},
 			{ match : {multiverseid : 182282}, replace : {artist : "Greg Staples", flavor : "Her sword sings more beautifully than any choir."}},
@@ -1616,7 +1634,6 @@
 			{ match : {name : "Sliver Queen"}, replace : {flavor : "Her children are ever part of her."}},
 			{ match : {name : "Squee, Goblin Nabob"}, replace : {artist : "Greg Staples", flavor : "\"Some goblins are expendable. Some are impossible to get rid of. But he's both — at the same time!\" — Starke"}},
 			{ match : {name : "Stalking Tiger"}, replace : {artist : "Terese Nielsen", flavor : "Int he Jamuraan jungles, there is often no serpating beauty from danger."}},
-			{ match : {name : "Stonehewer Giant"}, replace : {flavor : ""}},
 			{ match : {name : "Stuffy Doll"}, replace : {artist : "Dave Allsop", flavor : ""}},
 			{ match : {name : "Tawnos"}, replace : {artist : "Donato Giancola"}},
 			{ match : {name : "Teysa, Orzhov Scion"}, replace : {artist : "Todd Lockwood", flavor : ""}},
@@ -1652,15 +1669,8 @@
 		STH :
 		[
 			{ match : {name : ["Awakening", "Heat of Battle", "Primal Rage", "Torment"]}, flavorAddExclamation : true },
-			{ match : {name : [""]}, flavorAddDash : true },
 			{ match : {name : "Invasion Plans"}, replace : {flavor : "Gerrard studied the globe as Mirri kept watch. Suddenly, his eyes widened. \"This is Dominaria!\""}},
-			{ match : {name : "Stronghold Assassin"}, replace : {flavor : "The assassin sees only throats and hears only heartbeats."}},
-			{ match : {name : ""}, replace : {flavor : ""}},
-			{ match : {name : ""}, replace : {flavor : ""}},
-			{ match : {name : ""}, replace : {flavor : ""}},
-			{ match : {name : ""}, replace : {flavor : ""}},
-			{ match : {name : ""}, replace : {flavor : ""}},
-			{ match : {name : ""}, replace : {flavor : ""}},
+			{ match : {name : "Stronghold Assassin"}, replace : {flavor : "The assassin sees only throats and hears only heartbeats."}}
 		],
 		PO2 :
 		[
@@ -1685,11 +1695,7 @@
 			{ match : {name : "B.F.M. (Big Furry Monster)", number : "28b"}, replace : {imageName : "b.f.m. 1", number : "28"}},
 			{ match : {name : "B.F.M. (Big Furry Monster)", number : "29b"}, replace : {imageName : "b.f.m. 2", number : "29"}},
 			{ match : {name : "The Ultimate Nightmare of Wizards of the Coast® Customer Service"}, replace : {imageName : "the ultimate nightmare of wizards of the coastr customer service", manaCost : "{X}{Y}{Z}{R}{R}"}},
-			{ match : {name : "Forest"}, replace : {border : "black"}},
-			{ match : {name : "Island"}, replace : {border : "black"}},
-			{ match : {name : "Mountain"}, replace : {border : "black"}},
-			{ match : {name : "Plains"}, replace : {border : "black"}},
-			{ match : {name : "Swamp"}, replace : {border : "black"}},
+			{ match : {name : ["Forest", "Island", "Mountain", "Plains", "Swamp"]}, replace : {border : "black"}},
 			{ match : {name : "Censorship"}, replace : {artist : "Kaja Foglio"}},
 			{ match : {name : ["Clam-I-Am", "Fowl Play", "Jester's Sombrero", "Krazy Kow", "Prismatic Wardrobe", "Temp of the Damned"]}, flavorAddExclamation : true },
 			{ match : {name : "Flock of Rabid Sheep"}, replace : {flavor : "And their bleating was like a wet salmon slapped upon the land—slap! slap! slap!"}},
@@ -1781,7 +1787,6 @@
 		],
 		PTK :
 		[
-			{ match : {name : [""]}, flavorAddExclamation : true },
 			{ match : {name : ["Ravages of War"]}, flavorAddDash : true },
 			{ match : {name : "Brilliant Plan"}, replace : {flavor : "At Red Cliffs, Kongming and Zhou Yu each wrote his plan for defeating the Wei on the palm of his hand. They laughed as they both revealed the same word, \"Fire.\""}},
 			{ match : {name : "Imperial Edict"}, replace : {flavor : "Frustrated with Cao Cao's control of the imperial court, Emporer Xian secretly issued an edict condemning him, using his own blood as ink."}},
@@ -1816,13 +1821,7 @@
 			{ match : {imageName : "swamp4"}, replace : {number : "165", artist : "Romas"} },
 			{ match : {name : ["Border Guard", "Dakmor Ghoul", "Time Warp"]}, flavorAddExclamation : true },
 			{ match : {name : ["Durkwood Boars", "Wind Drake"]}, flavorAddDash : true },
-			{ match : {name : "Feral Shadow"}, replace : {artist : "Cliff Nielsen"}},
-			{ match : {name : ""}, replace : {flavor : ""}},
-			{ match : {name : ""}, replace : {flavor : ""}},
-			{ match : {name : ""}, replace : {flavor : ""}},
-			{ match : {name : ""}, replace : {flavor : ""}},
-			{ match : {name : ""}, replace : {flavor : ""}},
-			{ match : {name : ""}, replace : {flavor : ""}},
+			{ match : {name : "Feral Shadow"}, replace : {artist : "Cliff Nielsen"}}
 		],
 		MMQ :
 		[
@@ -1837,35 +1836,79 @@
 			{ renumberImages : "Swamp", order : [21171, 22370, 22369, 22368] },
 			{ match : {multiverseid : 22339}, replace : {artist : "Rob Alexander"} }
 		],
-		/*ZZZ :
+		NMS :
 		[
-			{ match : {name : [""]}, flavorAddExclamation : true },
-			{ match : {name : [""]}, flavorAddDash : true },
-			{ match : {name : ""}, replace : {flavor : ""}},
-		],*/
-
-
-
-
-
-
-
-
-
-
-
-		
+			{ match : {name : "Wild Mammoth"}, replace : {flavor : "\"Sit. Heel! Down! HELP!\""}}
+		],
+		PCY :
+		[
+			{ match : {name : ["Quicksilver Wall"]}, flavorAddExclamation : true },
+			{ match : {name : "Reveille Squad"}, replace : {flavor : "\"To arms! To arms! The Lion roars!\""}},
+			{ match : {name : "Withdraw"}, replace : {flavor : "\"We outnumber them! Charge! Charge! Hey, where'd you guys go? Retreat! Retreat!\""}}
+		],
 		BTD :
 		[
 			{ renumberImages : "Forest", order : [27242, 27243, 27244] },
 			{ renumberImages : "Island", order : [27236, 27237, 27238] },
 			{ renumberImages : "Mountain", order : [27239, 27240, 27241] },
-			{ renumberImages : "Swamp", order : [27233, 27234, 27235] }
+			{ renumberImages : "Swamp", order : [27233, 27234, 27235] },
+			{ match : {name : ["Lava Axe", "Lowland Giant"]}, flavorAddExclamation : true },
+			{ match : {name : ["Fallen Angel"]}, flavorAddDash : true }
 		],
 		PLS :
 		[
 			{ renumberImages : "Ertai, the Corrupted", order : [25614, 29292] },
 			{ renumberImages : "Skyship Weatherlight", order : [26480, 29293] }
+		],
+		ODY :
+		[
+			{ match : {name : "Impulsive Maneuvers"}, replace : {artist : "Dave Dorman"}}
+		],
+		DKM :
+		[
+			{ match : {name : "Abyssal Specter"}, replace : {number : "1", originalText : "Flying\nWhenever Abyssal Specter deals damage to a player, that player discards a card from his or her hand."}},
+			{ match : {name : "Balduvian Bears"}, replace : {number : "22", originalType : "Creature — Bear"}},
+			{ match : {name : "Balduvian Horde"}, replace : {number : "10", originalText : "When Balduvian Horde comes into play, sacrifice it unless you discard a card at random from your hand."}},
+			{ match : {name : "Barbed Sextant"}, replace : {number : "34", originalText : "{1}, {T}, Sacrifice Barbed Sextant: Add one mana of any color to your mana pool. Draw a card at the beginning of next turn's upkeep."}},
+			{ match : {name : "Bounty of the Hunt"}, replace : {number : "23", originalText : "You may remove a green card in your hand from the game rather than pay Bounty of the Hunt's mana cost.\n\Choose one — Target creature gets +3/+3 until end of turn; or target creature gets +2/+2 and another target creature gets +1/+1 until end of turn; or three target creatures each get +1/+1 until end of turn."}},
+			{ match : {name : "Contagion"}, replace : {number : "2", originalText : "You may pay 1 life and remove a black card in your hand from the game rather than pay Contagion's mana cost.\nPut two -2/-1 counters, distributed as you choose, on one or two target creatures."}},
+			{ match : {name : "Dark Banishing"}, replace : {number : "3", originalText : "Destroy target nonblack creature. It can't be regenerated."}},
+			{ match : {name : "Dark Ritual"}, replace : {number : "4"}},
+			{ match : {name : "Death Spark"}, replace : {number : "11", originalText : "Death Spark deals 1 damage to target creature or player.\nAt the beginning of your upkeep, if Death Spark is in your graveyard with a creature card directly above it, you may pay {1}. If you do, return Death Spark to your hand."}},
+			{ match : {name : "Elkin Bottle"}, replace : {number : "33", originalText : "{3}, {T}: Remove the top card of your library from the game face up. Until the beginning of your next upkeep, you may play that card as though it were in your hand. At the beginning of your next upkeep, if you haven't played the card, put it into your graveyard."}},
+			{ match : {name : "Elvish Bard"}, replace : {number : "24", originalText : "All creatures able to block Elvish Bard do so."}},
+			{ match : {name : "Folk of the Pines"}, replace : {number : "25", originalText : "{1}{G}: Folk of the Pines gets +1/+0 until end of turn."}},
+			{ match : {name : "Forest"}, replace : {number : "48", originalText : "{G}"}},
+			{ match : {name : "Foul Familiar"}, replace : {number : "5", originalText : "Foul Familiar can't black.\n{B}, Pay 1 life: Return Foul Familiar to its owner's hand."}},
+			{ match : {name : "Fyndhorn Elves"}, replace : {number : "26", originalText : "{T}: Add {G} to your mana pool."}},
+			{ match : {name : "Giant Growth"}, replace : {number : "27"}},
+			{ match : {name : "Giant Trap Door Spider"}, replace : {number : "33", originalText : "{1}{R}{G}, {T}: Remove from the game Giant Trap Door Spider and target creature without flying that's attacking you."}},
+			{ match : {name : "Goblin Mutant"}, replace : {number : "12", originalText : "Trample\nGoblin Mutant can't attack if defending player controls an untapped creature with power 3 or greater.\nGoblin Mutant can't block creatures with power 3 or greater."}},
+			{ match : {name : "Guerrilla Tactics"}, replace : {number : "13a", artist : "Amy Weber", originalText : "Guerrilla Tactics deals 2 damage to target creature or player.\nWhen a spell or ability an opponent controls causes you to discard Guerrilla Tactics from your hand, Guerrilla Tactics deals 4 damage to target creature or player."}},
+			{ match : {name : "Hurricane"}, replace : {number : "28"}},
+			{ match : {name : "Icy Manipulator"}, replace : {number : "36"}},
+			{ match : {name : "Incinerate"}, replace : {number : "14", originalText : "Incinerate deals 3 damage to target creature or player. A creature dealt damage this way can't be regenerated this turn."}},
+			{ match : {name : "Jokulhaups"}, replace : {number : "15", originalText : "Destroy all artifacts, creatures, and lands. They can't be regenerated."}},
+			{ match : {name : "Karplusan Forest"}, replace : {number : "39", originalText : "{T}: Add one colorless mana to your mana pool.\n{T}: Add {R} or {G} to your mana pool. Karplusan Forest deals 1 damage to you."}},
+			{ match : {name : "Lava Burst"}, replace : {number : "16", originalText : "Lava Burst deals X damage to target creature or player. If Lava Burst would deal damage to a creature, that damage can't be prevented or dealt instead to another creature or player."}},
+			{ match : {name : "Lhurgoyf"}, replace : {border : "black", number : "29", originalText : "Lhurgoyf's power is equal to the number of creature cards in all graveyards and its toughness is equal to that number plus 1."}},
+			{ match : {name : "Mountain"}, replace : {number : "45", originalText : "{R}"}},
+			{ match : {name : "Necropotence"}, replace : {border : "black", number : "7", originalText : "Skip your draw step.\nIf you would discard a card from your hand, remove that card from the game instead.\nPay 1 life: Remove the top card of your library from the game face down. At the end of your turn, put that card into your hand."}},
+			{ match : {name : "Orcish Cannoneers"}, replace : {number : "17"}},
+			{ match : {name : "Phantasmal Fiend"}, replace : {number : "8a", originalText : "{B}: Phantasmal Fiend gets +1/-1 until end of turn.\n{1}{U}: Switch Phantasmal Fiend's power and toughness until end of turn. Effects that would alter Phantasmal Fiend's power this turn alter its toughness instead, and vice versa."}},
+			{ match : {name : "Phyrexian War Beast"}, replace : {number : "37a", originalText : "When Phyrexian War Beast leaves play, sacrifice a land and Phyrexian War Beast deals 1 damage to you."}},
+			{ match : {name : "Pillage"}, replace : {number : "18", originalText : "Destroy target artifact or land. It can't be regenerated."}},
+			{ match : {name : "Pyroclasm"}, replace : {number : "19"}},
+			{ match : {name : "Shatter"}, replace : {number : "20"}},
+			{ match : {name : "Soul Burn"}, replace : {number : "9", originalText : "Spend only black and/or red mana on X.\nSoul Burn deals X damage to target creature or player. You gain life equal to the damage dealt, but not more than the amount of {B} spent on X, the player's life total before Soul Burn dealt damage, or the creature's toughness."}},
+			{ match : {name : "Storm Shaman"}, replace : {number : "21a", flavor : "\"Embrace the storm. Its voice shall echo within you, and its fire shall become your touch!\"\n—Lovisa Coldeyes, Balduvian chieftain", originalText : "{R}: Storm Shaman gets +1/+0 until end of turn."}},
+			{ match : {name : "Sulfurous Springs"}, replace : {number : "40", originalText : "{T}: Add one colorless mana to your mana pool.\n{T}: Add {B} or {R} to your mana pool. Sulfurous Springs deals 1 damage to you."}},
+			{ match : {name : "Swamp"}, replace : {number : "42", originalText : "{B}"}},
+			{ match : {name : "Underground River"}, replace : {number : "41", originalText : "{T}: Add one colorless mana to your mana pool.\n{T}: Add {U} or {B} to your mana pool. Underground River deals 1 damage to you."}},
+			{ match : {name : "Walking Wall"}, replace : {number : "38", originalText : "(Walls can't attack.)\n{3}: Walking Wall gets +3/-1 until end of turn and may attack this turn as though it weren't a Wall. Play this ability only once each turn.", artist : "Anthony S. Waters"}},
+			{ match : {name : "Woolly Spider"}, replace : {number : "30", originalText : "Woolly Spider may block as though it had flying.\nWhenever Woolly Spider blocks a creature with flying, Woolly Spider gets +0/+2 until end of turn."}},
+			{ match : {name : "Yavimaya Ancients"}, replace : {number : "31a", originalText : "{G}: Yavimaya Ancients gets +1/-2 until end of turn.", flavor : "\"We orphans of Fyndhorn have found no welcome in this alient place.\"\n — Taaveti of Kelsinko, elvish hunter"}},
+			{ match : {name : "Yavimaya Ants"}, replace : {number : "32", originalText : "Trample; haste (This creature may attack and {T} the turn it comes under your control.)\nCumulative upkeep {G}{G} (At the beginning of your upkeep, put an age counter on this creature, then sacrifice it unless you pay {G}{G} for each age counter on it.)"}}
 		],
 		TOR :
 		[
@@ -1875,7 +1918,68 @@
 		[
 			{ renumberImages : "Brothers Yamazaki", order : [78968, 85106] },
 			{ match : {multiverseid: 78968}, replace : {number : "160a"} },
-			{ match : {multiverseid: 85106}, replace : {number : "160b"} }
+			{ match : {multiverseid: 85106}, replace : {number : "160b"} },
+			{ match : {name : ["Feral Deceiver", "Hikari, Twilight Guardian", "Soratami Seer"]}, replace : {artist : "Glen Angus"}}
+		],
+		UNH :
+		[
+			{ match : {name : "Cheap Ass"}, replace : {text : "Spells you play cost {½} less to play."}},
+			{ match : {name : "Flaccify"}, replace : {text : "Counter target spell unless its controller pays {3}{½}."}},
+			{ match : {name : "Kill Destroy"}, replace : {name : "Kill! Destroy!", imageName : "kill! destroy!"}},
+			{ match : {name : "Little Girl"}, replace : {manaCost : "{hw}"}},
+			{ match : {name : "Look at Me, I'm R&D"}, replace : {artist : "spork;"} },
+			{ match : {name : "Our Market Research Shows That Players Like Really Long Card Names So We Made this Card to Have the Absolute Longest Card Name Ever Elemental"}, replace : {imageName : "our market research shows that players like really long card names so we made"}},
+			{ match : {name : ["Forest", "Island", "Mountain", "Plains", "Swamp"]}, replace : {border : "black"}},
+			{ match : {name : "Who/What/When/Where/Why"}, replace : { layout : "split", names : ["Who", "What", "When", "Where", "Why"] }},
+			{ copyCard : "Who/What/When/Where/Why", replace :
+				{
+					name         : "Who",
+					number       : "120a",
+					text         : "Target player gains X life.",
+					originalText : "Target player gains X life.",
+					manaCost     : "{X}{W}",
+					cmc          : 1,
+					colors       : ["White"],
+					foreignNames : [{language : "French", name : "Qui"}]
+				}
+			},
+			{ copyCard : "Who/What/When/Where/Why", replace :
+				{
+					name         : "What",
+					number       : "120b",
+					text         : "Destroy target artifact.",
+					originalText : "Destroy target artifact.",
+					manaCost     : "{2}{R}",
+					cmc          : 3,
+					colors       : ["Red"],
+					foreignNames : [{language : "French", name : "Quoi"}]
+				}
+			},
+			{ copyCard : "Who/What/When/Where/Why", replace :
+				{
+					name         : "When",
+					number       : "120c",
+					text         : "Counter target creature spell.",
+					originalText : "Counter target creature spell.",
+					manaCost     : "{2}{U}",
+					cmc          : 3,
+					colors       : ["Blue"],
+					foreignNames : [{language : "French", name : "Quand"}]
+				}
+			},
+			{ copyCard : "Who/What/When/Where/Why", replace :
+				{
+					name         : "Where",
+					number       : "120d",
+					text         : "Destroy target land.",
+					originalText : "Destroy target land.",
+					manaCost     : "{3}{B}",
+					cmc          : 4,
+					colors       : ["Black"],
+					foreignNames : [{language : "French", name : "Où"}]
+				}
+			},
+			{ match : {name : "Who/What/When/Where/Why"}, replace : { name : "Why", number : "120e", text : "Destroy target enchantment.", originalText : "Destroy target enchantment.", manaCost : "{1}{G}", cmc : 2, colors : ["Green"], foreignNames : [{language : "French", name : "Pourquoi"}] }},
 		],
 		BOK :
 		[
@@ -1934,16 +2038,106 @@
 					toughness  : "4",
 					imageName  : "scarmaker"
 				}
-			}
+			},
+			{ match : {name : "Minamo's Meddling"}, replace : {artist : "Alex Horley-Orlandelli"}},
+			{ match : {name : "Nezumi Shadow-Watcher"}, replace : {flavor : "\"The Okiba Gang! Night-cursed thieves and assassins! I've had enough of their meddling! Triple the guard!\"\n—Marrow-Gnawer"}}
 		],
 		SOK :
 		[
-			{ match : {name: "Erayo's Essence"}, remove : ["power", "toughness"] },
-			{ match : {name: "Homura's Essence"}, remove : ["power", "toughness"] },
-			{ match : {name: "Kuon's Essence"}, remove : ["power", "toughness"] },
-			{ match : {name: "Rune-Tail's Essence"}, remove : ["power", "toughness"] },
-			{ match : {name: "Sasaya's Essence"}, remove : ["power", "toughness"] }
+			{ match : {name: ["Erayo's Essence", "Homura's Essence", "Kuon's Essence", "Rune-Tail's Essence", "Sasaya's Essence"]}, remove : ["power", "toughness"] },
+			{ match : {name : "Adamaro, First to Desire"}, replace : {flavor : "\"Beware Adamaro! In him all pain and anger is perfected.\"\n—Isao, Enlightened Bushi"}},
+			{ match : {name : "Akki Drillmaster"}, replace : {flavor : "\"What part of ‘hayaku ikee!' did you not understand?\""}},
+			{ match : {name : "Descendant of Soramaro"}, replace : {flavor : "\"Soramaro speaks through me. Listen! And I will tell the wisdom of the ancestors.\""}},
+			{ match : {name : "Inner Fire"}, replace : {flavor : "\"Heart of Sokenzan, I call to you! Lend me your fire.\""}}
 		],
+		"9ED" :
+		[
+			{ match : {name : ["Holy Day", "Inspirit", "Lava Axe", "Might of Oaks"]}, flavorAddExclamation : true },
+			{ match : {name : "Blinking Spirit"}, replace : {flavor : "\"Don't look at it! Maybe it'll go away!\"\n—Ib Halfheart, goblin tactician"}},
+			{ match : {name : "Sea's Claim"}, replace : {flavor : "\"Who's the crazy one now!?\"\n—Torgle, mountaintop boatmaker"}},
+			{ match : {name : "Swarm of Rats"}, replace : {flavor : "\"Rats, rats, rats! Hundreds, thousands, millions of them, and every one a life.\"\n—Bram Stoker, Dracula"}}
+		],
+		RAV :
+		[
+			{ match : {name : ["Overwhelm"]}, flavorAddExclamation : true },
+			{ match : {name : "Thundersong Trumpeter"}, replace : {flavor : "\"Hear that? Those notes mean we've arrived at Sunhome! Let our allies' hearts soar and our enemies' hearts shatter at the sound!\"\n—Klattic, Boros legionnaire"}}
+		],
+		GPT :
+		[
+			{ match : {name : ["Gelectrode", "Schismotivate", "Skarrg, the Rage Pits", "Skarrgan Skybreaker", "Train of Thought", "Wreak Havoc"]}, flavorAddExclamation : true },
+			{ match : {name : "Borborygmos"}, replace : {flavor : "\"It's easy to see why those Gruul dirtbags follow him—the only orders he gives are ‘Crush them!' and ‘We eat!'\"\n—Teysa"}},
+			{ match : {name : "Gruul War Plow"}, replace : {flavor : "\"Steering apparatus?! What for? Rip it out, sharpen it, and lash it to the front!\"\n—Ktank, Gruul plowmaster"}},
+			{ match : {name : "Killer Instinct"}, replace : {flavor : "\"Take the bridge, men! Victory! Victory! is ou— Retreat! RETREAT\""}},
+			{ match : {name : "Tin Street Hooligan"}, replace : {flavor : "\"Rauck-Chauv's like a holiday! Only it isn't on the calendars, and instead of dancing you knock people flat, and instead of giving gifts you break stuff.\""}},
+			{ match : {name : "Torch Drake"}, replace : {flavor : "\"Drakes? Bah! Things that breathe don't interest me. It breathes fire, you say? Well, that's a different story!\"\n—Zataz, Izzet clockwork artificer"}}
+		],
+		DIS :
+		[
+			{ match : {name : ["Condemn", "Flame-Kin War Scout", "Kindle the Carnage", "Protean Hulk", "Psychic Possession", "Unliving Psychopath"]}, flavorAddExclamation : true },
+			{ match : {name : "Azorius Æthermage"}, replace : {artist : "Heather Hudson"}},
+			{ match : {name : "Bronze Bombshell"}, replace : {flavor : "\"Ooh, shiny! Let's pull off the chain and take her with us.\"\n—Ukl, Gruul raider, last words"}},
+			{ match : {name : ["Drekavac", "Magewright's Stone"]}, replace : {artist : "Carl Critchlow"}},
+			{ match : {name : "Ignorant Bliss"}, replace : {artist : "Jeff Miracola"}}
+		],
+		CSP :
+		[
+			{ match : {name : ["Heidar, Rimewind Master", "Lovisa Coldeyes"]}, flavorAddExclamation : true },
+			{ match : {name : "Flashfreeze"}, replace : {flavor : "\"Nature? Fire? Bah! Both are chaotic and difficult to control. Ice is structured, latticed, light as a feather, massive as a glacier. In ice, there is power!\"\n—Heidar, Rimewind master"}}
+		],
+		TSP :
+		[
+			{ match : {name : ["Ib Halfheart, Goblin Tactician", "Think Twice", "Word of Seizing"]}, flavorAddExclamation : true },
+			{ match : {name : ["Evil Eye of Urborg"]}, flavorAddDash : true },
+			{ match : {name : "Coal Stoker"}, replace : {flavor : "\"The day is mine! I sent three such creatures against my foe, then watched as my magefire popped her soldiers like overripe spleenfruits.\"\n—Dobruk the Unstable, pyromancer"}},
+			{ match : {name : "Kher Keep"}, replace : {flavor : "\"They're still here?! The cockroach may have finally met its match.\"\n—Teferi"}},
+			{ match : {name : "Magus of the Mirror"}, replace : {flavor : "\"Behold! The image of the enemy and all that she has. Trust your envy, and take it.\""}},
+			{ match : {name : "Orcish Cannonade"}, replace : {flavor : "\"Crispy! Scarback! Load another volcano-ball.\"\n—Stumphobbler Thuj, Orcish captain"}}
+		],
+		TSB :
+		[
+			{ match : "*", replace : {timeshifted : true}},
+			{ match : {name : ["Pandemonium"]}, flavorAddExclamation : true },
+			{ match : {name : "Craw Giant"}, replace : {flavor : "Harthag gave a jolly laugh as he surveyed the army before him. \"Ho ho ho! Midgets! You think you can stand in my way?\""}}
+		],
+		PLC :
+		[
+			{ match : {multiverseid : [130715, 122321, 122373, 122360, 122423, 128940, 122428, 122374, 122402, 122367, 122280, 122429, 122362, 122371, 122405, 122451, 131006, 122481, 122324, 130714, 125877, 126214, 134738, 124033, 125874, 126212,
+									   124066, 124470, 124757, 122338, 122436, 130718, 126818, 122282, 122325, 130816, 122442, 125873, 124445, 122285, 124474, 125879, 131011, 122355, 122366]}, replace : {timeshifted : true}},
+			{ match : {name : ["Prodigal Pyromancer"]}, flavorAddExclamation : true },
+			{ match : {name : "Merfolk Thaumaturgist"}, replace : {flavor : "\"Blasted fishtails! It's not enough that they meddle with my head, but they twist my body as well.\"\n—Tahngarth of the Weatherlight"}}
+		],
+		FUT :
+		[
+			{ match : {multiverseid : [136055, 136204, 136155, 136049, 130676, 126143, 130686, 130672, 132229, 130334, 136054, 130684, 126211, 130635, 136043, 132226, 136196, 126132, 136215, 132220, 132227, 126149, 126187, 136044, 130311, 132211, 130581,
+									   136040, 130595, 130695, 126162, 130574, 136201, 130634, 136208, 136198, 126151, 130691, 126186, 126165, 126158, 136202, 130346, 130614, 130588, 136140, 136138, 136045, 130564, 136210, 136213, 126160, 136153, 136145,
+									   126210, 136212, 136158, 130347, 136137, 136214, 136160, 130708, 136032, 130659, 130344, 130323, 136151, 130675, 136205, 136142, 136139, 130630, 130338, 136041, 130325, 130644, 136141, 126178,
+									   132222, 130702, 132215]}, replace : {timeshifted : true}},
+			{ match : {name : ["Grinning Ignus"]}, flavorAddExclamation : true },
+			{ match : {name : "Bloodshot Trainee"}, replace : {flavor : "\"Hrrngh! Someday I'm going to hurl this . . . er . . . roll this . . . hrrngh . . . nudge this boulder right down a cliff.\""}},
+			{ match : {name : "Rites of Flourishing"}, replace : {flavor : "\"Dance, and bring forth the coil! It is an umbilical to Gaea herself, fattening us with the earth's rich bounty.\""}},
+			{ match : {name : "Steamflogger Boss"}, replace : {flavor : "\"Whip the Xs ! Pinch the Os!\nWhat we're building, no one knows!\""}}
+		],
+		/*
+		ZZZ :
+		[
+			{ match : {name : [""]}, flavorAddExclamation : true },
+			{ match : {name : [""]}, flavorAddDash : true },
+			{ match : {name : ""}, replace : {flavor : ""}},
+		],
+		*/
+
+
+
+
+
+
+
+
+
+
+
+		
+
 		ZEN :
 		[
 			{ match : {imageName : "forest1"}, replace : {imageName : "forest1",  number : "246"} },
@@ -1987,70 +2181,6 @@
 			{ match : {imageName : "swamp7"}, replace : {imageName : "swamp4",  number : "241"} },
 			{ match : {imageName : "swamp8"}, replace : {imageName : "swamp4a", number : "241a"} }
 		],
-		UNH :
-		[
-			{ match : {name : "Cheap Ass"}, replace : {text : "Spells you play cost {½} less to play."}},
-			{ match : {name : "Flaccify"}, replace : {text : "Counter target spell unless its controller pays {3}{½}."}},
-			{ match : {name : "Kill Destroy"}, replace : {name : "Kill! Destroy!", imageName : "kill! destroy!"}},
-			{ match : {name : "Little Girl"}, replace : {manaCost : "{hw}"}},
-			{ match : {name : "Look at Me, I'm R&D"}, replace : {artist : "spork;"} },
-			{ match : {name : "Our Market Research Shows That Players Like Really Long Card Names So We Made this Card to Have the Absolute Longest Card Name Ever Elemental"}, replace : {imageName : "our market research shows that players like really long card names so we made"}},
-			{ match : {name : "Forest"}, replace : {border : "black"}},
-			{ match : {name : "Island"}, replace : {border : "black"}},
-			{ match : {name : "Mountain"}, replace : {border : "black"}},
-			{ match : {name : "Plains"}, replace : {border : "black"}},
-			{ match : {name : "Swamp"}, replace : {border : "black"}},
-			{ match : {name : "Who/What/When/Where/Why"}, replace : { layout : "split", names : ["Who", "What", "When", "Where", "Why"] }},
-			{ copyCard : "Who/What/When/Where/Why", replace :
-				{
-					name         : "Who",
-					number       : "120a",
-					text         : "Target player gains X life.",
-					originalText : "Target player gains X life.",
-					manaCost     : "{X}{W}",
-					cmc          : 1,
-					colors       : ["White"],
-					foreignNames : [{language : "French", name : "Qui"}]
-				}
-			},
-			{ copyCard : "Who/What/When/Where/Why", replace :
-				{
-					name         : "What",
-					number       : "120b",
-					text         : "Destroy target artifact.",
-					originalText : "Destroy target artifact.",
-					manaCost     : "{2}{R}",
-					cmc          : 3,
-					colors       : ["Red"],
-					foreignNames : [{language : "French", name : "Quoi"}]
-				}
-			},
-			{ copyCard : "Who/What/When/Where/Why", replace :
-				{
-					name         : "When",
-					number       : "120c",
-					text         : "Counter target creature spell.",
-					originalText : "Counter target creature spell.",
-					manaCost     : "{2}{U}",
-					cmc          : 3,
-					colors       : ["Blue"],
-					foreignNames : [{language : "French", name : "Quand"}]
-				}
-			},
-			{ copyCard : "Who/What/When/Where/Why", replace :
-				{
-					name         : "Where",
-					number       : "120d",
-					text         : "Destroy target land.",
-					originalText : "Destroy target land.",
-					manaCost     : "{3}{B}",
-					cmc          : 4,
-					colors       : ["Black"],
-					foreignNames : [{language : "French", name : "Où"}]
-				}
-			},
-			{ match : {name : "Who/What/When/Where/Why"}, replace : { name : "Why", number : "120e", text : "Destroy target enchantment.", originalText : "Destroy target enchantment.", manaCost : "{1}{G}", cmc : 2, colors : ["Green"], foreignNames : [{language : "French", name : "Pourquoi"}] }},
-		],
 		EVG :
 		[
 			{ match : {name : "Elemental"}, replace : {number : "T1", layout : "token"}},
@@ -2090,188 +2220,6 @@
 		[
 			{ match : { name : "Colossus of Akros" }, replace : {text : "Defender, indestructible\n{10}: Monstrosity 10. (If this creature isn't monstrous, put ten +1/+1 counters on it and it becomes monstrous.)\nAs long as Colossus of Akros is monstrous, it has trample and can attack as though it didn't have defender."}},
 			{ match : { name : "Time to Feed" }, replace : {text : "Choose target creature an opponent controls. When that creature dies this turn, you gain 3 life. Target creature you control fights that creature. (Each deals damage equal to its power to the other.)"}}
-		],
-		DKM :
-		[
-			{ match : {name : "Abyssal Specter"}, replace : {number : "1", originalText : "Flying\nWhenever Abyssal Specter deals damage to a player, that player discards a card from his or her hand."}},
-			{ match : {name : "Balduvian Bears"}, replace : {number : "22", originalType : "Creature — Bear"}},
-			{ match : {name : "Balduvian Horde"}, replace : {number : "10", originalText : "When Balduvian Horde comes into play, sacrifice it unless you discard a card at random from your hand."}},
-			{ match : {name : "Barbed Sextant"}, replace : {number : "34", originalText : "{1}, {T}, Sacrifice Barbed Sextant: Add one mana of any color to your mana pool. Draw a card at the beginning of next turn's upkeep."}},
-			{ match : {name : "Bounty of the Hunt"}, replace : {number : "23", originalText : "You may remove a green card in your hand from the game rather than pay Bounty of the Hunt's mana cost.\n\Choose one — Target creature gets +3/+3 until end of turn; or target creature gets +2/+2 and another target creature gets +1/+1 until end of turn; or three target creatures each get +1/+1 until end of turn."}},
-			{ match : {name : "Contagion"}, replace : {number : "2", originalText : "You may pay 1 life and remove a black card in your hand from the game rather than pay Contagion's mana cost.\nPut two -2/-1 counters, distributed as you choose, on one or two target creatures."}},
-			{ match : {name : "Dark Banishing"}, replace : {number : "3", originalText : "Destroy target nonblack creature. It can't be regenerated."}},
-			{ match : {name : "Dark Ritual"}, replace : {number : "4"}},
-			{ match : {name : "Death Spark"}, replace : {number : "11", originalText : "Death Spark deals 1 damage to target creature or player.\nAt the beginning of your upkeep, if Death Spark is in your graveyard with a creature card directly above it, you may pay {1}. If you do, return Death Spark to your hand."}},
-			{ match : {name : "Elkin Bottle"}, replace : {number : "33", originalText : "{3}, {T}: Remove the top card of your library from the game face up. Until the beginning of your next upkeep, you may play that card as though it were in your hand. At the beginning of your next upkeep, if you haven't played the card, put it into your graveyard."}},
-			{ match : {name : "Elvish Bard"}, replace : {number : "24", originalText : "All creatures able to block Elvish Bard do so."}},
-			{ match : {name : "Folk of the Pines"}, replace : {number : "25", originalText : "{1}{G}: Folk of the Pines gets +1/+0 until end of turn."}},
-			{ match : {name : "Forest"}, replace : {number : "48", originalText : "{G}"}},
-			{ match : {name : "Foul Familiar"}, replace : {number : "5", originalText : "Foul Familiar can't black.\n{B}, Pay 1 life: Return Foul Familiar to its owner's hand."}},
-			{ match : {name : "Fyndhorn Elves"}, replace : {number : "26", originalText : "{T}: Add {G} to your mana pool."}},
-			{ match : {name : "Giant Growth"}, replace : {number : "27"}},
-			{ match : {name : "Giant Trap Door Spider"}, replace : {number : "33", originalText : "{1}{R}{G}, {T}: Remove from the game Giant Trap Door Spider and target creature without flying that's attacking you."}},
-			{ match : {name : "Goblin Mutant"}, replace : {number : "12", originalText : "Trample\nGoblin Mutant can't attack if defending player controls an untapped creature with power 3 or greater.\nGoblin Mutant can't block creatures with power 3 or greater."}},
-			{ match : {name : "Guerrilla Tactics"}, replace : {number : "13a", artist : "Amy Weber", originalText : "Guerrilla Tactics deals 2 damage to target creature or player.\nWhen a spell or ability an opponent controls causes you to discard Guerrilla Tactics from your hand, Guerrilla Tactics deals 4 damage to target creature or player."}},
-			{ match : {name : "Hurricane"}, replace : {number : "28"}},
-			{ match : {name : "Icy Manipulator"}, replace : {number : "36"}},
-			{ match : {name : "Incinerate"}, replace : {number : "14", originalText : "Incinerate deals 3 damage to target creature or player. A creature dealt damage this way can't be regenerated this turn."}},
-			{ match : {name : "Jokulhaups"}, replace : {number : "15", originalText : "Destroy all artifacts, creatures, and lands. They can't be regenerated."}},
-			{ match : {name : "Karplusan Forest"}, replace : {number : "39", originalText : "{T}: Add one colorless mana to your mana pool.\n{T}: Add {R} or {G} to your mana pool. Karplusan Forest deals 1 damage to you."}},
-			{ match : {name : "Lava Burst"}, replace : {number : "16", originalText : "Lava Burst deals X damage to target creature or player. If Lava Burst would deal damage to a creature, that damage can't be prevented or dealt instead to another creature or player."}},
-			{ match : {name : "Lhurgoyf"}, replace : {border : "black", number : "29", originalText : "Lhurgoyf's power is equal to the number of creature cards in all graveyards and its toughness is equal to that number plus 1."}},
-			{ match : {name : "Mountain"}, replace : {number : "45", originalText : "{R}"}},
-			{ match : {name : "Necropotence"}, replace : {border : "black", number : "7", originalText : "Skip your draw step.\nIf you would discard a card from your hand, remove that card from the game instead.\nPay 1 life: Remove the top card of your library from the game face down. At the end of your turn, put that card into your hand."}},
-			{ match : {name : "Orcish Cannoneers"}, replace : {number : "17"}},
-			{ match : {name : "Phantasmal Fiend"}, replace : {number : "8a", originalText : "{B}: Phantasmal Fiend gets +1/-1 until end of turn.\n{1}{U}: Switch Phantasmal Fiend's power and toughness until end of turn. Effects that would alter Phantasmal Fiend's power this turn alter its toughness instead, and vice versa."}},
-			{ match : {name : "Phyrexian War Beast"}, replace : {number : "37a", originalText : "When Phyrexian War Beast leaves play, sacrifice a land and Phyrexian War Beast deals 1 damage to you."}},
-			{ match : {name : "Pillage"}, replace : {number : "18", originalText : "Destroy target artifact or land. It can't be regenerated."}},
-			{ match : {name : "Pyroclasm"}, replace : {number : "19"}},
-			{ match : {name : "Shatter"}, replace : {number : "20"}},
-			{ match : {name : "Soul Burn"}, replace : {number : "9", originalText : "Spend only black and/or red mana on X.\nSoul Burn deals X damage to target creature or player. You gain life equal to the damage dealt, but not more than the amount of {B} spent on X, the player's life total before Soul Burn dealt damage, or the creature's toughness."}},
-			{ match : {name : "Storm Shaman"}, replace : {number : "21a", flavor : "\"Embrace the storm. Its voice shall echo within you, and its fire shall become your touch!\"\n—Lovisa Coldeyes, Balduvian chieftain", originalText : "{R}: Storm Shaman gets +1/+0 until end of turn."}},
-			{ match : {name : "Sulfurous Springs"}, replace : {number : "40", originalText : "{T}: Add one colorless mana to your mana pool.\n{T}: Add {B} or {R} to your mana pool. Sulfurous Springs deals 1 damage to you."}},
-			{ match : {name : "Swamp"}, replace : {number : "42", originalText : "{B}"}},
-			{ match : {name : "Underground River"}, replace : {number : "41", originalText : "{T}: Add one colorless mana to your mana pool.\n{T}: Add {U} or {B} to your mana pool. Underground River deals 1 damage to you."}},
-			{ match : {name : "Walking Wall"}, replace : {number : "38", originalText : "(Walls can't attack.)\n{3}: Walking Wall gets +3/-1 until end of turn and may attack this turn as though it weren't a Wall. Play this ability only once each turn.", artist : "Anthony S. Waters"}},
-			{ match : {name : "Woolly Spider"}, replace : {number : "30", originalText : "Woolly Spider may block as though it had flying.\nWhenever Woolly Spider blocks a creature with flying, Woolly Spider gets +0/+2 until end of turn."}},
-			{ match : {name : "Yavimaya Ancients"}, replace : {number : "31a", originalText : "{G}: Yavimaya Ancients gets +1/-2 until end of turn.", flavor : "\"We orphans of Fyndhorn have found no welcome in this alient place.\"\n — Taaveti of Kelsinko, elvish hunter"}},
-			{ match : {name : "Yavimaya Ants"}, replace : {number : "32", originalText : "Trample; haste (This creature may attack and {T} the turn it comes under your control.)\nCumulative upkeep {G}{G} (At the beginning of your upkeep, put an age counter on this creature, then sacrifice it unless you pay {G}{G} for each age counter on it.)"}}
-		],
-		FUT :
-		[
-			{ match : {multiverseid : 136055}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 136204}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 136155}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 136049}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 130676}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 126143}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 130686}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 130672}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 132229}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 130334}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 136054}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 130684}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 126211}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 130635}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 136043}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 132226}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 136196}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 126132}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 136215}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 132220}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 132227}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 126149}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 126187}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 136044}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 130311}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 132211}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 130581}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 136040}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 130595}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 130695}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 126162}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 130574}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 136201}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 130634}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 136208}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 136198}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 126151}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 130691}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 126186}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 126165}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 126158}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 136202}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 130346}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 130614}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 130588}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 136140}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 136138}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 136045}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 130564}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 136210}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 136213}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 126160}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 136153}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 136145}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 126210}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 136212}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 136158}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 130347}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 136137}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 136214}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 136160}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 130708}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 136032}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 130659}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 130344}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 130323}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 136151}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 130675}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 136205}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 136142}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 136139}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 130630}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 130338}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 136041}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 130325}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 130644}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 136141}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 126178}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 132222}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 130702}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 132215}, replace : {timeshifted : true}}
-		],
-		PLC :
-		[
-			{ match : {multiverseid : 130715}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 122321}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 122373}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 122360}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 122423}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 128940}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 122428}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 122374}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 122402}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 122367}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 122280}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 122429}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 122362}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 122371}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 122405}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 122451}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 131006}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 122481}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 122324}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 130714}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 125877}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 126214}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 134738}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 124033}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 125874}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 126212}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 124066}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 124470}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 124757}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 122338}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 122436}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 130718}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 126818}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 122282}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 122325}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 130816}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 122442}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 125873}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 124445}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 122285}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 124474}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 125879}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 131011}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 122355}, replace : {timeshifted : true}},
-			{ match : {multiverseid : 122366}, replace : {timeshifted : true}}
-		],
-		TSB :
-		[
-			{ match : "*", replace : {timeshifted : true}}
 		],
 		DPA :
 		[
