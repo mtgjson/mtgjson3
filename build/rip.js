@@ -821,7 +821,7 @@ function compareCardsToMCI(set, cb)
 			var mciCardLinks = Array.toArray(listDoc.querySelectorAll("table tr td a"));
 			set.cards.serialForEach(function(card, subcb)
 			{
-				if(card.variations)
+				if(card.variations || card.layout==="token")
 					return setImmediate(subcb);
 
 				var mciCardLink = mciCardLinks.filter(function(link) { return link.textContent.trim().toLowerCase()===card.name.toLowerCase(); });

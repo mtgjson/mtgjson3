@@ -254,6 +254,7 @@
 			name : "Stronghold",
 			code : "STH",
 			gathererCode : "ST",
+			magicCardsInfoCode : "sh",
 			releaseDate : "1998-03-02",
 			border : "black",
 			type : "expansion",
@@ -264,6 +265,7 @@
 			name : "Portal Second Age",
 			code : "PO2",
 			gathererCode : "P2",
+			magicCardsInfoCode : "po2",
 			oldCode : "P02",
 			releaseDate : "1998-06-01",
 			border : "black",
@@ -274,6 +276,7 @@
 			name : "Exodus",
 			code : "EXO",
 			gathererCode : "EX",
+			magicCardsInfoCode : "ex",
 			releaseDate : "1998-06-15",
 			border : "black",
 			type : "expansion",
@@ -284,6 +287,7 @@
 			name : "Unglued",
 			code : "UGL",
 			gathererCode : "UG",
+			magicCardsInfoCode : "ug",
 			releaseDate : "1998-08-11",
 			border : "silver",
 			type : "un",
@@ -293,6 +297,7 @@
 			name : "Urza's Saga",
 			code : "USG",
 			gathererCode : "UZ",
+			magicCardsInfoCode : "us",
 			releaseDate : "1998-10-12",
 			border : "black",
 			type : "expansion",
@@ -302,6 +307,7 @@
 		{
 			name : "Anthologies",
 			code : "ATH",
+			magicCardsInfoCode : "at",
 			releaseDate : "1998-11-01",
 			border : "white",
 			type : "box"
@@ -310,6 +316,7 @@
 			name : "Urza's Legacy",
 			code : "ULG",
 			gathererCode : "GU",
+			magicCardsInfoCode : "ul",
 			releaseDate : "1999-02-15",
 			border : "black",
 			type : "expansion",
@@ -320,6 +327,7 @@
 			name : "Classic Sixth Edition",
 			code : "6ED",
 			gathererCode : "6E",
+			magicCardsInfoCode : "6e",
 			releaseDate : "1999-04-21",
 			border : "white",
 			type : "core",
@@ -329,6 +337,7 @@
 			name : "Portal Three Kingdoms",
 			code : "PTK",
 			gathererCode : "PK",
+			magicCardsInfoCode : "p3k",
 			releaseDate : "1999-05-01",
 			border : "white",
 			type : "starter",
@@ -338,6 +347,7 @@
 			name : "Urza's Destiny",
 			code : "UDS",
 			gathererCode : "CG",
+			magicCardsInfoCode : "ud",
 			releaseDate : "1999-06-07",
 			border : "black",
 			type : "expansion",
@@ -348,6 +358,7 @@
 			name : "Starter 1999",
 			code : "S99",
 			gathererCode : "P3",
+			magicCardsInfoCode : "st",
 			releaseDate : "1999-07-01",
 			border : "white",
 			type : "starter",
@@ -357,6 +368,7 @@
 			name : "Mercadian Masques",
 			code : "MMQ",
 			gathererCode : "MM",
+			magicCardsInfoCode : "mm",
 			releaseDate : "1999-10-04",
 			border : "black",
 			type : "expansion",
@@ -367,6 +379,7 @@
 			name : "Battle Royale Box Set",
 			code : "BRB",
 			gathererCode : "BR",
+			magicCardsInfoCode : "br",
 			releaseDate : "1999-11-12",
 			border : "white",
 			type : "box"
@@ -1636,6 +1649,194 @@
 			{ match : {name : "Staunch Defenders"}, replace : {flavor : "\"Hold your position! Leave doubt for the dying!\"\n—Tahngarth of the Weatherlight"}},
 			{ match : {name : "Talon Sliver"}, replace : {flavor : "\"Keep them at sword's length!\" Gerrard's order fell flat as each sliver's talon suddenly grew longer. \"Hold on—break out the polearms!\""}}
 		],
+		STH :
+		[
+			{ match : {name : ["Awakening", "Heat of Battle", "Primal Rage", "Torment"]}, flavorAddExclamation : true },
+			{ match : {name : [""]}, flavorAddDash : true },
+			{ match : {name : "Invasion Plans"}, replace : {flavor : "Gerrard studied the globe as Mirri kept watch. Suddenly, his eyes widened. \"This is Dominaria!\""}},
+			{ match : {name : "Stronghold Assassin"}, replace : {flavor : "The assassin sees only throats and hears only heartbeats."}},
+			{ match : {name : ""}, replace : {flavor : ""}},
+			{ match : {name : ""}, replace : {flavor : ""}},
+			{ match : {name : ""}, replace : {flavor : ""}},
+			{ match : {name : ""}, replace : {flavor : ""}},
+			{ match : {name : ""}, replace : {flavor : ""}},
+			{ match : {name : ""}, replace : {flavor : ""}},
+		],
+		PO2 :
+		[
+			{ renumberImages : "Forest", order : [8409, 8410, 8408] },
+			{ renumberImages : "Island", order : [8387, 8390, 8391] },
+			{ renumberImages : "Mountain", order : [8395, 8406, 8407] },
+			{ renumberImages : "Plains", order : [8380, 8374, 8354] },
+			{ renumberImages : "Swamp", order : [8394, 8392, 8393] },
+			{ match : {name : ["Goblin War Cry", "Norwood Riders", "Plated Wurm", "Town Sentry"]}, flavorAddExclamation : true },
+			{ match : {name : "Alaborn Cavalier"}, replace : {flavor : "\"Course he ran! I wouldn't want to stare down that barrel, either!\"\n—Alaborn soldier"}},
+			{ match : {name : "Blaze"}, replace : {flavor : "\"This isn't what I meant by ‘facing the heat of battle!'\"\n—Jefan, Talas ship captain"}},
+			{ match : {name : "Steam Catapult"}, replace : {flavor : "\"You idiots! Turn it around! Turn it around!\""}},
+			{ match : {name : "Stone Rain"}, replace : {flavor : "There goes the neighborhood!"}}
+		],
+		EXO :
+		[
+			{ match : {name : ["Erratic Portal", "Pandemonium"]}, flavorAddExclamation : true },
+			{ match : {name : ["Erratic Portal"]}, flavorAddExclamation : true }	// a second time
+		],
+		UGL :
+		[
+			{ match : {name : "B.F.M. (Big Furry Monster)", number : "28b"}, replace : {imageName : "b.f.m. 1", number : "28"}},
+			{ match : {name : "B.F.M. (Big Furry Monster)", number : "29b"}, replace : {imageName : "b.f.m. 2", number : "29"}},
+			{ match : {name : "The Ultimate Nightmare of Wizards of the Coast® Customer Service"}, replace : {imageName : "the ultimate nightmare of wizards of the coastr customer service", manaCost : "{X}{Y}{Z}{R}{R}"}},
+			{ match : {name : "Forest"}, replace : {border : "black"}},
+			{ match : {name : "Island"}, replace : {border : "black"}},
+			{ match : {name : "Mountain"}, replace : {border : "black"}},
+			{ match : {name : "Plains"}, replace : {border : "black"}},
+			{ match : {name : "Swamp"}, replace : {border : "black"}},
+			{ match : {name : "Censorship"}, replace : {artist : "Kaja Foglio"}},
+			{ match : {name : ["Clam-I-Am", "Fowl Play", "Jester's Sombrero", "Krazy Kow", "Prismatic Wardrobe", "Temp of the Damned"]}, flavorAddExclamation : true },
+			{ match : {name : "Flock of Rabid Sheep"}, replace : {flavor : "And their bleating was like a wet salmon slapped upon the land—slap! slap! slap!"}},
+			{ match : {name : "Get a Life"}, replace : {flavor : "Gimme five! (Or whatever you got.)"}},
+			{ match : {name : "Giant Fan"}, replace : {flavor : "Only a villain would unleash a giant fan on anyone!"}},
+			{ match : {name : "Goblin Bookie"}, replace : {flavor : "\"Glok loved bets! He'd sit in the bar all night an' laugh an' laugh. Hey—he still owes me.\"\n—Squee, goblin casino hand"}},
+			{ match : {name : "Gus"}, replace : {flavor : "\"Now I lay me down to sleep — What are you starin' at?\""}},
+			{ match : {name : "Handcuffs"}, replace : {flavor : "\"That was fun! Now me.\"\n—Gwendlyn Di Corci"}},
+			{ match : {name : "Mesa Chicken"}, replace : {flavor : "\"Lo! lord of layers proudly comb-crested\nHero to hens father to feathers\nCrowing sun-caller weaver of wattle\nElder to eggs.\"\n—Rooster Saga"}}
+		],
+		USG :
+		[
+			{ match : {name : ["Bull Hippo", "Curfew", "Goblin Cadets", "Goblin Spelunkers"]}, flavorAddExclamation : true },
+			{ match : {name : "Argothian Swine"}, replace : {flavor : "In Argoth, the shortest path between two points is the one the swine make."}},
+			{ match : {name : "Headlong Rush"}, replace : {flavor : "A landslide of goblins poured toward the defenders—tumbling, rolling, and bouncing their way down the steep hillside."}},
+			{ match : {name : "Pegasus Charger"}, replace : {flavor : "\"The clouds came alive and dove to the earth! Hooves flashed among the dark army, who fled before the spectacle of fury.\"\n—Song of All, canto 211"}},
+			{ match : {name : "Priest of Titania"}, replace : {flavor : "Titania rewards all those who honor the forest by making them a living part of it."}},
+			{ match : {name : "Sanguine Guard"}, replace : {flavor : "\"Father of Machines! Your filigree gaze carves us, and the scars dance upon our grateful flesh.\"\n—Phyrexian Scriptures"}}
+		],
+		ATH :
+		[
+			{ match : {name : "Aesthir Glider"}, replace : {originalText : "Flying\nAesthir Glider cannot block."}},
+			{ match : {name : "Armored Pegasus"}, replace : {originalType : "Creature — Pegasus"}},
+			{ match : {name : "Benalish Knight"}, replace : {originalText : "First strike\nYou may play Benalish Knight any time you could play an instant."}},
+			{ match : {name : "Brushland"}, replace : {artist : "Bryon Wackwitz"}},
+			{ match : {name : "Combat Medic"}, replace : {artist : "Liz Danforth", originalText : "{1}{W}: Prevent 1 damage to a creature or player."}},
+			{ match : {name : "Cuombajj Witches"}, replace : {originalText : "{T}: Cuombajj Witches deals 1 damage to target creature or player of your choice and 1 damage to target creature or player of an opponent's choice. (Choose your target first.)"}},
+			{ match : {name : "Erhnam Djinn"}, replace : {originalText : "During your upkeep, target non-Wall creature an opponent controls gains forestwalk until your next turn. (If defending player controls a forest, that creature is unblockable.)"}},
+			{ match : {name : "Feast of the Unicorn"}, replace : {originalText : "Target creature gets +4/+0."}},
+			{ match : {name : "Fireball"}, replace : {originalText : "At the time you play Fireball, pay an additional {1} for each target beyond the first.\nFireball deals X damage divided evenly, rounded down, among any number of target creatures and/or players."}},
+			{ match : {name : "Giant Growth"}, replace : {artist : "Sandra Everingham"}},
+			{ match : {name : "Giant Spider"}, replace : {originalText : "Giant Spider can block creatures with flying."}},
+			{ match : {name : "Goblin Balloon Brigade"}, replace : {originalText : "{R}: Goblin Balloon Brigade gains flying until end of turn."}},
+			{ match : {name : "Goblin Digging Team"}, replace : {originalType : "Summon — Goblins"}},
+			{ match : {name : "Goblin Grenade"}, replace : {originalText : "At the time you play Goblin Grenade, sacrifice a Goblin.\nGoblin Grenade deals 5 damage to target creature or player.", artist : "Ron Spencer"}},
+			{ match : {name : "Goblin Hero"}, replace : {originalType : "Summon — Goblin"}},
+			{ match : {name : "Goblin King"}, replace : {originalType : "Summon — Lord", originalText : "All goblins get +1/+1 and gain mountainwalk. (If defending player controls a mountain, those creatures are unblockable.)", artist : "Jesper Myrfors"}},
+			{ match : {name : "Goblin Matron"}, replace : {originalText : "When Goblin Matron comes into play, you may search your library for a Goblin card. If you do, reveal that card, put it into your hand, and shuffle your library afterward."}},
+			{ match : {name : "Goblin Mutant"}, replace : {originalText : "Trample\nGoblin Mutant cannot attack if defending player controls an untapped creature with power 3 or more.\nGoblin Mutant cannot block a creature with power 3 or more."}, remove : ["flavor"]},
+			{ match : {name : "Goblin Recruiter"}, replace : {originalText : "When Goblin Recruiter comes into play, search your library for any number of Goblin cards and reveal them to all players. Shuffle your library, then put the revealed cards on top of it in any order.", originalType : "Summon — Goblin"}},
+			{ match : {name : "Goblin Snowman"}, replace : {originalText : "When Goblin Snowman blocks, it does not deal or receive combat damage that turn.\n{T}: Goblin Snowman deals 1 damage to target creature it is blocking."}},
+			{ match : {name : "Goblin Tinkerer"}, replace : {originalText : "{R}, {T}: Destroy target artifact. That artifact deals damage equal to its total casting cost to Goblin Tinkerer."}},
+			{ match : {name : "Goblin Warrens"}, replace : {originalText : "{2}{R}, Sacrifice two Goblins: Put three Goblin tokens into play. Treat these tokens as 1/1 red creatures."}},
+			{ match : {name : "Hymn to Tourach"}, replace : {originalText : "Target player discards two cards at random from his or her hand. (If that player has only one card, he or she discards it.)"}, remove : ["flavor"]},
+			{ match : {name : "Hypnotic Specter"}, replace : {originalText : "Flying\nWhenever Hypnotic Specter successfully deals damage to an opponent, that player discards a card at random from his or her hand."}, remove : ["flavor"]},
+			{ match : {name : "Icatian Javelineers"}, replace : {originalText : "When Icatian Javelineers comes into play, put a javelin counter on it.\n{T}, Remove a javelin counter from Icatian Javelineers: Icatian Javelineers deals 1 damage to target creature or player."}},
+			{ match : {name : "Infantry Veteran"}, replace : {originalType : "Summon — Soldier"}},
+			{ match : {name : "Jalum Tome"}, replace : {originalText : "{2}, {T}: Draw a card, then choose and discard a card."}},
+			{ match : {name : "Knight of Stromgald"}, replace : {originalText : "Protection from white\n{B}: Knight of Stromgald gains first strike until end of turn.\n{B}{B}: Knight of Stromgald gets +1/+0 until end of turn."}, remove : ["flavor"]},
+			{ match : {name : "Llanowar Elves"}, replace : {originalText : "{T}: Add {G} to your mana pool. Play this ability as a mana source."}},
+			{ match : {name : "Mogg Flunkies"}, replace : {originalText : "Mogg Flunkies cannot attack or block unless another creature you control attacks or blocks the same turn."}},
+			{ match : {name : "Order of the White Shield"}, replace : {originalText : "Protection from black\n{W}: Order of the White Shield gains first strike until end of turn.\n{W}{W}: Order of the White Shield gets +1/+0 until end of turn."}},
+			{ match : {name : "Pacifism"}, replace : {originalText : "Enchanted creature cannot attack or block."}},
+			{ match : {name : "Pyrokinesis"}, replace : {originalText : "You may remove a red card in your hand from the game instead of paying Pyrokinesis's casting cost.\nPyrokinesis deals 4 damage divided any way you choose among any number of target creatures."}, remove : ["flavor"]},
+			{ match : {name : "Pyrotechnics" }, replace : {flavor : "\"Hi! ni! ya! Behold the man of flint, that's me! / Four lightnings zigzag from me, strike and return.\"\n—Navajo war chant"}},
+			{ match : {name : "Raging Goblin"}, replace : {originalText : "Raging Goblin is unaffected by summoning sickness.", flavor : "Charging alone takes uncommong daring or uncommon stupidity. Or both.", artist : "Brian Snōddy"}},
+			{ match : {name : "Samite Healer"}, replace : {originalType : "Summon — Cleric", originalText : "{T}: Prevent 1 damage to a creature or player."}},
+			{ match : {name : "Scavenger Folk"}, replace : {originalText : "{G}, {T}, Sacrifice Scavenger Folk: Destroy target artifact."}},
+			{ match : {name : "Serrated Arrows"}, replace : {originalText : "Serrated Arrows comes into play with three arrowhead counters on it.\nWhen there are no arrowhead counters on Serrated Arrows, destroy it.\n{T}, Remove an arrowhead counter from Serrated Arrows: Put a -1/-1 counter on target creature."}},
+			{ match : {name : "Spectral Bears"}, replace : {originalText : "When Spectral Bears attacks, if defending player controls no black cards, Spectral Bears does not untap during your next untap phase."}},
+			{ match : {name : "Strip Mine"}, replace : {originalText : "{T}: Add one colors mana to your mana pool.\n{T}, Sacrifice Strip Mine: Destroy target land."}},
+			{ match : {name : "Swords to Plowshares"}, replace : {originalText : "Remove target creature from the game. That creature's controller gains life equal to its power."}},
+			{ match : {name : "Terror"}, replace : {originalText : "Destroy target nonartifact, nonblack creature. That creature cannot be regenerated this turn."}},
+			{ match : {name : "Unholy Strength"}, replace : {originalText : "Enchanted creature gets +2/+1."}},
+			{ match : {name : "Uthden Troll"}, replace : {originalText : "{R}: Regenerate Uthden Troll."}},
+			{ match : {name : "Volcanic Dragon"}, replace : {originalText : "Flying\nVolcanic Dragon is unaffected by summoning sickness."}},
+			{ match : {name : "Woolly Spider"}, replace : {originalText : "Wooly Spider can block creatures with flying.\nWhen Woolly Spider blocks a creature with flying, Woolly Spider gets +0/+2 until end of turn."}}
+		],
+		ULG :
+		[
+			{ match : {name : ["Knighthood", "Lava Axe"]}, flavorAddExclamation : true },
+			{ match : {name : "Goblin Welder"}, replace : {flavor : "\"I wrecked your metal guy, boss. But look! I made you an ashtray.\""}},
+			{ match : {name : "Purify"}, replace : {flavor : "\"Our Mother! The sky was Her hair; the sun, Her face. She danced on the grass and in the hills.\"\n—Song of All, canto 23"}},
+			{ match : {name : "Quicksilver Amulet"}, replace : {flavor : "\"Wonderful! You got a lion on your first try. Now put it back.\""}},
+			{ match : {name : "Molten Hydra"}, replace : {flavor : "Keep off the glass. —Hydra warning sign"}}
+		],
+		"6ED" :
+		[
+			{ match : {name : "Pyrotechnics" }, replace : {flavor : "\"Hi!ni!ya! Behold the man of flint, that's me! / Four lightnings zigzag from me, strike and return.\"\n—Navajo war chant"}},
+			{ match : {name : ["Conquer", "Fervor", "Goblin Digging Team", "Goblin Hero", "Goblin Recruiter", "Infernal Contract", "Sabretooth Tiger"]}, flavorAddExclamation : true },
+			{ match : {name : ["Fallen Angel", "Goblin Warrens", "Inferno"]}, flavorAddDash : true },
+			{ match : {name : "Anaba Shaman"}, replace : {flavor : "\"The shamans? Ha! They are craven cows not capable of true magic.\"\n—Irini Sengir"}},
+			{ match : {name : "Daraja Griffin"}, replace : {flavor : "\"And the flamingos said, ‘Get out of our nest—we can't be seen with the likes of you!' So, the griffin ate them.\"\n—Azeworai, \"The Ugly Bird\""}},
+			{ match : {name : "Elvish Archers"}, replace : {flavor : "\"I tell you, there was so many arrows flying about you couldn't hardly see the sun. So I says to young Angus, ‘Well, at least now we're fighting in the shade!'\""}},
+			{ match : {name : "Giant Strength"}, replace : {flavor : "\"O! it is excellent / To have a giant's strength, but it is tyrannous / To use it like a giant.\"\n—William Shakespeare,\nMeasure for Measure"}},
+			{ match : {name : "Polymorph"}, replace : {flavor : "\"Ahh! Opposable digits!\""}},
+			{ match : {name : "Segovian Leviathan"}, replace : {flavor : "\"Leviathan, too! Can you catch him with a fish-hook or run a line round his tongue?\"\n—The Bible, Job 41:1"}},
+			{ match : {name : "Staunch Defenders"}, replace : {flavor : "\"Hold your position! Leave doubt for the dying!\"\n—Tahngarth of the Weatherlight"}}
+		],
+		PTK :
+		[
+			{ match : {name : [""]}, flavorAddExclamation : true },
+			{ match : {name : ["Ravages of War"]}, flavorAddDash : true },
+			{ match : {name : "Brilliant Plan"}, replace : {flavor : "At Red Cliffs, Kongming and Zhou Yu each wrote his plan for defeating the Wei on the palm of his hand. They laughed as they both revealed the same word, \"Fire.\""}},
+			{ match : {name : "Imperial Edict"}, replace : {flavor : "Frustrated with Cao Cao's control of the imperial court, Emporer Xian secretly issued an edict condemning him, using his own blood as ink."}},
+			{ match : {name : "Lady Zhurong, Warrior Queen"}, replace : {flavor : "\"A man, and such a fool! I, a woman, will fight them for you.\"\n—Lady Zhurong to her husband Meng Huo, before leading an army against the Shu"}},
+			{ match : {name : "Meng Huo's Horde"}, replace : {artist : "Li Tie"}},
+			{ match : {name : "Shu Defender"}, replace : {flavor : "Confronting Cao Cao's army at Steepslope Bridge, Zhang Fei bellowed, \"I am Zhang Fei of Yan! Who dares fight me to the death?\" Cao Cao's army cowered and fled."}},
+			{ match : {name : "Shu Foot Soldiers"}, replace : {flavor : "Liu Bei lost many men at the battle of Runan because of his lack of strategy. It wasn't until he met Kongming that he began to truly succeed as a leader."}},
+			{ match : {name : "Xun Yu, Wei Advisor"}, replace : {flavor : "\"A splendid talent, admired of all men! His folly lay in serving Cao Cao's power.\""}},
+			{ match : {name : "Zhao Zilong, Tiger General"}, replace : {flavor : "Zhao Zilong was a brave and noble warrior. Twice he rescued Liu Bei's son, Liu Shan."}}
+		],
+		UDS :
+		[
+			{ match : {name : ["Urza's Incubator"]}, flavorAddExclamation : true }
+		],
+		S99 :
+		[
+			{ match : {imageName : "forest1"}, replace : {number : "170", artist : "Quinton Hoover"} },
+			{ match : {imageName : "forest2"}, replace : {number : "171", artist : "Quinton Hoover"} },
+			{ match : {imageName : "forest3"}, replace : {number : "172", artist : "John Avon"} },
+			{ match : {imageName : "forest4"}, replace : {number : "173", artist : "John Avon"} },
+			{ match : {imageName : "mountain1"}, replace : {number : "166"} },
+			{ match : {imageName : "mountain2"}, replace : {number : "167", artist : "John Avon"} },
+			{ match : {imageName : "mountain3"}, replace : {number : "168"} },
+			{ match : {imageName : "mountain4"}, replace : {number : "169", artist : "Brian Durfee"} },
+			{ match : {imageName : "plains1"}, replace : {number : "154"} },
+			{ match : {imageName : "plains2"}, replace : {number : "155", artist : "Tom Wänerstrand"} },
+			{ match : {imageName : "plains3"}, replace : {number : "156"} },
+			{ match : {imageName : "plains4"}, replace : {number : "157", artist : "Fred Fields"} },
+			{ match : {imageName : "swamp1"}, replace : {number : "162", artist : "Romas"} },
+			{ match : {imageName : "swamp2"}, replace : {number : "163", artist : "Dan Frazier"} },
+			{ match : {imageName : "swamp3"}, replace : {number : "164", artist : "Douglas Shuler"} },
+			{ match : {imageName : "swamp4"}, replace : {number : "165", artist : "Romas"} },
+			{ match : {name : ["Border Guard", "Dakmor Ghoul", "Time Warp"]}, flavorAddExclamation : true },
+			{ match : {name : ["Durkwood Boars", "Wind Drake"]}, flavorAddDash : true },
+			{ match : {name : "Feral Shadow"}, replace : {artist : "Cliff Nielsen"}},
+			{ match : {name : ""}, replace : {flavor : ""}},
+			{ match : {name : ""}, replace : {flavor : ""}},
+			{ match : {name : ""}, replace : {flavor : ""}},
+			{ match : {name : ""}, replace : {flavor : ""}},
+			{ match : {name : ""}, replace : {flavor : ""}},
+			{ match : {name : ""}, replace : {flavor : ""}},
+		],
+		MMQ :
+		[
+			{ match : {name : "Squee, Goblin Nabob"}, replace : {flavor : "\"General?!\" Tahngarth roared. \"General nuisance, maybe.\""}}
+		],
+		BRB :
+		[
+			{ renumberImages : "Forest", order : [21119, 22347, 22351, 22349, 22348, 22352, 22355, 22353, 22354] },
+			{ renumberImages : "Island", order : [21144, 22364, 22366, 22367, 22365] },
+			{ renumberImages : "Mountain", order : [22344, 22335, 22336, 22339, 22342, 22334, 22343, 21118, 22340] },
+			{ renumberImages : "Plains", order : [22357, 22356, 21145, 22362, 22361, 22363, 22360, 22358, 22359] },
+			{ renumberImages : "Swamp", order : [21171, 22370, 22369, 22368] },
+			{ match : {multiverseid : 22339}, replace : {artist : "Rob Alexander"} }
+		],
 		/*ZZZ :
 		[
 			{ match : {name : [""]}, flavorAddExclamation : true },
@@ -1653,19 +1854,7 @@
 
 
 
-		"6ED" :
-		[
-			{ match : {name : "Pyrotechnics" }, replace : {flavor : "\"Hi!ni!ya! Behold the man of flint, that's me! / Four lightnings zigzag from me, strike and return.\"\n—Navajo war chant"}}
-		],
-		BRB :
-		[
-			{ renumberImages : "Forest", order : [21119, 22347, 22351, 22349, 22348, 22352, 22355, 22353, 22354] },
-			{ renumberImages : "Island", order : [21144, 22364, 22366, 22367, 22365] },
-			{ renumberImages : "Mountain", order : [22344, 22335, 22336, 22339, 22342, 22334, 22343, 21118, 22340] },
-			{ renumberImages : "Plains", order : [22357, 22356, 21145, 22362, 22361, 22363, 22360, 22358, 22359] },
-			{ renumberImages : "Swamp", order : [21171, 22370, 22369, 22368] },
-			{ match : {multiverseid : 22339}, replace : {artist : "Rob Alexander"} }
-		],
+		
 		BTD :
 		[
 			{ renumberImages : "Forest", order : [27242, 27243, 27244] },
@@ -1798,17 +1987,6 @@
 			{ match : {imageName : "swamp7"}, replace : {imageName : "swamp4",  number : "241"} },
 			{ match : {imageName : "swamp8"}, replace : {imageName : "swamp4a", number : "241a"} }
 		],
-		UGL :
-		[
-			{ match : {name : "B.F.M. (Big Furry Monster)", number : "28b"}, replace : {imageName : "b.f.m. 1", number : "28"}},
-			{ match : {name : "B.F.M. (Big Furry Monster)", number : "29b"}, replace : {imageName : "b.f.m. 2", number : "29"}},
-			{ match : {name : "The Ultimate Nightmare of Wizards of the Coast® Customer Service"}, replace : {imageName : "the ultimate nightmare of wizards of the coastr customer service", manaCost : "{X}{Y}{Z}{R}{R}"}},
-			{ match : {name : "Forest"}, replace : {border : "black"}},
-			{ match : {name : "Island"}, replace : {border : "black"}},
-			{ match : {name : "Mountain"}, replace : {border : "black"}},
-			{ match : {name : "Plains"}, replace : {border : "black"}},
-			{ match : {name : "Swamp"}, replace : {border : "black"}}
-		],
 		UNH :
 		[
 			{ match : {name : "Cheap Ass"}, replace : {text : "Spells you play cost {½} less to play."}},
@@ -1901,33 +2079,6 @@
 			{ match : {name : "Minion"}, replace : {number : "T2", layout : "token"}},
 			{ match : {name : "Saproling"}, replace : {number : "T3", layout : "token"}}
 		],
-		PO2 :
-		[
-			{ renumberImages : "Forest", order : [8409, 8410, 8408] },
-			{ renumberImages : "Island", order : [8387, 8390, 8391] },
-			{ renumberImages : "Mountain", order : [8395, 8406, 8407] },
-			{ renumberImages : "Plains", order : [8380, 8374, 8354] },
-			{ renumberImages : "Swamp", order : [8394, 8392, 8393] }
-		],
-		S99 :
-		[
-			{ match : {imageName : "forest1"}, replace : {number : "170", artist : "Quinton Hoover"} },
-			{ match : {imageName : "forest2"}, replace : {number : "171", artist : "Quinton Hoover"} },
-			{ match : {imageName : "forest3"}, replace : {number : "172", artist : "John Avon"} },
-			{ match : {imageName : "forest4"}, replace : {number : "173", artist : "John Avon"} },
-			{ match : {imageName : "mountain1"}, replace : {number : "166"} },
-			{ match : {imageName : "mountain2"}, replace : {number : "167", artist : "John Avon"} },
-			{ match : {imageName : "mountain3"}, replace : {number : "168"} },
-			{ match : {imageName : "mountain4"}, replace : {number : "169", artist : "Brian Durfee"} },
-			{ match : {imageName : "plains1"}, replace : {number : "154"} },
-			{ match : {imageName : "plains2"}, replace : {number : "155", artist : "Tom Wänerstrand"} },
-			{ match : {imageName : "plains3"}, replace : {number : "156"} },
-			{ match : {imageName : "plains4"}, replace : {number : "157", artist : "Fred Fields"} },
-			{ match : {imageName : "swamp1"}, replace : {number : "162", artist : "Romas"} },
-			{ match : {imageName : "swamp2"}, replace : {number : "163", artist : "Dan Frazier"} },
-			{ match : {imageName : "swamp3"}, replace : {number : "164", artist : "Douglas Shuler"} },
-			{ match : {imageName : "swamp4"}, replace : {number : "165", artist : "Romas"} }
-		],
 		DDL :
 		[
 			{ match : { name : "Anax and Cymede" }, replace : {text : "First strike, vigilance\nHeroic — Whenever you cast a spell that targets Anax and Cymede, creatures you control get +1/+1 and gain trample until end of turn."}},
@@ -1939,55 +2090,6 @@
 		[
 			{ match : { name : "Colossus of Akros" }, replace : {text : "Defender, indestructible\n{10}: Monstrosity 10. (If this creature isn't monstrous, put ten +1/+1 counters on it and it becomes monstrous.)\nAs long as Colossus of Akros is monstrous, it has trample and can attack as though it didn't have defender."}},
 			{ match : { name : "Time to Feed" }, replace : {text : "Choose target creature an opponent controls. When that creature dies this turn, you gain 3 life. Target creature you control fights that creature. (Each deals damage equal to its power to the other.)"}}
-		],
-		ATH :
-		[
-			{ match : {name : "Aesthir Glider"}, replace : {originalText : "Flying\nAesthir Glider cannot block."}},
-			{ match : {name : "Armored Pegasus"}, replace : {originalType : "Creature — Pegasus"}},
-			{ match : {name : "Benalish Knight"}, replace : {originalText : "First strike\nYou may play Benalish Knight any time you could play an instant."}},
-			{ match : {name : "Brushland"}, replace : {artist : "Bryon Wackwitz"}},
-			{ match : {name : "Combat Medic"}, replace : {artist : "Liz Danforth", originalText : "{1}{W}: Prevent 1 damage to a creature or player."}},
-			{ match : {name : "Cuombajj Witches"}, replace : {originalText : "{T}: Cuombajj Witches deals 1 damage to target creature or player of your choice and 1 damage to target creature or player of an opponent's choice. (Choose your target first.)"}},
-			{ match : {name : "Erhnam Djinn"}, replace : {originalText : "During your upkeep, target non-Wall creature an opponent controls gains forestwalk until your next turn. (If defending player controls a forest, that creature is unblockable.)"}},
-			{ match : {name : "Feast of the Unicorn"}, replace : {originalText : "Target creature gets +4/+0."}},
-			{ match : {name : "Fireball"}, replace : {originalText : "At the time you play Fireball, pay an additional {1} for each target beyond the first.\nFireball deals X damage divided evenly, rounded down, among any number of target creatures and/or players."}},
-			{ match : {name : "Giant Growth"}, replace : {artist : "Sandra Everingham"}},
-			{ match : {name : "Giant Spider"}, replace : {originalText : "Giant Spider can block creatures with flying."}},
-			{ match : {name : "Goblin Balloon Brigade"}, replace : {originalText : "{R}: Goblin Balloon Brigade gains flying until end of turn."}},
-			{ match : {name : "Goblin Digging Team"}, replace : {originalType : "Summon — Goblins"}},
-			{ match : {name : "Goblin Grenade"}, replace : {originalText : "At the time you play Goblin Grenade, sacrifice a Goblin.\nGoblin Grenade deals 5 damage to target creature or player.", artist : "Ron Spencer"}},
-			{ match : {name : "Goblin Hero"}, replace : {originalType : "Summon — Goblin"}},
-			{ match : {name : "Goblin King"}, replace : {originalType : "Summon — Lord", originalText : "All goblins get +1/+1 and gain mountainwalk. (If defending player controls a mountain, those creatures are unblockable.)", artist : "Jesper Myrfors"}},
-			{ match : {name : "Goblin Matron"}, replace : {originalText : "When Goblin Matron comes into play, you may search your library for a Goblin card. If you do, reveal that card, put it into your hand, and shuffle your library afterward."}},
-			{ match : {name : "Goblin Mutant"}, replace : {originalText : "Trample\nGoblin Mutant cannot attack if defending player controls an untapped creature with power 3 or more.\nGoblin Mutant cannot block a creature with power 3 or more."}, remove : ["flavor"]},
-			{ match : {name : "Goblin Recruiter"}, replace : {originalText : "When Goblin Recruiter comes into play, search your library for any number of Goblin cards and reveal them to all players. Shuffle your library, then put the revealed cards on top of it in any order.", originalType : "Summon — Goblin"}},
-			{ match : {name : "Goblin Snowman"}, replace : {originalText : "When Goblin Snowman blocks, it does not deal or receive combat damage that turn.\n{T}: Goblin Snowman deals 1 damage to target creature it is blocking."}},
-			{ match : {name : "Goblin Tinkerer"}, replace : {originalText : "{R}, {T}: Destroy target artifact. That artifact deals damage equal to its total casting cost to Goblin Tinkerer."}},
-			{ match : {name : "Goblin Warrens"}, replace : {originalText : "{2}{R}, Sacrifice two Goblins: Put three Goblin tokens into play. Treat these tokens as 1/1 red creatures."}},
-			{ match : {name : "Hymn to Tourach"}, replace : {originalText : "Target player discards two cards at random from his or her hand. (If that player has only one card, he or she discards it.)"}, remove : ["flavor"]},
-			{ match : {name : "Hypnotic Specter"}, replace : {originalText : "Flying\nWhenever Hypnotic Specter successfully deals damage to an opponent, that player discards a card at random from his or her hand."}, remove : ["flavor"]},
-			{ match : {name : "Icatian Javelineers"}, replace : {originalText : "When Icatian Javelineers comes into play, put a javelin counter on it.\n{T}, Remove a javelin counter from Icatian Javelineers: Icatian Javelineers deals 1 damage to target creature or player."}},
-			{ match : {name : "Infantry Veteran"}, replace : {originalType : "Summon — Soldier"}},
-			{ match : {name : "Jalum Tome"}, replace : {originalText : "{2}, {T}: Draw a card, then choose and discard a card."}},
-			{ match : {name : "Knight of Stromgald"}, replace : {originalText : "Protection from white\n{B}: Knight of Stromgald gains first strike until end of turn.\n{B}{B}: Knight of Stromgald gets +1/+0 until end of turn."}, remove : ["flavor"]},
-			{ match : {name : "Llanowar Elves"}, replace : {originalText : "{T}: Add {G} to your mana pool. Play this ability as a mana source."}},
-			{ match : {name : "Mogg Flunkies"}, replace : {originalText : "Mogg Flunkies cannot attack or block unless another creature you control attacks or blocks the same turn."}},
-			{ match : {name : "Order of the White Shield"}, replace : {originalText : "Protection from black\n{W}: Order of the White Shield gains first strike until end of turn.\n{W}{W}: Order of the White Shield gets +1/+0 until end of turn."}},
-			{ match : {name : "Pacifism"}, replace : {originalText : "Enchanted creature cannot attack or block."}},
-			{ match : {name : "Pyrokinesis"}, replace : {originalText : "You may remove a red card in your hand from the game instead of paying Pyrokinesis's casting cost.\nPyrokinesis deals 4 damage divided any way you choose among any number of target creatures."}, remove : ["flavor"]},
-			{ match : {name : "Pyrotechnics" }, replace : {flavor : "\"Hi! ni! ya! Behold the man of flint, that's me! / Four lightnings zigzag from me, strike and return.\"\n—Navajo war chant"}},
-			{ match : {name : "Raging Goblin"}, replace : {originalText : "Raging Goblin is unaffected by summoning sickness.", flavor : "Charging alone takes uncommong daring or uncommon stupidity. Or both.", artist : "Brian Snōddy"}},
-			{ match : {name : "Samite Healer"}, replace : {originalType : "Summon — Cleric", originalText : "{T}: Prevent 1 damage to a creature or player."}},
-			{ match : {name : "Scavenger Folk"}, replace : {originalText : "{G}, {T}, Sacrifice Scavenger Folk: Destroy target artifact."}},
-			{ match : {name : "Serrated Arrows"}, replace : {originalText : "Serrated Arrows comes into play with three arrowhead counters on it.\nWhen there are no arrowhead counters on Serrated Arrows, destroy it.\n{T}, Remove an arrowhead counter from Serrated Arrows: Put a -1/-1 counter on target creature."}},
-			{ match : {name : "Spectral Bears"}, replace : {originalText : "When Spectral Bears attacks, if defending player controls no black cards, Spectral Bears does not untap during your next untap phase."}},
-			{ match : {name : "Strip Mine"}, replace : {originalText : "{T}: Add one colors mana to your mana pool.\n{T}, Sacrifice Strip Mine: Destroy target land."}},
-			{ match : {name : "Swords to Plowshares"}, replace : {originalText : "Remove target creature from the game. That creature's controller gains life equal to its power."}},
-			{ match : {name : "Terror"}, replace : {originalText : "Destroy target nonartifact, nonblack creature. That creature cannot be regenerated this turn."}},
-			{ match : {name : "Unholy Strength"}, replace : {originalText : "Enchanted creature gets +2/+1."}},
-			{ match : {name : "Uthden Troll"}, replace : {originalText : "{R}: Regenerate Uthden Troll."}},
-			{ match : {name : "Volcanic Dragon"}, replace : {originalText : "Flying\nVolcanic Dragon is unaffected by summoning sickness."}},
-			{ match : {name : "Woolly Spider"}, replace : {originalText : "Wooly Spider can block creatures with flying.\nWhen Woolly Spider blocks a creature with flying, Woolly Spider gets +0/+2 until end of turn."}}
 		],
 		DKM :
 		[
