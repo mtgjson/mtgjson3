@@ -17,6 +17,8 @@ if(!C.SETS_NOT_ON_GATHERER.contains(targetSetCode))
 }
 
 var targetSet = C.SETS.mutateOnce(function(SET) { if(SET.code===targetSetCode) { return SET; } });
+if(!C.EXTRA_SET_CARD_PRINTINGS.hasOwnProperty(targetSet.name))
+	process.exit(0);
 
 var newSet = base.clone(targetSet);
 newSet.cards = [];
@@ -42,8 +44,8 @@ tiptoe(
 
 		newSet.cards = newSet.cards.sort(shared.cardComparator);
 
-		base.info("Other sets with these cards:");
-		base.info(newSet.cards.map(function(card) { return card.printings; }).flatten().uniqueBySort().map(function(setName) { return C.SETS.mutateOnce(function(SET) { if(SET.name===setName) { return SET.code; }}); }).join(" "));
+		//base.info("Other sets with these cards:");
+		//base.info(newSet.cards.map(function(card) { return card.printings; }).flatten().uniqueBySort().map(function(setName) { return C.SETS.mutateOnce(function(SET) { if(SET.name===setName) { return SET.code; }}); }).join(" "));
 
 		fs.writeFileSync(path.join(__dirname, "..", "json", targetSetCode + ".json"), JSON.stringify(newSet), {encoding : "utf8"});
 
@@ -153,7 +155,7 @@ function getMultiverseidsForSet(setCode, cb)
 	tiptoe(
 		function loadAllSets()
 		{
-			var validSets = C.SETS;
+			var validSets = C.SETS.filter(function(SET) { return !C.SETS_NOT_ON_GATHERER.contains(SET.code); });
 			if(ONLY_ALLOW_SETS.hasOwnProperty(targetSetCode))
 				validSets = C.SETS.filter(function(SET) { return ONLY_ALLOW_SETS[targetSetCode].contains(SET.code); });
 			else
