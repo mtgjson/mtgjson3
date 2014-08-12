@@ -8,6 +8,7 @@ var base = require("xbase"),
 	printUtil = require("xutil").print,
 	fileUtil = require("xutil").file,
 	diffUtil = require("xutil").diff,
+	unicodeUtil = require("xutil").unicode,
 	fs = require("fs"),
 	path = require("path"),
 	dustUtil = require("xutil").dust,
@@ -107,8 +108,7 @@ tiptoe(
 	},
 	function verifyJSON()
 	{
-		checkSetsForDups(this.parallel());
-		checkCardDataTypes(this.parallel());
+		checkSetsForProblems(this.parallel());
 	},
 	function zipJSON()
 	{
@@ -159,14 +159,14 @@ tiptoe(
 	}
 );
 
-function checkSetsForDups(cb)
+function checkSetsForProblems(cb)
 {
 	tiptoe(
 		function processSets()
 		{
 			C.SETS.map(function(SET) { return SET.code; }).serialForEach(function(code, subcb)
 			{
-				checkSetForDups(code, subcb);
+				checkSetForProblems(code, subcb);
 			}, this);
 		},
 		function finish(err)
@@ -176,59 +176,10 @@ function checkSetsForDups(cb)
 	);
 }
 
-function checkSetForDups(setCode, cb)
+function checkSetForProblems(setCode, cb)
 {
 	var ALLOWED_DUPS = ["B.F.M. (Big Furry Monster)"];
 	
-	tiptoe(
-		function getJSON()
-		{
-			fs.readFile(path.join(__dirname, "..", "web", "json", setCode + ".json"), {encoding : "utf8"}, this);
-		},
-		function compare(setRaw)
-		{
-			var setData = JSON.parse(setRaw);
-			var cardsByName = {};
-
-			setData.cards.forEach(function(card)
-			{
-				if(card.hasOwnProperty("variations") || ALLOWED_DUPS.contains(card.name))
-					return;
-
-				if(cardsByName.hasOwnProperty(card.name))
-					base.info("%s DUP: %s\n%s", setCode, card.name, diffUtil.diff(cardsByName[card.name], card));
-				else
-					cardsByName[card.name] = card;
-			});
-
-			this();
-		},
-		function finish(err)
-		{
-			setImmediate(function() { cb(err); });
-		}
-	);
-}
-
-function checkCardDataTypes(cb)
-{
-	tiptoe(
-		function processSets()
-		{
-			C.SETS.map(function(SET) { return SET.code; }).serialForEach(function(code, subcb)
-			{
-				checkSetCardDataTypes(code, subcb);
-			}, this);
-		},
-		function finish(err)
-		{
-			setImmediate(function() { cb(err); });
-		}
-	);
-}
-
-function checkSetCardDataTypes(setCode, cb)
-{
 	var VALID_TYPES =
 	{
 		layout       : "string",
@@ -265,16 +216,32 @@ function checkSetCardDataTypes(setCode, cb)
 		legalities   : {}
 	};
 
+	var ALLOWED_CATEGORIES = ["letter", "space", "punctuation", "number", "symbol"];
+	var ALLOWED_OTHER_CHARS = ['\n'];
+
 	tiptoe(
 		function getJSON()
 		{
 			fs.readFile(path.join(__dirname, "..", "web", "json", setCode + ".json"), {encoding : "utf8"}, this);
 		},
-		function check(setRaw)
+		function compare(setRaw)
 		{
 			var setData = JSON.parse(setRaw);
 			var cardsByName = {};
 
+			// Check for duplicate cards
+			setData.cards.forEach(function(card)
+			{
+				if(card.hasOwnProperty("variations") || ALLOWED_DUPS.contains(card.name))
+					return;
+
+				if(cardsByName.hasOwnProperty(card.name))
+					base.info("%s DUP: %s\n%s", setCode, card.name, diffUtil.diff(cardsByName[card.name], card));
+				else
+					cardsByName[card.name] = card;
+			});
+
+			// Check for invalid data types
 			setData.cards.forEach(function(card)
 			{
 				Object.forEach(card, function(key, val)
@@ -309,6 +276,31 @@ function checkSetCardDataTypes(setCode, cb)
 				});
 			});
 
+			// Check for invalid characters
+			setData.cards.forEach(function(card)
+			{
+				Object.forEach(VALID_TYPES, function(name, type) {
+					if(type!=="string")
+						return;
+
+					if(!card.hasOwnProperty(name) || !card[name])
+						return;
+
+					var categories = unicodeUtil.getCategories(card[name]);
+					categories.forEach(function(category, i)
+					{
+						if(ALLOWED_CATEGORIES.contains(category))
+							return;
+
+						var c = card[name].charAt(i);
+						if(ALLOWED_OTHER_CHARS.contains(c))
+							return;
+
+						base.info("Card [%s] (%s) has invalid character in field [%s]: [%s] (%s)", card.name, card.multiverseid || "", name, c, c.charCodeAt(0));
+					});
+				});
+			});
+
 			this();
 		},
 		function finish(err)
@@ -317,3 +309,4 @@ function checkSetCardDataTypes(setCode, cb)
 		}
 	);
 }
+

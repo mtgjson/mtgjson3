@@ -1013,11 +1013,15 @@ function processTextBlocks(doc, textBlocks)
 		result += processTextBoxChildren(doc, textBox.childNodes);
 	});
 
+	result = result.replaceAll("\u2028", "\n");
+
 	while(result.contains("\n\n"))
 	{
 		result = result.replaceAll("\n\n", "\n");
 	}
 
+	result = result.replaceAll("\u00a0", " ");
+	result = result.replaceAll("―", "—");
 	return result;
 }
 

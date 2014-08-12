@@ -2136,7 +2136,8 @@
 			{ match : {name : "Gruul War Plow"}, replace : {flavor : "\"Steering apparatus?! What for? Rip it out, sharpen it, and lash it to the front!\"\n—Ktank, Gruul plowmaster"}},
 			{ match : {name : "Killer Instinct"}, replace : {flavor : "\"Take the bridge, men! Victory! Victory! is ou— Retreat! RETREAT\""}},
 			{ match : {name : "Tin Street Hooligan"}, replace : {flavor : "\"Rauck-Chauv's like a holiday! Only it isn't on the calendars, and instead of dancing you knock people flat, and instead of giving gifts you break stuff.\""}},
-			{ match : {name : "Torch Drake"}, replace : {flavor : "\"Drakes? Bah! Things that breathe don't interest me. It breathes fire, you say? Well, that's a different story!\"\n—Zataz, Izzet clockwork artificer"}}
+			{ match : {name : "Torch Drake"}, replace : {flavor : "\"Drakes? Bah! Things that breathe don't interest me. It breathes fire, you say? Well, that's a different story!\"\n—Zataz, Izzet clockwork artificer"}},
+			{ match : {name : "Niv-Mizzet, the Firemind"}, replace : {flavor : "\"(Z–>)90° – (E–N²W)90°t = 1\""}}
 		],
 		DIS :
 		[
