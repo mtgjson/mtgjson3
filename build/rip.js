@@ -871,7 +871,7 @@ function compareCardToMCI(card, mciCardURL, cb)
 				base.warn("FLAVOR: %s (%s) flavor does not match MagicCardsInfo (%s).\n%s", card.name, card.multiverseid, mciCardURL, diffUtil.diff(cardFlavor, mciFlavor));
 
 			// Compare artist
-			var mciArtist = mciCardDoc.querySelectorAll("table tr td p").filter(function(p) { return p.textContent.startsWith("Illus."); })[0].textContent.substring(7).trim().replaceAll("\n", " ").innerTrim();
+			var mciArtist = mciCardDoc.querySelectorAll("table tr td p").filter(function(p) { return p.textContent.startsWith("Illus."); })[0].textContent.substring(7).trim().replaceAll("\n", " ").replaceAll(" and ", " & ").innerTrim();
 			var cardArtist = (card.artist || "").trim().replaceAll("\n", " ").innerTrim();
 			if(!mciArtist && cardArtist)
 				base.warn("ARTIST: %s (%s) has artist but MagicCardsInfo (%s) does not.", card.name, card.multiverseid, mciCardURL);

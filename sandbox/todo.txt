@@ -1,14 +1,26 @@
 /---------------\
 | High Priority |
 \---------------/
-* Consider correcting the artist names as per: http://www.usc.edu/dept/Deckmasters/archive/mtg/mtg.error.txt
+* Change 'printings' field to be a list of set codes rather than set names.
+
+* Add ALL Promos AND Tokens from magiccards.info
+Token List: http://magiccards.info/extras.html
+Recent Additions List: http://magiccards.info/additions.html
+This Get rid of both HHO and PPR from mtgjson as they should all be duplicated in the stuff from magiccards.info
+Make the detection and adding of more promos a bit more automated (cron job, then maybe a single manual deploy command of some sort)
+E-mail woogerboy, Be Titmarsh and search e-mail for anyone asking about 'tokens' or 'promo' and e-mail them
+
 
 
 /-----------------\
 | Medium Priority |
 \-----------------/
-* Add MTGO ID's to each card (known in MTGO as 'catId')
-  See: https://www.mtgolibrary.com/mlbot_php/installer/CatID.txt
+* Add some sort of 'deck' or 'subset' field, to identify which cards are part of which decks (such as 'elf' deck in the 'elves vs goblins' set)
+
+* Add a 'frame' attribute for sets that denote what style of the set has (original, eighth edition, magic 2015, timeshifted, etc)
+
+* Create a case-insensitive nginx plugin (the tolowercase one I have now requires a /actual/ directory).
+  Then enable this for the files in /json/
 
 * Add tokens. Can look at the test_urls.js to get a head start.
   Will likely need to add these manually for each set, looking at the picture and entering in the data.
@@ -16,12 +28,20 @@
   Could potentially scrape the data from: http://magiccards.info/extras.html
 
 
+
 /--------------\
 | Low Priority |
 \--------------/
-* The 'printing' field is nice, but it doesn't use set codes but full set names which can be a pain for others to convert.
-  Add like a printings-code field or something that is the same, but with the names converted to SET codes.
-  Once added, e-mail michael herbig and let him know :)
+* Add MTGO ID's to each card (known in MTGO as 'catId')
+  See: https://www.mtgolibrary.com/mlbot_php/installer/CatID.txt
+
+* Sets on MagicCards.info but not on Gatherer or MTGJSON: Ninth Edition Box Set, Eighth Edition Box Set, Coldsnap Theme Decks
+
+* Add an automatic RSS feed XML file from the changelog.json
+
+* Add links to every web page and app that uses mtgjson. Search google webmaster links, google Analytics referrers, google and bing search engines, email, github, and reddit too
+
+* Consider scraping unreleased sets from spoiler site: http://www.mtgsalvation.com/spoilers/141-magic-2015
 
 * Add full foreign language scrapes. Need to use ?printed=true on Gatherer to get this data.
   If the cards have unique multiverseids probably have totally seperate json. Files like AllCards-x-ch.json or what not for each language.
@@ -30,25 +50,10 @@
   When doing this, keep the 'foreignNames' field, and make sure it includes 'English' in non-english printings
 
 
+
 /-----------------\
 | Lowest Priority |
 \-----------------/
 * Add a 'foilable' boolean for sets/cards on whether foils are available or not. Then e-mail machael herbig
 
-
-
-/-----------\
-| Don't Add |
-\-----------/
-* Don't add these sets, because they are not on Gatherer or don't make sense to add:
-Master's Edition I, II, III, IV 
-http://wiki.mtgsalvation.com/article/Renaissance
-http://wiki.mtgsalvation.com/article/Rivals_Quick_Start_Set
-http://wiki.mtgsalvation.com/article/Introductory_Two-Player_Set
-http://wiki.mtgsalvation.com/article/Anthologies
-http://wiki.mtgsalvation.com/article/Deckmasters_2001
-http://wiki.mtgsalvation.com/article/Deck_Builder%27s_Toolkit
-http://wiki.mtgsalvation.com/article/Deck_Builder%27s_Toolkit_2011
-http://wiki.mtgsalvation.com/article/Deck_Builder%27s_Toolkit_2012
-http://wiki.mtgsalvation.com/article/Deck_Builder%27s_Toolkit_2014
 

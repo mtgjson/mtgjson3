@@ -1334,6 +1334,10 @@
 			{ match : {name : "Roc of Kher Ridges"}, replace : {flavor : "We encountered a valley topped with immense boulders and eerie rock formations. Suddenly one of these boulders toppled from its perch and sprouted gargantuan wings, casting a shadow of darkness and sending us fleeing in terror."}},
 			{ match : {name : "Wall of Ice"}, replace : {flavor : "\"And through the drifts the snowy cliffs/ Did send a dismal sheen:/ Nor shapes of men nor beasts we ken—/ The ice was all between.\"/—Samuel Coleridge, \"The Rime of the Ancient Mariner\""}},
 			{ match : {name : "Wall of Brambles"}, flavorAddDashWithNewline : true},
+			{ match : {name : ["Ancestral Recall", "Badlands", "Bayou", "Black Lotus", "Blaze of Glory", "Braingeyser", "Chaos Orb", "Contract from Below", "Copy Artifact", "Cyclopean Tomb", "Darkpact", "Demonic Attorney", "Demonic Hordes", "Farmstead",
+							   "Fastbond", "Forcefield", "Fork", "Gauntlet of Might", "Granite Gargoyle", "Illusionary Mask", "Kudzu", "Lich", "Mox Emerald", "Mox Jet", "Mox Pearl", "Mox Ruby", "Mox Sapphire", "Natural Selection",
+							   "Plateau", "Raging River", "Roc of Kher Ridges", "Rock Hydra", "Savannah", "Scrubland", "Sedge Troll", "Taiga", "Time Vault", "Time Walk", "Timetwister", "Tropical Island", "Tundra", "Two-Headed Giant of Foriys",
+							   "Underground Sea", "Vesuvan Doppelganger", "Veteran Bodyguard", "Volcanic Island", "Wheel of Fortune", "Word of Command"]}, replace : {reserved : true}},
 			// Using multiverseid here because these rules get copied into LEB and 2ED
 			{ match : {multiverseid: 243}, replace : {artist : "Mark Tedin"} },
 			{ match : {multiverseid: 248}, replace : {artist : "Mark Poole"} },
@@ -1350,7 +1354,9 @@
 			{ match : {name : "Bazaar of Baghdad"}, replace : {artist : "Jeff A. Menges"} },
 			{ match : {name : "Library of Alexandria"}, replace : {artist : "Mark Poole"} },
 			{ match : {name : "Ali Baba"}, replace : {flavor : "\"When he reached the entrance of the cavern, he pronounced the words, ‘Open, Sesame!'\" —The Arabian Nights, Junior Classics trans."} },
-			{ match : {name : ["Aladdin's Ring", "Juzám Djinn", "King Suleiman", "Repentant Blacksmith"]}, flavorAddDash : true}
+			{ match : {name : ["Aladdin's Ring", "Juzám Djinn", "King Suleiman", "Repentant Blacksmith"]}, flavorAddDash : true},
+			{ match : {name : ["Ali from Cairo", "Bazaar of Baghdad", "City in a Bottle", "Diamond Valley", "Drop of Honey", "Elephant Graveyard", "Guardian Beast", "Ifh-Biff Efreet", "Island of Wak-Wak", "Jihad", "Juzam Djinn", "Khabal Ghoul",
+							   "King Suleiman", "Library of Alexandria", "Merchant Ship", "Old Man of the Sea", "Pyramids", "Ring of Ma'ruf", "Sandals of Abdallah", "Serendib Djinn", "Shahrazad", "Singing Tree"]}, replace : {reserved : true}}
 		],
 		"2ED" :
 		[
@@ -1359,7 +1365,9 @@
 		ATQ :
 		[
 			{ match : {name : "Gate to Phyrexia"}, flavorAddDash : true },
-			{ match : {name : "Triskelion"}, replace : {flavor : "A brainchild of Tawnos, the Triskelion proved its versatility and usefulness in many of the later battles between the brothers."} }
+			{ match : {name : "Triskelion"}, replace : {flavor : "A brainchild of Tawnos, the Triskelion proved its versatility and usefulness in many of the later battles between the brothers."} },
+			{ match : {name : ["Argivian Archaeologist", "Candelabra of Tawnos", "Citanul Druid", "Damping Field", "Gaea's Avenger", "Gate to Phyrexia", "Golgothian Sylex", "Haunting Wind", "Martyrs of Korlis", "Mightstone",
+							   "Mishra's Workshop", "Power Artifact", "Powerleech", "Su-Chi", "Tawnos's Coffin", "Transmute Artifact", "Urza's Miter", "Weakstone"]}, replace : {reserved : true}}
 		],
 		"3ED" :
 		[
@@ -1399,7 +1407,14 @@
 			{ match : {name : ["Adun Oakenshield", "Alabaster Potion", "Angus Mackenzie", "Carrion Ants", "Dakkon Blackblade", "Darkness", "Devouring Deep", "Dream Coat", "Durkwood Boars", "Elven Riders", "Firestorm Phoenix", "Flash Counter",
 							   "Giant Turtle", "Glyph of Doom", "Greed", "Headless Horseman", "Hellfire", "Hornet Cobra", "Horror of Horrors", "Hyperion Blacksmith", "Karakas", "Lady Evangela", "Lady Orca", "Part Water", "Quarum Trench Gnomes",
 							   "Raging Bull", "Revelation", "Shimian Night Stalker", "Spinal Villain", "The Abyss", "The Brute", "Thunder Spirit", "Tolaria", "Touch of Darkness", "Underworld Dreams", "Urborg", "Vampire Bats", "Wall of Vapor",
-							   "Winds of Change", "Wolverine Pack", "Kobold Overlord", "Holy Day"]}, flavorAddDash : true}
+							   "Winds of Change", "Wolverine Pack", "Kobold Overlord", "Holy Day"]}, flavorAddDash : true},
+			{ match : {name : ["The Abyss", "Acid Rain", "Adun Oakenshield", "Al-abara's Carpet", "Alchor's Tomb", "All Hallow's Eve", "Angus Mackenzie", "Bartel Runeaxe", "Boris Devilboon", "Caverns of Despair", "Chains of Mephistopheles",
+							   "Cleanse", "Disharmony", "Divine Intervention", "Elder Spawn", "Eureka", "Falling Star", "Field of Dreams", "Firestorm Phoenix", "Forethought Amulet", "Gosta Dirk", "Gravity Sphere", "Gwendlyn Di Corci",
+							   "Halfdane", "Hazezon Tamar", "Hellfire", "Imprison", "In the Eye of Chaos", "Infinite Authority", "Invoke Prejudice", "Jacques le Vert", "Jovial Evil", "Knowledge Vault", "Kobold Overlord", "Lady Caleria",
+							   "Lady Evangela", "Land Equilibrium", "Life Matrix", "Lifeblood", "Living Plane", "Livonya Silone", "Mana Matrix", "Master of the Hunt", "Mirror Universe", "Moat", "Mold Demon", "Nether Void", "North Star",
+							   "Nova Pentacle", "Pixie Queen", "Planar Gate", "Quarum Trench Gnomes", "Ragnar", "Ramses Overdark", "Rapid Fire", "Rasputin Dreamweaver", "Reverberation", "Ring of Immortals", "Rohgahh of Kher Keep",
+							   "Spinal Villain", "Spiritual Sanctuary", "Storm World", "Sword of the Ages", "The Tabernacle at Pendrell Vale", "Telekinesis", "Tetsuo Umezawa", "Thunder Spirit", "Tuknir Deathlock",
+							   "Typhoon", "Ur-Drago", "Willow Satyr", "Wood Elemental"]}, replace : {reserved : true}}
 		],
 		DRK :
 		[
@@ -1407,7 +1422,9 @@
 			{ match : {name : ["Amnesia", "Carnivorous Plant", "Coal Golem", "Dark Sphere", "Diabolic Machine", "Elves of Deep Shadow", "Fissure", "Ghost Ship", "Goblin Shrine", "Grave Robbers", "Hidden Path", "Holy Light", "Inferno", "Knights of Thorn",
 			                    "Land Leeches", "Marsh Gas", "Martyr's Cry", "Miracle Worker", "Morale", "Orc General", "People of the Woods", "Pikemen", "Squire", "Venom", "Word of Binding"] }, flavorAddDash : true },
 			{ match : {name : "Goblin Hero"}, replace : {flavor : "They attacked in an orgy of rage and madness, but only one seemed as focused on killing us as on the sheer joy of battle."} },
-			{ match : {name : "Savaen Elves"}, replace : {flavor : "\"Purity of magic can only come from purity of the land. How can a meal nourish if the ingredients are spoiled?\" —Sidaine of Savaen"}},
+			{ match : {name : "Savaen Elves"}, replace : {flavor : "\"Purity of magic can only come from purity of the land. How can a meal nourish if the ingredients are spoiled?\" —Sidaine of Savaen"}},,
+			{ match : {name : ["City of Shadows", "Cleansing", "Eternal Flame", "Exorcist", "Frankenstein's Monster", "Goblin Wizard", "Grave Robbers", "Hidden Path", "Knights of Thorn", "Lurker", "Mana Vortex", "Martyr's Cry",
+							   "Nameless Race", "Niall Silvain", "Preacher", "Psychic Allergy", "Scarwood Bandits", "Season of the Witch", "Sorrow's Path", "Stone Calendar", "Tracker", "Worms of the Earth", "Wormwood Treefolk"]}, replace : {reserved : true}}
 		],
 		FEM :
 		[
@@ -1444,6 +1461,9 @@
 			{ renumberImages : "Vodalian Soldiers", order : [1899, 1901, 1900, 1902] },
 			{ match : {name : "Thrull Champion"}, flavorAddExclamation : true },
 			{ match : {name : "Delif's Cone"}, flavorAddDash : true },
+			{ match : {name : ["Aeolipile", "Balm of Restoration", "Conch Horn", "Delif's Cube", "Draconian Cylix", "Dwarven Armorer", "Ebon Praetor", "Elven Lyre", "Elvish Farmer", "Fungal Bloom", "Goblin Flotilla", "Hand of Justice",
+							   "Homarid Shaman", "Icatian Lieutenant", "Icatian Skirmishers", "Implements of Sacrifice", "Rainbow Vale", "Ring of Renewal", "River Merfolk", "Spirit Shield", "Thelon's Curse", "Thelonite Monk", "Thrull Champion",
+							   "Tourach's Gate", "Vodalian Knights", "Vodalian War Machine", "Zelyon Sword"]}, replace : {reserved : true}}
 		],
 		"4ED" :
 		[
@@ -1478,7 +1498,12 @@
 			{ match : {name : "Grizzled Wolverine"}, replace : {flavor : "\"Before you release a Wolverine from the trap, make sure it's really dead.\"\n—Lovisa Coldeyes,\nBalduvian Chieftain"}},
 			{ match : {name : "Mercenaries"}, replace : {flavor : "\"Blasted amateurs! Doesn't the queen think we can fight well enough on our own?\"\n—Avram Garrisson, Leader of the Knights of Stromgald"}},
 			{ match : {name : "Lhurgoyf"}, replace : {flavor : "\"Ach! Hans, run! It's the Lhurgoyf!\"\n—Saffi Eriksdotter, last words"}},
-			{ match : {name : "Rally"}, replace : {flavor : "\"Stand your ground, troops! This shall be our finest hour!\"\n—General Jarkeld, the Arctic Fox, last words"}}
+			{ match : {name : "Rally"}, replace : {flavor : "\"Stand your ground, troops! This shall be our finest hour!\"\n—General Jarkeld, the Arctic Fox, last words"}},
+			{ match : {name : ["Aegis of the Meek", "Altar of Bone", "Amulet of Quoz", "Balduvian Hydra", "Blizzard", "Brand of Ill Omen", "Call to Arms", "Chromatic Armor", "Earthlink", "Energy Storm", "Flow of Maggots", "Formation", "Fyndhorn Pollen",
+							   "General Jarkeld", "Glacial Crevasses", "Gravebind", "Halls of Mist", "Hot Springs", "Ice Cauldron", "Illusionary Presence", "Illusions of Grandeur", "Infernal Denizen", "Jester's Mask", "Kjeldoran Knight",
+							   "Kjeldoran Phalanx", "Land Cap", "Lava Tubes", "Lightning Blow", "Marton Stromgald", "Mercenaries", "Mesmeric Trance", "Minion of Tevesh Szat", "Mountain Titan", "Mudslide", "Musician", "Mystic Might", "Polar Kraken",
+							   "Reality Twist", "River Delta", "Ritual of Subdual", "Skeleton Ship", "Snowblind", "Soldevi Golem", "Spoils of Evil", "Spoils of War", "Storm Spirit", "Timberline Ridge", "Trailblazer",
+							   "Veldt", "Winter's Chill"]}, replace : {reserved : true}}
 		],
 		CHR :
 		[
@@ -1506,7 +1531,10 @@
 			{ renumberImages : "Willow Faerie", order : [2982, 2983] },
 			{ match : {name : ["Narwhal"]}, flavorAddExclamation : true },
 			{ match : {name : ["Baron Sengir", "Spectral Bears"]}, flavorAddDash : true },
-			{ match : {name : "Roterothopter"}, replace : {flavor : "\"The Roterothopter is as insidious as it is ingenious. It is one of the few creations of our school that I take no pride in.\" —Baki, Wizard Attendant"}}
+			{ match : {name : "Roterothopter"}, replace : {flavor : "\"The Roterothopter is as insidious as it is ingenious. It is one of the few creations of our school that I take no pride in.\" —Baki, Wizard Attendant"}},
+			{ match : {name : ["An-Zerrin Ruins", "Anaba Ancestor", "Anaba Spirit Crafter", "Apocalypse Chime", "Autumn Willow", "Aysen Crusader", "Aysen Highway", "Baki's Curse", "Baron Sengir", "Beast Walkers", "Black Carriage", "Chain Stasis",
+							   "Daughter of Autumn", "Didgeridoo", "Dwarven Pony", "Dwarven Sea Clan", "Faerie Noble", "Grandmother Sengir", "Hazduhr the Abbot", "Heart Wolf", "Koskun Falls", "Leeches", "Mammoth Harness", "Marjhan", "Mystic Decree",
+							   "Narwhal", "Reveka, Wizard Savant", "Rysorian Badger", "Serra Aviary", "Soraya the Falconer", "Timmerian Fiends", "Veldrane of Sengir", "Wall of Kelp", "Willow Priestess", "Winter Sky"]}, replace : {reserved : true}}
 		],
 		ALL :
 		[
@@ -1535,7 +1563,11 @@
 			{ renumberImages : "Wild Aesthir", order : [3220, 3219] },
 			{ match : {name : ["Burnout", "Mystic Compass", "Omen of Fire", "Urza's Engine"]}, flavorAddExclamation : true },
 			{ match : {name : ["Misinformation", "Nature's Blessing", "Sol Grail", "Urza's Engine", "Varchild's War-Riders"]}, flavorAddDash : true },
-			{ match : {name : "Kaysa"}, replace : {flavor : "Kaysa speaks as the Elder Druid, but the Yavimaya recognizes only one voice: its own."}}
+			{ match : {name : "Kaysa"}, replace : {flavor : "Kaysa speaks as the Elder Druid, but the Yavimaya recognizes only one voice: its own."}},
+			{ match : {name : ["Ashnod's Cylix", "Balduvian Trading Post", "Chaos Harlequin", "Dystopia", "Fatal Lore", "Floodwater Dam", "Gargantuan Gorilla", "Gustha's Scepter", "Heart of Yavimaya", "Helm of Obedience", "Ivory Gargoyle",
+							   "Kaysa", "Keeper of Tresserhorn", "Kjeldoran Outpost", "Krovikan Horror", "Lake of the Dead", "Lodestone Bauble", "Lord of Tresserhorn", "Misfortune", "Nature's Wrath", "Omen of Fire", "Phantasmal Sphere",
+							   "Phelddagrif", "Phyrexian Devourer", "Phyrexian Portal", "Ritual of the Machine", "Rogue Skycaptain", "Royal Decree", "Sheltered Valley", "Soldevi Digger", "Soldevi Excavations", "Splintering Wind", "Sustaining Spirit",
+							   "Sworn Defender", "Thawing Glaciers", "Thought Lash", "Tidal Control", "Tornado", "Varchild's War-Riders", "Wandering Mage", "Winter's Night"]}, replace : {reserved : true}}
 		],	
 		MIR :
 		[
@@ -1556,6 +1588,14 @@
 			{ match : {name : "Savage Twister"}, replace : {flavor : "\"Frozen, we watched the funnel pluck up three of the goats—pook! pook! pook!—before we ran for the wadi.\"\n—Travelogue of Najat"}},
 			{ match : {name : "Wall of Corpses"}, replace : {flavor : "\"I shall make walls of their flesh, and their blood will be my mortar.\"\n—Kaervek"}},
 			{ match : {name : "Ersatz Gnomes"}, replace : {flavor : "From jungle to sea, from sea to stone, from stone to field, from field to bone. What am I? —Zhalfirin riddle"}},
+			{ match : {name : ["Acidic Dagger", "Afiya Grove", "Amulet of Unmaking", "Asmira, Holy Avenger", "Auspicious Ancestor", "Barreling Attack", "Bazaar of Wonders", "Benthic Djinn", "Bone Mask", "Brushwagg", "Cadaverous Bloom",
+							   "Canopy Dragon", "Carrion", "Catacomb Dragon", "Chaosphere", "Circle of Despair", "Cycle of Life", "Discordant Spirit", "Divine Retribution", "Emberwilde Caliph", "Emberwilde Djinn", "Energy Bolt", "Energy Vortex",
+							   "Forsaken Wastes", "Frenetic Efreet", "Grim Feast", "Hakim, Loreweaver", "Hall of Gemstone", "Harbinger of Night", "Hivis of the Scale", "Jabari's Influence", "Jungle Patrol", "Kukemssa Pirates", "Leering Gargoyle",
+							   "Lion's Eye Diamond", "Lure of Prey", "Malignant Growth", "Mangara's Tome", "Mindbender Spores", "Misers' Cage", "Mist Dragon", "Natural Balance", "Null Chamber", "Paupers' Cage", "Phyrexian Dreadnought", "Phyrexian Purge",
+							   "Phyrexian Tribute", "Political Trickery", "Preferred Selection", "Prismatic Lace", "Purgatory", "Purraj of Urborg", "Rashida Scalebane", "Razor Pendulum", "Reflect Damage", "Reparations", "Rock Basilisk", "Sawback Manticore",
+							   "Seeds of Innocence", "Shallow Grave", "Shauku, Endbringer", "Shimmer", "Sidar Jabari", "Soul Echo", "Spectral Guardian", "Spirit of the Night", "Subterranean Spirit", "Tainted Specter", "Taniwha", "Teeka's Dragon",
+							   "Teferi's Imp", "Teferi's Isle", "Telim'Tor", "Telim'Tor's Edict", "Tombstone Stairwell", "Torrent of Lava", "Unfulfilled Desires", "Ventifact Bottle", "Warping Wurm", "Wellspring",
+							   "Yare", "Zirilan of the Claw", "Zuberi, Golden Feather"]}, replace : {reserved : true}}
 		],
 		ITP :
 		[
@@ -1594,7 +1634,11 @@
 			{ match : {name : "Freewind Falcon"}, replace : {flavor : "\"That does it! I'm going back to hunting chickens!\"\n—Rhirhok, goblin archer"}},
 			{ match : {name : "Guiding Spirit"}, replace : {flavor : "\"Retainer of eternal Sun! Life flash again upon thy wings.\"\n—\"Song to the Sun,\" Femeref song"}},
 			{ match : {name : "Longbow Archer"}, replace : {flavor : "\"If it bears wings, I will pin it to the skies over Tefemburu.\"\n—Ruya, Zhalfirin archer"}},
-			{ match : {name : "Magma Mine"}, replace : {flavor : "BOOM!"}}
+			{ match : {name : "Magma Mine"}, replace : {flavor : "BOOM!"}},
+			{ match : {name : ["Aku Djinn", "Anvil of Bogardan", "Bogardan Phoenix", "Breathstealer's Crypt", "Chronatog", "City of Solitude", "Corrosion", "Diamond Kaleidoscope", "Elkin Lair", "Equipoise", "Eye of Singularity", "Femeref Enchantress",
+							   "Firestorm Hellkite", "Flooded Shoreline", "Forbidden Ritual", "Griffin Canyon", "Guiding Spirit", "Kaervek's Spite", "Katabatic Winds", "Kookus", "Lichenthrope", "Lightning Cloud", "Ogre Enforcer", "Phyrexian Marauder",
+							   "Pillar Tombs of Aku", "Pygmy Hippo", "Quirion Druid", "Rainbow Efreet", "Retribution of the Meek", "Righteous War", "Sands of Time", "Squandered Resources", "Suleiman's Legacy", "Teferi's Realm", "Three Wishes", "Tithe",
+							   "Triangle of War", "Undiscovered Paradise", "Viashivan Dragon", "Zhalfirin Crusader"]}, replace : {reserved : true}}
 		],
 		"5ED" :
 		[
@@ -1717,7 +1761,11 @@
 			{ match : {name : "Inner Sanctum"}, replace : {flavor : "\"Save me from Maraxus,\" Starke pleaded, \"or condemn me to his wrath. Either way, do not ignore me!\""}},
 			{ match : {name : "Mwonvuli Ooze"}, replace : {flavor : "\"Ewww!\""}},
 			{ match : {name : "Vodalian Illusionist"}, replace : {flavor : "\"Torahn gore these shifty fishtails! You can't even get close to one.\"\n—Tahngarth of the Weatherlight"}},
-			{ match : {name : "Phantom Wings"}, replace : {flavor : "\"But you said ‘when goats fly!'\" Squee whined."}}
+			{ match : {name : "Phantom Wings"}, replace : {flavor : "\"But you said ‘when goats fly!'\" Squee whined."}},
+			{ match : {name : ["Abeyance", "Aboroth", "Ancestral Knowledge", "Avizoa", "Bone Dancer", "Bosium Strip", "Bubble Matrix", "Debt of Loyalty", "Dwarven Thaumaturgist", "Ertai's Familiar", "Firestorm", "Fungus Elemental", "Gallowbraid",
+							   "Goblin Bomb", "Heart of Bogardan", "Heat Stroke", "Infernal Tribute", "Inner Sanctum", "Liege of the Hollows", "Lotus Vale", "Mana Web", "Maraxus of Keld", "Morinfen", "Mwonvuli Ooze", "Null Rod", "Paradigm Shift",
+							   "Peacekeeper", "Pendrell Mists", "Psychic Vortex", "Scorched Ruins", "Thran Tome", "Tolarian Entrancer", "Tolarian Serpent", "Urborg Justice", "Urborg Stalker", "Wave of Terror", "Well of Knowledge",
+							   "Winding Canyons", "Xanthic Statue"]}, replace : {reserved : true}}
 		],
 		TMP :
 		[
@@ -1731,13 +1779,16 @@
 			{ match : {name : "Pincher Beetles"}, replace : {flavor : "\"No fair! Since when does a bug get ta munch on me?\"\n—Squee, goblin cabin hand"}},
 			{ match : {name : "Rootwater Shaman"}, replace : {flavor : "\"Ugh! When did orcs and fish start having kids?\"\n—Gerrard of the Weatherlight"}},
 			{ match : {name : "Staunch Defenders"}, replace : {flavor : "\"Hold your position! Leave doubt for the dying!\"\n—Tahngarth of the Weatherlight"}},
-			{ match : {name : "Talon Sliver"}, replace : {flavor : "\"Keep them at sword's length!\" Gerrard's order fell flat as each sliver's talon suddenly grew longer. \"Hold on—break out the polearms!\""}}
+			{ match : {name : "Talon Sliver"}, replace : {flavor : "\"Keep them at sword's length!\" Gerrard's order fell flat as each sliver's talon suddenly grew longer. \"Hold on—break out the polearms!\""}},
+			{ match : {name : ["Aluren", "Apocalypse", "Avenging Angel", "Commander Greven il-Vec", "Corpse Dance", "Cursed Scroll", "Earthcraft", "Eladamri, Lord of Leaves", "Escaped Shapeshifter", "Humility", "Intuition", "Meditate", "Orim, Samite Healer",
+							   "Recycle", "Sarcomancy", "Selenia, Dark Angel"]}, replace : {reserved : true}}
 		],
 		STH :
 		[
 			{ match : {name : ["Awakening", "Heat of Battle", "Primal Rage", "Torment"]}, flavorAddExclamation : true },
 			{ match : {name : "Invasion Plans"}, replace : {flavor : "Gerrard studied the globe as Mirri kept watch. Suddenly, his eyes widened. \"This is Dominaria!\""}},
-			{ match : {name : "Stronghold Assassin"}, replace : {flavor : "The assassin sees only throats and hears only heartbeats."}}
+			{ match : {name : "Stronghold Assassin"}, replace : {flavor : "The assassin sees only throats and hears only heartbeats."}},
+			{ match : {name : ["Crovax the Cursed", "Dream Halls", "Mox Diamond", "Silver Wyvern", "Sliver Queen", "Volrath's Shapeshifter", "Volrath's Stronghold"]}, replace : {reserved : true}}
 		],
 		PO2 :
 		[
@@ -1755,7 +1806,8 @@
 		EXO :
 		[
 			{ match : {name : ["Erratic Portal", "Pandemonium"]}, flavorAddExclamation : true },
-			{ match : {name : ["Erratic Portal"]}, flavorAddExclamation : true }	// a second time
+			{ match : {name : ["Erratic Portal"]}, flavorAddExclamation : true },	// a second time
+			{ match : {name : ["City of Traitors", "Dominating Licid", "Ertai, Wizard Adept", "Exalted Dragon", "Hatred", "Mind Over Matter", "Oath of Ghouls", "Recurring Nightmare", "Survival of the Fittest"]}, replace : {reserved : true}}
 		],
 		UGL :
 		[
@@ -1780,7 +1832,9 @@
 			{ match : {name : "Headlong Rush"}, replace : {flavor : "A landslide of goblins poured toward the defenders—tumbling, rolling, and bouncing their way down the steep hillside."}},
 			{ match : {name : "Pegasus Charger"}, replace : {flavor : "\"The clouds came alive and dove to the earth! Hooves flashed among the dark army, who fled before the spectacle of fury.\"\n—Song of All, canto 211"}},
 			{ match : {name : "Priest of Titania"}, replace : {flavor : "Titania rewards all those who honor the forest by making them a living part of it."}},
-			{ match : {name : "Sanguine Guard"}, replace : {flavor : "\"Father of Machines! Your filigree gaze carves us, and the scars dance upon our grateful flesh.\"\n—Phyrexian Scriptures"}}
+			{ match : {name : "Sanguine Guard"}, replace : {flavor : "\"Father of Machines! Your filigree gaze carves us, and the scars dance upon our grateful flesh.\"\n—Phyrexian Scriptures"}},
+			{ match : {name : ["Argothian Wurm", "Barrin, Master Wizard", "Citanul Centaurs", "Gaea's Cradle", "Gilded Drake", "Great Whale", "Herald of Serra", "Karn, Silver Golem", "Lifeline", "Lightning Dragon", "Morphling", "Opal Archangel",
+							   "Serra's Sanctum", "Tolarian Academy", "Temporal Aperture", "Time Spiral", "Yawgmoth's Will", "Zephid"]}, replace : {reserved : true}}
 		],
 		ATH :
 		[
@@ -1837,7 +1891,8 @@
 			{ match : {name : "Goblin Welder"}, replace : {flavor : "\"I wrecked your metal guy, boss. But look! I made you an ashtray.\""}},
 			{ match : {name : "Purify"}, replace : {flavor : "\"Our Mother! The sky was Her hair; the sun, Her face. She danced on the grass and in the hills.\"\n—Song of All, canto 23"}},
 			{ match : {name : "Quicksilver Amulet"}, replace : {flavor : "\"Wonderful! You got a lion on your first try. Now put it back.\""}},
-			{ match : {name : "Molten Hydra"}, replace : {flavor : "Keep off the glass. —Hydra warning sign"}}
+			{ match : {name : "Molten Hydra"}, replace : {flavor : "Keep off the glass. —Hydra warning sign"}},
+			{ match : {name : ["Deranged Hermit", "Grim Monolith", "Memory Jar", "Multani, Maro-Sorcerer", "Palinchron", "Radiant, Archangel", "Ring of Gix", "Second Chance", "Weatherseed Treefolk"]}, replace : {reserved : true}}
 		],
 		"6ED" :
 		[
@@ -1866,7 +1921,9 @@
 		],
 		UDS :
 		[
-			{ match : {name : ["Urza's Incubator"]}, flavorAddExclamation : true }
+			{ match : {name : ["Urza's Incubator"]}, flavorAddExclamation : true },
+			{ match : {name : ["Academy Rector", "Carnival of Souls", "Covetous Dragon", "Donate", "Masticore", "Metalworker", "Opalescence", "Phyrexian Negator", "Powder Keg", "Rofellos, Llanowar Emissary", "Replenish", "Treachery",
+							   "Yavimaya Hollow", "Yawgmoth's Bargain"]}, replace : {reserved : true}}
 		],
 		S99 :
 		[

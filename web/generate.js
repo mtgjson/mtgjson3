@@ -228,6 +228,7 @@ function checkSetForProblems(setCode, cb)
 		originalText : "string",
 		originalType : "string",
 		timeshifted  : "boolean",
+		reserved     : "boolean",
 		legalities   : {}
 	};
 
