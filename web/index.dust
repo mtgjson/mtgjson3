@@ -596,7 +596,7 @@
 						<td>
 							<ul>
 								{#changes}
-									<li>{.}</li>
+									<li>{.|s}</li>
 								{/changes}
 							</ul>
 						</td>
@@ -669,7 +669,7 @@
 		</table>
 		<hr>
 		<a name="windowsWarning"></a>
-		<h1>Windows Warning</h1>
+		<h1>Windows Warning<a href="#top">(back to top)</a></h1>
 		<p>Microsoft Windows does not allow files to be named CON (<a href="http://superuser.com/questions/86999/unable-to-rename-a-folder-or-a-file-as-con">see here</a>).<br>
 		Thus on Windows you can't download CON.json, CON.json.zip or extract AllSetFiles.zip (which contains CON.json)<br>
 		Here are Window friendly links with an underscore prefix: <a href="/json/_CON.json">_CON.json</a> | <a href="/json/_CON.json.zip">_CON.json.zip</a> | <a href="/json/AllSetFilesWindows.zip">AllSetFiles_Windows.zip</a><br><br></p>
