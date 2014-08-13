@@ -73,6 +73,8 @@ tiptoe(
 			allSetsArray.push(set);
 
 			fs.writeFile(path.join(__dirname, "json", SET.code + ".json"), JSON.stringify(set), {encoding : "utf8"}, this.parallel());
+			if(SET.code==="CON")
+				fs.writeFile(path.join(__dirname, "json", "_" + SET.code + ".json"), JSON.stringify(set), {encoding : "utf8"}, this.parallel());
 			fs.writeFile(path.join(__dirname, "json", SET.code + "-x.json"), JSON.stringify(setWithExtras), {encoding : "utf8"}, this.parallel());
 
 			var setSize = printUtil.toSize(JSON.stringify(set).length, 0);
@@ -81,7 +83,10 @@ tiptoe(
 			var setXSize = printUtil.toSize(JSON.stringify(setWithExtras).length, 0);
 			setXSize = "&nbsp;".repeat(6-setXSize.length) + setXSize;
 
-			dustData.sets.push({code : SET.code, name : SET.name, releaseDate : SET.releaseDate, size : setSize, sizeX : setXSize});
+			var dustSetData = {code : SET.code, name : SET.name, releaseDate : SET.releaseDate, size : setSize, sizeX : setXSize};
+			if(SET.code==="CON")
+				dustSetData.isCON = true;
+			dustData.sets.push(dustSetData);
 		}.bind(this));
 
 		dustData.sets = dustData.sets.sort(function(a, b) { return moment(a.releaseDate, "YYYY-MM-DD").unix()-moment(b.releaseDate, "YYYY-MM-DD").unix(); });
@@ -116,6 +121,7 @@ tiptoe(
 		runUtil.run("zip", ["-9", "AllSets-x.json.zip", "AllSets-x.json"], { cwd:  path.join(__dirname, "json"), silent : true }, this.parallel());
 		runUtil.run("zip", ["-9", "AllSetFiles.zip"].concat(C.SETS.map(function(SET) { return SET.code + ".json"; })), { cwd:  path.join(__dirname, "json"), silent : true }, this.parallel());
 		runUtil.run("zip", ["-9", "AllSetFiles-x.zip"].concat(C.SETS.map(function(SET) { return SET.code + "-x.json"; })), { cwd:  path.join(__dirname, "json"), silent : true }, this.parallel());
+		runUtil.run("zip", ["-9", "AllSetFilesWindows.zip"].concat(C.SETS.map(function(SET) { return (SET.code==="CON" ? "_" : "") + SET.code + ".json"; })), { cwd:  path.join(__dirname, "json"), silent : true }, this.parallel());
 
 		C.SETS.serialForEach(function(SET, cb)
 		{
@@ -125,6 +131,15 @@ tiptoe(
 		C.SETS.serialForEach(function(SET, cb)
 		{
 			runUtil.run("zip", ["-9", SET.code + "-x.json.zip", SET.code + "-x.json"], { cwd:  path.join(__dirname, "json"), silent : true }, cb);
+		}, this.parallel());
+
+		// Windows CON.json.zip
+		C.SETS.serialForEach(function(SET, cb)
+		{
+			if(SET.code!=="CON")
+				return setImmediate(cb);
+
+			runUtil.run("zip", ["-9", "_" + SET.code + ".json.zip", "_" + SET.code + ".json"], { cwd:  path.join(__dirname, "json"), silent : true }, cb);
 		}, this.parallel());
 	},
 	function render()

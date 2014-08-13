@@ -614,7 +614,7 @@
 				</tr>
 				<tr>
 					<td colspan="7">
-						All Individual Set files in one zip: <a href="json/AllSetFiles.zip">AllSetFiles.zip</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="size">{allSetFilesZipSize|s}</span><br>
+						All Individual Set files in one zip: <a href="json/AllSetFiles.zip">AllSetFiles.zip</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="size">{allSetFilesZipSize|s}</span><span style="font-size: 80%; margin-left: 2.0em;">*<a href="#windowsWarning">Windows Warning</a></span><br>
 						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;with extras: <a href="json/AllSetFiles-x.zip">AllSetFiles-x.zip</a>&nbsp;&nbsp;&nbsp;<span class="size">{allSetFilesXZipSize|s}</span>
 					</td>
 				</tr>
@@ -629,7 +629,12 @@
 			<tbody>
 				{#sets}
 					<tr class="firstRow">
-						<td rowspan="2">{name}</td>
+						<td rowspan="2">
+							{name}
+							{#isCON}
+								<br><span style="font-size: 80%; margin-left: 2.0em;">*<a href="#windowsWarning">Windows Warning</a></span>
+							{/isCON}
+						</td>
 						<td rowspan="2">{code}</td>
 						<td rowspan="2">{releaseDate}</td>
 						<td class="sizeColLeft">
@@ -662,6 +667,12 @@
 				{/sets}
 			</tbody>
 		</table>
+		<hr>
+		<a name="windowsWarning"></a>
+		<h1>Windows Warning</h1>
+		<p>Microsoft Windows does not allow files to be named CON (<a href="http://superuser.com/questions/86999/unable-to-rename-a-folder-or-a-file-as-con">see here</a>).<br>
+		Thus on Windows you can't download CON.json, CON.json.zip or extract AllSetFiles.zip (which contains CON.json)<br>
+		Here are Window friendly links with an underscore prefix: <a href="/json/_CON.json">_CON.json</a> | <a href="/json/_CON.json.zip">_CON.json.zip</a> | <a href="/json/AllSetFilesWindows.zip">AllSetFiles_Windows.zip</a><br><br></p>
 		<hr>
 		<a name="license"></a>
 		<h1>License and Copyright<a href="#top">(back to top)</a></h1>
