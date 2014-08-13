@@ -6,6 +6,7 @@
 			"Many cards have had their flavor text and artists corrected for various typos and errors found on Gatherer.",
 			"Double newlines are now just single newlines. This affects 'text', 'flavor' and 'originalText' card properties.",
 			"Created Window specific links for CON.json and AllSetFiles.zip. See <a href=\"#windowsWarning\">Windows Warning</a>",
+			"Basic lands no longer have a text attribute. According to <a href=\"http://rules.wizards.com/rulebook.aspx?game=Magic#3162\">rule 305.6</a> basic lands have an intrinsic ability.",
 			"UGL, ARN: Basic lands now correctly have the rarity \"Basic Land\".",
 			"UNH: Super Secret Tech now has rarity of 'Rare' to match it's colored symbol."
 		]
@@ -54,7 +55,7 @@
 		"when": "2014-07-12",
 		"changes": [
 			"Commander's Arsenal had the wrong set code. It is now correctly CM1 instead of CMA.",
-			"Phrexian mana symbols with colors have been reversed and now read {W/P} instead of {P/W} in order to follow the official rule 107.4f",
+			"Phrexian mana symbols with colors have been reversed and now read {W/P} instead of {P/W} in order to follow the official <a href=\"http://rules.wizards.com/rulebook.aspx?game=Magic#4218\">rule 107.4f</a>",
 			"VAN: Fixed a minor issue with the Royal Assasin Avatar",
 			"HHO: Fixed type for Yule Ooze"
 		],
@@ -163,14 +164,14 @@
 		"version": "2.4.3",
 		"when": "2014-05-12",
 		"changes": [
-			"Added an 'oldCode' field to several sets. See the documentation for more details."
+			"Added an 'oldCode' field to several sets."
 		]
 	},
 	{
 		"version": "2.4.2",
 		"when": "2014-05-01",
 		"changes": [
-			"As per rule 702.86 and rule 710, Level Up cards now have the layout: \"leveler\" (ROE, DDG, C13)",
+			"As per <a href=\"http://rules.wizards.com/rulebook.aspx?game=Magic#4122\">rule 702.86</a> and <a href=\"http://rules.wizards.com/rulebook.aspx?game=Magic#4133\">rule 710</a>, Level Up cards now have the layout: \"leveler\" (ROE, DDG, C13)",
 			"ARC, HOP, PC2: Planes, Schemes and Phenomenon cards now correctly have foreignName fields (where available)"
 		]
 	},
@@ -301,7 +302,7 @@
 		"when": "2014-02-15",
 		"changes": [
 			"The set 'Commander' has been re-named to 'Magic: The Gathering-Commander' to match the official set name and to match what has always been in the 'printings' field of cards.",
-			"Each set object now has a 'booster' property describing it's booster pack properties. See the Booster Documentation for more details.",
+			"Each set object now has a 'booster' property describing it's booster pack properties.",
 			"The 'colors' field is no longer present on cards that have no colors (it used to be present, but as an empty array)"
 		]
 	},
@@ -427,7 +428,7 @@
 		"version": "1.8",
 		"when": "2013-10-29",
 		"changes": [
-			"The 'type' field of each card now uses a UTF8 'long dash' instead of an ASCII dash. This was changed to align with official MTG rule 205.3b",
+			"The 'type' field of each card now uses a UTF8 'long dash' instead of an ASCII dash. This was changed to align with official MTG <a href=\"http://rules.wizards.com/rulebook.aspx?game=Magic#2751\">rule 205.3b</a>",
 			"Fixed a bug with \"Urza's Power-Plant\" where the sub-types and type incorrectly had just \"Power\" instead of \"Power-Plant\"",
 			"Fixed a bug with \"Assembly-Worker\" (Time Spiral) where the sub-types and type incorrectly had just \"Assembly\" instead of \"Assembly-Worker\"",
 			"Fixed a bug with \"Look at Me, I'm R&D\" (Unhinged) where the artist was missing",
@@ -502,7 +503,7 @@
 			"Added set: Duel Decks: Venser vs. Koth",
 			"Added set: Duel Decks: Izzet vs. Golgari",
 			"Added set: Duel Decks: Sorin vs. Tibalt",
-			"Each card may now have a \"border\" key if the border is different than the rest of the set. See the documentation for more details.",
+			"Each card may now have a \"border\" key if the border is different than the rest of the set.",
 			"Planeshift: Fixed a bug with 'Draco' text having {1}0 in the text rather than {10}",
 			"The 'printings' field on each card is now ordered by release date in ascending order"
 		]

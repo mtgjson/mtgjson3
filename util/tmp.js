@@ -13,7 +13,7 @@ var base = require("xbase"),
 	path = require("path"),
 	tiptoe = require("tiptoe");
 
-var matches = [];
+process.exit(0);		// Protection from accidental invocation
 
 tiptoe(
 	function processSets()
@@ -25,8 +25,6 @@ tiptoe(
 	},
 	function finish(err)
 	{
-		base.info(matches.unique().sort().join(" "));
-
 		if(err)
 		{
 			base.error(err);
@@ -44,15 +42,16 @@ function checkSet(setCode, cb)
 		{
 			fs.readFile(path.join(__dirname, "..", "json", setCode + ".json"), {encoding : "utf8"}, this);
 		},
-		function compare(setRaw)
+		function modifyAndSave(setRaw)
 		{
-			JSON.parse(setRaw).cards.forEach(function(card)
+			var set = JSON.parse(setRaw);
+			set.cards.forEach(function(card)
 			{
-				if(card.layout==="flip" || card.layout==="split" || card.layout==="double-faced")
-					matches.push(setCode);
+				if(card.type.startsWith("Basic Land"))
+					delete card.text;
 			});
 
-			this();
+			fs.writeFile(path.join(__dirname, "..", "json", setCode + ".json"), JSON.stringify(set), {encoding : "utf8"}, this);
 		},
 		function finish(err)
 		{

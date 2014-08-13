@@ -435,14 +435,14 @@ function processCardPart(doc, cardPart, printedDoc, printedCardPart)
 
 	// Text
 	var cardText = processTextBlocks(doc, cardPart.querySelectorAll(idPrefix + "_textRow .value .cardtextbox")).trim();
-	if(cardText)
+	if(cardText && !card.type.toLowerCase().startsWith("basic land"))
 	{
 		card.text = cardText;
 		if(card.text.contains("{UNKNOWN}"))
 			base.warn("Invalid symbol in oracle card text for card: %s", card.name);
 	}
 
-	if(cardText.toLowerCase().startsWith("level up {"))
+	if(cardText && cardText.toLowerCase().startsWith("level up {"))
 		card.layout = "leveler";
 
 	// Original Printed Text
