@@ -301,6 +301,13 @@ function checkSetForProblems(setCode, cb)
 				});
 			});
 
+			// Check for basic land invalid rarities
+			setData.cards.forEach(function(card)
+			{
+				if(card.type.contains("Basic Land") && card.rarity!=="Basic Land")
+					base.info("Basic land [%s] (%s) from set %s has rarity %s", card.name, card.multiverseid || "", setData.name, card.rarity);
+			});
+
 			this();
 		},
 		function finish(err)
