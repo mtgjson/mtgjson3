@@ -1990,6 +1990,7 @@
 		],
 		UNH :
 		[
+			{ match : {name : "Super Secret Tech"}, replace : {rarity : "Rare"}},
 			{ match : {name : "Cheap Ass"}, replace : {text : "Spells you play cost {½} less to play."}},
 			{ match : {name : "Flaccify"}, replace : {text : "Counter target spell unless its controller pays {3}{½}."}},
 			{ match : {name : "Kill Destroy"}, replace : {name : "Kill! Destroy!", imageName : "kill! destroy!"}},
