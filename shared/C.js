@@ -704,7 +704,7 @@
 			booster : ["rare", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "timeshifted common", "timeshifted common", "timeshifted common", ["timeshifted rare", "timeshifted uncommon"]]
 		},
 		{
-			name : "Promo Grand Prix",
+			name : "Grand Prix",
 			code : "pGPX",
 			magicCardsInfoCode : "gpx",
 			isMCISet : true,
@@ -769,6 +769,15 @@
 			block : "Lorwyn",
 			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "marketing"]
 		},
+		{
+			name : "15th Anniversary",
+			code : "p15A",
+			magicCardsInfoCode : "15ann",
+			isMCISet : true,
+			releaseDate : "2008-04-01",
+			border : "black",
+			type : "promo"
+		},		
 		{
 			name : "Shadowmoor",
 			code : "SHM",
@@ -2280,6 +2289,11 @@
 		[
 			{ match : {name : "Sage's Dousing"}, replace : {flavor : "\"Curse these merrows and their meddling! Since coming near the river, I can't so much as sneeze without being soaked.\"\n—Ashling the Pilgrim"}},
 			{ match : {name : "Sensation Gorger"}, replace : {flavor : "More, more, more!"}}
+		],
+		p15A :
+		[
+			{ match : {name : "Char"}, replace : {source : "Comic Con Magic Fifteenth Anniversary Tournament"}},
+			{ match : {name : "Kamahl, Pit Fighter"}, replace : {source : "15th Anniversary starter 10th Edition"}}
 		],
 		SHM :
 		[

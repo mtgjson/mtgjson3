@@ -938,6 +938,8 @@ function ripMCISet(set, cb)
 		},
 		function addAdditionalFields(cards)
 		{
+			base.info("Adding additional fields...");
+
 			set.cards = cards.filterEmpty().sort(shared.cardComparator);
 			fillImageNames(set);
 
@@ -950,6 +952,13 @@ function ripMCISet(set, cb)
 				base.warn("RUN ONE MORE TIME FOR PRINTINGS!");
 				this();
 			}
+		},
+		function performCorrections()
+		{
+			base.info("Doing set corrections...");
+			shared.performSetCorrections(shared.getSetCorrections(set.code), set.cards);
+
+			this();
 		},
 		function finish(err)
 		{
@@ -1090,13 +1099,13 @@ function ripMCICard(set, mciCardURL, cb)
 			}
 
 			// Number
-			var cardNumber = getTextContent(rightSide.querySelector("p small > b")).trim().replace(/^#([^ ]+) .*$/, "$1").trim();
+			var cardNumber = getTextContent(rightSide.querySelector("small > b")).trim().replace(/^#([^ ]+) .*$/, "$1").trim();
 			if(cardNumber)
 				card.number = cardNumber;
 
 			// Foreign Names
 			var cardForeignNames = [];
-			var languagesLine = Array.toArray(rightSide.querySelectorAll("p small u b")).mutateOnce(function(b) { if(getTextContent(b).startsWith("Languages")) { return b; } }).parentNode;
+			var languagesLine = Array.toArray(rightSide.querySelectorAll("small u b")).mutateOnce(function(b) { if(getTextContent(b).startsWith("Languages")) { return b; } }).parentNode;
 			var languageElement = languagesLine.nextElementSibling;
 			var cardForeignName = {};
 			do
@@ -1122,9 +1131,13 @@ function ripMCICard(set, mciCardURL, cb)
 				card.foreignNames = cardForeignNames;
 
 			// Source (comment on mci)
-			var cardComment = getTextContent(rightSide.querySelector("p small").firstChild).trim();
-			if(cardComment)
-				card.source = cardComment;
+			var commentContainer = rightSide.querySelector("p small");
+			if(commentContainer)
+			{
+				var cardComment = getTextContent(commentContainer.firstChild).trim();
+				if(cardComment)
+					card.source = cardComment;
+			}
 
 			// TODO: Not yet supported variations, names (so all split/doublefaced/flip cards), watermark, border, timeshifted, hand, life, originalText/originalType. Also haven't tested loyalty yet
 
