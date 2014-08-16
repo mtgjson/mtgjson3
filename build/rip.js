@@ -1011,6 +1011,8 @@ function ripMCICard(set, mciCardURL, cb)
 			// Card Name
 			card.name = getTextContent(cardNameElement).trim();
 
+			//base.info("Processing: %s", card.name);
+
 			// Card Rarity
 			var inEditions = false;
 			card.rarity = Array.toArray(rightSide.querySelectorAll("b")).mutateOnce(function(b)
@@ -1025,7 +1027,7 @@ function ripMCICard(set, mciCardURL, cb)
 					return b.textContent.replace(/[^(]+\(([^)]+)\)/, "$1", "g");
 			});
 
-			var cardInfoParts = getTextContent(cardNameElement.parentNode.nextElementSibling).innerTrim().trim().match(/^([^0-9,(]+)\(?([^/:]*)\:?\/?([^,)]*)\)?, ([^(]*)\(?([^)]*)\)?$/);
+			var cardInfoParts = getTextContent(cardNameElement.parentNode.nextElementSibling).innerTrim().trim().match(/^([^0-9*,(]+)\(?([^/:]*)\:?\/?([^,)]*)\)?, ([^(]*)\(?([^)]*)\)?$/);
 			if(cardInfoParts.length!==6)
 			{
 				base.warn("Unable to get cardInfoParts from: %s", getTextContent(cardNameElement.parentNode.nextElementSibling).innerTrim().trim());
@@ -1051,7 +1053,10 @@ function ripMCICard(set, mciCardURL, cb)
 			card.cmc = (cardInfoParts[5].trim().length>0) ? +cardInfoParts[5] : 0;
 
 			// Mana Cost
-			card.manaCost = cardInfoParts[4].split("").map(function(manaSymbol) { return processSymbol(manaSymbol); }).join("");
+			var manaRegex = /{([^}]+)}/g;
+			var manaCostRaw = cardInfoParts[4];
+			var manaParts = (manaCostRaw.match(manaRegex) || []).map(function(manaPart) { return manaPart.strip("{}"); });
+			card.manaCost = manaCostRaw.replace(manaRegex, ".").split("").map(function(manaSymbol) { return processSymbol(manaSymbol==="." ? manaParts.shift() : manaSymbol); }).join("");
 
 			// Colors
 			fillCardColors(card);
@@ -1061,6 +1066,10 @@ function ripMCICard(set, mciCardURL, cb)
 			card.text = processTextBlocks(cardNameElement.parentNode.nextElementSibling.nextElementSibling);
 			if(card.text && card.text.toLowerCase().startsWith("level up {"))
 				card.layout = "leveler";
+
+			// Replace MCI ascii dashes with minus sines in planeswalker abilities
+			if(card.types.contains("Planeswalker"))
+				card.text = card.text.split("\n").map(function(textLine) { if(textLine.startsWith("-")) { textLine = textLine.replaceCharAt(0, "−"); } return textLine; }).join("\n");
 
 			// Flavor Text
 			var cardFlavorText = processTextBlocks(cardNameElement.parentNode.nextElementSibling.nextElementSibling.nextElementSibling);
@@ -1113,6 +1122,8 @@ function ripMCICard(set, mciCardURL, cb)
 				if(languageElement.nodeName.toLowerCase()==="img")
 				{
 					cardForeignName["language"] = languageElement.getAttribute("alt");
+					if(cardForeignName["language"]==="Portuguese")
+						cardForeignName["language"] = "Portuguese (Brazil)";
 				}
 				else if(languageElement.nodeName.toLowerCase()==="a")
 				{
@@ -1254,6 +1265,7 @@ var SYMBOL_CONVERSION_MAP =
 	"w"					 : "W",
 	"r"					 : "R",
 	"g"					 : "G",
+	"x"					 : "X",
 
 	// Planechase Planes
 	"chaos"              : "C",
@@ -1292,6 +1304,9 @@ function processSymbol(symbol)
 	var symbols = symbol.toLowerCase().split(" or ").map(function(symbolPart)
 	{
 		symbolPart = symbolPart.trim();
+		if(/.\/./.test(symbolPart))
+			return symbolPart.toUpperCase();
+
 		if(!SYMBOL_CONVERSION_MAP.hasOwnProperty(symbolPart))
 		{
 			base.warn("Invalid symbolPart [%s] with full value: %s", symbolPart, symbol);
@@ -1342,21 +1357,13 @@ function processTextBoxChildren(children)
 			if(childNodeName==="img")
 				result += processSymbol(child.getAttribute("alt"));
 			else if(childNodeName==="i" || childNodeName==="b" || childNodeName==="u")
-			{
 				result += processTextBoxChildren(child.childNodes);
-			}
 			else if(childNodeName==="<")
-			{
 				result += "<";
-			}
 			else if(childNodeName===">")
-			{
 				result += ">";
-			}
 			else if(childNodeName==="br")
-			{
 				result += "\n";
-			}
 			else
 				base.warn("Unsupported text child tag name %s", childNodeName);
 		}

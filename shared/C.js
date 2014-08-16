@@ -704,6 +704,15 @@
 			booster : ["rare", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "timeshifted common", "timeshifted common", "timeshifted common", ["timeshifted rare", "timeshifted uncommon"]]
 		},
 		{
+			name : "Pro Tour",
+			code : "pPRO",
+			magicCardsInfoCode : "pro",
+			isMCISet : true,
+			releaseDate : "2007-02-09",
+			border : "black",
+			type : "promo"
+		},		
+		{
 			name : "Grand Prix",
 			code : "pGPX",
 			magicCardsInfoCode : "gpx",
@@ -730,6 +739,15 @@
 			border : "black",
 			type : "core",
 			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"]
+		},
+		{
+			name : "Magic Game Day",
+			code : "pMGD",
+			magicCardsInfoCode : "mgdc",
+			isMCISet : true,
+			releaseDate : "2007-07-14",
+			border : "black",
+			type : "promo"
 		},
 		{
 			name : "Masters Edition",
@@ -2250,6 +2268,15 @@
 			{ match : {name : ["Prodigal Pyromancer"]}, flavorAddExclamation : true },
 			{ match : {name : "Merfolk Thaumaturgist"}, replace : {flavor : "\"Blasted fishtails! It's not enough that they meddle with my head, but they twist my body as well.\"\n—Tahngarth of the Weatherlight"}}
 		],
+		pPRO :
+		[
+			{ match : "*", replace : {watermark : "Pro Tour"}},
+			{ match : {name : "Mirari's Wake"}, replace : {flavor : "Even after a false god tore magic from Dominaria, power still radiated from the Mirari sword that slew her."}}
+		],
+		pGPX :
+		[
+			{ match : {name : ["Call of the Herd", "Chrome Mox", "Maelstrom Pulse", "Spiritmonger", "Umezawa's Jitte"]}, replace : {watermark : "Grand Prix"}},
+		],
 		FUT :
 		[
 			{ match : {multiverseid : [136055, 136204, 136155, 136049, 130676, 126143, 130686, 130672, 132229, 130334, 136054, 130684, 126211, 130635, 136043, 132226, 136196, 126132, 136215, 132220, 132227, 126149, 126187, 136044, 130311, 132211, 130581,
@@ -2267,6 +2294,10 @@
 			{ match : {name : "Flashfreeze"}, replace : {flavor : "\"Nature? Fire? Bah! Both are chaotic and difficult to control. Ice is structured, latticed, light as a feather, massive as a glacier. In ice, there is power!\"\n—Heidar, Rimewind master"}},
 			{ match : {name : "Mogg Fanatic"}, replace : {flavor : "\"I got it! I got it! I—\""}},
 			{ match : {name : "Overgrowth"}, replace : {flavor : "\"Let the forest spread! From salt, stone, and fen, let the new trees rise.\"\n—Molimo, maro-sorcerer"}}
+		],
+		pMGD :
+		[
+			{ match : {name : ["Black Sun's Zenith", "Cryptborn Horror", "Dictate of Kruphix", "Dryad Militant", "Dungrove Elder", "Kiora's Follower", "Liliana's Specter", "Myr Superion", "Pain Seer", "Priest of Urabrask", "Squelching Leeches", "Stormblood Berserker", "Strangleroot Geist", "Tempered Steel", "Zombie Apocalypse"]}, remove : ["flavor"] }
 		],
 		MED :
 		[
@@ -2292,6 +2323,7 @@
 		],
 		p15A :
 		[
+			{ match : "*", replace : {watermark : "15th"}},
 			{ match : {name : "Char"}, replace : {source : "Comic Con Magic Fifteenth Anniversary Tournament"}},
 			{ match : {name : "Kamahl, Pit Fighter"}, replace : {source : "15th Anniversary starter 10th Edition"}}
 		],
