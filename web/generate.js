@@ -54,6 +54,7 @@ tiptoe(
 			// Strip out internal only data
 			delete setWithExtras.magicCardsInfoCode;
 			delete setWithExtras.isMCISet;
+			delete setWithExtras.magicRaritiesCode;
 
 			allSetsWithExtras[SET.code] = setWithExtras;
 			allSetsArrayWithExtras.push(setWithExtras);
@@ -68,6 +69,7 @@ tiptoe(
 				delete card.originalText;
 				delete card.originalType;
 				delete card.legalities;
+				delete card.source;
 			});
 
 			allSets[SET.code] = set;

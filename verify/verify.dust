@@ -14,6 +14,8 @@
 						<img src="http://dev.mtgimage.com/set/{code}/{imageName}.jpg" alt="{name}" style="max-width: 480px;"><br>
 						<span class="layout">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;layout: {layout}</span><br>
 						{?multiverseid}<span class="multiverseid">multiverseid: {multiverseid}</span><br>{/multiverseid}
+						{?releaseDate}<span class="releaseDate">&nbsp;releaseDate: {releaseDate}</span><br>{/releaseDate}
+						{?source}<span class="releaseDate">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;source: {source}</span><br>{/source}
 						<span class="json">
 							{json}
 						</span>

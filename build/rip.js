@@ -943,7 +943,8 @@ function ripMCISet(set, cb)
 
 			if(fs.existsSync(path.join(__dirname, "..", "json", set.code + ".json")))				
 			{
-				addPrintingsToMCISet(set, this);
+				addPrintingsToMCISet(set, this.parallel());
+				addReleaseDatesAndSourcesToMCISet(set, this.parallel());
 			}
 			else
 			{
@@ -1187,19 +1188,14 @@ function ripMCICard(set, mciCardURL, cb)
 			if(cardForeignNames.length>0)
 				card.foreignNames = cardForeignNames;
 
-			// Source (comment on mci)
+			// Source (comment on mci)  (NOTE: Will be overwritten if source is found on the magic rarities website)
 			var commentContainer = rightSide.querySelector("p small");
 			if(commentContainer)
 			{
 				var cardComment = getTextContent(commentContainer.firstChild).trim();
 				if(cardComment)
-				{
-					cardComment = cardComment.replaceAll(" prerelease participation bonus.", "").replaceAll(" prerelease participation bonus", "");
 					card.source = cardComment;
-				}
 			}
-
-			// TODO: Not yet supported variations, watermark, border, timeshifted, hand, life, originalText/originalType. Also haven't tested loyalty yet
 
 			this(undefined, card);
 		},
@@ -1243,6 +1239,84 @@ function addPrintingsToMCISet(set, cb)
 			set.cards.forEach(function(card) { card.printings = sortPrintings(card.printings); });
 
 			return setImmediate(cb);
+		}
+	);
+}
+
+function addReleaseDatesAndSourcesToMCISet(set, cb)
+{
+	if(!set.magicRaritiesCode)
+		return setImmediate(cb);
+
+	var normalizeCardName = function(text) { return text.toLowerCase().replace(/[^A-Za-z0-9_ ]/, "", "g"); };
+	var releaseDatesAndSources = {};
+
+	tiptoe(
+		function getMagicRaritiesList()
+		{
+			getURLAsDoc("http://www.magiclibrarities.net/" + set.magicRaritiesCode + "-english-cards-index.html", this);
+		},
+		function populateReleaseDates(doc)
+		{
+			Array.toArray(doc.querySelectorAll("table tr td:nth-child(5) a font")).forEach(function(cardNameElement)
+			{
+				// Card Names
+				var cardNames = [];
+
+				var cardNameRaw = getTextContent(cardNameElement.firstChild);
+				if(cardNameRaw.contains("/"))
+				{
+					cardNameRaw.split("/").forEach(function(cardName) { cardNames.push(normalizeCardName(cardName.trim())); });
+				}
+				else
+				{
+					cardNameRaw = normalizeCardName(cardNameRaw);
+					if(cardNameRaw)
+						cardNames.push(cardNameRaw);
+				}
+
+				cardNameRaw = normalizeCardName(getTextContent(cardNameElement.querySelector("i")));
+				if(cardNameRaw)
+					cardNames.push(cardNameRaw);
+
+				if(cardNames.length<1)
+					return;
+
+				// Source
+				var sourceText = getTextContent(cardNameElement.parentNode.parentNode.nextElementSibling.nextElementSibling.firstChild).trim();
+
+				// Release date
+				var releaseDateText = getTextContent(cardNameElement.parentNode.parentNode.nextElementSibling.nextElementSibling.nextElementSibling.firstChild).trim();
+				if(/^[0-9][0-9][0-9][0-9]\/[0-9][0-9]\/[0-9][0-9]$/.test(releaseDateText))
+					releaseDateText = releaseDateText.replaceAll("/", "-");
+
+				var releaseDate = ([/^([0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9])\/?.*/,
+									/^([0-9][0-9][0-9][0-9]-[0-9][0-9])$/,
+									/^([0-9][0-9][0-9][0-9])$/].mutateOnce(function(re) { if(re.test(releaseDateText)) { return releaseDateText.replace(re, "$1"); } }));
+				if(releaseDate)
+					cardNames.forEach(function(cardName) { if(!releaseDatesAndSources.hasOwnProperty(cardName)) { releaseDatesAndSources[cardName] = {releaseDate : releaseDate, source : sourceText}; }});
+				else
+					base.warn("Unknown release date format: " + releaseDateText);
+			});
+
+			set.cards.forEach(function(card)
+			{
+				var cardNameNormalized = normalizeCardName(card.name);
+				if(!releaseDatesAndSources.hasOwnProperty(cardNameNormalized))
+					return;
+
+				if(card.releaseDate===set.releaseDate)
+					return;
+
+				card.releaseDate = releaseDatesAndSources[cardNameNormalized].releaseDate;
+				card.source = releaseDatesAndSources[cardNameNormalized].source;
+			});
+
+			this();
+		},
+		function finish(err)
+		{
+			return setImmediate(function() { cb(err); });
 		}
 	);
 }

@@ -253,6 +253,7 @@
 			name : "Prerelease Events",
 			code : "pPRE",
 			magicCardsInfoCode : "ptc",
+			magicRaritiesCode : "82-rarities-prerelease-events-promos",
 			isMCISet : true,
 			releaseDate : "1997-10-04",
 			border : "black",
@@ -387,6 +388,7 @@
 			name : "Worlds",
 			code : "pWOR",
 			magicCardsInfoCode : "wrl",
+			magicRaritiesCode : "15-rarities-worlds-card",
 			isMCISet : true,
 			releaseDate : "1999-08-04",
 			border : "black",
@@ -569,6 +571,7 @@
 			name : "Release Events",
 			code : "pREL",
 			magicCardsInfoCode : "rep",
+			magicRaritiesCode : "94-rarities-release-events-promos",
 			isMCISet : true,
 			releaseDate : "2003-07-26",
 			border : "black",
@@ -743,6 +746,7 @@
 			name : "Pro Tour",
 			code : "pPRO",
 			magicCardsInfoCode : "pro",
+			magicRaritiesCode : "14-rarities-pro-tour-card",
 			isMCISet : true,
 			releaseDate : "2007-02-09",
 			border : "black",
@@ -752,6 +756,7 @@
 			name : "Grand Prix",
 			code : "pGPX",
 			magicCardsInfoCode : "gpx",
+			magicRaritiesCode : "73-rarities-grand-prix-promos",
 			isMCISet : true,
 			releaseDate : "2007-02-24",
 			border : "black",
@@ -780,6 +785,7 @@
 			name : "Magic Game Day",
 			code : "pMGD",
 			magicCardsInfoCode : "mgdc",
+			magicRaritiesCode : "119-rarities-magic-game-day-cards",
 			isMCISet : true,
 			releaseDate : "2007-07-14",
 			border : "black",
@@ -817,6 +823,7 @@
 			name : "Launch Parties",
 			code : "pLPA",
 			magicCardsInfoCode : "mlp",
+			magicRaritiesCode : "226-rarities-pre-launch-party-cards",
 			isMCISet : true,
 			releaseDate : "2008-02-01",
 			border : "black",
@@ -836,6 +843,7 @@
 			name : "15th Anniversary",
 			code : "p15A",
 			magicCardsInfoCode : "15ann",
+			magicRaritiesCode : "178-rarities-mtg-15th-anniversary",
 			isMCISet : true,
 			releaseDate : "2008-04-01",
 			border : "black",
@@ -1271,6 +1279,7 @@
 			name : "World Magic Cup Qualifiers",
 			code : "pWCQ",
 			magicCardsInfoCode : "wmcq",
+			magicRaritiesCode : "780-rarities-world-magic-cup-qualifiers-promos",
 			isMCISet : true,
 			releaseDate : "2013-04-06",
 			border : "black",
@@ -1861,18 +1870,11 @@
 		[
 			{ match : {name : "Archdemon of Greed"}, replace : {layout : "double-faced", names : ["Ravenous Demon", "Archdemon of Greed"]}},
 			{ match : {name : "Ravenous Demon"}, replace : {layout : "double-faced", names : ["Ravenous Demon", "Archdemon of Greed"]}},
-			{ match : {name : "Ajani Vengeant"}, replace : {source : "Shards of Alara"}},
-			{ match : {name : "Door of Destinies"}, replace : {source : "Morningtide"}},
-			{ match : {name : "Dragon Broodmother"}, replace : {source : "Alara Reborn"}},
-			{ match : {name : "Eater of Hope"}, replace : {source : "Born of the Gods"}},
-			{ match : {name : "Malfegor"}, replace : {source : "Conflux"}},
-			{ match : {name : "Demigod of Revenge"}, replace : {flavor : "\"His laugh, a bellowing, deathly din, slices through the heavens, making them bleed.\"\n—The Seer's Parables", source : "Shadowmoor"}},
+			{ match : {name : "Demigod of Revenge"}, replace : {flavor : "\"His laugh, a bellowing, deathly din, slices through the heavens, making them bleed.\"\n—The Seer's Parables"}},
 			{ match : {name : "Howlpack Alpha"}, remove : ["flavor"], replace : {layout : "double-faced", names : ["Mayor of Avabruck", "Howlpack Alpha"]}},
 			{ match : {name : "Howlpack Alpha"}, replace : {layout : "double-faced", names : ["Mayor of Avabruck", "Howlpack Alpha"]}},
-			{ match : {name : "Overbeing of Myth"}, replace : {flavor : "\"She walks among us unseen, learning from our imperfections.\"\n—The Seer's Parables", source : "Eventide"}},
-			{ match : {name : "Overtaker"}, replace : {flavor : "\"It's no challenge to master a Mercadian.\"", source : "Eventide"}},
-			
-			
+			{ match : {name : "Overbeing of Myth"}, replace : {flavor : "\"She walks among us unseen, learning from our imperfections.\"\n—The Seer's Parables"}},
+			{ match : {name : "Wren's Run Packmaster"}, replace : {releaseDate : "2007-09-29"}},
 		],
 		TMP :
 		[
@@ -2056,7 +2058,7 @@
 		],
 		pWOR :
 		[
-			{ match : {name : "Balduvian Horde"}, replace : {source : "Side events participation bonus at World Championships in Yokohama"}, remove : ["flavor"]}
+			{ match : {name : "Balduvian Horde"}, remove : ["flavor"]}
 		],
 		MMQ :
 		[
@@ -2152,7 +2154,7 @@
 		pREL :
 		[
 			{ match : {	name :"Force of Nature"}, remove : ["flavor"] },
-			{ match : { name : "Ichiga, Who Topples Oaks"}, replace : { layout : "flip", source : "Betrayers of Kamigawa Release Event participation bonus.", names : ["Budoka Pupil", "Ichiga, Who Topples Oaks"]}},
+			{ match : { name : "Ichiga, Who Topples Oaks"}, replace : { layout : "flip", names : ["Budoka Pupil", "Ichiga, Who Topples Oaks"], source : "Betrayers of Kamigawa Release Event participation bonus.", releaseDate : "2005-02-04"}},
 			{ match : { name : "Budoka Pupil"}, replace : { names : ["Budoka Pupil", "Ichiga, Who Topples Oaks"]}},
 			{ match : { name : "Ass Whuppin'"}, replace : { border : "silver"}}
 		],
@@ -2380,8 +2382,7 @@
 		pMGD :
 		[
 			{ match : {name : ["Black Sun's Zenith", "Cryptborn Horror", "Dictate of Kruphix", "Dryad Militant", "Dungrove Elder", "Kiora's Follower", "Liliana's Specter", "Myr Superion", "Pain Seer", "Priest of Urabrask", "Squelching Leeches",
-							   "Stormblood Berserker", "Strangleroot Geist", "Tempered Steel", "Zombie Apocalypse"]}, remove : ["flavor"] },
-			{ match : {name : "Squelching Leeches"}, replace : {source : "Journey into Nyx"}}
+							   "Stormblood Berserker", "Strangleroot Geist", "Tempered Steel", "Zombie Apocalypse"]}, remove : ["flavor"] }
 		],
 		MED :
 		[
@@ -2402,25 +2403,11 @@
 		],
 		pLPA :
 		[
-			{ match : {name : "Ajani Vengeant"}, replace : {source : "Shards of Alara"}},
-			{ match : {name : "Earwig Squad"}, replace : {source : "Morningtide"}},
-			{ match : {name : "Figure of Destiny"}, replace : {source : "Eventide"}},
-			{ match : {name : "Knight of New Alara"}, replace : {source : "Alara Reborn"}},
-			{ match : {name : "Obelisk of Alara"}, replace : {source : "Conflux"}},
+			{ match : {name : "Ajani Vengeant"}, replace : {source : "Shards of Alara Launch Party participation bonus", releaseDate : "2008-10-03"}},
 			{ match : {name : "Ludevic's Abomination"}, replace : {layout : "double-faced", names :["Ludevic's Test Subject", "Ludevic's Abomination"]}},
 			{ match : {name : "Ludevic's Test Subject"}, replace : {names :["Ludevic's Test Subject", "Ludevic's Abomination"]}},
 			{ match : {name : "Mondronen Shaman"}, replace : {names :["Mondronen Shaman", "Tovolar's Magehunter"]}},
 			{ match : {name : "Tovolar's Magehunter"}, replace : {layout : "double-faced", names :["Mondronen Shaman", "Tovolar's Magehunter"]}},
-			{ match : {name : "Vexing Shusher"}, replace : {source : "Shadowmoor"}},
-			
-			
-			
-
-			
-
-			
-			
-			
 		],
 		MOR :
 		[
@@ -2429,9 +2416,7 @@
 		],
 		p15A :
 		[
-			{ match : "*", replace : {watermark : "15th"}},
-			{ match : {name : "Char"}, replace : {source : "Comic Con Magic Fifteenth Anniversary Tournament"}},
-			{ match : {name : "Kamahl, Pit Fighter"}, replace : {source : "15th Anniversary starter 10th Edition"}}
+			{ match : "*", replace : {watermark : "15th"}}
 		],
 		SHM :
 		[

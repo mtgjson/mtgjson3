@@ -29,7 +29,7 @@
 		<br>
 		Card images and set and mana symbols are available here: <a href="http://mtgimage.com">mtgimage.com</a><br>
 		<br>
-		<strong>Extras</strong> include: Rulings, Printings, Foreign Language Names<br>
+		<strong>Extras</strong> include: Rulings, Printings, Foreign Language Names, Promo Sources and Original Texts<br>
 		</p>
 		<br>
 		<br>
@@ -150,7 +150,7 @@
                  code : "NMS",                // The code name of the set
          gathererCode : "NE",                 // The code that Gatherer uses for the set. Only present if different than 'code'
               oldCode : "NEM",                // An old style code used by some Magic software. Only present if different than 'gathererCode' and 'code'
-          releaseDate : "2000-02-14"          // When the set was released (YYYY-MM-DD)
+          releaseDate : "2000-02-14"          // When the set was released (YYYY-MM-DD). For promo sets, the date the first card was released.
                border : "black",              // The type of border on the cards, either "white", "black" or "silver"
                  type : "expansion",          // Type of set. One of: "core", "expansion", "reprint", "box", "un",
                                               //                      "from the vault", "premium deck", "duel deck",
@@ -372,9 +372,9 @@
 					<td>Set to true if this card is reserved by Wizards <a href="http://archive.wizards.com/Magic/tcg/article.aspx?x=magic/products/reprintpolicy">Official Reprint Policy</a></td>
 				</tr>
 				<tr>
-					<td>source</td>
-					<td>PAX East 2010 (Boston)</td>
-					<td>Where this card was originally obtained. This is only set for promo cards.</td>
+					<td>releaseDate</td>
+					<td>"2010-07-22" or "2010-07" or "2010"</td>
+					<td>The date this card was released. This is only set for promo cards and only when it differs from the set releaseDate. The date may not be accurate to an exact day and month, thus only a partial date may be set (YYYY-MM-DD or YYYY-MM or YYYY)</td>
 				</tr>
 			</tbody>
 		</table>
@@ -419,6 +419,11 @@
 					<td>legalities</td>
 					<td>{~lb} "Legacy" : "Banned",&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>"Vintage" : "Restricted",&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>"Commander" : "Legal" {~rb}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>"Commander" : "Special (Banned as Commander)"&nbsp;&nbsp;&nbsp;</td>
 					<td>Which formats this card is legal, restricted or banned in. The object's keys are the format and the values are the legality.</td>
+				</tr>
+				<tr>
+					<td>source</td>
+					<td>"Theros Game Day prize"</td>
+					<td>Where this card was originally obtained. This is only set for promo cards.</td>
 				</tr>
 			</tbody>
 		</table>
