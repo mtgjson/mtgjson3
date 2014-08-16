@@ -814,6 +814,15 @@
 			type : "duel deck"
 		},
 		{
+			name : "Launch Parties",
+			code : "pLPA",
+			magicCardsInfoCode : "mlp",
+			isMCISet : true,
+			releaseDate : "2008-02-01",
+			border : "black",
+			type : "promo"
+		},		
+		{
 			name : "Morningtide",
 			code : "MOR",
 			magicCardsInfoCode : "mt",
@@ -1850,13 +1859,16 @@
 		],
 		pPRE :
 		[
+			{ match : {name : "Archdemon of Greed"}, replace : {layout : "double-faced", names : ["Ravenous Demon", "Archdemon of Greed"]}},
+			{ match : {name : "Ravenous Demon"}, replace : {layout : "double-faced", names : ["Ravenous Demon", "Archdemon of Greed"]}},
 			{ match : {name : "Ajani Vengeant"}, replace : {source : "Shards of Alara"}},
 			{ match : {name : "Door of Destinies"}, replace : {source : "Morningtide"}},
 			{ match : {name : "Dragon Broodmother"}, replace : {source : "Alara Reborn"}},
 			{ match : {name : "Eater of Hope"}, replace : {source : "Born of the Gods"}},
 			{ match : {name : "Malfegor"}, replace : {source : "Conflux"}},
 			{ match : {name : "Demigod of Revenge"}, replace : {flavor : "\"His laugh, a bellowing, deathly din, slices through the heavens, making them bleed.\"\n—The Seer's Parables", source : "Shadowmoor"}},
-			{ match : {name : "Howlpack Alpha"}, remove : ["flavor"]},
+			{ match : {name : "Howlpack Alpha"}, remove : ["flavor"], replace : {layout : "double-faced", names : ["Mayor of Avabruck", "Howlpack Alpha"]}},
+			{ match : {name : "Howlpack Alpha"}, replace : {layout : "double-faced", names : ["Mayor of Avabruck", "Howlpack Alpha"]}},
 			{ match : {name : "Overbeing of Myth"}, replace : {flavor : "\"She walks among us unseen, learning from our imperfections.\"\n—The Seer's Parables", source : "Eventide"}},
 			{ match : {name : "Overtaker"}, replace : {flavor : "\"It's no challenge to master a Mercadian.\"", source : "Eventide"}},
 			
@@ -2140,7 +2152,8 @@
 		pREL :
 		[
 			{ match : {	name :"Force of Nature"}, remove : ["flavor"] },
-			{ match : { name : "Ichiga, Who Topples Oaks"}, replace : { layout : "flip", source : "Betrayers of Kamigawa Release Event participation bonus."}},
+			{ match : { name : "Ichiga, Who Topples Oaks"}, replace : { layout : "flip", source : "Betrayers of Kamigawa Release Event participation bonus.", names : ["Budoka Pupil", "Ichiga, Who Topples Oaks"]}},
+			{ match : { name : "Budoka Pupil"}, replace : { names : ["Budoka Pupil", "Ichiga, Who Topples Oaks"]}},
 			{ match : { name : "Ass Whuppin'"}, replace : { border : "silver"}}
 		],
 		CHK :
@@ -2386,6 +2399,28 @@
 			{ match : {name : "Elemental"}, replace : {number : "T1", layout : "token"}},
 			{ match : {name : "Elf Warrior"}, replace : {number : "T2", layout : "token"}},
 			{ match : {name : "Goblin"}, replace : {number : "T3", layout : "token"}}
+		],
+		pLPA :
+		[
+			{ match : {name : "Ajani Vengeant"}, replace : {source : "Shards of Alara"}},
+			{ match : {name : "Earwig Squad"}, replace : {source : "Morningtide"}},
+			{ match : {name : "Figure of Destiny"}, replace : {source : "Eventide"}},
+			{ match : {name : "Knight of New Alara"}, replace : {source : "Alara Reborn"}},
+			{ match : {name : "Obelisk of Alara"}, replace : {source : "Conflux"}},
+			{ match : {name : "Ludevic's Abomination"}, replace : {layout : "double-faced", names :["Ludevic's Test Subject", "Ludevic's Abomination"]}},
+			{ match : {name : "Ludevic's Test Subject"}, replace : {names :["Ludevic's Test Subject", "Ludevic's Abomination"]}},
+			{ match : {name : "Mondronen Shaman"}, replace : {names :["Mondronen Shaman", "Tovolar's Magehunter"]}},
+			{ match : {name : "Tovolar's Magehunter"}, replace : {layout : "double-faced", names :["Mondronen Shaman", "Tovolar's Magehunter"]}},
+			{ match : {name : "Vexing Shusher"}, replace : {source : "Shadowmoor"}},
+			
+			
+			
+
+			
+
+			
+			
+			
 		],
 		MOR :
 		[

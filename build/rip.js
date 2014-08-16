@@ -1024,7 +1024,15 @@ function ripMCICard(set, mciCardURL, cb)
 			// Card Name
 			card.name = getTextContent(cardNameElement).trim();
 
-			base.info("Processing: %s", card.name);
+			var cardNameParts = card.name.match(/^([^(]+)\(([^/]+)\/([^)]+)\)$/);
+			if(cardNameParts && cardNameParts.length===4)
+			{
+				card.name = cardNameParts[1].trim();
+				card.names = cardNameParts.slice(2).map(function(name) { return name.trim(); });
+				card.layout = "split";
+			}
+
+			//base.info("Processing: %s", card.name);
 
 			// Card Rarity
 			var inEditions = false;
@@ -1041,6 +1049,14 @@ function ripMCICard(set, mciCardURL, cb)
 			});
 
 			var cardInfoRaw = getTextContent(cardNameElement.parentNode.nextElementSibling).innerTrim().trim();
+			var colorIndicator = null;
+			var colorIndicatorParts = cardInfoRaw.match(/\(Color Indicator: ([^)]+)\)/);
+			if(colorIndicatorParts && colorIndicatorParts.length===2)
+			{
+				colorIndicator = colorIndicatorParts[1];
+				cardInfoRaw = cardInfoRaw.replace("(Color Indicator: " + colorIndicator + ")", "");
+			}
+
 			var cardInfoParts = cardInfoRaw.match(/^([^0-9*,(]+)\(?([^/:]*)\:?\/?([^,)]*)\)?, ([^(]*)\(?([^)]*)\)?$/);
 			if(!cardInfoParts)
 				cardInfoParts = cardInfoRaw.match(/^([^0-9*,(]+)\(?([^/:]*)\:?\/?([^,)]*)\)?,? ?([^(]*)\(?([^)]*)\)?$/);
@@ -1085,6 +1101,9 @@ function ripMCICard(set, mciCardURL, cb)
 			fillCardColors(card);
 			sortCardColors(card);
 
+			if(colorIndicator)
+				card.colors = [colorIndicator];
+
 			// Text
 			card.text = processTextBlocks(cardNameElement.parentNode.nextElementSibling.nextElementSibling);
 			if(card.text)
@@ -1096,6 +1115,7 @@ function ripMCICard(set, mciCardURL, cb)
 				else if(card.text.toLowerCase().contains("transform"))
 					card.layout = "double-faced";
 			}
+			card.text.replaceAll("{UP}", "{U/P}").replaceAll("{BP}", "{B/P}").replaceAll("{RP}", "{R/P}").replaceAll("{GP}", "{G/P}").replaceAll("{WP}", "{W/P}");
 
 			// Replace MCI ascii dashes with minus sines in planeswalker abilities
 			if(card.types.contains("Planeswalker"))
@@ -1179,7 +1199,7 @@ function ripMCICard(set, mciCardURL, cb)
 				}
 			}
 
-			// TODO: Not yet supported variations, names (so all split/doublefaced/flip cards), watermark, border, timeshifted, hand, life, originalText/originalType. Also haven't tested loyalty yet
+			// TODO: Not yet supported variations, watermark, border, timeshifted, hand, life, originalText/originalType. Also haven't tested loyalty yet
 
 			this(undefined, card);
 		},
@@ -1289,12 +1309,17 @@ var SYMBOL_CONVERSION_MAP =
 	"phyrexian green"    : "G/P",
 	"phyrexian"          : "P",
 	"variable colorless" : "X",
-	"b"					 : "B",
-	"u"					 : "U",
-	"w"					 : "W",
-	"r"					 : "R",
-	"g"					 : "G",
-	"x"					 : "X",
+	"b"                  : "B",
+	"u"                  : "U",
+	"w"                  : "W",
+	"r"                  : "R",
+	"g"                  : "G",
+	"x"                  : "X",
+	"wp"                 : "W/P",
+	"up"                 : "U/P",
+	"bp"                 : "B/P",
+	"rp"                 : "R/P",
+	"gp"                 : "G/P",
 
 	// Planechase Planes
 	"chaos"              : "C",
