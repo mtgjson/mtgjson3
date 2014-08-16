@@ -1024,7 +1024,7 @@ function ripMCICard(set, mciCardURL, cb)
 			// Card Name
 			card.name = getTextContent(cardNameElement).trim();
 
-			//base.info("Processing: %s", card.name);
+			base.info("Processing: %s", card.name);
 
 			// Card Rarity
 			var inEditions = false;
@@ -1130,7 +1130,7 @@ function ripMCICard(set, mciCardURL, cb)
 				// Legalities
 				var legalityElements = legalityElementsContainer.querySelectorAll("li");
 				if(legalityElements && legalityElements.length>0)
-					card.legalities = Array.toArray(legalityElements).mutate(function(legalityElement, result) { var legalityParts = getTextContent(legalityElement).match(/^([^ ]+) in ([^(]+).*$/); result[legalityParts[2].trim()] = legalityParts[1].trim(); return result; }, {});
+					card.legalities = Array.toArray(legalityElements).mutate(function(legalityElement, result) { var legalityParts = getTextContent(legalityElement).match(/^([^ ]+) in ([^(]+).*$/); if(!legalityParts) { return result; } result[legalityParts[2].trim()] = legalityParts[1].trim(); return result; }, {});
 			}
 
 			// Number

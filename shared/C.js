@@ -566,6 +566,15 @@
 			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"]
 		},
 		{
+			name : "Release Events",
+			code : "pREL",
+			magicCardsInfoCode : "rep",
+			isMCISet : true,
+			releaseDate : "2003-07-26",
+			border : "black",
+			type : "promo"
+		},		
+		{
 			name : "Eighth Edition",
 			code : "8ED",
 			oldCode : "8E",
@@ -2127,6 +2136,12 @@
 		TOR :
 		[
 			{ match : {name: "Cabal Coffers"}, replace : {artist : "Don Hazeltine"} }
+		],
+		pREL :
+		[
+			{ match : {	name :"Force of Nature"}, remove : ["flavor"] },
+			{ match : { name : "Ichiga, Who Topples Oaks"}, replace : { layout : "flip", source : "Betrayers of Kamigawa Release Event participation bonus."}},
+			{ match : { name : "Ass Whuppin'"}, replace : { border : "silver"}}
 		],
 		CHK :
 		[

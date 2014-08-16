@@ -237,6 +237,13 @@ exports.performSetCorrections = function(setCorrections, cards)
 			card.rarity = "Basic Land";
 		}
 	});
+
+	// Empty fields
+	cards.forEach(function(card)
+	{
+		if(card.hasOwnProperty("legalities") && Object.keys(card.legalities).length===0)
+			delete card.legalities;
+	}); 
 };
 
 exports.generateCacheFilePath = generateCacheFilePath;
