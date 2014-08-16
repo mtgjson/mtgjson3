@@ -53,6 +53,7 @@ tiptoe(
 
 			// Strip out internal only data
 			delete setWithExtras.magicCardsInfoCode;
+			delete setWithExtras.isMCISet;
 
 			allSetsWithExtras[SET.code] = setWithExtras;
 			allSetsArrayWithExtras.push(setWithExtras);
@@ -229,6 +230,7 @@ function checkSetForProblems(setCode, cb)
 		originalType : "string",
 		timeshifted  : "boolean",
 		reserved     : "boolean",
+		source       : "string",
 		legalities   : {}
 	};
 

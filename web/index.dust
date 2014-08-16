@@ -329,7 +329,7 @@
 					<td>2479</td>
 					<td>The multiverseid of the card on Wizard's Gatherer web page.<br>
 						Cards from sets that do not exist on Gatherer will NOT have a multiverseid.<br>
-						Sets not on Gatherer are: {setCodesNotOnGatherer}</td>
+						Sets not on Gatherer are: {setCodesNotOnGatherer} and all sets with a 4 letter code that starts with a lowercase 'p'.</td>
 				</tr>
 				<tr>
 					<td>variations</td>
@@ -371,6 +371,11 @@
 					<td>true</td>
 					<td>Set to true if this card is reserved by Wizards <a href="http://archive.wizards.com/Magic/tcg/article.aspx?x=magic/products/reprintpolicy">Official Reprint Policy</a></td>
 				</tr>
+				<tr>
+					<td>source</td>
+					<td>PAX East 2010 (Boston)</td>
+					<td>Where this card was originally obtained. This is only set for promo cards.</td>
+				</tr>
 			</tbody>
 		</table>
 		<table>
@@ -403,12 +408,12 @@
 				<tr>
 					<td>originalText</td>
 					<td>"{~lb}8{~rb}: Do 4 damage to any target."</td>
-					<td>The original text on the card at the time it was printed.</td>
+					<td>The original text on the card at the time it was printed. This field is not available for promo cards.</td>
 				</tr>
 				<tr>
 					<td>originalType</td>
 					<td>"Mono Artifact"</td>
-					<td>The original type on the card at the time it was printed.</td>
+					<td>The original type on the card at the time it was printed. This field is not available for promo cards.</td>
 				</tr>
 				<tr>
 					<td>legalities</td>
@@ -696,7 +701,7 @@
 					<li>Bobby Wertman, rotaercz, Chris Bush, Patrick Rogers, Lewis, aeosynth, Pouncing Kavu</li>
 					<li>Florian, Carlo Luchessa, Sean Eshbaugh, Didero, laxika, Vlad Grigorescu</li>
 					<li>mini.dude_22, Nathan Nelson, Rudi v. Pelt, Javier Bueno Hedo, Eric Olson</li>
-					<li>Michael Wybrow, SpideR</li>
+					<li>Michael Wybrow, SpideR, Brian</li>
 				</ul>
 			</li>
 			<li><a href="http://wiki.mtgsalvation.com/article/Main_Page">MTG Salvation Wiki</a> for an AWESOME resource</li>

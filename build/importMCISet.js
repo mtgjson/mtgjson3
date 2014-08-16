@@ -11,8 +11,6 @@ var base = require("xbase"),
 
 var setsToDo = shared.getSetsToDo();
 
-setsToDo.removeAll(C.SETS_NOT_ON_GATHERER.concat(shared.getMCISetCodes()));
-
 base.info("Doing sets: %s", setsToDo);
 
 setsToDo.serialForEach(function(arg, subcb)
@@ -24,16 +22,16 @@ setsToDo.serialForEach(function(arg, subcb)
 		return setImmediate(subcb);
 	}
 
-	if(targetSet.isMCISet)
+	if(!targetSet.isMCISet)
 	{
-		base.error("Set %s is an MCI set, use importMCISet.js instead.", arg);
+		base.error("Set %s is not an MCI set (isMCISet is not set)", arg);
 		return setImmediate(subcb);
 	}
 
 	tiptoe(
 		function build()
 		{
-			rip.ripSet(targetSet.name, this);
+			rip.ripMCISet(targetSet, this);
 		},
 		function save(set)
 		{

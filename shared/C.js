@@ -704,6 +704,15 @@
 			booster : ["rare", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "timeshifted common", "timeshifted common", "timeshifted common", ["timeshifted rare", "timeshifted uncommon"]]
 		},
 		{
+			name : "Promo Grand Prix",
+			code : "pGPX",
+			magicCardsInfoCode : "gpx",
+			isMCISet : true,
+			releaseDate : "2007-02-24",
+			border : "black",
+			type : "promo"
+		},
+		{
 			name : "Future Sight",
 			code : "FUT",
 			magicCardsInfoCode : "fut",

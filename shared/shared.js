@@ -32,6 +32,10 @@ exports.getSetsToDo = function(startAt)
 		{
 			setsToDo = C.SETS_NOT_ON_GATHERER.slice();
 		}
+		else if(arg==="mcisets")
+		{
+			setsToDo = exports.getMCISetCodes();
+		}
 		else if(arg==="sincelastprintingreset")
 		{
 			var seenLastPrintingResetSet = false;
@@ -62,6 +66,11 @@ exports.getSetsToDo = function(startAt)
 	setsToDo.removeAll(setsNotToDo);
 
 	return setsToDo.uniqueBySort();
+};
+
+exports.getMCISetCodes = function()
+{
+	return C.SETS.filter(function(SET) { return SET.isMCISet; }).map(function(SET) { return SET.code; });
 };
 
 exports.cardComparator = function(a, b)

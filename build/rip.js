@@ -66,45 +66,7 @@ function ripSet(setName, cb)
 
 			this.data.set.cards = this.data.set.cards.concat(cards).sort(shared.cardComparator);
 
-			// Image Name
-			var cardNameCounts = {};
-			this.data.set.cards.forEach(function(card)
-			{
-				if(!cardNameCounts.hasOwnProperty(card.name))
-					cardNameCounts[card.name] = 0;
-				else
-					cardNameCounts[card.name]++;
-			});
-
-			Object.forEach(cardNameCounts, function(key, val)
-			{
-				if(val===0)
-					delete cardNameCounts[key];
-				else
-					cardNameCounts[key]++;
-			});
-
-			var setCorrections = shared.getSetCorrections(this.data.set.code);
-
-			this.data.set.cards.forEach(function(card)
-			{
-				card.imageName = unicodeUtil.unicodeToAscii((card.layout==="split" ? card.names.join("") : card.name));
-
-				if(cardNameCounts.hasOwnProperty(card.name))
-				{
-					var imageNumber = cardNameCounts[card.name]--;
-
-					var numberOrder = setCorrections.mutateOnce(function(setCorrection) { return setCorrection.renumberImages===card.name ? setCorrection.order : undefined; });
-					if(numberOrder)
-						imageNumber = numberOrder.indexOf(card.multiverseid)+1;
-					
-					card.imageName += imageNumber;
-				}
-
-				card.imageName = card.imageName.replaceAll("/", " ");
-
-				card.imageName = card.imageName.strip(":\"?").replaceAll(" token card", "").toLowerCase();
-			});
+			fillImageNames(this.data.set);
 
 			// Foreign Languages
 			if(!fs.existsSync(path.join(__dirname, "..", "json", this.data.set.code + ".json")))
@@ -279,7 +241,7 @@ function processCardPart(doc, cardPart, printedDoc, printedCardPart)
 	var cardParts = getCardParts(doc);
 	if(card.layout!=="split" && cardParts.length===2)
 	{
-		var firstCardText = processTextBlocks(doc, cardParts[0].querySelectorAll(getCardPartIDPrefix(cardParts[0]) + "_textRow .value .cardtextbox")).trim().toLowerCase();
+		var firstCardText = processTextBlocks(cardParts[0].querySelectorAll(getCardPartIDPrefix(cardParts[0]) + "_textRow .value .cardtextbox")).trim().toLowerCase();
 		if(firstCardText.contains("flip"))
 			card.layout = "flip";
 		else if(firstCardText.contains("transform"))
@@ -299,51 +261,8 @@ function processCardPart(doc, cardPart, printedDoc, printedCardPart)
 	//base.info("Processing card: " + card.name);
 
 	// Card Type
-	var skipped = 0;
 	var rawTypeFull = getTextContent(cardPart.querySelector(idPrefix + "_typeRow .value")).trim();
-	if(!rawTypeFull.contains("—") && rawTypeFull.contains(" - "))  // Some gatherer entries have a regular dash instead of a 'long dash'
-	{
-		base.warn("Raw type for card [%s] does not contain a long dash for type [%s] but does contain a small dash surrounded by spaces ' - '. Auto-correcting!", card.name, rawTypeFull);
-		rawTypeFull = rawTypeFull.replace(" - ", "—");
-	}
-	var rawTypes = rawTypeFull.split(/[—]/);
-	rawTypes[0].split(" ").filterEmpty().forEach(function(rawType, i)
-	{
-		if(rawType.trim().toLowerCase()==="(none)")
-			return;
-
-		card.type += ((i-skipped)>0 ? " " : "") + rawType;
-
-		rawType = rawType.trim().toProperCase();
-		if(C.SUPERTYPES.contains(rawType))
-			card.supertypes.push(rawType);
-		else if(C.TYPES.contains(rawType))
-			card.types.push(rawType);
-		else
-			base.warn("Raw type not found [%s] for card: %s", rawType, card.name);
-	});
-	if(rawTypes.length>1)
-	{
-		card.subtypes = card.types.contains("Plane") ? [rawTypes[1].trim()] : rawTypes[1].split(" ").filterEmpty().map(function(subtype) { return subtype.trim(); });	// 205.3b Planes have just a single subtype
-		card.type += " — " + card.subtypes.join(" ");
-	}
-	if(!card.supertypes.length)
-		delete card.supertypes;
-	if(!card.types.length)
-		delete card.types;
-
-	if(card.types)
-	{
-		if(card.types.contains("Plane"))
-			card.layout = "plane";
-		else if(card.types.contains("Scheme"))
-			card.layout = "scheme";
-		else if(card.types.contains("Phenomenon"))
-			card.layout = "phenomenon";
-		
-		if(card.types.map(function(type) { return type.toLowerCase(); }).contains("vanguard"))
-			card.layout = "vanguard";
-	}
+	fillCardTypes(card, rawTypeFull);
 
 	// Original type
 	card.originalType = getTextContent(printedCardPart.querySelector(idPrefixPrinted + "_typeRow .value")).trim().replaceAll(" -", " —");
@@ -413,14 +332,7 @@ function processCardPart(doc, cardPart, printedDoc, printedCardPart)
 		card.manaCost = cardManaCost;
 
 	// Colors
-	cardManaCosts.forEach(function(manaCost)
-	{
-		Object.forEach(COLOR_SYMBOL_TO_NAME_MAP, function(colorSymbol, colorName)
-		{
-			if(manaCost.contains(colorSymbol))
-				card.colors.push(colorName);
-		});
-	});
+	fillCardColors(card);
 
 	var cardColorIndicators = getTextContent(cardPart.querySelector(idPrefix + "_colorIndicatorRow .value")).trim().toLowerCase().split(",").map(function(cardColorIndicator) { return cardColorIndicator.trim(); }) || [];
 	cardColorIndicators.forEach(function(cardColorIndicator)
@@ -429,12 +341,10 @@ function processCardPart(doc, cardPart, printedDoc, printedCardPart)
 			card.colors.push(cardColorIndicator);
 	});
 
-	card.colors = card.colors.unique().sort(function(a, b) { return COLOR_ORDER.indexOf(a)-COLOR_ORDER.indexOf(b); }).map(function(color) { return color.toProperCase(); });
-	if(card.colors.length===0)
-		delete card.colors;
+	sortCardColors(card);
 
 	// Text
-	var cardText = processTextBlocks(doc, cardPart.querySelectorAll(idPrefix + "_textRow .value .cardtextbox")).trim();
+	var cardText = processTextBlocks(cardPart.querySelectorAll(idPrefix + "_textRow .value .cardtextbox")).trim();
 	if(cardText && !card.type.toLowerCase().startsWith("basic land"))
 	{
 		card.text = cardText;
@@ -446,7 +356,7 @@ function processCardPart(doc, cardPart, printedDoc, printedCardPart)
 		card.layout = "leveler";
 
 	// Original Printed Text
-	var originalCardText = processTextBlocks(printedDoc, printedCardPart.querySelectorAll(idPrefixPrinted + "_textRow .value .cardtextbox")).trim();
+	var originalCardText = processTextBlocks(printedCardPart.querySelectorAll(idPrefixPrinted + "_textRow .value .cardtextbox")).trim();
 	if(originalCardText)
 	{
 		card.originalText = originalCardText;
@@ -455,7 +365,7 @@ function processCardPart(doc, cardPart, printedDoc, printedCardPart)
 	}
 
 	// Flavor Text
-	var cardFlavor = processTextBlocks(doc, cardPart.querySelectorAll(idPrefix + "_flavorRow .value .cardtextbox")).trim();
+	var cardFlavor = processTextBlocks(cardPart.querySelectorAll(idPrefix + "_flavorRow .value .cardtextbox")).trim();
 	if(cardFlavor)
 		card.flavor = cardFlavor;
 
@@ -470,7 +380,7 @@ function processCardPart(doc, cardPart, printedDoc, printedCardPart)
 	}
 
 	// Watermark
-	var cardWatermark = processTextBlocks(doc, cardPart.querySelectorAll(idPrefix + "_markRow .value .cardtextbox")).trim();
+	var cardWatermark = processTextBlocks(cardPart.querySelectorAll(idPrefix + "_markRow .value .cardtextbox")).trim();
 	if(cardWatermark)
 		card.watermark = cardWatermark;
 
@@ -727,7 +637,7 @@ function addPrintingsToCards(cards, cb)
 	tiptoe(
 		function loadNonGathererJSON()
 		{
-			C.SETS_NOT_ON_GATHERER.serialForEach(function(code, subcb)
+			C.SETS_NOT_ON_GATHERER.concat(shared.getMCISetCodes()).serialForEach(function(code, subcb)
 			{
 				fs.readFile(path.join(__dirname, "..", "json", code + ".json"), "utf8", subcb);
 			}, this);
@@ -786,7 +696,7 @@ function addPrintingsToCard(nonGathererSets, card, cb)
 					printings.push(nonGathererSet.name);
 			});
 
-			printings = printings.unique().sort(function(a, b) { return moment(getReleaseDateForSet(a), "YYYY-MM-DD").unix()-moment(getReleaseDateForSet(b), "YYYY-MM-DD").unix(); });
+			printings = sortPrintings(printings);
 			if(printings && printings.length)
 				card.printings = printings;
 
@@ -809,6 +719,123 @@ function getMultiverseidsForCardName(sets, cardName)
 	});
 
 	return multiverseids.unique();
+}
+
+function fillCardTypes(card, rawTypeFull)
+{
+	if(!rawTypeFull.contains("—") && rawTypeFull.contains(" - "))  // Some gatherer entries have a regular dash instead of a 'long dash'
+	{
+		base.warn("Raw type for card [%s] does not contain a long dash for type [%s] but does contain a small dash surrounded by spaces ' - '. Auto-correcting!", card.name, rawTypeFull);
+		rawTypeFull = rawTypeFull.replace(" - ", "—");
+	}
+	var rawTypes = rawTypeFull.split(/[—]/);
+	rawTypes[0].split(" ").filterEmpty().forEach(function(rawType, i)
+	{
+		if(rawType.trim().toLowerCase()==="(none)")
+			return;
+
+		card.type += (i>0 ? " " : "") + rawType;
+
+		rawType = rawType.trim().toProperCase();
+		if(C.SUPERTYPES.contains(rawType))
+			card.supertypes.push(rawType);
+		else if(C.TYPES.contains(rawType))
+			card.types.push(rawType);
+		else
+			base.warn("Raw type not found [%s] for card: %s", rawType, card.name);
+	});
+	if(rawTypes.length>1)
+	{
+		card.subtypes = card.types.contains("Plane") ? [rawTypes[1].trim()] : rawTypes[1].split(" ").filterEmpty().map(function(subtype) { return subtype.trim(); });	// 205.3b Planes have just a single subtype
+		card.type += " — " + card.subtypes.join(" ");
+	}
+	if(!card.supertypes.length)
+		delete card.supertypes;
+	if(!card.types.length)
+		delete card.types;
+
+	if(card.types)
+	{
+		if(card.types.contains("Plane"))
+			card.layout = "plane";
+		else if(card.types.contains("Scheme"))
+			card.layout = "scheme";
+		else if(card.types.contains("Phenomenon"))
+			card.layout = "phenomenon";
+		
+		if(card.types.map(function(type) { return type.toLowerCase(); }).contains("vanguard"))
+			card.layout = "vanguard";
+	}
+}
+
+function fillCardColors(card)
+{
+	if(!card.manaCost)
+		return;
+
+	card.manaCost.split("").forEach(function(manaCost)
+	{
+		Object.forEach(COLOR_SYMBOL_TO_NAME_MAP, function(colorSymbol, colorName)
+		{
+			if(manaCost.contains(colorSymbol))
+				card.colors.push(colorName);
+		});
+	});
+}
+
+function fillImageNames(set)
+{
+	// Image Name
+	var cardNameCounts = {};
+	set.cards.forEach(function(card)
+	{
+		if(!cardNameCounts.hasOwnProperty(card.name))
+			cardNameCounts[card.name] = 0;
+		else
+			cardNameCounts[card.name]++;
+	});
+
+	Object.forEach(cardNameCounts, function(key, val)
+	{
+		if(val===0)
+			delete cardNameCounts[key];
+		else
+			cardNameCounts[key]++;
+	});
+
+	var setCorrections = shared.getSetCorrections(set.code);
+
+	set.cards.forEach(function(card)
+	{
+		card.imageName = unicodeUtil.unicodeToAscii((card.layout==="split" ? card.names.join("") : card.name));
+
+		if(cardNameCounts.hasOwnProperty(card.name))
+		{
+			var imageNumber = cardNameCounts[card.name]--;
+
+			var numberOrder = setCorrections.mutateOnce(function(setCorrection) { return setCorrection.renumberImages===card.name ? setCorrection.order : undefined; });
+			if(numberOrder)
+				imageNumber = numberOrder.indexOf(card.multiverseid)+1;
+			
+			card.imageName += imageNumber;
+		}
+
+		card.imageName = card.imageName.replaceAll("/", " ");
+
+		card.imageName = card.imageName.strip(":\"?").replaceAll(" token card", "").toLowerCase();
+	});
+}
+
+function sortCardColors(card)
+{
+	card.colors = card.colors.unique().sort(function(a, b) { return COLOR_ORDER.indexOf(a)-COLOR_ORDER.indexOf(b); }).map(function(color) { return color.toProperCase(); });
+	if(card.colors.length===0)
+		delete card.colors;
+}
+
+function sortPrintings(printings)
+{
+	return printings.unique().sort(function(a, b) { return moment(getReleaseDateForSet(a), "YYYY-MM-DD").unix()-moment(getReleaseDateForSet(b), "YYYY-MM-DD").unix(); });
 }
 
 function compareCardsToMCI(set, cb)
@@ -862,7 +889,7 @@ function compareCardToMCI(card, mciCardURL, cb)
 		{
 			// Compare flavor
 			var cardFlavor = (card.flavor || "").trim().replaceAll("\n", " ").innerTrim();
-			var mciFlavor = processTextBlocks(mciCardDoc, mciCardDoc.querySelector("table tr td p i")).trim().replaceAll("\n", " ").innerTrim();
+			var mciFlavor = processTextBlocks(mciCardDoc.querySelector("table tr td p i")).trim().replaceAll("\n", " ").innerTrim();
 			if(!mciFlavor && cardFlavor)
 				base.warn("FLAVOR: %s (%s) has flavor but MagicCardsInfo (%s) does not.", card.name, card.multiverseid, mciCardURL);
 			else if(mciFlavor && !cardFlavor)
@@ -885,6 +912,257 @@ function compareCardToMCI(card, mciCardURL, cb)
 		function finish(err)
 		{
 			setImmediate(function() { cb(err); });
+		}
+	);
+}
+
+exports.ripMCISet = ripMCISet;
+function ripMCISet(set, cb)
+{
+	tiptoe(
+		function getCardList()
+		{
+			getURLAsDoc("http://magiccards.info/" + set.magicCardsInfoCode.toLowerCase() + "/en.html", this);
+		},
+		function processCardList(listDoc)
+		{
+			var mciCardLinks = Array.toArray(listDoc.querySelectorAll("table tr td a"));
+			mciCardLinks.serialForEach(function(mciCardLink, subcb)
+			{
+				var href = mciCardLink.getAttribute("href");
+				if(!href || !href.startsWith("/" + set.magicCardsInfoCode.toLowerCase() + "/en/"))
+					return setImmediate(subcb);
+
+				ripMCICard(set, href, subcb);
+			}, this);
+		},
+		function addAdditionalFields(cards)
+		{
+			set.cards = cards.filterEmpty().sort(shared.cardComparator);
+			fillImageNames(set);
+
+			if(fs.existsSync(path.join(__dirname, "..", "json", set.code + ".json")))				
+			{
+				addPrintingsToMCISet(set, this);
+			}
+			else
+			{
+				base.warn("RUN ONE MORE TIME FOR PRINTINGS!");
+				this();
+			}
+		},
+		function finish(err)
+		{
+			if(err)
+			{
+				base.error("Error ripping: %s", set.name);
+				return setImmediate(function() { cb(err); });
+			}
+
+			// Warn about missing fields
+			set.cards.forEach(function(card)
+			{
+				if(!card.rarity)
+					base.warn("Rarity not found for card: %s", card.name);
+				if(!card.artist)
+					base.warn("Artist not found for card: %s", card.name);
+			});
+
+			//base.info("Other Printings: %s", (this.data.set.cards.map(function(card) { return card.printings; }).flatten().unique().map(function(setName) { return C.SETS.mutateOnce(function(SET) { return SET.name===setName ? SET.code : undefined; }); }).remove(this.data.set.code) || []).join(" "));
+
+			setImmediate(function() { cb(err, set); }.bind(this));
+		}
+	);
+}
+
+function ripMCICard(set, mciCardURL, cb)
+{
+	tiptoe(
+		function getMCICardDoc()
+		{
+			getURLAsDoc("http://magiccards.info" + mciCardURL, this);
+		},
+		function compareProperties(mciCardDoc)
+		{
+			var card =
+			{
+				layout     : "normal",
+				supertypes : [],
+				type       : "",
+				types      : [],
+				colors     : []
+			};
+
+			var cardNameElement = mciCardDoc.querySelector("a[href=\"" + mciCardURL + "\"]");
+			if(!cardNameElement)
+				throw new Error("No valid card name element for: " + mciCardURL);
+			var leftSide = cardNameElement.parentNode.parentNode;
+			var rightSide = leftSide.nextElementSibling;
+
+			// Card Name
+			card.name = getTextContent(cardNameElement).trim();
+
+			// Card Rarity
+			var inEditions = false;
+			card.rarity = Array.toArray(rightSide.querySelectorAll("b")).mutateOnce(function(b)
+			{
+				if(b.textContent.startsWith("Editions"))
+				{
+					inEditions = true;
+					return undefined;
+				}
+
+				if(inEditions)
+					return b.textContent.replace(/[^(]+\(([^)]+)\)/, "$1", "g");
+			});
+
+			var cardInfoParts = getTextContent(cardNameElement.parentNode.nextElementSibling).innerTrim().trim().match(/^([^0-9,(]+)\(?([^/:]*)\:?\/?([^,)]*)\)?, ([^(]*)\(?([^)]*)\)?$/);
+			if(cardInfoParts.length!==6)
+			{
+				base.warn("Unable to get cardInfoParts from: %s", getTextContent(cardNameElement.parentNode.nextElementSibling).innerTrim().trim());
+				throw new Error("Card failed");
+			}
+			cardInfoParts = cardInfoParts.map(function(cardInfoPart) { return cardInfoPart.trim(); });
+
+			// Card Type
+			fillCardTypes(card, cardInfoParts[1]);
+
+			// Power/Toughness or Loyalty
+			if(cardInfoParts[2]==="Loyalty")
+			{
+				card.loyalty = +(cardInfoParts[3] || "0");
+			}
+			else if(cardInfoParts[2].length>0 && cardInfoParts[3].length>0)
+			{
+				card.power = cardInfoParts[2];
+				card.toughness = cardInfoParts[3];
+			}
+
+			// Converted Mana Cost (CMC)
+			card.cmc = (cardInfoParts[5].trim().length>0) ? +cardInfoParts[5] : 0;
+
+			// Mana Cost
+			card.manaCost = cardInfoParts[4].split("").map(function(manaSymbol) { return processSymbol(manaSymbol); }).join("");
+
+			// Colors
+			fillCardColors(card);
+			sortCardColors(card);
+
+			// Text
+			card.text = processTextBlocks(cardNameElement.parentNode.nextElementSibling.nextElementSibling);
+			if(card.text && card.text.toLowerCase().startsWith("level up {"))
+				card.layout = "leveler";
+
+			// Flavor Text
+			var cardFlavorText = processTextBlocks(cardNameElement.parentNode.nextElementSibling.nextElementSibling.nextElementSibling);
+			if(cardFlavorText)
+				card.flavor = cardFlavorText;
+
+			// Artist
+			var cardArtist = getTextContent(cardNameElement.parentNode.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling).trim();
+			if(cardArtist.startsWith("Illus."))
+				card.artist = cardArtist.substring("Illus.".length+1);
+
+			// Rulings and Legalities
+			var rulingLegalityElements = cardNameElement.parentNode.parentNode.querySelectorAll("ul");
+			if(rulingLegalityElements && rulingLegalityElements.length>=1)
+			{
+				var legalityElementsContainer = rulingLegalityElements[0];
+				if(rulingLegalityElements.length===2)
+				{
+					legalityElementsContainer = rulingLegalityElements[1];
+
+					// Rulings
+					card.rulings = Array.toArray(rulingLegalityElements[0].querySelectorAll("li")).map(function(rulingElement) { var rulingDate = getTextContent(rulingElement.querySelector("b")).trim(); return { date : moment(rulingDate, "MM/DD/YYYY").format("YYYY-MM-DD"), text : processTextBlocks(rulingElement).trim().substring(rulingDate.length+2) }; });
+				}
+
+				// Legalities
+				var legalityElements = legalityElementsContainer.querySelectorAll("li");
+				if(legalityElements && legalityElements.length>0)
+					card.legalities = Array.toArray(legalityElements).mutate(function(legalityElement, result) { var legalityParts = getTextContent(legalityElement).match(/^([^ ]+) in ([^(]+).*$/); result[legalityParts[2].trim()] = legalityParts[1].trim(); return result; }, {});
+			}
+
+			// Number
+			var cardNumber = getTextContent(rightSide.querySelector("p small > b")).trim().replace(/^#([^ ]+) .*$/, "$1").trim();
+			if(cardNumber)
+				card.number = cardNumber;
+
+			// Foreign Names
+			var cardForeignNames = [];
+			var languagesLine = Array.toArray(rightSide.querySelectorAll("p small u b")).mutateOnce(function(b) { if(getTextContent(b).startsWith("Languages")) { return b; } }).parentNode;
+			var languageElement = languagesLine.nextElementSibling;
+			var cardForeignName = {};
+			do
+			{
+				if(languageElement.nodeName.toLowerCase()==="img")
+				{
+					cardForeignName["language"] = languageElement.getAttribute("alt");
+				}
+				else if(languageElement.nodeName.toLowerCase()==="a")
+				{
+					if(cardForeignName.hasOwnProperty("language"))
+					{
+						cardForeignName["name"] = getTextContent(languageElement).trim();
+						cardForeignNames.push(cardForeignName);
+					}
+					cardForeignName = {};
+				}
+
+				languageElement = languageElement.nextElementSibling;
+			} while(languageElement);
+
+			if(cardForeignNames.length>0)
+				card.foreignNames = cardForeignNames;
+
+			// Source (comment on mci)
+			var cardComment = getTextContent(rightSide.querySelector("p small").firstChild).trim();
+			if(cardComment)
+				card.source = cardComment;
+
+			// TODO: Not yet supported variations, names (so all split/doublefaced/flip cards), watermark, border, timeshifted, hand, life, originalText/originalType. Also haven't tested loyalty yet
+
+			this(undefined, card);
+		},
+		function finish(err, card)
+		{
+			setImmediate(function() { cb(err, card); });
+		}
+	);
+}
+
+function addPrintingsToMCISet(set, cb)
+{
+	tiptoe(
+		function loadJSON()
+		{
+			set.cards.forEach(function(card) { card.printings = []; });
+
+			C.SETS.forEach(function(SET)
+			{
+				fs.readFile(path.join(__dirname, "..", "json", SET.code + ".json"), {encoding : "utf8"}, this.parallel());
+			}.bind(this));
+		},
+		function checkForPrintings(err)
+		{
+			if(err)
+				return setImmediate(function() { cb(err); });
+
+			var args=arguments;
+
+			C.SETS.forEach(function(SET, i)
+			{
+				var setWithExtras = JSON.parse(args[i+1]);
+				var setCardNames = setWithExtras.cards.map(function(card) { return card.name; });
+				set.cards.forEach(function(card)
+				{
+					if(setCardNames.contains(card.name))
+						card.printings.push(setWithExtras.name);
+				});
+			});
+
+			set.cards.forEach(function(card) { card.printings = sortPrintings(card.printings); });
+
+			return setImmediate(cb);
 		}
 	);
 }
@@ -951,6 +1229,11 @@ var SYMBOL_CONVERSION_MAP =
 	"phyrexian green"    : "G/P",
 	"phyrexian"          : "P",
 	"variable colorless" : "X",
+	"b"					 : "B",
+	"u"					 : "U",
+	"w"					 : "W",
+	"r"					 : "R",
+	"g"					 : "G",
 
 	// Planechase Planes
 	"chaos"              : "C",
@@ -1001,7 +1284,7 @@ function processSymbol(symbol)
 	return "{" + (symbols.length>1 ? symbols.join("/") : symbols[0]) + "}";
 }
 
-function processTextBlocks(doc, textBlocks)
+function processTextBlocks(textBlocks)
 {
 	var result = "";
 	if(!textBlocks)
@@ -1012,7 +1295,7 @@ function processTextBlocks(doc, textBlocks)
 		if(i>0)
 			result += "\n";
 
-		result += processTextBoxChildren(doc, textBox.childNodes);
+		result += processTextBoxChildren(textBox.childNodes);
 	});
 
 	result = result.replaceAll("\u2028", "\n");
@@ -1027,7 +1310,7 @@ function processTextBlocks(doc, textBlocks)
 	return result;
 }
 
-function processTextBoxChildren(doc, children)
+function processTextBoxChildren(children)
 {
 	var result = "";
 
@@ -1038,9 +1321,9 @@ function processTextBoxChildren(doc, children)
 			var childNodeName = child.nodeName.toLowerCase();
 			if(childNodeName==="img")
 				result += processSymbol(child.getAttribute("alt"));
-			else if(childNodeName==="i")
+			else if(childNodeName==="i" || childNodeName==="b" || childNodeName==="u")
 			{
-				result += processTextBoxChildren(doc, child.childNodes);
+				result += processTextBoxChildren(child.childNodes);
 			}
 			else if(childNodeName==="<")
 			{
