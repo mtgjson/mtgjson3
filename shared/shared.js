@@ -228,11 +228,14 @@ exports.performSetCorrections = function(setCorrections, cards)
 			card.printings.remove("Promo set for Gatherer");
 	});
 
-	// No text for basic lands
+	// No text for basic lands and rarity of Basic Land
 	cards.forEach(function(card)
 	{
-		if(card.type && card.type.startsWith("Basic Land"))
+		if(card.supertypes && card.supertypes.contains("Basic") && card.types && card.types.contains("Land"))
+		{
 			delete card.text;
+			card.rarity = "Basic Land";
+		}
 	});
 };
 

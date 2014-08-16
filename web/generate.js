@@ -250,7 +250,7 @@ function checkSetForProblems(setCode, cb)
 			// Check for duplicate cards
 			setData.cards.forEach(function(card)
 			{
-				if(card.hasOwnProperty("variations") || ALLOWED_DUPS.contains(card.name))
+				if(card.hasOwnProperty("variations") || ALLOWED_DUPS.contains(card.name) || setData.type==="promo")
 					return;
 
 				if(cardsByName.hasOwnProperty(card.name))

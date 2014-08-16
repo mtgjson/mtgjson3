@@ -13,8 +13,7 @@ var base = require("xbase"),
 	path = require("path"),
 	tiptoe = require("tiptoe");
 
-process.exit(0);		// Protection from accidental invocation
-
+process.exit(0);
 tiptoe(
 	function processSets()
 	{
@@ -47,7 +46,7 @@ function checkSet(setCode, cb)
 			var set = JSON.parse(setRaw);
 			set.cards.forEach(function(card)
 			{
-				if(card.type.startsWith("Basic Land"))
+				if(card.supertypes && card.supertypes.contains("Basic") && card.types && card.types.contains("Land"))
 					delete card.text;
 			});
 

@@ -276,8 +276,6 @@ function processCardPart(doc, cardPart, printedDoc, printedCardPart)
 	card.rarity = getTextContent(cardPart.querySelector(idPrefix + "_rarityRow .value")).trim();
 	if(card.rarity==="Bonus")
 		card.rarity = "Special";
-	if(card.type.toLowerCase().startsWith("basic land"))
-		card.rarity = "Basic Land";
 
 	// Artist
 	card.artist = getTextContent(cardPart.querySelector(idPrefix + "_artistRow .value a")).trim();
