@@ -12,7 +12,7 @@
 
 	exports.SETS_NOT_ON_GATHERER = ["HHO", "ATH", "ITP", "DKM", "RQS", "DPA"];
 	exports.SETS_WITH_NO_IMAGES = [];
-	
+
 	exports.SETS =
 	[
 		{
@@ -54,6 +54,15 @@
 			border : "white",
 			type : "core",
 			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"]
+		},
+		{
+			name : "Dragon Con",
+			code : "pDRC",
+			magicCardsInfoCode : "drc",
+			isMCISet : true,
+			releaseDate : "1994-01-01",
+			border : "black",
+			type : "promo"
 		},
 		{
 			name : "Antiquities",
@@ -241,6 +250,15 @@
 			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"]
 		},
 		{
+			name : "Prerelease Events",
+			code : "pPRE",
+			magicCardsInfoCode : "ptc",
+			isMCISet : true,
+			releaseDate : "1997-10-04",
+			border : "black",
+			type : "promo"
+		},
+		{
 			name : "Tempest",
 			code : "TMP",
 			gathererCode : "TE",
@@ -365,6 +383,15 @@
 			type : "starter",
 			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "land"]
 		},
+		{
+			name : "Worlds",
+			code : "pWOR",
+			magicCardsInfoCode : "wrl",
+			isMCISet : true,
+			releaseDate : "1999-08-04",
+			border : "black",
+			type : "promo"
+		},		
 		{
 			name : "Mercadian Masques",
 			code : "MMQ",
@@ -1223,6 +1250,15 @@
 			type : "duel deck"
 		},
 		{
+			name : "World Magic Cup Qualifiers",
+			code : "pWCQ",
+			magicCardsInfoCode : "wmcq",
+			isMCISet : true,
+			releaseDate : "2013-04-06",
+			border : "black",
+			type : "promo"
+		},		
+		{
 			name : "Dragon's Maze",
 			code : "DGM",
 			magicCardsInfoCode : "dgm",
@@ -1803,6 +1839,20 @@
 							   "Peacekeeper", "Pendrell Mists", "Psychic Vortex", "Scorched Ruins", "Thran Tome", "Tolarian Entrancer", "Tolarian Serpent", "Urborg Justice", "Urborg Stalker", "Wave of Terror", "Well of Knowledge",
 							   "Winding Canyons", "Xanthic Statue"]}, replace : {reserved : true}}
 		],
+		pPRE :
+		[
+			{ match : {name : "Ajani Vengeant"}, replace : {source : "Shards of Alara"}},
+			{ match : {name : "Door of Destinies"}, replace : {source : "Morningtide"}},
+			{ match : {name : "Dragon Broodmother"}, replace : {source : "Alara Reborn"}},
+			{ match : {name : "Eater of Hope"}, replace : {source : "Born of the Gods"}},
+			{ match : {name : "Malfegor"}, replace : {source : "Conflux"}},
+			{ match : {name : "Demigod of Revenge"}, replace : {flavor : "\"His laugh, a bellowing, deathly din, slices through the heavens, making them bleed.\"\n—The Seer's Parables", source : "Shadowmoor"}},
+			{ match : {name : "Howlpack Alpha"}, remove : ["flavor"]},
+			{ match : {name : "Overbeing of Myth"}, replace : {flavor : "\"She walks among us unseen, learning from our imperfections.\"\n—The Seer's Parables", source : "Eventide"}},
+			{ match : {name : "Overtaker"}, replace : {flavor : "\"It's no challenge to master a Mercadian.\"", source : "Eventide"}},
+			
+			
+		],
 		TMP :
 		[
 			{ renumberImages : "Plains", order : [4953, 4954, 4955, 4956] },
@@ -1982,6 +2032,10 @@
 			{ match : {name : ["Border Guard", "Dakmor Ghoul", "Time Warp"]}, flavorAddExclamation : true },
 			{ match : {name : ["Durkwood Boars", "Wind Drake"]}, flavorAddDash : true },
 			{ match : {name : "Feral Shadow"}, replace : {artist : "Cliff Nielsen"}}
+		],
+		pWOR :
+		[
+			{ match : {name : "Balduvian Horde"}, replace : {source : "Side events participation bonus at World Championships in Yokohama"}, remove : ["flavor"]}
 		],
 		MMQ :
 		[
@@ -2297,7 +2351,9 @@
 		],
 		pMGD :
 		[
-			{ match : {name : ["Black Sun's Zenith", "Cryptborn Horror", "Dictate of Kruphix", "Dryad Militant", "Dungrove Elder", "Kiora's Follower", "Liliana's Specter", "Myr Superion", "Pain Seer", "Priest of Urabrask", "Squelching Leeches", "Stormblood Berserker", "Strangleroot Geist", "Tempered Steel", "Zombie Apocalypse"]}, remove : ["flavor"] }
+			{ match : {name : ["Black Sun's Zenith", "Cryptborn Horror", "Dictate of Kruphix", "Dryad Militant", "Dungrove Elder", "Kiora's Follower", "Liliana's Specter", "Myr Superion", "Pain Seer", "Priest of Urabrask", "Squelching Leeches",
+							   "Stormblood Berserker", "Strangleroot Geist", "Tempered Steel", "Zombie Apocalypse"]}, remove : ["flavor"] },
+			{ match : {name : "Squelching Leeches"}, replace : {source : "Journey into Nyx"}}
 		],
 		MED :
 		[

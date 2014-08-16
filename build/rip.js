@@ -960,6 +960,21 @@ function ripMCISet(set, cb)
 
 			this();
 		},
+		function cleanupMCICards()
+		{
+			base.info("Performing final cleanups on MCI card data...");
+
+			set.cards.forEach(function(card)
+			{
+				if(card.flavor && /(\s)-/.test(card.flavor))
+				{
+					base.warn("Card [%s] converting flavor text ascii dash to em dash: %s", card.name, card.flavor);
+					card.flavor = card.flavor.replace(/(\s)-/, "$1—");
+				}
+			});
+
+			this();
+		},
 		function finish(err)
 		{
 			if(err)
@@ -1027,10 +1042,13 @@ function ripMCICard(set, mciCardURL, cb)
 					return b.textContent.replace(/[^(]+\(([^)]+)\)/, "$1", "g");
 			});
 
-			var cardInfoParts = getTextContent(cardNameElement.parentNode.nextElementSibling).innerTrim().trim().match(/^([^0-9*,(]+)\(?([^/:]*)\:?\/?([^,)]*)\)?, ([^(]*)\(?([^)]*)\)?$/);
-			if(cardInfoParts.length!==6)
+			var cardInfoRaw = getTextContent(cardNameElement.parentNode.nextElementSibling).innerTrim().trim();
+			var cardInfoParts = cardInfoRaw.match(/^([^0-9*,(]+)\(?([^/:]*)\:?\/?([^,)]*)\)?, ([^(]*)\(?([^)]*)\)?$/);
+			if(!cardInfoParts)
+				cardInfoParts = cardInfoRaw.match(/^([^0-9*,(]+)\(?([^/:]*)\:?\/?([^,)]*)\)?,? ?([^(]*)\(?([^)]*)\)?$/);
+			if(!cardInfoParts || cardInfoParts.length!==6)
 			{
-				base.warn("Unable to get cardInfoParts from: %s", getTextContent(cardNameElement.parentNode.nextElementSibling).innerTrim().trim());
+				base.warn("Unable to get cardInfoParts from card [%s]: %s", card.name, getTextContent(cardNameElement.parentNode.nextElementSibling).innerTrim().trim());
 				throw new Error("Card failed");
 			}
 			cardInfoParts = cardInfoParts.map(function(cardInfoPart) { return cardInfoPart.trim(); });
@@ -1050,13 +1068,20 @@ function ripMCICard(set, mciCardURL, cb)
 			}
 
 			// Converted Mana Cost (CMC)
-			card.cmc = (cardInfoParts[5].trim().length>0) ? +cardInfoParts[5] : 0;
+			if(cardInfoParts[5].trim().length>0)
+				card.cmc = +cardInfoParts[5];
 
 			// Mana Cost
 			var manaRegex = /{([^}]+)}/g;
 			var manaCostRaw = cardInfoParts[4];
 			var manaParts = (manaCostRaw.match(manaRegex) || []).map(function(manaPart) { return manaPart.strip("{}"); });
-			card.manaCost = manaCostRaw.replace(manaRegex, ".").split("").map(function(manaSymbol) { return processSymbol(manaSymbol==="." ? manaParts.shift() : manaSymbol); }).join("");
+			if(SYMBOL_CONVERSION_MAP.hasOwnProperty(manaCostRaw))
+				card.manaCost = processSymbol(manaCostRaw);
+			else
+				card.manaCost = manaCostRaw.replace(manaRegex, ".").split("").map(function(manaSymbol) { return processSymbol(manaSymbol==="." ? manaParts.shift() : manaSymbol); }).join("");
+
+			if(!card.hasOwnProperty("cmc") && card.manaCost==="{0}")
+				card.cmc = 0;
 
 			// Colors
 			fillCardColors(card);
@@ -1064,8 +1089,15 @@ function ripMCICard(set, mciCardURL, cb)
 
 			// Text
 			card.text = processTextBlocks(cardNameElement.parentNode.nextElementSibling.nextElementSibling);
-			if(card.text && card.text.toLowerCase().startsWith("level up {"))
-				card.layout = "leveler";
+			if(card.text)
+			{
+				if(card.text.toLowerCase().startsWith("level up {"))
+					card.layout = "leveler";
+				else if(card.text.toLowerCase().contains("flip"))
+					card.layout = "flip";
+				else if(card.text.toLowerCase().contains("transform"))
+					card.layout = "double-faced";
+			}
 
 			// Replace MCI ascii dashes with minus sines in planeswalker abilities
 			if(card.types.contains("Planeswalker"))
@@ -1074,14 +1106,7 @@ function ripMCICard(set, mciCardURL, cb)
 			// Flavor Text
 			var cardFlavorText = processTextBlocks(cardNameElement.parentNode.nextElementSibling.nextElementSibling.nextElementSibling);
 			if(cardFlavorText)
-			{
-				if(cardFlavorText.contains("-"))
-				{
-					base.warn("Card [%s] converting flavor text ascii dash to em dash: %s", card.name, cardFlavorText);
-					cardFlavorText = cardFlavorText.replaceAl("-", "—");
-				}
 				card.flavor = cardFlavorText;
-			}
 
 			// Artist
 			var cardArtist = getTextContent(cardNameElement.parentNode.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling).trim();
@@ -1089,9 +1114,12 @@ function ripMCICard(set, mciCardURL, cb)
 				card.artist = cardArtist.substring("Illus.".length+1);
 
 			// Rulings and Legalities
-			var rulingLegalityElements = cardNameElement.parentNode.parentNode.querySelectorAll("ul");
+			var rulingLegalityElements = Array.toArray(cardNameElement.parentNode.parentNode.querySelectorAll("ul"));
 			if(rulingLegalityElements && rulingLegalityElements.length>=1)
 			{
+				if(rulingLegalityElements[0].querySelector("li[class=\"reserve\"]"))
+					rulingLegalityElements.shift();
+
 				var legalityElementsContainer = rulingLegalityElements[0];
 				if(rulingLegalityElements.length===2)
 				{
@@ -1147,7 +1175,10 @@ function ripMCICard(set, mciCardURL, cb)
 			{
 				var cardComment = getTextContent(commentContainer.firstChild).trim();
 				if(cardComment)
+				{
+					cardComment = cardComment.replaceAll(" prerelease participation bonus.", "").replaceAll(" prerelease participation bonus", "");
 					card.source = cardComment;
+				}
 			}
 
 			// TODO: Not yet supported variations, names (so all split/doublefaced/flip cards), watermark, border, timeshifted, hand, life, originalText/originalType. Also haven't tested loyalty yet
@@ -1356,7 +1387,7 @@ function processTextBoxChildren(children)
 			var childNodeName = child.nodeName.toLowerCase();
 			if(childNodeName==="img")
 				result += processSymbol(child.getAttribute("alt"));
-			else if(childNodeName==="i" || childNodeName==="b" || childNodeName==="u")
+			else if(childNodeName==="i" || childNodeName==="b" || childNodeName==="u" || childNodeName==="a")
 				result += processTextBoxChildren(child.childNodes);
 			else if(childNodeName==="<")
 				result += "<";

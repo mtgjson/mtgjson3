@@ -220,6 +220,20 @@ exports.performSetCorrections = function(setCorrections, cards)
 
 		card.artist = card.artist.replace(/^([^"]*)"([^"]*)"(.*)$/, "$1“$2”$3", "m");
 	});
+
+	// Printings corrections
+	cards.forEach(function(card)
+	{
+		if(card.printings)
+			card.printings.remove("Promo set for Gatherer");
+	});
+
+	// No text for basic lands
+	cards.forEach(function(card)
+	{
+		if(card.type && card.type.startsWith("Basic Land"))
+			delete card.text;
+	});
 };
 
 exports.generateCacheFilePath = generateCacheFilePath;
