@@ -1056,7 +1056,14 @@ function ripMCICard(set, mciCardURL, cb)
 			// Flavor Text
 			var cardFlavorText = processTextBlocks(cardNameElement.parentNode.nextElementSibling.nextElementSibling.nextElementSibling);
 			if(cardFlavorText)
+			{
+				if(cardFlavorText.contains("-"))
+				{
+					base.warn("Card [%s] converting flavor text ascii dash to em dash: %s", card.name, cardFlavorText);
+					cardFlavorText = cardFlavorText.replaceAl("-", "—");
+				}
 				card.flavor = cardFlavorText;
+			}
 
 			// Artist
 			var cardArtist = getTextContent(cardNameElement.parentNode.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling).trim();
