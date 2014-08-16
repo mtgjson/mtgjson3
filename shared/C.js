@@ -860,6 +860,16 @@
 			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "marketing"]
 		},
 		{
+			name : "Summer of Magic",
+			code : "pSUM",
+			magicCardsInfoCode : "sum",
+			magicRaritiesCode : "118-rarities-summer-of-magic-tournament",
+			isMCISet : true,
+			releaseDate : "2007-07-21",
+			border : "black",
+			type : "promo"
+		},		
+		{
 			name : "Eventide",
 			code : "EVE",
 			magicCardsInfoCode : "eve",
