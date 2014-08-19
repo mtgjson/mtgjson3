@@ -1245,7 +1245,7 @@ function addPrintingsToMCISet(set, cb)
 
 function addReleaseDatesAndSourcesToMCISet(set, cb)
 {
-	if(!set.magicRaritiesCode)
+	if(!set.magicRaritiesCodes)
 		return setImmediate(cb);
 
 	var normalizeCardName = function(text) { return text.toLowerCase().replace(/[^A-Za-z0-9_ ]/, "", "g"); };
@@ -1254,11 +1254,14 @@ function addReleaseDatesAndSourcesToMCISet(set, cb)
 	tiptoe(
 		function getMagicRaritiesList()
 		{
-			getURLAsDoc("http://www.magiclibrarities.net/" + set.magicRaritiesCode + "-english-cards-index.html", this);
+			set.magicRaritiesCodes.forEach(function(magicRaritiesCode)
+			{
+				getURLAsDoc("http://www.magiclibrarities.net/" + magicRaritiesCode + "-english-cards-index.html", this.parallel());
+			}.bind(this));
 		},
-		function populateReleaseDates(doc)
+		function populateReleaseDates()
 		{
-			Array.toArray(doc.querySelectorAll("table tr td:nth-child(5) a font")).forEach(function(cardNameElement)
+			Array.prototype.slice.apply(arguments).map(function(doc) { return Array.toArray(doc.querySelectorAll("table tr td:nth-child(5) a font")); }).flatten().forEach(function(cardNameElement)
 			{
 				// Card Names
 				var cardNames = [];
@@ -1287,6 +1290,11 @@ function addReleaseDatesAndSourcesToMCISet(set, cb)
 
 				// Release date
 				var releaseDateText = getTextContent(cardNameElement.parentNode.parentNode.nextElementSibling.nextElementSibling.nextElementSibling.firstChild).trim();
+				while(releaseDateText.contains("-?"))
+				{
+					releaseDateText = releaseDateText.replaceAll("-[?]", "");
+				}
+
 				if(/^[0-9][0-9][0-9][0-9]\/[0-9][0-9]\/[0-9][0-9]$/.test(releaseDateText))
 					releaseDateText = releaseDateText.replaceAll("/", "-");
 
@@ -1424,7 +1432,12 @@ var TEXT_TO_SYMBOL_MAP =
 	"o6"  : "6",
 	"o7"  : "7",
 	"o8"  : "8",
-	"o9"  : "9"
+	"o9"  : "9",
+	"{WP}" : "W/P",
+	"{UP}" : "U/P",
+	"{BP}" : "B/P",
+	"{RP}" : "R/P",
+	"{GP}" : "G/P"
 };
 
 function processSymbol(symbol)
