@@ -1288,8 +1288,11 @@ function addReleaseDatesAndSourcesToMCISet(set, cb)
 
 				// Source
 				var sourceText = getTextContent(cardNameElement.parentNode.parentNode.nextElementSibling.nextElementSibling.firstChild).trim();
+				if(sourceText==="?" || sourceText.toLowerCase()==="source unknown" || sourceText.toLowerCase()==="unknown")
+					sourceText = "";
 
 				// Release date
+				var generalYear = getTextContent(cardNameElement.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.previousElementSibling).trim() || null;
 				var releaseDateText = getTextContent(cardNameElement.parentNode.parentNode.nextElementSibling.nextElementSibling.nextElementSibling.firstChild).trim();
 				while(releaseDateText.contains("-?"))
 				{
@@ -1304,12 +1307,23 @@ function addReleaseDatesAndSourcesToMCISet(set, cb)
 									/^([0-9][0-9][0-9][0-9]-[0-9][0-9])$/,
 									/^([0-9][0-9][0-9][0-9])$/].mutateOnce(function(re) { if(re.test(releaseDateText)) { return releaseDateText.replace(re, "$1"); } }));
 
-				releaseDate = releaseDate.replace(/-([0-9])$/, "-0$1");
+				if(!releaseDate && generalYear)
+					releaseDate = generalYear;
 
-				if(releaseDate)
-					cardNames.forEach(function(cardName) { if(!releaseDatesAndSources.hasOwnProperty(cardName)) { releaseDatesAndSources[cardName] = {releaseDate : releaseDate, source : sourceText}; }});
+				if(releaseDate || sourceText)
+				{
+					var cardInfo = {};
+					if(releaseDate)
+						cardInfo["releaseDate"] = releaseDate.replace(/-([0-9])$/, "-0$1");
+					if(sourceText)
+						cardInfo["source"] = sourceText;
+
+					cardNames.forEach(function(cardName) { if(!releaseDatesAndSources.hasOwnProperty(cardName)) { releaseDatesAndSources[cardName] = cardInfo; }});
+				}
 				else
+				{
 					base.warn("Unknown release date format: " + releaseDateText);
+				}
 			});
 
 			set.cards.forEach(function(card)
@@ -1318,8 +1332,10 @@ function addReleaseDatesAndSourcesToMCISet(set, cb)
 				if(!releaseDatesAndSources.hasOwnProperty(cardNameNormalized))
 					return;
 
-				card.source = releaseDatesAndSources[cardNameNormalized].source.replaceAll("� ", " ");
-				card.releaseDate = releaseDatesAndSources[cardNameNormalized].releaseDate;
+				if(releaseDatesAndSources[cardNameNormalized].source)
+					card.source = releaseDatesAndSources[cardNameNormalized].source.replaceAll("� ", " ");
+				if(releaseDatesAndSources[cardNameNormalized].releaseDate)
+					card.releaseDate = releaseDatesAndSources[cardNameNormalized].releaseDate;
 			});
 
 			this();

@@ -115,6 +115,16 @@
 			booster : ["uncommon", "uncommon", "common", "common", "common", "common", "common", "common"]
 		},
 		{
+			name : "Legend Membership",
+			code : "pLGM",
+			magicCardsInfoCode : "dcilm",
+			magicRaritiesCodes : "23-rarities-dci-legend-membership-promos",
+			isMCISet : true,
+			releaseDate : "1995-01-01",
+			border : "black",
+			type : "promo"
+		},
+		{
 			name : "Fourth Edition",
 			code : "4ED",
 			gathererCode : "4E",
@@ -184,6 +194,16 @@
 			type : "promo"
 		},
 		{
+			name : "Celebration",
+			code : "pCEL",
+			magicCardsInfoCode : "uqc",
+			magicRaritiesCodes : ["353-rarities-unique-cards", "352-rarities-garfield-event-cards", "798-rarities-special-guest-gift-cards"],
+			isMCISet : true,
+			releaseDate : "1996-08-14",
+			border : "black",
+			type : "promo"
+		},
+		{
 			name : "Mirage",
 			code : "MIR",
 			gathererCode : "MI",
@@ -223,6 +243,15 @@
 			border : "white",
 			type : "core",
 			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"]
+		},
+		{
+			name : "Portal Demo Game",
+			code : "pPOD",
+			magicCardsInfoCode : "pot",
+			isMCISet : true,
+			releaseDate : "1997-05-01",
+			border : "black",
+			type : "promo"
 		},
 		{
 			name : "Portal",
@@ -296,6 +325,16 @@
 			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"]
 		},
 		{
+			name : "Judge Gift Program",
+			code : "pJGP",
+			magicCardsInfoCode : "jr",
+			magicRaritiesCodes : "56-rarities-judge-gift-cards",
+			isMCISet : true,
+			releaseDate : "1998-06-01",
+			border : "black",
+			type : "promo"
+		},
+		{
 			name : "Exodus",
 			code : "EXO",
 			gathererCode : "EX",
@@ -316,6 +355,15 @@
 			type : "un",
 			booster : ["rare", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "land"]
 		},
+		{
+			name : "Asia Pacific Land Program",
+			code : "pALP",
+			magicCardsInfoCode : "apac",
+			isMCISet : true,
+			releaseDate : "1998-09-01",
+			border : "black",
+			type : "promo"
+		},				
 		{
 			name : "Urza's Saga",
 			code : "USG",
@@ -388,12 +436,32 @@
 			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "land"]
 		},
 		{
+			name : "Guru",
+			code : "pGRU",
+			magicCardsInfoCode : "guru",
+			magicRaritiesCodes : "50-rarities-guru-lands",
+			isMCISet : true,
+			releaseDate : "1999-07-12",
+			border : "black",
+			type : "promo"
+		},		
+		{
 			name : "Worlds",
 			code : "pWOR",
 			magicCardsInfoCode : "wrl",
 			magicRaritiesCodes : "15-rarities-worlds-card",
 			isMCISet : true,
 			releaseDate : "1999-08-04",
+			border : "black",
+			type : "promo"
+		},
+		{
+			name : "Wizards of the Coast Online Store",
+			code : "pWOS",
+			magicCardsInfoCode : "wotc",
+			magicRaritiesCodes : "51-rarities-wizards-of-the-coast-online-store",
+			isMCISet : true,
+			releaseDate : "1999-09-04",
 			border : "black",
 			type : "promo"
 		},
@@ -434,6 +502,15 @@
 			magicRaritiesCodes : "72-rarities-friday-night-magic",
 			isMCISet : true,
 			releaseDate : "2000-02-01",
+			border : "black",
+			type : "promo"
+		},
+		{
+			name : "European Land Program",
+			code : "pELP",
+			magicCardsInfoCode : "euro",
+			isMCISet : true,
+			releaseDate : "2000-02-05",
 			border : "black",
 			type : "promo"
 		},
@@ -1848,6 +1925,11 @@
 			{ match : {name : "Wall of Stone"}, replace : {flavor : "The ground itself lends its strength to these walls of living stone, which possess the stability of ancient mountains. These mighty bulwarks thwart ground-based troops, providing welcome relief for weary warriors who defend the land."}},
 			{ match : {name : "Winter Blast"}, replace : {flavor : "\"Blow, winds, and crack your cheeks! rage! blow!\" —William Shakespeare, King Lear"} }
 		],
+		pPOD :
+		[
+			{ match : {name : "Feral Shadow"}, replace : {flavor : "Not all shadows are cast by light—some are cast by darkness."}},
+			{ match : "*", replace : {releaseDate : "1997-05-01"}}
+		],
 		POR :
 		[
 			{ renumberImages : "Anaconda", order : [4287, 4288] },
@@ -1997,6 +2079,11 @@
 			{ match : {name : "Steam Catapult"}, replace : {flavor : "\"You idiots! Turn it around! Turn it around!\""}},
 			{ match : {name : "Stone Rain"}, replace : {flavor : "There goes the neighborhood!"}}
 		],
+		pJGP :
+		[
+			{ match : {name : "Burning Wish"}, remove : ["flavor"] },
+			{ match : {name : "Pernicious Deed"}, replace : {flavor : "\"The tyrannous and bloody deed is done, The most arch deed of piteous massacre That ever yet this land was guilty of.\"\n—William Shakespeare, Richard III"}}
+		],
 		EXO :
 		[
 			{ match : {name : ["Erratic Portal", "Pandemonium"]}, flavorAddExclamation : true },
@@ -2018,6 +2105,10 @@
 			{ match : {name : "Gus"}, replace : {flavor : "\"Now I lay me down to sleep — What are you starin' at?\""}},
 			{ match : {name : "Handcuffs"}, replace : {flavor : "\"That was fun! Now me.\"\n—Gwendlyn Di Corci"}},
 			{ match : {name : "Mesa Chicken"}, replace : {flavor : "\"Lo! lord of layers proudly comb-crested\nHero to hens father to feathers\nCrowing sun-caller weaver of wattle\nElder to eggs.\"\n—Rooster Saga"}}
+		],
+		pALP :
+		[
+			{ match : "*", replace : {releaseDate : "1998"}}
 		],
 		USG :
 		[
