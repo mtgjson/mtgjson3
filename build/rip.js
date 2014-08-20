@@ -961,10 +961,7 @@ function ripMCISet(set, cb)
 			set.cards.forEach(function(card)
 			{
 				if(card.flavor && /(\s)-/.test(card.flavor))
-				{
-					base.warn("Card [%s] converting flavor text ascii dash to em dash: %s", card.name, card.flavor);
 					card.flavor = card.flavor.replace(/(\s)-/, "$1—");
-				}
 			});
 
 			this();

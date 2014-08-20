@@ -396,7 +396,7 @@
 			releaseDate : "1999-08-04",
 			border : "black",
 			type : "promo"
-		},		
+		},
 		{
 			name : "Mercadian Masques",
 			code : "MMQ",
@@ -416,6 +416,16 @@
 			releaseDate : "1999-11-12",
 			border : "white",
 			type : "box"
+		},
+		{
+			name : "Friday Night Magic",
+			code : "pFNM",
+			magicCardsInfoCode : "fnmp",
+			magicRaritiesCodes : "72-rarities-friday-night-magic",
+			isMCISet : true,
+			releaseDate : "2000-02-01",
+			border : "black",
+			type : "promo"
 		},
 		{
 			name : "Nemesis",
@@ -1711,17 +1721,7 @@
 			{ match : {name : "Goblin Mime"}, replace : {flavor : "Mung noticed a few clouds gathering in the sky. Perhaps today he could perform his \"walking against the wind\" routine."}},
 			{ match : {name : "Man-o'-War"}, replace : {flavor : "\"Beauty to the eye does not always translate to the touch.\"\n—Naimah, Femeref philospher"}},
 			{ match : {name : "Pouncing Jaguar"}, replace : {flavor : "One pounce, she's hungry—you die quickly. Two, she's teaching her cubs—you're in for a long day."}},
-			{ match : {name : "Rewind"}, replace : {flavor : "\"Time flows like a river. In Tolaria we practice the art of building dams.\"\n—Barrin, master wizard"}},
-			{ match : {name : ""}, replace : {flavor : ""}},
-			{ match : {name : ""}, replace : {flavor : ""}},
-			{ match : {name : ""}, replace : {flavor : ""}},
-			{ match : {name : ""}, replace : {flavor : ""}},
-			{ match : {name : ""}, replace : {flavor : ""}},
-			{ match : {name : ""}, replace : {flavor : ""}},
-			{ match : {name : ""}, replace : {flavor : ""}},
-			{ match : {name : ""}, replace : {flavor : ""}},
-			{ match : {name : ""}, replace : {flavor : ""}},
-			{ match : {name : ""}, replace : {flavor : ""}},
+			{ match : {name : "Rewind"}, replace : {flavor : "\"Time flows like a river. In Tolaria we practice the art of building dams.\"\n—Barrin, master wizard"}}
 		],
 		MIR :
 		[
@@ -2128,6 +2128,14 @@
 			{ renumberImages : "Swamp", order : [21171, 22370, 22369, 22368] },
 			{ match : {multiverseid : 22339}, replace : {artist : "Rob Alexander"} }
 		],
+		pFNM :
+		[
+			{ match : {name : "Crystalline Sliver"}, replace : {releaseDate:"2008-06", source : "Summer Series Grand Prix events participation bonus. Creating a Magic Online account or filling out a survey on site at PAX East."}},
+			{ match : {name : "Engineered Plague"}, replace : {flavor : "\"The admixture of bitterwort in the viral brew has produced most favorable results.\"\n—Phyrexian progress notes"}},
+			{ match : {name : ["Fact or Fiction", "Force Spike"]}, remove : ["flavor"]},
+			{ match : {name : "Ophidian"}, replace : {flavor : "\"I will ... tell thee more than thou hast wit to ask.\"\n—Christopher Marlowe, Doctor Faustus"}},
+			{ match : {name : "Wing Shards"}, replace : {releaseDate:"2007-09-01", source : "Friday Night Magic prize"}}
+		],
 		NMS :
 		[
 			{ match : {name : "Wild Mammoth"}, replace : {flavor : "\"Sit. Heel! Down! HELP!\""}}
@@ -2199,7 +2207,7 @@
 			{ match : {name : "Underground River"}, replace : {number : "41", originalText : "{T}: Add one colorless mana to your mana pool.\n{T}: Add {U} or {B} to your mana pool. Underground River deals 1 damage to you."}},
 			{ match : {name : "Walking Wall"}, replace : {number : "38", originalText : "(Walls can't attack.)\n{3}: Walking Wall gets +3/-1 until end of turn and may attack this turn as though it weren't a Wall. Play this ability only once each turn.", artist : "Anthony S. Waters"}},
 			{ match : {name : "Woolly Spider"}, replace : {number : "30", originalText : "Woolly Spider may block as though it had flying.\nWhenever Woolly Spider blocks a creature with flying, Woolly Spider gets +0/+2 until end of turn."}},
-			{ match : {name : "Yavimaya Ancients"}, replace : {number : "31a", originalText : "{G}: Yavimaya Ancients gets +1/-2 until end of turn.", flavor : "\"We orphans of Fyndhorn have found no welcome in this alient place.\"\n — Taaveti of Kelsinko, elvish hunter"}},
+			{ match : {name : "Yavimaya Ancients"}, replace : {number : "31a", originalText : "{G}: Yavimaya Ancients gets +1/-2 until end of turn.", flavor : "\"We orphans of Fyndhorn have found no welcome in this alient place.\"\n—Taaveti of Kelsinko, elvish hunter"}},
 			{ match : {name : "Yavimaya Ants"}, replace : {number : "32", originalText : "Trample; haste (This creature may attack and {T} the turn it comes under your control.)\nCumulative upkeep {G}{G} (At the beginning of your upkeep, put an age counter on this creature, then sacrifice it unless you pay {G}{G} for each age counter on it.)"}}
 		],
 		TOR :
@@ -2420,12 +2428,7 @@
 		],
 		pPRO :
 		[
-			{ match : "*", replace : {watermark : "Pro Tour"}},
 			{ match : {name : "Mirari's Wake"}, replace : {flavor : "Even after a false god tore magic from Dominaria, power still radiated from the Mirari sword that slew her."}}
-		],
-		pGPX :
-		[
-			{ match : {name : ["Call of the Herd", "Chrome Mox", "Maelstrom Pulse", "Spiritmonger", "Umezawa's Jitte"]}, replace : {watermark : "Grand Prix"}},
 		],
 		FUT :
 		[
@@ -2479,10 +2482,6 @@
 		[
 			{ match : {name : "Sage's Dousing"}, replace : {flavor : "\"Curse these merrows and their meddling! Since coming near the river, I can't so much as sneeze without being soaked.\"\n—Ashling the Pilgrim"}},
 			{ match : {name : "Sensation Gorger"}, replace : {flavor : "More, more, more!"}}
-		],
-		p15A :
-		[
-			{ match : "*", replace : {watermark : "15th"}}
 		],
 		SHM :
 		[

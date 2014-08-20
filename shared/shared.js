@@ -245,14 +245,23 @@ exports.performSetCorrections = function(setCorrections, cards)
 			delete card.legalities;
 	});
 
-	// Flavor text quote newline
+	// Flavor text quotes and newlines
 	cards.forEach(function(card)
 	{
-		if(!card.flavor || !card.flavor.contains("—"))
+		if(!card.flavor)
 			return;
 
-		// Ensure the first quote appears before the last em-dash
-		if(card.flavor.indexOf('"')===-1 || card.flavor.indexOf('"')>card.flavor.lastIndexOf("—"))
+		card.flavor = card.flavor.replaceAll("“", "\"");
+		card.flavor = card.flavor.replaceAll("”", "\"");
+		card.flavor = card.flavor.replaceAll("＂", "\"");
+
+		if(!card.flavor.contains("—"))
+			return;
+
+		// Ensure two quotes appear before the last em-dash
+		var firstQuoteIdx = card.flavor.indexOf('"');
+		var secondQuoteIdx = card.flavor.substring(firstQuoteIdx+1).indexOf('"');
+		if(firstQuoteIdx===-1 || secondQuoteIdx===-1 || secondQuoteIdx>card.flavor.lastIndexOf("—"))
 			return;
 
 		card.flavor = card.flavor.replace(/\s*—\s*([^—]+)\s*$/, "\n—$1");
