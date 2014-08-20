@@ -981,6 +981,8 @@ function ripMCISet(set, cb)
 				return setImmediate(function() { cb(err); });
 			}
 
+			set.cards = set.cards.sort(shared.cardComparator);
+
 			// Warn about missing fields
 			set.cards.forEach(function(card)
 			{
@@ -1298,8 +1300,12 @@ function addReleaseDatesAndSourcesToMCISet(set, cb)
 					releaseDateText = releaseDateText.replaceAll("/", "-");
 
 				var releaseDate = ([/^([0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9])\/?.*/,
+									/^([0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]?)\/[0-9]+$/,
 									/^([0-9][0-9][0-9][0-9]-[0-9][0-9])$/,
 									/^([0-9][0-9][0-9][0-9])$/].mutateOnce(function(re) { if(re.test(releaseDateText)) { return releaseDateText.replace(re, "$1"); } }));
+
+				releaseDate = releaseDate.replace(/-([0-9])$/, "-0$1");
+
 				if(releaseDate)
 					cardNames.forEach(function(cardName) { if(!releaseDatesAndSources.hasOwnProperty(cardName)) { releaseDatesAndSources[cardName] = {releaseDate : releaseDate, source : sourceText}; }});
 				else
@@ -1312,7 +1318,7 @@ function addReleaseDatesAndSourcesToMCISet(set, cb)
 				if(!releaseDatesAndSources.hasOwnProperty(cardNameNormalized))
 					return;
 
-				card.source = releaseDatesAndSources[cardNameNormalized].source;
+				card.source = releaseDatesAndSources[cardNameNormalized].source.replaceAll("� ", " ");
 				card.releaseDate = releaseDatesAndSources[cardNameNormalized].releaseDate;
 			});
 

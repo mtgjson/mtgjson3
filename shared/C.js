@@ -418,6 +418,16 @@
 			type : "box"
 		},
 		{
+			name : "Super Series",
+			code : "pSUS",
+			magicCardsInfoCode : "sus",
+			magicRaritiesCodes : "36-rarities-junior-super-series",
+			isMCISet : true,
+			releaseDate : "1999-12-01",
+			border : "black",
+			type : "promo"
+		},
+		{
 			name : "Friday Night Magic",
 			code : "pFNM",
 			magicCardsInfoCode : "fnmp",
@@ -499,6 +509,16 @@
 			border : "white",
 			type : "core",
 			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land"]
+		},
+		{
+			name : "Magic Player Rewards",
+			code : "pMPR",
+			magicCardsInfoCode : "mprp",
+			magicRaritiesCodes : "29-rarities-magic-player-rewards",
+			isMCISet : true,
+			releaseDate : "2001-05-01",
+			border : "black",
+			type : "promo"
 		},
 		{
 			name : "Apocalypse",
@@ -769,6 +789,16 @@
 			block : "Time Spiral"
 		},
 		{
+			name : "Happy Holidays",
+			code : "pHHO",
+			magicCardsInfoCode : "hho",
+			magicRaritiesCodes : "19-rarities-happy-holidays-gift-card",
+			isMCISet : true,
+			releaseDate : "2006-12-31",
+			border : "silver",
+			type : "promo"
+		},
+		{
 			name : "Planar Chaos",
 			code : "PLC",
 			magicCardsInfoCode : "pc",
@@ -787,7 +817,7 @@
 			releaseDate : "2007-02-09",
 			border : "black",
 			type : "promo"
-		},		
+		},
 		{
 			name : "Grand Prix",
 			code : "pGPX",
@@ -2128,6 +2158,12 @@
 			{ renumberImages : "Swamp", order : [21171, 22370, 22369, 22368] },
 			{ match : {multiverseid : 22339}, replace : {artist : "Rob Alexander"} }
 		],
+		pSUS :
+		[
+			{ match : {name : "City of Brass"}, replace : {flavor : "\"Enter this palace-gate and ask the news Of greatness fallen into dust and clay.\"\n—The Arabian Nights, trans. Burton"}},
+			{ match : {name : "Elvish Champion"}, replace : {flavor : "\"We've endured your slights to Gaea with the grace of tolerance. Now behold the grace of our ferocity.\""}},
+			{ match : {name : "Whirling Dervish"}, replace : {flavor : "Amid this whirling hurricane of blades, there is no calm eye in which the hapless can find shelter."}}
+		],
 		pFNM :
 		[
 			{ match : {name : "Crystalline Sliver"}, replace : {releaseDate:"2008-06", source : "Summer Series Grand Prix events participation bonus. Creating a Magic Online account or filling out a survey on site at PAX East."}},
@@ -2159,6 +2195,10 @@
 		[
 			{ renumberImages : "Ertai, the Corrupted", order : [25614, 29292] },
 			{ renumberImages : "Skyship Weatherlight", order : [26480, 29293] }
+		],
+		pMPR :
+		[
+			{ match : {name : ["Brave the Elements", "Doom Blade", "Treasure Hunt"]}, remove : ["flavor"]}			
 		],
 		ODY :
 		[
@@ -2418,6 +2458,33 @@
 			{ match : "*", replace : {timeshifted : true}},
 			{ match : {name : ["Pandemonium"]}, flavorAddExclamation : true },
 			{ match : {name : "Craw Giant"}, replace : {flavor : "Harthag gave a jolly laugh as he surveyed the army before him. \"Ho ho ho! Midgets! You think you can stand in my way?\""}}
+		],
+		pHHO :
+		[
+			{ match : {name : "Naughty/Nice"}, replace :
+				{
+					layout      : "split",
+					name        : "Naughty",
+					manaCost    : "1{B}{B}",
+					releaseDate : "2012",
+					cmc         : 3,
+					colors      : ["Black"],
+					text        : "Search another target player's library for a card and put that card into your hand. Then shuffle that player's library.",
+					number      : "7a",
+					source      : "Holiday gift to Wizards internal teams and business partners."
+				}
+			},
+			{ copyCard : "Naughty", replace :
+				{
+					name         : "Nice",
+					number       : "7b",
+					text         : "Search your library for a card and put it into another target player's hand. Then shuffle your library",
+					manaCost     : "1{W}{W}",
+					colors       : ["White"]
+				}
+			},
+
+
 		],
 		PLC :
 		[
