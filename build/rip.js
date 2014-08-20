@@ -386,7 +386,7 @@ function processCardPart(doc, cardPart, printedDoc, printedCardPart)
 	var rulingRows = cardPart.querySelectorAll(idPrefix + "_rulingsContainer table tr.post");
 	if(rulingRows.length)
 	{
-		card.rulings = Array.toArray(rulingRows).map(function(rulingRow) { return { date : moment(getTextContent(rulingRow.querySelector("td:first-child")).trim(), "MM/DD/YYYY").format("YYYY-MM-DD"), text : getTextContent(rulingRow.querySelector("td:last-child")).trim()}; });
+		card.rulings = Array.toArray(rulingRows).map(function(rulingRow) { return { date : moment(getTextContent(rulingRow.querySelector("td:first-child")).trim(), "MM/DD/YYYY").format("YYYY-MM-DD"), text : getTextContent(rulingRow.querySelector("td:last-child")).innerTrim().trim()}; });
 		var seenRulings = [];
 		card.rulings = card.rulings.reverse().filter(function(ruling) { if(seenRulings.contains(ruling.text)) { return false; } seenRulings.push(ruling.text); return true; }).reverse();
 	}
@@ -577,6 +577,8 @@ function getForeignNamesForCardName(sets, cardName, cb)
 				{
 					var language = getTextContent(cardRow.querySelector("td:nth-child(2)")).trim();
 					var foreignCardName = getTextContent(cardRow.querySelector("td:nth-child(1) a")).innerTrim().trim();
+					if(foreignCardName.startsWith("XX"))
+						foreignCardName = foreignCardName.substring(2);
 					if(language && foreignCardName && !seenLanguages.contains(language) && cardName!==foreignCardName)
 					{
 						seenLanguages.push(language);
@@ -952,16 +954,9 @@ function ripMCISet(set, cb)
 				this();
 			}
 		},
-		function performCorrections()
-		{
-			base.info("Doing set corrections...");
-			shared.performSetCorrections(shared.getSetCorrections(set.code), set.cards);
-
-			this();
-		},
 		function cleanupMCICards()
 		{
-			base.info("Performing final cleanups on MCI card data...");
+			base.info("Performing cleanups on MCI card data...");
 
 			set.cards.forEach(function(card)
 			{
@@ -971,6 +966,13 @@ function ripMCISet(set, cb)
 					card.flavor = card.flavor.replace(/(\s)-/, "$1—");
 				}
 			});
+
+			this();
+		},
+		function performCorrections()
+		{
+			base.info("Doing set corrections...");
+			shared.performSetCorrections(shared.getSetCorrections(set.code), set.cards);
 
 			this();
 		},
@@ -1254,7 +1256,7 @@ function addReleaseDatesAndSourcesToMCISet(set, cb)
 	tiptoe(
 		function getMagicRaritiesList()
 		{
-			set.magicRaritiesCodes.forEach(function(magicRaritiesCode)
+			Array.toArray(set.magicRaritiesCodes).forEach(function(magicRaritiesCode)
 			{
 				getURLAsDoc("http://www.magiclibrarities.net/" + magicRaritiesCode + "-english-cards-index.html", this.parallel());
 			}.bind(this));
@@ -1313,11 +1315,8 @@ function addReleaseDatesAndSourcesToMCISet(set, cb)
 				if(!releaseDatesAndSources.hasOwnProperty(cardNameNormalized))
 					return;
 
-				if(card.releaseDate===set.releaseDate)
-					return;
-
-				card.releaseDate = releaseDatesAndSources[cardNameNormalized].releaseDate;
 				card.source = releaseDatesAndSources[cardNameNormalized].source;
+				card.releaseDate = releaseDatesAndSources[cardNameNormalized].releaseDate;
 			});
 
 			this();

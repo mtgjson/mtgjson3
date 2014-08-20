@@ -233,6 +233,7 @@ function checkSetForProblems(setCode, cb)
 		timeshifted  : "boolean",
 		reserved     : "boolean",
 		source       : "string",
+		releaseDate  : "string",
 		legalities   : {}
 	};
 

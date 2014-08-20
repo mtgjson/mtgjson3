@@ -13,7 +13,6 @@ var base = require("xbase"),
 	path = require("path"),
 	tiptoe = require("tiptoe");
 
-process.exit(0);
 tiptoe(
 	function processSets()
 	{
@@ -46,11 +45,21 @@ function checkSet(setCode, cb)
 			var set = JSON.parse(setRaw);
 			set.cards.forEach(function(card)
 			{
-				if(card.supertypes && card.supertypes.contains("Basic") && card.types && card.types.contains("Land"))
-					delete card.text;
+				if(card.name.toLowerCase().startsWith("xx"))
+					base.info("Name starts with xx: %s (%s)", card.name, setCode);
+
+				if(!card.foreignNames)
+					return;
+
+				card.foreignNames.forEach(function(foreignName)
+				{
+					if(foreignName.name.toLowerCase().startsWith("xx"))
+						base.info("foreignName Name starts with xx: language [%s]  name [%s]  setCode (%s)", foreignName.language, foreignName.name, setCode);
+				});
 			});
 
-			fs.writeFile(path.join(__dirname, "..", "json", setCode + ".json"), JSON.stringify(set), {encoding : "utf8"}, this);
+			//fs.writeFile(path.join(__dirname, "..", "json", setCode + ".json"), JSON.stringify(set), {encoding : "utf8"}, this);
+			this();
 		},
 		function finish(err)
 		{

@@ -183,9 +183,9 @@ exports.performSetCorrections = function(setCorrections, cards)
 					if(setCorrection.flavorAddExclamation)
 						card.flavor = card.flavor.replace(/([A-Za-z])"/, "$1!\"", "gm");
 
-					if((setCorrection.flavorAddDash || setCorrection.flavorAddDashWithNewline) && card.flavor)
+					if(setCorrection.flavorAddDash && card.flavor)
 					{
-						card.flavor = card.flavor.replace(/([.!?,'])(["][/]?[\n]?)(\s*)([A-Za-z])/, (setCorrection.flavorAddDashWithNewline ? "$1$2$3\n—$4" : "$1$2$3 —$4"), "gm");
+						card.flavor = card.flavor.replace(/([.!?,'])(["][/]?[\n]?)(\s*)([A-Za-z])/, "$1$2$3\n—$4", "gm");
 						while(card.flavor.contains("  —"))
 						{
 							card.flavor = card.flavor.replace("  —", " —");
@@ -243,7 +243,20 @@ exports.performSetCorrections = function(setCorrections, cards)
 	{
 		if(card.hasOwnProperty("legalities") && Object.keys(card.legalities).length===0)
 			delete card.legalities;
-	}); 
+	});
+
+	// Flavor text quote newline
+	cards.forEach(function(card)
+	{
+		if(!card.flavor || !card.flavor.contains("—"))
+			return;
+
+		// Ensure the first quote appears before the last em-dash
+		if(card.flavor.indexOf('"')===-1 || card.flavor.indexOf('"')>card.flavor.lastIndexOf("—"))
+			return;
+
+		card.flavor = card.flavor.replace(/\s*—\s*([^—]+)\s*$/, "\n—$1");
+	});
 };
 
 exports.generateCacheFilePath = generateCacheFilePath;

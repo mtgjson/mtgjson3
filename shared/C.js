@@ -10,7 +10,7 @@
 
 	exports.LAST_PRINTINGS_RESET = "M15";
 
-	exports.SETS_NOT_ON_GATHERER = ["HHO", "ATH", "ITP", "DKM", "RQS", "DPA"];
+	exports.SETS_NOT_ON_GATHERER = ["ATH", "ITP", "DKM", "RQS", "DPA"];
 	exports.SETS_WITH_NO_IMAGES = [];
 
 	exports.SETS =
@@ -95,13 +95,6 @@
 			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"]
 		},
 		{
-			name : "Promo set for Gatherer",
-			code : "PPR",
-			releaseDate : "1994-07-01",
-			border : "black",
-			type : "promo"
-		},
-		{
 			name : "The Dark",
 			code : "DRK",
 			gathererCode : "DK",
@@ -179,6 +172,16 @@
 			releaseDate : "1996-07-01",
 			border : "white",
 			type : "box"
+		},
+		{
+			name : "Arena League",
+			code : "pARL",
+			magicCardsInfoCode : "arena",
+			magicRaritiesCodes : "7-rarities-arena-league-promos",
+			isMCISet : true,
+			releaseDate : "1996-08-02",
+			border : "black",
+			type : "promo"
 		},
 		{
 			name : "Mirage",
@@ -677,6 +680,16 @@
 			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"]
 		},
 		{
+			name : "Two-Headed Giant Tournament",
+			code : "p2HG",
+			magicCardsInfoCode : "thgt",
+			magicRaritiesCodes : "13-rarities-two-headed-giant",
+			isMCISet : true,
+			releaseDate : "2005-12-09",
+			border : "black",
+			type : "promo"
+		},
+		{
 			name : "WPN and Gateway",
 			code : "pWPN",
 			magicCardsInfoCode : "grc",
@@ -685,7 +698,7 @@
 			releaseDate : "2006-01-01",
 			border : "black",
 			type : "promo"
-		},		
+		},
 		{
 			name : "Guildpact",
 			code : "GPT",
@@ -695,6 +708,16 @@
 			type : "expansion",
 			block : "Ravnica",
 			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"]
+		},
+		{
+			name : "Champs and States",
+			code : "pCMP",
+			magicCardsInfoCode : "cp",
+			magicRaritiesCodes : "54-rarities-champs-cards",
+			isMCISet : true,
+			releaseDate : "2006-03-18",
+			border : "black",
+			type : "promo"
 		},
 		{
 			name : "Dissension",
@@ -734,13 +757,6 @@
 			border : "black",
 			type : "expansion",
 			block : "Time Spiral"
-		},
-		{
-			name : "Happy Holidays",
-			code : "HHO",
-			releaseDate : "2006-12-25",
-			border : "silver",
-			type : "promo",
 		},
 		{
 			name : "Planar Chaos",
@@ -1452,7 +1468,7 @@
 			{ match : {name : "Pearled Unicorn"}, replace : {flavor : "\"‘Do you know, I always thought Unicorns were fabulous monsters, too? I never saw one alive before!' ‘Well, now that we have seen each other,' said the Unicorn, ‘if you'll believe in me, I'll believe in you.'\"\n—Lewis Carroll"}},
 			{ match : {name : "Roc of Kher Ridges"}, replace : {flavor : "We encountered a valley topped with immense boulders and eerie rock formations. Suddenly one of these boulders toppled from its perch and sprouted gargantuan wings, casting a shadow of darkness and sending us fleeing in terror."}},
 			{ match : {name : "Wall of Ice"}, replace : {flavor : "\"And through the drifts the snowy cliffs/ Did send a dismal sheen:/ Nor shapes of men nor beasts we ken—/ The ice was all between.\"/—Samuel Coleridge, \"The Rime of the Ancient Mariner\""}},
-			{ match : {name : "Wall of Brambles"}, flavorAddDashWithNewline : true},
+			{ match : {name : "Wall of Brambles"}, flavorAddDash : true},
 			{ match : {name : ["Ancestral Recall", "Badlands", "Bayou", "Black Lotus", "Blaze of Glory", "Braingeyser", "Chaos Orb", "Contract from Below", "Copy Artifact", "Cyclopean Tomb", "Darkpact", "Demonic Attorney", "Demonic Hordes", "Farmstead",
 							   "Fastbond", "Forcefield", "Fork", "Gauntlet of Might", "Granite Gargoyle", "Illusionary Mask", "Kudzu", "Lich", "Mox Emerald", "Mox Jet", "Mox Pearl", "Mox Ruby", "Mox Sapphire", "Natural Selection",
 							   "Plateau", "Raging River", "Roc of Kher Ridges", "Rock Hydra", "Savannah", "Scrubland", "Sedge Troll", "Taiga", "Time Vault", "Time Walk", "Timetwister", "Tropical Island", "Tundra", "Two-Headed Giant of Foriys",
@@ -1688,6 +1704,25 @@
 							   "Phelddagrif", "Phyrexian Devourer", "Phyrexian Portal", "Ritual of the Machine", "Rogue Skycaptain", "Royal Decree", "Sheltered Valley", "Soldevi Digger", "Soldevi Excavations", "Splintering Wind", "Sustaining Spirit",
 							   "Sworn Defender", "Thawing Glaciers", "Thought Lash", "Tidal Control", "Tornado", "Varchild's War-Riders", "Wandering Mage", "Winter's Night"]}, replace : {reserved : true}}
 		],	
+		pARL :
+		[
+			{ match : {name : ["Ashnod's Coupon", "Booster Tutor", "Circle of Protection: Art", "Goblin Mime", "Granny's Payback", "Mise"]}, replace : {border : "silver"}},
+			{ match : {name : "Castigate"}, replace : {flavor : "\"We have no need for military might. We wield two of the sharpest swords ever forged: Faith in our left hand, Wealth in our right.\"\n—Vuliev of the Ghost Council"}},
+			{ match : {name : "Goblin Mime"}, replace : {flavor : "Mung noticed a few clouds gathering in the sky. Perhaps today he could perform his \"walking against the wind\" routine."}},
+			{ match : {name : "Man-o'-War"}, replace : {flavor : "\"Beauty to the eye does not always translate to the touch.\"\n—Naimah, Femeref philospher"}},
+			{ match : {name : "Pouncing Jaguar"}, replace : {flavor : "One pounce, she's hungry—you die quickly. Two, she's teaching her cubs—you're in for a long day."}},
+			{ match : {name : "Rewind"}, replace : {flavor : "\"Time flows like a river. In Tolaria we practice the art of building dams.\"\n—Barrin, master wizard"}},
+			{ match : {name : ""}, replace : {flavor : ""}},
+			{ match : {name : ""}, replace : {flavor : ""}},
+			{ match : {name : ""}, replace : {flavor : ""}},
+			{ match : {name : ""}, replace : {flavor : ""}},
+			{ match : {name : ""}, replace : {flavor : ""}},
+			{ match : {name : ""}, replace : {flavor : ""}},
+			{ match : {name : ""}, replace : {flavor : ""}},
+			{ match : {name : ""}, replace : {flavor : ""}},
+			{ match : {name : ""}, replace : {flavor : ""}},
+			{ match : {name : ""}, replace : {flavor : ""}},
+		],
 		MIR :
 		[
 			{ renumberImages : "Forest", order : [3569, 3567, 3568, 3566] },
@@ -2542,10 +2577,6 @@
 		[
 			{ match : { name : "Colossus of Akros" }, replace : {text : "Defender, indestructible\n{10}: Monstrosity 10. (If this creature isn't monstrous, put ten +1/+1 counters on it and it becomes monstrous.)\nAs long as Colossus of Akros is monstrous, it has trample and can attack as though it didn't have defender."}},
 			{ match : { name : "Time to Feed" }, replace : {text : "Choose target creature an opponent controls. When that creature dies this turn, you gain 3 life. Target creature you control fights that creature. (Each deals damage equal to its power to the other.)"}}
-		],
-		PPR :
-		[
-			{ match : {name : "Shield of Kaldra"}, replace : {rarity : "Special"}}
 		],
 		"*" :
 		[
