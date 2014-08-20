@@ -888,8 +888,8 @@ function compareCardToMCI(card, mciCardURL, cb)
 		function compareProperties(mciCardDoc)
 		{
 			// Compare flavor
-			var cardFlavor = (card.flavor || "").trim().replaceAll("\n", " ").replaceAll(" —", "—").innerTrim();
-			var mciFlavor = processTextBlocks(mciCardDoc.querySelector("table tr td p i")).trim().replaceAll("\n", " ").replaceAll(" —", "—").innerTrim();
+			var cardFlavor = (card.flavor || "").trim().replaceAll("\n", " ").innerTrim().replaceAll(" —", "—");
+			var mciFlavor = processTextBlocks(mciCardDoc.querySelector("table tr td p i")).trim().replaceAll("\n", " ").innerTrim().replaceAll(" —", "—");
 			if(!mciFlavor && cardFlavor)
 				base.warn("FLAVOR: %s (%s) has flavor but MagicCardsInfo (%s) does not.", card.name, card.multiverseid, mciCardURL);
 			else if(mciFlavor && !cardFlavor)
