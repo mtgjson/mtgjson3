@@ -650,16 +650,16 @@
 								<br><span style="font-size: 80%; margin-left: 2.0em;">*<a href="#windowsWarning">Windows Warning</a></span>
 							{/isCON}
 						</td>
-						<td rowspan="2">{code}</td>
+						<td rowspan="2">{#shortCode}&nbsp;{/shortCode}{code}</td>
 						<td rowspan="2">{releaseDate}</td>
 						<td class="sizeColLeft">
-							<a href="json/{code}.json">{code}.json</a>
+							{#shortCode}&nbsp;{/shortCode}<a href="json/{code}.json">{code}.json</a>
 						</td>
 						<td class="sizeColRight">
 							<span class="size">{size|s}</span>
 						</td>
 						<td class="sizeColLeft">
-							<a href="json/{code}-x.json">{code}-x.json</a>
+							{#shortCode}&nbsp;{/shortCode}<a href="json/{code}-x.json">{code}-x.json</a>
 						</td>
 						<td class="sizeColRight">
 							<span class="size">{sizeX|s}</span>
@@ -667,13 +667,13 @@
 					</tr>
 					<tr class="secondRow">
 						<td class="sizeColLeft">
-							<a href="json/{code}.json.zip">{code}.json.zip</a>
+							{#shortCode}&nbsp;{/shortCode}<a href="json/{code}.json.zip">{code}.json.zip</a>
 						</td>
 						<td class="sizeColRight">
 							<span class="size">{sizeZip|s}</span>
 						</td>
 						<td class="sizeColLeft">
-							<a href="json/{code}-x.json.zip">{code}-x.json.zip</a>
+							{#shortCode}&nbsp;{/shortCode}<a href="json/{code}-x.json.zip">{code}-x.json.zip</a>
 						</td>
 						<td class="sizeColRight">
 							<span class="size">{sizeXZip|s}</span>

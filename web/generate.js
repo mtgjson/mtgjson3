@@ -89,6 +89,9 @@ tiptoe(
 			var dustSetData = {code : SET.code, name : SET.name, releaseDate : SET.releaseDate, size : setSize, sizeX : setXSize};
 			if(SET.code==="CON")
 				dustSetData.isCON = true;
+			if(SET.code.length===3)
+				dustSetData.shortCode = true;
+
 			dustData.sets.push(dustSetData);
 		}.bind(this));
 
