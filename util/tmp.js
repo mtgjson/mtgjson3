@@ -45,8 +45,16 @@ function checkSet(setCode, cb)
 			var set = JSON.parse(setRaw);
 			set.cards.forEach(function(card)
 			{
-				if(card.flavor && card.flavor.contains("“"))
-					base.info("Flavor contains curly quote: %s (%s) %s", card.name, setCode, card.flavor);
+				if(!card.flavor)
+					return;
+
+				var firstQuoteIdx = card.flavor.indexOf('"');
+				var secondQuoteIdx = card.flavor.substring(firstQuoteIdx+1).indexOf('"');
+				if(firstQuoteIdx===-1 || secondQuoteIdx===-1 || secondQuoteIdx>card.flavor.lastIndexOf("—"))
+					return;
+
+				if(/[^\n]—[^—]+$/.test(card.flavor))
+					base.info("Flavor contains non-newline before em-dash: %s (%s) %s", card.name, setCode, card.flavor);
 			});
 
 			//fs.writeFile(path.join(__dirname, "..", "json", setCode + ".json"), JSON.stringify(set), {encoding : "utf8"}, this);

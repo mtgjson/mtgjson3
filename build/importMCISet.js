@@ -31,7 +31,6 @@ setsToDo.serialForEach(function(arg, subcb)
 	tiptoe(
 		function build()
 		{
-			base.info("Ripping set: %s (%s)", targetSet.name, targetSet.code);
 			rip.ripMCISet(targetSet, this);
 		},
 		function save(set)

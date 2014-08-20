@@ -105,6 +105,20 @@
 			booster : ["uncommon", "uncommon", "common", "common", "common", "common", "common", "common"]
 		},
 		{
+			name : "Media Inserts",
+			code : "pMEI",
+			magicCardsInfoCode : "mbp",
+			magicRaritiesCodes : ["189-rarities-agent-of-artifice-novel-promo-insert", "109-rarities-harperprism-book-inserts", "20-rarities-armada-comics-book-promos", "175-rarities-coro-coro-comic-book-inserts", "296-rarities-dengeki-maoh-magazine-inserts",
+								  "81-rarities-gotta-magazine-cards", "196-rarities-hachette-french-magic-encyclopedia-inserts", "197-rarities-hachette-italian-magic-encyclopedia-inserts", "765-rarities-idw-comics-book-inserts",
+								  "16-rarities-kartefakt-magazine-promo", "121-rarities-players-guide-inserts", "228-rarities-rpg-magazine-inserts", "135-rarities-salvat-magic-encyclopedia-cards", "134-rarities-the-cardz-magazine-inserts",
+								  "22-rarities-the-duelist-cards", "18-rarities-topdeck-cards", "258-rarities-buy-a-box-promos", "787-rarities-holiday-gift-box", "224-rarities-duels-of-the-planeswalkers-software-promos",
+								  "160-rarities-resale-promos", "686-rarities-convention-and-various-promos"],
+			isMCISet : true,
+			releaseDate : "1995-01-01",
+			border : "black",
+			type : "promo"
+		},
+		{
 			name : "Fallen Empires",
 			code : "FEM",
 			gathererCode : "FE",
@@ -1678,6 +1692,38 @@
 			{ match : {name : ["City of Shadows", "Cleansing", "Eternal Flame", "Exorcist", "Frankenstein's Monster", "Goblin Wizard", "Grave Robbers", "Hidden Path", "Knights of Thorn", "Lurker", "Mana Vortex", "Martyr's Cry",
 							   "Nameless Race", "Niall Silvain", "Preacher", "Psychic Allergy", "Scarwood Bandits", "Season of the Witch", "Sorrow's Path", "Stone Calendar", "Tracker", "Worms of the Earth", "Wormwood Treefolk"]}, replace : {reserved : true}}
 		],
+		pMEI :
+		[
+			//{match : {name : ["Bloodthrone Vampire"]}, replace : {releaseDate : "2011"}},
+			{match : {name : [""]}, replace : {releaseDate : "2012"}},
+			//{match : {name : ["Angel of Glory's Rise", "Chandra's Fury", "Chandra, Pyromaster"]}, replace : {releaseDate : "2013"}},
+			{match : {name : ""}, replace : {releaseDate : ""}},
+			{match : {name : ""}, replace : {releaseDate : ""}},
+			{match : {name : ""}, replace : {releaseDate : ""}},
+			{match : {name : ""}, replace : {releaseDate : ""}},
+			{match : {name : ""}, replace : {releaseDate : ""}},
+			{match : {name : ""}, replace : {releaseDate : ""}},
+			{match : {name : ""}, replace : {releaseDate : ""}},
+			{match : {name : ""}, replace : {releaseDate : ""}},
+			{match : {name : ""}, replace : {releaseDate : ""}},
+			{match : {name : ""}, replace : {releaseDate : ""}},
+			{match : {name : ""}, replace : {releaseDate : ""}},
+			{match : {name : "Arrest"}, replace : {flavor : "Fayden didn't know if the giant had created the spehere's magic—only that he had to escape it to find Sifa."}},
+			{match : {name : ["Bloodthrone Vampire", "Kor Skyfisher", "Merfolk Mesmerist"]}, replace : {flavor : "www.MagicTheGathering.com"}},
+			{match : {name : "Knight Exemplar"}, replace : {flavor : "\"If you think you are brave enough to walk the path of honor, follow me into the dragon's den.\""}},
+			{match : {name : ""}, replace : {flavor : ""}},
+			{match : {name : ""}, replace : {flavor : ""}},
+			{match : {name : ""}, replace : {flavor : ""}},
+			{match : {name : ""}, replace : {flavor : ""}},
+			{match : {name : ""}, replace : {flavor : ""}},
+			{match : {name : ""}, replace : {flavor : ""}},
+			{match : {name : ""}, replace : {flavor : ""}},
+			{match : {name : ""}, replace : {flavor : ""}},
+			{match : {name : ""}, replace : {flavor : ""}},
+			{match : {name : ""}, replace : {flavor : ""}},
+			{match : {name : ""}, replace : {flavor : ""}},
+			{match : {name : ["Blue Elemental Blast", "Fireball", "Spined Wurm"]}, replace : {border : "white"}},
+		],
 		FEM :
 		[
 			{ renumberImages : "Armor Thrull", order : [1841, 1840, 1838, 1839] },
@@ -2119,7 +2165,8 @@
 			{ match : {name : "Priest of Titania"}, replace : {flavor : "Titania rewards all those who honor the forest by making them a living part of it."}},
 			{ match : {name : "Sanguine Guard"}, replace : {flavor : "\"Father of Machines! Your filigree gaze carves us, and the scars dance upon our grateful flesh.\"\n—Phyrexian Scriptures"}},
 			{ match : {name : ["Argothian Wurm", "Barrin, Master Wizard", "Citanul Centaurs", "Gaea's Cradle", "Gilded Drake", "Great Whale", "Herald of Serra", "Karn, Silver Golem", "Lifeline", "Lightning Dragon", "Morphling", "Opal Archangel",
-							   "Serra's Sanctum", "Tolarian Academy", "Temporal Aperture", "Time Spiral", "Yawgmoth's Will", "Zephid"]}, replace : {reserved : true}}
+							   "Serra's Sanctum", "Tolarian Academy", "Temporal Aperture", "Time Spiral", "Yawgmoth's Will", "Zephid"]}, replace : {reserved : true}},
+			{ match : {name : "Serra Zealot"}, fixFlavorNewlines : true}
 		],
 		ATH :
 		[
@@ -2723,17 +2770,27 @@
 			{ match : {name : "Swamp"}, replace : {number : "102"}},
 			{ match : {name : "The Rack"}, replace : {artist : "Nic Klein"}, remove : ["flavor"]}
 		],
+		M14 :
+		[
+			{ match : "*", fixFlavorNewlines : true },
+			{ match : { name : "Canyon Minotaur"}, replace : {flavor : "\"We'll scale these cliffs, traverse Brittle Bridge, and then fight our way down the volcanic slopes on the other side.\"\n\"Isn't the shortest route through the canyon?\"\n\"Yes.\"\n\"So shouldn't we—\"\n\"No.\""}}
+		],
 		DDL :
 		[
 			{ match : { name : "Anax and Cymede" }, replace : {text : "First strike, vigilance\nHeroic — Whenever you cast a spell that targets Anax and Cymede, creatures you control get +1/+1 and gain trample until end of turn."}},
 			{ match : { name : "Cavalry Pegasus" }, replace : {text : "Flying\nWhenever Cavalry Pegasus attacks, each attacking Human gains flying until end of turn."}},
 			{ match : { name : "Ordeal of Purphoros" }, replace : {text : "Enchant creature\nWhenever enchanted creature attacks, put a +1/+1 counter on it. Then if it has three or more +1/+1 counters on it, sacrifice Ordeal of Purphoros.\nWhen you sacrifice Ordeal of Purphoros, it deals 3 damage to target creature or player."}},
-			{ match : { name : "Polukranos, World Eater" }, replace : {text : "{X}{X}{G}: Monstrosity X. (If this creature isn't monstrous, put X +1/+1 counters on it and it becomes monstrous.)\nWhen Polukranos, World Eater becomes monstrous, it deals X damage divided as you choose among any number of target creatures your opponents control. Each of those creatures deals damage equal to its power to Polukranos."}}
+			{ match : { name : "Polukranos, World Eater" }, replace : {text : "{X}{X}{G}: Monstrosity X. (If this creature isn't monstrous, put X +1/+1 counters on it and it becomes monstrous.)\nWhen Polukranos, World Eater becomes monstrous, it deals X damage divided as you choose among any number of target creatures your opponents control. Each of those creatures deals damage equal to its power to Polukranos."}},
+			{ match : "*", fixFlavorNewlines : true },
 		],
 		THS :
 		[
 			{ match : { name : "Colossus of Akros" }, replace : {text : "Defender, indestructible\n{10}: Monstrosity 10. (If this creature isn't monstrous, put ten +1/+1 counters on it and it becomes monstrous.)\nAs long as Colossus of Akros is monstrous, it has trample and can attack as though it didn't have defender."}},
 			{ match : { name : "Time to Feed" }, replace : {text : "Choose target creature an opponent controls. When that creature dies this turn, you gain 3 life. Target creature you control fights that creature. (Each deals damage equal to its power to the other.)"}}
+		],
+		C13 :
+		[
+			{ match : "*", fixFlavorNewlines : true }
 		],
 		"*" :
 		[
@@ -2746,6 +2803,7 @@
 
 	exports.SET_CORRECTIONS["LEB"].pushAll(exports.SET_CORRECTIONS["LEA"]);	// All of LEA rules apply to LEB
 	exports.SET_CORRECTIONS["2ED"].pushAll(exports.SET_CORRECTIONS["LEA"]);	// All of LEA rules apply to 2ED
+	exports.SETS.forEach(function(SET) { if(SET.isMCISet) { if(!exports.SET_CORRECTIONS.hasOwnProperty(SET.code)) { exports.SET_CORRECTIONS[SET.code] = []; } exports.SET_CORRECTIONS[SET.code].push({match : "*", fixFlavorNewlines:true}); }});
 
 	exports.ARTIST_CORRECTIONS =
 	{
