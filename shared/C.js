@@ -882,6 +882,7 @@
 		{
 			name : "Happy Holidays",
 			code : "pHHO",
+			oldCode : "HHO",
 			magicCardsInfoCode : "hho",
 			magicRaritiesCodes : "19-rarities-happy-holidays-gift-card",
 			isMCISet : true,
@@ -1577,7 +1578,14 @@
 			border : "black",
 			type : "core",
 			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"]
-		}
+		},
+		{
+			name : "From the Vault: Annihilation (2014)",
+			code : "V14",
+			releaseDate : "2014-08-22",
+			border : "black",
+			type : "from the vault"
+		}		
 	];
 
 	exports.EXTRA_SET_CARD_PRINTINGS =
@@ -1694,34 +1702,10 @@
 		],
 		pMEI :
 		[
-			//{match : {name : ["Bloodthrone Vampire"]}, replace : {releaseDate : "2011"}},
-			{match : {name : [""]}, replace : {releaseDate : "2012"}},
-			//{match : {name : ["Angel of Glory's Rise", "Chandra's Fury", "Chandra, Pyromaster"]}, replace : {releaseDate : "2013"}},
-			{match : {name : ""}, replace : {releaseDate : ""}},
-			{match : {name : ""}, replace : {releaseDate : ""}},
-			{match : {name : ""}, replace : {releaseDate : ""}},
-			{match : {name : ""}, replace : {releaseDate : ""}},
-			{match : {name : ""}, replace : {releaseDate : ""}},
-			{match : {name : ""}, replace : {releaseDate : ""}},
-			{match : {name : ""}, replace : {releaseDate : ""}},
-			{match : {name : ""}, replace : {releaseDate : ""}},
-			{match : {name : ""}, replace : {releaseDate : ""}},
-			{match : {name : ""}, replace : {releaseDate : ""}},
-			{match : {name : ""}, replace : {releaseDate : ""}},
 			{match : {name : "Arrest"}, replace : {flavor : "Fayden didn't know if the giant had created the spehere's magic—only that he had to escape it to find Sifa."}},
 			{match : {name : ["Bloodthrone Vampire", "Kor Skyfisher", "Merfolk Mesmerist"]}, replace : {flavor : "www.MagicTheGathering.com"}},
 			{match : {name : "Knight Exemplar"}, replace : {flavor : "\"If you think you are brave enough to walk the path of honor, follow me into the dragon's den.\""}},
-			{match : {name : ""}, replace : {flavor : ""}},
-			{match : {name : ""}, replace : {flavor : ""}},
-			{match : {name : ""}, replace : {flavor : ""}},
-			{match : {name : ""}, replace : {flavor : ""}},
-			{match : {name : ""}, replace : {flavor : ""}},
-			{match : {name : ""}, replace : {flavor : ""}},
-			{match : {name : ""}, replace : {flavor : ""}},
-			{match : {name : ""}, replace : {flavor : ""}},
-			{match : {name : ""}, replace : {flavor : ""}},
-			{match : {name : ""}, replace : {flavor : ""}},
-			{match : {name : ""}, replace : {flavor : ""}},
+			{match : {name : "Mana Crypt"}, replace : {layout : "normal"}},
 			{match : {name : ["Blue Elemental Blast", "Fireball", "Spined Wurm"]}, replace : {border : "white"}},
 		],
 		FEM :
@@ -2606,7 +2590,9 @@
 					manaCost    : "1{B}{B}",
 					releaseDate : "2012",
 					cmc         : 3,
+					imageName   : "naughtynice",
 					colors      : ["Black"],
+					names       : ["Naughty", "Nice"],
 					text        : "Search another target player's library for a card and put that card into your hand. Then shuffle that player's library.",
 					number      : "7a",
 					source      : "Holiday gift to Wizards internal teams and business partners."
