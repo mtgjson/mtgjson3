@@ -5,6 +5,7 @@ var base = require("xbase"),
 	C = require("C"),
 	hash = require("mhash").hash,
 	path = require("path"),
+	moment = require("moment"),
 	querystring = require("querystring"),
 	fs = require("fs"),
 	url = require("url"),
@@ -183,6 +184,9 @@ exports.performSetCorrections = function(setCorrections, cards)
 					if(setCorrection.flavorAddExclamation)
 						card.flavor = card.flavor.replace(/([A-Za-z])"/, "$1!\"", "gm");
 
+					if(setCorrection.addPrinting)
+						card.printings = sortPrintings(card.printings.concat(Array.toArray(setCorrection.addPrinting)));
+
 					if(setCorrection.flavorAddDash && card.flavor)
 					{
 						card.flavor = card.flavor.replace(/([.!?,'])(["][/]?[\n]?)(\s*)([A-Za-z])/, "$1$2$3 —$4", "gm");
@@ -213,6 +217,8 @@ exports.performSetCorrections = function(setCorrections, cards)
 				var newCard = base.clone(cards.mutateOnce(function(card) { return card.name===setCorrection.copyCard ? card : undefined; }), true);
 				if(setCorrection.replace)
 					Object.forEach(setCorrection.replace, function(key, value) { newCard[key] = value; });
+				if(setCorrection.remove)
+					setCorrection.remove.forEach(function(removeKey) { delete newCard[removeKey]; });
 
 				cards.push(newCard);
 			}
@@ -276,6 +282,18 @@ function generateCacheFilePath(targetUrl)
 {
 	var urlHash = hash("whirlpool", targetUrl);
 	return  path.join(__dirname, "..", "cache", urlHash.charAt(0), urlHash);
+}
+
+exports.sortPrintings = sortPrintings;
+function sortPrintings(printings)
+{
+	return printings.unique().sort(function(a, b) { return moment(getReleaseDateForSet(a), "YYYY-MM-DD").unix()-moment(getReleaseDateForSet(b), "YYYY-MM-DD").unix(); });
+}
+
+exports.getReleaseDateForSet = getReleaseDateForSet;
+function getReleaseDateForSet(setName)
+{
+	return C.SETS.mutateOnce(function(SET) { return SET.name===setName ? SET.releaseDate : undefined; }) || moment().format("YYYY-MM-DD");
 }
 
 exports.clearCacheFile = function(targetUrl, cb)

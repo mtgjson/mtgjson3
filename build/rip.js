@@ -90,7 +90,7 @@ function ripSet(setName, cb)
 		{
 			base.info("Adding printings to cards...");
 
-			addPrintingsToCards(this.data.set.cards, this);
+			addPrintingsToCards(this.data.set, this);
 		},
 		function performCorrections()
 		{
@@ -266,6 +266,9 @@ function processCardPart(doc, cardPart, printedDoc, printedCardPart)
 
 	// Original type
 	card.originalType = getTextContent(printedCardPart.querySelector(idPrefixPrinted + "_typeRow .value")).trim().replaceAll(" -", " —");
+
+	if(card.originalType && card.originalType.toLowerCase().startsWith("token "))
+		card.layout = "token";
 
 	// Converted Mana Cost (CMC)
 	var cardCMC = getTextContent(cardPart.querySelector(idPrefix + "_cmcRow .value")).trim();
@@ -632,12 +635,15 @@ function addLegalitiesToCard(card, cb)
 	);
 }
 
-function addPrintingsToCards(cards, cb)
+function addPrintingsToCards(set, cb)
 {
 	tiptoe(
 		function loadNonGathererJSON()
 		{
-			C.SETS_NOT_ON_GATHERER.concat(shared.getMCISetCodes()).serialForEach(function(code, subcb)
+			var setCodes = C.SETS.map(function(SET) { return SET.code; });
+			var nonGathererSets = C.SETS_NOT_ON_GATHERER.concat(shared.getMCISetCodes()).concat(setCodes.slice(setCodes.indexOf(C.LAST_PRINTINGS_RESET)+1)).unique();
+			nonGathererSets.remove(set.code);
+			nonGathererSets.serialForEach(function(code, subcb)
 			{
 				fs.readFile(path.join(__dirname, "..", "json", code + ".json"), "utf8", subcb);
 			}, this);
@@ -646,7 +652,7 @@ function addPrintingsToCards(cards, cb)
 		{
 			var nonGathererSets = nonGathererSetsJSONRaw.map(function(nonGathererSetJSONRaw) { return JSON.parse(nonGathererSetJSONRaw); });
 
-			cards.serialForEach(function(card, subcb)
+			set.cards.serialForEach(function(card, subcb)
 			{
 				addPrintingsToCard(nonGathererSets, card, subcb);
 			}, this);
@@ -696,7 +702,7 @@ function addPrintingsToCard(nonGathererSets, card, cb)
 					printings.push(nonGathererSet.name);
 			});
 
-			printings = sortPrintings(printings);
+			printings = shared.sortPrintings(printings);
 			if(printings && printings.length)
 				card.printings = printings;
 
@@ -831,11 +837,6 @@ function sortCardColors(card)
 	card.colors = card.colors.unique().sort(function(a, b) { return COLOR_ORDER.indexOf(a)-COLOR_ORDER.indexOf(b); }).map(function(color) { return color.toProperCase(); });
 	if(card.colors.length===0)
 		delete card.colors;
-}
-
-function sortPrintings(printings)
-{
-	return printings.unique().sort(function(a, b) { return moment(getReleaseDateForSet(a), "YYYY-MM-DD").unix()-moment(getReleaseDateForSet(b), "YYYY-MM-DD").unix(); });
 }
 
 function compareCardsToMCI(set, cb)
@@ -1228,7 +1229,7 @@ function addPrintingsToMCISet(set, cb)
 				});
 			});
 
-			set.cards.forEach(function(card) { card.printings = sortPrintings(card.printings); });
+			set.cards.forEach(function(card) { card.printings = shared.sortPrintings(card.printings); });
 
 			return setImmediate(cb);
 		}
@@ -1538,11 +1539,6 @@ function processTextBoxChildren(children)
 	});
 
 	return result;
-}
-
-function getReleaseDateForSet(setName)
-{
-	return C.SETS.mutateOnce(function(SET) { return SET.name===setName ? SET.releaseDate : undefined; }) || moment().format("YYYY-MM-DD");
 }
 
 function getTextContent(item)

@@ -13,6 +13,8 @@ var base = require("xbase"),
 	path = require("path"),
 	tiptoe = require("tiptoe");
 
+process.exit(0);
+
 tiptoe(
 	function processSets()
 	{

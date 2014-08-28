@@ -1,12 +1,47 @@
 [
 	{
+		"version": "2.10.1",
+		"when": "2014-08-28",
+		"changes": [
+			"PLS: Fixed a bug where the image names for \"Tahngarth, Talruum Hero\" were incorrect"
+		],
+		"updatedSetFiles" : ["PLS", "PLS-x"]
+	},
+	{
+		"version": "2.10.0",
+		"when": "2014-08-27",
+		"changes": [
+			"Added set: Duel Decks: Speed vs. Cunning (DDN)"
+		],
+		"newSetFiles" : ["DDN", "DDN-x"],
+		"updatedSetFiles" : ["10E-x","2ED-x","3ED-x","4ED-x","5ED-x","6ED-x","7ED-x","8ED-x","9ED-x","ALA-x","APC-x","ARB-x","ARC-x","ARN-x","ATH-x","AVR-x","BRB-x","BTD-x","C13-x","CHK-x","CMD-x","CNS-x","CON-x","CSP-x","DD2-x","DDC-x","DDD-x","DDE-x","DDF-x","DDG-x","DDH-x","DDI-x","DDJ-x","DDK-x","DDL-x","DDM-x","DKA-x","DKM-x","DPA-x","EVG-x","GPT-x","GTC-x","H09-x","HOP-x","ICE-x","INV-x","ISD-x","ITP-x","LEA-x","LEB-x","LGN-x","LRW-x","M10-x","M11-x","M12-x","M13-x","M14-x","M15-x","MBS-x","MD1-x","ME3-x","MED-x","MIR-x","MMA-x","MMQ-x","MRD-x","NPH-x","ODY-x","ONS-x","PC2-x","PD2-x","PD3-x","PLC-x","PO2-x","POR-x","PTK-x","RAV-x","ROE-x","RQS-x","RTR-x","S00-x","S99-x","SCG-x","SHM-x","SOK-x","SOM-x","STH-x","THS-x","TMP-x","TSB-x","TSP-x","UDS-x","UGL-x","ULG-x","UNH-x","USG-x","V13-x","VIS-x","VMA-x","ZEN-x","pALP-x","pARL-x","pELP-x","pFNM-x","pGRU-x","pMEI-x","pMPR-x","pPRE-x"]
+	},
+	{
+		"version": "2.9.2",
+		"when": "2014-08-26",
+		"changes": [
+			"S00: Added a missing card (Rhox)",
+			"INV, APC: Fixed the originalText field for split cards.",
+			"pHHO: Fixed a mana cost typo with the Naughty & Nice promo card"
+		],
+		"updatedSetFiles" : ["10E-x","8ED-x","APC-x","INV-x","NMS-x","S00","S00-x"]
+	},
+	{
+		"version": "2.9.1",
+		"when": "2014-08-25",
+		"changes": [
+			"S99: Fixed two cards that had the wrong rarity"
+		],
+		"updatedSetFiles" : ["S99", "S99-x"]
+	},
+	{
 		"version": "2.9.0",
 		"when": "2014-08-21",
 		"changes": [
 			"Added promo cards! Added 27 new sets with set type \"promo\" and 4-letter set codes that begin with a lowercase 'p'. Many promo cards have a new 'source' property (extras only) that further details how the card was obtained.",
 			"As part of promo cards being added, the HHO and PPR sets have been removed. HHO is now pHHO and PPR's cards are spread across different promo sets.",
 			"Added set: From the Vault: Annihilation (2014) (V14)",
-			"Fixed a bug where some basic lands (snow covered lands) still had card text. All basic lands now correctly do not have card text as per <a href=\"http://rules.wizards.com/rulebook.aspx?game=Magic#3162\">rule 305.6</a>",
+			"Fixed a bug where some basic lands (snow covered lands) still had card text. All basic lands now correctly do not have card text as per.",
 			"Fixed issues where rulings would have multiple spaces in random places in the ruling text.",
 			"ODY, JUD, TSB: Fixed some foreignNames that incorrectly started with 'XX'.",
 			"USG, DDL, C13, M14: Newlines now correctly appear before the em-dash in the flavor text"

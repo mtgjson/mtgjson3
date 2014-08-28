@@ -63,6 +63,8 @@ node generate.js
 node verify/generate.js <expansion code>
 file:///mnt/compendium/DevLab/mtgjson/verify/verify.html
 
+# When verifying, check to see if the flavor text has a newline before the em-dash quote attribution. If not, add fixFlavorNewlines in C.js (see existing examples)
+
 # Now examine JSON changes
 cd util
 node compareRelease.js allsets not<expansion code> | more

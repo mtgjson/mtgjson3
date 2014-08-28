@@ -1,62 +1,61 @@
 /---------------\
 | High Priority |
 \---------------/
-* Need to do a node importMCISet mcisets and then updatePrintingsFromSet mcisets once before publishing to get printings right
+* Update all cards oracle text (so clear first)
 
-* Add ALL Promos AND Tokens from magiccards.info
+* Move all 'tokens' to a new array along side 'cards' called 'tokens' and reference 108.2 that they are not considered cards.
+
+* Add Tokens from magiccards.info
 Token List: http://magiccards.info/extras.html
-Recent Additions List: http://magiccards.info/additions.html
-Ensure the 'comment' fields for cards (as to which specific event they come from) is carried over in some form
-This Get rid of both HHO and PPR from mtgjson as they should all be duplicated in the stuff from magiccards.info
-Make the detection and adding of more promos a bit more automated (cron job, then maybe a single manual deploy command of some sort)
 E-mail woogerboy, Be Titmarsh and search e-mail for anyone asking about 'tokens' or 'promo' and e-mail them
+In addition to test_urls.js I need to look at the tokens folder in DevLab/images/originals/mtg/CCGHQ/full/
+Could potentially scrape the data from: http://magiccards.info/extras.html
 
+* Add JSONP support, thank Daan for the suggestion and e-mail him letting him know it's up. Maybe do this as a nginx plugin that can wrap *.json urls?
 
 
 /-----------------\
 | Medium Priority |
 \-----------------/
-* Consider changing 'printings' field to be a list of set codes rather than set names.
+* Consider changing 'printings' field to be a list of set codes rather than set names
 
 * Add some sort of 'deck' or 'subset' field, to identify which cards are part of which decks (such as 'elf' deck in the 'elves vs goblins' set)
 
-* Add a 'frame' attribute for sets that denote what style of the set has (original, eighth edition, magic 2015, timeshifted, etc)
-
-* Create a case-insensitive nginx plugin (the tolowercase one I have now requires a /actual/ directory).
-  Then enable this for the files in /json/
-
-* Add tokens. Can look at the test_urls.js to get a head start.
-  Will likely need to add these manually for each set, looking at the picture and entering in the data.
-  In addition to test_urls.js I need to look at the tokens folder in DevLab/images/originals/mtg/CCGHQ/full/
-  Could potentially scrape the data from: http://magiccards.info/extras.html
-
+* Create a nginx tolowercase plugin that doesn't require a /actual/ directory and then e-nable this for files in /json/
 
 
 /--------------\
 | Low Priority |
 \--------------/
+* Add a 'frame' attribute for sets that denote what style of the set has (original, eighth edition, magic 2015, timeshifted, etc)
+
+* Add 'Face the Hydra' cards
+
+* Add colorIndicator directly into the JSON. Greg Falcon mentions that it's officially part of the card and is cumbersome to reverse engineer from the mana cost/colors field.
+
 * Add MTGO ID's to each card (known in MTGO as 'catId')
   See: https://www.mtgolibrary.com/mlbot_php/installer/CatID.txt
 
 * Sets on MagicCards.info but not on Gatherer or MTGJSON: Ninth Edition Box Set, Eighth Edition Box Set, Coldsnap Theme Decks
 
-* Add an automatic RSS feed XML file from the changelog.json
-
 * Add links to every web page and app that uses mtgjson. Search google webmaster links, google Analytics referrers, google and bing search engines, email, github, and reddit too
-
-* Consider scraping unreleased sets from spoiler site: http://www.mtgsalvation.com/spoilers/141-magic-2015
 
 * Add full foreign language scrapes. Need to use ?printed=true on Gatherer to get this data.
   If the cards have unique multiverseids probably have totally seperate json. Files like AllCards-x-ch.json or what not for each language.
-  Then e-mail rubens w2net
+  Then e-mail rubens w2net and message skibulk on slightlymagic
   Also of course reply on MTGSalvation
   When doing this, keep the 'foreignNames' field, and make sure it includes 'English' in non-english printings
 
+* Add an automatic RSS feed XML file from the changelog.json
 
 
 /-----------------\
 | Lowest Priority |
 \-----------------/
+* Consider scraping unreleased sets from spoiler site: http://www.mtgsalvation.com/spoilers/141-magic-2015
+
+* skibulk requested this: An option in the source code's configuration file (on github) to toggle raw Gatherer data vs supplemented Gatherer data. Basically I want the option to download an unaltered version of the Gatherer database. I consider supplemented data to include per-card overrides, removal of the ability text for snow-covered lands, data from 3rd party sources (magiccards.info), etc.
+
 * Add a 'foilable' boolean for sets/cards on whether foils are available or not. Then e-mail machael herbig
 
 

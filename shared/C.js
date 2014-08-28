@@ -1585,7 +1585,14 @@
 			releaseDate : "2014-08-22",
 			border : "black",
 			type : "from the vault"
-		}		
+		},
+		{
+			name : "Duel Decks: Speed vs. Cunning",
+			code : "DDN",
+			releaseDate : "2014-09-05",
+			border : "black",
+			type : "duel deck"
+		}
 	];
 
 	exports.EXTRA_SET_CARD_PRINTINGS =
@@ -2261,7 +2268,8 @@
 			{ match : {imageName : "swamp4"}, replace : {number : "165", artist : "Romas"} },
 			{ match : {name : ["Border Guard", "Dakmor Ghoul", "Time Warp"]}, flavorAddExclamation : true },
 			{ match : {name : ["Durkwood Boars", "Wind Drake"]}, flavorAddDash : true },
-			{ match : {name : "Feral Shadow"}, replace : {artist : "Cliff Nielsen"}}
+			{ match : {name : "Feral Shadow"}, replace : {artist : "Cliff Nielsen"}},
+			{ match : {name : ["Mons's Goblin Raiders", "Goblin Hero"]}, replace : {rarity : "Common"}}
 		],
 		pWOR :
 		[
@@ -2298,6 +2306,48 @@
 		[
 			{ match : {name : "Wild Mammoth"}, replace : {flavor : "\"Sit. Heel! Down! HELP!\""}}
 		],
+		S00 :
+		[
+			{ copyCard : "Durkwood Boars", replace :
+				{
+					name       : "Rhox",
+					type       : "Creature — Rhino Beast",
+					subtypes   : ["Rhino", "Beast"],
+					originalType : "Creature — Beast",
+					cmc : 6,
+					rarity : "Rare",
+					artist : "Mark Zug",
+					power : "5",
+					toughness : "5",
+					number : "112a",
+					manaCost : "{4}{G}{G}",
+					text : "You may have Rhox assign its combat damage as though it weren't blocked.\n{2}{G}: Regenerate Rhox. (The next time this creature would be destroyed this turn, it isn't. Instead tap it, remove all damage from it, and remove it from combat.)",
+					originalText : "You may have Rhox deal combat damage to defending player as though it weren't blocked.\n{2}{G}: Regenerate Rhox.",
+					rulings : [
+						{
+							"date": "2008-04-01",
+							"text": "If this creature is attacking a planeswalker, assigning its damage as though it weren't blocked means the damage is assigned to the planeswalker, not to the defending player."
+						},
+						{
+							"date": "2008-04-01",
+							"text": "When assigning combat damage, you choose whether you want to assign all damage to blocking creatures, or if you want to assign all of it to the defending player or planeswalker. You can't split the damage assignment between them."
+						},
+						{
+							"date": "2008-04-01",
+							"text": "You can decide to assign damage to the defending player or planeswalker even if the blocking creature has protection from green or damage preventing effects on it."
+						},
+						{
+							"date": "2008-04-01",
+							"text": "If blocked by a creature with banding, the defending player decides whether or not the damage is assigned \"as though it weren't blocked\"."
+						}
+					],
+					imageName : "rhox",
+					foreignNames:[{"language":"Chinese Simplified","name":"罗克犀龙"},{"language":"Chinese Traditional","name":"羅克犀龍"},{"language":"Japanese","name":"ロウクス"},{"language":"Russian","name":"Рокс"}],
+					"legalities": {"Modern": "Legal","Masques Block": "Legal","Legacy": "Legal","Vintage": "Legal","Freeform": "Legal","Prismatic": "Legal","Tribal Wars Legacy": "Legal","Singleton 100": "Legal","Commander": "Legal"}
+				},
+				remove : ["multiverseid", "flavor"]
+			},	
+		],
 		PCY :
 		[
 			{ match : {name : ["Quicksilver Wall"]}, flavorAddExclamation : true },
@@ -2313,14 +2363,31 @@
 			{ match : {name : ["Lava Axe", "Lowland Giant"]}, flavorAddExclamation : true },
 			{ match : {name : ["Fallen Angel"]}, flavorAddDash : true }
 		],
+		INV :
+		[
+			{ match : {name : "Assault"}, replace : {originalText : "Assault deals 2 damage to target creature or player."}},
+			{ match : {name : "Spite"}, replace : {originalText : "Counter target noncreature spell."}},
+			{ match : {name : "Pain"}, replace : {originalText : "Target player discards a card from his or her hand."}},
+			{ match : {name : "Stand"}, replace : {originalText : "Prevent the next 2 damage that would be dealt to target creature this turn."}},
+			{ match : {name : "Wax"}, replace : {originalText : "Target creature gets +2/+2 until end of turn."}}
+		],
 		PLS :
 		[
 			{ renumberImages : "Ertai, the Corrupted", order : [25614, 29292] },
-			{ renumberImages : "Skyship Weatherlight", order : [26480, 29293] }
+			{ renumberImages : "Skyship Weatherlight", order : [26480, 29293] },
+			{ renumberImages : "Tahngarth, Talruum Hero", order : [26408, 29291] }
 		],
 		pMPR :
 		[
 			{ match : {name : ["Brave the Elements", "Doom Blade", "Treasure Hunt"]}, remove : ["flavor"]}			
+		],
+		APC :
+		[
+			{ match : {name : "Fire"}, replace : {originalText : "Fire deals 2 damage divided as you choose among any number of target creatures and/or players."}},
+			{ match : {name : "Illusion"}, replace : {originalText : "Target spell or permanent becomes the color of your choice until end of turn."}},
+			{ match : {name : "Life"}, replace : {originalText : "Until end of turn, all lands you control are 1/1/ creatures that are still lands."}},
+			{ match : {name : "Day"}, replace : {originalText : "Creatures target player controls get +1/+1 until end of turn."}},
+			{ match : {name : "Order"}, replace : {originalText : "Remove target attacking creature from the game."}},
 		],
 		ODY :
 		[
@@ -2587,7 +2654,7 @@
 				{
 					layout      : "split",
 					name        : "Naughty",
-					manaCost    : "1{B}{B}",
+					manaCost    : "{1}{B}{B}",
 					releaseDate : "2012",
 					cmc         : 3,
 					imageName   : "naughtynice",
@@ -2603,7 +2670,7 @@
 					name         : "Nice",
 					number       : "7b",
 					text         : "Search your library for a card and put it into another target player's hand. Then shuffle your library",
-					manaCost     : "1{W}{W}",
+					manaCost     : "{1}{W}{W}",
 					colors       : ["White"]
 				}
 			},
@@ -2783,7 +2850,8 @@
 			{ match : {name : "Draco"}, replace : {text : "Domain — Draco costs {2} less to cast for each basic land type among lands you control.\nFlying\nDomain — At the beginning of your upkeep, sacrifice Draco unless you pay {10}. This cost is reduced by {2} for each basic land type among lands you control."}},
 			{ match : {name : "Spawnsire of Ulamog"}, replace : {text : "Annihilator 1 (Whenever this creature attacks, defending player sacrifices a permanent.)\n{4}: Put two 0/1 colorless Eldrazi Spawn creature tokens onto the battlefield. They have \"Sacrifice this creature: Add {1} to your mana pool.\"\n{20}: Cast any number of Eldrazi cards you own from outside the game without paying their mana costs."}},
 			{ match : {name : "Jade Statue"}, remove : ["power", "toughness"] },
-			{ match : {name : "Ghostfire"}, remove : ["colors"] }
+			{ match : {name : "Ghostfire"}, remove : ["colors"] },
+			{ match : {name : "Rhox"}, addPrinting : "Starter 2000"}
 		]
 	};
 
@@ -2813,6 +2881,8 @@
 
 	exports.SYMBOL_RARITIES = {c:["common"], u : ["uncommon"], r : ["rare"], m : ["mythic", "mythic rare", "mythicrare"], s : ["special"]};
 	exports.SYMBOL_SIZES = [8, 16, 24, 32, 48, 64, 96, 128, 256, 512, 768, 1024];
+	exports.SETS_WITH_BONUS_RARITIES = ["VMA"];
+	exports.SETS_LACKING_HQ_SVG_SYMBOL_ICONS = ["MD1", "CNS", "VMA", "M15", "V14", "DDN"];
 
 	exports.SYMBOL_MANA =
 	{
