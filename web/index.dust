@@ -40,7 +40,9 @@
 		<h2 style="display: none;"><span style="color: red; text-decoration: underline;">ALERT:</span> alert message goes here</h2>
 		<br>
 		<br>
-		<table class="downloads downloadsAll">
+		<p>Data is available by set (All Sets) or by card (All Cards).</p><br>
+		<br>
+		<table class="downloads downloadsAll downloadsAllSets">
 			<thead>
 				<tr>
 					<th colspan="4">All Sets</th>
@@ -81,7 +83,48 @@
 				</tr>
 			</tbody>
 		</table>
-		<p style="margin-left: 10.5em; font-size: 150%;"><a href="#individualSets">Click Here for Individual Sets</a></p>
+		<table class="downloads downloadsAll downloadsAllCards">
+			<thead>
+				<tr>
+					<th colspan="4">All Cards</th>
+				</tr>
+				<tr>
+					<th colspan="2">Card Data Only</th>
+					<th colspan="2">Card Data with Extras</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="sizeColLeft">
+						<a href="json/AllCards.json">AllCards.json</a>
+					</td>
+					<td class="sizeColRight">
+						<span class="size">{allCardsSize}</span>
+					</td>
+					<td class="sizeColLeft">
+						<a href="json/AllCards-x.json">AllCards-x.json</a>
+					</td>
+					<td class="sizeColRight">
+						<span class="size">{allCardsSizeX}</span>
+					</td>
+				</tr>
+				<tr>
+					<td class="sizeColLeft">
+						<a href="json/AllCards.json.zip">AllCards.json.zip</a>
+					</td>
+					<td class="sizeColRight">
+						<span class="size">{allCardsSizeZip}</span>
+					</td>
+					<td class="sizeColLeft">
+						<a href="json/AllCards-x.json.zip">AllCards-x.json.zip</a>
+					</td>
+					<td class="sizeColRight">
+						<span class="size">{allCardsSizeXZip}</span>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<p class="individualSetsLink"><a href="#individualSets">Click Here for Individual Sets</a></p>
 		<br>
 		<br>
 		<br>
@@ -213,7 +256,6 @@
 		Foils are not explictily mentioned, except for 'Modern Masters' where a slot is guaranteed a foil. So that set has four additional possible booster card types: foil common, foil uncommon, foil rare and foil mythic rare<br>
 		<br>
 		<br>
-		</p>
 		<a name="cards"></a>
 		<h2>Cards<a href="#top">(back to top)</a></h2>
 		<p>The cards value is an Array of cards, each being a JSON object with key/value pairs. Below you will find a table detailing each key.<br>
@@ -428,6 +470,23 @@
 			</tbody>
 		</table>
 		<hr>
+		<h1>AllCards.json</h1>
+		<p>The <strong>AllCards.json</strong> file is organized by card name and uses data from the latest printing of each card.<br>
+		<br>
+		This file is lighter weight and is meant to provide quick and easy way to get basic card data.<br>
+		<br>
+		Several set specific fields are not present in the card data: {setSpecificFields}<br>
+		<br>
+		The JSON file itself looks like this:<br></p>
+		<pre><code data-language="javascript">    {~lb}
+        "Nevinyrral's Disk" : {~lb} /* card data */ {~rb},
+                   "Norrit" : {~lb} /* card data */ {~rb},
+        "Nullmage Shepherd" : {~lb} /* card data */ {~rb},
+        ...
+    {~rb}</code></pre>
+    	<br>
+    	<br>
+    	<hr>
 		<a name="additionalJSON"></a>
 		<h1>Additional JSON Files<a href="#top">(back to top)</a></h1>
 		<p>Several additional JSON files are available and will be updated whenever card data is added or updated:</p>

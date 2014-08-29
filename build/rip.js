@@ -958,6 +958,41 @@ function ripMCISet(set, cb)
 				this();
 			}
 		},
+		function applyLatestOracleFields()
+		{
+			base.info("Applying latest oracle fields to MCI cards...");
+
+			var oracleCards = {};
+			C.SETS.map(function(SET) { return SET.code; }).removeAll(shared.getMCISetCodes()).removeAll(C.SETS_NOT_ON_GATHERER).reverse().forEach(function(SETCODE)
+			{
+				JSON.parse(fs.readFileSync(path.join(__dirname, "..", "json", SETCODE + ".json"))).cards.forEach(function(card)
+				{
+					if(oracleCards.hasOwnProperty(card.name))
+						return;
+
+					oracleCards[card.name] = card;
+				});
+			});
+
+			set.cards.forEach(function(card)
+			{
+				C.ORACLE_FIELDS.forEach(function(oracleField)
+				{
+					if(!oracleCards.hasOwnProperty(card.name))
+						return;
+
+					if(!oracleCards[card.name].hasOwnProperty(oracleField))
+					{
+						delete card[oracleField];
+						return;
+					}
+
+					card[oracleField] = oracleCards[card.name][oracleField];
+				});
+			});
+
+			this();
+		},
 		function performCorrections()
 		{
 			base.info("Doing set corrections...");

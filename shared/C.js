@@ -1712,8 +1712,7 @@
 			{match : {name : "Arrest"}, replace : {flavor : "Fayden didn't know if the giant had created the spehere's magic—only that he had to escape it to find Sifa."}},
 			{match : {name : ["Bloodthrone Vampire", "Kor Skyfisher", "Merfolk Mesmerist"]}, replace : {flavor : "www.MagicTheGathering.com"}},
 			{match : {name : "Knight Exemplar"}, replace : {flavor : "\"If you think you are brave enough to walk the path of honor, follow me into the dragon's den.\""}},
-			{match : {name : "Mana Crypt"}, replace : {layout : "normal"}},
-			{match : {name : ["Blue Elemental Blast", "Fireball", "Spined Wurm"]}, replace : {border : "white"}},
+			{match : {name : ["Blue Elemental Blast", "Fireball", "Spined Wurm"]}, replace : {border : "white"}}
 		],
 		FEM :
 		[
@@ -2308,42 +2307,12 @@
 		],
 		S00 :
 		[
-			{ copyCard : "Durkwood Boars", replace :
+			{ importCard : {name : "Rhox", set : "10E"}},
+			{ match : {name : "Rhox"}, replace : 
 				{
-					name       : "Rhox",
-					type       : "Creature — Rhino Beast",
-					subtypes   : ["Rhino", "Beast"],
-					originalType : "Creature — Beast",
-					cmc : 6,
-					rarity : "Rare",
-					artist : "Mark Zug",
-					power : "5",
-					toughness : "5",
 					number : "112a",
-					manaCost : "{4}{G}{G}",
 					text : "You may have Rhox assign its combat damage as though it weren't blocked.\n{2}{G}: Regenerate Rhox. (The next time this creature would be destroyed this turn, it isn't. Instead tap it, remove all damage from it, and remove it from combat.)",
-					originalText : "You may have Rhox deal combat damage to defending player as though it weren't blocked.\n{2}{G}: Regenerate Rhox.",
-					rulings : [
-						{
-							"date": "2008-04-01",
-							"text": "If this creature is attacking a planeswalker, assigning its damage as though it weren't blocked means the damage is assigned to the planeswalker, not to the defending player."
-						},
-						{
-							"date": "2008-04-01",
-							"text": "When assigning combat damage, you choose whether you want to assign all damage to blocking creatures, or if you want to assign all of it to the defending player or planeswalker. You can't split the damage assignment between them."
-						},
-						{
-							"date": "2008-04-01",
-							"text": "You can decide to assign damage to the defending player or planeswalker even if the blocking creature has protection from green or damage preventing effects on it."
-						},
-						{
-							"date": "2008-04-01",
-							"text": "If blocked by a creature with banding, the defending player decides whether or not the damage is assigned \"as though it weren't blocked\"."
-						}
-					],
-					imageName : "rhox",
-					foreignNames:[{"language":"Chinese Simplified","name":"罗克犀龙"},{"language":"Chinese Traditional","name":"羅克犀龍"},{"language":"Japanese","name":"ロウクス"},{"language":"Russian","name":"Рокс"}],
-					"legalities": {"Modern": "Legal","Masques Block": "Legal","Legacy": "Legal","Vintage": "Legal","Freeform": "Legal","Prismatic": "Legal","Tribal Wars Legacy": "Legal","Singleton 100": "Legal","Commander": "Legal"}
+					originalText : "You may have Rhox deal combat damage to defending player as though it weren't blocked.\n{2}{G}: Regenerate Rhox."
 				},
 				remove : ["multiverseid", "flavor"]
 			},	
@@ -2966,4 +2935,47 @@
 		planeswalk : [],
 		forwardslash : []
 	};
+
+	exports.FIELD_TYPES =
+	{
+		layout       : "string",
+		name         : "string",
+		names        : ["string"],
+		manaCost     : "string",
+		cmc          : "number",
+		colors       : ["string"],
+		type         : "string",
+		supertypes   : ["string"],
+		types        : ["string"],
+		subtypes     : ["string"],
+		rarity       : "string",
+		text         : "string",
+		flavor       : "string",
+		artist       : "string",
+		number       : "string",
+		power        : "string",
+		toughness    : "string",
+		loyalty      : "number",
+		multiverseid : "number",
+		variations   : ["number"],
+		imageName    : "string",
+		watermark    : "string",
+		border       : "string",
+		hand         : "number",
+		life         : "number",
+		rulings      : ["object"],
+		foreignNames : ["object"],
+		printings    : ["string"],
+		originalText : "string",
+		originalType : "string",
+		timeshifted  : "boolean",
+		reserved     : "boolean",
+		source       : "string",
+		releaseDate  : "string",
+		legalities   : {}
+	};
+
+	exports.ORACLE_FIELDS = ["layout", "name", "names", "manaCost", "cmc", "colors", "type", "supertypes", "types", "subtypes", "text", "power", "toughness", "loyalty", "hand", "life", "rulings", "foreignNames", "printings", "legalities"];
+	exports.EXTRA_FIELDS = ["rulings", "foreignNames", "printings", "originalText", "originalType", "legalities", "source"];
+	exports.SET_SPECIFIC_FIELDS = ["artist", "flavor", "number", "multiverseid", "variations", "watermark", "border", "timeshifted", "reserved", "releaseDate", "originalText", "originalType"];
 })(typeof exports==="undefined" ? window.C={} : exports);

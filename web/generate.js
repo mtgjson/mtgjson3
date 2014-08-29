@@ -24,6 +24,7 @@ var dustData =
 tiptoe(
 	function removeJSONDirectory()
 	{
+		base.info("Clearing JSON directory...");
 		rimraf(path.join(__dirname, "json"), this);
 	},
 	function createJSONDirectory()
@@ -32,6 +33,7 @@ tiptoe(
 	},
 	function loadJSON()
 	{
+		base.info("Loading JSON...");
 		C.SETS.forEach(function(SET)
 		{
 			fs.readFile(path.join(__dirname, "..", "json", SET.code + ".json"), {encoding : "utf8"}, this.parallel());
@@ -47,9 +49,44 @@ tiptoe(
 		var allSetsWithExtras = {};
 		var allSetsArrayWithExtras = [];
 
+		var allCardsWithExtras = {};
+
+		base.info("Creating JSON files...");
 		C.SETS.forEach(function(SET, i)
 		{
 			var setWithExtras = JSON.parse(args[i]);
+
+			setWithExtras.cards.forEach(function(card)
+			{
+				Object.forEach(C.FIELD_TYPES, function(fieldName, fieldType)
+				{
+					if(!allCardsWithExtras.hasOwnProperty(card.name))
+						allCardsWithExtras[card.name] = {};
+
+					if(C.SET_SPECIFIC_FIELDS.contains(fieldName))
+						return;
+
+					if(C.ORACLE_FIELDS.contains(fieldName) && !["B.F.M. (Big Furry Monster)"].contains(card.name))
+					{
+						if(!card.hasOwnProperty(fieldName))
+						{
+							if(allCardsWithExtras[card.name].hasOwnProperty(fieldName))
+								base.warn("Card [%s] mismatch with field [%s] between current set [%s] and previous [%s] with values:\n\tNO VALUE\n\t%s", card.name, fieldName, SET.name, allCardsWithExtras[card.name].printings.last(), allCardsWithExtras[card.name][fieldName]);
+
+							return;
+						}
+
+						if(allCardsWithExtras[card.name].hasOwnProperty(fieldName))
+						{
+							var fieldDifference = diffUtil.diff(card[fieldName], allCardsWithExtras[card.name][fieldName]);
+							if(fieldDifference)
+								base.warn("Card [%s] mismatch with field [%s] between current set [%s] and previous [%s] with values:\n\t%s\n\t%s\n\tDifference: %s", card.name, fieldName, SET.name, allCardsWithExtras[card.name].printings.last(), card[fieldName], allCardsWithExtras[card.name][fieldName], fieldDifference);
+						}
+					}
+
+					allCardsWithExtras[card.name][fieldName] = card[fieldName];
+				});
+			});
 
 			// Strip out internal only data
 			delete setWithExtras.magicCardsInfoCode;
@@ -63,13 +100,10 @@ tiptoe(
 			set.cards.forEach(function(card)
 			{
 				// Strip out extras
-				delete card.rulings;
-				delete card.foreignNames;
-				delete card.printings;
-				delete card.originalText;
-				delete card.originalType;
-				delete card.legalities;
-				delete card.source;
+				C.EXTRA_FIELDS.forEach(function(EXTRA_FIELD)
+				{
+					delete card[EXTRA_FIELD];
+				});
 			});
 
 			allSets[SET.code] = set;
@@ -95,20 +129,37 @@ tiptoe(
 			dustData.sets.push(dustSetData);
 		}.bind(this));
 
+		var allCards = base.clone(allCardsWithExtras, true);
+		Object.values(allCards).forEach(function(card)
+		{
+			// Strip out extras
+			C.EXTRA_FIELDS.forEach(function(EXTRA_FIELD)
+			{
+				delete card[EXTRA_FIELD];
+			});
+		});
+
 		dustData.sets = dustData.sets.sort(function(a, b) { return moment(a.releaseDate, "YYYY-MM-DD").unix()-moment(b.releaseDate, "YYYY-MM-DD").unix(); });
 
 		dustData.allSize = printUtil.toSize(JSON.stringify(allSets).length, 1);
 		dustData.allSizeX = printUtil.toSize(JSON.stringify(allSetsWithExtras).length, 1);
 
+		dustData.allCardsSize = printUtil.toSize(JSON.stringify(allCards).length, 1);
+		dustData.allCardsSizeX = printUtil.toSize(JSON.stringify(allCardsWithExtras).length, 1);
+
 		dustData.changeLog = JSON.parse(fs.readFileSync(path.join(__dirname, "changelog.json"), {encoding : "utf8"})).map(function(o) { o.when = moment(o.when, "YYYY-MM-DD").format("MMM D, YYYY"); return o; });
 		dustData.lastUpdated = dustData.changeLog[0].when;
 		dustData.version = dustData.changeLog[0].version;
+		dustData.setSpecificFields = C.SET_SPECIFIC_FIELDS.sort().join(", ");
 
 		fs.writeFile(path.join(__dirname, "json", "AllSets.json"), JSON.stringify(allSets), {encoding : "utf8"}, this.parallel());
 		fs.writeFile(path.join(__dirname, "json", "AllSetsArray.json"), JSON.stringify(allSetsArray), {encoding : "utf8"}, this.parallel());
 
 		fs.writeFile(path.join(__dirname, "json", "AllSets-x.json"), JSON.stringify(allSetsWithExtras), {encoding : "utf8"}, this.parallel());
 		fs.writeFile(path.join(__dirname, "json", "AllSetsArray-x.json"), JSON.stringify(allSetsArrayWithExtras), {encoding : "utf8"}, this.parallel());
+
+		fs.writeFile(path.join(__dirname, "json", "AllCards.json"), JSON.stringify(allCards), {encoding : "utf8"}, this.parallel());
+		fs.writeFile(path.join(__dirname, "json", "AllCards-x.json"), JSON.stringify(allCardsWithExtras), {encoding : "utf8"}, this.parallel());
 		
 		fs.writeFile(path.join(__dirname, "json", "SetCodes.json"), JSON.stringify(C.SETS.map(function(SET) { return SET.code; })), {encoding : "utf8"}, this.parallel());
 		fs.writeFile(path.join(__dirname, "json", "SetList.json"), JSON.stringify(C.SETS.map(function(SET) { return {name : SET.name, code : SET.code, releaseDate : SET.releaseDate}; })), {encoding : "utf8"}, this.parallel());
@@ -119,12 +170,16 @@ tiptoe(
 	},
 	function verifyJSON()
 	{
+		base.info("Checking sets for problems...");
 		checkSetsForProblems(this.parallel());
 	},
 	function zipJSON()
 	{
+		base.info("Zipping files...");
 		runUtil.run("zip", ["-9", "AllSets.json.zip", "AllSets.json"], { cwd:  path.join(__dirname, "json"), silent : true }, this.parallel());
 		runUtil.run("zip", ["-9", "AllSets-x.json.zip", "AllSets-x.json"], { cwd:  path.join(__dirname, "json"), silent : true }, this.parallel());
+		runUtil.run("zip", ["-9", "AllCards.json.zip", "AllCards.json"], { cwd:  path.join(__dirname, "json"), silent : true }, this.parallel());
+		runUtil.run("zip", ["-9", "AllCards-x.json.zip", "AllCards-x.json"], { cwd:  path.join(__dirname, "json"), silent : true }, this.parallel());
 		runUtil.run("zip", ["-9", "AllSetFiles.zip"].concat(C.SETS.map(function(SET) { return SET.code + ".json"; })), { cwd:  path.join(__dirname, "json"), silent : true }, this.parallel());
 		runUtil.run("zip", ["-9", "AllSetFiles-x.zip"].concat(C.SETS.map(function(SET) { return SET.code + "-x.json"; })), { cwd:  path.join(__dirname, "json"), silent : true }, this.parallel());
 		runUtil.run("zip", ["-9", "AllSetFilesWindows.zip"].concat(C.SETS.map(function(SET) { return (SET.code==="CON" ? "_" : "") + SET.code + ".json"; })), { cwd:  path.join(__dirname, "json"), silent : true }, this.parallel());
@@ -150,8 +205,11 @@ tiptoe(
 	},
 	function render()
 	{
+		base.info("Rendering index...");
 		dustData.allSizeZip = printUtil.toSize(fs.statSync(path.join(__dirname, "json", "AllSets.json.zip")).size, 1);
 		dustData.allSizeXZip = printUtil.toSize(fs.statSync(path.join(__dirname, "json", "AllSets-x.json.zip")).size, 1);
+		dustData.allCardsSizeZip = printUtil.toSize(fs.statSync(path.join(__dirname, "json", "AllCards.json.zip")).size, 1);
+		dustData.allCardsSizeXZip = printUtil.toSize(fs.statSync(path.join(__dirname, "json", "AllCards-x.json.zip")).size, 1);
 		dustData.allSetFilesZipSize = printUtil.toSize(fs.statSync(path.join(__dirname, "json", "AllSetFiles.zip")).size, 1);
 		dustData.allSetFilesXZipSize = printUtil.toSize(fs.statSync(path.join(__dirname, "json", "AllSetFiles-x.zip")).size, 1);
 
@@ -200,46 +258,6 @@ function checkSetsForProblems(cb)
 function checkSetForProblems(setCode, cb)
 {
 	var ALLOWED_DUPS = ["B.F.M. (Big Furry Monster)"];
-	
-	var VALID_TYPES =
-	{
-		layout       : "string",
-		name         : "string",
-		names        : ["string"],
-		manaCost     : "string",
-		cmc          : "number",
-		colors       : ["string"],
-		type         : "string",
-		supertypes   : ["string"],
-		types        : ["string"],
-		subtypes     : ["string"],
-		rarity       : "string",
-		text         : "string",
-		flavor       : "string",
-		artist       : "string",
-		number       : "string",
-		power        : "string",
-		toughness    : "string",
-		loyalty      : "number",
-		multiverseid : "number",
-		variations   : ["number"],
-		imageName    : "string",
-		watermark    : "string",
-		border       : "string",
-		hand         : "number",
-		life         : "number",
-		rulings      : ["object"],
-		foreignNames : ["object"],
-		printings    : ["string"],
-		originalText : "string",
-		originalType : "string",
-		timeshifted  : "boolean",
-		reserved     : "boolean",
-		source       : "string",
-		releaseDate  : "string",
-		legalities   : {}
-	};
-
 	var ALLOWED_CATEGORIES = ["letter", "space", "punctuation", "number", "symbol"];
 	var ALLOWED_OTHER_CHARS = ['\n'];
 
@@ -270,21 +288,21 @@ function checkSetForProblems(setCode, cb)
 			{
 				Object.forEach(card, function(key, val)
 				{
-					if(!VALID_TYPES.hasOwnProperty(key))
+					if(!C.FIELD_TYPES.hasOwnProperty(key))
 					{
 						base.info("%s (%s) NO KNOWN TYPE REFERENCE: [%s] : [%s]", setCode, card.name, key, val);
 						return;
 					}
 
-					if(Array.isArray(VALID_TYPES[key]))
+					if(Array.isArray(C.FIELD_TYPES[key]))
 					{
-						if(val.some(function(v) { return typeof v!==VALID_TYPES[key][0]; }))
-							base.info("%s (%s) HAS A NON-%s IN ARRAY: [%s] : [%s]", setCode, card.name, VALID_TYPES[key][0], key, val);
+						if(val.some(function(v) { return typeof v!==C.FIELD_TYPES[key][0]; }))
+							base.info("%s (%s) HAS A NON-%s IN ARRAY: [%s] : [%s]", setCode, card.name, C.FIELD_TYPES[key][0], key, val);
 
 						return;
 					}
 
-					if(Object.isObject(VALID_TYPES[key]))
+					if(Object.isObject(C.FIELD_TYPES[key]))
 					{
 						if(!Object.isObject(val))
 							base.info("%s (%s) INVALID TYPE: [%s] : [%s] (Not an object)", setCode, card.name, key, val);
@@ -292,9 +310,9 @@ function checkSetForProblems(setCode, cb)
 						return;
 					}
 
-					if(typeof val!==VALID_TYPES[key])
+					if(typeof val!==C.FIELD_TYPES[key])
 					{
-						base.info("%s (%s) INVALID TYPE: [%s] : [%s] (%s !== %s)", setCode, card.name, key, val, typeof val, VALID_TYPES[key]);
+						base.info("%s (%s) INVALID TYPE: [%s] : [%s] (%s !== %s)", setCode, card.name, key, val, typeof val, C.FIELD_TYPES[key]);
 						return;
 					}
 				});
@@ -303,7 +321,7 @@ function checkSetForProblems(setCode, cb)
 			// Check for invalid characters
 			setData.cards.forEach(function(card)
 			{
-				Object.forEach(VALID_TYPES, function(name, type) {
+				Object.forEach(C.FIELD_TYPES, function(name, type) {
 					if(type!=="string")
 						return;
 

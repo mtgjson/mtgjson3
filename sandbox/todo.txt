@@ -11,12 +11,14 @@ E-mail woogerboy, Be Titmarsh and search e-mail for anyone asking about 'tokens'
 In addition to test_urls.js I need to look at the tokens folder in DevLab/images/originals/mtg/CCGHQ/full/
 Could potentially scrape the data from: http://magiccards.info/extras.html
 
-* Add JSONP support, thank Daan for the suggestion and e-mail him letting him know it's up. Maybe do this as a nginx plugin that can wrap *.json urls?
-
 
 /-----------------\
 | Medium Priority |
 \-----------------/
+* Add JSONP support, thank Daan for the suggestion and e-mail him letting him know it's up. Maybe do this as a nginx plugin that can wrap *.json urls?
+
+* Add a JSON file where all cards are available in an object indexed by name. Call it AllCards.json or AllCards-ByName.json or something
+
 * Consider changing 'printings' field to be a list of set codes rather than set names
 
 * Add some sort of 'deck' or 'subset' field, to identify which cards are part of which decks (such as 'elf' deck in the 'elves vs goblins' set)

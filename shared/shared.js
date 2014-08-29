@@ -212,9 +212,14 @@ exports.performSetCorrections = function(setCorrections, cards)
 				}
 			});
 
-			if(setCorrection.copyCard)
+			if(setCorrection.copyCard || setCorrection.importCard)
 			{
-				var newCard = base.clone(cards.mutateOnce(function(card) { return card.name===setCorrection.copyCard ? card : undefined; }), true);
+				var newCard;
+				if(setCorrection.copyCard)
+					newCard = base.clone(cards.mutateOnce(function(card) { return card.name===setCorrection.copyCard ? card : undefined; }), true);
+				else if(setCorrection.importCard)
+					newCard = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "json", setCorrection.importCard.set + ".json"), {encoding:"utf8"})).cards.mutateOnce(function(card) { return card.name===setCorrection.importCard.name ? card : undefined; });
+
 				if(setCorrection.replace)
 					Object.forEach(setCorrection.replace, function(key, value) { newCard[key] = value; });
 				if(setCorrection.remove)
