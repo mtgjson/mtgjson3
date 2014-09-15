@@ -95,7 +95,7 @@ function ripSet(setName, cb)
 		function performCorrections()
 		{
 			base.info("Doing set corrections...");
-			shared.performSetCorrections(shared.getSetCorrections(this.data.set.code), this.data.set.cards);
+			shared.performSetCorrections(shared.getSetCorrections(this.data.set.code), this.data.set);
 
 			this();
 		},
@@ -996,7 +996,7 @@ function ripMCISet(set, cb)
 		function performCorrections()
 		{
 			base.info("Doing set corrections...");
-			shared.performSetCorrections(shared.getSetCorrections(set.code), set.cards);
+			shared.performSetCorrections(shared.getSetCorrections(set.code), set);
 
 			this();
 		},

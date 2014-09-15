@@ -40,7 +40,7 @@ tiptoe(
 			process.exit(1);
 		}
 
-		shared.performSetCorrections(shared.getSetCorrections(targetSetCode), newSet.cards);
+		shared.performSetCorrections(shared.getSetCorrections(targetSetCode), newSet);
 
 		newSet.cards = newSet.cards.sort(shared.cardComparator);
 

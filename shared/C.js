@@ -10,6 +10,8 @@
 
 	exports.LAST_PRINTINGS_RESET = "M15";
 
+	exports.SETS_LACKING_HQ_SVG_SYMBOL_ICONS = ["VMA", "V14"];
+
 	exports.SETS_NOT_ON_GATHERER = ["ATH", "ITP", "DKM", "RQS", "DPA"];
 	exports.SETS_WITH_NO_IMAGES = [];
 
@@ -1611,10 +1613,15 @@
 			{ match : {name : ["Elvish Archers", "Goblin Balloon Brigade", "Wall of Air"]}, flavorAddExclamation : true},
 			{ match : {name : ["Jade Statue", "Scathe Zombies"]}, flavorAddDash : true},
 			{ match : {name : "Mahamoti Djinn"}, replace : {flavor : "Of royal blood among the spirits of the air, the Mahamoti Djinn rides on the wings of the winds. As dangerous in the gambling hall as he is in battle, he is a master of trickery and misdirection."}},
-			{ match : {name : "Pearled Unicorn"}, replace : {flavor : "\"‘Do you know, I always thought Unicorns were fabulous monsters, too? I never saw one alive before!' ‘Well, now that we have seen each other,' said the Unicorn, ‘if you'll believe in me, I'll believe in you.'\"\n—Lewis Carroll"}},
+			{ match : {name : "Pearled Unicorn"}, replace : {flavor : "\"‘Do you know, I always thought Unicorns were fabulous monsters, too? I never saw one alive before!' ‘Well, now that we have seen each other,' said the Unicorn, ‘if you'll believe in me, I'll believe in you.'\" —Lewis Carroll"}},
 			{ match : {name : "Roc of Kher Ridges"}, replace : {flavor : "We encountered a valley topped with immense boulders and eerie rock formations. Suddenly one of these boulders toppled from its perch and sprouted gargantuan wings, casting a shadow of darkness and sending us fleeing in terror."}},
 			{ match : {name : "Wall of Ice"}, replace : {flavor : "\"And through the drifts the snowy cliffs/ Did send a dismal sheen:/ Nor shapes of men nor beasts we ken—/ The ice was all between.\"/—Samuel Coleridge, \"The Rime of the Ancient Mariner\""}},
-			{ match : {name : "Wall of Brambles"}, flavorAddDash : true},
+			{ match : {name : "Air Elemental"}, replace : {flavor : "These spirits of the air are winsome and wild, and cannot be truly contained. Only marginally intelligent, they often substitute whimsy for strategy, delighting in mischief and mayhem."}},
+			{ match : {name : "Uthden Troll"}, replace : {flavor : "\"Oi oi oi, me gotta hurt in 'ere,\nOi oi oi, me smell a ting is near,\nGonna bosh 'n gonna nosh 'n da\nhurt'll disappear.\"\n—Traditional"}},
+			{ match : {name : "Scathe Zombies"}, replace : {flavor : "\"They groaned, they stirred, they all uprose,/ Nor spake, nor moved their eyes;/ It had been strange, even in a dream,/ To have seen those dead men rise.\"/ —Samuel Coleridge, \"The Rime of the Ancient Mariner\""}},
+			{ match : {name : "Granite Gargoyle"}, replace : {flavor : "\"While most overworlders fortunately don't realize this, Gargoyles can be most delicious, providing you have the appropriate tools to carve them.\"\n—The Underworld Cookbook, by Asmoranomardicadaistinaculdacar"}},
+			{ match : {name : "Obsianus Golem"}, replace : {flavor : "\"The foot stone is connected to the ankle stone, the ankle stone is connected to the leg stone...\"\n—Song of the Artificer"}},
+			{ match : {name : "Wall of Brambles"}, replace : {flavor : "\"What else, when chaos draws all forces inward to shape a single leaf.\"\n —Conrad Aiken"}},
 			{ match : {name : ["Ancestral Recall", "Badlands", "Bayou", "Black Lotus", "Blaze of Glory", "Braingeyser", "Chaos Orb", "Contract from Below", "Copy Artifact", "Cyclopean Tomb", "Darkpact", "Demonic Attorney", "Demonic Hordes", "Farmstead",
 							   "Fastbond", "Forcefield", "Fork", "Gauntlet of Might", "Granite Gargoyle", "Illusionary Mask", "Kudzu", "Lich", "Mox Emerald", "Mox Jet", "Mox Pearl", "Mox Ruby", "Mox Sapphire", "Natural Selection",
 							   "Plateau", "Raging River", "Roc of Kher Ridges", "Rock Hydra", "Savannah", "Scrubland", "Sedge Troll", "Taiga", "Time Vault", "Time Walk", "Timetwister", "Tropical Island", "Tundra", "Two-Headed Giant of Foriys",
@@ -1646,6 +1653,7 @@
 		ATQ :
 		[
 			{ match : {name : "Gate to Phyrexia"}, flavorAddDash : true },
+			{ match : {name : "Feldon's Cane"}, replace : {flavor : "Feldon found the first of these canes frozen in the Ronom Glacier."} },
 			{ match : {name : "Triskelion"}, replace : {flavor : "A brainchild of Tawnos, the Triskelion proved its versatility and usefulness in many of the later battles between the brothers."} },
 			{ match : {name : ["Argivian Archaeologist", "Candelabra of Tawnos", "Citanul Druid", "Damping Field", "Gaea's Avenger", "Gate to Phyrexia", "Golgothian Sylex", "Haunting Wind", "Martyrs of Korlis", "Mightstone",
 							   "Mishra's Workshop", "Power Artifact", "Powerleech", "Su-Chi", "Tawnos's Coffin", "Transmute Artifact", "Urza's Miter", "Weakstone"]}, replace : {reserved : true}}
@@ -1653,14 +1661,22 @@
 		"3ED" :
 		[
 			{ match : {name : ["Elvish Archers", "Wall of Air", "Goblin Balloon Brigade"]}, flavorAddExclamation : true},
-			{ match : {name : ["Aladdin's Ring", "Hypnotic Specter"]}, flavorAddDash : true},
+			{ match : {name : "Aladdin's Ring"}, replace : {flavor : "\"After these words the magician drew a ring off his finger, and put it on one of Aladdin's, saying: 'It is a talisman against all evil, so long as you obey me.'\" —The Arabian Nights, Junior Classics trans."}},
 			{ match : {name : "Dwarven Weaponsmith"}, replace : {flavor : "\"Work with zeal as hammers peal! Melt, anneal, and pound the steel!\"\n—Old Dwarvish forge-chant"} },
 			{ match : {name : "Mahamoti Djinn"}, replace : {flavor : "Of royal blood among the spirits of the air, the Mahamoti Djinn rides on the wings of the winds. As dangerous in the gambling hall as he is in battle, he is a master of trickery and misdirection."}},
 			{ match : {name : "Pearled Unicorn"}, replace : {flavor : "\"‘Do you know, I always thought Unicorns were fabulous monsters, too? I never saw one alive before!' ‘Well, now that we have seen each other,' said the Unicorn, ‘if you'll believe in me, I'll believe in you.'\" —Lewis Carroll"}},
 			{ match : {name : "Roc of Kher Ridges"}, replace : {flavor : "We encountered a valley topped with immense boulders and eerie rock formations. Suddenly one of these boulders toppled from its perch and sprouted gargantuan wings, casting a shadow of darkness and sending us fleeing in terror."}},
 			{ match : {name : "Wall of Wood"}, replace : {flavor : "Everybody knows that to ward off trouble, you knock on wood. But usually it's better to make a wall out of the wood and let trouble do the knocking."} },
 			{ match : {name : "Onulet"}, replace : {artist : "Anson Maddocks"} },
-			{ match : {name : "Plateau"}, replace : {artist : "Cornelius Brudi"} }
+			{ match : {name : "Fungusaur"}, replace : {flavor : "Rather than sheltering her young, the female Fungusaur often injures her own offspring, thereby ensuring their rapid growth."} },
+			{ match : {name : "Grizzly Bears"}, replace : {flavor : "Don't try to outrun one of Dominia's Grizzlies; it'll catch you, knock you down, and eat you. Of course, you could run up a tree. In that case you'll get a nice view before it knocks the tree down and eats you."}},
+			{ match : {name : "Plateau"}, replace : {artist : "Cornelius Brudi"} },
+			{ match : {name : "Nightmare"}, replace : {flavor : "The Nightmare arises from its lair in the swamps. As the poisoned land spreads, so does the Nightmare's rage and terrifying strength."} },
+			{ match : {name : "Hypnotic Specter"}, replace : {flavor : "\"...There was no trace/ Of aught on that illumined face...\" —Samuel Coleridge, \"Phantom\""} },
+			{ match : {name : "Uthden Troll"}, replace : {flavor : "\"Oi oi oi, me gotta hurt in 'ere,\nOi oi oi, me smell a ting is near,\nGonna bosh 'n gonna nosh 'n da\nhurt'll disappear.\"\n—Traditional"}},
+			{ match : {name : "Scathe Zombies"}, replace : {flavor : "\"They groaned, they stirred, they all uprose,/ Nor spake, nor moved their eyes;/ It had been strange, even in a dream,/ To have seen those dead men rise.\"/ —Samuel Coleridge, \"The Rime of the Ancient Mariner\""}},
+			{ match : {name : "Granite Gargoyle"}, replace : {flavor : "\"While most overworlders fortunately don't realize this, Gargoyles can be most delicious, providing you have the appropriate tools to carve them.\"\n—The Underworld Cookbook, by Asmoranomardicadaistinaculdacar"}},
+			{ match : {name : "Obsianus Golem"}, replace : {flavor : "\"The foot stone is connected to the ankle stone, the ankle stone is connected to the leg stone...\"\n—Song of the Artificer"}}
 		],
 		LEG :
 		[
@@ -1673,7 +1689,7 @@
 			{ match : {name : "Gaseous Form"}, replace : {flavor : "\". . . [A]nd gives to airy nothing/ A local habitation and a name.\" —William Shakespeare, A Midsummer-Night's Dream"} },
 			{ match : {name : "Giant Strength"}, replace : {flavor : "\"O! it is excellent/ To have a giant's strength, but it is tyrannous/ To use it like a giant.\" —William Shakespeare, Measure for Measure"} },
 			{ match : {name : "Hammerheim"}, replace : {flavor : "\"‘Tis distance lends enchantment to the view,/ And robes the mountain in its azure hue.\" —Thomas Campbell, \"Pleasures of Hope\""} },
-			{ match : {name : "Keepers of the Faith"}, replace : {flavor : "And then the Archangel Anthius spoke to them, saying, \"Fear shall be vanquished— by the Sword of Faith.\""} },
+			{ match : {name : "Keepers of the Faith"}, replace : {flavor : "And then the Archangel Anthius spoke to them, saying, \"Fear shall be vanquished by the Sword of Faith.\""} },
 			{ match : {name : "Lifeblood"}, replace : {flavor : "\"Foolish wizard! As you tap the power of your lofty keep, so grows my strength.\" —Malvern Xelionos, Letters"}},
 			{ match : {name : "Pendelhaven"}, replace : {flavor : "\"This is the forest primeval. The murmuring pines and the hemlocks . . . / Stand like Druids of old.\" —Henry Wadsworth Longfellow, \"Evangeline\""} },
 			{ match : {name : "Pyrotechnics" }, replace : {flavor : "\"Hi! ni! ya! Behold the man of flint, that's me!/ Four lightnings zigzag from me, strike and return.\"\n—Navajo war chant"}},
@@ -1703,6 +1719,7 @@
 			{ match : {name : ["Amnesia", "Carnivorous Plant", "Coal Golem", "Dark Sphere", "Diabolic Machine", "Elves of Deep Shadow", "Fissure", "Ghost Ship", "Goblin Shrine", "Grave Robbers", "Hidden Path", "Holy Light", "Inferno", "Knights of Thorn",
 			                    "Land Leeches", "Marsh Gas", "Martyr's Cry", "Miracle Worker", "Morale", "Orc General", "People of the Woods", "Pikemen", "Squire", "Venom", "Word of Binding"] }, flavorAddDash : true },
 			{ match : {name : "Goblin Hero"}, replace : {flavor : "They attacked in an orgy of rage and madness, but only one seemed as focused on killing us as on the sheer joy of battle."} },
+			{ match : {name : "Marsh Viper"}, replace : {flavor : "\"All we had left were their black and bloated bodies.\" —Maeveen O'Donagh, Memoirs of a Soldier"} },
 			{ match : {name : "Savaen Elves"}, replace : {flavor : "\"Purity of magic can only come from purity of the land. How can a meal nourish if the ingredients are spoiled?\" —Sidaine of Savaen"}},,
 			{ match : {name : ["City of Shadows", "Cleansing", "Eternal Flame", "Exorcist", "Frankenstein's Monster", "Goblin Wizard", "Grave Robbers", "Hidden Path", "Knights of Thorn", "Lurker", "Mana Vortex", "Martyr's Cry",
 							   "Nameless Race", "Niall Silvain", "Preacher", "Psychic Allergy", "Scarwood Bandits", "Season of the Witch", "Sorrow's Path", "Stone Calendar", "Tracker", "Worms of the Earth", "Wormwood Treefolk"]}, replace : {reserved : true}}
@@ -1762,14 +1779,19 @@
 			{ renumberImages : "Plains", order : [2386, 2385, 2384] },
 			{ renumberImages : "Swamp", order : [2375, 2376, 2374] },
 			{ match : {name : "Cosmic Horror"}, replace : {flavor : "\". . . [S]creams of horror rend th' affrighted skies.\" —Alexander Pope, The Rape of the Lock"}},
+			{ match : {name : "Aladdin's Ring"}, replace : {flavor : "\"After these words the magician drew a ring off his finger, and put it on one of Aladdin's, saying: 'It is a talisman against all evil, so long as you obey me.'\" —The Arabian Nights, Junior Classics trans."}},
 			{ match : {name : "Giant Strength"}, replace : {flavor : "\"O! it is excellent\nTo have a giant's strength, but it is tyrannous\nTo use it like a giant.\"\n—William Shakespeare, Measure for Measure"}},
 			{ match : {name : "Ley Druid"}, replace : {flavor : "After years of training, the Druid becomes one with nature, drawing power from the land and returning it when needed."}},
 			{ match : {name : "Pearled Unicorn"}, replace : {flavor : "\"‘Do you know, I always thought Unicorns were fabulous monsters, too? I never saw one alive before!' ‘Well, now that we have seen each other,' said the Unicorn, ‘if you'll believe in me, I'll believe in you.'\" —Lewis Carroll"}},
 			{ match : {name : "Segovian Leviathan"}, replace : {flavor : "\"Leviathan, too! Can you catch him with a fish-hook or run a line round his tongue?\" —Job 40:25"} },
 			{ match : {name : "Winter Blast"}, replace : {flavor : "\"Blow, winds, and crack your cheeks! rage! blow!\" —William Shakespeare, King Lear"} },
+			{ match : {name : "Hypnotic Specter"}, replace : {flavor : "\"...There was no trace\nOf aught on that illumined face...\"\n—Samuel Coleridge, \"Phantom\""} },
+			{ match : {name : "Marsh Viper"}, replace : {flavor : "\"All we had left were their black and bloated bodies.\" —Maeveen O'Donagh, Memoirs of a Soldier"} },
+			{ match : {name : "Gaseous Form"}, replace : {flavor : "\". . . [A]nd gives to airy nothing\nA local habitation and a name.\"\n—William Shakespeare, A Midsummer-Night's Dream"} },
+			{ match : {name : "Scathe Zombies"}, replace : {flavor : "\"They groaned, they stirred, they all uprose,/ Nor spake, nor moved their eyes;/ It had been strange, even in a dream,/ To have seen those dead men rise.\"/ —Samuel Coleridge, \"The Rime of the Ancient Mariner\""}},
 			{ match : {name : "Ali Baba"}, replace : {flavor : "\"When he reached the entrance of the cavern, he pronounced the words, ‘Open, Sesame!'\"\n—The Arabian Nights, Junior Classics trans."}},
 			{ match : {name : ["Elvish Archers", "Goblin Balloon Brigade", "Visions", "Wall of Air"]}, flavorAddExclamation : true },
-			{ match : {name : ["Aladdin's Ring", "Dragon Whelp", "Northern Paladin"]}, flavorAddDash : true }
+			{ match : {name : ["Dragon Whelp", "Northern Paladin"]}, flavorAddDash : true }
 		],
 		ICE :
 		[
@@ -1797,6 +1819,9 @@
 		[
 			{ match : {name : "Boomerang"}, replace : {flavor : "\"O! call back yesterday, bid time return.\" —William Shakespeare, King Richard the Second"} },
 			{ match : {name : "Craw Giant"}, replace : {flavor : "Harthag gave a jolly laugh as he surveyed the army before him. \"Ho ho ho! Midgets! You think you can stand in my way?\""} },
+			{ match : {name : "Keepers of the Faith"}, replace : {flavor : "And then the Archangel Anthius spoke to them, saying, \"Fear shall be vanquished by the Sword of Faith.\""} },
+			{ match : {name : "Scavenger Folk"}, replace : {flavor : "String, weapons, wax, or jewels—it makes no difference. Leave nothing unguarded in Scarwood."} },
+			{ match : {name : "Wall of Vapor"}, replace : {flavor : "\"Walls of a castle are made out of stone,/ Walls of a house out of bricks or of wood./ My walls are made out of magic alone,/ Stronger than any that ever have stood.\" —Chrysoberyl Earthsdaughter, Incantations"}},
 			{ match : {name : ["Goblin Digging Team", "Transmutation"]}, flavorAddExclamation : true },
 			{ match : {name : ["Goblin Shrine", "Revelation"]}, flavorAddDash : true },
 			{ match : {name : "Divine Offering"}, replace : {flavor : "D'Haren stared at the twisted lump of metal that had been a prized artifact. The fight was getting ugly."}},
@@ -1949,6 +1974,7 @@
 			{ match : {name : "Blinking Spirit"}, replace : {flavor : "\"Don't look at it! Maybe it'll go away!\"\n—Ib Halfheart, goblin tactician"}},
 			{ match : {name : "Boomerang"}, replace : {flavor : "\"O! call back yesterday, bid time return.\" —William Shakespeare, King Richard the Second"} },
 			{ match : {name : "Craw Giant"}, replace : {flavor : "Harthag gave a jolly laugh as he surveyed the army before him. \"Ho ho ho! Midgets! You think you can stand in my way?\""} },
+			{ match : {name : "Gaseous Form"}, replace : {flavor : "\". . . [A]nd gives to airy nothing\nA local habitation and a name.\"\n—William Shakespeare, A Midsummer-Night's Dream"} },
 			{ match : {name : "Brassclaw Orcs"}, replace : {flavor : "\"Modern Sarpadia's swarming with thrulls. It's a testament to the orcs that they've survived there so long.\"\n—Elbieta, Argivian scholar"}},
 			{ match : {name : "Giant Strength"}, replace : {flavor : "\"O! it is excellent / To have a giant's strength, but it is tyrannous / To use it like a giant.\"\n—William Shakespeare,\nMeasure for Measure"} },
 			{ match : {name : "Ironroot Treefolk"}, replace : {flavor : "\"‘I'll show you how to handle the treefolk!' the giant bragged, and he strode off into the forest. Two days later he returned, his face masked in sap and a nest behind his ear. None dared ask who won.\"\n—Azeworai, \"The Treeling\""}},
@@ -1956,6 +1982,7 @@
 			{ match : {name : "Pearled Unicorn"}, replace : {flavor : "\"‘Do you know, I always thought Unicorns were fabulous monsters, too? I never saw one alive before!' ‘Well, now that we have seen each other,' said the Unicorn, ‘if you'll believe in me, I'll believe in you.'\"\n—Lewis Carroll, Through the Looking-Glass"}},
 			{ match : {name : "Segovian Leviathan"}, replace : {flavor : "\"Leviathan, too! Can you catch him with a fish-hook or run a line round his tongue?\" —The Bible, Job 41:1"} },
 			{ match : {name : "Time Elemental"}, replace : {artist : "Amy Weber"}},
+			{ match : {name : "Aladdin's Ring"}, replace : {flavor : "\". . . [T]he magician drew a ring off his finger . . . , saying: 'It is a talisman against all evil, so long as you obey me.'\"\n—The Arabian Nights,\nJunior Classics trans."}},
 			{ match : {name : "Updraft"}, replace : {flavor : "\"Come one, come all! this rock shall fly From its firm base as soon as I.\"\n—Sir Walter Scott, \"The Lady of the Lake\""}},
 			{ match : {name : "Wall of Spears"}, replace : {flavor : "Even the most conservative generals revised their tactics after the Battle of Sarinth, during which a handful of peasant-pikemen held off a trio of rampaging craw wurms."}},
 			{ match : {name : "Wall of Stone"}, replace : {flavor : "The ground itself lends its strength to these walls of living stone, which possess the stability of ancient mountains. These mighty bulwarks thwart ground-based troops, providing welcome relief for weary warriors who defend the land."}},
@@ -1979,7 +2006,8 @@
 			{ match : {name : ["Border Guard"]}, flavorAddExclamation : true },
 			{ match : {name : ["Dread Charge"]}, flavorAddDash : true },
 			{ match : {name : "Armageddon"}, replace : {flavor : "\"‘O miserable of happy! Is this the end\nOf this new glorious world . . . ?'\"\n—John Milton, Paradise Lost"}},
-			{ match : {name : "Hill Giant"}, replace : {flavor : "Hill giants are mostly just big. Of course, that does count for a lot!"}}
+			{ match : {name : "Hill Giant"}, replace : {flavor : "Hill giants are mostly just big. Of course, that does count for a lot!"}},
+			{ match : {name : "Wind Drake"}, replace : {flavor : "\"No bird soars too high, if he soars with his own wings.\" —William Blake, The Marriage of Heaven and Hell"}}
 		],
 		VAN :
 		[
@@ -2152,6 +2180,7 @@
 			{ match : {name : "Argothian Swine"}, replace : {flavor : "In Argoth, the shortest path between two points is the one the swine make."}},
 			{ match : {name : "Headlong Rush"}, replace : {flavor : "A landslide of goblins poured toward the defenders—tumbling, rolling, and bouncing their way down the steep hillside."}},
 			{ match : {name : "Pegasus Charger"}, replace : {flavor : "\"The clouds came alive and dove to the earth! Hooves flashed among the dark army, who fled before the spectacle of fury.\"\n—Song of All, canto 211"}},
+			{ match : {name : "Bulwark"}, replace : {flavor : "\"It will be the goblin's first bath, and its last.\" —Fire Eye, viashino bey"}},
 			{ match : {name : "Priest of Titania"}, replace : {flavor : "Titania rewards all those who honor the forest by making them a living part of it."}},
 			{ match : {name : "Sanguine Guard"}, replace : {flavor : "\"Father of Machines! Your filigree gaze carves us, and the scars dance upon our grateful flesh.\"\n—Phyrexian Scriptures"}},
 			{ match : {name : ["Argothian Wurm", "Barrin, Master Wizard", "Citanul Centaurs", "Gaea's Cradle", "Gilded Drake", "Great Whale", "Herald of Serra", "Karn, Silver Golem", "Lifeline", "Lightning Dragon", "Morphling", "Opal Archangel",
@@ -2223,9 +2252,12 @@
 			{ match : {name : ["Fallen Angel", "Goblin Warrens", "Inferno"]}, flavorAddDash : true },
 			{ match : {name : "Anaba Shaman"}, replace : {flavor : "\"The shamans? Ha! They are craven cows not capable of true magic.\"\n—Irini Sengir"}},
 			{ match : {name : "Daraja Griffin"}, replace : {flavor : "\"And the flamingos said, ‘Get out of our nest—we can't be seen with the likes of you!' So, the griffin ate them.\"\n—Azeworai, \"The Ugly Bird\""}},
+			{ match : {name : "Aladdin's Ring"}, replace : {flavor : "\". . . [T]he magician drew a ring off his finger . . . , saying: 'It is a talisman against all evil, so long as you obey me.'\"\n—The Arabian Nights,\nJunior Classics trans."}},
 			{ match : {name : "Elvish Archers"}, replace : {flavor : "\"I tell you, there was so many arrows flying about you couldn't hardly see the sun. So I says to young Angus, ‘Well, at least now we're fighting in the shade!'\""}},
 			{ match : {name : "Giant Strength"}, replace : {flavor : "\"O! it is excellent / To have a giant's strength, but it is tyrannous / To use it like a giant.\"\n—William Shakespeare,\nMeasure for Measure"}},
 			{ match : {name : "Polymorph"}, replace : {flavor : "\"Ahh! Opposable digits!\""}},
+			{ match : {name : "Heavy Ballista"}, replace : {flavor : "\"Archers, ballistae—you can't even get near the island of Avenant.\"\n—Gerrard of the Weatherlight"}},
+		 	{ match : {name : "Early Harvest"}, replace : {flavor : "\"Tonight we'll eat a farewell feast. Cold corn porridge is not enough. / Let's peel papayas, pineapples, and mangoes, drink coconut milk, / and bake bananas.\"\n—\"Love Song of Night and Day\""}},
 			{ match : {name : "Segovian Leviathan"}, replace : {flavor : "\"Leviathan, too! Can you catch him with a fish-hook or run a line round his tongue?\"\n—The Bible, Job 41:1"}},
 			{ match : {name : "Staunch Defenders"}, replace : {flavor : "\"Hold your position! Leave doubt for the dying!\"\n—Tahngarth of the Weatherlight"}}
 		],
@@ -2285,7 +2317,11 @@
 			{ renumberImages : "Mountain", order : [22344, 22335, 22336, 22339, 22342, 22334, 22343, 21118, 22340] },
 			{ renumberImages : "Plains", order : [22357, 22356, 21145, 22362, 22361, 22363, 22360, 22358, 22359] },
 			{ renumberImages : "Swamp", order : [21171, 22370, 22369, 22368] },
-			{ match : {multiverseid : 22339}, replace : {artist : "Rob Alexander"} }
+			{ match : {multiverseid : 22339}, replace : {artist : "Rob Alexander"} },
+			{ match : {name : "Blinking Spirit"}, replace : {flavor : "\"Don't look at it! Maybe it'll go away!\"\n—Ib Halfheart, goblin tactician"}},
+			{ match : {name : "Curfew"}, replace : {flavor : "\". . . But I'm not tired!\""}},
+			{ match : {name : "Pincher Beetles"}, replace : {flavor : "\"No fair! Since when does a bug get ta munch on me?\"\n—Squee, goblin cabin hand"}},
+			{ match : {name : "Lhurgoyf"}, replace : {flavor : "\"Ach! Hans, run! It's the Lhurgoyf!\"\n—Saffi Eriksdotter, last words"}},
 		],
 		pSUS :
 		[
@@ -2303,7 +2339,8 @@
 		],
 		NMS :
 		[
-			{ match : {name : "Wild Mammoth"}, replace : {flavor : "\"Sit. Heel! Down! HELP!\""}}
+			{ match : {name : "Wild Mammoth"}, replace : {flavor : "\"Sit. Heel! Down! HELP!\""}},
+			{ match : {name : "Rhox"}, replace : {originalText : "You may have Rhox deal combat damage to defending player as though it weren't blocked.\n{2}{G}: Regenerate Rhox."}}
 		],
 		S00 :
 		[
@@ -2354,13 +2391,14 @@
 		[
 			{ match : {name : "Fire"}, replace : {originalText : "Fire deals 2 damage divided as you choose among any number of target creatures and/or players."}},
 			{ match : {name : "Illusion"}, replace : {originalText : "Target spell or permanent becomes the color of your choice until end of turn."}},
-			{ match : {name : "Life"}, replace : {originalText : "Until end of turn, all lands you control are 1/1/ creatures that are still lands."}},
+			{ match : {name : "Life"}, replace : {originalText : "Until end of turn, all lands you control are 1/1 creatures that are still lands."}},
 			{ match : {name : "Day"}, replace : {originalText : "Creatures target player controls get +1/+1 until end of turn."}},
 			{ match : {name : "Order"}, replace : {originalText : "Remove target attacking creature from the game."}},
 		],
 		ODY :
 		[
-			{ match : {name : "Impulsive Maneuvers"}, replace : {artist : "Dave Dorman"}}
+			{ match : {name : "Impulsive Maneuvers"}, replace : {artist : "Dave Dorman"}},
+			{ match : {name : "Dusk Imp"}, replace : {flavor : "It despises humans and squirrels and beasts and dwarves and cephalids . . . well, it despises just about everything."}}
 		],
 		DKM :
 		[
@@ -2419,6 +2457,10 @@
 			{ match : { name : "Budoka Pupil"}, replace : { names : ["Budoka Pupil", "Ichiga, Who Topples Oaks"]}},
 			{ match : { name : "Ass Whuppin'"}, replace : { border : "silver"}}
 		],
+		"8ED" :
+		[
+			{ match : {name : "Lhurgoyf"}, replace : {flavor : "\"Ach! Hans, run! It's the Lhurgoyf!\"\n—Saffi Eriksdotter, last words"}}
+		],
 		CHK :
 		[
 			{ renumberImages : "Brothers Yamazaki", order : [78968, 85106] },
@@ -2430,6 +2472,10 @@
 		[
 			{ match : {name : "Super Secret Tech"}, replace : {rarity : "Rare"}},
 			{ match : {name : "Cheap Ass"}, replace : {text : "Spells you play cost {½} less to play."}},
+			{ match : {name : "\"Ach! Hans, Run!\""}, replace : {
+				text : "At the beginning of your upkeep, you may say \"Ach! Hans, run! It's the . . .\" and name a creature card. If you do, search your library for the named card, put it into play, then shuffle your library. That creature has haste. Remove it from the game at end of turn.",
+				originalText : "At the beginning of your upkeep, you may say \"Ach! Hans, run! It's the . . .\" and name a creature card. If you do, search your library for the named card, put it into play, then shuffle your library. That creature has haste. Remove it from the game at end of turn."
+			}},
 			{ match : {name : "Flaccify"}, replace : {text : "Counter target spell unless its controller pays {3}{½}."}},
 			{ match : {name : "Kill Destroy"}, replace : {name : "Kill! Destroy!", imageName : "kill! destroy!"}},
 			{ match : {name : "Little Girl"}, replace : {manaCost : "{hw}"}},
@@ -2580,7 +2626,7 @@
 			{ match : {name : "Staggershock"}, replace : {releaseDate : "2010"}}
 		],
 		GPT :
-		[
+	[
 			{ match : {name : ["Gelectrode", "Schismotivate", "Skarrg, the Rage Pits", "Skarrgan Skybreaker", "Train of Thought", "Wreak Havoc"]}, flavorAddExclamation : true },
 			{ match : {name : "Borborygmos"}, replace : {flavor : "\"It's easy to see why those Gruul dirtbags follow him—the only orders he gives are ‘Crush them!' and ‘We eat!'\"\n—Teysa"}},
 			{ match : {name : "Gruul War Plow"}, replace : {flavor : "\"Steering apparatus?! What for? Rip it out, sharpen it, and lash it to the front!\"\n—Ktank, Gruul plowmaster"}},
@@ -2600,7 +2646,8 @@
 		CSP :
 		[
 			{ match : {name : ["Heidar, Rimewind Master", "Lovisa Coldeyes"]}, flavorAddExclamation : true },
-			{ match : {name : "Flashfreeze"}, replace : {flavor : "\"Nature? Fire? Bah! Both are chaotic and difficult to control. Ice is structured, latticed, light as a feather, massive as a glacier. In ice, there is power!\"\n—Heidar, Rimewind master"}}
+			{ match : {name : "Flashfreeze"}, replace : {flavor : "\"Nature? Fire? Bah! Both are chaotic and difficult to control. Ice is structured, latticed, light as a feather, massive as a glacier. In ice, there is power!\"\n—Heidar, Rimewind master"}},
+			{ match : {name : ["Snow-Covered Forest", "Snow-Covered Island", "Snow-Covered Mountain", "Snow-Covered Plain", "Snow-Covered Swamp"]}, replace : {rarity : "Common"}}
 		],
 		TSP :
 		[
@@ -2631,20 +2678,24 @@
 					names       : ["Naughty", "Nice"],
 					text        : "Search another target player's library for a card and put that card into your hand. Then shuffle that player's library.",
 					number      : "7a",
-					source      : "Holiday gift to Wizards internal teams and business partners."
+					source      : "Holiday gift to Wizards internal teams and business partners.",
+					printings    : ["Happy Holidays"]
 				}
 			},
 			{ copyCard : "Naughty", replace :
 				{
 					name         : "Nice",
 					number       : "7b",
-					text         : "Search your library for a card and put it into another target player's hand. Then shuffle your library",
+					text         : "Search your library for a card and put it into another target player's hand. Then shuffle your library.",
 					manaCost     : "{1}{W}{W}",
-					colors       : ["White"]
+					colors       : ["White"],
+					printings    : ["Happy Holidays"]
 				}
 			},
-
-
+			{ match : {name : "Gifts Given"}, replace : {text : "Search target opponent's library for four cards with different names and reveal them. That player chooses two of those cards. Put the chosen cards into the player's graveyard and the rest into your hand. Then that player shuffles his or her library."}},
+			{ match : {name : "Evil Presents"}, replace : {flavor : "'Tis better to give than to receive."}},
+			{ match : {name : "Gifts Given"}, replace : {flavor : "\"Thanks! You shouldn't have.\""}},
+			{ match : {name : "Season's Beatings"}, replace : {flavor : "Arriving home, he suddenly longed for the bloodsoaked battlefields behind him."}}
 		],
 		PLC :
 		[
@@ -2851,7 +2902,6 @@
 	exports.SYMBOL_RARITIES = {c:["common"], u : ["uncommon"], r : ["rare"], m : ["mythic", "mythic rare", "mythicrare"], s : ["special"]};
 	exports.SYMBOL_SIZES = [8, 16, 24, 32, 48, 64, 96, 128, 256, 512, 768, 1024];
 	exports.SETS_WITH_BONUS_RARITIES = ["VMA"];
-	exports.SETS_LACKING_HQ_SVG_SYMBOL_ICONS = ["MD1", "CNS", "VMA", "M15", "V14", "DDN"];
 
 	exports.SYMBOL_MANA =
 	{
@@ -2977,5 +3027,8 @@
 
 	exports.ORACLE_FIELDS = ["layout", "name", "names", "manaCost", "cmc", "colors", "type", "supertypes", "types", "subtypes", "text", "power", "toughness", "loyalty", "hand", "life", "rulings", "foreignNames", "printings", "legalities"];
 	exports.EXTRA_FIELDS = ["rulings", "foreignNames", "printings", "originalText", "originalType", "legalities", "source"];
-	exports.SET_SPECIFIC_FIELDS = ["artist", "flavor", "number", "multiverseid", "variations", "watermark", "border", "timeshifted", "reserved", "releaseDate", "originalText", "originalType"];
+	exports.SET_SPECIFIC_FIELDS = ["rarity", "artist", "flavor", "number", "multiverseid", "variations", "watermark", "border", "timeshifted", "reserved", "releaseDate", "originalText", "originalType"];
+
+	exports.VINTAGE_BANNED = ["Advantageous Proclamation", "Amulet of Quoz", "Backup Plan", "Brago's Favor", "Bronze Tablet", "Chaos Orb", "Contract from Below", "Darkpact", "Demonic Attorney", "Double Stroke", "Falling Star", "Immediate Action", "Iterative Analysis", "Jeweled Bird", "Muzzio's Preparations", "Power Play", "Rebirth", "Secret Summoning", "Secrets of Paradise", "Sentinel Dispatch", "Shahrazad", "Tempest Efreet", "Timmerian Fiends", "Unexpected Potential", "Worldknit"];
+	exports.VINTAGE_RESTRICTED = ["Ancestral Recall", "Balance", "Black Lotus", "Brainstorm", "Channel", "Demonic Consultation", "Demonic Tutor", "Fastbond", "Flash", "Gifts Ungiven", "Imperial Seal", "Library of Alexandria", "Lion’s Eye Diamond", "Lotus Petal", "Mana Crypt", "Mana Vault", "Memory Jar", "Merchant Scroll", "Mind’s Desire", "Mox Emerald", "Mox Jet", "Mox Pearl", "Mox Ruby", "Mox Sapphire", "Mystical Tutor", "Necropotence", "Ponder", "Sol Ring", "Strip Mine", "Thirst for Knowledge", "Time Vault", "Time Walk", "Timetwister", "Tinker", "Tolarian Academy", "Trinisphere", "Vampiric Tutor", "Wheel of Fortune", "Windfall", "Yawgmoth’s Bargain", "Yawgmoth’s Will"];
 })(typeof exports==="undefined" ? window.C={} : exports);

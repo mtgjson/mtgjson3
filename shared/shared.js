@@ -156,8 +156,9 @@ exports.getSetCorrections = function(setCode)
 	return setCorrections;
 };
 
-exports.performSetCorrections = function(setCorrections, cards)
+exports.performSetCorrections = function(setCorrections, fullSet)
 {
+	var cards = fullSet.cards;
 	setCorrections.forEach(function(setCorrection)
 	{
 		if(setCorrection==="numberCards")
@@ -270,7 +271,7 @@ exports.performSetCorrections = function(setCorrections, cards)
 			delete card.legalities;
 	});
 
-	// Flavor text quotes
+	// Flavor text changes
 	cards.forEach(function(card)
 	{
 		if(!card.flavor)
@@ -279,6 +280,24 @@ exports.performSetCorrections = function(setCorrections, cards)
 		card.flavor = card.flavor.replaceAll("“", "\"");
 		card.flavor = card.flavor.replaceAll("”", "\"");
 		card.flavor = card.flavor.replaceAll("＂", "\"");
+
+		while(card.flavor.contains(" \n"))
+		{
+			card.flavor = card.flavor.replaceAll(" \n", "\n");
+		}
+	});
+
+	// Legality corrections
+	cards.forEach(function(card)
+	{
+		if(card.layout==="token" || card.border==="silver" || (fullSet.border==="silver" && !card.hasOwnProperty("border")))
+			return;
+
+		if(!card.hasOwnProperty("legalities"))
+			card["legalities"] = {};
+
+		if(!card.legalities.hasOwnProperty("Vintage"))
+			card.legalities["Vintage"] = C.VINTAGE_BANNED.contains(card.name) ? "Banned" : (C.VINTAGE_RESTRICTED.contains(card.name) ? "Restricted" : "Legal");
 	});
 };
 

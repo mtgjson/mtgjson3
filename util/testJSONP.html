@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<title>JSONP MTGJSON TEST</title>
+		<script type="text/javascript">
+			"use strict";
+			window.mtgjsoncallback = function(data, name)
+			{
+				window.alert(name);
+				if(name==="changelog")
+					window.alert(data[0].when);
+				else if(name==="version")
+					window.alert(data);
+				else if(name==="RTR")
+					window.alert(data.name);
+				else if(name==="AllSets")
+					window.alert(data["ICE"].name);
+			};
+		</script>
+		<script type="text/javascript" src="http://dev.mtgjson.com/json/AllSets.jsonp"></script>
+		<script type="text/javascript" src="http://dev.mtgjson.com/json/changelog.jsonp"></script>
+		<script type="text/javascript" src="http://dev.mtgjson.com/json/version.jsonp"></script>
+		<script type="text/javascript" src="http://dev.mtgjson.com/json/RTR.jsonp"></script>
+</html>

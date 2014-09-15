@@ -15,6 +15,9 @@ var base = require("xbase"),
 	moment = require("moment"),
 	tiptoe = require("tiptoe");
 
+var JSONP_PREFIX = "mtgjsoncallback(";
+var JSONP_SUFFIX = ");";
+
 var dustData = 
 {
 	sets  : [],
@@ -110,9 +113,14 @@ tiptoe(
 			allSetsArray.push(set);
 
 			fs.writeFile(path.join(__dirname, "json", SET.code + ".json"), JSON.stringify(set), {encoding : "utf8"}, this.parallel());
+			fs.writeFile(path.join(__dirname, "json", SET.code + ".jsonp"), JSONP_PREFIX + JSON.stringify(set) + ', "' + SET.code + '"' + JSONP_SUFFIX, {encoding : "utf8"}, this.parallel());
 			if(SET.code==="CON")
+			{
 				fs.writeFile(path.join(__dirname, "json", "_" + SET.code + ".json"), JSON.stringify(set), {encoding : "utf8"}, this.parallel());
+				fs.writeFile(path.join(__dirname, "json", "_" + SET.code + ".jsonp"), JSONP_PREFIX + JSON.stringify(set) + ', "' + SET.code + '"' + JSONP_SUFFIX, {encoding : "utf8"}, this.parallel());
+			}
 			fs.writeFile(path.join(__dirname, "json", SET.code + "-x.json"), JSON.stringify(setWithExtras), {encoding : "utf8"}, this.parallel());
+			fs.writeFile(path.join(__dirname, "json", SET.code + "-x.jsonp"), JSONP_PREFIX + JSON.stringify(setWithExtras) + ', "' + SET.code + '-x"' + JSONP_SUFFIX, {encoding : "utf8"}, this.parallel());
 
 			var setSize = printUtil.toSize(JSON.stringify(set).length, 0);
 			setSize = "&nbsp;".repeat(6-setSize.length) + setSize;
@@ -153,20 +161,37 @@ tiptoe(
 		dustData.setSpecificFields = C.SET_SPECIFIC_FIELDS.sort().join(", ");
 
 		fs.writeFile(path.join(__dirname, "json", "AllSets.json"), JSON.stringify(allSets), {encoding : "utf8"}, this.parallel());
+		fs.writeFile(path.join(__dirname, "json", "AllSets.jsonp"), JSONP_PREFIX + JSON.stringify(allSets) + ', "AllSets"' + JSONP_SUFFIX, {encoding : "utf8"}, this.parallel());
+
 		fs.writeFile(path.join(__dirname, "json", "AllSetsArray.json"), JSON.stringify(allSetsArray), {encoding : "utf8"}, this.parallel());
+		fs.writeFile(path.join(__dirname, "json", "AllSetsArray.jsonp"), JSONP_PREFIX + JSON.stringify(allSetsArray) + ', "AllSetsArray"' + JSONP_SUFFIX, {encoding : "utf8"}, this.parallel());
 
 		fs.writeFile(path.join(__dirname, "json", "AllSets-x.json"), JSON.stringify(allSetsWithExtras), {encoding : "utf8"}, this.parallel());
+		fs.writeFile(path.join(__dirname, "json", "AllSets-x.jsonp"), JSONP_PREFIX + JSON.stringify(allSetsWithExtras) + ', "AllSets-x"' + JSONP_SUFFIX, {encoding : "utf8"}, this.parallel());
+
 		fs.writeFile(path.join(__dirname, "json", "AllSetsArray-x.json"), JSON.stringify(allSetsArrayWithExtras), {encoding : "utf8"}, this.parallel());
+		fs.writeFile(path.join(__dirname, "json", "AllSetsArray-x.jsonp"), JSONP_PREFIX + JSON.stringify(allSetsArrayWithExtras) + ', "AllSetsArray-x"' + JSONP_SUFFIX, {encoding : "utf8"}, this.parallel());
 
 		fs.writeFile(path.join(__dirname, "json", "AllCards.json"), JSON.stringify(allCards), {encoding : "utf8"}, this.parallel());
+		fs.writeFile(path.join(__dirname, "json", "AllCards.jsonp"), JSONP_PREFIX + JSON.stringify(allCards) + ', "AllCards"' + JSONP_SUFFIX, {encoding : "utf8"}, this.parallel());
+
 		fs.writeFile(path.join(__dirname, "json", "AllCards-x.json"), JSON.stringify(allCardsWithExtras), {encoding : "utf8"}, this.parallel());
+		fs.writeFile(path.join(__dirname, "json", "AllCards-x.jsonp"), JSONP_PREFIX + JSON.stringify(allCardsWithExtras) + ', "AllCards-x"' + JSONP_SUFFIX, {encoding : "utf8"}, this.parallel());
 		
 		fs.writeFile(path.join(__dirname, "json", "SetCodes.json"), JSON.stringify(C.SETS.map(function(SET) { return SET.code; })), {encoding : "utf8"}, this.parallel());
-		fs.writeFile(path.join(__dirname, "json", "SetList.json"), JSON.stringify(C.SETS.map(function(SET) { return {name : SET.name, code : SET.code, releaseDate : SET.releaseDate}; })), {encoding : "utf8"}, this.parallel());
-		fs.writeFile(path.join(__dirname, "json", "version-full.json"), JSON.stringify({version:dustData.version}), {encoding : "utf8"}, this.parallel());
-		fs.writeFile(path.join(__dirname, "json", "version.json"), JSON.stringify(dustData.version), {encoding : "utf8"}, this.parallel());
+		fs.writeFile(path.join(__dirname, "json", "SetCodes.jsonp"), JSONP_PREFIX + JSON.stringify(C.SETS.map(function(SET) { return SET.code; })) + ', "SetCodes"' + JSONP_SUFFIX, {encoding : "utf8"}, this.parallel());
 
-		fileUtil.copy(path.join(__dirname, "changelog.json"), path.join(__dirname, "json", "changelog.json"), this.parallel());
+		fs.writeFile(path.join(__dirname, "json", "SetList.json"), JSON.stringify(C.SETS.map(function(SET) { return {name : SET.name, code : SET.code, releaseDate : SET.releaseDate}; })), {encoding : "utf8"}, this.parallel());
+		fs.writeFile(path.join(__dirname, "json", "SetList.jsonp"), JSONP_PREFIX + JSON.stringify(C.SETS.map(function(SET) { return {name : SET.name, code : SET.code, releaseDate : SET.releaseDate}; })) + ', "SetList"' + JSONP_SUFFIX, {encoding : "utf8"}, this.parallel());
+
+		fs.writeFile(path.join(__dirname, "json", "version-full.json"), JSON.stringify({version:dustData.version}), {encoding : "utf8"}, this.parallel());
+		fs.writeFile(path.join(__dirname, "json", "version-full.jsonp"), JSONP_PREFIX + JSON.stringify({version:dustData.version}) + ', "version-full"' + JSONP_SUFFIX, {encoding : "utf8"}, this.parallel());
+
+		fs.writeFile(path.join(__dirname, "json", "version.json"), JSON.stringify(dustData.version), {encoding : "utf8"}, this.parallel());
+		fs.writeFile(path.join(__dirname, "json", "version.jsonp"), JSONP_PREFIX + JSON.stringify(dustData.version) + ', "version"' + JSONP_SUFFIX, {encoding : "utf8"}, this.parallel());
+
+		fs.writeFile(path.join(__dirname, "json", "changelog.json"), fs.readFileSync(path.join(__dirname, "changelog.json"), {encoding : "utf8"}), {encoding : "utf8"}, this.parallel());
+		fs.writeFile(path.join(__dirname, "json", "changelog.jsonp"), JSONP_PREFIX + fs.readFileSync(path.join(__dirname, "changelog.json"), {encoding : "utf8"}) + ', "changelog"' + JSONP_SUFFIX, {encoding : "utf8"}, this.parallel());
 	},
 	function verifyJSON()
 	{

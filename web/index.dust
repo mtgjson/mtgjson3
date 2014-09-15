@@ -45,7 +45,7 @@
 		<table class="downloads downloadsAll downloadsAllSets">
 			<thead>
 				<tr>
-					<th colspan="4">All Sets</th>
+					<th colspan="4">All Sets<br><span class="docLink"><a href="#documentation">Documentation</a></span></th>
 				</tr>
 				<tr>
 					<th colspan="2">Card Data Only</th>
@@ -86,7 +86,7 @@
 		<table class="downloads downloadsAll downloadsAllCards">
 			<thead>
 				<tr>
-					<th colspan="4">All Cards</th>
+					<th colspan="4">All Cards<br><span class="docLink"><a href="#allCardsJSON">Documentation</a></span></th>
 				</tr>
 				<tr>
 					<th colspan="2">Card Data Only</th>
@@ -134,35 +134,35 @@
 		<img src="images/sentriplets.jpg" id="cardExample">
 		<pre><code data-language="javascript">
     {~lb}
-                name : "Sen Triplets",
+               "name" : "Sen Triplets",
 
-            manaCost : "{~lb}2{~rb}{~lb}W{~rb}{~lb}U{~rb}{~lb}B{~rb}",
-                 cmc : 5,
-              colors : ["White", "Blue", "Black"],
+           "manaCost" : "{~lb}2{~rb}{~lb}W{~rb}{~lb}U{~rb}{~lb}B{~rb}",
+                "cmc" : 5,
+             "colors" : ["White", "Blue", "Black"],
 
-                type : "Legendary Artifact Creature — Human Wizard",
-          supertypes : ["Legendary"],
-               types : ["Artifact", "Creature"],
-            subtypes : ["Human", "Wizard"],
+               "type" : "Legendary Artifact Creature — Human Wizard",
+         "supertypes" : ["Legendary"],
+              "types" : ["Artifact", "Creature"],
+           "subtypes" : ["Human", "Wizard"],
 
-              rarity : "Mythic Rare",
+             "rarity" : "Mythic Rare",
 
-                text : "At the beginning of your upkeep, choose target opponent.
-                        This turn, that player can't cast spells or activate
-                        abilities and plays with his or her hand revealed.
-                        You may play cards from that player's hand this turn.",
+               "text" : "At the beginning of your upkeep, choose target opponent.
+                         This turn, that player can't cast spells or activate
+                         abilities and plays with his or her hand revealed.
+                         You may play cards from that player's hand this turn.",
 
-              flavor : "They are the masters of your mind.",
+             "flavor" : "They are the masters of your mind.",
 
-              artist : "Greg Staples",
-              number : "109",
+             "artist" : "Greg Staples",
+             "number" : "109",
 
-               power : "3",
-           toughness : "3",
+              "power" : "3",
+          "toughness" : "3",
 
-              layout : "normal",
-        multiverseid : 180607,
-           imageName : "sen triplets",
+             "layout" : "normal",
+       "multiverseid" : 180607,
+          "imageName" : "sen triplets"
     {~rb}
 		</code></pre>
 		<hr>
@@ -189,20 +189,20 @@
 		<br>
 		Each individual set is a JSON object like this:</p>
 <pre><code data-language="javascript">    {~lb}
-                 name : "Nemesis",            // The name of the set
-                 code : "NMS",                // The code name of the set
-         gathererCode : "NE",                 // The code that Gatherer uses for the set. Only present if different than 'code'
-              oldCode : "NEM",                // An old style code used by some Magic software. Only present if different than 'gathererCode' and 'code'
-          releaseDate : "2000-02-14"          // When the set was released (YYYY-MM-DD). For promo sets, the date the first card was released.
-               border : "black",              // The type of border on the cards, either "white", "black" or "silver"
-                 type : "expansion",          // Type of set. One of: "core", "expansion", "reprint", "box", "un",
-                                              //                      "from the vault", "premium deck", "duel deck",
-                                              //                      "starter", "commander", "planechase", "archenemy",
-                                              //                      "promo", "vanguard", "masters"
-                block : "Masques",            // The block this set is in,
-           onlineOnly : false,                // Present and set to true if the set was only released online
-              booster : [ "rare", ... ]       // Booster contents for this set, see below for details
-                cards : [ {~lb}{~rb}, {~lb}{~rb}, {~lb}{~rb}, ... ]  // The cards in the set
+                "name" : "Nemesis",            // The name of the set
+                "code" : "NMS",                // The code name of the set
+        "gathererCode" : "NE",                 // The code that Gatherer uses for the set. Only present if different than 'code'
+             "oldCode" : "NEM",                // An old style code used by some Magic software. Only present if different than 'gathererCode' and 'code'
+         "releaseDate" : "2000-02-14"          // When the set was released (YYYY-MM-DD). For promo sets, the date the first card was released.
+              "border" : "black",              // The type of border on the cards, either "white", "black" or "silver"
+                "type" : "expansion",          // Type of set. One of: "core", "expansion", "reprint", "box", "un",
+                                               //                      "from the vault", "premium deck", "duel deck",
+                                               //                      "starter", "commander", "planechase", "archenemy",
+                                               //                      "promo", "vanguard", "masters"
+               "block" : "Masques",            // The block this set is in,
+          "onlineOnly" : false,                // Present and set to true if the set was only released online
+             "booster" : [ "rare", ... ],      // Booster contents for this set, see below for details
+               "cards" : [ {~lb}{~rb}, {~lb}{~rb}, {~lb}{~rb}, ... ]  // The cards in the set
     {~rb}</code></pre>
 		<p>
 		Some software (Magic Workstation) uses non-standard set codes. You can find those <a href="http://www.slightlymagic.net/forum/viewtopic.php?f=2&t=581#p6454">in this post</a><br>
@@ -219,13 +219,13 @@
 		<br>
 		For example, 'Magic 2013' contains 1 land, 1 marketing card, 10 commons, 3 uncommons and 1 rare or mythic rare:</p>
 <pre><code data-language="javascript">    {~lb}
-    	   name : "Magic 2013",
-        booster : [ "land",
-                    "marketing",
-                    "common", "common", "common", "common", "common", "common", "common", "common", "common", "common",
-                    "uncommon", "uncommon", "uncommon",
-                    ["rare", "mythic rare"]
-                  ]
+          "name" : "Magic 2013",
+       "booster" : [ "land",
+                     "marketing",
+                     "common", "common", "common", "common", "common", "common", "common", "common", "common", "common",
+                     "uncommon", "uncommon", "uncommon",
+                     ["rare", "mythic rare"]
+                   ]
     {~rb}</code></pre>
 		<p><br>
 		The common booster card types are:</p>
@@ -470,12 +470,13 @@
 			</tbody>
 		</table>
 		<hr>
+		<a name="allCardsJSON"></a>
 		<h1>AllCards.json</h1>
-		<p>The <strong>AllCards.json</strong> file is organized by card name and uses data from the latest printing of each card.<br>
+		<p>The <strong>AllCards.json</strong> file is organized by card name and merges card data from multiple sets into a single card object.<br>
 		<br>
-		This file is lighter weight and is meant to provide quick and easy way to get basic card data.<br>
+		Due to this merging of card data, several set specific fields are not present in the AllCards data: {setSpecificFields}<br>
 		<br>
-		Several set specific fields are not present in the card data: {setSpecificFields}<br>
+		This file is lighter weight and is meant to provide a quick and easy way to get basic card data.<br>
 		<br>
 		The JSON file itself looks like this:<br></p>
 		<pre><code data-language="javascript">    {~lb}
@@ -485,7 +486,10 @@
         ...
     {~rb}</code></pre>
     	<br>
+    	For documentation on the card data itself, see the <a href="#cards">cards documentation</a>.<br>
     	<br>
+		<hr>
+		<br>
     	<hr>
 		<a name="additionalJSON"></a>
 		<h1>Additional JSON Files<a href="#top">(back to top)</a></h1>
@@ -498,6 +502,30 @@
 			<li><a href="/json/changelog.json">/json/changelog.json</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lists all changes in JSON format.</li>
 		</ul>
 		<br>
+		<br>
+		<br>
+    	<hr>
+		<a name="jsonp"></a>
+		<h1>JSONP<a href="#top">(back to top)</a></h1>
+		<p>All JSON files are also available as JSONP files by changing the extension from '.json' to '.jsonp'.<br>
+		<br>
+		This allows you to include them client side by linking to them directly with a &lt;script&gt; tag.<br>
+		<br>
+		HTML Example: &lt;script type="text/javascript" src="http://mtgjson.com/json/AllSets.jsonp"&gt;&lt;/script&gt;<br>
+		<br>
+		A callback handler called 'mtgjsoncallback' will be called with 2 arguments.<br>
+		<br>
+		The first argument is the JSON data itself. This isn't a string, so no need to call JSON.parse()<br>
+		<br>
+		The second is the file name as a string, without an extension ("AllSets" in the example).<br>
+		<br>
+		Client side javascript exammple:<br>
+		<pre><code data-language="javascript">        window.mtgjsoncallback = function(data, name)
+        {~lb}
+      		// handling code here
+        {~rb};
+</code></pre>
+		</p>
 		<br>
 		<br>
 		<hr>
