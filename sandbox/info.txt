@@ -5,7 +5,6 @@
 node build/createNonGathererSet.js <expansion code>
 
 # Update printings
-node util/updatePrintingsFromSet.js nongatherersets
 node util/updatePrintingsFromSet.js <expansion code>
 
 # Goto: Any New Set Final Instructions
@@ -20,7 +19,6 @@ node build/buildSet.js <expansion code>
 node build/buildSet.js <expansion code>
 
 # Now run
-node util/updatePrintingsFromSet.js nongatherersets
 node util/updatePrintingsFromSet.js sincelastprintingreset
 
 # Then IF the set was some how BEFORE our lastprinting reset (HIGHLY UNLIKELY) run:
@@ -28,21 +26,9 @@ node util/updateLegalitiesFromSet.js <expansion code>
 
 # If the set is not 'officially' out yet, then legalities is not correct yet.
 # So set a reminder for a day after the release date of the set to do:
-node util/clearCacheForSet.js legalities <new set>
-node build/buildSet.js <new set>
-node util/updateLegalitiesFromSet.js <new set>
-node util/updatePrintingsFromSet.js nongatherersets
-node util/updatePrintingsFromSet.js sincelastprintingreset
-
-# If the new set is part of a new BLOCK (CORE sets don't matter anymore, only first set of a new block)
-# Then the old block and old core has now rotated out
-# So will need to do 1 day AFTER release date of the set:
-node util/clearCacheForSet.js legalities <set codes that rotated out and the new set code>
 node util/clearCacheForSet.js legalities <set codes that rotated out and the new set code>
 node build/buildSet.js <set codes that rotated out and the new set code>
 node util/updateLegalitiesFromSet.js <set codes that rotated out and the new set code>
-node util/updatePrintingsFromSet.js nongatherersets
-node util/updatePrintingsFromSet.js sincelastprintingreset
 
 # Goto: Any New Set Final Instructions
 

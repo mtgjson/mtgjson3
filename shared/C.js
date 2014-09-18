@@ -10,7 +10,7 @@
 
 	exports.LAST_PRINTINGS_RESET = "M15";
 
-	exports.SETS_LACKING_HQ_SVG_SYMBOL_ICONS = ["VMA", "V14"];
+	exports.SETS_LACKING_HQ_SVG_SYMBOL_ICONS = ["KTK"];
 
 	exports.SETS_NOT_ON_GATHERER = ["ATH", "ITP", "DKM", "RQS", "DPA"];
 	exports.SETS_WITH_NO_IMAGES = [];
@@ -1594,6 +1594,15 @@
 			releaseDate : "2014-09-05",
 			border : "black",
 			type : "duel deck"
+		},
+		{
+			name : "Khans of Tarkir",
+			code : "KTK",
+			releaseDate : "2014-09-26",
+			border : "black",
+			type : "expansion",
+			block : "Khans of Tarkir",
+			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"]
 		}
 	];
 

@@ -1,9 +1,10 @@
 /---------------\
 | High Priority |
 \---------------/
-* Update all cards oracle text (so clear first)
+* Fix the 'downloadImages.js' script as it takes several runs to download a new set
 
 * Move all 'tokens' to a new array along side 'cards' called 'tokens' and reference 108.2 that they are not considered cards.
+  Have this be done automatically AFTER everything is done (including card modifications and sorting), by simply moving any card with layout==="token" to the new tokens array.
 
 * Add Tokens from magiccards.info
 Token List: http://magiccards.info/extras.html
@@ -17,13 +18,20 @@ Could potentially scrape the data from: http://magiccards.info/extras.html
 \-----------------/
 * Add JSONP support, thank Daan for the suggestion and e-mail him letting him know it's up. Maybe do this as a nginx plugin that can wrap *.json urls?
 
-* Add a JSON file where all cards are available in an object indexed by name. Call it AllCards.json or AllCards-ByName.json or something
-
 * Consider changing 'printings' field to be a list of set codes rather than set names
 
 * Add some sort of 'deck' or 'subset' field, to identify which cards are part of which decks (such as 'elf' deck in the 'elves vs goblins' set)
 
 * Create a nginx tolowercase plugin that doesn't require a /actual/ directory and then e-nable this for files in /json/
+
+* Add MTGO only sets:
+  + Mirrodin Pure vs. New Phyrexia
+  Theme Decks:
+  + Boltslinger
+  + Exiler
+  + Deathdancer Xira
+  + Enchantress Rubinia
+  More???
 
 
 /--------------\
@@ -55,6 +63,7 @@ Could potentially scrape the data from: http://magiccards.info/extras.html
 | Lowest Priority |
 \-----------------/
 * Consider scraping unreleased sets from spoiler site: http://www.mtgsalvation.com/spoilers/141-magic-2015
+  Also see: http://www.reddit.com/r/magicTCG/comments/2fik18/ktk_automatic_updates_for_cockatrice_windowsonly/
 
 * skibulk requested this: An option in the source code's configuration file (on github) to toggle raw Gatherer data vs supplemented Gatherer data. Basically I want the option to download an unaltered version of the Gatherer database. I consider supplemented data to include per-card overrides, removal of the ability text for snow-covered lands, data from 3rd party sources (magiccards.info), etc.
 

@@ -641,6 +641,7 @@ function addPrintingsToCards(set, cb)
 		function loadNonGathererJSON()
 		{
 			var setCodes = C.SETS.map(function(SET) { return SET.code; });
+			// Adds non-gatherer sets and promo MCI sets and sets released since last printing to the current set
 			var nonGathererSets = C.SETS_NOT_ON_GATHERER.concat(shared.getMCISetCodes()).concat(setCodes.slice(setCodes.indexOf(C.LAST_PRINTINGS_RESET)+1)).unique();
 			nonGathererSets.remove(set.code);
 			nonGathererSets.serialForEach(function(code, subcb)

@@ -83,7 +83,7 @@ tiptoe(
 						{
 							var fieldDifference = diffUtil.diff(card[fieldName], allCardsWithExtras[card.name][fieldName]);
 							if(fieldDifference)
-								base.warn("Card [%s] mismatch with field [%s] between current set [%s] and previous [%s] with values:\n\t%s\n\t%s\n\tDifference: %s", card.name, fieldName, SET.name, allCardsWithExtras[card.name].printings.last(), card[fieldName], allCardsWithExtras[card.name][fieldName], fieldDifference);
+								base.warn("Card [%s] mismatch with field [%s] between current set [%s] and previous [%s] with : %s", card.name, fieldName, SET.name, allCardsWithExtras[card.name].printings.last(), fieldDifference);
 						}
 					}
 
