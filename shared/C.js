@@ -1598,6 +1598,7 @@
 		{
 			name : "Khans of Tarkir",
 			code : "KTK",
+			magicCardsInfoCode : "ktk",
 			releaseDate : "2014-09-26",
 			border : "black",
 			type : "expansion",
