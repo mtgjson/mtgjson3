@@ -2890,6 +2890,20 @@
 		]
 	};
 
+	exports.SET_SPOILER_IMAGE_DIFF_SRC_NUMBER =
+	{
+		KTK :
+		{
+			"Abzan Falconer" : 3,
+			"Bloodstained Mire" : 1,
+			"Embodiment of Spring" : 2,
+			"Flooded Strand" : 1,
+			"Polluted Delta" : 1,
+			"Windswept Heath" : 1,
+			"Wooded Foothills" : 1
+		}
+	};
+
 	exports.SET_CORRECTIONS["LEB"].pushAll(exports.SET_CORRECTIONS["LEA"]);	// All of LEA rules apply to LEB
 	exports.SET_CORRECTIONS["2ED"].pushAll(exports.SET_CORRECTIONS["LEA"]);	// All of LEA rules apply to 2ED
 	exports.SETS.forEach(function(SET) { if(SET.isMCISet) { if(!exports.SET_CORRECTIONS.hasOwnProperty(SET.code)) { exports.SET_CORRECTIONS[SET.code] = []; } exports.SET_CORRECTIONS[SET.code].push({match : "*", fixFlavorNewlines:true}); }});

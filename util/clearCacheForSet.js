@@ -12,11 +12,11 @@ var base = require("xbase"),
 
 if(process.argv.length<4)
 {
-	base.error("Usage: node %s <all|oracle|original|languages|printings|legalities> <set codes>", process.argv[1]);
+	base.error("Usage: node %s <all|oracle|original|languages|printings|legalities|mcilist> <set codes>", process.argv[1]);
 	process.exit(1);
 }
 
-var VALID_TYPES = ["oracle", "original", "languages", "printings", "legalities"];
+var VALID_TYPES = ["oracle", "original", "languages", "printings", "legalities", "mcilist"];
 
 var cacheTypes = process.argv[2].toLowerCase()==="all" ? VALID_TYPES : Array.toArray(process.argv[2]);
 cacheTypes.serialForEach(function(cacheType, cb)
@@ -79,6 +79,9 @@ function clearCacheForSet(code, cacheType, cb)
 					self.data.urls.push(shared.buildMultiverseLegalitiesURL(card.multiverseid));
 				}
 			});
+
+			if(cacheType==="mcilist")
+				this.data.urls.push("http://magiccards.info/" + set.magicCardsInfoCode.toLowerCase() + "/en.html");
 
 			if(cacheType!=="printings")
 				this();
