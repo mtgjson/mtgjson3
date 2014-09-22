@@ -381,7 +381,7 @@
 				<tr>
 					<td>imageName</td>
 					<td>"ajani goldmane"</td>
-					<td>The <a href="http://mtgimage.com">mtgimage.com</a> file name for this card. Note this is not the same format as CCGHQ. See <a href="http://mtgimage.com">mtgimage.com</a> for more details.</td>
+					<td>The <a href="http://mtgimage.com">mtgimage.com</a> file name for this card. For AllSets and set specific JSON, use the /set or /setname prefix. For AllCards JSON use the /card prefix. See <a href="http://mtgimage.com">mtgimage.com</a> for more details.</td>
 				</tr>
 				<tr>
 					<td>watermark</td>
@@ -477,6 +477,8 @@
 		Due to this merging of card data, several set specific fields are not present in the AllCards data: {setSpecificFields}<br>
 		<br>
 		This file is lighter weight and is meant to provide a quick and easy way to get basic card data.<br>
+		<br>
+		Note: The "imageName" field in this file is meant for use with the <a href="http://mtgimage.com">mtgimage.com</a> "/card/" prefix.<br>
 		<br>
 		The JSON file itself looks like this:<br></p>
 		<pre><code data-language="javascript">    {~lb}
@@ -793,7 +795,7 @@
 					<li>Bobby Wertman, rotaercz, Chris Bush, Patrick Rogers, Lewis, aeosynth, Pouncing Kavu</li>
 					<li>Florian, Carlo Luchessa, Sean Eshbaugh, Didero, laxika, Vlad Grigorescu</li>
 					<li>mini.dude_22, Nathan Nelson, Rudi v. Pelt, Javier Bueno Hedo, Eric Olson</li>
-					<li>Michael Wybrow, SpideR, Brian, TheOnlyDJCat</li>
+					<li>Michael Wybrow, SpideR, Brian, TheOnlyDJCat, Moghedrin, Greg Falcon, kaoD</li>
 				</ul>
 			</li>
 			<li><a href="http://wiki.mtgsalvation.com/article/Main_Page">MTG Salvation Wiki</a> for an AWESOME resource</li>

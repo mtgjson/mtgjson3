@@ -53,6 +53,7 @@ tiptoe(
 		var allSetsArrayWithExtras = [];
 
 		var allCardsWithExtras = {};
+		var previousSeenSetCodes = {};
 
 		base.info("Creating JSON files...");
 		C.SETS.forEach(function(SET, i)
@@ -69,25 +70,36 @@ tiptoe(
 					if(C.SET_SPECIFIC_FIELDS.contains(fieldName))
 						return;
 
-					if(C.ORACLE_FIELDS.contains(fieldName) && !["B.F.M. (Big Furry Monster)"].contains(card.name))
+					if(!previousSeenSetCodes.hasOwnProperty(card.name))
+						previousSeenSetCodes[card.name] = {};
+					if(!previousSeenSetCodes[card.name].hasOwnProperty(fieldName))
+						previousSeenSetCodes[card.name][fieldName] = [];
+
+					var fieldValue = card[fieldName];
+					if(fieldName==="imageName")		// Modify for AllCards.json the imageName field to match the mtgimage.com /card/ prefix syntax
+						fieldValue = card.name.toLowerCase().strip(":\"?").replaceAll("/", " ").trim("0123456789 .").replaceAll(" token card", "");
+
+					if(C.ORACLE_FIELDS.contains(fieldName) && !["B.F.M. (Big Furry Monster)"].contains(card.name) && fieldName!=="foreignNames")
 					{
 						if(!card.hasOwnProperty(fieldName))
 						{
 							if(allCardsWithExtras[card.name].hasOwnProperty(fieldName))
-								base.warn("Card [%s] mismatch with field [%s] between current set [%s] and previous [%s] with values:\n\tNO VALUE\n\t%s", card.name, fieldName, SET.name, allCardsWithExtras[card.name].printings.last(), allCardsWithExtras[card.name][fieldName]);
+								base.warn("Card [%s] mismatch with field [%s] between current set [%s] and previous [%s] with values:\n\tNO VALUE\n\t%s", card.code, fieldName, SET.name, previousSeenSetCodes[card.name][fieldName].join(" "), allCardsWithExtras[card.name][fieldName]);
 
 							return;
 						}
 
 						if(allCardsWithExtras[card.name].hasOwnProperty(fieldName))
 						{
-							var fieldDifference = diffUtil.diff(card[fieldName], allCardsWithExtras[card.name][fieldName]);
+							var fieldDifference = diffUtil.diff(fieldValue, allCardsWithExtras[card.name][fieldName]);
 							if(fieldDifference)
-								base.warn("Card [%s] mismatch with field [%s] between current set [%s] and previous [%s] with : %s", card.name, fieldName, SET.name, allCardsWithExtras[card.name].printings.last(), fieldDifference);
+								base.warn("Card [%s] mismatch with field [%s] between current set [%s] and previous [%s] with : %s", card.name, fieldName, SET.code, previousSeenSetCodes[card.name][fieldName].join(" "), fieldDifference);
 						}
 					}
 
-					allCardsWithExtras[card.name][fieldName] = card[fieldName];
+					previousSeenSetCodes[card.name][fieldName].push(setWithExtras.code);
+					
+					allCardsWithExtras[card.name][fieldName] = fieldValue;
 				});
 			});
 

@@ -2460,6 +2460,11 @@
 		[
 			{ match : {name: "Cabal Coffers"}, replace : {artist : "Don Hazeltine"} }
 		],
+		ONS :
+		[
+			{ match : {name : "Kaboom!"}, replace : {text : "Choose any number of target players. For each of those players, reveal cards from the top of your library until you reveal a nonland card. Kaboom! deals damage equal to that card's converted mana cost to that player, then you put the revealed cards on the bottom of your library in any order.",
+											  originalText: "Choose any number of target players. For each of those players, reveal cards from the top of your library until you reveal a nonland card. Kaboom! deals damage equal to that card's converted mana cost to that player, then you put the revealed cards on the bottom of your library in any order."}}
+		],
 		pREL :
 		[
 			{ match : {	name :"Force of Nature"}, remove : ["flavor"] },
