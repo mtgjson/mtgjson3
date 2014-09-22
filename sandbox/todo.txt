@@ -16,8 +16,6 @@ Could potentially scrape the data from: http://magiccards.info/extras.html
 /-----------------\
 | Medium Priority |
 \-----------------/
-* Add JSONP support, thank Daan for the suggestion and e-mail him letting him know it's up. Maybe do this as a nginx plugin that can wrap *.json urls?
-
 * Consider changing 'printings' field to be a list of set codes rather than set names
 
 * Add some sort of 'deck' or 'subset' field, to identify which cards are part of which decks (such as 'elf' deck in the 'elves vs goblins' set)
@@ -38,6 +36,8 @@ Could potentially scrape the data from: http://magiccards.info/extras.html
 | Low Priority |
 \--------------/
 * Add a 'frame' attribute for sets that denote what style of the set has (original, eighth edition, magic 2015, timeshifted, etc)
+
+* Added 'seeded' booster pack info
 
 * Add 'Face the Hydra' cards
 
