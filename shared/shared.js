@@ -188,6 +188,9 @@ exports.performSetCorrections = function(setCorrections, fullSet)
 					if(setCorrection.addPrinting)
 						card.printings = sortPrintings(card.printings.concat(Array.toArray(setCorrection.addPrinting)));
 
+					if(setCorrection.setLegality)
+						Object.forEach(setCorrection.setLegality, function(legalityType, legalityValue) { card.legalities[legalityType] = legalityValue; });
+
 					if(setCorrection.flavorAddDash && card.flavor)
 					{
 						card.flavor = card.flavor.replace(/([.!?,'])(["][/]?[\n]?)(\s*)([A-Za-z])/, "$1$2$3 —$4", "gm");
@@ -296,8 +299,22 @@ exports.performSetCorrections = function(setCorrections, fullSet)
 		if(!card.hasOwnProperty("legalities"))
 			card["legalities"] = {};
 
+		//if(!card.legalities.hasOwnProperty("Vintage") && moment(fullSet.releaseDate, "YYYY-MM-DD").unix()<=moment().unix())
 		if(!card.legalities.hasOwnProperty("Vintage"))
 			card.legalities["Vintage"] = C.VINTAGE_BANNED.contains(card.name) ? "Banned" : (C.VINTAGE_RESTRICTED.contains(card.name) ? "Restricted" : "Legal");
+	});
+
+	// Final Release date validation
+	cards.forEach(function(card)
+	{
+		if(!card.releaseDate)
+			return;
+
+		if(["YYYY-MM-DD", "YYYY-MM", "YYYY"].some(function(dateFormat) { return !moment(card.releaseDate, dateFormat).isValid(); }))
+		{
+			base.warn("Set [%s] and card [%s] release date format invalid: %s", fullSet.code, card.name, card.releaseDate);
+			delete card.releaseDate;
+		}
 	});
 };
 

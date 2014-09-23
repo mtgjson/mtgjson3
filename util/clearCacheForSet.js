@@ -81,7 +81,14 @@ function clearCacheForSet(code, cacheType, cb)
 			});
 
 			if(cacheType==="mcilist")
+			{
 				this.data.urls.push("http://magiccards.info/" + set.magicCardsInfoCode.toLowerCase() + "/en.html");
+				var targetSet = C.SETS.mutateOnce(function(SET) { if(SET.code.toLowerCase()===set.code.toLowerCase()) { return SET; } });
+				Array.toArray(targetSet.magicRaritiesCodes).forEach(function(magicRaritiesCode)
+				{
+					this.data.urls.push("http://www.magiclibrarities.net/" + magicRaritiesCode + "-english-cards-index.html");
+				}.bind(this));				
+			}
 
 			if(cacheType!=="printings")
 				this();

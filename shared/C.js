@@ -1739,7 +1739,8 @@
 			{match : {name : "Arrest"}, replace : {flavor : "Fayden didn't know if the giant had created the spehere's magic—only that he had to escape it to find Sifa."}},
 			{match : {name : ["Bloodthrone Vampire", "Kor Skyfisher", "Merfolk Mesmerist"]}, replace : {flavor : "www.MagicTheGathering.com"}},
 			{match : {name : "Knight Exemplar"}, replace : {flavor : "\"If you think you are brave enough to walk the path of honor, follow me into the dragon's den.\""}},
-			{match : {name : ["Blue Elemental Blast", "Fireball", "Spined Wurm"]}, replace : {border : "white"}}
+			{match : {name : ["Blue Elemental Blast", "Fireball", "Spined Wurm"]}, replace : {border : "white"}},
+			{match : {name : "Wash Out"}, replace : {releaseDate : "2014-01-15"}}
 		],
 		FEM :
 		[
@@ -2857,6 +2858,10 @@
 			{ match : {name : "Shock"}, replace : {artist : "Jon Foster"}},
 			{ match : {name : "Swamp"}, replace : {number : "102"}},
 			{ match : {name : "The Rack"}, replace : {artist : "Nic Klein"}, remove : ["flavor"]}
+		],
+		GTC :
+		[
+			{ match : {name : "Sylvan Primordial"}, setLegality : {"Commander" : "Banned"}}
 		],
 		M14 :
 		[

@@ -1240,7 +1240,7 @@ function addPrintingsToMCISet(set, cb)
 	tiptoe(
 		function loadJSON()
 		{
-			set.cards.forEach(function(card) { card.printings = []; });
+			set.cards.forEach(function(card) { card.printings = [set.name]; });
 
 			C.SETS.forEach(function(SET)
 			{
