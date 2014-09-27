@@ -30,12 +30,15 @@ node util/clearCacheForSet.js legalities <set codes that rotated out and the new
 node build/buildSet.js <set codes that rotated out and the new set code>
 node util/updateLegalitiesFromSet.js <set codes that rotated out and the new set code>
 
-# Goto: Any New Set Final Instructions
+# Goto: Publish Final Instructions
 
 
-/--------------------------------\
-| Any New Set Final Instructions |
-\--------------------------------/
+/----------------------------\
+| Publish Final Instructions |
+\----------------------------/
+node build/importMCISet.js mcisets
+node util/updateNonGathererSets.js
+
 # Update generate.js with new version number and lastUpdated date
 # Update changelog.json with new change log entry
 
@@ -53,7 +56,7 @@ file:///mnt/compendium/DevLab/mtgjson/verify/verify.html
 
 # Now examine JSON changes
 cd util
-node compareRelease.js allsets not<expansion code> | more
+node compareRelease.js allsets not<new expansion code> | more
 
 # Update changelog.json entry's "updatedSetFiles" field with the files listed at the end of the compareRelease.js execution
 

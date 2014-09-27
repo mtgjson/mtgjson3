@@ -2783,7 +2783,8 @@
 		],
 		DD2 :
 		[
-			{ match : {name : "Elemental Shaman"}, replace : {number : "T1", layout : "token"}}
+			{ match : {name : "Elemental Shaman"}, replace : {number : "T1", layout : "token"}},
+			{ match : {multiverseid : 190586}, replace : {originalText : "R"}}
 		],
 		DDC :
 		[
