@@ -131,8 +131,6 @@ function ripSet(setName, cb)
 					base.warn("Artist not found for card: %s", card.name);
 			});
 
-			//base.info("Other Printings: %s", (this.data.set.cards.map(function(card) { return card.printings; }).flatten().unique().map(function(setName) { return C.SETS.mutateOnce(function(SET) { return SET.name===setName ? SET.code : undefined; }); }).remove(this.data.set.code) || []).join(" "));
-
 			setImmediate(function() { cb(err, this.data.set); }.bind(this));
 		}
 	);

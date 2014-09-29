@@ -331,6 +331,12 @@ function sortPrintings(printings)
 	return printings.unique().sort(function(a, b) { return moment(getReleaseDateForSet(a), "YYYY-MM-DD").unix()-moment(getReleaseDateForSet(b), "YYYY-MM-DD").unix(); });
 }
 
+exports.getSetCodeFromName = getSetCodeFromName;
+function getSetCodeFromName(setName)
+{
+	return C.SETS.mutateOnce(function(SET) { return SET.name.toLowerCase()===setName.toLowerCase() ? SET.code : undefined; });
+}
+
 exports.getReleaseDateForSet = getReleaseDateForSet;
 function getReleaseDateForSet(setName)
 {

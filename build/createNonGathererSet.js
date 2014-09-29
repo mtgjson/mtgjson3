@@ -44,9 +44,6 @@ tiptoe(
 
 		newSet.cards = newSet.cards.sort(shared.cardComparator);
 
-		//base.info("Other sets with these cards:");
-		//base.info(newSet.cards.map(function(card) { return card.printings; }).flatten().uniqueBySort().map(function(setName) { return C.SETS.mutateOnce(function(SET) { if(SET.name===setName) { return SET.code; }}); }).join(" "));
-
 		fs.writeFileSync(path.join(__dirname, "..", "json", targetSetCode + ".json"), JSON.stringify(newSet), {encoding : "utf8"});
 
 		process.exit(0);

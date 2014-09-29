@@ -2906,7 +2906,8 @@
 			"Flooded Strand" : 1,
 			"Polluted Delta" : 1,
 			"Windswept Heath" : 1,
-			"Wooded Foothills" : 1
+			"Wooded Foothills" : 1,
+			"Thousand Winds" : 3
 		}
 	};
 
