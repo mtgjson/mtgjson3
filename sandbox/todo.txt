@@ -1,8 +1,6 @@
 /---------------\
 | High Priority |
 \---------------/
-* Fix the 'downloadImages.js' script as it takes several runs to download a new set
-
 * Move all 'tokens' to a new array along side 'cards' called 'tokens' and reference 108.2 that they are not considered cards.
   Have this be done automatically AFTER everything is done (including card modifications and sorting), by simply moving any card with layout==="token" to the new tokens array.
 
@@ -33,22 +31,18 @@ Could potentially scrape the data from: http://magiccards.info/extras.html
   + Enchantress Rubinia
   More???
 
+* Add foil information to sets/cards. Lots of ways this could be done. A 'foilable'/'foilOnly' boolean at set and card level. Or perhaps an array like:
+{..., "code": "LEA", ..., "possibleCardStock": ["nonfoil"], ...}
+{..., "code": "MMQ", ..., "possibleCardStock": ["nonfoil", "foil"], ...}
+{..., "code": "V14", ..., "possibleCardStock": ["foil"], ...}
+
 
 /--------------\
 | Low Priority |
 \--------------/
-* Add a 'frame' attribute for sets that denote what style of the set has (original, eighth edition, magic 2015, timeshifted, etc)
-
 * Added 'seeded' booster pack info
 
 * Add 'Face the Hydra' cards
-
-* Add colorIndicator directly into the JSON. Greg Falcon mentions that it's officially part of the card and is cumbersome to reverse engineer from the mana cost/colors field.
-
-* Add MTGO ID's to each card (known in MTGO as 'catId')
-  See: https://www.mtgolibrary.com/mlbot_php/installer/CatID.txt
-
-* Add links to every web page and app that uses mtgjson. Search google webmaster links, google Analytics referrers, google and bing search engines, email, github, and reddit too
 
 * Add full foreign language scrapes. Need to use ?printed=true on Gatherer to get this data.
   If the cards have unique multiverseids probably have totally seperate json. Files like AllCards-x-ch.json or what not for each language.
@@ -56,18 +50,19 @@ Could potentially scrape the data from: http://magiccards.info/extras.html
   Also of course reply on MTGSalvation
   When doing this, keep the 'foreignNames' field, and make sure it includes 'English' in non-english printings
 
-* Add an automatic RSS feed XML file from the changelog.json
+* Add colorIndicator directly into the JSON. Greg Falcon mentions that it's officially part of the card and is cumbersome to reverse engineer from the mana cost/colors field.
 
 
 /-----------------\
 | Lowest Priority |
 \-----------------/
-* Consider scraping unreleased sets from spoiler site: http://www.mtgsalvation.com/spoilers/141-magic-2015
-  Also see: http://www.reddit.com/r/magicTCG/comments/2fik18/ktk_automatic_updates_for_cockatrice_windowsonly/
+* Add a 'frame' attribute for sets that denote what style of the set has (original, eighth edition, magic 2015, timeshifted, etc)
 
 * skibulk requested this: An option in the source code's configuration file (on github) to toggle raw Gatherer data vs supplemented Gatherer data. Basically I want the option to download an unaltered version of the Gatherer database. I consider supplemented data to include per-card overrides, removal of the ability text for snow-covered lands, data from 3rd party sources (magiccards.info), etc.
 
-* Add a 'foilable' boolean for sets/cards on whether foils are available or not. Then e-mail machael herbig. Also add a 'foilOnly' to sets/cards that only exist in foil form (some of the V?? decks? Many of the promo cards)
+* Add an automatic RSS feed XML file from the changelog.json
 
+* Add links to every web page and app that uses mtgjson. Search google webmaster links, google Analytics referrers, google and bing search engines, email, github, and reddit too
 
-
+* Add MTGO ID's to each card (known in MTGO as 'catId')
+  See: https://www.mtgolibrary.com/mlbot_php/installer/CatID.txt

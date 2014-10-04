@@ -10,7 +10,7 @@
 
 	exports.LAST_PRINTINGS_RESET = "M15";
 
-	exports.SETS_LACKING_HQ_SVG_SYMBOL_ICONS = ["KTK"];
+	exports.SETS_LACKING_HQ_SVG_SYMBOL_ICONS = [];
 
 	exports.SETS_NOT_ON_GATHERER = ["ATH", "ITP", "DKM", "RQS", "DPA"];
 	exports.SETS_WITH_NO_IMAGES = [];
