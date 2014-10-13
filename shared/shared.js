@@ -172,6 +172,7 @@ exports.performSetCorrections = function(setCorrections, fullSet)
 		}
 		else
 		{
+			var cardsToRemove = [];
 			cards.forEach(function(card)
 			{
 				if(setCorrection.match && (setCorrection.match==="*" || (Object.every(setCorrection.match, function(key, value) { return Array.isArray(value) ? value.contains(card[key]) : value===card[key]; }))))
@@ -213,7 +214,13 @@ exports.performSetCorrections = function(setCorrections, fullSet)
 								card.flavor = card.flavor.replace(/\s*—\s*([^—]+)\s*$/, "\n—$1");
 						}
 					}
+
+					if(setCorrection.removeCard)
+						cardsToRemove.push(card);
 				}
+
+				if(cardsToRemove.length>0)
+					cards.removeAll(cardsToRemove);
 			});
 
 			if(setCorrection.copyCard || setCorrection.importCard)

@@ -8,7 +8,7 @@
 	// Unglued/Unhinged types
 	exports.TYPES.push("Enchant", "Player", "Summon", "Interrupt", "Scariest", "You'll", "Ever", "See", "Eaturecray");
 
-	exports.LAST_PRINTINGS_RESET = "M15";
+	exports.LAST_PRINTINGS_RESET = "KTK";
 
 	exports.SETS_LACKING_HQ_SVG_SYMBOL_ICONS = [];
 
@@ -2475,7 +2475,8 @@
 		],
 		"8ED" :
 		[
-			{ match : {name : "Lhurgoyf"}, replace : {flavor : "\"Ach! Hans, run! It's the Lhurgoyf!\"\n—Saffi Eriksdotter, last words"}}
+			{ match : {name : "Lhurgoyf"}, replace : {flavor : "\"Ach! Hans, run! It's the Lhurgoyf!\"\n—Saffi Eriksdotter, last words"}},
+			{ match : {multiverseid:[47784, 47788, 47785, 47786, 47789, 47787, 49056]}, removeCard : true}
 		],
 		CHK :
 		[
@@ -3017,7 +3018,7 @@
 		sorcery : [],
 		power : [],
 		toughness : [],
-		chaosdice : [],
+		chaosdice : ["chaos", "c"],
 		planeswalk : [],
 		forwardslash : []
 	};
