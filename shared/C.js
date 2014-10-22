@@ -232,6 +232,16 @@
 			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"]
 		},
 		{
+			name : "Multiverse Gift Box",
+			code : "MGB",
+			magicCardsInfoCode : "mgbc",
+			magicRaritiesCodes : "145-rarities-multiverse-gift-box-cards",
+			isMCISet : true,
+			releaseDate : "1996-11-01",
+			border : "black",
+			type : "box"
+		},
+		{
 			name : "Introductory Two-Player Set",
 			code : "ITP",
 			oldCode : "I2P",
@@ -716,6 +726,16 @@
 			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land"]
 		},
 		{
+			name : "Eighth Edition Box Set",
+			code : "8BS",
+			magicCardsInfoCode : "8eb",
+			magicRaritiesCodes : "540-rarities-eighth-edition-box-set-cards",
+			isMCISet : true,
+			releaseDate : "2003-07-28",
+			border : "white",
+			type : "box"
+		},
+		{
 			name : "Mirrodin",
 			code : "MRD",
 			magicCardsInfoCode : "mi",
@@ -795,6 +815,16 @@
 			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land"]
 		},
 		{
+			name : "Ninth Edition Box Set",
+			code : "9BS",
+			magicCardsInfoCode : "9eb",
+			magicRaritiesCodes : "531-rarities-ninth-edition-box-set-cards",
+			isMCISet : true,
+			releaseDate : "2005-07-29",
+			border : "white",
+			type : "box"
+		},
+		{
 			name : "Ravnica: City of Guilds",
 			code : "RAV",
 			magicCardsInfoCode : "rav",
@@ -863,6 +893,17 @@
 			type : "expansion",
 			block : "Ice Age",
 			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"]
+		},
+		{
+			name : "Coldsnap Theme Decks",
+			code : "CST",
+			magicCardsInfoCode : "cstd",
+			magicRaritiesCodes : "230-rarities-coldsnap-preconstructed-reprint-cards",
+			isMCISet : true,
+			useMagicRaritiesNumber : true,
+			releaseDate : "2006-07-21",
+			border : "black",
+			type : "box"
 		},
 		{
 			name : "Time Spiral",
@@ -1934,6 +1975,10 @@
 							   "Teferi's Imp", "Teferi's Isle", "Telim'Tor", "Telim'Tor's Edict", "Tombstone Stairwell", "Torrent of Lava", "Unfulfilled Desires", "Ventifact Bottle", "Warping Wurm", "Wellspring",
 							   "Yare", "Zirilan of the Claw", "Zuberi, Golden Feather"]}, replace : {reserved : true}}
 		],
+		MGB :
+		[
+			{ match : "*", remove : ["source", "releaseDate", "number"]}
+		],
 		ITP :
 		[
 			{ match : {name : "Alabaster Potion"}, replace : {originalText : "Target player gains X life, or prevent X damage to any creature or player."}},
@@ -2491,6 +2536,10 @@
 			{ match : {name : "Lhurgoyf"}, replace : {flavor : "\"Ach! Hans, run! It's the Lhurgoyf!\"\n—Saffi Eriksdotter, last words"}},
 			{ match : {multiverseid:[47784, 47788, 47785, 47786, 47789, 47787, 49056]}, removeCard : true}
 		],
+		"8BS" :
+		[
+			{ match : "*", remove : ["source", "releaseDate"], prefixNumber : "S"}
+		],
 		CHK :
 		[
 			{ renumberImages : "Brothers Yamazaki", order : [78968, 85106] },
@@ -2640,6 +2689,10 @@
 			{ match : {name : "Swarm of Rats"}, replace : {flavor : "\"Rats, rats, rats! Hundreds, thousands, millions of them, and every one a life.\"\n—Bram Stoker, Dracula"}},
 			{ match : {multiverseid:[83064, 83319, 84073, 83104, 94912, 94911, 94910, 83075, 94914]}, removeCard : true}
 		],
+		"9BS" :
+		[
+			{ match : "*", remove : ["source", "releaseDate"], prefixNumber : "S"}
+		],
 		RAV :
 		[
 			{ match : {name : ["Overwhelm"]}, flavorAddExclamation : true },
@@ -2679,6 +2732,13 @@
 			{ match : {name : ["Heidar, Rimewind Master", "Lovisa Coldeyes"]}, flavorAddExclamation : true },
 			{ match : {name : "Flashfreeze"}, replace : {flavor : "\"Nature? Fire? Bah! Both are chaotic and difficult to control. Ice is structured, latticed, light as a feather, massive as a glacier. In ice, there is power!\"\n—Heidar, Rimewind master"}},
 			{ match : {name : ["Snow-Covered Forest", "Snow-Covered Island", "Snow-Covered Mountain", "Snow-Covered Plain", "Snow-Covered Swamp"]}, replace : {rarity : "Common"}}
+		],
+		CST :
+		[
+			"sortCards",
+			{ match : {name : ["Forest", "Island", "Mountain", "Plains", "Swamp"]}, incrementNumber : true},
+			{ match : {name : "Legions of Lim-Dûl"}, replace : {number : "142", source : "Snowscape Theme Deck"}},
+			{ match : "*", remove : ["releaseDate"]}
 		],
 		TSP :
 		[
@@ -2866,6 +2926,7 @@
 		DPA :
 		[
 			"numberCards",
+			"sortCards",
 			{ match : {name : ["Duskdale Wurm", "Molimo, Maro-Sorcerer", "Mortivore", "Roughshod Mentor", "Talara's Battalion", "Troll Ascetic"]}, remove : ["flavor"] },
 			{ match : {name : "Forest"}, replace : {number : "110"}, incrementNumber : true},
 			{ match : {name : "Island"}, replace : {number : "98"}, incrementNumber : true},

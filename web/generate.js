@@ -108,6 +108,7 @@ tiptoe(
 			delete setWithExtras.isMCISet;
 			delete setWithExtras.magicRaritiesCode;
 			delete setWithExtras.essentialMagicCode;
+			delete setWithExtras.useMagicRaritiesNumber;
 
 			allSetsWithExtras[SET.code] = setWithExtras;
 			allSetsArrayWithExtras.push(setWithExtras);
@@ -295,9 +296,10 @@ function checkSetsForProblems(cb)
 
 function checkSetForProblems(setCode, cb)
 {
-	var ALLOWED_DUPS = {UGL :["B.F.M. (Big Furry Monster)"], DKM : ["Mountain", "Swamp"], DPA :["Forest", "Island", "Mountain", "Swamp"]};
+	var ALLOWED_DUPS = {UGL :["B.F.M. (Big Furry Monster)"], DKM : ["Mountain", "Swamp"], DPA :["Forest", "Island", "Mountain", "Swamp"], CST : ["Forest", "Island", "Mountain", "Swamp", "Plains"]};
 	var ALLOWED_CATEGORIES = ["letter", "space", "punctuation", "number", "symbol"];
 	var ALLOWED_OTHER_CHARS = ['\n'];
+	var ALLOWED_MISSING_NUMBERS = ["9BS", "CST"];
 
 	tiptoe(
 		function getJSON()
@@ -404,7 +406,7 @@ function checkSetForProblems(setCode, cb)
 				});
 
 				// Check for missing numbers
-				if(seenNumbers.length>0)
+				if(seenNumbers.length>0 && !ALLOWED_MISSING_NUMBERS.contains(setData.code))
 				{
 					var realNumbers = [];
 					seenNumbers.forEach(function(seenNumber) { realNumbers.push(+seenNumber.replace(/[^0-9]/, "", "g")); });

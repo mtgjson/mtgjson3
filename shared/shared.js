@@ -169,6 +169,9 @@ exports.performSetCorrections = function(setCorrections, fullSet)
 			cards.multiSort([function(card) { return (card.hasOwnProperty("colors") ? COLOR_ORDER.indexOf(card.colors[0]) : 999); },
 									function(card) { return (card.types.contains("Artifact") ? -1 : 1); },
 									function(card) { return card.name; }]).forEach(function(card) { card.number = "" + (cardNumber++); });
+		}
+		else if(setCorrection==="sortCards")
+		{
 			cards = cards.sort(exports.cardComparator);
 		}
 		else
@@ -233,6 +236,9 @@ exports.performSetCorrections = function(setCorrections, fullSet)
 
 						cardsToIncrementNumber.push(card.name);
 					}
+
+					if(setCorrection.prefixNumber)
+						card.number = setCorrection.prefixNumber + card.number;
 				}
 
 				if(cardsToRemove.length>0)

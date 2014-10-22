@@ -1016,7 +1016,7 @@ function ripMCISet(set, cb)
 			if(fs.existsSync(path.join(__dirname, "..", "json", set.code + ".json")))				
 			{
 				addPrintingsToMCISet(set, this.parallel());
-				addReleaseDatesAndSourcesToMCISet(set, this.parallel());
+				addMagicLibraritiesInfoToMCISet(set, this.parallel());
 			}
 			else
 			{
@@ -1337,13 +1337,13 @@ function addPrintingsToMCISet(set, cb)
 	);
 }
 
-function addReleaseDatesAndSourcesToMCISet(set, cb)
+function addMagicLibraritiesInfoToMCISet(set, cb)
 {
 	if(!set.magicRaritiesCodes)
 		return setImmediate(cb);
 
 	var normalizeCardName = function(text) { return text.toLowerCase().replace(/[^A-Za-z0-9_ ]/, "", "g"); };
-	var releaseDatesAndSources = {};
+	var magicLibraritiesInfo = {};
 
 	tiptoe(
 		function getMagicRaritiesList()
@@ -1403,15 +1403,26 @@ function addReleaseDatesAndSourcesToMCISet(set, cb)
 				if(!releaseDate && generalYear)
 					releaseDate = generalYear;
 
-				if(releaseDate || sourceText)
+				// Number
+				var numberText;
+				if(set.useMagicRaritiesNumber)
+				{
+					numberText = getTextContent(cardNameElement.parentNode.parentNode.previousElementSibling.previousElementSibling);
+					if(numberText.contains("/"))
+						numberText = numberText.substring(0, numberText.indexOf("/"));
+				}
+
+				if(releaseDate || sourceText || numberText)
 				{
 					var cardInfo = {};
 					if(releaseDate)
 						cardInfo["releaseDate"] = releaseDate.replace(/-([0-9])$/, "-0$1");
 					if(sourceText)
 						cardInfo["source"] = sourceText;
+					if(numberText)
+						cardInfo["number"] = numberText;
 
-					cardNames.forEach(function(cardName) { if(!releaseDatesAndSources.hasOwnProperty(cardName)) { releaseDatesAndSources[cardName] = cardInfo; }});
+					cardNames.forEach(function(cardName) { if(!magicLibraritiesInfo.hasOwnProperty(cardName)) { magicLibraritiesInfo[cardName] = cardInfo; }});
 				}
 				else
 				{
@@ -1422,13 +1433,15 @@ function addReleaseDatesAndSourcesToMCISet(set, cb)
 			set.cards.forEach(function(card)
 			{
 				var cardNameNormalized = normalizeCardName(card.name);
-				if(!releaseDatesAndSources.hasOwnProperty(cardNameNormalized))
+				if(!magicLibraritiesInfo.hasOwnProperty(cardNameNormalized))
 					return;
 
-				if(releaseDatesAndSources[cardNameNormalized].source)
-					card.source = releaseDatesAndSources[cardNameNormalized].source.replaceAll("� ", " ");
-				if(releaseDatesAndSources[cardNameNormalized].releaseDate)
-					card.releaseDate = releaseDatesAndSources[cardNameNormalized].releaseDate;
+				if(magicLibraritiesInfo[cardNameNormalized].source)
+					card.source = magicLibraritiesInfo[cardNameNormalized].source.replaceAll("� ", " ");
+				if(magicLibraritiesInfo[cardNameNormalized].releaseDate)
+					card.releaseDate = magicLibraritiesInfo[cardNameNormalized].releaseDate;
+				if(magicLibraritiesInfo[cardNameNormalized].number)
+					card.number = magicLibraritiesInfo[cardNameNormalized].number;
 			});
 
 			this();
