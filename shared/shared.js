@@ -173,6 +173,7 @@ exports.performSetCorrections = function(setCorrections, fullSet)
 		else
 		{
 			var cardsToRemove = [];
+			var cardsToIncrementNumber = [];
 			cards.forEach(function(card)
 			{
 				if(setCorrection.match && (setCorrection.match==="*" || (Object.every(setCorrection.match, function(key, value) { return Array.isArray(value) ? value.contains(card[key]) : value===card[key]; }))))
@@ -217,6 +218,14 @@ exports.performSetCorrections = function(setCorrections, fullSet)
 
 					if(setCorrection.removeCard)
 						cardsToRemove.push(card);
+
+					if(setCorrection.incrementNumber)
+					{
+						if(cardsToIncrementNumber.contains(card.name))
+							card.number = "" + ((+card.number) + cardsToIncrementNumber.count(card.name));
+
+						cardsToIncrementNumber.push(card.name);
+					}
 				}
 
 				if(cardsToRemove.length>0)

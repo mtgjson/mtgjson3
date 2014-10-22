@@ -294,7 +294,7 @@ function checkSetsForProblems(cb)
 
 function checkSetForProblems(setCode, cb)
 {
-	var ALLOWED_DUPS = ["B.F.M. (Big Furry Monster)"];
+	var ALLOWED_DUPS = {UGL :["B.F.M. (Big Furry Monster)"], DKM : ["Mountain", "Swamp"]};
 	var ALLOWED_CATEGORIES = ["letter", "space", "punctuation", "number", "symbol"];
 	var ALLOWED_OTHER_CHARS = ['\n'];
 
@@ -311,7 +311,7 @@ function checkSetForProblems(setCode, cb)
 			// Check for duplicate cards
 			setData.cards.forEach(function(card)
 			{
-				if(card.hasOwnProperty("variations") || ALLOWED_DUPS.contains(card.name) || setData.type==="promo")
+				if(card.hasOwnProperty("variations") || (ALLOWED_DUPS.hasOwnProperty(setData.code) && ALLOWED_DUPS[setData.code].contains(card.name)) || setData.type==="promo")
 					return;
 
 				if(cardsByName.hasOwnProperty(card.name))
@@ -386,6 +386,35 @@ function checkSetForProblems(setCode, cb)
 				if(card.type.contains("Basic Land") && card.rarity!=="Basic Land")
 					base.info("Basic land [%s] (%s) from set %s has rarity %s", card.name, card.multiverseid || "", setData.name, card.rarity);
 			});
+
+			// Check for duplicate 'number' fields
+			if(setData.type!=="promo")
+			{
+				var seenNumbers = [];
+				setData.cards.forEach(function(card)
+				{
+					if(["plane", "phenomenon", "scheme", "vanguard"].contains(card.layout) || !card.hasOwnProperty("number"))
+						return;
+
+					if(seenNumbers.contains(card.number))
+						base.info("%s: Duplicate card number (%s): %s", setCode, card.name, card.number);
+					else
+						seenNumbers.push(card.number);
+				});
+
+				// Check for missing numbers
+				if(seenNumbers.length>0)
+				{
+					var realNumbers = [];
+					seenNumbers.forEach(function(seenNumber) { realNumbers.push(+seenNumber.replace(/[^0-9]/, "", "g")); });
+					realNumbers = realNumbers.unique();
+					for(var i=1;i<=realNumbers.length;i++)
+					{
+						if(!realNumbers.contains(i))
+							base.info("%s: Missing card number: %d", setCode, i);
+					}
+				}
+			}
 
 			this();
 		},

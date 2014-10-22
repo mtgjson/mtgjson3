@@ -501,7 +501,7 @@
 			<li><a href="/json/SetList.json">/json/SetList.json</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;An array of sets (code, name and releaseDate) currently available</li>
 			<li><a href="/json/version.json">/json/version.json</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Current version number as a quoted string</li>
 			<li><a href="/json/version-full.json">/json/version-full.json</a>&nbsp;&nbsp;&nbsp;&nbsp;Current version number as a JSON object</li>
-			<li><a href="/json/changelog.json">/json/changelog.json</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lists all changes in JSON format.</li>
+			<li><a href="/json/changelog.json">/json/changelog.json</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lists all changes in JSON format.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;It also notes which JSON files have changed since the last update with fields: updatedSetFiles, newSetFiles, removedSetFiles</li>
 		</ul>
 		<br>
 		<br>
@@ -679,9 +679,9 @@
 		</table>
 		<p>The mana symbols and set symbols are available on <a href="http://mtgimage.com">mtgimage.com</a><br>
 		<br>
-		The source code used to generate the JSON files is on <a href="https://github.com/Sembiance/mtgjson">github</a><br>
+		The source code used to generate the JSON is available on <a href="https://github.com/Sembiance/mtgjson">github</a><br>
 		<br>
-		Sample Java code to read the JSON files using Jackson can be found here: <a href="https://github.com/Sembiance/mtgjson/tree/master/java">java</a><br>
+		Example Java code to read the JSON using Jackson can be found <a href="https://github.com/Sembiance/mtgjson/tree/master/java">here on github</a><br>
 		<br>
 		<hr>
 		<a name="changeLog"></a>
@@ -798,7 +798,7 @@
 					<li>Florian, Carlo Luchessa, Sean Eshbaugh, Didero, laxika, Vlad Grigorescu</li>
 					<li>mini.dude_22, Nathan Nelson, Rudi v. Pelt, Javier Bueno Hedo, Eric Olson</li>
 					<li>Michael Wybrow, SpideR, Brian, TheOnlyDJCat, Moghedrin, Greg Falcon, kaoD</li>
-					<li>Josef Kronbichler, Piotr</li>
+					<li>Josef Kronbichler, Piotr, Andrew Fearson, Daniel Rasmussen</li>
 				</ul>
 			</li>
 			<li><a href="http://wiki.mtgsalvation.com/article/Main_Page">MTG Salvation Wiki</a> for an AWESOME resource</li>

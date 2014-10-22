@@ -957,6 +957,13 @@ function ripMCISet(set, cb)
 				this();
 			}
 		},
+		function performCorrections()
+		{
+			base.info("Doing set corrections...");
+			shared.performSetCorrections(shared.getSetCorrections(set.code), set);
+
+			this();
+		},
 		function applyLatestOracleFields()
 		{
 			base.info("Applying latest oracle fields to MCI cards...");
@@ -989,13 +996,6 @@ function ripMCISet(set, cb)
 					card[oracleField] = oracleCards[card.name][oracleField];
 				});
 			});
-
-			this();
-		},
-		function performCorrections()
-		{
-			base.info("Doing set corrections...");
-			shared.performSetCorrections(shared.getSetCorrections(set.code), set);
 
 			this();
 		},
@@ -1477,6 +1477,7 @@ var TEXT_TO_SYMBOL_MAP =
 	"o7"  : "7",
 	"o8"  : "8",
 	"o9"  : "9",
+	"o0"  : "0",
 	"{WP}" : "W/P",
 	"{UP}" : "U/P",
 	"{BP}" : "B/P",

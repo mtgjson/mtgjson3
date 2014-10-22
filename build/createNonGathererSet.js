@@ -17,7 +17,7 @@ if(!C.SETS_NOT_ON_GATHERER.contains(targetSetCode))
 }
 
 var targetSet = C.SETS.mutateOnce(function(SET) { if(SET.code===targetSetCode) { return SET; } });
-if(!C.EXTRA_SET_CARD_PRINTINGS.hasOwnProperty(targetSet.name))
+if(!C.EXTRA_SET_CARD_PRINTINGS.hasOwnProperty(targetSet.code))
 	process.exit(0);
 
 var newSet = base.clone(targetSet);
@@ -170,7 +170,7 @@ function getMultiverseidsForSet(setCode, cb)
 				return setImmediate(function() { cb(err); });
 
 			var allCards = Array.prototype.slice.apply(arguments).flatten().flatten();
-			var cardsToGet = base.clone(C.EXTRA_SET_CARD_PRINTINGS[targetSet.name]);
+			var cardsToGet = base.clone(C.EXTRA_SET_CARD_PRINTINGS[targetSet.code]);
 
 			var multiverseids = [];
 			allCards.forEach(function(card)
