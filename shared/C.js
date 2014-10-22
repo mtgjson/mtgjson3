@@ -1785,7 +1785,7 @@
 			{match : {name : "Knight Exemplar"}, replace : {flavor : "\"If you think you are brave enough to walk the path of honor, follow me into the dragon's den.\""}},
 			{match : {name : ["Blue Elemental Blast", "Fireball", "Spined Wurm"]}, replace : {border : "white"}},
 			{match : {name : "Wash Out"}, replace : {releaseDate : "2014-01-15"}},
-			{match : {name : "Avalance Tusker"}, replace : {name:"Avalanche Tusker", manaCost : "{2}{G}{U}{R}"}}
+			{match : {name : "Avalance Tusker"}, replace : {name:"Avalanche Tusker", imageName : "avalanche tusker", manaCost : "{2}{G}{U}{R}"}}
 		],
 		FEM :
 		[
@@ -2846,7 +2846,7 @@
 			{ match : {name : "Ludevic's Test Subject"}, replace : {names :["Ludevic's Test Subject", "Ludevic's Abomination"]}},
 			{ match : {name : "Mondronen Shaman"}, replace : {names :["Mondronen Shaman", "Tovolar's Magehunter"]}},
 			{ match : {name : "Tovolar's Magehunter"}, replace : {layout : "double-faced", names :["Mondronen Shaman", "Tovolar's Magehunter"]}},
-			{ match : {name : "Dragone Throne of Tarkir"}, replace : {name : "Dragon Throne of Tarkir"}}
+			{ match : {name : "Dragone Throne of Tarkir"}, replace : {name : "Dragon Throne of Tarkir", imageName : "dragon throne of tarkir"}}
 		],
 		MOR :
 		[
