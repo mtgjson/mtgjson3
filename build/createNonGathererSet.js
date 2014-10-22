@@ -17,7 +17,7 @@ if(!C.SETS_NOT_ON_GATHERER.contains(targetSetCode))
 }
 
 var targetSet = C.SETS.mutateOnce(function(SET) { if(SET.code===targetSetCode) { return SET; } });
-if(!C.EXTRA_SET_CARD_PRINTINGS.hasOwnProperty(targetSet.code))
+if(!C.NON_GATHERER_SET_CARD_LISTS.hasOwnProperty(targetSet.code))
 	process.exit(0);
 
 var newSet = base.clone(targetSet);
@@ -69,6 +69,7 @@ function processSet(setCode, targetMultiverseids, cb)
 				return setImmediate(function() { cb(err); });
 
 			var set = JSON.parse(setRaw);
+			var basicLandCount = {};
 			set.cards.forEach(function(card)
 			{
 				if(card.multiverseid && targetMultiverseids.contains(card.multiverseid))
@@ -87,7 +88,12 @@ function processSet(setCode, targetMultiverseids, cb)
 					{
 						newCard.imageName = newCard.imageName.trim("0123456789 .");
 						if(newCard.rarity==="Basic Land")
-							newCard.imageName = newCard.imageName + "1";
+						{
+							if(!basicLandCount.hasOwnProperty(newCard.name))
+								basicLandCount[card.name] = 0;
+							basicLandCount[card.name]++;
+							newCard.imageName = newCard.imageName + basicLandCount[card.name];
+						}
 					}
 
 					if(newCard.rarity!=="Basic Land")
@@ -170,7 +176,7 @@ function getMultiverseidsForSet(setCode, cb)
 				return setImmediate(function() { cb(err); });
 
 			var allCards = Array.prototype.slice.apply(arguments).flatten().flatten();
-			var cardsToGet = base.clone(C.EXTRA_SET_CARD_PRINTINGS[targetSet.code]);
+			var cardsToGet = base.clone(C.NON_GATHERER_SET_CARD_LISTS[targetSet.code]);
 
 			var multiverseids = [];
 			allCards.forEach(function(card)

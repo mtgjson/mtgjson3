@@ -112,6 +112,19 @@ function ripSet(setName, cb)
 				compareCardsToMCI(this.data.set, this);
 			}
 		},
+		function compareToEssentialMagic()
+		{
+			if(!this.data.set.essentialMagicCode)
+			{
+				base.warn("SKIPPING comparing to essentialmagic.com (no essentialMagicCode)...");
+				this();
+			}
+			else
+			{
+				base.info("Comparing cards to essentialmagic.com...");
+				compareCardsToEssentialMagic(this.data.set, this);
+			}
+		},
 		function finish(err)
 		{
 			if(err)
@@ -878,6 +891,16 @@ function createMCICardName(card)
 	return card.name;
 }
 
+function normalizeFlavor(flavor)
+{
+	flavor = unicodeUtil.unicodeToAscii(flavor.trim().replaceAll("\n", " "), {'—':'-','―':'-','”':'"','“':'"','‘':'\''}).innerTrim().replaceAll(" —", "—");
+	while(flavor.contains(". .")) { flavor = flavor.replaceAll("[.] [.]", ".."); }
+	while(flavor.contains(" .")) { flavor = flavor.replaceAll(" [.]", "."); }
+	while(flavor.contains(". ")) { flavor = flavor.replaceAll("[.] ", "."); }
+
+	return flavor;
+}
+
 function compareCardToMCI(card, mciCardURL, cb)
 {
 	tiptoe(
@@ -888,8 +911,8 @@ function compareCardToMCI(card, mciCardURL, cb)
 		function compareProperties(mciCardDoc)
 		{
 			// Compare flavor
-			var cardFlavor = (card.flavor || "").trim().replaceAll("\n", " ").innerTrim().replaceAll(" —", "—");
-			var mciFlavor = processTextBlocks(mciCardDoc.querySelector("table tr td p i")).trim().replaceAll("\n", " ").innerTrim().replaceAll(" —", "—");
+			var cardFlavor = normalizeFlavor(card.flavor || "");
+			var mciFlavor = normalizeFlavor(processTextBlocks(mciCardDoc.querySelector("table tr td p i")));
 			if(!mciFlavor && cardFlavor)
 				base.warn("FLAVOR: %s (%s) has flavor but MagicCardsInfo (%s) does not.", card.name, card.multiverseid, mciCardURL);
 			else if(mciFlavor && !cardFlavor)
@@ -907,6 +930,50 @@ function compareCardToMCI(card, mciCardURL, cb)
 			else if(mciArtist!==cardArtist && !C.ARTIST_CORRECTIONS.hasOwnProperty(cardArtist))
 				base.warn("ARTIST: %s (%s) artist does not match MagicCardsInfo (%s).\n%s", card.name, card.multiverseid, mciCardURL, diffUtil.diff(cardArtist, mciArtist));
 
+			this();
+		},
+		function finish(err)
+		{
+			setImmediate(function() { cb(err); });
+		}
+	);
+}
+
+function compareCardsToEssentialMagic(set, cb)
+{	
+	tiptoe(
+		function getSetCardList()
+		{
+			getURLAsDoc("http://www.essentialmagic.com/cardsets/Spoiler.asp?ID=" + set.essentialMagicCode, this);
+		},
+		function processSetCardList(listDoc)
+		{
+			Array.toArray(listDoc.querySelectorAll("table td#contentarea div#main table tr")).forEach(function(cardRow)
+			{
+				var cardName = processTextBlocks(cardRow.querySelector("td:nth-child(2) b a")).innerTrim().trim();
+				if(!cardName)
+				{
+					base.warn("Missing card name: %s", cardRow.innerHTML);
+					return;
+				}
+
+				set.cards.forEach(function(card)
+				{
+					if(card.name!==cardName)
+						return;
+
+					// Compare flavor
+					var cardFlavor = normalizeFlavor(card.flavor || "");
+					var essentialFlavor = normalizeFlavor(processTextBlocks(cardRow.querySelector("td:nth-child(2) i")));
+					if(!essentialFlavor && cardFlavor)
+						base.warn("FLAVOR: %s (%s) has flavor but essentialMagic does not.", card.name, card.multiverseid);
+					else if(essentialFlavor && !cardFlavor)
+						base.warn("FLAVOR: %s (%s) does not have flavor but essentialMagic does.", card.name, card.multiverseid);
+					else if(essentialFlavor!==cardFlavor)
+						base.warn("FLAVOR: %s (%s) flavor does not match essentialMagic.\n%s", card.name, card.multiverseid, diffUtil.diff(cardFlavor, essentialFlavor));
+				});
+			});
+			
 			this();
 		},
 		function finish(err)

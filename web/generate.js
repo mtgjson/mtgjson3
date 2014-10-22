@@ -107,6 +107,7 @@ tiptoe(
 			delete setWithExtras.magicCardsInfoCode;
 			delete setWithExtras.isMCISet;
 			delete setWithExtras.magicRaritiesCode;
+			delete setWithExtras.essentialMagicCode;
 
 			allSetsWithExtras[SET.code] = setWithExtras;
 			allSetsArrayWithExtras.push(setWithExtras);
@@ -294,7 +295,7 @@ function checkSetsForProblems(cb)
 
 function checkSetForProblems(setCode, cb)
 {
-	var ALLOWED_DUPS = {UGL :["B.F.M. (Big Furry Monster)"], DKM : ["Mountain", "Swamp"]};
+	var ALLOWED_DUPS = {UGL :["B.F.M. (Big Furry Monster)"], DKM : ["Mountain", "Swamp"], DPA :["Forest", "Island", "Mountain", "Swamp"]};
 	var ALLOWED_CATEGORIES = ["letter", "space", "punctuation", "number", "symbol"];
 	var ALLOWED_OTHER_CHARS = ['\n'];
 
@@ -396,7 +397,7 @@ function checkSetForProblems(setCode, cb)
 					if(["plane", "phenomenon", "scheme", "vanguard"].contains(card.layout) || !card.hasOwnProperty("number"))
 						return;
 
-					if(seenNumbers.contains(card.number))
+					if(!card.hasOwnProperty("variations") && seenNumbers.contains(card.number))
 						base.info("%s: Duplicate card number (%s): %s", setCode, card.name, card.number);
 					else
 						seenNumbers.push(card.number);

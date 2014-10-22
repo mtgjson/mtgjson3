@@ -169,6 +169,7 @@ exports.performSetCorrections = function(setCorrections, fullSet)
 			cards.multiSort([function(card) { return (card.hasOwnProperty("colors") ? COLOR_ORDER.indexOf(card.colors[0]) : 999); },
 									function(card) { return (card.types.contains("Artifact") ? -1 : 1); },
 									function(card) { return card.name; }]).forEach(function(card) { card.number = "" + (cardNumber++); });
+			cards = cards.sort(exports.cardComparator);
 		}
 		else
 		{
@@ -179,7 +180,13 @@ exports.performSetCorrections = function(setCorrections, fullSet)
 				if(setCorrection.match && (setCorrection.match==="*" || (Object.every(setCorrection.match, function(key, value) { return Array.isArray(value) ? value.contains(card[key]) : value===card[key]; }))))
 				{
 					if(setCorrection.replace)
-						Object.forEach(setCorrection.replace, function(key, value) { card[key] = value; });
+						Object.forEach(setCorrection.replace, function(key, value)
+							{ 
+								if(Object.isObject(value))
+									Object.forEach(value, function(findText, replaceWith) { card[key] = card[key].replaceAll(findText, replaceWith); });
+								else
+									card[key] = value; 
+							});
 					
 					if(setCorrection.remove)
 						setCorrection.remove.forEach(function(removeKey) { delete card[removeKey]; });
