@@ -6,8 +6,12 @@ var base = require("xbase"),
 	hash = require("mhash").hash,
 	path = require("path"),
 	moment = require("moment"),
+	domino = require("domino"),
 	querystring = require("querystring"),
+	tiptoe = require("tiptoe"),
+	request = require("request"),
 	fs = require("fs"),
+	urlUtil = require("xutil").url,
 	url = require("url"),
 	unicodeUtil = require("xutil").unicode;
 
@@ -378,11 +382,86 @@ exports.clearCacheFile = function(targetUrl, cb)
 	if(!fs.existsSync(cachePath))
 		return setImmediate(cb);
 
-	base.info("Clearing: %s for %s", cachePath, targetUrl);
+	//base.info("Clearing: %s for %s", cachePath, targetUrl);
 
 	fs.unlink(cachePath, cb);
 };
 
+exports.buildCacheFileURLs = function(card, cacheType, cb)
+{
+	tiptoe(
+		function getCacheURLs()
+		{
+			if(cacheType==="printings")
+				return exports.buildMultiverseAllPrintingsURLs(card.multiverseid, this);
+
+			var urls = [];
+			if(cacheType==="oracle")
+			{
+				urls.push(exports.buildMultiverseURL(card.multiverseid));
+				if(card.layout==="split")
+				{
+					urls.push(exports.buildMultiverseURL(card.multiverseid, card.names[0]));
+					urls.push(exports.buildMultiverseURL(card.multiverseid, card.names[1]));
+				}
+			}
+			else if(cacheType==="original")
+			{
+				urls.push(urlUtil.setQueryParam(exports.buildMultiverseURL(card.multiverseid), "printed", "true"));
+				if(card.layout==="split")
+				{
+					urls.push(urlUtil.setQueryParam(exports.buildMultiverseURL(card.multiverseid, card.names[0]), "printed", "true"));
+					urls.push(urlUtil.setQueryParam(exports.buildMultiverseURL(card.multiverseid, card.names[1]), "printed", "true"));
+				}
+			}
+			else if(cacheType==="languages")
+			{
+				urls.push(exports.buildMultiverseLanguagesURL(card.multiverseid));
+			}
+			else if(cacheType==="legalities")
+			{
+				urls.push(exports.buildMultiverseLegalitiesURL(card.multiverseid));
+			}
+
+			this(undefined, urls);
+		},
+		function returnCacheURLs(err, urls)
+		{
+			if(!urls.length)
+				throw new Error("No URLs for: %s %s", cacheType, card.multiverseid);
+			
+			if(urls.some(function(url) { return url.length===0; }))
+				throw new Error("Invalid urls for: %s %s [%s]", cacheType, card.multiverseid, urls.join(", "));
+
+			return setImmediate(function() { cb(err, urls); });
+		}
+	);
+};
+
+exports.buildMultiverseAllPrintingsURLs = function(multiverseid, cb)
+{
+	tiptoe(
+		function getFirstPage()
+		{
+			request(exports.buildMultiversePrintingsURL(multiverseid, 0), this);
+		},
+		function getAllPages(err, response, rawHTML)
+		{
+			if(err)
+				return setImmediate(function() { cb(err); });
+
+			var urls = [];
+
+			var numPages = exports.getPrintingsDocNumPages(domino.createWindow(rawHTML).document);
+			for(var i=0;i<numPages;i++)
+			{
+				urls.push(exports.buildMultiversePrintingsURL(multiverseid, i));
+			}
+
+			return setImmediate(function() { cb(undefined, urls); });
+		}
+	);
+};
 
 exports.getPrintingsDocNumPages = function(doc)
 {

@@ -4,8 +4,6 @@
 var base = require("xbase"),
 	C = require("C"),
 	fs = require("fs"),
-	domino = require("domino"),
-	request = require("request"),
 	shared = require("shared"),
 	path = require("path"),
 	tiptoe = require("tiptoe");
@@ -51,54 +49,32 @@ function clearCacheForSet(code, cacheType, cb)
 		},
 		function getCacheURLS(setRaw)
 		{
-			this.data.urls = [];
 			var set = JSON.parse(setRaw);
 			var self=this;
 			base.info("%d cards found.", set.cards.length);
-			set.cards.forEach(function(card)
-			{
-				if(cacheType==="oracle")
-				{
-					self.data.urls.push(shared.buildMultiverseURL(card.multiverseid));
-					if(card.layout==="split")
-					{
-						self.data.urls.push(shared.buildMultiverseURL(card.multiverseid, card.names[0]));
-						self.data.urls.push(shared.buildMultiverseURL(card.multiverseid, card.names[1]));
-					}
-				}
-				else if(cacheType==="languages")
-				{
-					self.data.urls.push(shared.buildMultiverseLanguagesURL(card.multiverseid));
-				}
-				else if(cacheType==="printings")
-				{
-					buildMultiverseAllPrintingsURL(card.multiverseid, self.parallel());
-				}
-				else if(cacheType==="legalities")
-				{
-					self.data.urls.push(shared.buildMultiverseLegalitiesURL(card.multiverseid));
-				}
-			});
 
 			if(cacheType==="mcilist")
 			{
-				this.data.urls.push("http://magiccards.info/" + set.magicCardsInfoCode.toLowerCase() + "/en.html");
+				var urls = [];
+				urls.push("http://magiccards.info/" + set.magicCardsInfoCode.toLowerCase() + "/en.html");
 				var targetSet = C.SETS.mutateOnce(function(SET) { if(SET.code.toLowerCase()===set.code.toLowerCase()) { return SET; } });
 				Array.toArray(targetSet.magicRaritiesCodes).forEach(function(magicRaritiesCode)
 				{
-					this.data.urls.push("http://www.magiclibrarities.net/" + magicRaritiesCode + "-english-cards-index.html");
-				}.bind(this));				
+					urls.push("http://www.magiclibrarities.net/" + magicRaritiesCode + "-english-cards-index.html");
+				}.bind(this));
+				this(undefined, urls);
 			}
-
-			if(cacheType!=="printings")
-				this();
+			else
+			{
+				set.cards.serialForEach(function(card, subcb)
+				{
+					shared.buildCacheFileURLs(card, cacheType, subcb);
+				}, this);
+			}
 		},
-		function clearCacheFiles()
+		function clearCacheFiles(urls)
 		{
-			if(cacheType==="printings")
-				this.data.urls = this.data.urls.concat(Array.prototype.slice.apply(arguments).flatten().uniqueBySort());
-
-			this.data.urls.serialForEach(shared.clearCacheFile, this);
+			urls.flatten().uniqueBySort().serialForEach(shared.clearCacheFile, this);
 		},
 		function finish(err)
 		{
@@ -107,27 +83,4 @@ function clearCacheForSet(code, cacheType, cb)
 	);
 }
 
-function buildMultiverseAllPrintingsURL(multiverseid, cb)
-{
-	tiptoe(
-		function getFirstPage()
-		{
-			request(shared.buildMultiversePrintingsURL(multiverseid, 0), this);
-		},
-		function getAllPages(err, response, rawHTML)
-		{
-			if(err)
-				return setImmediate(function() { cb(err); });
 
-			var urls = [];
-
-			var numPages = shared.getPrintingsDocNumPages(domino.createWindow(rawHTML).document);
-			for(var i=0;i<numPages;i++)
-			{
-				urls.push(shared.buildMultiversePrintingsURL(multiverseid, i));
-			}
-
-			return setImmediate(function() { cb(undefined, urls); });
-		}
-	);
-}

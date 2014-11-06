@@ -1,7 +1,7 @@
 /-----------------------------------\
 | Non-Gatherer New Set Instructions |
 \-----------------------------------/
-# Add new set to C.js in all places needed
+# Add new set to C.js in all places needed (SETS_NOT_ON_GATHERER and SETS and NON_GATHERER_SET_CARD_LISTS, etc)
 node build/createNonGathererSet.js <expansion code>
 
 # Update printings
@@ -14,7 +14,7 @@ node util/updatePrintingsFromSet.js <expansion code>
 | Gatherer New Set Instructions |
 \-------------------------------/
 # Add new set to C.js
-# Run buildSet.js TWICE (first pass gets data, second pass gets foreign langauge names)
+# Run buildSet.js TWICE (first pass gets data, second pass gets foreign langauge names and additional data)
 node build/buildSet.js <expansion code>
 node build/buildSet.js <expansion code>
 
@@ -39,12 +39,16 @@ node util/updateLegalitiesFromSet.js <set codes that rotated out and the new set
 node build/importMCISet.js mcisets
 node util/updateNonGathererSets.js
 
-# Update generate.js with new version number and lastUpdated date
 # Update changelog.json with new change log entry
 
 # Now generate web
 cd web
 node generate.js
+
+# ALERT: The web/generate.js file may detected old cards that need to be updated with new descriptions
+#        These show up as 'tainted set codes'. The cache files are automatically cleared, but you then need to re-run
+#        node build/buildSet.js <tainted set codes> && node build/importMCISet.js mcisets && node util/updateNonGathererSets.js
+#        Then re-run web/generate
 
 # Add images to dev.mtgimage.com
 

@@ -13,6 +13,7 @@ var base = require("xbase"),
 	path = require("path"),
 	dustUtil = require("xutil").dust,
 	moment = require("moment"),
+	shared = require("shared"),
 	tiptoe = require("tiptoe");
 
 var JSONP_PREFIX = "mtgjsoncallback(";
@@ -55,6 +56,8 @@ tiptoe(
 		var allCardsWithExtras = {};
 		var previousSeenSetCodes = {};
 
+		var taintedSetCodes = [];
+		var taintedCards = [];
 		base.info("Creating JSON files...");
 		C.SETS.forEach(function(SET, i)
 		{
@@ -84,7 +87,21 @@ tiptoe(
 						if(!card.hasOwnProperty(fieldName))
 						{
 							if(allCardsWithExtras[card.name].hasOwnProperty(fieldName))
-								base.warn("Card [%s] mismatch with field [%s] between current set [%s] and previous [%s] with values:\n\tNO VALUE\n\t%s", card.code, fieldName, SET.name, previousSeenSetCodes[card.name][fieldName].join(" "), allCardsWithExtras[card.name][fieldName]);
+							{
+								base.warn("Card [%s] mismatch with field [%s] between current set [%s] and previous [%s] with values:\n\tNO VALUE\n\t%s", card.code, fieldName, SET.code, previousSeenSetCodes[card.name][fieldName].join(" "), allCardsWithExtras[card.name][fieldName]);
+								taintedCards.push({card:card, fieldName:fieldName});
+
+								previousSeenSetCodes[card.name][fieldName].forEach(function(prevSetCode)
+								{
+									allSetsWithExtras[prevSetCode].cards.forEach(function(prevCard) { if(prevCard.name===card.name) { taintedCards.push({card:prevCard, fieldName:fieldName}); } });
+								});
+
+								[].concat(previousSeenSetCodes[card.name][fieldName], [SET.code]).forEach(function(taintedCode)
+								{
+									if(!C.SETS.filter(function(taintedSet) { return taintedSet.code===taintedCode; })[0].isMCISet && !C.SETS_NOT_ON_GATHERER.contains(taintedCode))
+										taintedSetCodes.push(taintedCode);
+								});
+							}
 
 							return;
 						}
@@ -93,7 +110,21 @@ tiptoe(
 						{
 							var fieldDifference = diffUtil.diff(fieldValue, allCardsWithExtras[card.name][fieldName]);
 							if(fieldDifference)
+							{
 								base.warn("Card [%s] mismatch with field [%s] between current set [%s] and previous [%s] with : %s", card.name, fieldName, SET.code, previousSeenSetCodes[card.name][fieldName].join(" "), fieldDifference);
+								taintedCards.push({card:card, fieldName:fieldName});
+								
+								previousSeenSetCodes[card.name][fieldName].forEach(function(prevSetCode)
+								{
+									allSetsWithExtras[prevSetCode].cards.forEach(function(prevCard) { if(prevCard.name===card.name) { taintedCards.push({card:prevCard, fieldName:fieldName}); } });
+								});
+
+								[].concat(previousSeenSetCodes[card.name][fieldName], [SET.code]).forEach(function(taintedCode)
+								{
+									if(!C.SETS.filter(function(taintedSet) { return taintedSet.code===taintedCode; })[0].isMCISet && !C.SETS_NOT_ON_GATHERER.contains(taintedCode))
+										taintedSetCodes.push(taintedCode);
+								});
+							}
 						}
 					}
 
@@ -151,6 +182,13 @@ tiptoe(
 			dustData.sets.push(dustSetData);
 		}.bind(this));
 
+		taintedSetCodes = taintedSetCodes.unique();
+		if(taintedSetCodes.length>0)
+		{
+			base.info("Tainted set codes: %s", taintedSetCodes.join(" "));
+			this.data.taintedCards = taintedCards;
+		}
+
 		var allCards = base.clone(allCardsWithExtras, true);
 		Object.values(allCards).forEach(function(card)
 		{
@@ -206,6 +244,20 @@ tiptoe(
 
 		fs.writeFile(path.join(__dirname, "json", "changelog.json"), fs.readFileSync(path.join(__dirname, "changelog.json"), {encoding : "utf8"}), {encoding : "utf8"}, this.parallel());
 		fs.writeFile(path.join(__dirname, "json", "changelog.jsonp"), JSONP_PREFIX + fs.readFileSync(path.join(__dirname, "changelog.json"), {encoding : "utf8"}) + ', "changelog"' + JSONP_SUFFIX, {encoding : "utf8"}, this.parallel());
+	},
+	function clearTaintedCacheFilesIfNecessary()
+	{
+		if(!this.data.taintedCards)
+			return this();
+
+		base.info("Clearing cache files for tainted cards...");
+
+		var self=this;
+
+		this.data.taintedCards.filter(function(taintedCard) { return taintedCard.card.hasOwnProperty("multiverseid"); }).serialForEach(function(taintedCard, subcb)
+		{
+			shared.buildCacheFileURLs(taintedCard.card, (taintedCard.fieldName==="printings" ? "printings" : (taintedCard.fieldName.startsWith("original") ? "original" : "oracle")), subcb);
+		}, function(err, cacheFileURLs) { base.info("Clearing %d cache files...", cacheFileURLs.length); cacheFileURLs.flatten().uniqueBySort().serialForEach(shared.clearCacheFile, self); });
 	},
 	function verifyJSON()
 	{

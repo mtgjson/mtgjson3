@@ -1,6 +1,8 @@
 /---------------\
 | High Priority |
 \---------------/
+* Download an older version of 8ED and 9ED json files from JSON (before OCT 22), delete all cards from it except the 'box set' cards, then place that into the legacy json, then ensure multiverseid's get created for them in mtgimage
+
 * Move all 'tokens' to a new array along side 'cards' called 'tokens' and reference 108.2 that they are not considered cards.
   Have this be done automatically AFTER everything is done (including card modifications and sorting), by simply moving any card with layout==="token" to the new tokens array.
 
