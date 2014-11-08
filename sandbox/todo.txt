@@ -1,8 +1,6 @@
 /---------------\
 | High Priority |
 \---------------/
-* Download an older version of 8ED and 9ED json files from JSON (before OCT 22), delete all cards from it except the 'box set' cards, then place that into the legacy json, then ensure multiverseid's get created for them in mtgimage
-
 * Move all 'tokens' to a new array along side 'cards' called 'tokens' and reference 108.2 that they are not considered cards.
   Have this be done automatically AFTER everything is done (including card modifications and sorting), by simply moving any card with layout==="token" to the new tokens array.
 
@@ -26,12 +24,13 @@ See the 3 e-mail's from Brian (eastsydneyboy@gmail.com) for more details on this
 * Create a nginx tolowercase plugin that doesn't require a /actual/ directory and then e-nable this for files in /json/
 
 * Add MTGO only sets:
-  + Mirrodin Pure vs. New Phyrexia
+  - PRM set. (promo cards, see e-mail from  Thomas Baird <thomas@cardhoarder.com>)
+  - Mirrodin Pure vs. New Phyrexia
   Theme Decks:
-  + Boltslinger
-  + Exiler
-  + Deathdancer Xira
-  + Enchantress Rubinia
+  - Boltslinger
+  - Exiler
+  - Deathdancer Xira
+  - Enchantress Rubinia
   More???
 
 * Add foil information to sets/cards. Lots of ways this could be done. A 'foilable'/'foilOnly' boolean at set and card level. Or perhaps an array like:
@@ -67,6 +66,6 @@ See the 3 e-mail's from Brian (eastsydneyboy@gmail.com) for more details on this
 
 * Add links to every web page and app that uses mtgjson. Search google webmaster links, google Analytics referrers, google and bing search engines, email, github, and reddit too
 
-* Add MTGO ID's to each card (known in MTGO as 'catId')
+* Add MTGO ID's to each card (known in MTGO as 'catId') Warning: May be different in the new MTGO client?
   See: https://www.mtgolibrary.com/mlbot_php/installer/CatID.txt
 
