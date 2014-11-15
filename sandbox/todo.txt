@@ -1,6 +1,15 @@
 /---------------\
 | High Priority |
 \---------------/
+* Magic 2015 also has 'starter' cards (those numbered 270 or higher): http://archive.wizards.com/Magic/magazine/article.aspx?x=mtg/daily/arcana/1515
+  Consider merging 8BS/9BS back into 8ED/9ED and mark those cards (and 270+ cards in M15) as 'starter' : true or 'box set' : true or some other sort of notifier.
+  If I do add this, make sure for the 'booster' documentation I document that cards marked as this should not be included in any booster simulations.
+
+* Add "Collector's Edition" and "International Collector's Edition" from Magiccards.info as pCED pCEI
+  http://magiccards.info/ced/en.html
+  http://magiccards.info/cedi/en.html
+  Info about the releases: http://mtgarchive.net/wiki/Collectors'_Edition  and  http://www.magiclibrarities.net/752-rarities-collectors-edition-box-set-cards-english-cards-index.html
+
 * Move all 'tokens' to a new array along side 'cards' called 'tokens' and reference 108.2 that they are not considered cards.
   Have this be done automatically AFTER everything is done (including card modifications and sorting), by simply moving any card with layout==="token" to the new tokens array.
 
