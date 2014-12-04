@@ -2953,6 +2953,10 @@
 		[
 			{ match : {name : "Sylvan Primordial"}, setLegality : {"Commander" : "Banned"}}
 		],
+		PC2 :
+		[
+			{ match : { name : "Stairs to Infinity"}, replace : {number : "P1"}}
+		],
 		M14 :
 		[
 			{ match : "*", fixFlavorNewlines : true },
