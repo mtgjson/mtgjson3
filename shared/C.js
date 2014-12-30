@@ -10,7 +10,7 @@
 
 	exports.LAST_PRINTINGS_RESET = "V14";
 
-	exports.SETS_LACKING_HQ_SVG_SYMBOL_ICONS = [];
+	exports.SETS_LACKING_HQ_SVG_SYMBOL_ICONS = ["C14"];
 
 	exports.SETS_NOT_ON_GATHERER = ["ATH", "ITP", "DKM", "RQS", "DPA"];
 	exports.SETS_WITH_NO_IMAGES = [];

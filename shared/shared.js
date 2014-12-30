@@ -3,7 +3,7 @@
 
 var base = require("xbase"),
 	C = require("C"),
-	hash = require("mhash").hash,
+	hash = require("mhash"),
 	path = require("path"),
 	moment = require("moment"),
 	domino = require("domino"),

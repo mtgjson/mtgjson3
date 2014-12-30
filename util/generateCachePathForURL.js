@@ -2,7 +2,6 @@
 /*global setImmediate: true*/
 
 var base = require("xbase"),
-	hash = require("mhash").hash,
 	path = require("path"),
 	shared = require("shared"),
 	tiptoe = require("tiptoe");
