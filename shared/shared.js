@@ -249,13 +249,15 @@ exports.performSetCorrections = function(setCorrections, fullSet)
 					cards.removeAll(cardsToRemove);
 			});
 
-			if(setCorrection.copyCard || setCorrection.importCard)
+			if(setCorrection.copyCard || setCorrection.importCard || setCorrection.addCard)
 			{
 				var newCard;
 				if(setCorrection.copyCard)
 					newCard = base.clone(cards.mutateOnce(function(card) { return card.name===setCorrection.copyCard ? card : undefined; }), true);
 				else if(setCorrection.importCard)
 					newCard = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "json", setCorrection.importCard.set + ".json"), {encoding:"utf8"})).cards.mutateOnce(function(card) { return card.name===setCorrection.importCard.name ? card : undefined; });
+				else if(setCorrection.addCard)
+					newCard = base.clone(setCorrection.addCard, true);
 
 				if(setCorrection.replace)
 					Object.forEach(setCorrection.replace, function(key, value) { newCard[key] = value; });

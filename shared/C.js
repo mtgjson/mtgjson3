@@ -10,7 +10,7 @@
 
 	exports.LAST_PRINTINGS_RESET = "V14";
 
-	exports.SETS_LACKING_HQ_SVG_SYMBOL_ICONS = ["C14"];
+	exports.SETS_LACKING_HQ_SVG_SYMBOL_ICONS = [];
 
 	exports.SETS_NOT_ON_GATHERER = ["ATH", "ITP", "DKM", "RQS", "DPA"];
 	exports.SETS_WITH_NO_IMAGES = [];
@@ -2718,7 +2718,9 @@
 			{ match : {name : "Mycoid Shepherd"}, replace : {releaseDate : "2009"}},
 			{ match : {name : "Naya Sojourners"}, replace : {releaseDate : "2010"}},
 			{ match : {name : "Nissa's Chosen"}, replace : {releaseDate : "2009"}},
-			{ match : {name : "Staggershock"}, replace : {releaseDate : "2010"}}
+			{ match : {name : "Staggershock"}, replace : {releaseDate : "2010"}},
+			{ match : {imageName : "fling1"}, replace : {releaseDate : "2014"}},
+			{ match : {imageName : "sylvan ranger1"}, replace : {releaseDate : "2014"}}
 		],
 		GPT :
 	[
@@ -2793,6 +2795,23 @@
 					manaCost     : "{1}{W}{W}",
 					colors       : ["White"],
 					printings    : ["Happy Holidays"]
+				}
+			},
+			{ addCard :
+				{
+					name : "Mishra's Toy Workshop",
+					text : "{T}: Add {3} to your mana pool. Spend this mana only on spells and abilities that put tokens onto the battlefield. Use toys to represent the tokens.",
+					flavor : "Even though Urza tried to apologize, Mishra continued to bear a grudge.",
+					artist : "Jung Park",
+					layout : "normal",
+					type : "Land",
+					types : ["Land"],
+					rarity : "Special",
+					source : "Holiday gift to Wizards internal teams and business partners.",
+					imageName : "mishra's toy workshop",
+					printings : ["Happy Holidays"],
+					releaseDate : "2014",
+					number : "9"
 				}
 			},
 			{ match : {name : "Gifts Given"}, replace : {text : "Search target opponent's library for four cards with different names and reveal them. That player chooses two of those cards. Put the chosen cards into the player's graveyard and the rest into your hand. Then that player shuffles his or her library."}},
@@ -3112,7 +3131,8 @@
 		toughness : [],
 		chaosdice : ["chaos", "c"],
 		planeswalk : [],
-		forwardslash : []
+		forwardslash : [],
+		tombstone : []
 	};
 
 	exports.FIELD_TYPES =
