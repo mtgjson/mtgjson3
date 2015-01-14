@@ -10,7 +10,7 @@
 
 	exports.LAST_PRINTINGS_RESET = "V14";
 
-	exports.SETS_LACKING_HQ_SVG_SYMBOL_ICONS = [];
+	exports.SETS_LACKING_HQ_SVG_SYMBOL_ICONS = ["FRF"];
 
 	exports.SETS_NOT_ON_GATHERER = ["ATH", "ITP", "DKM", "RQS", "DPA"];
 	exports.SETS_WITH_NO_IMAGES = [];
@@ -1655,6 +1655,15 @@
 			border : "black",
 			type : "commander"
 		},
+		{
+			name : "Fate Reforged",
+			code : "FRF",
+			releaseDate : "2015-01-23",
+			border : "black",
+			type : "expansion",
+			block : "Khans of Tarkir",
+			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"]
+		}
 	];
 
 	exports.NON_GATHERER_SET_CARD_LISTS =

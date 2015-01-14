@@ -45,8 +45,10 @@ tiptoe(
 	}
 );
 
+var imageNameAlerts = [];
 function processSet(code, cb)
 {
+	imageNameAlerts = [];
 	base.info("%s", code);
 
 	tiptoe(
@@ -60,6 +62,12 @@ function processSet(code, cb)
 			var result = compareSets(JSON.parse(oldJSONArgs[1]), JSON.parse(newJSON), code);
 			if(result)
 				console.log(result);
+
+			if(imageNameAlerts.length>0)
+			{
+				base.info("WARNING!! IMAGE NAMES HAVE CHANGED!!!");
+				base.info(imageNameAlerts.join("\n"));
+			}
 
 			this();
 		},
@@ -108,6 +116,9 @@ function compareSets(oldSet, newSet, filename)
 			updatedSetFiles.push(filename);
 			result += color.magenta(JSON.stringify(key)) + " : \n";
 			result += subResult;
+
+			if(oldCard.hasOwnProperty("imageName") && newCard.hasOwnProperty("imageName") && oldCard.imageName!==newCard.imageName)
+				imageNameAlerts.push(oldCard.name + "(" + oldCard.imageName + ") => " + newCard.name + "(" + newCard.imageName + ")");
 		}
 	});
 
