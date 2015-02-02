@@ -1658,6 +1658,7 @@
 		{
 			name : "Fate Reforged",
 			code : "FRF",
+			magicCardsInfoCode : "frf",
 			releaseDate : "2015-01-23",
 			border : "black",
 			type : "expansion",
