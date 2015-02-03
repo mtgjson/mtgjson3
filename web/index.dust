@@ -12,6 +12,7 @@
 			ga('create', 'UA-26058758-3', 'mtgjson.com');
 			ga('send', 'pageview');
 		</script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> 
 		<link type="text/css" rel="stylesheet" href="index.css">
 		<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
@@ -255,6 +256,8 @@
 		<br>
 		Foils are not explictily mentioned, except for 'Modern Masters' where a slot is guaranteed a foil. So that set has four additional possible booster card types: foil common, foil uncommon, foil rare and foil mythic rare<br>
 		<br>
+		Any card marked as "starter" : true should be exempted from any booster generation as these cards were only available in boxed sets and not in boosters.<br>
+		<br>
 		<br>
 		<a name="cards"></a>
 		<h2>Cards<a href="#top">(back to top)</a></h2>
@@ -417,6 +420,11 @@
 					<td>releaseDate</td>
 					<td>"2010-07-22" or "2010-07" or "2010"</td>
 					<td>The date this card was released. This is only set for promo cards. The date may not be accurate to an exact day and month, thus only a partial date may be set (YYYY-MM-DD or YYYY-MM or YYYY). Some promo cards do not have a known release date.</td>
+				</tr>
+				<tr>
+					<td>starter</td>
+					<td>true</td>
+					<td>Set to true if this card was only released as part of a core box set. These are technically part of the core sets and are tournament legal despite not being available in boosters.</td>
 				</tr>
 			</tbody>
 		</table>

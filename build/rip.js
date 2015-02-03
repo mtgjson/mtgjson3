@@ -129,7 +129,7 @@ function ripSet(setName, cb)
 		{
 			if(err)
 			{
-				base.error("Error ripping: %s", setName);
+				base.error("Error ripping: %s (%s)", this.data.set.code, setName);
 				return setImmediate(function() { cb(err); });
 			}
 

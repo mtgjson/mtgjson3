@@ -256,7 +256,7 @@ tiptoe(
 
 		this.data.taintedCards.filter(function(taintedCard) { return taintedCard.card.hasOwnProperty("multiverseid"); }).serialForEach(function(taintedCard, subcb)
 		{
-			shared.buildCacheFileURLs(taintedCard.card, (taintedCard.fieldName==="printings" ? "printings" : (taintedCard.fieldName.startsWith("original") ? "original" : "oracle")), subcb);
+			shared.buildCacheFileURLs(taintedCard.card, (taintedCard.fieldName==="printings" ? "printings" : (taintedCard.fieldName.startsWith("original") ? "original" : (taintedCard.fieldName==="legalities" ? "legalities" : "oracle"))), subcb);
 		}, function(err, cacheFileURLs) { base.info("Clearing %d cache files...", cacheFileURLs.length); cacheFileURLs.flatten().uniqueBySort().serialForEach(shared.clearCacheFile, self); });
 	},
 	function verifyJSON()
@@ -451,7 +451,7 @@ function checkSetForProblems(setCode, cb)
 					if(["plane", "phenomenon", "scheme", "vanguard"].contains(card.layout) || !card.hasOwnProperty("number"))
 						return;
 
-					if(!card.hasOwnProperty("variations") && seenNumbers.contains(card.number))
+					if(!card.hasOwnProperty("variations") && !card.starter && seenNumbers.contains(card.number))
 						base.info("%s: Duplicate card number (%s): %s", setCode, card.name, card.number);
 					else
 						seenNumbers.push(card.number);

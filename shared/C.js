@@ -726,16 +726,6 @@
 			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land"]
 		},
 		{
-			name : "Eighth Edition Box Set",
-			code : "8BS",
-			magicCardsInfoCode : "8eb",
-			magicRaritiesCodes : "540-rarities-eighth-edition-box-set-cards",
-			isMCISet : true,
-			releaseDate : "2003-07-28",
-			border : "white",
-			type : "box"
-		},
-		{
 			name : "Mirrodin",
 			code : "MRD",
 			magicCardsInfoCode : "mi",
@@ -813,16 +803,6 @@
 			border : "white",
 			type : "core",
 			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land"]
-		},
-		{
-			name : "Ninth Edition Box Set",
-			code : "9BS",
-			magicCardsInfoCode : "9eb",
-			magicRaritiesCodes : "531-rarities-ninth-edition-box-set-cards",
-			isMCISet : true,
-			releaseDate : "2005-07-29",
-			border : "white",
-			type : "box"
 		},
 		{
 			name : "Ravnica: City of Guilds",
@@ -2552,11 +2532,7 @@
 		"8ED" :
 		[
 			{ match : {name : "Lhurgoyf"}, replace : {flavor : "\"Ach! Hans, run! It's the Lhurgoyf!\"\n—Saffi Eriksdotter, last words"}},
-			{ match : {multiverseid:[47784, 47788, 47785, 47786, 47789, 47787, 49056]}, removeCard : true}
-		],
-		"8BS" :
-		[
-			{ match : "*", remove : ["source", "releaseDate"], prefixNumber : "S"},
+			{ match : {multiverseid:[47784, 47788, 47785, 47786, 47789, 47787, 49056]}, replace : {starter : true}},
 			{ match : {name : ["Eager Cadet", "Giant Octopus", "Sea Eagle"]}, replace : {rarity : "Common"}},
 			{ match : {name : ["Enormous Baloth", "Silverback Ape", "Vengeance"]}, replace : {rarity : "Uncommon"}},
 			{ match : {name : ["Vizzerdrix"]}, replace : {rarity : "Rare"}}
@@ -2708,11 +2684,7 @@
 			{ match : {name : "Blinking Spirit"}, replace : {flavor : "\"Don't look at it! Maybe it'll go away!\"\n—Ib Halfheart, goblin tactician"}},
 			{ match : {name : "Sea's Claim"}, replace : {flavor : "\"Who's the crazy one now!?\"\n—Torgle, mountaintop boatmaker"}},
 			{ match : {name : "Swarm of Rats"}, replace : {flavor : "\"Rats, rats, rats! Hundreds, thousands, millions of them, and every one a life.\"\n—Bram Stoker, Dracula"}},
-			{ match : {multiverseid:[83064, 83319, 84073, 83104, 94912, 94911, 94910, 83075, 94914]}, removeCard : true}
-		],
-		"9BS" :
-		[
-			{ match : "*", remove : ["source", "releaseDate"], prefixNumber : "S"}
+			{ match : {multiverseid:[83064, 83319, 84073, 83104, 94912, 94911, 94910, 83075, 94914]}, replace : {starter : true}}
 		],
 		RAV :
 		[
@@ -3008,6 +2980,10 @@
 		[
 			{ match : "*", fixFlavorNewlines : true }
 		],
+		M15 :
+		[
+			{ match : {number : ["270","271","272","273","274","275","276","277","278","279","280","281","282","283","284"]}, replace : {starter : true}}
+		],
 		"*" :
 		[
 			{ match : {name : "Draco"}, replace : {text : "Domain — Draco costs {2} less to cast for each basic land type among lands you control.\nFlying\nDomain — At the beginning of your upkeep, sacrifice Draco unless you pay {10}. This cost is reduced by {2} for each basic land type among lands you control."}},
@@ -3181,7 +3157,8 @@
 		reserved     : "boolean",
 		source       : "string",
 		releaseDate  : "string",
-		legalities   : {}
+		legalities   : {},
+		starter      : "boolean"
 	};
 
 	exports.ORACLE_FIELDS = ["layout", "name", "names", "manaCost", "cmc", "colors", "type", "supertypes", "types", "subtypes", "text", "power", "toughness", "loyalty", "hand", "life", "rulings", "foreignNames", "printings", "legalities"];
