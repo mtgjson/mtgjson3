@@ -1,13 +1,6 @@
 /---------------\
 | High Priority |
 \---------------/
-* Add "Collector's Edition" and "International Collector's Edition" from Magiccards.info as pCED pCEI
-  http://magiccards.info/ced/en.html
-  http://magiccards.info/cedi/en.html
-  Info about the releases: http://mtgarchive.net/wiki/Collectors'_Edition  and  http://www.magiclibrarities.net/752-rarities-collectors-edition-box-set-cards-english-cards-index.html
-
-* Add Duel Decks Anthologies (http://mtgsalvation.gamepedia.com/Duel_Decks_Anthology). It is not on gather or magiccards.info, so if CCGHQ doesn't have pics, not sure where the images will come from (I suppose I could just copy them from the original duel decks as a temporary solution)
-
 * Add TCGPlayer set names for each set, so those who want to get TCGPlayer prices can do so more easily. See the e-mail from Michael Norrish <mike.norrish@gmail.com> for more info
 
 * See the e-mail from john.a.bondeson@gmail.com regarding 'color identity' field that is used in commander/edh. At the very least I should research this and decide one way or the other about adding it and then reply back to him once it's added or my reasons why I won't be adding it.
@@ -32,7 +25,7 @@ See the 3 e-mail's from Brian (eastsydneyboy@gmail.com) for more details on this
 
 * Add some sort of 'deck' or 'subset' field, to identify which cards are part of which decks (such as 'elf' deck in the 'elves vs goblins' set)
 
-* Create a nginx tolowercase plugin that doesn't require a /actual/ directory and then e-nable this for files in /json/
+* Create a nginx tolowercase plugin that doesn't require a /actual/ directory and then enable this for files in /json/
 
 * Add MTGO only sets:
   - PRM set. (promo cards, see e-mail from  Thomas Baird <thomas@cardhoarder.com>)
@@ -55,7 +48,7 @@ See the 3 e-mail's from Brian (eastsydneyboy@gmail.com) for more details on this
 /--------------\
 | Low Priority |
 \--------------/
-* Added 'seeded' booster pack info
+* Add 'seeded' booster pack info
 
 * Add 'Face the Hydra' cards
 
@@ -64,6 +57,11 @@ See the 3 e-mail's from Brian (eastsydneyboy@gmail.com) for more details on this
   Then e-mail rubens w2net and message skibulk on slightlymagic
   Also of course reply on MTGSalvation
   When doing this, keep the 'foreignNames' field, and make sure it includes 'English' in non-english printings
+
+* Add "Collector's Edition" and "International Collector's Edition" from Magiccards.info as pCED pCEI  (old code for collector's edition is BCE)
+  http://magiccards.info/ced/en.html
+  http://magiccards.info/cedi/en.html
+  Info about the releases: http://mtgarchive.net/wiki/Collectors'_Edition  and  http://www.magiclibrarities.net/752-rarities-collectors-edition-box-set-cards-english-cards-index.html
 
 * Add colorIndicator directly into the JSON. Greg Falcon mentions that it's officially part of the card and is cumbersome to reverse engineer from the mana cost/colors field.
 

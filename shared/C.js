@@ -8,7 +8,7 @@
 	// Unglued/Unhinged types
 	exports.TYPES.push("Enchant", "Player", "Summon", "Interrupt", "Scariest", "You'll", "Ever", "See", "Eaturecray");
 
-	exports.LAST_PRINTINGS_RESET = "V14";
+	exports.LAST_PRINTINGS_RESET = "FRF";
 
 	exports.SETS_LACKING_HQ_SVG_SYMBOL_ICONS = [];
 
@@ -1634,6 +1634,34 @@
 			releaseDate : "2014-11-07",
 			border : "black",
 			type : "commander"
+		},
+		{
+			name : "Duel Decks Anthology, Divine vs. Demonic",
+			code : "DD3_DVD",
+			releaseDate : "2014-12-05",
+			border : "black",
+			type : "duel deck"
+		},
+		{
+			name : "Duel Decks Anthology, Elves vs. Dragons",
+			code : "DD3_EVG",
+			releaseDate : "2014-12-05",
+			border : "black",
+			type : "duel deck"
+		},
+		{
+			name : "Duel Decks Anthology, Garruk vs. Liliana",
+			code : "DD3_GVL",
+			releaseDate : "2014-12-05",
+			border : "black",
+			type : "duel deck"
+		},
+		{
+			name : "Duel Decks Anthology, Jace vs. Chandra",
+			code : "DD3_JVC",
+			releaseDate : "2014-12-05",
+			border : "black",
+			type : "duel deck"
 		},
 		{
 			name : "Fate Reforged",
