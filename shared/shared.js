@@ -351,6 +351,19 @@ exports.performSetCorrections = function(setCorrections, fullSet)
 			delete card.releaseDate;
 		}
 	});
+
+	// Set renames
+	Object.forEach(C.GATHERER_SET_RENAMES, function(oldName, newName)
+	{
+		if(fullSet.name===oldName)
+			fullSet.name = newName;
+
+		cards.forEach(function(card)
+		{
+			if(card.printings && card.printings.contains(oldName))
+				card.printings = card.printings.replaceAll(oldName, newName);
+		});
+	});
 };
 
 exports.generateCacheFilePath = generateCacheFilePath;

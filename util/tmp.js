@@ -13,6 +13,8 @@ var base = require("xbase"),
 	path = require("path"),
 	tiptoe = require("tiptoe");
 
+process.exit(0);
+
 var mwscodes = ["ARE", "AVR", "BIN", "BNG", "BOK", "BRB", "C13", "CFX", "CH", "CHK", "CHP", "CIN", "CM1", "CMD", "CNS", "CS", "CST", "CVP", "DD2", "DDC", "DDD", "DDE", "DDF", "DDG", "DDH", "DDI", "DDJ", "DDK", "DDL", "DDM", "DGM", "DIS", "DK", "DKA", "DLM", "DM", "DPA", "DRB", "DS", "EVE", "EVG", "EX", "FBP", "FD", "FE", "FNM", "FUT", "GAM", "GP", "GPX", "GTC", "GTW", "H09", "HHL", "HL", "HOP", "I2P", "IA", "IN", "ISD", "JGC", "JOU", "JU", "JUN", "LE", "LG", "LND", "LRW", "M10", "M11", "M12", "M13", "M14", "M15", "MBS", "MGB", "MGD", "MI", "MIN", "MM", "MMA", "MOR", "MPR", "MR", "NE", "NPH", "OD", "ON", "P2", "P3", "PC2", "PD2", "PD3", "PLC", "PRE", "PS", "PT", "PTR", "PY", "RAV", "REL", "ROE", "RS", "RTR", "S00", "SC", "SH", "SHM", "SOK", "SOM", "ST", "STO", "SUM", "TE", "THG", "THS", "TO", "TSB", "TSP", "UD", "UG", "UL", "UNH", "URC", "US", "V09", "V10", "V11", "V12", "V13", "VI", "WL", "WLD", "WWK", "ZEN"];
 var matches = [];
 

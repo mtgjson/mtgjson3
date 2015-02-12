@@ -37,7 +37,7 @@ function ripSet(setName, cb)
 					sort    : "cn+",
 					action  : "advanced",
 					special : "true",
-					set     : "[" + JSON.stringify(setName.replaceAll("&", "and")) + "]"
+					set     : "[" + JSON.stringify((C.GATHERER_SET_RENAMES_REVERSED[setName] || setName).replaceAll("&", "and")) + "]"
 				}
 			});
 
