@@ -68,6 +68,8 @@ function renderSet(setRaw, original, cb)
 		 "foreignNames", "printings", "legalities"].forEach(function(key) { delete dup[key]; });
 		card.json = util.inspect(dup);
 
+		card.symbolrarity = card.rarity==="Basic Land" ? "Common" : card.rarity;
+
 		if(card.text)
 			card.text = card.text.replaceAll("\n", "<br>");
 		if(card.originalText)
