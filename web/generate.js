@@ -363,6 +363,13 @@ function checkSetForProblems(setCode, cb)
 			var setData = JSON.parse(setRaw);
 			var cardsByName = {};
 
+			// Check for duplicate printings entries
+			setData.cards.forEach(function(card)
+			{
+				if(card.printings && card.printings.length!==card.printings.unique().length)
+					base.info("%s Duplicate printings entry for card %s", setCode, card.name);
+			});
+
 			// Check for duplicate cards
 			setData.cards.forEach(function(card)
 			{

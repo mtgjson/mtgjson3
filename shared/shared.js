@@ -9,7 +9,7 @@ var base = require("xbase"),
 	domino = require("domino"),
 	querystring = require("querystring"),
 	tiptoe = require("tiptoe"),
-	request = require("request"),
+	httpUtil = require("xutil").http,
 	fs = require("fs"),
 	urlUtil = require("xutil").url,
 	url = require("url"),
@@ -335,8 +335,8 @@ exports.performSetCorrections = function(setCorrections, fullSet)
 			card["legalities"] = {};
 
 		//if(!card.legalities.hasOwnProperty("Vintage") && moment(fullSet.releaseDate, "YYYY-MM-DD").unix()<=moment().unix())
-		if(!card.legalities.hasOwnProperty("Vintage"))
-			card.legalities["Vintage"] = C.VINTAGE_BANNED.contains(card.name) ? "Banned" : (C.VINTAGE_RESTRICTED.contains(card.name) ? "Restricted" : "Legal");
+		//if(!card.legalities.hasOwnProperty("Vintage"))
+		//	card.legalities["Vintage"] = C.VINTAGE_BANNED.contains(card.name) ? "Banned" : (C.VINTAGE_RESTRICTED.contains(card.name) ? "Restricted" : "Legal");
 	});
 
 	// Final Release date validation
@@ -363,6 +363,12 @@ exports.performSetCorrections = function(setCorrections, fullSet)
 			if(card.printings && card.printings.contains(oldName))
 				card.printings = card.printings.replaceAll(oldName, newName);
 		});
+	});
+
+	cards.forEach(function(card)
+	{
+		if(card.printings)
+			card.printings = card.printings.unique();
 	});
 };
 
@@ -458,9 +464,9 @@ exports.buildMultiverseAllPrintingsURLs = function(multiverseid, cb)
 	tiptoe(
 		function getFirstPage()
 		{
-			request(exports.buildMultiversePrintingsURL(multiverseid, 0), this);
+			httpUtil.get(exports.buildMultiversePrintingsURL(multiverseid, 0), this);
 		},
-		function getAllPages(err, response, rawHTML)
+		function getAllPages(err, rawHTML)
 		{
 			if(err)
 				return setImmediate(function() { cb(err); });
@@ -472,7 +478,6 @@ exports.buildMultiverseAllPrintingsURLs = function(multiverseid, cb)
 			{
 				urls.push(exports.buildMultiversePrintingsURL(multiverseid, i));
 			}
-
 			return setImmediate(function() { cb(undefined, urls); });
 		}
 	);
