@@ -4,7 +4,7 @@
 var base = require("xbase"),
 	C = require("C"),
 	shared = require("shared"),
-	request = require("request"),
+	httpUtil = require("xutil").http,
 	fs = require("fs"),
 	url = require("url"),
 	color = require("cli-color"),

@@ -55,6 +55,9 @@ function clearCacheForSet(code, cacheType, cb)
 
 			if(cacheType==="mcilist")
 			{
+				if(!set.magicCardsInfoCode)
+					return this.finish();
+
 				var urls = [];
 				urls.push("http://magiccards.info/" + set.magicCardsInfoCode.toLowerCase() + "/en.html");
 				var targetSet = C.SETS.mutateOnce(function(SET) { if(SET.code.toLowerCase()===set.code.toLowerCase()) { return SET; } });

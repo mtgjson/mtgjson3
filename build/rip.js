@@ -3,7 +3,7 @@
 
 var base = require("xbase"),
 	C = require("C"),
-	request = require("request"),
+	httpUtil = require("xutil").http,
 	fs = require("fs"),
 	url = require("url"),
 	moment = require("moment"),
@@ -273,6 +273,8 @@ function processCardPart(doc, cardPart, printedDoc, printedCardPart)
 
 	// Card Type
 	var rawTypeFull = getTextContent(cardPart.querySelector(idPrefix + "_typeRow .value")).trim();
+	if(rawTypeFull.trim().toLowerCase().startsWith("token "))
+		card.layout = "token";
 	fillCardTypes(card, rawTypeFull);
 
 	// Original type
@@ -470,16 +472,16 @@ function getURLAsDoc(targetURL, cb)
 		{
 			if(fs.existsSync(cachePath))
 			{
-				//base.info("URL [%s] is file: %s", url, cachePath);
-				fs.readFile(cachePath, {encoding:"utf8"}, function(err, data) { this(null, null, data); }.bind(this));
+				//base.info("URL [%s] is file: %s", targetURL, cachePath);
+				fs.readFile(cachePath, {encoding:"utf8"}, this);
 			}
 			else
 			{
 				base.info("Requesting from web: %s", targetURL);
-				request(targetURL, this);
+				httpUtil.get(targetURL, this);
 			}
 		},
-		function createDoc(err, response, pageHTML)
+		function createDoc(err, pageHTML)
 		{
 			if(err)
 				return setImmediate(function() { cb(err); });
@@ -749,7 +751,7 @@ function fillCardTypes(card, rawTypeFull)
 	var rawTypes = rawTypeFull.split(/[—]/);
 	rawTypes[0].split(" ").filterEmpty().forEach(function(rawType, i)
 	{
-		if(rawType.trim().toLowerCase()==="(none)")
+		if(rawType.trim().toLowerCase()==="(none)" || rawType.trim().toLowerCase()==="token")
 			return;
 
 		card.type += (i>0 ? " " : "") + rawType;

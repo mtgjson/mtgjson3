@@ -3,7 +3,7 @@
 
 var base = require("xbase"),
 	C = require("C"),
-	request = require("request"),
+	httpUtil = require("xutil").http,
 	fs = require("fs"),
 	url = require("url"),
 	shared = require("shared"),
@@ -54,12 +54,12 @@ function processSet(code, cb)
 	tiptoe(
 		function getJSON()
 		{
-			request("http://mtgjson.com/json/" + code + ".json", this.parallel());
+			httpUtil.get("http://mtgjson.com/json/" + code + ".json", this.parallel());
 			fs.readFile(path.join(__dirname, "..", "web", "json", code + ".json"), {encoding : "utf8"}, this.parallel());
 		},
 		function compare(oldJSONArgs, newJSON)
 		{
-			var result = compareSets(JSON.parse(oldJSONArgs[1]), JSON.parse(newJSON), code);
+			var result = compareSets(JSON.parse(oldJSONArgs[0]), JSON.parse(newJSON), code);
 			if(result)
 				console.log(result);
 
