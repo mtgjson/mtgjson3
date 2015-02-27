@@ -10,7 +10,7 @@
 
 	exports.LAST_PRINTINGS_RESET = "V14";
 
-	exports.SETS_LACKING_HQ_SVG_SYMBOL_ICONS = [];
+	exports.SETS_LACKING_HQ_SVG_SYMBOL_ICONS = ["DDO"];
 
 	exports.SETS_NOT_ON_GATHERER = ["ATH", "ITP", "DKM", "RQS", "DPA"];
 	exports.SETS_WITH_NO_IMAGES = [];
@@ -1684,7 +1684,6 @@
 
 	exports.GATHERER_SET_RENAMES =
 	{
-		"Duel Decks Anthology, Elves vs. Dragons" : "Duel Decks Anthology, Elves vs. Goblins",
 		"Duel Decks: Kiora vs. Elspeth" : "Duel Decks: Elspeth vs. Kiora"
 	};
 	exports.GATHERER_SET_RENAMES_REVERSED = Object.swapKeyValues(exports.GATHERER_SET_RENAMES);

@@ -51,7 +51,7 @@ function clearCacheForSet(code, cacheType, cb)
 		{
 			var set = JSON.parse(setRaw);
 			var self=this;
-			base.info("%d cards found.", set.cards.length);
+			base.info("%s: %d cards found.", code, set.cards.length);
 
 			if(cacheType==="mcilist")
 			{
@@ -71,7 +71,7 @@ function clearCacheForSet(code, cacheType, cb)
 			{
 				set.cards.serialForEach(function(card, subcb)
 				{
-					shared.buildCacheFileURLs(card, cacheType, subcb);
+					shared.buildCacheFileURLs(card, cacheType, subcb, true);
 				}, this);
 			}
 		},

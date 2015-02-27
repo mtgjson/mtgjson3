@@ -478,13 +478,21 @@ function getURLAsDoc(targetURL, cb)
 			else
 			{
 				base.info("Requesting from web: %s", targetURL);
-				httpUtil.get(targetURL, this);
+				httpUtil.get(targetURL, {timeout:base.SECOND*10, retry:5}, this);
 			}
 		},
-		function createDoc(err, pageHTML)
+		function createDoc(err, pageHTML, responseHeaders, responseStatusCode)
 		{
-			if(err)
+			if(err || (responseStatusCode && responseStatusCode!==200))
+			{
+				base.error("Error downloading: " + targetURL);
+				base.error("Cache path: " + cachePath);
+				base.error(err);
 				return setImmediate(function() { cb(err); });
+			}
+
+			if(!pageHTML || pageHTML.length===0)
+				throw new Error("Invalid pageHTML for " + cachePath + " (" + targetURL + ")");
 
 			if(!fs.existsSync(cachePath))
 				fs.writeFileSync(cachePath, pageHTML, {encoding:"utf8"});

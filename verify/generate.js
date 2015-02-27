@@ -10,7 +10,7 @@ var base = require("xbase"),
 
 function usage()
 {
-	base.error("Usage: node %s <set code or name>", process.argv[1]);
+	base.error("Usage: node %s <set code or name> [cardtype]", process.argv[1]);
 	process.exit(1);
 }
 
@@ -23,6 +23,8 @@ if(!targetSet)
 	base.error("Set %s not found!", process.argv[2]);
 	usage();
 }
+
+var onlyCardType = process.argv.length>=4 ? process.argv[3] : undefined;
 
 tiptoe(
 	function loadJSON()
@@ -54,6 +56,9 @@ tiptoe(
 function renderSet(setRaw, original, cb)
 {
 	var set = JSON.parse(setRaw);
+	if(onlyCardType)
+		set.cards = set.cards.filter(function(card) { return card.type.toLowerCase().split(" ").contains(onlyCardType.toLowerCase()); });
+
 	set.cards.forEach(function(card)
 	{
 		if(original)

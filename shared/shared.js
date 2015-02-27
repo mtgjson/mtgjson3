@@ -408,13 +408,13 @@ exports.clearCacheFile = function(targetUrl, cb)
 	fs.unlink(cachePath, cb);
 };
 
-exports.buildCacheFileURLs = function(card, cacheType, cb)
+exports.buildCacheFileURLs = function(card, cacheType, cb, fromCache)
 {
 	tiptoe(
 		function getCacheURLs()
 		{
 			if(cacheType==="printings")
-				return exports.buildMultiverseAllPrintingsURLs(card.multiverseid, this);
+				return exports.buildMultiverseAllPrintingsURLs(card.multiverseid, this, fromCache);
 
 			var urls = [];
 			if(cacheType==="oracle")
@@ -448,7 +448,10 @@ exports.buildCacheFileURLs = function(card, cacheType, cb)
 		},
 		function returnCacheURLs(err, urls)
 		{
-			if(!urls.length)
+			if(err)
+				throw err;
+			
+			if(!urls || !urls.length)
 				throw new Error("No URLs for: %s %s", cacheType, card.multiverseid);
 			
 			if(urls.some(function(url) { return url.length===0; }))
@@ -459,17 +462,25 @@ exports.buildCacheFileURLs = function(card, cacheType, cb)
 	);
 };
 
-exports.buildMultiverseAllPrintingsURLs = function(multiverseid, cb)
+exports.buildMultiverseAllPrintingsURLs = function(multiverseid, cb, fromCache)
 {
 	tiptoe(
 		function getFirstPage()
 		{
-			httpUtil.get(exports.buildMultiversePrintingsURL(multiverseid, 0), this);
+			var targetURL = exports.buildMultiversePrintingsURL(multiverseid, 0);
+			if(fromCache && fs.existsSync(generateCacheFilePath(targetURL)))
+				fs.readFile(generateCacheFilePath(targetURL), {encoding:"utf8"}, this);
+			else
+				httpUtil.get(targetURL, this);
 		},
 		function getAllPages(err, rawHTML)
 		{
 			if(err)
+			{
+				base.error(exports.buildMultiversePrintingsURL(multiverseid, 0));
+				base.error(err);
 				return setImmediate(function() { cb(err); });
+			}
 
 			var urls = [];
 

@@ -21,7 +21,10 @@ See the 3 e-mail's from Brian (eastsydneyboy@gmail.com) for more details on this
 /-----------------\
 | Medium Priority |
 \-----------------/
-* Consider making it so only foreignLangauges that gatherer has for a card appear for that card in that set (instead of all languages from all sets for that card) then e-mail morpheus rabbit
+* WPN and Gateway were tehcnically two seperate programs, despite magiccards.info combining them into one. Yes, WPN replaced Gateway, but right now combined there is no way to determine which set each card is from as the years overlap.
+
+* Consider making it so the only foreignNames in the array are those found on gatherer for that specific ard in that set (instead of all languages from all sets for that card) then e-mail morpheus rabbit
+
 * Consider changing 'printings' field to be a list of set codes rather than set names
 
 * Add some sort of 'deck' or 'subset' field, to identify which cards are part of which decks (such as 'elf' deck in the 'elves vs goblins' set)
@@ -44,7 +47,11 @@ See the 3 e-mail's from Brian (eastsydneyboy@gmail.com) for more details on this
 {..., "code": "LEA", ..., "possibleCardStock": ["nonfoil"], ...}
 {..., "code": "MMQ", ..., "possibleCardStock": ["nonfoil", "foil"], ...}
 {..., "code": "V14", ..., "possibleCardStock": ["foil"], ...}
-
+More info from mikeherbig@gmail.com:
+Basically what's really needed is three things: foilable, foil only, and non foil.
+- All sets pre-Urza's Legacy are non foil. (except that Urza's Saga, the set before Legacy, which actually had the first foil in the pre-release promo Lightning Dragon).
+- Sets after Legacy are generally "foilable", except that there are a lot of instances of sets that are not, like Coldsnap theme decks.
+- Foil only is cards like Lightning Dragon, From the Vault, etc.  The problem with having the foil status be per set is that some sets have cards that are foil only and non foil, such as Media Inserts and all of the Duel Decks, which will typically have a single foil only card and no other foils.
 
 /--------------\
 | Low Priority |
