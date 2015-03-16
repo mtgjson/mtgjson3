@@ -1749,6 +1749,10 @@
 		[
 			// All of LEA rules are copied into here (see below)
 		],
+		pDRC :
+		[
+			{ match : {name : "Nalathni Dragon"}, replace : {multiverseid : 97050} }
+		],
 		ATQ :
 		[
 			{ match : {name : "Gate to Phyrexia"}, flavorAddDash : true },
