@@ -28,8 +28,6 @@
 		<br>
 		Any bugs or feedback, e-mail me at <a href="mailto:robert@cosmicrealms.com">robert@cosmicrealms.com</a><br>
 		<br>
-		Card images and set and mana symbols are available here: <a href="http://mtgimage.com">mtgimage.com</a><br>
-		<br>
 		<strong>Extras</strong> include: Rulings, Printings, Foreign Language Names, Promo Sources and Original Texts<br>
 		</p>
 		<br>
@@ -384,7 +382,7 @@
 				<tr>
 					<td>imageName</td>
 					<td>"ajani goldmane"</td>
-					<td>The <a href="http://mtgimage.com">mtgimage.com</a> file name for this card. For AllSets and set specific JSON, use the /set or /setname prefix. For AllCards JSON use the /card prefix. See <a href="http://mtgimage.com">mtgimage.com</a> for more details.</td>
+					<td>This used to refer to the mtgimage.com file name for this card.<br>mtgimage.com has been <strong style="color: red;">SHUT DOWN</strong> by Wizards of the Coast.<br>Thus this field is not used any more.</td>
 				</tr>
 				<tr>
 					<td>watermark</td>
@@ -488,8 +486,6 @@
 		Due to this merging of card data, several set specific fields are not present in the AllCards data: {setSpecificFields}<br>
 		<br>
 		This file is lighter weight and is meant to provide a quick and easy way to get basic card data.<br>
-		<br>
-		Note: The "imageName" field in this file is meant for use with the <a href="http://mtgimage.com">mtgimage.com</a> "/card/" prefix.<br>
 		<br>
 		The JSON file itself looks like this:<br></p>
 		<pre><code data-language="javascript">    {~lb}
@@ -688,9 +684,7 @@
 				</tr>
 			</tbody>
 		</table>
-		<p>The mana symbols and set symbols are available on <a href="http://mtgimage.com">mtgimage.com</a><br>
-		<br>
-		The source code used to generate the JSON is available on <a href="https://github.com/Sembiance/mtgjson">github</a><br>
+		<p>The source code used to generate the JSON is available on <a href="https://github.com/Sembiance/mtgjson">github</a><br>
 		<br>
 		Example Java code to read the JSON using Jackson can be found <a href="https://github.com/Sembiance/mtgjson/tree/master/java">here on github</a><br>
 		<br>
@@ -838,7 +832,6 @@
 		<ul>
 			<li>Deck Builder's Toolkit Series</li>
 			<li>Renaissance</li>
-			<li>Ugin booster for Fate Reforged Prerelease</li>
 			<li>Hero's Path</li>
 			<li>Face the Hydra</li>
 			<li>Collector's Edition and International Collector's Edition<br>These sets are identical to Limited Edition Beta except with different card backs and additional basic lands.</li>

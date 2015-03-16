@@ -1664,6 +1664,13 @@
 			type : "duel deck"
 		},
 		{
+			name : "Ugin's Fate promos",
+			code : "FRF_UGIN",
+			releaseDate : "2015-01-17",
+			border : "black",
+			type : "promo"
+		},
+		{
 			name : "Fate Reforged",
 			code : "FRF",
 			magicCardsInfoCode : "frf",
@@ -1679,7 +1686,7 @@
 			releaseDate : "2015-02-27",
 			border : "black",
 			type : "duel deck"
-		},
+		}
 	];
 
 	exports.GATHERER_SET_RENAMES =
