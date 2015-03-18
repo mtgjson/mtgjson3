@@ -1686,6 +1686,15 @@
 			releaseDate : "2015-02-27",
 			border : "black",
 			type : "duel deck"
+		},
+		{
+			name : "Dragons of Tarkir",
+			code : "DTK",
+			releaseDate : "2015-03-27",
+			border : "black",
+			type : "expansion",
+			block : "Khans of Tarkir",
+			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"]
 		}
 	];
 
