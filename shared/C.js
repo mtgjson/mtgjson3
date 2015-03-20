@@ -2787,8 +2787,7 @@
 		[
 			{ match : {name : ["Heidar, Rimewind Master", "Lovisa Coldeyes"]}, flavorAddExclamation : true },
 			{ match : {name : "Flashfreeze"}, replace : {flavor : "\"Nature? Fire? Bah! Both are chaotic and difficult to control. Ice is structured, latticed, light as a feather, massive as a glacier. In ice, there is power!\"\n—Heidar, Rimewind master"}},
-			{ match : {name : ["Snow-Covered Forest", "Snow-Covered Island", "Snow-Covered Mountain", "Snow-Covered Plain", "Snow-Covered Swamp"]}, replace : {rarity : "Common"}},
-			{ match : {name : "Blizzard Specter"}, replace : {text : {"owner's hand" : "owner's hand."}}}
+			{ match : {name : ["Snow-Covered Forest", "Snow-Covered Island", "Snow-Covered Mountain", "Snow-Covered Plain", "Snow-Covered Swamp"]}, replace : {rarity : "Common"}}
 		],
 		CST :
 		[
