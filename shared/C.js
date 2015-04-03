@@ -2669,6 +2669,7 @@
 				}
 			},
 			{ match : {name : "Who/What/When/Where/Why"}, replace : { name : "Why", number : "120e", text : "Destroy target enchantment.", originalText : "Destroy target enchantment.", manaCost : "{1}{G}", cmc : 2, colors : ["Green"], foreignNames : [{language : "French", name : "Pourquoi"}] }},
+			{ match : {name : "Curse of the Fire Penguin"}, replace : {text : {"Penquin" : "Penguin"}}}
 		],
 		BOK :
 		[
