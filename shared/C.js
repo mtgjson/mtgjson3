@@ -8,7 +8,7 @@
 	// Unglued/Unhinged types
 	exports.TYPES.push("Enchant", "Player", "Summon", "Interrupt", "Scariest", "You'll", "Ever", "See", "Eaturecray");
 
-	exports.LAST_PRINTINGS_RESET = "V14";
+	exports.LAST_PRINTINGS_RESET = "TPR";
 
 	exports.SETS_LACKING_HQ_SVG_SYMBOL_ICONS = ["DDO"];
 
@@ -1695,7 +1695,16 @@
 			type : "expansion",
 			block : "Khans of Tarkir",
 			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"]
-		}
+		},
+		{
+			name : "Tempest Remastered",
+			code : "TPR",
+			releaseDate : "2015-05-06",
+			border : "black",
+			type : "reprint",
+			onlineOnly : true,
+			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land"]
+		},
 	];
 
 	exports.GATHERER_SET_RENAMES =
@@ -1750,7 +1759,8 @@
 			{ match : {name : "Bottle of Suleiman"}, replace : {originalText : "{1}: Flip a coin, with opponent calling heads or tails while coin is in the air. If the flip ends up in opponent's favor, Bottle of Suleiman does 5 damage to you. Otherwise, a 5/5 flying Djinn immediately comes into play on your side. Use a counter to represent Djinn. Djinn is treated exactly like a normal artifact creature except that if it leaves play it is removed from the game entirely. No matter how the flip turns out, Bottle of Suleiman is discarded after use."} },
 			{ match : {name : "Library of Alexandria"}, replace : {artist : "Mark Poole"} },
 			{ match : {name : "Ali Baba"}, replace : {flavor : "\"When he reached the entrance of the cavern, he pronounced the words, ‘Open, Sesame!'\" —The Arabian Nights, Junior Classics trans."} },
-			{ match : {name : ["Aladdin's Ring", "Juzám Djinn", "King Suleiman", "Repentant Blacksmith"]}, flavorAddDash : true},
+			{ match : {name : "Army of Allah"}, replace : {flavor : {"Arab" : " —Arab"}}},
+			{ match : {name : ["Bird Maiden", "Piety", "War Elephant", "Wyluli Wolf", "Aladdin's Ring", "Juzám Djinn", "King Suleiman", "Repentant Blacksmith"]}, flavorAddDash : true},
 			{ match : {name : ["Ali from Cairo", "Bazaar of Baghdad", "City in a Bottle", "Diamond Valley", "Drop of Honey", "Elephant Graveyard", "Guardian Beast", "Ifh-Biff Efreet", "Island of Wak-Wak", "Jihad", "Juzam Djinn", "Khabal Ghoul",
 							   "King Suleiman", "Library of Alexandria", "Merchant Ship", "Old Man of the Sea", "Pyramids", "Ring of Ma'ruf", "Sandals of Abdallah", "Serendib Djinn", "Shahrazad", "Singing Tree"]}, replace : {reserved : true}}
 		],
@@ -1792,6 +1802,7 @@
 		],
 		LEG :
 		[
+			{ match : {name : "Ærathi Berserker"}, replace : {flavor : {"Berserker" : "Berserker."}}},
 			{ match : {name : "The Tabernacle at Pendrell Vale"}, replace : {artist : "Nicola Leonard"} },
 			{ match : {name : ["Active Volcano", "Psionic Entity"]}, replace : {artist : "Justin Hampton"} },
 			{ match : {name : "Disharmony"}, replace : {artist : "Bryon Wackwitz"} },
@@ -1832,7 +1843,7 @@
 			                    "Land Leeches", "Marsh Gas", "Martyr's Cry", "Miracle Worker", "Morale", "Orc General", "People of the Woods", "Pikemen", "Squire", "Venom", "Word of Binding"] }, flavorAddDash : true },
 			{ match : {name : "Goblin Hero"}, replace : {flavor : "They attacked in an orgy of rage and madness, but only one seemed as focused on killing us as on the sheer joy of battle."} },
 			{ match : {name : "Marsh Viper"}, replace : {flavor : "\"All we had left were their black and bloated bodies.\" —Maeveen O'Donagh, Memoirs of a Soldier"} },
-			{ match : {name : "Savaen Elves"}, replace : {flavor : "\"Purity of magic can only come from purity of the land. How can a meal nourish if the ingredients are spoiled?\" —Sidaine of Savaen"}},,
+			{ match : {name : "Savaen Elves"}, replace : {flavor : "\"Purity of magic can only come from purity of the land. How can a meal nourish if the ingredients are spoiled?\" —Sidaine of Savaen"}},
 			{ match : {name : ["City of Shadows", "Cleansing", "Eternal Flame", "Exorcist", "Frankenstein's Monster", "Goblin Wizard", "Grave Robbers", "Hidden Path", "Knights of Thorn", "Lurker", "Mana Vortex", "Martyr's Cry",
 							   "Nameless Race", "Niall Silvain", "Preacher", "Psychic Allergy", "Scarwood Bandits", "Season of the Witch", "Sorrow's Path", "Stone Calendar", "Tracker", "Worms of the Earth", "Wormwood Treefolk"]}, replace : {reserved : true}}
 		],
@@ -1880,7 +1891,9 @@
 			{ renumberImages : "Vodalian Mage", order : [1896, 1898, 1897] },
 			{ renumberImages : "Vodalian Soldiers", order : [1899, 1901, 1900, 1902] },
 			{ match : {name : "Thrull Champion"}, flavorAddExclamation : true },
-			{ match : {name : "Delif's Cone"}, flavorAddDash : true },
+			{ match : {multiverseid : 1898}, replace : {flavor : {"cowards" : "cowards!", "magic" : "magic!"}}, flavorAddDash : true, fixFlavorNewlines : true},
+			{ match : {name : ["Delif's Cone", "Armor Thrull", "Elven Fortress", "Necrite"]}, flavorAddDash : true },
+			{ match : {multiverseid : 1841},fixFlavorNewlines : true},
 			{ match : {name : ["Aeolipile", "Balm of Restoration", "Conch Horn", "Delif's Cube", "Draconian Cylix", "Dwarven Armorer", "Ebon Praetor", "Elven Lyre", "Elvish Farmer", "Fungal Bloom", "Goblin Flotilla", "Hand of Justice",
 							   "Homarid Shaman", "Icatian Lieutenant", "Icatian Skirmishers", "Implements of Sacrifice", "Rainbow Vale", "Ring of Renewal", "River Merfolk", "Spirit Shield", "Thelon's Curse", "Thelonite Monk", "Thrull Champion",
 							   "Tourach's Gate", "Vodalian Knights", "Vodalian War Machine", "Zelyon Sword"]}, replace : {reserved : true}}
@@ -1989,7 +2002,12 @@
 			{ renumberImages : "Viscerid Armor", order : [3126, 3125] },
 			{ renumberImages : "Whip Vine", order : [3154, 3155] },
 			{ renumberImages : "Wild Aesthir", order : [3220, 3219] },
-			{ match : {name : ["Burnout", "Mystic Compass", "Omen of Fire", "Urza's Engine"]}, flavorAddExclamation : true },
+			{ match : {name : ["Balduvian War-Makers", "Burnout", "Mystic Compass", "Omen of Fire", "Urza's Engine"]}, flavorAddExclamation : true },
+			{ match : {name : "Carrier Pigeons"}, replace : { flavor : { "borders" : "borders!"}}},
+			{ match : {multiverseid : [3163, 3190, 3174, 3083, 3186, 3189]}, flavorAddDash : true},
+			{ match : {name : ["Lat-Nam's Legacy", "Undergrowth"]}, flavorAddDash : true},
+			{ match : {multiverseid : [3173, 3152]}, flavorAddExclamation : true, flavorAddDash : true},
+			{ match : {multiverseid : 3185}, flavorAddExclamation : true},
 			{ match : {name : ["Misinformation", "Nature's Blessing", "Sol Grail", "Urza's Engine", "Varchild's War-Riders"]}, flavorAddDash : true },
 			{ match : {name : "Kaysa"}, replace : {flavor : "Kaysa speaks as the Elder Druid, but the Yavimaya recognizes only one voice: its own."}},
 			{ match : {name : ["Ashnod's Cylix", "Balduvian Trading Post", "Chaos Harlequin", "Dystopia", "Fatal Lore", "Floodwater Dam", "Gargantuan Gorilla", "Gustha's Scepter", "Heart of Yavimaya", "Helm of Obedience", "Ivory Gargoyle",
@@ -2504,7 +2522,12 @@
 			{ renumberImages : "Ertai, the Corrupted", order : [25614, 29292] },
 			{ renumberImages : "Skyship Weatherlight", order : [26480, 29293] },
 			{ renumberImages : "Tahngarth, Talruum Hero", order : [26408, 29291] },
+			{ match : {name : "Gerrard's Command"}, flavorAddExclamation : true },
 			{ match : {name : "Gaea's Herald"}, replace : {flavor : "\"I bring word from Gaea. Fight on! She will never allow her children to die alone.\""}}
+		],
+		"7ED" :
+		[
+			{ match : {name : ["Fear", "Flying Carpet", "Lava Axe", "Might of Oaks", "Persecute", "Reprisal", "Sabretooth Tiger", "Scavenger Folk", "Sea Monster", "Treasure Trove"]}, flavorAddExclamation : true }
 		],
 		pMPR :
 		[
@@ -2554,7 +2577,7 @@
 			{ match : {name : "Jokulhaups"}, replace : {number : "15", originalText : "Destroy all artifacts, creatures, and lands. They can't be regenerated."}},
 			{ match : {name : "Karplusan Forest"}, replace : {number : "39", originalText : "{T}: Add one colorless mana to your mana pool.\n{T}: Add {R} or {G} to your mana pool. Karplusan Forest deals 1 damage to you."}},
 			{ match : {name : "Lava Burst"}, replace : {number : "16", originalText : "Lava Burst deals X damage to target creature or player. If Lava Burst would deal damage to a creature, that damage can't be prevented or dealt instead to another creature or player."}},
-			{ match : {name : "Lim-Dûl's High Guard"}, replace : {number : "6"}},
+			{ match : {name : "Lim-Dûl's High Guard"}, replace : {number : "6"}, fixFlavorNewlines : true},
 			{ match : {name : "Lhurgoyf"}, replace : {border : "black", number : "29", originalText : "Lhurgoyf's power is equal to the number of creature cards in all graveyards and its toughness is equal to that number plus 1."}},
 			{ match : {name : "Mountain"}, replace : {number : "45", originalText : "{R}"}, incrementNumber : true},
 			{ match : {name : "Necropotence"}, replace : {border : "black", number : "7", originalText : "Skip your draw step.\nIf you would discard a card from your hand, remove that card from the game instead.\nPay 1 life: Remove the top card of your library from the game face down. At the end of your turn, put that card into your hand."}},
@@ -2578,10 +2601,23 @@
 		[
 			{ match : {name: "Cabal Coffers"}, replace : {artist : "Don Hazeltine"} }
 		],
+		JUD :
+		[
+			{ match : {name: ["Barbarian Bully", "Breaking Point"]}, flavorAddExclamation : true }
+		],
 		ONS :
 		[
+			{ match : {name: ["Inspirit", "Reckless One", "Spitfire Handler"]}, flavorAddExclamation : true },
 			{ match : {name : "Kaboom!"}, replace : {text : "Choose any number of target players. For each of those players, reveal cards from the top of your library until you reveal a nonland card. Kaboom! deals damage equal to that card's converted mana cost to that player, then you put the revealed cards on the bottom of your library in any order.",
 											  originalText: "Choose any number of target players. For each of those players, reveal cards from the top of your library until you reveal a nonland card. Kaboom! deals damage equal to that card's converted mana cost to that player, then you put the revealed cards on the bottom of your library in any order."}}
+		],
+		LGN :
+		[
+			{ match : {name: "Goblin Lookout"}, replace : {flavor : {"'em" : "'em!"}} }
+		],
+		SCG :
+		[
+			{ match : {name: "Goblin War Strike"}, flavorAddExclamation : true }
 		],
 		pREL :
 		[
@@ -2596,7 +2632,8 @@
 			{ match : {multiverseid:[47784, 47788, 47785, 47786, 47789, 47787, 49056]}, replace : {starter : true}},
 			{ match : {name : ["Eager Cadet", "Giant Octopus", "Sea Eagle"]}, replace : {rarity : "Common"}},
 			{ match : {name : ["Enormous Baloth", "Silverback Ape", "Vengeance"]}, replace : {rarity : "Uncommon"}},
-			{ match : {name : ["Vizzerdrix"]}, replace : {rarity : "Rare"}}
+			{ match : {name : ["Vizzerdrix"]}, replace : {rarity : "Rare"}},
+			{ match : {name: ["Flash Counter", "Lava Axe", "Might of Oaks"]}, flavorAddExclamation : true }
 		],
 		CHK :
 		[
@@ -2771,7 +2808,7 @@
 			{ match : {name : ["Gelectrode", "Schismotivate", "Skarrg, the Rage Pits", "Skarrgan Skybreaker", "Train of Thought", "Wreak Havoc"]}, flavorAddExclamation : true },
 			{ match : {name : "Borborygmos"}, replace : {flavor : "\"It's easy to see why those Gruul dirtbags follow him—the only orders he gives are ‘Crush them!' and ‘We eat!'\"\n—Teysa"}},
 			{ match : {name : "Gruul War Plow"}, replace : {flavor : "\"Steering apparatus?! What for? Rip it out, sharpen it, and lash it to the front!\"\n—Ktank, Gruul plowmaster"}},
-			{ match : {name : "Killer Instinct"}, replace : {flavor : "\"Take the bridge, men! Victory! Victory! is ou— Retreat! RETREAT\""}},
+			{ match : {name : "Killer Instinct"}, replace : {flavor : "\"Take the bridge, men! Victory! Victory is ou— Retreat! RETREAT!\""}},
 			{ match : {name : "Tin Street Hooligan"}, replace : {flavor : "\"Rauck-Chauv's like a holiday! Only it isn't on the calendars, and instead of dancing you knock people flat, and instead of giving gifts you break stuff.\""}},
 			{ match : {name : "Torch Drake"}, replace : {flavor : "\"Drakes? Bah! Things that breathe don't interest me. It breathes fire, you say? Well, that's a different story!\"\n—Zataz, Izzet clockwork artificer"}},
 			{ match : {name : "Niv-Mizzet, the Firemind"}, replace : {flavor : "\"(Z–>)90° – (E–N²W)90°t = 1\""}}
@@ -2898,7 +2935,8 @@
 		],
 		MED :
 		[
-			{ match : {name : "Order of Leitbur"}, replace : {artist : "Randy Asplund-Faith"}}
+			{ match : {name : "Order of Leitbur"}, replace : {artist : "Randy Asplund-Faith"}},
+			{ match : {name : "Winter Blast"}, flavorAddDash : true, fixFlavorNewlines : true}
 		],
 		LRW :
 		[

@@ -95,6 +95,9 @@ exports.cardComparator = function(a, b)
 
 exports.buildMultiverseLanguagesURL = function(multiverseid)
 {
+	if(!multiverseid)
+		throw new Error("Invalid multiverseid");
+
 	var urlConfig = 
 	{
 		protocol : "http",
@@ -108,6 +111,9 @@ exports.buildMultiverseLanguagesURL = function(multiverseid)
 
 exports.buildMultiverseURL = function(multiverseid, part)
 {
+	if(!multiverseid)
+		throw new Error("Invalid multiverseid");
+
 	var urlConfig = 
 	{
 		protocol : "http",
@@ -127,6 +133,9 @@ exports.buildMultiverseURL = function(multiverseid, part)
 
 exports.buildMultiverseLegalitiesURL = function(multiverseid)
 {
+	if(!multiverseid)
+		throw new Error("Invalid multiverseid");
+
 	var urlConfig = 
 	{
 		protocol : "http",
@@ -140,6 +149,9 @@ exports.buildMultiverseLegalitiesURL = function(multiverseid)
 
 exports.buildMultiversePrintingsURL = function(multiverseid, page)
 {
+	if(!multiverseid)
+		throw new Error("Invalid multiverseid");
+
 	var urlConfig = 
 	{
 		protocol : "http",
@@ -149,6 +161,27 @@ exports.buildMultiversePrintingsURL = function(multiverseid, page)
 	};
 
 	return url.format(urlConfig);
+};
+
+exports.buildListingsURL = function(setName, page)
+{
+	var urlConfig = 
+	{
+		protocol : "http",
+		host     : "gatherer.wizards.com",
+		pathname : "/Pages/Search/Default.aspx",
+		query    :
+		{
+			output  : "checklist",
+			sort    : "cn+",
+			action  : "advanced",
+			special : "true",
+			set     : "[" + JSON.stringify(setName.replaceAll("&", "and")) + "]",
+			page    : ("" + (page || 0))
+		}
+	};
+
+	return url.format(urlConfig).replaceAll("%5C", "");
 };
 
 exports.getSetCorrections = function(setCode)
@@ -484,7 +517,7 @@ exports.buildMultiverseAllPrintingsURLs = function(multiverseid, cb, fromCache)
 
 			var urls = [];
 
-			var numPages = exports.getPrintingsDocNumPages(domino.createWindow(rawHTML).document);
+			var numPages = exports.getPagingNumPages(domino.createWindow(rawHTML).document, "printings");
 			for(var i=0;i<numPages;i++)
 			{
 				urls.push(exports.buildMultiversePrintingsURL(multiverseid, i));
@@ -494,15 +527,29 @@ exports.buildMultiverseAllPrintingsURLs = function(multiverseid, cb, fromCache)
 	);
 };
 
-exports.getPrintingsDocNumPages = function(doc)
+exports.getPagingNumPages = function(doc, type)
 {
-	var pageLinks = Array.toArray(doc.querySelectorAll("#ctl00_ctl00_ctl00_MainContent_SubContent_SubContent_PrintingsList_pagingControlsContainer a"));
+	var pageControlsContainer = (type==="printings" ? "SubContent_PrintingsList_pagingControlsContainer" : "bottomPagingControlsContainer");
+	var pageLinks = Array.toArray(doc.querySelectorAll("#ctl00_ctl00_ctl00_MainContent_SubContent_" + pageControlsContainer + " a"));
 
 	var numPages = 1;
 	if(pageLinks.length>0)
 	{
-		var lastPageHREF = pageLinks.last().getAttribute("href");
-		numPages += +querystring.parse(lastPageHREF.substring(lastPageHREF.indexOf("?")+1)).page;
+		if(type==="printings")
+		{
+			var lastPageHREF = pageLinks.last().getAttribute("href");
+			numPages += +querystring.parse(lastPageHREF.substring(lastPageHREF.indexOf("?")+1)).page;
+		}
+		else
+		{
+			var highestPageNum = 0;
+			pageLinks.forEach(function(pageLink)
+			{
+				var pageHREF = pageLink.getAttribute("href");
+				highestPageNum = Math.max(+querystring.parse(pageHREF.substring(pageHREF.indexOf("?")+1)).page, highestPageNum);
+			});
+			numPages = highestPageNum+1;
+		}
 	}
 
 	return numPages;

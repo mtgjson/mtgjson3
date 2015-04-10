@@ -186,6 +186,7 @@ function getMultiverseidsForSet(setCode, cb)
 
 				if(cardsToGet.contains(card.name) && (!SPECIFIC_CARD_MULTIVERSEIDS.hasOwnProperty(targetSetCode) || !SPECIFIC_CARD_MULTIVERSEIDS[targetSetCode].hasOwnProperty(card.name) || SPECIFIC_CARD_MULTIVERSEIDS[targetSetCode][card.name]===card.multiverseid))
 				{
+					//base.info("Getting [%s] from multiverseid: %d", card.name, card.multiverseid);
 					cardsToGet.remove(card.name);
 					multiverseids.push(card.multiverseid);
 				}

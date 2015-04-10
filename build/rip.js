@@ -16,6 +16,7 @@ var base = require("xbase"),
 	querystring = require("querystring"),
 	tiptoe = require("tiptoe");
 
+
 function ripSet(setName, cb)
 {
 	base.info("====================================================================================================================");
@@ -24,34 +25,14 @@ function ripSet(setName, cb)
 	tiptoe(
 		function getListHTML()
 		{
-			base.info("Getting card list...");
+			base.info("Getting card lists...");
 
-			var listURL = url.format(
-			{
-				protocol : "http",
-				host     : "gatherer.wizards.com",
-				pathname : "/Pages/Search/Default.aspx",
-				query    :
-				{
-					output  : "checklist",
-					sort    : "cn+",
-					action  : "advanced",
-					special : "true",
-					set     : "[" + JSON.stringify((C.GATHERER_SET_RENAMES_REVERSED[setName] || setName).replaceAll("&", "and")) + "]"
-				}
-			});
-
-			listURL = listURL.replaceAll("%5C", "");
-
-			getURLAsDoc(listURL, this);
+			getSetNameMultiverseIds(C.GATHERER_SET_RENAMES_REVERSED[setName] || setName, this);
 		},
-		function processFirstBatch(listDoc)
+		function processFirstBatch(multiverseids)
 		{
-			base.info("Processing first batch...");
-
 			this.data.set = base.clone(C.SETS.mutateOnce(function(SET) { return SET.name===setName ? SET : undefined; }));
-
-			processMultiverseids(Array.toArray(listDoc.querySelectorAll("table.checklist tr.cardItem a.nameLink")).map(function(o) {  return +querystring.parse(url.parse(o.getAttribute("href")).query).multiverseid; }).unique(), this);
+			processMultiverseids(multiverseids, this);
 		},
 		function processVariations(cards)
 		{
@@ -379,7 +360,10 @@ function processCardPart(doc, cardPart, printedDoc, printedCardPart)
 	}
 
 	// Flavor Text
-	var cardFlavor = processTextBlocks(cardPart.querySelectorAll(idPrefix + "_flavorRow .value .cardtextbox")).trim();
+	var cardFlavor = processTextBlocks(cardPart.querySelectorAll(idPrefix + "_flavorRow .value .flavortextbox")).trim();
+	if(!cardFlavor)
+		cardFlavor = processTextBlocks(cardPart.querySelectorAll(idPrefix + "_flavorRow .value .cardtextbox")).trim();
+
 	if(cardFlavor)
 		card.flavor = cardFlavor;
 
@@ -509,7 +493,7 @@ function addForeignNamesToCards(cards, cb)
 	tiptoe(
 		function loadJSON()
 		{
-			C.SETS.forEach(function(SET)
+			C.SETS.reverse().forEach(function(SET)
 			{
 				fs.readFile(path.join(__dirname, "..", "json", SET.code + ".json"), {encoding : "utf8"}, this.parallel());
 			}.bind(this));
@@ -518,7 +502,7 @@ function addForeignNamesToCards(cards, cb)
 		{
 			var args=arguments;
 
-			C.SETS.forEach(function(SET, i)
+			C.SETS.reverse().forEach(function(SET, i)
 			{
 				sets[SET.code] = JSON.parse(args[i]);
 			});
@@ -695,7 +679,7 @@ function addPrintingsToCard(nonGathererSets, card, cb)
 		},
 		function getAllPages(doc)
 		{
-			var numPages = shared.getPrintingsDocNumPages(doc);
+			var numPages = shared.getPagingNumPages(doc, "printings");
 			for(var i=0;i<numPages;i++)
 			{
 				getURLAsDoc(shared.buildMultiversePrintingsURL(card.multiverseid, i), this.parallel());
@@ -745,8 +729,7 @@ function getMultiverseidsForCardName(sets, cardName)
 	{
 		multiverseids = multiverseids.concat(set.cards.filter(function(card) { return card.name===cardName; }).map(function(card) { return card.multiverseid; }));
 	});
-
-	return multiverseids.unique();
+	return multiverseids.filterEmpty().unique();
 }
 
 function fillCardTypes(card, rawTypeFull)
@@ -883,7 +866,7 @@ function compareCardsToMCI(set, cb)
 					return setImmediate(subcb);
 				}
 
-				compareCardToMCI(card, mciCardLink[0].getAttribute("href"), subcb);
+				compareCardToMCI(set, card, mciCardLink[0].getAttribute("href"), subcb);
 			}, this);
 		},
 		function finish(err)
@@ -911,8 +894,29 @@ function normalizeFlavor(flavor)
 	return flavor;
 }
 
-function compareCardToMCI(card, mciCardURL, cb)
+function compareCardToMCI(set, card, mciCardURL, cb)
 {
+	var cardCorrection = null;
+	if(C.SET_CORRECTIONS.hasOwnProperty(set.code))
+	{
+		 C.SET_CORRECTIONS[set.code].forEach(function(setCorrection)
+		 {
+		 	 if(!setCorrection.hasOwnProperty("match") || !setCorrection.match.hasOwnProperty("name"))
+		 	 	return;
+
+		 	 if((typeof setCorrection.match.name==="string" && setCorrection.match.name===card.name) || (Array.isArray(setCorrection.match.name) && setCorrection.match.name.contains(card.name)))
+		 	 	cardCorrection = setCorrection;
+		 });
+	}
+
+	var hasFlavorCorrection = false;
+	if(cardCorrection && ((cardCorrection.replace && cardCorrection.replace.flavor) || cardCorrection.fixFlavorNewlines || cardCorrection.flavorAddDash || cardCorrection.flavorAddExclamation))
+		hasFlavorCorrection = true;
+
+	var hasArtistCorrection = false;
+	if(cardCorrection && cardCorrection.replace && cardCorrection.replace.artist)
+		hasArtistCorrection = true;
+
 	tiptoe(
 		function getMCICardDoc()
 		{
@@ -921,24 +925,33 @@ function compareCardToMCI(card, mciCardURL, cb)
 		function compareProperties(mciCardDoc)
 		{
 			// Compare flavor
-			var cardFlavor = normalizeFlavor(card.flavor || "");
-			var mciFlavor = normalizeFlavor(processTextBlocks(mciCardDoc.querySelector("table tr td p i")));
-			if(!mciFlavor && cardFlavor)
-				base.warn("FLAVOR: %s (%s) has flavor but MagicCardsInfo (%s) does not.", card.name, card.multiverseid, mciCardURL);
-			else if(mciFlavor && !cardFlavor)
-				base.warn("FLAVOR: %s (%s) does not have flavor but MagicCardsInfo (%s) does.", card.name, card.multiverseid, mciCardURL);
-			else if(mciFlavor!==cardFlavor)
-				base.warn("FLAVOR: %s (%s) flavor does not match MagicCardsInfo (%s).\n%s", card.name, card.multiverseid, mciCardURL, diffUtil.diff(cardFlavor, mciFlavor));
+			if(!hasFlavorCorrection)
+			{
+				if(!C.SET_CORRECTIONS.hasOwnProperty(set.code) || C.SET_CORRECTIONS[set.code])
+				{
+					var cardFlavor = normalizeFlavor(card.flavor || "");
+					var mciFlavor = normalizeFlavor(processTextBlocks(mciCardDoc.querySelector("table tr td p i")));
+					if(!mciFlavor && cardFlavor)
+						base.warn("FLAVOR: %s (%s) has flavor but MagicCardsInfo (%s) does not.", card.name, card.multiverseid, mciCardURL);
+					else if(mciFlavor && !cardFlavor)
+						base.warn("FLAVOR: %s (%s) does not have flavor but MagicCardsInfo (%s) does.", card.name, card.multiverseid, mciCardURL);
+					else if(mciFlavor!==cardFlavor)
+						base.warn("FLAVOR: %s (%s) flavor does not match MagicCardsInfo (%s).\n%s", card.name, card.multiverseid, mciCardURL, diffUtil.diff(cardFlavor, mciFlavor));
+				}
+			}
 
 			// Compare artist
-			var mciArtist = mciCardDoc.querySelectorAll("table tr td p").filter(function(p) { return p.textContent.startsWith("Illus."); })[0].textContent.substring(7).trim().replaceAll("\n", " ").replaceAll(" and ", " & ").innerTrim();
-			var cardArtist = (card.artist || "").trim().replaceAll("\n", " ").innerTrim();
-			if(!mciArtist && cardArtist)
-				base.warn("ARTIST: %s (%s) has artist but MagicCardsInfo (%s) does not.", card.name, card.multiverseid, mciCardURL);
-			else if(mciArtist && !cardArtist)
-				base.warn("ARTIST: %s (%s) does not have artist but MagicCardsInfo (%s) does.", card.name, card.multiverseid, mciCardURL);
-			else if(mciArtist!==cardArtist && !C.ARTIST_CORRECTIONS.hasOwnProperty(cardArtist))
-				base.warn("ARTIST: %s (%s) artist does not match MagicCardsInfo (%s).\n%s", card.name, card.multiverseid, mciCardURL, diffUtil.diff(cardArtist, mciArtist));
+			if(!hasArtistCorrection)
+			{
+				var mciArtist = mciCardDoc.querySelectorAll("table tr td p").filter(function(p) { return p.textContent.startsWith("Illus."); })[0].textContent.substring(7).trim().replaceAll("\n", " ").replaceAll(" and ", " & ").innerTrim();
+				var cardArtist = (card.artist || "").trim().replaceAll("\n", " ").innerTrim();
+				if(!mciArtist && cardArtist)
+					base.warn("ARTIST: %s (%s) has artist but MagicCardsInfo (%s) does not.", card.name, card.multiverseid, mciCardURL);
+				else if(mciArtist && !cardArtist)
+					base.warn("ARTIST: %s (%s) does not have artist but MagicCardsInfo (%s) does.", card.name, card.multiverseid, mciCardURL);
+				else if(mciArtist!==cardArtist && !C.ARTIST_CORRECTIONS.hasOwnProperty(cardArtist))
+					base.warn("ARTIST: %s (%s) artist does not match MagicCardsInfo (%s).\n%s", card.name, card.multiverseid, mciCardURL, diffUtil.diff(cardArtist, mciArtist));
+			}
 
 			this();
 		},
@@ -972,15 +985,35 @@ function compareCardsToEssentialMagic(set, cb)
 					if(card.name!==cardName)
 						return;
 
+					var cardCorrection = null;
+					if(C.SET_CORRECTIONS.hasOwnProperty(set.code))
+					{
+						 C.SET_CORRECTIONS[set.code].forEach(function(setCorrection)
+						 {
+						 	 if(!setCorrection.hasOwnProperty("match") || !setCorrection.match.hasOwnProperty("name"))
+						 	 	return;
+
+						 	 if((typeof setCorrection.match.name==="string" && setCorrection.match.name===card.name) || (Array.isArray(setCorrection.match.name) && setCorrection.match.name.contains(card.name)))
+						 	 	cardCorrection = setCorrection;
+						 });
+					}
+
+					var hasFlavorCorrection = false;
+					if(cardCorrection && ((cardCorrection.replace && cardCorrection.replace.flavor) || cardCorrection.fixFlavorNewlines || cardCorrection.flavorAddDash || cardCorrection.flavorAddExclamation))
+						hasFlavorCorrection = true;
+
 					// Compare flavor
-					var cardFlavor = normalizeFlavor(card.flavor || "");
-					var essentialFlavor = normalizeFlavor(processTextBlocks(cardRow.querySelector("td:nth-child(2) i")));
-					if(!essentialFlavor && cardFlavor)
-						base.warn("FLAVOR: %s (%s) has flavor but essentialMagic does not.", card.name, card.multiverseid);
-					else if(essentialFlavor && !cardFlavor)
-						base.warn("FLAVOR: %s (%s) does not have flavor but essentialMagic does.", card.name, card.multiverseid);
-					else if(essentialFlavor!==cardFlavor)
-						base.warn("FLAVOR: %s (%s) flavor does not match essentialMagic.\n%s", card.name, card.multiverseid, diffUtil.diff(cardFlavor, essentialFlavor));
+					if(!hasFlavorCorrection)
+					{
+						var cardFlavor = normalizeFlavor(card.flavor || "");
+						var essentialFlavor = normalizeFlavor(processTextBlocks(cardRow.querySelector("td:nth-child(2) i")));
+						if(!essentialFlavor && cardFlavor)
+							base.warn("FLAVOR: %s (%s) has flavor but essentialMagic does not.", card.name, card.multiverseid);
+						else if(essentialFlavor && !cardFlavor)
+							base.warn("FLAVOR: %s (%s) does not have flavor but essentialMagic does.", card.name, card.multiverseid);
+						else if(essentialFlavor!==cardFlavor)
+							base.warn("FLAVOR: %s (%s) flavor does not match essentialMagic.\n%s", card.name, card.multiverseid, diffUtil.diff(cardFlavor, essentialFlavor));
+					}
 				});
 			});
 			
@@ -1669,4 +1702,37 @@ function processTextBoxChildren(children)
 function getTextContent(item)
 {
 	return (item && item.textContent ? item.textContent : "");
+}
+
+function getSetNameMultiverseIds(setName, cb)
+{
+	tiptoe(
+		function getFirstListingsPage()
+		{
+			getURLAsDoc(shared.buildListingsURL(setName, 0), this);
+		},
+		function getOtherListingsPages(firstPageListDoc)
+		{
+			var numPages = shared.getPagingNumPages(firstPageListDoc, "listings");
+			for(var i=0;i<numPages;i++)
+			{
+				getURLAsDoc(shared.buildListingsURL(setName, i), this.parallel());
+			}
+		},
+		function getListingMultiverseids(err)
+		{
+			if(err)
+				return setImmediate(function() { cb(err); });
+
+			var listDocs = Array.prototype.slice.apply(arguments, [1]);
+
+			var multiverseids = [];
+			listDocs.forEach(function(listDoc)
+			{
+				multiverseids = multiverseids.concat(Array.toArray(listDoc.querySelectorAll("table.checklist tr.cardItem a.nameLink")).map(function(o) {  return +querystring.parse(url.parse(o.getAttribute("href")).query).multiverseid; }).unique());
+			});
+
+			setImmediate(function() { cb(undefined, multiverseids.unique()); });
+		}
+	);
 }
