@@ -1607,6 +1607,7 @@
 		{
 			name : "From the Vault: Annihilation (2014)",
 			code : "V14",
+			magicCardsInfoCode : "v14",
 			releaseDate : "2014-08-22",
 			border : "black",
 			type : "from the vault"
@@ -1614,6 +1615,7 @@
 		{
 			name : "Duel Decks: Speed vs. Cunning",
 			code : "DDN",
+			magicCardsInfoCode : "ddn",
 			releaseDate : "2014-09-05",
 			border : "black",
 			type : "duel deck"
@@ -1631,6 +1633,7 @@
 		{
 			name : "Commander 2014",
 			code : "C14",
+			magicCardsInfoCode : "c14",
 			releaseDate : "2014-11-07",
 			border : "black",
 			type : "commander"
@@ -1683,6 +1686,7 @@
 		{
 			name : "Duel Decks: Elspeth vs. Kiora",
 			code : "DDO",
+			magicCardsInfoCode : "ddo",
 			releaseDate : "2015-02-27",
 			border : "black",
 			type : "duel deck"
@@ -1690,6 +1694,7 @@
 		{
 			name : "Dragons of Tarkir",
 			code : "DTK",
+			magicCardsInfoCode : "dtk",
 			releaseDate : "2015-03-27",
 			border : "black",
 			type : "expansion",
@@ -1709,7 +1714,6 @@
 
 	exports.GATHERER_SET_RENAMES =
 	{
-		"Duel Decks: Kiora vs. Elspeth" : "Duel Decks: Elspeth vs. Kiora"
 	};
 	exports.GATHERER_SET_RENAMES_REVERSED = Object.swapKeyValues(exports.GATHERER_SET_RENAMES);
 

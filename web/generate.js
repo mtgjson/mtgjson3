@@ -135,7 +135,6 @@ tiptoe(
 			});
 
 			// Strip out internal only data
-			delete setWithExtras.magicCardsInfoCode;
 			delete setWithExtras.isMCISet;
 			delete setWithExtras.magicRaritiesCode;
 			delete setWithExtras.essentialMagicCode;
@@ -352,6 +351,7 @@ function checkSetForProblems(setCode, cb)
 	var ALLOWED_CATEGORIES = ["letter", "space", "punctuation", "number", "symbol"];
 	var ALLOWED_OTHER_CHARS = ['\n'];
 	var ALLOWED_MISSING_NUMBERS = ["CST"];
+	var ALLOWED_MISSING_MAGICCARDSINFO_CODE = ["RQS", "VAN", "DD3_DVD", "DD3_EVG", "DD3_GVL", "DD3_JVC", "FRF_UGIN"];
 
 	tiptoe(
 		function getJSON()
@@ -362,6 +362,10 @@ function checkSetForProblems(setCode, cb)
 		{
 			var setData = JSON.parse(setRaw);
 			var cardsByName = {};
+
+			// Check for magicCardsInfoCode
+			if(!ALLOWED_MISSING_MAGICCARDSINFO_CODE.contains(setCode) && !setData.hasOwnProperty("magicCardsInfoCode"))
+				base.info("%s Does not have field 'magicCardsInfoCode'", setCode);
 
 			// Check for duplicate printings entries
 			setData.cards.forEach(function(card)
