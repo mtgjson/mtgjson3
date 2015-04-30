@@ -2028,6 +2028,13 @@
 			{ match : {name : "Pouncing Jaguar"}, replace : {flavor : "One pounce, she's hungry—you die quickly. Two, she's teaching her cubs—you're in for a long day."}},
 			{ match : {name : "Rewind"}, replace : {flavor : "\"Time flows like a river. In Tolaria we practice the art of building dams.\"\n—Barrin, master wizard"}}
 		],
+		pCEL :
+		[
+			{ match : {name : "Fraternal Exaltation"}, replace : {text : "Sneak into your parents' closet to get a deck. Your new brother is joining the game."}},
+			{ match : {name : "Proposal"}, replace : {text : "Allows Richard to propose to Lily. If the proposal is accepted both players win; mix the cards in play, both libraries, and both graveyards as a shared deck."}},
+			{ match : {name : "Shichifukujin Dragon"}, replace : {text : {"on it." : "on it.\n"}}},
+			{ match : {name : "Splendid Genesis"}, replace : {text : "Shuffle all cards in the game together and deal them into three decks. The game continues with a new player."}}
+		],
 		MIR :
 		[
 			{ renumberImages : "Forest", order : [3569, 3567, 3568, 3566] },

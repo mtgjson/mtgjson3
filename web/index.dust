@@ -441,12 +441,12 @@
 			<tbody>		
 				<tr>
 					<td>rulings</td>
-					<td>[ {~lb} date : "2003-04-15",&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>text : "Does not tap." {~rb} ]</td>
+					<td>[ {~lb} "date" : "2003-04-15",&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>"text" : "Does not tap." {~rb} ]</td>
 					<td>The rulings for the card. An array of objects, each object having 'date' and 'text' keys.</td>
 				</tr>
 				<tr>
 					<td>foreignNames</td>
-					<td>[ {~lb} language : "Italian",&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>name : "Wurm Devastatore" {~rb} ]</td>
+					<td>[ {~lb} "language" : "Italian",&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>"name" : "Wurm Devastatore" {~rb} ]</td>
 					<td>Foreign language names for the card. An array of objects, each object having 'language' and 'name' keys. Only present if different than the english card name. Split cards don't currently have this field.</td>
 				</tr>
 				<tr>

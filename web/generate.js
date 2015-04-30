@@ -2,11 +2,9 @@
 
 var base = require("xbase"),
 	C = require("C"),
-	util = require("util"),
 	runUtil = require("xutil").run,
 	rimraf = require("rimraf"),
 	printUtil = require("xutil").print,
-	fileUtil = require("xutil").file,
 	diffUtil = require("xutil").diff,
 	unicodeUtil = require("xutil").unicode,
 	fs = require("fs"),
@@ -453,6 +451,22 @@ function checkSetForProblems(setCode, cb)
 					base.info("Basic land [%s] (%s) from set %s has rarity %s", card.name, card.multiverseid || "", setData.name, card.rarity);
 			});
 
+			// Check for cards with no text that should have it
+			setData.cards.forEach(function(card)
+			{
+				if(card.layout==="token")
+					return;
+
+				if(card.types && card.types.contains("Creature"))
+					return;
+
+				if(card.supertypes && card.types && card.supertypes.contains("Basic") && card.types.contains("Land"))
+					return;
+
+				if(!card.text || card.text.trim().length===0)
+					base.info("%s Card [%s] (%s) has no text field", setCode, card.name, card.multiverseid || "");
+			});
+
 			// Check for duplicate 'number' fields
 			if(setData.type!=="promo")
 			{
@@ -490,4 +504,3 @@ function checkSetForProblems(setCode, cb)
 		}
 	);
 }
-
