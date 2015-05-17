@@ -372,6 +372,31 @@ exports.performSetCorrections = function(setCorrections, fullSet)
 		//	card.legalities["Vintage"] = C.VINTAGE_BANNED.contains(card.name) ? "Banned" : (C.VINTAGE_RESTRICTED.contains(card.name) ? "Restricted" : "Legal");
 	});
 
+	// Rulings corrections
+	cards.forEach(function(card)
+	{
+		if(!card.hasOwnProperty("rulings") || card.rulings.length===0)
+			return;
+
+		card.rulings.forEach(function(ruling)
+		{
+			Object.forEach(C.SYMBOL_MANA, function(manaSymbol)
+			{
+				var newText = ruling.text.replaceAll("\\{" + manaSymbol.toUpperCase() + "\\]", "{" + manaSymbol.toUpperCase() + "}");
+				if(newText===ruling.text)
+					ruling.text.replaceAll("\\[" + manaSymbol.toUpperCase() + "\\}", "{" + manaSymbol.toUpperCase() + "}");
+				if(newText===ruling.text)
+					ruling.text.replaceAll("\\[" + manaSymbol.toUpperCase() + "\\]", "{" + manaSymbol.toUpperCase() + "}");
+
+				if(newText!==ruling.text)
+				{
+					base.warn("Auto correcting set %s Card [%s] (%s) that has ruling with invalid symbol: %s", fullSet.code, card.name, card.multiverseid || "", ruling.text);
+					ruling.text = newText;
+				}
+			});
+		});
+	});
+
 	// Final Release date validation
 	cards.forEach(function(card)
 	{

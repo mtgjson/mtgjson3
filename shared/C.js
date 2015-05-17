@@ -1710,6 +1710,14 @@
 			onlineOnly : true,
 			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land"]
 		},
+		{
+			name : "Modern Masters 2015 Edition",
+			code : "MM2",
+			releaseDate : "2015-05-22",
+			border : "black",
+			type : "reprint",
+			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", ["foil mythic rare", "foil rare", "foil uncommon", "foil common"]]
+		}
 	];
 
 	exports.GATHERER_SET_RENAMES =
