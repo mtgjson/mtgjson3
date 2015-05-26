@@ -291,6 +291,33 @@ tiptoe(
 			runUtil.run("zip", ["-9", "_" + SET.code + ".json.zip", "_" + SET.code + ".json"], { cwd:  path.join(__dirname, "json"), silent : true }, cb);
 		}, this.parallel());
 	},
+	function zipJSON()
+	{
+		base.info("Gzipping files...");
+		runUtil.run("gzip", ["-k", "AllSets.json"], { cwd:  path.join(__dirname, "json"), silent : true }, this.parallel());
+		runUtil.run("gzip", ["-k", "AllSets-x.json"], { cwd:  path.join(__dirname, "json"), silent : true }, this.parallel());
+		runUtil.run("gzip", ["-k", "AllCards.json"], { cwd:  path.join(__dirname, "json"), silent : true }, this.parallel());
+		runUtil.run("gzip", ["-k", "AllCards-x.json"], { cwd:  path.join(__dirname, "json"), silent : true }, this.parallel());
+
+		C.SETS.serialForEach(function(SET, cb)
+		{
+			runUtil.run("gzip", ["-k", SET.code + ".json"], { cwd:  path.join(__dirname, "json"), silent : true }, cb);
+		}, this.parallel());
+
+		C.SETS.serialForEach(function(SET, cb)
+		{
+			runUtil.run("gzip", ["-k", SET.code + "-x.json"], { cwd:  path.join(__dirname, "json"), silent : true }, cb);
+		}, this.parallel());
+
+		// Windows CON.json.zip
+		C.SETS.serialForEach(function(SET, cb)
+		{
+			if(SET.code!=="CON")
+				return setImmediate(cb);
+
+			runUtil.run("gzip", ["-k", "_" + SET.code + ".json"], { cwd:  path.join(__dirname, "json"), silent : true }, cb);
+		}, this.parallel());
+	},
 	function render()
 	{
 		base.info("Rendering index...");
