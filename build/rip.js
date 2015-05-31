@@ -58,8 +58,34 @@ function ripSet(setName, cb)
 			else
 			{
 				base.info("Adding foreign languages to cards...");
-				addForeignNamesToCards(this.data.set.cards, this);
+				addForeignNamesToSet(this.data.set, this);
 			}
+		},
+		function addLanguagesPrinted()
+		{
+			base.info("Adding languagesPrinted set field...");
+
+			var languagesPrinted = {};
+			this.data.set.cards.forEach(function(card)
+			{
+				if(!card.hasOwnProperty("languagesPrinted"))
+					return;
+
+				languagesPrinted.forEach(function(languagePrinted)
+				{
+					if(languagesPrinted.hasOwnProperty(languagePrinted))
+						return;
+
+					languagesPrinted[languagePrinted] = true;
+				});
+
+				delete card.languagesPrinted;
+			});
+
+			if(Object.keys(languagesPrinted).length>0)
+				this.data.set.languagesPrinted = Object.keys(languagesPrinted);
+
+			this();
 		},
 		function addLegalities()
 		{
@@ -486,7 +512,7 @@ function getURLAsDoc(targetURL, cb)
 	);
 }
 
-function addForeignNamesToCards(cards, cb)
+function addForeignNamesToSet(set, cb)
 {
 	var sets = {};
 
@@ -507,17 +533,14 @@ function addForeignNamesToCards(cards, cb)
 				sets[SET.code] = JSON.parse(args[i]);
 			});
 
-			cards.serialForEach(function(card, subcb)
+			set.cards.serialForEach(function(card, subcb)
 			{
 				getForeignNamesForCardName(sets, card.name, subcb);
 			}, this);
 		},
-		function applyForeignLanguages(err, cardsForeignNames)
+		function applyForeignLanguages(cardsForeignNames)
 		{
-			if(err)
-				return setImmediate(function() { cb(err); });
-
-			cards.forEach(function(card, i)
+			set.cards.forEach(function(card, i)
 			{
 				delete card.foreignNames;
 
@@ -554,6 +577,35 @@ function addForeignNamesToCards(cards, cb)
 						card.foreignNames = cardForeignNames;
 				}
 			});
+
+			set.cards.serialForEach(function(card, subcb)
+			{
+				if(!card.hasOwnProperty("multiverseid"))
+					return setImmediate(subcb);
+
+				getLanguagesPrintedForMultiverseid(card.multiverseid, subcb);
+			}, this);
+		},
+		function applyLanguagesPrinted(err, cardsLanguagesPrinted)
+		{
+			if(err)
+				return setImmediate(function() { cb(err); });
+
+			var languagesPrinted = {};
+			cardsLanguagesPrinted.forEach(function(cardLanguagesPrinted)
+			{
+				cardLanguagesPrinted.forEach(function(cardLanguagePrinted)
+				{
+					if(languagesPrinted.hasOwnProperty(cardLanguagePrinted))
+						return;
+
+					languagesPrinted[cardLanguagePrinted] = true;
+				});
+			});
+			
+			set.languagesPrinted = Object.keys(languagesPrinted).sort(function(a, b) { return a.localeCompare(b); });
+			if(set.languagesPrinted.length===0)
+				delete set.languagesPrinted;
 
 			setImmediate(function() { cb(); });
 		}
@@ -598,6 +650,28 @@ function getForeignNamesForCardName(sets, cardName, cb)
 			foreignLanguages = foreignLanguages.sort(function(a, b) { var al = a.language.toLowerCase().charAt(0); var bl = b.language.toLowerCase().charAt(0); return (al<bl ? -1 : (al>bl ? 1 : 0)); });
 
 			setImmediate(function() { cb(null, foreignLanguages); });
+		}
+	);
+}
+
+function getLanguagesPrintedForMultiverseid(multiverseid, cb)
+{
+	tiptoe(
+		function getLanguagePage()
+		{
+			getURLAsDoc(shared.buildMultiverseLanguagesURL(multiverseid), this);
+		},
+		function processDoc(err, doc)
+		{
+			var languagesPrinted = [];
+			Array.toArray(doc.querySelectorAll("table.cardList tr.cardItem")).forEach(function(cardRow)
+			{
+				var language = getTextContent(cardRow.querySelector("td:nth-child(2)")).trim();
+				if(language)
+					languagesPrinted.push(language);
+			});
+
+			setImmediate(function() { cb(null, languagesPrinted); });
 		}
 	);
 }
@@ -1231,6 +1305,8 @@ function ripMCICard(set, mciCardURL, cb)
 				card.manaCost = processSymbol(manaCostRaw);
 			else
 				card.manaCost = manaCostRaw.replace(manaRegex, ".").split("").map(function(manaSymbol) { return processSymbol(manaSymbol==="." ? manaParts.shift() : manaSymbol); }).join("");
+			if(!card.manaCost)
+				delete card.manaCost;
 
 			if(!card.hasOwnProperty("cmc") && card.manaCost==="{0}")
 				card.cmc = 0;

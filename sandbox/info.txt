@@ -1,3 +1,11 @@
+/------------------------------\
+| Updating Promos Instructions |
+\------------------------------/
+# Run
+node util/clearCacheForSet.js mcilist mcisets
+node build/importMCISet.js mcisets
+node util/updateFromPromoPrinintgs.js
+
 /-----------------------------------\
 | Non-Gatherer New Set Instructions |
 \-----------------------------------/

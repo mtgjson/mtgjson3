@@ -428,6 +428,13 @@ exports.performSetCorrections = function(setCorrections, fullSet)
 		if(card.printings)
 			card.printings = card.printings.unique();
 	});
+
+	// Printing codes
+	cards.forEach(function(card)
+	{
+		if(card.printings)
+			card.printingCodes = card.printings.map(function(printing) { return exports.getSetCodeFromName(printing); });
+	});
 };
 
 exports.generateCacheFilePath = generateCacheFilePath;
@@ -440,19 +447,37 @@ function generateCacheFilePath(targetUrl)
 exports.sortPrintings = sortPrintings;
 function sortPrintings(printings)
 {
-	return printings.unique().sort(function(a, b) { return moment(getReleaseDateForSet(a), "YYYY-MM-DD").unix()-moment(getReleaseDateForSet(b), "YYYY-MM-DD").unix(); });
+	return printings.unique().sort(function(a, b) { return moment(getReleaseDateForSetName(a), "YYYY-MM-DD").unix()-moment(getReleaseDateForSetName(b), "YYYY-MM-DD").unix(); });
+}
+
+exports.sortPrintingCodes = sortPrintingCodes;
+function sortPrintingCodes(printingCodes)
+{
+	return printingCodes.unique().sort(function(a, b) { return moment(getReleaseDateForSetCode(a), "YYYY-MM-DD").unix()-moment(getReleaseDateForSetCode(b), "YYYY-MM-DD").unix(); });
 }
 
 exports.getSetCodeFromName = getSetCodeFromName;
 function getSetCodeFromName(setName)
 {
-	return C.SETS.mutateOnce(function(SET) { return SET.name.toLowerCase()===setName.toLowerCase() ? SET.code : undefined; });
+	var setCode = C.SETS.mutateOnce(function(SET) { return SET.name.toLowerCase()===setName.toLowerCase() ? SET.code : undefined; });
+	if(!setCode)
+	{
+		base.error("FAILED TO GET SET CODE FOR NAME: %s", setName);
+		process.exit(1);
+	}
+	return setCode;
 }
 
-exports.getReleaseDateForSet = getReleaseDateForSet;
-function getReleaseDateForSet(setName)
+exports.getReleaseDateForSetName = getReleaseDateForSetName;
+function getReleaseDateForSetName(setName)
 {
 	return C.SETS.mutateOnce(function(SET) { return SET.name===setName ? SET.releaseDate : undefined; }) || moment().format("YYYY-MM-DD");
+}
+
+exports.getReleaseDateForSetCode = getReleaseDateForSetCode;
+function getReleaseDateForSetCode(setCode)
+{
+	return C.SETS.mutateOnce(function(SET) { return SET.code===setCode ? SET.releaseDate : undefined; }) || moment().format("YYYY-MM-DD");
 }
 
 exports.clearCacheFile = function(targetUrl, cb)

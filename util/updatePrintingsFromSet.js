@@ -4,11 +4,7 @@
 var base = require("xbase"),
 	C = require("C"),
 	fs = require("fs"),
-	url = require("url"),
-	color = require("cli-color"),
 	shared = require("shared"),
-	fileUtil = require("xutil").file,
-	diffUtil = require("xutil").diff,
 	path = require("path"),
 	tiptoe = require("tiptoe");
 
@@ -90,10 +86,17 @@ function addPrintingToSetCards(setCode, targetCardNames, printingName, cb)
 				if(!targetCardNames.contains(card.name))
 					return;
 
-				if(card.printings.contains(printingName))
-					return;
+				if(!card.printings.contains(printingName))
+				{
+					card.printings.push(printingName);
+					card.printings = shared.sortPrintings(card.printings);
+				}
 
-				card.printings.push(printingName);
+				if(!card.printingCodes.contains(setCode))
+				{
+					card.printingCodes.push(setCode);
+					card.printingCodes = shared.sortPrintingCodes(card.printingCodes);
+				}
 			});
 
 			fs.writeFile(path.join(__dirname, "..", "json", setCode + ".json"), JSON.stringify(set), {encoding : "utf8"}, this);

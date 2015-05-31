@@ -86,7 +86,7 @@ tiptoe(
 						{
 							if(allCardsWithExtras[card.name].hasOwnProperty(fieldName))
 							{
-								base.warn("Card [%s] mismatch with field [%s] between current set [%s] and previous [%s] with values:\n\tNO VALUE\n\t%s", card.code, fieldName, SET.code, previousSeenSetCodes[card.name][fieldName].join(" "), allCardsWithExtras[card.name][fieldName]);
+								base.warn("Card [%s] mismatch with field [%s] between current set [%s] and previous [%s] with values:\n\tNO VALUE\n\t%s", card.name, fieldName, SET.code, previousSeenSetCodes[card.name][fieldName].join(" "), allCardsWithExtras[card.name][fieldName]);
 								taintedCards.push({card:card, fieldName:fieldName});
 
 								previousSeenSetCodes[card.name][fieldName].forEach(function(prevSetCode)
@@ -522,6 +522,22 @@ function checkSetForProblems(setCode, cb)
 					}
 				}
 			}
+
+			// Check for printings and printingCodes not having same length
+			setData.cards.forEach(function(card)
+			{
+				if(!card.hasOwnProperty("printings"))
+					return;
+
+				if(!card.hasOwnProperty("printingCodes"))
+				{
+					base.info("%s Card [%s] (%s) has printings but not printingCodes", setCode, card.name, card.multiverseid || "");
+					return;
+				}
+
+				if(card.printings.length!==card.printingCodes.length)
+					base.info("%s Card [%s] (%s) has %d printings but %d printingCodes, these should be the same!", setCode, card.name, card.multiverseid || "", card.printings.length, card.printingCodes.length);
+			});
 
 			this();
 		},

@@ -33,13 +33,9 @@ See the 3 e-mail's from Brian (eastsydneyboy@gmail.com) for more details on this
 \-----------------/
 * WPN and Gateway were tehcnically two seperate programs, despite magiccards.info combining them into one. Yes, WPN replaced Gateway, but right now combined there is no way to determine which set each card is from as the years overlap.
 
-* Consider making it so the only foreignNames in the array are those found on gatherer for that specific ard in that set (instead of all languages from all sets for that card) then e-mail morpheus rabbit
-
-* Consider changing 'printings' field to be a list of set codes rather than set names
-
 * Add some sort of 'deck' or 'subset' field, to identify which cards are part of which decks (such as 'elf' deck in the 'elves vs goblins' set)
 
-* Create a nginx tolowercase plugin that doesn't require a /actual/ directory and then enable this for files in /json/
+* Create a nginx tolowercase plugin that doesn't require a /actual/ directory and then enable this for files in /json/  To prevent infinite redirect, maybe find a way to ensure it only passes through the plugin once and also don't return a different result at all if it's the same as the input?
 
 * Add MTGO only sets:
   - PRM set. (promo cards, see e-mail from  Thomas Baird <thomas@cardhoarder.com>)
@@ -66,6 +62,8 @@ Basically what's really needed is three things: foilable, foil only, and non foi
 /--------------\
 | Low Priority |
 \--------------/
+* Create a field to designate if a card has the same art as the card from another set (such as alpha, beta, unlimited, revised cards having almost all the same art). Best bet would be to take the crops, resize them to the same size, then compare them for similarity using something like puzzle diff. E-mail tiago.pereira@itpeople.pt
+
 * Add full parser support for magiclibrarities and then add the Oversized cards seen on this page "http://www.magiclibrarities.net/rarities.html" Probably add them as a single promo set for all oversized cards.
 
 * Add an 'availableOnline' flag to each set that is available on mtgo. Or maybe just add a mtgoSetId to each set (if such a thing exists in mtgo)

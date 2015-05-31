@@ -2896,7 +2896,8 @@
 					printings    : ["Happy Holidays"]
 				}
 			},
-			{ addCard :
+			{ match : {name : "Mishra's Toy Workshop"}, replace : {artist : "Jung Park"}},
+			/*{ addCard :
 				{
 					name : "Mishra's Toy Workshop",
 					text : "{T}: Add {3} to your mana pool. Spend this mana only on spells and abilities that put tokens onto the battlefield. Use toys to represent the tokens.",
@@ -2912,7 +2913,7 @@
 					releaseDate : "2014",
 					number : "9"
 				}
-			},
+			},*/
 			{ match : {name : "Gifts Given"}, replace : {text : "Search target opponent's library for four cards with different names and reveal them. That player chooses two of those cards. Put the chosen cards into the player's graveyard and the rest into your hand. Then that player shuffles his or her library."}},
 			{ match : {name : "Evil Presents"}, replace : {flavor : "'Tis better to give than to receive."}},
 			{ match : {name : "Gifts Given"}, replace : {flavor : "\"Thanks! You shouldn't have.\""}},
@@ -3241,46 +3242,47 @@
 
 	exports.FIELD_TYPES =
 	{
-		layout       : "string",
-		name         : "string",
-		names        : ["string"],
-		manaCost     : "string",
-		cmc          : "number",
-		colors       : ["string"],
-		type         : "string",
-		supertypes   : ["string"],
-		types        : ["string"],
-		subtypes     : ["string"],
-		rarity       : "string",
-		text         : "string",
-		flavor       : "string",
-		artist       : "string",
-		number       : "string",
-		power        : "string",
-		toughness    : "string",
-		loyalty      : "number",
-		multiverseid : "number",
-		variations   : ["number"],
-		imageName    : "string",
-		watermark    : "string",
-		border       : "string",
-		hand         : "number",
-		life         : "number",
-		rulings      : ["object"],
-		foreignNames : ["object"],
-		printings    : ["string"],
-		originalText : "string",
-		originalType : "string",
-		timeshifted  : "boolean",
-		reserved     : "boolean",
-		source       : "string",
-		releaseDate  : "string",
-		legalities   : {},
-		starter      : "boolean"
+		layout        : "string",
+		name          : "string",
+		names         : ["string"],
+		manaCost      : "string",
+		cmc           : "number",
+		colors        : ["string"],
+		type          : "string",
+		supertypes    : ["string"],
+		types         : ["string"],
+		subtypes      : ["string"],
+		rarity        : "string",
+		text          : "string",
+		flavor        : "string",
+		artist        : "string",
+		number        : "string",
+		power         : "string",
+		toughness     : "string",
+		loyalty       : "number",
+		multiverseid  : "number",
+		variations    : ["number"],
+		imageName     : "string",
+		watermark     : "string",
+		border        : "string",
+		hand          : "number",
+		life          : "number",
+		rulings       : ["object"],
+		foreignNames  : ["object"],
+		printings     : ["string"],
+		originalText  : "string",
+		originalType  : "string",
+		timeshifted   : "boolean",
+		reserved      : "boolean",
+		source        : "string",
+		releaseDate   : "string",
+		legalities    : {},
+		starter       : "boolean",
+		printingCodes : ["string"]
 	};
 
 	exports.ORACLE_FIELDS = ["layout", "name", "names", "manaCost", "cmc", "colors", "type", "supertypes", "types", "subtypes", "text", "power", "toughness", "loyalty", "hand", "life", "rulings", "foreignNames", "printings", "legalities"];
-	exports.EXTRA_FIELDS = ["rulings", "foreignNames", "printings", "originalText", "originalType", "legalities", "source"];
+	exports.EXTRA_FIELDS = ["rulings", "foreignNames", "printings", "originalText", "originalType", "legalities", "source", "printingCodes"];
 	exports.SET_SPECIFIC_FIELDS = ["rarity", "artist", "flavor", "number", "multiverseid", "variations", "watermark", "border", "timeshifted", "reserved", "releaseDate", "originalText", "originalType"];
 
 	exports.VINTAGE_BANNED = ["Advantageous Proclamation", "Amulet of Quoz", "Backup Plan", "Brago's Favor", "Bronze Tablet", "Chaos Orb", "Contract from Below", "Darkpact", "Demonic Attorney", "Double Stroke", "Falling Star", "Immediate Action", "Iterative Analysis", "Jeweled Bird", "Muzzio's Preparations", "Power Play", "Rebirth", "Secret Summoning", "Secrets of Paradise", "Sentinel Dispatch", "Shahrazad", "Tempest Efreet", "Timmerian Fiends", "Unexpected Potential", "Worldknit"];
