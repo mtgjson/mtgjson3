@@ -89,13 +89,7 @@ function addPrintingToSetCards(setCode, targetCardNames, printingName, cb)
 				if(!card.printings.contains(printingName))
 				{
 					card.printings.push(printingName);
-					card.printings = shared.sortPrintings(card.printings);
-				}
-
-				if(!card.printingCodes.contains(setCode))
-				{
-					card.printingCodes.push(setCode);
-					card.printingCodes = shared.sortPrintingCodes(card.printingCodes);
+					shared.finalizePrintings(card);
 				}
 			});
 

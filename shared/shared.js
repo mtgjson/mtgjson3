@@ -235,7 +235,10 @@ exports.performSetCorrections = function(setCorrections, fullSet)
 						card.flavor = card.flavor.replace(/([A-Za-z])"/, "$1!\"", "gm");
 
 					if(setCorrection.addPrinting)
-						card.printings = sortPrintings(card.printings.concat(Array.toArray(setCorrection.addPrinting)));
+					{
+						card.printings = card.printings.concat(Array.toArray(setCorrection.addPrinting));
+						exports.finalizePrintings(card);
+					}
 
 					if(setCorrection.setLegality)
 						Object.forEach(setCorrection.setLegality, function(legalityType, legalityValue) { card.legalities[legalityType] = legalityValue; });
@@ -423,18 +426,7 @@ exports.performSetCorrections = function(setCorrections, fullSet)
 		});
 	});
 
-	cards.forEach(function(card)
-	{
-		if(card.printings)
-			card.printings = card.printings.unique();
-	});
-
-	// Printing codes
-	cards.forEach(function(card)
-	{
-		if(card.printings)
-			card.printingCodes = card.printings.map(function(printing) { return exports.getSetCodeFromName(printing); });
-	});
+	cards.forEach(exports.finalizePrintings);
 };
 
 exports.generateCacheFilePath = generateCacheFilePath;
@@ -444,16 +436,11 @@ function generateCacheFilePath(targetUrl)
 	return  path.join(__dirname, "..", "cache", urlHash.charAt(0), urlHash);
 }
 
-exports.sortPrintings = sortPrintings;
-function sortPrintings(printings)
+exports.finalizePrintings = finalizePrintings;
+function finalizePrintings(card)
 {
-	return printings.unique().sort(function(a, b) { return moment(getReleaseDateForSetName(a), "YYYY-MM-DD").unix()-moment(getReleaseDateForSetName(b), "YYYY-MM-DD").unix(); });
-}
-
-exports.sortPrintingCodes = sortPrintingCodes;
-function sortPrintingCodes(printingCodes)
-{
-	return printingCodes.unique().sort(function(a, b) { return moment(getReleaseDateForSetCode(a), "YYYY-MM-DD").unix()-moment(getReleaseDateForSetCode(b), "YYYY-MM-DD").unix(); });
+	card.printings = card.printings.unique().sort(function(a, b) { return moment(getReleaseDateForSetName(a), "YYYY-MM-DD").unix()-moment(getReleaseDateForSetName(b), "YYYY-MM-DD").unix(); });
+	card.printingCodes = card.printings.map(function(printing) { return exports.getSetCodeFromName(printing); });
 }
 
 exports.getSetCodeFromName = getSetCodeFromName;

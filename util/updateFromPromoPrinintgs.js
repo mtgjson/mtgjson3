@@ -10,7 +10,6 @@ var base = require("xbase"),
 var cardsByName = {};
 
 tiptoe(
-
 	function getJSON()
 	{
 		base.info("Loading promo sets...");
@@ -43,10 +42,8 @@ tiptoe(
 			set.cards.forEach(function(card)
 			{
 				card.printings.push(set.name);
-				card.printings = shared.sortPrintings(card.printings.concat(cardsByName[card.name].map(function(set) { return set.name; })));
-
-				card.printingCodes.push(set.code);
-				card.printingCodes = shared.sortPrintingCodes(card.printingCodes.concat(cardsByName[card.name].map(function(set) { return set.code; })));
+				card.printings = card.printings.concat(cardsByName[card.name].map(function(set) { return set.name; }));
+				shared.finalizePrintings(card);
 			});
 		});
 

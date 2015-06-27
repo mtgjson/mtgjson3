@@ -782,9 +782,7 @@ function addPrintingsToCard(nonGathererSets, card, cb)
 					printings.push(nonGathererSet.name);
 			});
 
-			printings = shared.sortPrintings(printings);
-			if(printings && printings.length)
-				card.printings = printings;
+			card.printings = printings;
 
 			this();
 		},
@@ -1448,8 +1446,6 @@ function addPrintingsToMCISet(set, cb)
 						card.printings.push(setWithExtras.name);
 				});
 			});
-
-			set.cards.forEach(function(card) { card.printings = shared.sortPrintings(card.printings); });
 
 			return setImmediate(cb);
 		}

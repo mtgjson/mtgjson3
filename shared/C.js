@@ -1734,6 +1734,11 @@
 		DPA : ["Abyssal Specter", "Act of Treason", "Air Elemental", "Ascendant Evincar", "Banefire", "Blanchwood Armor", "Blaze", "Bloodmark Mentor", "Boomerang", "Cancel", "Cinder Pyromancer", "Civic Wayfinder", "Cloud Sprite", "Coat of Arms", "Consume Spirit", "Counterbore", "Crowd of Cinders", "Deluge", "Demon's Horn", "Denizen of the Deep", "Dragon's Claw", "Drove of Elves", "Drudge Skeletons", "Dusk Imp", "Duskdale Wurm", "Earth Elemental", "Elven Riders", "Elvish Champion", "Elvish Eulogist", "Elvish Promenade", "Elvish Visionary", "Elvish Warrior", "Enrage", "Essence Drain", "Essence Scatter", "Evacuation", "Eyeblight's Ending", "Forest", "Forest", "Forest", "Forest", "Furnace of Rath", "Gaea's Herald", "Giant Growth", "Giant Spider", "Goblin Piker", "Goblin Sky Raider", "Greenweaver Druid", "Hill Giant", "Howl of the Night Pack", "Immaculate Magistrate", "Imperious Perfect", "Incinerate", "Island", "Island", "Island", "Island", "Jagged-Scar Archers", "Kamahl, Pit Fighter", "Kraken's Eye", "Lightning Elemental", "Loxodon Warhammer", "Lys Alana Huntmaster", "Mahamoti Djinn", "Megrim", "Mind Control", "Mind Rot", "Mind Shatter", "Mind Spring", "Molimo, Maro-Sorcerer", "Moonglove Winnower", "Mortivore", "Mountain", "Mountain", "Mountain", "Mountain", "Natural Spring", "Naturalize", "Nature's Spiral", "Negate", "Overrun", "Phantom Warrior", "Prodigal Pyromancer", "Rage Reflection", "Rampant Growth", "Ravenous Rats", "River Boa", "Roughshod Mentor", "Runeclaw Bear", "Sengir Vampire", "Severed Legion", "Shivan Dragon", "Shock", "Snapping Drake", "Spined Wurm", "Swamp", "Swamp", "Swamp", "Swamp", "Talara's Battalion", "Terror", "The Rack", "Thieving Magpie", "Trained Armodon", "Troll Ascetic", "Underworld Dreams", "Unholy Strength", "Unsummon", "Verdant Force", "Vigor", "Wall of Spears", "Wall of Wood", "Wurm's Tooth"]
 	};
 
+	exports.NON_GATHERER_SET_RARITY_MAP =
+	{
+		DPA : { "Air Elemental" : "Uncommon", "Boomerang" : "Common", "Cancel" : "Common", "Cloud Sprite" : "Common", "Counterbore" : "Rare", "Deluge" : "Uncommon", "Denizen of the Deep" : "Rare", "Essence Scatter" : "Common", "Evacuation" : "Rare", "Mahamoti Djinn" : "Rare", "Mind Control" : "Uncommon", "Mind Spring" : "Rare", "Negate" : "Common", "Phantom Warrior" : "Uncommon", "Snapping Drake" : "Common", "Thieving Magpie" : "Uncommon", "Unsummon" : "Common", "Abyssal Specter" : "Uncommon", "Ascendant Evincar" : "Rare", "Consume Spirit" : "Uncommon", "Crowd of Cinders" : "Uncommon", "Drudge Skeletons" : "Common", "Dusk Imp" : "Common", "Essence Drain" : "Common", "Eyeblight's Ending" : "Common", "Megrim" : "Uncommon", "Mind Rot" : "Common", "Mind Shatter" : "Rare", "Moonglove Winnower" : "Common", "Mortivore" : "Rare", "Ravenous Rats" : "Common", "Sengir Vampire" : "Rare", "Severed Legion" : "Common", "Terror" : "Common", "Underworld Dreams" : "Rare", "Unholy Strength" : "Common", "Act of Treason" : "Uncommon", "Banefire" : "Rare", "Blaze" : "Uncommon", "Bloodmark Mentor" : "Uncommon", "Cinder Pyromancer" : "Common", "Earth Elemental" : "Uncommon", "Enrage" : "Uncommon", "Furnace of Rath" : "Rare", "Goblin Piker" : "Common", "Goblin Sky Raider" : "Common", "Hill Giant" : "Common", "Incinerate" : "Common", "Kamahl, Pit Fighter" : "Rare", "Lightning Elemental" : "Common", "Prodigal Pyromancer" : "Uncommon", "Rage Reflection" : "Rare", "Shivan Dragon" : "Rare", "Shock" : "Common", "Blanchwood Armor" : "Uncommon", "Civic Wayfinder" : "Common", "Drove of Elves" : "Uncommon", "Duskdale Wurm" : "Uncommon", "Elven Riders" : "Uncommon", "Elvish Champion" : "Rare", "Elvish Eulogist" : "Common", "Elvish Promenade" : "Uncommon", "Elvish Visionary" : "Common", "Elvish Warrior" : "Common", "Gaea's Herald" : "Rare", "Giant Growth" : "Common", "Giant Spider" : "Common", "Greenweaver Druid" : "Uncommon", "Howl of the Night Pack" : "Uncommon", "Immaculate Magistrate" : "Rare", "Imperious Perfect" : "Uncommon", "Jagged-Scar Archers" : "Uncommon", "Lys Alana Huntmaster" : "Common", "Molimo, Maro-Sorcerer" : "Rare", "Natural Spring" : "Common", "Naturalize" : "Common", "Nature's Spiral" : "Uncommon", "Overrun" : "Uncommon", "Rampant Growth" : "Common", "River Boa" : "Uncommon", "Roughshod Mentor" : "Uncommon", "Runeclaw Bear" : "Common", "Spined Wurm" : "Common", "Talara's Battalion" : "Rare", "Trained Armodon" : "Common", "Troll Ascetic" : "Rare", "Verdant Force" : "Rare", "Vigor" : "Rare", "Wall of Wood" : "Common", "Coat of Arms" : "Rare", "Demon's Horn" : "Uncommon", "Dragon's Claw" : "Uncommon", "Kraken's Eye" : "Uncommon", "Loxodon Warhammer" : "Rare", "The Rack" : "Uncommon", "Wall of Spears" : "Common", "Wurm's Tooth" : "Uncommon" }
+	};
+
 	exports.SET_CORRECTIONS =
 	{
 		LEA :
@@ -2897,23 +2902,6 @@
 				}
 			},
 			{ match : {name : "Mishra's Toy Workshop"}, replace : {artist : "Jung Park"}},
-			/*{ addCard :
-				{
-					name : "Mishra's Toy Workshop",
-					text : "{T}: Add {3} to your mana pool. Spend this mana only on spells and abilities that put tokens onto the battlefield. Use toys to represent the tokens.",
-					flavor : "Even though Urza tried to apologize, Mishra continued to bear a grudge.",
-					artist : "Jung Park",
-					layout : "normal",
-					type : "Land",
-					types : ["Land"],
-					rarity : "Special",
-					source : "Holiday gift to Wizards internal teams and business partners.",
-					imageName : "mishra's toy workshop",
-					printings : ["Happy Holidays"],
-					releaseDate : "2014",
-					number : "9"
-				}
-			},*/
 			{ match : {name : "Gifts Given"}, replace : {text : "Search target opponent's library for four cards with different names and reveal them. That player chooses two of those cards. Put the chosen cards into the player's graveyard and the rest into your hand. Then that player shuffles his or her library."}},
 			{ match : {name : "Evil Presents"}, replace : {flavor : "'Tis better to give than to receive."}},
 			{ match : {name : "Gifts Given"}, replace : {flavor : "\"Thanks! You shouldn't have.\""}},
@@ -3281,7 +3269,7 @@
 		printingCodes : ["string"]
 	};
 
-	exports.ORACLE_FIELDS = ["layout", "name", "names", "manaCost", "cmc", "colors", "type", "supertypes", "types", "subtypes", "text", "power", "toughness", "loyalty", "hand", "life", "rulings", "foreignNames", "printings", "legalities"];
+	exports.ORACLE_FIELDS = ["layout", "name", "names", "manaCost", "cmc", "colors", "type", "supertypes", "types", "subtypes", "text", "power", "toughness", "loyalty", "hand", "life", "rulings", "foreignNames", "printings", "printingCodes", "legalities"];
 	exports.EXTRA_FIELDS = ["rulings", "foreignNames", "printings", "originalText", "originalType", "legalities", "source", "printingCodes"];
 	exports.SET_SPECIFIC_FIELDS = ["rarity", "artist", "flavor", "number", "multiverseid", "variations", "watermark", "border", "timeshifted", "reserved", "releaseDate", "originalText", "originalType"];
 

@@ -97,7 +97,7 @@ function processSet(setCode, targetMultiverseids, cb)
 					}
 
 					if(newCard.rarity!=="Basic Land")
-						newCard.rarity = "Special";
+						newCard.rarity = (C.NON_GATHERER_SET_RARITY_MAP[newSet.code] || [])[newCard.name] || "Special";
 
 					if(MODERN_CREATURE_TYPES.contains(targetSetCode))
 						newCard.originalType = newCard.originalType.replace("Summon", "Creature");

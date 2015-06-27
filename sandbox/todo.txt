@@ -1,7 +1,7 @@
 /--------------\
 | Top Priority |
 \--------------/
-
+* Commander's Arsenal only has the 18 standard cards. I should add the 10 oversized cards that were part of this set (see http://mtgsalvation.gamepedia.com/Commander's_Arsenal)
 
 /---------------\
 | High Priority |
@@ -10,7 +10,7 @@
 
 * See the e-mail from john.a.bondeson@gmail.com regarding 'color identity' field that is used in commander/edh. At the very least I should research this and decide one way or the other about adding it and then reply back to him once it's added or my reasons why I won't be adding it.
 
-* Move all 'tokens' to a new array along side 'cards' called 'tokens' and reference 108.2 that they are not considered cards.
+* Move all existing 'tokens' to a new array along side 'cards' called 'tokens' and reference 108.2 that they are not considered cards.
   Have this be done automatically AFTER everything is done (including card modifications and sorting), by simply moving any card with layout==="token" to the new tokens array.
 
 * Add Tokens from magiccards.info
@@ -20,7 +20,6 @@ See e-mail from: missouri_county@hotmail.com
 Could potentially scrape the data from: http://magiccards.info/extras.html
 In addition to test_urls.js I need to look at the tokens folder in DevLab/images/originals/mtg/CCGHQ/full/
 When done, E-mail woogerboy, Be Titmarsh and search e-mail for anyone asking about 'tokens' or 'promo' and e-mail them too
-
 
 * Many of the early 4th edtion and earlier cards have messed up activation costs in the originalCardText (such as '1oRooR' on gatherer for 1RR) and also missing colons for almost all of them.
 See the 3 e-mail's from Brian (eastsydneyboy@gmail.com) for more details on this topic
