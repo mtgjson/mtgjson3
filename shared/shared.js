@@ -242,6 +242,9 @@ exports.performSetCorrections = function(setCorrections, fullSet)
 
 					if(setCorrection.setLegality)
 						Object.forEach(setCorrection.setLegality, function(legalityType, legalityValue) { card.legalities[legalityType] = legalityValue; });
+					
+					if(setCorrection.deleteLegality)
+						setCorrection.deleteLegality.forEach(function(legalityType) { delete card.legalities[legalityType]; });
 
 					if(setCorrection.flavorAddDash && card.flavor)
 					{
@@ -439,7 +442,8 @@ function generateCacheFilePath(targetUrl)
 exports.finalizePrintings = finalizePrintings;
 function finalizePrintings(card)
 {
-	card.printings = card.printings.unique().sort(function(a, b) { return moment(getReleaseDateForSetName(a), "YYYY-MM-DD").unix()-moment(getReleaseDateForSetName(b), "YYYY-MM-DD").unix(); });
+	card.printings = card.printings.unique().multiSort([function(item) { return moment(getReleaseDateForSetName(item), "YYYY-MM-DD").unix(); },
+														function(item) { return item; }]);
 	card.printingCodes = card.printings.map(function(printing) { return exports.getSetCodeFromName(printing); });
 }
 

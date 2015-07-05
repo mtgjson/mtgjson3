@@ -1,5 +1,36 @@
 [
 	{
+		"version": "2.20.7",
+		"when": "2015-07-04",
+		"changes": [
+			"Several cards are now correctly marked as Banned in commander. Source: http://magic.wizards.com/en/gameinfo/gameplay/formats/commander",
+			"DKM: Added 2 missing Forest cards and several alternate art cards. (NOTE: This has caused image names to change. So if you use these for unique ID's you need to reprocess DKM)"
+		],
+		"updatedSetFiles" : ["BOK-x","CNS-x","DKM","DKM-x","UDS-x","VMA-x"]
+	},
+	{
+		"version": "2.20.6",
+		"when": "2015-07-03",
+		"changes": [
+			"KTK, pPRE: Fixed 'printings' field for card Sultai Ascendancy",
+			"The 'printings' and 'printingCodes' fields are now correctly secondarily sorted by name if two sets have the same release date. This is a fix to the previous version.",
+			"Cards with layout 'plane' or 'phenomenon' are no longer marked as being legal for Vintage, Commander and Legacy.",
+			"Fixed the 'reserved' field for the following cards: Bösium Strip, Ifh-Bíff Efreet, Juzám Djinn, Khabál Ghoul, Márton Stromgald, Ring of Ma'rûf"
+		],
+		"updatedSetFiles" : ["ARN","ARN-x","HOP-x","ICE","ICE-x","KTK-x","MED","MED-x","PC2-x","WTH","WTH-x","pPRE-x"]
+	},
+	{
+		"version": "2.20.5",
+		"when": "2015-06-30",
+		"changes": [
+			"pPRE: Fixed 'name' field for Sultai Ascendancy",
+			"The 'printings' and 'printingCodes' fields are now correctly secondarily sorted by name if two sets have the same release date.",
+			"The 'Regrowth' cards have had their legailty for Vintage fixed.",
+			"The 'reserved' field is now applied to every instance of that card instead of just specific sets."
+		],
+		"updatedSetFiles" : ["2ED-x","3ED","3ED-x","DDE","DDE-x","DDL-x","HOP-x","LEA-x","LEB-x","ME2","ME2-x","ME3","ME3-x","ME4","ME4-x","MED","MED-x","PC2-x","TPR","TPR-x","V10","V10-x","VMA","VMA-x","pARL","pARL-x","pJGP","pJGP-x","pMPR","pMPR-x","pPRE","pPRE-x"]
+	},
+	{
 		"version": "2.20.4",
 		"when": "2015-06-24",
 		"changes": [

@@ -1729,7 +1729,7 @@
 	{
 		ATH : ["Aesthir Glider", "Armageddon", "Armored Pegasus", "Benalish Knight", "Black Knight", "Brushland", "Canopy Spider", "Carnivorous Plant", "Combat Medic", "Cuombajj Witches", "Disenchant", "Drifting Meadow", "Erhnam Djinn", "Feast of the Unicorn", "Fireball", "Forest", "Freewind Falcon", "Giant Growth", "Giant Spider", "Goblin Balloon Brigade", "Goblin Digging Team", "Goblin Grenade", "Goblin Hero", "Goblin King", "Goblin Matron", "Goblin Mutant", "Goblin Offensive", "Goblin Recruiter", "Goblin Snowman", "Goblin Tinkerer", "Goblin Vandal", "Goblin Warrens", "Gorilla Chieftain", "Hurricane", "Hymn to Tourach", "Hypnotic Specter", "Icatian Javelineers", "Ihsan's Shade", "Infantry Veteran", "Jalum Tome", "Knight of Stromgald", "Lady Orca", "Lightning Bolt", "Llanowar Elves", "Mirri, Cat Warrior", "Mogg Fanatic", "Mogg Flunkies", "Mogg Raider", "Mountain", "Nevinyrral's Disk", "Order of the White Shield", "Overrun", "Pacifism", "Pegasus Charger", "Pegasus Stampede", "Pendelhaven", "Plains", "Polluted Mire", "Pyrokinesis", "Pyrotechnics", "Raging Goblin", "Ranger en-Vec", "Samite Healer", "Scavenger Folk", "Serra Angel", "Serrated Arrows", "Slippery Karst", "Smoldering Crater", "Spectral Bears", "Strip Mine", "Swamp", "Swords to Plowshares", "Terror", "Unholy Strength", "Uthden Troll", "Volcanic Dragon", "Warrior's Honor", "White Knight", "Woolly Spider", "Youthful Knight" ],
 		ITP : ["Alabaster Potion", "Battering Ram", "Bog Imp", "Bog Wraith", "Circle of Protection: Black", "Circle of Protection: Red", "Clockwork Beast", "Cursed Land", "Dark Ritual", "Detonate", "Disintegrate", "Durkwood Boars", "Elven Riders", "Elvish Archers", "Energy Flux", "Feedback", "Fireball", "Forest", "Glasses of Urza", "Grizzly Bears", "Healing Salve", "Hill Giant", "Ironclaw Orcs", "Island", "Jayemdae Tome", "Lost Soul", "Merfolk of the Pearl Trident", "Mesa Pegasus", "Mons's Goblin Raiders", "Mountain", "Murk Dwellers", "Orcish Artillery", "Orcish Oriflamme", "Pearled Unicorn", "Phantom Monster", "Plains", "Power Sink", "Pyrotechnics", "Raise Dead", "Reverse Damage", "Rod of Ruin", "Scathe Zombies", "Sorceress Queen", "Swamp", "Terror", "Twiddle", "Unsummon", "Untamed Wilds", "Vampire Bats", "Wall of Bone", "War Mammoth", "Warp Artifact", "Weakness", "Whirling Dervish", "Winter Blast", "Zephyr Falcon", "Scryb Sprites" ],
-		DKM : ["Abyssal Specter", "Balduvian Bears", "Balduvian Horde", "Barbed Sextant", "Bounty of the Hunt", "Contagion", "Dark Banishing", "Dark Ritual", "Death Spark", "Elkin Bottle", "Elvish Bard", "Folk of the Pines", "Forest", "Foul Familiar", "Fyndhorn Elves", "Giant Growth", "Giant Trap Door Spider", "Goblin Mutant", "Guerrilla Tactics", "Hurricane", "Icy Manipulator", "Incinerate", "Jokulhaups", "Karplusan Forest", "Lava Burst", "Lhurgoyf", "Mountain", "Mountain", "Mountain", "Necropotence", "Orcish Cannoneers", "Phantasmal Fiend", "Phyrexian War Beast", "Pillage", "Pyroclasm", "Shatter", "Soul Burn", "Storm Shaman", "Sulfurous Springs", "Swamp", "Swamp", "Swamp", "Underground River", "Walking Wall", "Woolly Spider", "Yavimaya Ancients", "Yavimaya Ants", "Lim-Dûl's High Guard"],
+		DKM : ["Abyssal Specter", "Balduvian Bears", "Balduvian Horde", "Barbed Sextant", "Bounty of the Hunt", "Contagion", "Dark Banishing", "Dark Ritual", "Death Spark", "Elkin Bottle", "Elvish Bard", "Folk of the Pines", "Forest", "Forest", "Forest", "Foul Familiar", "Fyndhorn Elves", "Giant Growth", "Giant Trap Door Spider", "Goblin Mutant", "Guerrilla Tactics", "Hurricane", "Icy Manipulator", "Incinerate", "Jokulhaups", "Karplusan Forest", "Lava Burst", "Lhurgoyf", "Mountain", "Mountain", "Mountain", "Necropotence", "Orcish Cannoneers", "Phantasmal Fiend", "Phyrexian War Beast", "Pillage", "Pyroclasm", "Shatter", "Soul Burn", "Storm Shaman", "Sulfurous Springs", "Swamp", "Swamp", "Swamp", "Underground River", "Walking Wall", "Woolly Spider", "Yavimaya Ancients", "Yavimaya Ants", "Lim-Dûl's High Guard"],
 		RQS : ["Alabaster Potion", "Battering Ram", "Bog Imp", "Bog Wraith", "Circle of Protection: Black", "Circle of Protection: Red", "Clockwork Beast", "Cursed Land", "Dark Ritual", "Detonate", "Disintegrate", "Durkwood Boars", "Elven Riders", "Elvish Archers", "Energy Flux", "Feedback", "Fireball", "Forest", "Glasses of Urza", "Grizzly Bears", "Healing Salve", "Hill Giant", "Ironclaw Orcs", "Island", "Jayemdae Tome", "Lost Soul", "Merfolk of the Pearl Trident", "Mesa Pegasus", "Mons's Goblin Raiders", "Mountain", "Murk Dwellers", "Orcish Artillery", "Orcish Oriflamme", "Pearled Unicorn", "Plains", "Power Sink", "Pyrotechnics", "Raise Dead", "Reverse Damge", "Rod of Ruin", "Scath Zombies", "Scryb Sprites", "Sorceress Queen", "Swamp", "Terror", "Twiddle", "Unsummon", "Untamed Wilds", "Vampire Bats", "Wall of Bone", "War Mammoth", "Warp Artifact", "Weakness", "Whirling Dervish", "Winter Blast", "Zephyr Falcon"],
 		DPA : ["Abyssal Specter", "Act of Treason", "Air Elemental", "Ascendant Evincar", "Banefire", "Blanchwood Armor", "Blaze", "Bloodmark Mentor", "Boomerang", "Cancel", "Cinder Pyromancer", "Civic Wayfinder", "Cloud Sprite", "Coat of Arms", "Consume Spirit", "Counterbore", "Crowd of Cinders", "Deluge", "Demon's Horn", "Denizen of the Deep", "Dragon's Claw", "Drove of Elves", "Drudge Skeletons", "Dusk Imp", "Duskdale Wurm", "Earth Elemental", "Elven Riders", "Elvish Champion", "Elvish Eulogist", "Elvish Promenade", "Elvish Visionary", "Elvish Warrior", "Enrage", "Essence Drain", "Essence Scatter", "Evacuation", "Eyeblight's Ending", "Forest", "Forest", "Forest", "Forest", "Furnace of Rath", "Gaea's Herald", "Giant Growth", "Giant Spider", "Goblin Piker", "Goblin Sky Raider", "Greenweaver Druid", "Hill Giant", "Howl of the Night Pack", "Immaculate Magistrate", "Imperious Perfect", "Incinerate", "Island", "Island", "Island", "Island", "Jagged-Scar Archers", "Kamahl, Pit Fighter", "Kraken's Eye", "Lightning Elemental", "Loxodon Warhammer", "Lys Alana Huntmaster", "Mahamoti Djinn", "Megrim", "Mind Control", "Mind Rot", "Mind Shatter", "Mind Spring", "Molimo, Maro-Sorcerer", "Moonglove Winnower", "Mortivore", "Mountain", "Mountain", "Mountain", "Mountain", "Natural Spring", "Naturalize", "Nature's Spiral", "Negate", "Overrun", "Phantom Warrior", "Prodigal Pyromancer", "Rage Reflection", "Rampant Growth", "Ravenous Rats", "River Boa", "Roughshod Mentor", "Runeclaw Bear", "Sengir Vampire", "Severed Legion", "Shivan Dragon", "Shock", "Snapping Drake", "Spined Wurm", "Swamp", "Swamp", "Swamp", "Swamp", "Talara's Battalion", "Terror", "The Rack", "Thieving Magpie", "Trained Armodon", "Troll Ascetic", "Underworld Dreams", "Unholy Strength", "Unsummon", "Verdant Force", "Vigor", "Wall of Spears", "Wall of Wood", "Wurm's Tooth"]
 	};
@@ -1755,10 +1755,6 @@
 			{ match : {name : "Granite Gargoyle"}, replace : {flavor : "\"While most overworlders fortunately don't realize this, Gargoyles can be most delicious, providing you have the appropriate tools to carve them.\"\n—The Underworld Cookbook, by Asmoranomardicadaistinaculdacar"}},
 			{ match : {name : "Obsianus Golem"}, replace : {flavor : "\"The foot stone is connected to the ankle stone, the ankle stone is connected to the leg stone...\"\n—Song of the Artificer"}},
 			{ match : {name : "Wall of Brambles"}, replace : {flavor : "\"What else, when chaos draws all forces inward to shape a single leaf.\"\n —Conrad Aiken"}},
-			{ match : {name : ["Ancestral Recall", "Badlands", "Bayou", "Black Lotus", "Blaze of Glory", "Braingeyser", "Chaos Orb", "Contract from Below", "Copy Artifact", "Cyclopean Tomb", "Darkpact", "Demonic Attorney", "Demonic Hordes", "Farmstead",
-							   "Fastbond", "Forcefield", "Fork", "Gauntlet of Might", "Granite Gargoyle", "Illusionary Mask", "Kudzu", "Lich", "Mox Emerald", "Mox Jet", "Mox Pearl", "Mox Ruby", "Mox Sapphire", "Natural Selection",
-							   "Plateau", "Raging River", "Roc of Kher Ridges", "Rock Hydra", "Savannah", "Scrubland", "Sedge Troll", "Taiga", "Time Vault", "Time Walk", "Timetwister", "Tropical Island", "Tundra", "Two-Headed Giant of Foriys",
-							   "Underground Sea", "Vesuvan Doppelganger", "Veteran Bodyguard", "Volcanic Island", "Wheel of Fortune", "Word of Command"]}, replace : {reserved : true}},
 			// Using multiverseid here because these rules get copied into LEB and 2ED
 			{ match : {multiverseid: 243}, replace : {artist : "Mark Tedin"} },
 			{ match : {multiverseid: 248}, replace : {artist : "Mark Poole"} },
@@ -1777,9 +1773,7 @@
 			{ match : {name : "Library of Alexandria"}, replace : {artist : "Mark Poole"} },
 			{ match : {name : "Ali Baba"}, replace : {flavor : "\"When he reached the entrance of the cavern, he pronounced the words, ‘Open, Sesame!'\" —The Arabian Nights, Junior Classics trans."} },
 			{ match : {name : "Army of Allah"}, replace : {flavor : {"Arab" : " —Arab"}}},
-			{ match : {name : ["Bird Maiden", "Piety", "War Elephant", "Wyluli Wolf", "Aladdin's Ring", "Juzám Djinn", "King Suleiman", "Repentant Blacksmith"]}, flavorAddDash : true},
-			{ match : {name : ["Ali from Cairo", "Bazaar of Baghdad", "City in a Bottle", "Diamond Valley", "Drop of Honey", "Elephant Graveyard", "Guardian Beast", "Ifh-Biff Efreet", "Island of Wak-Wak", "Jihad", "Juzam Djinn", "Khabal Ghoul",
-							   "King Suleiman", "Library of Alexandria", "Merchant Ship", "Old Man of the Sea", "Pyramids", "Ring of Ma'ruf", "Sandals of Abdallah", "Serendib Djinn", "Shahrazad", "Singing Tree"]}, replace : {reserved : true}}
+			{ match : {name : ["Bird Maiden", "Piety", "War Elephant", "Wyluli Wolf", "Aladdin's Ring", "Juzám Djinn", "King Suleiman", "Repentant Blacksmith"]}, flavorAddDash : true}
 		],
 		"2ED" :
 		[
@@ -1793,9 +1787,7 @@
 		[
 			{ match : {name : "Gate to Phyrexia"}, flavorAddDash : true },
 			{ match : {name : "Feldon's Cane"}, replace : {flavor : "Feldon found the first of these canes frozen in the Ronom Glacier."} },
-			{ match : {name : "Triskelion"}, replace : {flavor : "A brainchild of Tawnos, the Triskelion proved its versatility and usefulness in many of the later battles between the brothers."} },
-			{ match : {name : ["Argivian Archaeologist", "Candelabra of Tawnos", "Citanul Druid", "Damping Field", "Gaea's Avenger", "Gate to Phyrexia", "Golgothian Sylex", "Haunting Wind", "Martyrs of Korlis", "Mightstone",
-							   "Mishra's Workshop", "Power Artifact", "Powerleech", "Su-Chi", "Tawnos's Coffin", "Transmute Artifact", "Urza's Miter", "Weakstone"]}, replace : {reserved : true}}
+			{ match : {name : "Triskelion"}, replace : {flavor : "A brainchild of Tawnos, the Triskelion proved its versatility and usefulness in many of the later battles between the brothers."} }
 		],
 		"3ED" :
 		[
@@ -1844,14 +1836,7 @@
 			{ match : {name : ["Adun Oakenshield", "Alabaster Potion", "Angus Mackenzie", "Carrion Ants", "Dakkon Blackblade", "Darkness", "Devouring Deep", "Dream Coat", "Durkwood Boars", "Elven Riders", "Firestorm Phoenix", "Flash Counter",
 							   "Giant Turtle", "Glyph of Doom", "Greed", "Headless Horseman", "Hellfire", "Hornet Cobra", "Horror of Horrors", "Hyperion Blacksmith", "Karakas", "Lady Evangela", "Lady Orca", "Part Water", "Quarum Trench Gnomes",
 							   "Raging Bull", "Revelation", "Shimian Night Stalker", "Spinal Villain", "The Abyss", "The Brute", "Thunder Spirit", "Tolaria", "Touch of Darkness", "Underworld Dreams", "Urborg", "Vampire Bats", "Wall of Vapor",
-							   "Winds of Change", "Wolverine Pack", "Kobold Overlord", "Holy Day"]}, flavorAddDash : true},
-			{ match : {name : ["The Abyss", "Acid Rain", "Adun Oakenshield", "Al-abara's Carpet", "Alchor's Tomb", "All Hallow's Eve", "Angus Mackenzie", "Bartel Runeaxe", "Boris Devilboon", "Caverns of Despair", "Chains of Mephistopheles",
-							   "Cleanse", "Disharmony", "Divine Intervention", "Elder Spawn", "Eureka", "Falling Star", "Field of Dreams", "Firestorm Phoenix", "Forethought Amulet", "Gosta Dirk", "Gravity Sphere", "Gwendlyn Di Corci",
-							   "Halfdane", "Hazezon Tamar", "Hellfire", "Imprison", "In the Eye of Chaos", "Infinite Authority", "Invoke Prejudice", "Jacques le Vert", "Jovial Evil", "Knowledge Vault", "Kobold Overlord", "Lady Caleria",
-							   "Lady Evangela", "Land Equilibrium", "Life Matrix", "Lifeblood", "Living Plane", "Livonya Silone", "Mana Matrix", "Master of the Hunt", "Mirror Universe", "Moat", "Mold Demon", "Nether Void", "North Star",
-							   "Nova Pentacle", "Pixie Queen", "Planar Gate", "Quarum Trench Gnomes", "Ragnar", "Ramses Overdark", "Rapid Fire", "Rasputin Dreamweaver", "Reverberation", "Ring of Immortals", "Rohgahh of Kher Keep",
-							   "Spinal Villain", "Spiritual Sanctuary", "Storm World", "Sword of the Ages", "The Tabernacle at Pendrell Vale", "Telekinesis", "Tetsuo Umezawa", "Thunder Spirit", "Tuknir Deathlock",
-							   "Typhoon", "Ur-Drago", "Willow Satyr", "Wood Elemental"]}, replace : {reserved : true}}
+							   "Winds of Change", "Wolverine Pack", "Kobold Overlord", "Holy Day"]}, flavorAddDash : true}
 		],
 		DRK :
 		[
@@ -1860,9 +1845,7 @@
 			                    "Land Leeches", "Marsh Gas", "Martyr's Cry", "Miracle Worker", "Morale", "Orc General", "People of the Woods", "Pikemen", "Squire", "Venom", "Word of Binding"] }, flavorAddDash : true },
 			{ match : {name : "Goblin Hero"}, replace : {flavor : "They attacked in an orgy of rage and madness, but only one seemed as focused on killing us as on the sheer joy of battle."} },
 			{ match : {name : "Marsh Viper"}, replace : {flavor : "\"All we had left were their black and bloated bodies.\" —Maeveen O'Donagh, Memoirs of a Soldier"} },
-			{ match : {name : "Savaen Elves"}, replace : {flavor : "\"Purity of magic can only come from purity of the land. How can a meal nourish if the ingredients are spoiled?\" —Sidaine of Savaen"}},
-			{ match : {name : ["City of Shadows", "Cleansing", "Eternal Flame", "Exorcist", "Frankenstein's Monster", "Goblin Wizard", "Grave Robbers", "Hidden Path", "Knights of Thorn", "Lurker", "Mana Vortex", "Martyr's Cry",
-							   "Nameless Race", "Niall Silvain", "Preacher", "Psychic Allergy", "Scarwood Bandits", "Season of the Witch", "Sorrow's Path", "Stone Calendar", "Tracker", "Worms of the Earth", "Wormwood Treefolk"]}, replace : {reserved : true}}
+			{ match : {name : "Savaen Elves"}, replace : {flavor : "\"Purity of magic can only come from purity of the land. How can a meal nourish if the ingredients are spoiled?\" —Sidaine of Savaen"}}
 		],
 		pMEI :
 		[
@@ -1910,10 +1893,7 @@
 			{ match : {name : "Thrull Champion"}, flavorAddExclamation : true },
 			{ match : {multiverseid : 1898}, replace : {flavor : {"cowards" : "cowards!", "magic" : "magic!"}}, flavorAddDash : true, fixFlavorNewlines : true},
 			{ match : {name : ["Delif's Cone", "Armor Thrull", "Elven Fortress", "Necrite"]}, flavorAddDash : true },
-			{ match : {multiverseid : 1841},fixFlavorNewlines : true},
-			{ match : {name : ["Aeolipile", "Balm of Restoration", "Conch Horn", "Delif's Cube", "Draconian Cylix", "Dwarven Armorer", "Ebon Praetor", "Elven Lyre", "Elvish Farmer", "Fungal Bloom", "Goblin Flotilla", "Hand of Justice",
-							   "Homarid Shaman", "Icatian Lieutenant", "Icatian Skirmishers", "Implements of Sacrifice", "Rainbow Vale", "Ring of Renewal", "River Merfolk", "Spirit Shield", "Thelon's Curse", "Thelonite Monk", "Thrull Champion",
-							   "Tourach's Gate", "Vodalian Knights", "Vodalian War Machine", "Zelyon Sword"]}, replace : {reserved : true}}
+			{ match : {multiverseid : 1841},fixFlavorNewlines : true}
 		],
 		"4ED" :
 		[
@@ -1953,12 +1933,7 @@
 			{ match : {name : "Grizzled Wolverine"}, replace : {flavor : "\"Before you release a Wolverine from the trap, make sure it's really dead.\"\n—Lovisa Coldeyes,\nBalduvian Chieftain"}},
 			{ match : {name : "Mercenaries"}, replace : {flavor : "\"Blasted amateurs! Doesn't the queen think we can fight well enough on our own?\"\n—Avram Garrisson, Leader of the Knights of Stromgald"}},
 			{ match : {name : "Lhurgoyf"}, replace : {flavor : "\"Ach! Hans, run! It's the Lhurgoyf!\"\n—Saffi Eriksdotter, last words"}},
-			{ match : {name : "Rally"}, replace : {flavor : "\"Stand your ground, troops! This shall be our finest hour!\"\n—General Jarkeld, the Arctic Fox, last words"}},
-			{ match : {name : ["Aegis of the Meek", "Altar of Bone", "Amulet of Quoz", "Balduvian Hydra", "Blizzard", "Brand of Ill Omen", "Call to Arms", "Chromatic Armor", "Earthlink", "Energy Storm", "Flow of Maggots", "Formation", "Fyndhorn Pollen",
-							   "General Jarkeld", "Glacial Crevasses", "Gravebind", "Halls of Mist", "Hot Springs", "Ice Cauldron", "Illusionary Presence", "Illusions of Grandeur", "Infernal Denizen", "Jester's Mask", "Kjeldoran Knight",
-							   "Kjeldoran Phalanx", "Land Cap", "Lava Tubes", "Lightning Blow", "Marton Stromgald", "Mercenaries", "Mesmeric Trance", "Minion of Tevesh Szat", "Mountain Titan", "Mudslide", "Musician", "Mystic Might", "Polar Kraken",
-							   "Reality Twist", "River Delta", "Ritual of Subdual", "Skeleton Ship", "Snowblind", "Soldevi Golem", "Spoils of Evil", "Spoils of War", "Storm Spirit", "Timberline Ridge", "Trailblazer",
-							   "Veldt", "Winter's Chill"]}, replace : {reserved : true}}
+			{ match : {name : "Rally"}, replace : {flavor : "\"Stand your ground, troops! This shall be our finest hour!\"\n—General Jarkeld, the Arctic Fox, last words"}}
 		],
 		CHR :
 		[
@@ -1989,10 +1964,7 @@
 			{ renumberImages : "Willow Faerie", order : [2982, 2983] },
 			{ match : {name : ["Narwhal"]}, flavorAddExclamation : true },
 			{ match : {name : ["Baron Sengir", "Spectral Bears"]}, flavorAddDash : true },
-			{ match : {name : "Roterothopter"}, replace : {flavor : "\"The Roterothopter is as insidious as it is ingenious. It is one of the few creations of our school that I take no pride in.\" —Baki, Wizard Attendant"}},
-			{ match : {name : ["An-Zerrin Ruins", "Anaba Ancestor", "Anaba Spirit Crafter", "Apocalypse Chime", "Autumn Willow", "Aysen Crusader", "Aysen Highway", "Baki's Curse", "Baron Sengir", "Beast Walkers", "Black Carriage", "Chain Stasis",
-							   "Daughter of Autumn", "Didgeridoo", "Dwarven Pony", "Dwarven Sea Clan", "Faerie Noble", "Grandmother Sengir", "Hazduhr the Abbot", "Heart Wolf", "Koskun Falls", "Leeches", "Mammoth Harness", "Marjhan", "Mystic Decree",
-							   "Narwhal", "Reveka, Wizard Savant", "Rysorian Badger", "Serra Aviary", "Soraya the Falconer", "Timmerian Fiends", "Veldrane of Sengir", "Wall of Kelp", "Willow Priestess", "Winter Sky"]}, replace : {reserved : true}}
+			{ match : {name : "Roterothopter"}, replace : {flavor : "\"The Roterothopter is as insidious as it is ingenious. It is one of the few creations of our school that I take no pride in.\" —Baki, Wizard Attendant"}}
 		],
 		ALL :
 		[
@@ -2026,11 +1998,7 @@
 			{ match : {multiverseid : [3173, 3152]}, flavorAddExclamation : true, flavorAddDash : true},
 			{ match : {multiverseid : 3185}, flavorAddExclamation : true},
 			{ match : {name : ["Misinformation", "Nature's Blessing", "Sol Grail", "Urza's Engine", "Varchild's War-Riders"]}, flavorAddDash : true },
-			{ match : {name : "Kaysa"}, replace : {flavor : "Kaysa speaks as the Elder Druid, but the Yavimaya recognizes only one voice: its own."}},
-			{ match : {name : ["Ashnod's Cylix", "Balduvian Trading Post", "Chaos Harlequin", "Dystopia", "Fatal Lore", "Floodwater Dam", "Gargantuan Gorilla", "Gustha's Scepter", "Heart of Yavimaya", "Helm of Obedience", "Ivory Gargoyle",
-							   "Kaysa", "Keeper of Tresserhorn", "Kjeldoran Outpost", "Krovikan Horror", "Lake of the Dead", "Lodestone Bauble", "Lord of Tresserhorn", "Misfortune", "Nature's Wrath", "Omen of Fire", "Phantasmal Sphere",
-							   "Phelddagrif", "Phyrexian Devourer", "Phyrexian Portal", "Ritual of the Machine", "Rogue Skycaptain", "Royal Decree", "Sheltered Valley", "Soldevi Digger", "Soldevi Excavations", "Splintering Wind", "Sustaining Spirit",
-							   "Sworn Defender", "Thawing Glaciers", "Thought Lash", "Tidal Control", "Tornado", "Varchild's War-Riders", "Wandering Mage", "Winter's Night"]}, replace : {reserved : true}}
+			{ match : {name : "Kaysa"}, replace : {flavor : "Kaysa speaks as the Elder Druid, but the Yavimaya recognizes only one voice: its own."}}
 		],	
 		pARL :
 		[
@@ -2066,15 +2034,7 @@
 			{ match : {name : "Polymorph"}, replace : {flavor : "\"Ahh! Opposable digits!\""}},
 			{ match : {name : "Savage Twister"}, replace : {flavor : "\"Frozen, we watched the funnel pluck up three of the goats—pook! pook! pook!—before we ran for the wadi.\"\n—Travelogue of Najat"}},
 			{ match : {name : "Wall of Corpses"}, replace : {flavor : "\"I shall make walls of their flesh, and their blood will be my mortar.\"\n—Kaervek"}},
-			{ match : {name : "Ersatz Gnomes"}, replace : {flavor : "From jungle to sea, from sea to stone, from stone to field, from field to bone. What am I? —Zhalfirin riddle"}},
-			{ match : {name : ["Acidic Dagger", "Afiya Grove", "Amulet of Unmaking", "Asmira, Holy Avenger", "Auspicious Ancestor", "Barreling Attack", "Bazaar of Wonders", "Benthic Djinn", "Bone Mask", "Brushwagg", "Cadaverous Bloom",
-							   "Canopy Dragon", "Carrion", "Catacomb Dragon", "Chaosphere", "Circle of Despair", "Cycle of Life", "Discordant Spirit", "Divine Retribution", "Emberwilde Caliph", "Emberwilde Djinn", "Energy Bolt", "Energy Vortex",
-							   "Forsaken Wastes", "Frenetic Efreet", "Grim Feast", "Hakim, Loreweaver", "Hall of Gemstone", "Harbinger of Night", "Hivis of the Scale", "Jabari's Influence", "Jungle Patrol", "Kukemssa Pirates", "Leering Gargoyle",
-							   "Lion's Eye Diamond", "Lure of Prey", "Malignant Growth", "Mangara's Tome", "Mindbender Spores", "Misers' Cage", "Mist Dragon", "Natural Balance", "Null Chamber", "Paupers' Cage", "Phyrexian Dreadnought", "Phyrexian Purge",
-							   "Phyrexian Tribute", "Political Trickery", "Preferred Selection", "Prismatic Lace", "Purgatory", "Purraj of Urborg", "Rashida Scalebane", "Razor Pendulum", "Reflect Damage", "Reparations", "Rock Basilisk", "Sawback Manticore",
-							   "Seeds of Innocence", "Shallow Grave", "Shauku, Endbringer", "Shimmer", "Sidar Jabari", "Soul Echo", "Spectral Guardian", "Spirit of the Night", "Subterranean Spirit", "Tainted Specter", "Taniwha", "Teeka's Dragon",
-							   "Teferi's Imp", "Teferi's Isle", "Telim'Tor", "Telim'Tor's Edict", "Tombstone Stairwell", "Torrent of Lava", "Unfulfilled Desires", "Ventifact Bottle", "Warping Wurm", "Wellspring",
-							   "Yare", "Zirilan of the Claw", "Zuberi, Golden Feather"]}, replace : {reserved : true}}
+			{ match : {name : "Ersatz Gnomes"}, replace : {flavor : "From jungle to sea, from sea to stone, from stone to field, from field to bone. What am I? —Zhalfirin riddle"}}
 		],
 		MGB :
 		[
@@ -2117,11 +2077,7 @@
 			{ match : {name : "Freewind Falcon"}, replace : {flavor : "\"That does it! I'm going back to hunting chickens!\"\n—Rhirhok, goblin archer"}},
 			{ match : {name : "Guiding Spirit"}, replace : {flavor : "\"Retainer of eternal Sun! Life flash again upon thy wings.\"\n—\"Song to the Sun,\" Femeref song"}},
 			{ match : {name : "Longbow Archer"}, replace : {flavor : "\"If it bears wings, I will pin it to the skies over Tefemburu.\"\n—Ruya, Zhalfirin archer"}},
-			{ match : {name : "Magma Mine"}, replace : {flavor : "BOOM!"}},
-			{ match : {name : ["Aku Djinn", "Anvil of Bogardan", "Bogardan Phoenix", "Breathstealer's Crypt", "Chronatog", "City of Solitude", "Corrosion", "Diamond Kaleidoscope", "Elkin Lair", "Equipoise", "Eye of Singularity", "Femeref Enchantress",
-							   "Firestorm Hellkite", "Flooded Shoreline", "Forbidden Ritual", "Griffin Canyon", "Guiding Spirit", "Kaervek's Spite", "Katabatic Winds", "Kookus", "Lichenthrope", "Lightning Cloud", "Ogre Enforcer", "Phyrexian Marauder",
-							   "Pillar Tombs of Aku", "Pygmy Hippo", "Quirion Druid", "Rainbow Efreet", "Retribution of the Meek", "Righteous War", "Sands of Time", "Squandered Resources", "Suleiman's Legacy", "Teferi's Realm", "Three Wishes", "Tithe",
-							   "Triangle of War", "Undiscovered Paradise", "Viashivan Dragon", "Zhalfirin Crusader"]}, replace : {reserved : true}}
+			{ match : {name : "Magma Mine"}, replace : {flavor : "BOOM!"}}
 		],
 		"5ED" :
 		[
@@ -2252,11 +2208,7 @@
 			{ match : {name : "Inner Sanctum"}, replace : {flavor : "\"Save me from Maraxus,\" Starke pleaded, \"or condemn me to his wrath. Either way, do not ignore me!\""}},
 			{ match : {name : "Mwonvuli Ooze"}, replace : {flavor : "\"Ewww!\""}},
 			{ match : {name : "Vodalian Illusionist"}, replace : {flavor : "\"Torahn gore these shifty fishtails! You can't even get close to one.\"\n—Tahngarth of the Weatherlight"}},
-			{ match : {name : "Phantom Wings"}, replace : {flavor : "\"But you said ‘when goats fly!'\" Squee whined."}},
-			{ match : {name : ["Abeyance", "Aboroth", "Ancestral Knowledge", "Avizoa", "Bone Dancer", "Bosium Strip", "Bubble Matrix", "Debt of Loyalty", "Dwarven Thaumaturgist", "Ertai's Familiar", "Firestorm", "Fungus Elemental", "Gallowbraid",
-							   "Goblin Bomb", "Heart of Bogardan", "Heat Stroke", "Infernal Tribute", "Inner Sanctum", "Liege of the Hollows", "Lotus Vale", "Mana Web", "Maraxus of Keld", "Morinfen", "Mwonvuli Ooze", "Null Rod", "Paradigm Shift",
-							   "Peacekeeper", "Pendrell Mists", "Psychic Vortex", "Scorched Ruins", "Thran Tome", "Tolarian Entrancer", "Tolarian Serpent", "Urborg Justice", "Urborg Stalker", "Wave of Terror", "Well of Knowledge",
-							   "Winding Canyons", "Xanthic Statue"]}, replace : {reserved : true}}
+			{ match : {name : "Phantom Wings"}, replace : {flavor : "\"But you said ‘when goats fly!'\" Squee whined."}}
 		],
 		pPRE :
 		[
@@ -2267,6 +2219,7 @@
 			{ match : {name : "Howlpack Alpha"}, replace : {layout : "double-faced", names : ["Mayor of Avabruck", "Howlpack Alpha"]}},
 			{ match : {name : "Overbeing of Myth"}, replace : {flavor : "\"She walks among us unseen, learning from our imperfections.\"\n—The Seer's Parables"}},
 			{ match : {name : "Wren's Run Packmaster"}, replace : {releaseDate : "2007-09-29"}},
+			{ match : {name : "Sultai Ascendacy"}, replace : {name : "Sultai Ascendancy"}}
 		],
 		TMP :
 		[
@@ -2280,16 +2233,13 @@
 			{ match : {name : "Pincher Beetles"}, replace : {flavor : "\"No fair! Since when does a bug get ta munch on me?\"\n—Squee, goblin cabin hand"}},
 			{ match : {name : "Rootwater Shaman"}, replace : {flavor : "\"Ugh! When did orcs and fish start having kids?\"\n—Gerrard of the Weatherlight"}},
 			{ match : {name : "Staunch Defenders"}, replace : {flavor : "\"Hold your position! Leave doubt for the dying!\"\n—Tahngarth of the Weatherlight"}},
-			{ match : {name : "Talon Sliver"}, replace : {flavor : "\"Keep them at sword's length!\" Gerrard's order fell flat as each sliver's talon suddenly grew longer. \"Hold on—break out the polearms!\""}},
-			{ match : {name : ["Aluren", "Apocalypse", "Avenging Angel", "Commander Greven il-Vec", "Corpse Dance", "Cursed Scroll", "Earthcraft", "Eladamri, Lord of Leaves", "Escaped Shapeshifter", "Humility", "Intuition", "Meditate", "Orim, Samite Healer",
-							   "Recycle", "Sarcomancy", "Selenia, Dark Angel"]}, replace : {reserved : true}}
+			{ match : {name : "Talon Sliver"}, replace : {flavor : "\"Keep them at sword's length!\" Gerrard's order fell flat as each sliver's talon suddenly grew longer. \"Hold on—break out the polearms!\""}}
 		],
 		STH :
 		[
 			{ match : {name : ["Awakening", "Heat of Battle", "Primal Rage", "Torment"]}, flavorAddExclamation : true },
 			{ match : {name : "Invasion Plans"}, replace : {flavor : "Gerrard studied the globe as Mirri kept watch. Suddenly, his eyes widened. \"This is Dominaria!\""}},
-			{ match : {name : "Stronghold Assassin"}, replace : {flavor : "The assassin sees only throats and hears only heartbeats."}},
-			{ match : {name : ["Crovax the Cursed", "Dream Halls", "Mox Diamond", "Silver Wyvern", "Sliver Queen", "Volrath's Shapeshifter", "Volrath's Stronghold"]}, replace : {reserved : true}}
+			{ match : {name : "Stronghold Assassin"}, replace : {flavor : "The assassin sees only throats and hears only heartbeats."}}
 		],
 		PO2 :
 		[
@@ -2312,8 +2262,7 @@
 		EXO :
 		[
 			{ match : {name : ["Erratic Portal", "Pandemonium"]}, flavorAddExclamation : true },
-			{ match : {name : ["Erratic Portal"]}, flavorAddExclamation : true },	// a second time
-			{ match : {name : ["City of Traitors", "Dominating Licid", "Ertai, Wizard Adept", "Exalted Dragon", "Hatred", "Mind Over Matter", "Oath of Ghouls", "Recurring Nightmare", "Survival of the Fittest"]}, replace : {reserved : true}}
+			{ match : {name : ["Erratic Portal"]}, flavorAddExclamation : true }	// a second time
 		],
 		UGL :
 		[
@@ -2345,8 +2294,6 @@
 			{ match : {name : "Priest of Titania"}, replace : {flavor : "Titania rewards all those who honor the forest by making them a living part of it."}},
 			{ match : {name : "Phyrexian Colossus"}, replace : {number : "305"}},
 			{ match : {name : "Sanguine Guard"}, replace : {flavor : "\"Father of Machines! Your filigree gaze carves us, and the scars dance upon our grateful flesh.\"\n—Phyrexian Scriptures"}},
-			{ match : {name : ["Argothian Wurm", "Barrin, Master Wizard", "Citanul Centaurs", "Gaea's Cradle", "Gilded Drake", "Great Whale", "Herald of Serra", "Karn, Silver Golem", "Lifeline", "Lightning Dragon", "Morphling", "Opal Archangel",
-							   "Serra's Sanctum", "Tolarian Academy", "Temporal Aperture", "Time Spiral", "Yawgmoth's Will", "Zephid"]}, replace : {reserved : true}},
 			{ match : {name : "Serra Zealot"}, fixFlavorNewlines : true}
 		],
 		ATH :
@@ -2404,8 +2351,7 @@
 			{ match : {name : "Goblin Welder"}, replace : {flavor : "\"I wrecked your metal guy, boss. But look! I made you an ashtray.\""}},
 			{ match : {name : "Purify"}, replace : {flavor : "\"Our Mother! The sky was Her hair; the sun, Her face. She danced on the grass and in the hills.\"\n—Song of All, canto 23"}},
 			{ match : {name : "Quicksilver Amulet"}, replace : {flavor : "\"Wonderful! You got a lion on your first try. Now put it back.\""}},
-			{ match : {name : "Molten Hydra"}, replace : {flavor : "Keep off the glass. —Hydra warning sign"}},
-			{ match : {name : ["Deranged Hermit", "Grim Monolith", "Memory Jar", "Multani, Maro-Sorcerer", "Palinchron", "Radiant, Archangel", "Ring of Gix", "Second Chance", "Weatherseed Treefolk"]}, replace : {reserved : true}}
+			{ match : {name : "Molten Hydra"}, replace : {flavor : "Keep off the glass. —Hydra warning sign"}}
 		],
 		"6ED" :
 		[
@@ -2439,9 +2385,7 @@
 		],
 		UDS :
 		[
-			{ match : {name : ["Urza's Incubator"]}, flavorAddExclamation : true },
-			{ match : {name : ["Academy Rector", "Carnival of Souls", "Covetous Dragon", "Donate", "Masticore", "Metalworker", "Opalescence", "Phyrexian Negator", "Powder Keg", "Rofellos, Llanowar Emissary", "Replenish", "Treachery",
-							   "Yavimaya Hollow", "Yawgmoth's Bargain"]}, replace : {reserved : true}}
+			{ match : {name : ["Urza's Incubator"]}, flavorAddExclamation : true }
 		],
 		S99 :
 		[
@@ -2588,37 +2532,43 @@
 			{ match : {name : "Elkin Bottle"}, replace : {number : "35", originalText : "{3}, {T}: Remove the top card of your library from the game face up. Until the beginning of your next upkeep, you may play that card as though it were in your hand. At the beginning of your next upkeep, if you haven't played the card, put it into your graveyard."}},
 			{ match : {name : "Elvish Bard"}, replace : {number : "24", originalText : "All creatures able to block Elvish Bard do so."}},
 			{ match : {name : "Folk of the Pines"}, replace : {number : "25", originalText : "{1}{G}: Folk of the Pines gets +1/+0 until end of turn."}},
-			{ match : {name : "Forest"}, replace : {number : "48", originalText : "{G}"}},
+			{ match : {name : "Forest"}, replace : {number : "48", originalText : "{G}"}, incrementNumber : true},
 			{ match : {name : "Foul Familiar"}, replace : {number : "5", originalText : "Foul Familiar can't black.\n{B}, Pay 1 life: Return Foul Familiar to its owner's hand."}},
 			{ match : {name : "Fyndhorn Elves"}, replace : {number : "26", originalText : "{T}: Add {G} to your mana pool."}},
 			{ match : {name : "Giant Growth"}, replace : {number : "27"}},
 			{ match : {name : "Giant Trap Door Spider"}, replace : {number : "33", originalText : "{1}{R}{G}, {T}: Remove from the game Giant Trap Door Spider and target creature without flying that's attacking you."}},
 			{ match : {name : "Goblin Mutant"}, replace : {number : "12", originalText : "Trample\nGoblin Mutant can't attack if defending player controls an untapped creature with power 3 or greater.\nGoblin Mutant can't block creatures with power 3 or greater."}},
-			{ match : {name : "Guerrilla Tactics"}, replace : {number : "13a", artist : "Amy Weber", originalText : "Guerrilla Tactics deals 2 damage to target creature or player.\nWhen a spell or ability an opponent controls causes you to discard Guerrilla Tactics from your hand, Guerrilla Tactics deals 4 damage to target creature or player."}},
+			{ match : {name : "Guerrilla Tactics"}, replace : {number : "13a", imageName  : "guerrilla tactics1", artist : "Amy Weber", originalText : "Guerrilla Tactics deals 2 damage to target creature or player.\nWhen a spell or ability an opponent controls causes you to discard Guerrilla Tactics from your hand, Guerrilla Tactics deals 4 damage to target creature or player."}},
+			{ copyCard : "Guerrilla Tactics", replace : { number : "13b", artist : "Randy Asplund", imageName : "guerrilla tactics2" }},
 			{ match : {name : "Hurricane"}, replace : {number : "28"}},
 			{ match : {name : "Icy Manipulator"}, replace : {number : "36"}},
 			{ match : {name : "Incinerate"}, replace : {number : "14", originalText : "Incinerate deals 3 damage to target creature or player. A creature dealt damage this way can't be regenerated this turn."}},
 			{ match : {name : "Jokulhaups"}, replace : {number : "15", originalText : "Destroy all artifacts, creatures, and lands. They can't be regenerated."}},
 			{ match : {name : "Karplusan Forest"}, replace : {number : "39", originalText : "{T}: Add one colorless mana to your mana pool.\n{T}: Add {R} or {G} to your mana pool. Karplusan Forest deals 1 damage to you."}},
 			{ match : {name : "Lava Burst"}, replace : {number : "16", originalText : "Lava Burst deals X damage to target creature or player. If Lava Burst would deal damage to a creature, that damage can't be prevented or dealt instead to another creature or player."}},
-			{ match : {name : "Lim-Dûl's High Guard"}, replace : {number : "6"}, fixFlavorNewlines : true},
+			{ match : {name : "Lim-Dûl's High Guard"}, replace : {number : "6a", imageName : "lim-dul's high guard1"}, fixFlavorNewlines : true},
+			{ copyCard : "Lim-Dûl's High Guard", replace : { number : "6b", imageName : "lim-dul's high guard2" }},
 			{ match : {name : "Lhurgoyf"}, replace : {border : "black", number : "29", originalText : "Lhurgoyf's power is equal to the number of creature cards in all graveyards and its toughness is equal to that number plus 1."}},
 			{ match : {name : "Mountain"}, replace : {number : "45", originalText : "{R}"}, incrementNumber : true},
 			{ match : {name : "Necropotence"}, replace : {border : "black", number : "7", originalText : "Skip your draw step.\nIf you would discard a card from your hand, remove that card from the game instead.\nPay 1 life: Remove the top card of your library from the game face down. At the end of your turn, put that card into your hand."}},
 			{ match : {name : "Orcish Cannoneers"}, replace : {number : "17"}},
-			{ match : {name : "Phantasmal Fiend"}, replace : {number : "8a", originalText : "{B}: Phantasmal Fiend gets +1/-1 until end of turn.\n{1}{U}: Switch Phantasmal Fiend's power and toughness until end of turn. Effects that would alter Phantasmal Fiend's power this turn alter its toughness instead, and vice versa."}},
-			{ match : {name : "Phyrexian War Beast"}, replace : {number : "37a", originalText : "When Phyrexian War Beast leaves play, sacrifice a land and Phyrexian War Beast deals 1 damage to you."}},
+			{ match : {name : "Phantasmal Fiend"}, replace : {number : "8a", imageName : "phantasmal fiend1", originalText : "{B}: Phantasmal Fiend gets +1/-1 until end of turn.\n{1}{U}: Switch Phantasmal Fiend's power and toughness until end of turn. Effects that would alter Phantasmal Fiend's power this turn alter its toughness instead, and vice versa."}},
+			{ copyCard : "Phantasmal Fiend", replace : { number : "8b", imageName : "phantasmal fiend2" }},
+			{ match : {name : "Phyrexian War Beast"}, replace : {number : "37a", imageName : "phyrexian war beast1", originalText : "When Phyrexian War Beast leaves play, sacrifice a land and Phyrexian War Beast deals 1 damage to you."}},
+			{ copyCard : "Phyrexian War Beast", replace : { number : "37b", imageName : "phyrexian war beast2" }},
 			{ match : {name : "Pillage"}, replace : {number : "18", originalText : "Destroy target artifact or land. It can't be regenerated."}},
 			{ match : {name : "Pyroclasm"}, replace : {number : "19"}},
 			{ match : {name : "Shatter"}, replace : {number : "20"}},
 			{ match : {name : "Soul Burn"}, replace : {number : "9", originalText : "Spend only black and/or red mana on X.\nSoul Burn deals X damage to target creature or player. You gain life equal to the damage dealt, but not more than the amount of {B} spent on X, the player's life total before Soul Burn dealt damage, or the creature's toughness."}},
-			{ match : {name : "Storm Shaman"}, replace : {number : "21a", flavor : "\"Embrace the storm. Its voice shall echo within you, and its fire shall become your touch!\"\n—Lovisa Coldeyes, Balduvian chieftain", originalText : "{R}: Storm Shaman gets +1/+0 until end of turn."}},
+			{ match : {name : "Storm Shaman"}, replace : {number : "21a", imageName : "storm shaman1", flavor : "\"Embrace the storm. Its voice shall echo within you, and its fire shall become your touch!\"\n—Lovisa Coldeyes, Balduvian chieftain", originalText : "{R}: Storm Shaman gets +1/+0 until end of turn."}},
+			{ copyCard : "Storm Shaman", replace : { number : "21b", imageName : "storm shaman2" }},
 			{ match : {name : "Sulfurous Springs"}, replace : {number : "40", originalText : "{T}: Add one colorless mana to your mana pool.\n{T}: Add {B} or {R} to your mana pool. Sulfurous Springs deals 1 damage to you."}},
 			{ match : {name : "Swamp"}, replace : {number : "42", originalText : "{B}"}, incrementNumber : true},
 			{ match : {name : "Underground River"}, replace : {number : "41", originalText : "{T}: Add one colorless mana to your mana pool.\n{T}: Add {U} or {B} to your mana pool. Underground River deals 1 damage to you."}},
 			{ match : {name : "Walking Wall"}, replace : {number : "38", originalText : "(Walls can't attack.)\n{3}: Walking Wall gets +3/-1 until end of turn and may attack this turn as though it weren't a Wall. Play this ability only once each turn.", artist : "Anthony S. Waters"}},
 			{ match : {name : "Woolly Spider"}, replace : {number : "30", originalText : "Woolly Spider may block as though it had flying.\nWhenever Woolly Spider blocks a creature with flying, Woolly Spider gets +0/+2 until end of turn."}},
-			{ match : {name : "Yavimaya Ancients"}, replace : {number : "31a", originalText : "{G}: Yavimaya Ancients gets +1/-2 until end of turn.", flavor : "\"We orphans of Fyndhorn have found no welcome in this alient place.\"\n—Taaveti of Kelsinko, elvish hunter"}},
+			{ match : {name : "Yavimaya Ancients"}, replace : {number : "31a", imageName : "yavimaya ancients1", originalText : "{G}: Yavimaya Ancients gets +1/-2 until end of turn.", flavor : "\"We orphans of Fyndhorn have found no welcome in this alient place.\"\n—Taaveti of Kelsinko, elvish hunter"}},
+			{ copyCard : "Yavimaya Ancients", replace : { number : "31b", imageName : "yavimaya ancients2" }},
 			{ match : {name : "Yavimaya Ants"}, replace : {number : "32", originalText : "Trample; haste (This creature may attack and {T} the turn it comes under your control.)\nCumulative upkeep {G}{G} (At the beginning of your upkeep, put an age counter on this creature, then sacrifice it unless you pay {G}{G} for each age counter on it.)"}}
 		],
 		TOR :
@@ -3097,7 +3047,51 @@
 			{ match : {name : "Spawnsire of Ulamog"}, replace : {text : "Annihilator 1 (Whenever this creature attacks, defending player sacrifices a permanent.)\n{4}: Put two 0/1 colorless Eldrazi Spawn creature tokens onto the battlefield. They have \"Sacrifice this creature: Add {1} to your mana pool.\"\n{20}: Cast any number of Eldrazi cards you own from outside the game without paying their mana costs."}},
 			{ match : {name : "Jade Statue"}, remove : ["power", "toughness"] },
 			{ match : {name : "Ghostfire"}, remove : ["colors"] },
-			{ match : {name : "Rhox"}, addPrinting : "Starter 2000"}
+			{ match : {name : "Rhox"}, addPrinting : "Starter 2000"},
+			{ match : {name : "Regrowth"}, setLegality : {"Vintage" : "Legal"}},
+			{ match : {name : ["Argothian Wurm", "Barrin, Master Wizard", "Citanul Centaurs", "Gaea's Cradle", "Gilded Drake", "Great Whale", "Herald of Serra", "Karn, Silver Golem", "Lifeline", "Lightning Dragon", "Morphling", "Opal Archangel",
+							   "Serra's Sanctum", "Tolarian Academy", "Temporal Aperture", "Time Spiral", "Yawgmoth's Will", "Zephid", "Deranged Hermit", "Grim Monolith", "Memory Jar", "Multani, Maro-Sorcerer", "Palinchron", "Radiant, Archangel", "Ring of Gix", "Second Chance", "Weatherseed Treefolk", "Academy Rector", "Carnival of Souls", "Covetous Dragon", "Donate", "Masticore", "Metalworker", "Opalescence", "Phyrexian Negator", "Powder Keg", "Rofellos, Llanowar Emissary", "Replenish", "Treachery",
+							   "Yavimaya Hollow", "Yawgmoth's Bargain", "Ancestral Recall", "Badlands", "Bayou", "Black Lotus", "Blaze of Glory", "Braingeyser", "Chaos Orb", "Contract from Below", "Copy Artifact", "Cyclopean Tomb", "Darkpact", "Demonic Attorney", "Demonic Hordes", "Farmstead",
+							   "Fastbond", "Forcefield", "Fork", "Gauntlet of Might", "Granite Gargoyle", "Illusionary Mask", "Kudzu", "Lich", "Mox Emerald", "Mox Jet", "Mox Pearl", "Mox Ruby", "Mox Sapphire", "Natural Selection",
+							   "Plateau", "Raging River", "Roc of Kher Ridges", "Rock Hydra", "Savannah", "Scrubland", "Sedge Troll", "Taiga", "Time Vault", "Time Walk", "Timetwister", "Tropical Island", "Tundra", "Two-Headed Giant of Foriys",
+							   "Underground Sea", "Vesuvan Doppelganger", "Veteran Bodyguard", "Volcanic Island", "Wheel of Fortune", "Word of Command", "Ali from Cairo", "Bazaar of Baghdad", "City in a Bottle", "Diamond Valley", "Drop of Honey", "Elephant Graveyard", "Guardian Beast", "Ifh-Bíff Efreet", "Island of Wak-Wak", "Jihad", "Juzám Djinn", "Khabál Ghoul",
+							   "King Suleiman", "Library of Alexandria", "Merchant Ship", "Old Man of the Sea", "Pyramids", "Ring of Ma'rûf", "Sandals of Abdallah", "Serendib Djinn", "Shahrazad", "Singing Tree", "Argivian Archaeologist", "Candelabra of Tawnos", "Citanul Druid", "Damping Field", "Gaea's Avenger", "Gate to Phyrexia", "Golgothian Sylex", "Haunting Wind", "Martyrs of Korlis", "Mightstone",
+							   "Mishra's Workshop", "Power Artifact", "Powerleech", "Su-Chi", "Tawnos's Coffin", "Transmute Artifact", "Urza's Miter", "Weakstone", "The Abyss", "Acid Rain", "Adun Oakenshield", "Al-abara's Carpet", "Alchor's Tomb", "All Hallow's Eve", "Angus Mackenzie", "Bartel Runeaxe", "Boris Devilboon", "Caverns of Despair", "Chains of Mephistopheles",
+							   "Cleanse", "Disharmony", "Divine Intervention", "Elder Spawn", "Eureka", "Falling Star", "Field of Dreams", "Firestorm Phoenix", "Forethought Amulet", "Gosta Dirk", "Gravity Sphere", "Gwendlyn Di Corci",
+							   "Halfdane", "Hazezon Tamar", "Hellfire", "Imprison", "In the Eye of Chaos", "Infinite Authority", "Invoke Prejudice", "Jacques le Vert", "Jovial Evil", "Knowledge Vault", "Kobold Overlord", "Lady Caleria",
+							   "Lady Evangela", "Land Equilibrium", "Life Matrix", "Lifeblood", "Living Plane", "Livonya Silone", "Mana Matrix", "Master of the Hunt", "Mirror Universe", "Moat", "Mold Demon", "Nether Void", "North Star",
+							   "Nova Pentacle", "Pixie Queen", "Planar Gate", "Quarum Trench Gnomes", "Ragnar", "Ramses Overdark", "Rapid Fire", "Rasputin Dreamweaver", "Reverberation", "Ring of Immortals", "Rohgahh of Kher Keep",
+							   "Spinal Villain", "Spiritual Sanctuary", "Storm World", "Sword of the Ages", "The Tabernacle at Pendrell Vale", "Telekinesis", "Tetsuo Umezawa", "Thunder Spirit", "Tuknir Deathlock",
+							   "Typhoon", "Ur-Drago", "Willow Satyr", "Wood Elemental", "City of Shadows", "Cleansing", "Eternal Flame", "Exorcist", "Frankenstein's Monster", "Goblin Wizard", "Grave Robbers", "Hidden Path", "Knights of Thorn", "Lurker", "Mana Vortex", "Martyr's Cry",
+							   "Nameless Race", "Niall Silvain", "Preacher", "Psychic Allergy", "Scarwood Bandits", "Season of the Witch", "Sorrow's Path", "Stone Calendar", "Tracker", "Worms of the Earth", "Wormwood Treefolk", "Aeolipile", "Balm of Restoration", "Conch Horn", "Delif's Cube", "Draconian Cylix", "Dwarven Armorer", "Ebon Praetor", "Elven Lyre", "Elvish Farmer", "Fungal Bloom", "Goblin Flotilla", "Hand of Justice",
+							   "Homarid Shaman", "Icatian Lieutenant", "Icatian Skirmishers", "Implements of Sacrifice", "Rainbow Vale", "Ring of Renewal", "River Merfolk", "Spirit Shield", "Thelon's Curse", "Thelonite Monk", "Thrull Champion",
+							   "Tourach's Gate", "Vodalian Knights", "Vodalian War Machine", "Zelyon Sword", "Aegis of the Meek", "Altar of Bone", "Amulet of Quoz", "Balduvian Hydra", "Blizzard", "Brand of Ill Omen", "Call to Arms", "Chromatic Armor", "Earthlink", "Energy Storm", "Flow of Maggots", "Formation", "Fyndhorn Pollen",
+							   "General Jarkeld", "Glacial Crevasses", "Gravebind", "Halls of Mist", "Hot Springs", "Ice Cauldron", "Illusionary Presence", "Illusions of Grandeur", "Infernal Denizen", "Jester's Mask", "Kjeldoran Knight",
+							   "Kjeldoran Phalanx", "Land Cap", "Lava Tubes", "Lightning Blow", "Márton Stromgald", "Mercenaries", "Mesmeric Trance", "Minion of Tevesh Szat", "Mountain Titan", "Mudslide", "Musician", "Mystic Might", "Polar Kraken",
+							   "Reality Twist", "River Delta", "Ritual of Subdual", "Skeleton Ship", "Snowblind", "Soldevi Golem", "Spoils of Evil", "Spoils of War", "Storm Spirit", "Timberline Ridge", "Trailblazer",
+							   "Veldt", "Winter's Chill", "An-Zerrin Ruins", "Anaba Ancestor", "Anaba Spirit Crafter", "Apocalypse Chime", "Autumn Willow", "Aysen Crusader", "Aysen Highway", "Baki's Curse", "Baron Sengir", "Beast Walkers", "Black Carriage", "Chain Stasis",
+							   "Daughter of Autumn", "Didgeridoo", "Dwarven Pony", "Dwarven Sea Clan", "Faerie Noble", "Grandmother Sengir", "Hazduhr the Abbot", "Heart Wolf", "Koskun Falls", "Leeches", "Mammoth Harness", "Marjhan", "Mystic Decree",
+							   "Narwhal", "Reveka, Wizard Savant", "Rysorian Badger", "Serra Aviary", "Soraya the Falconer", "Timmerian Fiends", "Veldrane of Sengir", "Wall of Kelp", "Willow Priestess", "Winter Sky", "Ashnod's Cylix", "Balduvian Trading Post", "Chaos Harlequin", "Dystopia", "Fatal Lore", "Floodwater Dam", "Gargantuan Gorilla", "Gustha's Scepter", "Heart of Yavimaya", "Helm of Obedience", "Ivory Gargoyle",
+							   "Kaysa", "Keeper of Tresserhorn", "Kjeldoran Outpost", "Krovikan Horror", "Lake of the Dead", "Lodestone Bauble", "Lord of Tresserhorn", "Misfortune", "Nature's Wrath", "Omen of Fire", "Phantasmal Sphere",
+							   "Phelddagrif", "Phyrexian Devourer", "Phyrexian Portal", "Ritual of the Machine", "Rogue Skycaptain", "Royal Decree", "Sheltered Valley", "Soldevi Digger", "Soldevi Excavations", "Splintering Wind", "Sustaining Spirit",
+							   "Sworn Defender", "Thawing Glaciers", "Thought Lash", "Tidal Control", "Tornado", "Varchild's War-Riders", "Wandering Mage", "Winter's Night", "Acidic Dagger", "Afiya Grove", "Amulet of Unmaking", "Asmira, Holy Avenger", "Auspicious Ancestor", "Barreling Attack", "Bazaar of Wonders", "Benthic Djinn", "Bone Mask", "Brushwagg", "Cadaverous Bloom",
+							   "Canopy Dragon", "Carrion", "Catacomb Dragon", "Chaosphere", "Circle of Despair", "Cycle of Life", "Discordant Spirit", "Divine Retribution", "Emberwilde Caliph", "Emberwilde Djinn", "Energy Bolt", "Energy Vortex",
+							   "Forsaken Wastes", "Frenetic Efreet", "Grim Feast", "Hakim, Loreweaver", "Hall of Gemstone", "Harbinger of Night", "Hivis of the Scale", "Jabari's Influence", "Jungle Patrol", "Kukemssa Pirates", "Leering Gargoyle",
+							   "Lion's Eye Diamond", "Lure of Prey", "Malignant Growth", "Mangara's Tome", "Mindbender Spores", "Misers' Cage", "Mist Dragon", "Natural Balance", "Null Chamber", "Paupers' Cage", "Phyrexian Dreadnought", "Phyrexian Purge",
+							   "Phyrexian Tribute", "Political Trickery", "Preferred Selection", "Prismatic Lace", "Purgatory", "Purraj of Urborg", "Rashida Scalebane", "Razor Pendulum", "Reflect Damage", "Reparations", "Rock Basilisk", "Sawback Manticore",
+							   "Seeds of Innocence", "Shallow Grave", "Shauku, Endbringer", "Shimmer", "Sidar Jabari", "Soul Echo", "Spectral Guardian", "Spirit of the Night", "Subterranean Spirit", "Tainted Specter", "Taniwha", "Teeka's Dragon",
+							   "Teferi's Imp", "Teferi's Isle", "Telim'Tor", "Telim'Tor's Edict", "Tombstone Stairwell", "Torrent of Lava", "Unfulfilled Desires", "Ventifact Bottle", "Warping Wurm", "Wellspring",
+							   "Yare", "Zirilan of the Claw", "Zuberi, Golden Feather", "Aku Djinn", "Anvil of Bogardan", "Bogardan Phoenix", "Breathstealer's Crypt", "Chronatog", "City of Solitude", "Corrosion", "Diamond Kaleidoscope", "Elkin Lair", "Equipoise", "Eye of Singularity", "Femeref Enchantress",
+							   "Firestorm Hellkite", "Flooded Shoreline", "Forbidden Ritual", "Griffin Canyon", "Guiding Spirit", "Kaervek's Spite", "Katabatic Winds", "Kookus", "Lichenthrope", "Lightning Cloud", "Ogre Enforcer", "Phyrexian Marauder",
+							   "Pillar Tombs of Aku", "Pygmy Hippo", "Quirion Druid", "Rainbow Efreet", "Retribution of the Meek", "Righteous War", "Sands of Time", "Squandered Resources", "Suleiman's Legacy", "Teferi's Realm", "Three Wishes", "Tithe",
+							   "Triangle of War", "Undiscovered Paradise", "Viashivan Dragon", "Zhalfirin Crusader", "Abeyance", "Aboroth", "Ancestral Knowledge", "Avizoa", "Bone Dancer", "Bösium Strip", "Bubble Matrix", "Debt of Loyalty", "Dwarven Thaumaturgist", "Ertai's Familiar", "Firestorm", "Fungus Elemental", "Gallowbraid",
+							   "Goblin Bomb", "Heart of Bogardan", "Heat Stroke", "Infernal Tribute", "Inner Sanctum", "Liege of the Hollows", "Lotus Vale", "Mana Web", "Maraxus of Keld", "Morinfen", "Mwonvuli Ooze", "Null Rod", "Paradigm Shift",
+							   "Peacekeeper", "Pendrell Mists", "Psychic Vortex", "Scorched Ruins", "Thran Tome", "Tolarian Entrancer", "Tolarian Serpent", "Urborg Justice", "Urborg Stalker", "Wave of Terror", "Well of Knowledge",
+							   "Winding Canyons", "Xanthic Statue", "Aluren", "Apocalypse", "Avenging Angel", "Commander Greven il-Vec", "Corpse Dance", "Cursed Scroll", "Earthcraft", "Eladamri, Lord of Leaves", "Escaped Shapeshifter", "Humility", "Intuition", "Meditate", "Orim, Samite Healer",
+							   "Recycle", "Sarcomancy", "Selenia, Dark Angel", "Crovax the Cursed", "Dream Halls", "Mox Diamond", "Silver Wyvern", "Sliver Queen", "Volrath's Shapeshifter", "Volrath's Stronghold", "City of Traitors", "Dominating Licid", "Ertai, Wizard Adept", "Exalted Dragon", "Hatred", "Mind Over Matter", "Oath of Ghouls", "Recurring Nightmare", "Survival of the Fittest"]}, replace : {reserved : true}},
+			{ match : {layout : ["plane", "phenomenon"]}, deleteLegality : ["Vintage", "Commander", "Legacy"]},
+			{ match : {name : ["Advantageous Proclamation","Amulet of Quoz","Ancestral Recall","Backup Plan","Balance","Biorhythm","Black Lotus","Brago's Favor","Braids, Cabal Minion","Bronze Tablet","Chaos Orb","Coalition Victory","Channel","Contract from Below","Darkpact","Demonic Attorney","Double Stroke","Emrakul, the Aeons Torn","Erayo, Soratami Ascendant","Falling Star","Fastbond","Gifts Ungiven","Griselbrand","Immediate Action","Iterative Analysis","Jeweled Bird","Karakas","Library of Alexandria","Limited Resources","Mox Emerald","Mox Jet","Mox Pearl","Mox Ruby","Mox Sapphire","Muzzio's Preparations","Painter's Servant","Panoptic Mirror","Power Play","Primeval Titan","Protean Hulk","Rebirth","Recurring Nightmare","Rofellos, Llanowar Emissary","Secret Summoning","Secrets of Paradise","Sentinel Dispatch","Shahrazad","Sundering Titan","Sway of the Stars","Sylvan Primordial","Tempest Efreet","Time Vault","Time Walk","Timmerian Fiends","Tinker","Tolarian Academy","Trade Secrets","Unexpected Potential","Upheaval","Worldfire","Worldknit","Yawgmoth's Bargain"]},
+					   setLegality : {"Commander" : "Banned"}}
 		]
 	};
 

@@ -372,7 +372,10 @@ function checkSetsForProblems(cb)
 
 function checkSetForProblems(setCode, cb)
 {
-	var ALLOWED_DUPS = {UGL :["B.F.M. (Big Furry Monster)"], DKM : ["Mountain", "Swamp"], DPA :["Forest", "Island", "Mountain", "Swamp"], CST : ["Forest", "Island", "Mountain", "Swamp", "Plains"]};
+	var ALLOWED_DUPS = { UGL :["B.F.M. (Big Furry Monster)"],
+						 DKM : ["Forest", "Mountain", "Swamp", "Guerrilla Tactics", "Lim-Dûl's High Guard", "Phantasmal Fiend", "Phyrexian War Beast", "Storm Shaman", "Yavimaya Ancients"],
+						 DPA :["Forest", "Island", "Mountain", "Swamp"],
+						 CST : ["Forest", "Island", "Mountain", "Swamp", "Plains"]};
 	var ALLOWED_CATEGORIES = ["letter", "space", "punctuation", "number", "symbol"];
 	var ALLOWED_OTHER_CHARS = ['\n'];
 	var ALLOWED_MISSING_NUMBERS = ["CST"];
