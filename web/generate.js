@@ -375,11 +375,13 @@ function checkSetForProblems(setCode, cb)
 	var ALLOWED_DUPS = { UGL :["B.F.M. (Big Furry Monster)"],
 						 DKM : ["Forest", "Mountain", "Swamp", "Guerrilla Tactics", "Lim-Dûl's High Guard", "Phantasmal Fiend", "Phyrexian War Beast", "Storm Shaman", "Yavimaya Ancients"],
 						 DPA :["Forest", "Island", "Mountain", "Swamp"],
-						 CST : ["Forest", "Island", "Mountain", "Swamp", "Plains"]};
+						 CST : ["Forest", "Island", "Mountain", "Swamp", "Plains"],
+						 CED : ["Forest", "Island", "Mountain", "Swamp", "Plains"],
+						 CEI : ["Forest", "Island", "Mountain", "Swamp", "Plains"]};
 	var ALLOWED_CATEGORIES = ["letter", "space", "punctuation", "number", "symbol"];
 	var ALLOWED_OTHER_CHARS = ['\n'];
 	var ALLOWED_MISSING_NUMBERS = ["CST"];
-	var ALLOWED_MISSING_MAGICCARDSINFO_CODE = ["RQS", "VAN", "DD3_DVD", "DD3_EVG", "DD3_GVL", "DD3_JVC", "FRF_UGIN"];
+	var ALLOWED_MISSING_MAGICCARDSINFO_CODE = ["RQS", "VAN", "FRF_UGIN"];
 
 	tiptoe(
 		function getJSON()
@@ -506,7 +508,7 @@ function checkSetForProblems(setCode, cb)
 					if(["plane", "phenomenon", "scheme", "vanguard"].contains(card.layout) || !card.hasOwnProperty("number"))
 						return;
 
-					if(!card.hasOwnProperty("variations") && !card.starter && seenNumbers.contains(card.number))
+					if(!card.hasOwnProperty("variations") && !card.starter && setData.type!=="starter" && seenNumbers.contains(card.number))
 						base.info("%s: Duplicate card number (%s): %s", setCode, card.name, card.number);
 					else
 						seenNumbers.push(card.number);

@@ -58,6 +58,24 @@
 			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"]
 		},
 		{
+			name : "Collector's Edition",
+			code : "CED",
+			magicCardsInfoCode : "ced",
+			isMCISet : true,
+			releaseDate : "1993-12-01",
+			border : "black",
+			type : "reprint"
+		},
+		{
+			name : "International Collector's Edition",
+			code : "CEI",
+			magicCardsInfoCode : "cedi",
+			isMCISet : true,
+			releaseDate : "1993-12-01",
+			border : "black",
+			type : "reprint"
+		},
+		{
 			name : "Dragon Con",
 			code : "pDRC",
 			magicCardsInfoCode : "drc",
@@ -1605,6 +1623,15 @@
 			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"]
 		},
 		{
+			name : "Clash Pack",
+			code : "CPK",
+			isMCISet : true,
+			magicCardsInfoCode : "clash",
+			releaseDate : "2014-07-18",
+			border : "black",
+			type : "starter"
+		},
+		{
 			name : "From the Vault: Annihilation (2014)",
 			code : "V14",
 			magicCardsInfoCode : "v14",
@@ -1641,6 +1668,7 @@
 		{
 			name : "Duel Decks Anthology, Divine vs. Demonic",
 			code : "DD3_DVD",
+			magicCardsInfoCode : "ddadvd",
 			releaseDate : "2014-12-05",
 			border : "black",
 			type : "duel deck"
@@ -1648,6 +1676,7 @@
 		{
 			name : "Duel Decks Anthology, Elves vs. Goblins",
 			code : "DD3_EVG",
+			magicCardsInfoCode : "ddaevg",
 			releaseDate : "2014-12-05",
 			border : "black",
 			type : "duel deck"
@@ -1655,6 +1684,7 @@
 		{
 			name : "Duel Decks Anthology, Garruk vs. Liliana",
 			code : "DD3_GVL",
+			magicCardsInfoCode : "ddagvl",
 			releaseDate : "2014-12-05",
 			border : "black",
 			type : "duel deck"
@@ -1662,6 +1692,7 @@
 		{
 			name : "Duel Decks Anthology, Jace vs. Chandra",
 			code : "DD3_JVC",
+			magicCardsInfoCode : "ddajvc",
 			releaseDate : "2014-12-05",
 			border : "black",
 			type : "duel deck"
@@ -2219,7 +2250,7 @@
 			{ match : {name : "Howlpack Alpha"}, replace : {layout : "double-faced", names : ["Mayor of Avabruck", "Howlpack Alpha"]}},
 			{ match : {name : "Overbeing of Myth"}, replace : {flavor : "\"She walks among us unseen, learning from our imperfections.\"\n—The Seer's Parables"}},
 			{ match : {name : "Wren's Run Packmaster"}, replace : {releaseDate : "2007-09-29"}},
-			{ match : {name : "Sultai Ascendacy"}, replace : {name : "Sultai Ascendancy"}}
+			{ match : {name : "Sultai Ascendacy"}, replace : {name : "Sultai Ascendancy", imageName : "sultai ascendancy"}}
 		],
 		TMP :
 		[
@@ -3040,6 +3071,16 @@
 		M15 :
 		[
 			{ match : {number : ["270","271","272","273","274","275","276","277","278","279","280","281","282","283","284"]}, replace : {starter : true}}
+		],
+		CPK :
+		[
+			{ match : {name : "Necropolis Fiend"}, replace : {number : "1", source: "CP2-Fate Reforged"}},
+			{ match : {name : "Hero's Downfall"}, replace : {number : "2", source: "CP2-Fate Reforged"}},
+			{ match : {name : "Sultai Ascendacy"}, replace : {name : "Sultai Ascendancy", imageName : "sultai ascendancy", number : "3", source: "CP2-Fate Reforged"}},
+			{ match : {name : "Reaper of the Wilds"}, replace : {number : "4", source: "CP2-Fate Reforged"}},
+			{ match : {name : "Whip of Erebos"}, replace : {number : "5", source: "CP2-Fate Reforged"}},
+			{ match : {name : "Courser of Kruphix"}, replace : {number : "6", source: "CP2-Fate Reforged"}},
+			{ match : {number : ["1", "2", "3", "4", "5", "6"]}, replace : {source: "CP1-Magic 2015"}}
 		],
 		"*" :
 		[

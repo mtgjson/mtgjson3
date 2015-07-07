@@ -189,7 +189,7 @@
 		Each individual set is a JSON object like this:</p>
 <pre><code data-language="javascript">    {~lb}
                 "name" : "Nemesis",            // The name of the set
-                "code" : "NMS",                // The code name of the set
+                "code" : "NMS",                // The set's abbreviated code
         "gathererCode" : "NE",                 // The code that Gatherer uses for the set. Only present if different than 'code'
              "oldCode" : "NEM",                // An old style code used by some Magic software. Only present if different than 'gathererCode' and 'code'
   "magicCardsInfoCode" : "ne",                 // The code that magiccards.info uses for the set. Only present if magiccards.info has this set
@@ -478,7 +478,7 @@
 				<tr>
 					<td>source</td>
 					<td>"Theros Game Day prize"</td>
-					<td>For promo cards, this is where this card was originally obtained. For box sets that are theme decks, this is which theme deck the card is from.</td>
+					<td>For promo cards, this is where this card was originally obtained. For box sets that are theme decks, this is which theme deck the card is from. For clash packs, this is which deck it is from.</td>
 				</tr>
 			</tbody>
 		</table>
@@ -841,7 +841,6 @@
 			<li>Renaissance</li>
 			<li>Hero's Path</li>
 			<li>Face the Hydra</li>
-			<li>Collector's Edition and International Collector's Edition<br>These sets are identical to Limited Edition Beta except with different card backs and additional basic lands.</li>
 		</ul>
 		<br>
 		<hr>

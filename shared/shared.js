@@ -442,6 +442,9 @@ function generateCacheFilePath(targetUrl)
 exports.finalizePrintings = finalizePrintings;
 function finalizePrintings(card)
 {
+	if(!card.printings)
+		return;
+	
 	card.printings = card.printings.unique().multiSort([function(item) { return moment(getReleaseDateForSetName(item), "YYYY-MM-DD").unix(); },
 														function(item) { return item; }]);
 	card.printingCodes = card.printings.map(function(printing) { return exports.getSetCodeFromName(printing); });
