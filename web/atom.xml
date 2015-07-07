@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+	<title>Magic the Gathering card data in JSON format</title>
+	<link href="http://mtgjson.com/atom.xml" rel="self"/>
+	<link href="http://mtgjson.com"/>
+	<updated>2015-07-06T00:00:00</updated>
+	<id>http://mtgjson.com</id>
+	<author>
+		<name>Robert Schultz</name>
+		<email>robert@cosmicrealms.com</email>
+	</author>
+	
+<entry>
+			<title>Update: Version 2.21.0</title>
+			<link href="http://mtgjson.com/#changeLog115"/>
+			<updated>2015-07-06T00:00:00</updated>
+			<id>http://mtgjson.com/#changeLog115</id>
+			<content type="html">&lt;p&gt;Changes:&lt;br&gt;&lt;ul&gt;&lt;li&gt;Added set: Clash Pack (CPK)&lt;/li&gt;&lt;li&gt;Added set: Collector&#39;s Edition (CED)&lt;/li&gt;&lt;li&gt;Added set: International Collector&#39;s Edition (CEI)&lt;/li&gt;&lt;li&gt;DD3 (All): Added &#39;magicCardsInfoCode&#39; field.&lt;/li&gt;&lt;li&gt;pPRE: Fixed &#39;imageName&#39; field for card &#39;Sultai Ascendancy&#39;&lt;/li&gt;</content>
+		</entry>
+	
+<entry>
+			<title>Update: Version 2.20.7</title>
+			<link href="http://mtgjson.com/#changeLog114"/>
+			<updated>2015-07-04T00:00:00</updated>
+			<id>http://mtgjson.com/#changeLog114</id>
+			<content type="html">&lt;p&gt;Changes:&lt;br&gt;&lt;ul&gt;&lt;li&gt;Several cards are now correctly marked as Banned in commander. Source: http://magic.wizards.com/en/gameinfo/gameplay/formats/commander&lt;/li&gt;&lt;li&gt;DKM: Added 2 missing Forest cards and several alternate art cards. (NOTE: This has caused image names to change. So if you use these for unique ID&#39;s you need to reprocess DKM)&lt;/li&gt;</content>
+		</entry>
+	
+<entry>
+			<title>Update: Version 2.20.6</title>
+			<link href="http://mtgjson.com/#changeLog113"/>
+			<updated>2015-07-03T00:00:00</updated>
+			<id>http://mtgjson.com/#changeLog113</id>
+			<content type="html">&lt;p&gt;Changes:&lt;br&gt;&lt;ul&gt;&lt;li&gt;KTK, pPRE: Fixed &#39;printings&#39; field for card Sultai Ascendancy&lt;/li&gt;&lt;li&gt;The &#39;printings&#39; and &#39;printingCodes&#39; fields are now correctly secondarily sorted by name if two sets have the same release date. This is a fix to the previous version.&lt;/li&gt;&lt;li&gt;Cards with layout &#39;plane&#39; or &#39;phenomenon&#39; are no longer marked as being legal for Vintage, Commander and Legacy.&lt;/li&gt;&lt;li&gt;Fixed the &#39;reserved&#39; field for the following cards: Bösium Strip, Ifh-Bíff Efreet, Juzám Djinn, Khabál Ghoul, Márton Stromgald, Ring of Ma&#39;rûf&lt;/li&gt;</content>
+		</entry>
+	
+<entry>
+			<title>Update: Version 2.20.5</title>
+			<link href="http://mtgjson.com/#changeLog112"/>
+			<updated>2015-06-30T00:00:00</updated>
+			<id>http://mtgjson.com/#changeLog112</id>
+			<content type="html">&lt;p&gt;Changes:&lt;br&gt;&lt;ul&gt;&lt;li&gt;pPRE: Fixed &#39;name&#39; field for Sultai Ascendancy&lt;/li&gt;&lt;li&gt;The &#39;printings&#39; and &#39;printingCodes&#39; fields are now correctly secondarily sorted by name if two sets have the same release date.&lt;/li&gt;&lt;li&gt;The &#39;Regrowth&#39; cards have had their legailty for Vintage fixed.&lt;/li&gt;&lt;li&gt;The &#39;reserved&#39; field is now applied to every instance of that card instead of just specific sets.&lt;/li&gt;</content>
+		</entry>
+	
+<entry>
+			<title>Update: Version 2.20.4</title>
+			<link href="http://mtgjson.com/#changeLog111"/>
+			<updated>2015-06-24T00:00:00</updated>
+			<id>http://mtgjson.com/#changeLog111</id>
+			<content type="html">&lt;p&gt;Changes:&lt;br&gt;&lt;ul&gt;&lt;li&gt;DPA: Fixed &#39;rarity&#39; field to be the correct rarity rather than &#39;Special&#39;&lt;/li&gt;</content>
+		</entry>
+	
+<entry>
+			<title>Update: Version 2.20.3</title>
+			<link href="http://mtgjson.com/#changeLog110"/>
+			<updated>2015-06-02T00:00:00</updated>
+			<id>http://mtgjson.com/#changeLog110</id>
+			<content type="html">&lt;p&gt;Changes:&lt;br&gt;&lt;ul&gt;&lt;li&gt;Fixed the &#39;printingCodes&#39; field on several cards&lt;/li&gt;</content>
+		</entry>
+	
+<entry>
+			<title>Update: Version 2.20.2</title>
+			<link href="http://mtgjson.com/#changeLog109"/>
+			<updated>2015-05-31T00:00:00</updated>
+			<id>http://mtgjson.com/#changeLog109</id>
+			<content type="html">&lt;p&gt;Changes:&lt;br&gt;&lt;ul&gt;&lt;li&gt;Added new cards to promo sets.&lt;/li&gt;&lt;li&gt;Updated &#39;source&#39; and &#39;releaseDate&#39; fields for several cards in promo sets.&lt;/li&gt;</content>
+		</entry>
+	
+<entry>
+			<title>Update: Version 2.20.1</title>
+			<link href="http://mtgjson.com/#changeLog108"/>
+			<updated>2015-05-30T00:00:00</updated>
+			<id>http://mtgjson.com/#changeLog108</id>
+			<content type="html">&lt;p&gt;Changes:&lt;br&gt;&lt;ul&gt;&lt;li&gt;Added &#39;printingCodes&#39; card field in the &#39;extras&#39; files. Same as &#39;printings&#39; but with set codes instead of set names.&lt;/li&gt;&lt;li&gt;Added &#39;languagesPrinted&#39; set field. This lists which languages this set was printed in according to Gatherer.&lt;/li&gt;</content>
+		</entry>
+	
+<entry>
+			<title>Update: Version 2.20.0</title>
+			<link href="http://mtgjson.com/#changeLog107"/>
+			<updated>2015-05-17T00:00:00</updated>
+			<id>http://mtgjson.com/#changeLog107</id>
+			<content type="html">&lt;p&gt;Changes:&lt;br&gt;&lt;ul&gt;&lt;li&gt;Added set: Modern Masters 2015 Edition (MM2)&lt;/li&gt;&lt;li&gt;CMD, pJGP: Fixed a ruling for &#39;Riku of Two Reflections&#39;&lt;/li&gt;</content>
+		</entry>
+	
+</feed>

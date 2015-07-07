@@ -19,6 +19,7 @@ var JSONP_SUFFIX = ");";
 
 var dustData = 
 {
+	title : "Magic the Gathering card data in JSON format",
 	sets  : [],
 	setCodesNotOnGatherer : C.SETS_NOT_ON_GATHERER.join(", ")
 };
@@ -204,7 +205,19 @@ tiptoe(
 		dustData.allCardsSize = printUtil.toSize(JSON.stringify(allCards).length, 1);
 		dustData.allCardsSizeX = printUtil.toSize(JSON.stringify(allCardsWithExtras).length, 1);
 
-		dustData.changeLog = JSON.parse(fs.readFileSync(path.join(__dirname, "changelog.json"), {encoding : "utf8"})).map(function(o) { o.when = moment(o.when, "YYYY-MM-DD").format("MMM D, YYYY"); return o; });
+		var changeLog = JSON.parse(fs.readFileSync(path.join(__dirname, "changelog.json"), {encoding : "utf8"}));
+
+		dustData.changeLog = changeLog.map(function(o, i) {
+			o.whenAtom = moment(o.when, "YYYY-MM-DD").format("YYYY-MM-DDTHH:mm:ss");
+			o.when = moment(o.when, "YYYY-MM-DD").format("MMM D, YYYY");
+			o.uniqueID = changeLog.length-i;
+			o.atomContent = "<p>Changes:<br><ul>" + o.changes.map(function(change) { return "<li>" + change + "</li>"; }).join(""); + "</ul></p>";
+			return o;
+		});
+
+		dustData.changeLogAtom = dustData.changeLog.slice(0, 9);
+
+		dustData.lastUpdatedAtom = dustData.changeLog[0].whenAtom;		
 		dustData.lastUpdated = dustData.changeLog[0].when;
 		dustData.version = dustData.changeLog[0].version;
 		dustData.setSpecificFields = C.SET_SPECIFIC_FIELDS.sort().join(", ");
@@ -320,7 +333,7 @@ tiptoe(
 	},
 	function render()
 	{
-		base.info("Rendering index...");
+		base.info("Rendering index and atom...");
 		dustData.allSizeZip = printUtil.toSize(fs.statSync(path.join(__dirname, "json", "AllSets.json.zip")).size, 1);
 		dustData.allSizeXZip = printUtil.toSize(fs.statSync(path.join(__dirname, "json", "AllSets-x.json.zip")).size, 1);
 		dustData.allCardsSizeZip = printUtil.toSize(fs.statSync(path.join(__dirname, "json", "AllCards.json.zip")).size, 1);
@@ -334,12 +347,13 @@ tiptoe(
 			dustData.sets[i].sizeXZip = printUtil.toSize(fs.statSync(path.join(__dirname, "json", SET.code + "-x.json.zip")).size, 1);
 		});
 
-		dustUtil.render(__dirname, "index", dustData, { keepWhitespace : true }, this);
-		//dustUtils.render(post.contentPath, "content", post, { keepWhitespace : true }, this);
+		dustUtil.render(__dirname, "index", dustData, { keepWhitespace : true }, this.parallel());
+		dustUtil.render(__dirname, "atom", dustData, { keepWhitespace : true }, this.parallel());
 	},
-	function save(html)
+	function save(indexHTML, atomXML)
 	{
-		fs.writeFile(path.join(__dirname, "index.html"), html, {encoding:"utf8"}, this);
+		fs.writeFile(path.join(__dirname, "index.html"), indexHTML, {encoding:"utf8"}, this.parallel());
+		fs.writeFile(path.join(__dirname, "atom.xml"), atomXML, {encoding:"utf8"}, this.parallel());
 	},
 	function finish(err)
 	{
