@@ -70,7 +70,7 @@ function renderSet(setRaw, original, cb)
 		var dup = base.clone(card, true);
 		["name", "manaCost", "cmc", "type", "supertypes", "types", "subtypes", "rarity", "artist", "number", "loyalty", "releaseDate", "source",
 		 "power", "toughness", "text", "originalText", "originalType", "flavor", "imageName", "rulings", "layout", "multiverseid", "colors", "names",
-		 "foreignNames", "printings", "legalities"].forEach(function(key) { delete dup[key]; });
+		 "foreignNames", "printings", "legalities", "printingCodes"].forEach(function(key) { delete dup[key]; });
 		card.json = util.inspect(dup);
 
 		card.symbolrarity = card.rarity==="Basic Land" ? "Common" : card.rarity;

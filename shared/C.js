@@ -1748,6 +1748,14 @@
 			border : "black",
 			type : "reprint",
 			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", ["foil mythic rare", "foil rare", "foil uncommon", "foil common"]]
+		},
+		{
+			name : "Magic Origins",
+			code : "ORI",
+			releaseDate : "2015-07-17",
+			border : "black",
+			type : "core",
+			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"]
 		}
 	];
 

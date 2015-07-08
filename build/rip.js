@@ -504,6 +504,9 @@ function getURLAsDoc(targetURL, cb)
 			if(!pageHTML || pageHTML.length===0)
 				throw new Error("Invalid pageHTML for " + cachePath + " (" + targetURL + ")");
 
+			if(!targetURL.contains("www.magiclibrarities.net") && !pageHTML.toString("utf8").trim().toLowerCase().endsWith("</html>"))
+				base.info("Potentially invalid pageHTML for [%s] (%s)", cachePath, targetURL);
+
 			if(!fs.existsSync(cachePath))
 				fs.writeFileSync(cachePath, pageHTML, {encoding:"utf8"});
 
