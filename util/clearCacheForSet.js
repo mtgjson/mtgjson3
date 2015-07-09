@@ -69,7 +69,7 @@ function clearCacheForSet(code, cacheType, cb)
 			}
 			else
 			{
-				set.cards.serialForEach(function(card, subcb)
+				set.cards.filter(function(card) { return card.hasOwnProperty("multiverseid"); }).serialForEach(function(card, subcb)
 				{
 					shared.buildCacheFileURLs(card, cacheType, subcb, true);
 				}, this);

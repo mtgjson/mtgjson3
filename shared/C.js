@@ -3090,6 +3090,14 @@
 			{ match : {name : "Courser of Kruphix"}, replace : {number : "6", source: "CP2-Fate Reforged"}},
 			{ match : {number : ["1", "2", "3", "4", "5", "6"]}, replace : {source: "CP1-Magic 2015"}}
 		],
+		ORI :
+		[
+			{ match : {name : "Chandra, Roaring Flame"}, replace : {colors : ["Red"]}},
+			{ match : {name : "Gideon, Battle-Forged"}, replace : {colors : ["White"]}},
+			{ match : {name : "Jace, Telepath Unbound"}, replace : {colors : ["Blue"]}},
+			{ match : {name : "Liliana, Defiant Necromancer"}, replace : {colors : ["Black"]}},
+			{ match : {name : "Nissa, Sage Animist"}, replace : {colors : ["Green"]}}
+		],
 		"*" :
 		[
 			{ match : {name : "Draco"}, replace : {text : "Domain — Draco costs {2} less to cast for each basic land type among lands you control.\nFlying\nDomain — At the beginning of your upkeep, sacrifice Draco unless you pay {10}. This cost is reduced by {2} for each basic land type among lands you control."}},
