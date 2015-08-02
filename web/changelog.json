@@ -1,5 +1,63 @@
 [
 	{
+		"version": "2.22.7",
+		"when": "2015-08-02",
+		"changes": [
+			"ORI: The starter cards numbered 273 and above have the 'starter' field set to true",
+			"ORI, MM2: Added 'magicCardsInfoCode' field",
+			"pMEI: Added 'multiverseid' field that points to the old Gatherer PPR set promo card",
+			"pALP, pELP: Added 'magicRaritiesCodes' field",
+			"8ED, 9ED: The 'number' field for 'starter' cards now correctly match what was printed on them",
+			"BTD: Added 'number' field",
+			"CED, CEI: Removed the 'number' field as these cards had no collector's number printed on them",
+			"The set field 'magicRaritiesCodes' is now always an array",
+			"The 'foreignNames' field language 'Portuguese' is now 'Portuguese (Brazil)' which matches Gatherer",
+			"Fixed the 'printings' and 'printingCodes' fields for 'Will-o'-the-Wisp'"
+		],
+		"updatedSetFiles" : []
+	},
+	{
+		"version": "2.22.6",
+		"when": "2015-07-29",
+		"changes": [
+			"CMD: Modified the 'text' field of the \"Vow of Malice\" card to fix a gatherer typo."
+		],
+		"updatedSetFiles" : ["CMD","CMD-x"]
+	},
+	{
+		"version": "2.22.5",
+		"when": "2015-07-23",
+		"changes": [
+			"POR, S99: Modified the 'text' field of the \"Nature's Cloak\" cards to more correctly match other Oracle text."
+		],
+		"updatedSetFiles" : ["POR","POR-x","S99","S99-x"]
+	},
+	{
+		"version": "2.22.4",
+		"when": "2015-07-19",
+		"changes": [
+			"CPK: Fixed 'source' field for CP1 cards"
+		],
+		"updatedSetFiles" : ["CPK-x"]
+	},
+	{
+		"version": "2.22.3",
+		"when": "2015-07-18",
+		"changes": [
+			"Updated legalities for Magic Origins"
+		],
+		"updatedSetFiles" : ["10E-x","2ED-x","3ED-x","4ED-x","5ED-x","6ED-x","7ED-x","8ED-x","9ED-x","ALA-x","APC-x","ARC-x","AVR-x","C14-x","CED-x","CEI-x","CMD-x","CNS-x","CON-x","DD3_EVG-x","DD3_GVL-x","DDD-x","DDF-x","DDG-x","DDL-x","DDM-x","DDN-x","DDO-x","DIS-x","DKA-x","DPA-x","EVG-x","EXO-x","FUT-x","GTC-x","HOP-x","ISD-x","ITP-x","LEA-x","LEB-x","LRW-x","M10-x","M11-x","M12-x","M13-x","M14-x","MM2-x","MOR-x","ODY-x","ONS-x","ORI-x","PC2-x","RAV-x","ROE-x","RQS-x","RTR-x","SHM-x","SOM-x","STH-x","TPR-x","VMA-x","ZEN-x","pFNM-x","pJGP-x","pMEI-x","pPRE-x","pWPN-x"]
+	},
+	{
+		"version": "2.22.2",
+		"when": "2015-07-17",
+		"changes": [
+			"DKM: Fixed 'rarity' field to be the correct rarity rather than 'Special'",
+			"CED, CEI: Fixed the 'name' field for 'Will-o'-the-Wisp'"
+		],
+		"updatedSetFiles" : ["CED","CED-x","CEI","CEI-x","DKM","DKM-x"]
+	},
+	{
 		"version": "2.22.1",
 		"when": "2015-07-09",
 		"changes": [

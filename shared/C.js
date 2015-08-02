@@ -8,7 +8,7 @@
 	// Unglued/Unhinged types
 	exports.TYPES.push("Enchant", "Player", "Summon", "Interrupt", "Scariest", "You'll", "Ever", "See", "Eaturecray");
 
-	exports.LAST_PRINTINGS_RESET = "TPR";
+	exports.LAST_PRINTINGS_RESET = "ORI";
 
 	exports.SETS_LACKING_HQ_SVG_SYMBOL_ICONS = ["DDO"];
 
@@ -152,7 +152,7 @@
 			name : "Legend Membership",
 			code : "pLGM",
 			magicCardsInfoCode : "dcilm",
-			magicRaritiesCodes : "23-rarities-dci-legend-membership-promos",
+			magicRaritiesCodes : ["23-rarities-dci-legend-membership-promos"],
 			isMCISet : true,
 			releaseDate : "1995-01-01",
 			border : "black",
@@ -222,7 +222,7 @@
 			name : "Arena League",
 			code : "pARL",
 			magicCardsInfoCode : "arena",
-			magicRaritiesCodes : "7-rarities-arena-league-promos",
+			magicRaritiesCodes : ["7-rarities-arena-league-promos"],
 			isMCISet : true,
 			releaseDate : "1996-08-02",
 			border : "black",
@@ -253,7 +253,7 @@
 			name : "Multiverse Gift Box",
 			code : "MGB",
 			magicCardsInfoCode : "mgbc",
-			magicRaritiesCodes : "145-rarities-multiverse-gift-box-cards",
+			magicRaritiesCodes : ["145-rarities-multiverse-gift-box-cards"],
 			isMCISet : true,
 			releaseDate : "1996-11-01",
 			border : "black",
@@ -330,7 +330,7 @@
 			name : "Prerelease Events",
 			code : "pPRE",
 			magicCardsInfoCode : "ptc",
-			magicRaritiesCodes : "82-rarities-prerelease-events-promos",
+			magicRaritiesCodes : ["82-rarities-prerelease-events-promos"],
 			isMCISet : true,
 			releaseDate : "1997-10-04",
 			border : "black",
@@ -373,7 +373,7 @@
 			name : "Judge Gift Program",
 			code : "pJGP",
 			magicCardsInfoCode : "jr",
-			magicRaritiesCodes : "56-rarities-judge-gift-cards",
+			magicRaritiesCodes : ["56-rarities-judge-gift-cards"],
 			isMCISet : true,
 			releaseDate : "1998-06-01",
 			border : "black",
@@ -404,6 +404,7 @@
 			name : "Asia Pacific Land Program",
 			code : "pALP",
 			magicCardsInfoCode : "apac",
+			magicRaritiesCodes : ["44-rarities-apac-lands"],
 			isMCISet : true,
 			releaseDate : "1998-09-01",
 			border : "black",
@@ -484,7 +485,7 @@
 			name : "Guru",
 			code : "pGRU",
 			magicCardsInfoCode : "guru",
-			magicRaritiesCodes : "50-rarities-guru-lands",
+			magicRaritiesCodes : ["50-rarities-guru-lands"],
 			isMCISet : true,
 			releaseDate : "1999-07-12",
 			border : "black",
@@ -494,7 +495,7 @@
 			name : "Worlds",
 			code : "pWOR",
 			magicCardsInfoCode : "wrl",
-			magicRaritiesCodes : "15-rarities-worlds-card",
+			magicRaritiesCodes : ["15-rarities-worlds-card"],
 			isMCISet : true,
 			releaseDate : "1999-08-04",
 			border : "black",
@@ -504,7 +505,7 @@
 			name : "Wizards of the Coast Online Store",
 			code : "pWOS",
 			magicCardsInfoCode : "wotc",
-			magicRaritiesCodes : "51-rarities-wizards-of-the-coast-online-store",
+			magicRaritiesCodes : ["51-rarities-wizards-of-the-coast-online-store"],
 			isMCISet : true,
 			releaseDate : "1999-09-04",
 			border : "black",
@@ -534,7 +535,7 @@
 			name : "Super Series",
 			code : "pSUS",
 			magicCardsInfoCode : "sus",
-			magicRaritiesCodes : "36-rarities-junior-super-series",
+			magicRaritiesCodes : ["36-rarities-junior-super-series"],
 			isMCISet : true,
 			releaseDate : "1999-12-01",
 			border : "black",
@@ -544,7 +545,7 @@
 			name : "Friday Night Magic",
 			code : "pFNM",
 			magicCardsInfoCode : "fnmp",
-			magicRaritiesCodes : "72-rarities-friday-night-magic",
+			magicRaritiesCodes : ["72-rarities-friday-night-magic"],
 			isMCISet : true,
 			releaseDate : "2000-02-01",
 			border : "black",
@@ -554,6 +555,7 @@
 			name : "European Land Program",
 			code : "pELP",
 			magicCardsInfoCode : "euro",
+			magicRaritiesCodes : ["46-rarities-euro-lands"],
 			isMCISet : true,
 			releaseDate : "2000-02-05",
 			border : "black",
@@ -636,7 +638,7 @@
 			name : "Magic Player Rewards",
 			code : "pMPR",
 			magicCardsInfoCode : "mprp",
-			magicRaritiesCodes : "29-rarities-magic-player-rewards",
+			magicRaritiesCodes : ["29-rarities-magic-player-rewards"],
 			isMCISet : true,
 			releaseDate : "2001-05-01",
 			border : "black",
@@ -727,7 +729,7 @@
 			name : "Release Events",
 			code : "pREL",
 			magicCardsInfoCode : "rep",
-			magicRaritiesCodes : "94-rarities-release-events-promos",
+			magicRaritiesCodes : ["94-rarities-release-events-promos"],
 			isMCISet : true,
 			releaseDate : "2003-07-26",
 			border : "black",
@@ -836,7 +838,7 @@
 			name : "Two-Headed Giant Tournament",
 			code : "p2HG",
 			magicCardsInfoCode : "thgt",
-			magicRaritiesCodes : "13-rarities-two-headed-giant",
+			magicRaritiesCodes : ["13-rarities-two-headed-giant"],
 			isMCISet : true,
 			releaseDate : "2005-12-09",
 			border : "black",
@@ -866,7 +868,7 @@
 			name : "Champs and States",
 			code : "pCMP",
 			magicCardsInfoCode : "cp",
-			magicRaritiesCodes : "54-rarities-champs-cards",
+			magicRaritiesCodes : ["54-rarities-champs-cards"],
 			isMCISet : true,
 			releaseDate : "2006-03-18",
 			border : "black",
@@ -896,7 +898,7 @@
 			name : "Coldsnap Theme Decks",
 			code : "CST",
 			magicCardsInfoCode : "cstd",
-			magicRaritiesCodes : "230-rarities-coldsnap-preconstructed-reprint-cards",
+			magicRaritiesCodes : ["230-rarities-coldsnap-preconstructed-reprint-cards"],
 			isMCISet : true,
 			useMagicRaritiesNumber : true,
 			releaseDate : "2006-07-21",
@@ -927,7 +929,7 @@
 			code : "pHHO",
 			oldCode : "HHO",
 			magicCardsInfoCode : "hho",
-			magicRaritiesCodes : "19-rarities-happy-holidays-gift-card",
+			magicRaritiesCodes : ["19-rarities-happy-holidays-gift-card"],
 			isMCISet : true,
 			releaseDate : "2006-12-31",
 			border : "silver",
@@ -947,7 +949,7 @@
 			name : "Pro Tour",
 			code : "pPRO",
 			magicCardsInfoCode : "pro",
-			magicRaritiesCodes : "14-rarities-pro-tour-card",
+			magicRaritiesCodes : ["14-rarities-pro-tour-card"],
 			isMCISet : true,
 			releaseDate : "2007-02-09",
 			border : "black",
@@ -957,7 +959,7 @@
 			name : "Grand Prix",
 			code : "pGPX",
 			magicCardsInfoCode : "gpx",
-			magicRaritiesCodes : "73-rarities-grand-prix-promos",
+			magicRaritiesCodes : ["73-rarities-grand-prix-promos"],
 			isMCISet : true,
 			releaseDate : "2007-02-24",
 			border : "black",
@@ -986,7 +988,7 @@
 			name : "Magic Game Day",
 			code : "pMGD",
 			magicCardsInfoCode : "mgdc",
-			magicRaritiesCodes : "119-rarities-magic-game-day-cards",
+			magicRaritiesCodes : ["119-rarities-magic-game-day-cards"],
 			isMCISet : true,
 			releaseDate : "2007-07-14",
 			border : "black",
@@ -1024,7 +1026,7 @@
 			name : "Launch Parties",
 			code : "pLPA",
 			magicCardsInfoCode : "mlp",
-			magicRaritiesCodes : "226-rarities-pre-launch-party-cards",
+			magicRaritiesCodes : ["226-rarities-pre-launch-party-cards"],
 			isMCISet : true,
 			releaseDate : "2008-02-01",
 			border : "black",
@@ -1044,7 +1046,7 @@
 			name : "15th Anniversary",
 			code : "p15A",
 			magicCardsInfoCode : "15ann",
-			magicRaritiesCodes : "178-rarities-mtg-15th-anniversary",
+			magicRaritiesCodes : ["178-rarities-mtg-15th-anniversary"],
 			isMCISet : true,
 			releaseDate : "2008-04-01",
 			border : "black",
@@ -1064,7 +1066,7 @@
 			name : "Summer of Magic",
 			code : "pSUM",
 			magicCardsInfoCode : "sum",
-			magicRaritiesCodes : "118-rarities-summer-of-magic-tournament",
+			magicRaritiesCodes : ["118-rarities-summer-of-magic-tournament"],
 			isMCISet : true,
 			releaseDate : "2007-07-21",
 			border : "black",
@@ -1490,7 +1492,7 @@
 			name : "World Magic Cup Qualifiers",
 			code : "pWCQ",
 			magicCardsInfoCode : "wmcq",
-			magicRaritiesCodes : "780-rarities-world-magic-cup-qualifiers-promos",
+			magicRaritiesCodes : ["780-rarities-world-magic-cup-qualifiers-promos"],
 			isMCISet : true,
 			releaseDate : "2013-04-06",
 			border : "black",
@@ -1744,6 +1746,7 @@
 		{
 			name : "Modern Masters 2015 Edition",
 			code : "MM2",
+			magicCardsInfoCode : "mm2",
 			releaseDate : "2015-05-22",
 			border : "black",
 			type : "reprint",
@@ -1752,6 +1755,7 @@
 		{
 			name : "Magic Origins",
 			code : "ORI",
+			magicCardsInfoCode : "ori",
 			releaseDate : "2015-07-17",
 			border : "black",
 			type : "core",
@@ -1775,6 +1779,7 @@
 
 	exports.NON_GATHERER_SET_RARITY_MAP =
 	{
+		DKM : { "Abyssal Specter" : "Uncommon", "Balduvian Bears" : "Common", "Balduvian Horde" : "Rare", "Barbed Sextant" : "Common", "Bounty of the Hunt" : "Uncommon", "Contagion" : "Uncommon", "Dark Banishing" : "Common", "Dark Ritual" : "Common", "Death Spark" : "Uncommon", "Elkin Bottle" : "Rare", "Elvish Bard" : "Uncommon", "Folk of the Pines" : "Common", "Forest" : "Basic Land", "Foul Familiar" : "Common", "Fyndhorn Elves" : "Common", "Giant Growth" : "Common", "Giant Trap Door Spider" : "", "Goblin Mutant" : "Uncommon", "Guerrilla Tactics" : "Common", "Hurricane" : "Uncommon", "Icy Manipulator" : "Uncommon", "Incinerate" : "Common", "Jokulhaups" : "Rare", "Karplusan Forest" : "Rare", "Lava Burst" : "Common", "Lhurgoyf" : "Rare", "Lim-Dûl's High Guard" : "Common", "Mountain" : "Basic Land", "Necropotence" : "Rare", "Orcish Cannoneers" : "Uncommon", "Phantasmal Fiend" : "Common", "Phyrexian War Beast" : "Common", "Pillage" : "Uncommon", "Pyroclasm" : "Uncommon", "Shatter" : "Common", "Soul Burn" : "Common", "Storm Shaman" : "Common", "Sulfurous Springs" : "Rare", "Swamp" : "Basic Land", "Underground River" : "Rare", "Walking Wall" : "Uncommon", "Woolly Spider" : "Common", "Yavimaya Ancients" : "Common", "Yavimaya Ants" : "Uncommon" },
 		DPA : { "Air Elemental" : "Uncommon", "Boomerang" : "Common", "Cancel" : "Common", "Cloud Sprite" : "Common", "Counterbore" : "Rare", "Deluge" : "Uncommon", "Denizen of the Deep" : "Rare", "Essence Scatter" : "Common", "Evacuation" : "Rare", "Mahamoti Djinn" : "Rare", "Mind Control" : "Uncommon", "Mind Spring" : "Rare", "Negate" : "Common", "Phantom Warrior" : "Uncommon", "Snapping Drake" : "Common", "Thieving Magpie" : "Uncommon", "Unsummon" : "Common", "Abyssal Specter" : "Uncommon", "Ascendant Evincar" : "Rare", "Consume Spirit" : "Uncommon", "Crowd of Cinders" : "Uncommon", "Drudge Skeletons" : "Common", "Dusk Imp" : "Common", "Essence Drain" : "Common", "Eyeblight's Ending" : "Common", "Megrim" : "Uncommon", "Mind Rot" : "Common", "Mind Shatter" : "Rare", "Moonglove Winnower" : "Common", "Mortivore" : "Rare", "Ravenous Rats" : "Common", "Sengir Vampire" : "Rare", "Severed Legion" : "Common", "Terror" : "Common", "Underworld Dreams" : "Rare", "Unholy Strength" : "Common", "Act of Treason" : "Uncommon", "Banefire" : "Rare", "Blaze" : "Uncommon", "Bloodmark Mentor" : "Uncommon", "Cinder Pyromancer" : "Common", "Earth Elemental" : "Uncommon", "Enrage" : "Uncommon", "Furnace of Rath" : "Rare", "Goblin Piker" : "Common", "Goblin Sky Raider" : "Common", "Hill Giant" : "Common", "Incinerate" : "Common", "Kamahl, Pit Fighter" : "Rare", "Lightning Elemental" : "Common", "Prodigal Pyromancer" : "Uncommon", "Rage Reflection" : "Rare", "Shivan Dragon" : "Rare", "Shock" : "Common", "Blanchwood Armor" : "Uncommon", "Civic Wayfinder" : "Common", "Drove of Elves" : "Uncommon", "Duskdale Wurm" : "Uncommon", "Elven Riders" : "Uncommon", "Elvish Champion" : "Rare", "Elvish Eulogist" : "Common", "Elvish Promenade" : "Uncommon", "Elvish Visionary" : "Common", "Elvish Warrior" : "Common", "Gaea's Herald" : "Rare", "Giant Growth" : "Common", "Giant Spider" : "Common", "Greenweaver Druid" : "Uncommon", "Howl of the Night Pack" : "Uncommon", "Immaculate Magistrate" : "Rare", "Imperious Perfect" : "Uncommon", "Jagged-Scar Archers" : "Uncommon", "Lys Alana Huntmaster" : "Common", "Molimo, Maro-Sorcerer" : "Rare", "Natural Spring" : "Common", "Naturalize" : "Common", "Nature's Spiral" : "Uncommon", "Overrun" : "Uncommon", "Rampant Growth" : "Common", "River Boa" : "Uncommon", "Roughshod Mentor" : "Uncommon", "Runeclaw Bear" : "Common", "Spined Wurm" : "Common", "Talara's Battalion" : "Rare", "Trained Armodon" : "Common", "Troll Ascetic" : "Rare", "Verdant Force" : "Rare", "Vigor" : "Rare", "Wall of Wood" : "Common", "Coat of Arms" : "Rare", "Demon's Horn" : "Uncommon", "Dragon's Claw" : "Uncommon", "Kraken's Eye" : "Uncommon", "Loxodon Warhammer" : "Rare", "The Rack" : "Uncommon", "Wall of Spears" : "Common", "Wurm's Tooth" : "Uncommon" }
 	};
 
@@ -1894,7 +1899,13 @@
 			{match : {name : ["Blue Elemental Blast", "Fireball", "Spined Wurm"]}, replace : {border : "white"}},
 			{match : {name : "Wash Out"}, replace : {releaseDate : "2014-01-15"}},
 			{match : {name : "Duress"}, replace : {artist : "Michael Komarck"}},
-			{match : {name : "Avalance Tusker"}, replace : {name:"Avalanche Tusker", imageName : "avalanche tusker", manaCost : "{2}{G}{U}{R}"}}
+			{match : {name : "Avalance Tusker"}, replace : {name:"Avalanche Tusker", imageName : "avalanche tusker", manaCost : "{2}{G}{U}{R}"}},
+			{match : {name : "Arena"}, replace : {multiverseid : 97042}},
+			{match : {name : "Giant Badger"}, replace : {multiverseid : 97045}},
+			{match : {name : "Mana Crypt"}, replace : {multiverseid : 97048}},
+			{match : {name : "Nalathni Dragon"}, replace : {multiverseid : 97050}},
+			{match : {name : "Sewers of Estark"}, replace : {multiverseid : 97054}},
+			{match : {name : "Windseeker Centaur"}, replace : {multiverseid : 97057}}
 		],
 		FEM :
 		[
@@ -2514,7 +2525,8 @@
 			{ renumberImages : "Mountain", order : [27239, 27240, 27241] },
 			{ renumberImages : "Swamp", order : [27233, 27234, 27235] },
 			{ match : {name : ["Lava Axe", "Lowland Giant"]}, flavorAddExclamation : true },
-			{ match : {name : ["Fallen Angel"]}, flavorAddDash : true }
+			{ match : {name : ["Fallen Angel"]}, flavorAddDash : true },
+			"numberCards"
 		],
 		INV :
 		[
@@ -2531,6 +2543,8 @@
 			{ renumberImages : "Tahngarth, Talruum Hero", order : [26408, 29291] },
 			{ match : {name : "Gerrard's Command"}, flavorAddExclamation : true },
 			{ match : {name : "Gaea's Herald"}, replace : {flavor : "\"I bring word from Gaea. Fight on! She will never allow her children to die alone.\""}}
+			/*{ match : {multiverseid : 29292}, removeCard : true},
+			{ match : {multiverseid : 25614}, remove : ["variations"], replace : {imageName : "ertai, the corrupted"}}*/
 		],
 		"7ED" :
 		[
@@ -2642,7 +2656,7 @@
 		"8ED" :
 		[
 			{ match : {name : "Lhurgoyf"}, replace : {flavor : "\"Ach! Hans, run! It's the Lhurgoyf!\"\n—Saffi Eriksdotter, last words"}},
-			{ match : {multiverseid:[47784, 47788, 47785, 47786, 47789, 47787, 49056]}, replace : {starter : true}},
+			{ match : {multiverseid:[47784, 47788, 47785, 47786, 47789, 47787, 49056]}, replace : {starter : true, prefixNumber : "S"}},
 			{ match : {name : ["Eager Cadet", "Giant Octopus", "Sea Eagle"]}, replace : {rarity : "Common"}},
 			{ match : {name : ["Enormous Baloth", "Silverback Ape", "Vengeance"]}, replace : {rarity : "Uncommon"}},
 			{ match : {name : ["Vizzerdrix"]}, replace : {rarity : "Rare"}},
@@ -2796,7 +2810,7 @@
 			{ match : {name : "Blinking Spirit"}, replace : {flavor : "\"Don't look at it! Maybe it'll go away!\"\n—Ib Halfheart, goblin tactician"}},
 			{ match : {name : "Sea's Claim"}, replace : {flavor : "\"Who's the crazy one now!?\"\n—Torgle, mountaintop boatmaker"}},
 			{ match : {name : "Swarm of Rats"}, replace : {flavor : "\"Rats, rats, rats! Hundreds, thousands, millions of them, and every one a life.\"\n—Bram Stoker, Dracula"}},
-			{ match : {multiverseid:[83064, 83319, 84073, 83104, 94912, 94911, 94910, 83075, 94914]}, replace : {starter : true}}
+			{ match : {multiverseid:[83064, 83319, 84073, 83104, 94912, 94911, 94910, 83075, 94914]}, replace : {starter : true, prefixNumber : "S"}}
 		],
 		RAV :
 		[
@@ -3082,13 +3096,17 @@
 		],
 		CPK :
 		[
+			{ match : {number : ["1", "2", "3", "4", "5", "6"]}, replace : {source: "CP1-Magic 2015"}},
 			{ match : {name : "Necropolis Fiend"}, replace : {number : "1", source: "CP2-Fate Reforged"}},
 			{ match : {name : "Hero's Downfall"}, replace : {number : "2", source: "CP2-Fate Reforged"}},
 			{ match : {name : "Sultai Ascendacy"}, replace : {name : "Sultai Ascendancy", imageName : "sultai ascendancy", number : "3", source: "CP2-Fate Reforged"}},
 			{ match : {name : "Reaper of the Wilds"}, replace : {number : "4", source: "CP2-Fate Reforged"}},
 			{ match : {name : "Whip of Erebos"}, replace : {number : "5", source: "CP2-Fate Reforged"}},
-			{ match : {name : "Courser of Kruphix"}, replace : {number : "6", source: "CP2-Fate Reforged"}},
-			{ match : {number : ["1", "2", "3", "4", "5", "6"]}, replace : {source: "CP1-Magic 2015"}}
+			{ match : {name : "Courser of Kruphix"}, replace : {number : "6", source: "CP2-Fate Reforged"}}
+		],
+		CMD :
+		[
+			{ match : {name : "Vow of Malice"}, replace : {text : {" wit " : " with "}}}
 		],
 		ORI :
 		[
@@ -3096,7 +3114,16 @@
 			{ match : {name : "Gideon, Battle-Forged"}, replace : {colors : ["White"]}},
 			{ match : {name : "Jace, Telepath Unbound"}, replace : {colors : ["Blue"]}},
 			{ match : {name : "Liliana, Defiant Necromancer"}, replace : {colors : ["Black"]}},
-			{ match : {name : "Nissa, Sage Animist"}, replace : {colors : ["Green"]}}
+			{ match : {name : "Nissa, Sage Animist"}, replace : {colors : ["Green"]}},
+			{ match : {number : ["273","274","275","276","277","278","279","280","281","282","283","284","285","286","287","288"]}, replace : {starter : true}}
+		],
+		CED :
+		[
+			{ match : "*", remove : ["number"] }
+		],
+		CEI :
+		[
+			{ match : "*", remove : ["number"] }
 		],
 		"*" :
 		[
@@ -3104,7 +3131,9 @@
 			{ match : {name : "Spawnsire of Ulamog"}, replace : {text : "Annihilator 1 (Whenever this creature attacks, defending player sacrifices a permanent.)\n{4}: Put two 0/1 colorless Eldrazi Spawn creature tokens onto the battlefield. They have \"Sacrifice this creature: Add {1} to your mana pool.\"\n{20}: Cast any number of Eldrazi cards you own from outside the game without paying their mana costs."}},
 			{ match : {name : "Jade Statue"}, remove : ["power", "toughness"] },
 			{ match : {name : "Ghostfire"}, remove : ["colors"] },
+			{ match : {name : "Will-O'-The-Wisp"}, replace : {name : "Will-o'-the-Wisp"}},
 			{ match : {name : "Rhox"}, addPrinting : "Starter 2000"},
+			{ match : {name : "Nature's Cloak"}, replace : {text : "Green creatures you control gain forestwalk until end of turn. (They can't be blocked as long as defending player controls a Forest.)"}},
 			{ match : {name : "Regrowth"}, setLegality : {"Vintage" : "Legal"}},
 			{ match : {name : ["Argothian Wurm", "Barrin, Master Wizard", "Citanul Centaurs", "Gaea's Cradle", "Gilded Drake", "Great Whale", "Herald of Serra", "Karn, Silver Golem", "Lifeline", "Lightning Dragon", "Morphling", "Opal Archangel",
 							   "Serra's Sanctum", "Tolarian Academy", "Temporal Aperture", "Time Spiral", "Yawgmoth's Will", "Zephid", "Deranged Hermit", "Grim Monolith", "Memory Jar", "Multani, Maro-Sorcerer", "Palinchron", "Radiant, Archangel", "Ring of Gix", "Second Chance", "Weatherseed Treefolk", "Academy Rector", "Carnival of Souls", "Covetous Dragon", "Donate", "Masticore", "Metalworker", "Opalescence", "Phyrexian Negator", "Powder Keg", "Rofellos, Llanowar Emissary", "Replenish", "Treachery",
@@ -3145,7 +3174,8 @@
 							   "Goblin Bomb", "Heart of Bogardan", "Heat Stroke", "Infernal Tribute", "Inner Sanctum", "Liege of the Hollows", "Lotus Vale", "Mana Web", "Maraxus of Keld", "Morinfen", "Mwonvuli Ooze", "Null Rod", "Paradigm Shift",
 							   "Peacekeeper", "Pendrell Mists", "Psychic Vortex", "Scorched Ruins", "Thran Tome", "Tolarian Entrancer", "Tolarian Serpent", "Urborg Justice", "Urborg Stalker", "Wave of Terror", "Well of Knowledge",
 							   "Winding Canyons", "Xanthic Statue", "Aluren", "Apocalypse", "Avenging Angel", "Commander Greven il-Vec", "Corpse Dance", "Cursed Scroll", "Earthcraft", "Eladamri, Lord of Leaves", "Escaped Shapeshifter", "Humility", "Intuition", "Meditate", "Orim, Samite Healer",
-							   "Recycle", "Sarcomancy", "Selenia, Dark Angel", "Crovax the Cursed", "Dream Halls", "Mox Diamond", "Silver Wyvern", "Sliver Queen", "Volrath's Shapeshifter", "Volrath's Stronghold", "City of Traitors", "Dominating Licid", "Ertai, Wizard Adept", "Exalted Dragon", "Hatred", "Mind Over Matter", "Oath of Ghouls", "Recurring Nightmare", "Survival of the Fittest"]}, replace : {reserved : true}},
+							   "Recycle", "Sarcomancy", "Selenia, Dark Angel", "Crovax the Cursed", "Dream Halls", "Mox Diamond", "Silver Wyvern", "Sliver Queen", "Volrath's Shapeshifter", "Volrath's Stronghold", "City of Traitors", "Dominating Licid", "Ertai, Wizard Adept", "Exalted Dragon", "Hatred", "Mind Over Matter", "Oath of Ghouls", "Recurring Nightmare", "Survival of the Fittest"]},
+				replace : {reserved : true}},
 			{ match : {layout : ["plane", "phenomenon"]}, deleteLegality : ["Vintage", "Commander", "Legacy"]},
 			{ match : {name : ["Advantageous Proclamation","Amulet of Quoz","Ancestral Recall","Backup Plan","Balance","Biorhythm","Black Lotus","Brago's Favor","Braids, Cabal Minion","Bronze Tablet","Chaos Orb","Coalition Victory","Channel","Contract from Below","Darkpact","Demonic Attorney","Double Stroke","Emrakul, the Aeons Torn","Erayo, Soratami Ascendant","Falling Star","Fastbond","Gifts Ungiven","Griselbrand","Immediate Action","Iterative Analysis","Jeweled Bird","Karakas","Library of Alexandria","Limited Resources","Mox Emerald","Mox Jet","Mox Pearl","Mox Ruby","Mox Sapphire","Muzzio's Preparations","Painter's Servant","Panoptic Mirror","Power Play","Primeval Titan","Protean Hulk","Rebirth","Recurring Nightmare","Rofellos, Llanowar Emissary","Secret Summoning","Secrets of Paradise","Sentinel Dispatch","Shahrazad","Sundering Titan","Sway of the Stars","Sylvan Primordial","Tempest Efreet","Time Vault","Time Walk","Timmerian Fiends","Tinker","Tolarian Academy","Trade Secrets","Unexpected Potential","Upheaval","Worldfire","Worldknit","Yawgmoth's Bargain"]},
 					   setLegality : {"Commander" : "Banned"}}
@@ -3191,9 +3221,19 @@
 		"Zoltan Boros & Gabor Szikszai" : ["Zoltan Boras & Gabor Szikszai"]
 	};
 
+	exports.LANGUAGE_RENAMES =
+	{
+		"Portuguese" : "Portuguese (Brazil)"
+	};
+
 	exports.SYMBOL_RARITIES = {c:["common"], u : ["uncommon"], r : ["rare"], m : ["mythic", "mythic rare", "mythicrare"], s : ["special"]};
 	exports.SYMBOL_SIZES = [8, 16, 24, 32, 48, 64, 96, 128, 256, 512, 768, 1024];
 	exports.SETS_WITH_BONUS_RARITIES = ["VMA"];
+
+	exports.ALLOW_ESSENTIAL_FLAVOR_MISMATCH =
+	{
+		"4ED" : [2283, 2296, 2311]
+	};
 
 	exports.SYMBOL_MANA =
 	{

@@ -164,7 +164,7 @@ function processMultiverseids(multiverseids, cb)
 
 	base.info("Processing %d multiverseids", multiverseids.unique().length);
 
-	multiverseids.unique().serialForEach(function(multiverseid, subcb)
+	multiverseids.unique().parallelForEach(function(multiverseid, subcb)
 	{
 		tiptoe(
 			function getMultiverseUrls()
@@ -175,8 +175,8 @@ function processMultiverseids(multiverseids, cb)
 			{
 				urls.forEach(function(multiverseURL)
 				{
-					getURLAsDoc(multiverseURL, this.parallel());
-					getURLAsDoc(urlUtil.setQueryParam(multiverseURL, "printed", "true"), this.parallel());
+					shared.getURLAsDoc(multiverseURL, this.parallel());
+					shared.getURLAsDoc(urlUtil.setQueryParam(multiverseURL, "printed", "true"), this.parallel());
 				}.bind(this));
 			},
 			function processMultiverseDocs()
@@ -216,7 +216,7 @@ function processMultiverseids(multiverseids, cb)
 			},
 			function finish(err) { setImmediate(function() { subcb(err); }); }
 		);
-	}, function(err) { return cb(err, cards); });
+	}, function(err) { return cb(err, cards); }, 10);
 }
 
 function getCardPartIDPrefix(cardPart)
@@ -438,8 +438,8 @@ function getURLsForMultiverseid(multiverseid, cb)
 	tiptoe(
 		function getDefaultDoc()
 		{
-			getURLAsDoc(shared.buildMultiverseURL(multiverseid), this.parallel());
-			getURLAsDoc(urlUtil.setQueryParam(shared.buildMultiverseURL(multiverseid), "printed", "true"), this.parallel());
+			shared.getURLAsDoc(shared.buildMultiverseURL(multiverseid), this.parallel());
+			shared.getURLAsDoc(urlUtil.setQueryParam(shared.buildMultiverseURL(multiverseid), "printed", "true"), this.parallel());
 		},
 		function processDefaultDoc(err, doc, printedDoc)
 		{
@@ -473,44 +473,7 @@ function getURLsForMultiverseid(multiverseid, cb)
 	);
 }
 
-function getURLAsDoc(targetURL, cb)
-{
-	var cachePath = shared.generateCacheFilePath(targetURL);
 
-	tiptoe(
-		function get()
-		{
-			if(fs.existsSync(cachePath))
-			{
-				//base.info("URL [%s] is file: %s", targetURL, cachePath);
-				fs.readFile(cachePath, {encoding:"utf8"}, this);
-			}
-			else
-			{
-				base.info("Requesting from web: %s", targetURL);
-				httpUtil.get(targetURL, {timeout:base.SECOND*10, retry:5}, this);
-			}
-		},
-		function createDoc(err, pageHTML, responseHeaders, responseStatusCode)
-		{
-			if(err || (responseStatusCode && responseStatusCode!==200))
-			{
-				base.error("Error downloading: " + targetURL);
-				base.error("Cache path: " + cachePath);
-				base.error(err);
-				return setImmediate(function() { cb(err); });
-			}
-
-			if(!pageHTML || pageHTML.length===0 || (!targetURL.contains("www.magiclibrarities.net") && !pageHTML.toString("utf8").trim().toLowerCase().endsWith("</html>")))
-				throw new Error("Invalid pageHTML for " + cachePath + " (" + targetURL + ")");
-
-			if(!fs.existsSync(cachePath))
-				fs.writeFileSync(cachePath, pageHTML, {encoding:"utf8"});
-
-			setImmediate(function() { cb(null, domino.createWindow(pageHTML).document); }.bind(this));
-		}
-	);
-}
 
 function addForeignNamesToSet(set, cb)
 {
@@ -621,10 +584,10 @@ function getForeignNamesForCardName(sets, cardName, cb)
 		function fetchLanguagePages()
 		{
 			var multiverseids = getMultiverseidsForCardName(sets, cardName);
-			multiverseids.serialForEach(function(multiverseid, subcb)
+			multiverseids.parallelForEach(function(multiverseid, subcb)
 			{
-				getURLAsDoc(shared.buildMultiverseLanguagesURL(multiverseid), subcb);
-			}, this);
+				shared.getURLAsDoc(shared.buildMultiverseLanguagesURL(multiverseid), subcb);
+			}, this, 10);
 		},
 		function processDocs(err, docs)
 		{
@@ -659,7 +622,7 @@ function getLanguagesPrintedForMultiverseid(multiverseid, cb)
 	tiptoe(
 		function getLanguagePage()
 		{
-			getURLAsDoc(shared.buildMultiverseLanguagesURL(multiverseid), this);
+			shared.getURLAsDoc(shared.buildMultiverseLanguagesURL(multiverseid), this);
 		},
 		function processDoc(err, doc)
 		{
@@ -678,10 +641,10 @@ function getLanguagesPrintedForMultiverseid(multiverseid, cb)
 
 function addLegalitiesToCards(cards, cb)
 {
-	cards.serialForEach(function(card, subcb)
+	cards.parallelForEach(function(card, subcb)
 	{
 		addLegalitiesToCard(card, subcb);
-	}, cb);
+	}, cb, 10);
 }
 
 function addLegalitiesToCard(card, cb)
@@ -689,7 +652,7 @@ function addLegalitiesToCard(card, cb)
 	tiptoe(
 		function getFirstPage()
 		{
-			getURLAsDoc(shared.buildMultiverseLegalitiesURL(card.multiverseid), this);
+			shared.getURLAsDoc(shared.buildMultiverseLegalitiesURL(card.multiverseid), this);
 		},
 		function processLegalities(doc)
 		{
@@ -749,14 +712,14 @@ function addPrintingsToCard(nonGathererSets, card, cb)
 	tiptoe(
 		function getFirstPage()
 		{
-			getURLAsDoc(shared.buildMultiversePrintingsURL(card.multiverseid, 0), this);
+			shared.getURLAsDoc(shared.buildMultiversePrintingsURL(card.multiverseid, 0), this);
 		},
 		function getAllPages(doc)
 		{
 			var numPages = shared.getPagingNumPages(doc, "printings");
 			for(var i=0;i<numPages;i++)
 			{
-				getURLAsDoc(shared.buildMultiversePrintingsURL(card.multiverseid, i), this.parallel());
+				shared.getURLAsDoc(shared.buildMultiversePrintingsURL(card.multiverseid, i), this.parallel());
 			}
 		},
 		function processPrintings()
@@ -921,12 +884,12 @@ function compareCardsToMCI(set, cb)
 	tiptoe(
 		function getSetCardList()
 		{
-			getURLAsDoc("http://magiccards.info/" + set.magicCardsInfoCode.toLowerCase() + "/en.html", this);
+			shared.getURLAsDoc("http://magiccards.info/" + set.magicCardsInfoCode.toLowerCase() + "/en.html", this);
 		},
 		function processSetCardList(listDoc)
 		{
 			var mciCardLinks = Array.toArray(listDoc.querySelectorAll("table tr td a"));
-			set.cards.serialForEach(function(card, subcb)
+			set.cards.parallelForEach(function(card, subcb)
 			{
 				if(card.variations || card.layout==="token")
 					return setImmediate(subcb);
@@ -939,7 +902,7 @@ function compareCardsToMCI(set, cb)
 				}
 
 				compareCardToMCI(set, card, mciCardLink[0].getAttribute("href"), subcb);
-			}, this);
+			}, this, 10);
 		},
 		function finish(err)
 		{
@@ -992,7 +955,7 @@ function compareCardToMCI(set, card, mciCardURL, cb)
 	tiptoe(
 		function getMCICardDoc()
 		{
-			getURLAsDoc("http://magiccards.info" + mciCardURL, this);
+			shared.getURLAsDoc("http://magiccards.info" + mciCardURL, this);
 		},
 		function compareProperties(mciCardDoc)
 		{
@@ -1039,7 +1002,7 @@ function compareCardsToEssentialMagic(set, cb)
 	tiptoe(
 		function getSetCardList()
 		{
-			getURLAsDoc("http://www.essentialmagic.com/cardsets/Spoiler.asp?ID=" + set.essentialMagicCode, this);
+			shared.getURLAsDoc("http://www.essentialmagic.com/cardsets/Spoiler.asp?ID=" + set.essentialMagicCode, this);
 		},
 		function processSetCardList(listDoc)
 		{
@@ -1077,6 +1040,9 @@ function compareCardsToEssentialMagic(set, cb)
 					// Compare flavor
 					if(!hasFlavorCorrection)
 					{
+						if(C.ALLOW_ESSENTIAL_FLAVOR_MISMATCH.hasOwnProperty(set.code) && (C.ALLOW_ESSENTIAL_FLAVOR_MISMATCH[set.code].contains(card.multiverseid) || C.ALLOW_ESSENTIAL_FLAVOR_MISMATCH[set.code].contains(card.name)))
+							return;
+
 						var cardFlavor = normalizeFlavor(card.flavor || "");
 						var essentialFlavor = normalizeFlavor(processTextBlocks(cardRow.querySelector("td:nth-child(2) i")));
 						if(!essentialFlavor && cardFlavor)
@@ -1107,7 +1073,7 @@ function ripMCISet(set, cb)
 	tiptoe(
 		function getCardList()
 		{
-			getURLAsDoc("http://magiccards.info/" + set.magicCardsInfoCode.toLowerCase() + "/en.html", this);
+			shared.getURLAsDoc("http://magiccards.info/" + set.magicCardsInfoCode.toLowerCase() + "/en.html", this);
 		},
 		function processCardList(listDoc)
 		{
@@ -1212,7 +1178,7 @@ function ripMCICard(set, mciCardURL, cb)
 	tiptoe(
 		function getMCICardDoc()
 		{
-			getURLAsDoc("http://magiccards.info" + mciCardURL, this);
+			shared.getURLAsDoc("http://magiccards.info" + mciCardURL, this);
 		},
 		function compareProperties(mciCardDoc)
 		{
@@ -1463,9 +1429,9 @@ function addMagicLibraritiesInfoToMCISet(set, cb)
 	tiptoe(
 		function getMagicRaritiesList()
 		{
-			Array.toArray(set.magicRaritiesCodes).forEach(function(magicRaritiesCode)
+			set.magicRaritiesCodes.forEach(function(magicRaritiesCode)
 			{
-				getURLAsDoc("http://www.magiclibrarities.net/" + magicRaritiesCode + "-english-cards-index.html", this.parallel());
+				shared.getURLAsDoc("http://www.magiclibrarities.net/" + magicRaritiesCode + "-english-cards-index.html", this.parallel());
 			}.bind(this));
 		},
 		function populateReleaseDates()
@@ -1781,15 +1747,14 @@ function getSetNameMultiverseIds(setName, cb)
 	tiptoe(
 		function getFirstListingsPage()
 		{
-			getURLAsDoc(shared.buildListingsURL(setName, 0), this);
+			shared.buildMultiverseListingURLs(setName, this);
 		},
-		function getOtherListingsPages(firstPageListDoc)
+		function getOtherListingsPages(urls)
 		{
-			var numPages = shared.getPagingNumPages(firstPageListDoc, "listings");
-			for(var i=0;i<numPages;i++)
+			urls.forEach(function(url)
 			{
-				getURLAsDoc(shared.buildListingsURL(setName, i), this.parallel());
-			}
+				shared.getURLAsDoc(url, this.parallel());
+			}.bind(this));
 		},
 		function getListingMultiverseids(err)
 		{

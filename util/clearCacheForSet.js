@@ -10,11 +10,11 @@ var base = require("xbase"),
 
 if(process.argv.length<4)
 {
-	base.error("Usage: node %s <all|oracle|original|languages|printings|legalities|mcilist> <set codes>", process.argv[1]);
+	base.error("Usage: node %s <all|oracle|original|languages|printings|legalities|mcilist|listings> <set codes>", process.argv[1]);
 	process.exit(1);
 }
 
-var VALID_TYPES = ["oracle", "original", "languages", "printings", "legalities", "mcilist"];
+var VALID_TYPES = ["oracle", "original", "languages", "printings", "legalities", "mcilist", "listings"];
 
 var cacheTypes = process.argv[2].toLowerCase()==="all" ? VALID_TYPES : Array.toArray(process.argv[2]);
 cacheTypes.serialForEach(function(cacheType, cb)
@@ -42,6 +42,8 @@ cacheTypes.serialForEach(function(cacheType, cb)
 
 function clearCacheForSet(code, cacheType, cb)
 {
+	var setName = C.SETS.mutateOnce(function(SET) { if(SET.code.toLowerCase()===code.toLowerCase()) { return SET; } }).name;
+
 	tiptoe(
 		function loadSetJSON()
 		{
@@ -50,9 +52,6 @@ function clearCacheForSet(code, cacheType, cb)
 		function getCacheURLS(setRaw)
 		{
 			var set = JSON.parse(setRaw);
-			var self=this;
-			base.info("%s: %d cards found.", code, set.cards.length);
-
 			if(cacheType==="mcilist")
 			{
 				if(!set.magicCardsInfoCode)
@@ -61,14 +60,19 @@ function clearCacheForSet(code, cacheType, cb)
 				var urls = [];
 				urls.push("http://magiccards.info/" + set.magicCardsInfoCode.toLowerCase() + "/en.html");
 				var targetSet = C.SETS.mutateOnce(function(SET) { if(SET.code.toLowerCase()===set.code.toLowerCase()) { return SET; } });
-				Array.toArray(targetSet.magicRaritiesCodes).forEach(function(magicRaritiesCode)
+				targetSet.magicRaritiesCodes.forEach(function(magicRaritiesCode)
 				{
 					urls.push("http://www.magiclibrarities.net/" + magicRaritiesCode + "-english-cards-index.html");
 				}.bind(this));
 				this(undefined, urls);
 			}
+			else if(cacheType==="listings")
+			{
+				return shared.buildMultiverseListingURLs(C.GATHERER_SET_RENAMES_REVERSED[setName] || setName, this);
+			}
 			else
 			{
+				base.info("%s: %d cards found.", code, set.cards.length);
 				set.cards.filter(function(card) { return card.hasOwnProperty("multiverseid"); }).serialForEach(function(card, subcb)
 				{
 					shared.buildCacheFileURLs(card, cacheType, subcb, true);
@@ -77,7 +81,10 @@ function clearCacheForSet(code, cacheType, cb)
 		},
 		function clearCacheFiles(urls)
 		{
-			urls.flatten().uniqueBySort().serialForEach(shared.clearCacheFile, this);
+			urls = urls.flatten().uniqueBySort();
+
+			base.info("Clearing %d URLS", urls.length);
+			urls.serialForEach(shared.clearCacheFile, this);
 		},
 		function finish(err)
 		{

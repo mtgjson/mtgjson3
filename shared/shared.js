@@ -220,6 +220,7 @@ exports.performSetCorrections = function(setCorrections, fullSet)
 				if(setCorrection.match && (setCorrection.match==="*" || (Object.every(setCorrection.match, function(key, value) { return Array.isArray(value) ? value.contains(card[key]) : value===card[key]; }))))
 				{
 					if(setCorrection.replace)
+					{
 						Object.forEach(setCorrection.replace, function(key, value)
 							{ 
 								if(Object.isObject(value))
@@ -227,6 +228,7 @@ exports.performSetCorrections = function(setCorrections, fullSet)
 								else
 									card[key] = value; 
 							});
+					}
 					
 					if(setCorrection.remove)
 						setCorrection.remove.forEach(function(removeKey) { delete card[removeKey]; });
@@ -416,6 +418,45 @@ exports.performSetCorrections = function(setCorrections, fullSet)
 		}
 	});
 
+	// Language renames
+	cards.forEach(function(card)
+	{
+		Object.forEach(C.LANGUAGE_RENAMES, function(oldName, newName)
+		{
+			if(!card.hasOwnProperty("foreignNames"))
+				return;
+
+			var value;
+			var indexToRemove = -1;
+			card.foreignNames.forEach(function(foreignName, i)
+			{
+				if(foreignName.language===oldName)
+				{
+					indexToRemove = i;
+					value = foreignName.name;
+				}
+			});
+
+			if(indexToRemove>=0)
+			{
+				card.foreignNames.splice(indexToRemove, 1);
+
+				var addedNewValue = true;
+				card.foreignNames.forEach(function(foreignName)
+				{
+					if(foreignName.language===newName)
+					{
+						foreignName.name = value;
+						addedNewValue = true;
+					}
+				});
+
+				if(!addedNewValue)
+					card.foreignNames.push({language:newName,name:value});
+			}
+		});
+	});
+
 	// Set renames
 	Object.forEach(C.GATHERER_SET_RENAMES, function(oldName, newName)
 	{
@@ -535,6 +576,78 @@ exports.buildCacheFileURLs = function(card, cacheType, cb, fromCache)
 				throw new Error("Invalid urls for: %s %s [%s]", cacheType, card.multiverseid, urls.join(", "));
 
 			return setImmediate(function() { cb(err, urls); });
+		}
+	);
+};
+
+exports.buildMultiverseListingURLs = function(setName, cb)
+{
+	var urls = [];
+	base.info(setName);
+	tiptoe(
+		function getFirstListingsPage()
+		{
+			exports.getURLAsDoc(exports.buildListingsURL(setName, 0), this);
+		},
+		function getOtherListingsPages(firstPageListDoc)
+		{
+			var numPages = exports.getPagingNumPages(firstPageListDoc, "listings");
+			for(var i=0;i<numPages;i++)
+			{
+				urls.push(exports.buildListingsURL(setName, i));
+			}
+
+			this();
+		},
+		function returnURLs(err)
+		{
+			return setImmediate(function() { cb(err, urls); });
+		}
+	);
+};
+
+exports.getURLAsDoc = function(targetURL, cb, retryCount)
+{
+	var cachePath = exports.generateCacheFilePath(targetURL);
+
+	tiptoe(
+		function get()
+		{
+			if(fs.existsSync(cachePath))
+			{
+				//base.info("URL [%s] is file: %s", targetURL, cachePath);
+				fs.readFile(cachePath, {encoding:"utf8"}, this);
+			}
+			else
+			{
+				base.info("Requesting from web: %s", targetURL);
+				httpUtil.get(targetURL, {timeout:base.SECOND*10, retry:5}, this);
+			}
+		},
+		function createDoc(err, pageHTML, responseHeaders, responseStatusCode)
+		{
+			if(err || (responseStatusCode && responseStatusCode!==200))
+			{
+				base.error("Error downloading: " + targetURL);
+				base.error("Cache path: " + cachePath);
+				base.error(err);
+				return setImmediate(function() { cb(err); });
+			}
+
+			if(!pageHTML || pageHTML.length===0 || (!targetURL.contains("www.magiclibrarities.net") && !pageHTML.toString("utf8").trim().toLowerCase().endsWith("</html>")))
+			{
+				retryCount = retryCount||0;
+				if(retryCount>3)
+					throw new Error("Invalid pageHTML for " + cachePath + " (" + targetURL + ")");
+	
+				base.error("FAILED DOWNLOADING (%s), TRYING AGAIN RETRY %d", targetURL, retryCount);
+				return exports.getURLAsDoc(targetURL, cb, retryCount+1);
+			}
+
+			if(!fs.existsSync(cachePath))
+				fs.writeFileSync(cachePath, pageHTML, {encoding:"utf8"});
+
+			setImmediate(function() { cb(null, domino.createWindow(pageHTML).document); }.bind(this));
 		}
 	);
 };
