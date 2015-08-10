@@ -418,6 +418,25 @@ function checkSetForProblems(setCode, cb)
 					base.info("%s Duplicate printings entry for card %s", setCode, card.name);
 			});
 
+			// Ensure imageName is present and unique within the set
+			var imageNames = [];
+			setData.cards.forEach(function(card)
+			{
+				if(!card.hasOwnProperty("imageName"))
+				{
+					base.info("%s (%s) Does not have an imageName field!", setCode, card.name);
+					return;
+				}
+
+				/*if(imageNames.contains(card.imageName))
+				{
+					base.info("%s (%s) Does has a DUPLICATE imageName field: %s", setCode, card.name, card.imageName);
+					return;
+				}*/
+
+				imageNames.push(card.imageName);
+			});
+
 			// Check for duplicate cards
 			setData.cards.forEach(function(card)
 			{

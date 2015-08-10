@@ -3,11 +3,9 @@
 
 var base = require("xbase"),
 	C = require("C"),
-	httpUtil = require("xutil").http,
 	fs = require("fs"),
 	url = require("url"),
 	moment = require("moment"),
-	domino = require("domino"),
 	unicodeUtil = require("xutil").unicode,
 	diffUtil = require("xutil").diff,
 	path = require("path"),
@@ -164,7 +162,7 @@ function processMultiverseids(multiverseids, cb)
 
 	base.info("Processing %d multiverseids", multiverseids.unique().length);
 
-	multiverseids.unique().parallelForEach(function(multiverseid, subcb)
+	multiverseids.unique().serialForEach(function(multiverseid, subcb)
 	{
 		tiptoe(
 			function getMultiverseUrls()
@@ -216,7 +214,7 @@ function processMultiverseids(multiverseids, cb)
 			},
 			function finish(err) { setImmediate(function() { subcb(err); }); }
 		);
-	}, function(err) { return cb(err, cards); }, 10);
+	}, function(err) { return cb(err, cards); });
 }
 
 function getCardPartIDPrefix(cardPart)
@@ -1078,14 +1076,14 @@ function ripMCISet(set, cb)
 		function processCardList(listDoc)
 		{
 			var mciCardLinks = Array.toArray(listDoc.querySelectorAll("table tr td a"));
-			mciCardLinks.serialForEach(function(mciCardLink, subcb)
+			mciCardLinks.parallelForEach(function(mciCardLink, subcb)
 			{
 				var href = mciCardLink.getAttribute("href");
 				if(!href || !href.startsWith("/" + set.magicCardsInfoCode.toLowerCase() + "/en/"))
 					return setImmediate(subcb);
 
 				ripMCICard(set, href, subcb);
-			}, this);
+			}, this, 10);
 		},
 		function addAdditionalFields(cards)
 		{

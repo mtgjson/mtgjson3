@@ -203,9 +203,25 @@ exports.performSetCorrections = function(setCorrections, fullSet)
 			var COLOR_ORDER = ["Blue", "Black", "Red", "Green", "White"];
 			var LAND_ORDER = ["Island", "Swamp", "Mountain", "Forest", "Plains"];
 			var cardNumber = 1;
-			cards.multiSort([function(card) { return (card.hasOwnProperty("colors") ? COLOR_ORDER.indexOf(card.colors[0]) : 999); },
-									function(card) { return (card.types.contains("Artifact") ? -1 : 1); },
-									function(card) { return card.name; }]).forEach(function(card) { card.number = "" + (cardNumber++); });
+
+			// COLORS, Golds, Artifacts, Non-Basic Lands, Lands
+
+			cards.multiSort([function(card) {
+								if(card.hasOwnProperty("colors") && card.colors.length===1)
+									return COLOR_ORDER.indexOf(card.colors[0]);
+								if(card.hasOwnProperty("colors") && card.colors.length>1)
+									return 5;
+								if(card.types.contains("Artifact"))
+									return 6;
+								if(card.types.contains("Land") && !card.hasOwnProperty("supertypes"))
+									return 7;
+								if(LAND_ORDER.contains(card.name))
+									return 8+LAND_ORDER.indexOf(card.name);
+
+								return 99999999;
+							 },
+							 function(card) { return card.name; },
+							 function(card) { return card.multiverseid || 0; }]).forEach(function(card) { card.number = "" + (cardNumber++); });
 		}
 		else if(setCorrection==="sortCards")
 		{
@@ -224,9 +240,16 @@ exports.performSetCorrections = function(setCorrections, fullSet)
 						Object.forEach(setCorrection.replace, function(key, value)
 							{ 
 								if(Object.isObject(value))
+								{
+									if(!card.hasOwnProperty(key))
+										return;
+									
 									Object.forEach(value, function(findText, replaceWith) { card[key] = card[key].replaceAll(findText, replaceWith); });
+								}
 								else
+								{
 									card[key] = value; 
+								}
 							});
 					}
 					

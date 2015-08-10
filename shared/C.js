@@ -2526,7 +2526,8 @@
 			{ renumberImages : "Swamp", order : [27233, 27234, 27235] },
 			{ match : {name : ["Lava Axe", "Lowland Giant"]}, flavorAddExclamation : true },
 			{ match : {name : ["Fallen Angel"]}, flavorAddDash : true },
-			"numberCards"
+			"numberCards",
+			{ match : {multiverseid : 99999}, replace : {number : 99}}
 		],
 		INV :
 		[
@@ -2656,7 +2657,7 @@
 		"8ED" :
 		[
 			{ match : {name : "Lhurgoyf"}, replace : {flavor : "\"Ach! Hans, run! It's the Lhurgoyf!\"\n—Saffi Eriksdotter, last words"}},
-			{ match : {multiverseid:[47784, 47788, 47785, 47786, 47789, 47787, 49056]}, replace : {starter : true, prefixNumber : "S"}},
+			{ match : {multiverseid:[47784, 47788, 47785, 47786, 47789, 47787, 49056]}, replace : {starter : true}, prefixNumber : "S"},
 			{ match : {name : ["Eager Cadet", "Giant Octopus", "Sea Eagle"]}, replace : {rarity : "Common"}},
 			{ match : {name : ["Enormous Baloth", "Silverback Ape", "Vengeance"]}, replace : {rarity : "Uncommon"}},
 			{ match : {name : ["Vizzerdrix"]}, replace : {rarity : "Rare"}},
@@ -2810,7 +2811,7 @@
 			{ match : {name : "Blinking Spirit"}, replace : {flavor : "\"Don't look at it! Maybe it'll go away!\"\n—Ib Halfheart, goblin tactician"}},
 			{ match : {name : "Sea's Claim"}, replace : {flavor : "\"Who's the crazy one now!?\"\n—Torgle, mountaintop boatmaker"}},
 			{ match : {name : "Swarm of Rats"}, replace : {flavor : "\"Rats, rats, rats! Hundreds, thousands, millions of them, and every one a life.\"\n—Bram Stoker, Dracula"}},
-			{ match : {multiverseid:[83064, 83319, 84073, 83104, 94912, 94911, 94910, 83075, 94914]}, replace : {starter : true, prefixNumber : "S"}}
+			{ match : {multiverseid:[83064, 83319, 84073, 83104, 94912, 94911, 94910, 83075, 94914]}, replace : {starter : true}, prefixNumber : "S"}
 		],
 		RAV :
 		[
@@ -3060,6 +3061,10 @@
 			{ match : {name : "Swamp"}, replace : {number : "102"}, incrementNumber : true},
 			{ match : {name : "The Rack"}, replace : {artist : "Nic Klein"}, remove : ["flavor"]}
 		],
+		SOM :
+		[
+			{ match : { name : "Razorfield Thresher"}, replace : {watermark : "Mirran"}}
+		],
 		GTC :
 		[
 			{ match : {name : "Sylvan Primordial"}, setLegality : {"Commander" : "Banned"}}
@@ -3132,6 +3137,7 @@
 			{ match : {name : "Jade Statue"}, remove : ["power", "toughness"] },
 			{ match : {name : "Ghostfire"}, remove : ["colors"] },
 			{ match : {name : "Will-O'-The-Wisp"}, replace : {name : "Will-o'-the-Wisp"}},
+			{ match : "*", replace : {text : {"roll {C}" : "roll CHAOS"}}},
 			{ match : {name : "Rhox"}, addPrinting : "Starter 2000"},
 			{ match : {name : "Nature's Cloak"}, replace : {text : "Green creatures you control gain forestwalk until end of turn. (They can't be blocked as long as defending player controls a Forest.)"}},
 			{ match : {name : "Regrowth"}, setLegality : {"Vintage" : "Legal"}},
