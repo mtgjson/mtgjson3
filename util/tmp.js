@@ -12,8 +12,6 @@ var base = require("xbase"),
 	path = require("path"),
 	tiptoe = require("tiptoe");
 
-process.exit(0);
-
 tiptoe(
 	function processSets()
 	{
@@ -36,6 +34,8 @@ tiptoe(
 
 function checkSet(setCode, cb)
 {
+	base.info(setCode);
+
 	tiptoe(
 		function getJSON()
 		{
@@ -46,11 +46,10 @@ function checkSet(setCode, cb)
 			var set = JSON.parse(setRaw);
 			set.cards.forEach(function(card)
 			{
-				card.printings.remove("Magic 2015 Clash Pack");
-				card.printingCodes.remove("pM15CP");
 			});
 
-			fs.writeFile(path.join(__dirname, "..", "json", setCode + ".json"), JSON.stringify(set), {encoding : "utf8"}, this);
+			//fs.writeFile(path.join(__dirname, "..", "json", setCode + ".json"), JSON.stringify(set), {encoding : "utf8"}, this);
+			this();
 		},
 		function finish(err)
 		{

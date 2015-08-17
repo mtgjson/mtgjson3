@@ -64,6 +64,11 @@ tiptoe(
 
 			setWithExtras.cards.forEach(function(card)
 			{
+				C.INTERNAL_ONLY_FIELDS.forEach(function(INTERNAL_ONLY_FIELD)
+				{
+					delete card[INTERNAL_ONLY_FIELD];
+				});
+
 				Object.forEach(C.FIELD_TYPES, function(fieldName, fieldType)
 				{
 					if(!allCardsWithExtras.hasOwnProperty(card.name))
@@ -386,16 +391,15 @@ function checkSetsForProblems(cb)
 
 function checkSetForProblems(setCode, cb)
 {
-	var ALLOWED_DUPS = { UGL :["B.F.M. (Big Furry Monster)"],
-						 DKM : ["Forest", "Mountain", "Swamp", "Guerrilla Tactics", "Lim-Dûl's High Guard", "Phantasmal Fiend", "Phyrexian War Beast", "Storm Shaman", "Yavimaya Ancients"],
-						 DPA :["Forest", "Island", "Mountain", "Swamp"],
-						 CST : ["Forest", "Island", "Mountain", "Swamp", "Plains"],
-						 CED : ["Forest", "Island", "Mountain", "Swamp", "Plains"],
-						 CEI : ["Forest", "Island", "Mountain", "Swamp", "Plains"]};
 	var ALLOWED_CATEGORIES = ["letter", "space", "punctuation", "number", "symbol"];
 	var ALLOWED_OTHER_CHARS = ['\n'];
 	var ALLOWED_MISSING_NUMBERS = ["CST"];
 	var ALLOWED_MISSING_MAGICCARDSINFO_CODE = ["RQS", "VAN", "FRF_UGIN"];
+	var ALLOWED_DUP_CARD_NUMBERS =
+	{
+		PLS : ["Ertai, the Corrupted", "Skyship Weatherlight", "Tahngarth, Talruum Hero"],
+		ME4 : ["Urza's Mine", "Urza's Power Plant", "Urza's Tower"]
+	};
 
 	tiptoe(
 		function getJSON()
@@ -405,7 +409,6 @@ function checkSetForProblems(setCode, cb)
 		function compare(setRaw)
 		{
 			var setData = JSON.parse(setRaw);
-			var cardsByName = {};
 
 			// Check for magicCardsInfoCode
 			if(!ALLOWED_MISSING_MAGICCARDSINFO_CODE.contains(setCode) && !setData.hasOwnProperty("magicCardsInfoCode"))
@@ -435,18 +438,6 @@ function checkSetForProblems(setCode, cb)
 				}*/
 
 				imageNames.push(card.imageName);
-			});
-
-			// Check for duplicate cards
-			setData.cards.forEach(function(card)
-			{
-				if(card.hasOwnProperty("variations") || (ALLOWED_DUPS.hasOwnProperty(setData.code) && ALLOWED_DUPS[setData.code].contains(card.name)) || setData.type==="promo")
-					return;
-
-				if(cardsByName.hasOwnProperty(card.name))
-					base.info("%s DUP: %s\n%s", setCode, card.name, diffUtil.diff(cardsByName[card.name], card));
-				else
-					cardsByName[card.name] = card;
 			});
 
 			// Check for invalid data types
@@ -541,7 +532,7 @@ function checkSetForProblems(setCode, cb)
 					if(["plane", "phenomenon", "scheme", "vanguard"].contains(card.layout) || !card.hasOwnProperty("number"))
 						return;
 
-					if(!card.hasOwnProperty("variations") && !card.starter && setData.type!=="starter" && seenNumbers.contains(card.number))
+					if((!ALLOWED_DUP_CARD_NUMBERS.hasOwnProperty(setCode) || !ALLOWED_DUP_CARD_NUMBERS[setCode].contains(card.name)) && !card.starter && setData.type!=="starter" && seenNumbers.contains(card.number))
 						base.info("%s: Duplicate card number (%s): %s", setCode, card.name, card.number);
 					else
 						seenNumbers.push(card.number);
