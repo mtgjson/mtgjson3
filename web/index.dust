@@ -37,7 +37,7 @@
 		<h2>&nbsp;&nbsp;&nbsp;Last Updated: <span class="value">{lastUpdated}</span><a href="#changeLog">(change log)</a><a href="/atom.xml">(rss)</a></h2>
 		<br>
 		<br>
-		<h2 style="display: none;"><span style="color: red; text-decoration: underline;">ALERT:</span> alert message goes here</h2>
+		<h2 style="display: block;"><span style="color: red; text-decoration: underline;">ALERT:</span> Backwards incompatible changes have been made. See <a href="#changeLog">(change log)</a>!!!</h2>
 		<br>
 		<br>
 		<p>Data is available by set 'All Sets' (preferred) or by card 'All Cards'.</p><br>
@@ -203,7 +203,6 @@
                "block" : "Masques",            // The block this set is in,
           "onlineOnly" : false,                // Present and set to true if the set was only released online
              "booster" : [ "rare", ... ],      // Booster contents for this set, see below for details
-    "languagesPrinted" : [ "French", ... ],    // Non English languages this set was printed in. Only available for sets on gatherer
                "cards" : [ {~lb}{~rb}, {~lb}{~rb}, {~lb}{~rb}, ... ]  // The cards in the set
     {~rb}</code></pre>
 		<p>
@@ -378,11 +377,6 @@
 						Sets not on Gatherer are: {setCodesNotOnGatherer} and all sets with a 4 letter code that starts with a lowercase 'p'.</td>
 				</tr>
 				<tr>
-					<td>variations</td>
-					<td>[ 1909, 1910 ]</td>
-					<td>If a card has alternate art (for example, 4 different Forests, or the 2 Brothers Yamazaki) then each other variation's multiverseid will be listed here, NOT including the current card's multiverseid.</td>
-				</tr>
-				<tr>
 					<td>imageName</td>
 					<td>"ajani goldmane"</td>
 					<td>This used to refer to the mtgimage.com file name for this card.<br>mtgimage.com has been <strong style="color: red;">SHUT DOWN</strong> by Wizards of the Coast.<br>This field will continue to be set correctly and is now only useful for UID purposes.</td>
@@ -448,8 +442,8 @@
 				</tr>
 				<tr>
 					<td>foreignNames</td>
-					<td>[ {~lb} "language" : "Italian",&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>"name" : "Wurm Devastatore" {~rb} ]</td>
-					<td>Foreign language names for the card. An array of objects, each object having 'language' and 'name' keys. A language is only present if different than the english card name. Split cards don't currently have this field.<br>Attention: This field is present if this card was printed in this language in ANY set, not just this one. This field is meant as a quick way to look up the foreign name of a card, regardless of whether it was printed in that language in this set or not. See the set level 'languagesPrinted' field if you want to know which languages the cards in this set were printed in.</td>
+					<td>[ {~lb} "language" : "Italian",<br>"name" : "Wurm Devastatore",<br>&nbsp;&nbsp;&nbsp;&nbsp;"multiverseid" : 200475 {~rb} ]</td>
+					<td>Foreign language names for the card. An array of objects, each object having 'language', 'name' and 'multiverseid' keys. Currently only available for sets that are on gatherer.</td>
 				</tr>
 				<tr>
 					<td>printingCodes</td>

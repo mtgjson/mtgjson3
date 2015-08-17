@@ -47,43 +47,13 @@ function ripSet(setName, cb)
 
 			fillImageNames(this.data.set);
 
-			// Foreign Languages
-			if(!fs.existsSync(path.join(__dirname, "..", "json", this.data.set.code + ".json")))
-			{
-				base.warn("SKIPPING foreign languages...");
-				this();
-			}
-			else
-			{
-				base.info("Adding foreign languages to cards...");
-				addForeignNamesToSet(this.data.set, this);
-			}
-		},
-		function addLanguagesPrinted()
-		{
-			base.info("Adding languagesPrinted set field...");
-
-			var languagesPrinted = {};
-			this.data.set.cards.forEach(function(card)
-			{
-				if(!card.hasOwnProperty("languagesPrinted"))
-					return;
-
-				languagesPrinted.forEach(function(languagePrinted)
-				{
-					if(languagesPrinted.hasOwnProperty(languagePrinted))
-						return;
-
-					languagesPrinted[languagePrinted] = true;
-				});
-
-				delete card.languagesPrinted;
-			});
-
-			if(Object.keys(languagesPrinted).length>0)
-				this.data.set.languagesPrinted = Object.keys(languagesPrinted);
-
 			this();
+		},
+		function addForeignNames()
+		{
+			base.info("Adding foreign names to cards...");
+
+			addForeignNamesToCards(this.data.set.cards, this);
 		},
 		function addLegalities()
 		{
@@ -471,168 +441,62 @@ function getURLsForMultiverseid(multiverseid, cb)
 	);
 }
 
-
-
-function addForeignNamesToSet(set, cb)
+function addForeignNamesToCards(cards, cb)
 {
-	var sets = {};
-
-	tiptoe(
-		function loadJSON()
-		{
-			C.SETS.reverse().forEach(function(SET)
-			{
-				fs.readFile(path.join(__dirname, "..", "json", SET.code + ".json"), {encoding : "utf8"}, this.parallel());
-			}.bind(this));
-		},
-		function processCards()
-		{
-			var args=arguments;
-
-			C.SETS.reverse().forEach(function(SET, i)
-			{
-				sets[SET.code] = JSON.parse(args[i]);
-			});
-
-			set.cards.serialForEach(function(card, subcb)
-			{
-				getForeignNamesForCardName(sets, card.name, subcb);
-			}, this);
-		},
-		function applyForeignLanguages(cardsForeignNames)
-		{
-			set.cards.forEach(function(card, i)
-			{
-				delete card.foreignNames;
-
-				if(card.layout==="split" || card.layout==="double-faced" || card.layout==="flip")
-				{
-					if(card.names.length===2)
-					{
-						card.foreignNames = [];
-						(cardsForeignNames[i] || []).forEach(function(cardForeignName)
-						{
-							if(cardForeignName.name.contains("//"))
-							{
-								var cardForeignNameParts = cardForeignName.name.split("//").map(function(cardForeignNamePart) { return cardForeignNamePart.trim(); });
-								if(cardForeignNameParts.length===card.names.length)
-								{
-									cardForeignName.name = cardForeignNameParts[card.names.indexOf(card.name)];
-									if(cardForeignName.name!==card.name)
-										card.foreignNames.push(cardForeignName);
-								}
-							}
-							else if(card.names[0]===card.name && card.name!==cardForeignName.name)
-							{
-								card.foreignNames.push(cardForeignName);
-							}
-						});
-						if(!card.foreignNames.length)
-							delete card.foreignNames;
-					}
-				}
-				else
-				{
-					var cardForeignNames = cardsForeignNames[i];
-					if(cardForeignNames && cardForeignNames.length)
-						card.foreignNames = cardForeignNames;
-				}
-			});
-
-			set.cards.serialForEach(function(card, subcb)
-			{
-				if(!card.hasOwnProperty("multiverseid"))
-					return setImmediate(subcb);
-
-				getLanguagesPrintedForMultiverseid(card.multiverseid, subcb);
-			}, this);
-		},
-		function applyLanguagesPrinted(err, cardsLanguagesPrinted)
-		{
-			if(err)
-				return setImmediate(function() { cb(err); });
-
-			var languagesPrinted = {};
-			cardsLanguagesPrinted.forEach(function(cardLanguagesPrinted)
-			{
-				cardLanguagesPrinted.forEach(function(cardLanguagePrinted)
-				{
-					if(languagesPrinted.hasOwnProperty(cardLanguagePrinted))
-						return;
-
-					languagesPrinted[cardLanguagePrinted] = true;
-				});
-			});
-			
-			set.languagesPrinted = Object.keys(languagesPrinted).sort(function(a, b) { return a.localeCompare(b); });
-			if(set.languagesPrinted.length===0)
-				delete set.languagesPrinted;
-
-			setImmediate(function() { cb(); });
-		}
-	);
+	cards.parallelForEach(function(card, subcb)
+	{
+		addForeignNamesToCard(card, subcb);
+	}, cb, 10);
 }
 
-function getForeignNamesForCardName(sets, cardName, cb)
+function addForeignNamesToCard(card, cb)
 {
-	var seenLanguages = [];
-	var foreignLanguages = [];
+	if(!card.multiverseid)
+		return setImmediate(cb);
 
 	tiptoe(
-		function fetchLanguagePages()
+		function fetchLanguagePage()
 		{
-			var multiverseids = getMultiverseidsForCardName(sets, cardName);
-			multiverseids.parallelForEach(function(multiverseid, subcb)
-			{
-				shared.getURLAsDoc(shared.buildMultiverseLanguagesURL(multiverseid), subcb);
-			}, this, 10);
+			shared.getURLAsDoc(shared.buildMultiverseLanguagesURL(card.multiverseid), this);
 		},
-		function processDocs(err, docs)
+		function processLanguages(doc)
 		{
-			if(err)
-				return setImmediate(function() { cb(err); });
+			delete card.foreignNames;
+			card.foreignNames = [];
 
-			docs.forEach(function(doc)
-			{
-				Array.toArray(doc.querySelectorAll("table.cardList tr.cardItem")).forEach(function(cardRow)
-				{
-					var language = getTextContent(cardRow.querySelector("td:nth-child(2)")).trim();
-					var foreignCardName = getTextContent(cardRow.querySelector("td:nth-child(1) a")).innerTrim().trim();
-					if(foreignCardName.startsWith("XX"))
-						foreignCardName = foreignCardName.substring(2);
-					if(language && foreignCardName && !seenLanguages.contains(language) && cardName!==foreignCardName)
-					{
-						seenLanguages.push(language);
-						foreignLanguages.push({language : language, name : foreignCardName});
-					}
-				});
-			});
-
-			foreignLanguages = foreignLanguages.sort(function(a, b) { var al = a.language.toLowerCase().charAt(0); var bl = b.language.toLowerCase().charAt(0); return (al<bl ? -1 : (al>bl ? 1 : 0)); });
-
-			setImmediate(function() { cb(null, foreignLanguages); });
-		}
-	);
-}
-
-function getLanguagesPrintedForMultiverseid(multiverseid, cb)
-{
-	tiptoe(
-		function getLanguagePage()
-		{
-			shared.getURLAsDoc(shared.buildMultiverseLanguagesURL(multiverseid), this);
-		},
-		function processDoc(err, doc)
-		{
-			var languagesPrinted = [];
 			Array.toArray(doc.querySelectorAll("table.cardList tr.cardItem")).forEach(function(cardRow)
 			{
 				var language = getTextContent(cardRow.querySelector("td:nth-child(2)")).trim();
-				if(language)
-					languagesPrinted.push(language);
+				var foreignCardName = getTextContent(cardRow.querySelector("td:nth-child(1) a")).innerTrim().trim();
+				if(foreignCardName.startsWith("XX"))
+					foreignCardName = foreignCardName.substring(2);
+
+				if(foreignCardName.contains("//"))
+				{
+					if(!card.hasOwnProperty("names"))
+					{
+						base.error("Card [%s] (%d) has foreignCardName [%s] but has no 'names' property.", card.name, card.multiverseid, foreignCardName);
+						process.exit(0);
+					}
+
+					foreignCardName = foreignCardName.split("//").map(function(part) { return part.trim(); })[card.names.indexOf(card.name)];
+				}
+
+				if(language && foreignCardName)
+				{
+					var languageHref = cardRow.querySelector("td:nth-child(1) a").getAttribute("href");
+					var foreignMultiverseid = querystring.parse(languageHref.substring(languageHref.indexOf("?")+1)).multiverseid;
+					card.foreignNames.push({language : language, name : foreignCardName, multiverseid : foreignMultiverseid});
+				}
 			});
 
-			setImmediate(function() { cb(null, languagesPrinted); });
+			card.foreignNames = card.foreignNames.sort(function(a, b) { var al = a.language.toLowerCase().charAt(0); var bl = b.language.toLowerCase().charAt(0); return (al<bl ? -1 : (al>bl ? 1 : 0)); });
+
+			this();
+		},
+		function finish(err)
+		{
+			setImmediate(function() { cb(err); });
 		}
 	);
 }
@@ -752,17 +616,6 @@ function addPrintingsToCard(nonGathererSets, card, cb)
 			setImmediate(function() { cb(err); });
 		}
 	);
-}
-
-function getMultiverseidsForCardName(sets, cardName)
-{
-	var multiverseids = [];
-
-	Object.forEach(sets, function(setCode, set)
-	{
-		multiverseids = multiverseids.concat(set.cards.filter(function(card) { return card.name===cardName; }).map(function(card) { return card.multiverseid; }));
-	});
-	return multiverseids.filterEmpty().unique();
 }
 
 function fillCardTypes(card, rawTypeFull)
