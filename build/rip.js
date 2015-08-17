@@ -25,7 +25,7 @@ function ripSet(setName, cb)
 		{
 			base.info("Getting card lists...");
 
-			getSetNameMultiverseIds(C.GATHERER_SET_RENAMES_REVERSED[setName] || setName, this);
+			getSetNameMultiverseIds(setName, this);
 		},
 		function processFirstBatch(multiverseids)
 		{
@@ -595,7 +595,7 @@ function addPrintingsToCard(nonGathererSets, card, cb)
 				{
 					var printing = getTextContent(cardRow.querySelector("td:nth-child(3)")).trim();
 					if(printing)
-						printings.push(printing);
+						printings.push(shared.getSetCodeFromName(printing));
 				});
 			});
 
@@ -604,7 +604,7 @@ function addPrintingsToCard(nonGathererSets, card, cb)
 			nonGathererSets.forEach(function(nonGathererSet)
 			{
 				if(nonGathererSet.cards.map(function(extraSetCard) { return extraSetCard.name; }).contains(card.name))
-					printings.push(nonGathererSet.name);
+					printings.push(nonGathererSet.code);
 			});
 
 			card.printings = printings;
@@ -1239,7 +1239,7 @@ function addPrintingsToMCISet(set, cb)
 	tiptoe(
 		function loadJSON()
 		{
-			set.cards.forEach(function(card) { card.printings = [set.name]; });
+			set.cards.forEach(function(card) { card.printings = [set.code]; });
 
 			C.SETS.forEach(function(SET)
 			{
@@ -1260,7 +1260,7 @@ function addPrintingsToMCISet(set, cb)
 				set.cards.forEach(function(card)
 				{
 					if(setCardNames.contains(card.name))
-						card.printings.push(setWithExtras.name);
+						card.printings.push(setWithExtras.code);
 				});
 			});
 

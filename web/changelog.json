@@ -7,7 +7,8 @@
 			"<span style='color: red; font-weight: bold;'>WARNING!</span> Several backwards incompatible changes have been made in this version! Read below carefully for details.",
 			"Removed the 'variations' card level field. See <a href=\"https://github.com/Sembiance/mtgjson/issues/64\">GitHub Issue #64</a> for more details.",
 			"Added a 'multiverseid' field to the card level 'foreignNames' object. See <a href=\"https://github.com/Sembiance/mtgjson/issues/12\">GitHub Issue #12</a> for more details.",
-			"Removed the 'languagesPrinted' set level field. See <a href=\"https://github.com/Sembiance/mtgjson/issues/12\">GitHub Issue #12</a> for more details."
+			"Removed the 'languagesPrinted' set level field. See <a href=\"https://github.com/Sembiance/mtgjson/issues/12\">GitHub Issue #12</a> for more details.",
+			"Renamed the 'printingCodes' card level field to be 'printings'. Thus the 'printings' field is now an array of set codes, rather than set names. See <a href=\"https://github.com/Sembiance/mtgjson/issues/65\">GitHub Issue #65</a> for more details."
 		],
 		"updatedSetFiles" : []
 	},

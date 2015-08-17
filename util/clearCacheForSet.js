@@ -68,7 +68,7 @@ function clearCacheForSet(code, cacheType, cb)
 			}
 			else if(cacheType==="listings")
 			{
-				return shared.buildMultiverseListingURLs(C.GATHERER_SET_RENAMES_REVERSED[setName] || setName, this);
+				return shared.buildMultiverseListingURLs(setName, this);
 			}
 			else
 			{

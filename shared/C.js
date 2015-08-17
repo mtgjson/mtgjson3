@@ -1763,11 +1763,6 @@
 		}
 	];
 
-	exports.GATHERER_SET_RENAMES =
-	{
-	};
-	exports.GATHERER_SET_RENAMES_REVERSED = Object.swapKeyValues(exports.GATHERER_SET_RENAMES);
-
 	exports.NON_GATHERER_SET_CARD_LISTS =
 	{
 		ATH : ["Aesthir Glider", "Armageddon", "Armored Pegasus", "Benalish Knight", "Black Knight", "Brushland", "Canopy Spider", "Carnivorous Plant", "Combat Medic", "Cuombajj Witches", "Disenchant", "Drifting Meadow", "Erhnam Djinn", "Feast of the Unicorn", "Fireball", "Forest", "Freewind Falcon", "Giant Growth", "Giant Spider", "Goblin Balloon Brigade", "Goblin Digging Team", "Goblin Grenade", "Goblin Hero", "Goblin King", "Goblin Matron", "Goblin Mutant", "Goblin Offensive", "Goblin Recruiter", "Goblin Snowman", "Goblin Tinkerer", "Goblin Vandal", "Goblin Warrens", "Gorilla Chieftain", "Hurricane", "Hymn to Tourach", "Hypnotic Specter", "Icatian Javelineers", "Ihsan's Shade", "Infantry Veteran", "Jalum Tome", "Knight of Stromgald", "Lady Orca", "Lightning Bolt", "Llanowar Elves", "Mirri, Cat Warrior", "Mogg Fanatic", "Mogg Flunkies", "Mogg Raider", "Mountain", "Nevinyrral's Disk", "Order of the White Shield", "Overrun", "Pacifism", "Pegasus Charger", "Pegasus Stampede", "Pendelhaven", "Plains", "Polluted Mire", "Pyrokinesis", "Pyrotechnics", "Raging Goblin", "Ranger en-Vec", "Samite Healer", "Scavenger Folk", "Serra Angel", "Serrated Arrows", "Slippery Karst", "Smoldering Crater", "Spectral Bears", "Strip Mine", "Swamp", "Swords to Plowshares", "Terror", "Unholy Strength", "Uthden Troll", "Volcanic Dragon", "Warrior's Honor", "White Knight", "Woolly Spider", "Youthful Knight" ],
@@ -3138,7 +3133,7 @@
 			{ match : {name : "Ghostfire"}, remove : ["colors"] },
 			{ match : {name : "Will-O'-The-Wisp"}, replace : {name : "Will-o'-the-Wisp"}},
 			{ match : "*", replace : {text : {"roll {C}" : "roll CHAOS"}}},
-			{ match : {name : "Rhox"}, addPrinting : "Starter 2000"},
+			{ match : {name : "Rhox"}, addPrinting : "S00"},
 			{ match : {name : "Nature's Cloak"}, replace : {text : "Green creatures you control gain forestwalk until end of turn. (They can't be blocked as long as defending player controls a Forest.)"}},
 			{ match : {name : "Regrowth"}, setLegality : {"Vintage" : "Legal"}},
 			{ match : {name : ["Argothian Wurm", "Barrin, Master Wizard", "Citanul Centaurs", "Gaea's Cradle", "Gilded Drake", "Great Whale", "Herald of Serra", "Karn, Silver Golem", "Lifeline", "Lightning Dragon", "Morphling", "Opal Archangel",
@@ -3361,13 +3356,12 @@
 		source        : "string",
 		releaseDate   : "string",
 		legalities    : {},
-		starter       : "boolean",
-		printingCodes : ["string"]
+		starter       : "boolean"
 	};
 
-	exports.ORACLE_FIELDS = ["layout", "name", "names", "manaCost", "cmc", "colors", "type", "supertypes", "types", "subtypes", "text", "power", "toughness", "loyalty", "hand", "life", "rulings", "foreignNames", "printings", "printingCodes", "legalities"];
+	exports.ORACLE_FIELDS = ["layout", "name", "names", "manaCost", "cmc", "colors", "type", "supertypes", "types", "subtypes", "text", "power", "toughness", "loyalty", "hand", "life", "rulings", "foreignNames", "printings", "legalities"];
 	exports.INTERNAL_ONLY_FIELDS = ["variations"];
-	exports.EXTRA_FIELDS = ["rulings", "foreignNames", "printings", "originalText", "originalType", "legalities", "source", "printingCodes"];
+	exports.EXTRA_FIELDS = ["rulings", "foreignNames", "printings", "originalText", "originalType", "legalities", "source"];
 	exports.SET_SPECIFIC_FIELDS = ["rarity", "artist", "flavor", "number", "multiverseid", "watermark", "border", "timeshifted", "reserved", "releaseDate", "originalText", "originalType"];
 
 	exports.VINTAGE_BANNED = ["Advantageous Proclamation", "Amulet of Quoz", "Backup Plan", "Brago's Favor", "Bronze Tablet", "Chaos Orb", "Contract from Below", "Darkpact", "Demonic Attorney", "Double Stroke", "Falling Star", "Immediate Action", "Iterative Analysis", "Jeweled Bird", "Muzzio's Preparations", "Power Play", "Rebirth", "Secret Summoning", "Secrets of Paradise", "Sentinel Dispatch", "Shahrazad", "Tempest Efreet", "Timmerian Fiends", "Unexpected Potential", "Worldknit"];

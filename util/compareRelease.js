@@ -2,13 +2,10 @@
 /*global setImmediate: true*/
 
 var base = require("xbase"),
-	C = require("C"),
 	httpUtil = require("xutil").http,
 	fs = require("fs"),
-	url = require("url"),
 	shared = require("shared"),
 	color = require("cli-color"),
-	fileUtil = require("xutil").file,
 	diffUtil = require("xutil").diff,
 	path = require("path"),
 	tiptoe = require("tiptoe");

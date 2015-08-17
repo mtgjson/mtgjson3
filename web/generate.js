@@ -552,22 +552,6 @@ function checkSetForProblems(setCode, cb)
 				}
 			}
 
-			// Check for printings and printingCodes not having same length
-			setData.cards.forEach(function(card)
-			{
-				if(!card.hasOwnProperty("printings"))
-					return;
-
-				if(!card.hasOwnProperty("printingCodes"))
-				{
-					base.info("%s Card [%s] (%s) has printings but not printingCodes", setCode, card.name, card.multiverseid || "");
-					return;
-				}
-
-				if(card.printings.length!==card.printingCodes.length)
-					base.info("%s Card [%s] (%s) has %d printings but %d printingCodes, these should be the same!", setCode, card.name, card.multiverseid || "", card.printings.length, card.printingCodes.length);
-			});
-
 			this();
 		},
 		function finish(err)

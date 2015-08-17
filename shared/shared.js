@@ -349,13 +349,6 @@ exports.performSetCorrections = function(setCorrections, fullSet)
 		card.artist = card.artist.replace(/^([^"]*)"([^"]*)"(.*)$/, "$1“$2”$3", "m");
 	});
 
-	// Printings corrections
-	cards.forEach(function(card)
-	{
-		if(card.printings)
-			card.printings.remove("Promo set for Gatherer");
-	});
-
 	// No text for basic lands and rarity of Basic Land
 	cards.forEach(function(card)
 	{
@@ -480,19 +473,6 @@ exports.performSetCorrections = function(setCorrections, fullSet)
 		});
 	});
 
-	// Set renames
-	Object.forEach(C.GATHERER_SET_RENAMES, function(oldName, newName)
-	{
-		if(fullSet.name===oldName)
-			fullSet.name = newName;
-
-		cards.forEach(function(card)
-		{
-			if(card.printings && card.printings.contains(oldName))
-				card.printings = card.printings.replaceAll(oldName, newName);
-		});
-	});
-
 	cards.forEach(exports.finalizePrintings);
 };
 
@@ -509,9 +489,8 @@ function finalizePrintings(card)
 	if(!card.printings)
 		return;
 	
-	card.printings = card.printings.unique().multiSort([function(item) { return moment(getReleaseDateForSetName(item), "YYYY-MM-DD").unix(); },
+	card.printings = card.printings.unique().multiSort([function(item) { return moment(getReleaseDateForSetCode(item), "YYYY-MM-DD").unix(); },
 														function(item) { return item; }]);
-	card.printingCodes = card.printings.map(function(printing) { return exports.getSetCodeFromName(printing); });
 }
 
 exports.getSetCodeFromName = getSetCodeFromName;
@@ -520,6 +499,7 @@ function getSetCodeFromName(setName)
 	var setCode = C.SETS.mutateOnce(function(SET) { return SET.name.toLowerCase()===setName.toLowerCase() ? SET.code : undefined; });
 	if(!setCode)
 	{
+		console.trace();
 		base.error("FAILED TO GET SET CODE FOR NAME: %s", setName);
 		process.exit(1);
 	}

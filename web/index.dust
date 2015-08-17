@@ -37,7 +37,7 @@
 		<h2>&nbsp;&nbsp;&nbsp;Last Updated: <span class="value">{lastUpdated}</span><a href="#changeLog">(change log)</a><a href="/atom.xml">(rss)</a></h2>
 		<br>
 		<br>
-		<h2 style="display: block;"><span style="color: red; text-decoration: underline;">ALERT:</span> Backwards incompatible changes have been made. See <a href="#changeLog">(change log)</a>!!!</h2>
+		<h2 style="display: block;"><span style="color: red; text-decoration: underline;">ALERT:</span> Backwards incompatible changes! See <a style="font-size: 90%; margin-left: 0;" href="#changeLog">(change log)</a>!!!</h2>
 		<br>
 		<br>
 		<p>Data is available by set 'All Sets' (preferred) or by card 'All Cards'.</p><br>
@@ -442,18 +442,13 @@
 				</tr>
 				<tr>
 					<td>foreignNames</td>
-					<td>[ {~lb} "language" : "Italian",<br>"name" : "Wurm Devastatore",<br>&nbsp;&nbsp;&nbsp;&nbsp;"multiverseid" : 200475 {~rb} ]</td>
-					<td>Foreign language names for the card. An array of objects, each object having 'language', 'name' and 'multiverseid' keys. Currently only available for sets that are on gatherer.</td>
-				</tr>
-				<tr>
-					<td>printingCodes</td>
-					<td>[ "ICE", "CHR" ]</td>
-					<td>The sets that this card was printed in, expressed as an array of set codes.</td>
+					<td>[ {~lb} "language" : "Italian",&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>"name" : "Wurm Devastatore",<br>"multiverseid" : 200475 {~rb} ]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+					<td>Foreign language names for the card, if this card in this set was printed in another language. An array of objects, each object having 'language', 'name' and 'multiverseid' keys. Currently only available for sets that are on gatherer.</td>
 				</tr>
 				<tr>
 					<td>printings</td>
-					<td>[ "Ice Age", "Chronicles" ]</td>
-					<td>The sets that this card was printed in, expressed as an array of set names.</td>
+					<td>[ "ICE", "CHR" ]</td>
+					<td>The sets that this card was printed in, expressed as an array of set codes.</td>
 				</tr>
 				<tr>
 					<td>originalText</td>
