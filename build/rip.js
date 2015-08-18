@@ -643,6 +643,9 @@ function fillCardTypes(card, rawTypeFull)
 
 		card.type += (i>0 ? " " : "") + rawType;
 
+		if(rawType==="Summon")
+			rawType = "Creature";
+
 		rawType = rawType.trim().toProperCase();
 		if(C.SUPERTYPES.contains(rawType))
 			card.supertypes.push(rawType);

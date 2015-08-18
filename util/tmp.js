@@ -13,8 +13,6 @@ var base = require("xbase"),
 	hash = require("mhash"),
 	tiptoe = require("tiptoe");
 
-var uniqueHashes = [];
-
 tiptoe(
 	function processSets()
 	{
@@ -48,15 +46,10 @@ function checkSet(setCode, cb)
 
 			set.cards.forEach(function(card)
 			{
-				var id = hash("sha1", (setCode + card.name + card.imageName));
-				base.info(id);
-				if(uniqueHashes.contains(id))
+				if(card.name==="Grave Titan")
 				{
-					base.error("COLLISION!");
-					process.exit(0);
+					base.info("%s: %s : %s", setCode, card.name, card.artist);
 				}
-
-				uniqueHashes.push(id);
 			});
 
 			//fs.writeFile(path.join(__dirname, "..", "json", setCode + ".json"), JSON.stringify(set), {encoding : "utf8"}, this);

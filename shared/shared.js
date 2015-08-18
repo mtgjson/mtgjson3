@@ -238,10 +238,10 @@ exports.performSetCorrections = function(setCorrections, fullSet)
 						if(Array.isArray(value))
 							return value.contains(card[key]);
 
-						if(value.startsWith("<"))
+						if(typeof value==="string" && value.startsWith("<"))
 							return (+card[key])<(+(value.substring(1)));
 
-						if(value.startsWith(">"))
+						if(typeof value==="string" && value.startsWith(">"))
 							return (+card[key])>(+(value.substring(1)));
 
 						return value===card[key];

@@ -6,7 +6,7 @@
 	exports.TYPES = ["Instant", "Sorcery", "Artifact", "Creature", "Enchantment", "Land", "Planeswalker", "Tribal", "Plane", "Phenomenon", "Scheme", "Vanguard", "Conspiracy"];
 
 	// Unglued/Unhinged types
-	exports.TYPES.push("Enchant", "Player", "Summon", "Interrupt", "Scariest", "You'll", "Ever", "See", "Eaturecray");
+	exports.TYPES.push("Enchant", "Player", "Interrupt", "Scariest", "You'll", "Ever", "See", "Eaturecray");
 
 	exports.LAST_PRINTINGS_RESET = "ORI";
 
@@ -1910,7 +1910,8 @@
 			{match : {name : "Mana Crypt"}, replace : {multiverseid : 97048}},
 			{match : {name : "Nalathni Dragon"}, replace : {multiverseid : 97050}},
 			{match : {name : "Sewers of Estark"}, replace : {multiverseid : 97054}},
-			{match : {name : "Windseeker Centaur"}, replace : {multiverseid : 97057}}
+			{match : {name : "Windseeker Centaur"}, replace : {multiverseid : 97057}},
+			{match : {name : "Grave Titan"}, replace : {artist : "Lucas Graciano"}}
 		],
 		FEM :
 		[
@@ -2839,7 +2840,8 @@
 			{ match : {name : "Nissa's Chosen"}, replace : {releaseDate : "2009"}},
 			{ match : {name : "Staggershock"}, replace : {releaseDate : "2010"}},
 			{ match : {imageName : "fling1"}, replace : {releaseDate : "2014"}},
-			{ match : {imageName : "sylvan ranger1"}, replace : {releaseDate : "2014"}}
+			{ match : {imageName : "sylvan ranger1"}, replace : {releaseDate : "2014"}},
+			{ match : {name : "Curse of Thirst"}, replace : {artist : "Dave Kendall"}}
 		],
 		GPT :
 	[
@@ -3215,22 +3217,43 @@
 
 	exports.ARTIST_CORRECTIONS =
 	{
-		"Brian Snõddy" : ["Brian Snōddy", "Brian Snoddy", "Brian Snøddy"],
-		"Dennis Detwiller" : ["Dennis Detwiler", "Denise Detwiler"],
-		"Diana Vick" : ["Diane Vick"],
-		"Douglas Shuler" : ["Douglas Schuler"],
-		"Edward P. Beard, Jr." : ["Edward P. Beard, Jr", "Edward Beard, Jr."],
-		"Jon J. Muth" : ["Jon J Muth"],
-		"Ken Meyer, Jr." : ["Ken Meyer Jr."],
-		"Kerstin Kaman" : ["Kersten Kaman"],
-		"L. A. Williams" : ["L.A. Williams"],
-		"Melissa A. Benson" : ["Melissa Benson"],
-		"Ron Spencer" : ["ROn Spencer"],
-		"Richard Kane Ferguson" : ["Richard Kane-Ferguson"],
-		"Sam Wood" : ["Sam Woods"],
-		"Steve White" : ["Steven White"],
-		"Tim Hildebrandt" : ["Tim Hilderbrandt"],
-		"Zoltan Boros & Gabor Szikszai" : ["Zoltan Boras & Gabor Szikszai"]
+		"Brian Snõddy"                        : ["Brian Snōddy", "Brian Snoddy", "Brian Snøddy"],
+		"Paolo Parente & Brian Snõddy"        : ["Parente & Brian Snoddy"],
+		"Dennis Detwiller"                    : ["Dennis Detwiler", "Denise Detwiler"],
+		"Diana Vick"                          : ["Diane Vick"],
+		"Douglas Shuler"                      : ["Douglas Schuler"],
+		"Edward P. Beard, Jr."                : ["Edward P. Beard, Jr", "Edward Beard, Jr.", "Edward P. Beard Jr."],
+		"Jon J. Muth"                         : ["Jon J Muth", "John J. Muth"],
+		"Ken Meyer, Jr."                      : ["Ken Meyer Jr."],
+		"Kerstin Kaman"                       : ["Kersten Kaman"],
+		"L. A. Williams"                      : ["L.A. Williams"],
+		"Melissa A. Benson"                   : ["Melissa Benson"],
+		"Ron Spencer"                         : ["ROn Spencer"],
+		"Richard Kane Ferguson"               : ["Richard Kane-Ferguson"],
+		"Sam Wood"                            : ["Sam Woods"],
+		"Steve White"                         : ["Steven White"],
+		"Tim Hildebrandt"                     : ["Tim Hilderbrandt"],
+		"Zoltan Boros & Gabor Szikszai"       : ["Zoltan Boras & Gabor Szikszai"],
+		"Bradley Williams"                    : ["Brad Williams"],
+		"Christopher Rush"                    : ["Christoper Rush"],
+		"Z. Plucinski & D. Alexander Gregory" : ["Z. Plucinski & D.A. Gregory"],
+		"Dave Kendall"                        : ["Daven Kendall"],
+		"DiTerlizzi"                          : ["DiTerrlizzi"],
+		"Tony Diterlizzi"                     : ["Tony DiTerlizzi"],
+		"Dom!"                                : ["Dom"],
+		"Geofrey Darrow"                      : ["G. Darrow"],
+		"Henry G. Higgenbotham"               : ["Henry G. Higginbotham"],
+		"Jarreau Wimberly"                    : ["Jarreau Wimberley"],
+		"Kev Walker"                          : ["Kevin Walker"],
+		"Lucio Parrillo"                      : ["Lucio Patrillo"],
+		"Mark A. Nelson"                      : ["Mark Nelson"],
+		"Matt Stewart"                        : ["Matt Steward"],
+		"Matthew D. Wilson"                   : ["Matthew Wilson"],
+		"Paolo Parente"                       : ["Parente"],
+		"Randy Asplund-Faith"                 : ["Randy Asplund"],
+		"Romas Kukalis"                       : ["Romas"],
+		"Scott M. Fischer"                    : ["Scott M. Fisher"],
+		"Trevor Claxton"                      : ["Trevon Claxton"]
 	};
 
 	exports.SYMBOL_RARITIES = {c:["common"], u : ["uncommon"], r : ["rare"], m : ["mythic", "mythic rare", "mythicrare"], s : ["special"]};
