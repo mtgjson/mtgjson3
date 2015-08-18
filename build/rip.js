@@ -490,7 +490,8 @@ function addForeignNamesToCard(card, cb)
 				}
 			});
 
-			card.foreignNames = card.foreignNames.sort(function(a, b) { var al = a.language.toLowerCase().charAt(0); var bl = b.language.toLowerCase().charAt(0); return (al<bl ? -1 : (al>bl ? 1 : 0)); });
+			if(card.foreignNames.length===0)
+				delete card.foreignNames;
 
 			this();
 		},
@@ -519,7 +520,7 @@ function addLegalitiesToCard(card, cb)
 		function processLegalities(doc)
 		{
 			delete card.legalities;
-			card.legalities = {};
+			card.legalities = [];
 
 			Array.toArray(doc.querySelectorAll("table.cardList")[1].querySelectorAll("tr.cardItem")).forEach(function(cardRow)
 			{
@@ -527,8 +528,17 @@ function addLegalitiesToCard(card, cb)
 				var legality = getTextContent(cardRow.querySelector("td:nth-child(2)")).trim();
 				var condition = getTextContent(cardRow.querySelector("td:nth-child(3)")).trim();
 				if(format && legality)
-					card.legalities[format] = legality + (condition && condition.length>0 ? (" (" + condition + ")") : "");
+				{
+					var legalityObject = {format:format, legality:legality};
+					if(condition && condition.length>0)
+						legalityObject.condition = condition;
+					
+					card.legalities.push(legalityObject);
+				}
 			});
+
+			if(card.legalities.length===0)
+				delete card.legalities;
 
 			this();
 		},
@@ -594,7 +604,7 @@ function addPrintingsToCard(nonGathererSets, card, cb)
 				Array.toArray(doc.querySelectorAll("table.cardList")[0].querySelectorAll("tr.cardItem")).forEach(function(cardRow)
 				{
 					var printing = getTextContent(cardRow.querySelector("td:nth-child(3)")).trim();
-					if(printing)
+					if(printing && printing!=="Promo set for Gatherer")
 						printings.push(shared.getSetCodeFromName(printing));
 				});
 			});
@@ -1179,7 +1189,7 @@ function ripMCICard(set, mciCardURL, cb)
 				// Legalities
 				var legalityElements = legalityElementsContainer.querySelectorAll("li");
 				if(legalityElements && legalityElements.length>0)
-					card.legalities = Array.toArray(legalityElements).mutate(function(legalityElement, result) { var legalityParts = getTextContent(legalityElement).match(/^([^ ]+) in ([^(]+).*$/); if(!legalityParts) { return result; } result[legalityParts[2].trim()] = legalityParts[1].trim(); return result; }, {});
+					card.legalities = Array.toArray(legalityElements).map(function(legalityElement) { var legalityParts = getTextContent(legalityElement).match(/^([^ ]+) in ([^(]+).*$/); if(!legalityParts) { return null; } return {format:legalityParts[2].trim(), legality:legalityParts[1].trim()}; }).filterEmpty();
 			}
 
 			// Number
@@ -1197,8 +1207,6 @@ function ripMCICard(set, mciCardURL, cb)
 				if(languageElement.nodeName.toLowerCase()==="img")
 				{
 					cardForeignName["language"] = languageElement.getAttribute("alt");
-					if(cardForeignName["language"]==="Portuguese")
-						cardForeignName["language"] = "Portuguese (Brazil)";
 				}
 				else if(languageElement.nodeName.toLowerCase()==="a")
 				{
@@ -1214,7 +1222,20 @@ function ripMCICard(set, mciCardURL, cb)
 			} while(languageElement);
 
 			if(cardForeignNames.length>0)
+			{
+				cardForeignNames.forEach(function(cardForeignName)
+				{
+					if(C.MCI_LANGUAGE_TO_GATHERER.hasOwnProperty(cardForeignName.language))
+						cardForeignName.language = C.MCI_LANGUAGE_TO_GATHERER[cardForeignName.language];
+
+					if(!C.VALID_LANGUAGES.contains(cardForeignName.language))
+					{
+						base.error("Invalid MCI language: %s", cardForeignName.language);
+						process.exit(0);
+					}
+				});
 				card.foreignNames = cardForeignNames;
+			}
 
 			// Source (comment on mci)  (NOTE: Will be overwritten if source is found on the magic rarities website)
 			var commentContainer = rightSide.querySelector("p small");

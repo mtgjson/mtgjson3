@@ -443,7 +443,7 @@
 				<tr>
 					<td>foreignNames</td>
 					<td>[ {~lb} "language" : "Italian",&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>"name" : "Wurm Devastatore",<br>"multiverseid" : 200475 {~rb} ]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-					<td>Foreign language names for the card, if this card in this set was printed in another language. An array of objects, each object having 'language', 'name' and 'multiverseid' keys. Currently only available for sets that are on gatherer.</td>
+					<td>Foreign language names for the card, if this card in this set was printed in another language. An array of objects, each object having 'language', 'name' and 'multiverseid' keys. Not available for all sets.</td>
 				</tr>
 				<tr>
 					<td>printings</td>
@@ -462,8 +462,9 @@
 				</tr>
 				<tr>
 					<td>legalities</td>
-					<td>{~lb} "Legacy" : "Banned",&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>"Vintage" : "Restricted",&nbsp;&nbsp;&nbsp;<br>"Commander" : "Legal" {~rb}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>"Commander" : "Special (Banned as Commander)"&nbsp;&nbsp;&nbsp;</td>
-					<td>Which formats this card is legal, restricted or banned in. The object's keys are the format and the values are the legality.</td>
+					<td>[ {~lb} "format" : "Legacy",&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>"legality" : "Banned" {~rb},&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+					      {~lb} "format" : "Vintage",&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>"legality" : "Restricted" {~rb} ]</td>
+					<td>Which formats this card is legal, restricted or banned in. An array of objects, each object having 'format' and 'legality'. A 'condition' key may be added in the future if Gatherer decides to utilize it again.</td>
 				</tr>
 				<tr>
 					<td>source</td>

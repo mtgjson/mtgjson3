@@ -233,7 +233,19 @@ exports.performSetCorrections = function(setCorrections, fullSet)
 			var cardsToIncrementNumber = [];
 			cards.forEach(function(card)
 			{
-				if(setCorrection.match && (setCorrection.match==="*" || (Object.every(setCorrection.match, function(key, value) { return Array.isArray(value) ? value.contains(card[key]) : value===card[key]; }))))
+				if(setCorrection.match && (setCorrection.match==="*" || (Object.every(setCorrection.match, function(key, value)
+					{
+						if(Array.isArray(value))
+							return value.contains(card[key]);
+
+						if(value.startsWith("<"))
+							return (+card[key])<(+(value.substring(1)));
+
+						if(value.startsWith(">"))
+							return (+card[key])>(+(value.substring(1)));
+
+						return value===card[key];
+					}))))
 				{
 					if(setCorrection.replace)
 					{
@@ -266,10 +278,33 @@ exports.performSetCorrections = function(setCorrections, fullSet)
 					}
 
 					if(setCorrection.setLegality)
-						Object.forEach(setCorrection.setLegality, function(legalityType, legalityValue) { card.legalities[legalityType] = legalityValue; });
+					{
+						Object.forEach(setCorrection.setLegality, function(legalityType, legalityValue)
+						{
+							var foundExisting = false;
+							if(card.hasOwnProperty("legalities"))
+							{
+								card.legalities.forEach(function(cardLegality)
+								{
+									if(cardLegality.format===legalityType)
+									{
+										foundExisting = true;
+										cardLegality.legality = legalityValue;
+									}
+								});
+							}
+							else
+							{
+								card.legalities = [];
+							}
+
+							if(!foundExisting)
+								card.legalities.push({format:legalityType,legality:legalityValue});
+						});
+					}
 					
-					if(setCorrection.deleteLegality)
-						setCorrection.deleteLegality.forEach(function(legalityType) { delete card.legalities[legalityType]; });
+					if(setCorrection.deleteLegality && card.hasOwnProperty("legalities"))
+						card.legalities = card.legalities.filter(function(cardLegality) { return !setCorrection.deleteLegality.contains(cardLegality.format); });
 
 					if(setCorrection.flavorAddDash && card.flavor)
 					{
@@ -308,10 +343,10 @@ exports.performSetCorrections = function(setCorrections, fullSet)
 					if(setCorrection.prefixNumber)
 						card.number = setCorrection.prefixNumber + card.number;
 				}
-
-				if(cardsToRemove.length>0)
-					cards.removeAll(cardsToRemove);
 			});
+
+			if(cardsToRemove.length>0)
+				cards.removeAll(cardsToRemove);
 
 			if(setCorrection.copyCard || setCorrection.importCard || setCorrection.addCard)
 			{
@@ -362,7 +397,7 @@ exports.performSetCorrections = function(setCorrections, fullSet)
 	// Empty fields
 	cards.forEach(function(card)
 	{
-		if(card.hasOwnProperty("legalities") && Object.keys(card.legalities).length===0)
+		if(card.hasOwnProperty("legalities") && card.legalities.length===0)
 			delete card.legalities;
 	});
 
@@ -380,20 +415,6 @@ exports.performSetCorrections = function(setCorrections, fullSet)
 		{
 			card.flavor = card.flavor.replaceAll(" \n", "\n");
 		}
-	});
-
-	// Legality corrections
-	cards.forEach(function(card)
-	{
-		if(card.layout==="token" || card.border==="silver" || (fullSet.border==="silver" && !card.hasOwnProperty("border")))
-			return;
-
-		if(!card.hasOwnProperty("legalities"))
-			card["legalities"] = {};
-
-		//if(!card.legalities.hasOwnProperty("Vintage") && moment(fullSet.releaseDate, "YYYY-MM-DD").unix()<=moment().unix())
-		//if(!card.legalities.hasOwnProperty("Vintage"))
-		//	card.legalities["Vintage"] = C.VINTAGE_BANNED.contains(card.name) ? "Banned" : (C.VINTAGE_RESTRICTED.contains(card.name) ? "Restricted" : "Legal");
 	});
 
 	// Rulings corrections
@@ -434,43 +455,13 @@ exports.performSetCorrections = function(setCorrections, fullSet)
 		}
 	});
 
-	// Language renames
+	// Sort legalities and foreign names
 	cards.forEach(function(card)
 	{
-		Object.forEach(C.LANGUAGE_RENAMES, function(oldName, newName)
-		{
-			if(!card.hasOwnProperty("foreignNames"))
-				return;
-
-			var value;
-			var indexToRemove = -1;
-			card.foreignNames.forEach(function(foreignName, i)
-			{
-				if(foreignName.language===oldName)
-				{
-					indexToRemove = i;
-					value = foreignName.name;
-				}
-			});
-
-			if(indexToRemove>=0)
-			{
-				card.foreignNames.splice(indexToRemove, 1);
-
-				var addedNewValue = true;
-				card.foreignNames.forEach(function(foreignName)
-				{
-					if(foreignName.language===newName)
-					{
-						foreignName.name = value;
-						addedNewValue = true;
-					}
-				});
-
-				if(!addedNewValue)
-					card.foreignNames.push({language:newName,name:value});
-			}
-		});
+		if(card.hasOwnProperty("legalities"))
+			card.legalities = card.legalities.sort(function(a, b) { var al = a.format.toLowerCase().charAt(0); var bl = b.format.toLowerCase().charAt(0); return (al<bl ? -1 : (al>bl ? 1 : 0)); });
+		if(card.hasOwnProperty("foreignNames"))
+			card.foreignNames = card.foreignNames.sort(function(a, b) { var al = a.language.toLowerCase().charAt(0); var bl = b.language.toLowerCase().charAt(0); return (al<bl ? -1 : (al>bl ? 1 : 0)); });
 	});
 
 	cards.forEach(exports.finalizePrintings);

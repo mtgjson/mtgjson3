@@ -216,7 +216,7 @@ tiptoe(
 			o.whenAtom = moment(o.when, "YYYY-MM-DD").format("YYYY-MM-DDTHH:mm:ss");
 			o.when = moment(o.when, "YYYY-MM-DD").format("MMM D, YYYY");
 			o.uniqueID = changeLog.length-i;
-			o.atomContent = "<p>Changes:<br><ul>" + o.changes.map(function(change) { return "<li>" + change + "</li>"; }).join(""); + "</ul></p>";
+			o.atomContent = "<p>Changes:<br><ul>" + o.changes.map(function(change) { return "<li>" + change + "</li>"; }).join("") + "</ul></p>";
 			return o;
 		});
 
@@ -521,6 +521,19 @@ function checkSetForProblems(setCode, cb)
 
 				if(!card.text || card.text.trim().length===0)
 					base.info("%s Card [%s] (%s) has no text field", setCode, card.name, card.multiverseid || "");
+			});
+
+			// Check set for valid languages
+			setData.cards.forEach(function(card)
+			{
+				if(!card.hasOwnProperty("foreignNames"))
+					return;
+
+				card.foreignNames.forEach(function(foreignName)
+				{
+					if(!C.VALID_LANGUAGES.contains(foreignName.language))
+						base.info("Basic land [%s] (%s) from set %s has an invalid foreignName language: %s", card.name, card.multiverseid || "", setData.name, foreignName.language);
+				});
 			});
 
 			// Check for duplicate 'number' fields

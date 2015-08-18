@@ -35,30 +35,23 @@ function processSet(code, cb)
 			var setCards = {};
 			set.cards.forEach(function(card)
 			{
-				card.printings.remove(set.name);
+				card.printings.remove(set.code);
 				if(!card.printings || !card.printings.length)
 					return;
 
 				card.printings.forEach(function(printing)
 				{
-					var printingCode = getSetCodeByName(printing);
-					if(!printingCode)
-					{
-						base.error("Unknown printing: %s", printing);
-						return;
-					}
+					if(!setCards.hasOwnProperty(printing))
+						setCards[printing] = [];
 
-					if(!setCards.hasOwnProperty(printingCode))
-						setCards[printingCode] = [];
-
-					setCards[printingCode].push(card.name);
-					setCards[printingCode] = setCards[printingCode].uniqueBySort();
+					setCards[printing].push(card.name);
+					setCards[printing] = setCards[printing].uniqueBySort();
 				});
 			});
 
 			Object.keys(setCards).serialForEach(function(setCode, subcb)
 			{
-				addPrintingToSetCards(setCode, setCards[setCode], set.name, subcb);
+				addPrintingToSetCards(setCode, setCards[setCode], set.code, subcb);
 			}, this);
 		},
 		function finish(err)
@@ -68,9 +61,9 @@ function processSet(code, cb)
 	);
 }
 
-function addPrintingToSetCards(setCode, targetCardNames, printingName, cb)
+function addPrintingToSetCards(setCode, targetCardNames, printingCode, cb)
 {
-	base.info("Adding printing [%s] to set [%s] for all cards: %s", printingName, setCode, targetCardNames.join(", "));
+	base.info("Adding printing [%s] to set [%s] for all cards: %s", printingCode, setCode, targetCardNames.join(", "));
 
 	tiptoe(
 		function getJSON()
@@ -86,9 +79,9 @@ function addPrintingToSetCards(setCode, targetCardNames, printingName, cb)
 				if(!targetCardNames.contains(card.name))
 					return;
 
-				if(!card.printings.contains(printingName))
+				if(!card.printings.contains(printingCode))
 				{
-					card.printings.push(printingName);
+					card.printings.push(printingCode);
 					shared.finalizePrintings(card);
 				}
 			});
@@ -100,9 +93,4 @@ function addPrintingToSetCards(setCode, targetCardNames, printingName, cb)
 			setImmediate(function() { cb(err); });
 		}
 	);
-}
-
-function getSetCodeByName(name)
-{
-	return C.SETS.mutateOnce(function(SET) { return SET.name===name ? SET.code : undefined; });
 }

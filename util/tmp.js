@@ -34,7 +34,8 @@ tiptoe(
 
 function checkSet(setCode, cb)
 {
-	base.info(setCode);
+	if(setCode!=="pWPN")
+		return cb();
 
 	tiptoe(
 		function getJSON()
@@ -44,8 +45,10 @@ function checkSet(setCode, cb)
 		function modifyAndSave(setRaw)
 		{
 			var set = JSON.parse(setRaw);
+
 			set.cards.forEach(function(card)
 			{
+				base.info("%s %d\t%s", card.releaseDate, card.number, card.name);
 			});
 
 			//fs.writeFile(path.join(__dirname, "..", "json", setCode + ".json"), JSON.stringify(set), {encoding : "utf8"}, this);

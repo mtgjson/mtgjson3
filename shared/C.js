@@ -845,10 +845,10 @@
 			type : "promo"
 		},
 		{
-			name : "WPN and Gateway",
-			code : "pWPN",
+			name : "Gateway",
+			code : "pGTW",
 			magicCardsInfoCode : "grc",
-			magicRaritiesCodes : ["255-rarities-wpn-promos", "76-rarities-gateway-promos"],
+			magicRaritiesCodes : ["76-rarities-gateway-promos"],
 			isMCISet : true,
 			releaseDate : "2006-01-01",
 			border : "black",
@@ -1099,6 +1099,16 @@
 			type : "masters",
 			onlineOnly : true,
 			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land"]
+		},
+		{
+			name : "Wizards Play Network",
+			code : "pWPN",
+			magicCardsInfoCode : "grc",
+			magicRaritiesCodes : ["255-rarities-wpn-promos"],
+			isMCISet : true,
+			releaseDate : "2008-10-01",
+			border : "black",
+			type : "promo"
 		},
 		{
 			name : "Shards of Alara",
@@ -2813,8 +2823,13 @@
 			{ match : {name : ["Overwhelm"]}, flavorAddExclamation : true },
 			{ match : {name : "Thundersong Trumpeter"}, replace : {flavor : "\"Hear that? Those notes mean we've arrived at Sunhome! Let our allies' hearts soar and our enemies' hearts shatter at the sound!\"\n—Klattic, Boros legionnaire"}}
 		],
+		pGTW :
+		[
+			{ match : {number : ">20"}, removeCard : true}
+		],
 		pWPN :
 		[
+			{ match : {number : "<21"}, removeCard : true},
 			{ match : {name : "Deathless Angel"}, replace : {releaseDate : "2010"}},
 			{ match : {name : "Emeria Angel"}, replace : {releaseDate : "2009"}},
 			{ match : {name : "Hada Freeblade"}, replace : {releaseDate : "2010"}},
@@ -3060,10 +3075,6 @@
 		[
 			{ match : { name : "Razorfield Thresher"}, replace : {watermark : "Mirran"}}
 		],
-		GTC :
-		[
-			{ match : {name : "Sylvan Primordial"}, setLegality : {"Commander" : "Banned"}}
-		],
 		PC2 :
 		[
 			{ match : { name : "Stairs to Infinity"}, replace : {number : "P1"}}
@@ -3222,11 +3233,6 @@
 		"Zoltan Boros & Gabor Szikszai" : ["Zoltan Boras & Gabor Szikszai"]
 	};
 
-	exports.LANGUAGE_RENAMES =
-	{
-		"Portuguese" : "Portuguese (Brazil)"
-	};
-
 	exports.SYMBOL_RARITIES = {c:["common"], u : ["uncommon"], r : ["rare"], m : ["mythic", "mythic rare", "mythicrare"], s : ["special"]};
 	exports.SYMBOL_SIZES = [8, 16, 24, 32, 48, 64, 96, 128, 256, 512, 768, 1024];
 	exports.SETS_WITH_BONUS_RARITIES = ["VMA"];
@@ -3355,15 +3361,36 @@
 		reserved      : "boolean",
 		source        : "string",
 		releaseDate   : "string",
-		legalities    : {},
+		legalities    : ["object"],
 		starter       : "boolean"
 	};
 
-	exports.ORACLE_FIELDS = ["layout", "name", "names", "manaCost", "cmc", "colors", "type", "supertypes", "types", "subtypes", "text", "power", "toughness", "loyalty", "hand", "life", "rulings", "foreignNames", "printings", "legalities"];
+	exports.ORACLE_FIELDS = ["layout", "name", "names", "manaCost", "cmc", "colors", "type", "supertypes", "types", "subtypes", "text", "power", "toughness", "loyalty", "hand", "life", "rulings", "printings", "legalities"];
 	exports.INTERNAL_ONLY_FIELDS = ["variations"];
 	exports.EXTRA_FIELDS = ["rulings", "foreignNames", "printings", "originalText", "originalType", "legalities", "source"];
 	exports.SET_SPECIFIC_FIELDS = ["rarity", "artist", "flavor", "number", "multiverseid", "watermark", "border", "timeshifted", "reserved", "releaseDate", "originalText", "originalType"];
 
 	exports.VINTAGE_BANNED = ["Advantageous Proclamation", "Amulet of Quoz", "Backup Plan", "Brago's Favor", "Bronze Tablet", "Chaos Orb", "Contract from Below", "Darkpact", "Demonic Attorney", "Double Stroke", "Falling Star", "Immediate Action", "Iterative Analysis", "Jeweled Bird", "Muzzio's Preparations", "Power Play", "Rebirth", "Secret Summoning", "Secrets of Paradise", "Sentinel Dispatch", "Shahrazad", "Tempest Efreet", "Timmerian Fiends", "Unexpected Potential", "Worldknit"];
 	exports.VINTAGE_RESTRICTED = ["Ancestral Recall", "Balance", "Black Lotus", "Brainstorm", "Channel", "Demonic Consultation", "Demonic Tutor", "Fastbond", "Flash", "Gifts Ungiven", "Imperial Seal", "Library of Alexandria", "Lion’s Eye Diamond", "Lotus Petal", "Mana Crypt", "Mana Vault", "Memory Jar", "Merchant Scroll", "Mind’s Desire", "Mox Emerald", "Mox Jet", "Mox Pearl", "Mox Ruby", "Mox Sapphire", "Mystical Tutor", "Necropotence", "Ponder", "Sol Ring", "Strip Mine", "Thirst for Knowledge", "Time Vault", "Time Walk", "Timetwister", "Tinker", "Tolarian Academy", "Trinisphere", "Vampiric Tutor", "Wheel of Fortune", "Windfall", "Yawgmoth’s Bargain", "Yawgmoth’s Will"];
+
+	exports.VALID_LANGUAGES =
+	[
+		"Chinese Simplified",
+		"Chinese Traditional",
+		"French",
+		"German",
+		"Italian",
+		"Japanese",
+		"Portuguese (Brazil)",
+		"Russian",
+		"Spanish",
+		"Korean"
+	];
+
+	exports.MCI_LANGUAGE_TO_GATHERER = 
+	{
+		"Portuguese"          : "Portuguese (Brazil)",
+		"Simplified Chinese"  : "Chinese Simplified",
+		"Traditional Chinese" : "Chinese Traditional"
+	};
 })(typeof exports==="undefined" ? window.C={} : exports);
