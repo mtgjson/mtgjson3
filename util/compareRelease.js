@@ -30,7 +30,11 @@ tiptoe(
 	},
 	function finish(err)
 	{
+		fs.writeFileSync("/tmp/changedSets.json", JSON.stringify(updatedSetFiles.uniqueBySort().sort()), {encoding:"utf8"});
+
+		base.info("\n\n\n");
 		base.info(JSON.stringify(updatedSetFiles.uniqueBySort().sort()));
+		base.info("\n\n\n");
 
 		if(err)
 		{

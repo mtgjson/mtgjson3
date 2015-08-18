@@ -2,22 +2,22 @@
 	{
 
 		"version": "3.0.0",
-		"when": "2015-08-17",
+		"when": "2015-08-18",
 		"changes": [
 			"<span style='color: red; font-weight: bold;'>WARNING!</span> Several backwards incompatible changes have been made in this version! Read below carefully for details.",
-			"Removed the 'variations' card field. See <a href=\"https://github.com/Sembiance/mtgjson/issues/64\">GitHub Issue #64</a> for more details.",
-			"Added a 'multiverseid' field to the card 'foreignNames' object. See docs or <a href=\"https://github.com/Sembiance/mtgjson/issues/12\">GitHub Issue #12</a> for more details.",
-			"Removed the 'languagesPrinted' set field. See <a href=\"https://github.com/Sembiance/mtgjson/issues/12\">GitHub Issue #12</a> for more details.",
-			"Renamed the 'printingCodes' card field to be 'printings'. Thus the 'printings' field is now an array of set codes, rather than set names. See docs or <a href=\"https://github.com/Sembiance/mtgjson/issues/65\">GitHub Issue #65</a> for more details.",
-			"The 'legalities' card field is now an array of objects rather than a flat object. See docs or <a href=\"https://github.com/Sembiance/mtgjson/issues/66\">GitHub Issue #66</a> for more details.",
-			"pWPN: This set is now named 'Wizards Play Network' and now only contains the WPN cards. See <a href=\"https://github.com/Sembiance/mtgjson/issues/50\">GitHub Issue #50</a> for more details.",
+			"Removed the 'variations' card field (<a href=\"https://github.com/Sembiance/mtgjson/issues/64\">issue #64</a>)",
+			"Added a 'multiverseid' field to the card 'foreignNames' object (<a href=\"https://github.com/Sembiance/mtgjson/issues/12\">issue #12</a>)",
+			"Removed the 'languagesPrinted' set field (<a href=\"https://github.com/Sembiance/mtgjson/issues/12\">issue #12</a>)",
+			"Renamed the 'printingCodes' card field to be 'printings'. Thus the 'printings' field is now an array of set codes, rather than set names. (<a href=\"https://github.com/Sembiance/mtgjson/issues/65\">issue #65</a>)",
+			"The 'legalities' card field is now an array of objects rather than a flat object (<a href=\"https://github.com/Sembiance/mtgjson/issues/66\">issue #66</a>)",
+			"pWPN: This set is now named 'Wizards Play Network' and now only contains the WPN cards (<a href=\"https://github.com/Sembiance/mtgjson/issues/50\">issue #50</a>)",
 			"Added Set: pGTW which contains the Gateway cards that were part of the pWPN set before.",
-			"Every card now has a unique 'id' field. See docs or <a href=\"https://github.com/Sembiance/mtgjson/issues/63\">GitHub Issue #63</a> for more details.",
-			"pCEL, UGH, UNH: The 'Summon' type no longer appears in cards in these sets. It has been replaced with the more modern 'Creature'. The originalType still exists for UNH, UGL cards with 'Summon'. See <a href=\"https://github.com/Sembiance/mtgjson/issues/35\">GitHub Issue #35</a> for more details.",
-			"Several artist names have been corrected. See <a href=\"https://github.com/Sembiance/mtgjson/issues/42\">GitHub Issue #42</a> for more details."
+			"Every card now has a unique 'id' field (<a href=\"https://github.com/Sembiance/mtgjson/issues/63\">issue #63</a>)",
+			"pCEL, UGH, UNH: The 'Summon' type no longer appears in cards in these sets. and has been replaced with the modern 'Creature' (<a href=\"https://github.com/Sembiance/mtgjson/issues/35\">issue #35</a>)",
+			"Several artist names have been corrected (<a href=\"https://github.com/Sembiance/mtgjson/issues/42\">issue #42</a>)"
 		],
 		"newSetFiles" : ["pGTW", "pGTW-x"],
-		"updatedSetFiles" : []
+		"updatedSetFiles" : ["10E","10E-x","2ED","2ED-x","3ED","3ED-x","4ED","4ED-x","5DN","5DN-x","5ED","5ED-x","6ED","6ED-x","7ED","7ED-x","8ED","8ED-x","9ED","9ED-x","ALA","ALA-x","ALL","ALL-x","APC","APC-x","ARB","ARB-x","ARC","ARC-x","ARN","ARN-x","ATH","ATH-x","ATQ","ATQ-x","AVR","AVR-x","BNG","BNG-x","BOK","BOK-x","BRB","BRB-x","BTD","BTD-x","C13","C13-x","C14","C14-x","CED","CED-x","CEI","CEI-x","CHK","CHK-x","CHR","CHR-x","CM1","CM1-x","CMD","CMD-x","CNS","CNS-x","CON","CON-x","CPK","CPK-x","CSP","CSP-x","CST","CST-x","DD2","DD2-x","DD3_DVD","DD3_DVD-x","DD3_EVG","DD3_EVG-x","DD3_GVL","DD3_GVL-x","DD3_JVC","DD3_JVC-x","DDC","DDC-x","DDD","DDD-x","DDE","DDE-x","DDF","DDF-x","DDG","DDG-x","DDH","DDH-x","DDI","DDI-x","DDJ","DDJ-x","DDK","DDK-x","DDL","DDL-x","DDM","DDM-x","DDN","DDN-x","DDO","DDO-x","DGM","DGM-x","DIS","DIS-x","DKA","DKA-x","DKM","DKM-x","DPA","DPA-x","DRB","DRB-x","DRK","DRK-x","DST","DST-x","DTK","DTK-x","EVE","EVE-x","EVG","EVG-x","EXO","EXO-x","FEM","FEM-x","FRF","FRF-x","FRF_UGIN","FRF_UGIN-x","FUT","FUT-x","GPT","GPT-x","GTC","GTC-x","H09","H09-x","HML","HML-x","HOP","HOP-x","ICE","ICE-x","INV","INV-x","ISD","ISD-x","ITP","ITP-x","JOU","JOU-x","JUD","JUD-x","KTK","KTK-x","LEA","LEA-x","LEB","LEB-x","LEG","LEG-x","LGN","LGN-x","LRW","LRW-x","M10","M10-x","M11","M11-x","M12","M12-x","M13","M13-x","M14","M14-x","M15","M15-x","MBS","MBS-x","MD1","MD1-x","ME2","ME2-x","ME3","ME3-x","ME4","ME4-x","MED","MED-x","MGB","MGB-x","MIR","MIR-x","MM2","MM2-x","MMA","MMA-x","MMQ","MMQ-x","MOR","MOR-x","MRD","MRD-x","NMS","NMS-x","NPH","NPH-x","ODY","ODY-x","ONS","ONS-x","ORI","ORI-x","PC2","PC2-x","PCY","PCY-x","PD2","PD2-x","PD3","PD3-x","PLC","PLC-x","PLS","PLS-x","PO2","PO2-x","POR","POR-x","PTK","PTK-x","RAV","RAV-x","ROE","ROE-x","RQS","RQS-x","RTR","RTR-x","S00","S00-x","S99","S99-x","SCG","SCG-x","SHM","SHM-x","SOK","SOK-x","SOM","SOM-x","STH","STH-x","THS","THS-x","TMP","TMP-x","TOR","TOR-x","TPR","TPR-x","TSB","TSB-x","TSP","TSP-x","UDS","UDS-x","UGL","UGL-x","ULG","ULG-x","UNH","UNH-x","USG","USG-x","V09","V09-x","V10","V10-x","V11","V11-x","V12","V12-x","V13","V13-x","V14","V14-x","VAN","VAN-x","VIS","VIS-x","VMA","VMA-x","WTH","WTH-x","WWK","WWK-x","ZEN","ZEN-x","p15A","p15A-x","p2HG","p2HG-x","pALP","pALP-x","pARL","pARL-x","pCEL","pCEL-x","pCMP","pCMP-x","pDRC","pDRC-x","pELP","pELP-x","pFNM","pFNM-x","pGPX","pGPX-x","pGRU","pGRU-x","pHHO","pHHO-x","pJGP","pJGP-x","pLGM","pLGM-x","pLPA","pLPA-x","pMEI","pMEI-x","pMGD","pMGD-x","pMPR","pMPR-x","pPOD","pPOD-x","pPRE","pPRE-x","pPRO","pPRO-x","pREL","pREL-x","pSUM","pSUM-x","pSUS","pSUS-x","pWCQ","pWCQ-x","pWOR","pWOR-x","pWOS","pWOS-x","pWPN","pWPN-x"]
 	},
 	{
 
