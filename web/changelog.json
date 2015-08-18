@@ -10,7 +10,8 @@
 			"Removed the 'languagesPrinted' set field. See <a href=\"https://github.com/Sembiance/mtgjson/issues/12\">GitHub Issue #12</a> for more details.",
 			"Renamed the 'printingCodes' card field to be 'printings'. Thus the 'printings' field is now an array of set codes, rather than set names. See docs or <a href=\"https://github.com/Sembiance/mtgjson/issues/65\">GitHub Issue #65</a> for more details.",
 			"The 'legalities' card field is now an array of objects rather than a flat object. See docs or <a href=\"https://github.com/Sembiance/mtgjson/issues/66\">GitHub Issue #66</a> for more details.",
-			"The pWPN is now named 'Wizards Play Network' and now only contains the WPN cards. The Gateway cards are now part of a new promo set, pGTW. See <a href=\"https://github.com/Sembiance/mtgjson/issues/50\">GitHub Issue #50</a> for more details."
+			"The pWPN is now named 'Wizards Play Network' and now only contains the WPN cards. The Gateway cards are now part of a new promo set, pGTW. See <a href=\"https://github.com/Sembiance/mtgjson/issues/50\">GitHub Issue #50</a> for more details.",
+			"Every card now has a unique 'id' field. See docs or <a href=\"https://github.com/Sembiance/mtgjson/issues/63\">GitHub Issue #63</a> for more details."
 		],
 		"newSetFiles" : ["pGTW", "pGTW-x"],
 		"updatedSetFiles" : []

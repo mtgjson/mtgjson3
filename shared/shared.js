@@ -464,7 +464,14 @@ exports.performSetCorrections = function(setCorrections, fullSet)
 			card.foreignNames = card.foreignNames.sort(function(a, b) { var al = a.language.toLowerCase().charAt(0); var bl = b.language.toLowerCase().charAt(0); return (al<bl ? -1 : (al>bl ? 1 : 0)); });
 	});
 
+	// Finalize printings
 	cards.forEach(exports.finalizePrintings);
+
+	// Generate ID
+	cards.forEach(function(card)
+	{
+		card.id = hash("sha1", (fullSet.code + card.name + card.imageName));
+	});
 };
 
 exports.generateCacheFilePath = generateCacheFilePath;

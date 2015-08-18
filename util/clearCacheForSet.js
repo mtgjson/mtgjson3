@@ -54,7 +54,7 @@ function clearCacheForSet(code, cacheType, cb)
 			var set = JSON.parse(setRaw);
 			if(cacheType==="mcilist")
 			{
-				if(!set.magicCardsInfoCode)
+				if(!set.isMCISet)
 					return this.finish();
 
 				var urls = [];

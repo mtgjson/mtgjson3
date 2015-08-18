@@ -10,7 +10,10 @@ var base = require("xbase"),
 	fileUtil = require("xutil").file,
 	diffUtil = require("xutil").diff,
 	path = require("path"),
+	hash = require("mhash"),
 	tiptoe = require("tiptoe");
+
+var uniqueHashes = [];
 
 tiptoe(
 	function processSets()
@@ -34,9 +37,6 @@ tiptoe(
 
 function checkSet(setCode, cb)
 {
-	if(setCode!=="pWPN")
-		return cb();
-
 	tiptoe(
 		function getJSON()
 		{
@@ -48,7 +48,15 @@ function checkSet(setCode, cb)
 
 			set.cards.forEach(function(card)
 			{
-				base.info("%s %d\t%s", card.releaseDate, card.number, card.name);
+				var id = hash("sha1", (setCode + card.name + card.imageName));
+				base.info(id);
+				if(uniqueHashes.contains(id))
+				{
+					base.error("COLLISION!");
+					process.exit(0);
+				}
+
+				uniqueHashes.push(id);
 			});
 
 			//fs.writeFile(path.join(__dirname, "..", "json", setCode + ".json"), JSON.stringify(set), {encoding : "utf8"}, this);

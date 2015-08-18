@@ -565,6 +565,25 @@ function checkSetForProblems(setCode, cb)
 				}
 			}
 
+			// Check set for id missing or collision
+			var cardids = [];
+			setData.cards.forEach(function(card)
+			{
+				if(!card.hasOwnProperty("id"))
+				{
+					base.info("%s: Card is missing 'id' field: %s", setCode, card.name);
+					return;
+				}
+
+				if(cardids.contains(card.id))
+				{
+					base.info("%s: Card (%s) has an id COLLISION: %s", setCode, card.name, card.id);
+					return;
+				}
+
+				cardids.push(card.id);
+			});
+
 			this();
 		},
 		function finish(err)
