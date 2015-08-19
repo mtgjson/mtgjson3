@@ -2904,7 +2904,7 @@
 					text        : "Search another target player's library for a card and put that card into your hand. Then shuffle that player's library.",
 					number      : "7a",
 					source      : "Holiday gift to Wizards internal teams and business partners.",
-					printings    : ["Happy Holidays"]
+					printings    : ["pHHO"]
 				}
 			},
 			{ copyCard : "Naughty", replace :
@@ -2914,7 +2914,7 @@
 					text         : "Search your library for a card and put it into another target player's hand. Then shuffle your library.",
 					manaCost     : "{1}{W}{W}",
 					colors       : ["White"],
-					printings    : ["Happy Holidays"]
+					printings    : ["pHHO"]
 				}
 			},
 			{ match : {name : "Mishra's Toy Workshop"}, replace : {artist : "Jung Park"}},
