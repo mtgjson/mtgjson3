@@ -1771,7 +1771,13 @@
 			type : "core",
 			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"]
 		},
-
+		{
+			name : "From the Vault: Angels",
+			code : "V15",
+			releaseDate : "2015-08-21",
+			border : "black",
+			type : "from the vault"
+		}
 	];
 
 	exports.NON_GATHERER_SET_CARD_LISTS =
