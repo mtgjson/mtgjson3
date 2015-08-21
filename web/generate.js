@@ -64,11 +64,6 @@ tiptoe(
 
 			setWithExtras.cards.forEach(function(card)
 			{
-				C.INTERNAL_ONLY_FIELDS.forEach(function(INTERNAL_ONLY_FIELD)
-				{
-					delete card[INTERNAL_ONLY_FIELD];
-				});
-
 				Object.forEach(C.FIELD_TYPES, function(fieldName, fieldType)
 				{
 					if(!allCardsWithExtras.hasOwnProperty(card.name))
