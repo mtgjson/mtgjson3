@@ -2988,7 +2988,7 @@
 			{ match : {name : "Ludevic's Abomination"}, replace : {layout : "double-faced", names :["Ludevic's Test Subject", "Ludevic's Abomination"]}},
 			{ match : {name : "Ludevic's Test Subject"}, replace : {names :["Ludevic's Test Subject", "Ludevic's Abomination"]}},
 			{ match : {name : "Mondronen Shaman"}, replace : {names :["Mondronen Shaman", "Tovolar's Magehunter"]}},
-			{ match : {name : "Tovolar's Magehunter"}, replace : {layout : "double-faced", names :["Mondronen Shaman", "Tovolar's Magehunter"]}},
+			{ match : {name : "Tovolar's Magehunter"}, replace : {layout : "double-faced", names :["Mondronen Shaman", "Tovolar's Magehunter"]}, remove : ["flavor"]},
 			{ match : {name : "Dragone Throne of Tarkir"}, replace : {name : "Dragon Throne of Tarkir", imageName : "dragon throne of tarkir"}}
 		],
 		MOR :
