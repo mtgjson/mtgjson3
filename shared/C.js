@@ -1777,6 +1777,13 @@
 			releaseDate : "2015-08-21",
 			border : "black",
 			type : "from the vault"
+		},
+		{
+			name : "Duel Decks: Zendikar vs. Eldrazi",
+			code : "DDP",
+			releaseDate : "2015-08-28",
+			border : "black",
+			type : "duel deck"
 		}
 	];
 
