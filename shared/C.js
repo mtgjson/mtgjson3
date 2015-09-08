@@ -2560,12 +2560,13 @@
 		PLS :
 		[
 			{ renumberImages : "Ertai, the Corrupted", order : [25614, 29292] },
+			{ match : {multiverseid : 29292}, replace : {number : "★107"}},
 			{ renumberImages : "Skyship Weatherlight", order : [26480, 29293] },
+			{ match : {multiverseid : 29293}, replace : {number : "★133"}},
 			{ renumberImages : "Tahngarth, Talruum Hero", order : [26408, 29291] },
+			{ match : {multiverseid : 29291}, replace : {number : "★74"}},
 			{ match : {name : "Gerrard's Command"}, flavorAddExclamation : true },
 			{ match : {name : "Gaea's Herald"}, replace : {flavor : "\"I bring word from Gaea. Fight on! She will never allow her children to die alone.\""}}
-			/*{ match : {multiverseid : 29292}, removeCard : true},
-			{ match : {multiverseid : 25614}, remove : ["variations"], replace : {imageName : "ertai, the corrupted"}}*/
 		],
 		"7ED" :
 		[

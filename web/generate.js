@@ -392,7 +392,6 @@ function checkSetForProblems(setCode, cb)
 	var ALLOWED_MISSING_MAGICCARDSINFO_CODE = ["RQS", "VAN", "FRF_UGIN"];
 	var ALLOWED_DUP_CARD_NUMBERS =
 	{
-		PLS : ["Ertai, the Corrupted", "Skyship Weatherlight", "Tahngarth, Talruum Hero"],
 		ME4 : ["Urza's Mine", "Urza's Power Plant", "Urza's Tower"]
 	};
 
