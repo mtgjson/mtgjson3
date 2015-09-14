@@ -486,7 +486,7 @@ function addForeignNamesToCard(card, cb)
 				{
 					var languageHref = cardRow.querySelector("td:nth-child(1) a").getAttribute("href");
 					var foreignMultiverseid = querystring.parse(languageHref.substring(languageHref.indexOf("?")+1)).multiverseid;
-					card.foreignNames.push({language : language, name : foreignCardName, multiverseid : foreignMultiverseid});
+					card.foreignNames.push({language : language, name : foreignCardName, multiverseid : +foreignMultiverseid});
 				}
 			});
 

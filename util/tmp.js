@@ -35,6 +35,8 @@ tiptoe(
 
 function checkSet(setCode, cb)
 {
+	base.info("Processing %s", setCode);
+	
 	tiptoe(
 		function getJSON()
 		{
@@ -46,14 +48,20 @@ function checkSet(setCode, cb)
 
 			set.cards.forEach(function(card)
 			{
-				if(card.name==="Grave Titan")
+				if(card.hasOwnProperty("foreignNames"))
 				{
-					base.info("%s: %s : %s", setCode, card.name, card.artist);
+					card.foreignNames.forEach(function(foreignName)
+					{
+						if(foreignName.multiverseid)
+							foreignName.multiverseid = +foreignName.multiverseid;
+						else
+							delete foreignName.multiverseid;
+					});
 				}
 			});
 
-			//fs.writeFile(path.join(__dirname, "..", "json", setCode + ".json"), JSON.stringify(set), {encoding : "utf8"}, this);
-			this();
+			fs.writeFile(path.join(__dirname, "..", "json", setCode + ".json"), JSON.stringify(set), {encoding : "utf8"}, this);
+			//this();
 		},
 		function finish(err)
 		{
