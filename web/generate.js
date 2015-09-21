@@ -166,10 +166,10 @@ tiptoe(
 			fs.writeFile(path.join(__dirname, "json", SET.code + "-x.jsonp"), JSONP_PREFIX + JSON.stringify(setWithExtras) + ', "' + SET.code + '-x"' + JSONP_SUFFIX, {encoding : "utf8"}, this.parallel());
 
 			var setSize = printUtil.toSize(JSON.stringify(set).length, 0);
-			setSize = "&nbsp;".repeat(6-setSize.length) + setSize;
+			setSize = (setSize.length>=6 ? "" : "&nbsp;".repeat(6-setSize.length)) + setSize;
 
 			var setXSize = printUtil.toSize(JSON.stringify(setWithExtras).length, 0);
-			setXSize = "&nbsp;".repeat(6-setXSize.length) + setXSize;
+			setXSize = (setSize.length>=6 ? "" : "&nbsp;".repeat(6-setXSize.length)) + setXSize;
 
 			var dustSetData = {code : SET.code, name : SET.name, releaseDate : SET.releaseDate, size : setSize, sizeX : setXSize};
 			if(SET.code==="CON")

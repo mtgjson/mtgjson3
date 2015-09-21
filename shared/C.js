@@ -2348,7 +2348,8 @@
 			{ match : {name : "Goblin Bookie"}, replace : {flavor : "\"Glok loved bets! He'd sit in the bar all night an' laugh an' laugh. Hey—he still owes me.\"\n—Squee, goblin casino hand"}},
 			{ match : {name : "Gus"}, replace : {flavor : "\"Now I lay me down to sleep — What are you starin' at?\""}},
 			{ match : {name : "Handcuffs"}, replace : {flavor : "\"That was fun! Now me.\"\n—Gwendlyn Di Corci"}},
-			{ match : {name : "Mesa Chicken"}, replace : {flavor : "\"Lo! lord of layers proudly comb-crested\nHero to hens father to feathers\nCrowing sun-caller weaver of wattle\nElder to eggs.\"\n—Rooster Saga"}}
+			{ match : {name : "Mesa Chicken"}, replace : {flavor : "\"Lo! lord of layers proudly comb-crested\nHero to hens father to feathers\nCrowing sun-caller weaver of wattle\nElder to eggs.\"\n—Rooster Saga"}},
+			{ match : {name : "Denied!"}, replace : {type : "Instant", types : ["Instant"]}},
 		],
 		pALP :
 		[
