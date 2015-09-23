@@ -392,7 +392,8 @@ function checkSetForProblems(setCode, cb)
 	var ALLOWED_MISSING_MAGICCARDSINFO_CODE = ["RQS", "VAN", "FRF_UGIN"];
 	var ALLOWED_DUP_CARD_NUMBERS =
 	{
-		ME4 : ["Urza's Mine", "Urza's Power Plant", "Urza's Tower"]
+		ME4 : ["Urza's Mine", "Urza's Power Plant", "Urza's Tower"],
+		BFZ : ["Forest", "Island", "Mountain", "Plains", "Swamp"]
 	};
 
 	tiptoe(

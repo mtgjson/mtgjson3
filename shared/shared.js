@@ -401,6 +401,19 @@ exports.performSetCorrections = function(setCorrections, fullSet)
 			delete card.legalities;
 	});
 
+	// Devoid mechanic
+	cards.forEach(function(card)
+	{
+		if(!card.text || !card.text.contains("\n"))
+			return;
+
+		card.text.split("\n").forEach(function(textLine)
+		{
+			if(textLine.toLowerCase().startsWith("devoid"))
+				delete card.colors;
+		});
+	});
+
 	// Flavor text changes
 	cards.forEach(function(card)
 	{

@@ -604,7 +604,7 @@ function addPrintingsToCard(nonGathererSets, card, cb)
 				Array.toArray(doc.querySelectorAll("table.cardList")[0].querySelectorAll("tr.cardItem")).forEach(function(cardRow)
 				{
 					var printing = getTextContent(cardRow.querySelector("td:nth-child(3)")).trim();
-					if(printing && printing!=="Promo set for Gatherer")
+					if(printing && !C.IGNORE_GATHERER_PRINTINGS.contains(printing))
 						printings.push(shared.getSetCodeFromName(printing));
 				});
 			});

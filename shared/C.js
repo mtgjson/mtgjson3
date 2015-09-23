@@ -1784,8 +1784,26 @@
 			releaseDate : "2015-08-28",
 			border : "black",
 			type : "duel deck"
+		},
+		{
+			name : "Battle for Zendikar",
+			code : "BFZ",
+			releaseDate : "2015-10-02",
+			border : "black",
+			type : "expansion",
+			block : "Battle for Zendikar",
+			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"]
+		},
+		{
+			name : "Zendikar Expedition",
+			code : "EXP",
+			releaseDate : "2015-10-02",
+			border : "black",
+			type : "promo"
 		}
 	];
+
+	exports.IGNORE_GATHERER_PRINTINGS = ["Promo set for Gatherer"];
 
 	exports.NON_GATHERER_SET_CARD_LISTS =
 	{
