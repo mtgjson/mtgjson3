@@ -4,11 +4,7 @@
 var base = require("xbase"),
 	C = require("C"),
 	fs = require("fs"),
-	url = require("url"),
-	color = require("cli-color"),
-	fileUtil = require("xutil").file,
 	shared = require("shared"),
-	diffUtil = require("xutil").diff,
 	path = require("path"),
 	tiptoe = require("tiptoe");
 
@@ -40,16 +36,14 @@ function processSet(code, cb)
 			var setCards = {};
 			set.cards.forEach(function(card)
 			{
-				card.printings.remove(set.name);
+				card.printings.remove(set.code);
 				if(!card.printings || !card.printings.length)
 					return;
 
 				cardLegalitiesByName[card.name] = card.legalities;
 
-				card.printings.forEach(function(printing)
+				card.printings.forEach(function(printingCode)
 				{
-					var printingCode = getSetCodeByName(printing);
-
 					if(!setCards.hasOwnProperty(printingCode))
 						setCards[printingCode] = [];
 
@@ -101,9 +95,4 @@ function updateLegalitiesForSetCards(setCode, targetCardNames, cardLegalitiesByN
 			setImmediate(function() { cb(err); });
 		}
 	);
-}
-
-function getSetCodeByName(name)
-{
-	return C.SETS.mutateOnce(function(SET) { return SET.name===name ? SET.code : undefined; });
 }

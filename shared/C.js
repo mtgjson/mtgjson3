@@ -3257,7 +3257,7 @@
 		"Diana Vick"                          : ["Diane Vick"],
 		"Douglas Shuler"                      : ["Douglas Schuler"],
 		"Edward P. Beard, Jr."                : ["Edward P. Beard, Jr", "Edward Beard, Jr.", "Edward P. Beard Jr."],
-		"Jon J. Muth"                         : ["Jon J Muth", "John J. Muth"],
+		"Jon J Muth"                          : ["Jon J. Muth", "John J. Muth"],
 		"Ken Meyer, Jr."                      : ["Ken Meyer Jr."],
 		"Kerstin Kaman"                       : ["Kersten Kaman"],
 		"L. A. Williams"                      : ["L.A. Williams"],
