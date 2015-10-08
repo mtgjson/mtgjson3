@@ -1,3 +1,13 @@
+Overview
+--------
+nodejs scripts in 'build' scrape data from gatherer.wizards.com and magiccards.info
+The scraped web pages are cached in the local 'cache' directory, so repeat runs don't hammer the sites.
+If you ever need to clear the cache, you can just delete the 'cache' directory, or you can be more selective using util/clearCacheForSet.js
+
+The 'shared/C.js' file contains most constants.
+
+The 'web/generate.js' nodejs script generates the final static files that will later be deployed to mtgjson.com using deploy/deploy.sh and served with nginx
+
 /-------------------------------\
 | Gatherer New Set Instructions |
 \-------------------------------/
@@ -77,3 +87,9 @@ cd deploy
 ./deploy.sh
 
 # Check live site mtgjson.com
+
+
+/-------------\
+| Final Notes |
+\-------------/
+* Whenever you clear the entire cache, or the 'printings' type of cache for all sets, you should update 'C.LAST_PRINTINGS_RESET' to the latest set code.
