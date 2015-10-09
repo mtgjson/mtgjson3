@@ -629,7 +629,7 @@ exports.getURLAsDoc = function(targetURL, cb, retryCount)
 		{
 			if(fs.existsSync(cachePath))
 			{
-				//base.info("URL [%s] is file: %s", targetURL, cachePath);
+				base.info("URL [%s] is  %s", targetURL, cachePath.split('/').pop());
 				fs.readFile(cachePath, {encoding:"utf8"}, this);
 			}
 			else
