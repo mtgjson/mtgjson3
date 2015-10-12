@@ -3,15 +3,6 @@
 <html>
 	<head>
 		<title>{title}</title>
-		<script>
-			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-			ga('create', 'UA-26058758-3', 'mtgjson.com');
-			ga('send', 'pageview');
-		</script>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> 
 		<link type="text/css" rel="stylesheet" href="index.css">
@@ -27,8 +18,6 @@
 		<br>
 		For more details see: <a href="#exampleCard">Example Card</a> and <a href="#documentation">Documentation</a> and <a href="http://forums.mtgsalvation.com/showthread.php?t=517971">Discussion Thread</a><br>
 		<br>
-		Any bugs or feedback, e-mail me at <a href="mailto:robert@cosmicrealms.com">robert@cosmicrealms.com</a><br>
-		<br>
 		<strong>Extras</strong> include: Rulings, Printings, Foreign Language Names, Promo Sources and Original Texts<br>
 		</p>
 		<br>
@@ -38,15 +27,6 @@
 		<br>
 		<br>
 		<h2 style="display: none;"><span style="color: red; text-decoration: underline;">ALERT:</span> Backwards incompatible changes! See <a style="font-size: 90%; margin-left: 0;" href="#changeLog">(change log)</a>!!!</h2>
-		<br>
-		<br>
-		<h2>
-			<span style="color: red; text-decoration: underline;">Future of mtgjson</span><br>
-			I am looking for someone else to take over running and updating mtgjson.<br>
-			I created it over 2 years ago and my heart is just not in it anymore.<br>
-			Do not worry, the site is not shutting down.<br>Until someone else can take it over, I will continue to run and update the site.<br>
-			If you are interested in taking it over, e-mail me at <a href="mailto:robert@cosmicrealms.com">robert@cosmicrealms.com</a>
-		</h2>
 		<br>
 		<br>
 		<p>Data is available by set 'All Sets' (preferred) or by card 'All Cards'.</p><br>
@@ -702,9 +682,9 @@
 				</tr>
 			</tbody>
 		</table>
-		<p>The source code used to generate the JSON is available on <a href="https://github.com/Sembiance/mtgjson">github</a><br>
+		<p>The source code used to generate the JSON is available on <a href="https://github.com/lsmoura/mtgjson">github</a><br>
 		<br>
-		Example Java code to read the JSON using Jackson can be found <a href="https://github.com/Sembiance/mtgjson/tree/master/java">here on github</a><br>
+		Example Java code to read the JSON using Jackson can be found <a href="https://github.com/lsmoura/mtgjson/tree/master/java">here on github</a><br>
 		<br>
 		<hr>
 		<a name="changeLog"></a>
@@ -813,6 +793,7 @@
 		<a name="thanks"></a>
 		<h1>Thanks<a href="#top">(back to top)</a></h1>
 		<ul>
+			<li><strong>Robert Schults</strong> for creating and mantaining this project from 2013 to 2015. Thank you for all your work and dedication!</li>
 			<li>Thank you <strong>VERY MUCH</strong> to these folks who reported bugs and helped in other ways:
 				<ul>
 					<li>Bobby Wertman, rotaercz, Chris Bush, Patrick Rogers, Lewis, aeosynth, Pouncing Kavu</li>
@@ -837,7 +818,7 @@
 		<hr>
 		<a name="todo"></a>
 		<h1>To-Do List<a href="#top">(back to top)</a></h1>
-		See the <a href="https://github.com/Sembiance/mtgjson/issues">Github Issues</a> list.<br>
+		See the <a href="https://github.com/lsmoura/mtgjson/issues">Github Issues</a> list.<br>
 		<br>
 		<hr>
 		<a name="missing-sets"></a>
