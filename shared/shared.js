@@ -737,7 +737,7 @@ exports.updateStandardForCard = function(card) {
 	card.legalities = card.legalities.filter(function(cardLegality) { return(cardLegality.format != "Standard"); });
 	var standard = false;
 	card.printings.forEach(function(value) {
-		if (C.STANDARD_SETS.indexOf(value) >= 0) {
+		if (!standard && C.STANDARD_SETS.indexOf(value) >= 0) {
 			standard = true;
 			//base.info("Card %s is in standard set (%s).", card.name, value);
 		}
@@ -746,4 +746,4 @@ exports.updateStandardForCard = function(card) {
 		var legalityObject = {format:"Standard", legality: "Legal"};
 		card.legalities.push(legalityObject);
 	}
-}
+};

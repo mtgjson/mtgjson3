@@ -34,7 +34,7 @@ tiptoe(
 		if(addedCards.length)
 			base.info("Cards Added: %s", addedCards.join(", "));
 
-		fs.writeFile(path.join(__dirname, "previous_banned_commander_cards.json"), JSON.stringify(cards), {encoding : "utf8"}, this);
+		fs.writeFile(path.join(__dirname, "previous_banned_commander_cards.json"), JSON.stringify(cards, null, '  ');, {encoding : "utf8"}, this);
 	},
 	function finish(err)
 	{

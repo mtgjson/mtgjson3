@@ -32,7 +32,7 @@ tiptoe(
 		if(additions.join(", ")!==previousAdditions.join(", "))
 			base.info("Sets changed.\nBefore: %s\n\nAfter: %s", previousAdditions.join(", "), additions.join(", "));
 
-		fs.writeFile(path.join(__dirname, "previous_mci_additions.json"), JSON.stringify(additions), {encoding : "utf8"}, this);
+		fs.writeFile(path.join(__dirname, "previous_mci_additions.json"), JSON.stringify(additions, null, '  ');, {encoding : "utf8"}, this);
 	},
 	function finish(err)
 	{

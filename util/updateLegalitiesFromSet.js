@@ -40,7 +40,6 @@ function processSet(code, cb)
 				if(!card.printings || !card.printings.length)
 					return;
 
-				shared.updateStandardForCard(card);
 				cardLegalitiesByName[card.name] = card.legalities;
 
 				card.printings.forEach(function(printingCode)
@@ -87,9 +86,10 @@ function updateLegalitiesForSetCards(setCode, targetCardNames, cardLegalitiesByN
 					return;
 
 				card.legalities = cardLegalitiesByName[card.name];
+				shared.updateStandardForCard(card);
 			});
 
-			fs.writeFile(path.join(__dirname, "..", "json", setCode + ".json"), JSON.stringify(set), {encoding : "utf8"}, this);
+			fs.writeFile(path.join(__dirname, "..", "json", setCode + ".json"), JSON.stringify(set, null, '  '), {encoding : "utf8"}, this);
 		},
 		function finish(err)
 		{
