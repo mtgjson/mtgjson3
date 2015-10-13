@@ -37,7 +37,7 @@ tiptoe(
 		if(addedSets.length)
 			base.info("Sets Added: %s", addedSets.join(", "));
 
-		fs.writeFile(path.join(__dirname, "previous_sets.json"), JSON.stringify(sets, null, '  ');, {encoding : "utf8"}, this);
+		fs.writeFile(path.join(__dirname, "previous_sets.json"), JSON.stringify(sets, null, '  '), {encoding : "utf8"}, this);
 	},
 	function finish(err)
 	{

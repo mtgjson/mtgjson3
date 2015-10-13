@@ -35,7 +35,7 @@ setsToDo.serialForEach(function(arg, subcb)
 		},
 		function save(set)
 		{
-			fs.writeFile(path.join(__dirname, "..", "json", set.code + ".json"), JSON.stringify(set, null, '  ');, {encoding:"utf8"}, this);
+			fs.writeFile(path.join(__dirname, "..", "json", set.code + ".json"), JSON.stringify(set, null, '  '), {encoding:"utf8"}, this);
 		},
 		function finish(err)
 		{

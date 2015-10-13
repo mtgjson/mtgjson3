@@ -734,7 +734,9 @@ exports.getPagingNumPages = function(doc, type)
 
 exports.updateStandardForCard = function(card) {
 	// Update standard legalities
-	card.legalities = card.legalities.filter(function(cardLegality) { return(cardLegality.format != "Standard"); });
+	if (card.legalities)
+		card.legalities = card.legalities.filter(function(cardLegality) { return(cardLegality.format != "Standard"); });
+
 	var standard = false;
 	card.printings.forEach(function(value) {
 		if (!standard && C.STANDARD_SETS.indexOf(value) >= 0) {
@@ -744,6 +746,9 @@ exports.updateStandardForCard = function(card) {
 	});
 	if (standard == true) {
 		var legalityObject = {format:"Standard", legality: "Legal"};
+		if (card.legalities == undefined)
+			card.legalities = [];
+		
 		card.legalities.push(legalityObject);
 	}
 };
