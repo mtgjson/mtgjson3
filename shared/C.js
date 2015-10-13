@@ -1747,6 +1747,7 @@
 		{
 			name : "Tempest Remastered",
 			code : "TPR",
+			magicCardsInfoCode : "tpr",
 			releaseDate : "2015-05-06",
 			border : "black",
 			type : "reprint",
@@ -1774,6 +1775,7 @@
 		{
 			name : "From the Vault: Angels",
 			code : "V15",
+			magicCardsInfoCode : "v15",
 			releaseDate : "2015-08-21",
 			border : "black",
 			type : "from the vault"
@@ -1781,6 +1783,7 @@
 		{
 			name : "Duel Decks: Zendikar vs. Eldrazi",
 			code : "DDP",
+			magicCardsInfoCode : "ddp",
 			releaseDate : "2015-08-28",
 			border : "black",
 			type : "duel deck"
@@ -1788,6 +1791,7 @@
 		{
 			name : "Battle for Zendikar",
 			code : "BFZ",
+			magicCardsInfoCode : "bfz",
 			releaseDate : "2015-10-02",
 			border : "black",
 			type : "expansion",
