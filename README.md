@@ -8,7 +8,7 @@ I didn't plan on open-sourcing this, so there are rough edges. See 'Other' secti
 Requirements
 ------------
 
-* Linux (never tested under MacOS or Windows)
+* Linux or MacOS (never tested under Windows)
 * [Node.js](http://nodejs.org/) v0.10.0 or later. It will NOT work with 0.9.9 or earlier.
 
 Setup
