@@ -13,7 +13,8 @@ var base = require("xbase"),
 	fs = require("fs"),
 	urlUtil = require("xutil").url,
 	url = require("url"),
-	unicodeUtil = require("xutil").unicode;
+	unicodeUtil = require("xutil").unicode,
+	zlib = require("zlib");
 
 exports.getSetsToDo = function(startAt)
 {
@@ -226,6 +227,9 @@ exports.performSetCorrections = function(setCorrections, fullSet)
 		else if(setCorrection==="sortCards")
 		{
 			cards = cards.sort(exports.cardComparator);
+		}
+		else if(setCorrection==="recalculateStandard") {
+			cards.forEach(function(card) { exports.updateStandardForCard(card); });
 		}
 		else
 		{
@@ -491,6 +495,7 @@ exports.generateCacheFilePath = generateCacheFilePath;
 function generateCacheFilePath(targetUrl)
 {
 	var urlHash = hash("whirlpool", targetUrl);
+	//var urlHash = hash("whirlpool", targetUrl) + ".gz";
 	return  path.join(__dirname, "..", "cache", urlHash.charAt(0), urlHash);
 }
 
@@ -629,7 +634,9 @@ exports.getURLAsDoc = function(targetURL, cb, retryCount)
 		{
 			if(fs.existsSync(cachePath))
 			{
-				base.info("URL [%s] is  %s", targetURL, cachePath.split('/').pop());
+				//base.info("URL [%s] is %s", targetURL, cachePath.split('/').pop());
+				//base.info("Reading %s from cache", targetURL);
+				//zlib.gunzip(fs.readFileSync(cachePath), this);
 				fs.readFile(cachePath, {encoding:"utf8"}, this);
 			}
 			else
@@ -658,8 +665,10 @@ exports.getURLAsDoc = function(targetURL, cb, retryCount)
 				return exports.getURLAsDoc(targetURL, cb, retryCount+1);
 			}
 
-			if(!fs.existsSync(cachePath))
+			if(!fs.existsSync(cachePath)) {
+				//fs.writeFileSync(cachePath, zlib.gzipSync(pageHTML));
 				fs.writeFileSync(cachePath, pageHTML, {encoding:"utf8"});
+			}
 
 			setImmediate(function() { cb(null, domino.createWindow(pageHTML).document); }.bind(this));
 		}
@@ -725,3 +734,19 @@ exports.getPagingNumPages = function(doc, type)
 
 	return numPages;
 };
+
+exports.updateStandardForCard = function(card) {
+	// Update standard legalities
+	card.legalities = card.legalities.filter(function(cardLegality) { return(cardLegality.format != "Standard"); });
+	var standard = false;
+	card.printings.forEach(function(value) {
+		if (C.STANDARD_SETS.indexOf(value) >= 0) {
+			standard = true;
+			//base.info("Card %s is in standard set (%s).", card.name, value);
+		}
+	});
+	if (standard == true) {
+		var legalityObject = {format:"Standard", legality: "Legal"};
+		card.legalities.push(legalityObject);
+	}
+}

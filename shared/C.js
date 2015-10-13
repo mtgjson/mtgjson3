@@ -2882,7 +2882,7 @@
 			{ match : {name : "Curse of Thirst"}, replace : {artist : "Dave Kendall"}}
 		],
 		GPT :
-	[
+		[
 			{ match : {name : ["Gelectrode", "Schismotivate", "Skarrg, the Rage Pits", "Skarrgan Skybreaker", "Train of Thought", "Wreak Havoc"]}, flavorAddExclamation : true },
 			{ match : {name : "Borborygmos"}, replace : {flavor : "\"It's easy to see why those Gruul dirtbags follow him—the only orders he gives are ‘Crush them!' and ‘We eat!'\"\n—Teysa"}},
 			{ match : {name : "Gruul War Plow"}, replace : {flavor : "\"Steering apparatus?! What for? Rip it out, sharpen it, and lash it to the front!\"\n—Ktank, Gruul plowmaster"}},
@@ -3178,6 +3178,7 @@
 		],
 		"*" :
 		[
+			"recalculateStandard",
 			{ match : {name : "Draco"}, replace : {text : "Domain — Draco costs {2} less to cast for each basic land type among lands you control.\nFlying\nDomain — At the beginning of your upkeep, sacrifice Draco unless you pay {10}. This cost is reduced by {2} for each basic land type among lands you control."}},
 			{ match : {name : "Spawnsire of Ulamog"}, replace : {text : "Annihilator 1 (Whenever this creature attacks, defending player sacrifices a permanent.)\n{4}: Put two 0/1 colorless Eldrazi Spawn creature tokens onto the battlefield. They have \"Sacrifice this creature: Add {1} to your mana pool.\"\n{20}: Cast any number of Eldrazi cards you own from outside the game without paying their mana costs."}},
 			{ match : {name : "Jade Statue"}, remove : ["power", "toughness"] },
@@ -3456,4 +3457,9 @@
 		"Simplified Chinese"  : "Chinese Simplified",
 		"Traditional Chinese" : "Chinese Traditional"
 	};
+
+	exports.STANDARD_SETS = [
+		'KTK', 'FRF', 'DTK', 'ORI', 'BFZ'
+	];
+
 })(typeof exports==="undefined" ? window.C={} : exports);

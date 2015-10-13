@@ -5,6 +5,8 @@ The scraped web pages are cached in the local 'cache' directory, so repeat runs 
 If you ever need to clear the cache, you can just delete the 'cache' directory, or you can be more selective using util/clearCacheForSet.js
 
 The 'shared/C.js' file contains most constants.
+Make sure that C.STANDARD_SETS is up-to-date.
+Sets with "recalculateStandard" parameter, will have its Standard legalities recalculated by mtgjson (using buildSet). This is currently set to ALL sets.
 
 The 'web/generate.js' nodejs script generates the final static files that will later be deployed to mtgjson.com using deploy/deploy.sh and served with nginx
 
@@ -25,6 +27,7 @@ node util/updatePrintingsFromSet.js sincelastprintingreset
 node util/clearCacheForSet.js legalities <set codes that rotated out AND the new set code>
 node build/buildSet.js <set codes that rotated out AND the new set code>
 node util/updateLegalitiesFromSet.js <set codes that rotated out AND the new set code>
+# updateLegalitiesFromSet also fixes incorrect "Standard" definitions from Gatherer, independent of "recalculateStandard" setting.
 
 # Goto: "Publish Final Instructions" below
 

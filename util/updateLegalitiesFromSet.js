@@ -40,6 +40,7 @@ function processSet(code, cb)
 				if(!card.printings || !card.printings.length)
 					return;
 
+				shared.updateStandardForCard(card);
 				cardLegalitiesByName[card.name] = card.legalities;
 
 				card.printings.forEach(function(printingCode)
