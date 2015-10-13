@@ -494,8 +494,7 @@ exports.performSetCorrections = function(setCorrections, fullSet)
 exports.generateCacheFilePath = generateCacheFilePath;
 function generateCacheFilePath(targetUrl)
 {
-	var urlHash = hash("whirlpool", targetUrl);
-	//var urlHash = hash("whirlpool", targetUrl) + ".gz";
+	var urlHash = hash("whirlpool", targetUrl) + ".gz";
 	return  path.join(__dirname, "..", "cache", urlHash.charAt(0), urlHash);
 }
 
@@ -636,8 +635,7 @@ exports.getURLAsDoc = function(targetURL, cb, retryCount)
 			{
 				//base.info("URL [%s] is %s", targetURL, cachePath.split('/').pop());
 				//base.info("Reading %s from cache", targetURL);
-				//zlib.gunzip(fs.readFileSync(cachePath), this);
-				fs.readFile(cachePath, {encoding:"utf8"}, this);
+				zlib.gunzip(fs.readFileSync(cachePath), this);
 			}
 			else
 			{
@@ -666,8 +664,7 @@ exports.getURLAsDoc = function(targetURL, cb, retryCount)
 			}
 
 			if(!fs.existsSync(cachePath)) {
-				//fs.writeFileSync(cachePath, zlib.gzipSync(pageHTML));
-				fs.writeFileSync(cachePath, pageHTML, {encoding:"utf8"});
+				fs.writeFileSync(cachePath, zlib.gzipSync(pageHTML));
 			}
 
 			setImmediate(function() { cb(null, domino.createWindow(pageHTML).document); }.bind(this));
