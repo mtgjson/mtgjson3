@@ -748,7 +748,44 @@ exports.updateStandardForCard = function(card) {
 		var legalityObject = {format:"Standard", legality: "Legal"};
 		if (card.legalities == undefined)
 			card.legalities = [];
-		
+
 		card.legalities.push(legalityObject);
 	}
+};
+
+exports.saveSet = function(set, callback) {
+	var start = new Date().getMilliseconds();
+	// Sort cards
+	set.cards.sort(function(a, b) {
+		if (a.number && b.number)
+			return(a.number.localeCompare(b.number));
+		return(a.multiverseid > b.multiverseid);
+	});
+
+	// Sort internal card stuff
+	set.cards.forEach(function(card) {
+		// Foreign Names
+		card.foreignNames.sort(function(a, b){
+			return(a.language.localeCompare(b.language));
+		});
+
+		// Legalities
+		card.legalities.sort(function(a, b){
+			return(a.format.localeCompare(b.format));
+		});
+
+		// Sort card properties
+		Object.keys(card).sort().forEach(function(key) {
+			var value = card[key];
+			delete card[key];
+			card[key] = value;
+		});
+	});
+
+	var end = new Date().getMilliseconds();
+	var time = end - start;
+	base.info("Added overhead: %d milliseconds.", time);
+
+	var fn = path.join(__dirname, "..", "json", set.code + ".json");
+	fs.writeFile(fn, JSON.stringify(set, null, '  '), {encoding:"utf8"}, callback);	
 };
