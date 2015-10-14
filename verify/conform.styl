@@ -1,1 +1,151 @@
-/mnt/compendium/DevLab/common/stylus/conform.styl
+vendors = webkit moz o official
+
+border-radius()
+	-webkit-border-radius arguments  
+	-moz-border-radius arguments
+	border-radius arguments  
+
+border-image()
+	-webkit-border-image arguments
+	-moz-border-image arguments
+	-o-border-image arguments
+
+box-sizing()
+	-webkit-box-sizing arguments
+	-moz-box-sizing arguments
+	-o-box-sizing arguments
+	box-sizing arguments
+
+opacity(n)
+	opacity n
+	if support-for-ie
+		-ms-filter "progid:DXImageTransform.Microsoft.Alpha(Opacity=" + round(n * 100) + ")";
+		filter unquote("progid:DXImageTransform.Microsoft.Alpha(Opacity=" + round(n * 100) + ")")
+
+box-shadow()
+	-webkit-box-shadow arguments
+	-moz-box-shadow arguments
+	box-shadow arguments
+
+my-transition()
+	-webkit-transition arguments
+	-moz-transition arguments
+	-ms-transition arguments
+	-o-transition arguments
+	transition arguments
+
+transition-box-shadow()
+	-webkit-transition -webkit-box-shadow arguments
+	-moz-transition -moz-box-shadow arguments
+	-ms-transition -ms-box-shadow arguments
+	-o-transition -o-box-shadow arguments
+	transition box-shadow arguments
+
+transition-transform()
+	-webkit-transition -webkit-transform arguments
+	-moz-transition -moz-transform arguments
+	-ms-transition -ms-transform arguments
+	-o-transition -o-transform arguments
+
+transform()
+	-webkit-transform arguments
+	-moz-transform arguments
+	-ms-transform arguments
+	-o-transform arguments
+	transform arguments
+
+transform-origin()
+	-webkit-transform-origin arguments
+	-moz-transform-origin arguments
+	-ms-transform-origin arguments
+	-o-transform-origin arguments
+	transform-origin arguments
+
+background-size()
+	-webkit-background-size arguments
+	-moz-background-size arguments
+	-o-background-size arguments
+	background-size arguments
+
+mask-image()
+	-webkit-mask-image arguments
+	-moz-mask-image arguments
+	-o-mask-image arguments
+	mask-image arguments
+
+text-size-adjust()
+	-webkit-text-size-adjust arguments
+	-moz-text-size-adjust arguments
+	-ms-text-size-adjust arguments
+	text-size-adjust arguments
+
+user-select()
+	if arguments=="element"
+		-webkit-user-select text
+	else
+		-webkit-user-select arguments
+
+	-khtml-user-select arguments
+
+	if arguments=="none"
+		-moz-user-select -moz-none
+	else
+		-moz-user-select arguments
+
+	-ms-user-select arguments
+	user-select arguments
+
+background-linear-gradient-legacy()
+	background-image: -webkit-gradient(arguments);
+
+background-linear-gradient()
+	background-image -webkit-linear-gradient(arguments)
+	background-image -moz-linear-gradient(arguments)
+	background-image -ms-linear-gradient(arguments)
+	background-image -o-linear-gradient(arguments)
+	background-image linear-gradient(arguments)
+
+background-radial-gradient()
+	background-image -webkit-radial-gradient(arguments)
+	background-image -moz-radial-gradient(arguments)
+	background-image -ms-radial-gradient(arguments)
+	background-image -o-radial-gradient(arguments)
+	background-image radial-gradient(arguments)
+
+animation()
+	-webkit-animation arguments
+	-moz-animation arguments
+	-o-animation arguments
+	animation arguments
+
+/*
+linear-gradient(direction, from, to)
+	if support-for-ie
+		add-property(filter, s("progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorstr=%s, EndColorstr=%s)", from, to));
+		add-property(-ms-filter, s("progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorstr=%s, EndColorstr=%s)", from, to));
+	add-property(background, s("-webkit-gradient(linear, %s top, %s bottom, from(%s), to(%s))", direction, direction, from, to));
+	add-property(background, s("-webkit-linear-gradient(%s, %s, %s)", direction, from, to));
+	add-property(background, s("-ms-linear-gradient(%s, %s, %s)", direction, from, to));
+	add-property(background, s("-moz-linear-gradient(%s, %s, %s)", direction, from, to));
+	add-property(background, s("-o-linear-gradient(%s, %s, %s)", direction, from, to));
+	add-property(background, s("linear-gradient(%s, %s, %s)", direction, from, to));*/
+
+background-opacity(level, r=0, g=0, b=0)
+	background rgb(r, g, b)
+	background rgba(r, g, b, level)
+
+add-sprite(width, height, positionX, positionY, paddingTop, paddingRight, paddingBottom, paddingLeft)
+	width width
+	height height
+	background-position positionX positionY
+	background-repeat no-repeat
+	background-clip content-box
+	padding-top paddingTop
+	padding-right paddingRight
+	padding-bottom paddingBottom
+	padding-left paddingLeft
+
+	&.selected
+		background-position 50% 50%, positionX positionY
+		background-repeat no-repeat, no-repeat
+		background-clip border-box, content-box
