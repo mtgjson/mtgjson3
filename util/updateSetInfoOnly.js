@@ -36,8 +36,9 @@ function processSet(code, cb)
 		{
 			var newSet = base.clone(C.SETS.mutateOnce(function(SET) { return SET.code===code ? SET : undefined; }));
 			newSet.cards = JSON.parse(setRaw).cards;
+			newSet.code = code; // Needed for shared.saveSet()
 
-			fs.writeFile(path.join(__dirname, "..", "json", code + ".json"), JSON.stringify(newSet, null, '  ');, {encoding : "utf8"}, this);
+			shared.saveSet(newSet, this);
 		},
 		function finish(err)
 		{
