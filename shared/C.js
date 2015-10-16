@@ -3426,7 +3426,8 @@
 		releaseDate   : "string",
 		legalities    : ["object"],
 		starter       : "boolean",
-		id            : "string"
+		id            : "string",
+		colorIdentity : ["string"]
 	};
 
 	exports.ORACLE_FIELDS = ["layout", "name", "names", "manaCost", "cmc", "colors", "type", "supertypes", "types", "subtypes", "text", "power", "toughness", "loyalty", "hand", "life", "rulings", "printings", "legalities"];
