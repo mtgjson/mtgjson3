@@ -316,6 +316,11 @@
 					<td>The card colors. Usually this is derived from the casting cost, but some cards are special (like the back of double-faced cards and Ghostfire).</td>
 				</tr>
 				<tr>
+					<td>colorIdentity</td>
+					<td>[ "U", "G" ]</td>
+					<td>This is created reading all card color information and costs. It is the same for double-sided cards (if they have different colors, the identity will have both colors). It also identifies all mana symbols in the card (cost and text). Mostly used on commander decks.</td>
+				</tr>
+				<tr>
 					<td>type</td>
 					<td>"Legendary Creature — Angel"</td>
 					<td>The card type. This is the type you would see on the card if printed today. Note: The dash is a UTF8 'long dash' as per the MTG rules</td>
