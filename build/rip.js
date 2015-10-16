@@ -49,6 +49,56 @@ function ripSet(setName, cb)
 
 			this();
 		},
+		function fixCommanderIdentity() {
+			base.info("Fixing color identity for double-faced cards...");
+			var size = this.data.set.cards.length;
+			var allCards = this.data.set.cards;
+
+			function findCardByNumber(number) {
+				var ret = null;
+				allCards.forEach(function(card) {
+					if (card.number == number)
+						ret = card;
+				});
+
+				return(ret);
+			}
+
+			this.data.set.cards.parallelForEach(function(card, subcb){
+				if (card.layout != "double-faced") {
+					return(setImmediate(subcb));
+				}
+
+				var colors = [];
+				var otherSideNum = card.number.substr(0, card.number.length - 1);
+
+				if (card.number.substr("-1") == "a") {
+					otherSideNum = otherSideNum + "b";
+				}
+				else {
+					otherSideNum = otherSideNum + "a";
+				}
+
+				var otherCard = findCardByNumber(otherSideNum);
+				if (otherCard == null) {
+					base.error("Current side name: %s", card.number);
+					base.error("-> Other Side num: %s", otherSideNum);
+					throw Error("Error: Cannot find other side of card " + card.name);
+				}
+
+				if (card.colorIdentity) colors = colors.concat(card.colorIdentity);
+				if (otherCard.colorIdentity) colors = colors.concat(otherCard.colorIdentity);
+
+				var uniqueColors = colors.filter(function(elem, pos) {
+				    return colors.indexOf(elem) == pos;
+				});
+
+				if (uniqueColors.length > 0)
+					card.colorIdentity = uniqueColors;
+
+				subcb();
+			}, this, size);
+		},
 		function addForeignNames()
 		{
 			base.info("Adding foreign names to cards...");
