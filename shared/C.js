@@ -2614,7 +2614,8 @@
 			{ match : {name : "Psionic Gift"}, replace : {flavor : {"spellcrafting" : "spellcrafting!"}}},
 			{ match : {name : "Decompose"}, replace : {flavor : {"Sheesh" : "Sheesh!"}}},
 			{ match : {name : "Gorilla Titan"}, flavorAddExclamation : true},
-			{ match : {name : "Dusk Imp"}, replace : {flavor : "It despises humans and squirrels and beasts and dwarves and cephalids . . . well, it despises just about everything."}}
+			{ match : {name : "Dusk Imp"}, replace : {flavor : "It despises humans and squirrels and beasts and dwarves and cephalids . . . well, it despises just about everything."}},
+			{ match:  {name : "Charmed Pendant"}, remove: ["colorIdentity"]}
 		],
 		DKM :
 		[
