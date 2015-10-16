@@ -754,7 +754,7 @@ exports.updateStandardForCard = function(card) {
 };
 
 exports.saveSet = function(set, callback) {
-	var start = new Date().getMilliseconds();
+	//var start = new Date().getMilliseconds();
 	// Sort cards
 	set.cards.sort(function(a, b) {
 		return(exports.alphanum(a.number, b.number));
@@ -780,9 +780,9 @@ exports.saveSet = function(set, callback) {
 		});
 	});
 
-	var end = new Date().getMilliseconds();
-	var time = end - start;
-	base.info("Added overhead: %d milliseconds.", time);
+	//var end = new Date().getMilliseconds();
+	//var time = end - start;
+	//base.info("Added overhead: %d milliseconds.", time);
 
 	var fn = path.join(__dirname, "..", "json", set.code + ".json");
 	fs.writeFile(fn, JSON.stringify(set, null, '  '), {encoding:"utf8"}, callback);	
