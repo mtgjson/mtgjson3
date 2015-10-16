@@ -162,6 +162,7 @@ function processMultiverseids(multiverseids, cb)
 					multiverseDocCardParts.forEach(function(cardPart, i)
 					{
 						var newCard = processCardPart(multiverseDoc, cardPart, printedMultiverseDoc, printedMultiverseDocCardParts[i]);
+
 						if(newCard.layout==="split" && i===1)
 							return;
 
@@ -392,6 +393,41 @@ function processCardPart(doc, cardPart, printedDoc, printedCardPart)
 		if(variationLinks.length)
 			card.variations = Array.toArray(variationLinks).map(function(variationLink) { return +variationLink.getAttribute("id").trim(); }).filter(function(variation) { return variation!==card.multiverseid; });
 	}
+
+	// Calculate commander color identity
+	var regex = /{([^}]*)}/g;
+	const validColors = ["W", "U", "B", "R", "G"];
+	var colors = [];
+	var res = null;
+
+	// Process color indicators
+	if (card.colors) {
+		var newColors = [];
+		card.colors.forEach(function(color){
+			if (color.toLowerCase() == "white") newColors.push("W");
+			if (color.toLowerCase() == "blue") newColors.push("U");
+			if (color.toLowerCase() == "black") newColors.push("B");
+			if (color.toLowerCase() == "red") newColors.push("R");
+			if (color.toLowerCase() == "green") newColors.push("G");
+		});
+
+		newColors.forEach(function(idx) {
+			if ((validColors.indexOf(idx) >= 0) && (colors.indexOf(idx) == -1))
+				colors.push(idx);
+		});
+	}
+
+	// Process card text and mana cost
+	var fullText = card.manaCost + card.text;
+	while (res = regex.exec(fullText)) {
+		res[1].split("/").forEach(function(idx) {
+			if ((validColors.indexOf(idx) >= 0) && (colors.indexOf(idx) == -1))
+				colors.push(idx);
+		});
+	}
+	//base.info("Colors: %s", JSON.stringify(colors));
+	if (colors.length > 0)
+		card.colorIdentity = colors;
 
 	return card;
 }
