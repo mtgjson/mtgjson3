@@ -86,7 +86,7 @@ function addPrintingToSetCards(setCode, targetCardNames, printingCode, cb)
 				}
 			});
 
-			fs.writeFile(path.join(__dirname, "..", "json", setCode + ".json"), JSON.stringify(set), {encoding : "utf8"}, this);
+			shared.saveSet(set, this);
 		},
 		function finish(err)
 		{

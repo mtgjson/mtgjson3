@@ -50,7 +50,7 @@ tiptoe(
 		base.info("Saving promo sets...");
 		sets.serialForEach(function(set, subcb)
 		{
-			fs.writeFile(path.join(__dirname, "..", "json", set.code + ".json"), JSON.stringify(set, null, '  ');, {encoding : "utf8"}, subcb);
+			shared.saveSet(set, subcb);
 		}, this);
 	},
 	function updateOtherSets()

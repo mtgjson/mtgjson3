@@ -89,7 +89,7 @@ function updateLegalitiesForSetCards(setCode, targetCardNames, cardLegalitiesByN
 				shared.updateStandardForCard(card);
 			});
 
-			fs.writeFile(path.join(__dirname, "..", "json", setCode + ".json"), JSON.stringify(set, null, '  '), {encoding : "utf8"}, this);
+			shared.saveSet(set, this);
 		},
 		function finish(err)
 		{
