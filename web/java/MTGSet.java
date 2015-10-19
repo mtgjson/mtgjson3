@@ -1,1 +1,1 @@
-../../java/src/com/mtgjson/MTGSet.java
+../../sample/java/src/com/mtgjson/MTGSet.java

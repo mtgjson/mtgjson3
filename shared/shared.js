@@ -757,20 +757,25 @@ exports.saveSet = function(set, callback) {
 	//var start = new Date().getMilliseconds();
 	// Sort cards
 	set.cards.sort(function(a, b) {
-		return(exports.alphanum(a.number, b.number));
+		if (a.number && b.number)
+			return(exports.alphanum(a.number, b.number));
+
+		a.name.localeCompare(b.name);
 	});
 
 	// Sort internal card stuff
 	set.cards.forEach(function(card) {
 		// Foreign Names
-		card.foreignNames.sort(function(a, b){
-			return(a.language.localeCompare(b.language));
-		});
+		if (card.foreignNames)
+			card.foreignNames.sort(function(a, b){
+				return(a.language.localeCompare(b.language));
+			});
 
 		// Legalities
-		card.legalities.sort(function(a, b){
-			return(a.format.localeCompare(b.format));
-		});
+		if (card.legalities)
+			card.legalities.sort(function(a, b){
+				return(a.format.localeCompare(b.format));
+			});
 
 		// Sort card properties
 		Object.keys(card).sort().forEach(function(key) {
