@@ -1792,6 +1792,7 @@
 			name : "Battle for Zendikar",
 			code : "BFZ",
 			magicCardsInfoCode : "bfz",
+			essentialMagicCode : "108",
 			releaseDate : "2015-10-02",
 			border : "black",
 			type : "expansion",
@@ -1799,8 +1800,9 @@
 			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"]
 		},
 		{
-			name : "Zendikar Expedition",
+			name : "Zendikar Expeditions",
 			code : "EXP",
+			magicCardsInfoCode : "exp",
 			releaseDate : "2015-10-02",
 			border : "black",
 			type : "promo"
