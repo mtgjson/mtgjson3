@@ -1712,6 +1712,7 @@
 		{
 			name : "Ugin's Fate promos",
 			code : "FRF_UGIN",
+			magicCardsInfoCode : "ugin",
 			releaseDate : "2015-01-17",
 			border : "black",
 			type : "promo"
