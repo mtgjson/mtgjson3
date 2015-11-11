@@ -8,7 +8,7 @@
 	// Unglued/Unhinged types
 	exports.TYPES.push("Enchant", "Player", "Interrupt", "Scariest", "You'll", "Ever", "See", "Eaturecray");
 
-	exports.LAST_PRINTINGS_RESET = "ORI";
+	exports.LAST_PRINTINGS_RESET = "C15";
 
 	exports.SETS_LACKING_HQ_SVG_SYMBOL_ICONS = ["DDO"];
 
@@ -1712,6 +1712,7 @@
 		{
 			name : "Ugin's Fate promos",
 			code : "FRF_UGIN",
+			magicCardsInfoCode : "ugin",
 			releaseDate : "2015-01-17",
 			border : "black",
 			type : "promo"
@@ -1792,6 +1793,7 @@
 			name : "Battle for Zendikar",
 			code : "BFZ",
 			magicCardsInfoCode : "bfz",
+			essentialMagicCode : "108",
 			releaseDate : "2015-10-02",
 			border : "black",
 			type : "expansion",
@@ -1799,12 +1801,20 @@
 			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"]
 		},
 		{
-			name : "Zendikar Expedition",
+			name : "Zendikar Expeditions",
 			code : "EXP",
+			magicCardsInfoCode : "exp",
 			releaseDate : "2015-10-02",
 			border : "black",
 			type : "promo"
-		}
+		},
+		{
+			name : "Commander 2015",
+			code : "C15",
+			releaseDate : "2015-11-13",
+			border : "black",
+			type : "commander"
+		}		
 	];
 
 	exports.IGNORE_GATHERER_PRINTINGS = ["Promo set for Gatherer"];

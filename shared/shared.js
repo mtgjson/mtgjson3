@@ -768,7 +768,11 @@ exports.saveSet = function(set, callback) {
 		// Foreign Names
 		if (card.foreignNames)
 			card.foreignNames.sort(function(a, b){
-				return(a.language.localeCompare(b.language));
+				var ret = a.language.localeCompare(b.language)
+				if (ret == 0 && a.multiverseid != b.multiverseid) {
+					ret = (a.multiverseid > b.multiverseid)?1:-1;
+				}
+				return(ret);
 			});
 
 		// Legalities
