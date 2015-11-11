@@ -54,17 +54,49 @@ function clearCacheForSet(code, cacheType, cb)
 			var set = JSON.parse(setRaw);
 			if(cacheType==="mcilist")
 			{
-				if(!set.isMCISet)
-					return this.finish();
+				if(!set.isMCISet) {
+					base.info("Not MCISet");
+
+					if (!set.magicCardsInfoCode)
+						return this.finish();
+				}
 
 				var urls = [];
-				urls.push("http://magiccards.info/" + set.magicCardsInfoCode.toLowerCase() + "/en.html");
+				var mciListUrl = "http://magiccards.info/" + set.magicCardsInfoCode.toLowerCase() + "/en.html";
+				urls.push(mciListUrl);
 				var targetSet = C.SETS.mutateOnce(function(SET) { if(SET.code.toLowerCase()===set.code.toLowerCase()) { return SET; } });
-				targetSet.magicRaritiesCodes.forEach(function(magicRaritiesCode)
-				{
-					urls.push("http://www.magiclibrarities.net/" + magicRaritiesCode + "-english-cards-index.html");
-				}.bind(this));
-				this(undefined, urls);
+				if (targetSet.magicRaritiesCodes) {
+					targetSet.magicRaritiesCodes.forEach(function(magicRaritiesCode)
+					{
+						urls.push("http://www.magiclibrarities.net/" + magicRaritiesCode + "-english-cards-index.html");
+					}.bind(this));
+				}
+
+				// Retrieve all mci info and clear it
+				base.info("MCI Set code: %s", set.magicCardsInfoCode);
+				var cb = this;
+				tiptoe(
+					function getList() {
+						base.info('Getting URL Contents for: %s', mciListUrl);
+						shared.getURLAsDoc(mciListUrl, this);
+					},
+					function getURLs(listDoc) {
+						var mciCardLinks = Array.toArray(listDoc.querySelectorAll("table tr td a"));
+						var validLinks = mciCardLinks.filter(function(link) {
+							var href = link.getAttribute("href");
+							return (href.indexOf(set.magicCardsInfoCode) >= 0);
+						});
+						validLinks.forEach(function(idx) {
+							var href = idx.getAttribute("href");
+							urls.push("http://magiccards.info" + href);
+						});
+
+						this();
+					},
+					function finish(err) {
+						cb(err, urls);
+					}
+				);
 			}
 			else if(cacheType==="listings")
 			{
