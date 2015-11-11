@@ -8,7 +8,7 @@
 	// Unglued/Unhinged types
 	exports.TYPES.push("Enchant", "Player", "Interrupt", "Scariest", "You'll", "Ever", "See", "Eaturecray");
 
-	exports.LAST_PRINTINGS_RESET = "ORI";
+	exports.LAST_PRINTINGS_RESET = "C15";
 
 	exports.SETS_LACKING_HQ_SVG_SYMBOL_ICONS = ["DDO"];
 
