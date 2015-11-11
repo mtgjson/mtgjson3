@@ -1806,7 +1806,14 @@
 			releaseDate : "2015-10-02",
 			border : "black",
 			type : "promo"
-		}
+		},
+		{
+			name : "Commander 2015",
+			code : "C15",
+			releaseDate : "2015-11-13",
+			border : "black",
+			type : "commander"
+		}		
 	];
 
 	exports.IGNORE_GATHERER_PRINTINGS = ["Promo set for Gatherer"];
