@@ -104,7 +104,13 @@ function generateSpoilerForSetName(setName, lang, cb) {
 			}
 			dustData.imgUrl = function(val, idx) {
 				var card = this.cards[this['$idx']];
-				var url = 'http://magiccards.info/scans/en/' + set.magicCardsInfoCode + '/' + card.number + '.jpg';
+				var url = null;
+				if (set.magicCardsInfoCode) {
+					var number = card.number;
+					if (card.mciNumber)
+						number = card.mciNumber;
+					url = 'http://magiccards.info/scans/en/' + set.magicCardsInfoCode + '/' + number + '.jpg';
+				}
 
 				return(url);
 			}

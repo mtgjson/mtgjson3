@@ -34,7 +34,7 @@
 	float: left;
 	margin-right: 1em;
 }
-.card_spoiler {
+#footer, .card_spoiler {
 	clear: both;
 }
 </style>
@@ -45,17 +45,19 @@
 	<p style="margin-top: 1.0em;">This is a visual spoiler created by the data provided on the <a href="http://mtgjson.com">MTGJSON project</a>.</p>
 	<h2>{setName}</h2>
 	{#cards}<div class="card_spoiler">
-		<div class="card_image"><img src="{imgUrl}" /></div>
+		{?imgUrl}<div class="card_image"><img src="{imgUrl}" /></div>{/imgUrl}
 		<div><span class="card_name">{name}</span> <span>{#manaIcons}<i class="mtg {.}"></i>{/manaIcons}</span></div>
 		<div><i class="mtg {setClass}"></i></div>
 		<div>{type}</div>
 		<div class="card_text">{dustText|s}</div>
 		<div class="card_flavor">{dustFlavor|s}</div>
 		<div>Illus. {artist}</div>
-		<div>#{number}</div>
+		{?number}<div>#{number}</div>{/number}
 	</div>{/cards}
-	<h1>License and Copyright<a href="#top">(back to top)</a></h1>
-	<p>The JSON files contain data that is Copyright (c) Wizards of the Coast - All Rights Reserved<br /><br />
-	This website is not affiliated with Wizards of the Coast in any way.</p>
+	<div id="footer">
+		<h1>License and Copyright<a href="#top">(back to top)</a></h1>
+		<p>The JSON files contain data that is Copyright (c) Wizards of the Coast - All Rights Reserved<br /><br />
+		This website is not affiliated with Wizards of the Coast in any way.</p>
+	</div>
 </body>
 </html>
