@@ -171,11 +171,13 @@ tiptoe(
 			var setXSize = printUtil.toSize(JSON.stringify(setWithExtras).length, 0);
 			setXSize = (setSize.length>=6 ? "" : "&nbsp;".repeat(6-setXSize.length)) + setXSize;
 
-			var dustSetData = {code : SET.code, name : SET.name, releaseDate : SET.releaseDate, size : setSize, sizeX : setXSize};
+			var dustSetData = {code : SET.code, lcCode : SET.code.toLowerCase(), name : SET.name, releaseDate : SET.releaseDate, size : setSize, sizeX : setXSize};
 			if(SET.code==="CON")
 				dustSetData.isCON = true;
 			if(SET.code.length===3)
 				dustSetData.shortCode = true;
+			if(SET.isMCISet)
+				dustSetData.isMCISet = true;
 
 			dustData.sets.push(dustSetData);
 		}.bind(this));
@@ -341,11 +343,10 @@ tiptoe(
 		dustData.allSetFilesZipSize = printUtil.toSize(fs.statSync(path.join(__dirname, "json", "AllSetFiles.zip")).size, 1);
 		dustData.allSetFilesXZipSize = printUtil.toSize(fs.statSync(path.join(__dirname, "json", "AllSetFiles-x.zip")).size, 1);
 
-		C.SETS.forEach(function(SET, i)
-		{
-			dustData.sets[i].lcCode = SET.code.toLowerCase();
-			dustData.sets[i].sizeZip = printUtil.toSize(fs.statSync(path.join(__dirname, "json", SET.code + ".json.zip")).size, 1);
-			dustData.sets[i].sizeXZip = printUtil.toSize(fs.statSync(path.join(__dirname, "json", SET.code + "-x.json.zip")).size, 1);
+		C.SETS.forEach(function(SET, i) {
+			var setCode = dustData.sets[i].code;
+			dustData.sets[i].sizeZip = printUtil.toSize(fs.statSync(path.join(__dirname, "json", setCode + ".json.zip")).size, 1);
+			dustData.sets[i].sizeXZip = printUtil.toSize(fs.statSync(path.join(__dirname, "json", setCode + "-x.json.zip")).size, 1);
 		});
 
 		dustUtil.render(__dirname, "index", dustData, { keepWhitespace : true }, this.parallel());
