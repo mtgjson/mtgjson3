@@ -3191,6 +3191,15 @@
 		[
 			{ match : "*", remove : ["number"] }
 		],
+		BFZ :
+		[
+			// These settings are to match the numbering of CCGHQ image release names (issue #89).
+			{ renumberImages : "Forest", order : [ 401890, 401889, 401888, 401891, 401886, 401883, 401887, 401885, 401884, 401882 ] },
+			{ renumberImages : "Island", order : [ 401921, 401926, 401925, 401923, 401927, 401919, 401920, 401922, 401918, 401924 ] },
+			{ renumberImages : "Mountain", order : [ 401960, 401961, 401956, 401959, 401962, 401953, 401955, 401954, 401957, 401958 ] },
+			{ renumberImages : "Plains", order : [ 401990, 401993, 401992, 401991, 401994, 401987, 401988, 401985, 401989, 401986 ] },
+			{ renumberImages : "Swamp", order : [ 402062, 402058, 402061, 402060, 402059, 402057, 402053, 402055, 402054, 402056 ] }
+		],
 		"*" :
 		[
 			"recalculateStandard",
