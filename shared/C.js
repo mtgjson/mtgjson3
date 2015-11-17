@@ -1816,6 +1816,7 @@
 		{
 			name : "Commander 2015",
 			code : "C15",
+			magicCardsInfoCode : "c15",
 			releaseDate : "2015-11-13",
 			border : "black",
 			type : "commander"
@@ -3193,9 +3194,29 @@
 		],
 		BFZ :
 		[
-			// These settings are to match the numbering of CCGHQ image release names (issue #89).
-			{ renumberImages : "Forest", order : [ 401890, 401889, 401888, 401891, 401886, 401883, 401887, 401885, 401884, 401882 ] },
-			{ renumberImages : "Island", order : [ 401921, 401926, 401925, 401923, 401927, 401919, 401920, 401922, 401918, 401924 ] },
+			// These settings are to match the numbering of CCGHQ image release names (issue #89) and the correct number on magiccards.info.
+			{ renumberImages : "Forest", order : [ 401887, 401885, 401884, 401882, 401883, 401889, 401888, 401891, 401886, 401890 ] },
+			{ match : { multiverseid : 401882 }, replace: { mciNumber : "273b" } },
+			{ match : { multiverseid : 401883 }, replace: { mciNumber : "274b" } },
+			{ match : { multiverseid : 401884 }, replace: { mciNumber : "272b" } },
+			{ match : { multiverseid : 401885 }, replace: { mciNumber : "271b" } },
+			{ match : { multiverseid : 401886 }, replace: { mciNumber : "273a" } },
+			{ match : { multiverseid : 401887 }, replace: { mciNumber : "270b" } },
+			{ match : { multiverseid : 401888 }, replace: { mciNumber : "271a" } },
+			{ match : { multiverseid : 401889 }, replace: { mciNumber : "270a" } },
+			{ match : { multiverseid : 401890 }, replace: { mciNumber : "274a" } },
+			{ match : { multiverseid : 401891 }, replace: { mciNumber : "272a" } },
+			{ renumberImages : "Island", order : [ 401922, 401918, 401920, 401924, 401919, 401925, 401923, 401926, 401927, 401921 ] },
+			{ match : { multiverseid : 401918 }, replace: { mciNumber : "256b" } },
+			{ match : { multiverseid : 401919 }, replace: { mciNumber : "259b" } },
+			{ match : { multiverseid : 401920 }, replace: { mciNumber : "257b" } },
+			{ match : { multiverseid : 401921 }, replace: { mciNumber : "259a" } },
+			{ match : { multiverseid : 401922 }, replace: { mciNumber : "255b" } },
+			{ match : { multiverseid : 401923 }, replace: { mciNumber : "256a" } },
+			{ match : { multiverseid : 401924 }, replace: { mciNumber : "258b" } },
+			{ match : { multiverseid : 401925 }, replace: { mciNumber : "255a" } },
+			{ match : { multiverseid : 401926 }, replace: { mciNumber : "257a" } },
+			{ match : { multiverseid : 401927 }, replace: { mciNumber : "258a" } },
 			{ renumberImages : "Mountain", order : [ 401960, 401961, 401956, 401959, 401962, 401953, 401955, 401954, 401957, 401958 ] },
 			{ renumberImages : "Plains", order : [ 401990, 401993, 401992, 401991, 401994, 401987, 401988, 401985, 401989, 401986 ] },
 			{ renumberImages : "Swamp", order : [ 402062, 402058, 402061, 402060, 402059, 402057, 402053, 402055, 402054, 402056 ] }
@@ -3429,6 +3450,7 @@
 		flavor        : "string",
 		artist        : "string",
 		number        : "string",
+		mciNumber     : "string",
 		power         : "string",
 		toughness     : "string",
 		loyalty       : "number",
