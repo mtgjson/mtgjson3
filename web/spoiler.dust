@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>{title}</title>
+<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-66983210-2', 'auto');
+	ga('send', 'pageview');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon" /> 
+<link type="text/css" rel="stylesheet" href="index.css" />
+<link type="text/css" rel="stylesheet" href="mtgicons.css" />
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css" />
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css" />
+<link type="text/css" rel="stylesheet" href="solarized-dark.css" />
+<style>
+.card_spoiler {
+	margin-top: 1em;
+}
+.card_flavor {
+	margin: 0.2em 0;
+	font-style: italic;
+}
+.card_name {
+	font-weight: bold;
+}
+.card_image {
+	float: left;
+	margin-right: 1em;
+}
+.card_spoiler {
+	clear: both;
+}
+</style>
+</head>
+<body>
+	<a name="top"></a>
+	<center><h1 style="font-size: 240%;">MTG JSON<br />{setName} spoilers</h1></center>
+	<p style="margin-top: 1.0em;">This is a visual spoiler created by the data provided on the <a href="http://mtgjson.com">MTGJSON project</a>.</p>
+	<h2>{setName}</h2>
+	{#cards}<div class="card_spoiler">
+		<div class="card_image"><img src="{imgUrl}" /></div>
+		<div><span class="card_name">{name}</span> <span>{#manaIcons}<i class="mtg {.}"></i>{/manaIcons}</span></div>
+		<div><i class="mtg {setClass}"></i></div>
+		<div>{type}</div>
+		<div class="card_text">{dustText|s}</div>
+		<div class="card_flavor">{dustFlavor|s}</div>
+		<div>Illus. {artist}</div>
+		<div>#{number}</div>
+	</div>{/cards}
+	<h1>License and Copyright<a href="#top">(back to top)</a></h1>
+	<p>The JSON files contain data that is Copyright (c) Wizards of the Coast - All Rights Reserved<br /><br />
+	This website is not affiliated with Wizards of the Coast in any way.</p>
+</body>
+</html>

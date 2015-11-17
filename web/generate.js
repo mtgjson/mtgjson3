@@ -343,6 +343,7 @@ tiptoe(
 
 		C.SETS.forEach(function(SET, i)
 		{
+			dustData.sets[i].lcCode = SET.code.toLowerCase();
 			dustData.sets[i].sizeZip = printUtil.toSize(fs.statSync(path.join(__dirname, "json", SET.code + ".json.zip")).size, 1);
 			dustData.sets[i].sizeXZip = printUtil.toSize(fs.statSync(path.join(__dirname, "json", SET.code + "-x.json.zip")).size, 1);
 		});

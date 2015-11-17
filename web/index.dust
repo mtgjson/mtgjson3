@@ -750,7 +750,7 @@
 				{#sets}
 					<tr class="firstRow">
 						<td rowspan="2">
-							{name}
+							{?isMCISet}{name}{:else}<a href="{lcCode}.html">{name}</a>{/isMCISet}
 							{#isCON}
 								<br><span style="font-size: 80%; margin-left: 2.0em;">*<a href="#windowsWarning">Windows Warning</a></span>
 							{/isCON}
