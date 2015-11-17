@@ -816,6 +816,8 @@ function compareCardToMCI(set, card, mciCardURL, cb)
 	if(cardCorrection && cardCorrection.replace && cardCorrection.replace.artist)
 		hasArtistCorrection = true;
 
+	var mciNumber = mciCardURL.match(/\/([0-9][^\.]*)\.html/)[1]
+
 	tiptoe(
 		function getMCICardDoc()
 		{
@@ -823,6 +825,7 @@ function compareCardToMCI(set, card, mciCardURL, cb)
 		},
 		function compareProperties(mciCardDoc)
 		{
+			card.mciNumber = mciNumber;
 			// Compare flavor
 			if(!hasFlavorCorrection)
 			{
