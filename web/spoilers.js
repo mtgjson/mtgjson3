@@ -114,6 +114,19 @@ function generateSpoilerForSetName(setName, lang, cb) {
 
 				return(url);
 			}
+			dustData.mciUrl = function(val, idx) {
+				var card = this.cards[this['$idx']];
+
+				var url = null;
+				if (set.magicCardsInfoCode) {
+					var number = card.number;
+					if (card.mciNumber)
+						number = card.mciNumber;
+					url = 'http://magiccards.info/' + set.magicCardsInfoCode + '/en/' + number + '.html';
+				}
+
+				return(url);
+			}
 
 			dustUtil.render(__dirname, "spoiler", dustData, { keepWhitespace : true }, this);
 		},
