@@ -37,6 +37,10 @@
 #footer, .card_spoiler {
 	clear: both;
 }
+.card_sets a {
+	text-decoration: none;
+	margin: 0 0.25em;
+}
 </style>
 </head>
 <body>
@@ -51,6 +55,7 @@
 		<div>{type}</div>
 		<div class="card_text">{dustText|s}</div>
 		<div class="card_flavor">{dustFlavor|s}</div>
+		{?printingLinks}<div class="card_sets">Other sets: {#printingLinks}<a href="/{lcSetName}.html#cardid-{id}"><i class="mtg {cssClass}"></i></a>{/printingLinks}</div>{/printingLinks}
 		<div>Illus. {artist}</div>
 		{?number}<div>#{number}</div>{/number}
 		<div><a href="http://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid={multiverseid}">gatherer</a>{?mciUrl} <a href="{mciUrl}">magiccards</a>{/mciUrl}</div>

@@ -33,6 +33,47 @@ function mtgManaConvert(value) {
 	return('<i class="mtg mana-' + value + '"></i>');
 }
 
+// Stores all the loaded sets
+var allSets = function(setName) {
+	if (!allSets.cache) {
+		allSets.cache = {};
+	}
+
+	if (allSets.cache[setName])
+		return(allSets.cache[setName]);
+
+	var ret = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "json", setName + ".json"), {encoding : "utf8"}))
+	allSets.cache[setName] = ret;
+	return(ret);
+};
+
+allSets.findMultiverseID = function(setName, multiverseid) {
+	var set = allSets(setName);
+	if (set == null) return(null);
+
+	var ret = null;
+	set.cards.forEach(function(card) {
+		if (card.multiverseid == multiverseid)
+			ret = card;
+	});
+
+	return(ret);
+};
+
+allSets.findCardName = function(setName, cardName) {
+	var set = allSets(setName);
+	if (set == null) return(null);
+
+	var ret = null;
+	var lcCardName = cardName.toLowerCase();
+	set.cards.forEach(function(card) {
+		if (card.name.toLowerCase() === lcCardName)
+			ret = card;
+	});
+
+	return(ret);
+}
+
 // Generate spoilers
 function generateSpoilerForSetName(setName, lang, cb) {
 	lang = lang || 'en';
@@ -55,10 +96,7 @@ function generateSpoilerForSetName(setName, lang, cb) {
 	tiptoe(
 		function loadSet() {
 			base.info('Generating spoilers for set %s', setName);
-			fs.readFile(path.join(__dirname, "..", "json", mySet.code + ".json"), {encoding : "utf8"}, this);
-		},
-		function parseSet(jsonRaw) {
-			set = JSON.parse(jsonRaw);
+			set = allSets(setName);
 			this();
 		},
 		function renderHTML() {
@@ -83,6 +121,34 @@ function generateSpoilerForSetName(setName, lang, cb) {
 					card.text = card.text.replaceAll('\n', '<br />').replaceAll('"', '&quot;');
 				if (card.flavor)
 					card.flavor = card.flavor.replaceAll('\n', '<br />').replaceAll('"', '&quot;');
+
+				// Other sets
+				card.printingLinks = [];
+				if (card.printings && card.rarity.toLowerCase() != "basic land") {
+					card.printings.forEach(function(printingName) {
+						if (printingName == setName) return;
+						var printingCard = allSets.findCardName(printingName, card.name);
+						var set = allSets(printingName);
+						if (!printingCard) {
+							base.error("Cannot find card '%s' on set '%s'", printingName, card.name);
+							return;
+						}
+
+						var cssClass = set.name.toLowerCase().replace(/duel decks.*[,:] ?/, '').replaceAll(' ', '-').replace('.', '');
+						if (printingCard.rarity)
+							if (printingCard.rarity.toLowerCase() !== "common")
+								cssClass += ' ' + printingCard.rarity.toLowerCase();
+
+						var entry = {
+							id: printingCard.id,
+							lcSetName: printingName.toLowerCase(),
+							cssClass: cssClass
+						};
+						card.printingLinks.push(entry);
+					});
+				}
+				if (card.printingLinks.length == 0)
+					delete card.printingLinks;
 			});
 			dustData.dustText = function(val, idx) {
 				var card = this.cards[this['$idx']];
