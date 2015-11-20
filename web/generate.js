@@ -211,6 +211,7 @@ tiptoe(
 
 		dustData.changeLog = changeLog.map(function(o, i) {
 			o.whenAtom = moment(o.when, "YYYY-MM-DD").format("YYYY-MM-DDTHH:mm:ss");
+			o.whenSiteMap = o.when;
 			o.when = moment(o.when, "YYYY-MM-DD").format("MMM D, YYYY");
 			o.uniqueID = changeLog.length-i;
 			o.atomContent = "<p>Changes:<br><ul>" + o.changes.map(function(change) { return "<li>" + change + "</li>"; }).join("") + "</ul></p>";
@@ -219,8 +220,9 @@ tiptoe(
 
 		dustData.changeLogAtom = dustData.changeLog.slice(0, 9);
 
-		dustData.lastUpdatedAtom = dustData.changeLog[0].whenAtom;		
+		dustData.lastUpdatedAtom = dustData.changeLog[0].whenAtom;
 		dustData.lastUpdated = dustData.changeLog[0].when;
+		dustData.lastUpdatedSiteMap = dustData.changeLog[0].whenSiteMap;
 		dustData.version = dustData.changeLog[0].version;
 		dustData.setSpecificFields = C.SET_SPECIFIC_FIELDS.sort().join(", ");
 
@@ -333,9 +335,8 @@ tiptoe(
 			runUtil.run("gzip", ["-k", "_" + SET.code + ".json"], { cwd:  path.join(__dirname, "json"), silent : true }, cb);
 		}, this.parallel());
 	},
-	function render()
-	{
-		base.info("Rendering index and atom...");
+	function render() {
+		base.info("Rendering index, atom and sitemap...");
 		dustData.allSizeZip = printUtil.toSize(fs.statSync(path.join(__dirname, "json", "AllSets.json.zip")).size, 1);
 		dustData.allSizeXZip = printUtil.toSize(fs.statSync(path.join(__dirname, "json", "AllSets-x.json.zip")).size, 1);
 		dustData.allCardsSizeZip = printUtil.toSize(fs.statSync(path.join(__dirname, "json", "AllCards.json.zip")).size, 1);
@@ -351,16 +352,15 @@ tiptoe(
 
 		dustUtil.render(__dirname, "index", dustData, { keepWhitespace : true }, this.parallel());
 		dustUtil.render(__dirname, "atom", dustData, { keepWhitespace : true }, this.parallel());
+		dustUtil.render(__dirname, "sitemap", dustData, { keepWhitespace : true }, this.parallel());
 	},
-	function save(indexHTML, atomXML)
-	{
+	function save(indexHTML, atomXML, sitemapXML) {
 		fs.writeFile(path.join(__dirname, "index.html"), indexHTML, {encoding:"utf8"}, this.parallel());
 		fs.writeFile(path.join(__dirname, "atom.xml"), atomXML, {encoding:"utf8"}, this.parallel());
+		fs.writeFile(path.join(__dirname, "sitemap.xml"), sitemapXML, {encoding:"utf8"}, this.parallel());
 	},
-	function finish(err)
-	{
-		if(err)
-		{
+	function finish(err) {
+		if(err) {
 			base.error(err);
 			process.exit(1);
 		}
