@@ -1,24 +1,16 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<!--[if IE]><![endif]-->
-<html>
+<!doctype html>
+<html lang="en">
 	<head>
+		<meta charset="utf-8" />
 		<title>{title}</title>
-		<script>
-			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-			ga('create', 'UA-66983210-2', 'auto');
-			ga('send', 'pageview');
-		</script>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> 
-		<link type="text/css" rel="stylesheet" href="index.css">
-		<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-		<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-		<link type="text/css" rel="stylesheet" href="solarized-dark.css">
-		<link rel="alternate" type="application/atom+xml" href="/atom.xml" title="MTGJSON Updates">
+		{analytics}
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon" /> 
+		<link type="text/css" rel="stylesheet" href="index.css" />
+		<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css" />
+		<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css" />
+		<link type="text/css" rel="stylesheet" href="solarized-dark.css" />
+		<link rel="alternate" type="application/atom+xml" href="/atom.xml" title="MTGJSON Updates" />
 	</head>
 	<body><a name="top"></a>
 		<script type="text/javascript" src="rainbow-custom.min.js"></script>
@@ -758,13 +750,13 @@
 						<td rowspan="2">{#shortCode}&nbsp;{/shortCode}{code}</td>
 						<td rowspan="2">{releaseDate}</td>
 						<td class="sizeColLeft">
-							{#shortCode}&nbsp;{/shortCode}<a href="json/{code}.json">{code}.json</a>
+							<a href="json/{code}.json">json</a>
 						</td>
 						<td class="sizeColRight">
 							<span class="size">{size|s}</span>
 						</td>
 						<td class="sizeColLeft">
-							{#shortCode}&nbsp;{/shortCode}<a href="json/{code}-x.json">{code}-x.json</a>
+							<a href="json/{code}-x.json">json</a>
 						</td>
 						<td class="sizeColRight">
 							<span class="size">{sizeX|s}</span>
@@ -772,13 +764,13 @@
 					</tr>
 					<tr class="secondRow">
 						<td class="sizeColLeft">
-							{#shortCode}&nbsp;{/shortCode}<a href="json/{code}.json.zip">{code}.json.zip</a>
+							<a href="json/{code}.json.zip">zipped</a>
 						</td>
 						<td class="sizeColRight">
 							<span class="size">{sizeZip|s}</span>
 						</td>
 						<td class="sizeColLeft">
-							{#shortCode}&nbsp;{/shortCode}<a href="json/{code}-x.json.zip">{code}-x.json.zip</a>
+							<a href="json/{code}-x.json.zip">zipped</a>
 						</td>
 						<td class="sizeColRight">
 							<span class="size">{sizeXZip|s}</span>
