@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt">
 	<head>
 		<meta charset="utf-8" />
 		<title>{title}</title>
@@ -15,29 +15,23 @@
 	<body><a name="top"></a>
 		<script type="text/javascript" src="rainbow-custom.min.js"></script>
 		<center><h1 style="font-size: 240%;">MTG JSON</h1></center>
-		<p style="margin-top: 1.0em;">This project provides up to date <a href="http://www.wizards.com/Magic/">Magic the Gathering</a> card data in <a href="http://www.json.org/">JSON</a> format for developers to easily use in their projects.<br>
-		<br>
-		For more details see: <a href="#exampleCard">Example Card</a> and <a href="#documentation">Documentation</a> and <a href="http://forums.mtgsalvation.com/showthread.php?t=517971">Discussion Thread</a><br>
-		<br>
-		Any bugs or feedback, e-mail me at <a href="mailto:mtgjson@andarilhomtg.com">mtgjson@andarilhomtg.com</a><br>
-		<br>
-		<strong>Extras</strong> include: Rulings, Printings, Foreign Language Names, Promo Sources and Original Texts<br>
-		</p>
-		<br>
-		<br>
-		<h2>Current Version: <span class="value">{version}</span></h2>
-		<h2>&nbsp;&nbsp;&nbsp;Last Updated: <span class="value">{lastUpdated}</span><a href="#changeLog">(change log)</a><a href="/atom.xml">(rss)</a></h2>
-		<br>
-		<br>
-		<p>Data is available by set 'All Sets' (preferred) or by card 'All Cards'.</p>
+		<p style="margin-top: 1.0em;">Este projeto prov&ecirc; dados de cartas de <a href="http://www.wizards.com/Magic/">Magic the Gathering</a> no formato <a href="http://www.json.org/">JSON</a> para desenvolvedores utilizarem em seus projetos.<br /><br />
+		Para detalhes veja: <a href="#exampleCard">Carta de Exemplo</a>, <a href="#documentation">Documenta&ccedil;&atilde;o</a> e <a href="http://forums.mtgsalvation.com/showthread.php?t=517971">F&oacute;rum de discuss&atilde;o</a><br /><br />
+		Quaisquer bugs ou sugest&otilde;es, entre em contato comigo no e-mail <a href="mailto:mtgjson@andarilhomtg.com">mtgjson@andarilhomtg.com</a><br /><br/>
+		<strong>Extras</strong> incluem: Regras, Impress&otilde;es, Nomes em outras l&iacute;nguas, Fontes promocionais e texto original<br /></p>
+		<br /><br />
+		<h2>Vers&atilde;o atual: <span class="value">{version}</span></h2>
+		<h2>&nbsp;&nbsp;&nbsp;&Uacute;ltima atualiza&ccedil;&atilde;o: <span class="value">{lastUpdated}</span><a href="#changeLog">(change log)</a><a href="/atom.xml">(rss)</a></h2>
+		<br /><br />
+		<p>Os dados est&atilde;o dispon&iacute;veis por set 'All Sets' (Todos os Sets - preferencial) ou por cartas 'All Cards' (Todas as Cartas).</p>
 		<table class="downloads downloadsAll downloadsAllSets">
 			<thead>
 				<tr>
-					<th colspan="4">All Sets<br><span class="docLink"><a href="#documentation">Documentation</a></span></th>
+					<th colspan="4">All Sets<br><span class="docLink"><a href="#documentation">Documenta&ccedil;&atilde;o</a></span></th>
 				</tr>
 				<tr>
-					<th colspan="2">Card Data Only</th>
-					<th colspan="2">Card Data with Extras</th>
+					<th colspan="2">Apenas dados das cartas</th>
+					<th colspan="2">Dados das cartas com extras</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -74,11 +68,11 @@
 		<table class="downloads downloadsAll downloadsAllCards">
 			<thead>
 				<tr>
-					<th colspan="4">All Cards<br><span class="docLink"><a href="#allCardsJSON">Documentation</a></span></th>
+					<th colspan="4">All Cards<br><span class="docLink"><a href="#allCardsJSON">Documenta&ccedil;&atilde;o</a></span></th>
 				</tr>
 				<tr>
-					<th colspan="2">Card Data Only</th>
-					<th colspan="2">Card Data with Extras</th>
+					<th colspan="2">Apenas dados das cartas</th>
+					<th colspan="2">Dados das cartas com extras</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -112,13 +106,13 @@
 				</tr>
 			</tbody>
 		</table>
-		<p class="individualSetsLink"><a href="#individualSets">Click Here for Individual Sets</a></p>
+		<p class="individualSetsLink"><a href="#individualSets">Clique aqui para sets individuais</a></p>
 		<br>
 		<br>
 		<br>
 		<hr>
 		<a name="exampleCard"></a>
-		<h1>Example Card<a href="#top">(back to top)</a></h1>
+		<h1>Carta de exemplo<a href="#top">(de volta ao topo)</a></h1>
 		<img src="images/sentriplets.jpg" id="cardExample">
 		<pre><code data-language="javascript">
     {~lb}
@@ -156,16 +150,16 @@
 		</code></pre>
 		<hr>
 		<a name="documentation"></a>
-		<h1>Documentation<a href="#top">(back to top)</a></h1>
-		<p>Topics: <a href="#sets">Sets</a>, <a href="#booster">Booster Field</a>, <a href="#cards">Cards</a>, <a href="#additionalJSON">Additional JSON Files</a>, <a href="#manaSymbols">Mana Symbols</a>, <a href="#otherSymbols">Other Symbols</a>
+		<h1>Documenta&ccedil;&atilde;o<a href="#top">(de volta ao topo)</a></h1>
+		<p>T&oacute;picos: <a href="#sets">Sets</a>, <a href="#booster">Campo Booster</a>, <a href="#cards">Cartas</a>, <a href="#additionalJSON">Arquivos JSON adicionais</a>, <a href="#manaSymbols">S&iacute;mbolos de Mana</a>, <a href="#otherSymbols">Outros S&iacute;mbolos</a>
 		<br>
 		<br>
 		</p>
 		<a name="sets"></a>
-		<h2>Sets<a href="#top">(back to top)</a></h1>
-		<p>All JSON files are UTF8 encoded. There are UTF8 characters (such as Æther Adept) in many of the files.<br>
+		<h2>Sets<a href="#top">(de volta ao topo)</a></h1>
+		<p>Todos os arquivos JSON sao codificados em UTF-8. Existem muitos caracteres UTF-8 (como Æther Adept) em muitos arquivos.<br>
 		<br>
-		The <strong>AllSets.json</strong> file is an object that looks like this:<br></p>
+		O arquivo <strong>AllSets.json</strong> &eacute; um objeto com a seguinte estrutura:<br></p>
 <pre><code data-language="javascript">	{~lb}
 		"LEA" : {~lb} /* set data */ {~rb},
 		"LEB" : {~lb} /* set data */ {~rb},
@@ -174,13 +168,13 @@
 	{~rb}</code></pre>
 		<p>
 		<br>
-		A flat array of all sets is also available: <a href="json/AllSetsArray.json">AllSetsArray.json</a> and <a href="json/AllSetsArray-x.json">AllSetsArray-x.json</a><br>
+		Um vetor de todos os sets tamb&eacute;m est&aacute; dispon&iacute;vel: <a href="json/AllSetsArray.json">AllSetsArray.json</a> e <a href="json/AllSetsArray-x.json">AllSetsArray-x.json</a><br>
 		<br>
-		Each individual set is a JSON object like this:</p>
+		Cada set individual &eacute; um objeto com a seguinte estrutura:</p>
 <pre><code data-language="javascript">    {~lb}
-                "name" : "Nemesis",            // The name of the set
-                "code" : "NMS",                // The set's abbreviated code
-        "gathererCode" : "NE",                 // The code that Gatherer uses for the set. Only present if different than 'code'
+                "name" : "Nemesis",            // O nome do set
+                "code" : "NMS",                // O c&oacute;digo abreviado do set
+        "gathererCode" : "NE",                 // O c&oacute;digo que o Gatherer usa para o set. Presente apenas se for diferente de 'code'
              "oldCode" : "NEM",                // An old style code used by some Magic software. Only present if different than 'gathererCode' and 'code'
   "magicCardsInfoCode" : "ne",                 // The code that magiccards.info uses for the set. Only present if magiccards.info has this set
          "releaseDate" : "2000-02-14"          // When the set was released (YYYY-MM-DD). For promo sets, the date the first card was released.

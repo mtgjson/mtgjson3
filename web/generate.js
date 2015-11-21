@@ -22,7 +22,7 @@ var dustData =
 	title : "Magic the Gathering card data in JSON format",
 	sets  : [],
 	setCodesNotOnGatherer : C.SETS_NOT_ON_GATHERER.join(", "),
-	analytics : "<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-66983210-2', 'auto');ga('send', 'pageview');</script>";
+	analytics : "<scr" + "ipt>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-66983210-2', 'auto');ga('send', 'pageview');</scr" + "ipt>"
 };
 
 tiptoe(
@@ -352,13 +352,16 @@ tiptoe(
 		});
 
 		dustUtil.render(__dirname, "index", dustData, { keepWhitespace : true }, this.parallel());
+		dustUtil.render(__dirname, "index.pt", dustData, { keepWhitespace : true }, this.parallel());
 		dustUtil.render(__dirname, "atom", dustData, { keepWhitespace : true }, this.parallel());
 		dustUtil.render(__dirname, "sitemap", dustData, { keepWhitespace : true }, this.parallel());
 	},
-	function save(indexHTML, atomXML, sitemapXML) {
+	function save(indexHTML, indexPTHTML, atomXML, sitemapXML) {
 		fs.writeFile(path.join(__dirname, "index.html"), indexHTML, {encoding:"utf8"}, this.parallel());
 		fs.writeFile(path.join(__dirname, "atom.xml"), atomXML, {encoding:"utf8"}, this.parallel());
 		fs.writeFile(path.join(__dirname, "sitemap.xml"), sitemapXML, {encoding:"utf8"}, this.parallel());
+
+		fs.writeFile(path.join(__dirname, "index.pt.html"), indexPTHTML, {encoding:"utf8"}, this.parallel());
 	},
 	function finish(err) {
 		if(err) {
