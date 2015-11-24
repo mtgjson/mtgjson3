@@ -21,7 +21,8 @@ var dustData =
 {
 	title : "Magic the Gathering card data in JSON format",
 	sets  : [],
-	setCodesNotOnGatherer : C.SETS_NOT_ON_GATHERER.join(", ")
+	setCodesNotOnGatherer : C.SETS_NOT_ON_GATHERER.join(", "),
+	analytics : "<scr" + "ipt>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-66983210-2', 'auto');ga('send', 'pageview');</scr" + "ipt>"
 };
 
 tiptoe(
@@ -171,11 +172,13 @@ tiptoe(
 			var setXSize = printUtil.toSize(JSON.stringify(setWithExtras).length, 0);
 			setXSize = (setSize.length>=6 ? "" : "&nbsp;".repeat(6-setXSize.length)) + setXSize;
 
-			var dustSetData = {code : SET.code, name : SET.name, releaseDate : SET.releaseDate, size : setSize, sizeX : setXSize};
+			var dustSetData = {code : SET.code, lcCode : SET.code.toLowerCase(), name : SET.name, releaseDate : SET.releaseDate, size : setSize, sizeX : setXSize};
 			if(SET.code==="CON")
 				dustSetData.isCON = true;
 			if(SET.code.length===3)
 				dustSetData.shortCode = true;
+			if(SET.isMCISet)
+				dustSetData.isMCISet = true;
 
 			dustData.sets.push(dustSetData);
 		}.bind(this));
@@ -209,6 +212,7 @@ tiptoe(
 
 		dustData.changeLog = changeLog.map(function(o, i) {
 			o.whenAtom = moment(o.when, "YYYY-MM-DD").format("YYYY-MM-DDTHH:mm:ss");
+			o.whenSiteMap = o.when;
 			o.when = moment(o.when, "YYYY-MM-DD").format("MMM D, YYYY");
 			o.uniqueID = changeLog.length-i;
 			o.atomContent = "<p>Changes:<br><ul>" + o.changes.map(function(change) { return "<li>" + change + "</li>"; }).join("") + "</ul></p>";
@@ -217,8 +221,9 @@ tiptoe(
 
 		dustData.changeLogAtom = dustData.changeLog.slice(0, 9);
 
-		dustData.lastUpdatedAtom = dustData.changeLog[0].whenAtom;		
+		dustData.lastUpdatedAtom = dustData.changeLog[0].whenAtom;
 		dustData.lastUpdated = dustData.changeLog[0].when;
+		dustData.lastUpdatedSiteMap = dustData.changeLog[0].whenSiteMap;
 		dustData.version = dustData.changeLog[0].version;
 		dustData.setSpecificFields = C.SET_SPECIFIC_FIELDS.sort().join(", ");
 
@@ -331,9 +336,8 @@ tiptoe(
 			runUtil.run("gzip", ["-k", "_" + SET.code + ".json"], { cwd:  path.join(__dirname, "json"), silent : true }, cb);
 		}, this.parallel());
 	},
-	function render()
-	{
-		base.info("Rendering index and atom...");
+	function render() {
+		base.info("Rendering index, atom and sitemap...");
 		dustData.allSizeZip = printUtil.toSize(fs.statSync(path.join(__dirname, "json", "AllSets.json.zip")).size, 1);
 		dustData.allSizeXZip = printUtil.toSize(fs.statSync(path.join(__dirname, "json", "AllSets-x.json.zip")).size, 1);
 		dustData.allCardsSizeZip = printUtil.toSize(fs.statSync(path.join(__dirname, "json", "AllCards.json.zip")).size, 1);
@@ -341,24 +345,26 @@ tiptoe(
 		dustData.allSetFilesZipSize = printUtil.toSize(fs.statSync(path.join(__dirname, "json", "AllSetFiles.zip")).size, 1);
 		dustData.allSetFilesXZipSize = printUtil.toSize(fs.statSync(path.join(__dirname, "json", "AllSetFiles-x.zip")).size, 1);
 
-		C.SETS.forEach(function(SET, i)
-		{
-			dustData.sets[i].sizeZip = printUtil.toSize(fs.statSync(path.join(__dirname, "json", SET.code + ".json.zip")).size, 1);
-			dustData.sets[i].sizeXZip = printUtil.toSize(fs.statSync(path.join(__dirname, "json", SET.code + "-x.json.zip")).size, 1);
+		C.SETS.forEach(function(SET, i) {
+			var setCode = dustData.sets[i].code;
+			dustData.sets[i].sizeZip = printUtil.toSize(fs.statSync(path.join(__dirname, "json", setCode + ".json.zip")).size, 1);
+			dustData.sets[i].sizeXZip = printUtil.toSize(fs.statSync(path.join(__dirname, "json", setCode + "-x.json.zip")).size, 1);
 		});
 
 		dustUtil.render(__dirname, "index", dustData, { keepWhitespace : true }, this.parallel());
+		dustUtil.render(__dirname, "index.pt", dustData, { keepWhitespace : true }, this.parallel());
 		dustUtil.render(__dirname, "atom", dustData, { keepWhitespace : true }, this.parallel());
+		dustUtil.render(__dirname, "sitemap", dustData, { keepWhitespace : true }, this.parallel());
 	},
-	function save(indexHTML, atomXML)
-	{
+	function save(indexHTML, indexPTHTML, atomXML, sitemapXML) {
 		fs.writeFile(path.join(__dirname, "index.html"), indexHTML, {encoding:"utf8"}, this.parallel());
 		fs.writeFile(path.join(__dirname, "atom.xml"), atomXML, {encoding:"utf8"}, this.parallel());
+		fs.writeFile(path.join(__dirname, "sitemap.xml"), sitemapXML, {encoding:"utf8"}, this.parallel());
+
+		fs.writeFile(path.join(__dirname, "index.pt.html"), indexPTHTML, {encoding:"utf8"}, this.parallel());
 	},
-	function finish(err)
-	{
-		if(err)
-		{
+	function finish(err) {
+		if(err) {
 			base.error(err);
 			process.exit(1);
 		}

@@ -857,6 +857,8 @@ function compareCardToMCI(set, card, mciCardURL, cb)
 	if(cardCorrection && cardCorrection.replace && cardCorrection.replace.artist)
 		hasArtistCorrection = true;
 
+	var mciNumber = mciCardURL.match(/\/([0-9][^\.]*)\.html/)[1]
+
 	tiptoe(
 		function getMCICardDoc()
 		{
@@ -864,6 +866,7 @@ function compareCardToMCI(set, card, mciCardURL, cb)
 		},
 		function compareProperties(mciCardDoc)
 		{
+			card.mciNumber = mciNumber;
 			// Compare flavor
 			if(!hasFlavorCorrection)
 			{
@@ -1641,6 +1644,12 @@ function processTextBoxChildren(children)
 			
 			childText = childText.replaceAll("roll chaos", "roll {C}");
 			childText = childText.replaceAll("chaos roll", "{C} roll");
+
+			// fix errors of type 'N{'... For more info, see issue #48.
+			childText = childText.replace(/([0-9]){/g, '{$1}{');
+			// Also fix errors that the ':' is missing after the mana cost.
+			// This takes all mana costs on the beggining of the line, followed by a space and adds a ':' character after it.
+			childText = childText.replace(/(^|\\n)({[^ ]*}) /g, '$1$2: ');
 
 			result += childText;
 		}

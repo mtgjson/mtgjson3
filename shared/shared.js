@@ -757,8 +757,12 @@ exports.saveSet = function(set, callback) {
 	//var start = new Date().getMilliseconds();
 	// Sort cards
 	set.cards.sort(function(a, b) {
-		if (a.number && b.number)
-			return(exports.alphanum(a.number, b.number));
+		if (a.number && b.number) {
+			var ret = exports.alphanum(a.number, b.number);
+			if (ret == 0)
+				ret = (a.multiverseid > b.multiverseid)?1:-1;
+			return(ret);
+		}
 
 		a.name.localeCompare(b.name);
 	});

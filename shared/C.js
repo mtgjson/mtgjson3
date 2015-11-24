@@ -92,7 +92,7 @@
 			releaseDate : "1994-03-01",
 			border : "black",
 			type : "expansion",
-			booster : ["uncommon", "uncommon", "common", "common", "common", "common", "common", "common"]			
+			booster : ["uncommon", "uncommon", "common", "common", "common", "common", "common", "common"]
 		},
 		{
 			name : "Revised Edition",
@@ -102,7 +102,12 @@
 			releaseDate : "1994-04-01",
 			border : "white",
 			type : "core",
-			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"]
+			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"],
+			translations: {
+				de: 'Unlimitierte Auflage',
+				fr: 'Tirage Non Limité',
+				it: 'Seconda Edizione'
+			}
 		},
 		{
 			name : "Legends",
@@ -112,7 +117,10 @@
 			releaseDate : "1994-06-01",
 			border : "black",
 			type : "expansion",
-			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"]
+			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"],
+			translations: {
+				it: 'Leggende'
+			}
 		},
 		{
 			name : "The Dark",
@@ -122,7 +130,10 @@
 			releaseDate : "1994-08-01",
 			border : "black",
 			type : "expansion",
-			booster : ["uncommon", "uncommon", "common", "common", "common", "common", "common", "common"]
+			booster : ["uncommon", "uncommon", "common", "common", "common", "common", "common", "common"],
+			translations: {
+				it: 'L\'Oscurità'
+			}
 		},
 		{
 			name : "Media Inserts",
@@ -167,7 +178,14 @@
 			releaseDate : "1995-04-01",
 			border : "white",
 			type : "core",
-			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"]
+			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"],
+			translations: {
+				de: 'Vierte Edition',
+				fr: 'Quatrième Edition',
+				it: 'Quarta Edizione',
+				es: 'Cuarta Edición',
+				pt: 'Quarta Edição'
+			}
 		},
 		{
 			name : "Ice Age",
@@ -178,7 +196,14 @@
 			border : "black",
 			type : "expansion",
 			block : "Ice Age",
-			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"]
+			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"],
+			translations: {
+				de: 'Eiszeit',
+				fr: 'Ere Glaciaire',
+				it: 'Era Glaciale',
+				es: 'Era Glacial',
+				pt: 'Era Glacial'
+			}
 		},
 		{
 			name : "Chronicles",
@@ -198,7 +223,14 @@
 			releaseDate : "1995-10-01",
 			border : "black",
 			type : "expansion",
-			booster : [["rare", "uncommon"], ["rare", "uncommon"], "common", "common", "common", "common", "common", "common"]
+			booster : [["rare", "uncommon"], ["rare", "uncommon"], "common", "common", "common", "common", "common", "common"],
+			translations: {
+				de: 'Heimatländer',
+				fr: 'Terres Natales',
+				it: 'Origini',
+				es: 'Tierras Natales',
+				pt: 'Terras Natais'
+			}
 		},
 		{
 			name : "Alliances",
@@ -209,7 +241,14 @@
 			border : "black",
 			type : "expansion",
 			block : "Ice Age",
-			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common"]
+			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common"],
+			translations: {
+				de: 'Allianzen',
+				fr: 'Alliances',
+				it: 'Alleanze',
+				es: 'Alianzas',
+				pt: 'Alianças'
+			}
 		},
 		{
 			name : "Rivals Quick Start Set",
@@ -247,7 +286,14 @@
 			border : "black",
 			type : "expansion",
 			block : "Mirage",
-			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"]
+			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"],
+			translations: {
+				de: 'Trugbilder',
+				fr: 'Mirage',
+				it: 'Mirage',
+				es: 'Espejismo',
+				pt: 'Miragem'
+			}
 		},
 		{
 			name : "Multiverse Gift Box",
@@ -266,7 +312,12 @@
 			magicCardsInfoCode : "itp",
 			releaseDate : "1996-12-31",
 			border : "white",
-			type : "starter"
+			type : "starter",
+			translations: {
+				de: 'Introductory Two-Player Set',
+				fr: 'Introductory Two-Player Set',
+				es: 'Introductory Two-Player Set'
+			}
 		},
 		{
 			name : "Visions",
@@ -277,7 +328,14 @@
 			border : "black",
 			type : "expansion",
 			block : "Mirage",
-			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"]
+			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"],
+			translations: {
+				de: 'Visionen',
+				fr: 'Visions',
+				it: 'Visioni',
+				es: 'Visiones',
+				pt: 'Visões'
+			}
 		},
 		{
 			name : "Fifth Edition",
@@ -287,7 +345,14 @@
 			releaseDate : "1997-03-24",
 			border : "white",
 			type : "core",
-			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"]
+			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"],
+			translations: {
+				de: 'Fünfte Edition',
+				fr: 'Cinquième Edition',
+				it: 'Quinta Edizione',
+				es: 'Quinta Edición',
+				pt: 'Quinta Edição'
+			}
 		},
 		{
 			name : "Portal Demo Game",
@@ -306,7 +371,12 @@
 			releaseDate : "1997-05-01",
 			border : "black",
 			type : "starter",
-			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"]
+			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"],
+			translations: {
+				de: 'Portal',
+				fr: 'Portal',
+				es: 'Portal'
+			}
 		},
 		{
 			name : "Vanguard",
@@ -324,7 +394,14 @@
 			border : "black",
 			type : "expansion",
 			block : "Mirage",
-			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"]
+			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"],
+			translations: {
+				de: 'Wetterlicht',
+				fr: 'Aquilon',
+				it: 'Cavalcavento',
+				es: 'El Vientoligero',
+				pt: 'Alisios'
+			}
 		},
 		{
 			name : "Prerelease Events",
@@ -345,7 +422,14 @@
 			border : "black",
 			type : "expansion",
 			block : "Tempest",
-			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"]
+			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"],
+			translations: {
+				de: 'Sturmwind',
+				fr: 'Tempête',
+				it: 'Tempesta',
+				es: 'Tempestad',
+				pt: 'Tempestade'
+			}
 		},
 		{
 			name : "Stronghold",
@@ -356,7 +440,14 @@
 			border : "black",
 			type : "expansion",
 			block : "Tempest",
-			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"]
+			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"],
+			translations: {
+				de: 'Felsenburg',
+				fr: 'Forteresse',
+				it: 'Fortezza',
+				es: 'Fortaleza',
+				pt: 'Fortaleza'
+			}
 		},
 		{
 			name : "Portal Second Age",
@@ -367,7 +458,14 @@
 			releaseDate : "1998-06-01",
 			border : "black",
 			type : "starter",
-			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"]
+			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"],
+			translations: {
+				de: 'Portal Zweites Zeitalter',
+				fr: 'Portal Second Age',
+				it: 'Portal Seconda Era',
+				es: 'Portal Segunda Edad',
+				pt: 'Portal Segunda Era'
+			}
 		},
 		{
 			name : "Judge Gift Program",
@@ -388,7 +486,14 @@
 			border : "black",
 			type : "expansion",
 			block : "Tempest",
-			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"]
+			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"],
+			translations: {
+				de: 'Exodus',
+				fr: 'Exode',
+				it: 'Esodo',
+				es: 'Éxodo',
+				pt: 'Êxodo'
+			}
 		},
 		{
 			name : "Unglued",
@@ -409,7 +514,7 @@
 			releaseDate : "1998-09-01",
 			border : "black",
 			type : "promo"
-		},				
+		},
 		{
 			name : "Urza's Saga",
 			code : "USG",
@@ -419,7 +524,14 @@
 			border : "black",
 			type : "expansion",
 			block : "Urza's",
-			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"]
+			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"],
+			translations: {
+				de: 'Urzas Saga',
+				fr: 'Epopée d\'Urza',
+				it: 'Saga di Urza',
+				es: 'La Saga de Urza',
+				pt: 'A Saga de Urza'
+			}
 		},
 		{
 			name : "Anthologies",
@@ -438,7 +550,14 @@
 			border : "black",
 			type : "expansion",
 			block : "Urza's",
-			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"]
+			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"],
+			translations: {
+				de: 'Urzas Vermächtnis',
+				fr: 'Héritage d\'Urza',
+				it: 'Eredità di Urza',
+				es: 'El Legado de Urza',
+				pt: 'O Legado de Urza'
+			}			
 		},
 		{
 			name : "Classic Sixth Edition",
@@ -448,7 +567,14 @@
 			releaseDate : "1999-04-21",
 			border : "white",
 			type : "core",
-			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"]
+			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"],
+			translations: {
+				de: 'Classic Sechste Edition',
+				fr: 'Classique Sixième Edition',
+				it: 'Classic Sesta Edizione',
+				es: 'Clásica Sexta Edición',
+				pt: 'Classica Sexta Edição'
+			}
 		},
 		{
 			name : "Portal Three Kingdoms",
@@ -458,7 +584,11 @@
 			releaseDate : "1999-05-01",
 			border : "white",
 			type : "starter",
-			booster : ["rare", "uncommon", "uncommon", "common", "common", "common", "common", "common", "land", "land"]
+			booster : ["rare", "uncommon", "uncommon", "common", "common", "common", "common", "common", "land", "land"],
+			translations: {
+				jp: 'Portal Three Kingdoms',
+				cn: 'Portal Three Kingdoms'
+			}
 		},
 		{
 			name : "Urza's Destiny",
@@ -469,7 +599,14 @@
 			border : "black",
 			type : "expansion",
 			block : "Urza's",
-			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"]
+			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"],
+			translations: {
+				de: 'Urzas Schicksal',
+				fr: 'Destinée d\'Urza',
+				it: 'Destino di Urza',
+				es: 'El Destino de Urza',
+				pt: 'O Destino de Urza'
+			}
 		},
 		{
 			name : "Starter 1999",
@@ -490,7 +627,7 @@
 			releaseDate : "1999-07-12",
 			border : "black",
 			type : "promo"
-		},		
+		},
 		{
 			name : "Worlds",
 			code : "pWOR",
@@ -520,7 +657,14 @@
 			border : "black",
 			type : "expansion",
 			block : "Masques",
-			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"]
+			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"],
+			translations: {
+				de: 'Merkadische Masken',
+				fr: 'Masques de Mercadia',
+				it: 'Maschere di Mercadia',
+				es: 'Máscaras de Mercadia',
+				pt: 'Máscara de Mercádia'
+			}
 		},
 		{
 			name : "Battle Royale Box Set",
@@ -570,8 +714,15 @@
 			releaseDate : "2000-02-14",
 			border : "black",
 			type : "expansion",
-			block : "Masques"		,
-			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"]	
+			block : "Masques",
+			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"],
+			translations: {
+				de: 'Nemesis',
+				fr: 'Némésis',
+				it: 'Nemesis',
+				es: 'Némesis',
+				pt: 'Nêmesis'
+			}
 		},
 		{
 			name : "Starter 2000",
@@ -580,7 +731,14 @@
 			magicCardsInfoCode : "st2k",
 			releaseDate : "2000-04-01",
 			border : "white",
-			type : "starter"
+			type : "starter",
+			translations: {
+				de: 'Starter 2000',
+				fr: 'Starter 2000',
+				it: 'Starter 2000',
+				es: 'Starter 2000',
+				pt: 'Starter 2000'
+			}
 		},
 		{
 			name : "Prophecy",
@@ -591,7 +749,14 @@
 			border : "black",
 			type : "expansion",
 			block : "Masques",
-			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"]
+			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"],
+			translations: {
+				de: 'Prophezeihung',
+				fr: 'Prophétie',
+				it: 'Profezia',
+				es: 'Profecía',
+				pt: 'Profecia'
+			}
 		},
 		{
 			name : "Beatdown Box Set",
@@ -611,7 +776,14 @@
 			border : "black",
 			type : "expansion",
 			block : "Invasion",
-			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"]
+			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"],
+			translations: {
+				de: 'Invasion',
+				fr: 'Invasion',
+				it: 'Invasione',
+				es: 'Invasión',
+				pt: 'Invasão'
+			}
 		},
 		{
 			name : "Planeshift",
@@ -622,7 +794,14 @@
 			border : "black",
 			type : "expansion",
 			block : "Invasion",
-			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"]
+			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"],
+			translations: {
+				de: 'Weltenwechsel',
+				fr: 'Planeshift',
+				it: 'Congiunzione',
+				es: 'Transmigración',
+				pt: 'Conjunção'
+			}
 		},
 		{
 			name : "Seventh Edition",
@@ -632,7 +811,14 @@
 			releaseDate : "2001-04-11",
 			border : "white",
 			type : "core",
-			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land"]
+			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land"],
+			translations: {
+				de: 'Siebte Edition',
+				fr: 'Septième Edition',
+				it: 'Settima Edizione',
+				es: 'Séptima Edición',
+				pt: 'Sétima Edição'
+			}
 		},
 		{
 			name : "Magic Player Rewards",
@@ -653,7 +839,14 @@
 			border : "black",
 			type : "expansion",
 			block : "Invasion",
-			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"]
+			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"],
+			translations: {
+				de: 'Apokalypse',
+				fr: 'Apocalypse',
+				it: 'Apocalisse',
+				es: 'Apocalipsis',
+				pt: 'Apocalipse'
+			}
 		},
 		{
 			name : "Odyssey",
@@ -665,7 +858,14 @@
 			border : "black",
 			type : "expansion",
 			block : "Odyssey",
-			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"]
+			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"],
+			translations: {
+				de: 'Odyssee',
+				fr: 'Odyssée',
+				it: 'Odissea',
+				es: 'Odisea',
+				pt: 'Odisséia'
+			}
 		},
 		{
 			name : "Deckmasters",
@@ -683,7 +883,14 @@
 			border : "black",
 			type : "expansion",
 			block : "Odyssey",
-			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"]
+			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"],
+			translations: {
+				de: 'Qualen',
+				fr: 'Tourment',
+				it: 'Tormento',
+				es: 'Tormento',
+				pt: 'Tormento'
+			}
 		},
 		{
 			name : "Judgment",
@@ -693,7 +900,14 @@
 			border : "black",
 			type : "expansion",
 			block : "Odyssey",
-			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"]
+			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"],
+			translations: {
+				de: 'Abrechnung',
+				fr: 'Jugement',
+				it: 'Sentenza',
+				es: 'Juicio',
+				pt: 'Julgamento'
+			}
 		},
 		{
 			name : "Onslaught",
@@ -703,7 +917,14 @@
 			border : "black",
 			type : "expansion",
 			block : "Onslaught",
-			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"]
+			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"],
+			translations: {
+				de: 'Aufmarsch',
+				fr: 'Carnage',
+				it: 'Assalto',
+				es: 'Embestida',
+				pt: 'Investida'
+			}
 		},
 		{
 			name : "Legions",
@@ -713,7 +934,14 @@
 			border : "black",
 			type : "expansion",
 			block : "Onslaught",
-			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"]
+			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"],
+			translations: {
+				de: 'Legionen',
+				fr: 'Légions',
+				it: 'Legioni',
+				es: 'Legiones',
+				pt: 'Legiões'
+			}
 		},
 		{
 			name : "Scourge",
@@ -723,7 +951,14 @@
 			border : "black",
 			type : "expansion",
 			block : "Onslaught",
-			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"]
+			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"],
+			translations: {
+				de: 'Plagen',
+				fr: 'Fléau',
+				it: 'Flagello',
+				es: 'Azote',
+				pt: 'Flagelo'
+			}
 		},
 		{
 			name : "Release Events",
@@ -734,7 +969,7 @@
 			releaseDate : "2003-07-26",
 			border : "black",
 			type : "promo"
-		},		
+		},
 		{
 			name : "Eighth Edition",
 			code : "8ED",
@@ -743,7 +978,14 @@
 			releaseDate : "2003-07-28",
 			border : "white",
 			type : "core",
-			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land"]
+			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land"],
+			translations: {
+				de: 'Haupt-Set - Achte Edition',
+				fr: 'Édition de base - Huitième Edition',
+				it: 'Set base - Ottava Edizione',
+				es: 'Colección Básica - Octava Edición',
+				pt: 'Kit Básico - Oitava Edição'
+			}
 		},
 		{
 			name : "Mirrodin",
@@ -753,7 +995,15 @@
 			border : "black",
 			type : "expansion",
 			block : "Mirrodin",
-			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"]
+			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"],
+			translations: {
+				de: 'Mirrodin',
+				fr: 'Mirrodin',
+				it: 'Mirrodin',
+				es: 'Mirrodin',
+				pt: 'Mirrodin',
+				jp: 'ミラディン'
+			}
 		},
 		{
 			name : "Darksteel",
@@ -763,7 +1013,16 @@
 			border : "black",
 			type : "expansion",
 			block : "Mirrodin",
-			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"]
+			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"],
+			translations: {
+				de: 'Nachtstahl',
+				fr: 'Sombracier',
+				it: 'Darksteel',
+				es: 'Darksteel',
+				pt: 'Darksteel',
+				jp: 'ダークスティール',
+				cn: '玄铁'
+			}
 		},
 		{
 			name : "Fifth Dawn",
@@ -773,7 +1032,16 @@
 			border : "black",
 			type : "expansion",
 			block : "Mirrodin",
-			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"]
+			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"],
+			translations: {
+				de: 'Fünfte Morgenröte',
+				fr: 'La Cinquième Aube',
+				it: 'Quinta Alba',
+				es: 'Quinto Amanecer',
+				pt: 'A Quinta Aurora',
+				jp: 'フィフス・ドーン',
+				cn: '五色曙光'
+			}
 		},
 		{
 			name : "Champions of Kamigawa",
@@ -783,7 +1051,16 @@
 			border : "black",
 			type : "expansion",
 			block : "Kamigawa",
-			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"]
+			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"],
+			translations: {
+				de: 'Meister von Kamigawa',
+				fr: 'Guerriers de Kamigawa',
+				it: 'Campioni di Kamigawa',
+				es: 'Campeones de Kamigawa',
+				pt: 'Campeões de Kamigawa',
+				jp: '神河物語',
+				cn: '神河群英录'
+			}
 		},
 		{
 			name : "Unhinged",
@@ -802,7 +1079,16 @@
 			border : "black",
 			type : "expansion",
 			block : "Kamigawa",
-			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"]
+			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"],
+			translations: {
+				de: 'Verräter von Kamigawa',
+				fr: 'Traîtres de Kamigawa',
+				it: 'Traditori di Kamigawa',
+				es: 'Traidores de Kamigawa',
+				pt: 'Traidores de Kamigawa',
+				jp: '神河謀叛',
+				cn: '神河叛将谱'
+			}
 		},
 		{
 			name : "Saviors of Kamigawa",
@@ -812,7 +1098,16 @@
 			border : "black",
 			type : "expansion",
 			block : "Kamigawa",
-			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"]
+			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"],
+			translations: {
+				de: 'Retter von Kamigawa',
+				fr: 'Libérateurs de Kamigawa',
+				it: 'Liberatori di Kamigawa',
+				es: 'Salvadores de Kamigawa',
+				pt: 'Salvadores Kamigawa',
+				jp: '神河救済',
+				cn: 'Saviors of Kamigawa'
+			}
 		},
 		{
 			name : "Ninth Edition",
@@ -822,7 +1117,19 @@
 			releaseDate : "2005-07-29",
 			border : "white",
 			type : "core",
-			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land"]
+			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land"],
+			translations: {
+				de: 'Haupt-Set - Neunte Edition',
+				fr: 'Édition de base - Neuvième Edition',
+				it: 'Set base - Nona Edizione',
+				es: 'Colección Básica - Novena Edición',
+				pt: 'Kit Básico - Nona Edição',
+				jp: '第9版',
+				cn: '第九版',
+				ru: 'Девятая редакция',
+				tw: 'Ninth Edition',
+				ko: 'Ninth Edition'
+			}
 		},
 		{
 			name : "Ravnica: City of Guilds",
@@ -832,7 +1139,17 @@
 			border : "black",
 			type : "expansion",
 			block : "Ravnica",
-			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"]
+			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"],
+			translations: {
+				de: 'Ravnica: Stadt der Gilden',
+				fr: 'Ravnica: La Cité des Guildes',
+				it: 'Ravnica: Città delle Gilde',
+				es: 'Rávnica: Ciudad de Gremios',
+				pt: 'Ravnica: A Cidade das Guildas',
+				jp: 'ラブニカ：ギルドの都',
+				cn: '拉尼卡公会城',
+				ru: 'Равника: Город Гильдий'
+			}
 		},
 		{
 			name : "Two-Headed Giant Tournament",
@@ -862,7 +1179,17 @@
 			border : "black",
 			type : "expansion",
 			block : "Ravnica",
-			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"]
+			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"],
+			translations: {
+				de: 'Gildenbund',
+				fr: 'Le Pacte des Guildes',
+				it: 'Il Patto delle Gilde',
+				es: 'El Pacto entre Gremios',
+				pt: 'Pacto das Guildas',
+				jp: 'ギルドパクト',
+				cn: '十會盟',
+				ru: 'Договор Гильдий'
+			}
 		},
 		{
 			name : "Champs and States",
@@ -882,7 +1209,17 @@
 			border : "black",
 			type : "expansion",
 			block : "Ravnica",
-			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"]
+			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"],
+			translations: {
+				de: 'Zwietracht',
+				fr: 'Discorde',
+				it: 'Discordia',
+				es: 'Discordia',
+				pt: 'Insurreição',
+				jp: 'ディセンション',
+				cn: '纷争',
+				ru: 'Раскол'
+			}
 		},
 		{
 			name : "Coldsnap",
@@ -892,7 +1229,17 @@
 			border : "black",
 			type : "expansion",
 			block : "Ice Age",
-			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"]
+			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"],
+			translations: {
+				de: 'Kälteeinbruch',
+				fr: 'Souffle glaciaire',
+				it: 'Ondata Glaciale',
+				es: 'Ola de frío',
+				pt: 'Frente Fria',
+				jp: 'コールドスナップ',
+				cn: '骤霜',
+				ru: 'Стужа'
+			}
 		},
 		{
 			name : "Coldsnap Theme Decks",
@@ -903,7 +1250,11 @@
 			useMagicRaritiesNumber : true,
 			releaseDate : "2006-07-21",
 			border : "black",
-			type : "box"
+			type : "box",
+			translations: {
+				de: 'Kälteeinbruch-Themendecks',
+				it: 'Coldsnap Theme Decks'
+			}
 		},
 		{
 			name : "Time Spiral",
@@ -913,7 +1264,17 @@
 			border : "black",
 			type : "expansion",
 			block : "Time Spiral",
-			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "timeshifted purple"]
+			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "timeshifted purple"],
+			translations: {
+				de: 'Zeitspirale',
+				fr: 'Spirale Temporelle',
+				it: 'Spirale Temporale',
+				es: 'Espiral del Tiempo',
+				pt: 'Time Spiral',
+				jp: '時のらせん',
+				cn: 'Time Spiral',
+				ru: 'Спираль времени'
+			}
 		},
 		{
 			name : 'Time Spiral "Timeshifted"',
@@ -922,7 +1283,17 @@
 			releaseDate : "2006-10-06",
 			border : "black",
 			type : "expansion",
-			block : "Time Spiral"
+			block : "Time Spiral",
+			translations: {
+				de: 'Zeitspirale Timeshifted',
+				fr: 'Spirale Temporelle Timeshifted',
+				it: 'Spirale Temporale Timeshifted',
+				es: 'Espiral del Tiempo Timeshifted',
+				pt: 'Time Spiral "Timeshifted"',
+				jp: '時のらせんのタイムシフト',
+				cn: 'Time Spiral "Timeshifted"',
+				ru: 'Спираль времени репринты'
+			}
 		},
 		{
 			name : "Happy Holidays",
@@ -943,7 +1314,17 @@
 			border : "black",
 			type : "expansion",
 			block : "Time Spiral",
-			booster : ["rare", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "timeshifted common", "timeshifted common", "timeshifted common", ["timeshifted rare", "timeshifted uncommon"]]
+			booster : ["rare", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "timeshifted common", "timeshifted common", "timeshifted common", ["timeshifted rare", "timeshifted uncommon"]],
+			translations: {
+				de: 'Weltenchaos',
+				fr: 'Chaos planaire',
+				it: 'Caos Dimensionale',
+				es: 'Caos planar',
+				pt: 'Caos Planar',
+				jp: '次元の混乱',
+				cn: '时空混沌',
+				ru: 'Вселенский Хаос'
+			}
 		},
 		{
 			name : "Pro Tour",
@@ -973,7 +1354,17 @@
 			border : "black",
 			type : "expansion",
 			block : "Time Spiral",
-			booster : [["rare", "timeshifted rare"], ["uncommon", "timeshifted uncommon"], ["uncommon", "timeshifted uncommon"], ["uncommon", "timeshifted uncommon"], ["common", "timeshifted common"], ["common", "timeshifted common"], ["common", "timeshifted common"], ["common", "timeshifted common"], ["common", "timeshifted common"], ["common", "timeshifted common"], ["common", "timeshifted common"], ["common", "timeshifted common"], ["common", "timeshifted common"], ["common", "timeshifted common"], ["common", "timeshifted common"]]
+			booster : [["rare", "timeshifted rare"], ["uncommon", "timeshifted uncommon"], ["uncommon", "timeshifted uncommon"], ["uncommon", "timeshifted uncommon"], ["common", "timeshifted common"], ["common", "timeshifted common"], ["common", "timeshifted common"], ["common", "timeshifted common"], ["common", "timeshifted common"], ["common", "timeshifted common"], ["common", "timeshifted common"], ["common", "timeshifted common"], ["common", "timeshifted common"], ["common", "timeshifted common"], ["common", "timeshifted common"]],
+			translations: {
+				de: 'Blick in die Zukunft',
+				fr: 'Vision de l\'Avenir',
+				it: 'Visione Futura',
+				es: 'Visión del Futuro',
+				pt: 'Visão do Futuro',
+				jp: '未来予知',
+				cn: '预知将来',
+				ru: 'Взгляд в Будущее'
+			}
 		},
 		{
 			name : "Tenth Edition",
@@ -982,7 +1373,18 @@
 			releaseDate : "2007-07-13",
 			border : "black",
 			type : "core",
-			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"]
+			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"],
+			translations: {
+				de: 'Zehnte Edition',
+				fr: 'Dixième édition',
+				it: 'Decima Edizione',
+				es: 'Décima Edición',
+				pt: 'Décima Edição',
+				jp: '第10版',
+				cn: '第十版',
+				ru: 'Десятое Издание',
+				tw: 'Tenth Edition'
+			}
 		},
 		{
 			name : "Magic Game Day",
@@ -1012,7 +1414,18 @@
 			border : "black",
 			type : "expansion",
 			block : "Lorwyn",
-			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "marketing"]
+			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "marketing"],
+			translations: {
+				de: 'Lorwyn',
+				fr: 'Lorwyn',
+				it: 'Lorwyn',
+				es: 'Lorwyn',
+				pt: 'Lorwyn',
+				jp: 'ローウィン',
+				cn: '洛温',
+				ru: 'Лорвин',
+				tw: 'Lorwyn'
+			}
 		},
 		{
 			name : "Duel Decks: Elves vs. Goblins",
@@ -1031,7 +1444,7 @@
 			releaseDate : "2008-02-01",
 			border : "black",
 			type : "promo"
-		},		
+		},
 		{
 			name : "Morningtide",
 			code : "MOR",
@@ -1040,7 +1453,17 @@
 			border : "black",
 			type : "expansion",
 			block : "Lorwyn",
-			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "marketing"]
+			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "marketing"],
+			translations: {
+				de: 'Morgenluft',
+				fr: 'Lèveciel',
+				it: 'Aurora',
+				es: 'Alborada',
+				pt: 'Alvorecer',
+				jp: 'モーニングタイド',
+				cn: '晨光',
+				ru: 'Рассвет'
+			}
 		},
 		{
 			name : "15th Anniversary",
@@ -1051,7 +1474,7 @@
 			releaseDate : "2008-04-01",
 			border : "black",
 			type : "promo"
-		},		
+		},
 		{
 			name : "Shadowmoor",
 			code : "SHM",
@@ -1060,7 +1483,17 @@
 			border : "black",
 			type : "expansion",
 			block : "Shadowmoor",
-			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "marketing"]
+			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "marketing"],
+			translations: {
+				de: 'Schattenmoor',
+				fr: 'Sombrelande',
+				it: 'Landa Tenebrosa',
+				es: 'Páramo Sombrío',
+				pt: 'Pântano Sombrio',
+				jp: 'シャドウムーア',
+				cn: '暗影荒原',
+				ru: 'Шэдоумур',
+			}
 		},
 		{
 			name : "Summer of Magic",
@@ -1071,7 +1504,7 @@
 			releaseDate : "2007-07-21",
 			border : "black",
 			type : "promo"
-		},		
+		},
 		{
 			name : "Eventide",
 			code : "EVE",
@@ -1080,7 +1513,17 @@
 			border : "black",
 			type : "expansion",
 			block : "Shadowmoor",
-			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "marketing"]
+			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "marketing"],
+			translations: {
+				de: 'Abendkühle',
+				fr: 'Coucheciel',
+				it: 'Vespro',
+				es: 'Crepúsculo',
+				pt: 'Entardecer',
+				jp: 'イーブンタイド',
+				cn: '暮光',
+				ru: 'Сумерки'
+			}
 		},
 		{
 			name : "From the Vault: Dragons",
@@ -1118,7 +1561,17 @@
 			border : "black",
 			type : "expansion",
 			block : "Alara",
-			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"]
+			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"],
+			translations: {
+				de: 'Fragmente von Alara',
+				fr: 'Les éclats d\'Alara',
+				it: 'Frammenti di Alara',
+				es: 'Fragmentos de Alara',
+				pt: 'Fragmentos de Alara',
+				jp: 'アラーラの断片',
+				cn: '阿拉若断片',
+				ru: 'Осколки Алары'
+			}
 		},
 		{
 			name : "Duel Decks: Jace vs. Chandra",
@@ -1127,7 +1580,10 @@
 			magicCardsInfoCode : "jvc",
 			releaseDate : "2008-11-07",
 			border : "black",
-			type : "duel deck"
+			type : "duel deck",
+			translations: {
+				jp: 'Duel Decks: Jace vs. Chandra'
+			}
 		},
 		{
 			name : "Conflux",
@@ -1138,7 +1594,17 @@
 			border : "black",
 			type : "expansion",
 			block : "Alara",
-			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"]
+			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"],
+			translations: {
+				de: 'Conflux',
+				fr: 'Conflux',
+				it: 'Conflux',
+				es: 'Conflux',
+				pt: 'Conflux',
+				jp: 'コンフラックス',
+				cn: '聚流',
+				ru: 'Conflux'
+			}
 		},
 		{
 			name : "Duel Decks: Divine vs. Demonic",
@@ -1156,7 +1622,17 @@
 			border : "black",
 			type : "expansion",
 			block : "Alara",
-			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"]
+			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"],
+			translations: {
+				de: 'Alara Reborn',
+				fr: 'Alara Reborn',
+				it: 'Alara Reborn',
+				es: 'Alara Reborn',
+				pt: 'Alara Reborn',
+				jp: 'アラーラ再誕',
+				cn: 'Alara Reborn',
+				ru: 'Alara Reborn'
+			}
 		},
 		{
 			name : "Magic 2010",
@@ -1165,7 +1641,17 @@
 			releaseDate : "2009-07-17",
 			border : "black",
 			type : "core",
-			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"]
+			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"],
+			translations: {
+				de: 'Magic 2010',
+				fr: 'Magic 2010',
+				it: 'Magic 2010',
+				es: 'Magic 2010',
+				pt: 'Magic 2010',
+				jp: '基本セット2010',
+				cn: 'Magic 2010',
+				ru: 'Magic 2010'
+			}
 		},
 		{
 			name : "From the Vault: Exiled",
@@ -1194,7 +1680,7 @@
 			type : "masters",
 			onlineOnly : true,
 			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land"]
-		},		
+		},
 		{
 			name : "Zendikar",
 			code : "ZEN",
@@ -1203,7 +1689,17 @@
 			border : "black",
 			type : "expansion",
 			block : "Zendikar",
-			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"]
+			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"],
+			translations: {
+				de: 'Zendikar',
+				fr: 'Zendikar',
+				it: 'Zendikar',
+				es: 'Zendikar',
+				pt: 'Zendikar',
+				jp: 'ゼンディカー',
+				cn: '赞迪卡',
+				ru: 'Zendikar'
+			}
 		},
 		{
 			name : "Duel Decks: Garruk vs. Liliana",
@@ -1229,7 +1725,18 @@
 			border : "black",
 			type : "expansion",
 			block : "Zendikar",
-			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"]
+			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"],
+			translations: {
+				de: 'Weltenerwachen',
+				fr: 'Worldwake',
+				it: 'Worldwake',
+				es: 'Despertar del mundo',
+				pt: 'Despertar do Mundo',
+				jp: 'ワールドウェイク',
+				cn: '天地醒转',
+				ru: 'Пробуждение Мира',
+				ko: 'Worldwake'
+			}
 		},
 		{
 			name : "Duel Decks: Phyrexia vs. the Coalition",
@@ -1237,7 +1744,10 @@
 			magicCardsInfoCode : "pvc",
 			releaseDate : "2010-03-19",
 			border : "black",
-			type : "duel deck"
+			type : "duel deck",
+			translations: {
+				jp: 'Duel Decks: Phyrexia vs. The Coalition'
+			}
 		},
 		{
 			name : "Rise of the Eldrazi",
@@ -1247,7 +1757,17 @@
 			border : "black",
 			type : "expansion",
 			block : "Zendikar",
-			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"]
+			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"],
+			translations: {
+				de: 'Aufstieg der Eldrazi',
+				fr: 'L\'ascension des Eldrazi',
+				it: 'Ascesa degli Eldrazi',
+				es: 'Levantamiento de los Eldrazi',
+				pt: 'Ascensão dos Eldrazi',
+				jp: 'エルドラージ覚醒',
+				cn: '奥札奇再起',
+				ru: 'Возрождение Эльдрази'
+			}
 		},
 		{
 			name : "Duels of the Planeswalkers",
@@ -1272,7 +1792,18 @@
 			releaseDate : "2010-07-16",
 			border : "black",
 			type : "core",
-			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"]
+			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"],
+			translations: {
+				de: 'Magic 2011',
+				fr: 'Magic 2011',
+				it: 'Magic 2011',
+				es: 'Magic 2011',
+				pt: 'Magic 2011',
+				jp: 'Magic 2011',
+				cn: 'Magic 2011',
+				ru: 'Magic 2011',
+				tw: 'Magic 2011'
+			}
 		},
 		{
 			name : "From the Vault: Relics",
@@ -1288,7 +1819,14 @@
 			magicCardsInfoCode : "ddf",
 			releaseDate : "2010-09-03",
 			border : "black",
-			type : "duel deck"
+			type : "duel deck",
+			translations: {
+				de: 'Duel Decks: Elspeth vs. Tezzeret',
+				fr: 'Duel Decks: Elspeth vs. Tezzeret',
+				it: 'Duel Decks: Elspeth vs. Tezzeret',
+				es: 'Duel Decks: Elspeth vs. Tezzeret',
+				jp: 'Duel Decks: Elspeth vs. Tezzeret'
+			}
 		},
 		{
 			name : "Scars of Mirrodin",
@@ -1298,7 +1836,18 @@
 			border : "black",
 			type : "expansion",
 			block : "Scars of Mirrodin",
-			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"]
+			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"],
+			translations: {
+				de: 'Die Narben von Mirrodin',
+				fr: 'Les cicatrices de Mirrodin',
+				it: 'Cicatrici di Mirrodin',
+				es: 'Cicatrices de Mirrodin',
+				pt: 'Cicatrizes de Mirrodin',
+				jp: 'ミラディンの傷跡',
+				cn: '秘罗地创痕',
+				ru: 'Шрамы Мирродина',
+				tw: '秘罗地创痕'
+			}
 		},
 		{
 			name : "Premium Deck Series: Fire and Lightning",
@@ -1326,7 +1875,18 @@
 			border : "black",
 			type : "expansion",
 			block : "Scars of Mirrodin",
-			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"]
+			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"],
+			translations: {
+				de: 'Belagertes Mirrodin',
+				fr: 'Mirrodin assiégé',
+				it: 'Mirrodin Assediato',
+				es: 'Mirrodin sitiado',
+				pt: 'Mirrodin Sitiada',
+				jp: 'ミラディン包囲戦',
+				cn: '围攻秘罗地',
+				ru: 'Осада Мирродина',
+				tw: '围攻秘罗地'
+			}
 		},
 		{
 			name : "Duel Decks: Knights vs. Dragons",
@@ -1334,7 +1894,14 @@
 			magicCardsInfoCode : "ddg",
 			releaseDate : "2011-04-01",
 			border : "black",
-			type : "duel deck"
+			type : "duel deck",
+			translations: {
+				de: 'Duel Decks: Knights vs. Dragons',
+				fr: 'Duel Decks: Knights vs. Dragons',
+				it: 'Duel Decks: Knights vs. Dragons',
+				es: 'Duel Decks: Knights vs. Dragons',
+				jp: 'Duel Decks: Knights vs. Dragons'
+			}
 		},
 		{
 			name : "New Phyrexia",
@@ -1344,7 +1911,18 @@
 			border : "black",
 			type : "expansion",
 			block : "Scars of Mirrodin",
-			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"]
+			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"],
+			translations: {
+				de: 'Das neue Phyrexia',
+				fr: 'La Nouvelle Phyrexia',
+				it: 'Nuova Phyrexia',
+				es: 'Nueva Phyrexia',
+				pt: 'Nova Phyrexia',
+				jp: '新たなるファイレクシア',
+				cn: '新非瑞克西亚',
+				ru: 'Новая Фирексия',
+				tw: '新非瑞克西亚'
+			}
 		},
 		{
 			name : "Magic: The Gathering-Commander",
@@ -1353,7 +1931,14 @@
 			magicCardsInfoCode : "cmd",
 			releaseDate : "2011-06-17",
 			border : "black",
-			type : "commander"
+			type : "commander",
+			translations: {
+				de: 'Commander',
+				fr: 'Commander',
+				it: 'Commander',
+				es: 'Commander',
+				jp: '統率者'
+			}
 		},
 		{
 			name : "Magic 2012",
@@ -1362,7 +1947,18 @@
 			releaseDate : "2011-07-15",
 			border : "black",
 			type : "core",
-			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"]
+			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"],
+			translations: {
+				de: 'Magic 2012',
+				fr: 'Magic 2012',
+				it: 'Magic 2012',
+				es: 'Magic 2012',
+				pt: 'Magic 2012',
+				jp: '2012基本セット',
+				cn: '核心系列2012',
+				ru: 'Базовый выпуск 2012',
+				tw: '核心系列2012'
+			},
 		},
 		{
 			name : "From the Vault: Legends",
@@ -1379,7 +1975,13 @@
 			magicCardsInfoCode : "ddh",
 			releaseDate : "2011-09-02",
 			border : "black",
-			type : "duel deck"
+			type : "duel deck",
+			translations: {
+				de: 'Duel Decks: Ajani vs. Nicol Bolas',
+				fr: 'Duel Decks: Ajani vs. Nicol Bolas',
+				it: 'Duel Decks: Ajani vs. Nicol Bolas',
+				es: 'Duel Decks: Ajani vs. Nicol Bolas'
+			}
 		},
 		{
 			name : "Innistrad",
@@ -1389,7 +1991,18 @@
 			border : "black",
 			type : "expansion",
 			block : "Innistrad",
-			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", ["land", "checklist"], "marketing", "double faced"]
+			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", ["land", "checklist"], "marketing", "double faced"],
+			translations: {
+				de: 'Innistrad',
+				fr: 'Innistrad',
+				it: 'Innistrad',
+				es: 'Innistrad',
+				pt: 'Innistrad',
+				jp: 'イニストラード',
+				cn: '依尼翠',
+				ru: 'Innistrad',
+				tw: '依尼翠'
+			}
 		},
 		{
 			name : "Premium Deck Series: Graveborn",
@@ -1407,7 +2020,19 @@
 			border : "black",
 			type : "expansion",
 			block : "Innistrad",
-			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"]
+			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"],
+			translations: {
+				de: 'Dunkles Erwachen',
+				fr: 'Obscure ascension',
+				it: 'Ascesa Oscura',
+				es: 'Ascenso siniestro',
+				pt: 'Ascensão das Trevas',
+				jp: '闇の隆盛',
+				cn: '黑影笼罩',
+				ru: 'Возвышение Мрака',
+				tw: '黑影籠罩',
+				ko: '어둠의 강림'
+			}
 		},
 		{
 			name : "Duel Decks: Venser vs. Koth",
@@ -1415,7 +2040,10 @@
 			magicCardsInfoCode : "ddi",
 			releaseDate : "2012-03-30",
 			border : "black",
-			type : "duel deck"
+			type : "duel deck",
+			translations: {
+				jp: 'デュエルデッキ：ヴェンセール vs. コス'
+			}
 		},
 		{
 			name : "Avacyn Restored",
@@ -1425,7 +2053,19 @@
 			border : "black",
 			type : "expansion",
 			block : "Innistrad",
-			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"]
+			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"],
+			translations: {
+				de: 'Avacyns Rückkehr',
+				fr: 'Avacyn ressuscitée',
+				it: 'Ritorno di Avacyn',
+				es: 'Avacyn restituida',
+				pt: 'Retorno de Avacyn',
+				jp: 'アヴァシンの帰還',
+				cn: '艾维欣重临',
+				ru: 'Возвращение Авацины',
+				tw: '艾維欣重臨',
+				ko: '아바신의 귀환'
+			}
 		},
 		{
 			name : "Planechase 2012 Edition",
@@ -1433,7 +2073,14 @@
 			magicCardsInfoCode : "pc2",
 			releaseDate : "2012-06-01",
 			border : "black",
-			type : "planechase"
+			type : "planechase",
+			translations: {
+				de: 'Planechase 2012 Edition',
+				fr: 'Planechase 2012 Edition',
+				it: 'Planechase 2012 Edition',
+				es: 'Planechase 2012 Edition',
+				jp: 'プレインチェイス2012'
+			}
 		},
 		{
 			name : "Magic 2013",
@@ -1442,7 +2089,19 @@
 			releaseDate : "2012-07-13",
 			border : "black",
 			type : "core",
-			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"]
+			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"],
+			translations: {
+				de: 'Magic 2013',
+				fr: 'Magic 2013',
+				it: 'Magic 2013',
+				es: 'Magic 2013',
+				pt: 'Magic 2013',
+				jp: '2013基本セット',
+				cn: '核心系列2013',
+				ru: 'Базовый выпуск 2013',
+				tw: '核心系列2013',
+				ko: '매직2013'
+			}
 		},
 		{
 			name : "From the Vault: Realms",
@@ -1459,7 +2118,10 @@
 			magicCardsInfoCode : "ddj",
 			releaseDate : "2012-09-07",
 			border : "black",
-			type : "duel deck"
+			type : "duel deck",
+			translations: {
+				jp: 'デュエルデッキ：イゼット vs. ゴルガリ'
+			}
 		},
 		{
 			name : "Return to Ravnica",
@@ -1469,7 +2131,19 @@
 			border : "black",
 			type : "expansion",
 			block : "Return to Ravnica",
-			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"]
+			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"],
+			translations: {
+				de: 'Rückkehr nach Ravnica',
+				fr: 'Retour sur Ravnica',
+				it: 'Ritorno a Ravnica',
+				es: 'Regreso a Rávnica',
+				pt: 'Retorno a Ravnica',
+				jp: 'ラヴニカへの回帰',
+				cn: '再访拉尼卡',
+				ru: 'Возвращение в Равнику',
+				tw: '再訪拉尼卡',
+				ko: '라브니카로의 귀환'
+			}
 		},
 		{
 			name : "Commander's Arsenal",
@@ -1488,7 +2162,19 @@
 			border : "black",
 			type : "expansion",
 			block : "Return to Ravnica",
-			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"]
+			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"],
+			translations: {
+				de: 'Gildensturm',
+				fr: 'Insurrection',
+				it: 'Irruzione',
+				es: 'Intrusión',
+				pt: 'Portões Violados',
+				jp: 'ギルド門侵犯',
+				cn: '兵临古城',
+				ru: 'Незваные Гости',
+				tw: '兵臨古城',
+				ko: '충돌의 관문'
+			}
 		},
 		{
 			name : "Duel Decks: Sorin vs. Tibalt",
@@ -1496,7 +2182,10 @@
 			magicCardsInfoCode : "ddk",
 			releaseDate : "2013-03-15",
 			border : "black",
-			type : "duel deck"
+			type : "duel deck",
+			translations: {
+				jp: 'Duel Decks: Sorin vs. Tibalt'
+			}
 		},
 		{
 			name : "World Magic Cup Qualifiers",
@@ -1507,7 +2196,7 @@
 			releaseDate : "2013-04-06",
 			border : "black",
 			type : "promo"
-		},		
+		},
 		{
 			name : "Dragon's Maze",
 			code : "DGM",
@@ -1516,7 +2205,19 @@
 			border : "black",
 			type : "expansion",
 			block : "Return to Ravnica",
-			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"]
+			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"],
+			translations: {
+				de: 'Labyrinth des Drachen',
+				fr: 'Le labyrinthe du dragon',
+				it: 'Labirinto del Drago',
+				es: 'Laberinto del Dragón',
+				pt: 'Labirinto do Dragão',
+				jp: 'ドラゴンの迷路',
+				cn: '巨龙迷城',
+				ru: 'Лабиринт Дракона',
+				tw: '巨龍迷城',
+				ko: '용의 미로'
+			}
 		},
 		{
 			name : "Modern Masters",
@@ -1534,7 +2235,19 @@
 			releaseDate : "2013-07-19",
 			border : "black",
 			type : "core",
-			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"]
+			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"],
+			translations: {
+				de: 'Hauptset Magic 2014',
+				fr: 'Édition de base Magic 2014',
+				it: 'Set Base Magic 2014',
+				es: 'Colección básica Magic 2014',
+				pt: 'Coleção Básica Magic 2014',
+				jp: 'マジック基本セット2014',
+				cn: '魔法風雲會2014核心系列',
+				ru: 'Базовый выпуск Magic 2014',
+				tw: '万智牌2014核心系列',
+				ko: '매직 2014 코어세트'
+			},
 		},
 		{
 			name : "From the Vault: Twenty",
@@ -1550,7 +2263,10 @@
 			magicCardsInfoCode : "ddl",
 			releaseDate : "2013-09-06",
 			border : "black",
-			type : "duel deck"
+			type : "duel deck",
+			translations: {
+				jp: 'Duel Decks: Heroes vs. Monsters'
+			}
 		},
 		{
 			name : "Theros",
@@ -1560,7 +2276,19 @@
 			border : "black",
 			type : "expansion",
 			block : "Theros",
-			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"]
+			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"],
+			translations: {
+				de: 'Theros',
+				fr: 'Theros',
+				it: 'Theros',
+				es: 'Theros',
+				pt: 'Theros',
+				jp: 'テーロス',
+				cn: 'Theros',
+				ru: 'Theros',
+				tw: 'Theros',
+				ko: 'Theros'
+			}
 		},
 		{
 			name : "Commander 2013 Edition",
@@ -1568,7 +2296,14 @@
 			magicCardsInfoCode : "c13",
 			releaseDate : "2013-11-01",
 			border : "black",
-			type : "commander"
+			type : "commander",
+			translations: {
+				de: 'Commander 2013 Edition',
+				fr: 'Commander 2013 Edition',
+				it: 'Commander 2013 Edition',
+				es: 'Commander 2013 Edition',
+				jp: '統率者(2013年版)'
+			}
 		},
 		{
 			name : "Born of the Gods",
@@ -1578,7 +2313,19 @@
 			border : "black",
 			type : "expansion",
 			block : "Theros",
-			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"]
+			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"],
+			translations: {
+				de: 'Kinder der Götter',
+				fr: 'Créations divines',
+				it: 'Figli degli dei',
+				es: 'Nacidos de los dioses',
+				pt: 'Nascidos dos Deuses',
+				jp: '神々の軍勢',
+				cn: '天神创生',
+				ru: 'Порождения Богов',
+				tw: '天神創生',
+				ko: '신들의 피조물'
+			}
 		},
 		{
 			name : "Duel Decks: Jace vs. Vraska",
@@ -1586,7 +2333,10 @@
 			magicCardsInfoCode : "ddm",
 			releaseDate : "2014-03-14",
 			border : "black",
-			type : "duel deck"
+			type : "duel deck",
+			translations: {
+				jp: 'Duel Decks: Jace vs. Vraska'
+			}
 		},
 		{
 			name : "Journey into Nyx",
@@ -1596,7 +2346,19 @@
 			border : "black",
 			type : "expansion",
 			block : "Theros",
-			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"]
+			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"],
+			translations: {
+				de: 'Reise nach Nyx',
+				fr: 'Incursion dans Nyx',
+				it: 'Viaggio verso Nyx',
+				es: 'Travesía hacia Nyx',
+				pt: 'Viagem para Nyx',
+				jp: 'ニクスへの旅',
+				cn: '尼兹之旅',
+				ru: 'Путешествие в Никс',
+				tw: '尼茲之旅',
+				ko: '닉스로 가는 길'
+			}
 		},
 		{
 			name : "Modern Event Deck 2014",
@@ -1613,7 +2375,11 @@
 			releaseDate : "2014-06-06",
 			border : "black",
 			type : "conspiracy",
-			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "draft-matters", "marketing"]
+			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "draft-matters", "marketing"],
+			translations: {
+				jp: 'Conspiracy',
+				cn: 'Conspiracy'
+			}
 		},
 		{
 			name : "Vintage Masters",
@@ -1632,7 +2398,19 @@
 			releaseDate : "2014-07-18",
 			border : "black",
 			type : "core",
-			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"]
+			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"],
+			translations: {
+				de: 'Magic 2015',
+				fr: 'Magic 2015',
+				it: 'Magic 2015',
+				es: 'Magic 2015',
+				pt: 'Magic 2015',
+				jp: 'Magic 2015',
+				cn: 'Magic 2015',
+				ru: 'Magic 2015',
+				tw: 'Magic 2015',
+				ko: 'Magic 2015'
+			}
 		},
 		{
 			name : "Clash Pack",
@@ -1657,7 +2435,10 @@
 			magicCardsInfoCode : "ddn",
 			releaseDate : "2014-09-05",
 			border : "black",
-			type : "duel deck"
+			type : "duel deck",
+			translations: {
+				jp: 'Duel Decks: Speed vs. Cunning'
+			}
 		},
 		{
 			name : "Khans of Tarkir",
@@ -1668,7 +2449,19 @@
 			border : "black",
 			type : "expansion",
 			block : "Khans of Tarkir",
-			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"]
+			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"],
+			translations: {
+				de: 'Khane von Tarkir',
+				fr: 'Les Khans de Tarkir',
+				it: 'I Khan di Tarkir',
+				es: 'Kans de Tarkir',
+				pt: 'Khans de Tarkir',
+				jp: 'タルキール覇王譚',
+				cn: '鞑契可汗',
+				ru: 'Ханы Таркира',
+				tw: '韃契可汗',
+				ko: '타르커의 칸'
+			}
 		},
 		{
 			name : "Commander 2014",
@@ -1677,7 +2470,15 @@
 			essentialMagicCode : "104",
 			releaseDate : "2014-11-07",
 			border : "black",
-			type : "commander"
+			type : "commander",
+			translations: {
+				de: 'Commander 2014 Edition',
+				fr: 'Commander 2014 Edition',
+				it: 'Commander 2014 Edition',
+				es: 'Commander 2014 Edition',
+				jp: 'Commander 2014 Edition',
+				cn: 'Commander 2014 Edition'
+			}
 		},
 		{
 			name : "Duel Decks Anthology, Divine vs. Demonic",
@@ -1717,7 +2518,19 @@
 			magicCardsInfoCode : "ugin",
 			releaseDate : "2015-01-17",
 			border : "black",
-			type : "promo"
+			type : "promo",
+			translations: {
+				de: 'Ugin\'s Fate',
+				fr: 'Ugin\'s Fate',
+				it: 'Ugin\'s Fate',
+				es: 'Ugin\'s Fate​',
+				pt: 'Ugin\'s Fate',
+				jp: 'Ugin\'s Fate',
+				cn: 'Ugin\'s Fate',
+				ru: 'Ugin\'s Fate',
+				tw: 'Ugin\'s Fate',
+				ko: 'Ugin\'s Fate'
+			}
 		},
 		{
 			name : "Fate Reforged",
@@ -1728,7 +2541,19 @@
 			border : "black",
 			type : "expansion",
 			block : "Khans of Tarkir",
-			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"]
+			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"],
+			translations: {
+				de: 'Schmiede des Schicksals',
+				fr: 'Destin reforgé',
+				it: 'Riforgiare il destino',
+				es: 'Destino reescrito',
+				pt: 'Destino Reescrito',
+				jp: '運命再編',
+				cn: '龙命殊途',
+				ru: 'Перекованная Судьба',
+				tw: '龍命殊途',
+				ko: '재창조된 운명'
+			}
 		},
 		{
 			name : "Duel Decks: Elspeth vs. Kiora",
@@ -1736,7 +2561,10 @@
 			magicCardsInfoCode : "ddo",
 			releaseDate : "2015-02-27",
 			border : "black",
-			type : "duel deck"
+			type : "duel deck",
+			translations: {
+				jp: 'デュエルデッキ: エルズペスVSキオーラ'
+			}
 		},
 		{
 			name : "Dragons of Tarkir",
@@ -1747,7 +2575,19 @@
 			border : "black",
 			type : "expansion",
 			block : "Khans of Tarkir",
-			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"]
+			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"],
+			translations: {
+				de: 'Drachen von Tarkir',
+				fr: 'Les dragons de Tarkir',
+				it: 'Draghi di Tarkir',
+				es: 'Dragones de Tarkir',
+				pt: 'Dragões de Tarkir',
+				jp: 'タルキール龍紀伝',
+				cn: '鞑契龙王',
+				ru: 'Драконы Таркира',
+				tw: '韃契龍王',
+				ko: '타르커의 용'
+			}
 		},
 		{
 			name : "Tempest Remastered",
@@ -1766,7 +2606,11 @@
 			releaseDate : "2015-05-22",
 			border : "black",
 			type : "reprint",
-			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", ["foil mythic rare", "foil rare", "foil uncommon", "foil common"]]
+			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", ["foil mythic rare", "foil rare", "foil uncommon", "foil common"]],
+			translations: {
+				jp: 'Modern Masters 2015 Edition',
+				cn: 'Modern Masters 2015 Edition'
+			}
 		},
 		{
 			name : "Magic Origins",
@@ -1776,7 +2620,19 @@
 			releaseDate : "2015-07-17",
 			border : "black",
 			type : "core",
-			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"]
+			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"],
+			translations: {
+				de: 'Magic Ursprünge',
+				fr: 'Magic Origines',
+				it: 'Magic Origins',
+				es: 'Magic Orígenes',
+				pt: 'Magic – Origens',
+				jp: 'マジック・オリジン',
+				cn: '万智牌：起源',
+				ru: 'Magic: Истоки',
+				tw: '魔法風雲會：起源',
+				ko: '매직의 기원'
+			}
 		},
 		{
 			name : "From the Vault: Angels",
@@ -1792,7 +2648,10 @@
 			magicCardsInfoCode : "ddp",
 			releaseDate : "2015-08-28",
 			border : "black",
-			type : "duel deck"
+			type : "duel deck",
+			translations: {
+				jp: 'Duel Decks: Zendikar vs. Eldrazi'
+			}
 		},
 		{
 			name : "Battle for Zendikar",
@@ -1803,7 +2662,19 @@
 			border : "black",
 			type : "expansion",
 			block : "Battle for Zendikar",
-			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"]
+			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"],
+			translations: {
+				de: "Kampf um Zendikar",
+				fr: "La bataille de Zendikar",
+				it: "Battaglia per Zendikar",
+				es: "La batalla por Zendikar",
+				pt: "Batalha por Zendikar",
+				jp: "戦乱のゼンディカー",
+				cn: "再战赞迪卡",
+				ru: "Битва за Зендикар",
+				tw: "再戰贊迪卡",
+				ko: "젠디카르 전투"
+			}
 		},
 		{
 			name : "Zendikar Expeditions",
@@ -1816,10 +2687,19 @@
 		{
 			name : "Commander 2015",
 			code : "C15",
+			magicCardsInfoCode : "c15",
 			releaseDate : "2015-11-13",
 			border : "black",
-			type : "commander"
-		}		
+			type : "commander",
+			translations: {
+				de: 'Commander 2015',
+				fr: 'Commander 2015',
+				it: 'Commander 2015',
+				es: 'Commander 2015',
+				jp: 'Commander 2015',
+				cn: 'Commander 2015'
+			}
+		}
 	];
 
 	exports.IGNORE_GATHERER_PRINTINGS = ["Promo set for Gatherer"];
@@ -1861,7 +2741,7 @@
 			{ match : {multiverseid: 220}, replace : {artist : "Dan Frazier"} },
 			{ match : {multiverseid: 285}, replace : {artist : "Jesper Myrfors"} }
 		],
-		LEB : 
+		LEB :
 		[
 			{ match : {name : "Ley Druid"}, replace : {flavor : "After years of training, the Druid becomes one with nature, drawing power from the land and returning it when needed."}}
 			// All of LEA rules are copied into here (see below)
@@ -2106,7 +2986,7 @@
 			{ match : {multiverseid : 3185}, flavorAddExclamation : true},
 			{ match : {name : ["Misinformation", "Nature's Blessing", "Sol Grail", "Urza's Engine", "Varchild's War-Riders"]}, flavorAddDash : true },
 			{ match : {name : "Kaysa"}, replace : {flavor : "Kaysa speaks as the Elder Druid, but the Yavimaya recognizes only one voice: its own."}}
-		],	
+		],
 		pARL :
 		[
 			{ match : {name : ["Ashnod's Coupon", "Booster Tutor", "Circle of Protection: Art", "Goblin Mime", "Granny's Payback", "Mise"]}, replace : {border : "silver"}},
@@ -2561,14 +3441,14 @@
 		S00 :
 		[
 			{ importCard : {name : "Rhox", set : "10E"}},
-			{ match : {name : "Rhox"}, replace : 
+			{ match : {name : "Rhox"}, replace :
 				{
 					number : "112a",
 					text : "You may have Rhox assign its combat damage as though it weren't blocked.\n{2}{G}: Regenerate Rhox. (The next time this creature would be destroyed this turn, it isn't. Instead tap it, remove all damage from it, and remove it from combat.)",
 					originalText : "You may have Rhox deal combat damage to defending player as though it weren't blocked.\n{2}{G}: Regenerate Rhox."
 				},
 				remove : ["multiverseid", "flavor", "number"]
-			},	
+			},
 		],
 		PCY :
 		[
@@ -2612,7 +3492,7 @@
 		],
 		pMPR :
 		[
-			{ match : {name : ["Brave the Elements", "Doom Blade", "Treasure Hunt"]}, remove : ["flavor"]}			
+			{ match : {name : ["Brave the Elements", "Doom Blade", "Treasure Hunt"]}, remove : ["flavor"]}
 		],
 		APC :
 		[
@@ -3100,7 +3980,7 @@
 			{ match : {imageName : "swamp6"}, replace : {imageName : "swamp3a", number : "240a"} },
 			{ match : {imageName : "swamp7"}, replace : {imageName : "swamp4",  number : "241"} },
 			{ match : {imageName : "swamp8"}, replace : {imageName : "swamp4a", number : "241a"} }
-		],		
+		],
 		DDD :
 		[
 			{ match : {name : "Beast", number : "1"}, replace : {number : "T1", layout : "token"}},
@@ -3191,6 +4071,80 @@
 		CEI :
 		[
 			{ match : "*", remove : ["number"] }
+		],
+		BFZ :
+		[
+			// These settings are to match the numbering of CCGHQ image release names (issue #89) and the correct number on magiccards.info.
+			{
+				renumberImages : "Forest",
+				order : [ 401889, 401888, 401891, 401886, 401890, 401887, 401885, 401884, 401882, 401883 ]
+			},
+			{ match : { multiverseid : 401889 }, replace: { mciNumber : "270a" } },
+			{ match : { multiverseid : 401888 }, replace: { mciNumber : "271a" } },
+			{ match : { multiverseid : 401891 }, replace: { mciNumber : "272a" } },
+			{ match : { multiverseid : 401886 }, replace: { mciNumber : "273a" } },
+			{ match : { multiverseid : 401890 }, replace: { mciNumber : "274a" } },
+			{ match : { multiverseid : 401887 }, replace: { mciNumber : "270b" } },
+			{ match : { multiverseid : 401885 }, replace: { mciNumber : "271b" } },
+			{ match : { multiverseid : 401884 }, replace: { mciNumber : "272b" } },
+			{ match : { multiverseid : 401882 }, replace: { mciNumber : "273b" } },
+			{ match : { multiverseid : 401883 }, replace: { mciNumber : "274b" } },
+			{
+				renumberImages : "Island",
+				order : [ 401925, 401923, 401926, 401927, 401921, 401922, 401918, 401920, 401924, 401919 ]
+			},
+			{ match : { multiverseid : 401925 }, replace: { mciNumber : "255a" } },
+			{ match : { multiverseid : 401923 }, replace: { mciNumber : "256a" } },
+			{ match : { multiverseid : 401926 }, replace: { mciNumber : "257a" } },
+			{ match : { multiverseid : 401927 }, replace: { mciNumber : "258a" } },
+			{ match : { multiverseid : 401921 }, replace: { mciNumber : "259a" } },
+			{ match : { multiverseid : 401922 }, replace: { mciNumber : "255b" } },
+			{ match : { multiverseid : 401918 }, replace: { mciNumber : "256b" } },
+			{ match : { multiverseid : 401920 }, replace: { mciNumber : "257b" } },
+			{ match : { multiverseid : 401924 }, replace: { mciNumber : "258b" } },
+			{ match : { multiverseid : 401919 }, replace: { mciNumber : "259b" } },
+			{
+				renumberImages : "Mountain",
+				order : [ 401958, 401957, 401954, 401955, 401953, 401962, 401959, 401956, 401961, 401960 ]
+			},
+			{ match : { multiverseid : 401958 }, replace: { mciNumber : "265a" } },
+			{ match : { multiverseid : 401957 }, replace: { mciNumber : "266a" } },
+			{ match : { multiverseid : 401954 }, replace: { mciNumber : "267a" } },
+			{ match : { multiverseid : 401955 }, replace: { mciNumber : "268a" } },
+			{ match : { multiverseid : 401953 }, replace: { mciNumber : "269a" } },
+			{ match : { multiverseid : 401962 }, replace: { mciNumber : "265b" } },
+			{ match : { multiverseid : 401959 }, replace: { mciNumber : "266b" } },
+			{ match : { multiverseid : 401956 }, replace: { mciNumber : "267b" } },
+			{ match : { multiverseid : 401961 }, replace: { mciNumber : "268b" } },
+			{ match : { multiverseid : 401960 }, replace: { mciNumber : "269b" } },
+			{
+				renumberImages : "Plains",
+				order : [ 401985, 401988, 401989, 401986, 401987, 401992, 401993, 401991, 401994, 401990 ]
+			},
+			{ match : { multiverseid : 401985 }, replace: { mciNumber : "250a" } },
+			{ match : { multiverseid : 401988 }, replace: { mciNumber : "251a" } },
+			{ match : { multiverseid : 401989 }, replace: { mciNumber : "252a" } },
+			{ match : { multiverseid : 401986 }, replace: { mciNumber : "253a" } },
+			{ match : { multiverseid : 401987 }, replace: { mciNumber : "254a" } },
+			{ match : { multiverseid : 401992 }, replace: { mciNumber : "250b" } },
+			{ match : { multiverseid : 401993 }, replace: { mciNumber : "251b" } },
+			{ match : { multiverseid : 401991 }, replace: { mciNumber : "252b" } },
+			{ match : { multiverseid : 401994 }, replace: { mciNumber : "253b" } },
+			{ match : { multiverseid : 401990 }, replace: { mciNumber : "254b" } },
+			{
+				renumberImages : "Swamp",
+				order : [ 402055, 402053, 402054, 402056, 402057, 402061, 402058, 402060, 402059, 402062 ]
+			},
+			{ match : { multiverseid : 402055 }, replace: { mciNumber : "260a" } },
+			{ match : { multiverseid : 402053 }, replace: { mciNumber : "261a" } },
+			{ match : { multiverseid : 402054 }, replace: { mciNumber : "262a" } },
+			{ match : { multiverseid : 402056 }, replace: { mciNumber : "263a" } },
+			{ match : { multiverseid : 402057 }, replace: { mciNumber : "264a" } },
+			{ match : { multiverseid : 402061 }, replace: { mciNumber : "260b" } },
+			{ match : { multiverseid : 402058 }, replace: { mciNumber : "261b" } },
+			{ match : { multiverseid : 402060 }, replace: { mciNumber : "262b" } },
+			{ match : { multiverseid : 402059 }, replace: { mciNumber : "263b" } },
+			{ match : { multiverseid : 402062 }, replace: { mciNumber : "264b" } }
 		],
 		"*" :
 		[
@@ -3421,6 +4375,7 @@
 		flavor        : "string",
 		artist        : "string",
 		number        : "string",
+		mciNumber     : "string",
 		power         : "string",
 		toughness     : "string",
 		loyalty       : "number",
@@ -3468,7 +4423,7 @@
 		"Korean"
 	];
 
-	exports.MCI_LANGUAGE_TO_GATHERER = 
+	exports.MCI_LANGUAGE_TO_GATHERER =
 	{
 		"Portuguese"          : "Portuguese (Brazil)",
 		"Simplified Chinese"  : "Chinese Simplified",
