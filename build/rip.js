@@ -1699,6 +1699,10 @@ function getSetNameMultiverseIds(setName, cb)
 	);
 }
 
+/**
+ * Process the "colorIdentity" fields for all given cards.
+ * cb() is called upon finish.
+ */
 function fixCommanderIdentityForCards(cards, cb) {
 	var size = cards.length;
 
@@ -1747,3 +1751,4 @@ function fixCommanderIdentityForCards(cards, cb) {
 		subcb();
 	}, cb, size);
 }
+exports.fixCommanderIdentityForCards = fixCommanderIdentityForCards;
