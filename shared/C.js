@@ -1,5 +1,7 @@
 "use strict";
 
+var base = require("xbase");
+
 (function(exports)
 {
 	exports.SUPERTYPES = ["Basic", "Legendary", "Snow", "World", "Ongoing"];
