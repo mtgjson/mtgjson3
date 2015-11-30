@@ -753,19 +753,34 @@ exports.updateStandardForCard = function(card) {
 	}
 };
 
+/**
+ * saveSet() prepares and saves a given set to a file.
+ * 1.    Each card is sorted by the following criteria:
+ * 1.1   If they both have a number, they are compared and sorted accordingly.
+ * 1.1.1 If the number exists and is the same, compare multiverseIDs
+ * 1.2   If there are no numbers, compare the names.
+ * 2.    The foreignNames array is sorted by the language name
+ * 3.    The legalities are sorted by format name
+ * 4.    Each key value of the card is sorted.
+ *
+ * 99. Finally, the file is saved to the <ROOT>/json/<SETNAME>.json file.
+ */
 exports.saveSet = function(set, callback) {
-	//var start = new Date().getMilliseconds();
-	// Sort cards
+	// 1. Sort cards
 	set.cards.sort(function(a, b) {
-		if (a.number && b.number)
-			return(exports.alphanum(a.number, b.number));
+		if (a.number && b.number) {
+			var ret = exports.alphanum(a.number, b.number);
+			if (ret == 0)
+				ret = (a.multiverseid > b.multiverseid)?1:-1;
+			return(ret);
+		}
 
 		a.name.localeCompare(b.name);
 	});
 
 	// Sort internal card stuff
 	set.cards.forEach(function(card) {
-		// Foreign Names
+		// 2. Foreign Names
 		if (card.foreignNames)
 			card.foreignNames.sort(function(a, b){
 				var ret = a.language.localeCompare(b.language)
@@ -775,13 +790,13 @@ exports.saveSet = function(set, callback) {
 				return(ret);
 			});
 
-		// Legalities
+		// 3. Legalities
 		if (card.legalities)
 			card.legalities.sort(function(a, b){
 				return(a.format.localeCompare(b.format));
 			});
 
-		// Sort card properties
+		// 4. Sort card properties
 		Object.keys(card).sort().forEach(function(key) {
 			var value = card[key];
 			delete card[key];
@@ -789,12 +804,8 @@ exports.saveSet = function(set, callback) {
 		});
 	});
 
-	//var end = new Date().getMilliseconds();
-	//var time = end - start;
-	//base.info("Added overhead: %d milliseconds.", time);
-
-	var fn = path.join(__dirname, "..", "json", set.code + ".json");
-	fs.writeFile(fn, JSON.stringify(set, null, '  '), {encoding:"utf8"}, callback);	
+	// 99. Save the file on the proper path
+	fs.writeFile(path.join(__dirname, "..", "json", set.code + ".json"), JSON.stringify(set, null, '  '), {encoding:"utf8"}, callback);	
 };
 
 // Natural sort implementation, for getting those card numbers in a human-readable format.
