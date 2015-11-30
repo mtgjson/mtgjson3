@@ -49,14 +49,11 @@
       ]
     },
     {
-      "artist": "Heather Hudson",
+      "artist": "Jeff A. Menges",
       "cmc": 2,
-      "colors": [
-        "Blue"
-      ],
-      "flavor": "Although greatly prized among falconers, the Zephyr Falcon is capricious and not easily tamed.",
-      "id": "4c93ab66f367088d79274211b9b495b33f52a739",
-      "imageName": "zephyr falcon",
+      "flavor": "By the time Mishra was defeated, no mage was foolish enough to rely heavily on walls.",
+      "id": "3fd1dad689cf09222f1a8ddc97efd03589b68bcd",
+      "imageName": "battering ram",
       "layout": "normal",
       "legalities": [
         {
@@ -72,26 +69,45 @@
           "legality": "Legal"
         }
       ],
-      "manaCost": "{1}{U}",
-      "name": "Zephyr Falcon",
-      "originalText": "Flying\nAttacking does not cause Zephyr Falcon to tap.",
-      "originalType": "Summon — Falcon",
+      "manaCost": "{2}",
+      "name": "Battering Ram",
+      "originalText": "Banding when attacking\nAt the end of combat, destroy all walls blocking Battering Ram.",
+      "originalType": "Artifact Creature",
       "power": "1",
       "printings": [
-        "LEG",
+        "ATQ",
         "4ED",
         "RQS",
         "ITP",
         "5ED"
       ],
       "rarity": "Special",
-      "subtypes": [
-        "Bird"
+      "rulings": [
+        {
+          "date": "2008-10-01",
+          "text": "If a creature with banding attacks, it can team up with any number of other attacking creatures with banding (and up to one nonbanding creature) and attack as a unit called a \"band.\" The band can be blocked by any creature that could block a single creature in the band. Blocking any creature in a band blocks the entire band. If a creature with banding is blocked, the attacking player chooses how the blockers' damage is assigned."
+        },
+        {
+          "date": "2008-10-01",
+          "text": "A maximum of one nonbanding creature can join an attacking band no matter how many creatures with banding are in it."
+        },
+        {
+          "date": "2008-10-01",
+          "text": "Creatures in the same band must all attack the same player or planeswalker."
+        },
+        {
+          "date": "2009-10-01",
+          "text": "If a creature in combat has banding, its controller assigns damage for creatures blocking or blocked by it. That player can ignore the damage assignment order when making this assignment."
+        }
       ],
-      "text": "Flying, vigilance",
+      "subtypes": [
+        "Construct"
+      ],
+      "text": "At the beginning of combat on your turn, Battering Ram gains banding until end of combat. (Any creatures with banding, and up to one without, can attack in a band. Bands are blocked as a group. If any creatures with banding you control are being blocked by a creature, you divide that creature's combat damage, not its controller, among any of the creatures it's blocking.)\nWhenever Battering Ram becomes blocked by a Wall, destroy that Wall at end of combat.",
       "toughness": "1",
-      "type": "Creature — Bird",
+      "type": "Artifact Creature — Construct",
       "types": [
+        "Artifact",
         "Creature"
       ]
     },
@@ -2250,11 +2266,14 @@
       ]
     },
     {
-      "artist": "Jeff A. Menges",
+      "artist": "Melissa A. Benson",
       "cmc": 2,
-      "flavor": "By the time Mishra was defeated, no mage was foolish enough to rely heavily on walls.",
-      "id": "3fd1dad689cf09222f1a8ddc97efd03589b68bcd",
-      "imageName": "battering ram",
+      "colors": [
+        "White"
+      ],
+      "flavor": "Before a woman marries in the village of Sursi, she must visit the land of the Mesa Pegasus. Legend has it that if the woman is pure of heart and her love is true, a Mesa Pegasus will appear, blessing her family with long life and good fortune.",
+      "id": "e86649b6e444ae20acc33902c820c861f447314e",
+      "imageName": "mesa pegasus",
       "layout": "normal",
       "legalities": [
         {
@@ -2262,7 +2281,23 @@
           "legality": "Legal"
         },
         {
+          "format": "Freeform",
+          "legality": "Legal"
+        },
+        {
           "format": "Legacy",
+          "legality": "Legal"
+        },
+        {
+          "format": "Prismatic",
+          "legality": "Legal"
+        },
+        {
+          "format": "Singleton 100",
+          "legality": "Legal"
+        },
+        {
+          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -2270,17 +2305,23 @@
           "legality": "Legal"
         }
       ],
-      "manaCost": "{2}",
-      "name": "Battering Ram",
-      "originalText": "Banding when attacking\nAt the end of combat, destroy all walls blocking Battering Ram.",
-      "originalType": "Artifact Creature",
+      "manaCost": "{1}{W}",
+      "name": "Mesa Pegasus",
+      "originalText": "Flying, banding",
+      "originalType": "Summon — Pegasus",
       "power": "1",
       "printings": [
-        "ATQ",
+        "LEA",
+        "LEB",
+        "2ED",
+        "CED",
+        "CEI",
+        "3ED",
         "4ED",
         "RQS",
         "ITP",
-        "5ED"
+        "5ED",
+        "MED"
       ],
       "rarity": "Special",
       "rulings": [
@@ -2302,13 +2343,12 @@
         }
       ],
       "subtypes": [
-        "Construct"
+        "Pegasus"
       ],
-      "text": "At the beginning of combat on your turn, Battering Ram gains banding until end of combat. (Any creatures with banding, and up to one without, can attack in a band. Bands are blocked as a group. If any creatures with banding you control are being blocked by a creature, you divide that creature's combat damage, not its controller, among any of the creatures it's blocking.)\nWhenever Battering Ram becomes blocked by a Wall, destroy that Wall at end of combat.",
+      "text": "Flying; banding (Any creatures with banding, and up to one without, can attack in a band. Bands are blocked as a group. If any creatures with banding you control are blocking or being blocked by a creature, you divide that creature's combat damage, not its controller, among any of the creatures it's being blocked by or is blocking.)",
       "toughness": "1",
-      "type": "Artifact Creature — Construct",
+      "type": "Creature — Pegasus",
       "types": [
-        "Artifact",
         "Creature"
       ]
     },
@@ -4591,14 +4631,14 @@
       ]
     },
     {
-      "artist": "Melissa A. Benson",
+      "artist": "Heather Hudson",
       "cmc": 2,
       "colors": [
-        "White"
+        "Blue"
       ],
-      "flavor": "Before a woman marries in the village of Sursi, she must visit the land of the Mesa Pegasus. Legend has it that if the woman is pure of heart and her love is true, a Mesa Pegasus will appear, blessing her family with long life and good fortune.",
-      "id": "e86649b6e444ae20acc33902c820c861f447314e",
-      "imageName": "mesa pegasus",
+      "flavor": "Although greatly prized among falconers, the Zephyr Falcon is capricious and not easily tamed.",
+      "id": "4c93ab66f367088d79274211b9b495b33f52a739",
+      "imageName": "zephyr falcon",
       "layout": "normal",
       "legalities": [
         {
@@ -4606,23 +4646,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -4630,49 +4654,25 @@
           "legality": "Legal"
         }
       ],
-      "manaCost": "{1}{W}",
-      "name": "Mesa Pegasus",
-      "originalText": "Flying, banding",
-      "originalType": "Summon — Pegasus",
+      "manaCost": "{1}{U}",
+      "name": "Zephyr Falcon",
+      "originalText": "Flying\nAttacking does not cause Zephyr Falcon to tap.",
+      "originalType": "Summon — Falcon",
       "power": "1",
       "printings": [
-        "LEA",
-        "LEB",
-        "2ED",
-        "CED",
-        "CEI",
-        "3ED",
+        "LEG",
         "4ED",
         "RQS",
         "ITP",
-        "5ED",
-        "MED"
+        "5ED"
       ],
       "rarity": "Special",
-      "rulings": [
-        {
-          "date": "2008-10-01",
-          "text": "If a creature with banding attacks, it can team up with any number of other attacking creatures with banding (and up to one nonbanding creature) and attack as a unit called a \"band.\" The band can be blocked by any creature that could block a single creature in the band. Blocking any creature in a band blocks the entire band. If a creature with banding is blocked, the attacking player chooses how the blockers' damage is assigned."
-        },
-        {
-          "date": "2008-10-01",
-          "text": "A maximum of one nonbanding creature can join an attacking band no matter how many creatures with banding are in it."
-        },
-        {
-          "date": "2008-10-01",
-          "text": "Creatures in the same band must all attack the same player or planeswalker."
-        },
-        {
-          "date": "2009-10-01",
-          "text": "If a creature in combat has banding, its controller assigns damage for creatures blocking or blocked by it. That player can ignore the damage assignment order when making this assignment."
-        }
-      ],
       "subtypes": [
-        "Pegasus"
+        "Bird"
       ],
-      "text": "Flying; banding (Any creatures with banding, and up to one without, can attack in a band. Bands are blocked as a group. If any creatures with banding you control are blocking or being blocked by a creature, you divide that creature's combat damage, not its controller, among any of the creatures it's being blocked by or is blocking.)",
+      "text": "Flying, vigilance",
       "toughness": "1",
-      "type": "Creature — Pegasus",
+      "type": "Creature — Bird",
       "types": [
         "Creature"
       ]

@@ -80,14 +80,13 @@
       ]
     },
     {
-      "artist": "Quinton Hoover",
-      "cmc": 3,
+      "artist": "Jesper Myrfors",
+      "cmc": 5,
       "colors": [
         "Green"
       ],
-      "flavor": "\"The standard cure for leeches requires the application of burning embers. Alternative methods must be devised should an ember of sufficient size prove more harmful than the leech.\" —Vervamon the Elder",
-      "id": "40d5516de087d87d39701febff5f9eb5125199d0",
-      "imageName": "land leeches",
+      "id": "bf17868794c04f7a5b2d5de383a99222ccfa1975",
+      "imageName": "wormwood treefolk",
       "layout": "normal",
       "legalities": [
         {
@@ -103,23 +102,30 @@
           "legality": "Legal"
         }
       ],
-      "manaCost": "{1}{G}{G}",
-      "multiverseid": 1769,
-      "name": "Land Leeches",
-      "originalText": "First strike",
-      "originalType": "Summon — Leeches",
-      "power": "2",
+      "manaCost": "{3}{G}{G}",
+      "multiverseid": 1782,
+      "name": "Wormwood Treefolk",
+      "originalText": "{G}{G} Wormwood Treefolk gains forestwalk until end of turn and does 2 damage to you.\n{B}{B} Wormwood Treefolk gains swampwalk until end of turn and does 2 damage to you.",
+      "originalType": "Summon — Treefolk",
+      "power": "4",
       "printings": [
         "DRK",
-        "4ED"
+        "ME3"
       ],
-      "rarity": "Common",
+      "rarity": "Rare",
+      "reserved": true,
+      "rulings": [
+        {
+          "date": "2009-10-01",
+          "text": "Causing Wormwood Treefolk to gain forestwalk or swampwalk is useful only during the declare attackers step or earlier. Once it becomes blocked, giving it a landwalk ability won't change that."
+        }
+      ],
       "subtypes": [
-        "Leech"
+        "Treefolk"
       ],
-      "text": "First strike",
-      "toughness": "2",
-      "type": "Creature — Leech",
+      "text": "{G}{G}: Wormwood Treefolk gains forestwalk until end of turn and deals 2 damage to you. (It can't be blocked as long as defending player controls a Forest.)\n{B}{B}: Wormwood Treefolk gains swampwalk until end of turn and deals 2 damage to you. (It can't be blocked as long as defending player controls a Swamp.)",
+      "toughness": "4",
+      "type": "Creature — Treefolk",
       "types": [
         "Creature"
       ]
@@ -3226,13 +3232,13 @@
       ]
     },
     {
-      "artist": "Jesper Myrfors",
-      "cmc": 5,
+      "artist": "Drew Tucker",
+      "cmc": 4,
       "colors": [
-        "Green"
+        "White"
       ],
-      "id": "bf17868794c04f7a5b2d5de383a99222ccfa1975",
-      "imageName": "wormwood treefolk",
+      "id": "714c4346402c62c6a29769c8e822f12924cb0700",
+      "imageName": "angry mob",
       "layout": "normal",
       "legalities": [
         {
@@ -3240,7 +3246,23 @@
           "legality": "Legal"
         },
         {
+          "format": "Freeform",
+          "legality": "Legal"
+        },
+        {
           "format": "Legacy",
+          "legality": "Legal"
+        },
+        {
+          "format": "Prismatic",
+          "legality": "Legal"
+        },
+        {
+          "format": "Singleton 100",
+          "legality": "Legal"
+        },
+        {
+          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -3248,30 +3270,25 @@
           "legality": "Legal"
         }
       ],
-      "manaCost": "{3}{G}{G}",
-      "multiverseid": 1782,
-      "name": "Wormwood Treefolk",
-      "originalText": "{G}{G} Wormwood Treefolk gains forestwalk until end of turn and does 2 damage to you.\n{B}{B} Wormwood Treefolk gains swampwalk until end of turn and does 2 damage to you.",
-      "originalType": "Summon — Treefolk",
-      "power": "4",
+      "manaCost": "{2}{W}{W}",
+      "multiverseid": 1801,
+      "name": "Angry Mob",
+      "originalText": "Trample\nDuring your turn, the *s below are both equal to the total number of swamps all opponents control. During any other player's turn, * equals 0.",
+      "originalType": "Summon — Mob",
+      "power": "2+*",
       "printings": [
         "DRK",
-        "ME3"
+        "4ED",
+        "5ED",
+        "MED"
       ],
-      "rarity": "Rare",
-      "reserved": true,
-      "rulings": [
-        {
-          "date": "2009-10-01",
-          "text": "Causing Wormwood Treefolk to gain forestwalk or swampwalk is useful only during the declare attackers step or earlier. Once it becomes blocked, giving it a landwalk ability won't change that."
-        }
-      ],
+      "rarity": "Uncommon",
       "subtypes": [
-        "Treefolk"
+        "Human"
       ],
-      "text": "{G}{G}: Wormwood Treefolk gains forestwalk until end of turn and deals 2 damage to you. (It can't be blocked as long as defending player controls a Forest.)\n{B}{B}: Wormwood Treefolk gains swampwalk until end of turn and deals 2 damage to you. (It can't be blocked as long as defending player controls a Swamp.)",
-      "toughness": "4",
-      "type": "Creature — Treefolk",
+      "text": "Trample\nAs long as it's your turn, Angry Mob's power and toughness are each equal to 2 plus the number of Swamps your opponents control. As long as it's not your turn, Angry Mob's power and toughness are each 2.",
+      "toughness": "2+*",
+      "type": "Creature — Human",
       "types": [
         "Creature"
       ]
@@ -6388,13 +6405,14 @@
       ]
     },
     {
-      "artist": "Drew Tucker",
-      "cmc": 4,
+      "artist": "Quinton Hoover",
+      "cmc": 3,
       "colors": [
-        "White"
+        "Green"
       ],
-      "id": "714c4346402c62c6a29769c8e822f12924cb0700",
-      "imageName": "angry mob",
+      "flavor": "\"The standard cure for leeches requires the application of burning embers. Alternative methods must be devised should an ember of sufficient size prove more harmful than the leech.\" —Vervamon the Elder",
+      "id": "40d5516de087d87d39701febff5f9eb5125199d0",
+      "imageName": "land leeches",
       "layout": "normal",
       "legalities": [
         {
@@ -6402,23 +6420,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -6426,25 +6428,23 @@
           "legality": "Legal"
         }
       ],
-      "manaCost": "{2}{W}{W}",
-      "multiverseid": 1801,
-      "name": "Angry Mob",
-      "originalText": "Trample\nDuring your turn, the *s below are both equal to the total number of swamps all opponents control. During any other player's turn, * equals 0.",
-      "originalType": "Summon — Mob",
-      "power": "2+*",
+      "manaCost": "{1}{G}{G}",
+      "multiverseid": 1769,
+      "name": "Land Leeches",
+      "originalText": "First strike",
+      "originalType": "Summon — Leeches",
+      "power": "2",
       "printings": [
         "DRK",
-        "4ED",
-        "5ED",
-        "MED"
+        "4ED"
       ],
-      "rarity": "Uncommon",
+      "rarity": "Common",
       "subtypes": [
-        "Human"
+        "Leech"
       ],
-      "text": "Trample\nAs long as it's your turn, Angry Mob's power and toughness are each equal to 2 plus the number of Swamps your opponents control. As long as it's not your turn, Angry Mob's power and toughness are each 2.",
-      "toughness": "2+*",
-      "type": "Creature — Human",
+      "text": "First strike",
+      "toughness": "2",
+      "type": "Creature — Leech",
       "types": [
         "Creature"
       ]

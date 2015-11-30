@@ -110,13 +110,14 @@
       ]
     },
     {
-      "artist": "Anson Maddocks",
-      "cmc": 1,
+      "artist": "Jeff A. Menges",
+      "cmc": 3,
       "colors": [
-        "Green"
+        "Black"
       ],
-      "id": "e1b2ffebe4eef06f07346dcc90b67f4d3ac03bc5",
-      "imageName": "living artifact",
+      "flavor": "They say the Zombie Master controlled these foul creatures even before his own death, but now that he is one of them, nothing can make them betray him.",
+      "id": "ef503d9eb3751103a46daccaf1c34dbd1591dc4b",
+      "imageName": "zombie master",
       "layout": "normal",
       "legalities": [
         {
@@ -132,11 +133,12 @@
           "legality": "Legal"
         }
       ],
-      "manaCost": "{G}",
-      "multiverseid": 1258,
-      "name": "Living Artifact",
-      "originalText": "Put a counter on target artifact for each life you lose. During your upkeep you may trade one counter for one life, but you can only trade in one counter during each of your upkeeps.",
-      "originalType": "Enchant Artifact",
+      "manaCost": "{1}{B}{B}",
+      "multiverseid": 1188,
+      "name": "Zombie Master",
+      "originalText": "All zombies in play gain swampwalk and \"{B} Regenerates\" for as long as this card remains in play.",
+      "originalType": "Summon — Lord",
+      "power": "2",
       "printings": [
         "LEA",
         "LEB",
@@ -145,26 +147,19 @@
         "CEI",
         "3ED",
         "4ED",
-        "5ED"
+        "5ED",
+        "6ED",
+        "ME4"
       ],
       "rarity": "Rare",
-      "rulings": [
-        {
-          "date": "2004-10-04",
-          "text": "You can cast it targeting your opponent's artifacts. The controller of the Aura (not the controller of the artifact) controls the Living Artifact ability."
-        },
-        {
-          "date": "2004-10-04",
-          "text": "Does not trigger on loss of life, just on damage."
-        }
-      ],
       "subtypes": [
-        "Aura"
+        "Zombie"
       ],
-      "text": "Enchant artifact\nWhenever you're dealt damage, put that many vitality counters on Living Artifact.\nAt the beginning of your upkeep, you may remove a vitality counter from Living Artifact. If you do, you gain 1 life.",
-      "type": "Enchantment — Aura",
+      "text": "Other Zombie creatures have swampwalk. (They can't be blocked as long as defending player controls a Swamp.)\nOther Zombies have \"{B}: Regenerate this permanent.\"",
+      "toughness": "3",
+      "type": "Creature — Zombie",
       "types": [
-        "Enchantment"
+        "Creature"
       ]
     },
     {
@@ -11352,14 +11347,10 @@
       ]
     },
     {
-      "artist": "Jeff A. Menges",
-      "cmc": 3,
-      "colors": [
-        "Black"
-      ],
-      "flavor": "They say the Zombie Master controlled these foul creatures even before his own death, but now that he is one of them, nothing can make them betray him.",
-      "id": "ef503d9eb3751103a46daccaf1c34dbd1591dc4b",
-      "imageName": "zombie master",
+      "artist": "Mark Tedin",
+      "cmc": 10,
+      "id": "ce61d56625790b98bd71407b03b738d93ee8f986",
+      "imageName": "aladdin's lamp",
       "layout": "normal",
       "legalities": [
         {
@@ -11375,33 +11366,27 @@
           "legality": "Legal"
         }
       ],
-      "manaCost": "{1}{B}{B}",
-      "multiverseid": 1188,
-      "name": "Zombie Master",
-      "originalText": "All zombies in play gain swampwalk and \"{B} Regenerates\" for as long as this card remains in play.",
-      "originalType": "Summon — Lord",
-      "power": "2",
+      "manaCost": "{10}",
+      "multiverseid": 1092,
+      "name": "Aladdin's Lamp",
+      "originalText": "{X}, {T}: Instead of drawing a card from the top of your library, draw X cards but choose only one to put in your hand. You must shuffle the leftover cards and put them at the bottom of your library.",
+      "originalType": "Artifact",
       "printings": [
-        "LEA",
-        "LEB",
-        "2ED",
-        "CED",
-        "CEI",
+        "ARN",
         "3ED",
-        "4ED",
-        "5ED",
-        "6ED",
-        "ME4"
+        "4ED"
       ],
       "rarity": "Rare",
-      "subtypes": [
-        "Zombie"
+      "rulings": [
+        {
+          "date": "2004-10-04",
+          "text": "If you use more than one Lamp effect, the second one will end up replacing the card being drawn with the first one."
+        }
       ],
-      "text": "Other Zombie creatures have swampwalk. (They can't be blocked as long as defending player controls a Swamp.)\nOther Zombies have \"{B}: Regenerate this permanent.\"",
-      "toughness": "3",
-      "type": "Creature — Zombie",
+      "text": "{X}, {T}: The next time you would draw a card this turn, instead look at the top X cards of your library, put all but one of them on the bottom of your library in a random order, then draw a card. X can't be 0.",
+      "type": "Artifact",
       "types": [
-        "Creature"
+        "Artifact"
       ]
     },
     {
@@ -23425,10 +23410,13 @@
       ]
     },
     {
-      "artist": "Mark Tedin",
-      "cmc": 10,
-      "id": "ce61d56625790b98bd71407b03b738d93ee8f986",
-      "imageName": "aladdin's lamp",
+      "artist": "Anson Maddocks",
+      "cmc": 1,
+      "colors": [
+        "Green"
+      ],
+      "id": "e1b2ffebe4eef06f07346dcc90b67f4d3ac03bc5",
+      "imageName": "living artifact",
       "layout": "normal",
       "legalities": [
         {
@@ -23444,27 +23432,39 @@
           "legality": "Legal"
         }
       ],
-      "manaCost": "{10}",
-      "multiverseid": 1092,
-      "name": "Aladdin's Lamp",
-      "originalText": "{X}, {T}: Instead of drawing a card from the top of your library, draw X cards but choose only one to put in your hand. You must shuffle the leftover cards and put them at the bottom of your library.",
-      "originalType": "Artifact",
+      "manaCost": "{G}",
+      "multiverseid": 1258,
+      "name": "Living Artifact",
+      "originalText": "Put a counter on target artifact for each life you lose. During your upkeep you may trade one counter for one life, but you can only trade in one counter during each of your upkeeps.",
+      "originalType": "Enchant Artifact",
       "printings": [
-        "ARN",
+        "LEA",
+        "LEB",
+        "2ED",
+        "CED",
+        "CEI",
         "3ED",
-        "4ED"
+        "4ED",
+        "5ED"
       ],
       "rarity": "Rare",
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "If you use more than one Lamp effect, the second one will end up replacing the card being drawn with the first one."
+          "text": "You can cast it targeting your opponent's artifacts. The controller of the Aura (not the controller of the artifact) controls the Living Artifact ability."
+        },
+        {
+          "date": "2004-10-04",
+          "text": "Does not trigger on loss of life, just on damage."
         }
       ],
-      "text": "{X}, {T}: The next time you would draw a card this turn, instead look at the top X cards of your library, put all but one of them on the bottom of your library in a random order, then draw a card. X can't be 0.",
-      "type": "Artifact",
+      "subtypes": [
+        "Aura"
+      ],
+      "text": "Enchant artifact\nWhenever you're dealt damage, put that many vitality counters on Living Artifact.\nAt the beginning of your upkeep, you may remove a vitality counter from Living Artifact. If you do, you gain 1 life.",
+      "type": "Enchantment — Aura",
       "types": [
-        "Artifact"
+        "Enchantment"
       ]
     }
   ]

@@ -1,5 +1,7 @@
 "use strict";
 
+var base = require("xbase");
+
 (function(exports)
 {
 	exports.SUPERTYPES = ["Basic", "Legendary", "Snow", "World", "Ongoing"];
@@ -25,7 +27,9 @@
 			releaseDate : "1993-08-05",
 			border : "black",
 			type : "core",
-			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"]
+			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"],
+			mkm_name: "Alpha",
+			mkm_id: 1
 		},
 		{
 			name : "Limited Edition Beta",
@@ -35,7 +39,9 @@
 			releaseDate : "1993-10-01",
 			border : "black",
 			type : "core",
-			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"]
+			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"],
+			mkm_name: "Beta",
+			mkm_id: 2
 		},
 		{
 			name : "Arabian Nights",
@@ -45,7 +51,9 @@
 			releaseDate : "1993-12-01",
 			border : "black",
 			type : "expansion",
-			booster : ["uncommon", "uncommon", "common", "common", "common", "common", "common", "common"]
+			booster : ["uncommon", "uncommon", "common", "common", "common", "common", "common", "common"],
+			mkm_name : "Arabian Nights",
+			mkm_id : 4
 		},
 		{
 			name : "Unlimited Edition",
@@ -55,7 +63,9 @@
 			releaseDate : "1993-12-01",
 			border : "white",
 			type : "core",
-			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"]
+			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"],
+			mkm_name : "Unlimited",
+			mkm_id : 3
 		},
 		{
 			name : "Collector's Edition",
@@ -64,7 +74,9 @@
 			isMCISet : true,
 			releaseDate : "1993-12-01",
 			border : "black",
-			type : "reprint"
+			type : "reprint",
+			mkm_name : "Collectors' Edition",
+			mkm_id : 61
 		},
 		{
 			name : "International Collector's Edition",
@@ -73,7 +85,9 @@
 			isMCISet : true,
 			releaseDate : "1993-12-01",
 			border : "black",
-			type : "reprint"
+			type : "reprint",
+			mkm_name : "International Edition",
+			mkm_id : 77
 		},
 		{
 			name : "Dragon Con",
@@ -92,7 +106,9 @@
 			releaseDate : "1994-03-01",
 			border : "black",
 			type : "expansion",
-			booster : ["uncommon", "uncommon", "common", "common", "common", "common", "common", "common"]
+			booster : ["uncommon", "uncommon", "common", "common", "common", "common", "common", "common"],
+			mkm_name : "Antiquities",
+			mkm_id : 5
 		},
 		{
 			name : "Revised Edition",
@@ -107,7 +123,9 @@
 				de: 'Unlimitierte Auflage',
 				fr: 'Tirage Non Limité',
 				it: 'Seconda Edizione'
-			}
+			},
+			mkm_name : "Revised",
+			mkm_id : 6
 		},
 		{
 			name : "Legends",
@@ -120,7 +138,9 @@
 			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"],
 			translations: {
 				it: 'Leggende'
-			}
+			},
+			mkm_name : "Legends",
+			mkm_id : 7
 		},
 		{
 			name : "The Dark",
@@ -133,7 +153,9 @@
 			booster : ["uncommon", "uncommon", "common", "common", "common", "common", "common", "common"],
 			translations: {
 				it: 'L\'Oscurità'
-			}
+			},
+			mkm_name : "The Dark",
+			mkm_id : 8
 		},
 		{
 			name : "Media Inserts",
@@ -157,7 +179,9 @@
 			releaseDate : "1994-11-01",
 			border : "black",
 			type : "expansion",
-			booster : ["uncommon", "uncommon", "common", "common", "common", "common", "common", "common"]
+			booster : ["uncommon", "uncommon", "common", "common", "common", "common", "common", "common"],
+			mkm_name : "Fallen Empires",
+			mkm_id : 9
 		},
 		{
 			name : "Legend Membership",
@@ -185,7 +209,9 @@
 				it: 'Quarta Edizione',
 				es: 'Cuarta Edición',
 				pt: 'Quarta Edição'
-			}
+			},
+			mkm_name : "Fourth Edition",
+			mkm_id : 10
 		},
 		{
 			name : "Ice Age",
@@ -203,7 +229,9 @@
 				it: 'Era Glaciale',
 				es: 'Era Glacial',
 				pt: 'Era Glacial'
-			}
+			},
+			mkm_name : "Ice Age",
+			mkm_id : 11
 		},
 		{
 			name : "Chronicles",
@@ -213,7 +241,9 @@
 			releaseDate : "1995-07-01",
 			border : "white",
 			type : "reprint",
-			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common"]
+			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common"],
+			mkm_name : "Chronicles",
+			mkm_id : 12
 		},
 		{
 			name : "Homelands",
@@ -230,7 +260,9 @@
 				it: 'Origini',
 				es: 'Tierras Natales',
 				pt: 'Terras Natais'
-			}
+			},
+			mkm_name : "Homelands",
+			mkm_id : 14
 		},
 		{
 			name : "Alliances",
@@ -248,7 +280,9 @@
 				it: 'Alleanze',
 				es: 'Alianzas',
 				pt: 'Alianças'
-			}
+			},
+			mkm_name : "Alliances",
+			mkm_id : 15
 		},
 		{
 			name : "Rivals Quick Start Set",
@@ -293,7 +327,9 @@
 				it: 'Mirage',
 				es: 'Espejismo',
 				pt: 'Miragem'
-			}
+			},
+			mkm_name : "Mirage",
+			mkm_id : 16
 		},
 		{
 			name : "Multiverse Gift Box",
@@ -303,7 +339,9 @@
 			isMCISet : true,
 			releaseDate : "1996-11-01",
 			border : "black",
-			type : "box"
+			type : "box",
+			mkm_name : "Multiverse Gift Box",
+			mkm_id : 1519
 		},
 		{
 			name : "Introductory Two-Player Set",
@@ -317,7 +355,9 @@
 				de: 'Introductory Two-Player Set',
 				fr: 'Introductory Two-Player Set',
 				es: 'Introductory Two-Player Set'
-			}
+			},
+			mkm_name : "Introductory Two-Player Set",
+			mkm_id : 85
 		},
 		{
 			name : "Visions",
@@ -335,7 +375,9 @@
 				it: 'Visioni',
 				es: 'Visiones',
 				pt: 'Visões'
-			}
+			},
+			mkm_name : "Visions",
+			mkm_id : 17
 		},
 		{
 			name : "Fifth Edition",
@@ -352,7 +394,9 @@
 				it: 'Quinta Edizione',
 				es: 'Quinta Edición',
 				pt: 'Quinta Edição'
-			}
+			},
+			mkm_name : "Fifth Edition",
+			mkm_id : 23
 		},
 		{
 			name : "Portal Demo Game",
@@ -376,14 +420,18 @@
 				de: 'Portal',
 				fr: 'Portal',
 				es: 'Portal'
-			}
+			},
+			mkm_name : "Portal",
+			mkm_id : 25
 		},
 		{
 			name : "Vanguard",
 			code : "VAN",
 			releaseDate : "1997-05-01",
 			border : "black",
-			type : "vanguard"
+			type : "vanguard",
+			mkm_name : "Vanguard",
+			mkm_id : 69
 		},
 		{
 			name : "Weatherlight",
@@ -401,7 +449,9 @@
 				it: 'Cavalcavento',
 				es: 'El Vientoligero',
 				pt: 'Alisios'
-			}
+			},
+			mkm_name : "Weatherlight",
+			mkm_id : 18
 		},
 		{
 			name : "Prerelease Events",
@@ -429,7 +479,9 @@
 				it: 'Tempesta',
 				es: 'Tempestad',
 				pt: 'Tempestade'
-			}
+			},
+			mkm_name : "Tempest",
+			mkm_id : 19
 		},
 		{
 			name : "Stronghold",
@@ -447,7 +499,9 @@
 				it: 'Fortezza',
 				es: 'Fortaleza',
 				pt: 'Fortaleza'
-			}
+			},
+			mkm_name : "Stronghold",
+			mkm_id : 20
 		},
 		{
 			name : "Portal Second Age",
@@ -465,7 +519,9 @@
 				it: 'Portal Seconda Era',
 				es: 'Portal Segunda Edad',
 				pt: 'Portal Segunda Era'
-			}
+			},
+			mkm_name : "Portal Second Age",
+			mkm_id : 24
 		},
 		{
 			name : "Judge Gift Program",
@@ -475,7 +531,9 @@
 			isMCISet : true,
 			releaseDate : "1998-06-01",
 			border : "black",
-			type : "promo"
+			type : "promo",
+			mkm_name : "Judge Rewards Promos",
+			mkm_id : 80
 		},
 		{
 			name : "Exodus",
@@ -493,7 +551,9 @@
 				it: 'Esodo',
 				es: 'Éxodo',
 				pt: 'Êxodo'
-			}
+			},
+			mkm_name : "Exodus",
+			mkm_id : 21
 		},
 		{
 			name : "Unglued",
@@ -503,7 +563,9 @@
 			releaseDate : "1998-08-11",
 			border : "silver",
 			type : "un",
-			booster : ["rare", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "land"]
+			booster : ["rare", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "land"],
+			mkm_name : "Unglued",
+			mkm_id : 22
 		},
 		{
 			name : "Asia Pacific Land Program",
@@ -513,7 +575,9 @@
 			isMCISet : true,
 			releaseDate : "1998-09-01",
 			border : "black",
-			type : "promo"
+			type : "promo",
+			mkm_name : "APAC Lands",
+			mkm_id : 97
 		},
 		{
 			name : "Urza's Saga",
@@ -531,7 +595,9 @@
 				it: 'Saga di Urza',
 				es: 'La Saga de Urza',
 				pt: 'A Saga de Urza'
-			}
+			},
+			mkm_name : "Urza's Saga",
+			mkm_id : 26
 		},
 		{
 			name : "Anthologies",
@@ -539,7 +605,9 @@
 			magicCardsInfoCode : "at",
 			releaseDate : "1998-11-01",
 			border : "white",
-			type : "box"
+			type : "box",
+			mkm_name : "Anthologies",
+			mkm_id : 75
 		},
 		{
 			name : "Urza's Legacy",
@@ -557,7 +625,9 @@
 				it: 'Eredità di Urza',
 				es: 'El Legado de Urza',
 				pt: 'O Legado de Urza'
-			}			
+			},
+			mkm_name : "Urza's Legacy",
+			mkm_id : 27
 		},
 		{
 			name : "Classic Sixth Edition",
@@ -574,7 +644,9 @@
 				it: 'Classic Sesta Edizione',
 				es: 'Clásica Sexta Edición',
 				pt: 'Classica Sexta Edição'
-			}
+			},
+			mkm_name : "Sixth Edition",
+			mkm_id : 29
 		},
 		{
 			name : "Portal Three Kingdoms",
@@ -588,7 +660,9 @@
 			translations: {
 				jp: 'Portal Three Kingdoms',
 				cn: 'Portal Three Kingdoms'
-			}
+			},
+			mkm_name : "Portal Three Kingdoms",
+			mkm_id : 30
 		},
 		{
 			name : "Urza's Destiny",
@@ -606,7 +680,9 @@
 				it: 'Destino di Urza',
 				es: 'El Destino de Urza',
 				pt: 'O Destino de Urza'
-			}
+			},
+			mkm_name : "Urza's Destiny",
+			mkm_id : 28
 		},
 		{
 			name : "Starter 1999",
@@ -616,7 +692,9 @@
 			releaseDate : "1999-07-01",
 			border : "white",
 			type : "starter",
-			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "land"]
+			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "land"],
+			mkm_name : "Starter 1999",
+			mkm_id : 63
 		},
 		{
 			name : "Guru",
@@ -626,7 +704,9 @@
 			isMCISet : true,
 			releaseDate : "1999-07-12",
 			border : "black",
-			type : "promo"
+			type : "promo",
+			mkm_name : "Guru Lands",
+			mkm_id : 88
 		},
 		{
 			name : "Worlds",
@@ -664,7 +744,9 @@
 				it: 'Maschere di Mercadia',
 				es: 'Máscaras de Mercadia',
 				pt: 'Máscara de Mercádia'
-			}
+			},
+			mkm_name : "Mercadian Masques",
+			mkm_id : 31
 		},
 		{
 			name : "Battle Royale Box Set",
@@ -673,7 +755,9 @@
 			magicCardsInfoCode : "br",
 			releaseDate : "1999-11-12",
 			border : "white",
-			type : "box"
+			type : "box",
+			mkm_name : "Battle Royale",
+			mkm_id : 64
 		},
 		{
 			name : "Super Series",
@@ -693,7 +777,9 @@
 			isMCISet : true,
 			releaseDate : "2000-02-01",
 			border : "black",
-			type : "promo"
+			type : "promo",
+			mkm_name : "Friday Night Magic Promos",
+			mkm_id : 72
 		},
 		{
 			name : "European Land Program",
@@ -722,7 +808,9 @@
 				it: 'Nemesis',
 				es: 'Némesis',
 				pt: 'Nêmesis'
-			}
+			},
+			mkm_name : "Nemesis",
+			mkm_id : 32
 		},
 		{
 			name : "Starter 2000",
@@ -738,7 +826,9 @@
 				it: 'Starter 2000',
 				es: 'Starter 2000',
 				pt: 'Starter 2000'
-			}
+			},
+			mkm_name : "Starter 2000",
+			mkm_id : 65
 		},
 		{
 			name : "Prophecy",
@@ -756,7 +846,9 @@
 				it: 'Profezia',
 				es: 'Profecía',
 				pt: 'Profecia'
-			}
+			},
+			mkm_name : "Prophecy",
+			mkm_id : 33
 		},
 		{
 			name : "Beatdown Box Set",
@@ -765,7 +857,9 @@
 			magicCardsInfoCode : "bd",
 			releaseDate : "2000-10-01",
 			border : "white",
-			type : "box"
+			type : "box",
+			mkm_name : "Beatdown",
+			mkm_id : 62
 		},
 		{
 			name : "Invasion",
@@ -783,7 +877,9 @@
 				it: 'Invasione',
 				es: 'Invasión',
 				pt: 'Invasão'
-			}
+			},
+			mkm_name : "Invasion",
+			mkm_id : 34
 		},
 		{
 			name : "Planeshift",
@@ -801,7 +897,9 @@
 				it: 'Congiunzione',
 				es: 'Transmigración',
 				pt: 'Conjunção'
-			}
+			},
+			mkm_name : "Planeshift",
+			mkm_id : 35
 		},
 		{
 			name : "Seventh Edition",
@@ -818,7 +916,9 @@
 				it: 'Settima Edizione',
 				es: 'Séptima Edición',
 				pt: 'Sétima Edição'
-			}
+			},
+			mkm_name : "Seventh Edition",
+			mkm_id : 37
 		},
 		{
 			name : "Magic Player Rewards",
@@ -846,7 +946,9 @@
 				it: 'Apocalisse',
 				es: 'Apocalipsis',
 				pt: 'Apocalipse'
-			}
+			},
+			mkm_name : "Apocalypse",
+			mkm_id : 36
 		},
 		{
 			name : "Odyssey",
@@ -865,7 +967,9 @@
 				it: 'Odissea',
 				es: 'Odisea',
 				pt: 'Odisséia'
-			}
+			},
+			mkm_name : "Odyssey",
+			mkm_id : 38
 		},
 		{
 			name : "Deckmasters",
@@ -873,7 +977,9 @@
 			magicCardsInfoCode : "dm",
 			releaseDate : "2001-12-01",
 			border : "white",
-			type : "box"
+			type : "box",
+			mkm_name : "Deckmasters",
+			mkm_id : 67
 		},
 		{
 			name : "Torment",
@@ -890,7 +996,9 @@
 				it: 'Tormento',
 				es: 'Tormento',
 				pt: 'Tormento'
-			}
+			},
+			mkm_name : "Torment",
+			mkm_id : 39
 		},
 		{
 			name : "Judgment",
@@ -907,7 +1015,9 @@
 				it: 'Sentenza',
 				es: 'Juicio',
 				pt: 'Julgamento'
-			}
+			},
+			mkm_name : "Judgment",
+			mkm_id : 40
 		},
 		{
 			name : "Onslaught",
@@ -924,7 +1034,9 @@
 				it: 'Assalto',
 				es: 'Embestida',
 				pt: 'Investida'
-			}
+			},
+			mkm_name : "Onslaught",
+			mkm_id : 41
 		},
 		{
 			name : "Legions",
@@ -941,7 +1053,9 @@
 				it: 'Legioni',
 				es: 'Legiones',
 				pt: 'Legiões'
-			}
+			},
+			mkm_name : "Legions",
+			mkm_id : 42
 		},
 		{
 			name : "Scourge",
@@ -958,7 +1072,9 @@
 				it: 'Flagello',
 				es: 'Azote',
 				pt: 'Flagelo'
-			}
+			},
+			mkm_name : "Scourge",
+			mkm_id : 43
 		},
 		{
 			name : "Release Events",
@@ -985,7 +1101,9 @@
 				it: 'Set base - Ottava Edizione',
 				es: 'Colección Básica - Octava Edición',
 				pt: 'Kit Básico - Oitava Edição'
-			}
+			},
+			mkm_name : "Eighth Edition",
+			mkm_id : 44
 		},
 		{
 			name : "Mirrodin",
@@ -1003,7 +1121,9 @@
 				es: 'Mirrodin',
 				pt: 'Mirrodin',
 				jp: 'ミラディン'
-			}
+			},
+			mkm_name : "Mirrodin",
+			mkm_id : 45
 		},
 		{
 			name : "Darksteel",
@@ -1022,7 +1142,9 @@
 				pt: 'Darksteel',
 				jp: 'ダークスティール',
 				cn: '玄铁'
-			}
+			},
+			mkm_name : "Darksteel",
+			mkm_id : 46
 		},
 		{
 			name : "Fifth Dawn",
@@ -1041,7 +1163,9 @@
 				pt: 'A Quinta Aurora',
 				jp: 'フィフス・ドーン',
 				cn: '五色曙光'
-			}
+			},
+			mkm_name : "Fifth Dawn",
+			mkm_id : 47
 		},
 		{
 			name : "Champions of Kamigawa",
@@ -1060,7 +1184,9 @@
 				pt: 'Campeões de Kamigawa',
 				jp: '神河物語',
 				cn: '神河群英录'
-			}
+			},
+			mkm_name : "Champions of Kamigawa",
+			mkm_id : 48
 		},
 		{
 			name : "Unhinged",
@@ -1069,7 +1195,9 @@
 			releaseDate : "2004-11-20",
 			border : "silver",
 			type : "un",
-			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land"]
+			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land"],
+			mkm_name : "Unhinged",
+			mkm_id : 59
 		},
 		{
 			name : "Betrayers of Kamigawa",
@@ -1088,7 +1216,9 @@
 				pt: 'Traidores de Kamigawa',
 				jp: '神河謀叛',
 				cn: '神河叛将谱'
-			}
+			},
+			mkm_name : "Betrayers of Kamigawa",
+			mkm_id : 51
 		},
 		{
 			name : "Saviors of Kamigawa",
@@ -1107,7 +1237,9 @@
 				pt: 'Salvadores Kamigawa',
 				jp: '神河救済',
 				cn: 'Saviors of Kamigawa'
-			}
+			},
+			mkm_name : "Saviors of Kamigawa",
+			mkm_id : 50
 		},
 		{
 			name : "Ninth Edition",
@@ -1129,7 +1261,9 @@
 				ru: 'Девятая редакция',
 				tw: 'Ninth Edition',
 				ko: 'Ninth Edition'
-			}
+			},
+			mkm_name : "Ninth Edition",
+			mkm_id : 49
 		},
 		{
 			name : "Ravnica: City of Guilds",
@@ -1149,7 +1283,9 @@
 				jp: 'ラブニカ：ギルドの都',
 				cn: '拉尼卡公会城',
 				ru: 'Равника: Город Гильдий'
-			}
+			},
+			mkm_name : "Ravnica: City of Guilds",
+			mkm_id : 55
 		},
 		{
 			name : "Two-Headed Giant Tournament",
@@ -1189,7 +1325,9 @@
 				jp: 'ギルドパクト',
 				cn: '十會盟',
 				ru: 'Договор Гильдий'
-			}
+			},
+			mkm_name : "Guildpact",
+			mkm_id : 54
 		},
 		{
 			name : "Champs and States",
@@ -1219,7 +1357,9 @@
 				jp: 'ディセンション',
 				cn: '纷争',
 				ru: 'Раскол'
-			}
+			},
+			mkm_name : "Dissension",
+			mkm_id : 53
 		},
 		{
 			name : "Coldsnap",
@@ -1239,7 +1379,9 @@
 				jp: 'コールドスナップ',
 				cn: '骤霜',
 				ru: 'Стужа'
-			}
+			},
+			mkm_name : "Coldsnap",
+			mkm_id : 52
 		},
 		{
 			name : "Coldsnap Theme Decks",
@@ -1254,7 +1396,9 @@
 			translations: {
 				de: 'Kälteeinbruch-Themendecks',
 				it: 'Coldsnap Theme Decks'
-			}
+			},
+			mkm_name : "Coldsnap Theme Decks",
+			mkm_id : 82
 		},
 		{
 			name : "Time Spiral",
@@ -1274,7 +1418,9 @@
 				jp: '時のらせん',
 				cn: 'Time Spiral',
 				ru: 'Спираль времени'
-			}
+			},
+			mkm_name : "Time Spiral",
+			mkm_id : 56
 		},
 		{
 			name : 'Time Spiral "Timeshifted"',
@@ -1284,16 +1430,19 @@
 			border : "black",
 			type : "expansion",
 			block : "Time Spiral",
+			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "timeshifted purple"],
 			translations: {
-				de: 'Zeitspirale Timeshifted',
-				fr: 'Spirale Temporelle Timeshifted',
-				it: 'Spirale Temporale Timeshifted',
-				es: 'Espiral del Tiempo Timeshifted',
-				pt: 'Time Spiral "Timeshifted"',
-				jp: '時のらせんのタイムシフト',
-				cn: 'Time Spiral "Timeshifted"',
-				ru: 'Спираль времени репринты'
-			}
+				de: 'Zeitspirale',
+				fr: 'Spirale Temporelle',
+				it: 'Spirale Temporale',
+				es: 'Espiral del Tiempo',
+				pt: 'Time Spiral',
+				jp: '時のらせん',
+				cn: 'Time Spiral',
+				ru: 'Спираль времени'
+			},
+			mkm_name : "Time Spiral",
+			mkm_id : 56
 		},
 		{
 			name : "Happy Holidays",
@@ -1304,7 +1453,9 @@
 			isMCISet : true,
 			releaseDate : "2006-12-31",
 			border : "silver",
-			type : "promo"
+			type : "promo",
+			mkm_name : "Happy Holidays Promos",
+			mkm_id : 1247
 		},
 		{
 			name : "Planar Chaos",
@@ -1324,7 +1475,9 @@
 				jp: '次元の混乱',
 				cn: '时空混沌',
 				ru: 'Вселенский Хаос'
-			}
+			},
+			mkm_name : "Planar Chaos",
+			mkm_id : 58
 		},
 		{
 			name : "Pro Tour",
@@ -1364,7 +1517,9 @@
 				jp: '未来予知',
 				cn: '预知将来',
 				ru: 'Взгляд в Будущее'
-			}
+			},
+			mkm_name : "Future Sight",
+			mkm_id : 70
 		},
 		{
 			name : "Tenth Edition",
@@ -1384,7 +1539,9 @@
 				cn: '第十版',
 				ru: 'Десятое Издание',
 				tw: 'Tenth Edition'
-			}
+			},
+			mkm_name : "Tenth Edition",
+			mkm_id : 74
 		},
 		{
 			name : "Magic Game Day",
@@ -1425,7 +1582,9 @@
 				cn: '洛温',
 				ru: 'Лорвин',
 				tw: 'Lorwyn'
-			}
+			},
+			mkm_name : "Lorwyn",
+			mkm_id : 84
 		},
 		{
 			name : "Duel Decks: Elves vs. Goblins",
@@ -1433,7 +1592,9 @@
 			magicCardsInfoCode : "evg",
 			releaseDate : "2007-11-16",
 			border : "black",
-			type : "duel deck"
+			type : "duel deck",
+			mkm_name : "Duel Decks: Elves vs. Goblins",
+			mkm_id : 91
 		},
 		{
 			name : "Launch Parties",
@@ -1463,7 +1624,9 @@
 				jp: 'モーニングタイド',
 				cn: '晨光',
 				ru: 'Рассвет'
-			}
+			},
+			mkm_name : "Morningtide",
+			mkm_id : 92
 		},
 		{
 			name : "15th Anniversary",
@@ -1492,8 +1655,10 @@
 				pt: 'Pântano Sombrio',
 				jp: 'シャドウムーア',
 				cn: '暗影荒原',
-				ru: 'Шэдоумур',
-			}
+				ru: 'Шэдоумур'
+			},
+			mkm_name : "Shadowmoor",
+			mkm_id : 95
 		},
 		{
 			name : "Summer of Magic",
@@ -1503,7 +1668,9 @@
 			isMCISet : true,
 			releaseDate : "2007-07-21",
 			border : "black",
-			type : "promo"
+			type : "promo",
+			mkm_name : "Summer Magic",
+			mkm_id : 76
 		},
 		{
 			name : "Eventide",
@@ -1523,7 +1690,9 @@
 				jp: 'イーブンタイド',
 				cn: '暮光',
 				ru: 'Сумерки'
-			}
+			},
+			mkm_name : "Eventide",
+			mkm_id : 99
 		},
 		{
 			name : "From the Vault: Dragons",
@@ -1531,7 +1700,9 @@
 			magicCardsInfoCode : "fvd",
 			releaseDate : "2008-08-29",
 			border : "black",
-			type : "from the vault"
+			type : "from the vault",
+			mkm_name : "From the Vault: Dragons",
+			mkm_id : 100
 		},
 		{
 			name : "Masters Edition II",
@@ -1571,7 +1742,9 @@
 				jp: 'アラーラの断片',
 				cn: '阿拉若断片',
 				ru: 'Осколки Алары'
-			}
+			},
+			mkm_name : "Shards of Alara",
+			mkm_id : 102
 		},
 		{
 			name : "Duel Decks: Jace vs. Chandra",
@@ -1583,7 +1756,9 @@
 			type : "duel deck",
 			translations: {
 				jp: 'Duel Decks: Jace vs. Chandra'
-			}
+			},
+			mkm_name : "Duel Decks: Jace vs. Chandra",
+			mkm_id : 104
 		},
 		{
 			name : "Conflux",
@@ -1604,7 +1779,9 @@
 				jp: 'コンフラックス',
 				cn: '聚流',
 				ru: 'Conflux'
-			}
+			},
+			mkm_name : "Conflux",
+			mkm_id : 106
 		},
 		{
 			name : "Duel Decks: Divine vs. Demonic",
@@ -1612,7 +1789,9 @@
 			magicCardsInfoCode : "dvd",
 			releaseDate : "2009-04-10",
 			border : "black",
-			type : "duel deck"
+			type : "duel deck",
+			mkm_name : "Duel Decks: Divine vs. Demonic",
+			mkm_id : 107
 		},
 		{
 			name : "Alara Reborn",
@@ -1632,7 +1811,9 @@
 				jp: 'アラーラ再誕',
 				cn: 'Alara Reborn',
 				ru: 'Alara Reborn'
-			}
+			},
+			mkm_name : "Alara Reborn",
+			mkm_id : 108
 		},
 		{
 			name : "Magic 2010",
@@ -1651,7 +1832,9 @@
 				jp: '基本セット2010',
 				cn: 'Magic 2010',
 				ru: 'Magic 2010'
-			}
+			},
+			mkm_name : "Magic 2010",
+			mkm_id : 109
 		},
 		{
 			name : "From the Vault: Exiled",
@@ -1660,7 +1843,9 @@
 			magicCardsInfoCode : "fve",
 			releaseDate : "2009-08-28",
 			border : "black",
-			type : "from the vault"
+			type : "from the vault",
+			mkm_name : "From the Vault: Exiled",
+			mkm_id : 112
 		},
 		{
 			name : "Planechase",
@@ -1669,7 +1854,9 @@
 			magicCardsInfoCode : "pch",
 			releaseDate : "2009-09-04",
 			border : "black",
-			type : "planechase"
+			type : "planechase",
+			mkm_name : "Planechase",
+			mkm_id : 113
 		},
 		{
 			name : "Masters Edition III",
@@ -1699,7 +1886,9 @@
 				jp: 'ゼンディカー',
 				cn: '赞迪卡',
 				ru: 'Zendikar'
-			}
+			},
+			mkm_name : "Zendikar",
+			mkm_id : 114
 		},
 		{
 			name : "Duel Decks: Garruk vs. Liliana",
@@ -1707,7 +1896,9 @@
 			magicCardsInfoCode : "gvl",
 			releaseDate : "2009-10-30",
 			border : "black",
-			type : "duel deck"
+			type : "duel deck",
+			mkm_name : "Duel Decks: Garruk vs. Liliana",
+			mkm_id : 115
 		},
 		{
 			name : "Premium Deck Series: Slivers",
@@ -1715,7 +1906,9 @@
 			magicCardsInfoCode : "pds",
 			releaseDate : "2009-11-20",
 			border : "black",
-			type : "premium deck"
+			type : "premium deck",
+			mkm_name : "Premium Deck Series: Slivers",
+			mkm_id : 116
 		},
 		{
 			name : "Worldwake",
@@ -1736,7 +1929,9 @@
 				cn: '天地醒转',
 				ru: 'Пробуждение Мира',
 				ko: 'Worldwake'
-			}
+			},
+			mkm_name : "Worldwake",
+			mkm_id : 118
 		},
 		{
 			name : "Duel Decks: Phyrexia vs. the Coalition",
@@ -1747,7 +1942,9 @@
 			type : "duel deck",
 			translations: {
 				jp: 'Duel Decks: Phyrexia vs. The Coalition'
-			}
+			},
+			mkm_name : "Duel Decks: Phyrexia vs. The Coalition",
+			mkm_id : 119
 		},
 		{
 			name : "Rise of the Eldrazi",
@@ -1767,7 +1964,9 @@
 				jp: 'エルドラージ覚醒',
 				cn: '奥札奇再起',
 				ru: 'Возрождение Эльдрази'
-			}
+			},
+			mkm_name : "Rise of the Eldrazi",
+			mkm_id : 120
 		},
 		{
 			name : "Duels of the Planeswalkers",
@@ -1775,7 +1974,9 @@
 			magicCardsInfoCode : "dpa",
 			releaseDate : "2010-06-04",
 			border : "black",
-			type : "box"
+			type : "box",
+			mkm_name : "Duels of the Planeswalkers Decks",
+			mkm_id : 1193
 		},
 		{
 			name : "Archenemy",
@@ -1783,7 +1984,9 @@
 			magicCardsInfoCode : "arc",
 			releaseDate : "2010-06-18",
 			border : "black",
-			type : "archenemy"
+			type : "archenemy",
+			mkm_name : "Archenemy",
+			mkm_id : 1194
 		},
 		{
 			name : "Magic 2011",
@@ -1803,7 +2006,9 @@
 				cn: 'Magic 2011',
 				ru: 'Magic 2011',
 				tw: 'Magic 2011'
-			}
+			},
+			mkm_name : "Magic 2011",
+			mkm_id : 1197
 		},
 		{
 			name : "From the Vault: Relics",
@@ -1811,7 +2016,9 @@
 			magicCardsInfoCode : "fvr",
 			releaseDate : "2010-08-27",
 			border : "black",
-			type : "from the vault"
+			type : "from the vault",
+			mkm_name : "From the Vault: Relics",
+			mkm_id : 1202
 		},
 		{
 			name : "Duel Decks: Elspeth vs. Tezzeret",
@@ -1826,7 +2033,9 @@
 				it: 'Duel Decks: Elspeth vs. Tezzeret',
 				es: 'Duel Decks: Elspeth vs. Tezzeret',
 				jp: 'Duel Decks: Elspeth vs. Tezzeret'
-			}
+			},
+			mkm_name : "Duel Decks: Elspeth vs. Tezzeret",
+			mkm_id : 1203
 		},
 		{
 			name : "Scars of Mirrodin",
@@ -1847,7 +2056,9 @@
 				cn: '秘罗地创痕',
 				ru: 'Шрамы Мирродина',
 				tw: '秘罗地创痕'
-			}
+			},
+			mkm_name : "Scars of Mirrodin",
+			mkm_id : 1206
 		},
 		{
 			name : "Premium Deck Series: Fire and Lightning",
@@ -1855,7 +2066,9 @@
 			magicCardsInfoCode : "pd2",
 			releaseDate : "2010-11-19",
 			border : "black",
-			type : "premium deck"
+			type : "premium deck",
+			mkm_name : "Premium Deck Series: Fire & Lightning",
+			mkm_id : 1218
 		},
 		{
 			name : "Masters Edition IV",
@@ -1886,7 +2099,9 @@
 				cn: '围攻秘罗地',
 				ru: 'Осада Мирродина',
 				tw: '围攻秘罗地'
-			}
+			},
+			mkm_name : "Mirrodin Besieged",
+			mkm_id : 1253
 		},
 		{
 			name : "Duel Decks: Knights vs. Dragons",
@@ -1901,7 +2116,9 @@
 				it: 'Duel Decks: Knights vs. Dragons',
 				es: 'Duel Decks: Knights vs. Dragons',
 				jp: 'Duel Decks: Knights vs. Dragons'
-			}
+			},
+			mkm_name : "Duel Decks: Knights vs. Dragons",
+			mkm_id : 1261
 		},
 		{
 			name : "New Phyrexia",
@@ -1922,7 +2139,9 @@
 				cn: '新非瑞克西亚',
 				ru: 'Новая Фирексия',
 				tw: '新非瑞克西亚'
-			}
+			},
+			mkm_name : "New Phyrexia",
+			mkm_id : 1262
 		},
 		{
 			name : "Magic: The Gathering-Commander",
@@ -1938,7 +2157,9 @@
 				it: 'Commander',
 				es: 'Commander',
 				jp: '統率者'
-			}
+			},
+			mkm_name : "Commander",
+			mkm_id : 1273
 		},
 		{
 			name : "Magic 2012",
@@ -1959,6 +2180,8 @@
 				ru: 'Базовый выпуск 2012',
 				tw: '核心系列2012'
 			},
+			mkm_name : "Magic 2012",
+			mkm_id : 1280
 		},
 		{
 			name : "From the Vault: Legends",
@@ -1967,7 +2190,9 @@
 			magicCardsInfoCode : "fvl",
 			releaseDate : "2011-08-26",
 			border : "black",
-			type : "from the vault"
+			type : "from the vault",
+			mkm_name : "From the Vault: Legends",
+			mkm_id : 1286
 		},
 		{
 			name : "Duel Decks: Ajani vs. Nicol Bolas",
@@ -1981,7 +2206,9 @@
 				fr: 'Duel Decks: Ajani vs. Nicol Bolas',
 				it: 'Duel Decks: Ajani vs. Nicol Bolas',
 				es: 'Duel Decks: Ajani vs. Nicol Bolas'
-			}
+			},
+			mkm_name : "Duel Decks: Ajani vs. Nicol Bolas",
+			mkm_id : 1288
 		},
 		{
 			name : "Innistrad",
@@ -2002,7 +2229,9 @@
 				cn: '依尼翠',
 				ru: 'Innistrad',
 				tw: '依尼翠'
-			}
+			},
+			mkm_name : "Innistrad",
+			mkm_id : 1327
 		},
 		{
 			name : "Premium Deck Series: Graveborn",
@@ -2010,7 +2239,9 @@
 			magicCardsInfoCode : "pd3",
 			releaseDate : "2011-11-18",
 			border : "black",
-			type : "premium deck"
+			type : "premium deck",
+			mkm_name : "Premium Deck Series: Graveborn",
+			mkm_id : 1337
 		},
 		{
 			name : "Dark Ascension",
@@ -2032,7 +2263,9 @@
 				ru: 'Возвышение Мрака',
 				tw: '黑影籠罩',
 				ko: '어둠의 강림'
-			}
+			},
+			mkm_name : "Dark Ascension",
+			mkm_id : 1345
 		},
 		{
 			name : "Duel Decks: Venser vs. Koth",
@@ -2043,7 +2276,9 @@
 			type : "duel deck",
 			translations: {
 				jp: 'デュエルデッキ：ヴェンセール vs. コス'
-			}
+			},
+			mkm_name : "Duel Decks: Venser vs. Koth",
+			mkm_id : 1350
 		},
 		{
 			name : "Avacyn Restored",
@@ -2065,7 +2300,9 @@
 				ru: 'Возвращение Авацины',
 				tw: '艾維欣重臨',
 				ko: '아바신의 귀환'
-			}
+			},
+			mkm_name : "Avacyn Restored",
+			mkm_id : 1358
 		},
 		{
 			name : "Planechase 2012 Edition",
@@ -2080,7 +2317,9 @@
 				it: 'Planechase 2012 Edition',
 				es: 'Planechase 2012 Edition',
 				jp: 'プレインチェイス2012'
-			}
+			},
+			mkm_name : "Planechase 2012",
+			mkm_id : 1369
 		},
 		{
 			name : "Magic 2013",
@@ -2101,7 +2340,9 @@
 				ru: 'Базовый выпуск 2013',
 				tw: '核心系列2013',
 				ko: '매직2013'
-			}
+			},
+			mkm_name : "Magic 2013",
+			mkm_id : 1388
 		},
 		{
 			name : "From the Vault: Realms",
@@ -2110,7 +2351,9 @@
 			magicCardsInfoCode : "v12",
 			releaseDate : "2012-08-31",
 			border : "black",
-			type : "from the vault"
+			type : "from the vault",
+			mkm_name : "From the Vault: Realms",
+			mkm_id : 1397
 		},
 		{
 			name : "Duel Decks: Izzet vs. Golgari",
@@ -2121,7 +2364,9 @@
 			type : "duel deck",
 			translations: {
 				jp: 'デュエルデッキ：イゼット vs. ゴルガリ'
-			}
+			},
+			mkm_name : "Duel Decks: Izzet vs. Golgari",
+			mkm_id : 1398
 		},
 		{
 			name : "Return to Ravnica",
@@ -2143,7 +2388,9 @@
 				ru: 'Возвращение в Равнику',
 				tw: '再訪拉尼卡',
 				ko: '라브니카로의 귀환'
-			}
+			},
+			mkm_name : "Return to Ravnica",
+			mkm_id : 1389
 		},
 		{
 			name : "Commander's Arsenal",
@@ -2152,7 +2399,9 @@
 			magicCardsInfoCode : "cma",
 			releaseDate : "2012-11-02",
 			border : "black",
-			type : "commander"
+			type : "commander",
+			mkm_name : "Commander's Arsenal",
+			mkm_id : 1418
 		},
 		{
 			name : "Gatecrash",
@@ -2174,7 +2423,9 @@
 				ru: 'Незваные Гости',
 				tw: '兵臨古城',
 				ko: '충돌의 관문'
-			}
+			},
+			mkm_name : "Gatecrash",
+			mkm_id : 1424
 		},
 		{
 			name : "Duel Decks: Sorin vs. Tibalt",
@@ -2185,7 +2436,9 @@
 			type : "duel deck",
 			translations: {
 				jp: 'Duel Decks: Sorin vs. Tibalt'
-			}
+			},
+			mkm_name : "Duel Decks: Sorin vs. Tibalt",
+			mkm_id : 1430
 		},
 		{
 			name : "World Magic Cup Qualifiers",
@@ -2217,7 +2470,9 @@
 				ru: 'Лабиринт Дракона',
 				tw: '巨龍迷城',
 				ko: '용의 미로'
-			}
+			},
+			mkm_name : "Dragon's Maze",
+			mkm_id : 1435
 		},
 		{
 			name : "Modern Masters",
@@ -2226,7 +2481,9 @@
 			releaseDate : "2013-06-07",
 			border : "black",
 			type : "reprint",
-			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", ["foil mythic rare", "foil rare", "foil uncommon", "foil common"]]
+			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", ["foil mythic rare", "foil rare", "foil uncommon", "foil common"]],
+			mkm_name : "Modern Masters",
+			mkm_id : 1444
 		},
 		{
 			name : "Magic 2014 Core Set",
@@ -2248,6 +2505,8 @@
 				tw: '万智牌2014核心系列',
 				ko: '매직 2014 코어세트'
 			},
+			mkm_name : "Magic 2014",
+			mkm_id : 1449
 		},
 		{
 			name : "From the Vault: Twenty",
@@ -2255,7 +2514,9 @@
 			magicCardsInfoCode : "v13",
 			releaseDate : "2013-08-23",
 			border : "black",
-			type : "from the vault"
+			type : "from the vault",
+			mkm_name : "From the Vault: Twenty",
+			mkm_id : 1455
 		},
 		{
 			name : "Duel Decks: Heroes vs. Monsters",
@@ -2266,7 +2527,9 @@
 			type : "duel deck",
 			translations: {
 				jp: 'Duel Decks: Heroes vs. Monsters'
-			}
+			},
+			mkm_name : "Duel Decks: Heroes vs. Monsters",
+			mkm_id : 1456
 		},
 		{
 			name : "Theros",
@@ -2288,7 +2551,9 @@
 				ru: 'Theros',
 				tw: 'Theros',
 				ko: 'Theros'
-			}
+			},
+			mkm_name : "Theros",
+			mkm_id : 1457
 		},
 		{
 			name : "Commander 2013 Edition",
@@ -2303,7 +2568,9 @@
 				it: 'Commander 2013 Edition',
 				es: 'Commander 2013 Edition',
 				jp: '統率者(2013年版)'
-			}
+			},
+			mkm_name : "Commander 2013",
+			mkm_id : 1464
 		},
 		{
 			name : "Born of the Gods",
@@ -2325,7 +2592,9 @@
 				ru: 'Порождения Богов',
 				tw: '天神創生',
 				ko: '신들의 피조물'
-			}
+			},
+			mkm_name : "Born of the Gods",
+			mkm_id : 1469
 		},
 		{
 			name : "Duel Decks: Jace vs. Vraska",
@@ -2336,7 +2605,9 @@
 			type : "duel deck",
 			translations: {
 				jp: 'Duel Decks: Jace vs. Vraska'
-			}
+			},
+			mkm_name : "Duel Decks: Jace vs. Vraska",
+			mkm_id : 1477
 		},
 		{
 			name : "Journey into Nyx",
@@ -2358,7 +2629,9 @@
 				ru: 'Путешествие в Никс',
 				tw: '尼茲之旅',
 				ko: '닉스로 가는 길'
-			}
+			},
+			mkm_name : "Journey into Nyx",
+			mkm_id : 1481
 		},
 		{
 			name : "Modern Event Deck 2014",
@@ -2366,7 +2639,9 @@
 			magicCardsInfoCode : "md1",
 			releaseDate : "2014-05-30",
 			border : "black",
-			type : "box"
+			type : "box",
+			mkm_name : "Modern Event Deck 2014",
+			mkm_id : 1484
 		},
 		{
 			name : "Magic: The Gathering—Conspiracy",
@@ -2379,7 +2654,9 @@
 			translations: {
 				jp: 'Conspiracy',
 				cn: 'Conspiracy'
-			}
+			},
+			mkm_name : "Conspiracy",
+			mkm_id : 1483
 		},
 		{
 			name : "Vintage Masters",
@@ -2410,7 +2687,9 @@
 				ru: 'Magic 2015',
 				tw: 'Magic 2015',
 				ko: 'Magic 2015'
-			}
+			},
+			mkm_name : "Magic 2015",
+			mkm_id : 1485
 		},
 		{
 			name : "Clash Pack",
@@ -2419,7 +2698,9 @@
 			magicCardsInfoCode : "clash",
 			releaseDate : "2014-07-18",
 			border : "black",
-			type : "starter"
+			type : "starter",
+			mkm_name : "Clash Pack Promos",
+			mkm_id : 1490
 		},
 		{
 			name : "From the Vault: Annihilation (2014)",
@@ -2427,7 +2708,9 @@
 			magicCardsInfoCode : "v14",
 			releaseDate : "2014-08-22",
 			border : "black",
-			type : "from the vault"
+			type : "from the vault",
+			mkm_name : "From the Vault: Annihilation",
+			mkm_id : 1494
 		},
 		{
 			name : "Duel Decks: Speed vs. Cunning",
@@ -2438,7 +2721,9 @@
 			type : "duel deck",
 			translations: {
 				jp: 'Duel Decks: Speed vs. Cunning'
-			}
+			},
+			mkm_name : "Duel Decks: Speed vs. Cunning",
+			mkm_id : 1496
 		},
 		{
 			name : "Khans of Tarkir",
@@ -2461,7 +2746,9 @@
 				ru: 'Ханы Таркира',
 				tw: '韃契可汗',
 				ko: '타르커의 칸'
-			}
+			},
+			mkm_name : "Khans of Tarkir",
+			mkm_id : 1495
 		},
 		{
 			name : "Commander 2014",
@@ -2478,7 +2765,9 @@
 				es: 'Commander 2014 Edition',
 				jp: 'Commander 2014 Edition',
 				cn: 'Commander 2014 Edition'
-			}
+			},
+			mkm_name : "Commander 2014",
+			mkm_id : 1513
 		},
 		{
 			name : "Duel Decks Anthology, Divine vs. Demonic",
@@ -2486,7 +2775,9 @@
 			magicCardsInfoCode : "ddadvd",
 			releaseDate : "2014-12-05",
 			border : "black",
-			type : "duel deck"
+			type : "duel deck",
+			mkm_name : "Duel Decks: Divine vs. Demonic",
+			mkm_id : 107
 		},
 		{
 			name : "Duel Decks Anthology, Elves vs. Goblins",
@@ -2494,7 +2785,9 @@
 			magicCardsInfoCode : "ddaevg",
 			releaseDate : "2014-12-05",
 			border : "black",
-			type : "duel deck"
+			type : "duel deck",
+			mkm_name : "Duel Decks: Elves vs. Goblins",
+			mkm_id : 91
 		},
 		{
 			name : "Duel Decks Anthology, Garruk vs. Liliana",
@@ -2502,7 +2795,9 @@
 			magicCardsInfoCode : "ddagvl",
 			releaseDate : "2014-12-05",
 			border : "black",
-			type : "duel deck"
+			type : "duel deck",
+			mkm_name : "Duel Decks: Garruk vs. Liliana",
+			mkm_id : 115
 		},
 		{
 			name : "Duel Decks Anthology, Jace vs. Chandra",
@@ -2510,7 +2805,9 @@
 			magicCardsInfoCode : "ddajvc",
 			releaseDate : "2014-12-05",
 			border : "black",
-			type : "duel deck"
+			type : "duel deck",
+			mkm_name : "Duel Decks: Jace vs. Chandra",
+			mkm_id : 104
 		},
 		{
 			name : "Ugin's Fate promos",
@@ -2530,7 +2827,9 @@
 				ru: 'Ugin\'s Fate',
 				tw: 'Ugin\'s Fate',
 				ko: 'Ugin\'s Fate'
-			}
+			},
+			mkm_name : "Ugin's Fate Promos",
+			mkm_id : 1587
 		},
 		{
 			name : "Fate Reforged",
@@ -2553,7 +2852,9 @@
 				ru: 'Перекованная Судьба',
 				tw: '龍命殊途',
 				ko: '재창조된 운명'
-			}
+			},
+			mkm_name : "Fate Reforged",
+			mkm_id : 1522
 		},
 		{
 			name : "Duel Decks: Elspeth vs. Kiora",
@@ -2564,7 +2865,9 @@
 			type : "duel deck",
 			translations: {
 				jp: 'デュエルデッキ: エルズペスVSキオーラ'
-			}
+			},
+			mkm_name : "Duel Decks: Elspeth vs. Kiora",
+			mkm_id : 1593
 		},
 		{
 			name : "Dragons of Tarkir",
@@ -2587,7 +2890,9 @@
 				ru: 'Драконы Таркира',
 				tw: '韃契龍王',
 				ko: '타르커의 용'
-			}
+			},
+			mkm_name : "Dragons of Tarkir",
+			mkm_id : 1601
 		},
 		{
 			name : "Tempest Remastered",
@@ -2597,7 +2902,9 @@
 			border : "black",
 			type : "reprint",
 			onlineOnly : true,
-			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land"]
+			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land"],
+			mkm_name : "Tempest",
+			mkm_id : 19
 		},
 		{
 			name : "Modern Masters 2015 Edition",
@@ -2610,7 +2917,9 @@
 			translations: {
 				jp: 'Modern Masters 2015 Edition',
 				cn: 'Modern Masters 2015 Edition'
-			}
+			},
+			mkm_name : "Modern Masters 2015",
+			mkm_id : 1641
 		},
 		{
 			name : "Magic Origins",
@@ -2632,7 +2941,9 @@
 				ru: 'Magic: Истоки',
 				tw: '魔法風雲會：起源',
 				ko: '매직의 기원'
-			}
+			},
+			mkm_name : "Magic Origins",
+			mkm_id : 1652
 		},
 		{
 			name : "From the Vault: Angels",
@@ -2640,7 +2951,9 @@
 			magicCardsInfoCode : "v15",
 			releaseDate : "2015-08-21",
 			border : "black",
-			type : "from the vault"
+			type : "from the vault",
+			mkm_name : "From the Vault: Angels",
+			mkm_id : 1661
 		},
 		{
 			name : "Duel Decks: Zendikar vs. Eldrazi",
@@ -2651,7 +2964,9 @@
 			type : "duel deck",
 			translations: {
 				jp: 'Duel Decks: Zendikar vs. Eldrazi'
-			}
+			},
+			mkm_name : "Duel Decks: Zendikar vs. Eldrazi",
+			mkm_id : 1663
 		},
 		{
 			name : "Battle for Zendikar",
@@ -2664,17 +2979,19 @@
 			block : "Battle for Zendikar",
 			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"],
 			translations: {
-				de: "Kampf um Zendikar",
-				fr: "La bataille de Zendikar",
-				it: "Battaglia per Zendikar",
-				es: "La batalla por Zendikar",
-				pt: "Batalha por Zendikar",
-				jp: "戦乱のゼンディカー",
-				cn: "再战赞迪卡",
-				ru: "Битва за Зендикар",
-				tw: "再戰贊迪卡",
-				ko: "젠디카르 전투"
-			}
+				de: 'Kampf um Zendikar',
+				fr: 'La bataille de Zendikar',
+				it: 'Battaglia per Zendikar',
+				es: 'La batalla por Zendikar',
+				pt: 'Batalha por Zendikar',
+				jp: '戦乱のゼンディカー',
+				cn: '再战赞迪卡',
+				ru: 'Битва за Зендикар',
+				tw: '再戰贊迪卡',
+				ko: '젠디카르 전투'
+			},
+			mkm_name : "Battle for Zendikar",
+			mkm_id : 1668
 		},
 		{
 			name : "Zendikar Expeditions",
@@ -2682,7 +2999,9 @@
 			magicCardsInfoCode : "exp",
 			releaseDate : "2015-10-02",
 			border : "black",
-			type : "promo"
+			type : "promo",
+			mkm_name : "Zendikar Expeditions",
+			mkm_id : 1669
 		},
 		{
 			name : "Commander 2015",
@@ -2698,7 +3017,9 @@
 				es: 'Commander 2015',
 				jp: 'Commander 2015',
 				cn: 'Commander 2015'
-			}
+			},
+			mkm_name : "Commander 2015",
+			mkm_id : 1679
 		}
 	];
 
@@ -2706,8 +3027,8 @@
 
 	exports.NON_GATHERER_SET_CARD_LISTS =
 	{
-		ATH : ["Aesthir Glider", "Armageddon", "Armored Pegasus", "Benalish Knight", "Black Knight", "Brushland", "Canopy Spider", "Carnivorous Plant", "Combat Medic", "Cuombajj Witches", "Disenchant", "Drifting Meadow", "Erhnam Djinn", "Feast of the Unicorn", "Fireball", "Forest", "Freewind Falcon", "Giant Growth", "Giant Spider", "Goblin Balloon Brigade", "Goblin Digging Team", "Goblin Grenade", "Goblin Hero", "Goblin King", "Goblin Matron", "Goblin Mutant", "Goblin Offensive", "Goblin Recruiter", "Goblin Snowman", "Goblin Tinkerer", "Goblin Vandal", "Goblin Warrens", "Gorilla Chieftain", "Hurricane", "Hymn to Tourach", "Hypnotic Specter", "Icatian Javelineers", "Ihsan's Shade", "Infantry Veteran", "Jalum Tome", "Knight of Stromgald", "Lady Orca", "Lightning Bolt", "Llanowar Elves", "Mirri, Cat Warrior", "Mogg Fanatic", "Mogg Flunkies", "Mogg Raider", "Mountain", "Nevinyrral's Disk", "Order of the White Shield", "Overrun", "Pacifism", "Pegasus Charger", "Pegasus Stampede", "Pendelhaven", "Plains", "Polluted Mire", "Pyrokinesis", "Pyrotechnics", "Raging Goblin", "Ranger en-Vec", "Sacred Mesa", "Samite Healer", "Scavenger Folk", "Serra Angel", "Serrated Arrows", "Slippery Karst", "Smoldering Crater", "Spectral Bears", "Strip Mine", "Swamp", "Swords to Plowshares", "Terror", "Unholy Strength", "Uthden Troll", "Volcanic Dragon", "Warrior's Honor", "White Knight", "Woolly Spider", "Youthful Knight" ],
-		ITP : ["Alabaster Potion", "Battering Ram", "Bog Imp", "Bog Wraith", "Circle of Protection: Black", "Circle of Protection: Red", "Clockwork Beast", "Cursed Land", "Dark Ritual", "Detonate", "Disintegrate", "Durkwood Boars", "Elven Riders", "Elvish Archers", "Energy Flux", "Feedback", "Fireball", "Forest", "Glasses of Urza", "Grizzly Bears", "Healing Salve", "Hill Giant", "Ironclaw Orcs", "Island", "Jayemdae Tome", "Lost Soul", "Merfolk of the Pearl Trident", "Mesa Pegasus", "Mons's Goblin Raiders", "Mountain", "Murk Dwellers", "Orcish Artillery", "Orcish Oriflamme", "Pearled Unicorn", "Phantom Monster", "Plains", "Power Sink", "Pyrotechnics", "Raise Dead", "Reverse Damage", "Rod of Ruin", "Scathe Zombies", "Sorceress Queen", "Swamp", "Terror", "Twiddle", "Unsummon", "Untamed Wilds", "Vampire Bats", "Wall of Bone", "War Mammoth", "Warp Artifact", "Weakness", "Whirling Dervish", "Winter Blast", "Zephyr Falcon", "Scryb Sprites" ],
+		ATH : ["Aesthir Glider", "Armageddon", "Armored Pegasus", "Benalish Knight", "Black Knight", "Brushland", "Canopy Spider", "Carnivorous Plant", "Combat Medic", "Cuombajj Witches", "Disenchant", "Drifting Meadow", "Erhnam Djinn", "Feast of the Unicorn", "Fireball", "Forest", "Freewind Falcon", "Giant Growth", "Giant Spider", "Goblin Balloon Brigade", "Goblin Digging Team", "Goblin Grenade", "Goblin Hero", "Goblin King", "Goblin Matron", "Goblin Mutant", "Goblin Offensive", "Goblin Recruiter", "Goblin Snowman", "Goblin Tinkerer", "Goblin Vandal", "Goblin Warrens", "Gorilla Chieftain", "Hurricane", "Hymn to Tourach", "Hypnotic Specter", "Icatian Javelineers", "Ihsan's Shade", "Infantry Veteran", "Jalum Tome", "Knight of Stromgald", "Lady Orca", "Lightning Bolt", "Llanowar Elves", "Mirri, Cat Warrior", "Mogg Fanatic", "Mogg Flunkies", "Mogg Raider", "Mountain", "Nevinyrral's Disk", "Order of the White Shield", "Overrun", "Pacifism", "Pegasus Charger", "Pegasus Stampede", "Pendelhaven", "Plains", "Polluted Mire", "Pyrokinesis", "Pyrotechnics", "Raging Goblin", "Ranger en-Vec", "Sacred Mesa", "Samite Healer", "Scavenger Folk", "Serra Angel", "Serrated Arrows", "Slippery Karst", "Smoldering Crater", "Spectral Bears", "Strip Mine", "Swamp", "Swords to Plowshares", "Terror", "Unholy Strength", "Uthden Troll", "Volcanic Dragon", "Warrior's Honor", "White Knight", "Woolly Spider", "Youthful Knight"],
+		ITP : ["Alabaster Potion", "Battering Ram", "Bog Imp", "Bog Wraith", "Circle of Protection: Black", "Circle of Protection: Red", "Clockwork Beast", "Cursed Land", "Dark Ritual", "Detonate", "Disintegrate", "Durkwood Boars", "Elven Riders", "Elvish Archers", "Energy Flux", "Feedback", "Fireball", "Forest", "Glasses of Urza", "Grizzly Bears", "Healing Salve", "Hill Giant", "Ironclaw Orcs", "Island", "Jayemdae Tome", "Lost Soul", "Merfolk of the Pearl Trident", "Mesa Pegasus", "Mons's Goblin Raiders", "Mountain", "Murk Dwellers", "Orcish Artillery", "Orcish Oriflamme", "Pearled Unicorn", "Phantom Monster", "Plains", "Power Sink", "Pyrotechnics", "Raise Dead", "Reverse Damage", "Rod of Ruin", "Scathe Zombies", "Sorceress Queen", "Swamp", "Terror", "Twiddle", "Unsummon", "Untamed Wilds", "Vampire Bats", "Wall of Bone", "War Mammoth", "Warp Artifact", "Weakness", "Whirling Dervish", "Winter Blast", "Zephyr Falcon", "Scryb Sprites"],
 		DKM : ["Abyssal Specter", "Balduvian Bears", "Balduvian Horde", "Barbed Sextant", "Bounty of the Hunt", "Contagion", "Dark Banishing", "Dark Ritual", "Death Spark", "Elkin Bottle", "Elvish Bard", "Folk of the Pines", "Forest", "Forest", "Forest", "Foul Familiar", "Fyndhorn Elves", "Giant Growth", "Giant Trap Door Spider", "Goblin Mutant", "Guerrilla Tactics", "Hurricane", "Icy Manipulator", "Incinerate", "Jokulhaups", "Karplusan Forest", "Lava Burst", "Lhurgoyf", "Mountain", "Mountain", "Mountain", "Necropotence", "Orcish Cannoneers", "Phantasmal Fiend", "Phyrexian War Beast", "Pillage", "Pyroclasm", "Shatter", "Soul Burn", "Storm Shaman", "Sulfurous Springs", "Swamp", "Swamp", "Swamp", "Underground River", "Walking Wall", "Woolly Spider", "Yavimaya Ancients", "Yavimaya Ants", "Lim-Dûl's High Guard"],
 		RQS : ["Alabaster Potion", "Battering Ram", "Bog Imp", "Bog Wraith", "Circle of Protection: Black", "Circle of Protection: Red", "Clockwork Beast", "Cursed Land", "Dark Ritual", "Detonate", "Disintegrate", "Durkwood Boars", "Elven Riders", "Elvish Archers", "Energy Flux", "Feedback", "Fireball", "Forest", "Glasses of Urza", "Grizzly Bears", "Healing Salve", "Hill Giant", "Ironclaw Orcs", "Island", "Jayemdae Tome", "Lost Soul", "Merfolk of the Pearl Trident", "Mesa Pegasus", "Mons's Goblin Raiders", "Mountain", "Murk Dwellers", "Orcish Artillery", "Orcish Oriflamme", "Pearled Unicorn", "Plains", "Power Sink", "Pyrotechnics", "Raise Dead", "Reverse Damge", "Rod of Ruin", "Scath Zombies", "Scryb Sprites", "Sorceress Queen", "Swamp", "Terror", "Twiddle", "Unsummon", "Untamed Wilds", "Vampire Bats", "Wall of Bone", "War Mammoth", "Warp Artifact", "Weakness", "Whirling Dervish", "Winter Blast", "Zephyr Falcon"],
 		DPA : ["Abyssal Specter", "Act of Treason", "Air Elemental", "Ascendant Evincar", "Banefire", "Blanchwood Armor", "Blaze", "Bloodmark Mentor", "Boomerang", "Cancel", "Cinder Pyromancer", "Civic Wayfinder", "Cloud Sprite", "Coat of Arms", "Consume Spirit", "Counterbore", "Crowd of Cinders", "Deluge", "Demon's Horn", "Denizen of the Deep", "Dragon's Claw", "Drove of Elves", "Drudge Skeletons", "Dusk Imp", "Duskdale Wurm", "Earth Elemental", "Elven Riders", "Elvish Champion", "Elvish Eulogist", "Elvish Promenade", "Elvish Visionary", "Elvish Warrior", "Enrage", "Essence Drain", "Essence Scatter", "Evacuation", "Eyeblight's Ending", "Forest", "Forest", "Forest", "Forest", "Furnace of Rath", "Gaea's Herald", "Giant Growth", "Giant Spider", "Goblin Piker", "Goblin Sky Raider", "Greenweaver Druid", "Hill Giant", "Howl of the Night Pack", "Immaculate Magistrate", "Imperious Perfect", "Incinerate", "Island", "Island", "Island", "Island", "Jagged-Scar Archers", "Kamahl, Pit Fighter", "Kraken's Eye", "Lightning Elemental", "Loxodon Warhammer", "Lys Alana Huntmaster", "Mahamoti Djinn", "Megrim", "Mind Control", "Mind Rot", "Mind Shatter", "Mind Spring", "Molimo, Maro-Sorcerer", "Moonglove Winnower", "Mortivore", "Mountain", "Mountain", "Mountain", "Mountain", "Natural Spring", "Naturalize", "Nature's Spiral", "Negate", "Overrun", "Phantom Warrior", "Prodigal Pyromancer", "Rage Reflection", "Rampant Growth", "Ravenous Rats", "River Boa", "Roughshod Mentor", "Runeclaw Bear", "Sengir Vampire", "Severed Legion", "Shivan Dragon", "Shock", "Snapping Drake", "Spined Wurm", "Swamp", "Swamp", "Swamp", "Swamp", "Talara's Battalion", "Terror", "The Rack", "Thieving Magpie", "Trained Armodon", "Troll Ascetic", "Underworld Dreams", "Unholy Strength", "Unsummon", "Verdant Force", "Vigor", "Wall of Spears", "Wall of Wood", "Wurm's Tooth"]

@@ -99,7 +99,7 @@ exports.buildMultiverseLanguagesURL = function(multiverseid)
 	if(!multiverseid)
 		throw new Error("Invalid multiverseid");
 
-	var urlConfig = 
+	var urlConfig =
 	{
 		protocol : "http",
 		host     : "gatherer.wizards.com",
@@ -115,7 +115,7 @@ exports.buildMultiverseURL = function(multiverseid, part)
 	if(!multiverseid)
 		throw new Error("Invalid multiverseid");
 
-	var urlConfig = 
+	var urlConfig =
 	{
 		protocol : "http",
 		host     : "gatherer.wizards.com",
@@ -137,7 +137,7 @@ exports.buildMultiverseLegalitiesURL = function(multiverseid)
 	if(!multiverseid)
 		throw new Error("Invalid multiverseid");
 
-	var urlConfig = 
+	var urlConfig =
 	{
 		protocol : "http",
 		host     : "gatherer.wizards.com",
@@ -153,7 +153,7 @@ exports.buildMultiversePrintingsURL = function(multiverseid, page)
 	if(!multiverseid)
 		throw new Error("Invalid multiverseid");
 
-	var urlConfig = 
+	var urlConfig =
 	{
 		protocol : "http",
 		host     : "gatherer.wizards.com",
@@ -166,7 +166,7 @@ exports.buildMultiversePrintingsURL = function(multiverseid, page)
 
 exports.buildListingsURL = function(setName, page)
 {
-	var urlConfig = 
+	var urlConfig =
 	{
 		protocol : "http",
 		host     : "gatherer.wizards.com",
@@ -254,21 +254,21 @@ exports.performSetCorrections = function(setCorrections, fullSet)
 					if(setCorrection.replace)
 					{
 						Object.forEach(setCorrection.replace, function(key, value)
-							{ 
+							{
 								if(Object.isObject(value))
 								{
 									if(!card.hasOwnProperty(key))
 										return;
-									
+
 									Object.forEach(value, function(findText, replaceWith) { card[key] = card[key].replaceAll(findText, replaceWith); });
 								}
 								else
 								{
-									card[key] = value; 
+									card[key] = value;
 								}
 							});
 					}
-					
+
 					if(setCorrection.remove)
 						setCorrection.remove.forEach(function(removeKey) { delete card[removeKey]; });
 
@@ -306,7 +306,7 @@ exports.performSetCorrections = function(setCorrections, fullSet)
 								card.legalities.push({format:legalityType,legality:legalityValue});
 						});
 					}
-					
+
 					if(setCorrection.deleteLegality && card.hasOwnProperty("legalities"))
 						card.legalities = card.legalities.filter(function(cardLegality) { return !setCorrection.deleteLegality.contains(cardLegality.format); });
 
@@ -503,7 +503,7 @@ function finalizePrintings(card)
 {
 	if(!card.printings)
 		return;
-	
+
 	card.printings = card.printings.unique().multiSort([function(item) { return moment(getReleaseDateForSetCode(item), "YYYY-MM-DD").unix(); },
 														function(item) { return item; }]);
 }
@@ -586,10 +586,10 @@ exports.buildCacheFileURLs = function(card, cacheType, cb, fromCache)
 		{
 			if(err)
 				throw err;
-			
+
 			if(!urls || !urls.length)
 				throw new Error("No URLs for: %s %s", cacheType, card.multiverseid);
-			
+
 			if(urls.some(function(url) { return url.length===0; }))
 				throw new Error("Invalid urls for: %s %s [%s]", cacheType, card.multiverseid, urls.join(", "));
 
@@ -658,7 +658,7 @@ exports.getURLAsDoc = function(targetURL, cb, retryCount)
 				retryCount = retryCount||0;
 				if(retryCount>3)
 					throw new Error("Invalid pageHTML for " + cachePath + " (" + targetURL + ")");
-	
+
 				base.error("FAILED DOWNLOADING (%s), TRYING AGAIN RETRY %d", targetURL, retryCount);
 				return exports.getURLAsDoc(targetURL, cb, retryCount+1);
 			}
@@ -753,9 +753,20 @@ exports.updateStandardForCard = function(card) {
 	}
 };
 
+/**
+ * saveSet() prepares and saves a given set to a file.
+ * 1.    Each card is sorted by the following criteria:
+ * 1.1   If they both have a number, they are compared and sorted accordingly.
+ * 1.1.1 If the number exists and is the same, compare multiverseIDs
+ * 1.2   If there are no numbers, compare the names.
+ * 2.    The foreignNames array is sorted by the language name
+ * 3.    The legalities are sorted by format name
+ * 4.    Each key value of the card is sorted.
+ *
+ * 99. Finally, the file is saved to the <ROOT>/json/<SETNAME>.json file.
+ */
 exports.saveSet = function(set, callback) {
-	//var start = new Date().getMilliseconds();
-	// Sort cards
+	// 1. Sort cards
 	set.cards.sort(function(a, b) {
 		if (a.number && b.number) {
 			var ret = exports.alphanum(a.number, b.number);
@@ -764,12 +775,12 @@ exports.saveSet = function(set, callback) {
 			return(ret);
 		}
 
-		a.name.localeCompare(b.name);
+		return(a.name.localeCompare(b.name));
 	});
 
 	// Sort internal card stuff
 	set.cards.forEach(function(card) {
-		// Foreign Names
+		// 2. Foreign Names
 		if (card.foreignNames)
 			card.foreignNames.sort(function(a, b){
 				var ret = a.language.localeCompare(b.language)
@@ -779,13 +790,13 @@ exports.saveSet = function(set, callback) {
 				return(ret);
 			});
 
-		// Legalities
+		// 3. Legalities
 		if (card.legalities)
 			card.legalities.sort(function(a, b){
 				return(a.format.localeCompare(b.format));
 			});
 
-		// Sort card properties
+		// 4. Sort card properties
 		Object.keys(card).sort().forEach(function(key) {
 			var value = card[key];
 			delete card[key];
@@ -793,12 +804,8 @@ exports.saveSet = function(set, callback) {
 		});
 	});
 
-	//var end = new Date().getMilliseconds();
-	//var time = end - start;
-	//base.info("Added overhead: %d milliseconds.", time);
-
-	var fn = path.join(__dirname, "..", "json", set.code + ".json");
-	fs.writeFile(fn, JSON.stringify(set, null, '  '), {encoding:"utf8"}, callback);	
+	// 99. Save the file on the proper path
+	fs.writeFile(path.join(__dirname, "..", "json", set.code + ".json"), JSON.stringify(set, null, '  '), {encoding:"utf8"}, callback);
 };
 
 // Natural sort implementation, for getting those card numbers in a human-readable format.

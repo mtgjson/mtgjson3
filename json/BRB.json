@@ -84,14 +84,14 @@
       ]
     },
     {
-      "artist": "Heather Hudson",
-      "cmc": 2,
+      "artist": "Adrian Smith",
+      "cmc": 4,
       "colors": [
-        "White"
+        "Black"
       ],
-      "flavor": "\"The soldier's path is worn smooth by the tread of many feet—all in one direction, none returning.\"\n—Oracle en-Vec",
-      "id": "0dfd0a25a4e008224a3772dc76332ee1f433b6c2",
-      "imageName": "advance scout",
+      "flavor": "\"I have seen the horrors Kaervek has freed. My Betrayal is certain—but of Kaervek or of Jamuraa, I cannot say.\"\n—Jolrael",
+      "id": "dfe3d181f837161f34efadb3c3fb276449efa459",
+      "imageName": "nekrataal",
       "layout": "normal",
       "legalities": [
         {
@@ -99,11 +99,31 @@
           "legality": "Legal"
         },
         {
+          "format": "Freeform",
+          "legality": "Legal"
+        },
+        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
-          "format": "Tempest Block",
+          "format": "Mirage Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Modern",
+          "legality": "Legal"
+        },
+        {
+          "format": "Prismatic",
+          "legality": "Legal"
+        },
+        {
+          "format": "Singleton 100",
+          "legality": "Legal"
+        },
+        {
+          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -111,25 +131,35 @@
           "legality": "Legal"
         }
       ],
-      "manaCost": "{1}{W}",
-      "multiverseid": 21186,
-      "name": "Advance Scout",
-      "originalText": "First strike\n{W} Target creature gains first strike until end of turn.",
-      "originalType": "Creature — Soldier",
-      "power": "1",
+      "manaCost": "{2}{B}{B}",
+      "multiverseid": 15391,
+      "name": "Nekrataal",
+      "originalText": "First strike\nWhen Nekrataal comes into play, destroy target nonartifact, nonblack creature. It can't be regenerated.",
+      "originalType": "Creature — Nekrataal",
+      "power": "2",
       "printings": [
-        "TMP",
-        "BRB"
+        "VIS",
+        "BRB",
+        "8ED",
+        "9ED",
+        "10E",
+        "DDM",
+        "C14"
       ],
-      "rarity": "Common",
+      "rarity": "Uncommon",
+      "rulings": [
+        {
+          "date": "2004-10-04",
+          "text": "Nothing happens if there are no non-artifact, non-black creatures on the battlefield when it enters the battlefield."
+        }
+      ],
       "subtypes": [
         "Human",
-        "Soldier",
-        "Scout"
+        "Assassin"
       ],
-      "text": "First strike\n{W}: Target creature gains first strike until end of turn.",
+      "text": "First strike\nWhen Nekrataal enters the battlefield, destroy target nonartifact, nonblack creature. That creature can't be regenerated.",
       "toughness": "1",
-      "type": "Creature — Human Soldier Scout",
+      "type": "Creature — Human Assassin",
       "types": [
         "Creature"
       ]
@@ -8809,14 +8839,13 @@
       ]
     },
     {
-      "artist": "Adrian Smith",
+      "artist": "Quinton Hoover",
       "cmc": 4,
       "colors": [
-        "Black"
+        "White"
       ],
-      "flavor": "\"I have seen the horrors Kaervek has freed. My Betrayal is certain—but of Kaervek or of Jamuraa, I cannot say.\"\n—Jolrael",
-      "id": "dfe3d181f837161f34efadb3c3fb276449efa459",
-      "imageName": "nekrataal",
+      "id": "a4ce29760cf9a9137c41870490e4500d8742f2e0",
+      "imageName": "wrath of god",
       "layout": "normal",
       "legalities": [
         {
@@ -8829,10 +8858,6 @@
         },
         {
           "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Mirage Block",
           "legality": "Legal"
         },
         {
@@ -8856,37 +8881,36 @@
           "legality": "Legal"
         }
       ],
-      "manaCost": "{2}{B}{B}",
-      "multiverseid": 15391,
-      "name": "Nekrataal",
-      "originalText": "First strike\nWhen Nekrataal comes into play, destroy target nonartifact, nonblack creature. It can't be regenerated.",
-      "originalType": "Creature — Nekrataal",
-      "power": "2",
+      "manaCost": "{2}{W}{W}",
+      "multiverseid": 21180,
+      "name": "Wrath of God",
+      "originalText": "Destroy all creatures. They can't be regenerated.",
+      "originalType": "Sorcery",
       "printings": [
-        "VIS",
+        "LEA",
+        "LEB",
+        "2ED",
+        "CED",
+        "CEI",
+        "3ED",
+        "4ED",
+        "5ED",
+        "POR",
+        "6ED",
         "BRB",
+        "7ED",
+        "pMPR",
         "8ED",
         "9ED",
         "10E",
-        "DDM",
-        "C14"
+        "C13",
+        "V14"
       ],
-      "rarity": "Uncommon",
-      "rulings": [
-        {
-          "date": "2004-10-04",
-          "text": "Nothing happens if there are no non-artifact, non-black creatures on the battlefield when it enters the battlefield."
-        }
-      ],
-      "subtypes": [
-        "Human",
-        "Assassin"
-      ],
-      "text": "First strike\nWhen Nekrataal enters the battlefield, destroy target nonartifact, nonblack creature. That creature can't be regenerated.",
-      "toughness": "1",
-      "type": "Creature — Human Assassin",
+      "rarity": "Rare",
+      "text": "Destroy all creatures. They can't be regenerated.",
+      "type": "Sorcery",
       "types": [
-        "Creature"
+        "Sorcery"
       ]
     },
     {
@@ -15647,13 +15671,14 @@
       ]
     },
     {
-      "artist": "Quinton Hoover",
-      "cmc": 4,
+      "artist": "Heather Hudson",
+      "cmc": 2,
       "colors": [
         "White"
       ],
-      "id": "a4ce29760cf9a9137c41870490e4500d8742f2e0",
-      "imageName": "wrath of god",
+      "flavor": "\"The soldier's path is worn smooth by the tread of many feet—all in one direction, none returning.\"\n—Oracle en-Vec",
+      "id": "0dfd0a25a4e008224a3772dc76332ee1f433b6c2",
+      "imageName": "advance scout",
       "layout": "normal",
       "legalities": [
         {
@@ -15661,27 +15686,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
-          "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
+          "format": "Tempest Block",
           "legality": "Legal"
         },
         {
@@ -15689,36 +15698,27 @@
           "legality": "Legal"
         }
       ],
-      "manaCost": "{2}{W}{W}",
-      "multiverseid": 21180,
-      "name": "Wrath of God",
-      "originalText": "Destroy all creatures. They can't be regenerated.",
-      "originalType": "Sorcery",
+      "manaCost": "{1}{W}",
+      "multiverseid": 21186,
+      "name": "Advance Scout",
+      "originalText": "First strike\n{W} Target creature gains first strike until end of turn.",
+      "originalType": "Creature — Soldier",
+      "power": "1",
       "printings": [
-        "LEA",
-        "LEB",
-        "2ED",
-        "CED",
-        "CEI",
-        "3ED",
-        "4ED",
-        "5ED",
-        "POR",
-        "6ED",
-        "BRB",
-        "7ED",
-        "pMPR",
-        "8ED",
-        "9ED",
-        "10E",
-        "C13",
-        "V14"
+        "TMP",
+        "BRB"
       ],
-      "rarity": "Rare",
-      "text": "Destroy all creatures. They can't be regenerated.",
-      "type": "Sorcery",
+      "rarity": "Common",
+      "subtypes": [
+        "Human",
+        "Soldier",
+        "Scout"
+      ],
+      "text": "First strike\n{W}: Target creature gains first strike until end of turn.",
+      "toughness": "1",
+      "type": "Creature — Human Soldier Scout",
       "types": [
-        "Sorcery"
+        "Creature"
       ]
     }
   ]

@@ -133,35 +133,36 @@
       ]
     },
     {
-      "artist": "Jesper Myrfors",
-      "cmc": 4,
+      "artist": "Jeff A. Menges",
+      "cmc": 3,
       "colors": [
-        "Green"
+        "Black"
       ],
+      "flavor": "They say the Zombie Master controlled these foul creatures even before his own death, but now that he is one of them, nothing can make them betray him.",
       "foreignNames": [
         {
           "language": "French",
-          "name": "Terres vivantes"
+          "name": "Maître des zombies"
         },
         {
           "language": "German",
-          "name": "Erwachen der Wälder"
+          "name": "Zombiemeister"
         },
         {
           "language": "Italian",
-          "name": "Terre Viventi"
+          "name": "Signore degli Zombi"
         },
         {
           "language": "Portuguese (Brazil)",
-          "name": "Terrenos Vivos"
+          "name": "Mestre Zumbi"
         },
         {
           "language": "Spanish",
-          "name": "Tierras vivientes"
+          "name": "Señor de los Zombies"
         }
       ],
-      "id": "b1943f65cd67d6394c8a94bb5e1273b97ff025f4",
-      "imageName": "living lands",
+      "id": "107e19979220b2a86963957cbf325d6db9568879",
+      "imageName": "zombie master",
       "layout": "normal",
       "legalities": [
         {
@@ -177,8 +178,9 @@
           "legality": "Legal"
         }
       ],
-      "manaCost": "{3}{G}",
-      "name": "Living Lands",
+      "manaCost": "{1}{B}{B}",
+      "name": "Zombie Master",
+      "power": "2",
       "printings": [
         "LEA",
         "LEB",
@@ -192,17 +194,15 @@
         "ME4"
       ],
       "rarity": "Rare",
-      "rulings": [
-        {
-          "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
-        }
-      ],
       "source": "SQUARE EDGES AND GOLD-BORDERED BACKSIDE, NOT TOURNAMENT LEGAL",
-      "text": "All Forests are 1/1 creatures that are still lands.",
-      "type": "Enchantment",
+      "subtypes": [
+        "Zombie"
+      ],
+      "text": "Other Zombie creatures have swampwalk. (They can't be blocked as long as defending player controls a Swamp.)\nOther Zombies have \"{B}: Regenerate this permanent.\"",
+      "toughness": "3",
+      "type": "Creature — Zombie",
       "types": [
-        "Enchantment"
+        "Creature"
       ]
     },
     {
@@ -14965,76 +14965,53 @@
       ]
     },
     {
-      "artist": "Jeff A. Menges",
-      "cmc": 3,
+      "artist": "Mark Poole",
+      "cmc": 1,
       "colors": [
-        "Black"
+        "Blue"
       ],
-      "flavor": "They say the Zombie Master controlled these foul creatures even before his own death, but now that he is one of them, nothing can make them betray him.",
-      "foreignNames": [
-        {
-          "language": "French",
-          "name": "Maître des zombies"
-        },
-        {
-          "language": "German",
-          "name": "Zombiemeister"
-        },
-        {
-          "language": "Italian",
-          "name": "Signore degli Zombi"
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Mestre Zumbi"
-        },
-        {
-          "language": "Spanish",
-          "name": "Señor de los Zombies"
-        }
-      ],
-      "id": "107e19979220b2a86963957cbf325d6db9568879",
-      "imageName": "zombie master",
+      "id": "e55fc27bed6c59290b5b263c2c6c69b81e9bdb64",
+      "imageName": "ancestral recall",
       "layout": "normal",
       "legalities": [
         {
           "format": "Commander",
+          "legality": "Banned"
+        },
+        {
+          "format": "Freeform",
           "legality": "Legal"
         },
         {
           "format": "Legacy",
+          "legality": "Banned"
+        },
+        {
+          "format": "Prismatic",
           "legality": "Legal"
         },
         {
           "format": "Vintage",
-          "legality": "Legal"
+          "legality": "Restricted"
         }
       ],
-      "manaCost": "{1}{B}{B}",
-      "name": "Zombie Master",
-      "power": "2",
+      "manaCost": "{U}",
+      "name": "Ancestral Recall",
       "printings": [
         "LEA",
         "LEB",
         "2ED",
         "CED",
         "CEI",
-        "3ED",
-        "4ED",
-        "5ED",
-        "6ED",
-        "ME4"
+        "VMA"
       ],
       "rarity": "Rare",
+      "reserved": true,
       "source": "SQUARE EDGES AND GOLD-BORDERED BACKSIDE, NOT TOURNAMENT LEGAL",
-      "subtypes": [
-        "Zombie"
-      ],
-      "text": "Other Zombie creatures have swampwalk. (They can't be blocked as long as defending player controls a Swamp.)\nOther Zombies have \"{B}: Regenerate this permanent.\"",
-      "toughness": "3",
-      "type": "Creature — Zombie",
+      "text": "Target player draws three cards.",
+      "type": "Instant",
       "types": [
-        "Creature"
+        "Instant"
       ]
     },
     {
@@ -30437,53 +30414,76 @@
       ]
     },
     {
-      "artist": "Mark Poole",
-      "cmc": 1,
+      "artist": "Jesper Myrfors",
+      "cmc": 4,
       "colors": [
-        "Blue"
+        "Green"
       ],
-      "id": "e55fc27bed6c59290b5b263c2c6c69b81e9bdb64",
-      "imageName": "ancestral recall",
+      "foreignNames": [
+        {
+          "language": "French",
+          "name": "Terres vivantes"
+        },
+        {
+          "language": "German",
+          "name": "Erwachen der Wälder"
+        },
+        {
+          "language": "Italian",
+          "name": "Terre Viventi"
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Terrenos Vivos"
+        },
+        {
+          "language": "Spanish",
+          "name": "Tierras vivientes"
+        }
+      ],
+      "id": "b1943f65cd67d6394c8a94bb5e1273b97ff025f4",
+      "imageName": "living lands",
       "layout": "normal",
       "legalities": [
         {
           "format": "Commander",
-          "legality": "Banned"
-        },
-        {
-          "format": "Freeform",
           "legality": "Legal"
         },
         {
           "format": "Legacy",
-          "legality": "Banned"
-        },
-        {
-          "format": "Prismatic",
           "legality": "Legal"
         },
         {
           "format": "Vintage",
-          "legality": "Restricted"
+          "legality": "Legal"
         }
       ],
-      "manaCost": "{U}",
-      "name": "Ancestral Recall",
+      "manaCost": "{3}{G}",
+      "name": "Living Lands",
       "printings": [
         "LEA",
         "LEB",
         "2ED",
         "CED",
         "CEI",
-        "VMA"
+        "3ED",
+        "4ED",
+        "5ED",
+        "6ED",
+        "ME4"
       ],
       "rarity": "Rare",
-      "reserved": true,
+      "rulings": [
+        {
+          "date": "2008-08-01",
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+        }
+      ],
       "source": "SQUARE EDGES AND GOLD-BORDERED BACKSIDE, NOT TOURNAMENT LEGAL",
-      "text": "Target player draws three cards.",
-      "type": "Instant",
+      "text": "All Forests are 1/1 creatures that are still lands.",
+      "type": "Enchantment",
       "types": [
-        "Instant"
+        "Enchantment"
       ]
     }
   ]

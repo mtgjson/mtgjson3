@@ -62,13 +62,13 @@
       ]
     },
     {
-      "artist": "Drew Tucker",
-      "cmc": 3,
+      "artist": "Julie Baroh",
+      "cmc": 4,
       "colors": [
         "Red"
       ],
-      "id": "acb8c2b595a1dbaa4d13216860931abe2bd591da",
-      "imageName": "ydwen efreet",
+      "id": "1edafa64463d50266dd66b91d006039e33ed473e",
+      "imageName": "aladdin",
       "layout": "normal",
       "legalities": [
         {
@@ -76,23 +76,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -100,29 +84,35 @@
           "legality": "Legal"
         }
       ],
-      "manaCost": "{R}{R}{R}",
-      "multiverseid": 967,
-      "name": "Ydwen Efreet",
-      "originalText": "If you choose to block with Ydwen Efreet, flip a coin immediately after defense is announced; opponent calls heads or tails while coin is in the air. If the flip ends up in opponent's favor, Ydwen Efreet cannot block this turn.",
-      "originalType": "Summon — Efreet",
-      "power": "3",
+      "manaCost": "{2}{R}{R}",
+      "multiverseid": 955,
+      "name": "Aladdin",
+      "originalText": "{1}{R}{R} and tap to take control of an artifact from opponent. Artifact is returned when Aladdin is removed from play or when game ends.",
+      "originalType": "Summon — Aladdin",
+      "power": "1",
       "printings": [
         "ARN",
-        "MED"
+        "CHR",
+        "ME4"
       ],
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2009-10-01",
-          "text": "The ability triggers any time Ydwen Efreet blocks."
+          "date": "2004-10-04",
+          "text": "Aladdin's ability can take control of more than one artifact, although only one each time the ability is used."
+        },
+        {
+          "date": "2008-08-01",
+          "text": "You do not lose control of the permanent if it stops being an artifact. The validity of the target is checked only on announcement and resolution of the ability."
         }
       ],
       "subtypes": [
-        "Efreet"
+        "Human",
+        "Rogue"
       ],
-      "text": "Whenever Ydwen Efreet blocks, flip a coin. If you lose the flip, remove Ydwen Efreet from combat and it can't block this turn. Creatures it was blocking that had become blocked by only Ydwen Efreet this combat become unblocked.",
-      "toughness": "6",
-      "type": "Creature — Efreet",
+      "text": "{1}{R}{R}, {T}: Gain control of target artifact for as long as you control Aladdin.",
+      "toughness": "1",
+      "type": "Creature — Human Rogue",
       "types": [
         "Creature"
       ]
@@ -2645,13 +2635,10 @@
       ]
     },
     {
-      "artist": "Julie Baroh",
-      "cmc": 4,
-      "colors": [
-        "Red"
-      ],
-      "id": "1edafa64463d50266dd66b91d006039e33ed473e",
-      "imageName": "aladdin",
+      "artist": "Dan Frazier",
+      "cmc": 6,
+      "id": "1e429e659e5b1e6acf0d00883c7c5d1d5c1fb567",
+      "imageName": "jandor's ring",
       "layout": "normal",
       "legalities": [
         {
@@ -2667,37 +2654,30 @@
           "legality": "Legal"
         }
       ],
-      "manaCost": "{2}{R}{R}",
-      "multiverseid": 955,
-      "name": "Aladdin",
-      "originalText": "{1}{R}{R} and tap to take control of an artifact from opponent. Artifact is returned when Aladdin is removed from play or when game ends.",
-      "originalType": "Summon — Aladdin",
-      "power": "1",
+      "manaCost": "{6}",
+      "multiverseid": 908,
+      "name": "Jandor's Ring",
+      "originalText": "{2}: Discard a card you just drew from your library, and draw another card to replace it.",
+      "originalType": "Mono Artifact",
       "printings": [
         "ARN",
-        "CHR",
-        "ME4"
+        "3ED"
       ],
       "rarity": "Rare",
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "Aladdin's ability can take control of more than one artifact, although only one each time the ability is used."
+          "text": "If you do not have the card still in your hand, you can't pay the cost. There is currently no way to prove that it was the card you drew except to get a judge or 3rd party involved, or to put cards you draw aside until you decide whether or not to use this."
         },
         {
-          "date": "2008-08-01",
-          "text": "You do not lose control of the permanent if it stops being an artifact. The validity of the target is checked only on announcement and resolution of the ability."
+          "date": "2004-10-04",
+          "text": "If you draw more than one card due to a spell or ability, you must discard the last one of those drawn."
         }
       ],
-      "subtypes": [
-        "Human",
-        "Rogue"
-      ],
-      "text": "{1}{R}{R}, {T}: Gain control of target artifact for as long as you control Aladdin.",
-      "toughness": "1",
-      "type": "Creature — Human Rogue",
+      "text": "{2}, {T}, Discard the last card you drew this turn: Draw a card.",
+      "type": "Artifact",
       "types": [
-        "Creature"
+        "Artifact"
       ]
     },
     {
@@ -5448,10 +5428,13 @@
       ]
     },
     {
-      "artist": "Dan Frazier",
-      "cmc": 6,
-      "id": "1e429e659e5b1e6acf0d00883c7c5d1d5c1fb567",
-      "imageName": "jandor's ring",
+      "artist": "Drew Tucker",
+      "cmc": 3,
+      "colors": [
+        "Red"
+      ],
+      "id": "acb8c2b595a1dbaa4d13216860931abe2bd591da",
+      "imageName": "ydwen efreet",
       "layout": "normal",
       "legalities": [
         {
@@ -5459,7 +5442,23 @@
           "legality": "Legal"
         },
         {
+          "format": "Freeform",
+          "legality": "Legal"
+        },
+        {
           "format": "Legacy",
+          "legality": "Legal"
+        },
+        {
+          "format": "Prismatic",
+          "legality": "Legal"
+        },
+        {
+          "format": "Singleton 100",
+          "legality": "Legal"
+        },
+        {
+          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -5467,30 +5466,31 @@
           "legality": "Legal"
         }
       ],
-      "manaCost": "{6}",
-      "multiverseid": 908,
-      "name": "Jandor's Ring",
-      "originalText": "{2}: Discard a card you just drew from your library, and draw another card to replace it.",
-      "originalType": "Mono Artifact",
+      "manaCost": "{R}{R}{R}",
+      "multiverseid": 967,
+      "name": "Ydwen Efreet",
+      "originalText": "If you choose to block with Ydwen Efreet, flip a coin immediately after defense is announced; opponent calls heads or tails while coin is in the air. If the flip ends up in opponent's favor, Ydwen Efreet cannot block this turn.",
+      "originalType": "Summon — Efreet",
+      "power": "3",
       "printings": [
         "ARN",
-        "3ED"
+        "MED"
       ],
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2004-10-04",
-          "text": "If you do not have the card still in your hand, you can't pay the cost. There is currently no way to prove that it was the card you drew except to get a judge or 3rd party involved, or to put cards you draw aside until you decide whether or not to use this."
-        },
-        {
-          "date": "2004-10-04",
-          "text": "If you draw more than one card due to a spell or ability, you must discard the last one of those drawn."
+          "date": "2009-10-01",
+          "text": "The ability triggers any time Ydwen Efreet blocks."
         }
       ],
-      "text": "{2}, {T}, Discard the last card you drew this turn: Draw a card.",
-      "type": "Artifact",
+      "subtypes": [
+        "Efreet"
+      ],
+      "text": "Whenever Ydwen Efreet blocks, flip a coin. If you lose the flip, remove Ydwen Efreet from combat and it can't block this turn. Creatures it was blocking that had become blocked by only Ydwen Efreet this combat become unblocked.",
+      "toughness": "6",
+      "type": "Creature — Efreet",
       "types": [
-        "Artifact"
+        "Creature"
       ]
     }
   ]
