@@ -110,13 +110,14 @@
       ]
     },
     {
-      "artist": "Jesper Myrfors",
-      "cmc": 4,
+      "artist": "Jeff A. Menges",
+      "cmc": 3,
       "colors": [
-        "Green"
+        "Black"
       ],
-      "id": "8d02bc0f1f7e228bc0baab24f8d7fce85143f97d",
-      "imageName": "living lands",
+      "flavor": "They say the Zombie Master controlled these foul creatures even before his own death, but now that he is one of them, nothing can make them betray him.",
+      "id": "7c01df13c93103130ce3395ea146483f660d6e12",
+      "imageName": "zombie master",
       "layout": "normal",
       "legalities": [
         {
@@ -132,11 +133,12 @@
           "legality": "Legal"
         }
       ],
-      "manaCost": "{3}{G}",
-      "multiverseid": 762,
-      "name": "Living Lands",
-      "originalText": "Treat all forests in play as 1/1 creatures. Now they can be enchanted, killed, and so forth, and they can be tapped either for mana or to attack. The living lands have no color; they are not considered green cards.",
-      "originalType": "Enchantment",
+      "manaCost": "{1}{B}{B}",
+      "multiverseid": 690,
+      "name": "Zombie Master",
+      "originalText": "All zombies in play gain swampwalk and \"{B} Regenerates\" for as long as this card remains in play.",
+      "originalType": "Summon — Lord",
+      "power": "2",
       "printings": [
         "LEA",
         "LEB",
@@ -150,16 +152,14 @@
         "ME4"
       ],
       "rarity": "Rare",
-      "rulings": [
-        {
-          "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
-        }
+      "subtypes": [
+        "Zombie"
       ],
-      "text": "All Forests are 1/1 creatures that are still lands.",
-      "type": "Enchantment",
+      "text": "Other Zombie creatures have swampwalk. (They can't be blocked as long as defending player controls a Swamp.)\nOther Zombies have \"{B}: Regenerate this permanent.\"",
+      "toughness": "3",
+      "type": "Creature — Zombie",
       "types": [
-        "Enchantment"
+        "Creature"
       ]
     },
     {
@@ -11424,56 +11424,55 @@
       ]
     },
     {
-      "artist": "Jeff A. Menges",
-      "cmc": 3,
+      "artist": "Mark Poole",
+      "cmc": 1,
       "colors": [
-        "Black"
+        "Blue"
       ],
-      "flavor": "They say the Zombie Master controlled these foul creatures even before his own death, but now that he is one of them, nothing can make them betray him.",
-      "id": "7c01df13c93103130ce3395ea146483f660d6e12",
-      "imageName": "zombie master",
+      "id": "b014fc9f2ad4be051fb54b68710570a980f074b5",
+      "imageName": "ancestral recall",
       "layout": "normal",
       "legalities": [
         {
           "format": "Commander",
+          "legality": "Banned"
+        },
+        {
+          "format": "Freeform",
           "legality": "Legal"
         },
         {
           "format": "Legacy",
+          "legality": "Banned"
+        },
+        {
+          "format": "Prismatic",
           "legality": "Legal"
         },
         {
           "format": "Vintage",
-          "legality": "Legal"
+          "legality": "Restricted"
         }
       ],
-      "manaCost": "{1}{B}{B}",
-      "multiverseid": 690,
-      "name": "Zombie Master",
-      "originalText": "All zombies in play gain swampwalk and \"{B} Regenerates\" for as long as this card remains in play.",
-      "originalType": "Summon — Lord",
-      "power": "2",
+      "manaCost": "{U}",
+      "multiverseid": 692,
+      "name": "Ancestral Recall",
+      "originalText": "Draw 3 cards or force opponent to draw 3 cards.",
+      "originalType": "Instant",
       "printings": [
         "LEA",
         "LEB",
         "2ED",
         "CED",
         "CEI",
-        "3ED",
-        "4ED",
-        "5ED",
-        "6ED",
-        "ME4"
+        "VMA"
       ],
       "rarity": "Rare",
-      "subtypes": [
-        "Zombie"
-      ],
-      "text": "Other Zombie creatures have swampwalk. (They can't be blocked as long as defending player controls a Swamp.)\nOther Zombies have \"{B}: Regenerate this permanent.\"",
-      "toughness": "3",
-      "type": "Creature — Zombie",
+      "reserved": true,
+      "text": "Target player draws three cards.",
+      "type": "Instant",
       "types": [
-        "Creature"
+        "Instant"
       ]
     },
     {
@@ -23332,55 +23331,56 @@
       ]
     },
     {
-      "artist": "Mark Poole",
-      "cmc": 1,
+      "artist": "Jesper Myrfors",
+      "cmc": 4,
       "colors": [
-        "Blue"
+        "Green"
       ],
-      "id": "b014fc9f2ad4be051fb54b68710570a980f074b5",
-      "imageName": "ancestral recall",
+      "id": "8d02bc0f1f7e228bc0baab24f8d7fce85143f97d",
+      "imageName": "living lands",
       "layout": "normal",
       "legalities": [
         {
           "format": "Commander",
-          "legality": "Banned"
-        },
-        {
-          "format": "Freeform",
           "legality": "Legal"
         },
         {
           "format": "Legacy",
-          "legality": "Banned"
-        },
-        {
-          "format": "Prismatic",
           "legality": "Legal"
         },
         {
           "format": "Vintage",
-          "legality": "Restricted"
+          "legality": "Legal"
         }
       ],
-      "manaCost": "{U}",
-      "multiverseid": 692,
-      "name": "Ancestral Recall",
-      "originalText": "Draw 3 cards or force opponent to draw 3 cards.",
-      "originalType": "Instant",
+      "manaCost": "{3}{G}",
+      "multiverseid": 762,
+      "name": "Living Lands",
+      "originalText": "Treat all forests in play as 1/1 creatures. Now they can be enchanted, killed, and so forth, and they can be tapped either for mana or to attack. The living lands have no color; they are not considered green cards.",
+      "originalType": "Enchantment",
       "printings": [
         "LEA",
         "LEB",
         "2ED",
         "CED",
         "CEI",
-        "VMA"
+        "3ED",
+        "4ED",
+        "5ED",
+        "6ED",
+        "ME4"
       ],
       "rarity": "Rare",
-      "reserved": true,
-      "text": "Target player draws three cards.",
-      "type": "Instant",
+      "rulings": [
+        {
+          "date": "2008-08-01",
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+        }
+      ],
+      "text": "All Forests are 1/1 creatures that are still lands.",
+      "type": "Enchantment",
       "types": [
-        "Instant"
+        "Enchantment"
       ]
     }
   ]

@@ -51,14 +51,11 @@
       ]
     },
     {
-      "artist": "Heather Hudson",
+      "artist": "Jeff A. Menges",
       "cmc": 2,
-      "colors": [
-        "Blue"
-      ],
-      "flavor": "Although greatly prized among falconers, the Zephyr Falcon is capricious and not easily tamed.",
-      "id": "ddb397a7e23b0a2964b53592560c03f80421ad88",
-      "imageName": "zephyr falcon",
+      "flavor": "By the time Mishra was defeated, no mage was foolish enough to rely heavily on walls.",
+      "id": "85c5c7ff0f016748813d0ddeac35319722b89fc5",
+      "imageName": "battering ram",
       "layout": "normal",
       "legalities": [
         {
@@ -74,26 +71,45 @@
           "legality": "Legal"
         }
       ],
-      "manaCost": "{1}{U}",
-      "name": "Zephyr Falcon",
-      "originalText": "Flying\nAttacking does not cause Zephyr Falcon to tap.",
-      "originalType": "Summon — Falcon",
+      "manaCost": "{2}",
+      "name": "Battering Ram",
+      "originalText": "Banding when attacking\nWhenever a wall blocks Battering Ram, destroy that creature at end of combat.",
+      "originalType": "Artifact Creature",
       "power": "1",
       "printings": [
-        "LEG",
+        "ATQ",
         "4ED",
         "RQS",
         "ITP",
         "5ED"
       ],
       "rarity": "Special",
-      "subtypes": [
-        "Bird"
+      "rulings": [
+        {
+          "date": "2008-10-01",
+          "text": "If a creature with banding attacks, it can team up with any number of other attacking creatures with banding (and up to one nonbanding creature) and attack as a unit called a \"band.\" The band can be blocked by any creature that could block a single creature in the band. Blocking any creature in a band blocks the entire band. If a creature with banding is blocked, the attacking player chooses how the blockers' damage is assigned."
+        },
+        {
+          "date": "2008-10-01",
+          "text": "A maximum of one nonbanding creature can join an attacking band no matter how many creatures with banding are in it."
+        },
+        {
+          "date": "2008-10-01",
+          "text": "Creatures in the same band must all attack the same player or planeswalker."
+        },
+        {
+          "date": "2009-10-01",
+          "text": "If a creature in combat has banding, its controller assigns damage for creatures blocking or blocked by it. That player can ignore the damage assignment order when making this assignment."
+        }
       ],
-      "text": "Flying, vigilance",
+      "subtypes": [
+        "Construct"
+      ],
+      "text": "At the beginning of combat on your turn, Battering Ram gains banding until end of combat. (Any creatures with banding, and up to one without, can attack in a band. Bands are blocked as a group. If any creatures with banding you control are being blocked by a creature, you divide that creature's combat damage, not its controller, among any of the creatures it's blocking.)\nWhenever Battering Ram becomes blocked by a Wall, destroy that Wall at end of combat.",
       "toughness": "1",
-      "type": "Creature — Bird",
+      "type": "Artifact Creature — Construct",
       "types": [
+        "Artifact",
         "Creature"
       ]
     },
@@ -2340,10 +2356,13 @@
     },
     {
       "artist": "Jeff A. Menges",
-      "cmc": 2,
-      "flavor": "By the time Mishra was defeated, no mage was foolish enough to rely heavily on walls.",
-      "id": "85c5c7ff0f016748813d0ddeac35319722b89fc5",
-      "imageName": "battering ram",
+      "cmc": 1,
+      "colors": [
+        "Red"
+      ],
+      "flavor": "The intricate dynamics of Rundvelt Goblin affairs are often confused with anarchy. The chaos, however, is the chaos of a thundercloud, and direction will sporadically and violently appear. Pashalik Mons and his Raiders are the thunderhead that leads in the storm.",
+      "id": "6e17b4ae84426825c6e182c044e18e633d8d4bfd",
+      "imageName": "mons's goblin raiders",
       "layout": "normal",
       "legalities": [
         {
@@ -2359,45 +2378,31 @@
           "legality": "Legal"
         }
       ],
-      "manaCost": "{2}",
-      "name": "Battering Ram",
-      "originalText": "Banding when attacking\nWhenever a wall blocks Battering Ram, destroy that creature at end of combat.",
-      "originalType": "Artifact Creature",
+      "manaCost": "{R}",
+      "name": "Mons's Goblin Raiders",
+      "originalType": "Summon — Goblins",
       "power": "1",
       "printings": [
-        "ATQ",
+        "LEA",
+        "LEB",
+        "2ED",
+        "CED",
+        "CEI",
+        "3ED",
         "4ED",
         "RQS",
         "ITP",
-        "5ED"
+        "5ED",
+        "S99",
+        "S00"
       ],
       "rarity": "Special",
-      "rulings": [
-        {
-          "date": "2008-10-01",
-          "text": "If a creature with banding attacks, it can team up with any number of other attacking creatures with banding (and up to one nonbanding creature) and attack as a unit called a \"band.\" The band can be blocked by any creature that could block a single creature in the band. Blocking any creature in a band blocks the entire band. If a creature with banding is blocked, the attacking player chooses how the blockers' damage is assigned."
-        },
-        {
-          "date": "2008-10-01",
-          "text": "A maximum of one nonbanding creature can join an attacking band no matter how many creatures with banding are in it."
-        },
-        {
-          "date": "2008-10-01",
-          "text": "Creatures in the same band must all attack the same player or planeswalker."
-        },
-        {
-          "date": "2009-10-01",
-          "text": "If a creature in combat has banding, its controller assigns damage for creatures blocking or blocked by it. That player can ignore the damage assignment order when making this assignment."
-        }
-      ],
       "subtypes": [
-        "Construct"
+        "Goblin"
       ],
-      "text": "At the beginning of combat on your turn, Battering Ram gains banding until end of combat. (Any creatures with banding, and up to one without, can attack in a band. Bands are blocked as a group. If any creatures with banding you control are being blocked by a creature, you divide that creature's combat damage, not its controller, among any of the creatures it's blocking.)\nWhenever Battering Ram becomes blocked by a Wall, destroy that Wall at end of combat.",
       "toughness": "1",
-      "type": "Artifact Creature — Construct",
+      "type": "Creature — Goblin",
       "types": [
-        "Artifact",
         "Creature"
       ]
     },
@@ -4846,14 +4851,14 @@
       ]
     },
     {
-      "artist": "Jeff A. Menges",
-      "cmc": 1,
+      "artist": "Heather Hudson",
+      "cmc": 2,
       "colors": [
-        "Red"
+        "Blue"
       ],
-      "flavor": "The intricate dynamics of Rundvelt Goblin affairs are often confused with anarchy. The chaos, however, is the chaos of a thundercloud, and direction will sporadically and violently appear. Pashalik Mons and his Raiders are the thunderhead that leads in the storm.",
-      "id": "6e17b4ae84426825c6e182c044e18e633d8d4bfd",
-      "imageName": "mons's goblin raiders",
+      "flavor": "Although greatly prized among falconers, the Zephyr Falcon is capricious and not easily tamed.",
+      "id": "ddb397a7e23b0a2964b53592560c03f80421ad88",
+      "imageName": "zephyr falcon",
       "layout": "normal",
       "legalities": [
         {
@@ -4869,30 +4874,25 @@
           "legality": "Legal"
         }
       ],
-      "manaCost": "{R}",
-      "name": "Mons's Goblin Raiders",
-      "originalType": "Summon — Goblins",
+      "manaCost": "{1}{U}",
+      "name": "Zephyr Falcon",
+      "originalText": "Flying\nAttacking does not cause Zephyr Falcon to tap.",
+      "originalType": "Summon — Falcon",
       "power": "1",
       "printings": [
-        "LEA",
-        "LEB",
-        "2ED",
-        "CED",
-        "CEI",
-        "3ED",
+        "LEG",
         "4ED",
         "RQS",
         "ITP",
-        "5ED",
-        "S99",
-        "S00"
+        "5ED"
       ],
       "rarity": "Special",
       "subtypes": [
-        "Goblin"
+        "Bird"
       ],
+      "text": "Flying, vigilance",
       "toughness": "1",
-      "type": "Creature — Goblin",
+      "type": "Creature — Bird",
       "types": [
         "Creature"
       ]

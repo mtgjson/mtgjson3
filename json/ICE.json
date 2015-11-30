@@ -103,14 +103,11 @@
       ]
     },
     {
-      "artist": "Edward P. Beard, Jr.",
-      "cmc": 3,
-      "colors": [
-        "Blue"
-      ],
-      "flavor": "\"A mage must be precise as well as potent; cautious, as well as clever.\"\n—Zur the Enchanter",
-      "id": "0cbfcd180170c881e415f8620f394e0a34008445",
-      "imageName": "zuran spellcaster",
+      "artist": "Melissa A. Benson",
+      "cmc": 5,
+      "flavor": "\"We encountered the Sentinels in the wastes, near no living thing. Their purpose was inscrutable.\"\n—Disa the Restless, journal entry",
+      "id": "7e5546c19f947ca87bbca5495e6f113f8049d731",
+      "imageName": "adarkar sentinel",
       "layout": "normal",
       "legalities": [
         {
@@ -146,26 +143,25 @@
           "legality": "Legal"
         }
       ],
-      "manaCost": "{2}{U}",
-      "multiverseid": 2548,
-      "name": "Zuran Spellcaster",
-      "originalText": "{T}: Zuran Spellcaster deals 1 damage to target creature or player.",
-      "originalType": "Summon — Wizard",
-      "power": "1",
+      "manaCost": "{5}",
+      "multiverseid": 2392,
+      "name": "Adarkar Sentinel",
+      "originalText": "{1}: +0/+1 until end of turn",
+      "originalType": "Artifact Creature",
+      "power": "3",
       "printings": [
         "ICE",
-        "CST",
         "ME2"
       ],
-      "rarity": "Common",
+      "rarity": "Uncommon",
       "subtypes": [
-        "Human",
-        "Wizard"
+        "Soldier"
       ],
-      "text": "{T}: Zuran Spellcaster deals 1 damage to target creature or player.",
-      "toughness": "1",
-      "type": "Creature — Human Wizard",
+      "text": "{1}: Adarkar Sentinel gets +0/+1 until end of turn.",
+      "toughness": "3",
+      "type": "Artifact Creature — Soldier",
       "types": [
+        "Artifact",
         "Creature"
       ]
     },
@@ -12966,11 +12962,14 @@
       ]
     },
     {
-      "artist": "Melissa A. Benson",
+      "artist": "L. A. Williams",
       "cmc": 5,
-      "flavor": "\"We encountered the Sentinels in the wastes, near no living thing. Their purpose was inscrutable.\"\n—Disa the Restless, journal entry",
-      "id": "7e5546c19f947ca87bbca5495e6f113f8049d731",
-      "imageName": "adarkar sentinel",
+      "colors": [
+        "White"
+      ],
+      "flavor": "\"Honorable in battle,\ngenerous in death.\"\n—Motto of the Kjeldoran Royal Guard",
+      "id": "5b15e07b4bed198ae8a9d4f78efae3fcb3300bda",
+      "imageName": "kjeldoran royal guard",
       "layout": "normal",
       "legalities": [
         {
@@ -12990,6 +12989,10 @@
           "legality": "Legal"
         },
         {
+          "format": "Modern",
+          "legality": "Legal"
+        },
+        {
           "format": "Prismatic",
           "legality": "Legal"
         },
@@ -13006,25 +13009,34 @@
           "legality": "Legal"
         }
       ],
-      "manaCost": "{5}",
-      "multiverseid": 2392,
-      "name": "Adarkar Sentinel",
-      "originalText": "{1}: +0/+1 until end of turn",
-      "originalType": "Artifact Creature",
-      "power": "3",
+      "manaCost": "{3}{W}{W}",
+      "multiverseid": 2698,
+      "name": "Kjeldoran Royal Guard",
+      "originalText": "{T}: Redirect to Kjeldoran Royal Guard all damage dealt to you from unblocked creatures this turn.",
+      "originalType": "Summon — Soldiers",
+      "power": "2",
       "printings": [
         "ICE",
-        "ME2"
+        "5ED",
+        "6ED",
+        "7ED",
+        "10E"
       ],
-      "rarity": "Uncommon",
+      "rarity": "Rare",
+      "rulings": [
+        {
+          "date": "2004-10-04",
+          "text": "If you activate the ability but Kjeldoran Royal Guard leaves the battlefield before combat damage is dealt, the combat damage from unblocked creatures won't be redirected. It will be dealt to you as normal."
+        }
+      ],
       "subtypes": [
+        "Human",
         "Soldier"
       ],
-      "text": "{1}: Adarkar Sentinel gets +0/+1 until end of turn.",
-      "toughness": "3",
-      "type": "Artifact Creature — Soldier",
+      "text": "{T}: All combat damage that would be dealt to you by unblocked creatures this turn is dealt to Kjeldoran Royal Guard instead.",
+      "toughness": "5",
+      "type": "Creature — Human Soldier",
       "types": [
-        "Artifact",
         "Creature"
       ]
     },
@@ -26196,14 +26208,14 @@
       ]
     },
     {
-      "artist": "L. A. Williams",
-      "cmc": 5,
+      "artist": "Edward P. Beard, Jr.",
+      "cmc": 3,
       "colors": [
-        "White"
+        "Blue"
       ],
-      "flavor": "\"Honorable in battle,\ngenerous in death.\"\n—Motto of the Kjeldoran Royal Guard",
-      "id": "5b15e07b4bed198ae8a9d4f78efae3fcb3300bda",
-      "imageName": "kjeldoran royal guard",
+      "flavor": "\"A mage must be precise as well as potent; cautious, as well as clever.\"\n—Zur the Enchanter",
+      "id": "0cbfcd180170c881e415f8620f394e0a34008445",
+      "imageName": "zuran spellcaster",
       "layout": "normal",
       "legalities": [
         {
@@ -26223,10 +26235,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Modern",
-          "legality": "Legal"
-        },
-        {
           "format": "Prismatic",
           "legality": "Legal"
         },
@@ -26243,33 +26251,25 @@
           "legality": "Legal"
         }
       ],
-      "manaCost": "{3}{W}{W}",
-      "multiverseid": 2698,
-      "name": "Kjeldoran Royal Guard",
-      "originalText": "{T}: Redirect to Kjeldoran Royal Guard all damage dealt to you from unblocked creatures this turn.",
-      "originalType": "Summon — Soldiers",
-      "power": "2",
+      "manaCost": "{2}{U}",
+      "multiverseid": 2548,
+      "name": "Zuran Spellcaster",
+      "originalText": "{T}: Zuran Spellcaster deals 1 damage to target creature or player.",
+      "originalType": "Summon — Wizard",
+      "power": "1",
       "printings": [
         "ICE",
-        "5ED",
-        "6ED",
-        "7ED",
-        "10E"
+        "CST",
+        "ME2"
       ],
-      "rarity": "Rare",
-      "rulings": [
-        {
-          "date": "2004-10-04",
-          "text": "If you activate the ability but Kjeldoran Royal Guard leaves the battlefield before combat damage is dealt, the combat damage from unblocked creatures won't be redirected. It will be dealt to you as normal."
-        }
-      ],
+      "rarity": "Common",
       "subtypes": [
         "Human",
-        "Soldier"
+        "Wizard"
       ],
-      "text": "{T}: All combat damage that would be dealt to you by unblocked creatures this turn is dealt to Kjeldoran Royal Guard instead.",
-      "toughness": "5",
-      "type": "Creature — Human Soldier",
+      "text": "{T}: Zuran Spellcaster deals 1 damage to target creature or player.",
+      "toughness": "1",
+      "type": "Creature — Human Wizard",
       "types": [
         "Creature"
       ]

@@ -54,13 +54,14 @@
       ]
     },
     {
-      "artist": "Mark Poole",
+      "artist": "Rebecca Guay",
       "cmc": 2,
       "colors": [
-        "Black"
+        "White"
       ],
-      "id": "d92b724d606e999868668c40fe2c33f57266a89a",
-      "imageName": "knight of stromgald",
+      "flavor": "\"Let no child be without a sword. We will all fight, for if we fail, we will certainly all die.\"\n—Oracle en-Vec",
+      "id": "a63875e8814c5390fc25af3323c1cd41fde7b135",
+      "imageName": "youthful knight",
       "layout": "normal",
       "legalities": [
         {
@@ -72,11 +73,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Ice Age Block",
+          "format": "Legacy",
           "legality": "Legal"
         },
         {
-          "format": "Legacy",
+          "format": "Modern",
           "legality": "Legal"
         },
         {
@@ -88,6 +89,10 @@
           "legality": "Legal"
         },
         {
+          "format": "Tempest Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
@@ -96,23 +101,23 @@
           "legality": "Legal"
         }
       ],
-      "manaCost": "{B}{B}",
-      "name": "Knight of Stromgald",
-      "originalText": "Protection from white\n{B}: Knight of Stromgald gains first strike until end of turn.\n{B}{B}: Knight of Stromgald gets +1/+0 until end of turn.",
+      "manaCost": "{1}{W}",
+      "name": "Youthful Knight",
+      "originalText": "First strike",
       "originalType": "Summon — Knight",
       "power": "2",
       "printings": [
-        "ICE",
-        "5ED",
+        "STH",
         "ATH",
-        "ME2"
+        "10E",
+        "TPR"
       ],
       "rarity": "Special",
       "subtypes": [
         "Human",
         "Knight"
       ],
-      "text": "Protection from white\n{B}: Knight of Stromgald gains first strike until end of turn.\n{B}{B}: Knight of Stromgald gets +1/+0 until end of turn.",
+      "text": "First strike (This creature deals combat damage before creatures without first strike.)",
       "toughness": "1",
       "type": "Creature — Human Knight",
       "types": [
@@ -2981,14 +2986,13 @@
       ]
     },
     {
-      "artist": "Rebecca Guay",
-      "cmc": 2,
+      "artist": "Jesper Myrfors",
+      "cmc": 4,
       "colors": [
         "White"
       ],
-      "flavor": "\"Let no child be without a sword. We will all fight, for if we fail, we will certainly all die.\"\n—Oracle en-Vec",
-      "id": "a63875e8814c5390fc25af3323c1cd41fde7b135",
-      "imageName": "youthful knight",
+      "id": "6a29a2efea9e63ceed0dc497a14b012fdccda778",
+      "imageName": "armageddon",
       "layout": "normal",
       "legalities": [
         {
@@ -3004,19 +3008,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Modern",
-          "legality": "Legal"
-        },
-        {
           "format": "Prismatic",
           "legality": "Legal"
         },
         {
           "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tempest Block",
           "legality": "Legal"
         },
         {
@@ -3028,27 +3024,35 @@
           "legality": "Legal"
         }
       ],
-      "manaCost": "{1}{W}",
-      "name": "Youthful Knight",
-      "originalText": "First strike",
-      "originalType": "Summon — Knight",
-      "power": "2",
+      "manaCost": "{3}{W}",
+      "name": "Armageddon",
+      "originalText": "Destroy all lands.",
+      "originalType": "Sorcery",
       "printings": [
-        "STH",
+        "LEA",
+        "LEB",
+        "2ED",
+        "CED",
+        "CEI",
+        "3ED",
+        "4ED",
+        "5ED",
+        "POR",
+        "PO2",
+        "pJGP",
         "ATH",
-        "10E",
-        "TPR"
+        "6ED",
+        "S99",
+        "MED",
+        "ME4",
+        "VMA",
+        "V14"
       ],
       "rarity": "Special",
-      "subtypes": [
-        "Human",
-        "Knight"
-      ],
-      "text": "First strike (This creature deals combat damage before creatures without first strike.)",
-      "toughness": "1",
-      "type": "Creature — Human Knight",
+      "text": "Destroy all lands.",
+      "type": "Sorcery",
       "types": [
-        "Creature"
+        "Sorcery"
       ]
     },
     {
@@ -6387,13 +6391,13 @@
       ]
     },
     {
-      "artist": "Jesper Myrfors",
-      "cmc": 4,
+      "artist": "Mark Poole",
+      "cmc": 2,
       "colors": [
-        "White"
+        "Black"
       ],
-      "id": "6a29a2efea9e63ceed0dc497a14b012fdccda778",
-      "imageName": "armageddon",
+      "id": "d92b724d606e999868668c40fe2c33f57266a89a",
+      "imageName": "knight of stromgald",
       "layout": "normal",
       "legalities": [
         {
@@ -6402,6 +6406,10 @@
         },
         {
           "format": "Freeform",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ice Age Block",
           "legality": "Legal"
         },
         {
@@ -6425,35 +6433,27 @@
           "legality": "Legal"
         }
       ],
-      "manaCost": "{3}{W}",
-      "name": "Armageddon",
-      "originalText": "Destroy all lands.",
-      "originalType": "Sorcery",
+      "manaCost": "{B}{B}",
+      "name": "Knight of Stromgald",
+      "originalText": "Protection from white\n{B}: Knight of Stromgald gains first strike until end of turn.\n{B}{B}: Knight of Stromgald gets +1/+0 until end of turn.",
+      "originalType": "Summon — Knight",
+      "power": "2",
       "printings": [
-        "LEA",
-        "LEB",
-        "2ED",
-        "CED",
-        "CEI",
-        "3ED",
-        "4ED",
+        "ICE",
         "5ED",
-        "POR",
-        "PO2",
-        "pJGP",
         "ATH",
-        "6ED",
-        "S99",
-        "MED",
-        "ME4",
-        "VMA",
-        "V14"
+        "ME2"
       ],
       "rarity": "Special",
-      "text": "Destroy all lands.",
-      "type": "Sorcery",
+      "subtypes": [
+        "Human",
+        "Knight"
+      ],
+      "text": "Protection from white\n{B}: Knight of Stromgald gains first strike until end of turn.\n{B}{B}: Knight of Stromgald gets +1/+0 until end of turn.",
+      "toughness": "1",
+      "type": "Creature — Human Knight",
       "types": [
-        "Sorcery"
+        "Creature"
       ]
     }
   ]

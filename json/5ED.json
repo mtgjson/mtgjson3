@@ -87,13 +87,14 @@
       ]
     },
     {
-      "artist": "Liz Danforth",
+      "artist": "George Pratt",
       "cmc": 4,
       "colors": [
-        "Blue"
+        "Black"
       ],
-      "id": "495e57807112c3c9eee9858bf6e9cec402bdeb04",
-      "imageName": "zur's weirding",
+      "flavor": "\"Mystic shadow, bending near me, /\nWho art thou? / Whence come ye?\"\n—Stephen Crane,\n\"Mystic shadow, bending near me\"",
+      "id": "26993fce91f42e5747c238c2902c300fed27a1cc",
+      "imageName": "abyssal specter",
       "layout": "normal",
       "legalities": [
         {
@@ -133,41 +134,33 @@
           "legality": "Legal"
         }
       ],
-      "manaCost": "{3}{U}",
-      "multiverseid": 3959,
-      "name": "Zur's Weirding",
-      "originalText": "Players play with their hands face up.\nWhenever any player draws a card, any other player may pay 2 life to force the drawing player to discard that card.",
-      "originalType": "Enchantment",
+      "manaCost": "{2}{B}{B}",
+      "multiverseid": 3822,
+      "name": "Abyssal Specter",
+      "originalText": "Flying\nIf Abyssal Specter damages any player, he or she chooses and discards a card.",
+      "originalType": "Summon — Specter",
+      "power": "2",
       "printings": [
         "ICE",
         "5ED",
         "6ED",
+        "BRB",
+        "7ED",
+        "DKM",
         "8ED",
-        "9ED"
+        "DDC",
+        "DPA",
+        "DD3_DVD"
       ],
-      "rarity": "Rare",
-      "rulings": [
-        {
-          "date": "2004-10-04",
-          "text": "If someone pays the cost, then the card was never drawn or discarded. It just gets put into the graveyard directly from the library."
-        },
-        {
-          "date": "2004-10-04",
-          "text": "This is continuous replacement effect that modifies a draw."
-        },
-        {
-          "date": "2004-10-04",
-          "text": "If a spell or ability causes more than one card to be drawn, draw the cards one at a time and deal with this replacement before drawing the next card."
-        },
-        {
-          "date": "2006-04-01",
-          "text": "When using Dredge with this, you have two choices. You can immediately replace the draw with Dredge, or you can apply Zur's Weirding's replacement. If the latter, you first resolve Zur's Weirding's ability, then if you're going to draw the card, decide whether or not to replace that draw with Dredge."
-        }
+      "rarity": "Uncommon",
+      "subtypes": [
+        "Specter"
       ],
-      "text": "Players play with their hands revealed.\nIf a player would draw a card, he or she reveals it instead. Then any other player may pay 2 life. If a player does, put that card into its owner's graveyard. Otherwise, that player draws a card.",
-      "type": "Enchantment",
+      "text": "Flying\nWhenever Abyssal Specter deals damage to a player, that player discards a card.",
+      "toughness": "3",
+      "type": "Creature — Specter",
       "types": [
-        "Enchantment"
+        "Creature"
       ]
     },
     {
@@ -16080,14 +16073,11 @@
       ]
     },
     {
-      "artist": "George Pratt",
-      "cmc": 4,
-      "colors": [
-        "Black"
-      ],
-      "flavor": "\"Mystic shadow, bending near me, /\nWho art thou? / Whence come ye?\"\n—Stephen Crane,\n\"Mystic shadow, bending near me\"",
-      "id": "26993fce91f42e5747c238c2902c300fed27a1cc",
-      "imageName": "abyssal specter",
+      "artist": "Zina Saunders",
+      "cmc": 6,
+      "flavor": "\"If that thief Joven ever shows his head around here again, make sure he leaves without it.\"\n—Eron the Relentless",
+      "id": "d437f73d5df0a1790de85795a62a62b61ee76bb0",
+      "imageName": "joven's tools",
       "layout": "normal",
       "legalities": [
         {
@@ -16095,31 +16085,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
-          "format": "Ice Age Block",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -16127,33 +16093,20 @@
           "legality": "Legal"
         }
       ],
-      "manaCost": "{2}{B}{B}",
-      "multiverseid": 3822,
-      "name": "Abyssal Specter",
-      "originalText": "Flying\nIf Abyssal Specter damages any player, he or she chooses and discards a card.",
-      "originalType": "Summon — Specter",
-      "power": "2",
+      "manaCost": "{6}",
+      "multiverseid": 3798,
+      "name": "Joven's Tools",
+      "originalText": "{4}, {T}: Target creature cannot be blocked this turn except by Walls.",
+      "originalType": "Artifact",
       "printings": [
-        "ICE",
-        "5ED",
-        "6ED",
-        "BRB",
-        "7ED",
-        "DKM",
-        "8ED",
-        "DDC",
-        "DPA",
-        "DD3_DVD"
+        "HML",
+        "5ED"
       ],
       "rarity": "Uncommon",
-      "subtypes": [
-        "Specter"
-      ],
-      "text": "Flying\nWhenever Abyssal Specter deals damage to a player, that player discards a card.",
-      "toughness": "3",
-      "type": "Creature — Specter",
+      "text": "{4}, {T}: Target creature can't be blocked this turn except by Walls.",
+      "type": "Artifact",
       "types": [
-        "Creature"
+        "Artifact"
       ]
     },
     {
@@ -33331,11 +33284,13 @@
       ]
     },
     {
-      "artist": "Zina Saunders",
-      "cmc": 6,
-      "flavor": "\"If that thief Joven ever shows his head around here again, make sure he leaves without it.\"\n—Eron the Relentless",
-      "id": "d437f73d5df0a1790de85795a62a62b61ee76bb0",
-      "imageName": "joven's tools",
+      "artist": "Liz Danforth",
+      "cmc": 4,
+      "colors": [
+        "Blue"
+      ],
+      "id": "495e57807112c3c9eee9858bf6e9cec402bdeb04",
+      "imageName": "zur's weirding",
       "layout": "normal",
       "legalities": [
         {
@@ -33343,7 +33298,31 @@
           "legality": "Legal"
         },
         {
+          "format": "Freeform",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ice Age Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Legacy",
+          "legality": "Legal"
+        },
+        {
+          "format": "Modern",
+          "legality": "Legal"
+        },
+        {
+          "format": "Prismatic",
+          "legality": "Legal"
+        },
+        {
+          "format": "Singleton 100",
+          "legality": "Legal"
+        },
+        {
+          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -33351,20 +33330,41 @@
           "legality": "Legal"
         }
       ],
-      "manaCost": "{6}",
-      "multiverseid": 3798,
-      "name": "Joven's Tools",
-      "originalText": "{4}, {T}: Target creature cannot be blocked this turn except by Walls.",
-      "originalType": "Artifact",
+      "manaCost": "{3}{U}",
+      "multiverseid": 3959,
+      "name": "Zur's Weirding",
+      "originalText": "Players play with their hands face up.\nWhenever any player draws a card, any other player may pay 2 life to force the drawing player to discard that card.",
+      "originalType": "Enchantment",
       "printings": [
-        "HML",
-        "5ED"
+        "ICE",
+        "5ED",
+        "6ED",
+        "8ED",
+        "9ED"
       ],
-      "rarity": "Uncommon",
-      "text": "{4}, {T}: Target creature can't be blocked this turn except by Walls.",
-      "type": "Artifact",
+      "rarity": "Rare",
+      "rulings": [
+        {
+          "date": "2004-10-04",
+          "text": "If someone pays the cost, then the card was never drawn or discarded. It just gets put into the graveyard directly from the library."
+        },
+        {
+          "date": "2004-10-04",
+          "text": "This is continuous replacement effect that modifies a draw."
+        },
+        {
+          "date": "2004-10-04",
+          "text": "If a spell or ability causes more than one card to be drawn, draw the cards one at a time and deal with this replacement before drawing the next card."
+        },
+        {
+          "date": "2006-04-01",
+          "text": "When using Dredge with this, you have two choices. You can immediately replace the draw with Dredge, or you can apply Zur's Weirding's replacement. If the latter, you first resolve Zur's Weirding's ability, then if you're going to draw the card, decide whether or not to replace that draw with Dredge."
+        }
+      ],
+      "text": "Players play with their hands revealed.\nIf a player would draw a card, he or she reveals it instead. Then any other player may pay 2 life. If a player does, put that card into its owner's graveyard. Otherwise, that player draws a card.",
+      "type": "Enchantment",
       "types": [
-        "Artifact"
+        "Enchantment"
       ]
     }
   ]

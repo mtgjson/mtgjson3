@@ -78,14 +78,14 @@
       ]
     },
     {
-      "artist": "Thomas Gianni",
-      "cmc": 2,
+      "artist": "D. Alexander Gregory",
+      "cmc": 3,
       "colors": [
         "White"
       ],
-      "flavor": "\"I'm too modest a wizard to reveal the full extent of my abilities.\"\n—Ertai, wizard adept",
-      "id": "f210f11d5a8c5e8ee225d7a074b7c3ab97f5c999",
-      "imageName": "abeyance",
+      "flavor": "\"Save me from Maraxus,\" Starke pleaded, \"or condemn me to his wrath. Either way, do not ignore me!\"",
+      "id": "0375615a8dd2a826737d2c7e6ced4a307c704ed1",
+      "imageName": "inner sanctum",
       "layout": "normal",
       "legalities": [
         {
@@ -105,38 +105,20 @@
           "legality": "Legal"
         }
       ],
-      "manaCost": "{1}{W}",
-      "multiverseid": 4563,
-      "name": "Abeyance",
-      "originalText": "Until end of turn, target player cannot play instants, interrupts, sorceries, or abilities requiring an activation cost.\nDraw a card.",
-      "originalType": "Instant",
+      "manaCost": "{1}{W}{W}",
+      "multiverseid": 4580,
+      "name": "Inner Sanctum",
+      "originalText": "Cumulative upkeep—2 life\nAll damage dealt to creatures you control is reduced to 0.",
+      "originalType": "Enchantment",
       "printings": [
         "WTH"
       ],
       "rarity": "Rare",
       "reserved": true,
-      "rulings": [
-        {
-          "date": "2004-10-04",
-          "text": "Abeyance prohibits activated abilities of cards which are not on the battlefield."
-        },
-        {
-          "date": "2004-10-04",
-          "text": "Abeyance never prevents mana abilities from being activated."
-        },
-        {
-          "date": "2004-10-04",
-          "text": "Abeyance does not affect abilities which are not activated, such as static abilities and triggered abilities. It also doesn't stop the declaration of attackers or blockers."
-        },
-        {
-          "date": "2008-08-01",
-          "text": "This can't be used as a counterspell. It will have no effect on spells which were on the stack when it was cast, nor on those cast in response to it."
-        }
-      ],
-      "text": "Until end of turn, target player can't cast instant or sorcery spells, and that player can't activate abilities that aren't mana abilities.\nDraw a card.",
-      "type": "Instant",
+      "text": "Cumulative upkeep—Pay 2 life. (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)\nPrevent all damage that would be dealt to creatures you control.",
+      "type": "Enchantment",
       "types": [
-        "Instant"
+        "Enchantment"
       ]
     },
     {
@@ -4882,14 +4864,14 @@
       ]
     },
     {
-      "artist": "D. Alexander Gregory",
+      "artist": "Patrick Kochakji",
       "cmc": 3,
       "colors": [
-        "White"
+        "Black"
       ],
-      "flavor": "\"Save me from Maraxus,\" Starke pleaded, \"or condemn me to his wrath. Either way, do not ignore me!\"",
-      "id": "0375615a8dd2a826737d2c7e6ced4a307c704ed1",
-      "imageName": "inner sanctum",
+      "flavor": "\"Pick a shell upon my shore and put it to your ear. That sound isn't the sea, but the whispers of the fallen.\"\n—Crovax",
+      "id": "6cba8e8ef26cb6177d2d69b6d97f434f452eb42a",
+      "imageName": "zombie scavengers",
       "layout": "normal",
       "legalities": [
         {
@@ -4909,20 +4891,46 @@
           "legality": "Legal"
         }
       ],
-      "manaCost": "{1}{W}{W}",
-      "multiverseid": 4580,
-      "name": "Inner Sanctum",
-      "originalText": "Cumulative upkeep—2 life\nAll damage dealt to creatures you control is reduced to 0.",
-      "originalType": "Enchantment",
+      "manaCost": "{2}{B}",
+      "multiverseid": 4475,
+      "name": "Zombie Scavengers",
+      "originalText": "Remove the top creature card in your graveyard from the game: Regenerate",
+      "originalType": "Summon — Zombies",
+      "power": "3",
       "printings": [
         "WTH"
       ],
-      "rarity": "Rare",
-      "reserved": true,
-      "text": "Cumulative upkeep—Pay 2 life. (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)\nPrevent all damage that would be dealt to creatures you control.",
-      "type": "Enchantment",
+      "rarity": "Common",
+      "rulings": [
+        {
+          "date": "2008-04-01",
+          "text": "The “top” card of your graveyard is the card that was put there most recently."
+        },
+        {
+          "date": "2008-04-01",
+          "text": "Players may not rearrange the cards in their graveyards. This is a little-known rule because new cards that care about graveyard order haven't been printed in years."
+        },
+        {
+          "date": "2008-04-01",
+          "text": "If an effect or rule puts two or more cards into the same graveyard at the same time, the owner of those cards may arrange them in any order."
+        },
+        {
+          "date": "2008-04-01",
+          "text": "The last thing that happens to a resolving instant or sorcery spell is that it's put into its owner's graveyard. --Example: You cast Wrath of God. All creatures on the battlefield are destroyed. You arrange all the cards put into your graveyard this way in any order you want. The other players in the game do the same to the cards that are put into their graveyards. Then you put Wrath of God into your graveyard, on top of the other cards."
+        },
+        {
+          "date": "2008-04-01",
+          "text": "Say you're the owner of both a permanent and an Aura that's attached to it. If both the permanent and the Aura are destroyed at the same time (by Akroma's Vengeance, for example), you decide the order they're put into your graveyard. If just the enchanted permanent is destroyed, it's put into your graveyard first. Then, after state-based actions are checked, the Aura (which is no longer attached to anything) is put into your graveyard on top of it."
+        }
+      ],
+      "subtypes": [
+        "Zombie"
+      ],
+      "text": "Exile the top creature card of your graveyard: Regenerate Zombie Scavengers.",
+      "toughness": "1",
+      "type": "Creature — Zombie",
       "types": [
-        "Enchantment"
+        "Creature"
       ]
     },
     {
@@ -9593,14 +9601,14 @@
       ]
     },
     {
-      "artist": "Patrick Kochakji",
-      "cmc": 3,
+      "artist": "Thomas Gianni",
+      "cmc": 2,
       "colors": [
-        "Black"
+        "White"
       ],
-      "flavor": "\"Pick a shell upon my shore and put it to your ear. That sound isn't the sea, but the whispers of the fallen.\"\n—Crovax",
-      "id": "6cba8e8ef26cb6177d2d69b6d97f434f452eb42a",
-      "imageName": "zombie scavengers",
+      "flavor": "\"I'm too modest a wizard to reveal the full extent of my abilities.\"\n—Ertai, wizard adept",
+      "id": "f210f11d5a8c5e8ee225d7a074b7c3ab97f5c999",
+      "imageName": "abeyance",
       "layout": "normal",
       "legalities": [
         {
@@ -9620,46 +9628,38 @@
           "legality": "Legal"
         }
       ],
-      "manaCost": "{2}{B}",
-      "multiverseid": 4475,
-      "name": "Zombie Scavengers",
-      "originalText": "Remove the top creature card in your graveyard from the game: Regenerate",
-      "originalType": "Summon — Zombies",
-      "power": "3",
+      "manaCost": "{1}{W}",
+      "multiverseid": 4563,
+      "name": "Abeyance",
+      "originalText": "Until end of turn, target player cannot play instants, interrupts, sorceries, or abilities requiring an activation cost.\nDraw a card.",
+      "originalType": "Instant",
       "printings": [
         "WTH"
       ],
-      "rarity": "Common",
+      "rarity": "Rare",
+      "reserved": true,
       "rulings": [
         {
-          "date": "2008-04-01",
-          "text": "The “top” card of your graveyard is the card that was put there most recently."
+          "date": "2004-10-04",
+          "text": "Abeyance prohibits activated abilities of cards which are not on the battlefield."
         },
         {
-          "date": "2008-04-01",
-          "text": "Players may not rearrange the cards in their graveyards. This is a little-known rule because new cards that care about graveyard order haven't been printed in years."
+          "date": "2004-10-04",
+          "text": "Abeyance never prevents mana abilities from being activated."
         },
         {
-          "date": "2008-04-01",
-          "text": "If an effect or rule puts two or more cards into the same graveyard at the same time, the owner of those cards may arrange them in any order."
+          "date": "2004-10-04",
+          "text": "Abeyance does not affect abilities which are not activated, such as static abilities and triggered abilities. It also doesn't stop the declaration of attackers or blockers."
         },
         {
-          "date": "2008-04-01",
-          "text": "The last thing that happens to a resolving instant or sorcery spell is that it's put into its owner's graveyard. --Example: You cast Wrath of God. All creatures on the battlefield are destroyed. You arrange all the cards put into your graveyard this way in any order you want. The other players in the game do the same to the cards that are put into their graveyards. Then you put Wrath of God into your graveyard, on top of the other cards."
-        },
-        {
-          "date": "2008-04-01",
-          "text": "Say you're the owner of both a permanent and an Aura that's attached to it. If both the permanent and the Aura are destroyed at the same time (by Akroma's Vengeance, for example), you decide the order they're put into your graveyard. If just the enchanted permanent is destroyed, it's put into your graveyard first. Then, after state-based actions are checked, the Aura (which is no longer attached to anything) is put into your graveyard on top of it."
+          "date": "2008-08-01",
+          "text": "This can't be used as a counterspell. It will have no effect on spells which were on the stack when it was cast, nor on those cast in response to it."
         }
       ],
-      "subtypes": [
-        "Zombie"
-      ],
-      "text": "Exile the top creature card of your graveyard: Regenerate Zombie Scavengers.",
-      "toughness": "1",
-      "type": "Creature — Zombie",
+      "text": "Until end of turn, target player can't cast instant or sorcery spells, and that player can't activate abilities that aren't mana abilities.\nDraw a card.",
+      "type": "Instant",
       "types": [
-        "Creature"
+        "Instant"
       ]
     }
   ]
