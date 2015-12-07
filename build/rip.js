@@ -1699,8 +1699,8 @@ function fixCommanderIdentityForCards(cards, cb) {
 		}
 
 		// Process color indicators
+		var newColors = [];
 		if (card.colors) {
-			var newColors = [];
 			card.colors.forEach(function(color){
 				if (color.toLowerCase() == "white") newColors.push('W');
 				if (color.toLowerCase() == "blue") newColors.push('U');
@@ -1708,12 +1708,21 @@ function fixCommanderIdentityForCards(cards, cb) {
 				if (color.toLowerCase() == "red") newColors.push('R');
 				if (color.toLowerCase() == "green") newColors.push('G');
 			});
-
-			newColors.forEach(function(idx) {
-				if ((validColors.indexOf(idx) >= 0) && (colors.indexOf(idx) == -1))
-					colors.push(idx);
-			});
 		}
+
+		// Add color identity to lands
+		if (card.type.toLowerCase().indexOf('land') >= 0) {
+			if (card.type.toLowerCase().indexOf('plains') > 0) newColors.push('W');
+			if (card.type.toLowerCase().indexOf('island') > 0) newColors.push('U');
+			if (card.type.toLowerCase().indexOf('swamp') > 0) newColors.push('B');
+			if (card.type.toLowerCase().indexOf('mountain') > 0) newColors.push('R');
+			if (card.type.toLowerCase().indexOf('forest') > 0) newColors.push('G');
+		}
+
+		newColors.forEach(function(idx) {
+			if ((validColors.indexOf(idx) >= 0) && (colors.indexOf(idx) == -1))
+				colors.push(idx);
+		});
 
 		// Process card text and mana cost
 		var fullText = card.manaCost;
