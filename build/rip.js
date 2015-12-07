@@ -1681,10 +1681,11 @@ function fixCommanderIdentityForCards(cards, cb) {
 		return(ret);
 	}
 
+	const validColors = ['W', 'U', 'B', 'R', 'G'];
+
 	cards.parallelForEach(function(card, subcb){
 		// Calculate commander color identity
 		var regex = /{([^}]*)}/g;
-		const validColors = ['W', 'U', 'B', 'R', 'G'];
 		var colors = [];	// Holds the final color array
 		var res = null;
 
@@ -1718,8 +1719,8 @@ function fixCommanderIdentityForCards(cards, cb) {
 			card.colorIdentity = colors;
 		}
 
-		// Process double-faced cards
-		if (card.layout == "double-faced") {
+		// Process split and double-faced cards
+		if (card.layout == "double-faced" || card.layout == "split") {
 			var otherSideNum = card.number.substr(0, card.number.length - 1);
 
 			if (card.number.substr("-1") == "a") {
@@ -1739,9 +1740,16 @@ function fixCommanderIdentityForCards(cards, cb) {
 			if (card.colorIdentity) colors = colors.concat(card.colorIdentity);
 			if (otherCard.colorIdentity) colors = colors.concat(otherCard.colorIdentity);
 
+			// Remove duplicates
 			var uniqueColors = colors.filter(function(elem, pos) {
 				return colors.indexOf(elem) == pos;
 			});
+
+			// Sort
+			colors.sort();
+
+			otherCard.colorIdentity = uniqueColors;
+			card.colorIdentity = uniqueColors;
 		}
 
 		subcb();
