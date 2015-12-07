@@ -1689,6 +1689,13 @@ function fixCommanderIdentityForCards(cards, cb) {
 		var colors = [];	// Holds the final color array
 		var res = null;
 
+		var ct = card.type.toLowerCase();
+		if (ct == "phenomenon" || ct == "token" || ct == "plane" || ct == "scheme" || ct == "vanguard") {
+			delete card.colorIdentity;
+			setImmediate(subcb);
+			return;
+		}
+
 		// Process color indicators
 		if (card.colors) {
 			var newColors = [];

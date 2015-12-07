@@ -18,7 +18,7 @@ shared.getSetsToDo().serialForEach(processSet, function(err) {
 });
 
 function processSet(code, cb) {
-	base.info("Processing set: %s", code);
+	base.info("Processing ColorIdentity for set: %s", code);
 
 	var set = null;
 
