@@ -1689,9 +1689,11 @@ function fixCommanderIdentityForCards(cards, cb) {
 		var colors = [];	// Holds the final color array
 		var res = null;
 
+		// Remove old colorIdentity before we start processing...
+		delete card.colorIdentity;
+
 		var ct = card.type.toLowerCase();
 		if (ct == "phenomenon" || ct == "token" || ct == "plane" || ct == "scheme" || ct == "vanguard") {
-			delete card.colorIdentity;
 			setImmediate(subcb);
 			return;
 		}
@@ -1714,7 +1716,10 @@ function fixCommanderIdentityForCards(cards, cb) {
 		}
 
 		// Process card text and mana cost
-		var fullText = card.manaCost + card.text;
+		var fullText = card.manaCost;
+		if (card.text) 
+			fullText += card.text.replace(/\([^\)]*\)/gi,'');
+
 		while (res = regex.exec(fullText)) {
 			res[1].split("/").forEach(function(idx) {
 				if ((validColors.indexOf(idx) >= 0) && (colors.indexOf(idx) == -1))
