@@ -768,14 +768,20 @@ exports.updateStandardForCard = function(card) {
 exports.saveSet = function(set, callback) {
 	// 1. Sort cards
 	set.cards.sort(function(a, b) {
+		var ret = 0;
 		if (a.number && b.number) {
 			var ret = exports.alphanum(a.number, b.number);
 			if (ret == 0)
 				ret = (a.multiverseid > b.multiverseid)?1:-1;
-			return(ret);
 		}
 
-		return(a.name.localeCompare(b.name));
+		if (ret == 0)
+			ret = a.name.localeCompare(b.name);
+
+		if (ret == 0)
+			ret = (a.multiverseid > b.multiverseid)?1:-1;
+
+		return(ret);
 	});
 
 	// Sort internal card stuff
