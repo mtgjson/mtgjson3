@@ -1,0 +1,222 @@
+/* mtgjson.css */
+
+html, body {
+	height: 100%;
+}
+
+body {
+ 	font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+#frontmatter {
+	height: 100%;
+	min-height: 720px;
+	text-align: center;
+	position: relative;
+}
+
+#header a {
+	color: #888;
+}
+
+#header #vendor {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 1.5em 0 1em 3em;
+	font-size: 150%;
+}
+
+#header {
+	border-bottom: 1px solid #888;
+	margin-bottom: 1em;
+}
+
+#frontmatter #header {
+	border-bottom: 0;
+	margin-bottom: 0;
+}
+
+#header > ul {
+	margin: 0;
+	padding: 3em 0 1em 0;
+	text-align: center;
+}
+
+#header > ul > li {
+	display: inline-block;
+	margin: 0 1em;
+}
+
+#logo {
+	text-align: center;
+}
+
+#mtgjson {
+	display: block;
+	font-size: 300%;
+	margin: 3em 0.5em;
+}
+
+#currentversion {
+	display: block;
+	color: #c00;
+}
+
+#downloads {
+	text-align: center;
+	margin: 0 auto;
+}
+
+#downloads span {
+	display: inline-block;
+	min-width: 25ex;
+	font-family: 'Roboto Mono', Monaco, courier, monospace;
+	font-weight: 700;
+	background-color: #4fc08d;
+	border-bottom: 2px solid #3aa373;
+	padding: 12px 14px;
+	border-radius: 4px;
+	transition: all 0.15s ease;
+	margin: 0 0.5em;
+}
+
+#downloads div {
+	margin: 1em 0;
+}
+
+#downloads a {
+	color: #fff;
+}
+
+#footer {
+	padding: 2em 1em 1em 1em;
+	background-color: #ccc;
+	text-align: center;
+}
+
+.down {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	left: 0;
+	padding: 1.5em 0;
+}
+
+.down img {
+	width: 20px;	
+}
+
+#main-contents {
+	background-color: #f0f0f0;
+	padding: 1em;
+	text-align: center;
+	color: #34495e;
+}
+
+#main-contents a {
+	color: #228;
+}
+
+#main-contents > p {
+	display: inline-block;
+	text-align: left;
+	vertical-align: top;
+	margin: 40px;
+	width: 300px;
+	
+}
+
+#thanks {
+	background-color: #42b983;
+	padding: 2em 1em;
+	margin: 0;
+	line-height: 1.5em;
+	color: #fff;
+}
+
+#thanks a, #thanks a:visited {
+	color: #00f;	
+}
+
+#thanks > div {
+	margin: 0 auto;
+	width: 720px;
+}
+
+#individual-thanks {
+	line-height: 1em;
+}
+
+#individual-thanks li {
+	display: inline-block;
+	margin: 0 0.25em;
+	font-size: smaller;
+}
+
+#examplecard {
+	background-color: #4283b9;
+	margin: 0;
+	padding: 1em 2em;
+	color: #fff;
+	text-align: center;
+}
+
+#examplecard pre {
+	text-align: left;
+}
+
+#examplecard img {
+	float: right;
+}
+
+@media(max-width: 1100px) {
+	#examplecard img {
+		max-width: 192px;
+	}
+}
+
+@media(max-width: 890px) {
+	#examplecard img {
+		width: auto;
+		display: block;
+		float: none;
+	}
+}
+
+#contents > div {
+	margin: 1em 2em;
+}
+
+table {
+	border: 1px solid black;
+	border-spacing: 0;
+	border-collapse: collapse;
+	margin: 1em auto;
+}
+
+table td {
+	padding: 0.5em 0.25em;
+}
+
+table thead th, table thead td {
+	background-color: #ccc;
+}
+
+.changelog-entry h3 {
+	margin: 1em 0 0 0;
+	padding: 0;
+}
+
+.changelog-date {
+	margin: 0;
+	padding: 0;
+	font-size: smaller;
+}
