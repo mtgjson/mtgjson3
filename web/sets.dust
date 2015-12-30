@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>MTG JSON</title>
+	<link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon" /> 
+	{analytics|s}
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Roboto Mono' rel='stylesheet' type='text/css'>
+	<link type="text/css" rel="stylesheet" href="mtgjson.css" />
+	<link type="text/css" rel="stylesheet" href="mtgicons.css" />
+</head>
+<body>
+	<div id="header">
+		<div id="vendor"><a href="/">MTG JSON</a></div>
+		<ul>
+			<li><a href="/documentation.html">Documentation</a></li>
+			<li><a href="/sets.html">All Sets</a></li>
+			<li><a href="/changelog.html">Changelog</a></li>
+			<li><a href="http://github.com/lsmoura/mtgjson">Github</a></li>
+		</ul>
+	</div>
+	<div id="sets-contents">{#sets}
+		<div>
+			<h2>{?isMCISet}{name}{:else}<a href="/sets/{lcCode}.html">{name}</a>{/isMCISet}</h2>
+			<p><i class="mtg {setClass}"></i></p>
+			<p>{code}</p>
+			<p>{releaseDate}</p>
+			<div class="downloads">
+				<a href="json/{code}.json.zip">Zipped ({sizeZip|s})</a>
+				<a href="json/{code}-x.json.zip">Zipped + Extras ({sizeXZip|s})</a>
+				<a href="json/{code}.json">Set ({size|s})</a>
+				<a href="json/{code}-x.json">Set + Extras ({sizeX|s})</a>
+			</div>
+		</div>
+	{/sets}</div>
+	<div class="windowswarning">
+		<h2>Windows Warning</h2>
+		<p>Microsoft Windows does not allow files to be named CON (<a href="http://superuser.com/questions/86999/unable-to-rename-a-folder-or-a-file-as-con">see here</a>).</p>
+		<p>Thus on Windows you can't download CON.json, CON.json.zip or extract AllSetFiles.zip (which contains CON.json)</p>
+		<p>Here are Window friendly links with an underscore prefix: <a href="/json/_CON.json">_CON.json</a> | <a href="/json/_CON.json.zip">_CON.json.zip</a> | <a href="/json/AllSetFilesWindows.zip">AllSetFiles_Windows.zip</a></p>
+	</div>
+	<div id="footer">
+		<p>The JSON files contains data that is Copyright &copy; Wizards of the Coast - All Rights Reserved</p>
+		<p>This website is not affiliated with Wizards of the Coast in any way.</p>
+	</div>
+</body>
+</html>

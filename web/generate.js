@@ -17,8 +17,7 @@ var base = require("xbase"),
 var JSONP_PREFIX = "mtgjsoncallback(";
 var JSONP_SUFFIX = ");";
 
-var dustData = 
-{
+var dustData =  {
 	title : "Magic the Gathering card data in JSON format",
 	sets  : [],
 	setCodesNotOnGatherer : C.SETS_NOT_ON_GATHERER.join(", "),
@@ -337,7 +336,7 @@ tiptoe(
 		}, this.parallel());
 	},
 	function render() {
-		base.info("Rendering index, atom and sitemap...");
+		base.info("Rendering dust files...");
 		dustData.allSizeZip = printUtil.toSize(fs.statSync(path.join(__dirname, "json", "AllSets.json.zip")).size, 1);
 		dustData.allSizeXZip = printUtil.toSize(fs.statSync(path.join(__dirname, "json", "AllSets-x.json.zip")).size, 1);
 		dustData.allCardsSizeZip = printUtil.toSize(fs.statSync(path.join(__dirname, "json", "AllCards.json.zip")).size, 1);
@@ -349,19 +348,36 @@ tiptoe(
 			var setCode = dustData.sets[i].code;
 			dustData.sets[i].sizeZip = printUtil.toSize(fs.statSync(path.join(__dirname, "json", setCode + ".json.zip")).size, 1);
 			dustData.sets[i].sizeXZip = printUtil.toSize(fs.statSync(path.join(__dirname, "json", setCode + "-x.json.zip")).size, 1);
+			// Set Class
+			dustData.sets[i].setClass = dustData.sets[i].name.toLowerCase().replaceAll(' ', '-');
 		});
 
-		dustUtil.render(__dirname, "index", dustData, { keepWhitespace : true }, this.parallel());
-		dustUtil.render(__dirname, "index.pt", dustData, { keepWhitespace : true }, this.parallel());
-		dustUtil.render(__dirname, "atom", dustData, { keepWhitespace : true }, this.parallel());
-		dustUtil.render(__dirname, "sitemap", dustData, { keepWhitespace : true }, this.parallel());
-	},
-	function save(indexHTML, indexPTHTML, atomXML, sitemapXML) {
-		fs.writeFile(path.join(__dirname, "index.html"), indexHTML, {encoding:"utf8"}, this.parallel());
-		fs.writeFile(path.join(__dirname, "atom.xml"), atomXML, {encoding:"utf8"}, this.parallel());
-		fs.writeFile(path.join(__dirname, "sitemap.xml"), sitemapXML, {encoding:"utf8"}, this.parallel());
+		function saveDust(input, output, cb) {
+			dustUtil.render(__dirname, input, dustData, { keepWhitespace : true }, function(err, doc) {
+				if (err) {
+					base.error("ERROR Rendering DUST for file %s", output);
+					return(setImmediate(function() { if (cb) cb(err); }));
+				}
 
-		fs.writeFile(path.join(__dirname, "index.pt.html"), indexPTHTML, {encoding:"utf8"}, this.parallel());
+				base.info("Writing %s...", output);
+				fs.writeFile(path.join(__dirname, output), doc, { encoding: 'utf8' }, function(err) {
+					if (err) {
+						base.error("ERROR:");
+						base.error(err);
+					}
+					base.info('Finished writing %s', output);
+					if (cb) cb();
+				});
+			});
+		}
+
+		saveDust('index', 'index.html', this.parallel());
+		saveDust('atom', 'atom.xml', this.parallel());
+		saveDust('sitemap', 'sitemap.xml', this.parallel());
+
+		saveDust('documentation', 'documentation.html', this.parallel());
+		saveDust('changelog', 'changelog.html', this.parallel());
+		saveDust('sets', 'sets.html', this.parallel());
 	},
 	function finish(err) {
 		if(err) {
