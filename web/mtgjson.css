@@ -195,6 +195,49 @@ a {
 	margin: 1em 2em;
 }
 
+#sets-contents {
+	padding: 1em;
+	text-align: center;
+	color: #34495e;
+}
+
+#sets-contents a {
+	color: #228;
+}
+
+#sets-contents > div {
+	display: inline-block;
+	text-align: left;
+	vertical-align: top;
+	margin: 40px;
+	width: 300px;
+}
+
+#sets-contents > div > h2 {
+	display: block;
+	margin: 0;
+	text-align: center;
+}
+
+#sets-contents > div > p {
+	margin: 0 0.2em 0.4em 0.2em;
+	font-size: smaller;
+	display: inline-block;
+}
+
+#sets-contents .downloads a {
+	display: inline-block;
+	font-size: smaller;
+	font-weight: 600;
+	background-color: #4fc08d;
+	border-bottom: 2px solid #3aa373;
+	padding: 0.2em 1ex;
+	border-radius: 4px;
+	transition: all 0.15s ease;
+	margin: 0.2em 0.5em;
+	color: #fff;
+}
+
 table {
 	border: 1px solid black;
 	border-spacing: 0;

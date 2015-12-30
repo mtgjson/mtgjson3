@@ -370,12 +370,12 @@ tiptoe(
 		}
 
 		saveDust('index', 'index.html', this.parallel());
-		saveDust('atom', 'atom.html', this.parallel());
-		saveDust('sitemap', 'sitemap.html', this.parallel());
+		saveDust('atom', 'atom.xml', this.parallel());
+		saveDust('sitemap', 'sitemap.xml', this.parallel());
 
 		saveDust('documentation', 'documentation.html', this.parallel());
 		saveDust('changelog', 'changelog.html', this.parallel());
-		// TODO: Individual Sets
+		saveDust('sets', 'sets.html', this.parallel());
 	},
 	function finish(err) {
 		if(err) {

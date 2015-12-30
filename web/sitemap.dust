@@ -6,9 +6,28 @@
 		<changefreq>monthly</changefreq>
 		<priority>1.0</priority>
 	</url>
+	<url>
+		<loc>http://mtgjson.com/documentation.html</loc>
+		<lastmod>{lastUpdatedSiteMap}</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.8</priority>
+	</url>
+	<url>
+		<loc>http://mtgjson.com/sets.html</loc>
+		<lastmod>{lastUpdatedSiteMap}</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.8</priority>
+	</url>
+	<url>
+		<loc>http://mtgjson.com/changelog.html</loc>
+		<lastmod>{lastUpdatedSiteMap}</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.7</priority>
+	</url>
 	{#sets}{^isMCISet}<url>
 		<loc>http://mtgjson.com/{lcCode}.html</loc>
 		<lastmod>{lastUpdatedSiteMap}</lastmod>
 		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
 	</url>{/isMCISet}{/sets}
 </urlset> 
