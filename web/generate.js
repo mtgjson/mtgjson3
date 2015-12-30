@@ -348,6 +348,8 @@ tiptoe(
 			var setCode = dustData.sets[i].code;
 			dustData.sets[i].sizeZip = printUtil.toSize(fs.statSync(path.join(__dirname, "json", setCode + ".json.zip")).size, 1);
 			dustData.sets[i].sizeXZip = printUtil.toSize(fs.statSync(path.join(__dirname, "json", setCode + "-x.json.zip")).size, 1);
+			// Set Class
+			dustData.sets[i].setClass = dustData.sets[i].name.toLowerCase().replaceAll(' ', '-');
 		});
 
 		function saveDust(input, output, cb) {

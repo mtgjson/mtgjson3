@@ -217,7 +217,7 @@ C.SETS.serialForEach(
 				generateSpoilerForSetName(setName, null, this);
 			},
 			function saveSet(html) {
-				fs.writeFile(path.join(__dirname, setName.toLowerCase() + ".html"), html, { encoding: "utf8" }, this);
+				fs.writeFile(path.join(__dirname, 'sets', setName.toLowerCase() + ".html"), html, { encoding: "utf8" }, this);
 			},
 			function finish(err) {
 				if (err)
