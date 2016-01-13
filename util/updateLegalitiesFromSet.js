@@ -8,10 +8,8 @@ var base = require("xbase"),
 	path = require("path"),
 	tiptoe = require("tiptoe");
 
-shared.getSetsToDo().serialForEach(processSet, function(err)
-{
-	if(err)
-	{
+shared.getSetsToDo().serialForEach(processSet, function(err) {
+	if(err) {
 		base.error(err);
 		process.exit(1);
 	}
@@ -19,31 +17,34 @@ shared.getSetsToDo().serialForEach(processSet, function(err)
 	process.exit(0);
 });
 
-function processSet(code, cb)
-{
+function processSet(code, cb) {
 	base.info("Processing set: %s", code);
 
 	tiptoe(
-		function getJSON()
-		{
+		function getJSON() {
 			fs.readFile(path.join(__dirname, "..", "json", code + ".json"), {encoding : "utf8"}, this);
 		},
-		function processCards(setRaw)
-		{
+		function processCards(setRaw) {
 			var set = JSON.parse(setRaw);
 
+			// Will contain all legalities on this set.
 			var cardLegalitiesByName = {};
+			// Which other sets have this card?
 			var setCards = {};
-			set.cards.forEach(function(card)
-			{
-				card.printings.remove(set.code);
-				if(!card.printings || !card.printings.length)
+
+			// Parsing each card...
+			set.cards.forEach(function(card) {
+				card.printings.remove(set.code); // We don't want to update our own set.
+
+				if(!card.printings || !card.printings.length) {
+					// This card has no other printings, we don't need to bother.
 					return;
+				}
 
 				cardLegalitiesByName[card.name] = card.legalities;
 
-				card.printings.forEach(function(printingCode)
-				{
+				// Updates the printings where we need to update something
+				card.printings.forEach(function(printingCode) {
 					if(!setCards.hasOwnProperty(printingCode))
 						setCards[printingCode] = [];
 
@@ -52,33 +53,36 @@ function processSet(code, cb)
 				});
 			});
 
-			Object.keys(setCards).serialForEach(function(setCode, subcb)
-			{
+			// Go over each set and update the legalities to reflect this set.
+			Object.keys(setCards).serialForEach(function(setCode, subcb) {
 				updateLegalitiesForSetCards(setCode, setCards[setCode], cardLegalitiesByName, subcb);
 			}, this);
 		},
-		function finish(err)
-		{
+		function finish(err) {
 			setImmediate(function() { cb(err); });
 		}
 	);
 }
 
-function updateLegalitiesForSetCards(setCode, targetCardNames, cardLegalitiesByName, cb)
-{
+/**
+ * Updates the legalities of a list of sets with the given legalities.
+ * @param setCode String with the name of the set we want to update
+ * @param targetCardNames Array of Strings with the names of the cards we want to update on this set.
+ * @param cardLegalitiesByName Dictionary with the key being the card name and the value is the legalities
+ *                             we want to reflect on the given setCode.
+ * @param cb Function with the callback to pass the error or pass no parameter 
+ */
+function updateLegalitiesForSetCards(setCode, targetCardNames, cardLegalitiesByName, cb) {
 	base.info("Adding legalities to set [%s] for all cards: %s", setCode, targetCardNames.join(", "));
 
 	tiptoe(
-		function getJSON()
-		{
+		function getJSON() {
 			fs.readFile(path.join(__dirname, "..", "json", setCode + ".json"), {encoding : "utf8"}, this);
 		},
-		function addPrintingsAndSave(setRaw)
-		{
+		function addPrintingsAndSave(setRaw) {
 			var set = JSON.parse(setRaw);
 
-			set.cards.forEach(function(card)
-			{
+			set.cards.forEach(function(card) {
 				if(!targetCardNames.contains(card.name))
 					return;
 
@@ -91,8 +95,7 @@ function updateLegalitiesForSetCards(setCode, targetCardNames, cardLegalitiesByN
 
 			shared.saveSet(set, this);
 		},
-		function finish(err)
-		{
+		function finish(err) {
 			setImmediate(function() { cb(err); });
 		}
 	);
