@@ -1420,8 +1420,7 @@ function addMagicLibraritiesInfoToMCISet(set, cb)
 
 var COLOR_ORDER = ["white", "blue", "black", "red", "green"];
 
-var COLOR_SYMBOL_TO_NAME_MAP =
-{
+var COLOR_SYMBOL_TO_NAME_MAP = {
 	"W" : "white",
 	"U" : "blue",
 	"B" : "black",
@@ -1429,13 +1428,13 @@ var COLOR_SYMBOL_TO_NAME_MAP =
 	"G" : "green"
 };
 
-var SYMBOL_CONVERSION_MAP =
-{
+var SYMBOL_CONVERSION_MAP = {
 	"white"              : "W",
 	"blue"               : "U",
 	"black"              : "B",
 	"red"                : "R",
 	"green"              : "G",
+	"colorless"          : "C",
 	"zero"               : "0",
 	"one"                : "1",
 	"two"                : "2",

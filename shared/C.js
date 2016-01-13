@@ -3020,6 +3020,27 @@ var base = require("xbase");
 			},
 			mkm_name : "Commander 2015",
 			mkm_id : 1679
+		},
+		{
+			name : "Oath of the Gatewatch",
+			code : "OGW",
+			releaseDate : "2016-01-22",
+			border : "black",
+			type : "expansion",
+			block : "Battle for Zendikar",
+			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"],
+			translations: {
+				pt: 'Juramento das Sentinelas',
+				es: 'El juramento de los Guardianes',
+				ru: 'Клятва Стражей',
+				ko: '관문수호대의 맹세',
+				jp: '『ゲートウォッチの誓い』',
+				it: 'Giuramento dei Guardiani',
+				de: 'Eid der Wächter',
+				fr: 'Le serment des Sentinelles',
+				'zh-hant': '守護者誓約',
+				'zh-hans': '守护者誓约'
+			}
 		}
 	];
 
@@ -4603,6 +4624,7 @@ var base = require("xbase");
 		r : ["red"],
 		g : ["green"],
 		s : ["snow"],
+		c : ["colorless"],
 		"0" : ["zero"],
 		"1" : ["one"],
 		"2" : ["two"],
@@ -4752,7 +4774,11 @@ var base = require("xbase");
 	};
 
 	exports.STANDARD_SETS = [
-		'KTK', 'FRF', 'DTK', 'ORI', 'BFZ'
+		'KTK',
+		'FRF',
+		'DTK',
+		'ORI',
+		'BFZ'
 	];
 
 })(typeof exports==="undefined" ? window.C={} : exports);

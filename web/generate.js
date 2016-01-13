@@ -157,8 +157,7 @@ tiptoe(
 
 			fs.writeFile(path.join(__dirname, "json", SET.code + ".json"), JSON.stringify(set), {encoding : "utf8"}, this.parallel());
 			fs.writeFile(path.join(__dirname, "json", SET.code + ".jsonp"), JSONP_PREFIX + JSON.stringify(set) + ', "' + SET.code + '"' + JSONP_SUFFIX, {encoding : "utf8"}, this.parallel());
-			if(SET.code==="CON")
-			{
+			if (SET.code === "CON") {
 				fs.writeFile(path.join(__dirname, "json", "_" + SET.code + ".json"), JSON.stringify(set), {encoding : "utf8"}, this.parallel());
 				fs.writeFile(path.join(__dirname, "json", "_" + SET.code + ".jsonp"), JSONP_PREFIX + JSON.stringify(set) + ', "' + SET.code + '"' + JSONP_SUFFIX, {encoding : "utf8"}, this.parallel());
 			}
@@ -166,10 +165,7 @@ tiptoe(
 			fs.writeFile(path.join(__dirname, "json", SET.code + "-x.jsonp"), JSONP_PREFIX + JSON.stringify(setWithExtras) + ', "' + SET.code + '-x"' + JSONP_SUFFIX, {encoding : "utf8"}, this.parallel());
 
 			var setSize = printUtil.toSize(JSON.stringify(set).length, 0);
-			setSize = (setSize.length>=6 ? "" : "&nbsp;".repeat(6-setSize.length)) + setSize;
-
 			var setXSize = printUtil.toSize(JSON.stringify(setWithExtras).length, 0);
-			setXSize = (setSize.length>=6 ? "" : "&nbsp;".repeat(6-setXSize.length)) + setXSize;
 
 			var dustSetData = {code : SET.code, lcCode : SET.code.toLowerCase(), name : SET.name, releaseDate : SET.releaseDate, size : setSize, sizeX : setXSize};
 			if(SET.code==="CON")
