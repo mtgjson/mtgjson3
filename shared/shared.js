@@ -845,4 +845,35 @@ exports.alphanum = function(a, b) {
     }
   }
   return aa.length - bb.length;
-}
+};
+
+/**
+ * Execute a function on a given set and saves the returned data (if any)
+ * @param setCode String with the name of the set we want to update
+ * @param processFunction function to modify the set data. If data is returned, this data considered the new set data.
+ * @param callback Function with the callback to pass the error or pass no parameter
+ */
+exports.processSet = function(setCode, processFunction, callback) {
+	tiptoe(
+		function getJSON() {
+			fs.readFile(path.join(__dirname, "..", "json", setCode + ".json"), {encoding : "utf8"}, this);
+		},
+		function updateData(rawSet) {
+			var set = JSON.parse(rawSet);
+
+			var newSet = processFunction(set);
+
+			if (newSet)
+				exports.saveSet(newSet, this);	// Save set if the function returned anything
+			else
+				this();
+		},
+		function finish(err) {
+			if (err)
+				throw(err);
+
+			if (callback)
+				callback();
+		}
+	);
+};

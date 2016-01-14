@@ -75,28 +75,20 @@ function processSet(code, cb) {
 function updateLegalitiesForSetCards(setCode, targetCardNames, cardLegalitiesByName, cb) {
 	base.info("Adding legalities to set [%s] for all cards: %s", setCode, targetCardNames.join(", "));
 
-	tiptoe(
-		function getJSON() {
-			fs.readFile(path.join(__dirname, "..", "json", setCode + ".json"), {encoding : "utf8"}, this);
-		},
-		function addPrintingsAndSave(setRaw) {
-			var set = JSON.parse(setRaw);
+	var processFunction = function(set) {
+		set.cards.forEach(function(card) {
+			if(!targetCardNames.contains(card.name))
+				return;
 
-			set.cards.forEach(function(card) {
-				if(!targetCardNames.contains(card.name))
-					return;
+			if(!cardLegalitiesByName.hasOwnProperty(card.name))
+				return;
 
-				if(!cardLegalitiesByName.hasOwnProperty(card.name))
-					return;
+			card.legalities = cardLegalitiesByName[card.name];
+			shared.updateStandardForCard(card);
+		});
 
-				card.legalities = cardLegalitiesByName[card.name];
-				shared.updateStandardForCard(card);
-			});
+		return(set);
+	};
 
-			shared.saveSet(set, this);
-		},
-		function finish(err) {
-			setImmediate(function() { cb(err); });
-		}
-	);
+	shared.processSet(setCode, processFunction, cb);
 }

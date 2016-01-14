@@ -179,18 +179,20 @@ tiptoe(
 		}.bind(this));
 
 		taintedSetCodes = taintedSetCodes.unique();
-		if(taintedSetCodes.length>0)
-		{
+		if(taintedSetCodes.length>0) {
 			base.info("Tainted set codes: %s", taintedSetCodes.join(" "));
-			this.data.taintedCards = taintedCards;
+			//this.data.taintedCards = taintedCards;
+			// *** CLEAR TAINTED DATA ***
+			taintedSetCodes = [];
+			taintedCards = [];
+			// **************************			
 		}
 
+
 		var allCards = base.clone(allCardsWithExtras, true);
-		Object.values(allCards).forEach(function(card)
-		{
+		Object.values(allCards).forEach(function(card) {
 			// Strip out extras
-			C.EXTRA_FIELDS.forEach(function(EXTRA_FIELD)
-			{
+			C.EXTRA_FIELDS.forEach(function(EXTRA_FIELD) {
 				delete card[EXTRA_FIELD];
 			});
 		});
@@ -222,55 +224,86 @@ tiptoe(
 		dustData.version = dustData.changeLog[0].version;
 		dustData.setSpecificFields = C.SET_SPECIFIC_FIELDS.sort().join(", ");
 
-		fs.writeFile(path.join(__dirname, "json", "AllSets.json"), JSON.stringify(allSets), {encoding : "utf8"}, this.parallel());
-		fs.writeFile(path.join(__dirname, "json", "AllSets.jsonp"), JSONP_PREFIX + JSON.stringify(allSets) + ', "AllSets"' + JSONP_SUFFIX, {encoding : "utf8"}, this.parallel());
-
-		fs.writeFile(path.join(__dirname, "json", "AllSetsArray.json"), JSON.stringify(allSetsArray), {encoding : "utf8"}, this.parallel());
-		fs.writeFile(path.join(__dirname, "json", "AllSetsArray.jsonp"), JSONP_PREFIX + JSON.stringify(allSetsArray) + ', "AllSetsArray"' + JSONP_SUFFIX, {encoding : "utf8"}, this.parallel());
-
-		fs.writeFile(path.join(__dirname, "json", "AllSets-x.json"), JSON.stringify(allSetsWithExtras), {encoding : "utf8"}, this.parallel());
-		fs.writeFile(path.join(__dirname, "json", "AllSets-x.jsonp"), JSONP_PREFIX + JSON.stringify(allSetsWithExtras) + ', "AllSets-x"' + JSONP_SUFFIX, {encoding : "utf8"}, this.parallel());
-
-		fs.writeFile(path.join(__dirname, "json", "AllSetsArray-x.json"), JSON.stringify(allSetsArrayWithExtras), {encoding : "utf8"}, this.parallel());
-		fs.writeFile(path.join(__dirname, "json", "AllSetsArray-x.jsonp"), JSONP_PREFIX + JSON.stringify(allSetsArrayWithExtras) + ', "AllSetsArray-x"' + JSONP_SUFFIX, {encoding : "utf8"}, this.parallel());
-
-		fs.writeFile(path.join(__dirname, "json", "AllCards.json"), JSON.stringify(allCards), {encoding : "utf8"}, this.parallel());
-		fs.writeFile(path.join(__dirname, "json", "AllCards.jsonp"), JSONP_PREFIX + JSON.stringify(allCards) + ', "AllCards"' + JSONP_SUFFIX, {encoding : "utf8"}, this.parallel());
-
-		fs.writeFile(path.join(__dirname, "json", "AllCards-x.json"), JSON.stringify(allCardsWithExtras), {encoding : "utf8"}, this.parallel());
-		fs.writeFile(path.join(__dirname, "json", "AllCards-x.jsonp"), JSONP_PREFIX + JSON.stringify(allCardsWithExtras) + ', "AllCards-x"' + JSONP_SUFFIX, {encoding : "utf8"}, this.parallel());
-		
-		fs.writeFile(path.join(__dirname, "json", "SetCodes.json"), JSON.stringify(C.SETS.map(function(SET) { return SET.code; })), {encoding : "utf8"}, this.parallel());
-		fs.writeFile(path.join(__dirname, "json", "SetCodes.jsonp"), JSONP_PREFIX + JSON.stringify(C.SETS.map(function(SET) { return SET.code; })) + ', "SetCodes"' + JSONP_SUFFIX, {encoding : "utf8"}, this.parallel());
-
-		fs.writeFile(path.join(__dirname, "json", "SetList.json"), JSON.stringify(C.SETS.map(function(SET) { return {name : SET.name, code : SET.code, releaseDate : SET.releaseDate}; })), {encoding : "utf8"}, this.parallel());
-		fs.writeFile(path.join(__dirname, "json", "SetList.jsonp"), JSONP_PREFIX + JSON.stringify(C.SETS.map(function(SET) { return {name : SET.name, code : SET.code, releaseDate : SET.releaseDate}; })) + ', "SetList"' + JSONP_SUFFIX, {encoding : "utf8"}, this.parallel());
-
-		fs.writeFile(path.join(__dirname, "json", "version-full.json"), JSON.stringify({version:dustData.version}), {encoding : "utf8"}, this.parallel());
-		fs.writeFile(path.join(__dirname, "json", "version-full.jsonp"), JSONP_PREFIX + JSON.stringify({version:dustData.version}) + ', "version-full"' + JSONP_SUFFIX, {encoding : "utf8"}, this.parallel());
-
-		fs.writeFile(path.join(__dirname, "json", "version.json"), JSON.stringify(dustData.version), {encoding : "utf8"}, this.parallel());
-		fs.writeFile(path.join(__dirname, "json", "version.jsonp"), JSONP_PREFIX + JSON.stringify(dustData.version) + ', "version"' + JSONP_SUFFIX, {encoding : "utf8"}, this.parallel());
-
-		fs.writeFile(path.join(__dirname, "json", "changelog.json"), fs.readFileSync(path.join(__dirname, "changelog.json"), {encoding : "utf8"}), {encoding : "utf8"}, this.parallel());
-		fs.writeFile(path.join(__dirname, "json", "changelog.jsonp"), JSONP_PREFIX + fs.readFileSync(path.join(__dirname, "changelog.json"), {encoding : "utf8"}) + ', "changelog"' + JSONP_SUFFIX, {encoding : "utf8"}, this.parallel());
+		// Save stuff.
+		tiptoe(
+			function() {
+				fs.writeFile(path.join(__dirname, "json", "AllSets.json"), JSON.stringify(allSets), {encoding : "utf8"}, this.parallel());
+				fs.writeFile(path.join(__dirname, "json", "AllSets.jsonp"), JSONP_PREFIX + JSON.stringify(allSets) + ', "AllSets"' + JSONP_SUFFIX, {encoding : "utf8"}, this.parallel());
+			},
+			function() {
+				fs.writeFile(path.join(__dirname, "json", "AllSetsArray.json"), JSON.stringify(allSetsArray), {encoding : "utf8"}, this.parallel());
+				fs.writeFile(path.join(__dirname, "json", "AllSetsArray.jsonp"), JSONP_PREFIX + JSON.stringify(allSetsArray) + ', "AllSetsArray"' + JSONP_SUFFIX, {encoding : "utf8"}, this.parallel());	
+			},
+			function() {
+				fs.writeFile(path.join(__dirname, "json", "AllSets-x.json"), JSON.stringify(allSetsWithExtras), {encoding : "utf8"}, this.parallel());
+				fs.writeFile(path.join(__dirname, "json", "AllSets-x.jsonp"), JSONP_PREFIX + JSON.stringify(allSetsWithExtras) + ', "AllSets-x"' + JSONP_SUFFIX, {encoding : "utf8"}, this.parallel());
+			},
+			function() {
+				fs.writeFile(path.join(__dirname, "json", "AllSetsArray-x.json"), JSON.stringify(allSetsArrayWithExtras), {encoding : "utf8"}, this.parallel());
+				fs.writeFile(path.join(__dirname, "json", "AllSetsArray-x.jsonp"), JSONP_PREFIX + JSON.stringify(allSetsArrayWithExtras) + ', "AllSetsArray-x"' + JSONP_SUFFIX, {encoding : "utf8"}, this.parallel());
+			},
+			function() {
+				fs.writeFile(path.join(__dirname, "json", "AllCards.json"), JSON.stringify(allCards), {encoding : "utf8"}, this.parallel());
+				fs.writeFile(path.join(__dirname, "json", "AllCards.jsonp"), JSONP_PREFIX + JSON.stringify(allCards) + ', "AllCards"' + JSONP_SUFFIX, {encoding : "utf8"}, this.parallel());
+			},
+			function() {
+				fs.writeFile(path.join(__dirname, "json", "AllCards-x.json"), JSON.stringify(allCardsWithExtras), {encoding : "utf8"}, this.parallel());
+				fs.writeFile(path.join(__dirname, "json", "AllCards-x.jsonp"), JSONP_PREFIX + JSON.stringify(allCardsWithExtras) + ', "AllCards-x"' + JSONP_SUFFIX, {encoding : "utf8"}, this.parallel());
+			},
+			function() {
+				fs.writeFile(path.join(__dirname, "json", "SetCodes.json"), JSON.stringify(C.SETS.map(function(SET) { return SET.code; })), {encoding : "utf8"}, this.parallel());
+				fs.writeFile(path.join(__dirname, "json", "SetCodes.jsonp"), JSONP_PREFIX + JSON.stringify(C.SETS.map(function(SET) { return SET.code; })) + ', "SetCodes"' + JSONP_SUFFIX, {encoding : "utf8"}, this.parallel());
+			},
+			function() {
+				fs.writeFile(path.join(__dirname, "json", "SetList.json"), JSON.stringify(C.SETS.map(function(SET) { return {name : SET.name, code : SET.code, releaseDate : SET.releaseDate}; })), {encoding : "utf8"}, this.parallel());
+				fs.writeFile(path.join(__dirname, "json", "SetList.jsonp"), JSONP_PREFIX + JSON.stringify(C.SETS.map(function(SET) { return {name : SET.name, code : SET.code, releaseDate : SET.releaseDate}; })) + ', "SetList"' + JSONP_SUFFIX, {encoding : "utf8"}, this.parallel());
+			},
+			function() {
+				fs.writeFile(path.join(__dirname, "json", "version-full.json"), JSON.stringify({version:dustData.version}), {encoding : "utf8"}, this.parallel());
+				fs.writeFile(path.join(__dirname, "json", "version-full.jsonp"), JSONP_PREFIX + JSON.stringify({version:dustData.version}) + ', "version-full"' + JSONP_SUFFIX, {encoding : "utf8"}, this.parallel());
+			},
+			function() {
+				fs.writeFile(path.join(__dirname, "json", "version.json"), JSON.stringify(dustData.version), {encoding : "utf8"}, this.parallel());
+				fs.writeFile(path.join(__dirname, "json", "version.jsonp"), JSONP_PREFIX + JSON.stringify(dustData.version) + ', "version"' + JSONP_SUFFIX, {encoding : "utf8"}, this.parallel());
+			},
+			function() {
+				fs.writeFile(path.join(__dirname, "json", "changelog.json"), fs.readFileSync(path.join(__dirname, "changelog.json"), {encoding : "utf8"}), {encoding : "utf8"}, this.parallel());
+				fs.writeFile(path.join(__dirname, "json", "changelog.jsonp"), JSONP_PREFIX + fs.readFileSync(path.join(__dirname, "changelog.json"), {encoding : "utf8"}) + ', "changelog"' + JSONP_SUFFIX, {encoding : "utf8"}, this.parallel());
+			},
+			function finish(err) {
+				this(err);
+			}
+		);
 	},
-	function clearTaintedCacheFilesIfNecessary()
-	{
+	function clearTaintedCacheFilesIfNecessary() {
 		if(!this.data.taintedCards)
 			return this();
 
 		base.info("Clearing cache files for tainted cards...");
 
-		var self=this;
+		base.info("Or not.");
 
-		this.data.taintedCards.filter(function(taintedCard) { return taintedCard.card.hasOwnProperty("multiverseid"); }).serialForEach(function(taintedCard, subcb)
-		{
-			shared.buildCacheFileURLs(taintedCard.card, (taintedCard.fieldName==="printings" ? "printings" : (taintedCard.fieldName.startsWith("original") ? "original" : (taintedCard.fieldName==="legalities" ? "legalities" : "oracle"))), subcb);
-		}, function(err, cacheFileURLs) { base.info("Clearing %d cache files...", cacheFileURLs.length); cacheFileURLs.flatten().uniqueBySort().serialForEach(shared.clearCacheFile, self); });
+		/*
+		var self = this;
+
+		this.data.taintedCards
+		.filter(
+			function(taintedCard) {
+				return taintedCard.card.hasOwnProperty("multiverseid");
+			}
+		)
+		.serialForEach(
+			function(taintedCard, subcb) {
+				shared.buildCacheFileURLs(taintedCard.card, (taintedCard.fieldName==="printings" ? "printings" : (taintedCard.fieldName.startsWith("original") ? "original" : (taintedCard.fieldName==="legalities" ? "legalities" : "oracle"))), subcb);
+			},
+			function(err, cacheFileURLs) {
+				base.info("Clearing %d cache files...", cacheFileURLs.length);
+				cacheFileURLs.flatten().uniqueBySort().serialForEach(shared.clearCacheFile, self);
+			}
+		);
+		*/
 	},
-	function verifyJSON()
-	{
+	function verifyJSON() {
 		base.info("Checking sets for problems...");
 		checkSetsForProblems(this.parallel());
 	},
@@ -348,7 +381,7 @@ tiptoe(
 			dustData.sets[i].setClass = dustData.sets[i].name.toLowerCase().replaceAll(' ', '-');
 		});
 
-		function saveDust(input, output, cb) {
+		var saveDust = function(input, output, cb) {
 			dustUtil.render(__dirname, input, dustData, { keepWhitespace : true }, function(err, doc) {
 				if (err) {
 					base.error("ERROR Rendering DUST for file %s", output);
@@ -365,7 +398,7 @@ tiptoe(
 					if (cb) cb();
 				});
 			});
-		}
+		};
 
 		saveDust('index', 'index.html', this.parallel());
 		saveDust('atom', 'atom.xml', this.parallel());
