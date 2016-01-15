@@ -810,8 +810,13 @@ exports.saveSet = function(set, callback) {
 		});
 	});
 
+	var fn = set.code;
+	if (set.language)
+		fn += '.' + set.language;
+	fn += '.json';
+
 	// 99. Save the file on the proper path
-	fs.writeFile(path.join(__dirname, "..", "json", set.code + ".json"), JSON.stringify(set, null, '  '), {encoding:"utf8"}, callback);
+	fs.writeFile(path.join(__dirname, "..", "json", fn), JSON.stringify(set, null, '  '), {encoding:"utf8"}, callback);
 };
 
 // Natural sort implementation, for getting those card numbers in a human-readable format.
