@@ -189,14 +189,13 @@ function processMultiverseids(multiverseids, cb) {
 			},
 			function () {
 				var docs = Array.prototype.slice.call(arguments);
-				processMultiverseDocs(docs, function(err, newCards) {
-					if (err) {
-						return(setImmediate(function(){ this(err); }));
-					}
+				processMultiverseDocs(docs, this);
+			},
+			function addToCards(newCards) {
+				newCards.map(function(c) { cards.push(c); });
+				//cards.concat(newCards); // Concat not working...?
 
-					cards.concat(newCards);
-					this();
-				}.bind(this));
+				this();
 			},
 			function finish(err) {
 				subcb(err);
