@@ -192,7 +192,11 @@ function processMultiverseids(multiverseids, cb) {
 				processMultiverseDocs(docs, this);
 			},
 			function addToCards(newCards) {
-				newCards.map(function(c) { cards.push(c); });
+				newCards.map(function(c) {
+					if (c.multiverseid == null)
+						c.multiverseid = multiverseid;
+					cards.push(c);
+				});
 				//cards.concat(newCards); // Concat not working...?
 
 				this();
@@ -263,7 +267,7 @@ function processCardPart(doc, cardPart, printedDoc, printedCardPart) {
 	}
 
 	// Card Name
-	card.name = getTextContent(cardPart.querySelector(idPrefix + "_nameRow .value")).trim();
+	card.name = getTextContent(printedCardPart.querySelector(idPrefix + "_nameRow .value")).trim();
 
 	if(card.name.endsWith(" token card"))
 		card.layout = "token";
@@ -1796,3 +1800,5 @@ function fixCommanderIdentityForCards(cards, cb) {
 
 exports.fixCommanderIdentityForCards = fixCommanderIdentityForCards;
 exports.getURLsForMultiverseid = getURLsForMultiverseid;
+exports.processMultiverseids = processMultiverseids;
+
