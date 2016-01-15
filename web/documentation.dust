@@ -4,9 +4,9 @@
 	<meta charset="utf-8" />
 	<title>MTG JSON</title>
 	{analytics|s}
-	<link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon" /> 
+	<link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Roboto Mono' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Roboto Mono' rel='stylesheet' type='text/css'>
 	<link type="text/css" rel="stylesheet" href="mtgjson.css" />
 </head>
 <body>
@@ -16,7 +16,7 @@
 			<li><a href="/documentation.html">Documentation</a></li>
 			<li><a href="/sets.html">All Sets</a></li>
 			<li><a href="/changelog.html">Changelog</a></li>
-			<li><a href="http://github.com/lsmoura/mtgjson">Github</a></li>
+			<li><a href="https://github.com/lsmoura/mtgjson">Github</a></li>
 		</ul>
 	</div>
 	<div id="contents">
@@ -50,8 +50,8 @@
 {~rq}</code></pre>
 			<p>Some software (Magic Workstation) uses non-standard set codes. You can find those <a href="http://www.slightlymagic.net/forum/viewtopic.php?f=2&t=581#p6454">in this post</a></p>
 		</div>
-		
-		
+
+
 		<div><a name="booster"></a>
 			<h2>Booster Field</h2>
 		<p>The 'booster' key is present for each set that has physical boosters (so not present for box sets, duel decks, digital masters editions, etc.). It is an array containing one item per card in the booster. Thus the array length is how many cards are in a booster. Each item in the array is either a string representing the type of booster card or an array of strings representing possible types for that booster card.</p>
@@ -91,7 +91,7 @@
 			Any card marked as "starter" : true should be exempted from any booster generation as these cards were only available in boxed sets and not in boosters.
 		</p>
 		</div>
-		
+
 		<div><a name="cards"></a>
 			<h2>Cards</h2>
 		<p>
@@ -220,7 +220,7 @@
 					<td>variations</td>
 					<td>[ 1909, 1910 ]</td>
 					<td>If a card has alternate art (for example, 4 different Forests, or the 2 Brothers Yamazaki) then each other variation's multiverseid will be listed here, NOT including the current card's multiverseid. NOTE: Only present for sets that exist on Gatherer.</td>
-				</tr>				
+				</tr>
 				<tr>
 					<td>imageName</td>
 					<td>"ajani goldmane"</td>
@@ -279,7 +279,7 @@
 					<th>Description</th>
 				</tr>
 			</thead>
-			<tbody>		
+			<tbody>
 				<tr>
 					<td>rulings</td>
 					<td>[ {~lb} "date" : "2003-04-15",<br>"text" : "Does not tap." {~rb} ]</td>
@@ -320,9 +320,9 @@
 		</table>
 		<p>A unique identifier (UID) key for each card can be made by combining: setCode + cardName + imageName</p>
 		</div>
-		
-		
-		
+
+
+
 		<div><a name="allcards"></a>
 			<h2>AllCards.json</h2>
 		<p>The <strong>AllCards.json</strong> file is organized by card name and merges card data from multiple sets into a single card object.<br>
@@ -339,8 +339,8 @@
     ...
 {~rb}</code></pre>
 		</div>
-		
-		
+
+
 		<div><h2>Additional JSON Files</h2>
 		<p>Several additional JSON files are available and will be updated whenever card data is added or updated:</p>
 		<ul>
@@ -352,8 +352,8 @@
 		</ul>
 		<p>It also notes which JSON files have changed since the last update with fields: updatedSetFiles, newSetFiles, removedSetFiles</p>
 		</div>
-	
-	
+
+
 		<div><a name="jsonp"></a>
 		<h2>JSONP</h2>
 		<p>
