@@ -130,15 +130,50 @@ function ripSet(setName, cb)
 }
 exports.ripSet = ripSet;
 
-function processMultiverseids(multiverseids, cb)
-{
+function processMultiverseDocs(docs, callback) {
+	var cards = [];
+
+	var i = 0;
+
+	docs.forEachBatch(function(multiverseDoc, printedMultiverseDoc) {
+		var newCards = [];
+		var multiverseDocCardParts = getCardParts(multiverseDoc);
+		var printedMultiverseDocCardParts = getCardParts(printedMultiverseDoc);
+		if (multiverseDocCardParts.length!==printedMultiverseDocCardParts.length) {
+			throw new Error("multiverseDocCardParts length [" + multiverseDocCardParts.length + "] does not equal printedMultiverseDocCardParts length [" + printedMultiverseDocCardParts.length + "]");
+		}
+
+		multiverseDocCardParts.forEach(function(cardPart, i) {
+			var newCard = processCardPart(multiverseDoc, cardPart, printedMultiverseDoc, printedMultiverseDocCardParts[i]);
+
+			if(newCard.layout==="split" && i===1)
+				return;
+
+			newCards.push(newCard);
+		});
+
+		if(newCards.length===2 && newCards[0].layout==="double-faced") {
+			var doubleFacedCardName = newCards[0].names.join(":::");
+			if(!doubleFacedCardNames.contains(doubleFacedCardName))
+				doubleFacedCardNames.push(doubleFacedCardName);
+			else
+				newCards = [];
+		}
+
+		cards = cards.concat(newCards);
+	}, 2);
+
+	if (callback)
+		callback(null, cards);
+}
+
+function processMultiverseids(multiverseids, cb) {
 	var cards = [];
 	var doubleFacedCardNames = [];
 
 	base.info("Processing %d multiverseids", multiverseids.unique().length);
 
-	multiverseids.unique().serialForEach(function(multiverseid, subcb)
-	{
+	multiverseids.unique().serialForEach(function(multiverseid, subcb) {
 		tiptoe(
 			function getMultiverseUrls()
 			{
@@ -152,43 +187,20 @@ function processMultiverseids(multiverseids, cb)
 					shared.getURLAsDoc(urlUtil.setQueryParam(multiverseURL, "printed", "true"), this.parallel());
 				}.bind(this));
 			},
-			function processMultiverseDocs()
-			{
-				Array.prototype.slice.call(arguments).forEachBatch(function(multiverseDoc, printedMultiverseDoc)
-				{
-					var newCards = [];
-					var multiverseDocCardParts = getCardParts(multiverseDoc);
-					var printedMultiverseDocCardParts = getCardParts(printedMultiverseDoc);
-					if(multiverseDocCardParts.length!==printedMultiverseDocCardParts.length)
-					{
-						throw new Error("multiverseDocCardParts length [" + multiverseDocCardParts.length + "] does not equal printedMultiverseDocCardParts length [" + printedMultiverseDocCardParts.length + "]");
+			function () {
+				var docs = Array.prototype.slice.call(arguments);
+				processMultiverseDocs(docs, function(err, newCards) {
+					if (err) {
+						return(setImmediate(function(){ this(err); }));
 					}
 
-					multiverseDocCardParts.forEach(function(cardPart, i)
-					{
-						var newCard = processCardPart(multiverseDoc, cardPart, printedMultiverseDoc, printedMultiverseDocCardParts[i]);
-
-						if(newCard.layout==="split" && i===1)
-							return;
-
-						newCards.push(newCard);
-					});
-
-					if(newCards.length===2 && newCards[0].layout==="double-faced")
-					{
-						var doubleFacedCardName = newCards[0].names.join(":::");
-						if(!doubleFacedCardNames.contains(doubleFacedCardName))
-							doubleFacedCardNames.push(doubleFacedCardName);
-						else
-							newCards = [];
-					}
-
-					cards = cards.concat(newCards);
-				}, 2);
-
-				this();
+					cards.concat(newCards);
+					this();
+				}.bind(this));
 			},
-			function finish(err) { setImmediate(function() { subcb(err); }); }
+			function finish(err) {
+				subcb(err);
+			}
 		);
 	}, function(err) { return cb(err, cards); });
 }
@@ -204,10 +216,8 @@ var POWER_TOUGHNESS_REPLACE_MAP =
 	"{\\^2}"  : "²"
 };
 
-function processCardPart(doc, cardPart, printedDoc, printedCardPart)
-{
-	var card =
-	{
+function processCardPart(doc, cardPart, printedDoc, printedCardPart) {
+	var card = {
 		layout     : "normal",
 		supertypes : [],
 		type       : "",
@@ -219,7 +229,16 @@ function processCardPart(doc, cardPart, printedDoc, printedCardPart)
 	var idPrefixPrinted = getCardPartIDPrefix(printedCardPart);
 
 	// Multiverseid
-	card.multiverseid = +querystring.parse(url.parse(cardPart.querySelector(idPrefix + "_setRow .value a").getAttribute("href")).query).multiverseid.trim();
+	//console.log(idPrefix);
+	var href_multiverseid = +querystring.parse(url.parse(cardPart.querySelector(idPrefix + "_setRow .value a").getAttribute("href")).query).multiverseid;
+	if (href_multiverseid) {
+		if (typeof(href_multiverseid) === 'string')
+			href_multiverseid = href_multiverseid.trim();
+		card.multiverseid = href_multiverseid;
+	}
+	else {
+		card.multiverseid = null;
+	}
 
 	// Check for split card
 	var fullCardName = getTextContent(doc.querySelector("#ctl00_ctl00_ctl00_MainContent_SubContent_SubContentHeader_subtitleDisplay")).trim();
@@ -1775,4 +1794,6 @@ function fixCommanderIdentityForCards(cards, cb) {
 		subcb();
 	}, cb, size);
 }
+
 exports.fixCommanderIdentityForCards = fixCommanderIdentityForCards;
+exports.getURLsForMultiverseid = getURLsForMultiverseid;
