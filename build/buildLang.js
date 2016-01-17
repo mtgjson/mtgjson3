@@ -23,7 +23,7 @@ var langRef = {
 };
 
 if(process.argv.length<4) {
-	base.error("Usage: node %s <2-digit-lang> <set codes>\n- Only one language at a time\n- The set must already be retrieved by 'buildSet'", process.argv[1]);
+	base.error("Usage: node %s <2-digit-lang|all> <set codes>\n- Only one language at a time\n- The set must already be retrieved by 'buildSet'", process.argv[1]);
 	process.exit(1);
 }
 
@@ -31,7 +31,34 @@ var langCode = process.argv[2].toLowerCase();
 
 shared.getSetsToDo(3).serialForEach(
 	function(code, subcb) {
-		buildLang(langCode, code, subcb);
+		var setInfo = null;
+		C.SETS.map(function(x) { if (x.code == code) setInfo = x; });
+
+		if (setInfo == null) {
+			console.error("Invalid set: %s", code);
+			return(setImmediate(subcb));
+		}
+
+		var langs = [];
+
+		if (!setInfo.translations) {
+			console.error("No translations for set: %s", code);
+			return(setImmediate(subcb));
+		}
+
+		if (langCode === 'all') {
+			langs = Object.keys(setInfo.translations);
+		}
+		else {
+			langs = [ code ];
+		}
+
+		langs.serialForEach(
+			function (cLang, codecb) {
+				buildLang(cLang, code, codecb);
+			},
+			subcb
+		);
 	},
 	function(err) {
 		if (err) {
