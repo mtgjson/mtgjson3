@@ -2,8 +2,7 @@
 
 var base = require("xbase");
 
-(function(exports)
-{
+(function(exports) {
 	exports.SUPERTYPES = ["Basic", "Legendary", "Snow", "World", "Ongoing"];
 	exports.TYPES = ["Instant", "Sorcery", "Artifact", "Creature", "Enchantment", "Land", "Planeswalker", "Tribal", "Plane", "Phenomenon", "Scheme", "Vanguard", "Conspiracy"];
 
@@ -17,8 +16,7 @@ var base = require("xbase");
 	exports.SETS_NOT_ON_GATHERER = ["ATH", "ITP", "DKM", "RQS", "DPA"];
 	exports.SETS_WITH_NO_IMAGES = [];
 
-	exports.SETS =
-	[
+	exports.SETS = [
 		{
 			name : "Limited Edition Alpha",
 			code : "LEA",
@@ -4416,6 +4414,16 @@ var base = require("xbase");
 		],
 		BFZ :
 		[
+			// Conduit of ruin was printed with the wrong name in Japanese.
+			{ match : { multiverseid : 401847 }, fixForeignNames: [ { language : "Japanese", name : "破滅の伝導者" } ] }, // English multiverseid
+			{
+				match : { multiverseid : 403641 },
+				replace: {
+					name : "破滅の伝導者",
+					originalText: "あなたが破滅の伝導者を唱えたとき、あなたはあなたのライブラリーから点数で見たマナ・コストが７以上の無色のクリーチャー・カードを１枚探してもよい。そうしたなら、それを公開し、その後あなたのライブラリーを切り直し、そのカードをライブラリーの一番上に置く。各ターン、あなたが最初に唱えるクリーチャー・呪文を唱えるためのコストは{2}少なくなる。"
+				}
+			}, // Japanese multiverseid
+
 			// These settings are to match the numbering of CCGHQ image release names (issue #89) and the correct number on magiccards.info.
 			{
 				renumberImages : "Forest",
@@ -4566,8 +4574,7 @@ var base = require("xbase");
 	exports.SET_CORRECTIONS["2ED"].pushAll(exports.SET_CORRECTIONS["LEA"]);	// All of LEA rules apply to 2ED
 	exports.SETS.forEach(function(SET) { if(SET.isMCISet) { if(!exports.SET_CORRECTIONS.hasOwnProperty(SET.code)) { exports.SET_CORRECTIONS[SET.code] = []; } exports.SET_CORRECTIONS[SET.code].push({match : "*", fixFlavorNewlines:true}); }});
 
-	exports.ARTIST_CORRECTIONS =
-	{
+	exports.ARTIST_CORRECTIONS = {
 		"Brian Snõddy"                        : ["Brian Snōddy", "Brian Snoddy", "Brian Snøddy"],
 		"Paolo Parente & Brian Snõddy"        : ["Parente & Brian Snoddy"],
 		"Dennis Detwiller"                    : ["Dennis Detwiler", "Denise Detwiler"],
@@ -4752,8 +4759,7 @@ var base = require("xbase");
 	exports.VINTAGE_BANNED = ["Advantageous Proclamation", "Amulet of Quoz", "Backup Plan", "Brago's Favor", "Bronze Tablet", "Chaos Orb", "Contract from Below", "Darkpact", "Demonic Attorney", "Double Stroke", "Falling Star", "Immediate Action", "Iterative Analysis", "Jeweled Bird", "Muzzio's Preparations", "Power Play", "Rebirth", "Secret Summoning", "Secrets of Paradise", "Sentinel Dispatch", "Shahrazad", "Tempest Efreet", "Timmerian Fiends", "Unexpected Potential", "Worldknit"];
 	exports.VINTAGE_RESTRICTED = ["Ancestral Recall", "Balance", "Black Lotus", "Brainstorm", "Channel", "Demonic Consultation", "Demonic Tutor", "Fastbond", "Flash", "Gifts Ungiven", "Imperial Seal", "Library of Alexandria", "Lion’s Eye Diamond", "Lotus Petal", "Mana Crypt", "Mana Vault", "Memory Jar", "Merchant Scroll", "Mind’s Desire", "Mox Emerald", "Mox Jet", "Mox Pearl", "Mox Ruby", "Mox Sapphire", "Mystical Tutor", "Necropotence", "Ponder", "Sol Ring", "Strip Mine", "Thirst for Knowledge", "Time Vault", "Time Walk", "Timetwister", "Tinker", "Tolarian Academy", "Trinisphere", "Vampiric Tutor", "Wheel of Fortune", "Windfall", "Yawgmoth’s Bargain", "Yawgmoth’s Will"];
 
-	exports.VALID_LANGUAGES =
-	[
+	exports.VALID_LANGUAGES = [
 		"Chinese Simplified",
 		"Chinese Traditional",
 		"French",
@@ -4766,8 +4772,7 @@ var base = require("xbase");
 		"Korean"
 	];
 
-	exports.MCI_LANGUAGE_TO_GATHERER =
-	{
+	exports.MCI_LANGUAGE_TO_GATHERER = {
 		"Portuguese"          : "Portuguese (Brazil)",
 		"Simplified Chinese"  : "Chinese Simplified",
 		"Traditional Chinese" : "Chinese Traditional"

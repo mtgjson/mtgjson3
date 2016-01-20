@@ -275,14 +275,12 @@ exports.performSetCorrections = function(setCorrections, fullSet)
 					if(setCorrection.flavorAddExclamation)
 						card.flavor = card.flavor.replace(/([A-Za-z])"/, "$1!\"", "gm");
 
-					if(setCorrection.addPrinting)
-					{
+					if(setCorrection.addPrinting) {
 						card.printings = card.printings.concat(Array.toArray(setCorrection.addPrinting));
 						exports.finalizePrintings(card);
 					}
 
-					if(setCorrection.setLegality)
-					{
+					if(setCorrection.setLegality) {
 						Object.forEach(setCorrection.setLegality, function(legalityType, legalityValue)
 						{
 							var foundExisting = false;
@@ -319,8 +317,7 @@ exports.performSetCorrections = function(setCorrections, fullSet)
 						}
 					}
 
-					if(setCorrection.fixFlavorNewlines && card.flavor)
-					{
+					if(setCorrection.fixFlavorNewlines && card.flavor) {
 						card.flavor = card.flavor.replace(/(\s|")-\s*([^"—-]+)\s*$/, "$1—$2");
 
 						if(card.flavor.contains("—"))
@@ -336,8 +333,7 @@ exports.performSetCorrections = function(setCorrections, fullSet)
 					if(setCorrection.removeCard)
 						cardsToRemove.push(card);
 
-					if(setCorrection.incrementNumber)
-					{
+					if(setCorrection.incrementNumber) {
 						if(cardsToIncrementNumber.contains(card.name))
 							card.number = "" + ((+card.number) + cardsToIncrementNumber.count(card.name));
 
@@ -346,6 +342,25 @@ exports.performSetCorrections = function(setCorrections, fullSet)
 
 					if(setCorrection.prefixNumber)
 						card.number = setCorrection.prefixNumber + card.number;
+
+					if (setCorrection.fixForeignNames && card.foreignNames) {
+						// Put all fixes in an array
+						var fixes = [];
+						if (Array.isArray(setCorrection.fixForeignNames))
+							fixes = setCorrection.fixForeignNames;
+						else
+							fixes.push(setCorrection.fixForeignNames);
+
+						// Check each fix
+						fixes.forEach(function(fix) {
+							card.foreignNames.forEach(function(fn) {
+								if (fn.language === fix.language) {
+									if (fix.name) fn.name = fix.name;
+									if (fix.multiverseid) fn.multiverseid = fix.multiverseid;
+								}
+							});
+						});
+					}
 				}
 			});
 
@@ -733,6 +748,9 @@ exports.getPagingNumPages = function(doc, type)
 };
 
 exports.updateStandardForCard = function(card) {
+	if (!card.printings)
+		return; // Can't check if it's standard if we don't have printings.
+
 	// Update standard legalities
 	if (card.legalities)
 		card.legalities = card.legalities.filter(function(cardLegality) { return(cardLegality.format != "Standard"); });
