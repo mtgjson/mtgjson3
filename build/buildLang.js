@@ -50,7 +50,7 @@ shared.getSetsToDo(3).serialForEach(
 			langs = Object.keys(setInfo.translations);
 		}
 		else {
-			langs = [ code ];
+			langs = [ langCode ];
 		}
 
 		langs.serialForEach(
@@ -132,8 +132,7 @@ function retrieve(lang, set, callback) {
 		function processIds() {
 			rip.processMultiverseids(multiverseids, this);
 		},
-		function () {
-			var cards = arguments[0];
+		function processCards(cards) {
 			fullSet.cards = Array.prototype.slice.call(cards).map(function(card) {
 				if (card.rulings) {
 					card.rulings = null;
@@ -143,12 +142,14 @@ function retrieve(lang, set, callback) {
 				return(card);
 			});
 
+			base.info("Doing set corrections...");
+			shared.performSetCorrections(shared.getSetCorrections(fullSet.code), fullSet);
+
 			shared.saveSet(fullSet, this);
-			//fs.writeFile(path.join(__dirname, 'test.json'), JSON.stringify(fullSet, null, '  '), 'utf8', this);
 		},
 		function finish(err) {
 			if (callback) callback(err);
-			console.log('done');
+			console.log('done fetching set ' + set.code);
 		}
 	);
 }
