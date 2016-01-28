@@ -4783,7 +4783,8 @@ var base = require("xbase");
 		'FRF',
 		'DTK',
 		'ORI',
-		'BFZ'
+		'BFZ',
+		'OGW'
 	];
 
 })(typeof exports==="undefined" ? window.C={} : exports);
