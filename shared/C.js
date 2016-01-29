@@ -3022,6 +3022,7 @@ var base = require("xbase");
 		{
 			name : "Oath of the Gatewatch",
 			code : "OGW",
+			magicCardsInfoCode : "ogw",
 			releaseDate : "2016-01-22",
 			border : "black",
 			type : "expansion",
