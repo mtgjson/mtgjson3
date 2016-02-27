@@ -3040,6 +3040,16 @@ var base = require("xbase");
 				'zh-hant': '守護者誓約',
 				'zh-hans': '守护者誓约'
 			}
+		},
+		{
+			name : 'Duel Decks: Blessed vs. Cursed',
+			code : 'BVC',
+			releaseDate : '2016-02-26',
+			border : 'black',
+			type : 'duel deck',
+			translations: {
+				jp: 'Duel Decks: Blessed vs. Cursed'
+			}
 		}
 	];
 
