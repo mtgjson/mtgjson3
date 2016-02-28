@@ -3043,7 +3043,7 @@ var base = require("xbase");
 		},
 		{
 			name : 'Duel Decks: Blessed vs. Cursed',
-			code : 'BVC',
+			code : 'DDQ',
 			releaseDate : '2016-02-26',
 			border : 'black',
 			type : 'duel deck',
