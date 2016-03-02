@@ -124,7 +124,7 @@ function retrieve(lang, set, callback) {
 					}
 
 					multiverseids.push(multiverseid);
-					cb();
+					setImediate(cb);
 				},
 				this
 			);
