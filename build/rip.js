@@ -1063,6 +1063,8 @@ var ripMCICard = function(set, mciCardURL, cb) {
 				colors     : []
 			};
 
+			card.mciNumber = mciCardURL.replace(/.*\/([0-9]*)\.html/, '$1');
+
 			var cardNameElement = mciCardDoc.querySelector("a[href=\"" + mciCardURL + "\"]");
 			if (!cardNameElement)
 				throw new Error("No valid card name element for: " + mciCardURL);
