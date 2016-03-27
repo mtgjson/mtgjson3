@@ -351,11 +351,15 @@ var processCardPart = function(doc, cardPart, printedDoc, printedCardPart) {
 		else
 			base.warn("Unknown card layout for multiverseid: %s", card.multiverseid);
 
-		card.names = [getTextContent(cardParts[0].querySelector(getCardPartIDPrefix(cardParts[0]) + "_nameRow .value")).trim(), getTextContent(cardParts[1].querySelector(getCardPartIDPrefix(cardParts[1]) + "_nameRow .value")).trim()];
+		card.names = [
+			getTextContent(cardParts[0].querySelector(getCardPartIDPrefix(cardParts[0]) + "_nameRow .value")).trim(),
+			getTextContent(cardParts[1].querySelector(getCardPartIDPrefix(cardParts[1]) + "_nameRow .value")).trim()
+		];
 	}
 
 	// Card Name
-	card.name = getTextContent(printedCardPart.querySelector(idPrefix + "_nameRow .value")).trim();
+	//card.name = getTextContent(printedCardPart.querySelector(idPrefix + "_nameRow .value")).trim();
+	card.name = getTextContent(cardPart.querySelector(idPrefix + "_nameRow .value")).trim();
 
 	if (card.name.endsWith(" token card"))
 		card.layout = "token";
