@@ -875,7 +875,9 @@ var compareCardToMCI = function(set, card, mciCardURL, cb) {
 			if (!hasFlavorCorrection) {
 				if (!C.SET_CORRECTIONS.hasOwnProperty(set.code) || C.SET_CORRECTIONS[set.code]) {
 					var cardFlavor = normalizeFlavor(card.flavor || "");
-					var mciFlavor = normalizeFlavor(processTextBlocks(mciCardDoc.querySelector("table tr td p i")));
+					var mciFlavor;
+					if (mciCardDoc)
+						mciFlavor = normalizeFlavor(processTextBlocks(mciCardDoc.querySelector("table tr td p i")));
 					if (!mciFlavor && cardFlavor)
 						base.warn("FLAVOR: %s (%s) has flavor but MagicCardsInfo (%s) does not.", card.name, card.multiverseid, mciCardURL);
 					else if (mciFlavor && !cardFlavor)
@@ -887,7 +889,9 @@ var compareCardToMCI = function(set, card, mciCardURL, cb) {
 
 			// Compare artist
 			if (!hasArtistCorrection) {
-				var mciArtist = mciCardDoc.querySelectorAll("table tr td p").filter(function (p) { return p.textContent.startsWith("Illus."); })[0].textContent.substring(7).trim().replaceAll("\n", " ").replaceAll(" and ", " & ").innerTrim();
+				var mciArtist;
+				if (mciCardDoc)
+					mciArtist = mciCardDoc.querySelectorAll("table tr td p").filter(function (p) { return p.textContent.startsWith("Illus."); })[0].textContent.substring(7).trim().replaceAll("\n", " ").replaceAll(" and ", " & ").innerTrim();
 				var cardArtist = (card.artist || "").trim().replaceAll("\n", " ").innerTrim();
 				if (!mciArtist && cardArtist)
 					base.warn("ARTIST: %s (%s) has artist but MagicCardsInfo (%s) does not.", card.name, card.multiverseid, mciCardURL);
