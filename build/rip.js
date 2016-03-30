@@ -340,6 +340,17 @@ var processCardPart = function(doc, cardPart, printedDoc, printedCardPart) {
 		card.names = fullCardName.split(" // ").filter(function (splitName) { return splitName.trim(); });
 	}
 
+	// Text
+	var cardText = processTextBlocks(cardPart.querySelectorAll(idPrefix + "_textRow .value .cardtextbox")).trim();
+	if (cardText && !card.type.toLowerCase().startsWith("basic land")) {
+		card.text = cardText;
+		if (card.text.contains("{UNKNOWN}"))
+			base.warn("Invalid symbol in oracle card text for card: %s", card.name);
+	}
+
+	if (cardText && cardText.toLowerCase().startsWith("level up {"))
+		card.layout = "leveler";
+
 	// Check for flip or double-faced card
 	var cardParts = getCardParts(doc);
 	if (card.layout !== "split" && cardParts.length === 2) {
@@ -348,8 +359,20 @@ var processCardPart = function(doc, cardPart, printedDoc, printedCardPart) {
 			card.layout = "flip";
 		else if (firstCardText.contains("transform"))
 			card.layout = "double-faced";
-		else
-			base.warn("Unknown card layout for multiverseid: %s", card.multiverseid);
+		else {
+			// Can't find a suitable match on the first card text. Let's search on the second...
+			// TODO: This bunch of code needs to be optimized.
+			var secondCardText = processTextBlocks(cardParts[1].querySelectorAll(getCardPartIDPrefix(cardParts[1]) + "_textRow .value .cardtextbox")).trim().toLowerCase();
+			if (secondCardText.contains("flip"))
+				card.layout = "flip";
+			else if (secondCardText.contains("transform"))
+				card.layout = "double-faced";
+			else {
+				base.warn("Unknown card layout for multiverseid: %s", card.multiverseid);
+				base.warn("card0 text: %s", firstCardText);
+				base.warn("card1 text: %s", secondCardText);
+			}
+		}
 
 		card.names = [
 			getTextContent(cardParts[0].querySelector(getCardPartIDPrefix(cardParts[0]) + "_nameRow .value")).trim(),
@@ -439,17 +462,6 @@ var processCardPart = function(doc, cardPart, printedDoc, printedCardPart) {
 	});
 
 	sortCardColors(card);
-
-	// Text
-	var cardText = processTextBlocks(cardPart.querySelectorAll(idPrefix + "_textRow .value .cardtextbox")).trim();
-	if (cardText && !card.type.toLowerCase().startsWith("basic land")) {
-		card.text = cardText;
-		if (card.text.contains("{UNKNOWN}"))
-			base.warn("Invalid symbol in oracle card text for card: %s", card.name);
-	}
-
-	if (cardText && cardText.toLowerCase().startsWith("level up {"))
-		card.layout = "leveler";
 
 	// Original Printed Text
 	var originalCardText = processTextBlocks(printedCardPart.querySelectorAll(idPrefixPrinted + "_textRow .value .cardtextbox")).trim();

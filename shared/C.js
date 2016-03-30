@@ -3050,6 +3050,26 @@ var base = require("xbase");
 			translations: {
 				jp: 'Duel Decks: Blessed vs. Cursed'
 			}
+		},
+		{
+			name : "Shadows over Innistrad",
+			code : "SOI",
+			releaseDate : "2016-04-08",
+			border : "black",
+			type : "expansion",
+			block : "Shadows over Innistrad",
+			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"],
+			translations: {
+				de: 'Schatten über Innistrad',
+				fr: 'Ténèbres sur Innistrad',
+				it: 'Ombre su Innistrad',
+				es: 'Sombras sobre Innistrad',
+				pt: 'Sombras em Innistrad',
+				jp: 'イニストラードを覆う影',
+				cn: '依尼翠暗影',
+				ru: 'Тени над Иннистрадом',
+				ko: '이니스트라드에 드리운 그림자'
+			}
 		}
 	];
 
@@ -4767,8 +4787,77 @@ var base = require("xbase");
 	exports.EXTRA_FIELDS = ["rulings", "foreignNames", "printings", "originalText", "originalType", "legalities", "source"];
 	exports.SET_SPECIFIC_FIELDS = ["rarity", "artist", "flavor", "number", "multiverseid", "variations", "watermark", "border", "timeshifted", "reserved", "releaseDate", "originalText", "originalType", "id", "foreignNames"];
 
-	exports.VINTAGE_BANNED = ["Advantageous Proclamation", "Amulet of Quoz", "Backup Plan", "Brago's Favor", "Bronze Tablet", "Chaos Orb", "Contract from Below", "Darkpact", "Demonic Attorney", "Double Stroke", "Falling Star", "Immediate Action", "Iterative Analysis", "Jeweled Bird", "Muzzio's Preparations", "Power Play", "Rebirth", "Secret Summoning", "Secrets of Paradise", "Sentinel Dispatch", "Shahrazad", "Tempest Efreet", "Timmerian Fiends", "Unexpected Potential", "Worldknit"];
-	exports.VINTAGE_RESTRICTED = ["Ancestral Recall", "Balance", "Black Lotus", "Brainstorm", "Channel", "Demonic Consultation", "Demonic Tutor", "Fastbond", "Flash", "Gifts Ungiven", "Imperial Seal", "Library of Alexandria", "Lion’s Eye Diamond", "Lotus Petal", "Mana Crypt", "Mana Vault", "Memory Jar", "Merchant Scroll", "Mind’s Desire", "Mox Emerald", "Mox Jet", "Mox Pearl", "Mox Ruby", "Mox Sapphire", "Mystical Tutor", "Necropotence", "Ponder", "Sol Ring", "Strip Mine", "Thirst for Knowledge", "Time Vault", "Time Walk", "Timetwister", "Tinker", "Tolarian Academy", "Trinisphere", "Vampiric Tutor", "Wheel of Fortune", "Windfall", "Yawgmoth’s Bargain", "Yawgmoth’s Will"];
+	exports.VINTAGE_BANNED = [
+		"Advantageous Proclamation",
+		"Amulet of Quoz",
+		"Backup Plan",
+		"Brago's Favor",
+		"Bronze Tablet",
+		"Chaos Orb",
+		"Contract from Below",
+		"Darkpact",
+		"Demonic Attorney",
+		"Double Stroke",
+		"Falling Star",
+		"Immediate Action",
+		"Iterative Analysis",
+		"Jeweled Bird",
+		"Muzzio's Preparations",
+		"Power Play",
+		"Rebirth",
+		"Secret Summoning",
+		"Secrets of Paradise",
+		"Sentinel Dispatch",
+		"Shahrazad",
+		"Tempest Efreet",
+		"Timmerian Fiends",
+		"Unexpected Potential",
+		"Worldknit"
+	];
+
+	exports.VINTAGE_RESTRICTED = [
+		"Ancestral Recall",
+		"Balance",
+		"Black Lotus",
+		"Brainstorm",
+		"Channel",
+		"Demonic Consultation",
+		"Demonic Tutor",
+		"Fastbond",
+		"Flash",
+		"Gifts Ungiven",
+		"Imperial Seal",
+		"Library of Alexandria",
+		"Lion’s Eye Diamond",
+		"Lotus Petal",
+		"Mana Crypt",
+		"Mana Vault",
+		"Memory Jar",
+		"Merchant Scroll",
+		"Mind’s Desire",
+		"Mox Emerald",
+		"Mox Jet",
+		"Mox Pearl",
+		"Mox Ruby",
+		"Mox Sapphire",
+		"Mystical Tutor",
+		"Necropotence",
+		"Ponder",
+		"Sol Ring",
+		"Strip Mine",
+		"Thirst for Knowledge",
+		"Time Vault",
+		"Time Walk",
+		"Timetwister",
+		"Tinker",
+		"Tolarian Academy",
+		"Trinisphere",
+		"Vampiric Tutor",
+		"Wheel of Fortune",
+		"Windfall",
+		"Yawgmoth’s Bargain",
+		"Yawgmoth’s Will"
+	];
 
 	exports.VALID_LANGUAGES = [
 		"Chinese Simplified",
