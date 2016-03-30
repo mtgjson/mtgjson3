@@ -2861,7 +2861,7 @@
       "rulings": [
         {
           "date": "2008-10-01",
-          "text": "Knight of the White Orchid's triggered ability has an \"intervening 'if' clause.\" That means (1) the ability won't trigger at all unless any one of your opponents controls more lands than you, and (2) the ability will do nothing if you control at least as many lands as each of your opponents by the time it resolves."
+          "text": "Knight of the White Orchid’s triggered ability has an “intervening ‘if’ clause.” That means (1) the ability won’t trigger at all unless any one of your opponents controls more lands than you, and (2) the ability will do nothing if you control at least as many lands as each of your opponents by the time it resolves."
         },
         {
           "date": "2015-06-22",
@@ -3153,10 +3153,6 @@
         },
         {
           "date": "2015-06-22",
-          "text": "The back face of a double-faced card doesn’t have a mana cost. A double-faced permanent with its back face up has a converted mana cost of 0. Each back face has a color indicator that defines its color."
-        },
-        {
-          "date": "2015-06-22",
           "text": "The back face of a double-faced card (in the case of Magic Origins, the planeswalker face) can’t be cast."
         },
         {
@@ -3182,6 +3178,14 @@
         {
           "date": "2015-06-22",
           "text": "If a double-faced card is manifested, it will be put onto the battlefield face down (this is also true if it’s put onto the battlefield face down some other way). Note that “face down” is not synonymous with “with its back face up.” A manifested double-faced card is a 2/2 creature with no name, mana cost, creature types, or abilities. While face down, it can’t transform. If the front face of a manifested double-faced card is a creature card, you can turn it face up by paying its mana cost. If you do, its front face will be up. A double-faced card on the battlefield can’t be turned face down."
+        },
+        {
+          "date": "2016-04-08",
+          "text": "The back face of a double-faced card doesn’t have a mana cost. A double-faced permanent with its back face up has a converted mana cost equal to the converted mana cost of its front face. Each back face has a color indicator that defines its color."
+        },
+        {
+          "date": "2016-04-08",
+          "text": "For more information on double-faced cards, see the Shadows over Innistrad mechanics article (http://magic.wizards.com/en/articles/archive/feature/shadows-over-innistrad-mechanics)."
         }
       ],
       "subtypes": [
@@ -3902,7 +3906,7 @@
         },
         {
           "date": "2013-01-24",
-          "text": "If another player gains control of either Murder Investigation or the enchanted creature (but not both), Murder Investigation will be enchanting an illegal permanent. The Aura will be put into its owner's graveyard as a state-based action."
+          "text": "If another player gains control of either Murder Investigation or the enchanted creature (but not both), Murder Investigation will be enchanting an illegal permanent. The Aura will be put into its owner’s graveyard as a state-based action."
         }
       ],
       "subtypes": [
@@ -4448,11 +4452,11 @@
         },
         {
           "date": "2009-02-01",
-          "text": "When you cast an Aura spell, you have to choose a target for it before this ability puts an Angel token onto the battlefield. In other words, you can't play an Aura spell intending to enchant the Angel that will be created as a result."
+          "text": "When you cast an Aura spell, you have to choose a target for it before this ability puts an Angel token onto the battlefield. In other words, you can’t play an Aura spell intending to enchant the Angel that will be created as a result."
         },
         {
           "date": "2009-02-01",
-          "text": "Casting Sigil of the Empty Throne won't trigger its own ability. It has to be on the battlefield for its ability to work."
+          "text": "Casting Sigil of the Empty Throne won’t trigger its own ability. It has to be on the battlefield for its ability to work."
         }
       ],
       "text": "Whenever you cast an enchantment spell, put a 4/4 white Angel creature token with flying onto the battlefield.",
@@ -6627,11 +6631,11 @@
       "rulings": [
         {
           "date": "2011-01-22",
-          "text": "If the creature spell is an illegal target (because it's left the stack, for example) when Bone to Ash tries to resolve, Bone to Ash will be countered and none of its effects will happen. You won't draw a card."
+          "text": "If the creature spell is an illegal target (because it’s left the stack, for example) when Bone to Ash tries to resolve, Bone to Ash will be countered and none of its effects will happen. You won’t draw a card."
         },
         {
           "date": "2011-01-22",
-          "text": "A creature spell that can't be countered by spells and abilities is a legal target for Bone to Ash. The creature spell won't be countered when Bone to Ash resolves, but you'll still draw a card."
+          "text": "A creature spell that can’t be countered by spells and abilities is a legal target for Bone to Ash. The creature spell won’t be countered when Bone to Ash resolves, but you’ll still draw a card."
         }
       ],
       "text": "Counter target creature spell.\nDraw a card.",
@@ -7580,7 +7584,8 @@
         "MOR",
         "SOM",
         "M14",
-        "ORI"
+        "ORI",
+        "W16"
       ],
       "rarity": "Common",
       "text": "Return target nonland permanent to its owner's hand.",
@@ -8395,10 +8400,6 @@
         },
         {
           "date": "2015-06-22",
-          "text": "The back face of a double-faced card doesn’t have a mana cost. A double-faced permanent with its back face up has a converted mana cost of 0. Each back face has a color indicator that defines its color."
-        },
-        {
-          "date": "2015-06-22",
           "text": "The back face of a double-faced card (in the case of Magic Origins, the planeswalker face) can’t be cast."
         },
         {
@@ -8424,6 +8425,18 @@
         {
           "date": "2015-06-22",
           "text": "If a double-faced card is manifested, it will be put onto the battlefield face down (this is also true if it’s put onto the battlefield face down some other way). Note that “face down” is not synonymous with “with its back face up.” A manifested double-faced card is a 2/2 creature with no name, mana cost, creature types, or abilities. While face down, it can’t transform. If the front face of a manifested double-faced card is a creature card, you can turn it face up by paying its mana cost. If you do, its front face will be up. A double-faced card on the battlefield can’t be turned face down."
+        },
+        {
+          "date": "2016-04-08",
+          "text": "If you discard a card with madness while resolving the ability of Jace, Vryn’s Prodigy, you’ll need to already have five other cards in your graveyard to satisfy that ability’s condition. You can’t choose to put the card directly into your graveyard to satisfy it."
+        },
+        {
+          "date": "2016-04-08",
+          "text": "The back face of a double-faced card doesn’t have a mana cost. A double-faced permanent with its back face up has a converted mana cost equal to the converted mana cost of its front face. Each back face has a color indicator that defines its color."
+        },
+        {
+          "date": "2016-04-08",
+          "text": "For more information on double-faced cards, see the Shadows over Innistrad mechanics article (http://magic.wizards.com/en/articles/archive/feature/shadows-over-innistrad-mechanics)."
         }
       ],
       "subtypes": [
@@ -9301,7 +9314,7 @@
       "rulings": [
         {
           "date": "2009-10-01",
-          "text": "A \"creature spell\" is any spell with the type Creature, even if it has other types such as Artifact or Enchantment. Older cards of type Summon are also Creature spells."
+          "text": "A “creature spell” is any spell with the type Creature, even if it has other types such as Artifact or Enchantment. Older cards of type Summon are also Creature spells."
         }
       ],
       "text": "Counter target noncreature spell.",
@@ -11379,7 +11392,7 @@
       "rulings": [
         {
           "date": "2011-01-22",
-          "text": "If there's only one card in your library when Tower Geist enters the battlefield, you'll look at that card and put it into your hand."
+          "text": "If there’s only one card in your library when Tower Geist enters the battlefield, you’ll look at that card and put it into your hand."
         }
       ],
       "subtypes": [
@@ -13827,7 +13840,7 @@
       "rulings": [
         {
           "date": "2008-10-01",
-          "text": "When the ability resolves, you may sacrifice Fleshbag Marauder itself. If you control no other creatures, you'll have to sacrifice Fleshbag Marauder."
+          "text": "When the ability resolves, you may sacrifice Fleshbag Marauder itself. If you control no other creatures, you’ll have to sacrifice Fleshbag Marauder."
         },
         {
           "date": "2015-06-22",
@@ -14910,10 +14923,6 @@
         },
         {
           "date": "2015-06-22",
-          "text": "The back face of a double-faced card doesn’t have a mana cost. A double-faced permanent with its back face up has a converted mana cost of 0. Each back face has a color indicator that defines its color."
-        },
-        {
-          "date": "2015-06-22",
           "text": "The back face of a double-faced card (in the case of Magic Origins, the planeswalker face) can’t be cast."
         },
         {
@@ -14939,6 +14948,14 @@
         {
           "date": "2015-06-22",
           "text": "If a double-faced card is manifested, it will be put onto the battlefield face down (this is also true if it’s put onto the battlefield face down some other way). Note that “face down” is not synonymous with “with its back face up.” A manifested double-faced card is a 2/2 creature with no name, mana cost, creature types, or abilities. While face down, it can’t transform. If the front face of a manifested double-faced card is a creature card, you can turn it face up by paying its mana cost. If you do, its front face will be up. A double-faced card on the battlefield can’t be turned face down."
+        },
+        {
+          "date": "2016-04-08",
+          "text": "The back face of a double-faced card doesn’t have a mana cost. A double-faced permanent with its back face up has a converted mana cost equal to the converted mana cost of its front face. Each back face has a color indicator that defines its color."
+        },
+        {
+          "date": "2016-04-08",
+          "text": "For more information on double-faced cards, see the Shadows over Innistrad mechanics article (http://magic.wizards.com/en/articles/archive/feature/shadows-over-innistrad-mechanics)."
         }
       ],
       "subtypes": [
@@ -15210,9 +15227,20 @@
       "originalType": "Sorcery",
       "printings": [
         "DIS",
-        "ORI"
+        "ORI",
+        "SOI"
       ],
       "rarity": "Common",
+      "rulings": [
+        {
+          "date": "2016-04-08",
+          "text": "If you have no other cards in hand, you’ll have to discard one of the creature cards you return to your hand."
+        },
+        {
+          "date": "2016-04-08",
+          "text": "You may cast Macabre Waltz targeting one or zero creature cards. You’ll still discard a card, even if you target no creature cards."
+        }
+      ],
       "text": "Return up to two target creature cards from your graveyard to your hand, then discard a card.",
       "type": "Sorcery",
       "types": [
@@ -18154,6 +18182,10 @@
           "legality": "Legal"
         },
         {
+          "format": "Khans of Tarkir Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -18175,10 +18207,6 @@
         },
         {
           "format": "Standard",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tarkir Block",
           "legality": "Legal"
         },
         {
@@ -18216,11 +18244,11 @@
       "rulings": [
         {
           "date": "2009-10-01",
-          "text": "Act of Treason can target any creature, even one that's untapped or one you already control."
+          "text": "Act of Treason can target any creature, even one that’s untapped or one you already control."
         },
         {
           "date": "2010-08-15",
-          "text": "Gaining control of a creature doesn't cause you to gain control of any Auras or Equipment attached to it."
+          "text": "Gaining control of a creature doesn’t cause you to gain control of any Auras or Equipment attached to it."
         },
         {
           "date": "2013-07-01",
@@ -19052,10 +19080,6 @@
         },
         {
           "date": "2015-06-22",
-          "text": "The back face of a double-faced card doesn’t have a mana cost. A double-faced permanent with its back face up has a converted mana cost of 0. Each back face has a color indicator that defines its color."
-        },
-        {
-          "date": "2015-06-22",
           "text": "The back face of a double-faced card (in the case of Magic Origins, the planeswalker face) can’t be cast."
         },
         {
@@ -19081,6 +19105,14 @@
         {
           "date": "2015-06-22",
           "text": "If a double-faced card is manifested, it will be put onto the battlefield face down (this is also true if it’s put onto the battlefield face down some other way). Note that “face down” is not synonymous with “with its back face up.” A manifested double-faced card is a 2/2 creature with no name, mana cost, creature types, or abilities. While face down, it can’t transform. If the front face of a manifested double-faced card is a creature card, you can turn it face up by paying its mana cost. If you do, its front face will be up. A double-faced card on the battlefield can’t be turned face down."
+        },
+        {
+          "date": "2016-04-08",
+          "text": "The back face of a double-faced card doesn’t have a mana cost. A double-faced permanent with its back face up has a converted mana cost equal to the converted mana cost of its front face. Each back face has a color indicator that defines its color."
+        },
+        {
+          "date": "2016-04-08",
+          "text": "For more information on double-faced cards, see the Shadows over Innistrad mechanics article (http://magic.wizards.com/en/articles/archive/feature/shadows-over-innistrad-mechanics)."
         }
       ],
       "subtypes": [
@@ -19363,7 +19395,7 @@
       "rulings": [
         {
           "date": "2012-07-01",
-          "text": "Chandra's Fury targets only the player, not any creature. Chandra's Fury will deal 1 damage to a creature with hexproof, for example."
+          "text": "Chandra’s Fury targets only the player, not any creature. Chandra’s Fury will deal 1 damage to a creature with hexproof, for example."
         }
       ],
       "text": "Chandra's Fury deals 4 damage to target player and 1 damage to each creature that player controls.",
@@ -19866,6 +19898,10 @@
           "legality": "Legal"
         },
         {
+          "format": "Khans of Tarkir Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -19887,10 +19923,6 @@
         },
         {
           "format": "Standard",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tarkir Block",
           "legality": "Legal"
         },
         {
@@ -24907,7 +24939,7 @@
       "rulings": [
         {
           "date": "2010-08-15",
-          "text": "Gaea's Revenge's first ability works only while it's a spell on the stack. Gaea's Revenge's last ability works only while it's on the battlefield."
+          "text": "Gaea’s Revenge’s first ability works only while it’s a spell on the stack. Gaea’s Revenge’s last ability works only while it’s on the battlefield."
         },
         {
           "date": "2010-08-15",
@@ -24915,7 +24947,7 @@
         },
         {
           "date": "2010-08-15",
-          "text": "Gaea's Revenge's last ability applies to all nongreen spells and abilities from nongreen sources, including ones you control. For example, you can't target it with the equip ability of an Equipment you control (unless the Equipment is somehow green)."
+          "text": "Gaea’s Revenge’s last ability applies to all nongreen spells and abilities from nongreen sources, including ones you control. For example, you can’t target it with the equip ability of an Equipment you control (unless the Equipment is somehow green)."
         },
         {
           "date": "2015-06-22",
@@ -26409,7 +26441,7 @@
       "rulings": [
         {
           "date": "2015-06-22",
-          "text": "The bonus is determined as Might of the Masses resolves. It won't change if the number of creatures you control changes later in the turn."
+          "text": "The bonus is determined as Might of the Masses resolves. It won’t change if the number of creatures you control changes later in the turn."
         },
         {
           "date": "2015-06-22",
@@ -26547,7 +26579,7 @@
       "rulings": [
         {
           "date": "2015-06-22",
-          "text": "Nissa, Vastwood Seer is exiled as a result of her second triggered ability. If she enters the battlefield while you control seven or more lands, she won't automatically be exiled and transform."
+          "text": "Nissa, Vastwood Seer is exiled as a result of her second triggered ability. If she enters the battlefield while you control seven or more lands, she won’t automatically be exiled and transform."
         },
         {
           "date": "2015-06-22",
@@ -26556,10 +26588,6 @@
         {
           "date": "2015-06-22",
           "text": "The converted mana cost of a double-faced card not on the battlefield is the converted mana cost of its front face."
-        },
-        {
-          "date": "2015-06-22",
-          "text": "The back face of a double-faced card doesn’t have a mana cost. A double-faced permanent with its back face up has a converted mana cost of 0. Each back face has a color indicator that defines its color."
         },
         {
           "date": "2015-06-22",
@@ -26588,6 +26616,14 @@
         {
           "date": "2015-06-22",
           "text": "If a double-faced card is manifested, it will be put onto the battlefield face down (this is also true if it’s put onto the battlefield face down some other way). Note that “face down” is not synonymous with “with its back face up.” A manifested double-faced card is a 2/2 creature with no name, mana cost, creature types, or abilities. While face down, it can’t transform. If the front face of a manifested double-faced card is a creature card, you can turn it face up by paying its mana cost. If you do, its front face will be up. A double-faced card on the battlefield can’t be turned face down."
+        },
+        {
+          "date": "2016-04-08",
+          "text": "The back face of a double-faced card doesn’t have a mana cost. A double-faced permanent with its back face up has a converted mana cost equal to the converted mana cost of its front face. Each back face has a color indicator that defines its color."
+        },
+        {
+          "date": "2016-04-08",
+          "text": "For more information on double-faced cards, see the Shadows over Innistrad mechanics article (http://magic.wizards.com/en/articles/archive/feature/shadows-over-innistrad-mechanics)."
         }
       ],
       "subtypes": [
@@ -29299,7 +29335,7 @@
       "rulings": [
         {
           "date": "2012-07-01",
-          "text": "Yeva's Forcemage's ability is mandatory, although you can choose Yeva's Forcemage as the target."
+          "text": "Yeva’s Forcemage’s ability is mandatory, although you can choose Yeva’s Forcemage as the target."
         }
       ],
       "subtypes": [
@@ -34259,6 +34295,10 @@
       "layout": "normal",
       "legalities": [
         {
+          "format": "Battle for Zendikar Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Commander",
           "legality": "Legal"
         },
@@ -34268,6 +34308,10 @@
         },
         {
           "format": "Innistrad Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Khans of Tarkir Block",
           "legality": "Legal"
         },
         {
@@ -34288,10 +34332,6 @@
         },
         {
           "format": "Standard",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tarkir Block",
           "legality": "Legal"
         },
         {
@@ -34833,7 +34873,7 @@
       "rulings": [
         {
           "date": "2012-10-01",
-          "text": "Activating the second ability of Rogue's Passage after a creature has become blocked won't cause it to become unblocked."
+          "text": "Activating the second ability of Rogue’s Passage after a creature has become blocked won’t cause it to become unblocked."
         }
       ],
       "text": "{T}: Add {C} to your mana pool.\n{4}, {T}: Target creature can't be blocked this turn.",
@@ -35477,7 +35517,8 @@
         "DDP",
         "BFZ",
         "C15",
-        "DDQ"
+        "DDQ",
+        "SOI"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -35857,7 +35898,8 @@
         "DDP",
         "BFZ",
         "C15",
-        "DDQ"
+        "DDQ",
+        "SOI"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -36237,7 +36279,8 @@
         "DDP",
         "BFZ",
         "C15",
-        "DDQ"
+        "DDQ",
+        "SOI"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -36617,7 +36660,8 @@
         "DDP",
         "BFZ",
         "C15",
-        "DDQ"
+        "DDQ",
+        "SOI"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -36666,21 +36710,6 @@
           "language": "French",
           "name": "Île",
           "multiverseid": 399539
-        },
-        {
-          "language": "French",
-          "name": "Île",
-          "multiverseid": 399585
-        },
-        {
-          "language": "French",
-          "name": "Île",
-          "multiverseid": 399694
-        },
-        {
-          "language": "French",
-          "name": "Île",
-          "multiverseid": 399772
         },
         {
           "language": "German",
@@ -36743,6 +36772,26 @@
           "multiverseid": 400326
         },
         {
+          "language": "Korean",
+          "name": "섬",
+          "multiverseid": 400370
+        },
+        {
+          "language": "Korean",
+          "name": "섬",
+          "multiverseid": 400416
+        },
+        {
+          "language": "Korean",
+          "name": "섬",
+          "multiverseid": 400525
+        },
+        {
+          "language": "Korean",
+          "name": "섬",
+          "multiverseid": 400603
+        },
+        {
           "language": "Portuguese (Brazil)",
           "name": "Ilha",
           "multiverseid": 400647
@@ -36761,11 +36810,6 @@
           "language": "Portuguese (Brazil)",
           "name": "Ilha",
           "multiverseid": 400880
-        },
-        {
-          "language": "Russian",
-          "name": "Остров",
-          "multiverseid": 400924
         }
       ],
       "id": "7eefc851f0bdd916c89df027edd6642c4f08bc31",
@@ -36994,7 +37038,8 @@
         "ORI",
         "BFZ",
         "C15",
-        "DDQ"
+        "DDQ",
+        "SOI"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -37043,21 +37088,6 @@
           "language": "French",
           "name": "Île",
           "multiverseid": 399539
-        },
-        {
-          "language": "French",
-          "name": "Île",
-          "multiverseid": 399585
-        },
-        {
-          "language": "French",
-          "name": "Île",
-          "multiverseid": 399694
-        },
-        {
-          "language": "French",
-          "name": "Île",
-          "multiverseid": 399772
         },
         {
           "language": "German",
@@ -37120,6 +37150,26 @@
           "multiverseid": 400326
         },
         {
+          "language": "Korean",
+          "name": "섬",
+          "multiverseid": 400370
+        },
+        {
+          "language": "Korean",
+          "name": "섬",
+          "multiverseid": 400416
+        },
+        {
+          "language": "Korean",
+          "name": "섬",
+          "multiverseid": 400525
+        },
+        {
+          "language": "Korean",
+          "name": "섬",
+          "multiverseid": 400603
+        },
+        {
           "language": "Portuguese (Brazil)",
           "name": "Ilha",
           "multiverseid": 400647
@@ -37138,11 +37188,6 @@
           "language": "Portuguese (Brazil)",
           "name": "Ilha",
           "multiverseid": 400880
-        },
-        {
-          "language": "Russian",
-          "name": "Остров",
-          "multiverseid": 400924
         }
       ],
       "id": "cb600224bf473b138e4d3356637146618c6debfb",
@@ -37371,7 +37416,8 @@
         "ORI",
         "BFZ",
         "C15",
-        "DDQ"
+        "DDQ",
+        "SOI"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -37420,21 +37466,6 @@
           "language": "French",
           "name": "Île",
           "multiverseid": 399539
-        },
-        {
-          "language": "French",
-          "name": "Île",
-          "multiverseid": 399585
-        },
-        {
-          "language": "French",
-          "name": "Île",
-          "multiverseid": 399694
-        },
-        {
-          "language": "French",
-          "name": "Île",
-          "multiverseid": 399772
         },
         {
           "language": "German",
@@ -37497,6 +37528,26 @@
           "multiverseid": 400326
         },
         {
+          "language": "Korean",
+          "name": "섬",
+          "multiverseid": 400370
+        },
+        {
+          "language": "Korean",
+          "name": "섬",
+          "multiverseid": 400416
+        },
+        {
+          "language": "Korean",
+          "name": "섬",
+          "multiverseid": 400525
+        },
+        {
+          "language": "Korean",
+          "name": "섬",
+          "multiverseid": 400603
+        },
+        {
           "language": "Portuguese (Brazil)",
           "name": "Ilha",
           "multiverseid": 400647
@@ -37515,11 +37566,6 @@
           "language": "Portuguese (Brazil)",
           "name": "Ilha",
           "multiverseid": 400880
-        },
-        {
-          "language": "Russian",
-          "name": "Остров",
-          "multiverseid": 400924
         }
       ],
       "id": "837ca338a1c179c5f038d484621788a34b68b642",
@@ -37748,7 +37794,8 @@
         "ORI",
         "BFZ",
         "C15",
-        "DDQ"
+        "DDQ",
+        "SOI"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -37797,21 +37844,6 @@
           "language": "French",
           "name": "Île",
           "multiverseid": 399539
-        },
-        {
-          "language": "French",
-          "name": "Île",
-          "multiverseid": 399585
-        },
-        {
-          "language": "French",
-          "name": "Île",
-          "multiverseid": 399694
-        },
-        {
-          "language": "French",
-          "name": "Île",
-          "multiverseid": 399772
         },
         {
           "language": "German",
@@ -37874,6 +37906,26 @@
           "multiverseid": 400326
         },
         {
+          "language": "Korean",
+          "name": "섬",
+          "multiverseid": 400370
+        },
+        {
+          "language": "Korean",
+          "name": "섬",
+          "multiverseid": 400416
+        },
+        {
+          "language": "Korean",
+          "name": "섬",
+          "multiverseid": 400525
+        },
+        {
+          "language": "Korean",
+          "name": "섬",
+          "multiverseid": 400603
+        },
+        {
           "language": "Portuguese (Brazil)",
           "name": "Ilha",
           "multiverseid": 400647
@@ -37892,11 +37944,6 @@
           "language": "Portuguese (Brazil)",
           "name": "Ilha",
           "multiverseid": 400880
-        },
-        {
-          "language": "Russian",
-          "name": "Остров",
-          "multiverseid": 400924
         }
       ],
       "id": "c3069e089a8e84bf0bd815f0f7cc39c0e0a257ae",
@@ -38125,7 +38172,8 @@
         "ORI",
         "BFZ",
         "C15",
-        "DDQ"
+        "DDQ",
+        "SOI"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -38507,7 +38555,8 @@
         "DDP",
         "BFZ",
         "C15",
-        "DDQ"
+        "DDQ",
+        "SOI"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -38889,7 +38938,8 @@
         "DDP",
         "BFZ",
         "C15",
-        "DDQ"
+        "DDQ",
+        "SOI"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -39271,7 +39321,8 @@
         "DDP",
         "BFZ",
         "C15",
-        "DDQ"
+        "DDQ",
+        "SOI"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -39653,7 +39704,8 @@
         "DDP",
         "BFZ",
         "C15",
-        "DDQ"
+        "DDQ",
+        "SOI"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -39809,6 +39861,10 @@
       "layout": "normal",
       "legalities": [
         {
+          "format": "Battle for Zendikar Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Commander",
           "legality": "Legal"
         },
@@ -39830,6 +39886,10 @@
         },
         {
           "format": "Kamigawa Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Khans of Tarkir Block",
           "legality": "Legal"
         },
         {
@@ -39890,10 +39950,6 @@
         },
         {
           "format": "Standard",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tarkir Block",
           "legality": "Legal"
         },
         {
@@ -40032,7 +40088,8 @@
         "ORI",
         "DDP",
         "BFZ",
-        "C15"
+        "C15",
+        "SOI"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -40188,6 +40245,10 @@
       "layout": "normal",
       "legalities": [
         {
+          "format": "Battle for Zendikar Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Commander",
           "legality": "Legal"
         },
@@ -40209,6 +40270,10 @@
         },
         {
           "format": "Kamigawa Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Khans of Tarkir Block",
           "legality": "Legal"
         },
         {
@@ -40269,10 +40334,6 @@
         },
         {
           "format": "Standard",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tarkir Block",
           "legality": "Legal"
         },
         {
@@ -40411,7 +40472,8 @@
         "ORI",
         "DDP",
         "BFZ",
-        "C15"
+        "C15",
+        "SOI"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -40567,6 +40629,10 @@
       "layout": "normal",
       "legalities": [
         {
+          "format": "Battle for Zendikar Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Commander",
           "legality": "Legal"
         },
@@ -40588,6 +40654,10 @@
         },
         {
           "format": "Kamigawa Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Khans of Tarkir Block",
           "legality": "Legal"
         },
         {
@@ -40648,10 +40718,6 @@
         },
         {
           "format": "Standard",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tarkir Block",
           "legality": "Legal"
         },
         {
@@ -40790,7 +40856,8 @@
         "ORI",
         "DDP",
         "BFZ",
-        "C15"
+        "C15",
+        "SOI"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -40946,6 +41013,10 @@
       "layout": "normal",
       "legalities": [
         {
+          "format": "Battle for Zendikar Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Commander",
           "legality": "Legal"
         },
@@ -40967,6 +41038,10 @@
         },
         {
           "format": "Kamigawa Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Khans of Tarkir Block",
           "legality": "Legal"
         },
         {
@@ -41027,10 +41102,6 @@
         },
         {
           "format": "Standard",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tarkir Block",
           "legality": "Legal"
         },
         {
@@ -41169,7 +41240,8 @@
         "ORI",
         "DDP",
         "BFZ",
-        "C15"
+        "C15",
+        "SOI"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -41325,6 +41397,10 @@
       "layout": "normal",
       "legalities": [
         {
+          "format": "Battle for Zendikar Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Commander",
           "legality": "Legal"
         },
@@ -41346,6 +41422,10 @@
         },
         {
           "format": "Kamigawa Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Khans of Tarkir Block",
           "legality": "Legal"
         },
         {
@@ -41406,10 +41486,6 @@
         },
         {
           "format": "Standard",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tarkir Block",
           "legality": "Legal"
         },
         {
@@ -41545,7 +41621,8 @@
         "ORI",
         "DDP",
         "BFZ",
-        "C15"
+        "C15",
+        "SOI"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -41701,6 +41778,10 @@
       "layout": "normal",
       "legalities": [
         {
+          "format": "Battle for Zendikar Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Commander",
           "legality": "Legal"
         },
@@ -41722,6 +41803,10 @@
         },
         {
           "format": "Kamigawa Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Khans of Tarkir Block",
           "legality": "Legal"
         },
         {
@@ -41782,10 +41867,6 @@
         },
         {
           "format": "Standard",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tarkir Block",
           "legality": "Legal"
         },
         {
@@ -41921,7 +42002,8 @@
         "ORI",
         "DDP",
         "BFZ",
-        "C15"
+        "C15",
+        "SOI"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -42077,6 +42159,10 @@
       "layout": "normal",
       "legalities": [
         {
+          "format": "Battle for Zendikar Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Commander",
           "legality": "Legal"
         },
@@ -42098,6 +42184,10 @@
         },
         {
           "format": "Kamigawa Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Khans of Tarkir Block",
           "legality": "Legal"
         },
         {
@@ -42158,10 +42248,6 @@
         },
         {
           "format": "Standard",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tarkir Block",
           "legality": "Legal"
         },
         {
@@ -42297,7 +42383,8 @@
         "ORI",
         "DDP",
         "BFZ",
-        "C15"
+        "C15",
+        "SOI"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -42453,6 +42540,10 @@
       "layout": "normal",
       "legalities": [
         {
+          "format": "Battle for Zendikar Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Commander",
           "legality": "Legal"
         },
@@ -42474,6 +42565,10 @@
         },
         {
           "format": "Kamigawa Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Khans of Tarkir Block",
           "legality": "Legal"
         },
         {
@@ -42534,10 +42629,6 @@
         },
         {
           "format": "Standard",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tarkir Block",
           "legality": "Legal"
         },
         {
@@ -42673,7 +42764,8 @@
         "ORI",
         "DDP",
         "BFZ",
-        "C15"
+        "C15",
+        "SOI"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -42809,7 +42901,8 @@
       "printings": [
         "M12",
         "M15",
-        "ORI"
+        "ORI",
+        "W16"
       ],
       "rarity": "Rare",
       "rulings": [
@@ -42966,15 +43059,15 @@
       "rulings": [
         {
           "date": "2009-10-01",
-          "text": "An \"attacking creature\" is one that has been declared as an attacker this combat, or one that was put onto the battlefield attacking this combat. Unless that creature leaves combat, it continues to be an attacking creature through the end of combat step, even if the player it was attacking has left the game, or the planeswalker it was attacking has left combat."
+          "text": "An “attacking creature” is one that has been declared as an attacker this combat, or one that was put onto the battlefield attacking this combat. Unless that creature leaves combat, it continues to be an attacking creature through the end of combat step, even if the player it was attacking has left the game, or the planeswalker it was attacking has left combat."
         },
         {
           "date": "2009-10-01",
-          "text": "A \"blocking creature\" is one that has been declared as a blocker this combat, or one that was put onto the battlefield blocking this combat. Unless that creature leaves combat, it continues to be a blocking creature through the end of combat step, even if the creature or creatures it was blocking are no longer on the battlefield or have otherwise left combat."
+          "text": "A “blocking creature” is one that has been declared as a blocker this combat, or one that was put onto the battlefield blocking this combat. Unless that creature leaves combat, it continues to be a blocking creature through the end of combat step, even if the creature or creatures it was blocking are no longer on the battlefield or have otherwise left combat."
         },
         {
           "date": "2012-07-01",
-          "text": "Destroying a blocking creature won't cause any of the creatures it was blocking to become unblocked. They won't deal combat damage to the defending player or planeswalker (unless they have trample)."
+          "text": "Destroying a blocking creature won’t cause any of the creatures it was blocking to become unblocked. They won’t deal combat damage to the defending player or planeswalker (unless they have trample)."
         }
       ],
       "starter": true,
@@ -43259,7 +43352,8 @@
         "M15",
         "DD3_DVD",
         "ORI",
-        "V15"
+        "V15",
+        "W16"
       ],
       "rarity": "Uncommon",
       "starter": true,
@@ -43624,6 +43718,10 @@
           "legality": "Legal"
         },
         {
+          "format": "Khans of Tarkir Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -43641,10 +43739,6 @@
         },
         {
           "format": "Standard",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tarkir Block",
           "legality": "Legal"
         },
         {
@@ -43880,6 +43974,10 @@
           "legality": "Legal"
         },
         {
+          "format": "Khans of Tarkir Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -43901,10 +43999,6 @@
         },
         {
           "format": "Standard",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tarkir Block",
           "legality": "Legal"
         },
         {
@@ -43944,7 +44038,8 @@
         "M14",
         "M15",
         "DTK",
-        "ORI"
+        "ORI",
+        "W16"
       ],
       "rarity": "Common",
       "starter": true,
@@ -44086,17 +44181,18 @@
         "M10",
         "M14",
         "M15",
-        "ORI"
+        "ORI",
+        "W16"
       ],
       "rarity": "Rare",
       "rulings": [
         {
           "date": "2008-04-01",
-          "text": "If you control 0 swamps, then the Nightmare has 0 toughness and will be put into its owner's graveyard as a state-based action right before the next player gains priority."
+          "text": "If you control 0 swamps, then the Nightmare has 0 toughness and will be put into its owner’s graveyard as a state-based action right before the next player gains priority."
         },
         {
           "date": "2009-10-01",
-          "text": "Nightmare's power and toughness changes as the number of Swamps you control changes."
+          "text": "Nightmare’s power and toughness changes as the number of Swamps you control changes."
         },
         {
           "date": "2013-07-01",
@@ -44257,21 +44353,22 @@
         "DDK",
         "M14",
         "M15",
-        "ORI"
+        "ORI",
+        "W16"
       ],
       "rarity": "Uncommon",
       "rulings": [
         {
           "date": "2007-07-15",
-          "text": "If Sengir Vampire deals nonlethal damage to a creature and then a different effect or damage source causes that creature to be put into a graveyard later in the turn, Sengir Vampire's ability will trigger and it will get a +1/+1 counter."
+          "text": "If Sengir Vampire deals nonlethal damage to a creature and then a different effect or damage source causes that creature to be put into a graveyard later in the turn, Sengir Vampire’s ability will trigger and it will get a +1/+1 counter."
         },
         {
           "date": "2011-09-22",
-          "text": "Each time a creature is put into a graveyard from the battlefield, check whether Sengir Vampire had dealt any damage to it at any time during that turn. If so, Sengir Vampire's ability will trigger. It doesn't matter who controlled the creature or whose graveyard it was put into."
+          "text": "Each time a creature is put into a graveyard from the battlefield, check whether Sengir Vampire had dealt any damage to it at any time during that turn. If so, Sengir Vampire’s ability will trigger. It doesn’t matter who controlled the creature or whose graveyard it was put into."
         },
         {
           "date": "2011-09-22",
-          "text": "If Sengir Vampire and a creature it dealt damage to are both put into a graveyard at the same time, Sengir Vampire's ability will trigger, but it will do nothing when it resolves."
+          "text": "If Sengir Vampire and a creature it dealt damage to are both put into a graveyard at the same time, Sengir Vampire’s ability will trigger, but it will do nothing when it resolves."
         }
       ],
       "starter": true,
@@ -44556,7 +44653,8 @@
         "ME4",
         "M14",
         "M15",
-        "ORI"
+        "ORI",
+        "W16"
       ],
       "rarity": "Rare",
       "starter": true,
@@ -44636,6 +44734,10 @@
       "imageName": "plummet",
       "layout": "normal",
       "legalities": [
+        {
+          "format": "Battle for Zendikar Block",
+          "legality": "Legal"
+        },
         {
           "format": "Commander",
           "legality": "Legal"
@@ -44828,11 +44930,11 @@
       "rulings": [
         {
           "date": "2009-10-01",
-          "text": "Prized Unicorn doesn't give a creature the ability to block it. It just forces those creatures that are already able to block it to do so. For example, it can't force a creature that's tapped or affected by a spell or ability that says it can't block to block it. If there's a cost associated with having a creature block, its controller isn't forced to pay that cost, so the creature doesn't have to block Prized Unicorn in that case either."
+          "text": "Prized Unicorn doesn’t give a creature the ability to block it. It just forces those creatures that are already able to block it to do so. For example, it can’t force a creature that’s tapped or affected by a spell or ability that says it can’t block to block it. If there’s a cost associated with having a creature block, its controller isn’t forced to pay that cost, so the creature doesn’t have to block Prized Unicorn in that case either."
         },
         {
           "date": "2009-10-01",
-          "text": "If a creature the defending player controls can't block Prized Unicorn, it can block any attacking creature, or not block at all."
+          "text": "If a creature the defending player controls can’t block Prized Unicorn, it can block any attacking creature, or not block at all."
         },
         {
           "date": "2009-10-01",
@@ -44978,7 +45080,7 @@
       "rulings": [
         {
           "date": "2009-10-01",
-          "text": "Terra Stomper can be targeted by spells that try to counter it (such as Cancel). Those spells will resolve, but the part of their effect that would counter Terra Stomper won't do anything. Any other effects those spells have will work as normal."
+          "text": "Terra Stomper can be targeted by spells that try to counter it (such as Cancel). Those spells will resolve, but the part of their effect that would counter Terra Stomper won’t do anything. Any other effects those spells have will work as normal."
         }
       ],
       "starter": true,

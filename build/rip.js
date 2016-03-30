@@ -253,7 +253,7 @@ var processMultiverseDocs = function(docs, callback) {
 		});
 
 		if (newCards.length === 2 && newCards[0].layout === "double-faced") {
-			var doubleFacedCardName = newCards[0].names.sort().join(":::");
+			var doubleFacedCardName = newCards[0].names.concat().sort().join(":::");
 			if (!doubleFacedCardNames.contains(doubleFacedCardName))
 				doubleFacedCardNames.push(doubleFacedCardName);
 			else
@@ -876,10 +876,11 @@ var compareCardToMCI = function(set, card, mciCardURL, cb) {
 		hasArtistCorrection = true;
 
 	var mciNumber = mciCardURL.match(/\/([0-9][^\.]*)\.html/)[1]
+	var mciURL = "http://magiccards.info" + mciCardURL;
 
 	tiptoe(
 		function getMCICardDoc() {
-			shared.getURLAsDoc("http://magiccards.info" + mciCardURL, this);
+			shared.getURLAsDoc(mciURL, this);
 		},
 		function compareProperties(mciCardDoc) {
 			card.mciNumber = mciNumber;
@@ -902,8 +903,21 @@ var compareCardToMCI = function(set, card, mciCardURL, cb) {
 			// Compare artist
 			if (!hasArtistCorrection) {
 				var mciArtist;
-				if (mciCardDoc)
-					mciArtist = mciCardDoc.querySelectorAll("table tr td p").filter(function (p) { return p.textContent.startsWith("Illus."); })[0].textContent.substring(7).trim().replaceAll("\n", " ").replaceAll(" and ", " & ").innerTrim();
+				if (mciCardDoc) {
+					mciArtist = mciCardDoc.querySelectorAll("table tr td p").filter(
+						function (p) {
+							return p.textContent.startsWith("Illus.");
+						}
+					);
+					if (mciArtist.length == 0) {
+						base.error('no MCIArtist! for url %s (cache: %s)', mciCardURL, shared.cache.cachname(mciURL));
+						shared.cache.delete(mciURL);
+						mciArtist = null;
+					}
+					else {
+						mciArtist = mciArtist[0].textContent.substring(7).trim().replaceAll("\n", " ").replaceAll(" and ", " & ").innerTrim();
+					}
+				}
 				var cardArtist = (card.artist || "").trim().replaceAll("\n", " ").innerTrim();
 				if (!mciArtist && cardArtist)
 					base.warn("ARTIST: %s (%s) has artist but MagicCardsInfo (%s) does not.", card.name, card.multiverseid, mciCardURL);

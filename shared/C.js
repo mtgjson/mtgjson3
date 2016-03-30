@@ -3052,6 +3052,12 @@ var base = require("xbase");
 			}
 		},
 		{
+			name: 'Welcome Deck 2016',
+			code: 'W16',
+			border : 'black',
+			block : 'Shadows over Innistrad'
+		},
+		{
 			name : "Shadows over Innistrad",
 			code : "SOI",
 			releaseDate : "2016-04-08",
@@ -4526,6 +4532,11 @@ var base = require("xbase");
 			{ match : { multiverseid : 402060 }, replace: { mciNumber : "262b" } },
 			{ match : { multiverseid : 402059 }, replace: { mciNumber : "263b" } },
 			{ match : { multiverseid : 402062 }, replace: { mciNumber : "264b" } }
+		],
+		SOI:
+		[
+			{ match: { multiverseid: 410049 }, replace: { number: '281a' } },
+			{ match: { multiverseid: 410050 }, replace: { number: '281b' } }
 		],
 		"*" :
 		[
