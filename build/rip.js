@@ -253,7 +253,7 @@ var processMultiverseDocs = function(docs, callback) {
 		});
 
 		if (newCards.length === 2 && newCards[0].layout === "double-faced") {
-			var doubleFacedCardName = newCards[0].names.join(":::");
+			var doubleFacedCardName = newCards[0].names.sort().join(":::");
 			if (!doubleFacedCardNames.contains(doubleFacedCardName))
 				doubleFacedCardNames.push(doubleFacedCardName);
 			else
