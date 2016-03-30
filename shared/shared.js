@@ -14,7 +14,9 @@ var base = require("xbase"),
 	urlUtil = require("xutil").url,
 	url = require("url"),
 	unicodeUtil = require("xutil").unicode,
-	zlib = require("zlib");
+	cache = require('cache');
+
+exports.cache = cache(path.join(__dirname, '..', 'cache'), { compress: true });
 
 exports.getSetsToDo = function(startAt)
 {
@@ -506,12 +508,9 @@ exports.performSetCorrections = function(setCorrections, fullSet)
 	});
 };
 
-exports.generateCacheFilePath = generateCacheFilePath;
-function generateCacheFilePath(targetUrl)
-{
-	var urlHash = hash("whirlpool", targetUrl) + ".gz";
-	return  path.join(__dirname, "..", "cache", urlHash.charAt(0), urlHash);
-}
+exports.generateCacheFilePath = function(targetUrl) {
+	exports.cache.cachname(targetUrl);
+};
 
 exports.finalizePrintings = finalizePrintings;
 function finalizePrintings(card)
@@ -548,69 +547,43 @@ function getReleaseDateForSetCode(setCode)
 	return C.SETS.mutateOnce(function(SET) { return SET.code===setCode ? SET.releaseDate : undefined; }) || moment().format("YYYY-MM-DD");
 }
 
-exports.clearCacheFile = function(targetUrl, cb)
-{
-	var cachePath = generateCacheFilePath(targetUrl);
-	if(!fs.existsSync(cachePath))
-		return setImmediate(cb);
-
-	//base.info("Clearing: %s for %s", cachePath, targetUrl);
-
-	fs.unlink(cachePath, cb);
+exports.clearCacheFile = function(targetUrl, cb) {
+	exports.cache.delete(targetUrl).done(cb);
 };
 
-exports.buildCacheFileURLs = function(card, cacheType, cb, fromCache)
-{
-	tiptoe(
-		function getCacheURLs()
-		{
-			if(cacheType==="printings")
-				return exports.buildMultiverseAllPrintingsURLs(card.multiverseid, this, fromCache);
+exports.buildCacheFileURLs = function(card, cacheType, cb, fromCache) {
+	if (cacheType==="printings")
+		return exports.buildMultiverseAllPrintingsURLs(card.multiverseid, this, fromCache);
 
-			var urls = [];
-			if(cacheType==="oracle")
-			{
-				urls.push(exports.buildMultiverseURL(card.multiverseid));
-				if(card.layout==="split")
-				{
-					urls.push(exports.buildMultiverseURL(card.multiverseid, card.names[0]));
-					urls.push(exports.buildMultiverseURL(card.multiverseid, card.names[1]));
-				}
-			}
-			else if(cacheType==="original")
-			{
-				urls.push(urlUtil.setQueryParam(exports.buildMultiverseURL(card.multiverseid), "printed", "true"));
-				if(card.layout==="split")
-				{
-					urls.push(urlUtil.setQueryParam(exports.buildMultiverseURL(card.multiverseid, card.names[0]), "printed", "true"));
-					urls.push(urlUtil.setQueryParam(exports.buildMultiverseURL(card.multiverseid, card.names[1]), "printed", "true"));
-				}
-			}
-			else if(cacheType==="languages")
-			{
-				urls.push(exports.buildMultiverseLanguagesURL(card.multiverseid));
-			}
-			else if(cacheType==="legalities")
-			{
-				urls.push(exports.buildMultiverseLegalitiesURL(card.multiverseid));
-			}
-
-			this(undefined, urls);
-		},
-		function returnCacheURLs(err, urls)
-		{
-			if(err)
-				throw err;
-
-			if(!urls || !urls.length)
-				throw new Error("No URLs for: %s %s", cacheType, card.multiverseid);
-
-			if(urls.some(function(url) { return url.length===0; }))
-				throw new Error("Invalid urls for: %s %s [%s]", cacheType, card.multiverseid, urls.join(", "));
-
-			return setImmediate(function() { cb(err, urls); });
+	var urls = [];
+	if (cacheType==="oracle") {
+		urls.push(exports.buildMultiverseURL(card.multiverseid));
+		if(card.layout==="split") {
+			urls.push(exports.buildMultiverseURL(card.multiverseid, card.names[0]));
+			urls.push(exports.buildMultiverseURL(card.multiverseid, card.names[1]));
 		}
-	);
+	}
+	else if (cacheType==="original") {
+		urls.push(urlUtil.setQueryParam(exports.buildMultiverseURL(card.multiverseid), "printed", "true"));
+		if (card.layout==="split") {
+			urls.push(urlUtil.setQueryParam(exports.buildMultiverseURL(card.multiverseid, card.names[0]), "printed", "true"));
+			urls.push(urlUtil.setQueryParam(exports.buildMultiverseURL(card.multiverseid, card.names[1]), "printed", "true"));
+		}
+	}
+	else if (cacheType==="languages") {
+		urls.push(exports.buildMultiverseLanguagesURL(card.multiverseid));
+	}
+	else if (cacheType==="legalities") {
+		urls.push(exports.buildMultiverseLegalitiesURL(card.multiverseid));
+	}
+
+	if(!urls || !urls.length)
+		throw new Error("No URLs for: %s %s", cacheType, card.multiverseid);
+
+	if(urls.some(function(url) { return url.length === 0; }))
+		throw new Error("Invalid urls for: %s %s [%s]", cacheType, card.multiverseid, urls.join(", "));
+
+	return(setImmediate(cb, err, urls));
 };
 
 exports.buildMultiverseListingURLs = function(setName, cb)
@@ -639,67 +612,72 @@ exports.buildMultiverseListingURLs = function(setName, cb)
 	);
 };
 
-exports.getURLAsDoc = function(targetURL, cb, retryCount)
-{
-	var cachePath = exports.generateCacheFilePath(targetURL);
+exports.getURLAsDoc = function(targetURL, cb, retryCount) {
+	var retryCount = 0;
 
-	tiptoe(
-		function get()
-		{
-			if(fs.existsSync(cachePath))
-			{
-				//base.info("URL [%s] is %s", targetURL, cachePath.split('/').pop());
-				//base.info("Reading %s from cache", targetURL);
-				zlib.gunzip(fs.readFileSync(cachePath), this);
-			}
-			else
-			{
-				base.info("Requesting from web: %s", targetURL);
-				httpUtil.get(targetURL, {timeout:base.SECOND*10, retry:5}, this);
-			}
-		},
-		function createDoc(err, pageHTML, responseHeaders, responseStatusCode)
-		{
-			if(err || (responseStatusCode && responseStatusCode!==200))
-			{
-				base.error("Error downloading: " + targetURL);
-				base.error("Cache path: " + cachePath);
-				base.error(err);
-				return setImmediate(function() { cb(err); });
-			}
-
-			if(!pageHTML || pageHTML.length===0 || (!targetURL.contains("www.magiclibrarities.net") && !pageHTML.toString("utf8").trim().toLowerCase().endsWith("</html>")))
-			{
-				retryCount = retryCount||0;
-				if(retryCount>3)
-					throw new Error("Invalid pageHTML for " + cachePath + " (" + targetURL + ")");
-
-				base.error("FAILED DOWNLOADING (%s), TRYING AGAIN RETRY %d", targetURL, retryCount);
-				return exports.getURLAsDoc(targetURL, cb, retryCount+1);
-			}
-
-			if(!fs.existsSync(cachePath)) {
-				fs.writeFileSync(cachePath, zlib.gzipSync(pageHTML));
-			}
-
-			setImmediate(function() { cb(null, domino.createWindow(pageHTML).document); }.bind(this));
+	// Downloads the targetURL.
+	var downloadDoc = function(cb) {
+		if (retryCount > 3) {
+			cb(new Error("Invalid pageHTML for " + targetURL));
+			return;
 		}
-	);
+
+		httpUtil.get(
+			targetURL,
+			{ timeout: base.SECOND*10, retry: 5 },
+			function(err, pageHTML, responseHeaders, responseStatusCode) {
+				if(err || (responseStatusCode && responseStatusCode!==200)) {
+					base.error("Error downloading: " + targetURL);
+					base.error(err);
+					return(setImmediate(cb, err));
+				}
+
+				if(!pageHTML || pageHTML.length===0 || (!targetURL.contains("www.magiclibrarities.net") && !pageHTML.toString("utf8").trim().toLowerCase().endsWith("</html>"))) {
+					retryCount++;
+					base.error("FAILED DOWNLOADING (%s), TRYING AGAIN RETRY %d", targetURL, retryCount);
+
+					return(setImmediate(downloadDoc, cb));
+				}
+
+				setImmediate(cb, null, pageHTML);
+			}
+		);
+	};
+
+	exports.cache.get(
+		targetURL,
+		function(cachecb) {
+			base.info("Requesting from web: %s", targetURL);
+			downloadDoc(function(err, html) {
+				if (err)
+					throw(err);
+				cachecb(html);
+			})
+		}
+	).done(function(err, html) {
+		if (err)
+			throw (err);
+		setImmediate(cb, null, domino.createWindow(html).document);
+	});
 };
 
-exports.buildMultiverseAllPrintingsURLs = function(multiverseid, cb, fromCache)
-{
+exports.buildMultiverseAllPrintingsURLs = function(multiverseid, cb, fromCache) {
 	tiptoe(
-		function getFirstPage()
-		{
+		function getFirstPage() {
 			var targetURL = exports.buildMultiversePrintingsURL(multiverseid, 0);
-			if(fromCache && fs.existsSync(generateCacheFilePath(targetURL)))
-				fs.readFile(generateCacheFilePath(targetURL), {encoding:"utf8"}, this);
+			if (fromCache) {
+				exports.cache.get(targetURL, function(cachecb) {
+					httpUtil.get(targetURL, function(err, html) {
+						if (err) throw(err);
+						cachecb(html);
+					});
+				});
+				.done(this);
+			}
 			else
 				httpUtil.get(targetURL, this);
 		},
-		function getAllPages(err, rawHTML)
-		{
+		function getAllPages(err, rawHTML) {
 			if(err)
 			{
 				base.error(exports.buildMultiversePrintingsURL(multiverseid, 0));

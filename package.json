@@ -1,20 +1,21 @@
 {
-	"name"			: "mtgjson",
-	"version"		: "1.0.0",
-	"author"		: "SergioMoura <mtgjson@andarilhomtg.com>",
-	"description"	: "Provides MTG JSON files",
-	"private"		: true,
-	"dependencies"	: {
-		"xutil"			: "git://github.com/Sembiance/xutil.git",
-		"moment"		: ">= 2.10.6",
-		"tiptoe"		: ">= 1.0.0",
-		"xbase"			: "git://github.com/Sembiance/xbase.git",
-		"domino"		: ">= 1.0.19",
-		"rimraf"		: ">= 2.4.2",
-		"cli-color"		: ">= 0.2.3",
-		"mhash"			: ">= 2.0.2"
-	},
-	"engines"		: {
-		"node"			: ">= 0.12.0"
-	}
+  "name": "mtgjson",
+  "version": "1.0.0",
+  "author": "SergioMoura <mtgjson@andarilhomtg.com>",
+  "description": "Provides MTG JSON files",
+  "private": true,
+  "dependencies": {
+    "cache": "git+https://github.com/mtgjson/cache.git",
+    "cli-color": ">= 0.2.3",
+    "domino": ">= 1.0.19",
+    "mhash": ">= 2.0.2",
+    "moment": ">= 2.10.6",
+    "rimraf": ">= 2.4.2",
+    "tiptoe": ">= 1.0.0",
+    "xbase": "git://github.com/Sembiance/xbase.git",
+    "xutil": "git://github.com/Sembiance/xutil.git"
+  },
+  "engines": {
+    "node": ">= 0.12.0"
+  }
 }
