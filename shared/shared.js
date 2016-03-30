@@ -671,7 +671,7 @@ exports.buildMultiverseAllPrintingsURLs = function(multiverseid, cb, fromCache) 
 						if (err) throw(err);
 						cachecb(html);
 					});
-				});
+				})
 				.done(this);
 			}
 			else

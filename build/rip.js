@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 /*global setImmediate: true*/
 
 var base = require("xbase"),
@@ -1536,9 +1536,7 @@ var fixCommanderIdentityForCards = function(cards, cb) {
 		return(ret);
 	}
 
-	const validColors = ['W', 'U', 'B', 'R', 'G'];
-
-	cards.parallelForEach(function (card, subcb){
+	cards.parallelForEach(function (card, subcb) {
 		// Calculate commander color identity
 		var regex = /{([^}]*)}/g;
 		var colors = [];	// Holds the final color array
@@ -1575,7 +1573,7 @@ var fixCommanderIdentityForCards = function(cards, cb) {
 		}
 
 		newColors.forEach(function (idx) {
-			if ((validColors.indexOf(idx) >= 0) && (colors.indexOf(idx) == -1))
+			if ((C.VALID_COLORS.indexOf(idx) >= 0) && (colors.indexOf(idx) == -1))
 				colors.push(idx);
 		});
 
@@ -1586,7 +1584,7 @@ var fixCommanderIdentityForCards = function(cards, cb) {
 
 		while (res = regex.exec(fullText)) {
 			res[1].split("/").forEach(function (idx) {
-				if ((validColors.indexOf(idx) >= 0) && (colors.indexOf(idx) == -1))
+				if ((C.VALID_COLORS.indexOf(idx) >= 0) && (colors.indexOf(idx) == -1))
 					colors.push(idx);
 			});
 		}

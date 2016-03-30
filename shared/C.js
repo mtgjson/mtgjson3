@@ -4878,6 +4878,8 @@ var base = require("xbase");
 		"Traditional Chinese" : "Chinese Traditional"
 	};
 
+	exports.VALID_COLORS = [ 'W', 'U', 'B', 'R', 'G' ];
+
 	exports.STANDARD_SETS = [
 		'KTK',
 		'FRF',
