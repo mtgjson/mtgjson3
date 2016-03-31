@@ -4399,16 +4399,11 @@ var base = require("xbase");
 		],
 		DDL :
 		[
-			{ match : { name : "Anax and Cymede" }, replace : {text : "First strike, vigilance\nHeroic — Whenever you cast a spell that targets Anax and Cymede, creatures you control get +1/+1 and gain trample until end of turn."}},
-			{ match : { name : "Cavalry Pegasus" }, replace : {text : "Flying\nWhenever Cavalry Pegasus attacks, each attacking Human gains flying until end of turn."}},
-			{ match : { name : "Ordeal of Purphoros" }, replace : {text : "Enchant creature\nWhenever enchanted creature attacks, put a +1/+1 counter on it. Then if it has three or more +1/+1 counters on it, sacrifice Ordeal of Purphoros.\nWhen you sacrifice Ordeal of Purphoros, it deals 3 damage to target creature or player."}},
-			{ match : { name : "Polukranos, World Eater" }, replace : {text : "{X}{X}{G}: Monstrosity X. (If this creature isn't monstrous, put X +1/+1 counters on it and it becomes monstrous.)\nWhen Polukranos, World Eater becomes monstrous, it deals X damage divided as you choose among any number of target creatures your opponents control. Each of those creatures deals damage equal to its power to Polukranos."}},
 			{ match : "*", fixFlavorNewlines : true },
 		],
 		THS :
 		[
-			{ match : { name : "Colossus of Akros" }, replace : {text : "Defender, indestructible\n{10}: Monstrosity 10. (If this creature isn't monstrous, put ten +1/+1 counters on it and it becomes monstrous.)\nAs long as Colossus of Akros is monstrous, it has trample and can attack as though it didn't have defender."}},
-			{ match : { name : "Time to Feed" }, replace : {text : "Choose target creature an opponent controls. When that creature dies this turn, you gain 3 life. Target creature you control fights that creature. (Each deals damage equal to its power to the other.)"}}
+			{ match : { name : "Colossus of Akros" }, replace : {text : "Defender, indestructible\n{10}: Monstrosity 10. (If this creature isn't monstrous, put ten +1/+1 counters on it and it becomes monstrous.)\nAs long as Colossus of Akros is monstrous, it has trample and can attack as though it didn't have defender."}}
 		],
 		C13 :
 		[
@@ -4427,10 +4422,6 @@ var base = require("xbase");
 			{ match : {name : "Reaper of the Wilds"}, replace : {number : "4", source: "CP2-Fate Reforged"}},
 			{ match : {name : "Whip of Erebos"}, replace : {number : "5", source: "CP2-Fate Reforged"}},
 			{ match : {name : "Courser of Kruphix"}, replace : {number : "6", source: "CP2-Fate Reforged"}}
-		],
-		CMD :
-		[
-			{ match : {name : "Vow of Malice"}, replace : {text : {" wit " : " with "}}}
 		],
 		ORI :
 		[
@@ -4542,7 +4533,7 @@ var base = require("xbase");
 		[
 			"recalculateStandard",
 			{ match : {name : "Draco"}, replace : {text : "Domain — Draco costs {2} less to cast for each basic land type among lands you control.\nFlying\nDomain — At the beginning of your upkeep, sacrifice Draco unless you pay {10}. This cost is reduced by {2} for each basic land type among lands you control."}},
-			{ match : {name : "Spawnsire of Ulamog"}, replace : {text : "Annihilator 1 (Whenever this creature attacks, defending player sacrifices a permanent.)\n{4}: Put two 0/1 colorless Eldrazi Spawn creature tokens onto the battlefield. They have \"Sacrifice this creature: Add {1} to your mana pool.\"\n{20}: Cast any number of Eldrazi cards you own from outside the game without paying their mana costs."}},
+			{ match : {name : "Spawnsire of Ulamog"}, replace : {text : "Annihilator 1 (Whenever this creature attacks, defending player sacrifices a permanent.)\n{4}: Put two 0/1 colorless Eldrazi Spawn creature tokens onto the battlefield. They have \"Sacrifice this creature: Add {C} to your mana pool.\"\n{20}: Cast any number of Eldrazi cards you own from outside the game without paying their mana costs."}},
 			{ match : {name : "Jade Statue"}, remove : ["power", "toughness"] },
 			{ match : {name : "Ghostfire"}, remove : ["colors"] },
 			{ match : {name : "Will-O'-The-Wisp"}, replace : {name : "Will-o'-the-Wisp"}},
