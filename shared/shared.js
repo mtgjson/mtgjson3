@@ -553,7 +553,7 @@ exports.clearCacheFile = function(targetUrl, cb) {
 
 exports.buildCacheFileURLs = function(card, cacheType, cb, fromCache) {
 	if (cacheType==="printings")
-		return exports.buildMultiverseAllPrintingsURLs(card.multiverseid, this, fromCache);
+		return exports.buildMultiverseAllPrintingsURLs(card.multiverseid, cb, fromCache);
 
 	var urls = [];
 	if (cacheType==="oracle") {
@@ -678,8 +678,7 @@ exports.buildMultiverseAllPrintingsURLs = function(multiverseid, cb, fromCache) 
 				httpUtil.get(targetURL, this);
 		},
 		function getAllPages(err, rawHTML) {
-			if(err)
-			{
+			if(err) {
 				base.error(exports.buildMultiversePrintingsURL(multiverseid, 0));
 				base.error(err);
 				return setImmediate(function() { cb(err); });
@@ -688,11 +687,10 @@ exports.buildMultiverseAllPrintingsURLs = function(multiverseid, cb, fromCache) 
 			var urls = [];
 
 			var numPages = exports.getPagingNumPages(domino.createWindow(rawHTML).document, "printings");
-			for(var i=0;i<numPages;i++)
-			{
+			for(var i = 0; i < numPages; i++) {
 				urls.push(exports.buildMultiversePrintingsURL(multiverseid, i));
 			}
-			return setImmediate(function() { cb(undefined, urls); });
+			return setImmediate(cb, undefined, urls);
 		}
 	);
 };
