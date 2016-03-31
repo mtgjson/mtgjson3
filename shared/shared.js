@@ -583,7 +583,7 @@ exports.buildCacheFileURLs = function(card, cacheType, cb, fromCache) {
 	if(urls.some(function(url) { return url.length === 0; }))
 		throw new Error("Invalid urls for: %s %s [%s]", cacheType, card.multiverseid, urls.join(", "));
 
-	return(setImmediate(cb, err, urls));
+	return(setImmediate(cb, null, urls));
 };
 
 exports.buildMultiverseListingURLs = function(setName, cb)
