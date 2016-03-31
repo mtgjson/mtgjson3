@@ -93,6 +93,40 @@ function getURLSForMcilistCache(setInfo, set, callback) {
 	);
 }
 
+/**
+ * Calls the callback with a list MCI urls for the given set
+ * @param setInfo object with set description
+ * @param set object with set contents
+ * @param cacheStype string with the type to get the urls from. Valid values are: 
+ *                        "oracle", "original", "languages", "printings", "legalities"
+ * @param callback function to call upon finish with format function(err, urls)
+ */
+function getURLSForCacheType(setInfo, set, cacheType, callback) {
+	base.info("%s: %d cards found.", set.code, set.cards.length);
+	var urls = [];
+	async.eachSeries(
+		set.cards.filter(
+			function(card) {
+				return(card.hasOwnProperty("multiverseid"));
+			}
+		),
+		function(card, subcb) {
+			shared.buildCacheFileURLs(
+				card,
+				cacheType,
+				function(err, url) {
+					urls.push(url);
+					subcb();
+				},
+				true
+			);
+		},
+		function(err) {
+			setImmediate(callback, err, urls);
+		}
+	);
+}
+
 function clearCacheForSet(code, cacheType, cb) {
 	var setInfo = C.SETS.mutateOnce(
 		function(SET) {
@@ -113,35 +147,15 @@ function clearCacheForSet(code, cacheType, cb) {
 				getURLSForMcilistCache(setInfo, set, this);
 			}
 			else if (cacheType === "listings") {
-				return shared.buildMultiverseListingURLs(setName, this);
+				shared.buildMultiverseListingURLs(setName, this);
 			}
 			else {
-				base.info("%s: %d cards found.", code, set.cards.length);
-				var urls = [];
-				async.eachSeries(
-					set.cards.filter(
-						function(card) {
-							return(card.hasOwnProperty("multiverseid"));
-						}
-					),
-					function(card, subcb) {
-						shared.buildCacheFileURLs(
-							card,
-							cacheType,
-							function(err, url) {
-								urls.push(url);
-								subcb();
-							},
-							true
-						);
-					},
-					function(err) {
-						this(err, urls);
-					}.bind(this)
-				);
+				getURLSForCacheType(setInfo, set, cacheType, this);
 			}
 		},
-		function clearCacheFiles(urls) {
+		function clearCacheFiles() {
+			var urls = [].concat(Array.prototype.slice.call(arguments));
+
 			if (!urls)
 				return(setImmediate(this, new Error("No urls for clearCacheFiles().")));
 			urls = urls.flatten().uniqueBySort();
