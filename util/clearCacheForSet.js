@@ -9,24 +9,26 @@ var base = require("xbase"),
 	async = require('async'),
 	tiptoe = require("tiptoe");
 
+var VALID_TYPES = [ "oracle", "original", "languages", "printings", "legalities", "mcilist", "listings" ];
+
 // If we're being called as a script, run as script, if not, behave as a module.
 if (module.parent === null) {
 	if (process.argv.length < 4) {
-		base.error("Usage: node %s <all|oracle|original|languages|printings|legalities|mcilist|listings> <set codes>", process.argv[1]);
+		base.error("Usage: node %s <cacheType> <set codes>", process.argv[1]);
+		base.error("Valid types are:");
+		base.error('* all');
+		base.error('* oracle');
+		base.error('* original');
+		base.error('* languages');
+		base.error('* printings');
+		base.error('* legalities');
+		base.error('* mcilist');
+		base.error('* listings');
+		base.error("You can specify multiple types at once using a single comma (',') between the types (no spaces).");
 		process.exit(1);
 	}
 
-	var VALID_TYPES = ["oracle", "original", "languages", "printings", "legalities", "mcilist", "listings"];
-
-	var cacheTypes = process.argv[2].toLowerCase() === 'all' ? VALID_TYPES : Array.toArray(process.argv[2]);
-
-	cacheTypes = cacheTypes.filter(function(cache) { 
-		if (VALID_TYPES.indexOf(cache.toLowerCase()) < 0) {
-			base.error('Invalid cacheType: %s', cache);
-			return(false);
-		}
-		return(true);
-	});
+	var cacheTypes = process.argv[2].toLowerCase() === 'all' ? VALID_TYPES : process.argv[2].toLowerCase().split(',');
 
 	async.eachSeries(
 		shared.getSetsToDo(3),
@@ -140,6 +142,14 @@ function clearCacheForSet(code, cacheTypes, cb) {
 		return(setImmediate(cb, new Error('Invalid cacheTypes format.')));
 	}
 
+	cacheTypes = cacheTypes.filter(function(cacheType) { 
+		if (VALID_TYPES.indexOf(cacheType.toLowerCase()) < 0) {
+			base.error('Invalid cacheType: %s', cacheType);
+			return(false);
+		}
+		return(true);
+	});
+
 	tiptoe(
 		function loadSetJSON() {
 			fs.readFile(path.join(__dirname, "..", "json", code + ".json"), { encoding : "utf8" }, this);
@@ -186,4 +196,3 @@ function clearCacheForSet(code, cacheTypes, cb) {
 }
 
 module.exports = clearCacheForSet;
-
