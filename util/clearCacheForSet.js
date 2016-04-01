@@ -9,59 +9,32 @@ var base = require("xbase"),
 	async = require('async'),
 	tiptoe = require("tiptoe");
 
-if (process.argv.length < 4) {
-	base.error("Usage: node %s <all|oracle|original|languages|printings|legalities|mcilist|listings> <set codes>", process.argv[1]);
-	process.exit(1);
+// If we're being called as a script, run as script, if not, behave as a module.
+if (module.parent === null) {
+	if (process.argv.length < 4) {
+		base.error("Usage: node %s <all|oracle|original|languages|printings|legalities|mcilist|listings> <set codes>", process.argv[1]);
+		process.exit(1);
+	}
+
+	var VALID_TYPES = ["oracle", "original", "languages", "printings", "legalities", "mcilist", "listings"];
+
+	var cacheTypes = process.argv[2].toLowerCase() === 'all' ? VALID_TYPES : Array.toArray(process.argv[2]);
+
+	cacheTypes = cacheTypes.filter(function(cache) { 
+		if (VALID_TYPES.indexOf(cache.toLowerCase()) < 0) {
+			base.error('Invalid cacheType: %s', cache);
+			return(false);
+		}
+		return(true);
+	});
+
+	async.eachSeries(
+		shared.getSetsToDo(3),
+		function(code, cb) {
+			clearCacheForSet(code, cacheTypes, cb);
+		}
+	);
 }
-
-var VALID_TYPES = ["oracle", "original", "languages", "printings", "legalities", "mcilist", "listings"];
-
-var cacheTypes = process.argv[2].toLowerCase() === 'all' ? VALID_TYPES : Array.toArray(process.argv[2]);
-
-cacheTypes = cacheTypes.filter(function(cache) { 
-	if (VALID_TYPES.indexOf(cache.toLowerCase()) < 0) {
-		base.error('Invalid cacheType: %s', cache);
-		return(false);
-	}
-	return(true);
-});
-
-async.eachSeries(
-	shared.getSetsToDo(3),
-	function(code, cb) {
-		clearCacheForSet(code, cacheTypes, cb);
-	}
-);
-
-/*
-async.eachSeries(
-	cacheTypes,
-	function(cacheType, cb) {
-		if (!VALID_TYPES.contains(cacheType)) {
-			base.error("Invalid cacheType: %s", cacheType);
-			return;
-		}
-
-		base.info("Clearing cache type: %s", cacheType);
-
-		async.eachSeries(
-			shared.getSetsToDo(3),
-			function(code, subcb) {
-				clearCacheForSet(code, cacheType, subcb);
-			},
-			cb
-		);
-	},
-	function(err) {
-		if (err) {
-			base.error(err);
-			process.exit(1);
-		}
-
-		process.exit(0);
-	}
-);
-*/
 
 /**
  * Calls the callback with a list MCI urls for the given set
@@ -212,4 +185,5 @@ function clearCacheForSet(code, cacheTypes, cb) {
 	);
 }
 
+module.exports = clearCacheForSet;
 
