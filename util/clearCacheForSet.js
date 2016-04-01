@@ -16,8 +16,24 @@ if (process.argv.length < 4) {
 
 var VALID_TYPES = ["oracle", "original", "languages", "printings", "legalities", "mcilist", "listings"];
 
-var cacheTypes = process.argv[2].toLowerCase()==="all" ? VALID_TYPES : Array.toArray(process.argv[2]);
+var cacheTypes = process.argv[2].toLowerCase() === 'all' ? VALID_TYPES : Array.toArray(process.argv[2]);
 
+cacheTypes = cacheTypes.filter(function(cache) { 
+	if (VALID_TYPES.indexOf(cache.toLowerCase()) < 0) {
+		base.error('Invalid cacheType: %s', cache);
+		return(false);
+	}
+	return(true);
+});
+
+async.eachSeries(
+	shared.getSetsToDo(3),
+	function(code, cb) {
+		clearCacheForSet(code, cacheTypes, cb);
+	}
+);
+
+/*
 async.eachSeries(
 	cacheTypes,
 	function(cacheType, cb) {
@@ -45,6 +61,7 @@ async.eachSeries(
 		process.exit(0);
 	}
 );
+*/
 
 /**
  * Calls the callback with a list MCI urls for the given set
@@ -102,7 +119,6 @@ function getURLSForMcilistCache(setInfo, set, callback) {
  * @param callback function to call upon finish with format function(err, urls)
  */
 function getURLSForCacheType(setInfo, set, cacheType, callback) {
-	base.info("%s: %d cards found.", set.code, set.cards.length);
 	var urls = [];
 	async.eachSeries(
 		set.cards.filter(
@@ -127,7 +143,13 @@ function getURLSForCacheType(setInfo, set, cacheType, callback) {
 	);
 }
 
-function clearCacheForSet(code, cacheType, cb) {
+/**
+ * Loads a given set and clears all the cached information regarding its cards.
+ * @param code string Set three or four letter code.
+ * @param cacheTypes array|string with types of cache to be cleared.
+ * @param cb function callback to call when done with an optional error parameter.
+ */
+function clearCacheForSet(code, cacheTypes, cb) {
 	var setInfo = C.SETS.mutateOnce(
 		function(SET) {
 			if (SET.code.toLowerCase() === code.toLowerCase()) {
@@ -137,21 +159,38 @@ function clearCacheForSet(code, cacheType, cb) {
 	);
 	var setName = setInfo.name;
 
+	if (typeof(cacheTypes) === 'string') {
+		cacheTypes = [ cacheTypes ];
+	}
+
+	if (!Array.isArray(cacheTypes)) {
+		return(setImmediate(cb, new Error('Invalid cacheTypes format.')));
+	}
+
 	tiptoe(
 		function loadSetJSON() {
 			fs.readFile(path.join(__dirname, "..", "json", code + ".json"), { encoding : "utf8" }, this);
 		},
 		function getCacheURLS(setRaw) {
 			var set = JSON.parse(setRaw);
-			if (cacheType === "mcilist") {
-				getURLSForMcilistCache(setInfo, set, this);
-			}
-			else if (cacheType === "listings") {
-				shared.buildMultiverseListingURLs(setName, this);
-			}
-			else {
-				getURLSForCacheType(setInfo, set, cacheType, this);
-			}
+			base.info("%s: %d cards found.", set.code, set.cards.length);
+
+			async.each(
+				cacheTypes,
+				function(cacheType, cb) {
+					base.info("Clearing cache type: %s", cacheType);
+
+					if (cacheType === "mcilist") {
+						getURLSForMcilistCache(setInfo, set, this.parallel());
+					}
+					else if (cacheType === "listings") {
+						shared.buildMultiverseListingURLs(setName, this.parallel());
+					}
+					else {
+						getURLSForCacheType(setInfo, set, cacheType, this.parallel());
+					}
+				}.bind(this)
+			);
 		},
 		function clearCacheFiles() {
 			var urls = [].concat(Array.prototype.slice.call(arguments));
