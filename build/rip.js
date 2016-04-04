@@ -12,7 +12,8 @@ var base = require("xbase"),
 	shared = require("shared"),
 	urlUtil = require("xutil").url,
 	querystring = require("querystring"),
-	tiptoe = require("tiptoe");
+	tiptoe = require("tiptoe"),
+	async = require('async');
 
 
 (function (exports) {
@@ -820,7 +821,7 @@ var compareCardsToMCI = function(set, cb) {
 		},
 		function processSetCardList(listDoc) {
 			var mciCardLinks = Array.toArray(listDoc.querySelectorAll("table tr td a"));
-			set.cards.parallelForEach(function (card, subcb) {
+			async.eachSeries(set.cards, function (card, subcb) {
 				if (card.variations || card.layout==="token")
 					return setImmediate(subcb);
 
@@ -831,10 +832,10 @@ var compareCardsToMCI = function(set, cb) {
 				}
 
 				compareCardToMCI(set, card, mciCardLink[0].getAttribute("href"), subcb);
-			}, this, 10);
+			}, this);
 		},
 		function finish(err) {
-			setImmediate(function () { cb(err); });
+			setImmediate(cb, err);
 		}
 	);
 };

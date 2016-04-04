@@ -624,7 +624,11 @@ exports.getURLAsDoc = function(targetURL, cb, retryCount) {
 
 		httpUtil.get(
 			targetURL,
-			{ timeout: base.SECOND*10, retry: 5 },
+			{
+				timeout: base.SECOND * 10,
+				retry: 5,
+				'User-Agent': 'mtgjson.com/1.0'
+			},
 			function(err, pageHTML, responseHeaders, responseStatusCode) {
 				if(err || (responseStatusCode && responseStatusCode!==200)) {
 					base.error("Error downloading: " + targetURL);
@@ -652,7 +656,7 @@ exports.getURLAsDoc = function(targetURL, cb, retryCount) {
 				if (err)
 					throw(err);
 				cachecb(html);
-			})
+			});
 		}
 	).done(function(err, html) {
 		if (err)
