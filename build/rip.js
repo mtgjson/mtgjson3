@@ -524,7 +524,7 @@ var getURLsForMultiverseid = function (multiverseid, cb) {
 		},
 		function processDefaultDoc(err, doc, printedDoc) {
 			if (err)
-				return setImmediate(function () { cb(err); });
+				return setImmediate(cb, err);
 
 			var urls = [];
 
@@ -545,7 +545,7 @@ var getURLsForMultiverseid = function (multiverseid, cb) {
 			});
 			urls = urls.unique();
 
-			setImmediate(function () { cb(null, urls); }.bind(this));
+			setImmediate(cb, null, urls);
 		}
 	);
 };
