@@ -226,7 +226,7 @@ var ripSet = function(setName, cb) {
 					base.warn("Artist not found for card: %s", card.name);
 			});
 
-			setImmediate(function () { cb(err, this.data.set); }.bind(this));
+			setImmediate(cb, err, this.data.set);
 		}
 	);
 };
@@ -265,7 +265,7 @@ var processMultiverseDocs = function(docs, callback) {
 	}, 2);
 
 	if (callback)
-		callback(null, cards);
+		setImmediate(callback, null, cards);
 };
 
 var processMultiverseids = function (multiverseids, cb) {
@@ -303,7 +303,7 @@ var processMultiverseids = function (multiverseids, cb) {
 				subcb(err);
 			}
 		);
-	}, function(err) { return cb(err, cards); });
+	}, function(err) { return setImmediate(cb, err, cards); });
 };
 
 var getCardPartIDPrefix = function(cardPart) {
@@ -517,10 +517,13 @@ var getCardParts = function (doc) {
 };
 
 var getURLsForMultiverseid = function (multiverseid, cb) {
+	var docUrl = shared.buildMultiverseURL(multiverseid);
+	var printedUrl = urlUtil.setQueryParam(shared.buildMultiverseURL(multiverseid), "printed", "true");
+
 	tiptoe(
 		function getDefaultDoc() {
-			shared.getURLAsDoc(shared.buildMultiverseURL(multiverseid), this.parallel());
-			shared.getURLAsDoc(urlUtil.setQueryParam(shared.buildMultiverseURL(multiverseid), "printed", "true"), this.parallel());
+			shared.getURLAsDoc(docUrl, this.parallel());
+			shared.getURLAsDoc(printedUrl, this.parallel());
 		},
 		function processDefaultDoc(err, doc, printedDoc) {
 			if (err)
@@ -530,8 +533,12 @@ var getURLsForMultiverseid = function (multiverseid, cb) {
 
 			var cardParts = getCardParts(doc);
 			var printedCardParts = getCardParts(printedDoc);
-			if (cardParts.length !== printedCardParts.length)
-				throw new Error("multiverseid [" + multiverseid + "] cardParts length [" + cardParts.length + "] does not equal printedCardParts length [" + printedCardParts.length + "]");
+			if (cardParts.length !== printedCardParts.length) {
+				var errorString = "multiverseid [" + multiverseid + "] cardParts length [" + cardParts.length + "] does not equal printedCardParts length [" + printedCardParts.length + "]";
+				errorString += '\noracle url: ' + docUrl;
+				errorString += '\nprinted url: ' + printedUrl;
+				throw new Error(errorString);
+			}
 
 			cardParts.forEach(function (cardPart, i) {
 				var card = processCardPart(doc, cardPart, printedDoc, printedCardParts[i]);
@@ -600,7 +607,7 @@ var addForeignNamesToCard = function (card, cb) {
 			this();
 		},
 		function finish(err) {
-			setImmediate(function () { cb(err); });
+			setImmediate(cb, err);
 		}
 	);
 };
@@ -643,7 +650,7 @@ var addLegalitiesToCard = function (card, cb) {
 			this();
 		},
 		function finish(err) {
-			setImmediate(function () { cb(err); });
+			setImmediate(cb, err);
 		}
 	);
 };
@@ -707,7 +714,7 @@ var addPrintingsToCard = function (nonGathererSets, card, cb) {
 			this();
 		},
 		function finish(err) {
-			setImmediate(function () { cb(err); });
+			setImmediate(cb, err);
 		}
 	);
 };
@@ -931,7 +938,7 @@ var compareCardToMCI = function(set, card, mciCardURL, cb) {
 			this();
 		},
 		function finish(err) {
-			setImmediate(function () { cb(err); });
+			setImmediate(cb, err);
 		}
 	);
 };
@@ -988,7 +995,7 @@ var compareCardsToEssentialMagic = function(set, cb) {
 			this();
 		},
 		function finish(err) {
-			setImmediate(function () { cb(err); });
+			setImmediate(cb, err);
 		}
 	);
 };
@@ -1079,7 +1086,7 @@ var ripMCISet = function(set, cb) {
 
 			//base.info("Other Printings: %s", (this.data.set.cards.map(function (card) { return card.printings; }).flatten().unique().map(function (setName) { return C.SETS.mutateOnce(function (SET) { return SET.name===setName ? SET.code : undefined; }); }).remove(this.data.set.code) || []).join(" "));
 
-			setImmediate(function () { cb(err, set); }.bind(this));
+			setImmediate(cb, err, set);
 		}
 	);
 };
@@ -1280,7 +1287,7 @@ var ripMCICard = function(set, mciCardURL, cb) {
 			this(undefined, card);
 		},
 		function finish(err, card) {
-			setImmediate(function () { cb(err, card); });
+			setImmediate(cb, err, card);
 		}
 	);
 };
@@ -1412,7 +1419,7 @@ var addMagicLibraritiesInfoToMCISet = function(set, cb) {
 			this();
 		},
 		function finish(err) {
-			return setImmediate(function () { cb(err); });
+			return setImmediate(cb, err);
 		}
 	);
 };
@@ -1529,7 +1536,7 @@ var getSetNameMultiverseIds = function(setName, cb) {
 				multiverseids = multiverseids.concat(Array.toArray(listDoc.querySelectorAll("table.checklist tr.cardItem a.nameLink")).map(function (o) {  return +querystring.parse(url.parse(o.getAttribute("href")).query).multiverseid; }).unique());
 			});
 
-			setImmediate(function () { cb(undefined, multiverseids.unique()); });
+			setImmediate(cb, undefined, multiverseids.unique());
 		}
 	);
 };
