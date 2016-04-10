@@ -586,28 +586,20 @@ exports.buildCacheFileURLs = function(card, cacheType, cb, fromCache) {
 	return(setImmediate(cb, null, urls));
 };
 
-exports.buildMultiverseListingURLs = function(setName, cb)
-{
-	var urls = [];
-	base.info(setName);
+exports.buildMultiverseListingURLs = function(setName, cb) {
+	base.info("building multiverse listing url for " + setName);
 	tiptoe(
-		function getFirstListingsPage()
-		{
+		function getFirstListingsPage() {
 			exports.getURLAsDoc(exports.buildListingsURL(setName, 0), this);
 		},
-		function getOtherListingsPages(firstPageListDoc)
-		{
+		function getOtherListingsPages(err, firstPageListDoc) {
 			var numPages = exports.getPagingNumPages(firstPageListDoc, "listings");
-			for(var i=0;i<numPages;i++)
-			{
-				urls.push(exports.buildListingsURL(setName, i));
-			}
+			var urls = [];
 
-			this();
-		},
-		function returnURLs(err)
-		{
-			return setImmediate(function() { cb(err, urls); });
+			for(var i = 0; i < numPages; i++)
+				urls.push(exports.buildListingsURL(setName, i));
+
+			return(setImmediate(cb, err, urls));
 		}
 	);
 };

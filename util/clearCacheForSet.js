@@ -34,6 +34,9 @@ if (module.parent === null) {
 		shared.getSetsToDo(3),
 		function(code, cb) {
 			clearCacheForSet(code, cacheTypes, cb);
+		},
+		function(err) {
+			if (err) throw(err);
 		}
 	);
 }
@@ -47,7 +50,7 @@ if (module.parent === null) {
 function getURLSForMcilistCache(setInfo, set, callback) {
 	if (!set.isMCISet) {
 		if (!set.magicCardsInfoCode) {
-			return(setImmediate(cb));
+			return(setImmediate(callback));
 		}
 	}
 
@@ -113,7 +116,27 @@ function getURLSForCacheType(setInfo, set, cacheType, callback) {
 			);
 		},
 		function(err) {
-			setImmediate(callback, err, urls);
+			// FIX Urls
+			var ret = [];
+
+			if (err)
+				return(setImmediate(callback, err));
+
+			async.eachSeries(
+				urls,
+				function(url, cb) {
+					if (Array.isArray(url)) {
+						url.forEach(function(x) { ret.push(x); });
+					}
+					else
+						ret.push(url);
+
+					setImmediate(cb);
+				},
+				function(err) {
+					setImmediate(callback, err, ret);
+				}
+			);
 		}
 	);
 }
@@ -180,7 +203,7 @@ function clearCacheForSet(code, cacheTypes, cb) {
 
 			if (!urls)
 				return(setImmediate(this, new Error("No urls for clearCacheFiles().")));
-			urls = urls.flatten().uniqueBySort();
+			urls = urls.flatten().uniqueBySort().filter(function (url) { return(url != null && url != undefined && url != ''); });
 
 			base.info("Clearing %d URLS", urls.length);
 			async.eachSeries(
