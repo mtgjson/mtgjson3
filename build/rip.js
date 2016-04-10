@@ -1548,7 +1548,7 @@ var getSetNameMultiverseIds = function(setName, cb) {
 var fixCommanderIdentityForCards = function(cards, cb) {
 	var size = cards.length;
 
-	function findCardByNumber(number) {
+	var findCardByNumber = function(number) {
 		var ret = null;
 		cards.forEach(function (card) {
 			if (card.number == number)
@@ -1556,9 +1556,9 @@ var fixCommanderIdentityForCards = function(cards, cb) {
 		});
 
 		return(ret);
-	}
+	};
 
-	cards.parallelForEach(function (card, subcb) {
+	async.each(cards, function(card, subcb) {
 		// Calculate commander color identity
 		var regex = /{([^}]*)}/g;
 		var colors = [];	// Holds the final color array
@@ -1569,8 +1569,7 @@ var fixCommanderIdentityForCards = function(cards, cb) {
 
 		var ct = card.type.toLowerCase();
 		if (ct == "phenomenon" || ct == "token" || ct == "plane" || ct == "scheme" || ct == "vanguard") {
-			setImmediate(subcb);
-			return;
+			return setImmediate(subcb);
 		}
 
 		// Process color indicators
@@ -1617,16 +1616,9 @@ var fixCommanderIdentityForCards = function(cards, cb) {
 
 		// Process split and double-faced cards
 		if (card.layout == "double-faced" || card.layout == "split") {
-			var otherSideNum = card.number.substr(0, card.number.length - 1);
-
-			if (card.number.substr("-1") == "a") {
-				otherSideNum = otherSideNum + "b";
-			}
-			else {
-				otherSideNum = otherSideNum + "a";
-			}
-
+			var otherSideNum = card.number.substr(0, card.number.length - 1) + ((card.number.substr(-1) == "a")?"b":"a");
 			var otherCard = findCardByNumber(otherSideNum);
+
 			if (otherCard == null) {
 				base.error("Current side name: %s", card.number);
 				base.error("-> Other Side num: %s", otherSideNum);
@@ -1651,7 +1643,7 @@ var fixCommanderIdentityForCards = function(cards, cb) {
 		}
 
 		subcb();
-	}, cb, size);
+	}, cb);
 };
 
 	// Expose stuff
