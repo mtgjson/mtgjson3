@@ -4883,12 +4883,11 @@ var base = require("xbase");
 	exports.VALID_COLORS = [ 'W', 'U', 'B', 'R', 'G' ];
 
 	exports.STANDARD_SETS = [
-		'KTK',
-		'FRF',
 		'DTK',
 		'ORI',
 		'BFZ',
-		'OGW'
+		'OGW',
+		'SOI'
 	];
 
 })(typeof exports==="undefined" ? window.C={} : exports);
