@@ -4525,9 +4525,138 @@ var base = require("xbase");
 			{ match : { multiverseid : 402062 }, replace: { mciNumber : "264b" } }
 		],
 		SOI:
-		[
-			{ match: { multiverseid: 410049 }, replace: { number: '281a' } },
-			{ match: { multiverseid: 410050 }, replace: { number: '281b' } }
+		[		
+			// Archangel Avacyn / Avacyn, the Purifier
+			{ match: { multiverseid: 409741 }, replace: { colorIdentity: [ 'W', 'R' ] } },
+			{ match: { multiverseid: 409742 }, replace: { colors: [ 'Red' ], colorIdentity: [ 'W', 'R' ] } },
+			
+			// Avacynian Missionaries / Lunarch Inquisitors
+			// 409743
+			{ match: { multiverseid: 409744 }, replace: { colors: [ 'White' ] } },
+
+			// Hanweir Militia Captain / Westvale Cult Leader
+			// 409759
+			{ match: { multiverseid: 409760 }, replace: { colors: [ 'White' ] } },
+
+			// Pious Evangel / Wayward Disciple
+			{ match: { multiverseid: 409773 }, replace: { colorIdentity: [ 'W', 'B' ] } },
+			{ match: { multiverseid: 409774 }, replace: { colors: [ 'Black'], colorIdentity: [ 'W', 'B' ] } },
+
+			// Town Gossipmonger / Incited Rabble
+			{ match: { multiverseid: 409786 }, replace: { colorIdentity: [ 'W', 'R' ] } },
+			{ match: { multiverseid: 409787 }, replace: { colors: [ 'Red'], colorIdentity: [ 'W', 'R' ] } },
+
+			// Aberrant Researcher / Perfected Form
+			// 409790
+			{ match: { multiverseid: 409791 }, replace: { colors: [ 'Blue' ] } },
+
+			// Daring Sleuth / Bearer of Overwhelming Truths
+			// 409796
+			{ match: { multiverseid: 409797 }, replace: { colors: [ 'Blue' ] } },
+
+			// Startled Awake / Persistent Nightmare
+			// 409831
+			{ match: { multiverseid: 409832 }, replace: { colors: [ 'Blue' ] } },
+
+			// Thing in the Ice / Awoken Horror
+			// 409836
+			{ match: { multiverseid: 409837 }, replace: { colors: [ 'Blue' ] } },
+
+			// Uninvited Geist / Unimpeded Trespasser
+			// 409839
+			{ match: { multiverseid: 409840 }, replace: { colors: [ 'Blue' ] } },
+
+			// Accursed Witch / Infectious Curse
+			// 409843
+			{ match: { multiverseid: 409844 }, replace: { colors: [ 'Black' ] } },
+
+			// Elusive Tormentor / Insidious Mist
+			{ match: { multiverseid: 409855 }, replace: { colorIdentity: [ 'U', 'B' ] } },
+			{ match: { multiverseid: 409856 }, replace: { colors: [ 'Blue' ], colorIdentity: [ 'U', 'B' ] } },
+
+			// Heir of Falkenrath / Heir to the Night
+			// 409864
+			{ match: { multiverseid: 409865 }, replace: { colors: [ 'Black' ] } },
+
+			// Kindly Stranger / Demon-Possessed Witch
+			// 409868
+			{ match: { multiverseid: 409869 }, replace: { colors: [ 'Black' ] } },
+
+			// Breakneck Rider / Neck Breaker
+			// 409897
+			{ match: { multiverseid: 409898 }, replace: { colors: [ 'Red' ] } },
+
+			// Convicted Killer / Branded Howler
+			// 409900
+			{ match: { multiverseid: 409901 }, replace: { colors: [ 'Red' ] } },
+
+			// Gatstaf Arsonists / Gatstaf Ravagers
+			// 409910
+			{ match: { multiverseid: 409911 }, replace: { colors: [ 'Red' ] } },
+
+			// Geier Reach Bandit / Vildin-Pack Alpha
+			// 409912
+			{ match: { multiverseid: 409913 }, replace: { colors: [ 'Red' ] } },
+
+			// Kessig Forgemaster / Flameheart Werewolf
+			// 409923
+			{ match: { multiverseid: 409924 }, replace: { colors: [ 'Red' ] } },
+
+			// Skin Invasion / Skin Shedder
+			// 409937
+			{ match: { multiverseid: 409938 }, replace: { colors: [ 'Red' ] } },
+
+			// Village Messenger / Moonrise Intruder
+			// 409946
+			{ match: { multiverseid: 409947 }, replace: { colors: [ 'Red' ] } },
+
+			// Autumnal Gloom / Ancient of the Equinox
+			// 409951
+			{ match: { multiverseid: 409952 }, replace: { colors: [ 'Green' ] } },
+
+			// Duskwatch Recruiter / Krallenhorde Howler
+			// 409961
+			{ match: { multiverseid: 409962 }, replace: { colors: [ 'Green' ] } },
+
+			// Hermit of the Natterknolls / Lone Wolf of the Natterknolls
+			// 409968
+			{ match: { multiverseid: 409969 }, replace: { colors: [ 'Green' ] } },
+
+			// Hinterland Logger / Timber Shredder
+			// 409970
+			{ match: { multiverseid: 409971 }, replace: { colors: [ 'Green' ] } },
+
+			// Lambholt Pacifist / Lambholt Butcher
+			// 409976
+			{ match: { multiverseid: 409977 }, replace: { colors: [ 'Green' ] } },
+
+			// Sage of Ancient Lore / Werewolf of Ancient Hunger
+			// 409987
+			{ match: { multiverseid: 409988 }, replace: { colors: [ 'Green' ] } },
+
+			// Solitary Hunter / One of the Pack
+			// 409992
+			{ match: { multiverseid: 409993 }, replace: { colors: [ 'Green' ] } },
+
+			// Arlinn Kord / Arlinn, Embraced by the Moon
+			// 410007
+			{ match: { multiverseid: 410008 }, replace: { colors: [ 'Red', 'Green' ] } },
+
+			// Harvest Hand / Scrounged Scythe
+			// 410021
+			// 410022
+
+			// Neglected Heirloom / Ashmouth Blade
+			// 410026
+			// 410027
+
+			// Thraben Gargoyle / Stonewing Antagonizer
+			// 410033
+			// 410034
+
+			// Westvale Abbey / Ormendahl, Profane Prince
+			{ match: { multiverseid: 410049 }, replace: { number: '281a', colorIdentity: [ 'B' ] } },
+			{ match: { multiverseid: 410050 }, replace: { number: '281b', colors: [ 'Black' ], colorIdentity: [ 'B' ] } }
 		],
 		"*" :
 		[
