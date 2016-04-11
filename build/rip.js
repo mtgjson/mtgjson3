@@ -1549,13 +1549,7 @@ var fixCommanderIdentityForCards = function(cards, cb) {
 	var size = cards.length;
 
 	var findCardByNumber = function(number) {
-		var ret = null;
-		cards.forEach(function (card) {
-			if (card.number == number)
-				ret = card;
-		});
-
-		return(ret);
+		return(cards.find(function(card) { return(card.number === number); }));
 	};
 
 	async.each(cards, function(card, subcb) {
