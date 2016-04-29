@@ -3056,6 +3056,7 @@ var base = require("xbase");
 			code: 'W16',
 			releaseDate : '2016-04-08',
 			border : 'black',
+			type: 'starter',
 			block : 'Shadows over Innistrad'
 		},
 		{
