@@ -3054,6 +3054,7 @@ var base = require("xbase");
 		{
 			name: 'Welcome Deck 2016',
 			code: 'W16',
+			releaseDate : '2016-04-08',
 			border : 'black',
 			block : 'Shadows over Innistrad'
 		},
