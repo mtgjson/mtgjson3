@@ -137,7 +137,6 @@ tiptoe(
 			delete setWithExtras.isMCISet;
 			delete setWithExtras.magicRaritiesCode;
 			delete setWithExtras.essentialMagicCode;
-			delete setWithExtras.useMagicRaritiesNumber;
 
 			allSetsWithExtras[SET.code] = setWithExtras;
 			allSetsArrayWithExtras.push(setWithExtras);
