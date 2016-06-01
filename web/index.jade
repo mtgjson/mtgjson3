@@ -1,0 +1,191 @@
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		title MTG JSON
+		!=analytics
+		link(rel="shortcut icon",href="data:image/x-icon;,",type="image/x-icon")
+		meta(name="viewport",content="width=device-width, initial-scale=1")
+		link(href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Roboto Mono',rel='stylesheet',type='text/css')
+		link(type="text/css",rel="stylesheet",href="mtgjson.css")
+	body
+		#frontmatter
+			#header
+				ul
+					li
+						a(href="/documentation.html") Documentation
+					li
+						a(href="/sets.html") Sets
+					li
+						a(href="/changelog.html") Changelog
+					li
+						a(href="https://github.com/lsmoura/mtgjson") Github
+			#logo
+				span#mtgjson MTG JSON
+				span#slogan Provides Magic: the Gathering card data in JSON format
+				span#currentversion
+					div
+						| Current version:
+						a(href="/changelog.html")=version
+					div=lastUpdated
+			#downloads
+				div
+					span
+						a(href="/json/AllSets.json.zip")
+							| All Sets
+							=allSizeZip
+					span
+						a(href="/json/AllCards.json.zip")
+							| All Cards
+							=allCardsSizeZip
+				div
+					span
+						a(href="/json/AllSets-x.json.zip")
+							| All Sets + Extras
+							=allSizeXZip
+					span
+						a(href="/json/AllCards-x.json.zip")
+							| All Cards + Extras 
+							=allCardsSizeXZip
+				div
+					form(action="https://www.paypal.com/cgi-bin/webscr",method="post",target="_top")
+						input(type="hidden",name="cmd",value="_s-xclick")
+						input(type="hidden",name="hosted_button_id",value="GQC8KTKMYEQPA")
+						input(type="image",src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif",border="0" name="submit",alt="PayPal")
+						img(alt="",border="0",src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif",width="1",height="1")
+			.down
+				img(src="/images/down.png")
+		#main-contents
+			p This project provides up to date Magic the Gathering card data in JSON format for developers to easily use in their projects.
+			p
+				| Any bugs or feedback, e-mail me at 
+				a(href="mailto:mtgjson@andarilhomtg.com") mtgjson@andarilhomtg.com
+			p Extras include: Rulings, Printings, Foreign Language Names, Promo Sources and Original Texts
+			p
+				| Data is available in AllSets, AllCards or by 
+				a(href="sets.html") individual sets
+			p All files are UTF8 encoded. There are UTF8 characters (such as Æther Adept) in many of the files.
+			p 
+				| JSONP support (
+				a(href="/documentation.html#jsonp") docs
+				|)
+		#examplecard
+			h1 Example Card
+			img(src="/images/sentriplets.jpeg")
+			pre
+				code(data-language="javascript").
+					{
+						"name" : "Sen Triplets",
+						"manaCost" : "{2}{W}{U}{B}",
+						"cmc" : 5,
+						"colors" : ["White", "Blue", "Black"],
+
+						"type" : "Legendary Artifact Creature — Human Wizard",
+						"supertypes" : ["Legendary"],
+						"types" : ["Artifact", "Creature"],
+						"subtypes" : ["Human", "Wizard"],
+
+						"rarity" : "Mythic Rare",
+
+						"text" : "At the beginning of your upkeep, choose target opponent.
+						         This turn, that player can't cast spells or activate
+						         abilities and plays with his or her hand revealed.
+						         You may play cards from that player's hand this turn.",
+
+						"flavor" : "They are the masters of your mind.",
+
+						"artist" : "Greg Staples",
+						"number" : "109",
+
+						"power" : "3",
+						"toughness" : "3",
+
+						"layout" : "normal",
+						"multiverseid" : 180607,
+						"imageName" : "sen triplets",
+						"id" : "3129aee7f26a4282ce131db7d417b1bc3338c4d4"
+					}
+		#thanks
+			div
+				h2 Thanks to
+				ul
+					li
+						strong Robert Schults
+						| for creating and mantaining this project from 2013 to 2015. Thank you for all your work and dedication!
+					li 
+						|Thank you VERY MUCH to these folks who reported bugs and helped in other ways:
+						ul#individual-thanks
+							li Bobby Wertman
+							li rotaercz
+							li Chris Bush
+							li Patrick Rogers
+							li Lewis
+							li aeosynth
+							li Pouncing Kavu
+							li Florian
+							li Carlo Luchessa
+							li Sean Eshbaugh
+							li Didero
+							li laxika
+							li Vlad Grigorescu
+							li mini.dude_22
+							li Nathan Nelson
+							li Rudi v. Pelt
+							li Javier Bueno Hedo
+							li Eric Olson
+							li Michael Wybrow
+							li SpideR
+							li Brian
+							li TheOnlyDJCat
+							li Moghedrin
+							li Greg Falcon
+							li kaoD
+							li Josef Kronbichler
+							li Piotr
+							li Andrew Fearson
+							li Daniel Rasmussen
+							li Nick Wedd
+							li George Leslie-Waksman
+							li Psithief
+							li Wiliam Scicchitano
+							li smecaj
+							li Jerry Mou
+							li Anonycat
+							li jenjia
+							li MHostile
+							li tom__bombadil
+							li Garr Godfrey
+							li
+								a(href="https://github.com/ZeldaZach",target="_blank") Zach Halpern
+							li
+								a(href="https://github.com/Garbee",target="_blank") Jonathan Garbee
+							li
+								a(href="https://github.com/Daenyth",target="_blank") Gavin Bisesi
+					li
+						a(href="http://wiki.mtgsalvation.com/article/Main_Page",target="_blank") MTG Salvation Wiki
+						| for an AWESOME resource
+					li
+						a(href="http://www.magiclibrarities.net/index.html",target="_blank") Magic Librarities
+						| for info on promo cards
+					li
+						a(href="http://magiccards.info/",target="_blank") magiccards.info
+						| for info on promo and token cards
+					li
+						| The kind soul who provided the 
+						a(href="http://www.slightlymagic.net/forum/viewtopic.php?t=4430",target="_blank") mana symbols
+						| in SVG vector format
+					li
+						a(href="http://www.slightlymagic.net/forum/viewforum.php?f=15",target="_blank") CCGHQ
+						| images are amazingly useful for helping me visually verify that card data is correct
+					li
+						a(href="http://ethanschoonover.com/solarized",target="_blank") Solarized
+						| is a great color scheme and its colors were used on this page for a long while
+					li
+						a(href="http://company.wizards.com/",target="_blank") Wizards of the Coast
+						| for continuing to support and develop this awesome game
+				</ul>
+			</div>
+		</div>
+		#footer
+			p The JSON files contains data that is Copyright &copy; Wizards of the Coast - All Rights Reserved
+			p This website is not affiliated with Wizards of the Coast in any way.

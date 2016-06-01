@@ -1,0 +1,42 @@
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		title MTG JSON
+		!=analytics
+		link(rel="shortcut icon",href="data:image/x-icon;,",type="image/x-icon")
+		meta(name="viewport",content="width=device-width, initial-scale=1")
+		link(href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Roboto Mono',rel='stylesheet',type='text/css')
+		link(type="text/css",rel="stylesheet",href="mtgjson.css")
+	body
+		#header
+			#vendor
+				a(href="/") MTG JSON
+			ul
+				li
+					a(href="/documentation.html") Documentation
+				li
+					a(href="/sets.html") All Sets
+				li
+					a(href="/changelog.html") Changelog
+				li
+					a(href="http://github.com/lsmoura/mtgjson") Github
+		#contents
+			div
+				h2
+					| Change Log (
+					a(href="/atom.xml") rss
+					|)
+				if changeLog
+					each log in changeLog
+						.changelog-entry
+							h3
+								a(name="changeLog" + log.uniqueID)
+								=log.version
+							.changelog-date=log.when
+							ul
+								each change in log.changes
+									li!=change
+		#footer
+			p The JSON files contains data that is Copyright &copy; Wizards of the Coast - All Rights Reserved
+			p This website is not affiliated with Wizards of the Coast in any way.

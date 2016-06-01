@@ -1,0 +1,17 @@
+doctype xml
+feed(xmlns="http://www.w3.org/2005/Atom")
+	title=title
+	link(href="http://mtgjson.com/atom.xml",rel="self")
+	link(href="http://mtgjson.com")
+	updated=lastUpdatedAtom
+	id https://mtgjson.com
+	author
+		name Sergio Moura
+		email mtgjson@andarilhomtg.com
+	each entry in changeLogAtom
+		entry
+			title='Update: Version ' + entry.version
+			link(href="https://mtgjson.com/#changeLog" + entry.uniqueID)
+			updated=entry.whenAtom
+			id='https://mtgjson.com/#changeLog' + entry.uniqueID
+			content(type="html")=entry.atomContent
