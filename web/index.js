@@ -349,7 +349,7 @@ tiptoe(
 		save('documentation.jade', 'documentation.html', this.parallel());
 	},
 	function zipFiles() {
-		console.log("Compressing files...");
+		console.log("Compressing JSON files...");
 		var self = this;
 		var runParams = { cwd: jsonRoot, silent : true };
 		fs.readdir(
@@ -377,22 +377,69 @@ tiptoe(
 		runUtil.run("zip", ["-9", "AllSetFiles-x.zip"].concat(C.SETS.map(function(SET) { return SET.code + "-x.json"; })), runParams, this.parallel());
 		runUtil.run("zip", ["-9", "AllSetFilesWindows.zip"].concat(C.SETS.map(function(SET) { return SET.code + (SET.code==="CON" ? "_" : "") + ".json"; })), runParams, this.parallel());
 	},
-	function zipRoot() {
-		var self = this;
-		var runParams = { cwd: output, silent : true };
-		fs.readdir(
-			output,
-			function(err, files) {
-				async.each(
-					files,
-					function(fn, cb) {
-						if (fn == 'json')
-							return(cb());
-						runUtil.run('gzip', [ '-k', fn ], runParams, cb);
+	function copyFiles() {
+		console.log("Copying static files...");
+		var folders = [ 'fonts', 'images', 'java' ];
+		async.each(
+			folders,
+			function(folder, cb) {
+				tiptoe(
+					function() {
+						// Create folder
+						fs.mkdir(path.join(output, folder), this);
 					},
-					self
+					function() {
+						// Read folder
+						fs.readdir(path.join(__dirname, folder), this);
+					},
+					function(contents) {
+						async.each(
+							contents,
+							function(file, subcb) {
+								var source = path.join(__dirname, folder, file);
+								var target = path.join(output, folder, file);
+
+								var rd = fs.createReadStream(source);
+        						rd.on('error', subcb);
+								var wr = fs.createWriteStream(target);
+								wr.on('error', subcb);
+								wr.on('finish', subcb);
+								rd.pipe(wr);
+							},
+							this
+						);
+					},
+					cb
 				);
-			}
+			},
+			this
+		);
+	},
+	function zipFolders() {
+		console.log("Compressing everything else...");
+
+		var folders = [ '.', 'fonts', 'images', 'java' ];
+		async.each(
+			folders,
+			function(folder, cb) {
+				var runParams = { cwd: path.join(output, folder), silent : true };
+				fs.readdir(
+					runParams.cwd,
+					function(err, files) {
+						if (err) throw(err);
+						async.each(
+							files,
+							function(fn, subcb) {
+								if (fn == 'json')
+									return(subcb());
+								runUtil.run('gzip', [ '-k', fn ], runParams, subcb);
+							},
+							cb
+						);
+					}
+				);
+			},
+			this
 		);
 	},
 	function(err) {
