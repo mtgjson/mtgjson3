@@ -165,9 +165,10 @@ var ripSet = function(setName, cb) {
 			this();
 		},
 		function fixCommanderIdentity() {
-			base.info("Fixing color identity for double-faced cards...");
+			base.info("Fixing double-faced cards...");
 
-			fixCommanderIdentityForCards(this.data.set.cards, this);
+			fixCommanderIdentityForCards(this.data.set.cards, this.parallel());
+			fixCMC(this.data.set.cards, this.parallel());
 		},
 		function addForeignNames() {
 			base.info("Adding foreign names to cards...");
@@ -1538,6 +1539,33 @@ var getSetNameMultiverseIds = function(setName, cb) {
 
 			setImmediate(cb, undefined, multiverseids.unique());
 		}
+	);
+};
+
+/**
+ * Fix converted mana cost for double-faced cards using the new SOI rule
+ */
+var fixCMC = function(cards, cb) {
+	var findCardByNumber = function(number) {
+		return(cards.find(function(card) { return(card.number === number); }));
+	};
+
+	async.each(cards,
+		function(card, subcb) {
+			if (card.layout != 'double-faced')
+				return(setImmediate(subcb));
+			if (card.hasOwnProperty('cmc'))
+				return(setImmediate(subcb));
+
+			var otherSideNum = card.number.substr(0, card.number.length - 1) + ((card.number.substr(-1) == 'a')?'b':'a');
+			var otherCard = findCardByNumber(otherSideNum);
+
+			if (otherCard.hasOwnProperty('cmc'))
+				card.cmc = otherCard.cmc;
+
+			setImmediate(subcb);
+		},
+		cb
 	);
 };
 
