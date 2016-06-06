@@ -82,6 +82,7 @@ var checkTaintField = function(SET, card, fieldName, fieldValue) {
 		console.log("Tainted field %s on card '%s' (%s)", fieldName, card.name, SET.code);
 		if (diff)
 			console.log(diff);
+		console.log('Other sets: %s', allCardsWithExtras[card.name]['printings'].join(','));
 	}
 };
 
@@ -145,6 +146,8 @@ module.exports = {
 if (require.main == module) {
 	console.log("Checking for tainted cards...");
 	checkAll(function() {
-		console.log(taintedCards);
+		var output = JSON.stringify(taintedCards, null, 2)
+		fs.writeFile(path.join(__dirname, '..', 'taint.json'), output, 'utf-8');
+		console.log('total tainted cards: %d', taintedCards.length);
 	});
 }
