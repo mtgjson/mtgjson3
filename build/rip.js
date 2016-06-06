@@ -1011,13 +1011,13 @@ var ripMCISet = function(set, cb) {
 		},
 		function processCardList(listDoc) {
 			var mciCardLinks = Array.toArray(listDoc.querySelectorAll("table tr td a"));
-			mciCardLinks.parallelForEach(function (mciCardLink, subcb) {
+			async.eachSeries(mciCardLinks, function(mciCardLink, subcb) {
 				var href = mciCardLink.getAttribute("href");
 				if (!href || !href.startsWith("/" + set.magicCardsInfoCode.toLowerCase() + "/en/"))
 					return setImmediate(subcb);
 
 				ripMCICard(set, href, subcb);
-			}, this, 10);
+			}, this);
 		},
 		function addAdditionalFields(cards) {
 			base.info("Adding additional fields...");
