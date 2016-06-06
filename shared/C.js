@@ -1387,7 +1387,6 @@ var base = require("xbase");
 			magicCardsInfoCode : "cstd",
 			magicRaritiesCodes : ["230-rarities-coldsnap-preconstructed-reprint-cards"],
 			isMCISet : true,
-			useMagicRaritiesNumber : true,
 			releaseDate : "2006-07-21",
 			border : "black",
 			type : "box",

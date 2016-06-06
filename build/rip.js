@@ -1382,11 +1382,6 @@ var addMagicLibraritiesInfoToMCISet = function(set, cb) {
 
 				// Number
 				var numberText;
-				if (set.useMagicRaritiesNumber) {
-					numberText = getTextContent(cardNameElement.parentNode.parentNode.previousElementSibling.previousElementSibling);
-					if (numberText.contains("/"))
-						numberText = numberText.substring(0, numberText.indexOf("/"));
-				}
 
 				if (releaseDate || sourceText || numberText) {
 					var cardInfo = {};
