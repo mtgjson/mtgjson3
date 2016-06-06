@@ -1,419 +1,396 @@
-doctype html
-html
-  head
-    meta(charset='utf-8')
-    title MTG JSON
-    !=analytics
-    link(rel='shortcut icon', href='data:image/x-icon;,', type='image/x-icon')
-    meta(name='viewport', content='width=device-width, initial-scale=1')
-    link(href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Roboto Mono', rel='stylesheet', type='text/css')
-    link(type='text/css', rel='stylesheet', href='mtgjson.css')
-  body
-    #header
-      #vendor
-        a(href='/') MTG JSON
+extends _layout.jade
+
+block contents
+  #contents
+    div
+      a(name='sets')
+      h2 Sets
+      p
+        | The 
+        strong AllSets.json
+        |  file is an object that looks like this:
+      pre.
+      p
+        | A flat array of all sets is also available: 
+        a(href='/json/AllSetsArray.json') AllSetsArray.json
+        |  and 
+        a(href='/json/AllSetsArray-x.json') AllSetsArray-x.json
+      p Each individual set is a JSON object like this:
+      pre
+        code(data-language="javascript").
+          {
+            "LEA" : { /* set data */ },
+            "LEB" : { /* set data */ },
+            "2ED" : { /* set data */ },
+            ...
+          }
+      p
+        | A flat array of all sets is also available: 
+        a(href="/json/AllSetsArray.json") AllSetsArray.json
+        | and 
+        a(href="/json/AllSetsArray-x.json") AllSetsArray-x.json
+      p Each individual set is a JSON object like this:
+      pre
+        code(data-language="javascript").
+          {
+            "name" : "Nemesis",            // The name of the set
+            "code" : "NMS",                // The set's abbreviated code
+            "gathererCode" : "NE",         // The code that Gatherer uses for the set. Only present if different than 'code'
+            "oldCode" : "NEM",             // An old style code used by some Magic software. Only present if different than 'gathererCode' and 'code'
+            "magicCardsInfoCode" : "ne",   // The code that magiccards.info uses for the set. Only present if magiccards.info has this set
+            "releaseDate" : "2000-02-14"   // When the set was released (YYYY-MM-DD). For promo sets, the date the first card was released.
+            "border" : "black",            // The type of border on the cards, either "white", "black" or "silver"
+            "type" : "expansion",          // Type of set. One of: "core", "expansion", "reprint", "box", "un",
+                                           //                      "from the vault", "premium deck", "duel deck",
+                                           //                      "starter", "commander", "planechase", "archenemy",
+                                           //                      "promo", "vanguard", "masters"
+            "block" : "Masques",           // The block this set is in,
+            "onlineOnly" : false,          // Present and set to true if the set was only released online
+            "booster" : [ "rare", ... ],   // Booster contents for this set, see below for details
+            "cards" : [ {}, {}, {}, ... ]  // The cards in the set
+          }
+      p
+        | Some software (Magic Workstation) uses non-standard set codes. You can find those 
+        a(href='http://www.slightlymagic.net/forum/viewtopic.php?f=2&t=581#p6454') in this post
+    div
+      a(name='booster')
+      h2 Booster Field
+      p
+        | The 'booster' key is present for each set that has physical boosters (so not present for box sets, duel decks, digital masters editions, etc.). It is an array containing one item per card in the booster. Thus the array length is how many cards are in a booster. Each item in the array is either a string representing the type of booster card or an array of strings representing possible types for that booster card.
+      p
+        | For example, 'Magic 2013' contains 1 land, 1 marketing card, 10 commons, 3 uncommons and 1 rare or mythic rare:
+      pre
+        code(data-language="javascript").
+          {
+            "name" : "Magic 2013",
+            "booster" : [ "land", "marketing", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "uncommon", "uncommon", "uncommon", [ "rare", "mythic rare" ] ]
+          }
+      p The common booster card types are:
+      ul
+        li common
+        li uncommon
+        li rare
+        li mythic rare
+        li land
+        li marketing
+        li checklist
+        li double faced
+      p The Time Spiral block has some additional types:
+      ul
+        li timeshifted common
+        li timeshifted uncommon
+        li timeshifted rare
+        li timeshifted purple
+      p
+        | Note that the 'Time Spiral "Timeshifted"' set does not have a booster field. This 'set' was actually a subset of the 'Time Spiral' set and its cards are the 'timeshifted purple' booster card type mentioned above.
+        | The "Magic: The Gathering—Conspiracy" expansion has an additional "draft-matters" type which can either be a "Conspiracy" type card or a card that affects drafting.
+        | The "Vintage Masters" set has one slot that can contain either a power nine card or a guaranteed foil, so it has additional types "power nine" and "foil".
+        | Foils are not explictily mentioned, except for 'Modern Masters' where a slot is guaranteed a foil. So that set has four additional possible booster card types: foil common, foil uncommon, foil rare and foil mythic rare.
+        | Any card marked as "starter" : true should be exempted from any booster generation as these cards were only available in boxed sets and not in boosters.
+    div
+      a(name='cards')
+      h2 Cards
+      p
+        | The cards value is an Array of cards, each being a JSON object with key/value pairs. Below you will find a table detailing each key.
+        | The cards are ordered first by 'number', then by 'name', then by 'multiverseid'.
+        | If a value would be empty (such as manaCost for Basic Lands), then the key will not exist in the object.
+        | All cards are from the latest Oracle text, not the original printed text (the 'extras' file has the originalText which is the non-oracle text).
+      table
+        thead
+          tr
+            th Key
+            th Example
+            th Description
+        tbody
+          tr
+            td id
+            td 3129aee7f26a4282ce131db7d417b1bc3338c4d4
+            td
+              | A unique id for this card. It is made up by doing an SHA1 hash of setCode + cardName + cardImageName
+          tr
+            td layout
+            td "normal"
+            td
+              | The card layout. Possible values: normal, split, flip, double-faced, token, plane, scheme, phenomenon, leveler, vanguard
+          tr
+            td name
+            td "Research"
+            td
+              | The card name. For split, double-faced and flip cards, just the name of one side of the card. Basically each 'sub-card' has its own record.
+          tr
+            td names
+            td [ "Research", "Development" ]
+            td
+              | Only used for split, flip and double-faced cards. Will contain all the names on this card, front or back.
+          tr
+            td manaCost
+            td "{~lb}G{~rb}{~lb}U{~rb}"
+            td
+              | The mana cost of this card. Consists of one or more 
+              a(href='#manaSymbols') mana symbols
+              | .
+          tr
+            td cmc
+            td 2
+            td
+              | Converted mana cost. Always a number. NOTE: cmc may have a decimal point as cards from unhinged may contain "half mana" (such as 'Little Girl' with a cmc of 0.5). Cards without this field have an implied cmc of zero as per rule 202.3a
+          tr
+            td colors
+            td [ "Blue", "Green" ]
+            td
+              | The card colors. Usually this is derived from the casting cost, but some cards are special (like the back of double-faced cards and Ghostfire).
+          tr
+            td colorIdentity
+            td [ "U", "G" ]
+            td
+              | This is created reading all card color information and costs. It is the same for double-sided cards (if they have different colors, the identity will have both colors). It also identifies all mana symbols in the card (cost and text). Mostly used on commander decks.
+          tr
+            td type
+            td "Legendary Creature — Angel"
+            td
+              | The card type. This is the type you would see on the card if printed today. Note: The dash is a UTF8 'long dash' as per the MTG rules
+          tr
+            td supertypes
+            td [ "Legendary" ]
+            td
+              | The supertypes of the card. These appear to the far left of the card type. Example values: Basic, Legendary, Snow, World, Ongoing
+          tr
+            td types
+            td [ "Creature" ]
+            td
+              | The types of the card. These appear to the left of the dash in a card type. Example values: Instant, Sorcery, Artifact, Creature, Enchantment, Land, Planeswalker
+          tr
+            td subtypes
+            td [ "Angel" ]
+            td
+              | The subtypes of the card. These appear to the right of the dash in a card type. Usually each word is its own subtype. Example values: Trap, Arcane, Equipment, Aura, Human, Rat, Squirrel, etc.
+          tr
+            td rarity
+            td "Rare"
+            td
+              | The rarity of the card. Examples: Common, Uncommon, Rare, Mythic Rare, Special, Basic Land
+          tr
+            td text
+            td "{T}: You gain 1 life."
+            td
+              | The text of the card. May contain 
+              a(href='#manaSymbols') mana symbols
+              |  and 
+              a(href='#otherSymbols') other symbols
+              | .
+          tr
+            td flavor
+            td "I'd like to buy a bowel."
+            td The flavor text of the card.
+          tr
+            td artist
+            td "Mark Poole"
+            td
+              | The artist of the card. This may not match what is on the card as MTGJSON corrects many card misprints.
+          tr
+            td number
+            td "148a"
+            td
+              | The card number. This is printed at the bottom-center of the card in small text. This is a string, not an integer, because some cards have letters in their numbers.
+          tr
+            td power
+            td "4"
+            td
+              | The power of the card. This is only present for creatures. This is a string, not an integer, because some cards have powers like: "1+*"
+          tr
+            td toughness
+            td "5"
+            td
+              | The toughness of the card. This is only present for creatures. This is a string, not an integer, because some cards have toughness like: "1+*"
+          tr
+            td loyalty
+            td 4
+            td The loyalty of the card. This is only present for planeswalkers.
+          tr
+            td multiverseid
+            td 2479
+            td
+              | The multiverseid of the card on Wizard's Gatherer web page.
+              br
+              | 						Cards from sets that do not exist on Gatherer will NOT have a multiverseid.
+              br
+              | 						Sets not on Gatherer are: ATH, ITP, DKM, RQS, DPA and all sets with a 4 letter code that starts with a lowercase 'p'.
+          tr
+            td variations
+            td [ 1909, 1910 ]
+            td
+              | If a card has alternate art (for example, 4 different Forests, or the 2 Brothers Yamazaki) then each other variation's multiverseid will be listed here, NOT including the current card's multiverseid. NOTE: Only present for sets that exist on Gatherer.
+          tr
+            td imageName
+            td "ajani goldmane"
+            td
+              | This used to refer to the mtgimage.com file name for this card.
+              br
+              | mtgimage.com has been 
+              strong(style='color: red;') SHUT DOWN
+              |  by Wizards of the Coast.
+              br
+              | This field will continue to be set correctly and is now only useful for UID purposes.
+          tr
+            td watermark
+            td "Selesnya"
+            td
+              | The watermark on the card. Note: Split cards don't currently have this field set, despite having a watermark on each side of the split card.
+          tr
+            td border
+            td "black"
+            td
+              | If the border for this specific card is DIFFERENT than the border specified in the top level set JSON, then it will be specified here. (Example: Unglued has silver borders, except for the lands which are black bordered)
+          tr
+            td timeshifted
+            td true
+            td If this card was a timeshifted card in the set.
+          tr
+            td hand
+            td -3
+            td Maximum hand size modifier. Only exists for Vanguard cards.
+          tr
+            td life
+            td -10
+            td Starting life total modifier. Only exists for Vanguard cards.
+          tr
+            td reserved
+            td true
+            td
+              | Set to true if this card is reserved by Wizards 
+              a(href='http://archive.wizards.com/Magic/tcg/article.aspx?x=magic/products/reprintpolicy') Official Reprint Policy
+          tr
+            td releaseDate
+            td "2010-07-22" or "2010-07" or "2010"
+            td
+              | The date this card was released. This is only set for promo cards. The date may not be accurate to an exact day and month, thus only a partial date may be set (YYYY-MM-DD or YYYY-MM or YYYY). Some promo cards do not have a known release date.
+          tr
+            td starter
+            td true
+            td
+              | Set to true if this card was only released as part of a core box set. These are technically part of the core sets and are tournament legal despite not being available in boosters.
+      table
+        thead
+          tr
+            th(colspan='3') Extras Only Fields
+          tr
+            th Key
+            th Example
+            th Description
+        tbody
+          tr
+            td rulings
+            td
+              | [ { "date" : "2003-04-15",
+              br
+              | "text" : "Does not tap." } ]
+            td
+              | The rulings for the card. An array of objects, each object having 'date' and 'text' keys.
+          tr
+            td foreignNames
+            td
+              | [ { "language" : "Italian",
+              br
+              | "name" : "Wurm Devastatore",
+              br
+              | "multiverseid" : 200475 } ]
+            td
+              | Foreign language names for the card, if this card in this set was printed in another language. An array of objects, each object having 'language', 'name' and 'multiverseid' keys. Not available for all sets.
+          tr
+            td printings
+            td [ "ICE", "CHR" ]
+            td The sets that this card was printed in, expressed as an array of set codes.
+          tr
+            td originalText
+            td "{8}: Do 4 damage to any target."
+            td
+              | The original text on the card at the time it was printed. This field is not available for promo cards.
+          tr
+            td originalType
+            td "Mono Artifact"
+            td
+              | The original type on the card at the time it was printed. This field is not available for promo cards.
+          tr
+            td legalities
+            td
+              | [ { "format" : "Legacy",
+              br
+              | "legality" : "Banned" },
+              br
+              | 					      { "format" : "Vintage",
+              br
+              | "legality" : "Restricted" } ]
+            td
+              | Which formats this card is legal, restricted or banned in. An array of objects, each object having 'format' and 'legality'. A 'condition' key may be added in the future if Gatherer decides to utilize it again.
+          tr
+            td source
+            td "Theros Game Day prize"
+            td
+              | For promo cards, this is where this card was originally obtained. For box sets that are theme decks, this is which theme deck the card is from. For clash packs, this is which deck it is from.
+      p
+        | A unique identifier (UID) key for each card can be made by combining: setCode + cardName + imageName
+    div
+      a(name='allcards')
+      h2 AllCards.json
+      p
+        | The 
+        strong AllCards.json
+        |  file is organized by card name and merges card data from multiple sets into a single card object.
+        br
+        br
+        | 		Due to this merging of card data, several set specific fields are not present in the AllCards data: artist, border, flavor, foreignNames, id, multiverseid, number, originalText, originalType, rarity, releaseDate, reserved, timeshifted, variations, watermark
+        br
+        br
+        | 		This file is lighter weight and is meant to provide a quick and easy way to get basic card data.
+        br
+        br
+        | 		The JSON file itself looks like this:
+        br
+      pre
+        code(data-language="javascript").
+          {
+          "Nevinyrral's Disk" : { /* card data */ },
+                     "Norrit" : { /* card data */ },
+          "Nullmage Shepherd" : { /* card data */ },
+          ...
+          }
+    div
+      h2 Additional JSON Files
+      p
+        | Several additional JSON files are available and will be updated whenever card data is added or updated:
       ul
         li
-          a(href='/documentation.html') Documentation
+          a(href='/json/SetCodes.json') /json/SetCodes.json
+          |  - An array of set codes currently available
         li
-          a(href='/sets.html') All Sets
+          a(href='/json/SetList.json') /json/SetList.json
+          |  - An array of sets (code, name and releaseDate) currently available
         li
-          a(href='/changelog.html') Changelog
+          a(href='/json/version.json') /json/version.json
+          |  - Current version number as a quoted string
         li
-          a(href='https://github.com/lsmoura/mtgjson') Github
-    #contents
-      div
-        a(name='sets')
-        h2 Sets
-        p
-          | The 
-          strong AllSets.json
-          |  file is an object that looks like this:
-        pre.
-        p
-          | A flat array of all sets is also available: 
-          a(href='/json/AllSetsArray.json') AllSetsArray.json
-          |  and 
-          a(href='/json/AllSetsArray-x.json') AllSetsArray-x.json
-        p Each individual set is a JSON object like this:
-        pre
-          code(data-language="javascript").
-            {
-              "LEA" : { /* set data */ },
-              "LEB" : { /* set data */ },
-              "2ED" : { /* set data */ },
-              ...
-            }
-        p
-          | A flat array of all sets is also available: 
-          a(href="/json/AllSetsArray.json") AllSetsArray.json
-          | and 
-          a(href="/json/AllSetsArray-x.json") AllSetsArray-x.json
-        p Each individual set is a JSON object like this:
-        pre
-          code(data-language="javascript").
-            {
-              "name" : "Nemesis",            // The name of the set
-              "code" : "NMS",                // The set's abbreviated code
-              "gathererCode" : "NE",         // The code that Gatherer uses for the set. Only present if different than 'code'
-              "oldCode" : "NEM",             // An old style code used by some Magic software. Only present if different than 'gathererCode' and 'code'
-              "magicCardsInfoCode" : "ne",   // The code that magiccards.info uses for the set. Only present if magiccards.info has this set
-              "releaseDate" : "2000-02-14"   // When the set was released (YYYY-MM-DD). For promo sets, the date the first card was released.
-              "border" : "black",            // The type of border on the cards, either "white", "black" or "silver"
-              "type" : "expansion",          // Type of set. One of: "core", "expansion", "reprint", "box", "un",
-                                             //                      "from the vault", "premium deck", "duel deck",
-                                             //                      "starter", "commander", "planechase", "archenemy",
-                                             //                      "promo", "vanguard", "masters"
-              "block" : "Masques",           // The block this set is in,
-              "onlineOnly" : false,          // Present and set to true if the set was only released online
-              "booster" : [ "rare", ... ],   // Booster contents for this set, see below for details
-              "cards" : [ {}, {}, {}, ... ]  // The cards in the set
-            }
-        p
-          | Some software (Magic Workstation) uses non-standard set codes. You can find those 
-          a(href='http://www.slightlymagic.net/forum/viewtopic.php?f=2&t=581#p6454') in this post
-      div
-        a(name='booster')
-        h2 Booster Field
-        p
-          | The 'booster' key is present for each set that has physical boosters (so not present for box sets, duel decks, digital masters editions, etc.). It is an array containing one item per card in the booster. Thus the array length is how many cards are in a booster. Each item in the array is either a string representing the type of booster card or an array of strings representing possible types for that booster card.
-        p
-          | For example, 'Magic 2013' contains 1 land, 1 marketing card, 10 commons, 3 uncommons and 1 rare or mythic rare:
-        pre
-          code(data-language="javascript").
-            {
-              "name" : "Magic 2013",
-              "booster" : [ "land", "marketing", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "uncommon", "uncommon", "uncommon", [ "rare", "mythic rare" ] ]
-            }
-        p The common booster card types are:
-        ul
-          li common
-          li uncommon
-          li rare
-          li mythic rare
-          li land
-          li marketing
-          li checklist
-          li double faced
-        p The Time Spiral block has some additional types:
-        ul
-          li timeshifted common
-          li timeshifted uncommon
-          li timeshifted rare
-          li timeshifted purple
-        p
-          | Note that the 'Time Spiral "Timeshifted"' set does not have a booster field. This 'set' was actually a subset of the 'Time Spiral' set and its cards are the 'timeshifted purple' booster card type mentioned above.
-          | The "Magic: The Gathering—Conspiracy" expansion has an additional "draft-matters" type which can either be a "Conspiracy" type card or a card that affects drafting.
-          | The "Vintage Masters" set has one slot that can contain either a power nine card or a guaranteed foil, so it has additional types "power nine" and "foil".
-          | Foils are not explictily mentioned, except for 'Modern Masters' where a slot is guaranteed a foil. So that set has four additional possible booster card types: foil common, foil uncommon, foil rare and foil mythic rare.
-          | Any card marked as "starter" : true should be exempted from any booster generation as these cards were only available in boxed sets and not in boosters.
-      div
-        a(name='cards')
-        h2 Cards
-        p
-          | The cards value is an Array of cards, each being a JSON object with key/value pairs. Below you will find a table detailing each key.
-          | The cards are ordered first by 'number', then by 'name', then by 'multiverseid'.
-          | If a value would be empty (such as manaCost for Basic Lands), then the key will not exist in the object.
-          | All cards are from the latest Oracle text, not the original printed text (the 'extras' file has the originalText which is the non-oracle text).
-        table
-          thead
-            tr
-              th Key
-              th Example
-              th Description
-          tbody
-            tr
-              td id
-              td 3129aee7f26a4282ce131db7d417b1bc3338c4d4
-              td
-                | A unique id for this card. It is made up by doing an SHA1 hash of setCode + cardName + cardImageName
-            tr
-              td layout
-              td "normal"
-              td
-                | The card layout. Possible values: normal, split, flip, double-faced, token, plane, scheme, phenomenon, leveler, vanguard
-            tr
-              td name
-              td "Research"
-              td
-                | The card name. For split, double-faced and flip cards, just the name of one side of the card. Basically each 'sub-card' has its own record.
-            tr
-              td names
-              td [ "Research", "Development" ]
-              td
-                | Only used for split, flip and double-faced cards. Will contain all the names on this card, front or back.
-            tr
-              td manaCost
-              td "{~lb}G{~rb}{~lb}U{~rb}"
-              td
-                | The mana cost of this card. Consists of one or more 
-                a(href='#manaSymbols') mana symbols
-                | .
-            tr
-              td cmc
-              td 2
-              td
-                | Converted mana cost. Always a number. NOTE: cmc may have a decimal point as cards from unhinged may contain "half mana" (such as 'Little Girl' with a cmc of 0.5). Cards without this field have an implied cmc of zero as per rule 202.3a
-            tr
-              td colors
-              td [ "Blue", "Green" ]
-              td
-                | The card colors. Usually this is derived from the casting cost, but some cards are special (like the back of double-faced cards and Ghostfire).
-            tr
-              td colorIdentity
-              td [ "U", "G" ]
-              td
-                | This is created reading all card color information and costs. It is the same for double-sided cards (if they have different colors, the identity will have both colors). It also identifies all mana symbols in the card (cost and text). Mostly used on commander decks.
-            tr
-              td type
-              td "Legendary Creature — Angel"
-              td
-                | The card type. This is the type you would see on the card if printed today. Note: The dash is a UTF8 'long dash' as per the MTG rules
-            tr
-              td supertypes
-              td [ "Legendary" ]
-              td
-                | The supertypes of the card. These appear to the far left of the card type. Example values: Basic, Legendary, Snow, World, Ongoing
-            tr
-              td types
-              td [ "Creature" ]
-              td
-                | The types of the card. These appear to the left of the dash in a card type. Example values: Instant, Sorcery, Artifact, Creature, Enchantment, Land, Planeswalker
-            tr
-              td subtypes
-              td [ "Angel" ]
-              td
-                | The subtypes of the card. These appear to the right of the dash in a card type. Usually each word is its own subtype. Example values: Trap, Arcane, Equipment, Aura, Human, Rat, Squirrel, etc.
-            tr
-              td rarity
-              td "Rare"
-              td
-                | The rarity of the card. Examples: Common, Uncommon, Rare, Mythic Rare, Special, Basic Land
-            tr
-              td text
-              td "{T}: You gain 1 life."
-              td
-                | The text of the card. May contain 
-                a(href='#manaSymbols') mana symbols
-                |  and 
-                a(href='#otherSymbols') other symbols
-                | .
-            tr
-              td flavor
-              td "I'd like to buy a bowel."
-              td The flavor text of the card.
-            tr
-              td artist
-              td "Mark Poole"
-              td
-                | The artist of the card. This may not match what is on the card as MTGJSON corrects many card misprints.
-            tr
-              td number
-              td "148a"
-              td
-                | The card number. This is printed at the bottom-center of the card in small text. This is a string, not an integer, because some cards have letters in their numbers.
-            tr
-              td power
-              td "4"
-              td
-                | The power of the card. This is only present for creatures. This is a string, not an integer, because some cards have powers like: "1+*"
-            tr
-              td toughness
-              td "5"
-              td
-                | The toughness of the card. This is only present for creatures. This is a string, not an integer, because some cards have toughness like: "1+*"
-            tr
-              td loyalty
-              td 4
-              td The loyalty of the card. This is only present for planeswalkers.
-            tr
-              td multiverseid
-              td 2479
-              td
-                | The multiverseid of the card on Wizard's Gatherer web page.
-                br
-                | 						Cards from sets that do not exist on Gatherer will NOT have a multiverseid.
-                br
-                | 						Sets not on Gatherer are: ATH, ITP, DKM, RQS, DPA and all sets with a 4 letter code that starts with a lowercase 'p'.
-            tr
-              td variations
-              td [ 1909, 1910 ]
-              td
-                | If a card has alternate art (for example, 4 different Forests, or the 2 Brothers Yamazaki) then each other variation's multiverseid will be listed here, NOT including the current card's multiverseid. NOTE: Only present for sets that exist on Gatherer.
-            tr
-              td imageName
-              td "ajani goldmane"
-              td
-                | This used to refer to the mtgimage.com file name for this card.
-                br
-                | mtgimage.com has been 
-                strong(style='color: red;') SHUT DOWN
-                |  by Wizards of the Coast.
-                br
-                | This field will continue to be set correctly and is now only useful for UID purposes.
-            tr
-              td watermark
-              td "Selesnya"
-              td
-                | The watermark on the card. Note: Split cards don't currently have this field set, despite having a watermark on each side of the split card.
-            tr
-              td border
-              td "black"
-              td
-                | If the border for this specific card is DIFFERENT than the border specified in the top level set JSON, then it will be specified here. (Example: Unglued has silver borders, except for the lands which are black bordered)
-            tr
-              td timeshifted
-              td true
-              td If this card was a timeshifted card in the set.
-            tr
-              td hand
-              td -3
-              td Maximum hand size modifier. Only exists for Vanguard cards.
-            tr
-              td life
-              td -10
-              td Starting life total modifier. Only exists for Vanguard cards.
-            tr
-              td reserved
-              td true
-              td
-                | Set to true if this card is reserved by Wizards 
-                a(href='http://archive.wizards.com/Magic/tcg/article.aspx?x=magic/products/reprintpolicy') Official Reprint Policy
-            tr
-              td releaseDate
-              td "2010-07-22" or "2010-07" or "2010"
-              td
-                | The date this card was released. This is only set for promo cards. The date may not be accurate to an exact day and month, thus only a partial date may be set (YYYY-MM-DD or YYYY-MM or YYYY). Some promo cards do not have a known release date.
-            tr
-              td starter
-              td true
-              td
-                | Set to true if this card was only released as part of a core box set. These are technically part of the core sets and are tournament legal despite not being available in boosters.
-        table
-          thead
-            tr
-              th(colspan='3') Extras Only Fields
-            tr
-              th Key
-              th Example
-              th Description
-          tbody
-            tr
-              td rulings
-              td
-                | [ { "date" : "2003-04-15",
-                br
-                | "text" : "Does not tap." } ]
-              td
-                | The rulings for the card. An array of objects, each object having 'date' and 'text' keys.
-            tr
-              td foreignNames
-              td
-                | [ { "language" : "Italian",
-                br
-                | "name" : "Wurm Devastatore",
-                br
-                | "multiverseid" : 200475 } ]
-              td
-                | Foreign language names for the card, if this card in this set was printed in another language. An array of objects, each object having 'language', 'name' and 'multiverseid' keys. Not available for all sets.
-            tr
-              td printings
-              td [ "ICE", "CHR" ]
-              td The sets that this card was printed in, expressed as an array of set codes.
-            tr
-              td originalText
-              td "{8}: Do 4 damage to any target."
-              td
-                | The original text on the card at the time it was printed. This field is not available for promo cards.
-            tr
-              td originalType
-              td "Mono Artifact"
-              td
-                | The original type on the card at the time it was printed. This field is not available for promo cards.
-            tr
-              td legalities
-              td
-                | [ { "format" : "Legacy",
-                br
-                | "legality" : "Banned" },
-                br
-                | 					      { "format" : "Vintage",
-                br
-                | "legality" : "Restricted" } ]
-              td
-                | Which formats this card is legal, restricted or banned in. An array of objects, each object having 'format' and 'legality'. A 'condition' key may be added in the future if Gatherer decides to utilize it again.
-            tr
-              td source
-              td "Theros Game Day prize"
-              td
-                | For promo cards, this is where this card was originally obtained. For box sets that are theme decks, this is which theme deck the card is from. For clash packs, this is which deck it is from.
-        p
-          | A unique identifier (UID) key for each card can be made by combining: setCode + cardName + imageName
-      div
-        a(name='allcards')
-        h2 AllCards.json
-        p
-          | The 
-          strong AllCards.json
-          |  file is organized by card name and merges card data from multiple sets into a single card object.
-          br
-          br
-          | 		Due to this merging of card data, several set specific fields are not present in the AllCards data: artist, border, flavor, foreignNames, id, multiverseid, number, originalText, originalType, rarity, releaseDate, reserved, timeshifted, variations, watermark
-          br
-          br
-          | 		This file is lighter weight and is meant to provide a quick and easy way to get basic card data.
-          br
-          br
-          | 		The JSON file itself looks like this:
-          br
-        pre
-          code(data-language="javascript").
-            {
-            "Nevinyrral's Disk" : { /* card data */ },
-                       "Norrit" : { /* card data */ },
-            "Nullmage Shepherd" : { /* card data */ },
-            ...
-            }
-      div
-        h2 Additional JSON Files
-        p
-          | Several additional JSON files are available and will be updated whenever card data is added or updated:
-        ul
-          li
-            a(href='/json/SetCodes.json') /json/SetCodes.json
-            |  - An array of set codes currently available
-          li
-            a(href='/json/SetList.json') /json/SetList.json
-            |  - An array of sets (code, name and releaseDate) currently available
-          li
-            a(href='/json/version.json') /json/version.json
-            |  - Current version number as a quoted string
-          li
-            a(href='/json/version-full.json') /json/version-full.json
-            |  - Current version number as a JSON object
-          li
-            a(href='/json/changelog.json') /json/changelog.json
-            |  - Lists all changes in JSON format.
-        p
-          | It also notes which JSON files have changed since the last update with fields: updatedSetFiles, newSetFiles, removedSetFiles
-      div
-        a(name='jsonp')
-        h2 JSONP
-        p
-          | All JSON files are also available as JSONP files by changing the extension from '.json' to '.jsonp'.
-          | This allows you to include them client side by linking to them directly with a <script> tag.
-        p
-          | HTML Example: <script type="text/javascript" src="http://mtgjson.com/json/AllSets.jsonp"></script>
-        p
-          | A callback handler called 'mtgjsoncallback' will be called with 2 arguments.
-          | The first argument is the JSON data itself. This isn't a string, so no need to call JSON.parse()
-          | The second is the file name as a string, without an extension ("AllSets" in the example).
-        p Client side javascript example:
-        pre
-          code(data-language="javascript").
-            window.mtgjsoncallback = function(data, name) {
-              /* handling code here */
-            };
-    #footer
-      p The JSON files contains data that is Copyright &copy; Wizards of the Coast - All Rights Reserved
-      p This website is not affiliated with Wizards of the Coast in any way.
+          a(href='/json/version-full.json') /json/version-full.json
+          |  - Current version number as a JSON object
+        li
+          a(href='/json/changelog.json') /json/changelog.json
+          |  - Lists all changes in JSON format.
+      p
+        | It also notes which JSON files have changed since the last update with fields: updatedSetFiles, newSetFiles, removedSetFiles
+    div
+      a(name='jsonp')
+      h2 JSONP
+      p
+        | All JSON files are also available as JSONP files by changing the extension from '.json' to '.jsonp'.
+        | This allows you to include them client side by linking to them directly with a <script> tag.
+      p
+        | HTML Example: <script type="text/javascript" src="http://mtgjson.com/json/AllSets.jsonp"></script>
+      p
+        | A callback handler called 'mtgjsoncallback' will be called with 2 arguments.
+        | The first argument is the JSON data itself. This isn't a string, so no need to call JSON.parse()
+        | The second is the file name as a string, without an extension ("AllSets" in the example).
+      p Client side javascript example:
+      pre
+        code(data-language="javascript").
+          window.mtgjsoncallback = function(data, name) {
+            /* handling code here */
+          };

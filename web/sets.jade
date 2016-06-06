@@ -1,53 +1,28 @@
-doctype html
-html
-	head
-		meta(charset="utf-8")
-		title MTG JSON
-		link(rel="shortcut icon",href="data:image/x-icon;,",type="image/x-icon")
-		!=analytics
-		meta(name="viewport" content="width=device-width, initial-scale=1")
-		link(href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Roboto Mono',rel='stylesheet',type='text/css')
-		link(type="text/css",rel="stylesheet",href="mtgjson.css")
-		link(type="text/css",rel="stylesheet",href="mtgicons.css")
-	body
-		#header
-			#vendor
-				a(href="/") MTG JSON
-			ul
-				li
-					a(href="/documentation.html") Documentation
-				li
-					a(href="/sets.html") All Sets
-				li
-					a(href="/changelog.html") Changelog
-				li
-					a(href="https://github.com/lsmoura/mtgjson") Github
-		#sets-contents
-			each set in sets
-				div
-					h2=set.name
-					p=set.code
-					p=set.releaseDate
-					.downloads
-						a(href="json/" + set.code + ".json.zip") Zipped</a>
-						a(href="json/" + set.code + "-x.json.zip") Zipped + Extras
-						a(href="json/" + set.code + ".json") Set
-						a(href="json/" + set.code + "-x.json") Set + Extras
-		.windowswarning
-			h2 Windows Warning
-			p
-				| Microsoft Windows does not allow files to be named CON (
-				a(href="http://superuser.com/questions/86999/unable-to-rename-a-folder-or-a-file-as-con") see here
-				|)
-			p Thus on Windows you can't download CON.json, CON.json.zip or extract AllSetFiles.zip (which contains CON.json)
-			p
-				|Here are Window friendly links with an underscore suffix: 
-				a(href="/json/CON_.json") CON_.json
-				|  | 
-				a(href="/json/CON_.json.zip") CON_.json.zip
-				|  | 
-				a(href="/json/AllSetFilesWindows.zip") AllSetFiles_Windows.zip
+extends _layout.jade
 
-		#footer
-			p The JSON files contains data that is Copyright &copy; Wizards of the Coast - All Rights Reserved
-			p This website is not affiliated with Wizards of the Coast in any way.
+block contents
+	#sets-contents
+		each set in sets
+			div
+				h2=set.name
+				p=set.code
+				p=set.releaseDate
+				.downloads
+					a(href="json/" + set.code + ".json.zip") Zipped</a>
+					a(href="json/" + set.code + "-x.json.zip") Zipped + Extras
+					a(href="json/" + set.code + ".json") Set
+					a(href="json/" + set.code + "-x.json") Set + Extras
+	.windowswarning
+		h2 Windows Warning
+		p
+			| Microsoft Windows does not allow files to be named CON (
+			a(href="http://superuser.com/questions/86999/unable-to-rename-a-folder-or-a-file-as-con") see here
+			|)
+		p Thus on Windows you can't download CON.json, CON.json.zip or extract AllSetFiles.zip (which contains CON.json)
+		p
+			|Here are Window friendly links with an underscore suffix: 
+			a(href="/json/CON_.json") CON_.json
+			|  | 
+			a(href="/json/CON_.json.zip") CON_.json.zip
+			|  | 
+			a(href="/json/AllSetFilesWindows.zip") AllSetFiles_Windows.zip
