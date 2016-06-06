@@ -54,6 +54,14 @@ var checkTaintField = function(SET, card, fieldName, fieldValue) {
 			fieldValue = card[fieldName];
 	}
 
+	if (fieldName == 'rulings' && fieldValue) {
+		// We need to fix the quotes, since mci and gatherer do not agree on quote formatting.
+		// MTGJson will adopt regular quotes all around.
+		fieldValue.forEach(function(rule) {
+			rule.text = rule.text.replace(/[“”]/g, '"');
+		});
+	}
+
 	// Do nothing if we do not have a previous value.
 	if (!allCardsWithExtras[card.name].hasOwnProperty(fieldName)) {
 		allCardsWithExtras[card.name][fieldName] = fieldValue;
