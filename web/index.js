@@ -69,7 +69,6 @@ function processCard(SET, card, callback) {
 		var diff = null;
 		if (previousValue) {
 			if (!fieldValue) {
-				console.log("No value present");
 				taint = true;
 			}
 			else 
@@ -380,12 +379,12 @@ tiptoe(
 			fs.writeFile(path.join(output, fn), html, 'utf-8', callback);
 		};
 
-		save('index.jade', 'index.html', this.parallel());
-		save('atom.jade', 'atom.xml', this.parallel());
-		save('sitemap.jade', 'sitemap.xml', this.parallel());
-		save('sets.jade', 'sets.html', this.parallel());
-		save('changelog.jade', 'changelog.html', this.parallel());
-		save('documentation.jade', 'documentation.html', this.parallel());
+		save('index.pug', 'index.html', this.parallel());
+		save('atom.pug', 'atom.xml', this.parallel());
+		save('sitemap.pug', 'sitemap.xml', this.parallel());
+		save('sets.pug', 'sets.html', this.parallel());
+		save('changelog.pug', 'changelog.html', this.parallel());
+		save('documentation.pug', 'documentation.html', this.parallel());
 	},
 	function zipFiles() {
 		console.log("Compressing JSON files...");
@@ -480,8 +479,6 @@ tiptoe(
 	function(err) {
 		if (err) throw(err);
 
-		//console.log(params);
-
-		console.log('done');
+		console.log('public folder generation finished.');
 	}
 );
