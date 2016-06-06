@@ -189,6 +189,45 @@ function saveSet(Code, FullSET, SimpleSET, callback) {
 	done = true;
 }
 
+/**
+ * Creates a list of all the files on a given folder and gives it to the callback function.
+ * Adapted from stackoverflow: http://stackoverflow.com/a/5827895/488212
+ */
+var walk = function(dir, callback) {
+	var results = [];
+
+	fs.readdir(dir, function(err, list) {
+		if (err) return(callback(err));
+
+		if (list.length == 0) return(setImmediate(callback, null, results));
+
+		async.each(
+			list,
+			function(file, cb) {
+				file = path.resolve(dir, file);
+
+				fs.stat(file, function(err, stat) {
+					if (err) return(callback(err));
+
+					if (stat && stat.isDirectory())
+						walk(file, function(err, res) {
+							results = results.concat(res);
+							cb();
+						});
+					else {
+						results.push(file);
+						cb();
+					}
+				});
+			},
+			function() {
+				setImmediate(callback, null, results);
+			}
+		);
+	});
+};
+
+// Start processing...
 tiptoe(
 	function removeDirectory() {
 		console.log("Clearing Output directory...");
@@ -377,70 +416,66 @@ tiptoe(
 		runUtil.run("zip", ["-9", "AllSetFiles-x.zip"].concat(C.SETS.map(function(SET) { return SET.code + "-x.json"; })), runParams, this.parallel());
 		runUtil.run("zip", ["-9", "AllSetFilesWindows.zip"].concat(C.SETS.map(function(SET) { return SET.code + (SET.code==="CON" ? "_" : "") + ".json"; })), runParams, this.parallel());
 	},
-	function copyFiles() {
-		console.log("Copying static files...");
-		var folders = [ 'fonts', 'images', 'java' ];
-		async.each(
-			folders,
-			function(folder, cb) {
-				tiptoe(
-					function() {
-						// Create folder
-						fs.mkdir(path.join(output, folder), this);
-					},
-					function() {
-						// Read folder
-						fs.readdir(path.join(__dirname, folder), this);
-					},
-					function(contents) {
-						async.each(
-							contents,
-							function(file, subcb) {
-								var source = path.join(__dirname, folder, file);
-								var target = path.join(output, folder, file);
+	function createFolders() {
+		// Create folders. This should me automated on copyFiles() step somehow.
+		fs.mkdir(path.join(output, 'java'), this.parallel());
+		fs.mkdir(path.join(output, 'images'), this.parallel());
+		fs.mkdir(path.join(output, 'fonts'), this.parallel());
+	},
+	function generateList() {
+		var self = this;
+		console.log("Generating static file list...");
 
-								var rd = fs.createReadStream(source);
-        						rd.on('error', subcb);
-								var wr = fs.createWriteStream(target);
-								wr.on('error', subcb);
-								wr.on('finish', subcb);
-								rd.pipe(wr);
-							},
-							this
-						);
-					},
-					cb
-				);
+		walk(__dirname, function(err, files) {
+			var relative = files.map(function(value) { return(value.replace(__dirname + '/', '')); });
+
+			var final = relative.filter(function(value) {
+				return(value.match(/\.(png|css|java|jpe?g|eot|svg|ttf|woff)$/) != null);
+			});
+
+			self(err, final);
+		});
+	},
+	function copyFiles(files) {
+		var self = this;
+		async.each(
+			files,
+			function(file, cb) {
+				var source = path.join(__dirname, file);
+				var target = path.join(output, file);
+
+				var rd = fs.createReadStream(source);
+				rd.on('error', cb);
+				var wr = fs.createWriteStream(target);
+				wr.on('error', cb);
+				wr.on('finish', cb);
+				rd.pipe(wr);
 			},
-			this
+			function () { self(null, files); }
 		);
 	},
-	function zipFolders() {
-		console.log("Compressing everything else...");
+	function zipFiles(files) {
+		var self = this;
+		console.log("GZipping static files...");
 
-		var folders = [ '.', 'fonts', 'images', 'java' ];
-		async.each(
-			folders,
-			function(folder, cb) {
-				var runParams = { cwd: path.join(output, folder), silent : true };
-				fs.readdir(
-					runParams.cwd,
-					function(err, files) {
-						if (err) throw(err);
-						async.each(
-							files,
-							function(fn, subcb) {
-								if (fn == 'json')
-									return(subcb());
-								runUtil.run('gzip', [ '-k', fn ], runParams, subcb);
-							},
-							cb
-						);
-					}
-				);
-			},
-			this
-		);
+		walk(output, function(err, files) {
+			if (err) {
+				return(self(err));
+			}
+
+			var final = files.filter(function(value) {
+				return(value.match(/\.(css|java|eot|svg|ttf|woff|html?|xml)$/) != null);
+			});
+
+			async.each(
+				final,
+				function(file, cb) {
+					var runParams = { cwd: path.dirname(file), silent : true };
+					runUtil.run('gzip', [ '-k', path.basename(file) ], runParams, cb);
+				},
+				self
+			);
+		});
 	},
 	function(err) {
 		if (err) throw(err);
