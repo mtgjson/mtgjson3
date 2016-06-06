@@ -1011,13 +1011,23 @@ var ripMCISet = function(set, cb) {
 		},
 		function processCardList(listDoc) {
 			var mciCardLinks = Array.toArray(listDoc.querySelectorAll("table tr td a"));
+			var cards = [];
+			var self = this;
+
 			async.eachSeries(mciCardLinks, function(mciCardLink, subcb) {
 				var href = mciCardLink.getAttribute("href");
 				if (!href || !href.startsWith("/" + set.magicCardsInfoCode.toLowerCase() + "/en/"))
 					return setImmediate(subcb);
 
-				ripMCICard(set, href, subcb);
-			}, this);
+				ripMCICard(set, href, function(err, card) {
+					if (err) throw(err);
+					cards.push(card);
+					subcb();
+				});
+			}, function(err) {
+				if (err) throw(err);
+				self(null, cards);
+			});
 		},
 		function addAdditionalFields(cards) {
 			base.info("Adding additional fields...");
