@@ -103,6 +103,7 @@ var checkTaintField = function(SET, card, fieldName, fieldValue) {
 		if (diff)
 			console.log(diff);
 		console.log('Past sets: %s', obj.sets.join(','));
+		console.log('Card sets: %s', card.printings.join(','));
 	}
 };
 
