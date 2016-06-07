@@ -65,10 +65,8 @@ var checkTaintField = function(SET, card, fieldName, fieldValue) {
 	// Do nothing if we do not have a previous value.
 	if (!allCardsWithExtras[card.name].hasOwnProperty(fieldName)) {
 		allCardsWithExtras[card.name][fieldName] = fieldValue;
-		allCardsWithExtras[card.name]['_sets'] = [ SET.code ];
 		return;
 	}
-	allCardsWithExtras[card.name]['_sets'].push(SET.code);
 
 	var previousValue = allCardsWithExtras[card.name][fieldName];
 
@@ -88,11 +86,23 @@ var checkTaintField = function(SET, card, fieldName, fieldValue) {
 	}
 
 	if (taint) {
-		taintedCards.push({ card: card, fieldName: fieldName });
+		var obj = taintedCards.find(function(c) { return(c.name == card.name); });
+
+		if (!obj) {
+			obj = { card: card, fields: [], sets: [] };
+			taintedCards.push({ card: card, fieldName: fieldName });
+		}
+
+		if (obj.fields.indexOf(fieldName) < 0)
+			obj.fields.push(fieldName);
+
+		if (obj.sets.indexOf(SET.code) < 0)
+			obj.sets.push(SET.code);
+		
 		console.log("Tainted field %s on card '%s' (%s)", fieldName, card.name, SET.code);
 		if (diff)
 			console.log(diff);
-		console.log('Past sets: %s', allCardsWithExtras[card.name]['_sets'].join(','));
+		console.log('Past sets: %s', obj.sets.join(','));
 	}
 };
 
