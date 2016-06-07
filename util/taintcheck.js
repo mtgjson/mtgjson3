@@ -58,16 +58,18 @@ var checkTaintField = function(SET, card, fieldName, fieldValue) {
 		// We need to fix the quotes, since mci and gatherer do not agree on quote formatting.
 		// MTGJson will adopt regular quotes all around.
 		fieldValue.forEach(function(rule) {
-			rule.text = rule.text.replace(/[“”]/g, '"');
+			rule.text = rule.text.replace(/[“”]/g, '"').replace(/’/g, "'");
 		});
 	}
 
 	// Do nothing if we do not have a previous value.
 	if (!allCardsWithExtras[card.name].hasOwnProperty(fieldName)) {
 		allCardsWithExtras[card.name][fieldName] = fieldValue;
+		allCardsWithExtras[card.name]['_sets'] = [ SET.code ];
 		return;
 	}
-	
+	allCardsWithExtras[card.name]['_sets'].push(SET.code);
+
 	var previousValue = allCardsWithExtras[card.name][fieldName];
 
 	var taint = false;
@@ -90,7 +92,7 @@ var checkTaintField = function(SET, card, fieldName, fieldValue) {
 		console.log("Tainted field %s on card '%s' (%s)", fieldName, card.name, SET.code);
 		if (diff)
 			console.log(diff);
-		console.log('Other sets: %s', allCardsWithExtras[card.name]['printings'].join(','));
+		console.log('Past sets: %s', allCardsWithExtras[card.name]['_sets'].join(','));
 	}
 };
 
