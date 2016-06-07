@@ -3078,6 +3078,14 @@ var base = require("xbase");
 				ru: 'Тени над Иннистрадом',
 				ko: '이니스트라드에 드리운 그림자'
 			}
+		},
+		{
+			name : "Eternal Masters",
+			code : "EMA",
+			releaseDate : "2016-06-10",
+			border : "black",
+			type : "reprint",
+			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"]
 		}
 	];
 
