@@ -91,7 +91,7 @@ function processCard(SET, card, callback) {
 		Object.keys(C.FIELD_TYPES),
 		function(fieldName, subcb) {
 			if (C.SET_SPECIFIC_FIELDS.contains(fieldName)) {
-				subcb();
+				setImmediate(subcb);
 				return;
 			}
 
@@ -109,7 +109,7 @@ function processCard(SET, card, callback) {
 			previousSeenSetCodes[card.name][fieldName].push(SET.code);
 			allCardsWithExtras[card.name][fieldName] = fieldValue;
 
-			subcb();
+			setImmediate(subcb);
 		},
 		callback
 	);
@@ -136,11 +136,12 @@ function processSet(SET, callback) {
 				// Strip out extras
 				async.each(C.EXTRA_FIELDS, function(EXTRA_FIELD, subcb) {
 					delete card[EXTRA_FIELD];
-					subcb();
+					setImmediate(subcb);
 				}, cb);
 			});
 
-			callback && callback(null, SET, SimpleSet);
+			if (callback)
+				setImmediate(callback, null, SET, SimpleSet);
 		}
 	);
 }
