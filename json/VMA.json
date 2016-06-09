@@ -737,21 +737,22 @@
         "pJGP",
         "V09",
         "ME4",
-        "VMA"
+        "VMA",
+        "EMA"
       ],
       "rarity": "Mythic Rare",
       "rulings": [
         {
-          "date": "2004-10-04",
-          "text": "This spell is not targeted, so cards which can’t be targeted, such as a creature with protection from white, are both counted and valid choices for being sacrificed."
+          "date": "2016-06-08",
+          "text": "First the player whose turn it is chooses which lands (if any) to keep, then each other player in turn order does the same. Each player will know the choices made by the players who chose before them. All of the unchosen lands are then sacrificed simultaneously. Then the process is repeated for cards in hand, except that no cards are revealed until all players have chosen what to discard, at which point those cards are all discarded simultaneously. Lastly, the process is repeated for creatures, and players will again know earlier choices made when deciding what to sacrifice. All of the unchosen creatures are then sacrificed simultaneously."
         },
         {
-          "date": "2004-10-04",
-          "text": "All lands sacrificed go to the graveyard simultaneously, then all cards discarded, and finally all creatures sacrificed. Within each group, you pick the order they end up in the graveyard."
+          "date": "2016-06-08",
+          "text": "Balance doesn’t have targets, so permanents that can’t be targeted, such as a creature with shroud or protection from white, are valid choices to be sacrificed."
         },
         {
-          "date": "2004-10-04",
-          "text": "Cards are not counted until the appropriate step. So, a land creature sacrificed to the first part of the spell would not count for the last part."
+          "date": "2016-06-08",
+          "text": "Each type of object is counted during the corresponding part of the process. Cards in hand are counted after lands have been sacrificed, and creatures on the battlefield are counted after cards have been discarded. Thus, a land creature sacrificed to the first part of the spell would not be counted when determining how many creatures are on the battlefield for the last part."
         }
       ],
       "text": "Each player chooses a number of lands he or she controls equal to the number of lands controlled by the player who controls the fewest, then sacrifices the rest. Players discard cards and sacrifice creatures the same way.",
@@ -904,7 +905,8 @@
       "power": "1",
       "printings": [
         "JUD",
-        "VMA"
+        "VMA",
+        "EMA"
       ],
       "rarity": "Common",
       "subtypes": [
@@ -1157,11 +1159,27 @@
           "legality": "Legal"
         },
         {
+          "format": "Freeform",
+          "legality": "Legal"
+        },
+        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Onslaught Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Prismatic",
+          "legality": "Legal"
+        },
+        {
+          "format": "Singleton 100",
+          "legality": "Legal"
+        },
+        {
+          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -1187,7 +1205,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "The two X’s in the mana cost mean that you pay 2 mana (above the {2}{W}{W} base cost) for each token you want to create."
+          "text": "The two X's in the mana cost mean that you pay 2 mana (above the {2}{W}{W} base cost) for each token you want to create."
         },
         {
           "date": "2004-10-04",
@@ -1207,7 +1225,7 @@
         },
         {
           "date": "2008-10-01",
-          "text": "The cycling ability and the triggered ability are separate. If the triggered ability is countered (with Stifle, for example, or if all its targets have become illegal), the cycling ability will still resolve and you’ll draw a card."
+          "text": "The cycling ability and the triggered ability are separate. If the triggered ability is countered (with Stifle, for example, or if all its targets have become illegal), the cycling ability will still resolve and you'll draw a card."
         }
       ],
       "text": "Put X 4/4 white Angel creature tokens with flying onto the battlefield.\nCycling {2}{W} ({2}{W}, Discard this card: Draw a card.)\nWhen you cycle Decree of Justice, you may pay {X}. If you do, put X 1/1 white Soldier creature tokens onto the battlefield.",
@@ -1632,11 +1650,27 @@
           "legality": "Legal"
         },
         {
+          "format": "Freeform",
+          "legality": "Legal"
+        },
+        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Onslaught Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Prismatic",
+          "legality": "Legal"
+        },
+        {
+          "format": "Singleton 100",
+          "legality": "Legal"
+        },
+        {
+          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -1711,7 +1745,8 @@
       "printings": [
         "ONS",
         "VMA",
-        "C15"
+        "C15",
+        "EMA"
       ],
       "rarity": "Rare",
       "subtypes": [
@@ -1770,7 +1805,8 @@
         "pJGP",
         "ULG",
         "C13",
-        "VMA"
+        "VMA",
+        "EMA"
       ],
       "rarity": "Rare",
       "rulings": [
@@ -2003,11 +2039,27 @@
           "legality": "Legal"
         },
         {
+          "format": "Freeform",
+          "legality": "Legal"
+        },
+        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Onslaught Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Prismatic",
+          "legality": "Legal"
+        },
+        {
+          "format": "Singleton 100",
+          "legality": "Legal"
+        },
+        {
+          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -2435,7 +2487,8 @@
         "pFNM",
         "NMS",
         "VMA",
-        "C15"
+        "C15",
+        "EMA"
       ],
       "rarity": "Common",
       "rulings": [
@@ -2490,9 +2543,16 @@
       "originalType": "Instant",
       "printings": [
         "ODY",
-        "VMA"
+        "VMA",
+        "EMA"
       ],
       "rarity": "Common",
+      "rulings": [
+        {
+          "date": "2016-06-08",
+          "text": "The legality of a spell’s target is checked only as that spell begins to resolve. If Shelter gives the targeted creature protection from white, you’ll still draw a card."
+        }
+      ],
       "text": "Target creature you control gains protection from the color of your choice until end of turn.\nDraw a card.",
       "type": "Instant",
       "types": [
@@ -2885,17 +2945,18 @@
         "ME4",
         "V13",
         "CNS",
-        "VMA"
+        "VMA",
+        "EMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2004-10-04",
-          "text": "If the creature has a negative power, the player does not lose life. It acts the same as if it had a power of zero."
+          "date": "2016-06-08",
+          "text": "The amount of life gained is equal to the power of the targeted creature as it last existed on the battlefield."
         },
         {
-          "date": "2008-10-01",
-          "text": "The amount of life that’s gained is equal to the power of the targeted creature as it last existed on the battlefield."
+          "date": "2016-06-08",
+          "text": "If the creature’s power is negative, its controller doesn’t lose or gain life."
         }
       ],
       "text": "Exile target creature. Its controller gains life equal to its power.",
@@ -3310,13 +3371,14 @@
         "DDJ",
         "CNS",
         "VMA",
-        "C15"
+        "C15",
+        "EMA"
       ],
       "rarity": "Common",
       "rulings": [
         {
-          "date": "2004-10-04",
-          "text": "This is all one effect. You draw 3 and return 2 cards all in one resolution. Nothing may happen between the two. If something triggers on drawing cards, it will go on the stack after Brainstorm finishes resolving."
+          "date": "2016-06-08",
+          "text": "You draw three cards and put two cards back all while Brainstorm is resolving. Nothing can happen between the two, and no player may choose to take actions."
         }
       ],
       "text": "Draw three cards, then put two cards from your hand on top of your library in any order.",
@@ -3612,13 +3674,14 @@
         "ME4",
         "C13",
         "DDM",
-        "VMA"
+        "VMA",
+        "EMA"
       ],
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2004-10-04",
-          "text": "You take control of a creature, but Auras enchanting and Equipment attached to the creature do not change controller."
+          "date": "2016-06-08",
+          "text": "Gaining control of a creature doesn’t cause you to gain control of any Auras or Equipment attached to it."
         }
       ],
       "subtypes": [
@@ -3702,7 +3765,8 @@
         "ME4",
         "VMA",
         "DD3_JVC",
-        "TPR"
+        "TPR",
+        "EMA"
       ],
       "rarity": "Common",
       "text": "Counter target spell.",
@@ -3754,7 +3818,8 @@
         "TOR",
         "DDH",
         "C13",
-        "VMA"
+        "VMA",
+        "EMA"
       ],
       "rarity": "Common",
       "text": "Target player draws two cards.\nFlashback—{1}{U}, Pay 3 life. (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
@@ -3865,17 +3930,18 @@
         "CNS",
         "VMA",
         "DD3_JVC",
-        "C15"
+        "C15",
+        "EMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2004-10-04",
+          "date": "2016-06-08",
           "text": "You choose which pile to put into your hand."
         },
         {
-          "date": "2004-10-04",
-          "text": "The revealed cards are revealed in order, so that all players know what order they were on the library."
+          "date": "2016-06-08",
+          "text": "Each pile may contain from zero to five cards; they don’t have to be split “evenly.”"
         }
       ],
       "text": "Reveal the top five cards of your library. An opponent separates those cards into two piles. Put one pile into your hand and the other into your graveyard.",
@@ -3992,9 +4058,16 @@
         "ALL",
         "pJGP",
         "MED",
-        "VMA"
+        "VMA",
+        "EMA"
       ],
       "rarity": "Rare",
+      "rulings": [
+        {
+          "date": "2016-06-08",
+          "text": "If another effect causes Force of Will to cost more, you must pay that additional cost even if you pay its alternative cost."
+        }
+      ],
       "text": "You may pay 1 life and exile a blue card from your hand rather than pay Force of Will's mana cost.\nCounter target spell.",
       "type": "Instant",
       "types": [
@@ -4100,29 +4173,30 @@
       "printings": [
         "ONS",
         "DDM",
-        "VMA"
+        "VMA",
+        "EMA"
       ],
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2007-05-01",
+          "date": "2016-06-08",
           "text": "The top card of your library isn’t in your hand, so you can’t suspend it, cycle it, discard it, or activate any of its activated abilities."
         },
         {
-          "date": "2007-05-01",
-          "text": "If the top card of your library is a land, you can play it if you could play a land."
+          "date": "2016-06-08",
+          "text": "You must follow the normal timing permissions and restrictions for the top card of your library and pay its costs. If it has alternative or additional costs, you may pay those. If the card has any mandatory additional costs, you must pay those."
         },
         {
-          "date": "2007-05-01",
-          "text": "If the top card of your library has morph, you can cast that card face down for {3}. However, all players will have seen which card it is before the spell is cast."
+          "date": "2016-06-08",
+          "text": "If the top card of your library is a land, you may play that land only if you have any available land plays."
         },
         {
-          "date": "2007-05-01",
+          "date": "2016-06-08",
+          "text": "If the top card of your library changes while you’re casting a spell or activating an ability (perhaps because that top card is the card you’re casting) the new top card won’t be revealed until you finish casting that spell or activating that ability."
+        },
+        {
+          "date": "2016-06-08",
           "text": "As soon as you finish playing the card on top of your library, reveal the next card in your library."
-        },
-        {
-          "date": "2007-05-01",
-          "text": "If the top card of your library changes while you’re casting a spell or activating an ability, the new top card won’t be revealed until you finish casting that spell or activating that ability."
         }
       ],
       "text": "Play with the top card of your library revealed.\nYou may play the top card of your library.",
@@ -4284,17 +4358,18 @@
       "printings": [
         "WWK",
         "V13",
-        "VMA"
+        "VMA",
+        "EMA"
       ],
       "rarity": "Mythic Rare",
       "rulings": [
         {
-          "date": "2010-03-01",
-          "text": "Jace, the Mind Sculptor is the first planeswalker with a loyalty ability that costs [0]. Activating this ability follows the same rules as activating any other planeswalker ability, though you’ll neither put loyalty counters on Jace nor remove loyalty counters from Jace to do so."
+          "date": "2016-06-08",
+          "text": "You draw three cards and put two cards back all while Jace’s second ability is resolving. Nothing can happen between the two, and no player may choose to take actions."
         },
         {
-          "date": "2010-03-01",
-          "text": "If you activate Jace’s second ability, the two cards you put on top of your library may be any two cards from your hand. They don’t have to be cards you drew with the ability."
+          "date": "2016-06-08",
+          "text": "If the targeted player for Jace’s last ability has no cards in hand, that player shuffles nothing into his or her library, and that player’s library will remain empty. That player won’t lose the game until he or she tries to draw from the empty library."
         }
       ],
       "subtypes": [
@@ -4587,13 +4662,14 @@
         "DD2",
         "VMA",
         "DD3_JVC",
-        "DDO"
+        "DDO",
+        "EMA"
       ],
       "rarity": "Common",
       "rulings": [
         {
-          "date": "2004-10-04",
-          "text": "It can choose itself. It has to if there are no other creatures."
+          "date": "2016-06-08",
+          "text": "If there are no other creatures on the battlefield when Man-o’-War enters the battlefield, its ability must target itself."
         }
       ],
       "subtypes": [
@@ -5440,7 +5516,8 @@
         "3ED",
         "MED",
         "V09",
-        "VMA"
+        "VMA",
+        "EMA"
       ],
       "rarity": "Uncommon",
       "subtypes": [
@@ -6080,29 +6157,30 @@
         "5ED",
         "MED",
         "PD3",
-        "VMA"
+        "VMA",
+        "EMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2004-10-04",
-          "text": "When putting a card onto the battlefield that requires a definition for its value or some other choice, you do what is needed to define the value or make the choice."
+          "date": "2016-06-08",
+          "text": "Animate Dead is an Aura, albeit with an unusual enchant ability. You target a creature card in a graveyard when you cast it. It enters the battlefield attached to that card. Then it returns that card to the battlefield, and attaches itself to the card again (since the card is a new object on the battlefield). Animate Dead itself never moves into a graveyard during this process."
         },
         {
-          "date": "2007-09-16",
-          "text": "This is a new wording. Animate Dead is now an Aura. You target a creature card in a graveyard when you cast it. It enters the battlefield attached to that card. Then it returns that card to the battlefield, and attaches itself to that card again (since the card is treated as a new object on the battlefield)."
+          "date": "2016-06-08",
+          "text": "If Animate Dead isn’t on the battlefield as its triggered ability resolves, none of its effects happen. The creature card won’t be returned to the battlefield."
         },
         {
-          "date": "2007-09-16",
+          "date": "2016-06-08",
+          "text": "Abilities such as shroud and protection function only on the battlefield unless otherwise specified. A creature card with shroud may be targeted by Animate Dead, and Animate Dead will become attached to the creature that enters the battlefield."
+        },
+        {
+          "date": "2016-06-08",
+          "text": "If the creature put onto the battlefield has protection from black—or if the creature can’t legally be enchanted by Animate Dead for another reason—Animate Dead won’t be able to attach to it. It will be put into the graveyard as a state-based action, causing its delayed triggered ability to trigger. When the trigger resolves, if the creature’s still on the battlefield, its controller will sacrifice it."
+        },
+        {
+          "date": "2016-06-08",
           "text": "Once the creature is returned to the battlefield, Animate Dead can’t be attached to anything other than it (unless Animate Dead somehow manages to put a different creature onto the battlefield). Attempting to move Animate Dead to another creature won’t work."
-        },
-        {
-          "date": "2008-04-01",
-          "text": "If the creature card put onto the battlefield has Protection from Black (or anything that prevents this from legally being attached), this won’t be able to attach to it. Then this will go to the graveyard as a State-Based Action, causing the creature to be sacrificed."
-        },
-        {
-          "date": "2008-04-01",
-          "text": "A “creature card” is any card with the type Creature, even if it has other types such as Artifact, Enchantment, or Land. Older cards of type Summon are also Creature cards."
         }
       ],
       "subtypes": [
@@ -7111,7 +7189,8 @@
         "ATH",
         "MED",
         "V13",
-        "VMA"
+        "VMA",
+        "EMA"
       ],
       "rarity": "Uncommon",
       "text": "Target player discards two cards at random.",
@@ -7160,9 +7239,20 @@
       "power": "3",
       "printings": [
         "TOR",
-        "VMA"
+        "VMA",
+        "EMA"
       ],
       "rarity": "Rare",
+      "rulings": [
+        {
+          "date": "2016-06-08",
+          "text": "If multiple Ichorids are in your graveyard, you can’t exile the same creature card to return each of them to the battlefield."
+        },
+        {
+          "date": "2016-06-08",
+          "text": "If one Ichorid’s ability exiles another, the exiled Ichorid’s ability can’t return it to the battlefield."
+        }
+      ],
       "subtypes": [
         "Horror"
       ],
@@ -7558,13 +7648,18 @@
         "DKM",
         "ME2",
         "V09",
-        "VMA"
+        "VMA",
+        "EMA"
       ],
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2004-10-04",
-          "text": "Removing Necropotence from the battlefield will not stop the cards from the life-payment ability from being put into your hand in the end step."
+          "date": "2016-06-08",
+          "text": "Necropotence’s last ability creates a delayed triggered ability that will put the exiled card into your hand. That ability still triggers even if Necropotence is removed from the battlefield before your end step."
+        },
+        {
+          "date": "2016-06-08",
+          "text": "If the discarded card isn’t put into your graveyard (due to an effect such as madness) or leaves your graveyard (perhaps because another effect returned it to your hand), it won’t be exiled."
         }
       ],
       "text": "Skip your draw step.\nWhenever you discard a card, exile that card from your graveyard.\nPay 1 life: Exile the top card of your library face down. Put that card into your hand at the beginning of your next end step.",
@@ -8404,17 +8499,18 @@
       "originalType": "Sorcery",
       "printings": [
         "APC",
-        "VMA"
+        "VMA",
+        "EMA"
       ],
       "rarity": "Common",
       "rulings": [
         {
-          "date": "2004-10-04",
-          "text": "You can choose 0, 1, or 2 targets."
+          "date": "2016-06-08",
+          "text": "You can cast Urborg Uprising with zero targets if you only want to draw a card."
         },
         {
-          "date": "2004-10-04",
-          "text": "You do not get to draw a card if you chose at least one target and all targets are illegal on resolution."
+          "date": "2016-06-08",
+          "text": "If you chose at least one target and all targets are illegal on resolution, you won’t draw a card."
         }
       ],
       "text": "Return up to two target creature cards from your graveyard to your hand.\nDraw a card.",
@@ -8465,9 +8561,16 @@
         "VIS",
         "pJGP",
         "6ED",
-        "VMA"
+        "VMA",
+        "EMA"
       ],
       "rarity": "Rare",
+      "rulings": [
+        {
+          "date": "2016-06-08",
+          "text": "The “shuffle and put the card on top” is a single action. If an effect causes the top card of the library to be face up, the second card down is not revealed."
+        }
+      ],
       "text": "Search your library for a card, then shuffle your library and put that card on top of it. You lose 2 life.",
       "type": "Instant",
       "types": [
@@ -8516,7 +8619,8 @@
       "printings": [
         "ONS",
         "V11",
-        "VMA"
+        "VMA",
+        "EMA"
       ],
       "rarity": "Rare",
       "subtypes": [
@@ -8751,7 +8855,8 @@
         "PC2",
         "VMA",
         "DDN",
-        "C14"
+        "C14",
+        "EMA"
       ],
       "rarity": "Common",
       "subtypes": [
@@ -8946,7 +9051,8 @@
         "LEG",
         "ME3",
         "PD2",
-        "VMA"
+        "VMA",
+        "EMA"
       ],
       "rarity": "Common",
       "rulings": [
@@ -8963,12 +9069,20 @@
           "text": "The spell copy has all the text and can result in itself being copied."
         },
         {
-          "date": "2009-10-01",
-          "text": "As Chain Lightning resolves, the targeted player, or the controller of the targeted creature, may copy it. The copy has the same text, target, and color of the resolving spell, though the player who’s copying it may choose a new target for it. Once that copy is created (or not), the resolving Chain Lightning has finished resolving and leaves the stack."
+          "date": "2016-06-08",
+          "text": "As Chain Lightning resolves, the targeted player or the controller of the targeted creature may copy it. The copy has the same text, target, and color of the resolving spell, though the player who’s copying it may choose a new target for it. Once that copy is created (or not), the first Chain Lightning has finished resolving and leaves the stack."
         },
         {
-          "date": "2009-10-01",
-          "text": "If the targeted creature or player is an illegal target by the time Chain Lightning resolves, the spell is countered. It won’t be copied."
+          "date": "2016-06-08",
+          "text": "The player putting the copy of the spell on the stack controls that copy."
+        },
+        {
+          "date": "2016-06-08",
+          "text": "The copy of Chain Lightning is created on the stack, so it’s not cast. Abilities that trigger when a player casts a spell won’t trigger. Players may respond to that spell before it resolves."
+        },
+        {
+          "date": "2016-06-08",
+          "text": "If the targeted creature or player is an illegal target when Chain Lightning tries to resolve, the spell is countered. It can’t be copied."
         }
       ],
       "text": "Chain Lightning deals 3 damage to target creature or player. Then that player or that creature's controller may pay {R}{R}. If the player does, he or she may copy this spell and may choose a new target for that copy.",
@@ -9220,7 +9334,8 @@
         "USG",
         "DDL",
         "C13",
-        "VMA"
+        "VMA",
+        "EMA"
       ],
       "rarity": "Rare",
       "rulings": [
@@ -9509,13 +9624,18 @@
       "originalType": "Sorcery",
       "printings": [
         "USG",
-        "VMA"
+        "VMA",
+        "EMA"
       ],
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2004-10-04",
+          "date": "2016-06-08",
           "text": "You might end up discarding the card you searched for."
+        },
+        {
+          "date": "2016-06-08",
+          "text": "You put the card into your hand and discard a card at random all while Gamble is resolving. Nothing can happen between the two, and no player may choose to take actions."
         }
       ],
       "text": "Search your library for a card, put that card into your hand, discard a card at random, then shuffle your library.",
@@ -10571,7 +10691,8 @@
       "printings": [
         "ODY",
         "HOP",
-        "VMA"
+        "VMA",
+        "EMA"
       ],
       "rarity": "Common",
       "text": "Target creature gets +3/+0 and gains haste until end of turn.\nFlashback {2}{R} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
@@ -10670,7 +10791,8 @@
       "printings": [
         "ONS",
         "HOP",
-        "VMA"
+        "VMA",
+        "EMA"
       ],
       "rarity": "Rare",
       "subtypes": [
@@ -11089,7 +11211,8 @@
         "SCG",
         "DDK",
         "CNS",
-        "VMA"
+        "VMA",
+        "EMA"
       ],
       "rarity": "Rare",
       "text": "At the beginning of each player's upkeep, Sulfuric Vortex deals 2 damage to that player.\nIf a player would gain life, that player gains no life instead.",
@@ -11245,17 +11368,22 @@
       "power": "7",
       "printings": [
         "JUD",
-        "VMA"
+        "VMA",
+        "EMA"
       ],
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2004-10-04",
-          "text": "It is possible for the Dragon to leave the battlefield before its “enters the battlefield” trigger resolves. If this happens, then the “leaves the battlefield” trigger will have nothing to return and the “enters the battlefield” trigger’s effects will be irreversible."
+          "date": "2016-06-08",
+          "text": "It is possible for Worldgorger Dragon to leave the battlefield before its “enters the battlefield” trigger resolves. If this happens, then the “leaves the battlefield” trigger will have nothing to return. Then its “enters the battlefield” trigger resolves, and all other permanents you control are exiled forever."
         },
         {
-          "date": "2005-08-01",
-          "text": "If an Aura is exiled this way, you can place it on any legal permanent when it returns. It doesn’t have to go back to the same place. It can’t be placed on a permanent that is entering the battlefield at the same time."
+          "date": "2016-06-08",
+          "text": "If an Aura is exiled with Worldgorger Dragon, the player who controls the Aura when it enters the battlefield chooses what it will enchant. It doesn’t have to go back to the same place. It can’t enter the battlefield enchanting a permanent that enters the battlefield at the same time."
+        },
+        {
+          "date": "2016-06-08",
+          "text": "If Animate Dead is put onto the battlefield enchanting Worldgorger Dragon, Worldgorger Dragon’s enters-the-battlefield trigger will exile Animate Dead, which causes you to sacrifice Worldgorger Dragon, which causes Animate Dead to return to the battlefield attached to a creature card in a graveyard of your choice. If you can choose a creature card other than Worldgorger Dragon, you must do so after as many iterations of this loop as you’d like. If you can’t choose a different card, and no player chooses to break the loop, the game ends in a draw."
         }
       ],
       "subtypes": [
@@ -11939,13 +12067,14 @@
         "DDD",
         "CNS",
         "VMA",
-        "DD3_GVL"
+        "DD3_GVL",
+        "EMA"
       ],
       "rarity": "Common",
       "rulings": [
         {
-          "date": "2004-10-04",
-          "text": "If cast targeting an opponent’s creature, you get the Elephant when that creature goes to the graveyard."
+          "date": "2016-06-08",
+          "text": "If Elephant Guide enchants an opponent’s creature, you get the Elephant when that creature dies."
         }
       ],
       "subtypes": [
@@ -13311,7 +13440,8 @@
       "printings": [
         "pFNM",
         "ODY",
-        "VMA"
+        "VMA",
+        "EMA"
       ],
       "rarity": "Uncommon",
       "text": "Put a 6/6 green Wurm creature token onto the battlefield.\nFlashback {3}{G} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
@@ -13473,7 +13603,8 @@
       "power": "8",
       "printings": [
         "ONS",
-        "VMA"
+        "VMA",
+        "EMA"
       ],
       "rarity": "Rare",
       "subtypes": [
@@ -13694,37 +13825,38 @@
         "5ED",
         "MED",
         "CM1",
-        "VMA"
+        "VMA",
+        "EMA"
       ],
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2004-10-04",
-          "text": "If you have drawn cards prior to your draw step, they can be ones chosen to be put back using this effect. For example, a cantrip draw or an instant used during upkeep."
+          "date": "2016-06-08",
+          "text": "You always perform your normal draw before this ability. The normal draw occurs before anything can be placed on the stack during a player’s draw step."
         },
         {
-          "date": "2004-10-04",
-          "text": "Spells and abilities are resolved one at a time, so if you use multiple Sylvan Libraries in one stack, each will resolve in sequence. You do not get to draw all the cards at once then put them all back at once."
+          "date": "2016-06-08",
+          "text": "If you control other triggered abilities that allow you to draw cards during your draw step, you can choose to order Sylvan Library’s ability before or after those abilities. Triggered abilities controlled by other players will resolve before triggered abilities you control."
         },
         {
-          "date": "2004-10-04",
-          "text": "You can return zero, one, or two cards."
+          "date": "2016-06-08",
+          "text": "Any cards drawn prior to Sylvan Library’s ability resolving, including in your upkeep or in response to Sylvan Library’s triggered ability, can be chosen to be put back using this effect. Sylvan Library’s controller is responsible for keeping these cards distinguishable in hand, such as by keeping them separate from cards that began the turn in hand."
         },
         {
-          "date": "2004-10-04",
-          "text": "This will count as 2 draws for anything that affects “drawn cards\"."
+          "date": "2016-06-08",
+          "text": "If you control more than one Sylvan Library, the triggered ability of each will resolve in sequence. You don’t get to draw all the cards at once and then put them all back at once."
         },
         {
-          "date": "2004-10-04",
-          "text": "If you are going to draw cards due to triggered abilities during your draw step, your regular draw resolves first, but you can choose to order the Sylvan Library before or after any other draws."
+          "date": "2016-06-08",
+          "text": "You can put back zero, one, or two cards."
         },
         {
-          "date": "2007-09-16",
+          "date": "2016-06-08",
           "text": "If you choose to draw two cards, then replace one or more of those draws with some other effect, the rest of Sylvan Library’s ability still happens. If you’ve actually drawn only one card that turn, you must choose that card and either pay 4 life or put it on top of your library. If you haven’t actually drawn any cards that turn, the rest of the ability has no effect."
         },
         {
-          "date": "2013-04-15",
-          "text": "You always perform your normal draw before this ability because the normal draw occurs before anything is placed on the stack."
+          "date": "2016-06-08",
+          "text": "It’s not possible to take any actions between drawing the cards and choosing two cards. You can’t cast the cards you drew to avoid having two cards to choose."
         }
       ],
       "text": "At the beginning of your draw step, you may draw two additional cards. If you do, choose two cards in your hand drawn this turn. For each of those cards, pay 4 life or put the card on top of your library.",
@@ -14103,9 +14235,20 @@
         "INV",
         "DDE",
         "ARC",
-        "VMA"
+        "VMA",
+        "EMA"
       ],
       "rarity": "Uncommon",
+      "rulings": [
+        {
+          "date": "2016-06-08",
+          "text": "While Armadillo Cloak’s last ability is similar to lifelink, it isn’t lifelink—it’s a normal triggered ability. If a creature you control with lifelink wears an Armadillo Cloak and deals damage, first you’ll gain that much life for lifelink, and then Armadillo Cloak’s triggered ability is put onto the stack. This also means that multiple instances of Armadillo Cloak’s triggered ability do trigger separately."
+        },
+        {
+          "date": "2016-06-08",
+          "text": "If Armadillo Cloak enchants a creature you don’t control, you’ll gain life when it deals damage, as long as that damage hasn’t already caused you to lose the game."
+        }
+      ],
       "subtypes": [
         "Aura"
       ],
@@ -14155,7 +14298,8 @@
       "printings": [
         "PC2",
         "C13",
-        "VMA"
+        "VMA",
+        "EMA"
       ],
       "rarity": "Rare",
       "subtypes": [
@@ -14334,21 +14478,22 @@
       "power": "2",
       "printings": [
         "CNS",
-        "VMA"
+        "VMA",
+        "EMA"
       ],
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2014-05-29",
-          "text": "The ability exiles and returns all the targets during the combat damage step, after combat damage is dealt. You can’t target any creature that didn’t survive combat."
+          "date": "2016-06-08",
+          "text": "Brago’s last ability exiles and returns all the targets during the combat damage step, after combat damage is dealt. You can’t target any creature that didn’t survive combat."
         },
         {
-          "date": "2014-05-29",
-          "text": "You may exile Brago using its own ability."
+          "date": "2016-06-08",
+          "text": "You may exile and return Brago using its own ability."
         },
         {
-          "date": "2014-05-29",
-          "text": "If you exile an Aura this way, the player who will control it when it enters the battlefield chooses what it will enchant at that time. That player may choose any player or permanent that Aura could enchant. However, the Aura can’t enter the battlefield enchanting a permanent that enters the battlefield at the same time."
+          "date": "2016-06-08",
+          "text": "If you exile an Aura with Brago’s last ability, the Aura’s owner chooses what it will enchant as it comes back onto the battlefield. An Aura put onto the battlefield this way doesn’t target anything (so it could be attached to a permanent with shroud, for example), but the Aura’s enchant ability restricts what it can be attached to. The Aura can’t enter the battlefield enchanting a permanent that enters the battlefield at the same time. If the Aura can’t legally be attached to anything, it remains exiled."
         }
       ],
       "subtypes": [
@@ -14402,24 +14547,29 @@
       "originalType": "Planeswalker — Dack",
       "printings": [
         "CNS",
-        "VMA"
+        "VMA",
+        "EMA"
       ],
       "rarity": "Mythic Rare",
       "rulings": [
         {
-          "date": "2014-05-29",
+          "date": "2016-06-08",
+          "text": "The targeted player draws two cards and discards two cards all while Dack’s first ability is resolving. Nothing can happen between the two, and no player may choose to take actions."
+        },
+        {
+          "date": "2016-06-08",
           "text": "The ability of Dack’s emblem will resolve before the spell that caused it to trigger."
         },
         {
-          "date": "2014-05-29",
+          "date": "2016-06-08",
           "text": "The effect of Dack’s second ability and the effect of the emblem’s ability last indefinitely. You won’t lose control of the permanents if Dack leaves the battlefield."
         },
         {
-          "date": "2014-05-29",
-          "text": "If you gain control of a permanent and you leave the game, the control-changing effect will end. Unless there’s another control-changing effect affecting that permanent, it will return to its owner’s control."
+          "date": "2016-06-08",
+          "text": "If you gain control of a permanent, and you leave the game, the control-changing effect will end. Unless there’s another control-changing effect affecting that permanent, it will return to its owner’s control."
         },
         {
-          "date": "2014-05-29",
+          "date": "2016-06-08",
           "text": "If you gain control of a permanent another player owns, and that player leaves the game, the permanent will also leave the game."
         }
       ],
@@ -14815,7 +14965,8 @@
       "originalType": "Enchantment",
       "printings": [
         "APC",
-        "VMA"
+        "VMA",
+        "EMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
@@ -15916,9 +16067,16 @@
         "pMEI",
         "pJGP",
         "ME2",
-        "VMA"
+        "VMA",
+        "EMA"
       ],
       "rarity": "Mythic Rare",
+      "rulings": [
+        {
+          "date": "2016-06-08",
+          "text": "No player may choose to take actions between determining the result of the flip and damage being dealt if you lost the flip."
+        }
+      ],
       "text": "At the beginning of your upkeep, flip a coin. If you lose the flip, Mana Crypt deals 3 damage to you.\n{T}: Add {C}{C} to your mana pool.",
       "type": "Artifact",
       "types": [
@@ -16155,17 +16313,14 @@
         "V10",
         "C13",
         "VMA",
-        "C14"
+        "C14",
+        "EMA"
       ],
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2005-08-01",
-          "text": "Creatures can be regenerated although the Auras on the creatures will still be destroyed by the Disk."
-        },
-        {
-          "date": "2013-07-01",
-          "text": "The destruction of the Disk is not a sacrifice. It is destroyed as part of the resolution if it is still on the battlefield. If an effect gives Nevinyrral’s Disk indestructible or regenerates it, it won’t be destroyed by its ability."
+          "date": "2016-06-08",
+          "text": "You don’t sacrifice Nevinyrral’s Disk to activate its ability. It’s destroyed as part of the ability’s resolution if it’s still on the battlefield. If an effect gives Nevinyrral’s Disk indestructible or regenerates it, it stays on the battlefield."
         }
       ],
       "text": "Nevinyrral's Disk enters the battlefield tapped.\n{1}, {T}: Destroy all artifacts, creatures, and enchantments.",
@@ -16755,7 +16910,15 @@
           "legality": "Legal"
         },
         {
+          "format": "Freeform",
+          "legality": "Legal"
+        },
+        {
           "format": "Legacy",
+          "legality": "Legal"
+        },
+        {
+          "format": "Prismatic",
           "legality": "Legal"
         },
         {
@@ -17767,11 +17930,27 @@
           "legality": "Legal"
         },
         {
+          "format": "Freeform",
+          "legality": "Legal"
+        },
+        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Mirage Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Prismatic",
+          "legality": "Legal"
+        },
+        {
+          "format": "Singleton 100",
+          "legality": "Legal"
+        },
+        {
+          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -17794,7 +17973,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "Because the “search” requires you to find a card with certain characteristics, you don’t have to find the card if you don’t want to."
+          "text": "Because the \"search\" requires you to find a card with certain characteristics, you don't have to find the card if you don't want to."
         }
       ],
       "text": "Rocky Tar Pit enters the battlefield tapped.\n{T}, Sacrifice Rocky Tar Pit: Search your library for a Swamp or Mountain card and put it onto the battlefield. Then shuffle your library.",
@@ -18129,7 +18308,23 @@
           "legality": "Legal"
         },
         {
+          "format": "Freeform",
+          "legality": "Legal"
+        },
+        {
           "format": "Legacy",
+          "legality": "Banned"
+        },
+        {
+          "format": "Prismatic",
+          "legality": "Banned"
+        },
+        {
+          "format": "Singleton 100",
+          "legality": "Banned"
+        },
+        {
+          "format": "Tribal Wars Legacy",
           "legality": "Banned"
         },
         {

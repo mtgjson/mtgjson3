@@ -161,27 +161,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -240,27 +224,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -318,15 +286,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
           "legality": "Legal"
         },
         {
@@ -486,27 +446,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -763,10 +707,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Ice Age Block",
           "legality": "Legal"
         },
@@ -787,23 +727,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Tempest Block",
           "legality": "Legal"
         },
         {
           "format": "Time Spiral Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -882,27 +810,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -1013,27 +925,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -1086,10 +982,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -1099,18 +991,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -1249,13 +1129,26 @@
       "originalText": "Target creature loses all abilities and is a 0/1 creature until end of turn.",
       "originalType": "Instant",
       "printings": [
-        "USG"
+        "USG",
+        "EMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2007-02-01",
-          "text": "Removes all creature abilities. This includes mana abilities. Animated lands will also lose the ability to tap for mana."
+          "date": "2016-06-08",
+          "text": "Humble overwrites all previous effects that set the creature’s base power and toughness to specific values. Any power- or toughness-setting effects that start to apply after Humble resolves will overwrite this effect."
+        },
+        {
+          "date": "2016-06-08",
+          "text": "Effects that modify a creature’s power and/or toughness, such as the effect of Seal of Strength, will apply to the creature no matter when they started to take effect. The same is true for any counters that change its power and/or toughness and effects that switch its power and toughness."
+        },
+        {
+          "date": "2016-06-08",
+          "text": "If the affected creature gains an ability after Humble resolves, it will keep that ability."
+        },
+        {
+          "date": "2016-06-08",
+          "text": "Humble doesn’t counter abilities that have already triggered or been activated. In particular, casting this spell won’t stop a creature’s ability that says “At the beginning of your upkeep,” “When this creature enters the battlefield,” or similar from triggering."
         }
       ],
       "text": "Until end of turn, target creature loses all abilities and has base power and toughness 0/1.",
@@ -1283,27 +1176,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -1333,7 +1210,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "The power of the creature is checked on activation and on resolution. If the targeted creature's power is not 4 or greater on resolution, the ability is countered."
+          "text": "The power of the creature is checked on activation and on resolution. If the targeted creature’s power is not 4 or greater on resolution, the ability is countered."
         }
       ],
       "subtypes": [
@@ -1366,23 +1243,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -1404,13 +1265,14 @@
       "power": "2",
       "printings": [
         "USG",
-        "C15"
+        "C15",
+        "EMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "You can cast this if there are no enchantments in your graveyard. The enters the battlefield ability just doesn't do anything."
+          "text": "You can cast this if there are no enchantments in your graveyard. The enters the battlefield ability just doesn’t do anything."
         }
       ],
       "subtypes": [
@@ -1444,23 +1306,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -1870,7 +1716,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
+          "format": "Khans of Tarkir Block",
           "legality": "Legal"
         },
         {
@@ -1890,31 +1736,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Standard",
           "legality": "Legal"
         },
         {
-          "format": "Tarkir Block",
-          "legality": "Legal"
-        },
-        {
           "format": "Tempest Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Standard",
           "legality": "Legal"
         },
         {
@@ -1953,7 +1779,8 @@
         "M14",
         "DD3_DVD",
         "DTK",
-        "TPR"
+        "TPR",
+        "EMA"
       ],
       "rarity": "Common",
       "subtypes": [
@@ -1984,27 +1811,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -2032,7 +1843,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "You can attach this to an opponent's creature, and all damage done to you is instead done to their creature."
+          "text": "You can attach this to an opponent’s creature, and all damage done to you is instead done to their creature."
         },
         {
           "date": "2004-10-04",
@@ -2124,27 +1935,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -2312,27 +2107,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -2920,27 +2699,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -2996,27 +2759,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -3081,27 +2828,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -3133,19 +2864,19 @@
       "rulings": [
         {
           "date": "2008-10-01",
-          "text": "Whether or not the ability triggers depends on if the Avatar has the ability while in the graveyard. If it doesn't (thanks to Yixlid Jailer, for instance), then the ability won't trigger. It doesn't matter whether the Avatar had the ability in its previous zone (it will trigger even if it had been on the battlefield with Humility)."
+          "text": "Whether or not the ability triggers depends on if the Avatar has the ability while in the graveyard. If it doesn’t (thanks to Yixlid Jailer, for instance), then the ability won’t trigger. It doesn’t matter whether the Avatar had the ability in its previous zone (it will trigger even if it had been on the battlefield with Humility)."
         },
         {
           "date": "2012-07-01",
-          "text": "Serra Avatar's power and toughness are constantly updated as your life total changes."
+          "text": "Serra Avatar’s power and toughness are constantly updated as your life total changes."
         },
         {
           "date": "2012-07-01",
-          "text": "The ability that defines Serra Avatar's power and toughness works in all zones, not just the battlefield."
+          "text": "The ability that defines Serra Avatar’s power and toughness works in all zones, not just the battlefield."
         },
         {
           "date": "2012-07-01",
-          "text": "If Serra Avatar is no longer in your graveyard when its triggered ability resolves, you won't shuffle your library."
+          "text": "If Serra Avatar is no longer in your graveyard when its triggered ability resolves, you won’t shuffle your library."
         }
       ],
       "subtypes": [
@@ -3231,27 +2962,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -3808,27 +3523,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -3888,27 +3587,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -3936,7 +3619,7 @@
       "rulings": [
         {
           "date": "2007-07-15",
-          "text": "You can't put an Aura card from your hand onto the battlefield this way if that Aura can't legally enchant Academy Researchers. For example, you can't put an Aura with \"enchant land\" or \"enchant green creature\" onto the battlefield attached to Academy Researchers (unless Academy Researchers somehow turned into a land or a green creature before the ability resolved)."
+          "text": "You can’t put an Aura card from your hand onto the battlefield this way if that Aura can’t legally enchant Academy Researchers. For example, you can’t put an Aura with “enchant land” or “enchant green creature” onto the battlefield attached to Academy Researchers (unless Academy Researchers somehow turned into a land or a green creature before the ability resolved)."
         }
       ],
       "subtypes": [
@@ -4399,27 +4082,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -4479,27 +4146,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -4884,27 +4535,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -4935,7 +4570,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "The creatures and lands are only prevented from untapping during the targeted player's next untap step. They can still can untap during other player's untap steps."
+          "text": "The creatures and lands are only prevented from untapping during the targeted player’s next untap step. They can still can untap during other player’s untap steps."
         },
         {
           "date": "2009-10-01",
@@ -4966,27 +4601,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -5017,7 +4636,7 @@
       "rulings": [
         {
           "date": "2012-07-01",
-          "text": "If Fog Bank blocks a creature with trample, that creature's controller must assign 2 damage to Fog Bank (assuming it's blocking no other creatures, there was no damage marked on it, and nothing has changed its toughness). The remainder can be assigned to the defending player or planeswalker."
+          "text": "If Fog Bank blocks a creature with trample, that creature’s controller must assign 2 damage to Fog Bank (assuming it’s blocking no other creatures, there was no damage marked on it, and nothing has changed its toughness). The remainder can be assigned to the defending player or planeswalker."
         }
       ],
       "subtypes": [
@@ -5228,27 +4847,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -5298,27 +4901,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -5372,27 +4959,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -5420,7 +4991,7 @@
       "rulings": [
         {
           "date": "2005-08-01",
-          "text": "Imaginary Pet's ability triggers only if you have cards in your hand as your upkeep begins, and the ability checks again as it resolves. If your hand is empty at both those times, Imaginary Pet stays on the battlefield."
+          "text": "Imaginary Pet’s ability triggers only if you have cards in your hand as your upkeep begins, and the ability checks again as it resolves. If your hand is empty at both those times, Imaginary Pet stays on the battlefield."
         }
       ],
       "subtypes": [
@@ -5611,15 +5182,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
           "legality": "Legal"
         },
         {
@@ -5817,17 +5380,14 @@
       "power": "2",
       "printings": [
         "USG",
-        "PC2"
+        "PC2",
+        "EMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2004-10-04",
-          "text": "You can untap another player's lands."
-        },
-        {
-          "date": "2004-10-04",
-          "text": "This does not target the lands."
+          "date": "2016-06-08",
+          "text": "You choose which lands to untap as the triggered ability resolves. They aren’t targeted, and they don’t have to be lands that you control."
         }
       ],
       "subtypes": [
@@ -5858,10 +5418,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Ice Age Block",
           "legality": "Legal"
         },
@@ -5874,19 +5430,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Tempest Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -5932,7 +5476,7 @@
         },
         {
           "date": "2004-10-04",
-          "text": "When this spell resolves, you either pay X mana or let your lands become tapped. The lands that become tapped are not \"tapped for mana\". If you choose to pay, you may pay the X mana using whatever mana abilities you want to use."
+          "text": "When this spell resolves, you either pay X mana or let your lands become tapped. The lands that become tapped are not “tapped for mana\". If you choose to pay, you may pay the X mana using whatever mana abilities you want to use."
         },
         {
           "date": "2010-03-01",
@@ -6072,15 +5616,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
           "legality": "Legal"
         },
         {
@@ -6135,27 +5671,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -6185,19 +5705,19 @@
       "rulings": [
         {
           "date": "2012-07-01",
-          "text": "Rewind targets only a spell. It doesn't target any lands. The lands are chosen on resolution. It doesn't matter who controls the lands."
+          "text": "Rewind targets only a spell. It doesn’t target any lands. The lands are chosen on resolution. It doesn’t matter who controls the lands."
         },
         {
           "date": "2012-07-01",
-          "text": "When Rewind resolves, you choose up to four lands and those lands untap once. You can't choose one land and have it untap four times, for example."
+          "text": "When Rewind resolves, you choose up to four lands and those lands untap once. You can’t choose one land and have it untap four times, for example."
         },
         {
           "date": "2012-07-01",
-          "text": "If the spell is an illegal target when Rewind tries to resolve, perhaps because it was countered by another spell or ability, Rewind will be countered and none of its effects will happen. You won't untap any lands."
+          "text": "If the spell is an illegal target when Rewind tries to resolve, perhaps because it was countered by another spell or ability, Rewind will be countered and none of its effects will happen. You won’t untap any lands."
         },
         {
           "date": "2012-07-01",
-          "text": "If Rewind resolves but the target spell can't be countered, you'll still untap lands."
+          "text": "If Rewind resolves but the target spell can’t be countered, you’ll still untap lands."
         }
       ],
       "text": "Counter target spell. Untap up to four lands.",
@@ -6584,23 +6104,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -6706,27 +6210,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -6909,15 +6397,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
           "legality": "Legal"
         },
         {
@@ -7304,24 +6784,8 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Banned"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
-          "legality": "Legal"
         },
         {
           "format": "Urza Block",
@@ -7607,10 +7071,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Kamigawa Block",
           "legality": "Legal"
         },
@@ -7620,18 +7080,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -7811,27 +7259,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -8118,10 +7550,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -8131,18 +7559,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -8186,7 +7602,7 @@
         },
         {
           "date": "2010-08-15",
-          "text": "The amount of damage dealt to a creature is not bounded by its toughness, and the amount of damage dealt to a player is not bounded by that player's life total. For example, if Corrupt deals 6 damage to a 2/2 creature, you'll gain 6 life."
+          "text": "The amount of damage dealt to a creature is not bounded by its toughness, and the amount of damage dealt to a player is not bounded by that player’s life total. For example, if Corrupt deals 6 damage to a 2/2 creature, you’ll gain 6 life."
         },
         {
           "date": "2013-07-01",
@@ -8271,23 +7687,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -8343,10 +7743,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Ice Age Block",
           "legality": "Legal"
         },
@@ -8363,19 +7759,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Tempest Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -8570,23 +7954,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -8614,7 +7982,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "If the creature is on the battlefield and is returned to its owner's hand or is exiled, this card loses track of the creature and has no further effects in the future."
+          "text": "If the creature is on the battlefield and is returned to its owner’s hand or is exiled, this card loses track of the creature and has no further effects in the future."
         }
       ],
       "text": "When Diabolic Servitude enters the battlefield, return target creature card from your graveyard to the battlefield.\nWhen the creature put onto the battlefield with Diabolic Servitude dies, exile it and return Diabolic Servitude to its owner's hand.\nWhen Diabolic Servitude leaves the battlefield, exile the creature put onto the battlefield with Diabolic Servitude.",
@@ -8695,7 +8063,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
+          "format": "Khans of Tarkir Block",
           "legality": "Legal"
         },
         {
@@ -8707,27 +8075,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Standard",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tarkir Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Standard",
           "legality": "Legal"
         },
         {
@@ -8760,7 +8108,8 @@
         "M14",
         "MD1",
         "DD3_DVD",
-        "DTK"
+        "DTK",
+        "EMA"
       ],
       "rarity": "Common",
       "text": "Target opponent reveals his or her hand. You choose a noncreature, nonland card from it. That player discards that card.",
@@ -8788,27 +8137,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -8913,15 +8246,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
           "legality": "Legal"
         },
         {
@@ -9029,27 +8354,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -9180,27 +8489,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -9258,15 +8551,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
           "legality": "Legal"
         },
         {
@@ -9301,7 +8586,7 @@
         },
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn’t matter how long the permanent has been a creature."
         }
       ],
       "text": "Pay half your life, rounded up: Lurking Evil becomes a 4/4 Horror creature with flying.",
@@ -9381,27 +8666,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -9428,7 +8697,7 @@
       "rulings": [
         {
           "date": "2007-07-15",
-          "text": "It doesn't matter who controlled the creature cards when they were on the battlefield. As long as they were put into your graveyard, you get to put them into your hand."
+          "text": "It doesn’t matter who controlled the creature cards when they were on the battlefield. As long as they were put into your graveyard, you get to put them into your hand."
         },
         {
           "date": "2007-07-15",
@@ -9642,27 +8911,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -10360,15 +9613,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
           "legality": "Legal"
         },
         {
@@ -10486,27 +9731,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -10534,7 +9763,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "This card is a bit weird. When it enters the battlefield under your control, you give control of it to an opponent. After that it damages them each turn because the \"you\" on the card means its controller."
+          "text": "This card is a bit weird. When it enters the battlefield under your control, you give control of it to an opponent. After that it damages them each turn because the “you” on the card means its controller."
         }
       ],
       "subtypes": [
@@ -10703,23 +9932,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -10936,23 +10149,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -10975,21 +10172,30 @@
         "USG",
         "CNS",
         "C14",
-        "C15"
+        "C15",
+        "EMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2004-10-04",
-          "text": "This card can be used to put both parts of the B.F.M. onto the battlefield at once."
+          "date": "2016-06-08",
+          "text": "You must choose two targets. You can’t cast Victimize targeting only one creature card."
         },
         {
-          "date": "2004-10-04",
-          "text": "If one of the target creatures is not there on resolution, the other is still affected. If both creatures are gone, then nothing happens."
+          "date": "2016-06-08",
+          "text": "The creature you sacrifice isn’t chosen until Victimize resolves. You can’t return the creature you sacrifice because it will still be on the battlefield at the time targets are chosen."
         },
         {
-          "date": "2010-03-01",
-          "text": "You can't bring back the creature you sacrificed because targets are chosen as the spell is cast, but the creature is not sacrificed until the spell resolves."
+          "date": "2016-06-08",
+          "text": "As Victimize resolves, you must sacrifice a creature if able. You can’t change your mind and choose not to sacrifice anything."
+        },
+        {
+          "date": "2016-06-08",
+          "text": "If one of the targeted creature cards is an illegal target (for instance, because it has left your graveyard before Victimize resolves), you’ll still sacrifice a creature and put the other card onto the battlefield. If both are illegal targets, Victimize will be countered. You won’t sacrifice a creature."
+        },
+        {
+          "date": "2016-06-08",
+          "text": "Victimize can be used to put both parts of the B.F.M. onto the battlefield at once."
         }
       ],
       "text": "Choose two target creature cards in your graveyard. Sacrifice a creature. If you do, return the chosen cards to the battlefield tapped.",
@@ -11016,23 +10222,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -11087,27 +10277,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -11285,16 +10459,8 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Banned"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
         },
         {
           "format": "Urza Block",
@@ -11330,7 +10496,7 @@
         },
         {
           "date": "2004-10-04",
-          "text": "If an effect asks you to discard a card, you can't \"discard\" something that is in your graveyard. Those cards are not in your hand. Thus, Cycling abilities of cards in the graveyard can't be activated."
+          "text": "If an effect asks you to discard a card, you can’t “discard” something that is in your graveyard. Those cards are not in your hand. Thus, Cycling abilities of cards in the graveyard can’t be activated."
         },
         {
           "date": "2004-10-04",
@@ -11338,11 +10504,11 @@
         },
         {
           "date": "2004-10-04",
-          "text": "If you play a card using Yawgmoth's Will and something triggers only when \"cast from your hand\", that something will not trigger. Such things trigger based on where the card came from."
+          "text": "If you play a card using Yawgmoth’s Will and something triggers only when “cast from your hand\", that something will not trigger. Such things trigger based on where the card came from."
         },
         {
           "date": "2004-10-04",
-          "text": "To \"play a card\" is to either cast a spell or to put a land onto the battlefield using the main phase special action."
+          "text": "To “play a card” is to either cast a spell or to put a land onto the battlefield using the main phase special action."
         },
         {
           "date": "2006-10-15",
@@ -11498,10 +10664,6 @@
         },
         {
           "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -11809,23 +10971,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -11849,7 +10995,8 @@
         "USG",
         "DDL",
         "C13",
-        "VMA"
+        "VMA",
+        "EMA"
       ],
       "rarity": "Rare",
       "rulings": [
@@ -12132,15 +11279,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
           "legality": "Legal"
         },
         {
@@ -12341,15 +11480,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
           "legality": "Legal"
         },
         {
@@ -12370,13 +11501,18 @@
       "originalType": "Sorcery",
       "printings": [
         "USG",
-        "VMA"
+        "VMA",
+        "EMA"
       ],
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2004-10-04",
+          "date": "2016-06-08",
           "text": "You might end up discarding the card you searched for."
+        },
+        {
+          "date": "2016-06-08",
+          "text": "You put the card into your hand and discard a card at random all while Gamble is resolving. Nothing can happen between the two, and no player may choose to take actions."
         }
       ],
       "text": "Search your library for a card, put that card into your hand, discard a card at random, then shuffle your library.",
@@ -12404,23 +11540,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -12474,23 +11594,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -12519,7 +11623,7 @@
       "rulings": [
         {
           "date": "2008-08-01",
-          "text": "A Goblin permanent card is an artifact, creature, land, and/or enchantment card with the creature type \"Goblin\". Usually such cards will be creatures in addition to any other types, but they may be tribal instead. For example, you could put Boggart Shenanigans onto the battlefield with this effect."
+          "text": "A Goblin permanent card is an artifact, creature, land, and/or enchantment card with the creature type “Goblin\". Usually such cards will be creatures in addition to any other types, but they may be tribal instead. For example, you could put Boggart Shenanigans onto the battlefield with this effect."
         }
       ],
       "subtypes": [
@@ -12551,23 +11655,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -12600,11 +11688,11 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "Because the \"search\" requires you to find a card with certain characteristics, you don't have to find the card if you don't want to."
+          "text": "Because the “search” requires you to find a card with certain characteristics, you don’t have to find the card if you don’t want to."
         },
         {
           "date": "2008-04-01",
-          "text": "You can search for any card with the creature type Goblin, including Creature or Tribal cards. Older cards of type \"Summon Goblin\" and \"Summon Goblins\" also count. You can't search for cards that have Goblin in the name but don't have the creature type Goblin."
+          "text": "You can search for any card with the creature type Goblin, including Creature or Tribal cards. Older cards of type “Summon Goblin” and “Summon Goblins” also count. You can’t search for cards that have Goblin in the name but don’t have the creature type Goblin."
         }
       ],
       "subtypes": [
@@ -12692,15 +11780,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
           "legality": "Legal"
         },
         {
@@ -12754,27 +11834,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -13065,27 +12129,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -13263,15 +12311,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
           "legality": "Legal"
         },
         {
@@ -13374,27 +12414,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -13610,27 +12634,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -13839,27 +12847,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -13966,27 +12958,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -14015,11 +12991,11 @@
       "rulings": [
         {
           "date": "2010-08-15",
-          "text": "Only Shiv's Embrace's controller (who is not necessarily the enchanted creature's controller) can activate its activated ability."
+          "text": "Only Shiv’s Embrace’s controller (who is not necessarily the enchanted creature’s controller) can activate its activated ability."
         },
         {
           "date": "2010-08-15",
-          "text": "When Shiv's Embrace's activated ability resolves, the creature Shiv's Embrace is enchanting at that time will get +1/+0 (regardless of what creature Shiv's Embrace was enchanting when the ability was activated). If Shiv's Embrace has left the battlefield by then, the creature it was enchanting at the time it left the battlefield will get +1/+0."
+          "text": "When Shiv’s Embrace’s activated ability resolves, the creature Shiv’s Embrace is enchanting at that time will get +1/+0 (regardless of what creature Shiv’s Embrace was enchanting when the ability was activated). If Shiv’s Embrace has left the battlefield by then, the creature it was enchanting at the time it left the battlefield will get +1/+0."
         }
       ],
       "subtypes": [
@@ -14050,27 +13026,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -14177,23 +13137,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -14270,17 +13214,22 @@
       "originalType": "Enchantment",
       "printings": [
         "pJGP",
-        "USG"
+        "USG",
+        "EMA"
       ],
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2004-10-04",
-          "text": "You only sacrifice the creature if you still control it at end of turn. If that creature has left the battlefield and come back, you don't sacrifice it."
-        },
-        {
           "date": "2007-05-01",
           "text": "Putting the card onto the battlefield is optional. When the ability resolves, you can choose not to."
+        },
+        {
+          "date": "2016-06-08",
+          "text": "You only sacrifice the creature if you still control it at end of turn. If that creature has left the battlefield, even if it came back, you don’t sacrifice it. Likewise, if an opponent has gained control of it, it won’t be sacrificed and will remain on the battlefield indefinitely."
+        },
+        {
+          "date": "2016-06-08",
+          "text": "Putting a card onto the battlefield is optional. When the ability resolves, you can choose not to, even if you have one in your hand."
         }
       ],
       "text": "{R}: You may put a creature card from your hand onto the battlefield. That creature gains haste. Sacrifice the creature at the beginning of the next end step.",
@@ -14415,27 +13364,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -14598,27 +13531,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -14830,27 +13747,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -14901,27 +13802,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -14956,11 +13841,11 @@
         },
         {
           "date": "2004-10-04",
-          "text": "If no card of the chosen type is found before your library empties, you don't get a card, but you do get to order all the cards in your library any way you choose."
+          "text": "If no card of the chosen type is found before your library empties, you don’t get a card, but you do get to order all the cards in your library any way you choose."
         },
         {
           "date": "2007-07-15",
-          "text": "If your library is empty, Abundance can prevent you from losing the game for being unable to draw a card. If an effect or turn-based action would cause you to draw a card, you can replace that draw with Abundance's replacement effect. (It doesn't matter that you'd be unable to actually draw a card.) Since Abundance's effect has you put a card into your hand instead of drawing a card, you'll never be forced to draw a card with an empty library."
+          "text": "If your library is empty, Abundance can prevent you from losing the game for being unable to draw a card. If an effect or turn-based action would cause you to draw a card, you can replace that draw with Abundance’s replacement effect. (It doesn’t matter that you’d be unable to actually draw a card.) Since Abundance’s effect has you put a card into your hand instead of drawing a card, you’ll never be forced to draw a card with an empty library."
         }
       ],
       "text": "If you would draw a card, you may instead choose land or nonland and reveal cards from the top of your library until you reveal a card of the chosen kind. Put that card into your hand and put all other cards revealed this way on the bottom of your library in any order.",
@@ -15044,18 +13929,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
-          "legality": "Legal"
-        },
-        {
           "format": "Urza Block",
           "legality": "Legal"
         },
@@ -15108,27 +13981,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -15270,13 +14127,22 @@
       "power": "0",
       "printings": [
         "pJGP",
-        "USG"
+        "USG",
+        "EMA"
       ],
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2005-08-01",
-          "text": "The ability triggers when you announce an Enchantment spell."
+          "date": "2016-06-08",
+          "text": "Argothian Enchantress’s last ability will resolve before the spell that caused it to trigger."
+        },
+        {
+          "date": "2016-06-08",
+          "text": "If the enchantment spell is countered, Argothian Enchantress’s last ability still resolves and causes you to draw a card."
+        },
+        {
+          "date": "2016-06-08",
+          "text": "Enchantments put onto the battlefield without being cast won’t cause Argothian Enchantress’s last ability to trigger."
         }
       ],
       "subtypes": [
@@ -16058,27 +14924,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -16255,27 +15105,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -16521,15 +15355,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
           "legality": "Legal"
         },
         {
@@ -16636,27 +15462,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -16688,7 +15498,7 @@
         },
         {
           "date": "2005-08-01",
-          "text": "You draw cards equal to the creature's power when you sacrificed it. This includes any bonuses from effects like Giant Growth."
+          "text": "You draw cards equal to the creature’s power when you sacrificed it. This includes any bonuses from effects like Giant Growth."
         }
       ],
       "text": "Sacrifice a creature: Draw cards equal to the sacrificed creature's power, then discard three cards.",
@@ -17403,23 +16213,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -17646,27 +16440,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -17693,7 +16471,7 @@
       "rulings": [
         {
           "date": "2008-04-01",
-          "text": "This card now has Enchant Swamp, which works exactly like any other Enchant ability. This means it can only be cast targeting a Swamp, and it will be put into its owner's graveyard if the permanent it's attached to ever stops being a Swamp."
+          "text": "This card now has Enchant Swamp, which works exactly like any other Enchant ability. This means it can only be cast targeting a Swamp, and it will be put into its owner’s graveyard if the permanent it’s attached to ever stops being a Swamp."
         }
       ],
       "subtypes": [
@@ -17821,23 +16599,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -18084,27 +16846,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -18213,23 +16959,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -18431,10 +17161,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -18444,18 +17170,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -18489,7 +17203,7 @@
         },
         {
           "date": "2011-01-25",
-          "text": "You get the mana whether you want it or not. If you don't spend it, it will disappear at the end of the current step (or phase)."
+          "text": "You get the mana whether you want it or not. If you don’t spend it, it will disappear at the end of the current step (or phase)."
         }
       ],
       "subtypes": [
@@ -18516,27 +17230,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -18563,11 +17261,11 @@
       "rulings": [
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn’t matter how long the permanent has been a creature."
         },
         {
           "date": "2009-10-01",
-          "text": "If Chimeric Staff is already an artifact creature when you activate its ability, Chimeric Staff stays an artifact creature but the ability resets its creature types. You always apply the effect from this card before counters or other effects that modify power and toughness. For example, if you pay {3} to make it a 3/3, then someone gives it -1/-1, it will be a 2/2. If you then activate the ability with {4}, you will apply the \"4/4\" effect before the -1/-1 effect, so the end result will be a 3/3. Damage that was dealt to the creature stays on it."
+          "text": "If Chimeric Staff is already an artifact creature when you activate its ability, Chimeric Staff stays an artifact creature but the ability resets its creature types. You always apply the effect from this card before counters or other effects that modify power and toughness. For example, if you pay {3} to make it a 3/3, then someone gives it -1/-1, it will be a 2/2. If you then activate the ability with {4}, you will apply the “4/4” effect before the -1/-1 effect, so the end result will be a 3/3. Damage that was dealt to the creature stays on it."
         }
       ],
       "text": "{X}: Chimeric Staff becomes an X/X Construct artifact creature until end of turn.",
@@ -18588,27 +17286,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -18661,10 +17343,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -18673,19 +17351,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Time Spiral Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -18786,23 +17452,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -18845,10 +17495,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -18858,18 +17504,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -19102,23 +17736,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -19153,7 +17771,7 @@
         },
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn’t matter how long the permanent has been a creature."
         }
       ],
       "subtypes": [
@@ -19717,15 +18335,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
           "legality": "Legal"
         },
         {
@@ -19943,27 +18553,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -20016,27 +18610,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -20237,23 +18815,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -20276,7 +18838,8 @@
         "USG",
         "DDE",
         "C14",
-        "C15"
+        "C15",
+        "EMA"
       ],
       "rarity": "Uncommon",
       "text": "Worn Powerstone enters the battlefield tapped.\n{T}: Add {C}{C} to your mana pool.",
@@ -20296,23 +18859,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -20361,23 +18908,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -20524,23 +19055,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -20596,23 +19111,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -20763,23 +19262,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -20835,23 +19318,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -20951,16 +19418,8 @@
           "legality": "Banned"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Banned"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
         },
         {
           "format": "Urza Block",
