@@ -8,14 +8,16 @@ var path = require('path');
 var tiptoe = require('tiptoe');
 var async = require('async');
 
-shared.getSetsToDo().serialForEach(processSet, function(err) {
-	if(err) {
-		base.error(err);
-		process.exit(1);
-	}
+if (require.main == module) {
+	shared.getSetsToDo().serialForEach(processSet, function(err) {
+		if(err) {
+			base.error(err);
+			process.exit(1);
+		}
 
-	process.exit(0);
-});
+		process.exit(0);
+	});
+}
 
 function processSet(code, cb) {
 	base.info("Processing set: %s", code);
@@ -88,3 +90,5 @@ function addRulingsToSetCards(setCode, targetCardNames, cardRulingsByName, cb) {
 
 	shared.processSet(setCode, processFunction, cb);
 }
+
+module.exports = processSet;

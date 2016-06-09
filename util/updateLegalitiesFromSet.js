@@ -8,14 +8,16 @@ var base = require("xbase"),
 	path = require("path"),
 	tiptoe = require("tiptoe");
 
-shared.getSetsToDo().serialForEach(processSet, function(err) {
-	if(err) {
-		base.error(err);
-		process.exit(1);
-	}
+if (require.main == module) {
+	shared.getSetsToDo().serialForEach(processSet, function(err) {
+		if(err) {
+			base.error(err);
+			process.exit(1);
+		}
 
-	process.exit(0);
-});
+		process.exit(0);
+	});
+}
 
 function processSet(code, cb) {
 	base.info("Processing set: %s", code);
@@ -92,3 +94,5 @@ function updateLegalitiesForSetCards(setCode, targetCardNames, cardLegalitiesByN
 
 	shared.processSet(setCode, processFunction, cb);
 }
+
+module.exports = processSet;
