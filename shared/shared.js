@@ -651,8 +651,11 @@ exports.getURLAsDoc = function(targetURL, cb, retryCount) {
 			});
 		}
 	).done(function(err, html) {
-		if (err)
-			throw (err);
+		if (err) {
+			console.error('Error downloading %s', targetURL);
+			exports.cache.delete(targetURL).done(function() { throw(err); });
+			return;
+		}
 		setImmediate(cb, null, domino.createWindow(html).document);
 	});
 };
