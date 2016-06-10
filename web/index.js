@@ -394,7 +394,7 @@ tiptoe(
 		fs.readdir(
 			jsonRoot,
 			function(err, files) {
-				async.each(
+				async.eachSeries(
 					files,
 					function(fn, cb) {
 						tiptoe(
