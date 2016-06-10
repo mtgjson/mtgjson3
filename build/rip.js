@@ -574,7 +574,8 @@ var addForeignNamesToCard = function (card, cb) {
 
 	tiptoe(
 		function fetchLanguagePage() {
-			shared.getURLAsDoc(shared.buildMultiverseLanguagesURL(card.multiverseid), this);
+			for (var page = 0; page < 4; ++page)
+				shared.getURLAsDoc(shared.buildMultiverseLanguagesURL(card.multiverseid, page), this);
 		},
 		function processLanguages(doc) {
 			delete card.foreignNames;
