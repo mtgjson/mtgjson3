@@ -574,38 +574,37 @@ var addForeignNamesToCard = function (card, cb) {
 
 	tiptoe(
 		function fetchLanguagePage() {
-			for (var page = 0; page < 4; ++page)
-				shared.getURLAsDoc(shared.buildMultiverseLanguagesURL(card.multiverseid, page), this);
-		},
-		function processLanguages(doc) {
-			delete card.foreignNames;
-			card.foreignNames = [];
+			for (var page = 0; page < 4; ++page) {
+				shared.getURLAsDoc(shared.buildMultiverseLanguagesURL(card.multiverseid, page), function(err, doc) {
+					if (!card.foreignNames)
+						card.foreignNames = [];
 
-			Array.toArray(doc.querySelectorAll("table.cardList tr.cardItem")).forEach(function (cardRow) {
-				var language = getTextContent(cardRow.querySelector("td:nth-child(2)")).trim();
-				var foreignCardName = getTextContent(cardRow.querySelector("td:nth-child(1) a")).innerTrim().trim();
-				if (foreignCardName.startsWith("XX"))
-					foreignCardName = foreignCardName.substring(2);
+					Array.toArray(doc.querySelectorAll("table.cardList tr.cardItem")).forEach(function (cardRow) {
+						var language = getTextContent(cardRow.querySelector("td:nth-child(2)")).trim();
+						var foreignCardName = getTextContent(cardRow.querySelector("td:nth-child(1) a")).innerTrim().trim();
+						if (foreignCardName.startsWith("XX"))
+							foreignCardName = foreignCardName.substring(2);
 
-				if (foreignCardName.contains("//")) {
-					if (!card.hasOwnProperty("names")) {
-						base.error("Card [%s] (%d) has foreignCardName [%s] but has no 'names' property.", card.name, card.multiverseid, foreignCardName);
-						process.exit(0);
-					}
+						if (foreignCardName.contains("//")) {
+							if (!card.hasOwnProperty("names")) {
+								base.error("Card [%s] (%d) has foreignCardName [%s] but has no 'names' property.", card.name, card.multiverseid, foreignCardName);
+								process.exit(0);
+							}
 
-					foreignCardName = foreignCardName.split("//").map(function (part) { return part.trim(); })[card.names.indexOf(card.name)];
-				}
+							foreignCardName = foreignCardName.split("//").map(function (part) { return part.trim(); })[card.names.indexOf(card.name)];
+						}
 
-				if (language && foreignCardName) {
-					var languageHref = cardRow.querySelector("td:nth-child(1) a").getAttribute("href");
-					var foreignMultiverseid = querystring.parse(languageHref.substring(languageHref.indexOf("?")+1)).multiverseid;
-					card.foreignNames.push({language : language, name : foreignCardName, multiverseid : +foreignMultiverseid});
-				}
-			});
+						if (language && foreignCardName) {
+							var languageHref = cardRow.querySelector("td:nth-child(1) a").getAttribute("href");
+							var foreignMultiverseid = querystring.parse(languageHref.substring(languageHref.indexOf("?")+1)).multiverseid;
+							card.foreignNames.push({language : language, name : foreignCardName, multiverseid : +foreignMultiverseid});
+						}
+					});
 
-			if (card.foreignNames.length === 0)
-				delete card.foreignNames;
-
+					if (card.foreignNames.length === 0)
+						delete card.foreignNames;
+				});
+			}
 			this();
 		},
 		function finish(err) {
