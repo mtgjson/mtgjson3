@@ -83,12 +83,12 @@ function buildLang(lang, setCode, callback) {
 		if (!setData.translations) {
 			var msg = "Set " + setCode + " does not have any translations.";
 			console.error(msg);
-			return(setImmediate(function() { callback(msg); }));
+			return(setImmediate(callback, msg));
 		}
 		if (!setData.translations[lang]) {
 			var msg = "Set " + setCode + " does not have the requested translation: '" + lang + "'.";
 			console.error(msg);
-			return(setImmediate(function() { callback(msg); }));
+			return(setImmediate(callback, msg));
 		}
 
 		retrieve(lang, setData, callback);
