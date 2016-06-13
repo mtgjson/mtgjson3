@@ -12,6 +12,7 @@ var async = require('async');
 
 var langRef = {
 	"ch": "Chinese Simplified",		// TODO: Fixme.
+	"cn": "Chinese Simplified",		// TODO: Fixme.
 	"ch-s": "Chinese Traditional",	// TODO: Fixme.
 	"fr": "French",
 	"de": "German",
