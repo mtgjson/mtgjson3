@@ -24,16 +24,17 @@ var langRef = {
 	"es": "Spanish",
 };
 
-if (process.argv.length < 4) {
-	base.error("Usage: node %s <2-digit-lang|all> <set codes>\n- Only one language at a time\n- The set must already be retrieved by 'buildSet'", process.argv[1]);
-	process.exit(1);
-}
-
-var langCode = process.argv[2].toLowerCase();
-
-var setsToDo = shared.getSetsToDo(3);
-
 if (require.main == module) {
+	// Only fetch automatically if we're called directly.
+	if (process.argv.length < 4) {
+		base.error("Usage: node %s <2-digit-lang|all> <set codes>\n- Only one language at a time\n- The set must already be retrieved by 'buildSet'", process.argv[1]);
+		process.exit(1);
+	}
+
+	var langCode = process.argv[2].toLowerCase();
+
+	var setsToDo = shared.getSetsToDo(3);
+
 	async.eachSeries(
 		setsToDo,
 		function(code, subcb) {
