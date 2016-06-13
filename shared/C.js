@@ -3080,12 +3080,16 @@ var base = require("xbase");
 			}
 		},
 		{
-			name : "Eternal Masters",
-			code : "EMA",
-			releaseDate : "2016-06-10",
-			border : "black",
-			type : "reprint",
-			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"]
+			name : 'Eternal Masters',
+			code : 'EMA',
+			releaseDate : '2016-06-10',
+			border : 'black',
+			type : 'reprint',
+			booster : [ [ 'rare', 'mythic rare' ], 'uncommon', 'uncommon', 'uncommon', 'common', 'common', 'common', 'common', 'common', 'common', 'common', 'common', 'common', 'common', [ 'foil mythic rare', 'foil rare', 'foil uncommon', 'foil common' ] ],
+			translations: {
+				jp: 'エターナルマスターズ',
+				cn: '经典大师'
+			}
 		}
 	];
 
