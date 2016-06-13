@@ -1,16 +1,18 @@
 "use strict";
 
-var base = require("xbase"),
-	C = require("C"),
-	fs = require("fs"),
-	path = require("path"),
-	shared = require("shared"),
-	tiptoe = require("tiptoe"),
-	rip = require("./rip.js"),
-	urlUtil = require("xutil").url;
+var fs = require('fs');
+var path = require('path');
+var base = require('xbase');
+var C = require('C');
+var shared = require('shared');
+var tiptoe = require('tiptoe');
+var rip = require('./rip.js');
+var urlUtil = require('xutil').url;
+var async = require('async');
 
 var langRef = {
 	"ch": "Chinese Simplified",		// TODO: Fixme.
+	"cn": "Chinese Simplified",		// TODO: Fixme.
 	"ch-s": "Chinese Traditional",	// TODO: Fixme.
 	"fr": "French",
 	"de": "German",
@@ -22,56 +24,62 @@ var langRef = {
 	"es": "Spanish",
 };
 
-if(process.argv.length<4) {
+if (process.argv.length < 4) {
 	base.error("Usage: node %s <2-digit-lang|all> <set codes>\n- Only one language at a time\n- The set must already be retrieved by 'buildSet'", process.argv[1]);
 	process.exit(1);
 }
 
 var langCode = process.argv[2].toLowerCase();
 
-shared.getSetsToDo(3).serialForEach(
-	function(code, subcb) {
-		var setInfo = null;
-		C.SETS.map(function(x) { if (x.code == code) setInfo = x; });
+var setsToDo = shared.getSetsToDo(3);
 
-		if (setInfo == null) {
-			console.error("Invalid set: %s", code);
-			return(setImmediate(subcb));
+if (require.main == module) {
+	async.eachSeries(
+		setsToDo,
+		function(code, subcb) {
+			var setInfo = null;
+			C.SETS.map(function(x) { if (x.code == code) setInfo = x; });
+
+			if (setInfo == null) {
+				console.error("Invalid set: %s", code);
+				return(setImmediate(subcb));
+			}
+
+			var langs = [];
+
+			if (!setInfo.translations) {
+				console.error("No translations for set: %s", code);
+				return(setImmediate(subcb));
+			}
+
+			if (langCode === 'all') {
+				langs = Object.keys(setInfo.translations);
+			}
+			else {
+				langs = [ langCode ];
+			}
+
+			async.eachSeries(
+				langs,
+				function (cLang, codecb) {
+					buildLang(cLang, code, codecb);
+				},
+				subcb
+			);
+		},
+		function(err) {
+			if (err) {
+				console.error(err);
+				throw(err);
+			}
+
+			console.log('done.');
 		}
-
-		var langs = [];
-
-		if (!setInfo.translations) {
-			console.error("No translations for set: %s", code);
-			return(setImmediate(subcb));
-		}
-
-		if (langCode === 'all') {
-			langs = Object.keys(setInfo.translations);
-		}
-		else {
-			langs = [ langCode ];
-		}
-
-		langs.serialForEach(
-			function (cLang, codecb) {
-				buildLang(cLang, code, codecb);
-			},
-			subcb
-		);
-	},
-	function(err) {
-		if (err) {
-			console.error(err);
-			throw(err);
-		}
-
-		console.log('done.');
-	}
-);
+	);
+}
 
 function buildLang(lang, setCode, callback) {
-	console.log(setCode);
+	console.log('%s:%s', setCode, lang);
 
 	fs.readFile(path.join(__dirname, '..', 'json', setCode.toUpperCase() + '.json'), 'utf8', function(err, data) {
 		if (err) {
@@ -83,12 +91,12 @@ function buildLang(lang, setCode, callback) {
 		if (!setData.translations) {
 			var msg = "Set " + setCode + " does not have any translations.";
 			console.error(msg);
-			return(setImmediate(function() { callback(msg); }));
+			return(setImmediate(callback, msg));
 		}
 		if (!setData.translations[lang]) {
 			var msg = "Set " + setCode + " does not have the requested translation: '" + lang + "'.";
 			console.error(msg);
-			return(setImmediate(function() { callback(msg); }));
+			return(setImmediate(callback, msg));
 		}
 
 		retrieve(lang, setData, callback);
@@ -153,3 +161,5 @@ function retrieve(lang, set, callback) {
 		}
 	);
 }
+
+module.exports = buildLang;
