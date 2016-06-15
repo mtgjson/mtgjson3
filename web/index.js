@@ -37,8 +37,6 @@ var allSetsArrayWithExtras = [];
 // Cards variables
 var allCardsWithExtras = {};
 var allCards = {};
-var allCardsArray = [];
-var allCardsArrayWithExtras = [];
 
 // Other stuff
 var previousSeenSetCodes = {};
@@ -299,16 +297,24 @@ tiptoe(
 			);
 		};
 
+		// Generate allCards object.
+		allCards = clone(allCardsWithExtras, true);
+		Object.values(allCards).forEach(function(card) {
+			// Strip out extras
+			C.EXTRA_FIELDS.forEach(function(EXTRA_FIELD) {
+				delete card[EXTRA_FIELD];
+			});
+		});
+
 		var dataBlock = {
 			'AllSets': { data: allSets, param: 'allSize' },
 			'AllSets-x': { data: allSetsWithExtras, param: 'allSizeX' },
 			'AllSetsArray': { data: allSetsArray, param: 'allSizeArray' },
 			'AllSetsArray-x': { data: allSetsArrayWithExtras, param: 'allSizeArrayX' },
 			'AllCards': { data: allCards, param: 'allCards' },
-			'AllCards-x': { data: allCardsWithExtras, param: 'allCardsX' },
-			'AllCardsArray': { data: allCardsArray, param: 'allCardsArray' },
-			'AllCardsArray-x': { data: allCardsArrayWithExtras, param: 'allCardsArrayX' }
+			'AllCards-x': { data: allCardsWithExtras, param: 'allCardsX' }
 		};
+
 		async.eachSeries(
 			Object.keys(dataBlock),
 			function(block, cb) {
