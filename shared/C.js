@@ -3090,6 +3090,16 @@ var base = require("xbase");
 				jp: 'エターナルマスターズ',
 				cn: '经典大师'
 			}
+		},
+		{
+			// http://magic.wizards.com/en/articles/archive/news/announcing-eldritch-moon-2016-02-08
+			name : 'Eldritch Moon',
+			code : 'EMN',
+			releaseDate : '2016-07-22',
+			border : 'black',
+			type : 'expansion',
+			block : 'Shadows over Innistrad',
+			booster : [ [ "rare", "mythic rare" ], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"]
 		}
 	];
 
