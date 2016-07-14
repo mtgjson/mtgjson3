@@ -3066,7 +3066,7 @@ var base = require("xbase");
 			border : "black",
 			type : "expansion",
 			block : "Shadows over Innistrad",
-			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"],
+			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", ["common", ["double faced rare", "double faced mythic rare"]], ["double faced common", "double faced uncommon"], "land", "marketing"],
 			translations: {
 				de: 'Schatten über Innistrad',
 				fr: 'Ténèbres sur Innistrad',
@@ -3099,7 +3099,7 @@ var base = require("xbase");
 			border : 'black',
 			type : 'expansion',
 			block : 'Shadows over Innistrad',
-			booster : [ [ "rare", "mythic rare" ], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"]
+			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", ["common", ["double faced rare", "double faced mythic rare"]], ["double faced common", "double faced uncommon"], "land", "marketing"]
 		}
 	];
 
