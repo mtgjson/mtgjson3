@@ -44,6 +44,18 @@ If something doesn't work after doing a `git pull` update, make sure you also up
 
     npm update
 
+Including a new set
+-------------------
+
+If you're building mtgjson data on your own, you should follow the following steps to be able to grab the new set data:
+
+* Make sure the new set is already available on gatherer
+* Update C.js
+* node build/buildSet NEWSETCODE
+* (check everything)
+* node util/updatePrintingsFromSet NEWSETCODE
+* node util/updateRulingsFromSet NEWSETCODE
+* node util/updateLelalitiesFromSet NEWSETCODE
 
 Other
 -----
