@@ -263,6 +263,11 @@ block contents
             td true
             td
               | Set to true if this card was only released as part of a core box set. These are technically part of the core sets and are tournament legal despite not being available in boosters.
+         tr
+           td mciNumber
+           td 109
+           td
+             | Number used by MagicCards.info for their indexing URLs (Most often it is the card number in the set)
       table
         thead
           tr
@@ -332,7 +337,7 @@ block contents
         |  file is organized by card name and merges card data from multiple sets into a single card object.
         br
         br
-        | 		Due to this merging of card data, several set specific fields are not present in the AllCards data: artist, border, flavor, foreignNames, id, multiverseid, number, originalText, originalType, rarity, releaseDate, reserved, timeshifted, variations, watermark
+        | 		Due to this merging of card data, several set specific fields are not present in the AllCards data: artist, border, flavor, foreignNames, id, mciNumber, multiverseid, number, originalText, originalType, rarity, releaseDate, reserved, timeshifted, variations, watermark
         br
         br
         | 		This file is lighter weight and is meant to provide a quick and easy way to get basic card data.
@@ -343,6 +348,7 @@ block contents
       pre
         code(data-language="javascript").
           {
+		  ...
           "Nevinyrral's Disk" : { /* card data */ },
                      "Norrit" : { /* card data */ },
           "Nullmage Shepherd" : { /* card data */ },
