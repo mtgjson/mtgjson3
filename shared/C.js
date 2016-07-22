@@ -4874,8 +4874,7 @@ var base = require("xbase");
 		hg : ["halfgreen", "halfg", "greenhalf", "ghalf", "gh", "greenh"]
 	};
 
-	exports.SYMBOL_OTHER =
-	{
+	exports.SYMBOL_OTHER = {
 		t : ["tap"],
 		q : ["untap"],
 		artifact : [],
@@ -4894,8 +4893,7 @@ var base = require("xbase");
 		tombstone : []
 	};
 
-	exports.FIELD_TYPES =
-	{
+	exports.FIELD_TYPES = {
 		layout        : "string",
 		name          : "string",
 		names         : ["string"],
@@ -4911,7 +4909,6 @@ var base = require("xbase");
 		flavor        : "string",
 		artist        : "string",
 		number        : "string",
-		mciNumber     : "string",
 		power         : "string",
 		toughness     : "string",
 		loyalty       : "number",
