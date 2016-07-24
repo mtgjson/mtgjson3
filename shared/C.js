@@ -5037,7 +5037,8 @@ var base = require("xbase");
 		'ORI',
 		'BFZ',
 		'OGW',
-		'SOI'
+		'SOI',
+		'EMN'
 	];
 
 })(typeof exports==="undefined" ? window.C={} : exports);
