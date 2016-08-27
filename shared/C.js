@@ -3100,6 +3100,19 @@ var base = require("xbase");
 			type : 'expansion',
 			block : 'Shadows over Innistrad',
 			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", ["common", ["double faced rare", "double faced mythic rare"]], ["double faced common", "double faced uncommon"], "land", "marketing"]
+		},
+                {
+		        // http://magic.wizards.com/en/articles/archive/news/announcing-conspiracy-2
+			name : "Conspiracy: Take the Crown",
+			code : "CN2",
+			releaseDate : "2016-08-26",
+			border : "black",
+			type : "conspiracy",
+			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "draft-matters", "marketing"],
+			translations: {
+			    jp: "Conspiracy: Take the Crown",
+			    cn: "Conspiracy: Take the Crown"
+			}
 		}
 	];
 
