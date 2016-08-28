@@ -3101,19 +3101,27 @@ var base = require("xbase");
 			block : 'Shadows over Innistrad',
 			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", ["common", ["double faced rare", "double faced mythic rare"]], ["double faced common", "double faced uncommon"], "land", "marketing"]
 		},
-                {
-		        // http://magic.wizards.com/en/articles/archive/news/announcing-conspiracy-2
-			name : "Conspiracy: Take the Crown",
-			code : "CN2",
-			releaseDate : "2016-08-26",
-			border : "black",
-			type : "conspiracy",
-			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "draft-matters", "marketing"],
-			translations: {
-			    jp: "Conspiracy: Take the Crown",
-			    cn: "Conspiracy: Take the Crown"
-			}
-		}
+            {
+                // http://magic.wizards.com/en/articles/archive/news/announcing-vault-lore-2016-02-29
+                name : "From the Vault: Lore",
+                code : "V16",
+                releaseDate : "2016-08-19",
+                border : "black",
+                type : "from the vault"
+            },
+            {
+                // http://magic.wizards.com/en/articles/archive/news/announcing-conspiracy-2
+                name : "Conspiracy: Take the Crown",
+                code : "CN2",
+                releaseDate : "2016-08-26",
+                border : "black",
+                type : "conspiracy",
+                booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "draft-matters", "marketing"],
+                translations: {
+                    jp: "Conspiracy: Take the Crown",
+                    cn: "Conspiracy: Take the Crown"
+                }
+            }
 	];
 
 	exports.IGNORE_GATHERER_PRINTINGS = ["Promo set for Gatherer"];
@@ -5046,12 +5054,13 @@ var base = require("xbase");
 	exports.VALID_COLORS = [ 'W', 'U', 'B', 'R', 'G' ];
 
 	exports.STANDARD_SETS = [
-		'DTK',
-		'ORI',
-		'BFZ',
-		'OGW',
-		'SOI',
-		'EMN'
+	    'DTK',
+	    'ORI',
+	    'BFZ',
+	    'OGW',
+	    'SOI',
+	    'EMN',
+	    'W16'
 	];
 
 })(typeof exports==="undefined" ? window.C={} : exports);
