@@ -884,7 +884,7 @@ var compareCardToMCI = function(set, card, mciCardURL, cb) {
 	if (cardCorrection && cardCorrection.replace && cardCorrection.replace.artist)
 		hasArtistCorrection = true;
 
-	var mciNumber = mciCardURL.match(/\/([0-9][^\.]*)\.html/)[1]
+	var mciNumber = mciCardURL.match(/\/(\d+)(\.html)?$/)[1]
 	var mciURL = "http://magiccards.info" + mciCardURL;
 
 	tiptoe(
