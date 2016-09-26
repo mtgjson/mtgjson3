@@ -4729,7 +4729,7 @@ var base = require("xbase");
 		],
 		"MPS": [
 			{ match: '*', replace: { rarity: "Special" } },
-			{ match: { multiverseid: 417582 }, replace: { multiverseid: 420590, number: '1', artist: 'Jason Rainville' } },
+			{ match: { multiverseid: 417582 }, replace: { multiverseid: 420588, number: '1', artist: 'Jason Rainville' } },
 			{ match: { multiverseid: 417640 }, replace: { multiverseid: 420589, number: '2', artist: 'Jakub Kasper' } },
 			{ match: { multiverseid: 417669 }, replace: { multiverseid: 420590, number: '3', artist: 'Vincent Proce' } },
 			{ match: { multiverseid: 417685 }, replace: { multiverseid: 420591, number: '4', artist: 'Greg Opalinski' } },
