@@ -2997,7 +2997,7 @@ var base = require("xbase");
 			magicCardsInfoCode : "exp",
 			releaseDate : "2015-10-02",
 			border : "black",
-			type : "promo",
+			type : "masterpiece",
 			mkm_name : "Zendikar Expeditions",
 			mkm_id : 1669
 		},
@@ -5086,13 +5086,12 @@ var base = require("xbase");
 	exports.VALID_COLORS = [ 'W', 'U', 'B', 'R', 'G' ];
 
 	exports.STANDARD_SETS = [
-	    'DTK',
-	    'ORI',
 	    'BFZ',
 	    'OGW',
 	    'SOI',
 	    'EMN',
-	    'W16'
+	    'W16',
+	    'KLD'
 	];
 
 })(typeof exports==="undefined" ? window.C={} : exports);
