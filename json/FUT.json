@@ -193,15 +193,15 @@
         },
         {
           "date": "2014-07-18",
-          "text": "Tapping a multicolored creature using convoke will pay for {1} or one mana of your choice of any of that creature’s colors."
+          "text": "Tapping a multicolored creature using convoke will pay for or one mana of your choice of any of that creature’s colors."
         },
         {
           "date": "2014-07-18",
-          "text": "When using convoke to cast a spell with {X} in its mana cost, first choose the value for X. That choice, plus any cost increases or decreases, will determine the spell’s total cost. Then you can tap creatures you control to help pay that cost. For example, if you cast Chord of Calling (a spell with convoke and mana cost {X}{G}{G}{G}) and choose X to be 3, the total cost is {3}{G}{G}{G}. If you tap two green creatures and two red creatures, you’ll have to pay {1}{G}."
+          "text": "When using convoke to cast a spell with in its mana cost, first choose the value for X. That choice, plus any cost increases or decreases, will determine the spell’s total cost. Then you can tap creatures you control to help pay that cost. For example, if you cast Chord of Calling (a spell with convoke and mana cost ) and choose X to be 3, the total cost is . If you tap two green creatures and two red creatures, you’ll have to pay ."
         },
         {
           "date": "2014-07-18",
-          "text": "If a creature you control has a mana ability with {T} in the cost, activating that ability while casting a spell with convoke will result in the creature being tapped when you pay the spell’s costs. You won’t be able to tap it again for convoke. Similarly, if you sacrifice a creature to activate a mana ability while casting a spell with convoke, that creature won’t be on the battlefield when you pay the spell’s costs, so you won’t be able to tap it for convoke."
+          "text": "If a creature you control has a mana ability with in the cost, activating that ability while casting a spell with convoke will result in the creature being tapped when you pay the spell’s costs. You won’t be able to tap it again for convoke. Similarly, if you sacrifice a creature to activate a mana ability while casting a spell with convoke, that creature won’t be on the battlefield when you pay the spell’s costs, so you won’t be able to tap it for convoke."
         }
       ],
       "subtypes": [
@@ -744,7 +744,7 @@
           "text": "It doesn’t matter how many creatures you control as Even the Odds resolves."
         }
       ],
-      "text": "Cast Even the Odds only if you control fewer creatures than each opponent.\nPut three 1/1 white Soldier creature tokens onto the battlefield.",
+      "text": "Cast Even the Odds only if you control fewer creatures than each opponent.\nCreate three 1/1 white Soldier creature tokens.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -1177,7 +1177,7 @@
         "Human",
         "Knight"
       ],
-      "text": "Flying; flanking  (Whenever a creature without flanking blocks this creature, the blocking creature gets -1/-1 until end of turn.)\nSuspend 3—{W} (Rather than cast this card from your hand, you may pay {W} and exile it with three time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost. It has haste.)",
+      "text": "Flying; flanking (Whenever a creature without flanking blocks this creature, the blocking creature gets -1/-1 until end of turn.)\nSuspend 3—{W} (Rather than cast this card from your hand, you may pay {W} and exile it with three time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost. It has haste.)",
       "toughness": "2",
       "type": "Creature — Human Knight",
       "types": [
@@ -1791,10 +1791,6 @@
         {
           "date": "2007-05-01",
           "text": "Scout’s Warning works just like Quicken, except for creatures instead of sorceries."
-        },
-        {
-          "date": "2007-05-01",
-          "text": "During the turn you cast Scout’s Warning, you can suspend creature cards from your hand at the time you could cast an instant. This ends as soon as you actually cast a creature card."
         },
         {
           "date": "2007-05-01",
@@ -2456,7 +2452,7 @@
         "Kithkin",
         "Spellshaper"
       ],
-      "text": "{W}, {T}, Discard a card: Put a 1/1 white Kithkin Soldier creature token named Goldmeadow Harrier onto the battlefield. It has \"{W}, {T}: Tap target creature.\"",
+      "text": "{W}, {T}, Discard a card: Create a 1/1 white Kithkin Soldier creature token named Goldmeadow Harrier. It has \"{W}, {T}: Tap target creature.\"",
       "timeshifted": true,
       "toughness": "2",
       "type": "Creature — Kithkin Spellshaper",
@@ -2573,7 +2569,7 @@
           "text": "If Imperial Mask becomes a copy of something else after the ability triggers but before it resolves, the tokens will enter the battlefield as copies of whatever the ex-Imperial Mask is now. If Imperial Mask became a copy of something else and then left the battlefield, the tokens will enter the battlefield as copies of whatever it was copying when it last existed on the battlefield."
         }
       ],
-      "text": "When Imperial Mask enters the battlefield, if it's not a token, each of your teammates puts a token that's a copy of Imperial Mask onto the battlefield.\nYou have hexproof. (You can't be the target of spells or abilities your opponents control.)",
+      "text": "When Imperial Mask enters the battlefield, if it's not a token, each of your teammates creates a token that's a copy of Imperial Mask.\nYou have hexproof. (You can't be the target of spells or abilities your opponents control.)",
       "timeshifted": true,
       "type": "Enchantment",
       "types": [
@@ -2953,10 +2949,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -2969,19 +2961,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Time Spiral Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -3005,15 +2985,15 @@
       "rulings": [
         {
           "date": "2007-05-01",
-          "text": "While a spell with X in its cost is on the stack, its converted mana cost takes the chosen value of X into account. Mistmeadow Skulk can be chosen as a target for a Blaze (which has mana cost {X}{R}) if X is 0 or 1, for example, but it can't be chosen as a target for a Blaze if X is 2 or more."
+          "text": "While a spell with X in its cost is on the stack, its converted mana cost takes the chosen value of X into account. Mistmeadow Skulk can be chosen as a target for a Blaze (which has mana cost ) if X is 0 or 1, for example, but it can’t be chosen as a target for a Blaze if X is 2 or more."
         },
         {
           "date": "2007-05-01",
-          "text": "A face-down creature has a converted mana cost of 0, so Mistmeadow Skulk doesn't have protection from it ."
+          "text": "A face-down creature has a converted mana cost of 0, so Mistmeadow Skulk doesn’t have protection from it ."
         },
         {
           "date": "2008-05-01",
-          "text": "The protection ability means the following: - Mistmeadow Skulk can't be blocked by creatures with converted mana cost 3 or greater. - Mistmeadow Skulk can't be enchanted by Auras with converted mana cost 3 or greater. It also can't be equipped by Equipment with converted mana cost 3 or greater. - Mistmeadow Skulk can't be targeted by spells with converted mana cost 3 or greater. It also can't be targeted by abilities from sources with converted mana cost 3 or greater. - All damage that would be dealt to Mistmeadow Skulk by sources with converted mana cost 3 or greater is prevented."
+          "text": "The protection ability means the following: - Mistmeadow Skulk can’t be blocked by creatures with converted mana cost 3 or greater. - Mistmeadow Skulk can’t be enchanted by Auras with converted mana cost 3 or greater. It also can’t be equipped by Equipment with converted mana cost 3 or greater. - Mistmeadow Skulk can’t be targeted by spells with converted mana cost 3 or greater. It also can’t be targeted by abilities from sources with converted mana cost 3 or greater. - All damage that would be dealt to Mistmeadow Skulk by sources with converted mana cost 3 or greater is prevented."
         }
       ],
       "subtypes": [
@@ -3625,7 +3605,7 @@
         "Faerie",
         "Spellshaper"
       ],
-      "text": "Flying\n{U}, {T}, Discard a card: Put a 1/1 blue Faerie creature token named Cloud Sprite onto the battlefield. It has flying and \"Cloud Sprite can block only creatures with flying.\"",
+      "text": "Flying\n{U}, {T}, Discard a card: Create a 1/1 blue Faerie creature token named Cloud Sprite. It has flying and \"Cloud Sprite can block only creatures with flying.\"",
       "toughness": "1",
       "type": "Creature — Faerie Spellshaper",
       "types": [
@@ -4368,24 +4348,24 @@
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2007-05-01",
+          "date": "2016-06-08",
           "text": "The top card of your library isn’t in your hand, so you can’t suspend it, cycle it, discard it, or activate any of its activated abilities."
         },
         {
-          "date": "2007-05-01",
-          "text": "If the top card of your library is a land, you can play it if you could play a land."
+          "date": "2016-06-08",
+          "text": "You must follow the normal timing permissions and restrictions for the top card of your library and pay its costs. If it has alternative or additional costs, you may pay those. If the card has any mandatory additional costs, you must pay those."
         },
         {
-          "date": "2007-05-01",
-          "text": "If the top card of your library has morph, you can cast that card face down for {3}. However, all players will have seen which card it is before the spell is cast."
+          "date": "2016-06-08",
+          "text": "If the top card of your library is a land, you may play that land only if you have any available land plays."
         },
         {
-          "date": "2007-05-01",
+          "date": "2016-06-08",
+          "text": "If the top card of your library changes while you’re casting a spell or activating an ability (perhaps because that top card is the card you’re casting) the new top card won’t be revealed until you finish casting that spell or activating that ability."
+        },
+        {
+          "date": "2016-06-08",
           "text": "As soon as you finish playing the card on top of your library, reveal the next card in your library."
-        },
-        {
-          "date": "2007-05-01",
-          "text": "If the top card of your library changes while you’re casting a spell or activating an ability, the new top card won’t be revealed until you finish casting that spell or activating that ability."
         }
       ],
       "subtypes": [
@@ -5010,10 +4990,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -5022,19 +4998,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Time Spiral Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -5058,15 +5022,15 @@
       "rulings": [
         {
           "date": "2007-05-01",
-          "text": "If a spell is returned to its owner's hand, it's removed from the stack and thus will not resolve. The spell isn't countered; it just no longer exists."
+          "text": "If a spell is returned to its owner’s hand, it’s removed from the stack and thus will not resolve. The spell isn’t countered; it just no longer exists."
         },
         {
           "date": "2007-05-01",
-          "text": "If a copy of a spell is returned to its owner's hand, it's moved there, then it will cease to exist as a state-based action."
+          "text": "If a copy of a spell is returned to its owner’s hand, it’s moved there, then it will cease to exist as a state-based action."
         },
         {
           "date": "2007-05-01",
-          "text": "If Venser's enters-the-battlefield ability targets a spell cast with flashback, that spell will be exiled instead of returning to its owner's hand."
+          "text": "If Venser’s enters-the-battlefield ability targets a spell cast with flashback, that spell will be exiled instead of returning to its owner’s hand."
         }
       ],
       "subtypes": [
@@ -6011,7 +5975,7 @@
         },
         {
           "date": "2007-05-01",
-          "text": "Nix doesn’t check whether a spell’s mana cost is 0. Rather, it checks how much mana was actually spent to cast it. It can counter a spell with mana cost 0 (such as Slaughter Pact), a spell cast via an alternative nonmana cost (such as Allosaurus Rider) or alternative cost of {0} (such as Basking Rootwalla), a spell whose cost to cast it was reduced to 0 (such as Frogmite), a spell cast without paying its cost due to an effect (such as suspend or Mindleech Mass’s ability), or a copy of a spell, among other possibilities. It will not counter a spell that had an additional or alternative mana cost paid to cast it, regardless of that spell’s converted mana cost (such as a face-down spell cast with morph, or an Ornithopter cast while Trinisphere is on the battlefield, for example)."
+          "text": "Nix doesn’t check whether a spell’s mana cost is 0. Rather, it checks how much mana was actually spent to cast it. It can counter a spell with mana cost 0 (such as Slaughter Pact), a spell cast via an alternative nonmana cost (such as Allosaurus Rider) or alternative cost of (such as Basking Rootwalla), a spell whose cost to cast it was reduced to 0 (such as Frogmite), a spell cast without paying its cost due to an effect (such as suspend or Mindleech Mass’s ability), or a copy of a spell, among other possibilities. It will not counter a spell that had an additional or alternative mana cost paid to cast it, regardless of that spell’s converted mana cost (such as a face-down spell cast with morph, or an Ornithopter cast while Trinisphere is on the battlefield, for example)."
         },
         {
           "date": "2007-05-01",
@@ -6086,10 +6050,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -6098,19 +6058,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Time Spiral Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -6636,7 +6584,7 @@
           "multiverseid": 145263
         }
       ],
-      "id": "373408bfa43b6e1225b828dcf9e4f667af5ffd36",
+      "id": "62bb22434dfa3ace85a82da97e51a30916a9e289",
       "imageName": "vedalken aethermage",
       "layout": "normal",
       "legalities": [
@@ -6662,9 +6610,8 @@
         }
       ],
       "manaCost": "{1}{U}",
-      "mciNumber": "61",
       "multiverseid": 130325,
-      "name": "Vedalken Æthermage",
+      "name": "Vedalken Aethermage",
       "number": "61",
       "originalText": "Flash (You may play this spell any time you could play an instant.)\nWhen Vedalken Æthermage comes into play, return target Sliver to its owner's hand.\nWizardcycling {3} ({3}, Discard this card: Search your library for a Wizard card, reveal it, and put it into your hand. Then shuffle your library.)",
       "originalType": "Creature — Vedalken Wizard",
@@ -6695,7 +6642,7 @@
         "Vedalken",
         "Wizard"
       ],
-      "text": "Flash (You may cast this spell any time you could cast an instant.)\nWhen Vedalken Æthermage enters the battlefield, return target Sliver to its owner's hand.\nWizardcycling {3} ({3}, Discard this card: Search your library for a Wizard card, reveal it, and put it into your hand. Then shuffle your library.)",
+      "text": "Flash (You may cast this spell any time you could cast an instant.)\nWhen Vedalken Aethermage enters the battlefield, return target Sliver to its owner's hand.\nWizardcycling {3} ({3}, Discard this card: Search your library for a Wizard card, reveal it, and put it into your hand. Then shuffle your library.)",
       "timeshifted": true,
       "toughness": "2",
       "type": "Creature — Vedalken Wizard",
@@ -8409,7 +8356,7 @@
         "Zombie",
         "Spellshaper"
       ],
-      "text": "{B}, {T}, Discard a card: Put a 1/1 black Zombie Goblin creature token named Festering Goblin onto the battlefield. It has \"When Festering Goblin dies, target creature gets -1/-1 until end of turn.\"",
+      "text": "{B}, {T}, Discard a card: Create a 1/1 black Zombie Goblin creature token named Festering Goblin. It has \"When Festering Goblin dies, target creature gets -1/-1 until end of turn.\"",
       "toughness": "1",
       "type": "Creature — Zombie Spellshaper",
       "types": [
@@ -8814,7 +8761,7 @@
           "text": "Neither ability cares who controlled the creature (or nontoken creature), only which graveyard it was put into."
         }
       ],
-      "text": "Whenever a nontoken creature is put into your graveyard from the battlefield, if Bridge from Below is in your graveyard, put a 2/2 black Zombie creature token onto the battlefield.\nWhen a creature is put into an opponent's graveyard from the battlefield, if Bridge from Below is in your graveyard, exile Bridge from Below.",
+      "text": "Whenever a nontoken creature is put into your graveyard from the battlefield, if Bridge from Below is in your graveyard, create a 2/2 black Zombie creature token.\nWhen a creature is put into an opponent's graveyard from the battlefield, if Bridge from Below is in your graveyard, exile Bridge from Below.",
       "timeshifted": true,
       "type": "Enchantment",
       "types": [
@@ -9199,10 +9146,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -9211,19 +9154,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Time Spiral Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -9247,7 +9178,7 @@
       "rulings": [
         {
           "date": "2013-04-15",
-          "text": "An ability that triggers when something \"attacks and isn't blocked\" triggers in the declare blockers step after blockers are declared if (1) that creature is attacking and (2) no creatures are declared to block it. It will trigger even if that creature was put onto the battlefield attacking rather than having been declared as an attacker in the declare attackers step."
+          "text": "An ability that triggers when something “attacks and isn’t blocked” triggers in the declare blockers step after blockers are declared if (1) that creature is attacking and (2) no creatures are declared to block it. It will trigger even if that creature was put onto the battlefield attacking rather than having been declared as an attacker in the declare attackers step."
         },
         {
           "date": "2013-07-01",
@@ -10988,7 +10919,7 @@
         },
         {
           "date": "2008-04-01",
-          "text": "Lands that are turned into Mountains will have “{T}: Add {R} to your mana pool."
+          "text": "Lands that are turned into Mountains will have “: Add to your mana pool."
         }
       ],
       "subtypes": [
@@ -11220,7 +11151,7 @@
           "text": "Although originally printed with a characteristic-defining ability that defined its color, this card now has a color indicator. This color indicator can’t be affected by text-changing effects (such as the one created by Crystal Spray), although color-changing effects can still overwrite it."
         }
       ],
-      "text": "Put a 4/4 red Giant creature token onto the battlefield.\nAt the beginning of your next upkeep, pay {4}{R}. If you don't, you lose the game.",
+      "text": "Create a 4/4 red Giant creature token.\nAt the beginning of your next upkeep, pay {4}{R}. If you don't, you lose the game.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -11394,10 +11325,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -11406,23 +11333,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Theros Block",
           "legality": "Legal"
         },
         {
           "format": "Time Spiral Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -11900,7 +11815,7 @@
         "Elemental",
         "Spellshaper"
       ],
-      "text": "{R}, {T}, Discard a card: Put a 3/1 red Elemental creature token named Spark Elemental onto the battlefield. It has trample, haste, and \"At the beginning of the end step, sacrifice Spark Elemental.\"",
+      "text": "{R}, {T}, Discard a card: Create a 3/1 red Elemental creature token named Spark Elemental. It has trample, haste, and \"At the beginning of the end step, sacrifice Spark Elemental.\"",
       "toughness": "3",
       "type": "Creature — Elemental Spellshaper",
       "types": [
@@ -12080,10 +11995,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -12096,19 +12007,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Time Spiral Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -12832,10 +12731,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -12844,19 +12739,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Time Spiral Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -12880,7 +12763,7 @@
       "rulings": [
         {
           "date": "2009-02-01",
-          "text": "Unlike the normal cycling ability, Slivercycling doesn't allow you to draw a card. Instead, it lets you search your library for a Sliver card. After you find a Sliver card in your library, you reveal it, put it into your hand, then shuffle your library."
+          "text": "Unlike the normal cycling ability, Slivercycling doesn’t allow you to draw a card. Instead, it lets you search your library for a Sliver card. After you find a Sliver card in your library, you reveal it, put it into your hand, then shuffle your library."
         },
         {
           "date": "2009-02-01",
@@ -12892,7 +12775,7 @@
         },
         {
           "date": "2009-02-01",
-          "text": "You can choose to find any card with the Sliver creature type, even if it isn't a creature card. This includes, for example, Tribal cards with the Changeling ability. You can also choose not to find a card, even if there is a Sliver card in your graveyard."
+          "text": "You can choose to find any card with the Sliver creature type, even if it isn’t a creature card. This includes, for example, Tribal cards with the Changeling ability. You can also choose not to find a card, even if there is a Sliver card in your library."
         },
         {
           "date": "2013-07-01",
@@ -13005,11 +12888,11 @@
       "rulings": [
         {
           "date": "2007-05-01",
-          "text": "When the echo ability resolves, you may pay {0} or choose not pay. The first option means Shah of Naar Isle stays on the battlefield and its last ability triggers. The second option means Shah of Naar Isle is sacrificed."
+          "text": "When the echo ability resolves, you may pay or choose not pay. The first option means Shah of Naar Isle stays on the battlefield and its last ability triggers. The second option means Shah of Naar Isle is sacrificed."
         },
         {
           "date": "2007-05-01",
-          "text": "If you use Thick-Skinned Goblin’s ability to pay {0} instead of Shah of Naar Isle’s echo cost, the Shah’s last ability will trigger."
+          "text": "If you use Thick-Skinned Goblin’s ability to pay instead of Shah of Naar Isle’s echo cost, the Shah’s last ability will trigger."
         },
         {
           "date": "2007-05-01",
@@ -13539,7 +13422,7 @@
       "rulings": [
         {
           "date": "2007-05-01",
-          "text": "This card has minor errata to make casting the spell optional. When the ability triggers, first you choose whether to pay {2}{R}{R}{R}. If you paid, then you choose whether to cast the spell."
+          "text": "This card has minor errata to make casting the spell optional. When the ability triggers, first you choose whether to pay . If you paid, then you choose whether to cast the spell."
         },
         {
           "date": "2007-05-01",
@@ -14000,15 +13883,15 @@
         },
         {
           "date": "2014-07-18",
-          "text": "Tapping a multicolored creature using convoke will pay for {1} or one mana of your choice of any of that creature’s colors."
+          "text": "Tapping a multicolored creature using convoke will pay for or one mana of your choice of any of that creature’s colors."
         },
         {
           "date": "2014-07-18",
-          "text": "When using convoke to cast a spell with {X} in its mana cost, first choose the value for X. That choice, plus any cost increases or decreases, will determine the spell’s total cost. Then you can tap creatures you control to help pay that cost. For example, if you cast Chord of Calling (a spell with convoke and mana cost {X}{G}{G}{G}) and choose X to be 3, the total cost is {3}{G}{G}{G}. If you tap two green creatures and two red creatures, you’ll have to pay {1}{G}."
+          "text": "When using convoke to cast a spell with in its mana cost, first choose the value for X. That choice, plus any cost increases or decreases, will determine the spell’s total cost. Then you can tap creatures you control to help pay that cost. For example, if you cast Chord of Calling (a spell with convoke and mana cost ) and choose X to be 3, the total cost is . If you tap two green creatures and two red creatures, you’ll have to pay ."
         },
         {
           "date": "2014-07-18",
-          "text": "If a creature you control has a mana ability with {T} in the cost, activating that ability while casting a spell with convoke will result in the creature being tapped when you pay the spell’s costs. You won’t be able to tap it again for convoke. Similarly, if you sacrifice a creature to activate a mana ability while casting a spell with convoke, that creature won’t be on the battlefield when you pay the spell’s costs, so you won’t be able to tap it for convoke."
+          "text": "If a creature you control has a mana ability with in the cost, activating that ability while casting a spell with convoke will result in the creature being tapped when you pay the spell’s costs. You won’t be able to tap it again for convoke. Similarly, if you sacrifice a creature to activate a mana ability while casting a spell with convoke, that creature won’t be on the battlefield when you pay the spell’s costs, so you won’t be able to tap it for convoke."
         }
       ],
       "subtypes": [
@@ -14189,10 +14072,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Time Spiral Block",
           "legality": "Legal"
         },
@@ -14317,7 +14196,7 @@
         "Elf",
         "Spellshaper"
       ],
-      "text": "{G}, {T}, Discard a card: Put a 1/1 green Elf Druid creature token named Llanowar Elves onto the battlefield. It has \"{T}: Add {G} to your mana pool.\"",
+      "text": "{G}, {T}, Discard a card: Create a 1/1 green Elf Druid creature token named Llanowar Elves. It has \"{T}: Add {G} to your mana pool.\"",
       "toughness": "1",
       "type": "Creature — Elf Spellshaper",
       "types": [
@@ -14630,10 +14509,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -14642,19 +14517,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Time Spiral Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -14677,11 +14540,11 @@
       "rulings": [
         {
           "date": "2007-05-01",
-          "text": "If you choose the \"destroy\" mode and Quiet Disrepair is moved to a different permanent while the ability is on the stack, the newly enchanted permanent will be destroyed when the ability resolves."
+          "text": "If you choose the “destroy” mode and Quiet Disrepair is moved to a different permanent while the ability is on the stack, the newly enchanted permanent will be destroyed when the ability resolves."
         },
         {
           "date": "2007-05-01",
-          "text": "If you choose the \"destroy\" mode and Quiet Disrepair leaves the battlefield while the ability is on the stack, the last permanent it enchanted will be destroyed."
+          "text": "If you choose the “destroy” mode and Quiet Disrepair leaves the battlefield while the ability is on the stack, the last permanent it enchanted will be destroyed."
         }
       ],
       "subtypes": [
@@ -15113,18 +14976,18 @@
         },
         {
           "date": "2014-07-18",
-          "text": "Tapping a multicolored creature using convoke will pay for {1} or one mana of your choice of any of that creature’s colors."
+          "text": "Tapping a multicolored creature using convoke will pay for or one mana of your choice of any of that creature’s colors."
         },
         {
           "date": "2014-07-18",
-          "text": "When using convoke to cast a spell with {X} in its mana cost, first choose the value for X. That choice, plus any cost increases or decreases, will determine the spell’s total cost. Then you can tap creatures you control to help pay that cost. For example, if you cast Chord of Calling (a spell with convoke and mana cost {X}{G}{G}{G}) and choose X to be 3, the total cost is {3}{G}{G}{G}. If you tap two green creatures and two red creatures, you’ll have to pay {1}{G}."
+          "text": "When using convoke to cast a spell with in its mana cost, first choose the value for X. That choice, plus any cost increases or decreases, will determine the spell’s total cost. Then you can tap creatures you control to help pay that cost. For example, if you cast Chord of Calling (a spell with convoke and mana cost ) and choose X to be 3, the total cost is . If you tap two green creatures and two red creatures, you’ll have to pay ."
         },
         {
           "date": "2014-07-18",
-          "text": "If a creature you control has a mana ability with {T} in the cost, activating that ability while casting a spell with convoke will result in the creature being tapped when you pay the spell’s costs. You won’t be able to tap it again for convoke. Similarly, if you sacrifice a creature to activate a mana ability while casting a spell with convoke, that creature won’t be on the battlefield when you pay the spell’s costs, so you won’t be able to tap it for convoke."
+          "text": "If a creature you control has a mana ability with in the cost, activating that ability while casting a spell with convoke will result in the creature being tapped when you pay the spell’s costs. You won’t be able to tap it again for convoke. Similarly, if you sacrifice a creature to activate a mana ability while casting a spell with convoke, that creature won’t be on the battlefield when you pay the spell’s costs, so you won’t be able to tap it for convoke."
         }
       ],
-      "text": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nBuyback {3} (You may pay an additional {3} as you cast this spell. If you do, put this card into your hand as it resolves.)\nPut a 1/1 green Saproling creature token onto the battlefield.",
+      "text": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nBuyback {3} (You may pay an additional {3} as you cast this spell. If you do, put this card into your hand as it resolves.)\nCreate a 1/1 green Saproling creature token.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -15321,7 +15184,7 @@
       "subtypes": [
         "Fungus"
       ],
-      "text": "At the beginning of your upkeep, put a spore counter on Utopia Mycon.\nRemove three spore counters from Utopia Mycon: Put a 1/1 green Saproling creature token onto the battlefield.\nSacrifice a Saproling: Add one mana of any color to your mana pool.",
+      "text": "At the beginning of your upkeep, put a spore counter on Utopia Mycon.\nRemove three spore counters from Utopia Mycon: Create a 1/1 green Saproling creature token.\nSacrifice a Saproling: Add one mana of any color to your mana pool.",
       "toughness": "2",
       "type": "Creature — Fungus",
       "types": [
@@ -15389,10 +15252,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -15401,19 +15260,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Time Spiral Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -15550,7 +15397,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "Whenever a Forest enters the battlefield, green creatures you control get +1/+1 and gain trample until end of turn.\nGrandeur — Discard another card named Baru, Fist of Krosa: Put an X/X green Wurm creature token onto the battlefield, where X is the number of lands you control.",
+      "text": "Whenever a Forest enters the battlefield, green creatures you control get +1/+1 and gain trample until end of turn.\nGrandeur — Discard another card named Baru, Fist of Krosa: Create an X/X green Wurm creature token, where X is the number of lands you control.",
       "timeshifted": true,
       "toughness": "4",
       "type": "Legendary Creature — Human Druid",
@@ -15978,7 +15825,7 @@
       "rulings": [
         {
           "date": "2007-05-01",
-          "text": "Muraganda Petroglyphs gives a bonus only to creatures that have no rules text at all. This includes true vanilla creatures (such as Grizzly Bears), face-down creatures, many tokens, and creatures that have lost their abilities (due to Ovinize, for example). Any ability of any kind, whether or not the ability functions in the on the battlefield zone, including things like “Cycling {2}” means the creature doesn’t get the bonus."
+          "text": "Muraganda Petroglyphs gives a bonus only to creatures that have no rules text at all. This includes true vanilla creatures (such as Grizzly Bears), face-down creatures, many tokens, and creatures that have lost their abilities (due to Ovinize, for example). Any ability of any kind, whether or not the ability functions in the on the battlefield zone, including things like “Cycling ” means the creature doesn’t get the bonus."
         },
         {
           "date": "2007-05-01",
@@ -16118,7 +15965,7 @@
         "Cat",
         "Warrior"
       ],
-      "text": "Nacatl War-Pride must be blocked by exactly one creature if able.\nWhenever Nacatl War-Pride attacks, put X tokens that are copies of Nacatl War-Pride onto the battlefield tapped and attacking, where X is the number of creatures defending player controls. Exile the tokens at the beginning of the next end step.",
+      "text": "Nacatl War-Pride must be blocked by exactly one creature if able.\nWhenever Nacatl War-Pride attacks, create X tokens that are copies of Nacatl War-Pride and that are tapped and attacking, where X is the number of creatures defending player controls. Exile the tokens at the beginning of the next end step.",
       "timeshifted": true,
       "toughness": "3",
       "type": "Creature — Cat Warrior",
@@ -16186,10 +16033,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -16198,23 +16041,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Theros Block",
           "legality": "Legal"
         },
         {
           "format": "Time Spiral Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -16306,10 +16137,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -16322,19 +16149,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Time Spiral Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -16357,11 +16172,11 @@
       "rulings": [
         {
           "date": "2008-08-01",
-          "text": "Chroma abilities check only mana costs, which are found in a card's upper right corner. They don't count mana symbols that appear in a card's text box."
+          "text": "Chroma abilities check only mana costs, which are found in a card’s upper right corner. They don’t count mana symbols that appear in a card’s text box."
         },
         {
           "date": "2008-08-01",
-          "text": "Chroma abilities count hybrid mana symbols of the appropriate color. For example, a card with mana cost {3}{U/R}{U/R} has two red mana symbols in its mana cost."
+          "text": "Chroma abilities count hybrid mana symbols of the appropriate color. For example, a card with mana cost has two red mana symbols in its mana cost."
         }
       ],
       "text": "Chroma — Reveal any number of cards in your hand. You gain 2 life for each green mana symbol in those cards' mana costs.",
@@ -16604,11 +16419,11 @@
         },
         {
           "date": "2007-05-01",
-          "text": "The cost reduction will be {2} no matter how many times the spell targets the same Spellwild Ouphe."
+          "text": "The cost reduction will be no matter how many times the spell targets the same Spellwild Ouphe."
         },
         {
           "date": "2007-05-01",
-          "text": "The spell may have any number of other targets; that won’t affect the cost reduction unless the spell targets other Spellwild Ouphes as well. In that case, the spell costs {2} less to cast for each different Spellwild Ouphe it targets."
+          "text": "The spell may have any number of other targets; that won’t affect the cost reduction unless the spell targets other Spellwild Ouphes as well. In that case, the spell costs less to cast for each different Spellwild Ouphe it targets."
         }
       ],
       "subtypes": [
@@ -16724,7 +16539,7 @@
       "subtypes": [
         "Fungus"
       ],
-      "text": "At the beginning of your upkeep, put a spore counter on Sporoloth Ancient.\nCreatures you control have \"Remove two spore counters from this creature: Put a 1/1 green Saproling creature token onto the battlefield.\"",
+      "text": "At the beginning of your upkeep, put a spore counter on Sporoloth Ancient.\nCreatures you control have \"Remove two spore counters from this creature: Create a 1/1 green Saproling creature token.\"",
       "timeshifted": true,
       "toughness": "4",
       "type": "Creature — Fungus",
@@ -17011,10 +16826,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -17023,19 +16834,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Time Spiral Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -17692,10 +17491,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -17704,19 +17499,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Time Spiral Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -17979,7 +17762,7 @@
       "subtypes": [
         "Spellshaper"
       ],
-      "text": "{1}, {T}, Discard a card: Put a 1/1 colorless Sliver artifact creature token named Metallic Sliver onto the battlefield.",
+      "text": "{1}, {T}, Discard a card: Create a 1/1 colorless Sliver artifact creature token named Metallic Sliver.",
       "toughness": "1",
       "type": "Artifact Creature — Spellshaper",
       "types": [
@@ -18945,7 +18728,7 @@
       "rulings": [
         {
           "date": "2007-05-01",
-          "text": "Cards with mana cost {0} (like Pact of Negation) and cards with no mana cost (like Living End and every land) have converted mana cost 0."
+          "text": "Cards with mana cost (like Pact of Negation) and cards with no mana cost (like Living End and every land) have converted mana cost 0."
         }
       ],
       "text": "Tolaria West enters the battlefield tapped.\n{T}: Add {U} to your mana pool.\nTransmute {1}{U}{U} ({1}{U}{U}, Discard this card: Search your library for a card with converted mana cost 0, reveal it, and put it into your hand. Then shuffle your library. Transmute only as a sorcery.)",
@@ -19014,10 +18797,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -19026,19 +18805,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Time Spiral Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -19065,19 +18832,19 @@
         },
         {
           "date": "2007-05-01",
-          "text": "Dryad Arbor is played as a land. It doesn't use the stack, it's not a spell, it can't be responded to, it has no mana cost, and it counts as your land play for the turn."
+          "text": "Dryad Arbor is played as a land. It doesn’t use the stack, it’s not a spell, it can’t be responded to, it has no mana cost, and it counts as your land play for the turn."
         },
         {
           "date": "2007-05-01",
-          "text": "If a Dryad Arbor gains flash, or you have the ability to play Dryad Arbor as though it had flash (due to Teferi, Mage of Zhalfir or Scout's Warning, for example), you can ignore the normal timing rules for playing a land, but not any other restrictions. You can't play Dryad Arbor during another player's turn, and you can't play Dryad Arbor if it's your turn and you've already played a land."
+          "text": "If a Dryad Arbor gains flash, or you have the ability to play Dryad Arbor as though it had flash (due to Teferi, Mage of Zhalfir or Scout’s Warning, for example), you can ignore the normal timing rules for playing a land, but not any other restrictions. You can’t play Dryad Arbor during another player’s turn, and you can’t play Dryad Arbor if it’s your turn and you’ve already played a land."
         },
         {
           "date": "2011-09-22",
-          "text": "If Dryad Arbor is changed into another basic land type (such as by Sea's Claim), it continues to be a creature and a Dryad."
+          "text": "If Dryad Arbor is changed into another basic land type (such as by Sea’s Claim), it continues to be a creature and a Dryad."
         },
         {
           "date": "2013-06-07",
-          "text": "Although originally printed with a characteristic-defining ability that defined its color, this card now has a color indicator. This color indicator can't be affected by text-changing effects (such as the one created by Crystal Spray), although color-changing effects can still overwrite it."
+          "text": "Although originally printed with a characteristic-defining ability that defined its color, this card now has a color indicator. This color indicator can’t be affected by text-changing effects (such as the one created by Crystal Spray), although color-changing effects can still overwrite it."
         }
       ],
       "subtypes": [
@@ -19151,10 +18918,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -19167,19 +18930,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Time Spiral Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -19202,7 +18953,7 @@
       "rulings": [
         {
           "date": "2007-05-01",
-          "text": "{(b/r)}, {T}” is the same as saying “{B}, {T} or {R}, {T}."
+          "text": ", ” is the same as saying “, or , ."
         }
       ],
       "text": "{T}: Add {C} to your mana pool.\n{B/R}, {T}: Add {B}{B}, {B}{R}, or {R}{R} to your mana pool.",
@@ -19270,10 +19021,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -19282,19 +19029,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Time Spiral Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -19378,10 +19113,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -19390,19 +19121,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Time Spiral Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -19606,11 +19325,11 @@
       "rulings": [
         {
           "date": "2007-05-01",
-          "text": "The turn you play River of Tears, it will produce {B} when tapped for mana."
+          "text": "The turn you play River of Tears, it will produce when tapped for mana."
         },
         {
           "date": "2007-05-01",
-          "text": "The land produces {B} only after you’ve played a land, not after you’ve put a land directly onto the battlefield (such as with Rampant Growth)."
+          "text": "The land produces only after you’ve played a land, not after you’ve put a land directly onto the battlefield (such as with Rampant Growth)."
         }
       ],
       "text": "{T}: Add {U} to your mana pool. If you played a land this turn, add {B} to your mana pool instead.",

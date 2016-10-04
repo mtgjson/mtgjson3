@@ -511,7 +511,7 @@
         "C14"
       ],
       "rarity": "Common",
-      "text": "Destroy target creature. It can't be regenerated. Its controller puts a 1/1 white Spirit creature token with flying onto the battlefield.",
+      "text": "Destroy target creature. It can't be regenerated. Its controller creates a 1/1 white Spirit creature token with flying.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -803,7 +803,7 @@
         "VMA"
       ],
       "rarity": "Common",
-      "text": "Put two 1/1 white Bird creature tokens with flying onto the battlefield.\nFlashback—Tap three untapped white creatures you control. (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "text": "Create two 1/1 white Bird creature tokens with flying.\nFlashback—Tap three untapped white creatures you control. (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -1159,27 +1159,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Onslaught Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -1205,7 +1189,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "The two X's in the mana cost mean that you pay 2 mana (above the {2}{W}{W} base cost) for each token you want to create."
+          "text": "The two X’s in the mana cost mean that you pay 2 mana (above the base cost) for each token you want to create."
         },
         {
           "date": "2004-10-04",
@@ -1225,10 +1209,10 @@
         },
         {
           "date": "2008-10-01",
-          "text": "The cycling ability and the triggered ability are separate. If the triggered ability is countered (with Stifle, for example, or if all its targets have become illegal), the cycling ability will still resolve and you'll draw a card."
+          "text": "The cycling ability and the triggered ability are separate. If the triggered ability is countered (with Stifle, for example, or if all its targets have become illegal), the cycling ability will still resolve and you’ll draw a card."
         }
       ],
-      "text": "Put X 4/4 white Angel creature tokens with flying onto the battlefield.\nCycling {2}{W} ({2}{W}, Discard this card: Draw a card.)\nWhen you cycle Decree of Justice, you may pay {X}. If you do, put X 1/1 white Soldier creature tokens onto the battlefield.",
+      "text": "Create X 4/4 white Angel creature tokens with flying.\nCycling {2}{W} ({2}{W}, Discard this card: Draw a card.)\nWhen you cycle Decree of Justice, you may pay {X}. If you do, create X 1/1 white Soldier creature tokens.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -1650,27 +1634,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Onslaught Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -1809,12 +1777,6 @@
         "EMA"
       ],
       "rarity": "Rare",
-      "rulings": [
-        {
-          "date": "2008-04-01",
-          "text": "A “creature card” is any card with the type Creature, even if it has other types such as Artifact, Enchantment, or Land. Older cards of type Summon are also Creature cards."
-        }
-      ],
       "subtypes": [
         "Angel",
         "Spirit"
@@ -2039,27 +2001,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Onslaught Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -2772,7 +2718,7 @@
         "VMA"
       ],
       "rarity": "Rare",
-      "text": "Whenever a player discards a card, you may pay {W}. If you do, put a 1/1 white Spirit creature token with flying onto the battlefield.",
+      "text": "Whenever a player discards a card, you may pay {W}. If you do, create a 1/1 white Spirit creature token with flying.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -2827,7 +2773,7 @@
           "text": "It checks if there are any Reflection tokens on the battlefield at the beginning of upkeep, and if there are it will not trigger at all. It will check again on resolution and will do nothing if a Reflection is on the battlefield at that time."
         }
       ],
-      "text": "At the beginning of your upkeep, if there are no Reflection tokens on the battlefield, put a 2/2 white Reflection creature token onto the battlefield.\n{0}: Destroy target Reflection.",
+      "text": "At the beginning of your upkeep, if there are no Reflection tokens on the battlefield, create a 2/2 white Reflection creature token.\n{0}: Destroy target Reflection.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -3603,19 +3549,15 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "You can untap another player’s lands."
-        },
-        {
-          "date": "2004-10-04",
-          "text": "This does not target the lands."
-        },
-        {
-          "date": "2004-10-04",
           "text": "You can untap 0, 1, or 2 lands."
         },
         {
           "date": "2008-10-01",
           "text": "Cycling is an activated ability. Effects that interact with activated abilities (such as Stifle or Rings of Brighthearth) will interact with cycling. Effects that interact with spells (such as Remove Soul or Faerie Tauntings) will not."
+        },
+        {
+          "date": "2016-06-08",
+          "text": "You choose which lands to untap as the triggered ability resolves. They aren’t targeted, and they don’t have to be lands that you control."
         }
       ],
       "subtypes": [
@@ -4119,12 +4061,8 @@
       "rarity": "Common",
       "rulings": [
         {
-          "date": "2004-10-04",
-          "text": "You can untap another player’s lands."
-        },
-        {
-          "date": "2004-10-04",
-          "text": "This does not target the lands."
+          "date": "2016-06-08",
+          "text": "You choose which lands to untap as the triggered ability resolves. They aren’t targeted, and they don’t have to be lands that you control."
         }
       ],
       "text": "Draw two cards, then discard two cards. Untap up to three lands.",
@@ -4300,7 +4238,7 @@
       "rulings": [
         {
           "date": "2010-03-01",
-          "text": "The delayed triggered ability triggers and produces {U} any time a land with the land-type Island is tapped for mana, even if that land has other types or the mana for which it was tapped is another color. For example, if you tap a Breeding Pool for {G}, High Tide will give you an extra {U}."
+          "text": "The delayed triggered ability triggers and produces any time a land with the land-type Island is tapped for mana, even if that land has other types or the mana for which it was tapped is another color. For example, if you tap a Breeding Pool for , High Tide will give you an extra ."
         },
         {
           "date": "2010-03-01",
@@ -4590,6 +4528,7 @@
       "originalType": "Instant",
       "printings": [
         "LEG",
+        "pJGP",
         "ME3",
         "VMA"
       ],
@@ -5084,12 +5023,8 @@
           "text": "You can untap 0 to 7 lands."
         },
         {
-          "date": "2004-10-04",
-          "text": "You can untap another player’s lands."
-        },
-        {
-          "date": "2004-10-04",
-          "text": "This does not target the lands."
+          "date": "2016-06-08",
+          "text": "You choose which lands to untap as the triggered ability resolves. They aren’t targeted, and they don’t have to be lands that you control."
         }
       ],
       "subtypes": [
@@ -5244,7 +5179,7 @@
         },
         {
           "date": "2004-10-04",
-          "text": "When this spell resolves, you either pay X mana or let your lands become tapped. The lands that become tapped are not “tapped for mana\". If you choose to pay, you may pay the X mana using whatever mana abilities you want to use."
+          "text": "When this spell resolves, you either pay X mana or let your lands become tapped. The lands that become tapped are not “tapped for mana”. If you choose to pay, you may pay the X mana using whatever mana abilities you want to use."
         },
         {
           "date": "2010-03-01",
@@ -7498,7 +7433,7 @@
         },
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn’t matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn’t matter how long the permanent has been a creature."
         }
       ],
       "text": "Pay half your life, rounded up: Lurking Evil becomes a 4/4 Horror creature with flying.",
@@ -7719,11 +7654,11 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "If a spell is both blue and red, you pay {1} less, not {2} less."
+          "text": "If a spell is both blue and red, you pay less, not less."
         },
         {
           "date": "2004-10-04",
-          "text": "The generic X cost is still considered generic even if there is a requirement that a specific color be used for it. For example, “only black mana can be spent this way\". This distinction is important for effects which reduce the generic portion of a spell’s cost."
+          "text": "The generic X cost is still considered generic even if there is a requirement that a specific color be used for it. For example, “only black mana can be spent this way”. This distinction is important for effects which reduce the generic portion of a spell’s cost."
         },
         {
           "date": "2004-10-04",
@@ -8157,7 +8092,7 @@
           "text": "Use the powers of the creatures as they last existed on the battlefield to determine the value of X, even if they were negative. For example, if the sacrificed creatures were 3/3, 5/5, 0/4, and -2/2, the Demon will be 6/6."
         }
       ],
-      "text": "Each player sacrifices a creature. Put an X/X black Demon creature token with flying onto the battlefield, where X is the total power of the creatures sacrificed this way.",
+      "text": "Each player sacrifices a creature. Create an X/X black Demon creature token with flying, where X is the total power of the creatures sacrificed this way.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -8207,7 +8142,7 @@
       ],
       "rarity": "Uncommon",
       "reserved": true,
-      "text": "When Sarcomancy enters the battlefield, put a 2/2 black Zombie creature token onto the battlefield.\nAt the beginning of your upkeep, if there are no Zombies on the battlefield, Sarcomancy deals 1 damage to you.",
+      "text": "When Sarcomancy enters the battlefield, create a 2/2 black Zombie creature token.\nAt the beginning of your upkeep, if there are no Zombies on the battlefield, Sarcomancy deals 1 damage to you.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -8751,7 +8686,7 @@
         },
         {
           "date": "2004-10-04",
-          "text": "If you play a card using Yawgmoth’s Will and something triggers only when “cast from your hand\", that something will not trigger. Such things trigger based on where the card came from."
+          "text": "If you play a card using Yawgmoth’s Will and something triggers only when “cast from your hand”, that something will not trigger. Such things trigger based on where the card came from."
         },
         {
           "date": "2004-10-04",
@@ -8865,7 +8800,7 @@
         "Goblin",
         "Warrior"
       ],
-      "text": "When Beetleback Chief enters the battlefield, put two 1/1 red Goblin creature tokens onto the battlefield.",
+      "text": "When Beetleback Chief enters the battlefield, create two 1/1 red Goblin creature tokens.",
       "toughness": "2",
       "type": "Creature — Goblin Warrior",
       "types": [
@@ -9341,12 +9276,6 @@
         "EMA"
       ],
       "rarity": "Rare",
-      "rulings": [
-        {
-          "date": "2004-10-04",
-          "text": "The ability does 4 damage to every creature on the battlefield other than Crater Hellion."
-        }
-      ],
       "subtypes": [
         "Hellion",
         "Beast"
@@ -9909,7 +9838,7 @@
       "rulings": [
         {
           "date": "2008-08-01",
-          "text": "A Goblin permanent card is an artifact, creature, land, and/or enchantment card with the creature type “Goblin\". Usually such cards will be creatures in addition to any other types, but they may be tribal instead. For example, you could put Boggart Shenanigans onto the battlefield with this effect."
+          "text": "A Goblin permanent card is an artifact, creature, land, and/or enchantment card with the creature type “Goblin”. Usually such cards will be creatures in addition to any other types, but they may be tribal instead. For example, you could put Boggart Shenanigans onto the battlefield with this effect."
         }
       ],
       "subtypes": [
@@ -10074,10 +10003,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -10091,6 +10016,7 @@
       "originalType": "Creature — Goblin Warrior",
       "power": "1",
       "printings": [
+        "pPRE",
         "pJGP",
         "ONS",
         "VMA",
@@ -11730,7 +11656,7 @@
       "subtypes": [
         "Boar"
       ],
-      "text": "When Brindle Shoat dies, put a 3/3 green Boar creature token onto the battlefield.",
+      "text": "When Brindle Shoat dies, create a 3/3 green Boar creature token.",
       "toughness": "1",
       "type": "Creature — Boar",
       "types": [
@@ -11904,7 +11830,7 @@
       "subtypes": [
         "Elf"
       ],
-      "text": "Echo {3}{G}{G} (At the beginning of your upkeep, if this came under your control since the beginning of your last upkeep, sacrifice it unless you pay its echo cost.)\nWhen Deranged Hermit enters the battlefield, put four 1/1 green Squirrel creature tokens onto the battlefield.\nSquirrel creatures get +1/+1.",
+      "text": "Echo {3}{G}{G} (At the beginning of your upkeep, if this came under your control since the beginning of your last upkeep, sacrifice it unless you pay its echo cost.)\nWhen Deranged Hermit enters the battlefield, create four 1/1 green Squirrel creature tokens.\nSquirrel creatures get +1/+1.",
       "toughness": "1",
       "type": "Creature — Elf",
       "types": [
@@ -12021,7 +11947,7 @@
         "Human",
         "Druid"
       ],
-      "text": "At the beginning of each upkeep, if Dreampod Druid is enchanted, put a 1/1 green Saproling creature token onto the battlefield.",
+      "text": "At the beginning of each upkeep, if Dreampod Druid is enchanted, create a 1/1 green Saproling creature token.",
       "toughness": "2",
       "type": "Creature — Human Druid",
       "types": [
@@ -12084,7 +12010,7 @@
       "subtypes": [
         "Aura"
       ],
-      "text": "Enchant creature\nEnchanted creature gets +3/+3.\nWhen enchanted creature dies, put a 3/3 green Elephant creature token onto the battlefield.",
+      "text": "Enchant creature\nEnchanted creature gets +3/+3.\nWhen enchanted creature dies, create a 3/3 green Elephant creature token.",
       "type": "Enchantment — Aura",
       "types": [
         "Enchantment"
@@ -12280,7 +12206,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "The cards are put onto the battlefield and will not trigger effects which trigger on such cards being “cast” or “played\"."
+          "text": "The cards are put onto the battlefield and will not trigger effects which trigger on such cards being “cast” or “played”."
         },
         {
           "date": "2004-10-04",
@@ -12353,7 +12279,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "You take damage when you play a land using the “play a land” action. Such an action can be your regular “play a land\", one enabled by Fastbond, or ones enabled through other effects."
+          "text": "You take damage when you play a land using the “play a land” action. Such an action can be your regular “play a land”, one enabled by Fastbond, or ones enabled through other effects."
         },
         {
           "date": "2004-10-04",
@@ -12699,7 +12625,7 @@
           "text": "At the time this spell is resolving, it is on the stack and not in the graveyard. This means that you should not count this card when determining whether the Threshold effect occurs."
         }
       ],
-      "text": "Put two 2/2 green Bear creature tokens onto the battlefield.\nThreshold — Put four 2/2 green Bear creature tokens onto the battlefield instead if seven or more cards are in your graveyard.\nFlashback {5}{G}{G} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "text": "Create two 2/2 green Bear creature tokens.\nThreshold — Create four 2/2 green Bear creature tokens instead if seven or more cards are in your graveyard.\nFlashback {5}{G}{G} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -13228,7 +13154,7 @@
       "subtypes": [
         "Wurm"
       ],
-      "text": "Trample\nWhen Penumbra Wurm dies, put a 6/6 black Wurm creature token with trample onto the battlefield.",
+      "text": "Trample\nWhen Penumbra Wurm dies, create a 6/6 black Wurm creature token with trample.",
       "toughness": "6",
       "type": "Creature — Wurm",
       "types": [
@@ -13448,7 +13374,7 @@
         "EMA"
       ],
       "rarity": "Uncommon",
-      "text": "Put a 6/6 green Wurm creature token onto the battlefield.\nFlashback {3}{G} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "text": "Create a 6/6 green Wurm creature token.\nFlashback {3}{G} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -13560,7 +13486,7 @@
           "text": "Each token knows which Saproling Burst it came from."
         }
       ],
-      "text": "Fading 7 (This enchantment enters the battlefield with seven fade counters on it. At the beginning of your upkeep, remove a fade counter from it. If you can't, sacrifice it.)\nRemove a fade counter from Saproling Burst: Put a green Saproling creature token onto the battlefield. It has \"This creature's power and toughness are each equal to the number of fade counters on Saproling Burst.\"\nWhen Saproling Burst leaves the battlefield, destroy all tokens put onto the battlefield with Saproling Burst. They can't be regenerated.",
+      "text": "Fading 7 (This enchantment enters the battlefield with seven fade counters on it. At the beginning of your upkeep, remove a fade counter from it. If you can't, sacrifice it.)\nRemove a fade counter from Saproling Burst: Create a green Saproling creature token. It has \"This creature's power and toughness are each equal to the number of fade counters on Saproling Burst.\"\nWhen Saproling Burst leaves the battlefield, destroy all tokens created with Saproling Burst. They can't be regenerated.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -13917,7 +13843,7 @@
       "subtypes": [
         "Wurm"
       ],
-      "text": "When Symbiotic Wurm dies, put seven 1/1 green Insect creature tokens onto the battlefield.",
+      "text": "When Symbiotic Wurm dies, create seven 1/1 green Insect creature tokens.",
       "toughness": "7",
       "type": "Creature — Wurm",
       "types": [
@@ -14149,7 +14075,7 @@
         "Blue",
         "Green"
       ],
-      "id": "d07ffbb16af4e338ba80560b35f4b617c0019ab4",
+      "id": "16be8cbf3fdda5708601ba9d79c3a6f96c04b329",
       "imageName": "aether mutation",
       "layout": "normal",
       "legalities": [
@@ -14171,9 +14097,8 @@
         }
       ],
       "manaCost": "{3}{G}{U}",
-      "mciNumber": "241",
       "multiverseid": 382837,
-      "name": "Æther Mutation",
+      "name": "Aether Mutation",
       "number": "241",
       "originalText": "Return target creature to its owner's hand. Put X 1/1 green Saproling creature tokens onto the battlefield, where X is that creature's converted mana cost.",
       "originalType": "Sorcery",
@@ -14188,7 +14113,7 @@
           "text": "You only put the tokens onto the battlefield if the target creature is still a legal target on resolution."
         }
       ],
-      "text": "Return target creature to its owner's hand. Put X 1/1 green Saproling creature tokens onto the battlefield, where X is that creature's converted mana cost.",
+      "text": "Return target creature to its owner's hand. Create X 1/1 green Saproling creature tokens, where X is that creature's converted mana cost.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -14642,7 +14567,7 @@
         },
         {
           "date": "2014-05-29",
-          "text": "If the copied creature has {X} in its mana cost (such as Grenzo, Dungeon Warden), X is considered to be 0."
+          "text": "If the copied creature has in its mana cost (such as Grenzo, Dungeon Warden), X is considered to be 0."
         },
         {
           "date": "2014-05-29",
@@ -14684,7 +14609,7 @@
       "subtypes": [
         "Shapeshifter"
       ],
-      "text": "You may have Dack's Duplicate enter the battlefield as a copy of any creature on the battlefield except it gains haste and dethrone. (Whenever it attacks the player with the most life or tied for most life, put a +1/+1 counter on it.)",
+      "text": "You may have Dack's Duplicate enter the battlefield as a copy of any creature on the battlefield, except it gains haste and dethrone. (Whenever it attacks the player with the most life or tied for most life, put a +1/+1 counter on it.)",
       "toughness": "0",
       "type": "Creature — Shapeshifter",
       "types": [
@@ -14976,10 +14901,10 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "The tokens are named “Goblin Soldier” and have the creature types “Goblin” and “Soldier\"."
+          "text": "The tokens are named “Goblin Soldier” and have the creature types “Goblin” and “Soldier”."
         }
       ],
-      "text": "{2}, Sacrifice a land: Put two 1/1 red and white Goblin Soldier creature tokens onto the battlefield.",
+      "text": "{2}, Sacrifice a land: Create two 1/1 red and white Goblin Soldier creature tokens.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -15660,7 +15585,7 @@
         },
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn’t matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn’t matter how long the permanent has been a creature."
         }
       ],
       "text": "{0}: Tap all lands you control. Chimeric Idol becomes a 3/3 Turtle artifact creature until end of turn.",
@@ -15973,7 +15898,7 @@
         },
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn’t matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn’t matter how long the permanent has been a creature."
         }
       ],
       "subtypes": [
@@ -16034,7 +15959,7 @@
           "text": "The ability is a mana ability, so it is activated and resolves as a mana ability, but it can only be activated at times when you can cast an instant. Yes, this is a bit weird."
         }
       ],
-      "text": "Sacrifice Lion's Eye Diamond, Discard your hand: Add three mana of any one color to your mana pool. Activate this ability only any time you could cast an instant.",
+      "text": "Discard your hand, Sacrifice Lion's Eye Diamond: Add three mana of any one color to your mana pool. Activate this ability only any time you could cast an instant.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -16380,15 +16305,15 @@
         },
         {
           "date": "2013-07-01",
-          "text": "Activated abilities contain a colon. They’re generally written “[Cost]: [Effect].” Some keywords are activated abilities and will have colons in their reminder texts."
-        },
-        {
-          "date": "2013-07-01",
           "text": "This effect applies to all activated abilities of artifacts, including mana abilities."
         },
         {
           "date": "2013-07-01",
           "text": "This effect does not prevent triggered abilities from triggering and it doesn’t stop the effects of static abilities."
+        },
+        {
+          "date": "2016-06-08",
+          "text": "Activated abilities contain a colon. They’re generally written “[Cost]: [Effect].” Some keywords are activated abilities and will have colons in their reminder text."
         }
       ],
       "text": "Activated abilities of artifacts can't be activated.",
@@ -16789,7 +16714,7 @@
       "subtypes": [
         "Thopter"
       ],
-      "text": "Flying\nThopter Squadron enters the battlefield with three +1/+1 counters on it.\n{1}, Remove a +1/+1 counter from Thopter Squadron: Put a 1/1 colorless Thopter artifact creature token with flying onto the battlefield. Activate this ability only any time you could cast a sorcery.\n{1}, Sacrifice another Thopter: Put a +1/+1 counter on Thopter Squadron. Activate this ability only any time you could cast a sorcery.",
+      "text": "Flying\nThopter Squadron enters the battlefield with three +1/+1 counters on it.\n{1}, Remove a +1/+1 counter from Thopter Squadron: Create a 1/1 colorless Thopter artifact creature token with flying. Activate this ability only any time you could cast a sorcery.\n{1}, Sacrifice another Thopter: Put a +1/+1 counter on Thopter Squadron. Activate this ability only any time you could cast a sorcery.",
       "toughness": "0",
       "type": "Artifact Creature — Thopter",
       "types": [
@@ -16917,15 +16842,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
           "legality": "Legal"
         },
         {
@@ -17559,7 +17476,7 @@
           "text": "You have to sacrifice a plains before this card is put onto the battlefield. You have to do this no matter how it is put onto the battlefield."
         }
       ],
-      "text": "If Kjeldoran Outpost would enter the battlefield, sacrifice a Plains instead. If you do, put Kjeldoran Outpost onto the battlefield. If you don't, put it into its owner's graveyard.\n{T}: Add {W} to your mana pool.\n{1}{W}, {T}: Put a 1/1 white Soldier creature token onto the battlefield.",
+      "text": "If Kjeldoran Outpost would enter the battlefield, sacrifice a Plains instead. If you do, put Kjeldoran Outpost onto the battlefield. If you don't, put it into its owner's graveyard.\n{T}: Add {W} to your mana pool.\n{1}{W}, {T}: Create a 1/1 white Soldier creature token.",
       "type": "Land",
       "types": [
         "Land"
@@ -17937,27 +17854,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Mirage Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -17980,7 +17881,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "Because the \"search\" requires you to find a card with certain characteristics, you don't have to find the card if you don't want to."
+          "text": "Because the “search” requires you to find a card with certain characteristics, you don’t have to find the card if you don’t want to."
         }
       ],
       "text": "Rocky Tar Pit enters the battlefield tapped.\n{T}, Sacrifice Rocky Tar Pit: Search your library for a Swamp or Mountain card and put it onto the battlefield. Then shuffle your library.",
@@ -18315,23 +18216,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
-          "legality": "Banned"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Banned"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Banned"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Banned"
         },
         {

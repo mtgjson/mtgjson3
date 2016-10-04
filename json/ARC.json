@@ -450,10 +450,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -462,19 +458,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
           "format": "Shards of Alara Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -490,6 +474,7 @@
       "originalText": "Exile target creature. Its controller may search his or her library for a basic land card, put that card onto the battlefield tapped, then shuffle his or her library.",
       "originalType": "Instant",
       "printings": [
+        "pFNM",
         "pWPN",
         "CON",
         "ARC",
@@ -502,7 +487,7 @@
       "rulings": [
         {
           "date": "2009-02-01",
-          "text": "If the targeted creature becomes an illegal target by the time Path to Exile would resolve, the entire spell is countered. The creature's controller won't get to search for a basic land card."
+          "text": "If the targeted creature becomes an illegal target by the time Path to Exile would resolve, the entire spell is countered. The creature’s controller won’t get to search for a basic land card."
         }
       ],
       "text": "Exile target creature. Its controller may search his or her library for a basic land card, put that card onto the battlefield tapped, then shuffle his or her library.",
@@ -770,7 +755,7 @@
         },
         {
           "date": "2009-10-01",
-          "text": "A noncreature permanent that turns into a creature is subject to the “summoning sickness” rule: It can only attack, and its {T} abilities can only be activated, if its controller has continuously controlled that permanent since the beginning of his or her most recent turn."
+          "text": "A noncreature permanent that turns into a creature is subject to the “summoning sickness” rule: It can only attack, and its abilities can only be activated, if its controller has continuously controlled that permanent since the beginning of his or her most recent turn."
         }
       ],
       "text": "Each noncreature artifact is an artifact creature with power and toughness each equal to its converted mana cost. (Equipment that's a creature can't equip a creature.)",
@@ -984,7 +969,7 @@
         },
         {
           "date": "2010-06-15",
-          "text": "If a land is tapped for mana but doesn’t produce any (for example, if you tap Gaea’s Cradle for mana while you control no creatures), the delayed triggered ability won’t produce any mana either."
+          "text": "If a land is tapped for mana but doesn’t produce any (for example, if you tap Gaea’s Cradle for mana while you control no creatures), the delayed triggered ability won’t trigger."
         }
       ],
       "text": "When you set this scheme in motion, until your next turn, whenever a player taps a land for mana, that player adds one mana to his or her mana pool of any type that land produced.",
@@ -1158,7 +1143,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "The converted mana cost of this card is still 8, even if you only pay {B}{B} to cast it."
+          "text": "The converted mana cost of this card is still 8, even if you only pay to cast it."
         }
       ],
       "subtypes": [
@@ -1331,7 +1316,7 @@
       "rulings": [
         {
           "date": "2010-06-15",
-          "text": "You choose the target player when the ability triggers. As the ability resolves, you choose a value for X and decide whether to pay {X}. If you do decide to pay {X}, it’s too late for any player to respond since the ability is already in the midst of resolving."
+          "text": "You choose the target player when the ability triggers. As the ability resolves, you choose a value for X and decide whether to pay . If you do decide to pay , it’s too late for any player to respond since the ability is already in the midst of resolving."
         }
       ],
       "text": "When you set this scheme in motion, you may pay {X}. If you do, put each nonland permanent target player controls with converted mana cost X or less on the bottom of its owner's library.",
@@ -1443,7 +1428,7 @@
         "ARC"
       ],
       "rarity": "Common",
-      "text": "When you set this scheme in motion, put seven 0/1 green Plant creature tokens onto the battlefield. If you control ten or more lands, put seven 3/3 green Elemental creature tokens onto the battlefield instead.",
+      "text": "When you set this scheme in motion, create seven 0/1 green Plant creature tokens. If you control ten or more lands, create seven 3/3 green Elemental creature tokens instead.",
       "type": "Scheme",
       "types": [
         "Scheme"
@@ -1507,7 +1492,7 @@
       "subtypes": [
         "Zombie"
       ],
-      "text": "Other Zombie creatures you control get +1/+1.\n{2}{B}, {T}: Exile target creature card from a graveyard. Put a 2/2 black Zombie creature token onto the battlefield.",
+      "text": "Other Zombie creatures you control get +1/+1.\n{2}{B}, {T}: Exile target creature card from a graveyard. Create a 2/2 black Zombie creature token.",
       "toughness": "2",
       "type": "Creature — Zombie",
       "types": [
@@ -1737,10 +1722,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -1749,19 +1730,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
           "format": "Shards of Alara Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -1787,23 +1756,23 @@
       "rulings": [
         {
           "date": "2008-10-01",
-          "text": "If you activate a card's unearth ability but that card is removed from your graveyard before the ability resolves, that unearth ability will resolve and do nothing."
+          "text": "If you activate a card’s unearth ability but that card is removed from your graveyard before the ability resolves, that unearth ability will resolve and do nothing."
         },
         {
           "date": "2008-10-01",
-          "text": "Activating a creature card's unearth ability isn't the same as casting the creature card. The unearth ability is put on the stack, but the creature card is not. Spells and abilities that interact with activated abilities (such as Stifle) will interact with unearth, but spells and abilities that interact with spells (such as Remove Soul) will not."
+          "text": "Activating a creature card’s unearth ability isn’t the same as casting the creature card. The unearth ability is put on the stack, but the creature card is not. Spells and abilities that interact with activated abilities (such as Stifle) will interact with unearth, but spells and abilities that interact with spells (such as Remove Soul) will not."
         },
         {
           "date": "2008-10-01",
-          "text": "At the beginning of the end step, a creature returned to the battlefield with unearth is exiled. This is a delayed triggered ability, and it can be countered by effects such as Stifle or Voidslime that counter triggered abilities. If the ability is countered, the creature will stay on the battlefield and the delayed trigger won't trigger again. However, the replacement effect will still exile the creature when it eventually leaves the battlefield."
+          "text": "At the beginning of the end step, a creature returned to the battlefield with unearth is exiled. This is a delayed triggered ability, and it can be countered by effects such as Stifle or Voidslime that counter triggered abilities. If the ability is countered, the creature will stay on the battlefield and the delayed trigger won’t trigger again. However, the replacement effect will still exile the creature when it eventually leaves the battlefield."
         },
         {
           "date": "2008-10-01",
-          "text": "Unearth grants haste to the creature that's returned to the battlefield. However, neither of the \"exile\" abilities is granted to that creature. If that creature loses all its abilities, it will still be exiled at the beginning of the end step, and if it would leave the battlefield, it is still exiled instead."
+          "text": "Unearth grants haste to the creature that’s returned to the battlefield. However, neither of the “exile” abilities is granted to that creature. If that creature loses all its abilities, it will still be exiled at the beginning of the end step, and if it would leave the battlefield, it is still exiled instead."
         },
         {
           "date": "2008-10-01",
-          "text": "If a creature returned to the battlefield with unearth would leave the battlefield for any reason, it's exiled instead -- unless the spell or ability that's causing the creature to leave the battlefield is actually trying to exile it! In that case, it succeeds at exiling it. If it later returns the creature card to the battlefield (as Oblivion Ring or Flickerwisp might, for example), the creature card will return to the battlefield as a new object with no relation to its previous existence. The unearth effect will no longer apply to it."
+          "text": "If a creature returned to the battlefield with unearth would leave the battlefield for any reason, it’s exiled instead -- unless the spell or ability that’s causing the creature to leave the battlefield is actually trying to exile it! In that case, it succeeds at exiling it. If it later returns the creature card to the battlefield (as Oblivion Ring or Flickerwisp might, for example), the creature card will return to the battlefield as a new object with no relation to its previous existence. The unearth effect will no longer apply to it."
         }
       ],
       "subtypes": [
@@ -2235,7 +2204,7 @@
         },
         {
           "date": "2010-06-15",
-          "text": "During an opponent’s untap step, effects that would otherwise cause your permanents to stay tapped don’t apply because they apply only during *your* untap step. For example, if you control a Deep-Slumber Titan (a creature that says “Deep-Slumber Titan doesn’t untap during your untap step\"), you untap Deep-Slumber Titan during each opponent’s untap step."
+          "text": "During an opponent’s untap step, effects that would otherwise cause your permanents to stay tapped don’t apply because they apply only during *your* untap step. For example, if you control a Deep-Slumber Titan (a creature that says “Deep-Slumber Titan doesn’t untap during your untap step”), you untap Deep-Slumber Titan during each opponent’s untap step."
         },
         {
           "date": "2010-06-15",
@@ -2282,10 +2251,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -2294,19 +2259,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
           "format": "Shards of Alara Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -2400,7 +2353,7 @@
         },
         {
           "date": "2010-06-15",
-          "text": "If the targeted permanent has {X} in its mana cost (such as Protean Hydra), X is considered to be zero."
+          "text": "If the targeted permanent has in its mana cost (such as Protean Hydra), X is considered to be zero."
         },
         {
           "date": "2010-06-15",
@@ -2415,7 +2368,7 @@
           "text": "If the targeted permanent is an Aura, you choose a legal permanent, player, or other card for the token to enchant as it enters the battlefield. A permanent you choose must be able to be enchanted by the token. (For example, if the Aura it’s copying is red and has “enchant creature,” the permanent must be a creature, and it can’t have protection from red.) Since the token Aura wasn’t cast as a spell, it doesn’t target what it will enchant; you may choose something that has shroud, for example. As the ability resolves, no player can respond between the time you choose what the token will enchant and the time it enters the battlefield. If you can’t choose something for the token to enchant, it enters the battlefield unattached, then is put into your graveyard as a state-based action."
         }
       ],
-      "text": "When you set this scheme in motion, put a token onto the battlefield that's a copy of target permanent an opponent controls.",
+      "text": "When you set this scheme in motion, create a token that's a copy of target permanent an opponent controls.",
       "type": "Scheme",
       "types": [
         "Scheme"
@@ -2745,7 +2698,7 @@
         "ARC"
       ],
       "rarity": "Common",
-      "text": "When you set this scheme in motion, put a 4/6 colorless Golem artifact creature token onto the battlefield.",
+      "text": "When you set this scheme in motion, create a 4/6 colorless Golem artifact creature token.",
       "type": "Scheme",
       "types": [
         "Scheme"
@@ -2963,7 +2916,7 @@
         "ARC"
       ],
       "rarity": "Common",
-      "text": "When you set this scheme in motion, put a 5/5 red Dragon creature token with flying onto the battlefield.",
+      "text": "When you set this scheme in motion, create a 5/5 red Dragon creature token with flying.",
       "type": "Scheme",
       "types": [
         "Scheme"
@@ -3472,7 +3425,7 @@
       "rulings": [
         {
           "date": "2010-06-15",
-          "text": "As the ability resolves, you choose a value for X and decide whether to pay {X}. If you do decide to pay {X}, it’s too late for any player to respond since the ability is already in the midst of resolving."
+          "text": "As the ability resolves, you choose a value for X and decide whether to pay . If you do decide to pay , it’s too late for any player to respond since the ability is already in the midst of resolving."
         }
       ],
       "text": "When you set this scheme in motion, you may pay {X}. If you do, you gain X life and draw X cards.",
@@ -3500,10 +3453,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -3513,18 +3462,6 @@
         },
         {
           "format": "Odyssey Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -3546,7 +3483,7 @@
         "PD3"
       ],
       "rarity": "Uncommon",
-      "text": "Discard two cards: Put a 2/2 black Zombie creature token onto the battlefield.",
+      "text": "Discard two cards: Create a 2/2 black Zombie creature token.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -3717,7 +3654,7 @@
         },
         {
           "date": "2010-06-15",
-          "text": "If you choose a card, you cast it as part of the resolution of this ability. Timing restrictions based on the card’s type are ignored. Other restrictions are not (such as “Cast [this card] only during your end step\")."
+          "text": "If you choose a card, you cast it as part of the resolution of this ability. Timing restrictions based on the card’s type are ignored. Other restrictions are not (such as “Cast [this card] only during your end step”)."
         },
         {
           "date": "2010-06-15",
@@ -3983,7 +3920,7 @@
       "supertypes": [
         "Ongoing"
       ],
-      "text": "(An ongoing scheme remains face up until it's abandoned.)\nWhenever a creature attacks and isn't blocked, if you're the defending player, put a 0/1 green Plant creature token onto the battlefield blocking that creature.\nWhen four or more creatures attack you, abandon this scheme at end of combat.",
+      "text": "(An ongoing scheme remains face up until it's abandoned.)\nWhenever a creature attacks and isn't blocked, if you're the defending player, create a 0/1 green Plant creature token that's blocking that creature.\nWhen four or more creatures attack you, abandon this scheme at end of combat.",
       "type": "Ongoing Scheme",
       "types": [
         "Scheme"
@@ -4258,10 +4195,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -4282,7 +4215,7 @@
         "ORI"
       ],
       "rarity": "Common",
-      "text": "Put two 1/1 red Goblin creature tokens onto the battlefield.",
+      "text": "Create two 1/1 red Goblin creature tokens.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -4561,7 +4494,7 @@
         "ARC"
       ],
       "rarity": "Common",
-      "text": "When you set this scheme in motion, put five 1/1 green Saproling creature tokens onto the battlefield.",
+      "text": "When you set this scheme in motion, create five 1/1 green Saproling creature tokens.",
       "type": "Scheme",
       "types": [
         "Scheme"
@@ -4643,7 +4576,7 @@
         },
         {
           "date": "2004-12-01",
-          "text": "If, for example, X is 5 and you choose three target creatures, Fireball has a total cost of {7}{R} (even though its mana cost is just {5}{R}). If those creatures are all still legal targets as Fireball resolves, it deals 1 damage to each of them."
+          "text": "If, for example, X is 5 and you choose three target creatures, Fireball has a total cost of (even though its mana cost is just ). If those creatures are all still legal targets as Fireball resolves, it deals 1 damage to each of them."
         },
         {
           "date": "2009-05-01",
@@ -4728,7 +4661,7 @@
           "text": "If there are multiple combat phases in a turn, each of these Zombies must attack its designated player in each of them that it’s able to."
         }
       ],
-      "text": "When you set this scheme in motion, for each opponent, put a 2/2 black Zombie creature token onto the battlefield that attacks that player each combat if able.",
+      "text": "When you set this scheme in motion, for each opponent, create a 2/2 black Zombie creature token that attacks that player each combat if able.",
       "type": "Scheme",
       "types": [
         "Scheme"
@@ -4786,7 +4719,7 @@
       "rulings": [
         {
           "date": "2008-10-01",
-          "text": "You choose the target when the ability triggers. When the ability resolves, you choose a value for X and decide whether to pay {X}{R}. If you do decide to pay {X}{R}, it’s too late for any player to respond since the ability is already in the midst of resolving."
+          "text": "You choose the target when the ability triggers. When the ability resolves, you choose a value for X and decide whether to pay . If you do decide to pay , it’s too late for any player to respond since the ability is already in the midst of resolving."
         }
       ],
       "subtypes": [
@@ -5138,11 +5071,11 @@
       "rulings": [
         {
           "date": "2009-10-01",
-          "text": "You decide whether to pay {5}{R}{R} as Hellkite Charger’s ability resolves."
+          "text": "You decide whether to pay as Hellkite Charger’s ability resolves."
         },
         {
           "date": "2009-10-01",
-          "text": "If you pay {5}{R}{R}, the new combat phase immediately follows the current combat phase. There is no main phase in between."
+          "text": "If you pay , the new combat phase immediately follows the current combat phase. There is no main phase in between."
         },
         {
           "date": "2009-10-01",
@@ -5150,7 +5083,7 @@
         },
         {
           "date": "2009-10-01",
-          "text": "If two Hellkite Chargers attack at the same time, both of their abilities trigger. If you pay {5}{R}{R} for each, two new combat phases will be created. However, all attacking creatures untap as those abilities resolve, not as the combat phases start. Any creature that attacks in the second combat phase will remain tapped during the third combat phase."
+          "text": "If two Hellkite Chargers attack at the same time, both of their abilities trigger. If you pay for each, two new combat phases will be created. However, all attacking creatures untap as those abilities resolve, not as the combat phases start. Any creature that attacks in the second combat phase will remain tapped during the third combat phase."
         }
       ],
       "subtypes": [
@@ -5208,7 +5141,7 @@
       "rulings": [
         {
           "date": "2010-06-15",
-          "text": "You choose the target opponent when the ability triggers. As the ability resolves, you choose a value for X and decide whether to pay {X}. If you do decide to pay {X}, it’s too late for any player to respond since the ability is already in the midst of resolving."
+          "text": "You choose the target opponent when the ability triggers. As the ability resolves, you choose a value for X and decide whether to pay . If you do decide to pay , it’s too late for any player to respond since the ability is already in the midst of resolving."
         }
       ],
       "text": "When you set this scheme in motion, you may pay {X}. If you do, this scheme deals X damage to target opponent and each creature he or she controls.",
@@ -5347,27 +5280,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -5399,7 +5316,7 @@
         },
         {
           "date": "2009-10-01",
-          "text": "Casting a Trap by paying its alternative cost doesn't change its mana cost or converted mana cost. The only difference is the cost you actually pay."
+          "text": "Casting a Trap by paying its alternative cost doesn’t change its mana cost or converted mana cost. The only difference is the cost you actually pay."
         },
         {
           "date": "2009-10-01",
@@ -5407,11 +5324,11 @@
         },
         {
           "date": "2009-10-01",
-          "text": "Inferno Trap's alternative cost condition checks for any damage, not just combat damage."
+          "text": "Inferno Trap’s alternative cost condition checks for any damage, not just combat damage."
         },
         {
           "date": "2009-10-01",
-          "text": "The alternative cost condition doesn't check who controlled the creatures that dealt damage to you. Damage dealt to you by your own creatures counts."
+          "text": "The alternative cost condition doesn’t check who controlled the creatures that dealt damage to you. Damage dealt to you by your own creatures counts."
         },
         {
           "date": "2009-10-01",
@@ -5971,10 +5888,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -5983,19 +5896,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
           "format": "Shards of Alara Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -6020,7 +5921,7 @@
       "rulings": [
         {
           "date": "2009-02-01",
-          "text": "Volcanic Fallout can be targeted by spells that try to counter it (such as Countersquall). Those spells will still resolve, but the part of their effect that would counter Volcanic Fallout won't do anything. Any other effects those spells have will work as normal."
+          "text": "Volcanic Fallout can be targeted by spells that try to counter it (such as Countersquall). Those spells will still resolve, but the part of their effect that would counter Volcanic Fallout won’t do anything. Any other effects those spells have will work as normal."
         }
       ],
       "text": "Volcanic Fallout can't be countered.\nVolcanic Fallout deals 2 damage to each creature and each player.",
@@ -6332,12 +6233,6 @@
         "EMA"
       ],
       "rarity": "Common",
-      "rulings": [
-        {
-          "date": "2009-10-01",
-          "text": "Fog has no effect on damage that’s already been dealt."
-        }
-      ],
       "text": "Prevent all combat damage that would be dealt this turn.",
       "type": "Instant",
       "types": [
@@ -6662,7 +6557,7 @@
         },
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn’t matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn’t matter how long the permanent has been a creature."
         }
       ],
       "subtypes": [
@@ -6782,10 +6677,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -6965,10 +6856,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -6978,18 +6865,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -7013,7 +6888,7 @@
       "rulings": [
         {
           "date": "2013-07-01",
-          "text": "This card won't be put into your graveyard until after it's finished resolving, which means it won't be shuffled into your library as part of its own effect."
+          "text": "This card won’t be put into your graveyard until after it’s finished resolving, which means it won’t be shuffled into your library as part of its own effect."
         }
       ],
       "text": "Choose two —\n• Target player gains 7 life.\n• Put target noncreature permanent on top of its owner's library.\n• Target player shuffles his or her graveyard into his or her library.\n• Search your library for a creature card, reveal it, put it into your hand, then shuffle your library.",
@@ -7365,7 +7240,7 @@
         "Elf",
         "Shaman"
       ],
-      "text": "Saproling creatures get +1/+1.\nMorph {3}{G}{G} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)\nWhen Thelonite Hermit is turned face up, put four 1/1 green Saproling creature tokens onto the battlefield.",
+      "text": "Saproling creatures get +1/+1.\nMorph {3}{G}{G} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)\nWhen Thelonite Hermit is turned face up, create four 1/1 green Saproling creature tokens.",
       "toughness": "1",
       "type": "Creature — Elf Shaman",
       "types": [
@@ -7437,7 +7312,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "Kicker {X} (You may pay an additional {X} as you cast this spell.)\nSaproling creatures and other Treefolk creatures get +1/+1.\nWhen Verdeloth the Ancient enters the battlefield, if it was kicked, put X 1/1 green Saproling creature tokens onto the battlefield.",
+      "text": "Kicker {X} (You may pay an additional {X} as you cast this spell.)\nSaproling creatures and other Treefolk creatures get +1/+1.\nWhen Verdeloth the Ancient enters the battlefield, if it was kicked, create X 1/1 green Saproling creature tokens.",
       "toughness": "7",
       "type": "Legendary Creature — Treefolk",
       "types": [
@@ -7978,10 +7853,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -7990,19 +7861,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
           "format": "Shards of Alara Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -8027,31 +7886,31 @@
       "rulings": [
         {
           "date": "2009-05-01",
-          "text": "Cascade triggers when you cast the spell, meaning that it resolves before that spell. If you end up casting the exiled card, it will go on the stack above the spell with Cascade."
+          "text": "Cascade triggers when you cast the spell, meaning that it resolves before that spell. If you end up casting the exiled card, it will go on the stack above the spell with cascade."
         },
         {
           "date": "2009-05-01",
-          "text": "When the Cascade ability resolves, you must exile cards. The only optional part of the ability is whether or not your cast the last card exiled."
+          "text": "When the cascade ability resolves, you must exile cards. The only optional part of the ability is whether or not you cast the last card exiled."
         },
         {
           "date": "2009-05-01",
-          "text": "If a spell with Cascade is countered, the Cascade ability will still resolve normally."
+          "text": "If a spell with cascade is countered, the cascade ability will still resolve normally."
         },
         {
           "date": "2009-05-01",
-          "text": "You exile the cards face-up. All players will be able to see them."
+          "text": "You exile the cards face-up. All players will be able to see them."
         },
         {
           "date": "2009-05-01",
-          "text": "If you exile a split card with Cascade, check if at least one half of that split card has a converted mana cost that's less than the converted mana cost of the spell with cascade. If so, you can cast either half of that split card."
+          "text": "If you exile a split card with cascade, check if at least one half of that split card has a converted mana cost that’s less than the converted mana cost of the spell with cascade. If so, you can cast either half of that split card."
         },
         {
           "date": "2009-05-01",
-          "text": "If you cast the last exiled card, you're casting it as a spell. It can be countered. If that card has cascade, the new spell's cascade ability will trigger, and you'll repeat the process for the new spell."
+          "text": "If you cast the last exiled card, you’re casting it as a spell. It can be countered. If that card has cascade, the new spell’s cascade ability will trigger, and you’ll repeat the process for the new spell."
         },
         {
           "date": "2009-05-01",
-          "text": "After you're done exiling cards and casting the last one if you chose to do so, the remaining exiled cards are randomly placed on the bottom of your library. Neither you nor any other player is allowed to know the order of those cards."
+          "text": "After you’re done exiling cards and casting the last one if you chose to do so, the remaining exiled cards are randomly placed on the bottom of your library. Neither you nor any other player is allowed to know the order of those cards."
         }
       ],
       "text": "Cascade (When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom in a random order.)\nBituminous Blast deals 4 damage to target creature.",
@@ -8788,7 +8647,7 @@
         "Zombie",
         "Shaman"
       ],
-      "text": "({B/R} can be paid with either {B} or {R}.)\n{3}{B}, Discard a card: Target creature gets -2/-2 until end of turn.\n{3}{R}: Put a 2/1 red Goblin creature token with haste onto the battlefield. Exile it at the beginning of the next end step.",
+      "text": "({B/R} can be paid with either {B} or {R}.)\n{3}{B}, Discard a card: Target creature gets -2/-2 until end of turn.\n{3}{R}: Create a 2/1 red Goblin creature token with haste. Exile it at the beginning of the next end step.",
       "toughness": "2",
       "type": "Creature — Zombie Shaman",
       "types": [
@@ -8915,7 +8774,7 @@
         "Elf",
         "Wizard"
       ],
-      "text": "{3}{G}: Put a 1/1 green Saproling creature token onto the battlefield.\n{3}{W}: Creatures you control get +1/+1 until end of turn.",
+      "text": "{3}{G}: Create a 1/1 green Saproling creature token.\n{3}{W}: Creatures you control get +1/+1 until end of turn.",
       "toughness": "2",
       "type": "Creature — Elf Wizard",
       "types": [
@@ -9396,7 +9255,7 @@
         "U"
       ],
       "flavor": "\"Release that which was never caged.\"\n—Spellbomb inscription",
-      "id": "9f311c5bc13a3c4b7d22d1ae91f7b528fa23f661",
+      "id": "742e5fc38e52bb2660e2569c6947c50c14aa5d10",
       "imageName": "aether spellbomb",
       "layout": "normal",
       "legalities": [
@@ -9422,9 +9281,8 @@
         }
       ],
       "manaCost": "{1}",
-      "mciNumber": "102",
       "multiverseid": 220525,
-      "name": "Æther Spellbomb",
+      "name": "Aether Spellbomb",
       "number": "102",
       "originalText": "{U}, Sacrifice Æther Spellbomb: Return target creature to its owner's hand.\n{1}, Sacrifice Æther Spellbomb: Draw a card.",
       "originalType": "Artifact",
@@ -9435,7 +9293,7 @@
         "MMA"
       ],
       "rarity": "Common",
-      "text": "{U}, Sacrifice Æther Spellbomb: Return target creature to its owner's hand.\n{1}, Sacrifice Æther Spellbomb: Draw a card.",
+      "text": "{U}, Sacrifice Aether Spellbomb: Return target creature to its owner's hand.\n{1}, Sacrifice Aether Spellbomb: Draw a card.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -9653,6 +9511,10 @@
         {
           "date": "2016-06-08",
           "text": "Duplicant keeps all creature types it had when the card was imprinted, including any types that Duplicant had gained."
+        },
+        {
+          "date": "2016-07-13",
+          "text": "If a melded permanent is exiled by Duplicant’s triggered ability, that ability’s controller chooses the relative timestamp of the two meld cards. Duplicant looks at the information of the one with the later timestamp."
         }
       ],
       "subtypes": [
@@ -10598,27 +10460,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -10651,15 +10497,15 @@
       "rulings": [
         {
           "date": "2010-06-15",
-          "text": "Annihilator abilities trigger and resolve during the declare attackers step. The defending player chooses and sacrifices the required number of permanents before he or she declares blockers. Any creatures sacrificed this way won't be able to block."
+          "text": "Annihilator abilities trigger and resolve during the declare attackers step. The defending player chooses and sacrifices the required number of permanents before he or she declares blockers. Any creatures sacrificed this way won’t be able to block."
         },
         {
           "date": "2010-06-15",
-          "text": "If a creature with annihilator is attacking a planeswalker, and the defending player chooses to sacrifice that planeswalker, the attacking creature continues to attack. It may be blocked. If it isn't blocked, it simply won't deal combat damage to anything."
+          "text": "If a creature with annihilator is attacking a planeswalker, and the defending player chooses to sacrifice that planeswalker, the attacking creature continues to attack. It may be blocked. If it isn’t blocked, it simply won’t deal combat damage to anything."
         },
         {
           "date": "2010-06-15",
-          "text": "In a Two-Headed Giant game, the controller of an attacking creature with annihilator chooses which of the defending players is affected by the ability. Only that player sacrifices permanents. The choice is made as the ability resolves; once a player is chosen, it's too late for anyone to respond."
+          "text": "In a Two-Headed Giant game, the controller of an attacking creature with annihilator chooses which of the defending players is affected by the ability. Only that player sacrifices permanents. The choice is made as the ability resolves; once a player is chosen, it’s too late for anyone to respond."
         }
       ],
       "subtypes": [
@@ -10744,27 +10590,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -10893,7 +10723,7 @@
         "DDR"
       ],
       "rarity": "Common",
-      "text": "Khalni Garden enters the battlefield tapped.\nWhen Khalni Garden enters the battlefield, put a 0/1 green Plant creature token onto the battlefield.\n{T}: Add {G} to your mana pool.",
+      "text": "Khalni Garden enters the battlefield tapped.\nWhen Khalni Garden enters the battlefield, create a 0/1 green Plant creature token.\n{T}: Add {G} to your mana pool.",
       "type": "Land",
       "types": [
         "Land"
@@ -10910,27 +10740,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Odyssey Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -11103,7 +10917,7 @@
       "rulings": [
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn’t matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn’t matter how long the permanent has been a creature."
         },
         {
           "date": "2009-10-01",
@@ -11391,7 +11205,7 @@
         "C13"
       ],
       "rarity": "Uncommon",
-      "text": "{T}: Add {C} to your mana pool.\n{2}{G}{W}, {T}: Put a 1/1 green Saproling creature token onto the battlefield.",
+      "text": "{T}: Add {C} to your mana pool.\n{2}{G}{W}, {T}: Create a 1/1 green Saproling creature token.",
       "type": "Land",
       "types": [
         "Land"
@@ -11424,6 +11238,10 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -11664,6 +11482,10 @@
           "legality": "Legal"
         },
         {
+          "format": "Kaladesh Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Kamigawa Block",
           "legality": "Legal"
         },
@@ -11898,6 +11720,10 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -12136,6 +11962,10 @@
           "legality": "Legal"
         },
         {
+          "format": "Kaladesh Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Kamigawa Block",
           "legality": "Legal"
         },
@@ -12371,6 +12201,10 @@
           "legality": "Legal"
         },
         {
+          "format": "Kaladesh Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Kamigawa Block",
           "legality": "Legal"
         },
@@ -12603,6 +12437,10 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -12847,6 +12685,10 @@
           "legality": "Legal"
         },
         {
+          "format": "Kaladesh Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Kamigawa Block",
           "legality": "Legal"
         },
@@ -13085,6 +12927,10 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -13329,6 +13175,10 @@
           "legality": "Legal"
         },
         {
+          "format": "Kaladesh Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Kamigawa Block",
           "legality": "Legal"
         },
@@ -13567,6 +13417,10 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -13811,6 +13665,10 @@
           "legality": "Legal"
         },
         {
+          "format": "Kaladesh Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Kamigawa Block",
           "legality": "Legal"
         },
@@ -14049,6 +13907,10 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -14291,6 +14153,10 @@
           "legality": "Legal"
         },
         {
+          "format": "Kaladesh Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Kamigawa Block",
           "legality": "Legal"
         },
@@ -14527,6 +14393,10 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {

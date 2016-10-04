@@ -935,7 +935,7 @@
         },
         {
           "date": "2007-10-01",
-          "text": "If the Incarnation is removed from the graveyard after the ability triggers but before it resolves, it won’t get shuffled into its owner’s library. Similarly, if a replacement effect has the Incarnation move to a different zone instead of being put into the graveyard, the ability won’t trigger at all."
+          "text": "If the Incarnation is removed from the graveyard after the ability triggers but before it resolves, it will remain in its new zone when its owner shuffles his or her library. Similarly, if a replacement effect has the Incarnation move to a different zone instead of being put into the graveyard, the ability won’t trigger at all."
         }
       ],
       "subtypes": [
@@ -1114,7 +1114,7 @@
       "colors": [
         "Blue"
       ],
-      "id": "31e6d59286239c0cea652e041c6d918ed5fcb6b7",
+      "id": "e340a5ee14f9a6c2ca97dd6131947ad747485712",
       "imageName": "aethersnipe",
       "layout": "normal",
       "legalities": [
@@ -1140,9 +1140,8 @@
         }
       ],
       "manaCost": "{5}{U}",
-      "mciNumber": "17",
       "multiverseid": 393816,
-      "name": "Æthersnipe",
+      "name": "Aethersnipe",
       "number": "17",
       "originalText": "When Æthersnipe enters the battlefield, return target nonland permanent to its owner's hand.\nEvoke {1}{U}{U} (You may cast this spell for its evoke cost. If you do, it's sacrificed when it enters the battlefield.)",
       "originalType": "Creature — Elemental",
@@ -1165,7 +1164,7 @@
       "subtypes": [
         "Elemental"
       ],
-      "text": "When Æthersnipe enters the battlefield, return target nonland permanent to its owner's hand.\nEvoke {1}{U}{U} (You may cast this spell for its evoke cost. If you do, it's sacrificed when it enters the battlefield.)",
+      "text": "When Aethersnipe enters the battlefield, return target nonland permanent to its owner's hand.\nEvoke {1}{U}{U} (You may cast this spell for its evoke cost. If you do, it's sacrificed when it enters the battlefield.)",
       "toughness": "4",
       "type": "Creature — Elemental",
       "types": [
@@ -1445,10 +1444,6 @@
           "text": "This has no mana cost, which means it can’t normally be cast as a spell. You could, however, cast it via some alternate means, like with Fist of Suns or Mind’s Desire."
         },
         {
-          "date": "2006-10-15",
-          "text": "This has no mana cost, which means it can’t be cast with the Replicate ability of Djinn Illuminatus or by somehow giving it Flashback."
-        },
-        {
           "date": "2013-06-07",
           "text": "You can exile a card in your hand using suspend any time you could cast that card. Consider its card type, any effect that affects when you could cast it (such as flash) and any other effects that could stop you from casting it (such as Meddling Mage’s effect) to determine if and when you can do this. Whether or not you could actually complete all steps in casting the card is irrelevant. For example, you can exile a card with suspend that has no mana cost or requires a target even if no legal targets are available at that time."
         },
@@ -1491,6 +1486,10 @@
         {
           "date": "2013-06-07",
           "text": "Although originally printed with a characteristic-defining ability that defined its color, this card now has a color indicator. This color indicator can’t be affected by text-changing effects (such as the one created by Crystal Spray), although color-changing effects can still overwrite it."
+        },
+        {
+          "date": "2016-09-20",
+          "text": "This has no mana cost, which means its mana cost can’t be paid for effects such as replicate from Djinn Illuminatus or flashback from Snapcaster Mage."
         }
       ],
       "text": "Suspend 4—{U} (Rather than cast this card from your hand, pay {U} and exile it with four time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)\nTarget player draws three cards.",
@@ -1994,6 +1993,10 @@
           "legality": "Legal"
         },
         {
+          "format": "Kaladesh Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Kamigawa Block",
           "legality": "Legal"
         },
@@ -2227,6 +2230,10 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -2466,6 +2473,10 @@
           "legality": "Legal"
         },
         {
+          "format": "Kaladesh Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Kamigawa Block",
           "legality": "Legal"
         },
@@ -2699,6 +2710,10 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -3876,14 +3891,14 @@
         },
         {
           "date": "2007-10-01",
-          "text": "If the Incarnation is removed from the graveyard after the ability triggers but before it resolves, it won’t get shuffled into its owner’s library. Similarly, if a replacement effect has the Incarnation move to a different zone instead of being put into the graveyard, the ability won’t trigger at all."
+          "text": "If the Incarnation is removed from the graveyard after the ability triggers but before it resolves, it will remain in its new zone when its owner shuffles his or her library. Similarly, if a replacement effect has the Incarnation move to a different zone instead of being put into the graveyard, the ability won’t trigger at all."
         }
       ],
       "subtypes": [
         "Elemental",
         "Incarnation"
       ],
-      "text": "Haste\nIf a spell you control would deal damage to an opponent, prevent that damage. Put a 3/1 red Elemental Shaman creature token with haste onto the battlefield for each 1 damage prevented this way.\nWhen Hostility is put into a graveyard from anywhere, shuffle it into its owner's library.",
+      "text": "Haste\nIf a spell you control would deal damage to an opponent, prevent that damage. Create a 3/1 red Elemental Shaman creature token with haste for each 1 damage prevented this way.\nWhen Hostility is put into a graveyard from anywhere, shuffle it into its owner's library.",
       "toughness": "6",
       "type": "Creature — Elemental Incarnation",
       "types": [
@@ -4214,11 +4229,11 @@
         },
         {
           "date": "2008-05-01",
-          "text": "A card with monocolored hybrid mana symbols in its mana cost has a converted mana cost equal to the highest possible cost it could be cast for. Its converted mana cost never changes. Thus, Flame Javelin has a converted mana cost of 6, even if you spend {R}{R}{R} to cast it."
+          "text": "A card with monocolored hybrid mana symbols in its mana cost has a converted mana cost equal to the highest possible cost it could be cast for. Its converted mana cost never changes. Thus, Flame Javelin has a converted mana cost of 6, even if you spend to cast it."
         },
         {
           "date": "2008-05-01",
-          "text": "If a cost includes more than one monocolored hybrid mana symbol, you can choose a different way to pay for each symbol. For example, you can pay for Flame Javelin by spending {R}{R}{R}, {2}{R}{R}, {4}{R}, or {6}."
+          "text": "If a cost includes more than one monocolored hybrid mana symbol, you can choose a different way to pay for each symbol. For example, you can pay for Flame Javelin by spending , , , or ."
         }
       ],
       "text": "({2/R} can be paid with any two mana or with {R}. This card's converted mana cost is 6.)\nFlame Javelin deals 4 damage to target creature or player.",
@@ -4254,6 +4269,10 @@
         },
         {
           "format": "Modern",
+          "legality": "Legal"
+        },
+        {
+          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -4425,7 +4444,7 @@
         },
         {
           "date": "2004-12-01",
-          "text": "If, for example, X is 5 and you choose three target creatures, Fireball has a total cost of {7}{R} (even though its mana cost is just {5}{R}). If those creatures are all still legal targets as Fireball resolves, it deals 1 damage to each of them."
+          "text": "If, for example, X is 5 and you choose three target creatures, Fireball has a total cost of (even though its mana cost is just ). If those creatures are all still legal targets as Fireball resolves, it deals 1 damage to each of them."
         },
         {
           "date": "2009-05-01",
@@ -4580,6 +4599,10 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -4825,6 +4848,10 @@
           "legality": "Legal"
         },
         {
+          "format": "Kaladesh Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Kamigawa Block",
           "legality": "Legal"
         },
@@ -5067,6 +5094,10 @@
           "legality": "Legal"
         },
         {
+          "format": "Kaladesh Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Kamigawa Block",
           "legality": "Legal"
         },
@@ -5306,6 +5337,10 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {

@@ -282,7 +282,7 @@
         "Human",
         "Soldier"
       ],
-      "text": "Benalish Commander's power and toughness are each equal to the number of Soldiers you control.\nSuspend X—{X}{W}{W}. X can't be 0. (Rather than cast this card from your hand, you may pay {X}{W}{W} and exile it with X time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost. It has haste.)\nWhenever a time counter is removed from Benalish Commander while it's exiled, put a 1/1 white Soldier creature token onto the battlefield.",
+      "text": "Benalish Commander's power and toughness are each equal to the number of Soldiers you control.\nSuspend X—{X}{W}{W}. X can't be 0. (Rather than cast this card from your hand, you may pay {X}{W}{W} and exile it with X time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost. It has haste.)\nWhenever a time counter is removed from Benalish Commander while it's exiled, create a 1/1 white Soldier creature token.",
       "toughness": "*",
       "type": "Creature — Human Soldier",
       "types": [
@@ -587,15 +587,15 @@
       "rulings": [
         {
           "date": "2007-02-01",
-          "text": "You may return this creature itself to its owner’s hand. If you control no other creatures, you must return it."
-        },
-        {
-          "date": "2007-02-01",
-          "text": "The ability doesn’t target what you return. You don’t choose what to return until the ability resolves. No one can respond to the choice."
-        },
-        {
-          "date": "2007-02-01",
           "text": "If you are instructed to return more creatures than you control, you must return all the creatures you control to their owner’s hand."
+        },
+        {
+          "date": "2016-06-08",
+          "text": "You may return this creature itself to its owner’s hand as its triggered ability resolves. If you don't control enough other creatures, you must return it."
+        },
+        {
+          "date": "2016-06-08",
+          "text": "The ability doesn’t target any creature. You don’t choose what to return until the ability resolves. Once the ability has started to resolve, no one can respond to the choice."
         }
       ],
       "subtypes": [
@@ -1137,7 +1137,7 @@
       "subtypes": [
         "Fungus"
       ],
-      "text": "At the beginning of your upkeep, put a spore counter on Pallid Mycoderm.\nRemove three spore counters from Pallid Mycoderm: Put a 1/1 green Saproling creature token onto the battlefield.\nSacrifice a Saproling: Each creature you control that's a Fungus or a Saproling gets +1/+1 until end of turn.",
+      "text": "At the beginning of your upkeep, put a spore counter on Pallid Mycoderm.\nRemove three spore counters from Pallid Mycoderm: Create a 1/1 green Saproling creature token.\nSacrifice a Saproling: Each creature you control that's a Fungus or a Saproling gets +1/+1 until end of turn.",
       "toughness": "4",
       "type": "Creature — Fungus",
       "types": [
@@ -1596,7 +1596,7 @@
         "Rebel",
         "Knight"
       ],
-      "text": "Protection from black; flanking (Whenever a creature without flanking blocks this creature, the blocking creature gets -1/-1 until end of turn.)\nSuspend 3—{1}{W}{W} (Rather than cast this card from your hand, you may pay {1}{W}{W} and exile it with three time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost. It has haste.)\nWhen the last time counter is removed from Riftmarked Knight while it's exiled, put a 2/2 black Knight creature token with flanking, protection from white, and haste onto the battlefield.",
+      "text": "Protection from black; flanking (Whenever a creature without flanking blocks this creature, the blocking creature gets -1/-1 until end of turn.)\nSuspend 3—{1}{W}{W} (Rather than cast this card from your hand, you may pay {1}{W}{W} and exile it with three time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost. It has haste.)\nWhen the last time counter is removed from Riftmarked Knight while it's exiled, create a 2/2 black Knight creature token with flanking, protection from white, and haste.",
       "toughness": "2",
       "type": "Creature — Human Rebel Knight",
       "types": [
@@ -2099,10 +2099,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -2111,19 +2107,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Time Spiral Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -2151,12 +2135,12 @@
           "text": "Both triggered abilities trigger when Stonecloaker enters the battlefield. They can be put on the stack in either order."
         },
         {
-          "date": "2007-02-01",
-          "text": "You may return this creature itself to its owner's hand. If you control no other creatures, you must return it."
+          "date": "2016-06-08",
+          "text": "You may return this creature itself to its owner’s hand as its triggered ability resolves. If you don't control enough other creatures, you must return it."
         },
         {
-          "date": "2007-02-01",
-          "text": "The ability doesn't target what you return. You don't choose what to return until the ability resolves. No one can respond to the choice."
+          "date": "2016-06-08",
+          "text": "The ability doesn’t target any creature. You don’t choose what to return until the ability resolves. Once the ability has started to resolve, no one can respond to the choice."
         }
       ],
       "subtypes": [
@@ -2273,26 +2257,26 @@
         },
         {
           "date": "2007-02-01",
-          "text": "You may return this creature itself to its owner’s hand. If you control no other creatures, you must return it."
-        },
-        {
-          "date": "2007-02-01",
-          "text": "The ability doesn’t target what you return. You don’t choose what to return until the ability resolves. No one can respond to the choice."
-        },
-        {
-          "date": "2007-02-01",
           "text": "If you are instructed to return more creatures than you control, you must return all the creatures you control to their owner’s hand."
         },
         {
           "date": "2009-10-01",
           "text": "A token’s owner is the player under whose control it entered the battlefield."
+        },
+        {
+          "date": "2016-06-08",
+          "text": "You may return this creature itself to its owner’s hand as its triggered ability resolves. If you don't control enough other creatures, you must return it."
+        },
+        {
+          "date": "2016-06-08",
+          "text": "The ability doesn’t target any creature. You don’t choose what to return until the ability resolves. Once the ability has started to resolve, no one can respond to the choice."
         }
       ],
       "subtypes": [
         "Human",
         "Soldier"
       ],
-      "text": "Flying\nWhen Stormfront Riders enters the battlefield, return two creatures you control to their owner's hand.\nWhenever Stormfront Riders or another creature is returned to your hand from the battlefield, put a 1/1 white Soldier creature token onto the battlefield.",
+      "text": "Flying\nWhen Stormfront Riders enters the battlefield, return two creatures you control to their owner's hand.\nWhenever Stormfront Riders or another creature is returned to your hand from the battlefield, create a 1/1 white Soldier creature token.",
       "toughness": "3",
       "type": "Creature — Human Soldier",
       "types": [
@@ -2409,8 +2393,8 @@
           "text": "Activated abilities of copies of a spell with that name (such as Lightning Storm) cannot be activated."
         },
         {
-          "date": "2013-07-01",
-          "text": "Activated abilities contain a colon. They’re generally written “[Cost]: [Effect].” Some keywords are activated abilities and will have colons in their reminder texts."
+          "date": "2016-06-08",
+          "text": "Activated abilities contain a colon. They’re generally written “[Cost]: [Effect].” Some keywords are activated abilities and will have colons in their reminder text."
         }
       ],
       "subtypes": [
@@ -3071,7 +3055,7 @@
         "Human",
         "Druid"
       ],
-      "text": "At the beginning of your upkeep, put a spore counter on Mycologist.\nRemove three spore counters from Mycologist: Put a 1/1 green Saproling creature token onto the battlefield.\nSacrifice a Saproling: You gain 2 life.",
+      "text": "At the beginning of your upkeep, put a spore counter on Mycologist.\nRemove three spore counters from Mycologist: Create a 1/1 green Saproling creature token.\nSacrifice a Saproling: You gain 2 life.",
       "timeshifted": true,
       "toughness": "2",
       "type": "Creature — Human Druid",
@@ -3580,10 +3564,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -3592,19 +3572,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Time Spiral Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -3632,43 +3600,43 @@
         },
         {
           "date": "2007-02-01",
-          "text": "If this is suspended, then when the last time counter is removed from it, both its triggered ability and the \"play this card\" part of the suspend ability will trigger. They can be put on the stack in either order."
+          "text": "If this is suspended, then when the last time counter is removed from it, both its triggered ability and the “play this card” part of the suspend ability will trigger. They can be put on the stack in either order."
         },
         {
           "date": "2013-06-07",
-          "text": "You can exile a card in your hand using suspend any time you could cast that card. Consider its card type, any effect that affects when you could cast it (such as flash) and any other effects that could stop you from casting it (such as Meddling Mage's effect) to determine if and when you can do this. Whether or not you could actually complete all steps in casting the card is irrelevant. For example, you can exile a card with suspend that has no mana cost or requires a target even if no legal targets are available at that time."
+          "text": "You can exile a card in your hand using suspend any time you could cast that card. Consider its card type, any effect that affects when you could cast it (such as flash) and any other effects that could stop you from casting it (such as Meddling Mage’s effect) to determine if and when you can do this. Whether or not you could actually complete all steps in casting the card is irrelevant. For example, you can exile a card with suspend that has no mana cost or requires a target even if no legal targets are available at that time."
         },
         {
           "date": "2013-06-07",
-          "text": "Exiling a card with suspend isn't casting that card. This action doesn't use the stack and can't be responded to."
+          "text": "Exiling a card with suspend isn’t casting that card. This action doesn’t use the stack and can’t be responded to."
         },
         {
           "date": "2013-06-07",
-          "text": "If the spell requires any targets, those targets are chosen when the spell is finally cast, not when it's exiled."
+          "text": "If the spell requires any targets, those targets are chosen when the spell is finally cast, not when it’s exiled."
         },
         {
           "date": "2013-06-07",
-          "text": "If the first triggered ability of suspend (the one that removes time counters) is countered, no time counter is removed. The ability will trigger again during the card's owner's next upkeep."
+          "text": "If the first triggered ability of suspend (the one that removes time counters) is countered, no time counter is removed. The ability will trigger again during the card’s owner’s next upkeep."
         },
         {
           "date": "2013-06-07",
-          "text": "When the last time counter is removed, the second triggered ability of suspend will trigger. It doesn't matter why the last time counter was removed or what effect removed it."
+          "text": "When the last time counter is removed, the second triggered ability of suspend will trigger. It doesn’t matter why the last time counter was removed or what effect removed it."
         },
         {
           "date": "2013-06-07",
-          "text": "If the second triggered ability of suspend (the one that lets you cast the card) is countered, the card can't be cast. It remains exiled with no time counters on it, and it's no longer suspended."
+          "text": "If the second triggered ability of suspend (the one that lets you cast the card) is countered, the card can’t be cast. It remains exiled with no time counters on it, and it’s no longer suspended."
         },
         {
           "date": "2013-06-07",
-          "text": "As the second triggered ability resolves, you must cast the card if able. Timing restrictions based on the card's type are ignored."
+          "text": "As the second triggered ability resolves, you must cast the card if able. Timing restrictions based on the card’s type are ignored."
         },
         {
           "date": "2013-06-07",
-          "text": "If you can't cast the card, perhaps because there are no legal targets available, it remains exiled with no time counters on it, and it's no longer suspended."
+          "text": "If you can’t cast the card, perhaps because there are no legal targets available, it remains exiled with no time counters on it, and it’s no longer suspended."
         },
         {
           "date": "2013-06-07",
-          "text": "If the spell has any mandatory additional costs, you must pay those if able. However, if an additional cost includes a mana payment, you are forced to pay that cost only if there's enough mana in your mana pool at the time you cast the spell. You aren't forced to activate any mana abilities, although you may do so if you wish."
+          "text": "If the spell has any mandatory additional costs, you must pay those if able. However, if an additional cost includes a mana payment, you are forced to pay that cost only if there’s enough mana in your mana pool at the time you cast the spell. You aren’t forced to activate any mana abilities, although you may do so if you wish."
         },
         {
           "date": "2013-06-07",
@@ -3678,7 +3646,7 @@
       "subtypes": [
         "Avatar"
       ],
-      "text": "Aeon Chronicler's power and toughness are each equal to the number of cards in your hand.\nSuspend X—{X}{3}{U}. X can't be 0.  (Rather than cast this card from your hand, you may pay {X}{3}{U} and exile it with X time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost. It has haste.)\nWhenever a time counter is removed from Aeon Chronicler while it's exiled, draw a card.",
+      "text": "Aeon Chronicler's power and toughness are each equal to the number of cards in your hand.\nSuspend X—{X}{3}{U}. X can't be 0. (Rather than cast this card from your hand, you may pay {X}{3}{U} and exile it with X time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost. It has haste.)\nWhenever a time counter is removed from Aeon Chronicler while it's exiled, draw a card.",
       "toughness": "*",
       "type": "Creature — Avatar",
       "types": [
@@ -3745,10 +3713,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -3757,19 +3721,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Time Spiral Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -3793,7 +3745,7 @@
       "rulings": [
         {
           "date": "2007-02-01",
-          "text": "The first ability is a replacement effect. The choice is made as Aquamorph Entity is turned face up (or enters the battlefield); it turns face up (or enters the battlefield) as a creature of that size. It doesn't become a 0/0 and then a creature of the chosen size."
+          "text": "The first ability is a replacement effect. The choice is made as Aquamorph Entity is turned face up (or enters the battlefield); it turns face up (or enters the battlefield) as a creature of that size. It doesn’t become a 0/0 and then a creature of the chosen size."
         },
         {
           "date": "2007-02-01",
@@ -3801,7 +3753,7 @@
         },
         {
           "date": "2007-02-01",
-          "text": "If a creature that's already on the battlefield becomes a copy of a face-up Aquamorph Entity, its power and toughness become the power and toughness that were chosen for the Entity."
+          "text": "If a creature that’s already on the battlefield becomes a copy of a face-up Aquamorph Entity, its power and toughness become the power and toughness that were chosen for the Entity."
         }
       ],
       "subtypes": [
@@ -3978,10 +3930,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -3990,19 +3938,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Time Spiral Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -4026,11 +3962,11 @@
       "rulings": [
         {
           "date": "2007-02-01",
-          "text": "Treat Body Double as though it were the chosen card entering the battlefield. Any \"As this card enters the battlefield,\" \"This card enters the battlefield with,\" and \"When this card enters the battlefield\" abilities of the chosen card will work."
+          "text": "Treat Body Double as though it were the chosen card entering the battlefield. Any “As this card enters the battlefield,” “This card enters the battlefield with,” and “When this card enters the battlefield” abilities of the chosen card will work."
         },
         {
           "date": "2007-02-01",
-          "text": "You don't have to choose a card to copy. If you don't, Body Double enters the battlefield as a 0/0 creature and is probably put into your graveyard immediately, unless something is increasing its toughness to keep it alive."
+          "text": "You don’t have to choose a card to copy. If you don’t, Body Double enters the battlefield as a 0/0 creature and is probably put into your graveyard immediately, unless something is increasing its toughness to keep it alive."
         },
         {
           "date": "2007-02-01",
@@ -4255,7 +4191,7 @@
       "subtypes": [
         "Illusion"
       ],
-      "text": "Flying\nVanishing 3 (This creature enters the battlefield with three time counters on it. At the beginning of your upkeep, remove a time counter from it. When the last is removed, sacrifice it.)\nWhen Chronozoa dies, if it had no time counters on it, put two tokens that are copies of it onto the battlefield.",
+      "text": "Flying\nVanishing 3 (This creature enters the battlefield with three time counters on it. At the beginning of your upkeep, remove a time counter from it. When the last is removed, sacrifice it.)\nWhen Chronozoa dies, if it had no time counters on it, create two tokens that are copies of it.",
       "toughness": "3",
       "type": "Creature — Illusion",
       "types": [
@@ -4992,7 +4928,7 @@
           "text": "The creature’s controller gets the Ape token even if the creature isn’t actually destroyed."
         }
       ],
-      "text": "Destroy target creature. It can't be regenerated. Its controller puts a 3/3 green Ape creature token onto the battlefield.",
+      "text": "Destroy target creature. It can't be regenerated. Its controller creates a 3/3 green Ape creature token.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -6026,7 +5962,7 @@
           "multiverseid": 141751
         }
       ],
-      "id": "0d16237dae82f07699c39014feefc3ef674a6558",
+      "id": "48d6c754cab9639b259f8565ca4e1c7b50256e73",
       "imageName": "frozen aether",
       "layout": "normal",
       "legalities": [
@@ -6052,9 +5988,8 @@
         }
       ],
       "manaCost": "{3}{U}",
-      "mciNumber": "54",
       "multiverseid": 122402,
-      "name": "Frozen Æther",
+      "name": "Frozen Aether",
       "number": "54",
       "originalText": "Artifacts, creatures, and lands your opponents control come into play tapped.",
       "originalType": "Enchantment",
@@ -6182,12 +6117,12 @@
       "rarity": "Common",
       "rulings": [
         {
-          "date": "2004-10-04",
-          "text": "The sacrifice is triggered on the announcement of a spell that targets it and is placed on the stack before responses can be announced."
-        },
-        {
           "date": "2007-02-01",
           "text": "This is the timeshifted version of Skulking Ghost."
+        },
+        {
+          "date": "2016-06-08",
+          "text": "You’ll sacrifice Skulking Ghost even if you counter the spell or ability that targets it. If that spell has no other targets, it’ll be countered when it tries to resolve."
         }
       ],
       "subtypes": [
@@ -6602,10 +6537,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -6614,19 +6545,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Time Spiral Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -6651,7 +6570,7 @@
       "rulings": [
         {
           "date": "2007-02-01",
-          "text": "If a creature that's already on the battlefield becomes a copy of Primal Plasma, it copies the power, toughness, and abilities that were chosen for Primal Plasma when it entered the battlefield."
+          "text": "If a creature that’s already on the battlefield becomes a copy of Primal Plasma, it copies the power, toughness, and abilities that were chosen for Primal Plasma when it entered the battlefield."
         },
         {
           "date": "2007-02-01",
@@ -6663,7 +6582,7 @@
         },
         {
           "date": "2012-07-01",
-          "text": "If another permanent enters the battlefield as a copy of Primal Clay, the controller of that permanent will get to make a new choice. The copy won't necessarily have the same power, toughness, and abilities as the original."
+          "text": "If another permanent enters the battlefield as a copy of Primal Clay, the controller of that permanent will get to make a new choice. The copy won’t necessarily have the same power, toughness, and abilities as the original."
         }
       ],
       "subtypes": [
@@ -7410,7 +7329,7 @@
         },
         {
           "date": "2007-02-01",
-          "text": "Each time a source deals damage to you, you may pay {1}. You can’t pay more than {1}, even if more than 1 damage was dealt."
+          "text": "Each time a source deals damage to you, you may pay . You can’t pay more than , even if more than 1 damage was dealt."
         },
         {
           "date": "2007-02-01",
@@ -7722,7 +7641,7 @@
       "subtypes": [
         "Insect"
       ],
-      "text": "Vanishing 3 (This creature enters the battlefield with three time counters on it. At the beginning of your upkeep, remove a time counter from it. When the last is removed, sacrifice it.)\nWhen Deadly Grub dies, if it had no time counters on it, put a 6/1 green Insect creature token with shroud onto the battlefield. (It can't be the target of spells or abilities.)",
+      "text": "Vanishing 3 (This creature enters the battlefield with three time counters on it. At the beginning of your upkeep, remove a time counter from it. When the last is removed, sacrifice it.)\nWhen Deadly Grub dies, if it had no time counters on it, create a 6/1 green Insect creature token with shroud. (It can't be the target of spells or abilities.)",
       "toughness": "1",
       "type": "Creature — Insect",
       "types": [
@@ -9490,6 +9409,7 @@
       "originalText": "Destroy all creatures. They can't be regenerated.",
       "originalType": "Sorcery",
       "printings": [
+        "pJGP",
         "pMPR",
         "PLC"
       ],
@@ -10151,7 +10071,7 @@
       "rulings": [
         {
           "date": "2007-02-01",
-          "text": "You target an opponent when you cast Shrouded Lore. The opponent chooses a card in your graveyard as Shrouded Lore resolves. After that choice is made, you’re given the option to pay {B}. If you do, the targeted opponent must choose a different card, if there is one. (If there isn’t one, this part is skipped.) Then you’re given the option to pay {B} again. As long as you keep paying {B}, the process continues. As soon as you decline to pay {B}, the last card that was chosen by the opponent is put into your hand."
+          "text": "You target an opponent when you cast Shrouded Lore. The opponent chooses a card in your graveyard as Shrouded Lore resolves. After that choice is made, you’re given the option to pay . If you do, the targeted opponent must choose a different card, if there is one. (If there isn’t one, this part is skipped.) Then you’re given the option to pay again. As long as you keep paying , the process continues. As soon as you decline to pay , the last card that was chosen by the opponent is put into your hand."
         },
         {
           "date": "2007-02-01",
@@ -10332,7 +10252,7 @@
           "multiverseid": 141189
         }
       ],
-      "id": "04baeadeec7beb778bfa23b67ef92d9bacf433d1",
+      "id": "4fc162b9b134e98aebb778777c6e06dbbb96e428",
       "imageName": "aether membrane",
       "layout": "normal",
       "legalities": [
@@ -10358,9 +10278,8 @@
         }
       ],
       "manaCost": "{1}{R}{R}",
-      "mciNumber": "93",
       "multiverseid": 124504,
-      "name": "Æther Membrane",
+      "name": "Aether Membrane",
       "number": "93",
       "originalText": "Defender\nÆther Membrane can block as though it had flying.\nWhenever Æther Membrane blocks a creature, return that creature to its owner's hand at end of combat.",
       "originalType": "Creature — Wall",
@@ -10373,13 +10292,13 @@
       "rulings": [
         {
           "date": "2007-02-01",
-          "text": "The blocked creature is returned to its owner’s hand at end of combat only if the blocked creature is still on the battlefield. It doesn’t matter whether AEther Membrane is on the battlefield."
+          "text": "The blocked creature is returned to its owner’s hand at end of combat only if the blocked creature is still on the battlefield. It doesn’t matter whether Aether Membrane is on the battlefield."
         }
       ],
       "subtypes": [
         "Wall"
       ],
-      "text": "Defender; reach (This creature can block creatures with flying.)\nWhenever Æther Membrane blocks a creature, return that creature to its owner's hand at end of combat.",
+      "text": "Defender; reach (This creature can block creatures with flying.)\nWhenever Aether Membrane blocks a creature, return that creature to its owner's hand at end of combat.",
       "toughness": "5",
       "type": "Creature — Wall",
       "types": [
@@ -10446,10 +10365,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -10458,19 +10373,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Time Spiral Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -10503,7 +10406,7 @@
         },
         {
           "date": "2013-07-01",
-          "text": "In a Commander game where this card is your commander, you may cast it face-down from the Command zone by paying {3} plus {2} for each time it has been cast from your command zone. The cost to turn it face-up is unaffected."
+          "text": "In a Commander game where this card is your commander, you may cast it face-down from the Command zone by paying plus for each time it has been cast from your command zone. The cost to turn it face-up is unaffected."
         }
       ],
       "subtypes": [
@@ -11587,11 +11490,11 @@
         },
         {
           "date": "2007-02-01",
-          "text": "If an effect changes the targets of this ability, the second target can be changed to any creature the chosen opponent controls. The choice of opponent can’t be changed."
+          "text": "Tapped creatures can be targeted. Tapping them again will do nothing, but they’ll still deal damage."
         },
         {
           "date": "2007-02-01",
-          "text": "Tapped creatures can be targeted. Tapping them again will do nothing, but they’ll still deal damage."
+          "text": "If an effect changes the targets of this ability, the second target can be changed to any creature the chosen opponent controls. The choice of opponent can’t be changed."
         }
       ],
       "subtypes": [
@@ -14737,7 +14640,7 @@
         },
         {
           "date": "2009-10-01",
-          "text": "A noncreature permanent that turns into a creature is subject to the “summoning sickness” rule: It can only attack, and its {T} abilities can only be activated, if its controller has continuously controlled that permanent since the beginning of his or her most recent turn."
+          "text": "A noncreature permanent that turns into a creature is subject to the “summoning sickness” rule: It can only attack, and its abilities can only be activated, if its controller has continuously controlled that permanent since the beginning of his or her most recent turn."
         }
       ],
       "text": "Kicker {3}{G} (You may pay an additional {3}{G} as you cast this spell.)\nSearch your library for up to two Forest cards and put them onto the battlefield tapped. Then shuffle your library.\nIf Hunting Wilds was kicked, untap all Forests put onto the battlefield this way. They become 3/3 green creatures with haste that are still lands.",
@@ -14848,7 +14751,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "Forestwalk (This creature can't be blocked as long as defending player controls a Forest.)\nWhenever Jedit Ojanen of Efrava attacks or blocks, put a 2/2 green Cat Warrior creature token with forestwalk onto the battlefield.",
+      "text": "Forestwalk (This creature can't be blocked as long as defending player controls a Forest.)\nWhenever Jedit Ojanen of Efrava attacks or blocks, create a 2/2 green Cat Warrior creature token with forestwalk.",
       "toughness": "5",
       "type": "Legendary Creature — Cat Warrior",
       "types": [
@@ -15058,7 +14961,7 @@
         },
         {
           "date": "2007-02-01",
-          "text": "Saprolings that are on the battlefield while Life and Limb is on the battlefield have the ability “{T}: Add {G} to your mana pool.” Although they’re Forests, they are not basic lands."
+          "text": "Saprolings that are on the battlefield while Life and Limb is on the battlefield have the ability “: Add to your mana pool.” Although they’re Forests, they are not basic lands."
         },
         {
           "date": "2007-02-01",
@@ -15471,7 +15374,7 @@
       "subtypes": [
         "Fungus"
       ],
-      "text": "At the beginning of your upkeep, put a spore counter on Psychotrope Thallid.\nRemove three spore counters from Psychotrope Thallid: Put a 1/1 green Saproling creature token onto the battlefield.\n{1}, Sacrifice a Saproling: Draw a card.",
+      "text": "At the beginning of your upkeep, put a spore counter on Psychotrope Thallid.\nRemove three spore counters from Psychotrope Thallid: Create a 1/1 green Saproling creature token.\n{1}, Sacrifice a Saproling: Draw a card.",
       "toughness": "1",
       "type": "Creature — Fungus",
       "types": [
@@ -16073,7 +15976,7 @@
       "subtypes": [
         "Fungus"
       ],
-      "text": "At the beginning of your upkeep, put a spore counter on Vitaspore Thallid.\nRemove three spore counters from Vitaspore Thallid: Put a 1/1 green Saproling creature token onto the battlefield.\nSacrifice a Saproling: Target creature gains haste until end of turn.",
+      "text": "At the beginning of your upkeep, put a spore counter on Vitaspore Thallid.\nRemove three spore counters from Vitaspore Thallid: Create a 1/1 green Saproling creature token.\nSacrifice a Saproling: Target creature gains haste until end of turn.",
       "toughness": "1",
       "type": "Creature — Fungus",
       "types": [
@@ -17060,7 +16963,7 @@
         },
         {
           "date": "2007-02-01",
-          "text": "Drawing a card is optional. If you forget, you can’t go back later and do it, even if it is something you normally do."
+          "text": "Drawing a card is optional."
         }
       ],
       "subtypes": [
@@ -17819,10 +17722,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -17831,19 +17730,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Time Spiral Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -18517,7 +18404,7 @@
       "rulings": [
         {
           "date": "2008-04-01",
-          "text": "If Urborg, Tomb of Yawgmoth and either Blood Moon or Magus of the Moon are on the battlefield, all nonbasic lands will be Mountains, not Swamps. Urborg, Tomb of Yawgmoth will be a Mountain as well. It will have “{T}: Add {R} to your mana pool” and no other abilities."
+          "text": "If Urborg, Tomb of Yawgmoth and either Blood Moon or Magus of the Moon are on the battlefield, all nonbasic lands will be Mountains, not Swamps. Urborg, Tomb of Yawgmoth will be a Mountain as well. It will have “: Add to your mana pool” and no other abilities."
         },
         {
           "date": "2014-07-18",
@@ -18525,11 +18412,11 @@
         },
         {
           "date": "2014-07-18",
-          "text": "Urborg’s ability causes each land on the battlefield to have the land type Swamp. Each land thus has the ability “{T}: Add {B} to your mana pool.” Nothing else changes about those lands, including their names, other subtypes, other abilities, and whether they’re legendary or basic."
+          "text": "Urborg’s ability causes each land on the battlefield to have the land type Swamp. Each land thus has the ability “: Add to your mana pool.” Nothing else changes about those lands, including their names, other subtypes, other abilities, and whether they’re legendary or basic."
         },
         {
           "date": "2014-07-18",
-          "text": "If Urborg loses its abilities (for example, if it becomes a creature and then Turn to Frog targets it), all lands on the battlefield, including Urborg, will still be Swamps, but Urborg won’t have the ability “Each land is a Swamp in addition to its other land types.” Urborg also won’t be able to tap to produce {B}, but other lands (including those that enter the battlefield later in the turn) will. The way continuous effects work, Urborg’s type-changing ability is applied before the effect that removes both the type-changing ability and its own mana ability."
+          "text": "If Urborg loses its abilities (for example, if it becomes a creature and then Turn to Frog targets it), all lands on the battlefield, including Urborg, will still be Swamps, but Urborg won’t have the ability “Each land is a Swamp in addition to its other land types.” Urborg also won’t be able to tap to produce , but other lands (including those that enter the battlefield later in the turn) will. The way continuous effects work, Urborg’s type-changing ability is applied before the effect that removes both the type-changing ability and its own mana ability."
         }
       ],
       "supertypes": [

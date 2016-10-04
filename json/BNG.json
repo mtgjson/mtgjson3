@@ -142,7 +142,7 @@
       "rulings": [
         {
           "date": "2013-09-15",
-          "text": "Numeric mana symbols ({0}, {1}, and so on) in mana costs of permanents you control don’t count toward your devotion to any color."
+          "text": "Numeric mana symbols (, , and so on) in mana costs of permanents you control don’t count toward your devotion to any color."
         },
         {
           "date": "2013-09-15",
@@ -195,10 +195,6 @@
         {
           "date": "2014-02-01",
           "text": "If the first target would be dealt combat damage by multiple creatures, you choose which of that damage to prevent. (For example, if one of those creatures has deathtouch, you could choose to prevent the damage from that creature specifically.) You don’t decide until the point at which the creatures would deal their damage."
-        },
-        {
-          "date": "2014-02-01",
-          "text": ""
         }
       ],
       "text": "Prevent the next X damage that would be dealt to target creature this turn, where X is your devotion to white. If damage is prevented this way, Acolyte's Reward deals that much damage to target creature or player. (Each {W} in the mana costs of permanents you control counts toward your devotion to white.)",
@@ -690,7 +686,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "Vigilance\nWhenever Brimaz, King of Oreskos attacks, put a 1/1 white Cat Soldier creature token with vigilance onto the battlefield attacking.\nWhenever Brimaz blocks a creature, put a 1/1 white Cat Soldier creature token with vigilance onto the battlefield blocking that creature.",
+      "text": "Vigilance\nWhenever Brimaz, King of Oreskos attacks, create a 1/1 white Cat Soldier creature token with vigilance that's attacking.\nWhenever Brimaz blocks a creature, create a 1/1 white Cat Soldier creature token with vigilance that's blocking that creature.",
       "toughness": "4",
       "type": "Legendary Creature — Cat Soldier",
       "types": [
@@ -913,7 +909,7 @@
       "rulings": [
         {
           "date": "2013-09-15",
-          "text": "You don’t choose whether the spell is going to be an Aura spell or not until the spell is already on the stack. Abilities that affect when you can cast a spell, such as flash, will apply to the creature card in whatever zone you’re casting it from. For example, an effect that said you can cast creature spells as though they have flash will allow you to cast a creature card with bestow as an Aura spell anytime you could cast an instant."
+          "text": "You don’t choose whether the spell is going to be an Aura spell or not until the spell is already on the stack. Abilities that affect when you can cast a spell, such as flash, will apply to the spell after you've made this choice. For example, an effect that said you can cast creature spells as though they have flash won’t allow you to cast a creature card with bestow as an Aura spell anytime you could cast an instant, but one that said you can cast Aura spells as though they have flash will."
         },
         {
           "date": "2013-09-15",
@@ -925,7 +921,7 @@
         },
         {
           "date": "2013-09-15",
-          "text": "Unlike other Auras, an Aura with bestow isn’t put into its owner’s graveyard if it becomes unattached. Rather, the effect making it an Aura ends, it loses enchant creature, and it remains on the battlefield as an enchantment creature. It can attack (and its {T} abilities can be activated, if it has any) on the turn it becomes unattached if it’s been under your control continuously, even as an Aura, since your most recent turn began."
+          "text": "Unlike other Auras, an Aura with bestow isn’t put into its owner’s graveyard if it becomes unattached. Rather, the effect making it an Aura ends, it loses enchant creature, and it remains on the battlefield as an enchantment creature. It can attack (and its abilities can be activated, if it has any) on the turn it becomes unattached if it’s been under your control continuously, even as an Aura, since your most recent turn began."
         },
         {
           "date": "2013-09-15",
@@ -1517,7 +1513,7 @@
       "rulings": [
         {
           "date": "2013-09-15",
-          "text": "You don’t choose whether the spell is going to be an Aura spell or not until the spell is already on the stack. Abilities that affect when you can cast a spell, such as flash, will apply to the creature card in whatever zone you’re casting it from. For example, an effect that said you can cast creature spells as though they have flash will allow you to cast a creature card with bestow as an Aura spell anytime you could cast an instant."
+          "text": "You don’t choose whether the spell is going to be an Aura spell or not until the spell is already on the stack. Abilities that affect when you can cast a spell, such as flash, will apply to the spell after you've made this choice. For example, an effect that said you can cast creature spells as though they have flash won’t allow you to cast a creature card with bestow as an Aura spell anytime you could cast an instant, but one that said you can cast Aura spells as though they have flash will."
         },
         {
           "date": "2013-09-15",
@@ -1529,7 +1525,7 @@
         },
         {
           "date": "2013-09-15",
-          "text": "Unlike other Auras, an Aura with bestow isn’t put into its owner’s graveyard if it becomes unattached. Rather, the effect making it an Aura ends, it loses enchant creature, and it remains on the battlefield as an enchantment creature. It can attack (and its {T} abilities can be activated, if it has any) on the turn it becomes unattached if it’s been under your control continuously, even as an Aura, since your most recent turn began."
+          "text": "Unlike other Auras, an Aura with bestow isn’t put into its owner’s graveyard if it becomes unattached. Rather, the effect making it an Aura ends, it loses enchant creature, and it remains on the battlefield as an enchantment creature. It can attack (and its abilities can be activated, if it has any) on the turn it becomes unattached if it’s been under your control continuously, even as an Aura, since your most recent turn began."
         },
         {
           "date": "2013-09-15",
@@ -1802,7 +1798,7 @@
         "Human",
         "Soldier"
       ],
-      "text": "Inspired — Whenever God-Favored General becomes untapped, you may pay {2}{W}. If you do, put two 1/1 white Soldier enchantment creature tokens onto the battlefield.",
+      "text": "Inspired — Whenever God-Favored General becomes untapped, you may pay {2}{W}. If you do, create two 1/1 white Soldier enchantment creature tokens.",
       "toughness": "1",
       "type": "Creature — Human Soldier",
       "types": [
@@ -2455,10 +2451,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -2467,19 +2459,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Theros Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -2607,7 +2587,7 @@
       "rulings": [
         {
           "date": "2013-09-15",
-          "text": "You don’t choose whether the spell is going to be an Aura spell or not until the spell is already on the stack. Abilities that affect when you can cast a spell, such as flash, will apply to the creature card in whatever zone you’re casting it from. For example, an effect that said you can cast creature spells as though they have flash will allow you to cast a creature card with bestow as an Aura spell anytime you could cast an instant."
+          "text": "You don’t choose whether the spell is going to be an Aura spell or not until the spell is already on the stack. Abilities that affect when you can cast a spell, such as flash, will apply to the spell after you've made this choice. For example, an effect that said you can cast creature spells as though they have flash won’t allow you to cast a creature card with bestow as an Aura spell anytime you could cast an instant, but one that said you can cast Aura spells as though they have flash will."
         },
         {
           "date": "2013-09-15",
@@ -2619,7 +2599,7 @@
         },
         {
           "date": "2013-09-15",
-          "text": "Unlike other Auras, an Aura with bestow isn’t put into its owner’s graveyard if it becomes unattached. Rather, the effect making it an Aura ends, it loses enchant creature, and it remains on the battlefield as an enchantment creature. It can attack (and its {T} abilities can be activated, if it has any) on the turn it becomes unattached if it’s been under your control continuously, even as an Aura, since your most recent turn began."
+          "text": "Unlike other Auras, an Aura with bestow isn’t put into its owner’s graveyard if it becomes unattached. Rather, the effect making it an Aura ends, it loses enchant creature, and it remains on the battlefield as an enchantment creature. It can attack (and its abilities can be activated, if it has any) on the turn it becomes unattached if it’s been under your control continuously, even as an Aura, since your most recent turn began."
         },
         {
           "date": "2013-09-15",
@@ -2897,7 +2877,7 @@
       "subtypes": [
         "Archon"
       ],
-      "text": "Flying\nTribute 2 (As this creature enters the battlefield, an opponent of your choice may place two +1/+1 counters on it.)\nWhen Ornitharch enters the battlefield, if tribute wasn't paid, put two 1/1 white Bird creature tokens with flying onto the battlefield.",
+      "text": "Flying\nTribute 2 (As this creature enters the battlefield, an opponent of your choice may place two +1/+1 counters on it.)\nWhen Ornitharch enters the battlefield, if tribute wasn't paid, create two 1/1 white Bird creature tokens with flying.",
       "toughness": "3",
       "type": "Creature — Archon",
       "types": [
@@ -3601,7 +3581,7 @@
         "Cat",
         "Soldier"
       ],
-      "text": "Vigilance\nHeroic — Whenever you cast a spell that targets Vanguard of Brimaz, put a 1/1 white Cat Soldier creature token with vigilance onto the battlefield.",
+      "text": "Vigilance\nHeroic — Whenever you cast a spell that targets Vanguard of Brimaz, create a 1/1 white Cat Soldier creature token with vigilance.",
       "toughness": "2",
       "type": "Creature — Cat Soldier",
       "types": [
@@ -3729,7 +3709,7 @@
         "Human",
         "Cleric"
       ],
-      "text": "Inspired — Whenever Aerie Worshippers becomes untapped, you may pay {2}{U}. If you do, put a 2/2 blue Bird enchantment creature token with flying onto the battlefield.",
+      "text": "Inspired — Whenever Aerie Worshippers becomes untapped, you may pay {2}{U}. If you do, create a 2/2 blue Bird enchantment creature token with flying.",
       "toughness": "4",
       "type": "Creature — Human Cleric",
       "types": [
@@ -4837,7 +4817,7 @@
         },
         {
           "date": "2014-02-01",
-          "text": "If the copied creature has {X} in its mana cost, X is considered to be zero."
+          "text": "If the copied creature has in its mana cost, X is considered to be zero."
         },
         {
           "date": "2014-02-01",
@@ -4852,7 +4832,7 @@
           "text": "Any enters-the-battlefield abilities of the copied creature will trigger when the token enters the battlefield. Any “as [this permanent] enters the battlefield” or “[this permanent] enters the battlefield with” abilities of the copied creature will also work."
         }
       ],
-      "text": "Put a token onto the battlefield that's a copy of target creature you control. If it's your turn, scry 2. (Look at the top two cards of your library, then put any number of them on the bottom of your library and the rest on top in any order.)",
+      "text": "Create a token that's a copy of target creature you control. If it's your turn, scry 2. (Look at the top two cards of your library, then put any number of them on the bottom of your library and the rest on top in any order.)",
       "type": "Instant",
       "types": [
         "Instant"
@@ -4959,7 +4939,7 @@
       "rulings": [
         {
           "date": "2013-09-15",
-          "text": "You don’t choose whether the spell is going to be an Aura spell or not until the spell is already on the stack. Abilities that affect when you can cast a spell, such as flash, will apply to the creature card in whatever zone you’re casting it from. For example, an effect that said you can cast creature spells as though they have flash will allow you to cast a creature card with bestow as an Aura spell anytime you could cast an instant."
+          "text": "You don’t choose whether the spell is going to be an Aura spell or not until the spell is already on the stack. Abilities that affect when you can cast a spell, such as flash, will apply to the spell after you've made this choice. For example, an effect that said you can cast creature spells as though they have flash won’t allow you to cast a creature card with bestow as an Aura spell anytime you could cast an instant, but one that said you can cast Aura spells as though they have flash will."
         },
         {
           "date": "2013-09-15",
@@ -4971,7 +4951,7 @@
         },
         {
           "date": "2013-09-15",
-          "text": "Unlike other Auras, an Aura with bestow isn’t put into its owner’s graveyard if it becomes unattached. Rather, the effect making it an Aura ends, it loses enchant creature, and it remains on the battlefield as an enchantment creature. It can attack (and its {T} abilities can be activated, if it has any) on the turn it becomes unattached if it’s been under your control continuously, even as an Aura, since your most recent turn began."
+          "text": "Unlike other Auras, an Aura with bestow isn’t put into its owner’s graveyard if it becomes unattached. Rather, the effect making it an Aura ends, it loses enchant creature, and it remains on the battlefield as an enchantment creature. It can attack (and its abilities can be activated, if it has any) on the turn it becomes unattached if it’s been under your control continuously, even as an Aura, since your most recent turn began."
         },
         {
           "date": "2013-09-15",
@@ -5687,7 +5667,7 @@
       "rulings": [
         {
           "date": "2013-09-15",
-          "text": "You don’t choose whether the spell is going to be an Aura spell or not until the spell is already on the stack. Abilities that affect when you can cast a spell, such as flash, will apply to the creature card in whatever zone you’re casting it from. For example, an effect that said you can cast creature spells as though they have flash will allow you to cast a creature card with bestow as an Aura spell anytime you could cast an instant."
+          "text": "You don’t choose whether the spell is going to be an Aura spell or not until the spell is already on the stack. Abilities that affect when you can cast a spell, such as flash, will apply to the spell after you've made this choice. For example, an effect that said you can cast creature spells as though they have flash won’t allow you to cast a creature card with bestow as an Aura spell anytime you could cast an instant, but one that said you can cast Aura spells as though they have flash will."
         },
         {
           "date": "2013-09-15",
@@ -5699,7 +5679,7 @@
         },
         {
           "date": "2013-09-15",
-          "text": "Unlike other Auras, an Aura with bestow isn’t put into its owner’s graveyard if it becomes unattached. Rather, the effect making it an Aura ends, it loses enchant creature, and it remains on the battlefield as an enchantment creature. It can attack (and its {T} abilities can be activated, if it has any) on the turn it becomes unattached if it’s been under your control continuously, even as an Aura, since your most recent turn began."
+          "text": "Unlike other Auras, an Aura with bestow isn’t put into its owner’s graveyard if it becomes unattached. Rather, the effect making it an Aura ends, it loses enchant creature, and it remains on the battlefield as an enchantment creature. It can attack (and its abilities can be activated, if it has any) on the turn it becomes unattached if it’s been under your control continuously, even as an Aura, since your most recent turn began."
         },
         {
           "date": "2013-09-15",
@@ -6436,10 +6416,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Theros Block",
           "legality": "Legal"
         },
@@ -7027,10 +7003,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -7039,19 +7011,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Theros Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -8717,7 +8677,7 @@
       "subtypes": [
         "Zombie"
       ],
-      "text": "Intimidate (This creature can't be blocked except by artifact creatures and/or creatures that share a color with it.)\nInspired — Whenever Forlorn Pseudamma becomes untapped, you may pay {2}{B}. If you do, put a 2/2 black Zombie enchantment creature token onto the battlefield.",
+      "text": "Intimidate (This creature can't be blocked except by artifact creatures and/or creatures that share a color with it.)\nInspired — Whenever Forlorn Pseudamma becomes untapped, you may pay {2}{B}. If you do, create a 2/2 black Zombie enchantment creature token.",
       "toughness": "1",
       "type": "Creature — Zombie",
       "types": [
@@ -8942,7 +8902,7 @@
           "text": "If the creature isn’t a legal target as Gild tries to resolve, the spell will be countered and none of its effects will happen. No token will be created."
         }
       ],
-      "text": "Exile target creature. Put a colorless artifact token named Gold onto the battlefield. It has \"Sacrifice this artifact: Add one mana of any color to your mana pool.\"",
+      "text": "Exile target creature. Create a colorless artifact token named Gold. It has \"Sacrifice this artifact: Add one mana of any color to your mana pool.\"",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -9155,7 +9115,7 @@
       "rulings": [
         {
           "date": "2013-09-15",
-          "text": "You don’t choose whether the spell is going to be an Aura spell or not until the spell is already on the stack. Abilities that affect when you can cast a spell, such as flash, will apply to the creature card in whatever zone you’re casting it from. For example, an effect that said you can cast creature spells as though they have flash will allow you to cast a creature card with bestow as an Aura spell anytime you could cast an instant."
+          "text": "You don’t choose whether the spell is going to be an Aura spell or not until the spell is already on the stack. Abilities that affect when you can cast a spell, such as flash, will apply to the spell after you've made this choice. For example, an effect that said you can cast creature spells as though they have flash won’t allow you to cast a creature card with bestow as an Aura spell anytime you could cast an instant, but one that said you can cast Aura spells as though they have flash will."
         },
         {
           "date": "2013-09-15",
@@ -9167,7 +9127,7 @@
         },
         {
           "date": "2013-09-15",
-          "text": "Unlike other Auras, an Aura with bestow isn’t put into its owner’s graveyard if it becomes unattached. Rather, the effect making it an Aura ends, it loses enchant creature, and it remains on the battlefield as an enchantment creature. It can attack (and its {T} abilities can be activated, if it has any) on the turn it becomes unattached if it’s been under your control continuously, even as an Aura, since your most recent turn began."
+          "text": "Unlike other Auras, an Aura with bestow isn’t put into its owner’s graveyard if it becomes unattached. Rather, the effect making it an Aura ends, it loses enchant creature, and it remains on the battlefield as an enchantment creature. It can attack (and its abilities can be activated, if it has any) on the turn it becomes unattached if it’s been under your control continuously, even as an Aura, since your most recent turn began."
         },
         {
           "date": "2013-09-15",
@@ -9299,7 +9259,7 @@
       "rulings": [
         {
           "date": "2013-09-15",
-          "text": "Numeric mana symbols ({0}, {1}, and so on) in mana costs of permanents you control don’t count toward your devotion to any color."
+          "text": "Numeric mana symbols (, , and so on) in mana costs of permanents you control don’t count toward your devotion to any color."
         },
         {
           "date": "2013-09-15",
@@ -9315,7 +9275,7 @@
         },
         {
           "date": "2014-02-01",
-          "text": "If your devotion to black is greater than six, Marshmist Titan will cost {B} to cast. The colored mana requirement isn’t reduced."
+          "text": "If your devotion to black is greater than six, Marshmist Titan will cost to cast. The colored mana requirement isn’t reduced."
         }
       ],
       "subtypes": [
@@ -9540,7 +9500,7 @@
       "rulings": [
         {
           "date": "2013-09-15",
-          "text": "You don’t choose whether the spell is going to be an Aura spell or not until the spell is already on the stack. Abilities that affect when you can cast a spell, such as flash, will apply to the creature card in whatever zone you’re casting it from. For example, an effect that said you can cast creature spells as though they have flash will allow you to cast a creature card with bestow as an Aura spell anytime you could cast an instant."
+          "text": "You don’t choose whether the spell is going to be an Aura spell or not until the spell is already on the stack. Abilities that affect when you can cast a spell, such as flash, will apply to the spell after you've made this choice. For example, an effect that said you can cast creature spells as though they have flash won’t allow you to cast a creature card with bestow as an Aura spell anytime you could cast an instant, but one that said you can cast Aura spells as though they have flash will."
         },
         {
           "date": "2013-09-15",
@@ -9552,7 +9512,7 @@
         },
         {
           "date": "2013-09-15",
-          "text": "Unlike other Auras, an Aura with bestow isn’t put into its owner’s graveyard if it becomes unattached. Rather, the effect making it an Aura ends, it loses enchant creature, and it remains on the battlefield as an enchantment creature. It can attack (and its {T} abilities can be activated, if it has any) on the turn it becomes unattached if it’s been under your control continuously, even as an Aura, since your most recent turn began."
+          "text": "Unlike other Auras, an Aura with bestow isn’t put into its owner’s graveyard if it becomes unattached. Rather, the effect making it an Aura ends, it loses enchant creature, and it remains on the battlefield as an enchantment creature. It can attack (and its abilities can be activated, if it has any) on the turn it becomes unattached if it’s been under your control continuously, even as an Aura, since your most recent turn began."
         },
         {
           "date": "2013-09-15",
@@ -9790,7 +9750,7 @@
       "rulings": [
         {
           "date": "2014-02-01",
-          "text": "If the mana cost of the revealed card includes {X}, X is considered to be 0."
+          "text": "If the mana cost of the revealed card includes , X is considered to be 0."
         },
         {
           "date": "2014-02-01",
@@ -9928,7 +9888,7 @@
       "rulings": [
         {
           "date": "2013-09-15",
-          "text": "Numeric mana symbols ({0}, {1}, and so on) in mana costs of permanents you control don’t count toward your devotion to any color."
+          "text": "Numeric mana symbols (, , and so on) in mana costs of permanents you control don’t count toward your devotion to any color."
         },
         {
           "date": "2013-09-15",
@@ -10315,7 +10275,7 @@
       "rulings": [
         {
           "date": "2013-09-15",
-          "text": "You don’t choose whether the spell is going to be an Aura spell or not until the spell is already on the stack. Abilities that affect when you can cast a spell, such as flash, will apply to the creature card in whatever zone you’re casting it from. For example, an effect that said you can cast creature spells as though they have flash will allow you to cast a creature card with bestow as an Aura spell anytime you could cast an instant."
+          "text": "You don’t choose whether the spell is going to be an Aura spell or not until the spell is already on the stack. Abilities that affect when you can cast a spell, such as flash, will apply to the spell after you've made this choice. For example, an effect that said you can cast creature spells as though they have flash won’t allow you to cast a creature card with bestow as an Aura spell anytime you could cast an instant, but one that said you can cast Aura spells as though they have flash will."
         },
         {
           "date": "2013-09-15",
@@ -10327,7 +10287,7 @@
         },
         {
           "date": "2013-09-15",
-          "text": "Unlike other Auras, an Aura with bestow isn’t put into its owner’s graveyard if it becomes unattached. Rather, the effect making it an Aura ends, it loses enchant creature, and it remains on the battlefield as an enchantment creature. It can attack (and its {T} abilities can be activated, if it has any) on the turn it becomes unattached if it’s been under your control continuously, even as an Aura, since your most recent turn began."
+          "text": "Unlike other Auras, an Aura with bestow isn’t put into its owner’s graveyard if it becomes unattached. Rather, the effect making it an Aura ends, it loses enchant creature, and it remains on the battlefield as an enchantment creature. It can attack (and its abilities can be activated, if it has any) on the turn it becomes unattached if it’s been under your control continuously, even as an Aura, since your most recent turn began."
         },
         {
           "date": "2013-09-15",
@@ -10556,10 +10516,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -11294,7 +11250,7 @@
       "rulings": [
         {
           "date": "2013-09-15",
-          "text": "You don’t choose whether the spell is going to be an Aura spell or not until the spell is already on the stack. Abilities that affect when you can cast a spell, such as flash, will apply to the creature card in whatever zone you’re casting it from. For example, an effect that said you can cast creature spells as though they have flash will allow you to cast a creature card with bestow as an Aura spell anytime you could cast an instant."
+          "text": "You don’t choose whether the spell is going to be an Aura spell or not until the spell is already on the stack. Abilities that affect when you can cast a spell, such as flash, will apply to the spell after you've made this choice. For example, an effect that said you can cast creature spells as though they have flash won’t allow you to cast a creature card with bestow as an Aura spell anytime you could cast an instant, but one that said you can cast Aura spells as though they have flash will."
         },
         {
           "date": "2013-09-15",
@@ -11306,7 +11262,7 @@
         },
         {
           "date": "2013-09-15",
-          "text": "Unlike other Auras, an Aura with bestow isn’t put into its owner’s graveyard if it becomes unattached. Rather, the effect making it an Aura ends, it loses enchant creature, and it remains on the battlefield as an enchantment creature. It can attack (and its {T} abilities can be activated, if it has any) on the turn it becomes unattached if it’s been under your control continuously, even as an Aura, since your most recent turn began."
+          "text": "Unlike other Auras, an Aura with bestow isn’t put into its owner’s graveyard if it becomes unattached. Rather, the effect making it an Aura ends, it loses enchant creature, and it remains on the battlefield as an enchantment creature. It can attack (and its abilities can be activated, if it has any) on the turn it becomes unattached if it’s been under your control continuously, even as an Aura, since your most recent turn began."
         },
         {
           "date": "2013-09-15",
@@ -11795,7 +11751,7 @@
         },
         {
           "date": "2014-02-01",
-          "text": "If the copied creature has {X} in its mana cost, X is considered to be zero."
+          "text": "If the copied creature has in its mana cost, X is considered to be zero."
         },
         {
           "date": "2014-02-01",
@@ -11834,7 +11790,7 @@
         "Minotaur",
         "Shaman"
       ],
-      "text": "Inspired — Whenever Felhide Spiritbinder becomes untapped, you may pay {1}{R}. If you do, put a token onto the battlefield that's a copy of another target creature except it's an enchantment in addition to its other types. It gains haste. Exile it at the beginning of the next end step.",
+      "text": "Inspired — Whenever Felhide Spiritbinder becomes untapped, you may pay {1}{R}. If you do, create a token that's a copy of another target creature, except it's an enchantment in addition to its other types. It gains haste. Exile it at the beginning of the next end step.",
       "toughness": "4",
       "type": "Creature — Minotaur Shaman",
       "types": [
@@ -12544,7 +12500,7 @@
       "rulings": [
         {
           "date": "2013-09-15",
-          "text": "You don’t choose whether the spell is going to be an Aura spell or not until the spell is already on the stack. Abilities that affect when you can cast a spell, such as flash, will apply to the creature card in whatever zone you’re casting it from. For example, an effect that said you can cast creature spells as though they have flash will allow you to cast a creature card with bestow as an Aura spell anytime you could cast an instant."
+          "text": "You don’t choose whether the spell is going to be an Aura spell or not until the spell is already on the stack. Abilities that affect when you can cast a spell, such as flash, will apply to the spell after you've made this choice. For example, an effect that said you can cast creature spells as though they have flash won’t allow you to cast a creature card with bestow as an Aura spell anytime you could cast an instant, but one that said you can cast Aura spells as though they have flash will."
         },
         {
           "date": "2013-09-15",
@@ -12556,7 +12512,7 @@
         },
         {
           "date": "2013-09-15",
-          "text": "Unlike other Auras, an Aura with bestow isn’t put into its owner’s graveyard if it becomes unattached. Rather, the effect making it an Aura ends, it loses enchant creature, and it remains on the battlefield as an enchantment creature. It can attack (and its {T} abilities can be activated, if it has any) on the turn it becomes unattached if it’s been under your control continuously, even as an Aura, since your most recent turn began."
+          "text": "Unlike other Auras, an Aura with bestow isn’t put into its owner’s graveyard if it becomes unattached. Rather, the effect making it an Aura ends, it loses enchant creature, and it remains on the battlefield as an enchantment creature. It can attack (and its abilities can be activated, if it has any) on the turn it becomes unattached if it’s been under your control continuously, even as an Aura, since your most recent turn began."
         },
         {
           "date": "2013-09-15",
@@ -12687,7 +12643,7 @@
         },
         {
           "date": "2014-02-01",
-          "text": "If the card has {X} in its mana cost, you must choose 0 as its value."
+          "text": "If the card has in its mana cost, you must choose 0 as its value."
         },
         {
           "date": "2014-02-01",
@@ -13416,7 +13372,7 @@
         "Satyr",
         "Shaman"
       ],
-      "text": "Haste\nInspired — Whenever Satyr Nyx-Smith becomes untapped, you may pay {2}{R}. If you do, put a 3/1 red Elemental enchantment creature token with haste onto the battlefield.",
+      "text": "Haste\nInspired — Whenever Satyr Nyx-Smith becomes untapped, you may pay {2}{R}. If you do, create a 3/1 red Elemental enchantment creature token with haste.",
       "toughness": "1",
       "type": "Creature — Satyr Shaman",
       "types": [
@@ -14014,7 +13970,7 @@
       "rulings": [
         {
           "date": "2013-09-15",
-          "text": "Numeric mana symbols ({0}, {1}, and so on) in mana costs of permanents you control don’t count toward your devotion to any color."
+          "text": "Numeric mana symbols (, , and so on) in mana costs of permanents you control don’t count toward your devotion to any color."
         },
         {
           "date": "2013-09-15",
@@ -14384,7 +14340,7 @@
       "rulings": [
         {
           "date": "2013-09-15",
-          "text": "Numeric mana symbols ({0}, {1}, and so on) in mana costs of permanents you control don’t count toward your devotion to any color."
+          "text": "Numeric mana symbols (, , and so on) in mana costs of permanents you control don’t count toward your devotion to any color."
         },
         {
           "date": "2013-09-15",
@@ -14880,7 +14836,7 @@
           "text": "Scry appears on some spells and abilities with one or more targets. If all of the spell or ability’s targets are illegal when it tries to resolve, it will be countered and none of its effects will happen. You won’t scry."
         }
       ],
-      "text": "Put two 3/3 green Centaur enchantment creature tokens onto the battlefield. If it's your turn, scry 2. (Look at the top two cards of your library, then put any number of them on the bottom of your library and the rest on top in any order.)",
+      "text": "Create two 3/3 green Centaur enchantment creature tokens. If it's your turn, scry 2. (Look at the top two cards of your library, then put any number of them on the bottom of your library and the rest on top in any order.)",
       "type": "Instant",
       "types": [
         "Instant"
@@ -15116,7 +15072,7 @@
         },
         {
           "date": "2014-02-01",
-          "text": "You decide the value of X and choose whether to pay {X} as the heroic ability resolves."
+          "text": "You decide the value of X and choose whether to pay as the heroic ability resolves."
         }
       ],
       "subtypes": [
@@ -15912,7 +15868,7 @@
       "rulings": [
         {
           "date": "2013-09-15",
-          "text": "You don’t choose whether the spell is going to be an Aura spell or not until the spell is already on the stack. Abilities that affect when you can cast a spell, such as flash, will apply to the creature card in whatever zone you’re casting it from. For example, an effect that said you can cast creature spells as though they have flash will allow you to cast a creature card with bestow as an Aura spell anytime you could cast an instant."
+          "text": "You don’t choose whether the spell is going to be an Aura spell or not until the spell is already on the stack. Abilities that affect when you can cast a spell, such as flash, will apply to the spell after you've made this choice. For example, an effect that said you can cast creature spells as though they have flash won’t allow you to cast a creature card with bestow as an Aura spell anytime you could cast an instant, but one that said you can cast Aura spells as though they have flash will."
         },
         {
           "date": "2013-09-15",
@@ -15924,7 +15880,7 @@
         },
         {
           "date": "2013-09-15",
-          "text": "Unlike other Auras, an Aura with bestow isn’t put into its owner’s graveyard if it becomes unattached. Rather, the effect making it an Aura ends, it loses enchant creature, and it remains on the battlefield as an enchantment creature. It can attack (and its {T} abilities can be activated, if it has any) on the turn it becomes unattached if it’s been under your control continuously, even as an Aura, since your most recent turn began."
+          "text": "Unlike other Auras, an Aura with bestow isn’t put into its owner’s graveyard if it becomes unattached. Rather, the effect making it an Aura ends, it loses enchant creature, and it remains on the battlefield as an enchantment creature. It can attack (and its abilities can be activated, if it has any) on the turn it becomes unattached if it’s been under your control continuously, even as an Aura, since your most recent turn began."
         },
         {
           "date": "2013-09-15",
@@ -16051,7 +16007,7 @@
       "rulings": [
         {
           "date": "2013-09-15",
-          "text": "You don’t choose whether the spell is going to be an Aura spell or not until the spell is already on the stack. Abilities that affect when you can cast a spell, such as flash, will apply to the creature card in whatever zone you’re casting it from. For example, an effect that said you can cast creature spells as though they have flash will allow you to cast a creature card with bestow as an Aura spell anytime you could cast an instant."
+          "text": "You don’t choose whether the spell is going to be an Aura spell or not until the spell is already on the stack. Abilities that affect when you can cast a spell, such as flash, will apply to the spell after you've made this choice. For example, an effect that said you can cast creature spells as though they have flash won’t allow you to cast a creature card with bestow as an Aura spell anytime you could cast an instant, but one that said you can cast Aura spells as though they have flash will."
         },
         {
           "date": "2013-09-15",
@@ -16063,7 +16019,7 @@
         },
         {
           "date": "2013-09-15",
-          "text": "Unlike other Auras, an Aura with bestow isn’t put into its owner’s graveyard if it becomes unattached. Rather, the effect making it an Aura ends, it loses enchant creature, and it remains on the battlefield as an enchantment creature. It can attack (and its {T} abilities can be activated, if it has any) on the turn it becomes unattached if it’s been under your control continuously, even as an Aura, since your most recent turn began."
+          "text": "Unlike other Auras, an Aura with bestow isn’t put into its owner’s graveyard if it becomes unattached. Rather, the effect making it an Aura ends, it loses enchant creature, and it remains on the battlefield as an enchantment creature. It can attack (and its abilities can be activated, if it has any) on the turn it becomes unattached if it’s been under your control continuously, even as an Aura, since your most recent turn began."
         },
         {
           "date": "2013-09-15",
@@ -16335,7 +16291,7 @@
         "Centaur",
         "Warrior"
       ],
-      "text": "Inspired — Whenever Pheres-Band Raiders becomes untapped, you may pay {2}{G}. If you do, put a 3/3 green Centaur enchantment creature token onto the battlefield.",
+      "text": "Inspired — Whenever Pheres-Band Raiders becomes untapped, you may pay {2}{G}. If you do, create a 3/3 green Centaur enchantment creature token.",
       "toughness": "5",
       "type": "Creature — Centaur Warrior",
       "types": [
@@ -16570,7 +16526,7 @@
       "subtypes": [
         "Aura"
       ],
-      "text": "Enchant creature\nWhen Raised by Wolves enters the battlefield, put two 2/2 green Wolf creature tokens onto the battlefield.\nEnchanted creature gets +1/+1 for each Wolf you control.",
+      "text": "Enchant creature\nWhen Raised by Wolves enters the battlefield, create two 2/2 green Wolf creature tokens.\nEnchanted creature gets +1/+1 for each Wolf you control.",
       "type": "Enchantment — Aura",
       "types": [
         "Enchantment"
@@ -17135,7 +17091,7 @@
       "rulings": [
         {
           "date": "2013-09-15",
-          "text": "Numeric mana symbols ({0}, {1}, and so on) in mana costs of permanents you control don’t count toward your devotion to any color."
+          "text": "Numeric mana symbols (, , and so on) in mana costs of permanents you control don’t count toward your devotion to any color."
         },
         {
           "date": "2013-09-15",
@@ -17457,7 +17413,7 @@
           "multiverseid": 380165
         }
       ],
-      "id": "a792e033f845e0cebcaca203a2024fabf63714fb",
+      "id": "3028f7811370652c618b37f5fc4a9a75651f2e61",
       "imageName": "unravel the aether",
       "layout": "normal",
       "legalities": [
@@ -17483,9 +17439,8 @@
         }
       ],
       "manaCost": "{1}{G}",
-      "mciNumber": "143",
       "multiverseid": 378515,
-      "name": "Unravel the Æther",
+      "name": "Unravel the Aether",
       "number": "143",
       "originalText": "Choose target artifact or enchantment. Its owner shuffles it into his or her library.",
       "originalType": "Instant",
@@ -17496,11 +17451,11 @@
       "rulings": [
         {
           "date": "2014-02-01",
-          "text": "If the artifact or enchantment is an illegal target as Unravel the Æther tries to resolve, it will be countered and none of its effects will happen. No library will be shuffled."
+          "text": "If the artifact or enchantment is an illegal target as Unravel the Aether tries to resolve, it will be countered and none of its effects will happen. No library will be shuffled."
         },
         {
           "date": "2014-02-01",
-          "text": "If the artifact or enchantment is a token, it will be shuffled into its owner’s library when Unravel the Æther resolves, then will cease to exist. For practical purposes, whatever item is representing the token should not actually be put into the library, though the library is still shuffled."
+          "text": "If the artifact or enchantment is a token, it will be shuffled into its owner’s library when Unravel the Aether resolves, then will cease to exist. For practical purposes, whatever item is representing the token should not actually be put into the library, though the library is still shuffled."
         }
       ],
       "text": "Choose target artifact or enchantment. Its owner shuffles it into his or her library.",
@@ -17618,7 +17573,7 @@
       "rulings": [
         {
           "date": "2013-09-15",
-          "text": "You don’t choose whether the spell is going to be an Aura spell or not until the spell is already on the stack. Abilities that affect when you can cast a spell, such as flash, will apply to the creature card in whatever zone you’re casting it from. For example, an effect that said you can cast creature spells as though they have flash will allow you to cast a creature card with bestow as an Aura spell anytime you could cast an instant."
+          "text": "You don’t choose whether the spell is going to be an Aura spell or not until the spell is already on the stack. Abilities that affect when you can cast a spell, such as flash, will apply to the spell after you've made this choice. For example, an effect that said you can cast creature spells as though they have flash won’t allow you to cast a creature card with bestow as an Aura spell anytime you could cast an instant, but one that said you can cast Aura spells as though they have flash will."
         },
         {
           "date": "2013-09-15",
@@ -17630,7 +17585,7 @@
         },
         {
           "date": "2013-09-15",
-          "text": "Unlike other Auras, an Aura with bestow isn’t put into its owner’s graveyard if it becomes unattached. Rather, the effect making it an Aura ends, it loses enchant creature, and it remains on the battlefield as an enchantment creature. It can attack (and its {T} abilities can be activated, if it has any) on the turn it becomes unattached if it’s been under your control continuously, even as an Aura, since your most recent turn began."
+          "text": "Unlike other Auras, an Aura with bestow isn’t put into its owner’s graveyard if it becomes unattached. Rather, the effect making it an Aura ends, it loses enchant creature, and it remains on the battlefield as an enchantment creature. It can attack (and its abilities can be activated, if it has any) on the turn it becomes unattached if it’s been under your control continuously, even as an Aura, since your most recent turn began."
         },
         {
           "date": "2013-09-15",
@@ -17759,7 +17714,7 @@
       "rulings": [
         {
           "date": "2013-09-15",
-          "text": "Numeric mana symbols ({0}, {1}, and so on) in mana costs of permanents you control don’t count toward your devotion to any color."
+          "text": "Numeric mana symbols (, , and so on) in mana costs of permanents you control don’t count toward your devotion to any color."
         },
         {
           "date": "2013-09-15",
@@ -18179,7 +18134,7 @@
       "rulings": [
         {
           "date": "2013-09-15",
-          "text": "Numeric mana symbols ({0}, {1}, and so on) in mana costs of permanents you control don’t count toward your devotion to any color."
+          "text": "Numeric mana symbols (, , and so on) in mana costs of permanents you control don’t count toward your devotion to any color."
         },
         {
           "date": "2013-09-15",
@@ -18312,10 +18267,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -18324,19 +18275,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Theros Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -18382,7 +18321,7 @@
       "subtypes": [
         "Kiora"
       ],
-      "text": "+1: Until your next turn, prevent all damage that would be dealt to and dealt by target permanent an opponent controls.\n−1: Draw a card. You may play an additional land this turn.\n−5: You get an emblem with \"At the beginning of your end step, put a 9/9 blue Kraken creature token onto the battlefield.\"",
+      "text": "+1: Until your next turn, prevent all damage that would be dealt to and dealt by target permanent an opponent controls.\n−1: Draw a card. You may play an additional land this turn.\n−5: You get an emblem with \"At the beginning of your end step, create a 9/9 blue Kraken creature token.\"",
       "type": "Planeswalker — Kiora",
       "types": [
         "Planeswalker"
@@ -18461,10 +18400,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -18473,19 +18408,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Theros Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -18620,7 +18543,7 @@
       "rulings": [
         {
           "date": "2013-09-15",
-          "text": "Numeric mana symbols ({0}, {1}, and so on) in mana costs of permanents you control don’t count toward your devotion to any color."
+          "text": "Numeric mana symbols (, , and so on) in mana costs of permanents you control don’t count toward your devotion to any color."
         },
         {
           "date": "2013-09-15",
@@ -18780,7 +18703,7 @@
       "rulings": [
         {
           "date": "2013-09-15",
-          "text": "Numeric mana symbols ({0}, {1}, and so on) in mana costs of permanents you control don’t count toward your devotion to any color."
+          "text": "Numeric mana symbols (, , and so on) in mana costs of permanents you control don’t count toward your devotion to any color."
         },
         {
           "date": "2013-09-15",
@@ -18952,11 +18875,11 @@
         },
         {
           "date": "2014-02-01",
-          "text": "You apply cost reduction effects after other cost modifiers, so Ragemonger can reduce additional costs or alternative costs of Minotaur spells if they include {B} and/or {R}."
+          "text": "You apply cost reduction effects after other cost modifiers, so Ragemonger can reduce additional costs or alternative costs of Minotaur spells if they include and/or ."
         },
         {
           "date": "2014-02-01",
-          "text": "If a spell has hybrid mana symbols in its mana cost, you choose which half you will be paying before determining the total cost. If you choose to pay such a cost with {B} or {R}, Ragemonger can reduce that part of the cost."
+          "text": "If a spell has hybrid mana symbols in its mana cost, you choose which half you will be paying before determining the total cost. If you choose to pay such a cost with or , Ragemonger can reduce that part of the cost."
         }
       ],
       "subtypes": [
@@ -19314,7 +19237,7 @@
       "rulings": [
         {
           "date": "2013-09-15",
-          "text": "Numeric mana symbols ({0}, {1}, and so on) in mana costs of permanents you control don’t count toward your devotion to any color."
+          "text": "Numeric mana symbols (, , and so on) in mana costs of permanents you control don’t count toward your devotion to any color."
         },
         {
           "date": "2013-09-15",
@@ -19465,7 +19388,7 @@
       "rulings": [
         {
           "date": "2014-02-01",
-          "text": "If you choose 1 for the value of X, Astral Cornucopia will cost {3} to cast and enter the battlefield with one charge counter. If you choose 2 for the value of X, it will cost {6} to cast and enter the battlefield with two charge counters, and so on."
+          "text": "If you choose 1 for the value of X, Astral Cornucopia will cost to cast and enter the battlefield with one charge counter. If you choose 2 for the value of X, it will cost to cast and enter the battlefield with two charge counters, and so on."
         },
         {
           "date": "2014-02-01",

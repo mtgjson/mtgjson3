@@ -330,7 +330,7 @@
       "rulings": [
         {
           "date": "2006-09-25",
-          "text": "The last sentence applies only if your life total is being reduced by damage. Other effects or costs (such as “lose 1 life” or “pay 1 life\") can reduce your life total below 1 as normal."
+          "text": "The last sentence applies only if your life total is being reduced by damage. Other effects or costs (such as “lose 1 life” or “pay 1 life”) can reduce your life total below 1 as normal."
         },
         {
           "date": "2006-09-25",
@@ -2345,7 +2345,7 @@
       "subtypes": [
         "Aura"
       ],
-      "text": "Enchant creature\nEnchanted creature gets +2/+2 and has flying.\nWhen enchanted creature dies, put a 2/2 white Griffin creature token with flying onto the battlefield.",
+      "text": "Enchant creature\nEnchanted creature gets +2/+2 and has flying.\nWhen enchanted creature dies, create a 2/2 white Griffin creature token with flying.",
       "type": "Enchantment — Aura",
       "types": [
         "Enchantment"
@@ -2543,7 +2543,7 @@
         "Human",
         "Spellshaper"
       ],
-      "text": "{1}{W}, {T}, Discard a card: Put two 1/1 white Citizen creature tokens onto the battlefield.",
+      "text": "{1}{W}, {T}, Discard a card: Create two 1/1 white Citizen creature tokens.",
       "toughness": "1",
       "type": "Creature — Human Spellshaper",
       "types": [
@@ -3333,7 +3333,7 @@
         },
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn’t matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn’t matter how long the permanent has been a creature."
         }
       ],
       "text": "When an opponent casts a creature spell, if Opal Guardian is an enchantment, Opal Guardian becomes a 3/4 Gargoyle creature with flying and protection from red.",
@@ -4172,10 +4172,6 @@
           "text": "This has no mana cost, which means it can’t normally be cast as a spell. You could, however, cast it via some alternate means, like with Fist of Suns or Mind’s Desire."
         },
         {
-          "date": "2006-10-15",
-          "text": "This has no mana cost, which means it can’t be cast with the Replicate ability of Djinn Illuminatus or by somehow giving it Flashback."
-        },
-        {
           "date": "2013-06-07",
           "text": "You can exile a card in your hand using suspend any time you could cast that card. Consider its card type, any effect that affects when you could cast it (such as flash) and any other effects that could stop you from casting it (such as Meddling Mage’s effect) to determine if and when you can do this. Whether or not you could actually complete all steps in casting the card is irrelevant. For example, you can exile a card with suspend that has no mana cost or requires a target even if no legal targets are available at that time."
         },
@@ -4218,6 +4214,10 @@
         {
           "date": "2013-06-07",
           "text": "Although originally printed with a characteristic-defining ability that defined its color, this card now has a color indicator. This color indicator can’t be affected by text-changing effects (such as the one created by Crystal Spray), although color-changing effects can still overwrite it."
+        },
+        {
+          "date": "2016-09-20",
+          "text": "This has no mana cost, which means its mana cost can’t be paid for effects such as replicate from Djinn Illuminatus or flashback from Snapcaster Mage."
         }
       ],
       "text": "Suspend 6—{W} (Rather than cast this card from your hand, pay {W} and exile it with six time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)\nEach player chooses a number of lands he or she controls equal to the number of lands controlled by the player who controls the fewest, then sacrifices the rest. Players sacrifice creatures and discard cards the same way.",
@@ -5267,10 +5267,6 @@
           "text": "This has no mana cost, which means it can’t normally be cast as a spell. You could, however, cast it via some alternate means, like with Fist of Suns or Mind’s Desire."
         },
         {
-          "date": "2006-10-15",
-          "text": "This has no mana cost, which means it can’t be cast with the Replicate ability of Djinn Illuminatus or by somehow giving it Flashback."
-        },
-        {
           "date": "2013-06-07",
           "text": "You can exile a card in your hand using suspend any time you could cast that card. Consider its card type, any effect that affects when you could cast it (such as flash) and any other effects that could stop you from casting it (such as Meddling Mage’s effect) to determine if and when you can do this. Whether or not you could actually complete all steps in casting the card is irrelevant. For example, you can exile a card with suspend that has no mana cost or requires a target even if no legal targets are available at that time."
         },
@@ -5313,6 +5309,10 @@
         {
           "date": "2013-06-07",
           "text": "Although originally printed with a characteristic-defining ability that defined its color, this card now has a color indicator. This color indicator can’t be affected by text-changing effects (such as the one created by Crystal Spray), although color-changing effects can still overwrite it."
+        },
+        {
+          "date": "2016-09-20",
+          "text": "This has no mana cost, which means its mana cost can’t be paid for effects such as replicate from Djinn Illuminatus or flashback from Snapcaster Mage."
         }
       ],
       "text": "Suspend 4—{U} (Rather than cast this card from your hand, pay {U} and exile it with four time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)\nTarget player draws three cards.",
@@ -5945,10 +5945,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -5957,19 +5953,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Time Spiral Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -6061,10 +6045,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -6073,19 +6053,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Time Spiral Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -6113,7 +6081,7 @@
         },
         {
           "date": "2013-04-15",
-          "text": "Switching a creature's power and toughness twice (or any even number of times) effectively returns the creature to the power and toughness it had before any switches."
+          "text": "Switching a creature’s power and toughness twice (or any even number of times) effectively returns the creature to the power and toughness it had before any switches."
         }
       ],
       "subtypes": [
@@ -6438,10 +6406,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -6450,19 +6414,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Time Spiral Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -9099,10 +9051,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -9111,19 +9059,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Time Spiral Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -9147,7 +9083,7 @@
       "rulings": [
         {
           "date": "2006-09-25",
-          "text": "The last ability means that in order for an opponent to cast a spell, it must be that opponent's turn, during a main phase, and the stack must be empty. This is true even if the player doesn't have a sorcery he or she is able to cast, or if a rule or effect allows a spell to be cast at another time."
+          "text": "The last ability means that in order for an opponent to cast a spell, it must be that opponent’s turn, during a main phase, and the stack must be empty. This is true even if the player doesn’t have a sorcery he or she is able to cast, or if a rule or effect allows a spell to be cast at another time."
         },
         {
           "date": "2006-09-25",
@@ -9155,15 +9091,15 @@
         },
         {
           "date": "2006-09-25",
-          "text": "If an ability lets an opponent cast a spell as part of its effect (such as Isochron Scepter's ability does), that opponent can't cast that spell since the currently resolving ability is still on the stack."
+          "text": "If an ability lets an opponent cast a spell as part of its effect (such as Isochron Scepter’s ability does), that opponent can’t cast that spell since the currently resolving ability is still on the stack."
         },
         {
           "date": "2006-09-25",
-          "text": "Your opponents can't cast their suspended cards, no matter what phase it is when the last time counter is removed. Your opponents can't cast cards using the madness ability either, no matter what phase it is when the card is discarded."
+          "text": "Your opponents can’t cast their suspended cards, no matter what phase it is when the last time counter is removed. Your opponents can’t cast cards using the madness ability either, no matter what phase it is when the card is discarded."
         },
         {
           "date": "2007-05-01",
-          "text": "If you have Teferi on the battlefield and there's a Split Second spell on the stack (such as Sudden Death), you can't Suspend creatures until after the Split Second spell resolves."
+          "text": "If you have Teferi on the battlefield and there’s a Split Second spell on the stack (such as Sudden Death), you can’t Suspend creatures until after the Split Second spell resolves."
         }
       ],
       "subtypes": [
@@ -9723,8 +9659,8 @@
           "text": "If the resolution of a triggered ability involves casting a spell, that spell can’t be cast if a spell with split second is on the stack."
         },
         {
-          "date": "2013-07-01",
-          "text": "Activated abilities contain a colon. They’re generally written “[Cost]: [Effect].” Some keywords are activated abilities and will have colons in their reminder texts."
+          "date": "2016-06-08",
+          "text": "Activated abilities contain a colon. They’re generally written “[Cost]: [Effect].” Some keywords are activated abilities and will have colons in their reminder text."
         }
       ],
       "text": "Split second (As long as this spell is on the stack, players can't cast spells or activate abilities that aren't mana abilities.)\nCounter target activated or triggered ability. If a permanent's ability is countered this way, activated abilities of that permanent can't be activated this turn. (Mana abilities can't be targeted.)",
@@ -9931,15 +9867,15 @@
         },
         {
           "date": "2006-09-25",
-          "text": "If Vesuvan Shapeshifter is turned face up, the process of turning face up includes (optionally) choosing another creature on the battlefield. You’ll pay {1}{U} (not the morph cost, if any, of the new creature), then Vesuvan Shapeshifter will turn face up as a copy of that creature, plus the triggered ability it gives itself. It won’t turn face up as a Vesuvan Shapeshifter and then change. If the copied creature has a “when this creature is turned face up” ability, it will trigger for Vesuvan Shapeshifter."
+          "text": "If Vesuvan Shapeshifter is turned face up, the process of turning face up includes (optionally) choosing another creature on the battlefield. You’ll pay (not the morph cost, if any, of the new creature), then Vesuvan Shapeshifter will turn face up as a copy of that creature, plus the triggered ability it gives itself. It won’t turn face up as a Vesuvan Shapeshifter and then change. If the copied creature has a “when this creature is turned face up” ability, it will trigger for Vesuvan Shapeshifter."
         },
         {
           "date": "2006-09-25",
-          "text": "When Vesuvan Shapeshifter is turned face down, its copy effect wears off. While it’s face down, it’s a face-down Vesuvan Shapeshifter that can be turned face up for a morph cost of {1}{U}."
+          "text": "When Vesuvan Shapeshifter is turned face down, its copy effect wears off. While it’s face down, it’s a face-down Vesuvan Shapeshifter that can be turned face up for a morph cost of ."
         },
         {
           "date": "2006-09-25",
-          "text": "If another creature copies Vesuvan Shapeshifter while it’s face up, the new creature will become a copy of whatever Vesuvan Shapeshifter is copying and gain the “you may turn this creature face down” ability. It won’t gain morph {1}{U}. If that creature is then turned face down, its copy effect will continue and it’ll be a face-down version of whatever it’s copying. If the creature it’s copying has morph, it can be turned face up. If the creature it’s copying doesn’t have morph, it’s stuck face down forever unless some other effect (like Break Open) turns it face up again."
+          "text": "If another creature copies Vesuvan Shapeshifter while it’s face up, the new creature will become a copy of whatever Vesuvan Shapeshifter is copying and gain the “you may turn this creature face down” ability. It won’t gain morph . If that creature is then turned face down, its copy effect will continue and it’ll be a face-down version of whatever it’s copying. If the creature it’s copying has morph, it can be turned face up. If the creature it’s copying doesn’t have morph, it’s stuck face down forever unless some other effect (like Break Open) turns it face up again."
         },
         {
           "date": "2006-09-25",
@@ -9955,7 +9891,7 @@
         },
         {
           "date": "2006-09-25",
-          "text": "If you don’t or can’t choose another creature on the battlefield for Vesuvan Shapeshifter to copy, it doesn’t get the triggered ability that turns it face down. It’s just a 0/0 creature with morph {1}{U}."
+          "text": "If you don’t or can’t choose another creature on the battlefield for Vesuvan Shapeshifter to copy, it doesn’t get the triggered ability that turns it face down. It’s just a 0/0 creature with morph ."
         }
       ],
       "subtypes": [
@@ -10200,8 +10136,8 @@
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2013-07-01",
-          "text": "Activated abilities contain a colon. They’re generally written “[Cost]: [Effect].” Some keywords are activated abilities and will have colons in their reminder texts."
+          "date": "2016-06-08",
+          "text": "Activated abilities contain a colon. They’re generally written “[Cost]: [Effect].” Some keywords are activated abilities and will have colons in their reminder text."
         }
       ],
       "subtypes": [
@@ -10489,10 +10425,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -10501,19 +10433,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Time Spiral Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -11316,7 +11236,7 @@
         "Zombie",
         "Fungus"
       ],
-      "text": "At the beginning of your upkeep, put a spore counter on Deathspore Thallid.\nRemove three spore counters from Deathspore Thallid: Put a 1/1 green Saproling creature token onto the battlefield.\nSacrifice a Saproling: Target creature gets -1/-1 until end of turn.",
+      "text": "At the beginning of your upkeep, put a spore counter on Deathspore Thallid.\nRemove three spore counters from Deathspore Thallid: Create a 1/1 green Saproling creature token.\nSacrifice a Saproling: Target creature gets -1/-1 until end of turn.",
       "toughness": "1",
       "type": "Creature — Zombie Fungus",
       "types": [
@@ -11723,7 +11643,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "Whenever you cast a creature spell, put X 1/1 black Thrull creature tokens onto the battlefield, where X is that spell's converted mana cost.\nWhen you control seven or more Thrulls, sacrifice Endrek Sahr, Master Breeder.",
+      "text": "Whenever you cast a creature spell, create X 1/1 black Thrull creature tokens, where X is that spell's converted mana cost.\nWhen you control seven or more Thrulls, sacrifice Endrek Sahr, Master Breeder.",
       "toughness": "2",
       "type": "Legendary Creature — Human Wizard",
       "types": [
@@ -12631,10 +12551,6 @@
           "text": "This has no mana cost, which means it can’t normally be cast as a spell. You could, however, cast it via some alternate means, like with Fist of Suns or Mind’s Desire."
         },
         {
-          "date": "2006-10-15",
-          "text": "This has no mana cost, which means it can’t be cast with the Replicate ability of Djinn Illuminatus or by somehow giving it Flashback."
-        },
-        {
           "date": "2013-06-07",
           "text": "You can exile a card in your hand using suspend any time you could cast that card. Consider its card type, any effect that affects when you could cast it (such as flash) and any other effects that could stop you from casting it (such as Meddling Mage’s effect) to determine if and when you can do this. Whether or not you could actually complete all steps in casting the card is irrelevant. For example, you can exile a card with suspend that has no mana cost or requires a target even if no legal targets are available at that time."
         },
@@ -12677,6 +12593,10 @@
         {
           "date": "2013-06-07",
           "text": "Although originally printed with a characteristic-defining ability that defined its color, this card now has a color indicator. This color indicator can’t be affected by text-changing effects (such as the one created by Crystal Spray), although color-changing effects can still overwrite it."
+        },
+        {
+          "date": "2016-09-20",
+          "text": "This has no mana cost, which means its mana cost can’t be paid for effects such as replicate from Djinn Illuminatus or flashback from Snapcaster Mage."
         }
       ],
       "text": "Suspend 3—{2}{B}{B} (Rather than cast this card from your hand, pay {2}{B}{B} and exile it with three time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)\nEach player exiles all creature cards from his or her graveyard, then sacrifices all creatures he or she controls, then puts all cards he or she exiled this way onto the battlefield.",
@@ -12746,10 +12666,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -12758,19 +12674,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Time Spiral Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -12794,11 +12698,11 @@
       "rulings": [
         {
           "date": "2006-09-25",
-          "text": "When the life totals are exchanged, each player gains or loses the amount of life necessary to equal the other player's previous life total. For example, if player A has 5 life and player B has 3 life before the exchange, player A will lose 2 life and player B will gain 2 life. Replacement effects may modify these gains and losses, and triggered abilities may trigger on them."
+          "text": "When the life totals are exchanged, each player gains or loses the amount of life necessary to equal the other player’s previous life total. For example, if player A has 5 life and player B has 3 life before the exchange, player A will lose 2 life and player B will gain 2 life. Replacement effects may modify these gains and losses, and triggered abilities may trigger on them."
         },
         {
           "date": "2011-01-01",
-          "text": "If an effect says that a player can't lose life, that player can't exchange life totals with a player who has a lower life total; in that case, the exchange won't happen."
+          "text": "If an effect says that a player can’t lose life, that player can’t exchange life totals with a player who has a lower life total; in that case, the exchange won’t happen."
         }
       ],
       "subtypes": [
@@ -14109,7 +14013,7 @@
       "subtypes": [
         "Vampire"
       ],
-      "text": "Flying\n{1}{B}, Exile Sengir Nosferatu: Put a 1/2 black Bat creature token with flying onto the battlefield. It has \"{1}{B}, Sacrifice this creature: Return an exiled card named Sengir Nosferatu to the battlefield under its owner's control.\"",
+      "text": "Flying\n{1}{B}, Exile Sengir Nosferatu: Create a 1/2 black Bat creature token with flying. It has \"{1}{B}, Sacrifice this creature: Return an exiled card named Sengir Nosferatu to the battlefield under its owner's control.\"",
       "toughness": "4",
       "type": "Creature — Vampire",
       "types": [
@@ -14375,10 +14279,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -14387,19 +14287,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Time Spiral Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -15561,7 +15449,7 @@
           "multiverseid": 134361
         }
       ],
-      "id": "b42626b63f0f708e794cc36db044c8addbf7cb6a",
+      "id": "ac5c7ca1951e677656e61a0aef0acfab64da4bc0",
       "imageName": "aetherflame wall",
       "layout": "normal",
       "legalities": [
@@ -15587,9 +15475,8 @@
         }
       ],
       "manaCost": "{1}{R}",
-      "mciNumber": "142",
       "multiverseid": 113558,
-      "name": "Ætherflame Wall",
+      "name": "Aetherflame Wall",
       "number": "142",
       "originalText": "Defender\nÆtherflame Wall can block creatures with shadow as though they didn't have shadow.\n{R}: Ætherflame Wall gets +1/+0 until end of turn.",
       "originalType": "Creature — Wall",
@@ -15601,17 +15488,17 @@
       "rulings": [
         {
           "date": "2006-09-25",
-          "text": "AEtherflame Wall can block creatures with shadow and creatures without shadow."
+          "text": "Aetherflame Wall can block creatures with shadow and creatures without shadow."
         },
         {
           "date": "2006-09-25",
-          "text": "If AEtherflame Wall gains shadow, it won’t be able to block any creatures (not even those with shadow)."
+          "text": "If Aetherflame Wall gains shadow, it won’t be able to block any creatures (not even those with shadow)."
         }
       ],
       "subtypes": [
         "Wall"
       ],
-      "text": "Defender\nÆtherflame Wall can block creatures with shadow as though they didn't have shadow.\n{R}: Ætherflame Wall gets +1/+0 until end of turn.",
+      "text": "Defender\nAetherflame Wall can block creatures with shadow as though they didn't have shadow.\n{R}: Aetherflame Wall gets +1/+0 until end of turn.",
       "toughness": "4",
       "type": "Creature — Wall",
       "types": [
@@ -15780,10 +15667,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -15792,19 +15675,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Time Spiral Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -16677,7 +16548,7 @@
           "text": "The triggered ability that creates the copies can itself be countered by anything that can counter a triggered ability. If it is countered, no copies will be put onto the stack."
         }
       ],
-      "text": "Put two 1/1 red Goblin creature tokens onto the battlefield.\nStorm (When you cast this spell, copy it for each spell cast before it this turn.)",
+      "text": "Create two 1/1 red Goblin creature tokens.\nStorm (When you cast this spell, copy it for each spell cast before it this turn.)",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -17071,7 +16942,7 @@
       "rulings": [
         {
           "date": "2006-09-25",
-          "text": "The first ability applies only if your life total is being reduced by damage. Other effects or costs (such as “lose 1 life” or “pay 1 life\") can reduce your life total below 1 as normal."
+          "text": "The first ability applies only if your life total is being reduced by damage. Other effects or costs (such as “lose 1 life” or “pay 1 life”) can reduce your life total below 1 as normal."
         },
         {
           "date": "2006-09-25",
@@ -17162,10 +17033,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -17174,19 +17041,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Time Spiral Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -17907,7 +17762,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "Whenever another Goblin you control becomes blocked, sacrifice it. If you do, it deals 4 damage to each creature blocking it.\nSacrifice two Mountains: Put two 1/1 red Goblin creature tokens onto the battlefield.",
+      "text": "Whenever another Goblin you control becomes blocked, sacrifice it. If you do, it deals 4 damage to each creature blocking it.\nSacrifice two Mountains: Create two 1/1 red Goblin creature tokens.",
       "toughness": "2",
       "type": "Legendary Creature — Goblin Advisor",
       "types": [
@@ -18480,7 +18335,7 @@
       "rulings": [
         {
           "date": "2006-09-25",
-          "text": "This has an additional cost with an option. Essentially, the card’s cost to cast is either {5}{R} or {R} and a discard. But its mana cost is always {R} and its converted mana cost is always 1."
+          "text": "This has an additional cost with an option. Essentially, the card’s cost to cast is either or and a discard. But its mana cost is always and its converted mana cost is always 1."
         },
         {
           "date": "2016-04-08",
@@ -18688,7 +18543,7 @@
         "Goblin",
         "Warrior"
       ],
-      "text": "Echo {1}{R} (At the beginning of your upkeep, if this came under your control since the beginning of your last upkeep, sacrifice it unless you pay its echo cost.)\nWhen Mogg War Marshal enters the battlefield or dies, put a 1/1 red Goblin creature token onto the battlefield.",
+      "text": "Echo {1}{R} (At the beginning of your upkeep, if this came under your control since the beginning of your last upkeep, sacrifice it unless you pay its echo cost.)\nWhen Mogg War Marshal enters the battlefield or dies, create a 1/1 red Goblin creature token.",
       "toughness": "1",
       "type": "Creature — Goblin Warrior",
       "types": [
@@ -18865,10 +18720,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -18877,19 +18728,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Time Spiral Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -20040,7 +19879,7 @@
       "rulings": [
         {
           "date": "2006-09-25",
-          "text": "When an echo ability you control resolves, you have three options: pay the echo cost, pay {0}, or sacrifice the permanent."
+          "text": "When an echo ability you control resolves, you have three options: pay the echo cost, pay , or sacrifice the permanent."
         }
       ],
       "subtypes": [
@@ -20575,10 +20414,6 @@
           "text": "This has no mana cost, which means it can’t normally be cast as a spell. You could, however, cast it via some alternate means, like with Fist of Suns or Mind’s Desire."
         },
         {
-          "date": "2006-10-15",
-          "text": "This has no mana cost, which means it can’t be cast with the Replicate ability of Djinn Illuminatus or by somehow giving it Flashback."
-        },
-        {
           "date": "2013-06-07",
           "text": "You can exile a card in your hand using suspend any time you could cast that card. Consider its card type, any effect that affects when you could cast it (such as flash) and any other effects that could stop you from casting it (such as Meddling Mage’s effect) to determine if and when you can do this. Whether or not you could actually complete all steps in casting the card is irrelevant. For example, you can exile a card with suspend that has no mana cost or requires a target even if no legal targets are available at that time."
         },
@@ -20621,6 +20456,10 @@
         {
           "date": "2013-06-07",
           "text": "Although originally printed with a characteristic-defining ability that defined its color, this card now has a color indicator. This color indicator can’t be affected by text-changing effects (such as the one created by Crystal Spray), although color-changing effects can still overwrite it."
+        },
+        {
+          "date": "2016-09-20",
+          "text": "This has no mana cost, which means its mana cost can’t be paid for effects such as replicate from Djinn Illuminatus or flashback from Snapcaster Mage."
         }
       ],
       "text": "Suspend 4—{1}{R} (Rather than cast this card from your hand, pay {1}{R} and exile it with four time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)\nEach player discards his or her hand, then draws seven cards.",
@@ -20802,7 +20641,7 @@
           "multiverseid": 134360
         }
       ],
-      "id": "59aaa3299f15c1d1e5362a1f45adaf2aa4ff4247",
+      "id": "08b8a764f85f6917e0334f772d26ff512e2c6a0b",
       "imageName": "aether web",
       "layout": "normal",
       "legalities": [
@@ -20828,9 +20667,8 @@
         }
       ],
       "manaCost": "{1}{G}",
-      "mciNumber": "189",
       "multiverseid": 108852,
-      "name": "Æther Web",
+      "name": "Aether Web",
       "number": "189",
       "originalText": "Flash (You may play this spell any time you could play an instant.)\nEnchant creature\nEnchanted creature gets +1/+1, can block as though it had flying, and can block creatures with shadow as though they didn't have shadow.",
       "originalType": "Enchantment — Aura",
@@ -21453,10 +21291,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -21465,19 +21299,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Time Spiral Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -21580,10 +21402,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -21592,19 +21410,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Time Spiral Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -21737,7 +21543,7 @@
       "rulings": [
         {
           "date": "2006-09-25",
-          "text": "After Glass Asp’s triggered ability resolves, the affected player has the ability to perform a special action of paying {2}. This action may be performed any time the player has priority, and it doesn’t use the stack. It may be performed only once. Once that player’s next draw step begins, the player no longer has the ability to perform this action. If the player performed the action, the delayed “lose 2 life” triggered ability won’t trigger. Otherwise, it will."
+          "text": "After Glass Asp’s triggered ability resolves, the affected player has the ability to perform a special action of paying . This action may be performed any time the player has priority, and it doesn’t use the stack. It may be performed only once. Once that player’s next draw step begins, the player no longer has the ability to perform this action. If the player performed the action, the delayed “lose 2 life” triggered ability won’t trigger. Otherwise, it will."
         }
       ],
       "subtypes": [
@@ -22144,10 +21950,6 @@
         },
         {
           "date": "2006-10-15",
-          "text": "This has no mana cost, which means it can’t be cast with the Replicate ability of Djinn Illuminatus or by somehow giving it Flashback."
-        },
-        {
-          "date": "2006-10-15",
           "text": "Anything that triggers during the resolution of this will wait to be put on the stack until everything is put onto the battlefield and resolution is complete. The player whose turn it is will put all of his or her triggered abilities on the stack in any order, then each other player in turn order will do the same. (The last ability put on the stack will be the first one that resolves.)"
         },
         {
@@ -22193,6 +21995,10 @@
         {
           "date": "2013-06-07",
           "text": "Although originally printed with a characteristic-defining ability that defined its color, this card now has a color indicator. This color indicator can’t be affected by text-changing effects (such as the one created by Crystal Spray), although color-changing effects can still overwrite it."
+        },
+        {
+          "date": "2016-09-20",
+          "text": "This has no mana cost, which means its mana cost can’t be paid for effects such as replicate from Djinn Illuminatus or flashback from Snapcaster Mage."
         }
       ],
       "text": "Suspend 3—{1}{G}{G} (Rather than cast this card from your hand, pay {1}{G}{G} and exile it with three time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)\nStarting with you, each player may put an artifact, creature, enchantment, or land card from his or her hand onto the battlefield. Repeat this process until no one puts a card onto the battlefield.",
@@ -22580,10 +22386,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -22592,19 +22394,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Time Spiral Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -23170,7 +22960,7 @@
       "subtypes": [
         "Spider"
       ],
-      "text": "Reach\nWhen Penumbra Spider dies, put a 2/4 black Spider creature token with reach onto the battlefield.",
+      "text": "Reach\nWhen Penumbra Spider dies, create a 2/4 black Spider creature token with reach.",
       "toughness": "4",
       "type": "Creature — Spider",
       "types": [
@@ -23468,7 +23258,7 @@
       "subtypes": [
         "Fungus"
       ],
-      "text": "At the beginning of your upkeep, put a spore counter on Savage Thallid.\nRemove three spore counters from Savage Thallid: Put a 1/1 green Saproling creature token onto the battlefield.\nSacrifice a Saproling: Regenerate target Fungus.",
+      "text": "At the beginning of your upkeep, put a spore counter on Savage Thallid.\nRemove three spore counters from Savage Thallid: Create a 1/1 green Saproling creature token.\nSacrifice a Saproling: Regenerate target Fungus.",
       "toughness": "2",
       "type": "Creature — Fungus",
       "types": [
@@ -24006,7 +23796,7 @@
       "rulings": [
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn’t matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn’t matter how long the permanent has been a creature."
         }
       ],
       "subtypes": [
@@ -24226,7 +24016,7 @@
       "subtypes": [
         "Fungus"
       ],
-      "text": "At the beginning of your upkeep, put a spore counter on each Fungus you control.\nRemove three spore counters from Sporesower Thallid: Put a 1/1 green Saproling creature token onto the battlefield.",
+      "text": "At the beginning of your upkeep, put a spore counter on each Fungus you control.\nRemove three spore counters from Sporesower Thallid: Create a 1/1 green Saproling creature token.",
       "toughness": "4",
       "type": "Creature — Fungus",
       "types": [
@@ -24321,7 +24111,7 @@
         "TSP"
       ],
       "rarity": "Common",
-      "text": "Put a 1/1 green Saproling creature token onto the battlefield.",
+      "text": "Create a 1/1 green Saproling creature token.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -24734,7 +24524,7 @@
       "subtypes": [
         "Fungus"
       ],
-      "text": "At the beginning of your upkeep, put a spore counter on Thallid Germinator.\nRemove three spore counters from Thallid Germinator: Put a 1/1 green Saproling creature token onto the battlefield.\nSacrifice a Saproling: Target creature gets +1/+1 until end of turn.",
+      "text": "At the beginning of your upkeep, put a spore counter on Thallid Germinator.\nRemove three spore counters from Thallid Germinator: Create a 1/1 green Saproling creature token.\nSacrifice a Saproling: Target creature gets +1/+1 until end of turn.",
       "toughness": "2",
       "type": "Creature — Fungus",
       "types": [
@@ -24833,7 +24623,7 @@
       "subtypes": [
         "Fungus"
       ],
-      "text": "Defender\nAt the beginning of your upkeep, put a spore counter on Thallid Shell-Dweller.\nRemove three spore counters from Thallid Shell-Dweller: Put a 1/1 green Saproling creature token onto the battlefield.",
+      "text": "Defender\nAt the beginning of your upkeep, put a spore counter on Thallid Shell-Dweller.\nRemove three spore counters from Thallid Shell-Dweller: Create a 1/1 green Saproling creature token.",
       "toughness": "5",
       "type": "Creature — Fungus",
       "types": [
@@ -25044,7 +24834,7 @@
         "Elf",
         "Shaman"
       ],
-      "text": "Saproling creatures get +1/+1.\nMorph {3}{G}{G} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)\nWhen Thelonite Hermit is turned face up, put four 1/1 green Saproling creature tokens onto the battlefield.",
+      "text": "Saproling creatures get +1/+1.\nMorph {3}{G}{G} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)\nWhen Thelonite Hermit is turned face up, create four 1/1 green Saproling creature tokens.",
       "toughness": "1",
       "type": "Creature — Elf Shaman",
       "types": [
@@ -25461,7 +25251,7 @@
       "subtypes": [
         "Aura"
       ],
-      "text": "Enchant creature\nEnchanted creature gets +3/+3 and has \"At the beginning of each upkeep, put a 1/1 green Saproling creature token onto the battlefield.\"",
+      "text": "Enchant creature\nEnchanted creature gets +3/+3 and has \"At the beginning of each upkeep, create a 1/1 green Saproling creature token.\"",
       "type": "Enchantment — Aura",
       "types": [
         "Enchantment"
@@ -25653,7 +25443,7 @@
         "TSP"
       ],
       "rarity": "Rare",
-      "text": "Buyback {2}{G} (You may pay an additional {2}{G} as you cast this spell. If you do, put this card into your hand as it resolves.)\nPut an X/X green Wurm creature token onto the battlefield.",
+      "text": "Buyback {2}{G} (You may pay an additional {2}{G} as you cast this spell. If you do, put this card into your hand as it resolves.)\nCreate an X/X green Wurm creature token.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -27614,7 +27404,7 @@
       "rulings": [
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn’t matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn’t matter how long the permanent has been a creature."
         }
       ],
       "text": "{T}: Add {U} to your mana pool.\n{1}{U}: Chronatog Totem becomes a 1/2 blue Atog artifact creature until end of turn.\n{0}: Chronatog Totem gets +3/+3 until end of turn. You skip your next turn. Activate this ability only once each turn and only if Chronatog Totem is a creature.",
@@ -27812,7 +27602,7 @@
         },
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn’t matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn’t matter how long the permanent has been a creature."
         }
       ],
       "text": "{T}: Add {R} to your mana pool.\n{4}{R}: Foriysian Totem becomes a 4/4 red Giant artifact creature with trample until end of turn.\nAs long as Foriysian Totem is a creature, it can block an additional creature each combat.",
@@ -28189,7 +27979,7 @@
         },
         {
           "date": "2006-09-25",
-          "text": "Colored costs can’t be reduced by this effect. For example, a spell that costs {2}{R} can’t be reduced by more than {2}."
+          "text": "Colored costs can’t be reduced by this effect. For example, a spell that costs can’t be reduced by more than ."
         },
         {
           "date": "2006-09-25",
@@ -28289,10 +28079,6 @@
           "text": "This has no mana cost, which means it can’t normally be cast as a spell. You could, however, cast it via some alternate means, like with Fist of Suns or Mind’s Desire."
         },
         {
-          "date": "2006-10-15",
-          "text": "This has no mana cost, which means it can’t be cast with the Replicate ability of Djinn Illuminatus or by somehow giving it Flashback."
-        },
-        {
           "date": "2013-06-07",
           "text": "You can exile a card in your hand using suspend any time you could cast that card. Consider its card type, any effect that affects when you could cast it (such as flash) and any other effects that could stop you from casting it (such as Meddling Mage’s effect) to determine if and when you can do this. Whether or not you could actually complete all steps in casting the card is irrelevant. For example, you can exile a card with suspend that has no mana cost or requires a target even if no legal targets are available at that time."
         },
@@ -28331,6 +28117,10 @@
         {
           "date": "2013-06-07",
           "text": "A creature cast using suspend will enter the battlefield with haste. It will have haste until another player gains control of it (or, in some rare cases, gains control of the creature spell itself)."
+        },
+        {
+          "date": "2016-09-20",
+          "text": "This has no mana cost, which means its mana cost can’t be paid for effects such as replicate from Djinn Illuminatus or flashback from Snapcaster Mage."
         }
       ],
       "text": "Suspend 3—{0} (Rather than cast this card from your hand, pay {0} and exile it with three time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)\n{T}, Sacrifice Lotus Bloom: Add three mana of any one color to your mana pool.",
@@ -28484,10 +28274,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -28496,19 +28282,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Time Spiral Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -28531,11 +28305,11 @@
       "rulings": [
         {
           "date": "2006-09-25",
-          "text": "When damage is dealt to Phyrexian Totem, its triggered ability will trigger. A number of permanents equal to the amount of damage dealt will be sacrificed when the ability resolves. It doesn't matter if Phyrexian Totem isn't on the battlefield when the ability resolves, as long as Phyrexian Totem was a creature as it left the battlefield. If one of the permanents sacrificed is Phyrexian Totem itself, the requisite number of other permanents must still be sacrificed."
+          "text": "When damage is dealt to Phyrexian Totem, its triggered ability will trigger. A number of permanents equal to the amount of damage dealt will be sacrificed when the ability resolves. It doesn’t matter if Phyrexian Totem isn’t on the battlefield when the ability resolves, as long as Phyrexian Totem was a creature as it left the battlefield. If one of the permanents sacrificed is Phyrexian Totem itself, the requisite number of other permanents must still be sacrificed."
         },
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn’t matter how long the permanent has been a creature."
         }
       ],
       "text": "{T}: Add {B} to your mana pool.\n{2}{B}: Phyrexian Totem becomes a 5/5 black Horror artifact creature with trample until end of turn.\nWhenever Phyrexian Totem is dealt damage, if it's a creature, sacrifice that many permanents.",
@@ -28715,7 +28489,7 @@
         "TSP"
       ],
       "rarity": "Rare",
-      "text": "As Sarpadian Empires, Vol. VII enters the battlefield, choose white Citizen, blue Camarid, black Thrull, red Goblin, or green Saproling.\n{3}, {T}: Put a 1/1 creature token of the chosen color and type onto the battlefield.",
+      "text": "As Sarpadian Empires, Vol. VII enters the battlefield, choose white Citizen, blue Camarid, black Thrull, red Goblin, or green Saproling.\n{3}, {T}: Create a 1/1 creature token of the chosen color and type.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -28902,7 +28676,7 @@
       "rulings": [
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn’t matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn’t matter how long the permanent has been a creature."
         }
       ],
       "text": "{T}: Add {W} to your mana pool.\n{1}{W}{W}: Thunder Totem becomes a 2/2 white Spirit artifact creature with flying and first strike until end of turn.",
@@ -28997,7 +28771,7 @@
       "subtypes": [
         "Construct"
       ],
-      "text": "Flying\nTriskelavus enters the battlefield with three +1/+1 counters on it.\n{1}, Remove a +1/+1 counter from Triskelavus: Put a 1/1 colorless Triskelavite artifact creature token with flying onto the battlefield. It has \"Sacrifice this creature: This creature deals 1 damage to target creature or player.\"",
+      "text": "Flying\nTriskelavus enters the battlefield with three +1/+1 counters on it.\n{1}, Remove a +1/+1 counter from Triskelavus: Create a 1/1 colorless Triskelavite artifact creature token with flying. It has \"Sacrifice this creature: This creature deals 1 damage to target creature or player.\"",
       "toughness": "1",
       "type": "Artifact Creature — Construct",
       "types": [
@@ -29188,7 +28962,7 @@
         },
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn’t matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn’t matter how long the permanent has been a creature."
         }
       ],
       "text": "{T}: Add {G} to your mana pool.\n{2}{G}{G}{G}: Weatherseed Totem becomes a 5/3 green Treefolk artifact creature with trample until end of turn.\nWhen Weatherseed Totem is put into a graveyard from the battlefield, if it was a creature, return this card to its owner's hand.",
@@ -29732,20 +29506,12 @@
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2006-09-25",
-          "text": "After all players have decided not to take any more mulligans, players choose whether to put Leylines and/or Gemstone Caverns onto the battlefield, starting with the player who will be going first and proceeding in turn order. Each player may choose any number of Leylines and/or Gemstone Caverns. The cards are revealed and put onto the battlefield at the same time."
-        },
-        {
-          "date": "2011-06-01",
-          "text": "Your “opening hand” is the hand of cards you decide to start the game with after taking any mulligans."
-        },
-        {
-          "date": "2011-06-01",
-          "text": "After all players have decided not to take any more mulligans, if the starting player has any cards that allow actions to be taken with them from a player’s opening hand, that player may take the actions of any of those cards. The starting player repeats this, taking all actions he or she wishes to, one at a time. Then each other player in turn order may do the same. After each player has exercised his or her option to take actions from his or her opening hand, the first turn of the game begins."
-        },
-        {
           "date": "2013-07-01",
           "text": "If multiple Gemstone Caverns are put onto the battlefield under a single player’s control before the game begins, the “legend rule” won’t put the extras into that player’s graveyard until just before the first player gets priority during his or her first upkeep step. There’s no opportunity to tap the extras for mana."
+        },
+        {
+          "date": "2016-06-08",
+          "text": "A player’s “opening hand” is the hand of cards the player has after all players have taken mulligans and “scryed” if applicable. If players have any cards in hand that allow actions to be taken with them from a player’s opening hand, the starting player takes all such actions first in any order, followed by each other player in turn order. Then the first turn begins."
         }
       ],
       "supertypes": [
@@ -29844,7 +29610,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "{T}: Add {C} to your mana pool.\n{1}{R}, {T}: Put a 0/1 red Kobold creature token named Kobolds of Kher Keep onto the battlefield.",
+      "text": "{T}: Add {C} to your mana pool.\n{1}{R}, {T}: Create a 0/1 red Kobold creature token named Kobolds of Kher Keep.",
       "type": "Legendary Land",
       "types": [
         "Land"
@@ -30309,7 +30075,7 @@
       "subtypes": [
         "Urza’s"
       ],
-      "text": "{T}: Add {C} to your mana pool.\n{7}, {T}: Put a 2/2 colorless Assembly-Worker artifact creature token onto the battlefield.",
+      "text": "{T}: Add {C} to your mana pool.\n{7}, {T}: Create a 2/2 colorless Assembly-Worker artifact creature token.",
       "type": "Land — Urza’s",
       "types": [
         "Land"
@@ -30369,10 +30135,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -30381,19 +30143,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Time Spiral Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -30419,11 +30169,11 @@
         },
         {
           "date": "2006-09-25",
-          "text": "If you don't choose a land on the battlefield, Vesuva enters the battlefield untapped as itself."
+          "text": "If you don’t choose a land on the battlefield, Vesuva enters the battlefield untapped as itself."
         },
         {
           "date": "2006-10-15",
-          "text": "Cornered Market won't prevent Vesuva from being played (unless there's a Vesuva on the battlefield copying nothing), since you play it before it becomes named something else."
+          "text": "Cornered Market won’t prevent Vesuva from being played (unless there’s a Vesuva on the battlefield copying nothing), since you play it before it becomes named something else."
         }
       ],
       "text": "You may have Vesuva enter the battlefield tapped as a copy of any land on the battlefield.",
@@ -30586,6 +30336,10 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -30955,6 +30709,10 @@
           "legality": "Legal"
         },
         {
+          "format": "Kaladesh Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Kamigawa Block",
           "legality": "Legal"
         },
@@ -31318,6 +31076,10 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -31687,6 +31449,10 @@
           "legality": "Legal"
         },
         {
+          "format": "Kaladesh Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Kamigawa Block",
           "legality": "Legal"
         },
@@ -32053,6 +31819,10 @@
           "legality": "Legal"
         },
         {
+          "format": "Kaladesh Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Kamigawa Block",
           "legality": "Legal"
         },
@@ -32413,6 +32183,10 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -32779,6 +32553,10 @@
           "legality": "Legal"
         },
         {
+          "format": "Kaladesh Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Kamigawa Block",
           "legality": "Legal"
         },
@@ -33142,6 +32920,10 @@
           "legality": "Legal"
         },
         {
+          "format": "Kaladesh Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Kamigawa Block",
           "legality": "Legal"
         },
@@ -33502,6 +33284,10 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -33874,6 +33660,10 @@
           "legality": "Legal"
         },
         {
+          "format": "Kaladesh Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Kamigawa Block",
           "legality": "Legal"
         },
@@ -34240,6 +34030,10 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -34612,6 +34406,10 @@
           "legality": "Legal"
         },
         {
+          "format": "Kaladesh Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Kamigawa Block",
           "legality": "Legal"
         },
@@ -34978,6 +34776,10 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -35350,6 +35152,10 @@
           "legality": "Legal"
         },
         {
+          "format": "Kaladesh Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Kamigawa Block",
           "legality": "Legal"
         },
@@ -35716,6 +35522,10 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -36088,6 +35898,10 @@
           "legality": "Legal"
         },
         {
+          "format": "Kaladesh Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Kamigawa Block",
           "legality": "Legal"
         },
@@ -36454,6 +36268,10 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -36824,6 +36642,10 @@
           "legality": "Legal"
         },
         {
+          "format": "Kaladesh Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Kamigawa Block",
           "legality": "Legal"
         },
@@ -37191,6 +37013,10 @@
           "legality": "Legal"
         },
         {
+          "format": "Kaladesh Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Kamigawa Block",
           "legality": "Legal"
         },
@@ -37555,6 +37381,10 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {

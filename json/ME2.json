@@ -117,7 +117,7 @@
       "rulings": [
         {
           "date": "2008-10-01",
-          "text": "If Angel of Fury is removed from the graveyard after the ability triggers but before it resolves, it won’t get shuffled into its owner’s library. Similarly, if a replacement effect has the Incarnation move to a different zone instead of being put into the graveyard, the ability won’t trigger at all."
+          "text": "If Angel of Fury is removed from the graveyard after the ability triggers but before it resolves, it will remain in its zone when its owner shuffles his or her library. Similarly, if a replacement effect has it move to a different zone instead of being put into the graveyard, the ability won’t trigger at all."
         },
         {
           "date": "2008-10-01",
@@ -254,23 +254,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -470,7 +454,7 @@
       "subtypes": [
         "Aura"
       ],
-      "text": "Enchant land you control\nEnchanted land has \"{W}{W}, {T}: Put a 0/1 white Caribou creature token onto the battlefield.\"\nSacrifice a Caribou token: You gain 1 life.",
+      "text": "Enchant land you control\nEnchanted land has \"{W}{W}, {T}: Create a 0/1 white Caribou creature token.\"\nSacrifice a Caribou token: You gain 1 life.",
       "type": "Enchantment — Aura",
       "types": [
         "Enchantment"
@@ -743,7 +727,7 @@
           "text": "If a creature in combat has banding, its controller assigns damage for creatures blocking or blocked by it. That player can ignore the damage assignment order when making this assignment."
         }
       ],
-      "text": "Put a 1/1 white Knight creature token with banding onto the battlefield. (Any creatures with banding, and up to one without, can attack in a band. Bands are blocked as a group. If any creatures with banding you control are blocking or being blocked by a creature, you divide that creature's combat damage, not its controller, among any of the creatures it's being blocked by or is blocking.)",
+      "text": "Create a 1/1 white Knight creature token with banding. (Any creatures with banding, and up to one without, can attack in a band. Bands are blocked as a group. If any creatures with banding you control are blocking or being blocked by a creature, you divide that creature's combat damage, not its controller, among any of the creatures it's being blocked by or is blocking.)",
       "type": "Instant",
       "types": [
         "Instant"
@@ -908,10 +892,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -920,19 +900,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Time Spiral Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -1385,7 +1353,7 @@
         "Human",
         "Soldier"
       ],
-      "text": "At end of combat, if Kjeldoran Home Guard attacked or blocked this combat, put a -0/-1 counter on Kjeldoran Home Guard and put a 0/1 white Deserter creature token onto the battlefield.",
+      "text": "At end of combat, if Kjeldoran Home Guard attacked or blocked this combat, put a -0/-1 counter on Kjeldoran Home Guard and create a 0/1 white Deserter creature token.",
       "toughness": "6",
       "type": "Creature — Human Soldier",
       "types": [
@@ -1670,6 +1638,7 @@
       "originalText": "Destroy all lands.",
       "originalType": "Sorcery",
       "printings": [
+        "pJGP",
         "PTK",
         "ME2"
       ],
@@ -1755,10 +1724,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Ice Age Block",
           "legality": "Legal"
         },
@@ -1771,19 +1736,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Theros Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -2189,11 +2142,11 @@
         },
         {
           "date": "2008-10-01",
-          "text": "Paying cumulative upkeep is always optional. If it’s not paid, the permanent with cumulative upkeep is sacrificed. Partial payments of the total cumulative upkeep cost can’t be made. For example, if a permanent with “cumulative upkeep {1}” has three age counters on it when its cumulative upkeep ability triggers, it gets another age counter and then its controller chooses to either pay {4} or sacrifice the permanent."
+          "text": "Paying cumulative upkeep is always optional. If it’s not paid, the permanent with cumulative upkeep is sacrificed. Partial payments of the total cumulative upkeep cost can’t be made. For example, if a permanent with “cumulative upkeep ” has three age counters on it when its cumulative upkeep ability triggers, it gets another age counter and then its controller chooses to either pay or sacrifice the permanent."
         },
         {
           "date": "2008-10-01",
-          "text": "The second ability applies only if your life total is being reduced by damage. Other effects or costs (such as “lose 1 life” or “pay 1 life\") can reduce your life total below 1 as normal."
+          "text": "The second ability applies only if your life total is being reduced by damage. Other effects or costs (such as “lose 1 life” or “pay 1 life”) can reduce your life total below 1 as normal."
         },
         {
           "date": "2008-10-01",
@@ -2359,7 +2312,7 @@
         "Blue"
       ],
       "flavor": "\"I do love the rain . . . but this storm feels somehow wrong, Taysir.\"\n—Daria",
-      "id": "90666fc3257e4753122904df6859ad525684549c",
+      "id": "c7c2aba76bb79ac681a1aba1c8c5cf171d16d0f3",
       "imageName": "aether storm",
       "layout": "normal",
       "legalities": [
@@ -2377,9 +2330,8 @@
         }
       ],
       "manaCost": "{3}{U}",
-      "mciNumber": "39",
       "multiverseid": 184722,
-      "name": "Æther Storm",
+      "name": "Aether Storm",
       "number": "39",
       "originalText": "Creature cards can't be played.\nPay 4 life: Destroy Æther Storm. It can't be regenerated. Any player may play this ability.",
       "originalType": "Enchantment",
@@ -2399,7 +2351,7 @@
           "text": "Affects any spell with the type creature, including those with other types such as artifact or enchantment. This includes older cards with “summon” on their type line."
         }
       ],
-      "text": "Creature spells can't be cast.\nPay 4 life: Destroy Æther Storm. It can't be regenerated. Any player may activate this ability.",
+      "text": "Creature spells can't be cast.\nPay 4 life: Destroy Aether Storm. It can't be regenerated. Any player may activate this ability.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -2452,7 +2404,7 @@
       "rulings": [
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn’t matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn’t matter how long the permanent has been a creature."
         },
         {
           "date": "2008-10-01",
@@ -2825,7 +2777,7 @@
         },
         {
           "date": "2008-04-01",
-          "text": "A “creature card” is any card with the type Creature, even if it has other types such as Artifact, Enchantment, or Land. Older cards of type Summon are also Creature cards."
+          "text": "A “creature card” is any card with the type creature, even if it has other types such as artifact, enchantment, or land. Older cards of type summon are also creature cards."
         },
         {
           "date": "2008-10-01",
@@ -3393,7 +3345,7 @@
       "rulings": [
         {
           "date": "2008-10-01",
-          "text": "Paying cumulative upkeep is always optional. If it’s not paid, the permanent with cumulative upkeep is sacrificed. Partial payments of the total cumulative upkeep cost can’t be made. For example, if a permanent with “cumulative upkeep {1}” has three age counters on it when its cumulative upkeep ability triggers, it gets another age counter and then its controller chooses to either pay {4} or sacrifice the permanent."
+          "text": "Paying cumulative upkeep is always optional. If it’s not paid, the permanent with cumulative upkeep is sacrificed. Partial payments of the total cumulative upkeep cost can’t be made. For example, if a permanent with “cumulative upkeep ” has three age counters on it when its cumulative upkeep ability triggers, it gets another age counter and then its controller chooses to either pay or sacrifice the permanent."
         },
         {
           "date": "2008-10-01",
@@ -3654,10 +3606,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Ice Age Block",
           "legality": "Legal"
         },
@@ -3667,18 +3615,6 @@
         },
         {
           "format": "Mirage Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -3710,11 +3646,11 @@
         },
         {
           "date": "2004-10-04",
-          "text": "The creature returns to the opponent when the \"until end of turn\" effect wears off during the cleanup step. It taps during the Cleanup step (if it is not already tapped), so any abilities triggered off it tapping happen at that time."
+          "text": "The creature returns to the opponent when the “until end of turn” effect wears off during the cleanup step. It taps during the Cleanup step (if it is not already tapped), so any abilities triggered off it tapping happen at that time."
         },
         {
           "date": "2008-10-01",
-          "text": "You tap the creature when you lose control of it for any reason -- because Ray of Command's effect ends, or because a spell or ability causes another player to gain control of it."
+          "text": "You tap the creature when you lose control of it for any reason -- because Ray of Command’s effect ends, or because a spell or ability causes another player to gain control of it."
         }
       ],
       "text": "Untap target creature an opponent controls and gain control of it until end of turn. That creature gains haste until end of turn. When you lose control of the creature, tap it.",
@@ -4442,7 +4378,7 @@
         "Plant",
         "Wall"
       ],
-      "text": "Defender (This creature can't attack.)\n{U}{U}, {T}: Put a 0/1 blue Plant Wall creature token with defender named Kelp onto the battlefield.",
+      "text": "Defender (This creature can't attack.)\n{U}{U}, {T}: Create a 0/1 blue Plant Wall creature token with defender named Kelp.",
       "toughness": "3",
       "type": "Creature — Plant Wall",
       "types": [
@@ -4742,7 +4678,7 @@
       "subtypes": [
         "Zombie"
       ],
-      "text": "{2}{R}, Exile a creature card from your graveyard: Put a 3/1 black and red Graveborn creature token with haste onto the battlefield. Sacrifice it at the beginning of the next end step.",
+      "text": "{2}{R}, Exile a creature card from your graveyard: Create a 3/1 black and red Graveborn creature token with haste. Sacrifice it at the beginning of the next end step.",
       "toughness": "3",
       "type": "Creature — Zombie",
       "types": [
@@ -4861,7 +4797,7 @@
           "text": "The Spirit token has the power and toughness of the attacking creature as it last existed on the battlefield."
         }
       ],
-      "text": "Destroy target nonartifact attacking creature. It can't be regenerated. Put a black Spirit creature token with that creature's power and toughness onto the battlefield. Sacrifice the token at the beginning of the next end step.",
+      "text": "Destroy target nonartifact attacking creature. It can't be regenerated. Create a black Spirit creature token. Its power is equal to that creature's power and its toughness is equal to that creature's toughness. Sacrifice the token at the beginning of the next end step.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -4982,11 +4918,11 @@
         },
         {
           "date": "2008-04-01",
-          "text": "If the creature card put onto the battlefield has Protection from Black (or anything that prevents this from legally being attached), this won’t be able to attach to it. Then this will go to the graveyard as a State-Based Action, causing the creature to be sacrificed."
+          "text": "If the creature card put onto the battlefield has protection from black (or anything that prevents this from legally being attached), this won’t be able to attach to it. Then this will go to the graveyard as a state-based action, causing the creature to be sacrificed."
         },
         {
           "date": "2008-04-01",
-          "text": "A “creature card” is any card with the type Creature, even if it has other types such as Artifact, Enchantment, or Land. Older cards of type Summon are also Creature cards."
+          "text": "A “creature card” is any card with the type creature, even if it has other types such as artifact, enchantment, or land. Older cards of type summon are also creature cards."
         }
       ],
       "subtypes": [
@@ -5114,7 +5050,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "There is no way to make this card affect your opponent. It affects “you\", and “you” means the controller of the spell. It has no targets."
+          "text": "There is no way to make this card affect your opponent. It affects “you”, and “you” means the controller of the spell. It has no targets."
         },
         {
           "date": "2004-10-04",
@@ -5769,7 +5705,7 @@
       "rulings": [
         {
           "date": "2008-10-01",
-          "text": "This effect changes the type of mana produced, but not the amount. For example, if a land that’s tapped for mana would add {W}{W} to its controller’s mana pool, it adds {B}{B} to that player’s mana pool instead."
+          "text": "This effect changes the type of mana produced, but not the amount. For example, if a land that’s tapped for mana would add to its controller’s mana pool, it adds to that player’s mana pool instead."
         }
       ],
       "text": "Cumulative upkeep—Pay {B} and 1 life. (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)\nIf a land is tapped for mana, it produces {B} instead of any other type.",
@@ -6573,7 +6509,7 @@
       "rulings": [
         {
           "date": "2008-04-01",
-          "text": "A “creature card” is any card with the type Creature, even if it has other types such as Artifact, Enchantment, or Land. Older cards of type Summon are also Creature cards."
+          "text": "A “creature card” is any card with the type creature, even if it has other types such as artifact, enchantment, or land. Older cards of type summon are also creature cards."
         }
       ],
       "text": "Add {B} to your mana pool for each creature card in your graveyard.",
@@ -6631,7 +6567,7 @@
         },
         {
           "date": "2008-04-01",
-          "text": "A “creature card” is any card with the type Creature, even if it has other types such as Artifact, Enchantment, or Land. Older cards of type Summon are also Creature cards."
+          "text": "A “creature card” is any card with the type creature, even if it has other types such as artifact, enchantment, or land. Older cards of type summon are also creature cards."
         }
       ],
       "text": "As an additional cost to cast Soul Exchange, exile a creature you control.\nReturn target creature card from your graveyard to the battlefield. Put a +2/+2 counter on that creature if the exiled creature was a Thrull.",
@@ -7626,7 +7562,7 @@
       "rulings": [
         {
           "date": "2008-10-01",
-          "text": "A tip on how this math works: The cost to destroy a noncreature artifact with converted mana cost 0 is {0} + {0} + {1} = {1}. The cost to destroy a noncreature artifact with converted mana cost 1 is {1} + {1} + {1} = {3}. The cost to destroy a noncreature artifact with converted mana cost 2 is {2} + {2} + {1} = {5}. And so on."
+          "text": "A tip on how this math works: The cost to destroy a noncreature artifact with converted mana cost 0 is + + = . The cost to destroy a noncreature artifact with converted mana cost 1 is + + = . The cost to destroy a noncreature artifact with converted mana cost 2 is + + = . And so on."
         }
       ],
       "subtypes": [
@@ -7997,7 +7933,7 @@
         },
         {
           "date": "2008-10-01",
-          "text": "A tip on how this math works: To deal a total of 1 damage, X is 0. The cost is {0} + {0} + {R} = {R}. To deal a total of 2 damage, X is 1. The cost is {1} + {1} + {R} = {2}{R}. To deal a total of 3 damage, X is 2. The cost is {2} + {2} + {R} = {4}{R}. And so on."
+          "text": "A tip on how this math works: To deal a total of 1 damage, X is 0. The cost is + + = . To deal a total of 2 damage, X is 1. The cost is + + = . To deal a total of 3 damage, X is 2. The cost is + + = . And so on."
         },
         {
           "date": "2008-10-01",
@@ -8332,7 +8268,7 @@
       "rulings": [
         {
           "date": "2008-10-01",
-          "text": "This ability changes the targeted land’s land types. It doesn’t affect its name, its supertypes (such as whether or not it’s legendary, snow, or basic), or its other types (if it’s also a creature, for example). The ability will cause the land to lose all of its printed abilities and gain the ability “{T}: Add {B} to your mana pool.”"
+          "text": "This ability changes the targeted land’s land types. It doesn’t affect its name, its supertypes (such as whether or not it’s legendary, snow, or basic), or its other types (if it’s also a creature, for example). The ability will cause the land to lose all of its printed abilities and gain the ability “: Add to your mana pool.”"
         }
       ],
       "subtypes": [
@@ -9195,7 +9131,7 @@
       "subtypes": [
         "Elf"
       ],
-      "text": "At the beginning of your upkeep, put a spore counter on Elvish Farmer.\nRemove three spore counters from Elvish Farmer: Put a 1/1 green Saproling creature token onto the battlefield.\nSacrifice a Saproling: You gain 2 life.",
+      "text": "At the beginning of your upkeep, put a spore counter on Elvish Farmer.\nRemove three spore counters from Elvish Farmer: Create a 1/1 green Saproling creature token.\nSacrifice a Saproling: You gain 2 life.",
       "toughness": "2",
       "type": "Creature — Elf",
       "types": [
@@ -9638,7 +9574,7 @@
       "rulings": [
         {
           "date": "2008-10-01",
-          "text": "You target an opponent when you cast Forgotten Lore. The opponent chooses a card in your graveyard as Forgotten Lore resolves. After that choice is made, you’re given the option to pay {G}. If you do, the targeted opponent must choose a different card, if there is one. (If there isn’t one, this part is skipped.) Then you’re given the option to pay {G} again. As long as you keep paying {G}, the process continues. As soon as you decline to pay {G}, the last card that was chosen by the opponent is put into your hand."
+          "text": "You target an opponent when you cast Forgotten Lore. The opponent chooses a card in your graveyard as Forgotten Lore resolves. After that choice is made, you’re given the option to pay . If you do, the targeted opponent must choose a different card, if there is one. (If there isn’t one, this part is skipped.) Then you’re given the option to pay again. As long as you keep paying , the process continues. As soon as you decline to pay , the last card that was chosen by the opponent is put into your hand."
         },
         {
           "date": "2008-10-01",
@@ -10171,14 +10107,14 @@
       "rulings": [
         {
           "date": "2008-04-01",
-          "text": "A “creature card” is any card with the type Creature, even if it has other types such as Artifact, Enchantment, or Land. Older cards of type Summon are also Creature cards."
+          "text": "A “creature card” is any card with the type creature, even if it has other types such as artifact, enchantment, or land. Older cards of type summon are also creature cards."
         },
         {
           "date": "2008-10-01",
           "text": "The two creature cards are exiled as a cost. No one can respond to this. If no graveyard has two creature cards in it, the cost can’t be paid."
         }
       ],
-      "text": "{1}, Exile two creature cards from a single graveyard: Put a 1/1 green Saproling creature token onto the battlefield.",
+      "text": "{1}, Exile two creature cards from a single graveyard: Create a 1/1 green Saproling creature token.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -10231,7 +10167,7 @@
       "rulings": [
         {
           "date": "2008-10-01",
-          "text": "This effect changes the type of mana produced, but not the amount. For example, if a land that’s tapped for mana would add {W}{W} to its controller’s mana pool, it adds {C}{C} to that player’s mana pool instead."
+          "text": "This effect changes the type of mana produced, but not the amount. For example, if a land that’s tapped for mana would add to its controller’s mana pool, it adds to that player’s mana pool instead."
         }
       ],
       "text": "Cumulative upkeep {2} (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)\nIf a land is tapped for mana, it produces colorless mana instead of any other type.",
@@ -10543,7 +10479,7 @@
       "subtypes": [
         "Fungus"
       ],
-      "text": "At the beginning of your upkeep, put a spore counter on Thallid.\nRemove three spore counters from Thallid: Put a 1/1 green Saproling creature token onto the battlefield.",
+      "text": "At the beginning of your upkeep, put a spore counter on Thallid.\nRemove three spore counters from Thallid: Create a 1/1 green Saproling creature token.",
       "toughness": "1",
       "type": "Creature — Fungus",
       "types": [
@@ -10592,7 +10528,7 @@
       "subtypes": [
         "Fungus"
       ],
-      "text": "At the beginning of your upkeep, put a spore counter on Thallid Devourer.\nRemove three spore counters from Thallid Devourer: Put a 1/1 green Saproling creature token onto the battlefield.\nSacrifice a Saproling: Thallid Devourer gets +1/+2 until end of turn.",
+      "text": "At the beginning of your upkeep, put a spore counter on Thallid Devourer.\nRemove three spore counters from Thallid Devourer: Create a 1/1 green Saproling creature token.\nSacrifice a Saproling: Thallid Devourer gets +1/+2 until end of turn.",
       "toughness": "2",
       "type": "Creature — Fungus",
       "types": [
@@ -10658,7 +10594,7 @@
         },
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn’t matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn’t matter how long the permanent has been a creature."
         }
       ],
       "subtypes": [
@@ -10939,7 +10875,7 @@
         },
         {
           "date": "2008-04-01",
-          "text": "If blocked by a creature with banding, the defending player decides whether or not the damage is assigned “as though it weren’t blocked\"."
+          "text": "If blocked by a creature with banding, the defending player decides whether or not the damage is assigned “as though it weren’t blocked”."
         }
       ],
       "subtypes": [
@@ -12448,7 +12384,7 @@
       "rulings": [
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn’t matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn’t matter how long the permanent has been a creature."
         },
         {
           "date": "2008-10-01",
@@ -12789,7 +12725,7 @@
       "rulings": [
         {
           "date": "2008-10-01",
-          "text": "Paying cumulative upkeep is always optional. If it’s not paid, the permanent with cumulative upkeep is sacrificed. Partial payments of the total cumulative upkeep cost can’t be made. For example, if a permanent with “cumulative upkeep {1}” has three age counters on it when its cumulative upkeep ability triggers, it gets another age counter and then its controller chooses to either pay {4} or sacrifice the permanent."
+          "text": "Paying cumulative upkeep is always optional. If it’s not paid, the permanent with cumulative upkeep is sacrificed. Partial payments of the total cumulative upkeep cost can’t be made. For example, if a permanent with “cumulative upkeep ” has three age counters on it when its cumulative upkeep ability triggers, it gets another age counter and then its controller chooses to either pay or sacrifice the permanent."
         }
       ],
       "subtypes": [
@@ -13074,23 +13010,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -13130,27 +13050,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Ice Age Block",
           "legality": "Legal"
         },
         {
           "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -13173,7 +13077,7 @@
       "rulings": [
         {
           "date": "2008-08-01",
-          "text": "When Glacial Chasm's enters-the-battlefield ability resolves, if you don't control any other lands, you must sacrifice Glacial Chasm itself."
+          "text": "When Glacial Chasm’s enters-the-battlefield ability resolves, if you don’t control any other lands, you must sacrifice Glacial Chasm itself."
         }
       ],
       "text": "Cumulative upkeep—Pay 2 life. (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)\nWhen Glacial Chasm enters the battlefield, sacrifice a land.\nCreatures you control can't attack.\nPrevent all damage that would be dealt to you.",
@@ -13387,7 +13291,7 @@
           "text": "You have to sacrifice a plains before this card is put onto the battlefield. You have to do this no matter how it is put onto the battlefield."
         }
       ],
-      "text": "If Kjeldoran Outpost would enter the battlefield, sacrifice a Plains instead. If you do, put Kjeldoran Outpost onto the battlefield. If you don't, put it into its owner's graveyard.\n{T}: Add {W} to your mana pool.\n{1}{W}, {T}: Put a 1/1 white Soldier creature token onto the battlefield.",
+      "text": "If Kjeldoran Outpost would enter the battlefield, sacrifice a Plains instead. If you do, put Kjeldoran Outpost onto the battlefield. If you don't, put it into its owner's graveyard.\n{T}: Add {W} to your mana pool.\n{1}{W}, {T}: Create a 1/1 white Soldier creature token.",
       "type": "Land",
       "types": [
         "Land"
