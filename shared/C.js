@@ -3137,7 +3137,7 @@ var base = require("xbase");
                 releaseDate : "2016-09-30",
                 border : "black",
                 type : "expansion",
-                booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "draft-matters", "marketing"]
+                booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"]
             },
             {
                 name : "Kaladesh Inventions",
