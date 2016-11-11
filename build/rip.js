@@ -497,9 +497,19 @@ var processCardPart = function(doc, cardPart, printedDoc, printedCardPart) {
 	// Rulings
 	var rulingRows = cardPart.querySelectorAll(idPrefix + "_rulingsContainer table tr.post");
 	if (rulingRows.length) {
-		card.rulings = Array.toArray(rulingRows).map(function (rulingRow) { return { date : moment(getTextContent(rulingRow.querySelector("td:first-child")).trim(), "MM/DD/YYYY").format("YYYY-MM-DD"), text : getTextContent(rulingRow.querySelector("td:last-child")).innerTrim().trim()}; });
+		card.rulings = Array.toArray(rulingRows).map(function (rulingRow) {
+			return({
+				date : moment(getTextContent(rulingRow.querySelector("td:first-child")).trim(), "MM/DD/YYYY").format("YYYY-MM-DD"),
+				text : getTextContent(rulingRow.querySelector("td:last-child")).innerTrim().trim()
+			});
+		});
+
 		var seenRulings = [];
-		card.rulings = card.rulings.reverse().filter(function (ruling) { if (seenRulings.contains(ruling.text)) { return false; } seenRulings.push(ruling.text); return true; }).reverse();
+		card.rulings = card.rulings.reverse().filter(function (ruling) {
+			if (seenRulings.contains(ruling.text)) { return false; }
+			seenRulings.push(ruling.text);
+			return true;
+		}).reverse();
 	}
 
 	// Variations
@@ -1522,7 +1532,18 @@ var processTextBoxChildren = function(children) {
 };
 
 var getTextContent = function(item) {
-	return (item && item.textContent ? item.textContent : "");
+	var ret = '';
+	if (item) {
+		ret = item.innerHTML
+		.replace(/<img .*alt="([^"]*)".*>/g, function(match, alt) {
+			if (!SYMBOL_CONVERSION_MAP[alt.toLowerCase()]) {
+				console.log("Can't find symbol: %s", alt);
+			}
+			return('{' + SYMBOL_CONVERSION_MAP[alt.toLowerCase()] + '}');
+		})
+		.replace(/<[^>]*>/g, '');
+	}
+	return(ret);
 };
 
 var getSetNameMultiverseIds = function(setName, cb) {
