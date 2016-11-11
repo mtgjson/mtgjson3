@@ -3141,6 +3141,9 @@ var base = require("xbase");
         },
         {
             name : "Kaladesh Inventions",
+            alternativeNames: [
+                'Masterpiece Series: Kaladesh Inventions'
+            ],
             code : "MPS",
             releaseDate : "2016-09-30",
             border : "black",

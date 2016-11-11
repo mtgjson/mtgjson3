@@ -523,16 +523,25 @@ function finalizePrintings(card)
 }
 
 exports.getSetCodeFromName = getSetCodeFromName;
-function getSetCodeFromName(setName)
-{
-	var setCode = C.SETS.mutateOnce(function(SET) { return SET.name.toLowerCase()===setName.toLowerCase() ? SET.code : undefined; });
-	if(!setCode)
-	{
+function getSetCodeFromName(setName) {
+	var setInfo = C.SETS.find(function(SET) {
+		if (SET.name.toLowerCase() === setName.toLowerCase())
+			return(true);
+		if (SET.alternativeNames) {
+			var i;
+			for (i = 0; i < SET.alternativeNames.length; i++)
+				if (SET.alternativeNames[i].toLowerCase() === setName.toLowerCase())
+					return(true);
+		}
+		return(false);
+	});
+
+	if (!setInfo) {
 		console.trace();
-		base.error("FAILED TO GET SET CODE FOR NAME: %s", setName);
+		base.error("FAILED TO GET SET CODE FOR NAME: '%s'", setName);
 		process.exit(1);
 	}
-	return setCode;
+	return(setInfo.code);
 }
 
 exports.getReleaseDateForSetName = getReleaseDateForSetName;
