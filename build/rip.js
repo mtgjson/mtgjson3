@@ -497,7 +497,7 @@ var processCardPart = function(doc, cardPart, printedDoc, printedCardPart) {
 	// Rulings
 	var rulingRows = cardPart.querySelectorAll(idPrefix + "_rulingsContainer table tr.post");
 	if (rulingRows.length) {
-		card.rulings = Array.toArray(rulingRows).map(function (rulingRow) { return { date : moment(getTextContent(rulingRow.querySelector("td:first-child")).trim(), "MM/DD/YYYY").format("YYYY-MM-DD"), text : getTextContent(rulingRow.querySelector("td:last-child")).innerTrim().trim()}; });
+		card.rulings = Array.toArray(rulingRows).map(function (rulingRow) { return { date : moment(getTextContent(rulingRow.querySelector("td:first-child")).trim(), "MM/DD/YYYY").format("YYYY-MM-DD"), text : processTextBlocks(rulingRow.querySelector("td:last-child")).innerTrim().trim()}; });
 		var seenRulings = [];
 		card.rulings = card.rulings.reverse().filter(function (ruling) { if (seenRulings.contains(ruling.text)) { return false; } seenRulings.push(ruling.text); return true; }).reverse();
 	}
@@ -1484,7 +1484,7 @@ var processTextBoxChildren = function(children) {
 			var childNodeName = child.nodeName.toLowerCase();
 			if (childNodeName==="img")
 				result += processSymbol(child.getAttribute("alt"));
-			else if (childNodeName==="i" || childNodeName==="b" || childNodeName==="u" || childNodeName==="a")
+			else if (childNodeName==="i" || childNodeName==="b" || childNodeName==="u" || childNodeName==="a" || childNodeName==="autocard")
 				result += processTextBoxChildren(child.childNodes);
 			else if (childNodeName==="<")
 				result += "<";

@@ -459,6 +459,11 @@ exports.performSetCorrections = function(setCorrections, fullSet)
 
 		card.rulings.forEach(function(ruling)
 		{
+			// Fix bugs on Gatherer with {PW} and {CHAOS} symbols in rulings.
+			ruling.text = ruling.text.replaceAll("roll \\{P\\}\\{W\\}", "roll {PW}");
+			ruling.text = ruling.text.replaceAll("roll \\{C\\}", "roll {CHAOS}");
+			ruling.text = ruling.text.replaceAll("rolling \\{C\\}", "rolling {CHAOS}");
+
 			Object.forEach(C.SYMBOL_MANA, function(manaSymbol)
 			{
 				var newText = ruling.text.replaceAll("\\{" + manaSymbol.toUpperCase() + "\\]", "{" + manaSymbol.toUpperCase() + "}");
