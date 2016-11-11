@@ -3145,7 +3145,7 @@ var base = require("xbase");
             releaseDate : "2016-09-30",
             border : "black",
             type : "masterpiece"
-        }
+        },
         {
             name : "Commander 2016",
             code : "C16",
