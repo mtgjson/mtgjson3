@@ -3101,51 +3101,66 @@ var base = require("xbase");
 			block : 'Shadows over Innistrad',
 			booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", ["common", "double faced rare", "double faced mythic rare"], ["double faced common", "double faced uncommon"], ["land", "checklist"], "marketing"]
 		},
-            {
-                // http://magic.wizards.com/en/articles/archive/news/announcing-vault-lore-2016-02-29
-                name : "From the Vault: Lore",
-                code : "V16",
-                releaseDate : "2016-08-19",
-                border : "black",
-                type : "from the vault"
-            },
-            {
-                // http://magic.wizards.com/en/articles/archive/news/announcing-conspiracy-2
-                name : "Conspiracy: Take the Crown",
-                code : "CN2",
-                releaseDate : "2016-08-26",
-                border : "black",
-                type : "conspiracy",
-                booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "draft-matters", "marketing"],
-                translations: {
-                    jp: "Conspiracy: Take the Crown",
-                    cn: "Conspiracy: Take the Crown"
-                }
-            },
-            {
-                // http://magic.wizards.com/en/content/duel-decks-nissa-vs-ob-nixilis
-                name : "Duel Decks: Nissa vs. Ob Nixilis",
-                code : "DDR",
-                releaseDate : "2016-09-02",
-                type: "duel deck",
-                border: "black"
-            },
-            {
-                // http://magic.wizards.com/en/content/kaladesh-information
-                name : "Kaladesh",
-                code : "KLD",
-                releaseDate : "2016-09-30",
-                border : "black",
-                type : "expansion",
-                booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"]
-            },
-            {
-                name : "Kaladesh Inventions",
-                code : "MPS",
-                releaseDate : "2016-09-30",
-                border : "black",
-                type : "masterpiece"
+        {
+            // http://magic.wizards.com/en/articles/archive/news/announcing-vault-lore-2016-02-29
+            name : "From the Vault: Lore",
+            code : "V16",
+            releaseDate : "2016-08-19",
+            border : "black",
+            type : "from the vault"
+        },
+        {
+            // http://magic.wizards.com/en/articles/archive/news/announcing-conspiracy-2
+            name : "Conspiracy: Take the Crown",
+            code : "CN2",
+            releaseDate : "2016-08-26",
+            border : "black",
+            type : "conspiracy",
+            booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "draft-matters", "marketing"],
+            translations: {
+                jp: "Conspiracy: Take the Crown",
+                cn: "Conspiracy: Take the Crown"
             }
+        },
+        {
+            // http://magic.wizards.com/en/content/duel-decks-nissa-vs-ob-nixilis
+            name : "Duel Decks: Nissa vs. Ob Nixilis",
+            code : "DDR",
+            releaseDate : "2016-09-02",
+            type: "duel deck",
+            border: "black"
+        },
+        {
+            // http://magic.wizards.com/en/content/kaladesh-information
+            name : "Kaladesh",
+            code : "KLD",
+            releaseDate : "2016-09-30",
+            border : "black",
+            type : "expansion",
+            booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"]
+        },
+        {
+            name : "Kaladesh Inventions",
+            code : "MPS",
+            releaseDate : "2016-09-30",
+            border : "black",
+            type : "masterpiece"
+        }
+        {
+            name : "Commander 2016",
+            code : "C16",
+            releaseDate : "2016-11-11",
+            border : "black",
+            type : "commander",
+            translations: {
+                de: 'Commander 2016',
+                fr: 'Commander 2016',
+                it: 'Commander 2016',
+                es: 'Commander 2016',
+                jp: 'Commander 2016',
+                cn: 'Commander 2016'
+            }
+        }
 	];
 
 	exports.IGNORE_GATHERER_PRINTINGS = ["Promo set for Gatherer"];
