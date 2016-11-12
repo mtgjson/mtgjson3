@@ -196,7 +196,7 @@
       ]
     },
     {
-      "artist": "Greg & Tim Hildebrandt",
+      "artist": "Greg &amp; Tim Hildebrandt",
       "cmc": 6,
       "colorIdentity": [
         "W"
@@ -1365,15 +1365,15 @@
         },
         {
           "date": "2014-07-18",
-          "text": "Tapping a multicolored creature using convoke will pay for or one mana of your choice of any of that creature's colors."
+          "text": "Tapping a multicolored creature using convoke will pay for {1} or one mana of your choice of any of that creature's colors."
         },
         {
           "date": "2014-07-18",
-          "text": "When using convoke to cast a spell with in its mana cost, first choose the value for X. That choice, plus any cost increases or decreases, will determine the spell's total cost. Then you can tap creatures you control to help pay that cost. For example, if you cast Chord of Calling (a spell with convoke and mana cost ) and choose X to be 3, the total cost is . If you tap two green creatures and two red creatures, you'll have to pay ."
+          "text": "When using convoke to cast a spell with {G}."
         },
         {
           "date": "2014-07-18",
-          "text": "If a creature you control has a mana ability with in the cost, activating that ability while casting a spell with convoke will result in the creature being tapped when you pay the spell's costs. You won't be able to tap it again for convoke. Similarly, if you sacrifice a creature to activate a mana ability while casting a spell with convoke, that creature won't be on the battlefield when you pay the spell's costs, so you won't be able to tap it for convoke."
+          "text": "If a creature you control has a mana ability with {T} in the cost, activating that ability while casting a spell with convoke will result in the creature being tapped when you pay the spell's costs. You won't be able to tap it again for convoke. Similarly, if you sacrifice a creature to activate a mana ability while casting a spell with convoke, that creature won't be on the battlefield when you pay the spell's costs, so you won't be able to tap it for convoke."
         }
       ],
       "text": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nDestroy all nontoken creatures.",
@@ -2329,7 +2329,7 @@
       ]
     },
     {
-      "artist": "Zoltan Boros & Gabor Szikszai",
+      "artist": "Zoltan Boros &amp; Gabor Szikszai",
       "cmc": 3,
       "colorIdentity": [
         "W"
@@ -3375,7 +3375,7 @@
       ]
     },
     {
-      "artist": "Zoltan Boros & Gabor Szikszai",
+      "artist": "Zoltan Boros &amp; Gabor Szikszai",
       "cmc": 6,
       "colorIdentity": [
         "U"
@@ -5337,7 +5337,7 @@
       "rulings": [
         {
           "date": "2007-10-01",
-          "text": "You decide whether or not to add that much to your mana pool as the delayed triggered ability resolves at the beginning of your next main phase. You don't decide before then."
+          "text": "You decide whether or not to add that much {C} to your mana pool as the delayed triggered ability resolves at the beginning of your next main phase. You don't decide before then."
         },
         {
           "date": "2007-10-01",
@@ -8170,9 +8170,98 @@
           "multiverseid": 260748
         }
       ],
+      "id": "818ce49129c0ffd98fd961cfbd4566411a2dbcf8",
+      "imageName": "nezumi graverobber",
+      "layout": "flip",
+      "legalities": [
+        {
+          "format": "Commander",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kamigawa Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Legacy",
+          "legality": "Legal"
+        },
+        {
+          "format": "Modern",
+          "legality": "Legal"
+        },
+        {
+          "format": "Vintage",
+          "legality": "Legal"
+        }
+      ],
+      "manaCost": "{1}{B}",
+      "mciNumber": "92a",
+      "multiverseid": 247175,
+      "name": "Nezumi Graverobber",
+      "names": [
+        "Nezumi Graverobber",
+        "Nighteyes the Desecrator"
+      ],
+      "number": "92a",
+      "originalText": "{1}{B}: Exile target card from an opponent's graveyard. If no cards are in that graveyard, flip Nezumi Graverobber.\n-----\nNighteyes the Desecrator\nLegendary Creature — Rat Wizard\n4/2\n{4}{B}: Put target creature card from a graveyard onto the battlefield under your control.",
+      "originalType": "Creature — Rat Rogue",
+      "power": "2",
+      "printings": [
+        "CHK",
+        "CMD"
+      ],
+      "rarity": "Uncommon",
+      "subtypes": [
+        "Rat",
+        "Rogue"
+      ],
+      "text": "{1}{B}: Exile target card from an opponent's graveyard. If no cards are in that graveyard, flip Nezumi Graverobber.",
+      "toughness": "1",
+      "type": "Creature — Rat Rogue",
+      "types": [
+        "Creature"
+      ]
+    },
+    {
+      "artist": "Jim Nelson",
+      "cmc": 2,
+      "colorIdentity": [
+        "B"
+      ],
+      "colors": [
+        "Black"
+      ],
+      "foreignNames": [
+        {
+          "language": "French",
+          "name": "Nezumi Graverobber",
+          "multiverseid": 261415
+        },
+        {
+          "language": "German",
+          "name": "Nezumi Graverobber",
+          "multiverseid": 260430
+        },
+        {
+          "language": "Italian",
+          "name": "Nezumi Graverobber",
+          "multiverseid": 262052
+        },
+        {
+          "language": "Japanese",
+          "name": "Nezumi Graverobber",
+          "multiverseid": 261734
+        },
+        {
+          "language": "Spanish",
+          "name": "Nezumi Graverobber",
+          "multiverseid": 260748
+        }
+      ],
       "id": "d777b336a296fb6a1c9e6bea61b3c0e885024dee",
       "imageName": "nighteyes the desecrator",
-      "layout": "normal",
+      "layout": "flip",
       "legalities": [
         {
           "format": "Commander",
@@ -8199,7 +8288,11 @@
       "mciNumber": "92b",
       "multiverseid": 247175,
       "name": "Nighteyes the Desecrator",
-      "number": "92",
+      "names": [
+        "Nezumi Graverobber",
+        "Nighteyes the Desecrator"
+      ],
+      "number": "92b",
       "originalText": "{1}{B}: Exile target card from an opponent's graveyard. If no cards are in that graveyard, flip Nezumi Graverobber.\n-----\nNighteyes the Desecrator\nLegendary Creature — Rat Wizard\n4/2\n{4}{B}: Put target creature card from a graveyard onto the battlefield under your control.",
       "originalType": "Creature — Rat Rogue",
       "power": "4",
@@ -9600,7 +9693,7 @@
         },
         {
           "date": "2013-07-01",
-          "text": "In a Commander game where this card is your commander, you may cast it face-down from the Command zone by paying plus for each time it has been cast from your command zone. The cost to turn it face-up is unaffected."
+          "text": "In a Commander game where this card is your commander, you may cast it face-down from the Command zone by paying {2} for each time it has been cast from your command zone. The cost to turn it face-up is unaffected."
         }
       ],
       "subtypes": [
@@ -9777,7 +9870,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "The converted mana cost of this card is still 8, even if you only pay to cast it."
+          "text": "The converted mana cost of this card is still 8, even if you only pay {R} to cast it."
         }
       ],
       "subtypes": [
@@ -9877,7 +9970,7 @@
       ]
     },
     {
-      "artist": "Greg & Tim Hildebrandt",
+      "artist": "Greg &amp; Tim Hildebrandt",
       "cmc": 2,
       "colorIdentity": [
         "R"
@@ -12654,7 +12747,7 @@
       ]
     },
     {
-      "artist": "Zoltan Boros & Gabor Szikszai",
+      "artist": "Zoltan Boros &amp; Gabor Szikszai",
       "cmc": 6,
       "colorIdentity": [
         "G"
@@ -16552,7 +16645,7 @@
       ]
     },
     {
-      "artist": "Zoltan Boros & Gabor Szikszai",
+      "artist": "Zoltan Boros &amp; Gabor Szikszai",
       "cmc": 4,
       "colorIdentity": [
         "W",
@@ -17511,7 +17604,7 @@
       ]
     },
     {
-      "artist": "Zoltan Boros & Gabor Szikszai",
+      "artist": "Zoltan Boros &amp; Gabor Szikszai",
       "cmc": 3,
       "colorIdentity": [
         "U",
@@ -17947,7 +18040,7 @@
       ]
     },
     {
-      "artist": "Zoltan Boros & Gabor Szikszai",
+      "artist": "Zoltan Boros &amp; Gabor Szikszai",
       "cmc": 2,
       "colorIdentity": [
         "B",
@@ -18722,7 +18815,7 @@
       ]
     },
     {
-      "artist": "Zoltan Boros & Gabor Szikszai",
+      "artist": "Zoltan Boros &amp; Gabor Szikszai",
       "cmc": 4,
       "colorIdentity": [
         "W",
@@ -19815,11 +19908,11 @@
       "rulings": [
         {
           "date": "2011-09-22",
-          "text": "Each time the first ability triggers, you can pay only one time to get one copy of the spell. Each time the second ability triggers, you can pay only one time to get one token."
+          "text": "Each time the first ability triggers, you can pay {U} only one time to get one token."
         },
         {
           "date": "2011-09-22",
-          "text": "If the spell that caused Riku's first ability to trigger has left the stack by the time the ability resolves, you can still pay . If you do, you'll copy the spell as it last existed on the stack."
+          "text": "If the spell that caused Riku's first ability to trigger has left the stack by the time the ability resolves, you can still pay {R}. If you do, you'll copy the spell as it last existed on the stack."
         },
         {
           "date": "2011-09-22",
@@ -19827,7 +19920,7 @@
         },
         {
           "date": "2011-09-22",
-          "text": "If the copied spell has in its mana cost, the value of X is copied."
+          "text": "If the copied spell has {X} in its mana cost, the value of X is copied."
         },
         {
           "date": "2011-09-22",
@@ -19839,7 +19932,7 @@
         },
         {
           "date": "2011-09-22",
-          "text": "If the creature that caused Riku's second ability to trigger has already left the battlefield by the time the ability resolves, you can still pay . If you do, you'll still put a token onto the battlefield. That token has the copiable values of the characteristics of that creature as it last existed on the battlefield."
+          "text": "If the creature that caused Riku's second ability to trigger has already left the battlefield by the time the ability resolves, you can still pay {U}. If you do, you'll still put a token onto the battlefield. That token has the copiable values of the characteristics of that creature as it last existed on the battlefield."
         },
         {
           "date": "2011-09-22",
@@ -19851,7 +19944,7 @@
         },
         {
           "date": "2011-09-22",
-          "text": "If the creature had in its mana cost, X must be 0. Note this is different from an found in the mana cost of a copied spell."
+          "text": "If the creature had {X} found in the mana cost of a copied spell."
         }
       ],
       "subtypes": [
@@ -20735,7 +20828,7 @@
       ]
     },
     {
-      "artist": "Zoltan Boros & Gabor Szikszai",
+      "artist": "Zoltan Boros &amp; Gabor Szikszai",
       "cmc": 6,
       "colorIdentity": [
         "W",
@@ -25814,7 +25907,7 @@
         },
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
         },
         {
           "date": "2009-10-01",
@@ -32775,7 +32868,7 @@
       ]
     },
     {
-      "artist": "Zoltan Boros & Gabor Szikszai",
+      "artist": "Zoltan Boros &amp; Gabor Szikszai",
       "colorIdentity": [
         "G"
       ],
