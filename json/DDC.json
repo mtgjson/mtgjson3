@@ -727,23 +727,23 @@
         },
         {
           "date": "2013-06-07",
-          "text": "If a permanent has multiple instances of persist, they’ll each trigger separately, but the redundant instances will have no effect. If one instance returns the card to the battlefield, the next to resolve will do nothing."
+          "text": "If a permanent has multiple instances of persist, they'll each trigger separately, but the redundant instances will have no effect. If one instance returns the card to the battlefield, the next to resolve will do nothing."
         },
         {
           "date": "2013-06-07",
-          "text": "If a token with no -1/-1 counters on it has persist, the ability will trigger when the token is put into the graveyard. However, the token will cease to exist and can’t return to the battlefield."
+          "text": "If a token with no -1/-1 counters on it has persist, the ability will trigger when the token is put into the graveyard. However, the token will cease to exist and can't return to the battlefield."
         },
         {
           "date": "2013-06-07",
-          "text": "When a permanent with persist returns to the battlefield, it’s a new object with no memory of or connection to its previous existence."
+          "text": "When a permanent with persist returns to the battlefield, it's a new object with no memory of or connection to its previous existence."
         },
         {
           "date": "2013-06-07",
-          "text": "If multiple creatures with persist are put into the graveyard at the same time (due to combat damage or a spell that destroys all creatures, for example), the active player (the player whose turn it is) puts all of his or her persist triggers on the stack in any order, then each other player in turn order does the same. The last trigger put on the stack is the first one that resolves. That means that in a two-player game, the nonactive player’s persist creatures will return to the battlefield first, then the active player’s persist creatures do the same. The creatures return to the battlefield one at a time."
+          "text": "If multiple creatures with persist are put into the graveyard at the same time (due to combat damage or a spell that destroys all creatures, for example), the active player (the player whose turn it is) puts all of his or her persist triggers on the stack in any order, then each other player in turn order does the same. The last trigger put on the stack is the first one that resolves. That means that in a two-player game, the nonactive player's persist creatures will return to the battlefield first, then the active player's persist creatures do the same. The creatures return to the battlefield one at a time."
         },
         {
           "date": "2013-06-07",
-          "text": "If a creature with persist that has +1/+1 counters on it receives enough -1/-1 counters to cause it to be destroyed by lethal damage or put into its owner’s graveyard for having 0 or less toughness, persist won’t trigger and the card won’t return to the battlefield. That’s because persist checks the creature’s existence just before it leaves the battlefield, and it still has all those counters on it at that point."
+          "text": "If a creature with persist that has +1/+1 counters on it receives enough -1/-1 counters to cause it to be destroyed by lethal damage or put into its owner's graveyard for having 0 or less toughness, persist won't trigger and the card won't return to the battlefield. That's because persist checks the creature's existence just before it leaves the battlefield, and it still has all those counters on it at that point."
         }
       ],
       "subtypes": [
@@ -808,7 +808,7 @@
       "subtypes": [
         "Angel"
       ],
-      "text": "Flying\nAt the beginning of your upkeep, you may put a 1/1 white Spirit creature token with flying onto the battlefield.",
+      "text": "Flying\nAt the beginning of your upkeep, you may create a 1/1 white Spirit creature token with flying.",
       "toughness": "4",
       "type": "Creature — Angel",
       "types": [
@@ -1070,11 +1070,11 @@
         },
         {
           "date": "2005-08-01",
-          "text": "Any Aura attached to the creature is put into its owner’s graveyard as a state-based action. Equipment attached to the creature become unattached but remain on the battlefield."
+          "text": "Any Aura attached to the creature is put into its owner's graveyard as a state-based action. Equipment attached to the creature become unattached but remain on the battlefield."
         },
         {
           "date": "2005-08-01",
-          "text": "If Otherworldly Journey is cast during an end step, the creature won’t return until the beginning of the next end step."
+          "text": "If Otherworldly Journey is cast during an end step, the creature won't return until the beginning of the next end step."
         }
       ],
       "subtypes": [
@@ -1122,10 +1122,6 @@
         },
         {
           "format": "Onslaught Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -1294,11 +1290,11 @@
         },
         {
           "date": "2008-10-01",
-          "text": "If you attack with multiple creatures, but then all but one are removed from combat, your exalted abilities won’t trigger."
+          "text": "If you attack with multiple creatures, but then all but one are removed from combat, your exalted abilities won't trigger."
         },
         {
           "date": "2008-10-01",
-          "text": "Some effects put creatures onto the battlefield attacking. Since those creatures were never declared as attackers, they’re ignored by exalted abilities. They won’t cause exalted abilities to trigger. If any exalted abilities have already triggered (because exactly one creature was declared as an attacker), those abilities will resolve as normal even though there may now be multiple attackers."
+          "text": "Some effects put creatures onto the battlefield attacking. Since those creatures were never declared as attackers, they're ignored by exalted abilities. They won't cause exalted abilities to trigger. If any exalted abilities have already triggered (because exactly one creature was declared as an attacker), those abilities will resolve as normal even though there may now be multiple attackers."
         },
         {
           "date": "2008-10-01",
@@ -1310,7 +1306,7 @@
         },
         {
           "date": "2008-10-01",
-          "text": "In a Two-Headed Giant game, a creature “attacks alone” if it’s the only creature declared as an attacker by your entire team. If you control that attacking creature, your exalted abilities will trigger but your teammate’s exalted abilities won’t."
+          "text": "In a Two-Headed Giant game, a creature \"attacks alone\" if it's the only creature declared as an attacker by your entire team. If you control that attacking creature, your exalted abilities will trigger but your teammate's exalted abilities won't."
         },
         {
           "date": "2012-07-01",
@@ -1375,11 +1371,11 @@
       "rulings": [
         {
           "date": "2016-06-08",
-          "text": "Faith’s Fetters doesn’t stop static abilities, triggered abilities, or mana abilities from working. A mana ability is an ability that produces mana, not an ability that costs mana."
+          "text": "Faith's Fetters doesn't stop static abilities, triggered abilities, or mana abilities from working. A mana ability is an ability that produces mana, not an ability that costs mana."
         },
         {
           "date": "2016-06-08",
-          "text": "Activated abilities contain a colon. They’re generally written “[Cost]: [Effect].” Some keywords are activated abilities and will have colons in their reminder text."
+          "text": "Activated abilities contain a colon. They're generally written \"[Cost]: [Effect].\" Some keywords are activated abilities and will have colons in their reminder text."
         }
       ],
       "subtypes": [
@@ -1555,7 +1551,7 @@
         },
         {
           "date": "2009-10-01",
-          "text": "If a player casts a white spell, Angel’s Feather’s ability triggers and is put on the stack on top of that spell. Angel’s Feather’s ability will resolve (causing you to gain 1 life) before the spell does."
+          "text": "If a player casts a white spell, Angel's Feather's ability triggers and is put on the stack on top of that spell. Angel's Feather's ability will resolve (causing you to gain 1 life) before the spell does."
         }
       ],
       "text": "Whenever a player casts a white spell, you may gain 1 life.",
@@ -2771,7 +2767,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "The “sacrifice a creature” effect is not targeted. It can affect creatures with protection from black, for example."
+          "text": "The \"sacrifice a creature\" effect is not targeted. It can affect creatures with protection from black, for example."
         },
         {
           "date": "2008-04-01",
@@ -3091,15 +3087,15 @@
         },
         {
           "date": "2013-06-07",
-          "text": "Once you decide to replace a draw using a card’s dredge ability, that card can’t be removed from your graveyard “in response.” (Replacement effects don’t use the stack.)"
+          "text": "Once you decide to replace a draw using a card's dredge ability, that card can't be removed from your graveyard \"in response.\" (Replacement effects don't use the stack.)"
         },
         {
           "date": "2013-06-07",
-          "text": "You can’t use dredge unless you’re going to draw a card and the card with dredge is already in your graveyard."
+          "text": "You can't use dredge unless you're going to draw a card and the card with dredge is already in your graveyard."
         },
         {
           "date": "2013-06-07",
-          "text": "Notably, Stinkweed Imp’s ability isn’t deathtouch. It’s a triggered ability that triggers only on combat damage."
+          "text": "Notably, Stinkweed Imp's ability isn't deathtouch. It's a triggered ability that triggers only on combat damage."
         }
       ],
       "subtypes": [
@@ -3168,7 +3164,7 @@
         },
         {
           "date": "2008-08-01",
-          "text": "A hybrid spell that’s black and another color is *not* a nonblack spell. Since it’s black, it can’t be nonblack!"
+          "text": "A hybrid spell that's black and another color is *not* a nonblack spell. Since it's black, it can't be nonblack!"
         }
       ],
       "subtypes": [
@@ -3540,7 +3536,7 @@
       "rulings": [
         {
           "date": "2013-09-20",
-          "text": "If a creature (such as Clone) enters the battlefield as a copy of this creature, the copy’s “enters-the-battlefield” ability will still trigger as long as you cast that creature spell from your hand."
+          "text": "If a creature (such as Clone) enters the battlefield as a copy of this creature, the copy's \"enters-the-battlefield\" ability will still trigger as long as you cast that creature spell from your hand."
         }
       ],
       "subtypes": [
@@ -3734,10 +3730,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -3956,7 +3948,7 @@
         },
         {
           "date": "2004-10-04",
-          "text": "You don’t reveal the card to your opponent."
+          "text": "You don't reveal the card to your opponent."
         },
         {
           "date": "2004-10-04",
@@ -4162,7 +4154,7 @@
         },
         {
           "date": "2012-05-01",
-          "text": "Barter in Blood doesn’t target any creatures and may be cast even if a player controls fewer than two creatures."
+          "text": "Barter in Blood doesn't target any creatures and may be cast even if a player controls fewer than two creatures."
         }
       ],
       "text": "Each player sacrifices two creatures.",
@@ -4219,7 +4211,7 @@
           "text": "Breeding Pit must actually be on the battlefield at the beginning of the endstep in order for you to get a Thrull. The getting of the Thrull is not part of paying the upkeep, it is part of having the card on the battlefield."
         }
       ],
-      "text": "At the beginning of your upkeep, sacrifice Breeding Pit unless you pay {B}{B}.\nAt the beginning of your end step, put a 0/1 black Thrull creature token onto the battlefield.",
+      "text": "At the beginning of your upkeep, sacrifice Breeding Pit unless you pay {B}{B}.\nAt the beginning of your end step, create a 0/1 black Thrull creature token.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -4280,14 +4272,14 @@
         },
         {
           "date": "2004-12-01",
-          "text": "The power and toughness of the Demon token are set when Promise of Power resolves. They’re unaffected if the number of cards in your hand changes later."
+          "text": "The power and toughness of the Demon token are set when Promise of Power resolves. They're unaffected if the number of cards in your hand changes later."
         },
         {
           "date": "2004-12-01",
-          "text": "If you pay the entwine cost, you draw five cards, then lose five life, then put the Demon token onto the battlefield. The five cards you draw count toward the Demon’s power and toughness."
+          "text": "If you pay the entwine cost, you draw five cards, then lose five life, then put the Demon token onto the battlefield. The five cards you draw count toward the Demon's power and toughness."
         }
       ],
-      "text": "Choose one —\n• You draw five cards and you lose 5 life.\n• Put an X/X black Demon creature token with flying onto the battlefield, where X is the number of cards in your hand.\nEntwine {4} (Choose both if you pay the entwine cost.)",
+      "text": "Choose one —\n• You draw five cards and you lose 5 life.\n• Create an X/X black Demon creature token with flying, where X is the number of cards in your hand.\nEntwine {4} (Choose both if you pay the entwine cost.)",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -4364,14 +4356,14 @@
         },
         {
           "date": "2010-08-15",
-          "text": "The amount of damage dealt to a creature is not bounded by its toughness, and the amount of damage dealt to a player is not bounded by that player’s life total. For example, if Corrupt deals 6 damage to a 2/2 creature, you’ll gain 6 life."
+          "text": "The amount of damage dealt to a creature is not bounded by its toughness, and the amount of damage dealt to a player is not bounded by that player's life total. For example, if Corrupt deals 6 damage to a 2/2 creature, you'll gain 6 life."
         },
         {
           "date": "2013-07-01",
           "text": "Corrupt counts any land you control with the subtype Swamp, not just ones named Swamp."
         }
       ],
-      "text": "Corrupt deals damage equal to the number of Swamps you control to target creature or player. You gain life equal to the damage dealt this way.",
+      "text": "Corrupt deals damage to target creature or player equal to the number of Swamps you control. You gain life equal to the damage dealt this way.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -4439,7 +4431,7 @@
         },
         {
           "date": "2009-10-01",
-          "text": "If the targeted creature or player is an illegal target by the time Consume Spirit would resolve, the entire spell is countered. You won’t gain any life."
+          "text": "If the targeted creature or player is an illegal target by the time Consume Spirit would resolve, the entire spell is countered. You won't gain any life."
         }
       ],
       "text": "Spend only black mana on X.\nConsume Spirit deals X damage to target creature or player and you gain X life.",
@@ -4503,7 +4495,7 @@
         },
         {
           "date": "2009-10-01",
-          "text": "If a player casts a black spell, Demon’s Horn’s ability triggers and is put on the stack on top of that spell. Demon’s Horn’s ability will resolve (causing you to gain 1 life) before the spell does."
+          "text": "If a player casts a black spell, Demon's Horn's ability triggers and is put on the stack on top of that spell. Demon's Horn's ability will resolve (causing you to gain 1 life) before the spell does."
         }
       ],
       "text": "Whenever a player casts a black spell, you may gain 1 life.",
