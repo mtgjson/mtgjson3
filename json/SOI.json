@@ -21,9 +21,19 @@
     "common",
     "common",
     "common",
-    "common",
-    "common",
-    "land",
+    [
+      "common",
+      "double faced rare",
+      "double faced mythic rare"
+    ],
+    [
+      "double faced common",
+      "double faced uncommon"
+    ],
+    [
+      "land",
+      "checklist"
+    ],
     "marketing"
   ],
   "translations": {
@@ -629,7 +639,7 @@
           "text": "Archangel Avacyn's delayed triggered ability won't cause it to transform back into Archangel Avacyn if it has already transformed into Avacyn, the Purifier, perhaps because several creatures died in one turn."
         },
         {
-          "date": "2016-04-08",
+          "date": "2016-07-13",
           "text": "For more information on double-faced cards, see the Shadows over Innistrad mechanics article (http://magic.wizards.com/en/articles/archive/feature/shadows-over-innistrad-mechanics)."
         }
       ],
@@ -873,7 +883,7 @@
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2016-04-08",
+          "date": "2016-07-13",
           "text": "For more information on double-faced cards, see the Shadows over Innistrad mechanics article (http://magic.wizards.com/en/articles/archive/feature/shadows-over-innistrad-mechanics)."
         }
       ],
@@ -1253,7 +1263,7 @@
       "rulings": [
         {
           "date": "2016-04-08",
-          "text": "Casting a spell for an alternative cost, such as a madness cost, doesn't change its converted mana cost. For example, casting Twins of Maurer Estate (a card with mana cost {4}{B} and madness cost {2}{B}) for its madness cost will not cause Bygone Bishop's ability to trigger."
+          "text": "Casting a spell for an alternative cost, such as a madness cost, doesn't change its converted mana cost. For example, casting Twins of Maurer Estate (a card with mana cost {B}) for its madness cost will not cause Bygone Bishop's ability to trigger."
         },
         {
           "date": "2016-04-08",
@@ -1272,7 +1282,7 @@
         "Spirit",
         "Cleric"
       ],
-      "text": "Flying\nWhenever you cast a creature spell with converted mana cost 3 or less, investigate. (Put a colorless Clue artifact token onto the battlefield with \"{2}, Sacrifice this artifact: Draw a card.\")",
+      "text": "Flying\nWhenever you cast a creature spell with converted mana cost 3 or less, investigate. (Create a colorless Clue artifact token with \"{2}, Sacrifice this artifact: Draw a card.\")",
       "toughness": "3",
       "type": "Creature — Spirit Cleric",
       "types": [
@@ -1610,7 +1620,7 @@
         "Human",
         "Soldier"
       ],
-      "text": "{1}{W}, Exile Dauntless Cathar from your graveyard: Put a 1/1 white Spirit creature token with flying onto the battlefield. Activate this ability only any time you could cast a sorcery.",
+      "text": "{1}{W}, Exile Dauntless Cathar from your graveyard: Create a 1/1 white Spirit creature token with flying. Activate this ability only any time you could cast a sorcery.",
       "toughness": "2",
       "type": "Creature — Human Soldier",
       "types": [
@@ -1885,7 +1895,7 @@
           "text": "In some rare cases, you can have a token or a copy of a spell in your graveyard at the moment that an object's delirium ability counts the card types among cards in your graveyard, before that token or copy ceases to exist. Because tokens and copies of spells are not cards, even if they are copies of cards, their types will never be counted."
         }
       ],
-      "text": "Exile all creatures.\nDelirium — Put a 4/4 white Angel creature token with flying onto the battlefield if there are four or more card types among cards in your graveyard.",
+      "text": "Exile all creatures.\nDelirium — Create a 4/4 white Angel creature token with flying if there are four or more card types among cards in your graveyard.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -2112,7 +2122,7 @@
         "Spirit",
         "Knight"
       ],
-      "text": "Flying\nWhenever another Spirit enters the battlefield under your control, you gain 2 life.\n{3}{W}: Put a 1/1 white Spirit creature token with flying onto the battlefield.",
+      "text": "Flying\nWhenever another Spirit enters the battlefield under your control, you gain 2 life.\n{3}{W}: Create a 1/1 white Spirit creature token with flying.",
       "toughness": "4",
       "type": "Creature — Spirit Knight",
       "types": [
@@ -2359,7 +2369,7 @@
       "subtypes": [
         "Spirit"
       ],
-      "text": "Flying\nWhen Emissary of the Sleepless enters the battlefield, if a creature died this turn, put a 1/1 white Spirit creature token with flying onto the battlefield.",
+      "text": "Flying\nWhen Emissary of the Sleepless enters the battlefield, if a creature died this turn, create a 1/1 white Spirit creature token with flying.",
       "toughness": "4",
       "type": "Creature — Spirit",
       "types": [
@@ -2602,7 +2612,7 @@
           "text": "If you sacrifice a Clue for another card's cost or effect, such as that of Angelic Purge or Tamiyo's Journal, you can't also pay {2} and sacrifice it to draw a card."
         }
       ],
-      "text": "Tap up to two target creatures.\nInvestigate. (Put a colorless Clue artifact token onto the battlefield with \"{2}, Sacrifice this artifact: Draw a card.\")",
+      "text": "Tap up to two target creatures.\nInvestigate. (Create a colorless Clue artifact token with \"{2}, Sacrifice this artifact: Draw a card.\")",
       "type": "Instant",
       "types": [
         "Instant"
@@ -2843,7 +2853,7 @@
           "text": "Once Hanweir Militia Captain has transformed into Westvale Cult Leader, controlling fewer than four creatures won't cause it to transform back."
         },
         {
-          "date": "2016-04-08",
+          "date": "2016-07-13",
           "text": "For more information on double-faced cards, see the Shadows over Innistrad mechanics article (http://magic.wizards.com/en/articles/archive/feature/shadows-over-innistrad-mechanics)."
         }
       ],
@@ -2976,7 +2986,7 @@
         "Human",
         "Cleric"
       ],
-      "text": "Westvale Cult Leader's power and toughness are each equal to the number of creatures you control.\nAt the beginning of your end step, put a 1/1 white and black Human Cleric creature token onto the battlefield.",
+      "text": "Westvale Cult Leader's power and toughness are each equal to the number of creatures you control.\nAt the beginning of your end step, create a 1/1 white and black Human Cleric creature token.",
       "toughness": "*",
       "type": "Creature — Human Cleric",
       "types": [
@@ -3218,7 +3228,7 @@
           "text": "You can't cast a spell without choosing legal targets. If all of those targets become illegal, the spell is countered and you won't investigate."
         }
       ],
-      "text": "Destroy target creature with power 4 or greater.\nInvestigate. (Put a colorless Clue artifact token onto the battlefield with \"{2}, Sacrifice this artifact: Draw a card.\")",
+      "text": "Destroy target creature with power 4 or greater.\nInvestigate. (Create a colorless Clue artifact token with \"{2}, Sacrifice this artifact: Draw a card.\")",
       "type": "Instant",
       "types": [
         "Instant"
@@ -3957,7 +3967,7 @@
         "Human",
         "Cleric"
       ],
-      "text": "Lifelink\n{2}{W}, Exile Nearheath Chaplain from your graveyard: Put two 1/1 white Spirit creature tokens with flying onto the battlefield. Activate this ability only any time you could cast a sorcery.",
+      "text": "Lifelink\n{2}{W}, Exile Nearheath Chaplain from your graveyard: Create two 1/1 white Spirit creature tokens with flying. Activate this ability only any time you could cast a sorcery.",
       "toughness": "1",
       "type": "Creature — Human Cleric",
       "types": [
@@ -4075,7 +4085,7 @@
           "text": "You get the Spirit token, not the owner of the target card."
         }
       ],
-      "text": "Put target card from a graveyard on the top or bottom of its owner's library. Put a 1/1 white Spirit creature token with flying onto the battlefield.",
+      "text": "Put target card from a graveyard on the top or bottom of its owner's library. Create a 1/1 white Spirit creature token with flying.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -4565,7 +4575,7 @@
           "text": "If Pious Evangel enters the battlefield at the same time as another creature you control, Pious Evangel's ability triggers once for the other creature as well as once for itself."
         },
         {
-          "date": "2016-04-08",
+          "date": "2016-07-13",
           "text": "For more information on double-faced cards, see the Shadows over Innistrad mechanics article (http://magic.wizards.com/en/articles/archive/feature/shadows-over-innistrad-mechanics)."
         }
       ],
@@ -5402,7 +5412,7 @@
           "text": "The Equipment you control doesn't have to be attached to a creature."
         }
       ],
-      "text": "Target creature gets +2/+2 until end of turn. If you control an Equipment, put a 1/1 white Human Soldier creature token onto the battlefield.",
+      "text": "Target creature gets +2/+2 until end of turn. If you control an Equipment, create a 1/1 white Human Soldier creature token.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -5527,7 +5537,7 @@
           "text": "You can't cast a spell without choosing legal targets. If all of those targets become illegal, the spell is countered and you won't investigate."
         }
       ],
-      "text": "Target creature gets +1/+0 and gains indestructible until end of turn. (Damage and effects that say \"destroy\" don't destroy it.)\nInvestigate. (Put a colorless Clue artifact token onto the battlefield with \"{2}, Sacrifice this artifact: Draw a card.\")",
+      "text": "Target creature gets +1/+0 and gains indestructible until end of turn. (Damage and effects that say \"destroy\" don't destroy it.)\nInvestigate. (Create a colorless Clue artifact token with \"{2}, Sacrifice this artifact: Draw a card.\")",
       "type": "Instant",
       "types": [
         "Instant"
@@ -5888,7 +5898,7 @@
         "Human",
         "Soldier"
       ],
-      "text": "When Thraben Inspector enters the battlefield, investigate. (Put a colorless Clue artifact token onto the battlefield with \"{2}, Sacrifice this artifact: Draw a card.\")",
+      "text": "When Thraben Inspector enters the battlefield, investigate. (Create a colorless Clue artifact token with \"{2}, Sacrifice this artifact: Draw a card.\")",
       "toughness": "2",
       "type": "Creature — Human Soldier",
       "types": [
@@ -6142,7 +6152,7 @@
           "text": "You can tap any untapped creature you control, including one you haven't controlled continuously since the beginning of your most recent turn, to pay the cost of Town Gossipmonger's activated ability. You must have controlled Town Gossipmonger continuously since the beginning of your most recent turn, however."
         },
         {
-          "date": "2016-04-08",
+          "date": "2016-07-13",
           "text": "For more information on double-faced cards, see the Shadows over Innistrad mechanics article (http://magic.wizards.com/en/articles/archive/feature/shadows-over-innistrad-mechanics)."
         }
       ],
@@ -6506,7 +6516,7 @@
         "SOI"
       ],
       "rarity": "Common",
-      "text": "{2}{W}, Sacrifice Vessel of Ephemera: Put two 1/1 white Spirit creature tokens with flying onto the battlefield.",
+      "text": "{2}{W}, Sacrifice Vessel of Ephemera: Create two 1/1 white Spirit creature tokens with flying.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -6628,7 +6638,7 @@
           "text": "If a replacement effect causes the top card of your library to go to a zone other than your graveyard, Aberrant Researcher will still transform if that card was an instant or sorcery card."
         },
         {
-          "date": "2016-04-08",
+          "date": "2016-07-13",
           "text": "For more information on double-faced cards, see the Shadows over Innistrad mechanics article (http://magic.wizards.com/en/articles/archive/feature/shadows-over-innistrad-mechanics)."
         }
       ],
@@ -7258,7 +7268,7 @@
           "text": "You can't cast a spell without choosing legal targets. If all of those targets become illegal, the spell is countered and you won't investigate."
         }
       ],
-      "text": "Counter target spell.\nInvestigate three times. (To investigate, put a colorless Clue artifact token onto the battlefield with \"{2}, Sacrifice this artifact: Draw a card.\")",
+      "text": "Counter target spell.\nInvestigate three times. (To investigate, create a colorless Clue artifact token with \"{2}, Sacrifice this artifact: Draw a card.\")",
       "type": "Instant",
       "types": [
         "Instant"
@@ -7376,7 +7386,7 @@
           "text": "If Daring Sleuth's ability triggers multiple times before any of those abilities resolves, only the first one to resolve will cause it to transform."
         },
         {
-          "date": "2016-04-08",
+          "date": "2016-07-13",
           "text": "For more information on double-faced cards, see the Shadows over Innistrad mechanics article (http://magic.wizards.com/en/articles/archive/feature/shadows-over-innistrad-mechanics)."
         }
       ],
@@ -7513,7 +7523,7 @@
         "Human",
         "Wizard"
       ],
-      "text": "Prowess (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)\nWhenever Bearer of Overwhelming Truths deals combat damage to a player, investigate. (Put a colorless Clue artifact token onto the battlefield with \"{2}, Sacrifice this artifact: Draw a card.\")",
+      "text": "Prowess (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)\nWhenever Bearer of Overwhelming Truths deals combat damage to a player, investigate. (Create a colorless Clue artifact token with \"{2}, Sacrifice this artifact: Draw a card.\")",
       "toughness": "2",
       "type": "Creature — Human Wizard",
       "types": [
@@ -7747,7 +7757,7 @@
         "Human",
         "Wizard"
       ],
-      "text": "When Drownyard Explorers enters the battlefield, investigate. (Put a colorless Clue artifact token onto the battlefield with \"{2}, Sacrifice this artifact: Draw a card.\")",
+      "text": "When Drownyard Explorers enters the battlefield, investigate. (Create a colorless Clue artifact token with \"{2}, Sacrifice this artifact: Draw a card.\")",
       "toughness": "4",
       "type": "Creature — Human Wizard",
       "types": [
@@ -7860,7 +7870,7 @@
       "subtypes": [
         "Zombie"
       ],
-      "text": "When Drunau Corpse Trawler enters the battlefield, put a 2/2 black Zombie creature token onto the battlefield.\n{2}{B}: Target Zombie gains deathtouch until end of turn.",
+      "text": "When Drunau Corpse Trawler enters the battlefield, create a 2/2 black Zombie creature token.\n{2}{B}: Target Zombie gains deathtouch until end of turn.",
       "toughness": "1",
       "type": "Creature — Zombie",
       "types": [
@@ -8442,7 +8452,7 @@
           "text": "If you sacrifice a Clue for another card's cost or effect, such as that of Angelic Purge or Tamiyo's Journal, you can't also pay {2} and sacrifice it to draw a card."
         }
       ],
-      "text": "When Fleeting Memories enters the battlefield, investigate. (Put a colorless Clue artifact token onto the battlefield with \"{2}, Sacrifice this artifact: Draw a card.\")\nWhenever you sacrifice a Clue, target player puts the top three cards of his or her library into his or her graveyard.",
+      "text": "When Fleeting Memories enters the battlefield, investigate. (Create a colorless Clue artifact token with \"{2}, Sacrifice this artifact: Draw a card.\")\nWhenever you sacrifice a Clue, target player puts the top three cards of his or her library into his or her graveyard.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -9070,7 +9080,7 @@
           "text": "You can't cast a spell without choosing legal targets. If all of those targets become illegal, the spell is countered and you won't investigate."
         }
       ],
-      "text": "Put target permanent on top of its owner's library.\nInvestigate. (Put a colorless Clue artifact token onto the battlefield with \"{2}, Sacrifice this artifact: Draw a card.\")",
+      "text": "Put target permanent on top of its owner's library.\nInvestigate. (Create a colorless Clue artifact token with \"{2}, Sacrifice this artifact: Draw a card.\")",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -9447,7 +9457,7 @@
           "text": "You can't cast a spell without choosing legal targets. If all of those targets become illegal, the spell is countered and you won't investigate."
         }
       ],
-      "text": "Target creature gets -4/-0 until end of turn.\nInvestigate. (Put a colorless Clue artifact token onto the battlefield with \"{2}, Sacrifice this artifact: Draw a card.\")",
+      "text": "Target creature gets -4/-0 until end of turn.\nInvestigate. (Create a colorless Clue artifact token with \"{2}, Sacrifice this artifact: Draw a card.\")",
       "type": "Instant",
       "types": [
         "Instant"
@@ -10339,7 +10349,7 @@
           "text": "If you sacrifice a Clue for another card's cost or effect, such as that of Angelic Purge or Tamiyo's Journal, you can't also pay {2} and sacrifice it to draw a card."
         }
       ],
-      "text": "Whenever one or more creatures you control deal combat damage to a player, investigate. (Put a colorless Clue artifact token onto the battlefield with \"{2}, Sacrifice this artifact: Draw a card.\")\n{1}{G}, Exile a creature card from your graveyard: Investigate. You gain 2 life.",
+      "text": "Whenever one or more creatures you control deal combat damage to a player, investigate. (Create a colorless Clue artifact token with \"{2}, Sacrifice this artifact: Draw a card.\")\n{1}{G}, Exile a creature card from your graveyard: Investigate. You gain 2 life.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -10684,7 +10694,7 @@
           "text": "You can't cast a spell without choosing legal targets. If all of those targets become illegal, the spell is countered and you won't investigate."
         }
       ],
-      "text": "Tap target creature. It doesn't untap during its controller's next untap step.\nInvestigate. (Put a colorless Clue artifact token onto the battlefield with \"{2}, Sacrifice this artifact: Draw a card.\")",
+      "text": "Tap target creature. It doesn't untap during its controller's next untap step.\nInvestigate. (Create a colorless Clue artifact token with \"{2}, Sacrifice this artifact: Draw a card.\")",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -11027,7 +11037,7 @@
           "text": "Rise from the Tides isn't put into your graveyard until after it's finished resolving. It won't be counted among the instant and sorcery cards in your graveyard."
         }
       ],
-      "text": "Put a 2/2 black Zombie creature token onto the battlefield tapped for each instant and sorcery card in your graveyard.",
+      "text": "Create a tapped 2/2 black Zombie creature token for each instant and sorcery card in your graveyard.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -11589,7 +11599,7 @@
       "rarity": "Mythic Rare",
       "rulings": [
         {
-          "date": "2016-04-08",
+          "date": "2016-07-13",
           "text": "For more information on double-faced cards, see the Shadows over Innistrad mechanics article (http://magic.wizards.com/en/articles/archive/feature/shadows-over-innistrad-mechanics)."
         }
       ],
@@ -12186,7 +12196,7 @@
           "text": "Removing all ice counters from Thing in the Ice some other way will not cause it to transform. You'll need to cast an instant or sorcery spell and cause its last ability to trigger."
         },
         {
-          "date": "2016-04-08",
+          "date": "2016-07-13",
           "text": "For more information on double-faced cards, see the Shadows over Innistrad mechanics article (http://magic.wizards.com/en/articles/archive/feature/shadows-over-innistrad-mechanics)."
         }
       ],
@@ -12431,7 +12441,7 @@
           "text": "If you sacrifice a Clue for another card's cost or effect, such as that of Angelic Purge or Tamiyo's Journal, you can't also pay {2} and sacrifice it to draw a card."
         }
       ],
-      "text": "Whenever you cast an instant or sorcery spell, investigate. (Put a colorless Clue artifact token onto the battlefield with \"{2}, Sacrifice this artifact: Draw a card.\")",
+      "text": "Whenever you cast an instant or sorcery spell, investigate. (Create a colorless Clue artifact token with \"{2}, Sacrifice this artifact: Draw a card.\")",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -12553,7 +12563,7 @@
           "text": "If you cause a creature to have 0 power or less, use the actual value (which may be negative) to determine whether it can block or be blocked. A creature with skulk and 0 or less power most likely won't be blocked, but it won't deal combat damage and won't trigger any abilities that trigger when combat damage is dealt."
         },
         {
-          "date": "2016-04-08",
+          "date": "2016-07-13",
           "text": "For more information on double-faced cards, see the Shadows over Innistrad mechanics article (http://magic.wizards.com/en/articles/archive/feature/shadows-over-innistrad-mechanics)."
         }
       ],
@@ -13052,7 +13062,7 @@
           "text": "If an effect causes Accursed Witch to transform on the battlefield, rather than leaving it and returning transformed, then Infectious Curse doesn't become attached to any player and is put into your graveyard. This won't cause abilities that trigger when a creature leaves the battlefield to trigger."
         },
         {
-          "date": "2016-04-08",
+          "date": "2016-07-13",
           "text": "For more information on double-faced cards, see the Shadows over Innistrad mechanics article (http://magic.wizards.com/en/articles/archive/feature/shadows-over-innistrad-mechanics)."
         }
       ],
@@ -13978,7 +13988,7 @@
           "text": "You can activate Call the Bloodline's ability once on each player's turn, not just your own."
         }
       ],
-      "text": "{1}, Discard a card: Put a 1/1 black Vampire Knight creature token with lifelink onto the battlefield. Activate this ability only once each turn.",
+      "text": "{1}, Discard a card: Create a 1/1 black Vampire Knight creature token with lifelink. Activate this ability only once each turn.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -14460,7 +14470,7 @@
         "Zombie",
         "Giant"
       ],
-      "text": "Diregraf Colossus enters the battlefield with a +1/+1 counter on it for each Zombie card in your graveyard.\nWhenever you cast a Zombie spell, put a 2/2 black Zombie creature token onto the battlefield tapped.",
+      "text": "Diregraf Colossus enters the battlefield with a +1/+1 counter on it for each Zombie card in your graveyard.\nWhenever you cast a Zombie spell, create a tapped 2/2 black Zombie creature token.",
       "toughness": "2",
       "type": "Creature — Zombie Giant",
       "types": [
@@ -14588,7 +14598,7 @@
           "text": "Once blockers have been chosen, transforming Elusive Tormentor into Insidious Mist won't cause it to become unblocked."
         },
         {
-          "date": "2016-04-08",
+          "date": "2016-07-13",
           "text": "For more information on double-faced cards, see the Shadows over Innistrad mechanics article (http://magic.wizards.com/en/articles/archive/feature/shadows-over-innistrad-mechanics)."
         }
       ],
@@ -15090,7 +15100,7 @@
           "text": "If you discard a card with madness while resolving a spell or ability, it moves immediately to exile. Continue resolving that spell or ability—the card is not in your graveyard at this time. Its madness trigger will be placed onto the stack once that spell or ability has completely resolved."
         }
       ],
-      "text": "Madness {X}{B}{B} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)\nPut three 2/2 black Zombie creature tokens onto the battlefield tapped and you gain 3 life. If From Under the Floorboards's madness cost was paid, instead put X of those tokens onto the battlefield tapped and you gain X life.",
+      "text": "Madness {X}{B}{B} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)\nCreate three tapped 2/2 black Zombie creature tokens and you gain 3 life. If From Under the Floorboards's madness cost was paid, instead create X of those tokens and you gain X life.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -15202,7 +15212,7 @@
         "Human",
         "Rogue"
       ],
-      "text": "{3}{B}, Exile Ghoulcaller's Accomplice from your graveyard: Put a 2/2 black Zombie creature token onto the battlefield. Activate this ability only any time you could cast a sorcery.",
+      "text": "{3}{B}, Exile Ghoulcaller's Accomplice from your graveyard: Create a 2/2 black Zombie creature token. Activate this ability only any time you could cast a sorcery.",
       "toughness": "2",
       "type": "Creature — Human Rogue",
       "types": [
@@ -15467,7 +15477,7 @@
           "text": "If you discard a card with madness while resolving a spell or ability, it moves immediately to exile. Continue resolving that spell or ability—the card is not in your graveyard at this time. Its madness trigger will be placed onto the stack once that spell or ability has completely resolved."
         }
       ],
-      "text": "Put two 2/2 black Zombie creature tokens onto the battlefield.\nMadness {2}{B} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)",
+      "text": "Create two 2/2 black Zombie creature tokens.\nMadness {2}{B} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -15693,7 +15703,7 @@
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2016-04-08",
+          "date": "2016-07-13",
           "text": "For more information on double-faced cards, see the Shadows over Innistrad mechanics article (http://magic.wizards.com/en/articles/archive/feature/shadows-over-innistrad-mechanics)."
         }
       ],
@@ -16208,7 +16218,7 @@
           "text": "Some delirium abilities are activated abilities of permanents. To activate such an ability, there must be four or more card types among cards in your graveyard. The number of card types is not rechecked as the ability resolves."
         },
         {
-          "date": "2016-04-08",
+          "date": "2016-07-13",
           "text": "For more information on double-faced cards, see the Shadows over Innistrad mechanics article (http://magic.wizards.com/en/articles/archive/feature/shadows-over-innistrad-mechanics)."
         }
       ],
@@ -18149,7 +18159,7 @@
           "text": "If the creature card becomes an illegal target, Shamble Back is countered. None of its effects happen."
         }
       ],
-      "text": "Exile target creature card from a graveyard. Put a 2/2 black Zombie creature token onto the battlefield. You gain 2 life.",
+      "text": "Exile target creature card from a graveyard. Create a 2/2 black Zombie creature token. You gain 2 life.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -19811,7 +19821,7 @@
           "text": "The abilities that transform a Werewolf back and forth look at the entire previous turn, even if the Werewolf with that ability wasn't on the battlefield for some or all of that turn."
         },
         {
-          "date": "2016-04-08",
+          "date": "2016-07-13",
           "text": "For more information on double-faced cards, see the Shadows over Innistrad mechanics article (http://magic.wizards.com/en/articles/archive/feature/shadows-over-innistrad-mechanics)."
         }
       ],
@@ -20184,7 +20194,7 @@
           "text": "The abilities that transform a Werewolf back and forth look at the entire previous turn, even if the Werewolf with that ability wasn't on the battlefield for some or all of that turn."
         },
         {
-          "date": "2016-04-08",
+          "date": "2016-07-13",
           "text": "For more information on double-faced cards, see the Shadows over Innistrad mechanics article (http://magic.wizards.com/en/articles/archive/feature/shadows-over-innistrad-mechanics)."
         }
       ],
@@ -20425,7 +20435,7 @@
         "SOI"
       ],
       "rarity": "Uncommon",
-      "text": "Put two 1/1 red Devil creature tokens onto the battlefield. They have \"When this creature dies, it deals 1 damage to target creature or player.\"",
+      "text": "Create two 1/1 red Devil creature tokens. They have \"When this creature dies, it deals 1 damage to target creature or player.\"",
       "type": "Instant",
       "types": [
         "Instant"
@@ -20532,7 +20542,7 @@
         "SOI"
       ],
       "rarity": "Rare",
-      "text": "Put four 1/1 red Devil creature tokens onto the battlefield. They have \"When this creature dies, it deals 1 damage to target creature or player.\"",
+      "text": "Create four 1/1 red Devil creature tokens. They have \"When this creature dies, it deals 1 damage to target creature or player.\"",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -21428,7 +21438,7 @@
           "text": "The abilities that transform a Werewolf back and forth look at the entire previous turn, even if the Werewolf with that ability wasn't on the battlefield for some or all of that turn."
         },
         {
-          "date": "2016-04-08",
+          "date": "2016-07-13",
           "text": "For more information on double-faced cards, see the Shadows over Innistrad mechanics article (http://magic.wizards.com/en/articles/archive/feature/shadows-over-innistrad-mechanics)."
         }
       ],
@@ -21679,7 +21689,7 @@
           "text": "The abilities that transform a Werewolf back and forth look at the entire previous turn, even if the Werewolf with that ability wasn't on the battlefield for some or all of that turn."
         },
         {
-          "date": "2016-04-08",
+          "date": "2016-07-13",
           "text": "For more information on double-faced cards, see the Shadows over Innistrad mechanics article (http://magic.wizards.com/en/articles/archive/feature/shadows-over-innistrad-mechanics)."
         }
       ],
@@ -23063,7 +23073,7 @@
           "text": "The abilities that transform a Werewolf back and forth look at the entire previous turn, even if the Werewolf with that ability wasn't on the battlefield for some or all of that turn."
         },
         {
-          "date": "2016-04-08",
+          "date": "2016-07-13",
           "text": "For more information on double-faced cards, see the Shadows over Innistrad mechanics article (http://magic.wizards.com/en/articles/archive/feature/shadows-over-innistrad-mechanics)."
         }
       ],
@@ -23316,7 +23326,7 @@
       "rulings": [
         {
           "date": "2006-09-25",
-          "text": "This has an additional cost with an option. Essentially, the card's cost to cast is either {5}{R} or {R} and a discard. But its mana cost is always {R} and its converted mana cost is always 1."
+          "text": "This has an additional cost with an option. Essentially, the card's cost to cast is either {R} and its converted mana cost is always 1."
         },
         {
           "date": "2016-04-08",
@@ -24811,7 +24821,7 @@
           "text": "If, during your declare attackers step, the enchanted creature is tapped or is affected by a spell or ability that says it can't attack, then it doesn't attack. If there's a cost associated with having that creature attack, its controller isn't forced to pay that cost, so it doesn't have to attack in that case either."
         },
         {
-          "date": "2016-04-08",
+          "date": "2016-07-13",
           "text": "For more information on double-faced cards, see the Shadows over Innistrad mechanics article (http://magic.wizards.com/en/articles/archive/feature/shadows-over-innistrad-mechanics)."
         }
       ],
@@ -25862,7 +25872,7 @@
           "text": "The abilities that transform a Werewolf back and forth look at the entire previous turn, even if the Werewolf with that ability wasn't on the battlefield for some or all of that turn."
         },
         {
-          "date": "2016-04-08",
+          "date": "2016-07-13",
           "text": "For more information on double-faced cards, see the Shadows over Innistrad mechanics article (http://magic.wizards.com/en/articles/archive/feature/shadows-over-innistrad-mechanics)."
         }
       ],
@@ -26219,7 +26229,7 @@
       "rulings": [
         {
           "date": "2016-04-08",
-          "text": "You can't choose to discard a card without also paying {1}{R}."
+          "text": "You can't choose to discard a card without also paying {R}."
         },
         {
           "date": "2016-04-08",
@@ -26485,7 +26495,7 @@
           "text": "Most triggered delirium abilities use an intervening \"if\" clause. There must be four or more card types among cards in your graveyard in order for these abilities to trigger, otherwise they never trigger at all. There's no way to have the ability trigger if there aren't enough card types, even if you intend to raise that number in response to the triggered ability. The number of card types is checked again as the trigger resolves, and if it has become too low somehow, the ability does nothing. If which card types are in your graveyard changes but the quantity of card types stays the same (or increases), then the delirium triggered ability will still resolve."
         },
         {
-          "date": "2016-04-08",
+          "date": "2016-07-13",
           "text": "For more information on double-faced cards, see the Shadows over Innistrad mechanics article (http://magic.wizards.com/en/articles/archive/feature/shadows-over-innistrad-mechanics)."
         }
       ],
@@ -26738,7 +26748,7 @@
         "Human",
         "Warrior"
       ],
-      "text": "Whenever Briarbridge Patrol deals damage to one or more creatures, investigate. (Put a colorless Clue artifact token onto the battlefield with \"{2}, Sacrifice this artifact: Draw a card.\")\nAt the beginning of each end step, if you sacrificed three or more Clues this turn, you may put a creature card from your hand onto the battlefield.",
+      "text": "Whenever Briarbridge Patrol deals damage to one or more creatures, investigate. (Create a colorless Clue artifact token with \"{2}, Sacrifice this artifact: Draw a card.\")\nAt the beginning of each end step, if you sacrificed three or more Clues this turn, you may put a creature card from your hand onto the battlefield.",
       "toughness": "3",
       "type": "Creature — Human Warrior",
       "types": [
@@ -26865,7 +26875,7 @@
         "Human",
         "Scout"
       ],
-      "text": "When Byway Courier dies, investigate. (Put a colorless Clue artifact token onto the battlefield with \"{2}, Sacrifice this artifact: Draw a card.\")",
+      "text": "When Byway Courier dies, investigate. (Create a colorless Clue artifact token with \"{2}, Sacrifice this artifact: Draw a card.\")",
       "toughness": "2",
       "type": "Creature — Human Scout",
       "types": [
@@ -27108,7 +27118,7 @@
           "text": "You can't cast a spell without choosing legal targets. If all of those targets become illegal, the spell is countered and you won't investigate."
         }
       ],
-      "text": "Investigate, then target creature gets +1/+1 until end of turn for each Clue you control. (To investigate, put a colorless Clue artifact token onto the battlefield with \"{2}, Sacrifice this artifact: Draw a card.\")",
+      "text": "Investigate, then target creature gets +1/+1 until end of turn for each Clue you control. (To investigate, create a colorless Clue artifact token with \"{2}, Sacrifice this artifact: Draw a card.\")",
       "type": "Instant",
       "types": [
         "Instant"
@@ -27220,7 +27230,7 @@
           "text": "If multiple land cards are put into your graveyard at once, Crawling Sensation's last ability triggers only once. This could happen because an effect (such as that of Crawling Sensation's first ability) put them there from your library at once, or because they were destroyed at the same time (such as two land creatures that were dealt lethal combat damage)."
         }
       ],
-      "text": "At the beginning of your upkeep, you may put the top two cards of your library into your graveyard.\nWhenever one or more land cards are put into your graveyard from anywhere for the first time each turn, put a 1/1 green Insect creature token onto the battlefield.",
+      "text": "At the beginning of your upkeep, you may put the top two cards of your library into your graveyard.\nWhenever one or more land cards are put into your graveyard from anywhere for the first time each turn, create a 1/1 green Insect creature token.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -27455,7 +27465,7 @@
         "Human",
         "Shaman"
       ],
-      "text": "Whenever a permanent you control transforms into a non-Human creature, put a 2/2 green Wolf creature token onto the battlefield.",
+      "text": "Whenever a permanent you control transforms into a non-Human creature, create a 2/2 green Wolf creature token.",
       "toughness": "4",
       "type": "Creature — Human Shaman",
       "types": [
@@ -27713,7 +27723,7 @@
           "text": "The abilities that transform a Werewolf back and forth look at the entire previous turn, even if the Werewolf with that ability wasn't on the battlefield for some or all of that turn."
         },
         {
-          "date": "2016-04-08",
+          "date": "2016-07-13",
           "text": "For more information on double-faced cards, see the Shadows over Innistrad mechanics article (http://magic.wizards.com/en/articles/archive/feature/shadows-over-innistrad-mechanics)."
         }
       ],
@@ -28552,7 +28562,7 @@
           "text": "The abilities that transform a Werewolf back and forth look at the entire previous turn, even if the Werewolf with that ability wasn't on the battlefield for some or all of that turn."
         },
         {
-          "date": "2016-04-08",
+          "date": "2016-07-13",
           "text": "For more information on double-faced cards, see the Shadows over Innistrad mechanics article (http://magic.wizards.com/en/articles/archive/feature/shadows-over-innistrad-mechanics)."
         }
       ],
@@ -28812,7 +28822,7 @@
           "text": "The abilities that transform a Werewolf back and forth look at the entire previous turn, even if the Werewolf with that ability wasn't on the battlefield for some or all of that turn."
         },
         {
-          "date": "2016-04-08",
+          "date": "2016-07-13",
           "text": "For more information on double-faced cards, see the Shadows over Innistrad mechanics article (http://magic.wizards.com/en/articles/archive/feature/shadows-over-innistrad-mechanics)."
         }
       ],
@@ -29197,7 +29207,7 @@
       "subtypes": [
         "Ooze"
       ],
-      "text": "Delirium — Whenever Inexorable Blob attacks, if there are four or more card types among cards in your graveyard, put a 3/3 green Ooze creature token onto the battlefield tapped and attacking.",
+      "text": "Delirium — Whenever Inexorable Blob attacks, if there are four or more card types among cards in your graveyard, create a 3/3 green Ooze creature token that's tapped and attacking.",
       "toughness": "3",
       "type": "Creature — Ooze",
       "types": [
@@ -29567,7 +29577,7 @@
           "text": "The abilities that transform a Werewolf back and forth look at the entire previous turn, even if the Werewolf with that ability wasn't on the battlefield for some or all of that turn."
         },
         {
-          "date": "2016-04-08",
+          "date": "2016-07-13",
           "text": "For more information on double-faced cards, see the Shadows over Innistrad mechanics article (http://magic.wizards.com/en/articles/archive/feature/shadows-over-innistrad-mechanics)."
         }
       ],
@@ -30435,7 +30445,7 @@
         "Wolf",
         "Spirit"
       ],
-      "text": "Flash (You may cast this spell any time you could cast an instant.)\nWhen Pack Guardian enters the battlefield, you may discard a land card. If you do, put a 2/2 green Wolf creature token onto the battlefield.",
+      "text": "Flash (You may cast this spell any time you could cast an instant.)\nWhen Pack Guardian enters the battlefield, you may discard a land card. If you do, create a 2/2 green Wolf creature token.",
       "toughness": "3",
       "type": "Creature — Wolf Spirit",
       "types": [
@@ -30785,7 +30795,7 @@
           "text": "You can't cast a spell without choosing legal targets. If all of those targets become illegal, the spell is countered and you won't investigate."
         }
       ],
-      "text": "Destroy target artifact or enchantment.\nInvestigate. (Put a colorless Clue artifact token onto the battlefield with \"{2}, Sacrifice this artifact: Draw a card.\")",
+      "text": "Destroy target artifact or enchantment.\nInvestigate. (Create a colorless Clue artifact token with \"{2}, Sacrifice this artifact: Draw a card.\")",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -30906,7 +30916,7 @@
           "text": "The abilities that transform a Werewolf back and forth look at the entire previous turn, even if the Werewolf with that ability wasn't on the battlefield for some or all of that turn."
         },
         {
-          "date": "2016-04-08",
+          "date": "2016-07-13",
           "text": "For more information on double-faced cards, see the Shadows over Innistrad mechanics article (http://magic.wizards.com/en/articles/archive/feature/shadows-over-innistrad-mechanics)."
         }
       ],
@@ -31282,7 +31292,7 @@
           "text": "Second Harvest copies all tokens, not only creature tokens. Notably, this includes Clue tokens."
         }
       ],
-      "text": "For each token you control, put a token onto the battlefield that's a copy of that permanent.",
+      "text": "For each token you control, create a token that's a copy of that permanent.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -31394,7 +31404,7 @@
         "Wolf",
         "Warrior"
       ],
-      "text": "Trample\nWhenever a Wolf or Werewolf you control becomes the target of an instant or sorcery spell, put a 2/2 green Wolf creature token onto the battlefield.",
+      "text": "Trample\nWhenever a Wolf or Werewolf you control becomes the target of an instant or sorcery spell, create a 2/2 green Wolf creature token.",
       "toughness": "2",
       "type": "Creature — Wolf Warrior",
       "types": [
@@ -31513,7 +31523,7 @@
           "text": "The abilities that transform a Werewolf back and forth look at the entire previous turn, even if the Werewolf with that ability wasn't on the battlefield for some or all of that turn."
         },
         {
-          "date": "2016-04-08",
+          "date": "2016-07-13",
           "text": "For more information on double-faced cards, see the Shadows over Innistrad mechanics article (http://magic.wizards.com/en/articles/archive/feature/shadows-over-innistrad-mechanics)."
         }
       ],
@@ -32129,7 +32139,7 @@
         "Human",
         "Scout"
       ],
-      "text": "Whenever a land enters the battlefield under your control, investigate. (Put a colorless Clue artifact token onto the battlefield with \"{2}, Sacrifice this artifact: Draw a card.\")\nWhenever you sacrifice a Clue, put a +1/+1 counter on Tireless Tracker.",
+      "text": "Whenever a land enters the battlefield under your control, investigate. (Create a colorless Clue artifact token with \"{2}, Sacrifice this artifact: Draw a card.\")\nWhenever you sacrifice a Clue, put a +1/+1 counter on Tireless Tracker.",
       "toughness": "2",
       "type": "Creature — Human Scout",
       "types": [
@@ -32493,7 +32503,7 @@
           "text": "If you sacrifice a Clue for another card's cost or effect, such as that of Angelic Purge or Tamiyo's Journal, you can't also pay {2} and sacrifice it to draw a card."
         }
       ],
-      "text": "Whenever a nontoken creature you control dies, investigate. (Put a colorless Clue artifact token onto the battlefield with \"{2}, Sacrifice this artifact: Draw a card.\")\nWhenever you sacrifice a Clue, put a 1/1 white Human Soldier creature token onto the battlefield.",
+      "text": "Whenever a nontoken creature you control dies, investigate. (Create a colorless Clue artifact token with \"{2}, Sacrifice this artifact: Draw a card.\")\nWhenever you sacrifice a Clue, create a 1/1 white Human Soldier creature token.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -32948,7 +32958,7 @@
       "subtypes": [
         "Aura"
       ],
-      "text": "Enchant land\nWhen Weirding Wood enters the battlefield, investigate. (Put a colorless Clue artifact token onto the battlefield with \"{2}, Sacrifice this artifact: Draw a card.\")\nEnchanted land has \"{T}: Add two mana of any one color to your mana pool.\"",
+      "text": "Enchant land\nWhen Weirding Wood enters the battlefield, investigate. (Create a colorless Clue artifact token with \"{2}, Sacrifice this artifact: Draw a card.\")\nEnchanted land has \"{T}: Add two mana of any one color to your mana pool.\"",
       "type": "Enchantment — Aura",
       "types": [
         "Enchantment"
@@ -33349,14 +33359,14 @@
           "text": "You can't activate Arlinn Kord's second ability and, after she transforms, activate a loyalty ability of Arlinn, Embraced by the Moon during that turn (or vice versa)."
         },
         {
-          "date": "2016-04-08",
+          "date": "2016-07-13",
           "text": "For more information on double-faced cards, see the Shadows over Innistrad mechanics article (http://magic.wizards.com/en/articles/archive/feature/shadows-over-innistrad-mechanics)."
         }
       ],
       "subtypes": [
         "Arlinn"
       ],
-      "text": "+1: Until end of turn, up to one target creature gets +2/+2 and gains vigilance and haste.\n0: Put a 2/2 green Wolf creature token onto the battlefield. Transform Arlinn Kord.",
+      "text": "+1: Until end of turn, up to one target creature gets +2/+2 and gains vigilance and haste.\n0: Create a 2/2 green Wolf creature token. Transform Arlinn Kord.",
       "type": "Planeswalker — Arlinn",
       "types": [
         "Planeswalker"
@@ -33863,7 +33873,7 @@
       "subtypes": [
         "Aura"
       ],
-      "text": "Enchant creature\nEnchanted creature has \"Whenever this creature attacks, put a 4/4 white Angel creature token with flying onto the battlefield tapped and attacking. Exile that token at end of combat.\"",
+      "text": "Enchant creature\nEnchanted creature has \"Whenever this creature attacks, create a 4/4 white Angel creature token with flying that's tapped and attacking. Exile that token at end of combat.\"",
       "type": "Enchantment — Aura",
       "types": [
         "Enchantment"
@@ -34365,7 +34375,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "Flying\nYou and Humans you control have hexproof.\n{2}, Exile a card from your graveyard: Put a 1/1 white Human Soldier creature token onto the battlefield.",
+      "text": "Flying\nYou and Humans you control have hexproof.\n{2}, Exile a card from your graveyard: Create a 1/1 white Human Soldier creature token.",
       "toughness": "5",
       "type": "Legendary Creature — Angel",
       "types": [
@@ -34488,7 +34498,7 @@
       "subtypes": [
         "Sorin"
       ],
-      "text": "+1: Reveal the top card of your library and put that card into your hand. Each opponent loses life equal to its converted mana cost.\n−X: Sorin, Grim Nemesis deals X damage to target creature or planeswalker and you gain X life.\n−9: Put a number of 1/1 black Vampire Knight creature tokens with lifelink onto the battlefield equal to the highest life total among all players.",
+      "text": "+1: Reveal the top card of your library and put that card into your hand. Each opponent loses life equal to its converted mana cost.\n−X: Sorin, Grim Nemesis deals X damage to target creature or planeswalker and you gain X life.\n−9: Create a number of 1/1 black Vampire Knight creature tokens with lifelink equal to the highest life total among all players.",
       "type": "Planeswalker — Sorin",
       "types": [
         "Planeswalker"
@@ -35033,7 +35043,7 @@
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2016-04-08",
+          "date": "2016-07-13",
           "text": "For more information on double-faced cards, see the Shadows over Innistrad mechanics article (http://magic.wizards.com/en/articles/archive/feature/shadows-over-innistrad-mechanics)."
         }
       ],
@@ -35373,7 +35383,7 @@
           "text": "If you sacrifice a Clue for another card's cost or effect, such as that of Angelic Purge or Tamiyo's Journal, you can't also pay {2} and sacrifice it to draw a card."
         }
       ],
-      "text": "{T}: Add {C} to your mana pool.\n{4}, {T}: Investigate. (Put a colorless Clue artifact token onto the battlefield with \"{2}, Sacrifice this artifact: Draw a card.\")",
+      "text": "{T}: Add {C} to your mana pool.\n{4}, {T}: Investigate. (Create a colorless Clue artifact token with \"{2}, Sacrifice this artifact: Draw a card.\")",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -35588,7 +35598,7 @@
           "text": "When Neglected Heirloom transforms, it remains attached to the creature it's attached to. If the equipped creature transforms into a noncreature permanent, Neglected Heirloom will become unattached before it transforms into Ashmouth Blade."
         },
         {
-          "date": "2016-04-08",
+          "date": "2016-07-13",
           "text": "For more information on double-faced cards, see the Shadows over Innistrad mechanics article (http://magic.wizards.com/en/articles/archive/feature/shadows-over-innistrad-mechanics)."
         }
       ],
@@ -36128,7 +36138,7 @@
       "subtypes": [
         "Equipment"
       ],
-      "text": "Equipped creature gets +4/+2.\nWhenever equipped creature dies, if it was a Human, put a 1/1 white Spirit creature token with flying onto the battlefield.\nEquip {3}",
+      "text": "Equipped creature gets +4/+2.\nWhenever equipped creature dies, if it was a Human, create a 1/1 white Spirit creature token with flying.\nEquip {3}",
       "type": "Artifact — Equipment",
       "types": [
         "Artifact"
@@ -36246,7 +36256,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "At the beginning of your upkeep, investigate. (Put a colorless Clue artifact token onto the battlefield with \"{2}, Sacrifice this artifact: Draw a card.\")\n{T}, Sacrifice three Clues: Search your library for a card and put that card into your hand. Then shuffle your library.",
+      "text": "At the beginning of your upkeep, investigate. (Create a colorless Clue artifact token with \"{2}, Sacrifice this artifact: Draw a card.\")\n{T}, Sacrifice three Clues: Search your library for a card and put that card into your hand. Then shuffle your library.",
       "type": "Legendary Artifact",
       "types": [
         "Artifact"
@@ -36354,7 +36364,7 @@
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2016-04-08",
+          "date": "2016-07-13",
           "text": "For more information on double-faced cards, see the Shadows over Innistrad mechanics article (http://magic.wizards.com/en/articles/archive/feature/shadows-over-innistrad-mechanics)."
         }
       ],
@@ -38094,11 +38104,11 @@
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2016-04-08",
+          "date": "2016-07-13",
           "text": "For more information on double-faced cards, see the Shadows over Innistrad mechanics article (http://magic.wizards.com/en/articles/archive/feature/shadows-over-innistrad-mechanics)."
         }
       ],
-      "text": "{T}: Add {C} to your mana pool.\n{5}, {T}, Pay 1 life: Put a 1/1 white and black Human Cleric creature token onto the battlefield.\n{5}, {T}, Sacrifice five creatures: Transform Westvale Abbey, then untap it.",
+      "text": "{T}: Add {C} to your mana pool.\n{5}, {T}, Pay 1 life: Create a 1/1 white and black Human Cleric creature token.\n{5}, {T}, Sacrifice five creatures: Transform Westvale Abbey, then untap it.",
       "type": "Land",
       "types": [
         "Land"
@@ -38341,6 +38351,16 @@
           "multiverseid": 410382
         },
         {
+          "language": "Chinese Simplified",
+          "name": "平原",
+          "multiverseid": 410383
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "平原",
+          "multiverseid": 410384
+        },
+        {
           "language": "Chinese Traditional",
           "name": "平原",
           "multiverseid": 410712
@@ -38436,29 +38456,19 @@
           "multiverseid": 412692
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Planície",
-          "multiverseid": 412693
+          "language": "Spanish",
+          "name": "Llanura",
+          "multiverseid": 413352
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Planície",
-          "multiverseid": 412694
+          "language": "Spanish",
+          "name": "Llanura",
+          "multiverseid": 413353
         },
         {
-          "language": "Russian",
-          "name": "Равнина",
-          "multiverseid": 413022
-        },
-        {
-          "language": "Russian",
-          "name": "Равнина",
-          "multiverseid": 413023
-        },
-        {
-          "language": "Russian",
-          "name": "Равнина",
-          "multiverseid": 413024
+          "language": "Spanish",
+          "name": "Llanura",
+          "multiverseid": 413354
         }
       ],
       "id": "10b441a561eb8963fe6ebf567faa4861038fac71",
@@ -38711,6 +38721,16 @@
           "multiverseid": 410382
         },
         {
+          "language": "Chinese Simplified",
+          "name": "平原",
+          "multiverseid": 410383
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "平原",
+          "multiverseid": 410384
+        },
+        {
           "language": "Chinese Traditional",
           "name": "平原",
           "multiverseid": 410712
@@ -38806,29 +38826,19 @@
           "multiverseid": 412692
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Planície",
-          "multiverseid": 412693
+          "language": "Spanish",
+          "name": "Llanura",
+          "multiverseid": 413352
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Planície",
-          "multiverseid": 412694
+          "language": "Spanish",
+          "name": "Llanura",
+          "multiverseid": 413353
         },
         {
-          "language": "Russian",
-          "name": "Равнина",
-          "multiverseid": 413022
-        },
-        {
-          "language": "Russian",
-          "name": "Равнина",
-          "multiverseid": 413023
-        },
-        {
-          "language": "Russian",
-          "name": "Равнина",
-          "multiverseid": 413024
+          "language": "Spanish",
+          "name": "Llanura",
+          "multiverseid": 413354
         }
       ],
       "id": "d9b36230487e8c1b233be3b2b2041d1ff6ee57f7",
@@ -39081,6 +39091,16 @@
           "multiverseid": 410382
         },
         {
+          "language": "Chinese Simplified",
+          "name": "平原",
+          "multiverseid": 410383
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "平原",
+          "multiverseid": 410384
+        },
+        {
           "language": "Chinese Traditional",
           "name": "平原",
           "multiverseid": 410712
@@ -39176,29 +39196,19 @@
           "multiverseid": 412692
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Planície",
-          "multiverseid": 412693
+          "language": "Spanish",
+          "name": "Llanura",
+          "multiverseid": 413352
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Planície",
-          "multiverseid": 412694
+          "language": "Spanish",
+          "name": "Llanura",
+          "multiverseid": 413353
         },
         {
-          "language": "Russian",
-          "name": "Равнина",
-          "multiverseid": 413022
-        },
-        {
-          "language": "Russian",
-          "name": "Равнина",
-          "multiverseid": 413023
-        },
-        {
-          "language": "Russian",
-          "name": "Равнина",
-          "multiverseid": 413024
+          "language": "Spanish",
+          "name": "Llanura",
+          "multiverseid": 413354
         }
       ],
       "id": "370c1191e0321627d6f4f25a52f9118bc5a9efc7",
@@ -40547,6 +40557,21 @@
       ],
       "foreignNames": [
         {
+          "language": "Chinese Simplified",
+          "name": "沼泽",
+          "multiverseid": 410388
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "沼泽",
+          "multiverseid": 410389
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "沼泽",
+          "multiverseid": 410390
+        },
+        {
           "language": "Chinese Traditional",
           "name": "沼澤",
           "multiverseid": 410718
@@ -40640,21 +40665,6 @@
           "language": "Portuguese (Brazil)",
           "name": "Pântano",
           "multiverseid": 412698
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Pântano",
-          "multiverseid": 412699
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Pântano",
-          "multiverseid": 412700
-        },
-        {
-          "language": "Russian",
-          "name": "Болото",
-          "multiverseid": 413028
         },
         {
           "language": "Spanish",
@@ -40920,6 +40930,21 @@
       ],
       "foreignNames": [
         {
+          "language": "Chinese Simplified",
+          "name": "沼泽",
+          "multiverseid": 410388
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "沼泽",
+          "multiverseid": 410389
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "沼泽",
+          "multiverseid": 410390
+        },
+        {
           "language": "Chinese Traditional",
           "name": "沼澤",
           "multiverseid": 410718
@@ -41013,21 +41038,6 @@
           "language": "Portuguese (Brazil)",
           "name": "Pântano",
           "multiverseid": 412698
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Pântano",
-          "multiverseid": 412699
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Pântano",
-          "multiverseid": 412700
-        },
-        {
-          "language": "Russian",
-          "name": "Болото",
-          "multiverseid": 413028
         },
         {
           "language": "Spanish",
@@ -41293,6 +41303,21 @@
       ],
       "foreignNames": [
         {
+          "language": "Chinese Simplified",
+          "name": "沼泽",
+          "multiverseid": 410388
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "沼泽",
+          "multiverseid": 410389
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "沼泽",
+          "multiverseid": 410390
+        },
+        {
           "language": "Chinese Traditional",
           "name": "沼澤",
           "multiverseid": 410718
@@ -41386,21 +41411,6 @@
           "language": "Portuguese (Brazil)",
           "name": "Pântano",
           "multiverseid": 412698
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Pântano",
-          "multiverseid": 412699
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Pântano",
-          "multiverseid": 412700
-        },
-        {
-          "language": "Russian",
-          "name": "Болото",
-          "multiverseid": 413028
         },
         {
           "language": "Spanish",
@@ -41666,11 +41676,6 @@
       ],
       "foreignNames": [
         {
-          "language": "Chinese Simplified",
-          "name": "山脉",
-          "multiverseid": 410391
-        },
-        {
           "language": "Chinese Traditional",
           "name": "山脈",
           "multiverseid": 410721
@@ -41781,14 +41786,19 @@
           "multiverseid": 413031
         },
         {
-          "language": "Russian",
-          "name": "Гора",
-          "multiverseid": 413032
+          "language": "Spanish",
+          "name": "Montaña",
+          "multiverseid": 413361
         },
         {
-          "language": "Russian",
-          "name": "Гора",
-          "multiverseid": 413033
+          "language": "Spanish",
+          "name": "Montaña",
+          "multiverseid": 413362
+        },
+        {
+          "language": "Spanish",
+          "name": "Montaña",
+          "multiverseid": 413363
         }
       ],
       "id": "412adb3be5e9728a55411a886acc2f95711e1ee4",
@@ -42412,11 +42422,6 @@
       ],
       "foreignNames": [
         {
-          "language": "Chinese Simplified",
-          "name": "山脉",
-          "multiverseid": 410391
-        },
-        {
           "language": "Chinese Traditional",
           "name": "山脈",
           "multiverseid": 410721
@@ -42527,14 +42532,19 @@
           "multiverseid": 413031
         },
         {
-          "language": "Russian",
-          "name": "Гора",
-          "multiverseid": 413032
+          "language": "Spanish",
+          "name": "Montaña",
+          "multiverseid": 413361
         },
         {
-          "language": "Russian",
-          "name": "Гора",
-          "multiverseid": 413033
+          "language": "Spanish",
+          "name": "Montaña",
+          "multiverseid": 413362
+        },
+        {
+          "language": "Spanish",
+          "name": "Montaña",
+          "multiverseid": 413363
         }
       ],
       "id": "3ad0bff1ff61d99d6979ef1a301e291a51b089b8",
@@ -42785,11 +42795,6 @@
       ],
       "foreignNames": [
         {
-          "language": "Chinese Simplified",
-          "name": "树林",
-          "multiverseid": 410394
-        },
-        {
           "language": "Chinese Traditional",
           "name": "樹林",
           "multiverseid": 410724
@@ -42885,16 +42890,6 @@
           "multiverseid": 412704
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Floresta",
-          "multiverseid": 412705
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Floresta",
-          "multiverseid": 412706
-        },
-        {
           "language": "Russian",
           "name": "Лес",
           "multiverseid": 413034
@@ -42908,6 +42903,21 @@
           "language": "Russian",
           "name": "Лес",
           "multiverseid": 413036
+        },
+        {
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 413364
+        },
+        {
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 413365
+        },
+        {
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 413366
         }
       ],
       "id": "12f0211ccfbdb31ca67e51d51f5a71ef2171a9ce",
@@ -43156,11 +43166,6 @@
       ],
       "foreignNames": [
         {
-          "language": "Chinese Simplified",
-          "name": "树林",
-          "multiverseid": 410394
-        },
-        {
           "language": "Chinese Traditional",
           "name": "樹林",
           "multiverseid": 410724
@@ -43256,16 +43261,6 @@
           "multiverseid": 412704
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Floresta",
-          "multiverseid": 412705
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Floresta",
-          "multiverseid": 412706
-        },
-        {
           "language": "Russian",
           "name": "Лес",
           "multiverseid": 413034
@@ -43279,6 +43274,21 @@
           "language": "Russian",
           "name": "Лес",
           "multiverseid": 413036
+        },
+        {
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 413364
+        },
+        {
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 413365
+        },
+        {
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 413366
         }
       ],
       "id": "25b40995295be221d1b5899076d7614902d6990c",
@@ -43527,11 +43537,6 @@
       ],
       "foreignNames": [
         {
-          "language": "Chinese Simplified",
-          "name": "树林",
-          "multiverseid": 410394
-        },
-        {
           "language": "Chinese Traditional",
           "name": "樹林",
           "multiverseid": 410724
@@ -43627,16 +43632,6 @@
           "multiverseid": 412704
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Floresta",
-          "multiverseid": 412705
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Floresta",
-          "multiverseid": 412706
-        },
-        {
           "language": "Russian",
           "name": "Лес",
           "multiverseid": 413034
@@ -43650,6 +43645,21 @@
           "language": "Russian",
           "name": "Лес",
           "multiverseid": 413036
+        },
+        {
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 413364
+        },
+        {
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 413365
+        },
+        {
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 413366
         }
       ],
       "id": "0f29a51e8abf4ede6f2b6bb25da74422b098d259",

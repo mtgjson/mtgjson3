@@ -799,7 +799,7 @@
         "Human",
         "Cleric"
       ],
-      "text": "Lifelink (Damage dealt by this creature also causes you to gain that much life.)\nWhen Elgaud Inquisitor dies, put a 1/1 white Spirit creature token with flying onto the battlefield.",
+      "text": "Lifelink (Damage dealt by this creature also causes you to gain that much life.)\nWhen Elgaud Inquisitor dies, create a 1/1 white Spirit creature token with flying.",
       "toughness": "2",
       "type": "Creature — Human Cleric",
       "types": [
@@ -1039,7 +1039,7 @@
         "DDQ"
       ],
       "rarity": "Common",
-      "text": "Put two 1/1 white Human creature tokens onto the battlefield.\nFateful hour — If you have 5 or less life, put five of those tokens onto the battlefield instead.",
+      "text": "Create two 1/1 white Human creature tokens.\nFateful hour — If you have 5 or less life, create five of those tokens instead.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -1393,7 +1393,7 @@
         "DDQ"
       ],
       "rarity": "Rare",
-      "text": "Put five 1/1 white Human creature tokens onto the battlefield. If Increasing Devotion was cast from a graveyard, put ten of those tokens onto the battlefield instead.\nFlashback {7}{W}{W} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "text": "Create five 1/1 white Human creature tokens. If Increasing Devotion was cast from a graveyard, create ten of those tokens instead.\nFlashback {7}{W}{W} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -1517,7 +1517,7 @@
         "MD1"
       ],
       "rarity": "Uncommon",
-      "text": "Put two 1/1 white Spirit creature tokens with flying onto the battlefield.\nFlashback {1}{B} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "text": "Create two 1/1 white Spirit creature tokens with flying.\nFlashback {1}{B} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -3288,7 +3288,7 @@
         "Human",
         "Cleric"
       ],
-      "text": "{T}: Put a 1/1 white Human creature token onto the battlefield.\nFateful hour — As long as you have 5 or less life, other creatures you control get +2/+2.",
+      "text": "{T}: Create a 1/1 white Human creature token.\nFateful hour — As long as you have 5 or less life, other creatures you control get +2/+2.",
       "toughness": "2",
       "type": "Creature — Human Cleric",
       "types": [
@@ -5024,7 +5024,7 @@
         "Human",
         "Wizard"
       ],
-      "text": "{2}{U}, {T}, Exile a creature card from your graveyard: Put a 2/2 black Zombie creature token onto the battlefield, then put a +1/+1 counter on each Zombie creature you control.",
+      "text": "{2}{U}, {T}, Exile a creature card from your graveyard: Create a 2/2 black Zombie creature token, then put a +1/+1 counter on each Zombie creature you control.",
       "toughness": "2",
       "type": "Creature — Human Wizard",
       "types": [
@@ -5731,6 +5731,14 @@
         {
           "date": "2011-01-22",
           "text": "When Relentless Skaabs returns to the battlefield because of its undying ability, it's not being cast. You won't exile a creature card from your graveyard."
+        },
+        {
+          "date": "2013-04-15",
+          "text": "You must exile exactly one creature card from your graveyard to cast this spell; you cannot cast it without exiling a creature card, and you cannot exile additional creature cards."
+        },
+        {
+          "date": "2013-04-15",
+          "text": "Players can only respond once this spell has been cast and all its costs have been paid. No one can try to otherwise remove the creature card you exiled in order to prevent you from casting this spell."
         }
       ],
       "subtypes": [
@@ -9516,7 +9524,7 @@
         "DKA"
       ],
       "rarity": "Common",
-      "text": "Put a 2/2 black Zombie creature token onto the battlefield.\nFlashback {4}{U} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "text": "Create a 2/2 black Zombie creature token.\nFlashback {4}{U} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -15263,7 +15271,7 @@
           "text": "Check the sacrificed creature's toughness as it last existed on the battlefield to determine how many Wolves you put onto the battlefield."
         }
       ],
-      "text": "At the beginning of your end step, you may sacrifice a nontoken creature. If you do, put X 2/2 green Wolf creature tokens onto the battlefield, where X is the sacrificed creature's toughness.",
+      "text": "At the beginning of your end step, you may sacrifice a nontoken creature. If you do, create X 2/2 green Wolf creature tokens, where X is the sacrificed creature's toughness.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -18952,7 +18960,7 @@
         "Human",
         "Werewolf"
       ],
-      "text": "Whenever this creature enters the battlefield or transforms into Huntmaster of the Fells, put a 2/2 green Wolf creature token onto the battlefield and you gain 2 life.\nAt the beginning of each upkeep, if no spells were cast last turn, transform Huntmaster of the Fells.",
+      "text": "Whenever this creature enters the battlefield or transforms into Huntmaster of the Fells, create a 2/2 green Wolf creature token and you gain 2 life.\nAt the beginning of each upkeep, if no spells were cast last turn, transform Huntmaster of the Fells.",
       "toughness": "2",
       "type": "Creature — Human Werewolf",
       "types": [
@@ -19349,7 +19357,7 @@
       "subtypes": [
         "Sorin"
       ],
-      "text": "+1: Put a 1/1 black Vampire creature token with lifelink onto the battlefield.\n−2: You get an emblem with \"Creatures you control get +1/+0.\"\n−6: Destroy up to three target creatures and/or other planeswalkers. Return each card put into a graveyard this way to the battlefield under your control.",
+      "text": "+1: Create a 1/1 black Vampire creature token with lifelink.\n−2: You get an emblem with \"Creatures you control get +1/+0.\"\n−6: Destroy up to three target creatures and/or other planeswalkers. Return each card put into a graveyard this way to the battlefield under your control.",
       "type": "Planeswalker — Sorin",
       "types": [
         "Planeswalker"
@@ -19728,7 +19736,7 @@
       "subtypes": [
         "Equipment"
       ],
-      "text": "Equipped creature gets +1/+0 and has vigilance.\nWhenever equipped creature dies, if it was a Human, put a 1/1 white Spirit creature token with flying onto the battlefield.\nEquip {2}",
+      "text": "Equipped creature gets +1/+0 and has vigilance.\nWhenever equipped creature dies, if it was a Human, create a 1/1 white Spirit creature token with flying.\nEquip {2}",
       "type": "Artifact — Equipment",
       "types": [
         "Artifact"

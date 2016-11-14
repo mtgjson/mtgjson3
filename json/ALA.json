@@ -832,7 +832,7 @@
       "rulings": [
         {
           "date": "2008-10-01",
-          "text": "You choose a target when the ability triggers. You don't choose whether to pay {W} until the ability resolves."
+          "text": "You choose a target when the ability triggers. You don't choose whether to pay {1}{W} until the ability resolves."
         },
         {
           "date": "2008-10-01",
@@ -1931,7 +1931,7 @@
         "Human",
         "Knight"
       ],
-      "text": "When Knight-Captain of Eos enters the battlefield, put two 1/1 white Soldier creature tokens onto the battlefield.\n{W}, Sacrifice a Soldier: Prevent all combat damage that would be dealt this turn.",
+      "text": "When Knight-Captain of Eos enters the battlefield, create two 1/1 white Soldier creature tokens.\n{W}, Sacrifice a Soldier: Prevent all combat damage that would be dealt this turn.",
       "toughness": "2",
       "type": "Creature — Human Knight",
       "types": [
@@ -3686,7 +3686,6 @@
         "KTK"
       ],
       "rarity": "Common",
-      "starter": true,
       "text": "Counter target spell.",
       "type": "Instant",
       "types": [
@@ -7129,7 +7128,7 @@
       "subtypes": [
         "Demon"
       ],
-      "text": "Flying, trample\nAt the beginning of your upkeep, sacrifice a non-Zombie creature, then put a 2/2 black Zombie creature token onto the battlefield.",
+      "text": "Flying, trample\nAt the beginning of your upkeep, sacrifice a non-Zombie creature, then create a 2/2 black Zombie creature token.",
       "toughness": "6",
       "type": "Creature — Demon",
       "types": [
@@ -9106,7 +9105,7 @@
         "Human",
         "Wizard"
       ],
-      "text": "{U}, {T}: Put a 0/1 blue Homunculus artifact creature token onto the battlefield.\nAt the beginning of your upkeep, sacrifice a Homunculus.",
+      "text": "{U}, {T}: Create a 0/1 blue Homunculus artifact creature token.\nAt the beginning of your upkeep, sacrifice a Homunculus.",
       "toughness": "2",
       "type": "Artifact Creature — Human Wizard",
       "types": [
@@ -10871,7 +10870,7 @@
       ]
     },
     {
-      "artist": "Zoltan Boros & Gabor Szikszai",
+      "artist": "Zoltan Boros &amp; Gabor Szikszai",
       "cmc": 3,
       "colorIdentity": [
         "R"
@@ -11071,7 +11070,7 @@
       "rulings": [
         {
           "date": "2008-10-01",
-          "text": "You choose the target when the ability triggers. When the ability resolves, you choose a value for X and decide whether to pay {R}, it's too late for any player to respond since the ability is already in the midst of resolving."
+          "text": "You choose the target when the ability triggers. When the ability resolves, you choose a value for X and decide whether to pay {X}{R}. If you do decide to pay {X}{R}, it's too late for any player to respond since the ability is already in the midst of resolving."
         }
       ],
       "subtypes": [
@@ -11178,7 +11177,7 @@
           "text": "The second ability affects all Goblin creatures controlled by all players. It's not limited to the tokens put onto the battlefield by the first ability."
         }
       ],
-      "text": "At the beginning of your upkeep, put a 1/1 red Goblin creature token with haste onto the battlefield.\nGoblin creatures attack each turn if able.",
+      "text": "At the beginning of your upkeep, create a 1/1 red Goblin creature token with haste.\nGoblin creatures attack each turn if able.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -11701,7 +11700,7 @@
         "Human",
         "Shaman"
       ],
-      "text": "{B}, {T}: Target player loses 1 life.\n{G}, {T}: Put a 1/1 green Saproling creature token onto the battlefield.",
+      "text": "{B}, {T}: Target player loses 1 life.\n{G}, {T}: Create a 1/1 green Saproling creature token.",
       "toughness": "2",
       "type": "Creature — Human Shaman",
       "types": [
@@ -12573,7 +12572,7 @@
           "text": "You get the token, regardless of who controlled the creature or whose graveyard it was put into."
         }
       ],
-      "text": "Skeletonize deals 3 damage to target creature. When a creature dealt damage this way dies this turn, put a 1/1 black Skeleton creature token onto the battlefield with \"{B}: Regenerate this creature.\"",
+      "text": "Skeletonize deals 3 damage to target creature. When a creature dealt damage this way dies this turn, create a 1/1 black Skeleton creature token with \"{B}: Regenerate this creature.\"",
       "type": "Instant",
       "types": [
         "Instant"
@@ -13345,7 +13344,7 @@
       ]
     },
     {
-      "artist": "Zoltan Boros & Gabor Szikszai",
+      "artist": "Zoltan Boros &amp; Gabor Szikszai",
       "cmc": 5,
       "colorIdentity": [
         "R"
@@ -15117,7 +15116,7 @@
         },
         {
           "date": "2008-10-01",
-          "text": "While a spell with in its cost is on the stack, its converted mana cost takes the chosen value of X into account. For example, if you cast Blaze (a spell with the mana cost ) and choose a value of 5 for that X, then your Manaplasm will get +6/+6 until end of turn."
+          "text": "While a spell with {X} in its cost is on the stack, its converted mana cost takes the chosen value of X into account. For example, if you cast Blaze (a spell with the mana cost {X}{R}) and choose a value of 5 for that X, then your Manaplasm will get +6/+6 until end of turn."
         }
       ],
       "subtypes": [
@@ -15685,7 +15684,7 @@
           "text": "X is equal to the power of the sacrificed creature as it last existed on the battlefield."
         }
       ],
-      "text": "{1}{G}, Sacrifice a non-Ooze creature: Put an X/X green Ooze creature token onto the battlefield, where X is the sacrificed creature's power. Activate this ability only any time you could cast a sorcery.",
+      "text": "{1}{G}, Sacrifice a non-Ooze creature: Create an X/X green Ooze creature token, where X is the sacrificed creature's power. Activate this ability only any time you could cast a sorcery.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -17548,7 +17547,7 @@
       "subtypes": [
         "Dragon"
       ],
-      "text": "Flying\nWhen Broodmate Dragon enters the battlefield, put a 4/4 red Dragon creature token with flying onto the battlefield.",
+      "text": "Flying\nWhen Broodmate Dragon enters the battlefield, create a 4/4 red Dragon creature token with flying.",
       "toughness": "4",
       "type": "Creature — Dragon",
       "types": [
@@ -18662,7 +18661,7 @@
       "subtypes": [
         "Beast"
       ],
-      "text": "Vigilance\n{T}: Put an 8/8 Beast creature token that's red, green, and white onto the battlefield.",
+      "text": "Vigilance\n{T}: Create an 8/8 Beast creature token that's red, green, and white.",
       "toughness": "8",
       "type": "Creature — Beast",
       "types": [
@@ -19472,10 +19471,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -19484,19 +19479,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
           "format": "Shards of Alara Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -20271,10 +20254,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -20283,19 +20262,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
           "format": "Shards of Alara Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -23252,7 +23219,7 @@
           "text": "If the creature that caused Minion Reflector's ability to trigger has already left the battlefield by the time the ability resolves, you can still pay {2}. If you do, you'll still put a token onto the battlefield. That token has the copiable values of the characteristics of that nontoken creature as it last existed on the battlefield."
         }
       ],
-      "text": "Whenever a nontoken creature enters the battlefield under your control, you may pay {2}. If you do, put a token that's a copy of that creature onto the battlefield. That token has haste and \"At the beginning of the end step, sacrifice this permanent.\"",
+      "text": "Whenever a nontoken creature enters the battlefield under your control, you may pay {2}. If you do, create a token that's a copy of that creature. That token has haste and \"At the beginning of the end step, sacrifice this permanent.\"",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -24939,7 +24906,7 @@
       ]
     },
     {
-      "artist": "Zoltan Boros & Gabor Szikszai",
+      "artist": "Zoltan Boros &amp; Gabor Szikszai",
       "colorIdentity": [
         "W"
       ],
@@ -26429,6 +26396,11 @@
       ],
       "foreignNames": [
         {
+          "language": "Chinese Simplified",
+          "name": "海岛",
+          "multiverseid": 187453
+        },
+        {
           "language": "French",
           "name": "Île",
           "multiverseid": 188697
@@ -26547,11 +26519,6 @@
           "language": "Russian",
           "name": "Остров",
           "multiverseid": 188949
-        },
-        {
-          "language": "Spanish",
-          "name": "Isla",
-          "multiverseid": 187951
         }
       ],
       "id": "8105bea312202bb15e620414e68326fb620d91fa",
@@ -26797,6 +26764,11 @@
       ],
       "foreignNames": [
         {
+          "language": "Chinese Simplified",
+          "name": "海岛",
+          "multiverseid": 187453
+        },
+        {
           "language": "French",
           "name": "Île",
           "multiverseid": 188697
@@ -26915,11 +26887,6 @@
           "language": "Russian",
           "name": "Остров",
           "multiverseid": 188949
-        },
-        {
-          "language": "Spanish",
-          "name": "Isla",
-          "multiverseid": 187951
         }
       ],
       "id": "7efbd7c6e42d7ecde13b242e9d84faa7d4ea30c2",
@@ -27165,6 +27132,11 @@
       ],
       "foreignNames": [
         {
+          "language": "Chinese Simplified",
+          "name": "海岛",
+          "multiverseid": 187453
+        },
+        {
           "language": "French",
           "name": "Île",
           "multiverseid": 188697
@@ -27283,11 +27255,6 @@
           "language": "Russian",
           "name": "Остров",
           "multiverseid": 188949
-        },
-        {
-          "language": "Spanish",
-          "name": "Isla",
-          "multiverseid": 187951
         }
       ],
       "id": "a45b6844bbf1add9165876e7de6ffbf208e38800",
@@ -27533,6 +27500,11 @@
       ],
       "foreignNames": [
         {
+          "language": "Chinese Simplified",
+          "name": "海岛",
+          "multiverseid": 187453
+        },
+        {
           "language": "French",
           "name": "Île",
           "multiverseid": 188697
@@ -27651,11 +27623,6 @@
           "language": "Russian",
           "name": "Остров",
           "multiverseid": 188949
-        },
-        {
-          "language": "Spanish",
-          "name": "Isla",
-          "multiverseid": 187951
         }
       ],
       "id": "5199daa70d3246649b72b7ca916281e89f635e2b",
@@ -27901,6 +27868,26 @@
       ],
       "foreignNames": [
         {
+          "language": "Chinese Simplified",
+          "name": "沼泽",
+          "multiverseid": 187456
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "沼泽",
+          "multiverseid": 187457
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "沼泽",
+          "multiverseid": 187458
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "沼泽",
+          "multiverseid": 187459
+        },
+        {
           "language": "French",
           "name": "Marais",
           "multiverseid": 188701
@@ -27999,26 +27986,6 @@
           "language": "Portuguese (Brazil)",
           "name": "Pântano",
           "multiverseid": 188206
-        },
-        {
-          "language": "Russian",
-          "name": "Болото",
-          "multiverseid": 188950
-        },
-        {
-          "language": "Russian",
-          "name": "Болото",
-          "multiverseid": 188951
-        },
-        {
-          "language": "Russian",
-          "name": "Болото",
-          "multiverseid": 188952
-        },
-        {
-          "language": "Russian",
-          "name": "Болото",
-          "multiverseid": 188953
         },
         {
           "language": "Spanish",
@@ -28275,6 +28242,26 @@
       ],
       "foreignNames": [
         {
+          "language": "Chinese Simplified",
+          "name": "沼泽",
+          "multiverseid": 187456
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "沼泽",
+          "multiverseid": 187457
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "沼泽",
+          "multiverseid": 187458
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "沼泽",
+          "multiverseid": 187459
+        },
+        {
           "language": "French",
           "name": "Marais",
           "multiverseid": 188701
@@ -28373,26 +28360,6 @@
           "language": "Portuguese (Brazil)",
           "name": "Pântano",
           "multiverseid": 188206
-        },
-        {
-          "language": "Russian",
-          "name": "Болото",
-          "multiverseid": 188950
-        },
-        {
-          "language": "Russian",
-          "name": "Болото",
-          "multiverseid": 188951
-        },
-        {
-          "language": "Russian",
-          "name": "Болото",
-          "multiverseid": 188952
-        },
-        {
-          "language": "Russian",
-          "name": "Болото",
-          "multiverseid": 188953
         },
         {
           "language": "Spanish",
@@ -28649,6 +28616,26 @@
       ],
       "foreignNames": [
         {
+          "language": "Chinese Simplified",
+          "name": "沼泽",
+          "multiverseid": 187456
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "沼泽",
+          "multiverseid": 187457
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "沼泽",
+          "multiverseid": 187458
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "沼泽",
+          "multiverseid": 187459
+        },
+        {
           "language": "French",
           "name": "Marais",
           "multiverseid": 188701
@@ -28747,26 +28734,6 @@
           "language": "Portuguese (Brazil)",
           "name": "Pântano",
           "multiverseid": 188206
-        },
-        {
-          "language": "Russian",
-          "name": "Болото",
-          "multiverseid": 188950
-        },
-        {
-          "language": "Russian",
-          "name": "Болото",
-          "multiverseid": 188951
-        },
-        {
-          "language": "Russian",
-          "name": "Болото",
-          "multiverseid": 188952
-        },
-        {
-          "language": "Russian",
-          "name": "Болото",
-          "multiverseid": 188953
         },
         {
           "language": "Spanish",
@@ -29023,6 +28990,26 @@
       ],
       "foreignNames": [
         {
+          "language": "Chinese Simplified",
+          "name": "沼泽",
+          "multiverseid": 187456
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "沼泽",
+          "multiverseid": 187457
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "沼泽",
+          "multiverseid": 187458
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "沼泽",
+          "multiverseid": 187459
+        },
+        {
           "language": "French",
           "name": "Marais",
           "multiverseid": 188701
@@ -29121,26 +29108,6 @@
           "language": "Portuguese (Brazil)",
           "name": "Pântano",
           "multiverseid": 188206
-        },
-        {
-          "language": "Russian",
-          "name": "Болото",
-          "multiverseid": 188950
-        },
-        {
-          "language": "Russian",
-          "name": "Болото",
-          "multiverseid": 188951
-        },
-        {
-          "language": "Russian",
-          "name": "Болото",
-          "multiverseid": 188952
-        },
-        {
-          "language": "Russian",
-          "name": "Болото",
-          "multiverseid": 188953
         },
         {
           "language": "Spanish",
@@ -30513,7 +30480,7 @@
       ]
     },
     {
-      "artist": "Zoltan Boros & Gabor Szikszai",
+      "artist": "Zoltan Boros &amp; Gabor Szikszai",
       "colorIdentity": [
         "R"
       ],
@@ -30893,11 +30860,6 @@
       ],
       "foreignNames": [
         {
-          "language": "Chinese Simplified",
-          "name": "树林",
-          "multiverseid": 187466
-        },
-        {
           "language": "French",
           "name": "Forêt",
           "multiverseid": 188709
@@ -31000,22 +30962,27 @@
         {
           "language": "Russian",
           "name": "Лес",
-          "multiverseid": 188958
-        },
-        {
-          "language": "Russian",
-          "name": "Лес",
-          "multiverseid": 188959
-        },
-        {
-          "language": "Russian",
-          "name": "Лес",
-          "multiverseid": 188960
-        },
-        {
-          "language": "Russian",
-          "name": "Лес",
           "multiverseid": 188961
+        },
+        {
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 187962
+        },
+        {
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 187963
+        },
+        {
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 187964
+        },
+        {
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 187965
         }
       ],
       "id": "e33420bd0caf1961ca4cad99d2ff163ec94aab6e",
@@ -31259,16 +31226,11 @@
       ]
     },
     {
-      "artist": "Zoltan Boros & Gabor Szikszai",
+      "artist": "Zoltan Boros &amp; Gabor Szikszai",
       "colorIdentity": [
         "G"
       ],
       "foreignNames": [
-        {
-          "language": "Chinese Simplified",
-          "name": "树林",
-          "multiverseid": 187466
-        },
         {
           "language": "French",
           "name": "Forêt",
@@ -31372,22 +31334,27 @@
         {
           "language": "Russian",
           "name": "Лес",
-          "multiverseid": 188958
-        },
-        {
-          "language": "Russian",
-          "name": "Лес",
-          "multiverseid": 188959
-        },
-        {
-          "language": "Russian",
-          "name": "Лес",
-          "multiverseid": 188960
-        },
-        {
-          "language": "Russian",
-          "name": "Лес",
           "multiverseid": 188961
+        },
+        {
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 187962
+        },
+        {
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 187963
+        },
+        {
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 187964
+        },
+        {
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 187965
         }
       ],
       "id": "d8c911249278c187e861af166317b55fbff6e7ce",
@@ -31631,16 +31598,11 @@
       ]
     },
     {
-      "artist": "Zoltan Boros & Gabor Szikszai",
+      "artist": "Zoltan Boros &amp; Gabor Szikszai",
       "colorIdentity": [
         "G"
       ],
       "foreignNames": [
-        {
-          "language": "Chinese Simplified",
-          "name": "树林",
-          "multiverseid": 187466
-        },
         {
           "language": "French",
           "name": "Forêt",
@@ -31744,22 +31706,27 @@
         {
           "language": "Russian",
           "name": "Лес",
-          "multiverseid": 188958
-        },
-        {
-          "language": "Russian",
-          "name": "Лес",
-          "multiverseid": 188959
-        },
-        {
-          "language": "Russian",
-          "name": "Лес",
-          "multiverseid": 188960
-        },
-        {
-          "language": "Russian",
-          "name": "Лес",
           "multiverseid": 188961
+        },
+        {
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 187962
+        },
+        {
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 187963
+        },
+        {
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 187964
+        },
+        {
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 187965
         }
       ],
       "id": "f86e0c572bec94a3c1d3c5355cb20bb16b8ff21a",
@@ -32009,11 +31976,6 @@
       ],
       "foreignNames": [
         {
-          "language": "Chinese Simplified",
-          "name": "树林",
-          "multiverseid": 187466
-        },
-        {
           "language": "French",
           "name": "Forêt",
           "multiverseid": 188709
@@ -32116,22 +32078,27 @@
         {
           "language": "Russian",
           "name": "Лес",
-          "multiverseid": 188958
-        },
-        {
-          "language": "Russian",
-          "name": "Лес",
-          "multiverseid": 188959
-        },
-        {
-          "language": "Russian",
-          "name": "Лес",
-          "multiverseid": 188960
-        },
-        {
-          "language": "Russian",
-          "name": "Лес",
           "multiverseid": 188961
+        },
+        {
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 187962
+        },
+        {
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 187963
+        },
+        {
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 187964
+        },
+        {
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 187965
         }
       ],
       "id": "e36ef686695ee33d06cba5b146d59d8a6ef2ae9d",
