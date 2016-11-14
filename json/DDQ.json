@@ -412,7 +412,7 @@
         },
         {
           "date": "2011-09-22",
-          "text": "In most cases, when determining whether a creature entering the battlefield under your control should get a +1/+1 counter, you'll simply look at what the creature will look like on the battlefield. You'll consider any effects affecting a creature entering the battlefield under your control that fall under one of these categories: --Replacement effects that have already modified how the permanent enters the battlefield, like the one created by Clone. --Continuous effects that changed the permanent's creature type on the stack, like the one created by Artificial Evolution. --Effects from the permanent's own static abilities, as long as they affect only that permanent, like Adaptive Automaton's."
+          "text": "In most cases, when determining whether a creature entering the battlefield under your control should get a +1/+1 counter, you'll simply look at what the creature will looklike on the battlefield. You'llconsider any effects affecting acreature entering the battlefield under your control that fall under one of these categories: --Replacement effects that have already modified how the permanent enters the battlefield, like the one created by Clone. --Continuous effects that changed the permanent's creature type on the stack, like the one created by Artificial Evolution. --Effects from the permanent's own static abilities, as long as they affect only that permanent, like Adaptive Automaton's."
         },
         {
           "date": "2011-09-22",
@@ -839,7 +839,7 @@
         "DDQ"
       ],
       "rarity": "Common",
-      "text": "Put two 1/1 white Human creature tokens onto the battlefield.\nFateful hour — If you have 5 or less life, put five of those tokens onto the battlefield instead.",
+      "text": "Create two 1/1 white Human creature tokens.\nFateful hour — If you have 5 or less life, create five of those tokens instead.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -967,7 +967,7 @@
         "DDQ"
       ],
       "rarity": "Rare",
-      "text": "Put five 1/1 white Human creature tokens onto the battlefield. If Increasing Devotion was cast from a graveyard, put ten of those tokens onto the battlefield instead.\nFlashback {7}{W}{W} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "text": "Create five 1/1 white Human creature tokens. If Increasing Devotion was cast from a graveyard, create ten of those tokens instead.\nFlashback {7}{W}{W} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -4247,6 +4247,16 @@
         "DDQ"
       ],
       "rarity": "Common",
+      "rulings": [
+        {
+          "date": "2013-04-15",
+          "text": "You must exile exactly one creature card from your graveyard to cast this spell; you cannot cast it without exiling a creature card, and you cannot exile additional creature cards."
+        },
+        {
+          "date": "2013-04-15",
+          "text": "Players can only respond once this spell has been cast and all its costs have been paid. No one can try to otherwise remove the creature card you exiled in order to prevent you from casting this spell."
+        }
+      ],
       "subtypes": [
         "Zombie",
         "Horror"
@@ -4315,6 +4325,14 @@
         {
           "date": "2011-01-22",
           "text": "When Relentless Skaabs returns to the battlefield because of its undying ability, it's not being cast. You won't exile a creature card from your graveyard."
+        },
+        {
+          "date": "2013-04-15",
+          "text": "You must exile exactly one creature card from your graveyard to cast this spell; you cannot cast it without exiling a creature card, and you cannot exile additional creature cards."
+        },
+        {
+          "date": "2013-04-15",
+          "text": "Players can only respond once this spell has been cast and all its costs have been paid. No one can try to otherwise remove the creature card you exiled in order to prevent you from casting this spell."
         }
       ],
       "subtypes": [
@@ -4513,6 +4531,16 @@
         "DDQ"
       ],
       "rarity": "Common",
+      "rulings": [
+        {
+          "date": "2013-04-15",
+          "text": "You must exile exactly one creature card from your graveyard to cast this spell; you cannot cast it without exiling a creature card, and you cannot exile additional creature cards."
+        },
+        {
+          "date": "2013-04-15",
+          "text": "Players can only respond once this spell has been cast and all its costs have been paid. No one can try to otherwise remove the creature card you exiled in order to prevent you from casting this spell."
+        }
+      ],
       "subtypes": [
         "Zombie",
         "Drake"
@@ -5381,7 +5409,7 @@
         "DDQ"
       ],
       "rarity": "Uncommon",
-      "text": "Put two 2/2 black Zombie creature tokens onto the battlefield.\nFlashback {5}{B}{B} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "text": "Create two 2/2 black Zombie creature tokens.\nFlashback {5}{B}{B} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -7561,20 +7589,6 @@
       "id": "3ce65150d921bd7058018ec8bfd1a0623b6eeb03",
       "imageName": "angel",
       "layout": "token",
-      "legalities": [
-        {
-          "format": "Commander",
-          "legality": "Legal"
-        },
-        {
-          "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Vintage",
-          "legality": "Legal"
-        }
-      ],
       "multiverseid": 409653,
       "name": "Angel",
       "number": "77",
@@ -7607,20 +7621,6 @@
       "id": "4f90697b1345dcf2b196519cd7739300cc8e6543",
       "imageName": "human",
       "layout": "token",
-      "legalities": [
-        {
-          "format": "Commander",
-          "legality": "Legal"
-        },
-        {
-          "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Vintage",
-          "legality": "Legal"
-        }
-      ],
       "multiverseid": 409654,
       "name": "Human",
       "number": "78",
@@ -7698,20 +7698,6 @@
       "id": "e5eff329472998514ad2803a16b8ff8cec1fd793",
       "imageName": "zombie",
       "layout": "token",
-      "legalities": [
-        {
-          "format": "Commander",
-          "legality": "Legal"
-        },
-        {
-          "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Vintage",
-          "legality": "Legal"
-        }
-      ],
       "multiverseid": 409656,
       "name": "Zombie",
       "number": "80",
