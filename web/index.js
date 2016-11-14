@@ -52,6 +52,10 @@ function processCard(SET, card, callback) {
 		previousSeenSetCodes[card.name] = {};
 
 	var checkTaint = function(fieldName, fieldValue) {
+		if (SET.code == 'UGL')
+			// ignore un-sets.
+			return;
+
 		if (!fieldValue) {
 			if (card.hasOwnProperty(fieldName))
 				fieldValue = card[fieldName];
