@@ -1535,7 +1535,7 @@ var getTextContent = function(item) {
 	var ret = '';
 	if (item) {
 		ret = item.innerHTML
-		.replace(/<img .*alt="([^"]*)".*>/g, function(match, alt) {
+		.replace(/<img .*?alt="([^"]*)"[^>]*>/g, function(match, alt) {
 			if (!SYMBOL_CONVERSION_MAP[alt.toLowerCase()]) {
 				console.log("Can't find symbol: %s", alt);
 			}
