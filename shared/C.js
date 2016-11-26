@@ -4757,7 +4757,7 @@ var base = require("xbase");
 		[
 			"recalculateStandard",
 			{ match : {name : "Draco"}, replace : {text : "Domain — Draco costs {2} less to cast for each basic land type among lands you control.\nFlying\nDomain — At the beginning of your upkeep, sacrifice Draco unless you pay {10}. This cost is reduced by {2} for each basic land type among lands you control."}},
-			{ match : {name : "Spawnsire of Ulamog"}, replace : {text : "Annihilator 1 (Whenever this creature attacks, defending player sacrifices a permanent.)\n{4}: Put two 0/1 colorless Eldrazi Spawn creature tokens onto the battlefield. They have \"Sacrifice this creature: Add {C} to your mana pool.\"\n{20}: Cast any number of Eldrazi cards you own from outside the game without paying their mana costs."}},
+			{ match : {name : "Spawnsire of Ulamog"}, replace : {text : "Annihilator 1 (Whenever this creature attacks, defending player sacrifices a permanent.)\n{4}: Create two 0/1 colorless Eldrazi Spawn creature tokens. They have \"Sacrifice this creature: Add {C} to your mana pool.\"\n{20}: Cast any number of Eldrazi cards you own from outside the game without paying their mana costs."}},
 			{ match : {name : "Jade Statue"}, remove : ["power", "toughness"] },
 			{ match : {name : "Ghostfire"}, remove : ["colors"] },
 			{ match : {name : "Will-O'-The-Wisp"}, replace : {name : "Will-o'-the-Wisp"}},
