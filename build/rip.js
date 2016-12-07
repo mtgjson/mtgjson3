@@ -1,5 +1,5 @@
+/*jslint node: true */
 'use strict';
-/*global setImmediate: true*/
 
 var base = require("xbase"),
 	C = require("C"),
@@ -291,7 +291,7 @@ var processMultiverseids = function (multiverseids, cb) {
 			},
 			function addToCards(newCards) {
 				newCards.map(function (c) {
-					if (c.multiverseid == null)
+					if (c.multiverseid === null)
 						c.multiverseid = multiverseid;
 					cards.push(c);
 				});
@@ -485,7 +485,7 @@ var processCardPart = function(doc, cardPart, printedDoc, printedCardPart) {
 	if (cardNumberValue) {
 		if (card.layout === "split")
 			cardNumberValue = cardNumberValue.replace(/[^\d.]/g, "") + ["a", "b"][card.names.indexOf(card.name)];
-		
+
 		card.number = cardNumberValue;
 	}
 
@@ -649,7 +649,7 @@ var addLegalitiesToCard = function (card, cb) {
 					var legalityObject = {format:format, legality:legality};
 					if (condition && condition.length>0)
 						legalityObject.condition = condition;
-					
+
 					card.legalities.push(legalityObject);
 				}
 			});
@@ -769,7 +769,7 @@ var fillCardTypes = function (card, rawTypeFull) {
 			card.layout = "scheme";
 		else if (card.types.contains("Phenomenon"))
 			card.layout = "phenomenon";
-		
+
 		if (card.types.map(function (type) { return type.toLowerCase(); }).contains("vanguard"))
 			card.layout = "vanguard";
 	}
@@ -815,7 +815,7 @@ var fillImageNames = function (set) {
 			var numberOrder = setCorrections.mutateOnce(function (setCorrection) { return setCorrection.renumberImages===card.name ? setCorrection.order : undefined; });
 			if (numberOrder)
 				imageNumber = numberOrder.indexOf(card.multiverseid)+1;
-			
+
 			card.imageName += imageNumber;
 		}
 
@@ -893,7 +893,7 @@ var compareCardToMCI = function(set, card, mciCardURL, cb) {
 	if (cardCorrection && cardCorrection.replace && cardCorrection.replace.artist)
 		hasArtistCorrection = true;
 
-	var mciNumber = mciCardURL.match(/\/(\w+)(\.html)?$/)[1]
+	var mciNumber = mciCardURL.match(/\/(\w+)(\.html)?$/)[1];
 	var mciURL = "http://magiccards.info" + mciCardURL;
 
 	tiptoe(
@@ -927,7 +927,7 @@ var compareCardToMCI = function(set, card, mciCardURL, cb) {
 							return p.textContent.startsWith("Illus.");
 						}
 					);
-					if (mciArtist.length == 0) {
+					if (mciArtist.length === 0) {
 						base.error('no MCIArtist! for url %s (cache: %s)', mciCardURL, shared.cache.cachname(mciURL));
 						shared.cache.delete(mciURL);
 						mciArtist = null;
@@ -1001,7 +1001,7 @@ var compareCardsToEssentialMagic = function(set, cb) {
 					}
 				});
 			});
-			
+
 			this();
 		},
 		function finish(err) {
@@ -1270,11 +1270,11 @@ var ripMCICard = function(set, mciCardURL, cb) {
 			do
 			{
 				if (languageElement.nodeName.toLowerCase()==="img") {
-					cardForeignName["language"] = languageElement.getAttribute("alt");
+					cardForeignName.language = languageElement.getAttribute("alt");
 				}
 				else if (languageElement.nodeName.toLowerCase()==="a") {
 					if (cardForeignName.hasOwnProperty("language")) {
-						cardForeignName["name"] = getTextContent(languageElement).trim();
+						cardForeignName.name = getTextContent(languageElement).trim();
 						cardForeignNames.push(cardForeignName);
 					}
 					cardForeignName = {};
@@ -1410,11 +1410,11 @@ var addMagicLibraritiesInfoToMCISet = function(set, cb) {
 				if (releaseDate || sourceText || numberText) {
 					var cardInfo = {};
 					if (releaseDate)
-						cardInfo["releaseDate"] = releaseDate.replace(/-([0-9])$/, "-0$1");
+						cardInfo.releaseDate = releaseDate.replace(/-([0-9])$/, "-0$1");
 					if (sourceText)
-						cardInfo["source"] = sourceText;
+						cardInfo.source = sourceText;
 					if (numberText)
-						cardInfo["number"] = numberText;
+						cardInfo.number = numberText;
 
 					cardNames.forEach(function (cardName) { if (!magicLibraritiesInfo.hasOwnProperty(cardName)) { magicLibraritiesInfo[cardName] = cardInfo; }});
 				}
@@ -1429,7 +1429,7 @@ var addMagicLibraritiesInfoToMCISet = function(set, cb) {
 					return;
 
 				if (magicLibraritiesInfo[cardNameNormalized].source)
-					card.source = magicLibraritiesInfo[cardNameNormalized].source.replaceAll("� ", " ");
+				    card.source = magicLibraritiesInfo[cardNameNormalized].source.replaceAll(String.fromCharCode(65533) + " ", " ");
 				if (magicLibraritiesInfo[cardNameNormalized].releaseDate)
 					card.releaseDate = magicLibraritiesInfo[cardNameNormalized].releaseDate;
 				if (magicLibraritiesInfo[cardNameNormalized].number)
@@ -1511,7 +1511,7 @@ var processTextBoxChildren = function(children) {
 				childText = childText.replaceAll("o" + text, "{" + symbol + "}");
 				childText = childText.replaceAll(text, "{" + symbol + "}");
 			});
-			
+
 			childText = childText.replaceAll("roll chaos", "roll {C}");
 			childText = childText.replaceAll("chaos roll", "{C} roll");
 
@@ -1652,14 +1652,16 @@ var fixCommanderIdentityForCards = function(cards, cb) {
 
 		// Process card text and mana cost
 		var fullText = card.manaCost;
-		if (card.text) 
-			fullText += card.text.replace(/\([^\)]*\)/gi,'');
+		if (card.text)
+		    fullText += card.text.replace(/\([^\)]*\)/gi,'');
 
-		while (res = regex.exec(fullText)) {
-			res[1].split("/").forEach(function (idx) {
-				if ((C.VALID_COLORS.indexOf(idx) >= 0) && (colors.indexOf(idx) == -1))
-					colors.push(idx);
-			});
+            var addColor = function(idx) {
+                if (C.VALID_COLORS.indexOf(idx) >= 0 && colors.indexOf(idx) < 0)
+                    colors.push(idx);
+            };
+
+		while ((res = regex.exec(fullText))) {
+		    res[1].split("/").forEach(addColor);
 		}
 
 		if (colors.length > 0) {
@@ -1671,7 +1673,7 @@ var fixCommanderIdentityForCards = function(cards, cb) {
 			var otherSideNum = card.number.substr(0, card.number.length - 1) + ((card.number.substr(-1) == "a")?"b":"a");
 			var otherCard = findCardByNumber(otherSideNum);
 
-			if (otherCard == null) {
+			if (otherCard === null) {
 				base.error("Current side name: %s", card.number);
 				base.error("-> Other Side num: %s", otherSideNum);
 				throw Error("Error: Cannot find other side of card " + card.name);
