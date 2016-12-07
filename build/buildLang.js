@@ -1,3 +1,4 @@
+/*jslint node: true */
 "use strict";
 
 var fs = require('fs');
@@ -7,7 +8,6 @@ var C = require('C');
 var shared = require('shared');
 var tiptoe = require('tiptoe');
 var rip = require('./rip.js');
-var urlUtil = require('xutil').url;
 var async = require('async');
 
 var langRef = {
@@ -41,7 +41,7 @@ if (require.main == module) {
 			var setInfo = null;
 			C.SETS.map(function(x) { if (x.code == code) setInfo = x; });
 
-			if (setInfo == null) {
+			if (setInfo === null) {
 				console.error("Invalid set: %s", code);
 				return(setImmediate(subcb));
 			}
@@ -88,14 +88,15 @@ function buildLang(lang, setCode, callback) {
 			return(setImmediate(function() { callback(err); }));
 		}
 
+                var msg;
 		var setData = JSON.parse(data);
 		if (!setData.translations) {
-			var msg = "Set " + setCode + " does not have any translations.";
+			msg = "Set " + setCode + " does not have any translations.";
 			console.error(msg);
 			return(setImmediate(callback, msg));
 		}
 		if (!setData.translations[lang]) {
-			var msg = "Set " + setCode + " does not have the requested translation: '" + lang + "'.";
+			msg = "Set " + setCode + " does not have the requested translation: '" + lang + "'.";
 			console.error(msg);
 			return(setImmediate(callback, msg));
 		}
@@ -127,7 +128,7 @@ function retrieve(lang, set, callback) {
 							multiverseid = card.foreignNames[i].multiverseid;
 					}
 
-					if (multiverseid == null) {
+					if (multiverseid === null) {
 						console.error("Cannot find correct multiverseid for card '%s'", card.name);
 						return(setImmediate(cb));
 					}

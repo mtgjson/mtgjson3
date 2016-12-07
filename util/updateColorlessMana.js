@@ -1,12 +1,10 @@
 "use strict";
 
 var base = require("xbase"),
-	C = require("C"),
 	fs = require("fs"),
 	path = require("path"),
 	shared = require("shared"),
-	tiptoe = require("tiptoe"),
-	rip = require('../build/rip.js');
+	tiptoe = require("tiptoe");
 
 shared.getSetsToDo().serialForEach(processSet, function(err) {
 	if(err) {
@@ -54,7 +52,7 @@ function processSet(code, cb) {
 			this();
 		},
 		function saveSet() {
-			if (set == null) {
+			if (set === null) {
 				throw('Error processing set');
 			}
 

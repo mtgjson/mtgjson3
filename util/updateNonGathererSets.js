@@ -1,5 +1,4 @@
 "use strict";
-/*global setImmediate: true*/
 
 var base = require("xbase"),
 	C = require("C"),

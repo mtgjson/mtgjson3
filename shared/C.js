@@ -1,7 +1,5 @@
 "use strict";
 
-var base = require("xbase");
-
 (function(exports) {
 	exports.SUPERTYPES = ["Basic", "Legendary", "Snow", "World", "Ongoing"];
 	exports.TYPES = ["Instant", "Sorcery", "Artifact", "Creature", "Enchantment", "Land", "Planeswalker", "Tribal", "Plane", "Phenomenon", "Scheme", "Vanguard", "Conspiracy"];
@@ -4873,8 +4871,8 @@ var base = require("xbase");
 		}
 	};
 
-	exports.SET_CORRECTIONS["LEB"].pushAll(exports.SET_CORRECTIONS["LEA"]);	// All of LEA rules apply to LEB
-	exports.SET_CORRECTIONS["2ED"].pushAll(exports.SET_CORRECTIONS["LEA"]);	// All of LEA rules apply to 2ED
+	exports.SET_CORRECTIONS.LEB.pushAll(exports.SET_CORRECTIONS.LEA);	// All of LEA rules apply to LEB
+	exports.SET_CORRECTIONS['2ED'].pushAll(exports.SET_CORRECTIONS.LEA);	// All of LEA rules apply to 2ED
 	exports.SETS.forEach(function(SET) { if(SET.isMCISet) { if(!exports.SET_CORRECTIONS.hasOwnProperty(SET.code)) { exports.SET_CORRECTIONS[SET.code] = []; } exports.SET_CORRECTIONS[SET.code].push({match : "*", fixFlavorNewlines:true}); }});
 
 	exports.ARTIST_CORRECTIONS = {

@@ -1,7 +1,6 @@
 "use strict";
 
 var base = require("xbase"),
-	C = require("C"),
 	fs = require("fs"),
 	path = require("path"),
 	shared = require("shared"),
@@ -32,7 +31,7 @@ function processSet(code, cb) {
 			rip.fixCommanderIdentityForCards(set.cards, this);
 		},
 		function saveSet() {
-			if (set == null) {
+			if (set === null) {
 				throw('Error processing set');
 			}
 

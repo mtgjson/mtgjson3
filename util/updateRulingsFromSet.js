@@ -1,7 +1,6 @@
 'use strict';
 
 var base = require('xbase');
-var C = require('C');
 var fs = require('fs');
 var shared = require('shared');
 var path = require('path');

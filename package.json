@@ -17,7 +17,13 @@
     "xbase": "git://github.com/Sembiance/xbase.git",
     "xutil": "git://github.com/Sembiance/xutil.git"
   },
+  "devDependencies": {
+    "jshint": "^2.9"
+  },
   "engines": {
     "node": ">= 0.12.0"
+  },
+  "scripts": {
+    "test": "./node_modules/jshint/bin/jshint build/*.js shared/*.js util/*.js"
   }
 }

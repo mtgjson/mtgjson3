@@ -1,10 +1,8 @@
+/*jslint node: true */
 "use strict";
-/*global setImmediate: true*/
 
 var base = require("xbase"),
 	C = require("C"),
-	fs = require("fs"),
-	path = require("path"),
 	shared = require("shared"),
 	tiptoe = require("tiptoe"),
 	rip = require("./rip.js");
