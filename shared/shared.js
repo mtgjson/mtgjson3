@@ -1,5 +1,4 @@
 "use strict";
-/*global setImmediate: true*/
 
 var base = require("xbase"),
 	C = require("C"),
@@ -614,7 +613,7 @@ exports.buildMultiverseListingURLs = function(setName, cb) {
 };
 
 exports.getURLAsDoc = function(targetURL, cb, retryCount) {
-	var retryCount = 0;
+	retryCount = 0;
 
 	// Downloads the targetURL.
 	var downloadDoc = function(cb) {
@@ -746,9 +745,9 @@ exports.updateStandardForCard = function(card) {
 			//base.info("Card %s is in standard set (%s).", card.name, value);
 		}
 	});
-	if (standard == true) {
+	if (standard === true) {
 		var legalityObject = {format:"Standard", legality: "Legal"};
-		if (card.legalities == undefined)
+		if (card.legalities === undefined)
 			card.legalities = [];
 
 		card.legalities.push(legalityObject);
@@ -772,15 +771,15 @@ exports.saveSet = function(set, callback) {
 	set.cards.sort(function(a, b) {
 		var ret = 0;
 		if (a.number && b.number) {
-			var ret = exports.alphanum(a.number, b.number);
-			if (ret == 0)
+			ret = exports.alphanum(a.number, b.number);
+			if (ret === 0)
 				ret = (a.multiverseid > b.multiverseid)?1:-1;
 		}
 
-		if (ret == 0)
+		if (ret === 0)
 			ret = a.name.localeCompare(b.name);
 
-		if (ret == 0)
+		if (ret === 0)
 			ret = (a.multiverseid > b.multiverseid)?1:-1;
 
 		return(ret);
@@ -791,11 +790,11 @@ exports.saveSet = function(set, callback) {
 		// 2. Foreign Names
 		if (card.foreignNames)
 			card.foreignNames.sort(function(a, b){
-				var ret = a.language.localeCompare(b.language)
-				if (ret == 0 && a.multiverseid != b.multiverseid) {
-					ret = (a.multiverseid > b.multiverseid)?1:-1;
-				}
-				return(ret);
+			    var ret = a.language.localeCompare(b.language);
+			    if (ret === 0 && a.multiverseid != b.multiverseid) {
+				ret = (a.multiverseid > b.multiverseid)?1:-1;
+			    }
+			    return(ret);
 			});
 
 		// 3. Legalities
@@ -825,10 +824,10 @@ exports.saveSet = function(set, callback) {
 // Thanks to Brian Huisman at http://web.archive.org/web/20130826203933/http://my.opera.com/GreyWyvern/blog/show.dml/1671288 and http://www.davekoelle.com/alphanum.html
 exports.alphanum = function(a, b) {
   function chunkify(t) {
-    var tz = new Array();
+    var tz = [];
     var x = 0, y = -1, n = 0, i, j;
 
-    while (i = (j = t.charAt(x++)).charCodeAt(0)) {
+      while ((i = (j = t.charAt(x++)).charCodeAt(0))) {
       var m = (i == 46 || (i >=48 && i <= 57));
       if (m !== n) {
         tz[++y] = "";
