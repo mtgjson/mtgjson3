@@ -187,15 +187,16 @@ function clearCacheForSet(code, cacheTypes, cb) {
 					base.info("Clearing cache type: %s", cacheType);
 
 					if (cacheType === "mcilist") {
-						getURLSForMcilistCache(setInfo, set, this.parallel());
+						getURLSForMcilistCache(setInfo, set, cb);
 					}
 					else if (cacheType === "listings") {
-						shared.buildMultiverseListingURLs(setName, this.parallel());
+						shared.buildMultiverseListingURLs(setName, cb);
 					}
 					else {
-						getURLSForCacheType(setInfo, set, cacheType, this.parallel());
+						getURLSForCacheType(setInfo, set, cacheType, cb);
 					}
-				}.bind(this)
+				},
+				this
 			);
 		},
 		function clearCacheFiles() {
@@ -203,7 +204,7 @@ function clearCacheForSet(code, cacheTypes, cb) {
 
 			if (!urls)
 				return(setImmediate(this, new Error("No urls for clearCacheFiles().")));
-			urls = urls.flatten().uniqueBySort().filter(function (url) { return(url != null && url != undefined && url != ''); });
+			urls = urls.flatten().uniqueBySort().filter(function (url) { return(url !== null && url !== undefined && url !== ''); });
 
 			base.info("Clearing %d URLS", urls.length);
 			async.eachSeries(
