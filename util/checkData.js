@@ -1,12 +1,8 @@
 "use strict";
 
-var base = require("xbase"),
-	C = require("C"),
-	fs = require("fs"),
+var C = require("C"),
 	shared = require("shared"),
-	path = require("path"),
-	diffUtil = require("xutil").diff,
-	tiptoe = require("tiptoe");
+	diffUtil = require("xutil").diffUtil;
 
 /**
  * Load the codes of all sets on C.SETS
@@ -26,6 +22,10 @@ function setNames(callback) {
 /**
  * Builds a dictionary with ALL card information
  */
+/*
+var fs = require("fs");
+var path = require("path");
+
 function loadSets(callback) {
 	var allSets = {};
 
@@ -52,7 +52,7 @@ function loadSets(callback) {
 
 	setNames(processList);
 }
-
+*/
 
 setNames(function(err, setList) {
 	if (err)
@@ -79,7 +79,7 @@ setNames(function(err, setList) {
 				// Compare
 				if (!card[field]) {
 					if (allCards[card.name][field]) {
-						console.log("'%s' (%s) mismatch for field '%s' (previous sets: %s)", card.name, setCode, field, allCards[card.name]['_sets'].join(','));
+						console.log("'%s' (%s) mismatch for field '%s' (previous sets: %s)", card.name, setCode, field, allCards[card.name]._sets.join(','));
 					}
 				}
 				else {
@@ -90,17 +90,17 @@ setNames(function(err, setList) {
 							setCode,
 							field,
 							fieldDifference.trim(),
-							allCards[card.name]['_sets'].join(',')
+							allCards[card.name]._sets.join(',')
 						);
 				}
 			});
 		}
 		else {
 			allCards[card.name] = card;
-			allCards[card.name]['_sets'] = [];
+			allCards[card.name]._sets = [];
 		}
 		
-		allCards[card.name]['_sets'].push(setCode);
+		allCards[card.name]._sets.push(setCode);
 	};
 
 	setList.serialForEach(
@@ -112,8 +112,7 @@ setNames(function(err, setList) {
 				},
 				cb);
 		},
-		function finish(err) {
-
+		function finish() {
 		}
 	);
 });
