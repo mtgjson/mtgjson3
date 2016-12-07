@@ -8,7 +8,6 @@ var C = require('C');
 var shared = require('shared');
 var tiptoe = require('tiptoe');
 var rip = require('./rip.js');
-var urlUtil = require('xutil').url;
 var async = require('async');
 
 var langRef = {

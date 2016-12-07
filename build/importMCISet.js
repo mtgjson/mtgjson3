@@ -3,8 +3,6 @@
 
 var base = require('xbase');
 var C = require('C');
-var fs = require('fs');
-var path = require('path');
 var shared = require('shared');
 var tiptoe = require('tiptoe');
 var rip = require('./rip.js');

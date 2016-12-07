@@ -6,8 +6,7 @@ var base = require("xbase"),
 	fs = require("fs"),
 	path = require("path"),
 	shared = require("shared"),
-	tiptoe = require("tiptoe"),
-	rip = require("./rip.js");
+	tiptoe = require("tiptoe");
 
 var setsToDo = shared.getSetsToDo();
 

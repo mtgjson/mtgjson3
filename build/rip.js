@@ -234,8 +234,6 @@ var ripSet = function(setName, cb) {
 var processMultiverseDocs = function(docs, callback) {
 	var cards = [];
 
-	var i = 0;
-
 	docs.forEachBatch(function (multiverseDoc, printedMultiverseDoc) {
 		var newCards = [];
 		var multiverseDocCardParts = getCardParts(multiverseDoc);
@@ -1604,8 +1602,6 @@ var fixCMC = function(cards, cb) {
  * cb() is called upon finish.
  */
 var fixCommanderIdentityForCards = function(cards, cb) {
-	var size = cards.length;
-
 	var findCardByNumber = function(number) {
 		return(cards.find(function(card) { return(card.number === number); }));
 	};
