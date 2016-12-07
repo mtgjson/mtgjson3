@@ -2,7 +2,6 @@
 /*global setImmediate: true*/
 
 var base = require("xbase"),
-	C = require("C"),
 	fs = require("fs"),
 	shared = require("shared"),
 	path = require("path"),
