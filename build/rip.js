@@ -96,9 +96,20 @@ var SYMBOL_CONVERSION_MAP = {
     "bp"                 : "B/P",
     "rp"                 : "R/P",
     "gp"                 : "G/P",
+    "white or blue"      : "W/U",
+    "white or black"     : "W/B",
+    "blue or red"        : "U/R",
+    "blue or black"      : "U/B",
+    "black or red"       : "B/R",
+    "black or green"     : "B/G",
+    "red or green"       : "R/G",
+    "red or white"       : "R/W",
+    "green or white"     : "G/W",
+    "green or blue"      : "G/U",
     // Planechase Planes
-    "chaos"              : "C",
-    "[chaos]"            : "C",
+    "chaos"              : "CHAOS",
+    "[chaos]"            : "CHAOS",
+    "planeswalk"         : "PW",
     // Unglued, Unhinged
     "100"                : "100",
     "500"                : "500",
@@ -1474,6 +1485,7 @@ var processTextBlocks = function(textBlocks) {
 	});
 
 	result = result.replaceAll("\u2028", "\n");
+	result = result.replaceAll("&amp;", "&");
 
 	while(result.contains("\n\n")) {
 		result = result.replaceAll("\n\n", "\n");
@@ -1539,7 +1551,9 @@ var getTextContent = function(item) {
 			}
 			return('{' + SYMBOL_CONVERSION_MAP[alt.toLowerCase()] + '}');
 		})
-		.replace(/<[^>]*>/g, '');
+		.replace(/<[^>]*>/g, '')
+		.replaceAll("&amp;", "&")
+		.replaceAll("&nbsp;", " ");
 	}
 	return(ret);
 };
