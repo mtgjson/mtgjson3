@@ -3161,6 +3161,21 @@
                 jp: 'Commander 2016',
                 cn: 'Commander 2016'
             }
+        },
+        {
+            name : "Planechase Anthology",
+            code : "PCA",
+            releaseDate : "2016-11-25",
+            border : "black",
+            type : "planechase"
+        },
+        {
+            name : "Aether Revolt",
+            code : "AER",
+            releaseDate : "2017-01-20",
+            border : "black",
+            type : "expansion",
+            booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common","common","common","common","common","land","marketing"]
         }
 	];
 
