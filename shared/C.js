@@ -1,5 +1,14 @@
 "use strict";
 
+Array.prototype.pushAll = function(otherArray) {
+	var i;
+	for (i = 0; i < otherArray.length; i++) {
+		this.push(otherArray[i]);
+	}
+
+	return(this);
+};
+
 (function(exports) {
 	exports.SUPERTYPES = ["Basic", "Legendary", "Snow", "World", "Ongoing"];
 	exports.TYPES = ["Instant", "Sorcery", "Artifact", "Creature", "Enchantment", "Land", "Planeswalker", "Tribal", "Plane", "Phenomenon", "Scheme", "Vanguard", "Conspiracy"];
