@@ -3147,9 +3147,9 @@ Array.prototype.pushAll = function(otherArray) {
             booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"]
         },
         {
-            name : "Kaladesh Inventions",
+            name : "Masterpiece Series: Kaladesh Inventions",
             alternativeNames: [
-                'Masterpiece Series: Kaladesh Inventions'
+                'Kaladesh Inventions'
             ],
             code : "MPS",
             releaseDate : "2016-09-30",
