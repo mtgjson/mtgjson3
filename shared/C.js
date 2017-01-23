@@ -1197,7 +1197,7 @@ Array.prototype.pushAll = function(otherArray) {
 			name : "Unhinged",
 			code : "UNH",
 			magicCardsInfoCode : "uh",
-			releaseDate : "2004-11-20",
+			releaseDate : "2004-11-19",
 			border : "silver",
 			type : "un",
 			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land"],
@@ -1324,7 +1324,7 @@ Array.prototype.pushAll = function(otherArray) {
 			translations: {
 				de: 'Gildenbund',
 				fr: 'Le Pacte des Guildes',
-				it: 'Il Patto delle Gilde',
+				it: 'Patto delle Gilde',
 				es: 'El Pacto entre Gremios',
 				pt: 'Pacto das Guildas',
 				jp: 'ギルドパクト',
@@ -1810,7 +1810,7 @@ Array.prototype.pushAll = function(otherArray) {
 			translations: {
 				de: 'Alara Reborn',
 				fr: 'Alara Reborn',
-				it: 'Alara Reborn',
+				it: 'Rinascita di Alara',
 				es: 'Alara Reborn',
 				pt: 'Alara Reborn',
 				jp: 'アラーラ再誕',
@@ -3144,6 +3144,7 @@ Array.prototype.pushAll = function(otherArray) {
             releaseDate : "2016-09-30",
             border : "black",
             type : "expansion",
+            block : 'Kaladesh',
             booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"]
         },
         {
@@ -3183,6 +3184,7 @@ Array.prototype.pushAll = function(otherArray) {
             code : "AER",
             releaseDate : "2017-01-20",
             border : "black",
+            block : 'Kaladesh',
             type : "expansion",
             booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common","common","common","common","common","land","marketing"]
         }
