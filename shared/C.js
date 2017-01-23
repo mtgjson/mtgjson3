@@ -1324,7 +1324,7 @@ Array.prototype.pushAll = function(otherArray) {
 			translations: {
 				de: 'Gildenbund',
 				fr: 'Le Pacte des Guildes',
-				it: 'Il Patto delle Gilde',
+				it: 'Patto delle Gilde',
 				es: 'El Pacto entre Gremios',
 				pt: 'Pacto das Guildas',
 				jp: 'ギルドパクト',
