@@ -1810,7 +1810,7 @@ Array.prototype.pushAll = function(otherArray) {
 			translations: {
 				de: 'Alara Reborn',
 				fr: 'Alara Reborn',
-				it: 'Alara Reborn',
+				it: 'Rinascita di Alara',
 				es: 'Alara Reborn',
 				pt: 'Alara Reborn',
 				jp: 'アラーラ再誕',
