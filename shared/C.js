@@ -1197,7 +1197,7 @@ Array.prototype.pushAll = function(otherArray) {
 			name : "Unhinged",
 			code : "UNH",
 			magicCardsInfoCode : "uh",
-			releaseDate : "2004-11-20",
+			releaseDate : "2004-11-19",
 			border : "silver",
 			type : "un",
 			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land"],
