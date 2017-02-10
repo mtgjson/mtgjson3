@@ -49,18 +49,6 @@ Array.prototype.pushAll = function(otherArray) {
 			mkm_id: 2
 		},
 		{
-			name : "Arabian Nights",
-			code : "ARN",
-			gathererCode : "AN",
-			magicCardsInfoCode : "an",
-			releaseDate : "1993-12-01",
-			border : "black",
-			type : "expansion",
-			booster : ["uncommon", "uncommon", "common", "common", "common", "common", "common", "common"],
-			mkm_name : "Arabian Nights",
-			mkm_id : 4
-		},
-		{
 			name : "Unlimited Edition",
 			code : "2ED",
 			gathererCode : "2U",
@@ -94,6 +82,18 @@ Array.prototype.pushAll = function(otherArray) {
 			mkm_name : "International Edition",
 			mkm_id : 77
 		},
+        {
+			name : "Arabian Nights",
+			code : "ARN",
+			gathererCode : "AN",
+			magicCardsInfoCode : "an",
+			releaseDate : "1993-12-17",
+			border : "black",
+			type : "expansion",
+			booster : ["uncommon", "uncommon", "common", "common", "common", "common", "common", "common"],
+			mkm_name : "Arabian Nights",
+			mkm_id : 4
+		},
 		{
 			name : "Dragon Con",
 			code : "pDRC",
@@ -108,7 +108,7 @@ Array.prototype.pushAll = function(otherArray) {
 			code : "ATQ",
 			gathererCode : "AQ",
 			magicCardsInfoCode : "aq",
-			releaseDate : "1994-03-01",
+			releaseDate : "1994-03-04",
 			border : "black",
 			type : "expansion",
 			booster : ["uncommon", "uncommon", "common", "common", "common", "common", "common", "common"],
@@ -137,7 +137,7 @@ Array.prototype.pushAll = function(otherArray) {
 			code : "LEG",
 			gathererCode : "LE",
 			magicCardsInfoCode : "lg",
-			releaseDate : "1994-06-01",
+			releaseDate : "1994-06-10",
 			border : "black",
 			type : "expansion",
 			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"],
@@ -152,7 +152,7 @@ Array.prototype.pushAll = function(otherArray) {
 			code : "DRK",
 			gathererCode : "DK",
 			magicCardsInfoCode : "dk",
-			releaseDate : "1994-08-01",
+			releaseDate : "1994-08-08",
 			border : "black",
 			type : "expansion",
 			booster : ["uncommon", "uncommon", "common", "common", "common", "common", "common", "common"],
@@ -163,6 +163,18 @@ Array.prototype.pushAll = function(otherArray) {
 			mkm_id : 8
 		},
 		{
+			name : "Fallen Empires",
+			code : "FEM",
+			gathererCode : "FE",
+			magicCardsInfoCode : "fe",
+			releaseDate : "1994-11-15",
+			border : "black",
+			type : "expansion",
+			booster : ["uncommon", "uncommon", "common", "common", "common", "common", "common", "common"],
+			mkm_name : "Fallen Empires",
+			mkm_id : 9
+		},
+        {
 			name : "Media Inserts",
 			code : "pMEI",
 			magicCardsInfoCode : "mbp",
@@ -175,18 +187,6 @@ Array.prototype.pushAll = function(otherArray) {
 			releaseDate : "1995-01-01",
 			border : "black",
 			type : "promo"
-		},
-		{
-			name : "Fallen Empires",
-			code : "FEM",
-			gathererCode : "FE",
-			magicCardsInfoCode : "fe",
-			releaseDate : "1994-11-01",
-			border : "black",
-			type : "expansion",
-			booster : ["uncommon", "uncommon", "common", "common", "common", "common", "common", "common"],
-			mkm_name : "Fallen Empires",
-			mkm_id : 9
 		},
 		{
 			name : "Legend Membership",
@@ -255,7 +255,7 @@ Array.prototype.pushAll = function(otherArray) {
 			code : "HML",
 			gathererCode : "HM",
 			magicCardsInfoCode : "hl",
-			releaseDate : "1995-10-01",
+			releaseDate : "1995-10-14",
 			border : "black",
 			type : "expansion",
 			booster : [["rare", "uncommon"], ["rare", "uncommon"], "common", "common", "common", "common", "common", "common"],
@@ -292,7 +292,7 @@ Array.prototype.pushAll = function(otherArray) {
 		{
 			name : "Rivals Quick Start Set",
 			code : "RQS",
-			releaseDate : "1996-07-01",
+			releaseDate : "1996-06-10",
 			border : "white",
 			type : "box"
 		},
@@ -509,26 +509,6 @@ Array.prototype.pushAll = function(otherArray) {
 			mkm_id : 20
 		},
 		{
-			name : "Portal Second Age",
-			code : "PO2",
-			gathererCode : "P2",
-			magicCardsInfoCode : "po2",
-			oldCode : "P02",
-			releaseDate : "1998-06-01",
-			border : "black",
-			type : "starter",
-			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"],
-			translations: {
-				de: 'Portal Zweites Zeitalter',
-				fr: 'Portal Second Age',
-				it: 'Portal Seconda Era',
-				es: 'Portal Segunda Edad',
-				pt: 'Portal Segunda Era'
-			},
-			mkm_name : "Portal Second Age",
-			mkm_id : 24
-		},
-		{
 			name : "Judge Gift Program",
 			code : "pJGP",
 			magicCardsInfoCode : "jr",
@@ -559,6 +539,26 @@ Array.prototype.pushAll = function(otherArray) {
 			},
 			mkm_name : "Exodus",
 			mkm_id : 21
+		},
+        {
+			name : "Portal Second Age",
+			code : "PO2",
+			gathererCode : "P2",
+			magicCardsInfoCode : "po2",
+			oldCode : "P02",
+			releaseDate : "1998-06-24",
+			border : "black",
+			type : "starter",
+			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"],
+			translations: {
+				de: 'Portal Zweites Zeitalter',
+				fr: 'Portal Second Age',
+				it: 'Portal Seconda Era',
+				es: 'Portal Segunda Edad',
+				pt: 'Portal Segunda Era'
+			},
+			mkm_name : "Portal Second Age",
+			mkm_id : 24
 		},
 		{
 			name : "Unglued",
@@ -694,7 +694,7 @@ Array.prototype.pushAll = function(otherArray) {
 			code : "S99",
 			gathererCode : "P3",
 			magicCardsInfoCode : "st",
-			releaseDate : "1999-07-01",
+			releaseDate : "1999-07-12",
 			border : "white",
 			type : "starter",
 			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "land"],
@@ -822,7 +822,7 @@ Array.prototype.pushAll = function(otherArray) {
 			code : "S00",
 			gathererCode : "P4",
 			magicCardsInfoCode : "st2k",
-			releaseDate : "2000-04-01",
+			releaseDate : "2000-04-24",
 			border : "white",
 			type : "starter",
 			translations: {
@@ -990,7 +990,7 @@ Array.prototype.pushAll = function(otherArray) {
 			name : "Torment",
 			code : "TOR",
 			magicCardsInfoCode : "tr",
-			releaseDate : "2002-02-04",
+			releaseDate : "2002-02-08",
 			border : "black",
 			type : "expansion",
 			block : "Odyssey",
@@ -1197,7 +1197,7 @@ Array.prototype.pushAll = function(otherArray) {
 			name : "Unhinged",
 			code : "UNH",
 			magicCardsInfoCode : "uh",
-			releaseDate : "2004-11-19",
+			releaseDate : "2004-11-20",
 			border : "silver",
 			type : "un",
 			booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land"],
