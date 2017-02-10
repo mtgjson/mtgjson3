@@ -5179,7 +5179,8 @@ Array.prototype.pushAll = function(otherArray) {
 	    'SOI',
 	    'EMN',
 	    'W16',
-	    'KLD'
+	    'KLD',
+	    'AER'
 	];
 
 })(typeof exports==="undefined" ? window.C={} : exports);
