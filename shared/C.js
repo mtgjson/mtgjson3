@@ -3247,10 +3247,12 @@ Array.prototype.pushAll = function(otherArray) {
 		],
         CED: [
             "noBasicLandWatermarks",
+            { match : "*", remove : ["number"] }
         ],
         CEI :
         [
             "noBasicLandWatermarks",
+            { match : "*", remove : ["number"] }
         ],
 		"2ED" :
 		[
@@ -4567,14 +4569,6 @@ Array.prototype.pushAll = function(otherArray) {
 			{ match : {name : "Liliana, Defiant Necromancer"}, replace : {colors : ["Black"]}},
 			{ match : {name : "Nissa, Sage Animist"}, replace : {colors : ["Green"]}},
 			{ match : {number : ["273","274","275","276","277","278","279","280","281","282","283","284","285","286","287","288"]}, replace : {starter : true}}
-		],
-		CED :
-		[
-			{ match : "*", remove : ["number"] }
-		],
-		CEI :
-		[
-			{ match : "*", remove : ["number"] }
 		],
 		BFZ :
 		[
