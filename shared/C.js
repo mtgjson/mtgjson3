@@ -3211,6 +3211,7 @@ Array.prototype.pushAll = function(otherArray) {
 	{
 		LEA :
 		[
+            "noBasicLandWatermarks",
 			{ match : {name : ["Elvish Archers", "Goblin Balloon Brigade", "Wall of Air"]}, flavorAddExclamation : true},
 			{ match : {name : ["Jade Statue", "Scathe Zombies"]}, flavorAddDash : true},
 			{ match : {name : "Mahamoti Djinn"}, replace : {flavor : "Of royal blood among the spirits of the air, the Mahamoti Djinn rides on the wings of the winds. As dangerous in the gambling hall as he is in battle, he is a master of trickery and misdirection."}},
@@ -3231,6 +3232,7 @@ Array.prototype.pushAll = function(otherArray) {
 		],
 		LEB :
 		[
+            "noBasicLandWatermarks",
 			{ match : {name : "Ley Druid"}, replace : {flavor : "After years of training, the Druid becomes one with nature, drawing power from the land and returning it when needed."}}
 			// All of LEA rules are copied into here (see below)
 		],
@@ -3243,8 +3245,16 @@ Array.prototype.pushAll = function(otherArray) {
 			{ match : {name : "Army of Allah"}, replace : {flavor : {"Arab" : " —Arab"}}},
 			{ match : {name : ["Bird Maiden", "Piety", "War Elephant", "Wyluli Wolf", "Aladdin's Ring", "Juzám Djinn", "King Suleiman", "Repentant Blacksmith"]}, flavorAddDash : true}
 		],
+        CED: [
+            "noBasicLandWatermarks",
+        ],
+        CEI :
+        [
+            "noBasicLandWatermarks",
+        ],
 		"2ED" :
 		[
+            "noBasicLandWatermarks",
 			// All of LEA rules are copied into here (see below)
 		],
 		pDRC :
@@ -3259,6 +3269,7 @@ Array.prototype.pushAll = function(otherArray) {
 		],
 		"3ED" :
 		[
+            "noBasicLandWatermarks",
 			{ match : {name : ["Elvish Archers", "Wall of Air", "Goblin Balloon Brigade"]}, flavorAddExclamation : true},
 			{ match : {name : "Aladdin's Ring"}, replace : {flavor : "\"After these words the magician drew a ring off his finger, and put it on one of Aladdin's, saying: 'It is a talisman against all evil, so long as you obey me.'\" —The Arabian Nights, Junior Classics trans."}},
 			{ match : {name : "Dwarven Weaponsmith"}, replace : {flavor : "\"Work with zeal as hammers peal! Melt, anneal, and pound the steel!\"\n—Old Dwarvish forge-chant"} },
@@ -3372,6 +3383,7 @@ Array.prototype.pushAll = function(otherArray) {
 		],
 		"4ED" :
 		[
+            "noBasicLandWatermarks",
 			{ match : {name : "Pyrotechnics" }, replace : {flavor : "\"Hi! ni! ya! Behold the man of flint, that's me!\nFour lightnings zigzag from me, strike and return.\" —Navajo war chant"}},
 			{ renumberImages : "Forest", order : [2377, 2378, 2379] },
 			{ renumberImages : "Island", order : [2390, 2389, 2391] },
@@ -3395,6 +3407,7 @@ Array.prototype.pushAll = function(otherArray) {
 		],
 		ICE :
 		[
+            "noBasicLandWatermarks",
 			{ renumberImages : "Forest", order : [2748, 2746, 2747] },
 			{ renumberImages : "Island", order : [2768, 2767, 2769] },
 			{ renumberImages : "Mountain", order : [2763, 2765, 2764] },
@@ -3477,6 +3490,7 @@ Array.prototype.pushAll = function(otherArray) {
 		],
 		pARL :
 		[
+            "noBasicLandWatermarks",
 			{ match : {name : ["Ashnod's Coupon", "Booster Tutor", "Circle of Protection: Art", "Goblin Mime", "Granny's Payback", "Mise"]}, replace : {border : "silver"}},
 			{ match : {name : "Castigate"}, replace : {flavor : "\"We have no need for military might. We wield two of the sharpest swords ever forged: Faith in our left hand, Wealth in our right.\"\n—Vuliev of the Ghost Council"}},
 			{ match : {name : "Goblin Mime"}, replace : {flavor : "Mung noticed a few clouds gathering in the sky. Perhaps today he could perform his \"walking against the wind\" routine."}},
@@ -3493,6 +3507,7 @@ Array.prototype.pushAll = function(otherArray) {
 		],
 		MIR :
 		[
+            "noBasicLandWatermarks",
 			{ renumberImages : "Forest", order : [3569, 3567, 3568, 3566] },
 			{ renumberImages : "Island", order : [3584, 3582, 3583, 3581] },
 			{ renumberImages : "Mountain", order : [3580, 3578, 3579, 3577] },
@@ -3517,6 +3532,7 @@ Array.prototype.pushAll = function(otherArray) {
 		],
 		ITP :
 		[
+            "noBasicLandWatermarks",
 			{ match : {name : "Alabaster Potion"}, replace : {originalText : "Target player gains X life, or prevent X damage to any creature or player."}},
 			{ match : {name : "Battering Ram"}, replace : {originalText : "Banding when attacking\nWhenever a wall blocks Battering Ram, destroy that creature at end of combat."}},
 			{ match : {name : "Bog Wraith"}, replace : {originalText : "Swampwalk"}},
@@ -3556,6 +3572,7 @@ Array.prototype.pushAll = function(otherArray) {
 		],
 		"5ED" :
 		[
+            "noBasicLandWatermarks",
 			{ match : {name : "Pyrotechnics" }, replace : {flavor : "\"Hi! ni! ya! Behold the man of flint, that's me! / Four lightnings zigzag from me, strike and return.\"\n—Navajo war chant"}},
 			{ renumberImages : "Forest", order : [4171, 4172, 4173, 4174] },
 			{ renumberImages : "Island", order : [4199, 4200, 4201, 4202] },
@@ -3687,6 +3704,7 @@ Array.prototype.pushAll = function(otherArray) {
 		],
 		pPRE :
 		[
+            "noBasicLandWatermarks",
 			{ match : {name : "Archdemon of Greed"}, replace : {layout : "double-faced", names : ["Ravenous Demon", "Archdemon of Greed"]}},
 			{ match : {name : "Ravenous Demon"}, replace : {layout : "double-faced", names : ["Ravenous Demon", "Archdemon of Greed"]}},
 			{ match : {name : "Demigod of Revenge"}, replace : {flavor : "\"His laugh, a bellowing, deathly din, slices through the heavens, making them bleed.\"\n—The Seer's Parables"}},
@@ -3698,6 +3716,7 @@ Array.prototype.pushAll = function(otherArray) {
 		],
 		TMP :
 		[
+            "noBasicLandWatermarks",
 			{ renumberImages : "Plains", order : [4953, 4954, 4955, 4956] },
 			{ match : {name : ["Bayou Dragonfly", "Lowland Giant", "Mindwhip Sliver", "Repentance", "Shatter", "Staunch Defenders", "Sudden Impact", "Tahngarth's Rage", "Time Warp"]}, flavorAddExclamation : true },
 			{ match : {name : "Deadshot"}, replace : {flavor : "\"Carrion! Keep your distance. My blade will come to you!\"\n—Crovax"}},
@@ -3758,10 +3777,12 @@ Array.prototype.pushAll = function(otherArray) {
 		],
 		pALP :
 		[
+            "noBasicLandWatermarks",
 			{ match : "*", replace : {releaseDate : "1998"}}
 		],
 		USG :
 		[
+            "noBasicLandWatermarks",
 			{ match : {name : ["Bull Hippo", "Curfew", "Goblin Cadets", "Goblin Spelunkers"]}, flavorAddExclamation : true },
 			{ match : {name : "Argothian Swine"}, replace : {flavor : "In Argoth, the shortest path between two points is the one the swine make."}},
 			{ match : {name : "Headlong Rush"}, replace : {flavor : "A landslide of goblins poured toward the defenders—tumbling, rolling, and bouncing their way down the steep hillside."}},
@@ -3774,6 +3795,7 @@ Array.prototype.pushAll = function(otherArray) {
 		],
 		ATH :
 		[
+            "noBasicLandWatermarks",
 			{ match : {name : "Aesthir Glider"}, replace : {originalText : "Flying\nAesthir Glider cannot block."}},
 			{ match : {name : "Armored Pegasus"}, replace : {originalType : "Creature — Pegasus"}},
 			{ match : {name : "Benalish Knight"}, replace : {originalText : "First strike\nYou may play Benalish Knight any time you could play an instant."}},
@@ -4503,6 +4525,9 @@ Array.prototype.pushAll = function(otherArray) {
 		[
 			{ match : { name : "Stairs to Infinity"}, replace : {number : "P1"}}
 		],
+        V12 : [
+            { match : { name : "Dryad Arbor"}, replace : {watermark : "Green"}}
+        ],
 		M14 :
 		[
 			{ match : "*", fixFlavorNewlines : true },

@@ -198,9 +198,14 @@ exports.getSetCorrections = function(setCode)
 exports.performSetCorrections = function(setCorrections, fullSet)
 {
 	var cards = fullSet.cards;
+    var addBasicLandWatermarks = true;
 	setCorrections.forEach(function(setCorrection)
 	{
-		if(setCorrection==="numberCards")
+        if(setCorrection==="noBasicLandWatermarks")
+        {
+            addBasicLandWatermarks = false;
+        }
+		else if(setCorrection==="numberCards")
 		{
 			var COLOR_ORDER = ["Blue", "Black", "Red", "Green", "White"];
 			var LAND_ORDER = ["Island", "Swamp", "Mountain", "Forest", "Plains"];
@@ -409,8 +414,25 @@ exports.performSetCorrections = function(setCorrections, fullSet)
 	{
 		if(card.supertypes && card.supertypes.contains("Basic") && card.types && card.types.contains("Land"))
 		{
-			delete card.text;
-			card.rarity = "Basic Land";
+            if(card.name!=="Wastes")
+                delete card.text;
+            if(card.name in ["Plains", "Island", "Swamp", "Mountain", "Forest"] || !(fullSet.code in ["CSP", "OGW"]))
+                card.rarity = "Basic Land";
+            if(addBasicLandWatermarks)
+            {
+                if("Plains" in card.subtypes)
+                    card.watermark = "White";
+                else if("Island" in card.subtypes)
+                    card.watermark = "Blue";
+                else if("Swamp" in card.subtypes)
+                    card.watermark = "Black";
+                else if("Mountain" in card.subtypes)
+                    card.watermark = "Red";
+                else if("Forest" in card.subtypes)
+                    card.watermark = "Green";
+                else
+                    card.watermark = "Colorless";
+            }
 		}
 	});
 
