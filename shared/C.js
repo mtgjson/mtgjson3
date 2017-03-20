@@ -4200,7 +4200,9 @@ Array.prototype.pushAll = function(otherArray) {
           toughness  : "4",
           imageName  : "jaraku the interloper"
         }
-	];
+      }
+    ]
+	};
 
 	exports.IGNORE_GATHERER_PRINTINGS = ["Promo set for Gatherer"];
 
