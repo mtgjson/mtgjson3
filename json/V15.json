@@ -473,10 +473,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Innistrad Block",
           "legality": "Legal"
         },
@@ -486,18 +482,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -513,9 +497,20 @@
       "originalType": "Sorcery",
       "printings": [
         "AVR",
-        "V15"
+        "V15",
+        "MM3"
       ],
       "rarity": "Mythic Rare",
+      "rulings": [
+        {
+          "date": "2017-03-14",
+          "text": "A mana cost of {X}{X} means that you pay twice X. If you want X to be 3, you pay {6}{W}{W}{W} to cast Entreat the Angels."
+        },
+        {
+          "date": "2017-03-14",
+          "text": "Entreat the Angels's converted mana cost is based on its mana cost of {X}{X}{W}{W}{W}, even if you're casting it for its miracle cost. For example, if you cast Entreat the Angels for its miracle cost and choose 4 for X, its converted mana cost is 11."
+        }
+      ],
       "text": "Create X 4/4 white Angel creature tokens with flying.\nMiracle {X}{W}{W} (You may cast this card for its miracle cost when you draw it if it's the first card you drew this turn.)",
       "type": "Sorcery",
       "types": [
