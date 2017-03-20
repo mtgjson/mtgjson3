@@ -3187,6 +3187,14 @@ Array.prototype.pushAll = function(otherArray) {
       block : 'Kaladesh',
       type : "expansion",
       booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common","common","common","common","common","land","marketing"]
+    },
+    {
+      name : "Modern Masters 2017 Edition",
+      code : "MM3",
+      releaseDate : "2017-03-17",
+      border : "black",
+      type : "reprint",
+      booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", ["foil mythic rare", "foil rare", "foil uncommon", "foil common"]]
     }
   ];
 
