@@ -2339,12 +2339,8 @@
           "text": "If you control no creature tokens when you populate, nothing will happen."
         },
         {
-          "date": "2013-07-01",
-          "text": "The creature token you put onto the battlefield will also have indestructible."
-        },
-        {
-          "date": "2013-07-01",
-          "text": "Creatures that enter the battlefield after Rootborn Defenses resolves will not gain indestructible."
+          "date": "2017-03-14",
+          "text": "Rootborn Defenses affects only creatures you control after populating at the time it resolves. The creature token you create will gain indestructible, but creatures you begin to control later in the turn will not."
         }
       ],
       "text": "Populate. Creatures you control gain indestructible until end of turn. (To populate, create a token that's a copy of a creature token you control. Damage and effects that say \"destroy\" don't destroy creatures with indestructible.)",
@@ -7572,11 +7568,11 @@
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2012-10-01",
+          "date": "2017-03-14",
           "text": "Players won't know which player or planeswalker Desecration Demon will attack, if any, when deciding whether to sacrifice a creature."
         },
         {
-          "date": "2012-10-01",
+          "date": "2017-03-14",
           "text": "Each opponent in turn order may choose to sacrifice a creature, even if an opponent already chose to sacrifice a creature that combat. Desecration Demon will have a maximum of one +1/+1 counter put on it each combat, no matter how many creatures were sacrificed."
         }
       ],
@@ -8666,7 +8662,7 @@
       "rarity": "Common",
       "rulings": [
         {
-          "date": "2012-10-01",
+          "date": "2017-03-14",
           "text": "Defender only matters when Ogre Jailbreaker could be declared as an attacking creature. If Ogre Jailbreaker is already attacking, losing control of your only Gate won't cause Ogre Jailbreaker to leave combat."
         }
       ],
@@ -11031,6 +11027,10 @@
         {
           "date": "2013-04-15",
           "text": "If you are instructed to cast a spell with overload \"without paying its mana cost,\" you can't choose to pay its overload cost instead."
+        },
+        {
+          "date": "2017-03-14",
+          "text": "An overloaded Dynacharge affects only creatures you control at the time it resolves. Creatures you begin to control later in the turn won't get +2/+0."
         }
       ],
       "text": "Target creature you control gets +2/+0 until end of turn.\nOverload {2}{R} (You may cast this spell for its overload cost. If you do, change its text by replacing all instances of \"target\" with \"each.\")",
@@ -14637,14 +14637,6 @@
       "rarity": "Common",
       "rulings": [
         {
-          "date": "2012-10-01",
-          "text": "You can cast Druid's Deliverance even if you don't control any creature tokens."
-        },
-        {
-          "date": "2012-10-01",
-          "text": "Combat damage dealt to creatures or planeswalkers you control and combat damage dealt to your teammates is not prevented."
-        },
-        {
           "date": "2013-04-15",
           "text": "You can choose any creature token you control for populate. If a spell or ability puts a token onto the battlefield under your control and then instructs you to populate (as Coursers' Accord does), you may choose to copy the token you just created, or you may choose to copy another creature token you control."
         },
@@ -14667,6 +14659,18 @@
         {
           "date": "2013-04-15",
           "text": "If you control no creature tokens when you populate, nothing will happen."
+        },
+        {
+          "date": "2017-03-14",
+          "text": "You can cast Druid's Deliverance even if you don't control any creature tokens."
+        },
+        {
+          "date": "2017-03-14",
+          "text": "Combat damage dealt to creatures or planeswalkers you control won't be prevented."
+        },
+        {
+          "date": "2017-03-14",
+          "text": "In a Two-Headed Giant game, combat damage dealt to your teammate won't be prevented."
         }
       ],
       "text": "Prevent all combat damage that would be dealt to you this turn. Populate. (Create a token that's a copy of a creature token you control.)",
@@ -16738,12 +16742,12 @@
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2012-10-01",
+          "date": "2017-03-14",
           "text": "The converted mana cost of a creature token is 0, unless that token is a copy of another creature, in which case it copies that creature's mana cost."
         },
         {
-          "date": "2012-10-01",
-          "text": "If the permanent has {X} in its mana cost, X is 0."
+          "date": "2017-03-14",
+          "text": "If a permanent has {X} in its mana cost, X is considered to be 0."
         }
       ],
       "text": "Abrupt Decay can't be countered by spells or abilities.\nDestroy target nonland permanent with converted mana cost 3 or less.",
@@ -19407,20 +19411,20 @@
       "rarity": "Common",
       "rulings": [
         {
-          "date": "2012-10-01",
+          "date": "2017-03-14",
           "text": "Two Goblin Electromancers will make instant and sorcery spells you cast cost {2} less to cast, and so on."
         },
         {
-          "date": "2012-10-01",
-          "text": "Goblin Electromancer can't reduce the colored mana requirement of an instant or sorcery spell."
+          "date": "2017-03-14",
+          "text": "Goblin Electromancer can't reduce colored mana costs or {C} in the cost of instant or sorcery spells."
         },
         {
-          "date": "2012-10-01",
+          "date": "2017-03-14",
           "text": "If there are additional costs to cast a spell, such as a kicker cost or a cost imposed by another effect (such as the one imposed by Thalia, Guardian of Thraben's ability), apply those increases before applying cost reductions."
         },
         {
-          "date": "2012-10-01",
-          "text": "Goblin Electromancer can reduce alternative costs such as overload costs."
+          "date": "2017-03-14",
+          "text": "Goblin Electromancer can reduce alternative costs such as overload costs and flashback costs."
         }
       ],
       "subtypes": [
@@ -24078,6 +24082,10 @@
         {
           "date": "2013-04-15",
           "text": "If you are instructed to cast a spell with overload \"without paying its mana cost,\" you can't choose to pay its overload cost instead."
+        },
+        {
+          "date": "2017-03-14",
+          "text": "The set of creatures that gets +1/+0 from an overloaded Teleportal is determined as the spell resolves. Creatures you begin to control later in the turn won't get +1/+0. However, because the second part of Teleportal's effect doesn't change the characteristics of any permanents, the set of creatures that can't be blocked is constantly updated. Any creature you control at the moment blockers are chosen can't be blocked."
         }
       ],
       "text": "Target creature you control gets +1/+0 until end of turn and can't be blocked this turn.\nOverload {3}{U}{R} (You may cast this spell for its overload cost. If you do, change its text by replacing all instances of \"target\" with \"each.\")",
@@ -24920,14 +24928,6 @@
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2012-10-01",
-          "text": "The ability that defines Wayfaring Temple's power and toughness works in all zones, not just the battlefield."
-        },
-        {
-          "date": "2012-10-01",
-          "text": "As long as Wayfaring Temple is on the battlefield, its first ability will count itself."
-        },
-        {
           "date": "2013-04-15",
           "text": "You can choose any creature token you control for populate. If a spell or ability puts a token onto the battlefield under your control and then instructs you to populate (as Coursers' Accord does), you may choose to copy the token you just created, or you may choose to copy another creature token you control."
         },
@@ -24950,6 +24950,14 @@
         {
           "date": "2013-04-15",
           "text": "If you control no creature tokens when you populate, nothing will happen."
+        },
+        {
+          "date": "2017-03-14",
+          "text": "The ability that defines Wayfaring Temple's power and toughness works in all zones, not just the battlefield."
+        },
+        {
+          "date": "2017-03-14",
+          "text": "As long as Wayfaring Temple is on the battlefield, its first ability will count itself, so it'll be at least 1/1."
         }
       ],
       "subtypes": [
@@ -26649,10 +26657,6 @@
       "rarity": "Common",
       "rulings": [
         {
-          "date": "2012-10-01",
-          "text": "You must target an artifact or enchantment to cast Sundering Growth. If that artifact or creature is an illegal target when Sundering Growth tries to resolve, it will be countered and none of its effects will happen. You won't populate."
-        },
-        {
           "date": "2013-04-15",
           "text": "You can choose any creature token you control for populate. If a spell or ability puts a token onto the battlefield under your control and then instructs you to populate (as Coursers' Accord does), you may choose to copy the token you just created, or you may choose to copy another creature token you control."
         },
@@ -26675,6 +26679,10 @@
         {
           "date": "2013-04-15",
           "text": "If you control no creature tokens when you populate, nothing will happen."
+        },
+        {
+          "date": "2017-03-14",
+          "text": "You must target an artifact or enchantment to cast Sundering Growth. If that artifact or enchantment is an illegal target when Sundering Growth tries to resolve, it will be countered and none of its effects will happen. You won't populate."
         }
       ],
       "text": "Destroy target artifact or enchantment, then populate. (Create a token that's a copy of a creature token you control.)",

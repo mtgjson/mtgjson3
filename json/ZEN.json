@@ -2136,12 +2136,8 @@
       "rarity": "Common",
       "rulings": [
         {
-          "date": "2016-06-08",
-          "text": "You may target any creature an opponent controls. If it's already tapped, it just won't untap during its controller's next untap step."
-        },
-        {
-          "date": "2016-06-08",
-          "text": "If the creature isn't tapped during its controller's next untap step (perhaps because it was untapped by a spell), this ability has no effect. It won't apply at a later time."
+          "date": "2017-03-14",
+          "text": "Kor Hookmaster's ability can target a creature that's already tapped. It still won't untap during its controller's next untap step."
         }
       ],
       "subtypes": [
@@ -2463,11 +2459,11 @@
       "rarity": "Common",
       "rulings": [
         {
-          "date": "2009-10-01",
-          "text": "The triggered ability doesn't target a permanent. You choose which one to return to its owner's hand as the ability resolves. No one can respond to the choice."
+          "date": "2017-03-14",
+          "text": "Kor Skyfisher's triggered ability doesn't target a permanent. You choose which one to return to its owner's hand as the ability resolves. No one can respond to the choice."
         },
         {
-          "date": "2009-10-01",
+          "date": "2017-03-14",
           "text": "If Kor Skyfisher is still on the battlefield as its triggered ability resolves, you may return Kor Skyfisher itself."
         }
       ],
@@ -15284,36 +15280,48 @@
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2009-10-01",
+          "date": "2017-03-14",
           "text": "If either of Pyromancer Ascension's abilities triggers, it will go on the stack on top of the spell that caused it to trigger. The ability will resolve first. If it's Pyromancer Ascension's second ability that triggered, the copy it creates will also resolve before the original spell. The copy is created even if the original spell has been countered."
         },
         {
-          "date": "2009-10-01",
-          "text": "If Pyromancer Ascension's first ability triggers, you'll put a quest counter on it even if the card in your graveyard leaves your graveyard by the time the ability resolves."
+          "date": "2017-03-14",
+          "text": "If Pyromancer Ascension's first ability triggers, you'll put a quest counter on it even if the card in your graveyard leaves your graveyard by the time the ability resolves or if the spell you cast is countered."
         },
         {
-          "date": "2009-10-01",
-          "text": "If you cast an instant or sorcery spell from your graveyard (due to an ability such as retrace, for example), Pyromancer Ascension's first ability won't trigger unless another card with the same name is in your graveyard."
+          "date": "2017-03-14",
+          "text": "If you cast an instant or sorcery spell from your graveyard (due to an ability such as flashback, for example), Pyromancer Ascension's first ability won't trigger unless another card with the same name is in your graveyard."
         },
         {
-          "date": "2009-10-01",
-          "text": "The second ability triggers only if Pyromancer Ascension already has two quest counters on it at the time you cast an instant or sorcery spell. This means a spell can't both cause the second counter to be put on Pyromancer Ascension and become copied."
+          "date": "2017-03-14",
+          "text": "The second ability triggers only if Pyromancer Ascension already has two quest counters on it at the time you cast an instant or sorcery spell. This means a spell can't cause the second counter to be put on Pyromancer Ascension and then become copied. It also means a player can't remove Pyromancer Ascension in response to you casting an instant or sorcery spell in order to prevent the ability from triggering."
         },
         {
-          "date": "2009-10-01",
-          "text": "If you copy a spell, the copy will have the same targets as the spell it's copying unless you choose new ones. You may change any number of the targets, including all of them or none of them."
+          "date": "2017-03-14",
+          "text": "Pyromancer Ascension's second ability can copy any instant or sorcery spell, not just one with targets."
         },
         {
-          "date": "2009-10-01",
-          "text": "You may copy an instant or sorcery spell that has no targets."
+          "date": "2017-03-14",
+          "text": "The copy is created on the stack, so it's not \"cast.\" Abilities that trigger when a player casts a spell won't trigger."
         },
         {
-          "date": "2009-10-01",
-          "text": "If the original spell was kicked, the copy is kicked too. Other decisions made for the original spell, such as the value of X or the mode, are also copied."
+          "date": "2017-03-14",
+          "text": "The copy will have the same targets as the spell it's copying unless you choose new ones. You may change any number of the targets, including all of them or none of them. If, for one of the targets, you can't choose a new legal target, then it remains unchanged (even if the current target is illegal)."
         },
         {
-          "date": "2011-09-22",
-          "text": "Both of these abilities trigger when a spell is cast, not when it resolves. This means that their effects will occur even if the Ascension is destroyed in response to such a spell being cast."
+          "date": "2017-03-14",
+          "text": "If the spell that's copied is modal (that is, it says \"Choose one —\" or the like), the copy will have the same mode. A different mode cannot be chosen."
+        },
+        {
+          "date": "2017-03-14",
+          "text": "If the spell that's copied has an X whose value was determined as it was cast (like Bonfire of the Damned does), the copy will have the same value of X."
+        },
+        {
+          "date": "2017-03-14",
+          "text": "If the spell has damage divided as it was cast (like Fiery Justice does), the division can't be changed (although the targets receiving that damage still can)."
+        },
+        {
+          "date": "2017-03-14",
+          "text": "You can't choose to pay any alternative or additional costs for the copy. However, effects based on any alternative or additional costs that were paid for the original spell are copied as though those same costs were paid for the copy."
         }
       ],
       "text": "Whenever you cast an instant or sorcery spell that has the same name as a card in your graveyard, you may put a quest counter on Pyromancer Ascension.\nWhenever you cast an instant or sorcery spell while Pyromancer Ascension has two or more quest counters on it, you may copy that spell. You may choose new targets for the copy.",

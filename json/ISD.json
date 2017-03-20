@@ -4049,16 +4049,16 @@
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2011-09-22",
-          "text": "Activated abilities contain a colon. They're generally written \"[Cost]: [Effect].\" Some keywords, such as equip, are activated abilities; they have colons in their reminder text."
+          "date": "2017-03-14",
+          "text": "Activated abilities contain a colon. They're generally written \"[Cost]: [Effect].\" Some keyword abilities, such as equip, are activated abilities and will have colons in their reminder text."
         },
         {
-          "date": "2011-09-22",
-          "text": "Mana abilities of artifacts also can't be activated."
+          "date": "2017-03-14",
+          "text": "No abilities of artifacts can be activated, including mana abilities."
         },
         {
-          "date": "2011-09-22",
-          "text": "Triggered abilities and static abilities of artifacts are unaffected. Also, activated abilities (such as cycling or unearth) of artifact cards not on the battlefield are unaffected."
+          "date": "2017-03-14",
+          "text": "Stony Silence's ability affects only artifacts on the battlefield. Activated abilities that work in other zones (such as cycling) can still be activated. Triggered abilities (starting with \"when,\" \"whenever,\" or \"at\") are unaffected."
         }
       ],
       "text": "Activated abilities of artifacts can't be activated.",
@@ -5258,27 +5258,23 @@
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2011-09-22",
+          "date": "2017-03-14",
           "text": "The token copies exactly what was printed on the original creature and nothing else (unless that creature is copying something else or is a token; see below). It doesn't copy whether that creature is tapped or untapped, whether it has any counters on it or Auras and Equipment attached to it, or any non-copy effects that have changed its power, toughness, types, color, or so on."
         },
         {
-          "date": "2011-09-22",
-          "text": "If you copy a double-faced creature, the token will be a copy of the face that's up when the token is created. Because the token is not a double-faced card, it won't be able to transform."
+          "date": "2017-03-14",
+          "text": "If the copied creature has {X} in its mana cost, X is considered to be 0."
         },
         {
-          "date": "2011-09-22",
-          "text": "If the copied creature has {X} in its mana cost, X is considered to be zero."
+          "date": "2017-03-14",
+          "text": "If the copied creature is a token, the token that's created copies the original characteristics of that token as stated by the effect that created the token."
         },
         {
-          "date": "2011-09-22",
+          "date": "2017-03-14",
           "text": "If the copied creature is copying something else (for example, if the copied creature is an Evil Twin), then the token enters the battlefield as whatever that creature copied."
         },
         {
-          "date": "2011-09-22",
-          "text": "If the copied creature is a token, the token that's created copies the original characteristics of that token as stated by the effect that put the token onto the battlefield."
-        },
-        {
-          "date": "2011-09-22",
+          "date": "2017-03-14",
           "text": "Any enters-the-battlefield abilities of the copied creature will trigger when the token enters the battlefield. Any \"as [this creature] enters the battlefield\" or \"[this creature] enters the battlefield with\" abilities of the chosen creature will also work."
         }
       ],
@@ -9142,16 +9138,20 @@
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2011-09-22",
-          "text": "If the targeted instant or sorcery card already has flashback, you may use either flashback ability to cast it from your graveyard."
-        },
-        {
-          "date": "2012-10-01",
-          "text": "You can't pay other alternative costs of a card you're casting from your graveyard using flashback. For example, if the instant or sorcery has an overload cost, you can't pay that cost."
-        },
-        {
           "date": "2013-07-01",
           "text": "For split cards, you pay only the cost for the half of the card you are casting. This is true because the cost is not looked at until after the card is on the stack, at which time it only has one of the two costs."
+        },
+        {
+          "date": "2017-03-14",
+          "text": "If you cast an instant or sorcery with {X} in its mana cost this way, you still choose the value of X as part of casting the spell and pay that cost."
+        },
+        {
+          "date": "2017-03-14",
+          "text": "If an instant or sorcery card in your graveyard already has flashback, you may use either flashback ability to cast it from your graveyard."
+        },
+        {
+          "date": "2017-03-14",
+          "text": "You may pay any optional additional costs the spell has, such as conspire costs. You must pay any mandatory additional costs the spell has, such as that of Bone Splinters."
         }
       ],
       "subtypes": [
@@ -11657,6 +11657,12 @@
         "MM3"
       ],
       "rarity": "Uncommon",
+      "rulings": [
+        {
+          "date": "2017-03-14",
+          "text": "If Falkenrath Noble and another creature die at the same time, Falkenrath Noble's triggered ability will trigger for each of them."
+        }
+      ],
       "subtypes": [
         "Vampire"
       ],
@@ -12174,19 +12180,19 @@
       "rarity": "Mythic Rare",
       "rulings": [
         {
-          "date": "2011-09-22",
-          "text": "When the first ability resolves, first you choose a card to discard, then each other player in turn order chooses a card to discard, then all those cards are discarded simultaneously. No one sees what the other players are discarding before deciding which card to discard."
+          "date": "2017-03-14",
+          "text": "When Liliana's first ability resolves, first the player whose turn it is chooses a card to discard, then each other player in turn order chooses a card to discard, then those cards are discarded simultaneously. No one sees what the other players are discarding before deciding which card to discard."
         },
         {
-          "date": "2011-09-22",
-          "text": "The player targeted by the second ability chooses which creature to sacrifice when the ability resolves. This ability doesn't target any creature."
+          "date": "2017-03-14",
+          "text": "The player targeted by Liliana's second ability chooses which creature to sacrifice when the ability resolves. This ability doesn't target any creature."
         },
         {
-          "date": "2011-09-22",
-          "text": "When the third ability resolves, you put each permanent the player controls into one of the two piles. For example, you could put a creature into one pile and an Aura enchanting that creature into the other pile."
+          "date": "2017-03-14",
+          "text": "When Liliana's third ability resolves, you put each permanent the player controls into one of the two piles. For example, you could put a creature into one pile and an Aura enchanting that creature into the other pile."
         },
         {
-          "date": "2011-09-22",
+          "date": "2017-03-14",
           "text": "A pile can be empty. If the player chooses an empty pile, no permanents will be sacrificed."
         }
       ],
@@ -13362,20 +13368,20 @@
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2011-09-22",
+          "date": "2017-03-14",
           "text": "Only creatures on the battlefield will be exiled. In other zones, they're \"creature cards,\" not \"creatures.\""
         },
         {
-          "date": "2011-09-22",
-          "text": "A double-faced creature only has the name of the face that's up. For example, if Village Ironsmith is targeted by Sever the Bloodline, Ironfang wouldn't be exiled."
-        },
-        {
-          "date": "2011-09-22",
+          "date": "2017-03-14",
           "text": "If the targeted creature is an illegal target by the time Sever the Bloodline resolves, it will be countered and none of its effects will happen. No creatures will be exiled."
         },
         {
-          "date": "2011-09-22",
-          "text": "Unless a token is a copy of another creature or was explicitly given a name by the effect that created it, its name is the creature types it was given when it was created. For example, the Zombie tokens created by Army of the Damned and by Cellar Door are all named \"Zombie.\""
+          "date": "2017-03-14",
+          "text": "Unless a token is a copy of another creature or was explicitly given a name by the effect that created it, its name is the creature types it was given when it was created. For example, the Beast tokens created by Thragtusk and by Baloth Cage Trap are both named \"Beast.\""
+        },
+        {
+          "date": "2017-03-14",
+          "text": "A double-faced creature only has the name of the face that's up. For example, if Village Ironsmith is targeted by Sever the Bloodline, Ironfang wouldn't be exiled."
         }
       ],
       "text": "Exile target creature and all other creatures with the same name as that creature.\nFlashback {5}{B}{B} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
@@ -18013,24 +18019,24 @@
       "rarity": "Mythic Rare",
       "rulings": [
         {
-          "date": "2011-09-22",
+          "date": "2013-07-01",
+          "text": "For split cards, you pay only the cost for the half of the card you are casting. This is true because the cost is not looked at until after the card is on the stack, at which time it only has one of the two costs."
+        },
+        {
+          "date": "2017-03-14",
           "text": "Only instant and sorcery cards in your graveyard when Past in Flames resolves will gain flashback. Instant and sorcery cards that are put into your graveyard later in the turn, including the resolving Past in Flames, won't gain flashback."
         },
         {
-          "date": "2011-09-22",
-          "text": "If you cast an instant or sorcery with {X} in its mana cost this way, you still choose the value of X as part of casting the spell."
+          "date": "2017-03-14",
+          "text": "If you cast an instant or sorcery with {X} in its mana cost this way, you still choose the value of X as part of casting the spell and pay that cost."
         },
         {
-          "date": "2011-09-22",
+          "date": "2017-03-14",
           "text": "If an instant or sorcery card in your graveyard already has flashback, you may use either flashback ability to cast it from your graveyard."
         },
         {
-          "date": "2011-09-22",
-          "text": "You may pay any optional additional costs the spell has, such as kicker costs. You must pay any mandatory additional costs the spell has."
-        },
-        {
-          "date": "2013-07-01",
-          "text": "For split cards, you pay only the cost for the half of the card you are casting. This is true because the cost is not looked at until after the card is on the stack, at which time it only has one of the two costs."
+          "date": "2017-03-14",
+          "text": "You may pay any optional additional costs the spell has, such as conspire costs. You must pay any mandatory additional costs the spell has, such as that of Bone Splinters."
         }
       ],
       "text": "Each instant and sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost.\nFlashback {4}{R} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
@@ -25408,35 +25414,39 @@
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2011-09-22",
+          "date": "2017-03-14",
           "text": "Evil Twin copies exactly what was printed on the original creature (unless that creature is copying something else or is a token; see below) and it gains the activated ability. It doesn't copy whether that creature is tapped or untapped, whether it has any counters on it or any Auras and Equipment attached to it, or any non-copy effects that have changed its power, toughness, types, color, or so on."
         },
         {
-          "date": "2011-09-22",
-          "text": "If you copy a double-faced creature, Evil Twin will be a copy of the face that's up when Evil Twin enters the battlefield. Because Evil Twin is not a double-faced card, it won't be able to transform."
+          "date": "2017-03-14",
+          "text": "The activated ability that Evil Twin gains as part of its copy effect is a copiable value that other effects may copy."
         },
         {
-          "date": "2011-09-22",
-          "text": "If the chosen creature has {X} in its mana cost, X is considered to be zero."
+          "date": "2017-03-14",
+          "text": "If the chosen creature has {X} in its mana cost, X is considered to be 0."
         },
         {
-          "date": "2011-09-22",
+          "date": "2017-03-14",
           "text": "If the chosen creature is copying something else (for example, if the chosen creature is another Evil Twin), then your Evil Twin enters the battlefield as whatever the chosen creature copied."
         },
         {
-          "date": "2011-09-22",
-          "text": "If the chosen creature is a token, Evil Twin copies the original characteristics of that token as stated by the effect that put the token onto the battlefield. Evil Twin is not a token."
+          "date": "2017-03-14",
+          "text": "If the chosen creature is a token, Evil Twin copies the original characteristics of that token as stated by the effect that created the token. Evil Twin is not a token in this case."
         },
         {
-          "date": "2011-09-22",
+          "date": "2017-03-14",
+          "text": "Unless a token is a copy of another creature or was explicitly given a name by the effect that created it, its name is the creature types it was given when it was created. For example, the Beast tokens created by Thragtusk and by Baloth Cage Trap are both named \"Beast.\""
+        },
+        {
+          "date": "2017-03-14",
           "text": "Any enters-the-battlefield abilities of the copied creature will trigger when Evil Twin enters the battlefield. Any \"as [this creature] enters the battlefield\" or \"[this creature] enters the battlefield with\" abilities of the chosen creature will also work."
         },
         {
-          "date": "2011-09-22",
+          "date": "2017-03-14",
           "text": "If Evil Twin somehow enters the battlefield at the same time as another creature, Evil Twin can't become a copy of that creature. You may only choose a creature that's already on the battlefield."
         },
         {
-          "date": "2011-09-22",
+          "date": "2017-03-14",
           "text": "You can choose not to copy anything. In that case, Evil Twin enters the battlefield as a 0/0 creature, and is probably put into the graveyard immediately."
         }
       ],
@@ -25792,11 +25802,11 @@
       "rarity": "Mythic Rare",
       "rulings": [
         {
-          "date": "2011-09-22",
+          "date": "2017-03-14",
           "text": "If Olivia Voldaren deals lethal damage to a creature with its first activated ability, that creature will become a Vampire before dying."
         },
         {
-          "date": "2011-09-22",
+          "date": "2017-03-14",
           "text": "If you activate Olivia Voldaren's last ability, and before that ability resolves you lose control of Olivia Voldaren, the ability will resolve with no effect. You won't gain control of the targeted Vampire."
         }
       ],
