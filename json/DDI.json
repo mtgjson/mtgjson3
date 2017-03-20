@@ -437,7 +437,8 @@
       "printings": [
         "SHM",
         "DDI",
-        "C13"
+        "C13",
+        "MM3"
       ],
       "rarity": "Uncommon",
       "subtypes": [
@@ -775,7 +776,8 @@
       "printings": [
         "ARB",
         "CMD",
-        "DDI"
+        "DDI",
+        "MM3"
       ],
       "rarity": "Uncommon",
       "subtypes": [
@@ -1697,13 +1699,18 @@
         "CMD",
         "DDI",
         "MMA",
-        "MD1"
+        "MD1",
+        "MM3"
       ],
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2009-02-01",
-          "text": "If the targeted creature becomes an illegal target by the time Path to Exile would resolve, the entire spell is countered. The creature's controller won't get to search for a basic land card."
+          "date": "2017-03-14",
+          "text": "If the targeted creature becomes an illegal target by the time Path to Exile would resolve, the entire spell is countered. The creature's controller won't search for a basic land card."
+        },
+        {
+          "date": "2017-03-14",
+          "text": "The controller of the exiled creature isn't required to search his or her library for a basic land. If that player doesn't, the player won't shuffle his or her library."
         }
       ],
       "text": "Exile target creature. Its controller may search his or her library for a basic land card, put that card onto the battlefield tapped, then shuffle his or her library.",
@@ -2245,21 +2252,22 @@
       "originalType": "Instant",
       "printings": [
         "CSP",
-        "DDI"
+        "DDI",
+        "MM3"
       ],
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2006-07-15",
-          "text": "Vanish into Memory cares about the creature's power just before it left the battlefield and its toughness just after it returns to the battlefield. For example, if you target a Vigean Hydropon with two +1/+1 counters on it, you'll draw two cards, then when the Hydropon returns to the battlefield with five +1/+1 counters on it, you'll discard five cards."
+          "date": "2017-03-14",
+          "text": "Vanish into Memory cares about the creature's power just before it left the battlefield and its toughness just after it returns to the battlefield. For example, if you target a 2/2 creature with two +1/+1 counters on it, you'll draw four cards, then when it returns to the battlefield without any counters on it, you'll discard two cards."
         },
         {
-          "date": "2006-07-15",
-          "text": "If the creature exiled with Vanish into Memory never returns to the battlefield (because it was a token creature, for example), you don't discard any cards"
+          "date": "2017-03-14",
+          "text": "If the creature exiled with Vanish into Memory never returns to the battlefield (because it was a token creature, for example), you don't discard any cards."
         },
         {
-          "date": "2006-07-15",
-          "text": "If the creature exiled with Vanish into Memory isn't a creature card (for example, it was an animated Gruul War Plow), that card will still be returned to the battlefield, but not as a creature. Since the card returned to the battlefield has no toughness, you discard no cards."
+          "date": "2017-03-14",
+          "text": "If the creature exiled with Vanish into Memory isn't a creature card (for example, a crewed Vehicle), that card will still be returned to the battlefield, but not as a creature. Since the card returned to the battlefield has no toughness, you discard no cards."
         }
       ],
       "text": "Exile target creature. You draw cards equal to that creature's power. At the beginning of your next upkeep, return that card to the battlefield under its owner's control. If you do, discard cards equal to that creature's toughness.",

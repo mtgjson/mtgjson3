@@ -13238,7 +13238,8 @@
       "originalType": "Creature — Goblin Warrior",
       "power": "1",
       "printings": [
-        "SHM"
+        "SHM",
+        "MM3"
       ],
       "rarity": "Common",
       "subtypes": [
@@ -15021,7 +15022,8 @@
       "originalText": "Put target attacking or blocking creature on top of its owner's library.\nConspire (As you play this spell, you may tap two untapped creatures you control that share a color with it. When you do, copy it and you may choose a new target for the copy.)",
       "originalType": "Instant",
       "printings": [
-        "SHM"
+        "SHM",
+        "MM3"
       ],
       "rarity": "Common",
       "text": "Put target attacking or blocking creature on top of its owner's library.\nConspire (As you cast this spell, you may tap two untapped creatures you control that share a color with it. When you do, copy it and you may choose a new target for the copy.)",
@@ -15920,7 +15922,8 @@
       "printings": [
         "SHM",
         "DDI",
-        "C13"
+        "C13",
+        "MM3"
       ],
       "rarity": "Uncommon",
       "subtypes": [
@@ -22135,7 +22138,8 @@
         "SHM",
         "ARC",
         "DDK",
-        "EMA"
+        "EMA",
+        "MM3"
       ],
       "rarity": "Uncommon",
       "rulings": [
@@ -22145,7 +22149,7 @@
         },
         {
           "date": "2016-06-08",
-          "text": "This spell checks on resolution to see if any mana of the appropriate colors were spent to pay its cost. It doesn't matter how much mana of that color was spent; the effect multiplied."
+          "text": "This spell checks on resolution to see if any mana of the appropriate colors were spent to pay its cost. It doesn't matter how much mana of that color was spent; the effect isn't multiplied."
         },
         {
           "date": "2016-06-08",
@@ -23031,9 +23035,16 @@
       "originalText": "Put a 4/4 red and green Giant Warrior creature token with haste into play. Remove it from the game at end of turn.\nConspire (As you play this spell, you may tap two untapped creatures you control that share a color with it. When you do, copy it.)",
       "originalType": "Sorcery",
       "printings": [
-        "SHM"
+        "SHM",
+        "MM3"
       ],
       "rarity": "Common",
+      "rulings": [
+        {
+          "date": "2017-03-14",
+          "text": "The delayed triggered ability that exiles the token isn't a characteristic of the token. If an effect such as populate copies the token, the new token won't be exiled."
+        }
+      ],
       "text": "Create a 4/4 red and green Giant Warrior creature token with haste. Exile it at the beginning of the next end step.\nConspire (As you cast this spell, you may tap two untapped creatures you control that share a color with it. When you do, copy it.)",
       "type": "Sorcery",
       "types": [
@@ -24465,7 +24476,8 @@
       "originalType": "Creature — Goblin Shaman",
       "power": "2",
       "printings": [
-        "SHM"
+        "SHM",
+        "MM3"
       ],
       "rarity": "Uncommon",
       "subtypes": [
@@ -24802,9 +24814,36 @@
       "originalType": "Legendary Creature — Goblin Shaman",
       "power": "3",
       "printings": [
-        "SHM"
+        "SHM",
+        "MM3"
       ],
       "rarity": "Rare",
+      "rulings": [
+        {
+          "date": "2017-03-14",
+          "text": "If a spell gains a second instance of conspire from Wort's ability, you may choose to pay for one, both, or none of those abilities. Each conspire ability triggers only if you tap two creatures specifically for that ability."
+        },
+        {
+          "date": "2017-03-14",
+          "text": "If the spell that's copied is modal (that is, it says \"Choose one —\" or the like), the copy will have the same mode. A different mode can't be chosen."
+        },
+        {
+          "date": "2017-03-14",
+          "text": "If the spell that's copied has an X whose value was determined as it was cast (like Bonfire of the Damned does), the copy will have the same value of X."
+        },
+        {
+          "date": "2017-03-14",
+          "text": "If the spell has damage divided as it was cast (like Fiery Justice does), the division can't be changed (although the targets receiving that damage still can)."
+        },
+        {
+          "date": "2017-03-14",
+          "text": "Some spells instruct you to sacrifice a creature as an additional cost to cast that spell. If you sacrifice Wort to pay that cost, that spell won't have conspire at the moment it becomes cast, so conspire won't trigger, even if you tapped two creatures."
+        },
+        {
+          "date": "2017-03-14",
+          "text": "If you're casting a spell for its flashback cost, you can't pay another alternative cost (such as an overload cost or a Trap's alternative cost) instead. You may pay additional costs, such as conspire."
+        }
+      ],
       "subtypes": [
         "Goblin",
         "Shaman"
