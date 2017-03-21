@@ -1,9 +1,9 @@
 "use strict";
 
-var base = require("xbase"),
+var base = require('@sembiance/xbase'),
 	C = require("C"),
 	path = require("path"),
-	runUtil = require("xutil").run,
+	runUtil = require('@sembiance/xutil').run,
 	tiptoe = require("tiptoe");
 
 tiptoe(

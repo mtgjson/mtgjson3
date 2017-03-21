@@ -1,7 +1,7 @@
 "use strict";
 /*global setImmediate: true*/
 
-var base = require("xbase"),
+var base = require('@sembiance/xbase'),
 	C = require("C"),
 	fs = require("fs"),
 	shared = require("shared"),

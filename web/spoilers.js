@@ -1,15 +1,15 @@
 "use strict";
 
-var base = require("xbase"),
+var base = require('@sembiance/xbase'),
 	C = require("C"),
-	runUtil = require("xutil").run,
+	runUtil = require('@sembiance/xutil').run,
 	rimraf = require("rimraf"),
-	printUtil = require("xutil").print,
-	diffUtil = require("xutil").diff,
-	unicodeUtil = require("xutil").unicode,
+	printUtil = require('@sembiance/xutil').print,
+	diffUtil = require('@sembiance/xutil').diff,
+	unicodeUtil = require('@sembiance/xutil').unicode,
 	fs = require("fs"),
 	path = require("path"),
-	dustUtil = require("xutil").dust,
+	dustUtil = require('@sembiance/xutil').dust,
 	moment = require("moment"),
 	shared = require("shared"),
 	tiptoe = require("tiptoe");
