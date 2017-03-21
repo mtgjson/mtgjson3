@@ -3195,6 +3195,13 @@ Array.prototype.pushAll = function(otherArray) {
       border : "black",
       type : "reprint",
       booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", ["foil mythic rare", "foil rare", "foil uncommon", "foil common"]]
+    },
+    {
+      name : "Duel Decks: Mind vs. Might",
+      code : "DDS",
+      releaseDate : "2017-03-31",
+      border : "black",
+      type : "duel deck"
     }
   ];
 
