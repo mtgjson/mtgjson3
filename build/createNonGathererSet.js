@@ -1,7 +1,7 @@
 /*jslint node: true */
 "use strict";
 
-var base = require("xbase"),
+var base = require('@sembiance/xbase'),
 	C = require("C"),
 	path = require("path"),
 	moment = require("moment"),

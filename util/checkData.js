@@ -2,7 +2,7 @@
 
 var C = require("C"),
 	shared = require("shared"),
-	diffUtil = require("xutil").diffUtil;
+	diffUtil = require('@sembiance/xutil').diffUtil;
 
 /**
  * Load the codes of all sets on C.SETS
