@@ -558,7 +558,7 @@ function getSetCodeFromName(setName) {
 
 	if (!setInfo) {
 		console.trace();
-		base.error("FAILED TO GET SET CODE FOR NAME: '%s'", setName);
+		base.error("Failed to get set code for '%s'; please add the set to shared/C.js", setName);
 		process.exit(1);
 	}
 	return(setInfo.code);
