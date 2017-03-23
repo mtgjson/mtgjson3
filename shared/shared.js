@@ -1,6 +1,6 @@
 "use strict";
 
-var base = require("xbase"),
+var base = require('@sembiance/xbase'),
 	C = require("C"),
 	hash = require("mhash"),
 	path = require("path"),
@@ -8,11 +8,11 @@ var base = require("xbase"),
 	domino = require("domino"),
 	querystring = require("querystring"),
 	tiptoe = require("tiptoe"),
-	httpUtil = require("xutil").http,
+	httpUtil = require('@sembiance/xutil').http,
 	fs = require("fs"),
-	urlUtil = require("xutil").url,
+	urlUtil = require('@sembiance/xutil').url,
 	url = require("url"),
-	unicodeUtil = require("xutil").unicode,
+	unicodeUtil = require('@sembiance/xutil').unicode,
 	cache = require('cache');
 
 exports.cache = cache(path.join(__dirname, '..', 'cache'), { compress: true });

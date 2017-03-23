@@ -9,8 +9,8 @@ var async = require('async');
 var C = require('C');
 var moment = require('moment');
 
-var diffUtil = require('xutil').diff;
-var runUtil = require("xutil").run;
+var diffUtil = require('@sembiance/xutil').diff;
+var runUtil = require('@sembiance/xutil').run;
 
 var clone = require('../clonekit');
 
