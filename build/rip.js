@@ -1,16 +1,16 @@
 /*jslint node: true */
 'use strict';
 
-var base = require("xbase"),
+var base = require('@sembiance/xbase'),
 	C = require("C"),
 	fs = require("fs"),
 	url = require("url"),
 	moment = require("moment"),
-	unicodeUtil = require("xutil").unicode,
-	diffUtil = require("xutil").diff,
+	unicodeUtil = require('@sembiance/xutil').unicode,
+	diffUtil = require('@sembiance/xutil').diff,
 	path = require("path"),
 	shared = require("shared"),
-	urlUtil = require("xutil").url,
+	urlUtil = require('@sembiance/xutil').url,
 	querystring = require("querystring"),
 	tiptoe = require("tiptoe"),
 	async = require('async');
