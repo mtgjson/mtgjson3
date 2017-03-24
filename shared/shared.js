@@ -638,7 +638,7 @@ exports.getURLAsDoc = function(targetURL, cb, retryCount) {
 
 	// Downloads the targetURL.
 	var downloadDoc = function(cb) {
-		if (retryCount > 13) {
+		if (retryCount > 23) {
 			cb(new Error("Invalid pageHTML for " + targetURL));
 			return;
 		}
@@ -647,7 +647,7 @@ exports.getURLAsDoc = function(targetURL, cb, retryCount) {
 			targetURL,
 			{
 				timeout: base.SECOND * 10,
-				retry: 15,
+				retry: 25,
 				'User-Agent': 'mtgjson.com/1.0'
 			},
 			function(err, pageHTML, responseHeaders, responseStatusCode) {
