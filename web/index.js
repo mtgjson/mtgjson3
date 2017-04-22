@@ -154,8 +154,8 @@ function saveSet(Code, FullSET, SimpleSET, callback) {
 
 	var setPrefix = path.join(jsonRoot, Code);
 
-	var _ss = JSON.stringify(SimpleSET);
-	var _fs = JSON.stringify(FullSET);
+	var _ss = JSON.stringify(SimpleSET, null, 2);
+	var _fs = JSON.stringify(FullSET, null, 2);
 
 	var Size = _ss.length;
 	var FullSize = _fs.length;
@@ -287,7 +287,7 @@ tiptoe(
 	},
 	function saveFullJSON() {
 		var save = function(fname, data, callback) {
-			var _data = JSON.stringify(data);
+			var _data = JSON.stringify(data, null, 2);
 			var size = _data.length;
 
 			tiptoe(
@@ -357,17 +357,17 @@ tiptoe(
 		params.setSpecificFields = C.SET_SPECIFIC_FIELDS.sort().join(", ");
 
 		// SetCodes
-		var setCodes = JSON.stringify(C.SETS.map(function(SET) { return SET.code; }));
+		var setCodes = JSON.stringify(C.SETS.map(function(SET) { return SET.code; }), null, 2);
 		fs.writeFile(path.join(jsonRoot, 'SetCodes.json'), setCodes, { encoding : 'utf8' }, this.parallel());
 		fs.writeFile(path.join(jsonRoot, 'SetCodes.jsonp'), JSONP_PREFIX + setCodes + ', "SetCodes"' + JSONP_SUFFIX, { encoding : 'utf8' }, this.parallel());
 
 		// SetList
-		var setList = JSON.stringify(C.SETS.map(function(SET) { return { name : SET.name, code : SET.code, releaseDate : SET.releaseDate }; }));
+		var setList = JSON.stringify(C.SETS.map(function(SET) { return { name : SET.name, code : SET.code, releaseDate : SET.releaseDate }; }), null, 2);
 		fs.writeFile(path.join(jsonRoot, 'SetList.json'), setList, { encoding : 'utf8' }, this.parallel());
 		fs.writeFile(path.join(jsonRoot, 'SetList.jsonp'), JSONP_PREFIX + setList + ', "SetList"' + JSONP_SUFFIX, { encoding : 'utf8' }, this.parallel());
 
 		// Version
-		var version = JSON.stringify({ version: params.version });
+		var version = JSON.stringify({ version: params.version }, null, 2);
 		fs.writeFile(path.join(jsonRoot, 'version-full.json'), version, { encoding : 'utf8' }, this.parallel());
 		fs.writeFile(path.join(jsonRoot, 'version-full.jsonp'), JSONP_PREFIX + version + ', "version-full"' + JSONP_SUFFIX, { encoding : 'utf8' }, this.parallel());
 
@@ -375,7 +375,7 @@ tiptoe(
 		fs.writeFile(path.join(jsonRoot, 'version.jsonp'), JSONP_PREFIX + JSON.stringify(params.version) + ', "version"' + JSONP_SUFFIX, { encoding : 'utf8' }, this.parallel());
 
 		// Changelog
-		var cl = JSON.stringify(changelog);
+		var cl = JSON.stringify(changelog, null, 2);
 		fs.writeFile(path.join(jsonRoot, 'changelog.json'), cl, { encoding : 'utf8' }, this.parallel());
 		fs.writeFile(path.join(jsonRoot, 'changelog.jsonp'), JSONP_PREFIX + cl + ', "changelog"' + JSONP_SUFFIX, { encoding : 'utf8' }, this.parallel());
 	},
