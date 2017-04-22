@@ -1,20 +1,19 @@
 /*jslint node: true */
 'use strict';
 
-var base = require("xbase"),
-	C = require("C"),
-	fs = require("fs"),
-	url = require("url"),
-	moment = require("moment"),
-	unicodeUtil = require("xutil").unicode,
-	diffUtil = require("xutil").diff,
-	path = require("path"),
-	shared = require("shared"),
-	urlUtil = require("xutil").url,
-	querystring = require("querystring"),
-	tiptoe = require("tiptoe"),
-	async = require('async');
-
+var base = require("@sembiance/xbase");
+var C = require("../shared/C");
+var fs = require("fs");
+var url = require("url");
+var moment = require("moment");
+var path = require("path");
+var shared = require("../shared/shared");
+var unicodeUtil = require("@sembiance/xutil").unicode;
+var diffUtil = require("@sembiance/xutil").diff;
+var urlUtil = require("@sembiance/xutil").url;
+var querystring = require("querystring");
+var tiptoe = require("tiptoe");
+var async = require('async');
 
 (function (exports) {
 
@@ -363,32 +362,39 @@ var processCardPart = function(doc, cardPart, printedDoc, printedCardPart) {
 
 	// Check for flip or double-faced card
 	var cardParts = getCardParts(doc);
-	if (card.layout !== "split" && cardParts.length === 2) {
+	if (cardParts.length === 2) {
 		var firstCardText = processTextBlocks(cardParts[0].querySelectorAll(getCardPartIDPrefix(cardParts[0]) + "_textRow .value .cardtextbox")).trim().toLowerCase();
-		if (firstCardText.contains("flip"))
-			card.layout = "flip";
-		else if (firstCardText.contains("transform"))
-			card.layout = "double-faced";
+		var secondCardText = processTextBlocks(cardParts[1].querySelectorAll(getCardPartIDPrefix(cardParts[1]) + "_textRow .value .cardtextbox")).trim().toLowerCase();
+
+		if (card.layout === 'split') {
+			if (secondCardText.contains('aftermath')) card.layout = 'aftermath';
+		}
 		else {
-			// Can't find a suitable match on the first card text. Let's search on the second...
-			// TODO: This bunch of code needs to be optimized.
-			var secondCardText = processTextBlocks(cardParts[1].querySelectorAll(getCardPartIDPrefix(cardParts[1]) + "_textRow .value .cardtextbox")).trim().toLowerCase();
-			if (secondCardText.contains("flip"))
+			if (firstCardText.contains("flip"))
 				card.layout = "flip";
-			else if (secondCardText.contains("transform"))
+			else if (firstCardText.contains("transform"))
 				card.layout = "double-faced";
 			else {
-				base.warn("Unknown card layout for multiverseid: %s", card.multiverseid);
-				base.warn("card0 text: %s", firstCardText);
-				base.warn("card1 text: %s", secondCardText);
+				// Can't find a suitable match on the first card text. Let's search on the second...
+				// TODO: This bunch of code needs to be optimized.
+				if (secondCardText.contains("flip"))
+					card.layout = "flip";
+				else if (secondCardText.contains("transform"))
+					card.layout = "double-faced";
+				else {
+					base.warn("Unknown card layout for multiverseid: %s", card.multiverseid);
+					base.warn("card0 text: %s", firstCardText);
+					base.warn("card1 text: %s", secondCardText);
+				}
 			}
-		}
 
-		card.names = [
-			getTextContent(cardParts[0].querySelector(getCardPartIDPrefix(cardParts[0]) + "_nameRow .value")).trim(),
-			getTextContent(cardParts[1].querySelector(getCardPartIDPrefix(cardParts[1]) + "_nameRow .value")).trim()
-		];
+			card.names = [
+				getTextContent(cardParts[0].querySelector(getCardPartIDPrefix(cardParts[0]) + "_nameRow .value")).trim(),
+				getTextContent(cardParts[1].querySelector(getCardPartIDPrefix(cardParts[1]) + "_nameRow .value")).trim()
+			];
+		}
 	}
+
 
 	// Card Name
 	//card.name = getTextContent(printedCardPart.querySelector(idPrefix + "_nameRow .value")).trim();
@@ -1680,17 +1686,18 @@ var fixCommanderIdentityForCards = function(cards, cb) {
 
 		// Process split and double-faced cards
 		if (card.layout == "double-faced" || card.layout == "split") {
-			var otherSideNum = card.number.substr(0, card.number.length - 1) + ((card.number.substr(-1) == "a")?"b":"a");
+			var otherSideNum = card.number.substr(0, card.number.length - 1) + ((card.number.substr(-1) == "a") ? "b" : "a");
 			var otherCard = findCardByNumber(otherSideNum);
 
-			if (otherCard === null) {
+			if (!otherCard) {
 				base.error("Current side name: %s", card.number);
 				base.error("-> Other Side num: %s", otherSideNum);
-				throw Error("Error: Cannot find other side of card " + card.name);
+
+				//throw Error("Error: Cannot find other side of card " + card.name);
 			}
 
 			if (card.colorIdentity) colors = colors.concat(card.colorIdentity);
-			if (otherCard.colorIdentity) colors = colors.concat(otherCard.colorIdentity);
+			if (otherCard && otherCard.colorIdentity) colors = colors.concat(otherCard.colorIdentity);
 
 			// Remove duplicates
 			var uniqueColors = colors.filter(function (elem, pos) {
@@ -1701,7 +1708,7 @@ var fixCommanderIdentityForCards = function(cards, cb) {
 			colors.sort();
 
 			if (uniqueColors.length > 0) {
-				otherCard.colorIdentity = uniqueColors;
+				if (otherCard) otherCard.colorIdentity = uniqueColors;
 				card.colorIdentity = uniqueColors;
 			}
 		}

@@ -1,24 +1,23 @@
 "use strict";
 
-var base = require("xbase"),
-	C = require("C"),
-	hash = require("mhash"),
-	path = require("path"),
-	moment = require("moment"),
-	domino = require("domino"),
-	querystring = require("querystring"),
-	tiptoe = require("tiptoe"),
-	httpUtil = require("xutil").http,
-	fs = require("fs"),
-	urlUtil = require("xutil").url,
-	url = require("url"),
-	unicodeUtil = require("xutil").unicode,
-	cache = require('cache');
+var base = require("@sembiance/xbase");
+var C = require("./C");
+var hash = require("mhash");
+var path = require("path");
+var moment = require("moment");
+var domino = require("domino");
+var querystring = require("querystring");
+var tiptoe = require("tiptoe");
+var fs = require("fs");
+var url = require("url");
+var httpUtil = require("@sembiance/xutil").http;
+var urlUtil = require("@sembiance/xutil").url;
+var unicodeUtil = require("@sembiance/xutil").unicode;
+var cache = require('cache');
 
 exports.cache = cache(path.join(__dirname, '..', 'cache'), { compress: true });
 
-exports.getSetsToDo = function(startAt)
-{
+exports.getSetsToDo = function(startAt) {
 	startAt = startAt || 2;
 	if(process.argv.length<(startAt+1))
 	{
@@ -652,17 +651,32 @@ exports.getURLAsDoc = function(targetURL, cb, retryCount) {
 				'User-Agent': 'mtgjson.com/1.0'
 			},
 			function(err, pageHTML, responseHeaders, responseStatusCode) {
-				if(err || (responseStatusCode && responseStatusCode!==200)) {
+				if (err || (responseStatusCode && responseStatusCode!==200)) {
 					base.error("Error downloading: " + targetURL);
 					base.error(err);
 					return(setImmediate(cb, err));
 				}
 
-				if(!pageHTML || pageHTML.length===0 || (!targetURL.contains("www.magiclibrarities.net") && !pageHTML.toString("utf8").trim().toLowerCase().endsWith("</html>"))) {
+				var success = true;
+				if (!pageHTML || pageHTML.length === 0) {
+					success = false;
+					base.error("No page contents");
+				}
+
+				var pageString = pageHTML ? pageHTML.toString('utf8').trim().toLowerCase() : '';
+
+				/*
+				if (!targetURL.contains("www.magiclibrarities.net") && (!pageString.endsWith('</html>') || !pageString.endsWith('</string>'))) {
+					success = false;
+					base.error('Invalid page format.');
+					base.error(pageString.substr(-80));
+				}
+				*/
+
+				if (!success) {
 					retryCount++;
 					base.error("FAILED DOWNLOADING (%s), TRYING AGAIN RETRY %d", targetURL, retryCount);
-
-					return(setImmediate(downloadDoc, cb));
+					return(setImmediate(downloadDoc, cb));	
 				}
 
 				setImmediate(cb, null, pageHTML);

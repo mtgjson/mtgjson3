@@ -23,6 +23,10 @@ Array.prototype.pushAll = function(otherArray) {
   exports.SETS_NOT_ON_GATHERER = ["ATH", "ITP", "DKM", "RQS", "DPA"];
   exports.SETS_WITH_NO_IMAGES = [];
 
+  var DDS = require('./sets/DDS');
+  var AKH_SET = require('./sets/AKH');
+  var MPS_AKH_SET = require('./sets/MPS_AKH');
+
   exports.SETS = [
     {
       name : "Limited Edition Alpha",
@@ -3195,7 +3199,10 @@ Array.prototype.pushAll = function(otherArray) {
       border : "black",
       type : "reprint",
       booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", ["foil mythic rare", "foil rare", "foil uncommon", "foil common"]]
-    }
+    },
+    DDS,
+    AKH_SET,
+    MPS_AKH_SET
   ];
 
   exports.IGNORE_GATHERER_PRINTINGS = ["Promo set for Gatherer"];

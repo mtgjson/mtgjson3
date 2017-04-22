@@ -6,12 +6,12 @@ var path = require('path');
 var rimraf = require('rimraf');
 var tiptoe = require('tiptoe');
 var async = require('async');
-var C = require('C');
 var moment = require('moment');
 
-var diffUtil = require('xutil').diff;
-var runUtil = require("xutil").run;
+var diffUtil = require('@sembiance/xutil').diff;
+var runUtil = require("@sembiance/xutil").run;
 
+var C = require('../shared/C');
 var clone = require('../clonekit');
 
 var JSONP_PREFIX = 'mtgjsoncallback(';
