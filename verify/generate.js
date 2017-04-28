@@ -1,11 +1,11 @@
 "use strict";
 
-var base = require("xbase"),
+var base = require("@sembiance/xbase"),
 	C = require("C"),
 	util = require("util"),
 	fs = require("fs"),
 	path = require("path"),
-	dustUtil = require("xutil").dust,
+	dustUtil = require("@sembiance/xutil").dust,
 	tiptoe = require("tiptoe");
 
 function usage()
