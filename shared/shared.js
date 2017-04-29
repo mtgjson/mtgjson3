@@ -419,15 +419,15 @@ exports.performSetCorrections = function(setCorrections, fullSet)
                 card.rarity = "Basic Land";
             if(addBasicLandWatermarks)
             {
-                if(card.subtypes.contains("Plains"))
+                if('subtypes' in card && card.subtypes.contains("Plains"))
                     card.watermark = "White";
-                else if(card.subtypes.contains("Island"))
+                else if('subtypes' in card && card.subtypes.contains("Island"))
                     card.watermark = "Blue";
-                else if(card.subtypes.contains("Swamp"))
+                else if('subtypes' in card && card.subtypes.contains("Swamp"))
                     card.watermark = "Black";
-                else if(card.subtypes.contains("Mountain"))
+                else if('subtypes' in card && card.subtypes.contains("Mountain"))
                     card.watermark = "Red";
-                else if(card.subtypes.contains("Forest"))
+                else if('subtypes' in card && card.subtypes.contains("Forest"))
                     card.watermark = "Green";
                 else
                     card.watermark = "Colorless";
