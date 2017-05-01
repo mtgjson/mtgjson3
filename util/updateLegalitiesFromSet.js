@@ -1,11 +1,11 @@
 "use strict";
 /*global setImmediate: true*/
 
-var base = require("xbase"),
-	fs = require("fs"),
-	shared = require("shared"),
-	path = require("path"),
-	tiptoe = require("tiptoe");
+var base = require('@sembiance/xbase');
+var fs = require("fs");
+var shared = require('../shared/shared');
+var path = require("path");
+var tiptoe = require("tiptoe");
 
 if (require.main == module) {
 	shared.getSetsToDo().serialForEach(processSet, function(err) {
@@ -71,7 +71,7 @@ function processSet(code, cb) {
  * @param targetCardNames Array of Strings with the names of the cards we want to update on this set.
  * @param cardLegalitiesByName Dictionary with the key being the card name and the value is the legalities
  *                             we want to reflect on the given setCode.
- * @param cb Function with the callback to pass the error or pass no parameter 
+ * @param cb Function with the callback to pass the error or pass no parameter
  */
 function updateLegalitiesForSetCards(setCode, targetCardNames, cardLegalitiesByName, cb) {
 	base.info("Adding legalities to set [%s] for all cards: %s", setCode, targetCardNames.join(", "));

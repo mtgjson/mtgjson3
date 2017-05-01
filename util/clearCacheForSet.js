@@ -1,13 +1,13 @@
 "use strict";
 /*global setImmediate: true*/
 
-var base = require("xbase"),
-	C = require("C"),
-	fs = require("fs"),
-	shared = require("shared"),
-	path = require("path"),
-	async = require('async'),
-	tiptoe = require("tiptoe");
+var base = require('@sembiance/xbase');
+var C = require('../shared/C');
+var fs = require("fs");
+var shared = require('../shared/shared');
+var path = require("path");
+var async = require('async');
+var tiptoe = require("tiptoe");
 
 var VALID_TYPES = [ "oracle", "original", "languages", "printings", "legalities", "mcilist", "listings" ];
 
@@ -92,7 +92,7 @@ function getURLSForMcilistCache(setInfo, set, callback) {
  * Calls the callback with a list MCI urls for the given set
  * @param setInfo object with set description
  * @param set object with set contents
- * @param cacheStype string with the type to get the urls from. Valid values are: 
+ * @param cacheStype string with the type to get the urls from. Valid values are:
  *                        "oracle", "original", "languages", "printings", "legalities"
  * @param callback function to call upon finish with format function(err, urls)
  */
@@ -165,7 +165,7 @@ function clearCacheForSet(code, cacheTypes, cb) {
 		return(setImmediate(cb, new Error('Invalid cacheTypes format.')));
 	}
 
-	cacheTypes = cacheTypes.filter(function(cacheType) { 
+	cacheTypes = cacheTypes.filter(function(cacheType) {
 		if (VALID_TYPES.indexOf(cacheType.toLowerCase()) < 0) {
 			base.error('Invalid cacheType: %s', cacheType);
 			return(false);

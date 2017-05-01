@@ -5676,11 +5676,11 @@ Array.prototype.pushAll = function(otherArray) {
       { match : { multiverseid : 402062 }, replace: { mciNumber : "264b" } }
     ],
     SOI:
-    [    
+    [
       // Archangel Avacyn / Avacyn, the Purifier
       { match: { multiverseid: 409741 }, replace: { colorIdentity: [ 'W', 'R' ] } },
       { match: { multiverseid: 409742 }, replace: { colors: [ 'Red' ], colorIdentity: [ 'W', 'R' ] } },
-      
+
       // Avacynian Missionaries / Lunarch Inquisitors
       // 409743
       { match: { multiverseid: 409744 }, replace: { colors: [ 'White' ] } },
@@ -6226,7 +6226,8 @@ Array.prototype.pushAll = function(otherArray) {
     'EMN',
     'W16',
     'KLD',
-    'AER'
+    'AER',
+    'AKH'
   ];
 
 })(typeof exports==="undefined" ? window.C={} : exports);
