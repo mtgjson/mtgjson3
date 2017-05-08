@@ -419,15 +419,15 @@ exports.performSetCorrections = function(setCorrections, fullSet)
                 card.rarity = "Basic Land";
             if(addBasicLandWatermarks)
             {
-                if("Plains" in card.subtypes)
+                if('subtypes' in card && card.subtypes.contains("Plains"))
                     card.watermark = "White";
-                else if("Island" in card.subtypes)
+                else if('subtypes' in card && card.subtypes.contains("Island"))
                     card.watermark = "Blue";
-                else if("Swamp" in card.subtypes)
+                else if('subtypes' in card && card.subtypes.contains("Swamp"))
                     card.watermark = "Black";
-                else if("Mountain" in card.subtypes)
+                else if('subtypes' in card && card.subtypes.contains("Mountain"))
                     card.watermark = "Red";
-                else if("Forest" in card.subtypes)
+                else if('subtypes' in card && card.subtypes.contains("Forest"))
                     card.watermark = "Green";
                 else
                     card.watermark = "Colorless";
@@ -558,7 +558,7 @@ function getSetCodeFromName(setName) {
 
 	if (!setInfo) {
 		console.trace();
-		base.error("FAILED TO GET SET CODE FOR NAME: '%s'", setName);
+		base.error("Failed to get set code for '%s'; please add the set to shared/C.js", setName);
 		process.exit(1);
 	}
 	return(setInfo.code);
@@ -638,7 +638,7 @@ exports.getURLAsDoc = function(targetURL, cb, retryCount) {
 
 	// Downloads the targetURL.
 	var downloadDoc = function(cb) {
-		if (retryCount > 3) {
+		if (retryCount > 103) {
 			cb(new Error("Invalid pageHTML for " + targetURL));
 			return;
 		}
@@ -647,7 +647,7 @@ exports.getURLAsDoc = function(targetURL, cb, retryCount) {
 			targetURL,
 			{
 				timeout: base.SECOND * 10,
-				retry: 5,
+				retry: 105,
 				'User-Agent': 'mtgjson.com/1.0'
 			},
 			function(err, pageHTML, responseHeaders, responseStatusCode) {

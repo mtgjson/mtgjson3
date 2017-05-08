@@ -24,6 +24,7 @@ Array.prototype.pushAll = function(otherArray) {
   exports.SETS_WITH_NO_IMAGES = [];
 
   var DDS = require('./sets/DDS');
+  var W17_SET = require('./sets/W17');
   var AKH_SET = require('./sets/AKH');
   var MPS_AKH_SET = require('./sets/MPS_AKH');
 
@@ -3157,6 +3158,8 @@ Array.prototype.pushAll = function(otherArray) {
         'Kaladesh Inventions'
       ],
       code : "MPS",
+      magicCardsInfoCode:"mpskld",
+      gathererCode: "MPS_KLD",
       releaseDate : "2016-09-30",
       border : "black",
       type : "masterpiece"
@@ -3201,6 +3204,7 @@ Array.prototype.pushAll = function(otherArray) {
       booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", ["foil mythic rare", "foil rare", "foil uncommon", "foil common"]]
     },
     DDS,
+    W17_SET,
     AKH_SET,
     MPS_AKH_SET
   ];
@@ -5822,6 +5826,9 @@ Array.prototype.pushAll = function(otherArray) {
     ],
     AER: [
       { match: { multiverseid: [423678, 423758, 423698, 423720, 423795] }, replace: { watermark: 'Planeswalker' } }
+    ],
+    AKH: [
+      { match: { multiverseid: [426727, 426786, 426704, 426825, 426717] }, replace: { watermark: 'Planeswalker' } }
     ],
     "*" :
     [

@@ -5,7 +5,7 @@ var path = require('path');
 var C = require('C');
 var async = require('async');
 var tiptoe = require('tiptoe');
-var diffUtil = require('xutil').diff;
+var diffUtil = require('@sembiance/xutil').diff;
 
 var allCardsWithExtras = {};
 var previousSeenSetCodes = {};

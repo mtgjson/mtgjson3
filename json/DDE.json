@@ -448,7 +448,7 @@
       "rulings": [
         {
           "date": "2011-01-25",
-          "text": "You get the mana whether you want it or not. If you don't spend it, it will disappear at the end of the current step (or phase)."
+          "text": "You get the mana whether you want it or not. If you don’t spend it, it will disappear at the end of the current step (or phase)."
         }
       ],
       "subtypes": [
@@ -1179,7 +1179,8 @@
         "V13",
         "VMA",
         "DD3_DVD",
-        "TPR"
+        "TPR",
+        "MPS_AKH"
       ],
       "rarity": "Common",
       "text": "Add {B}{B}{B} to your mana pool.",
@@ -1245,7 +1246,7 @@
       "rulings": [
         {
           "date": "2013-04-15",
-          "text": "You are not allowed to \"unequip\" equipment from a creature. If Lightning Greaves is attached to the only creature you control, you won't be able to attach other equipment to it (or target it with anything else) until you have another creature onto which you can move Lightning Greaves."
+          "text": "You are not allowed to “unequip” equipment from a creature. If Lightning Greaves is attached to the only creature you control, you won’t be able to attach other equipment to it (or target it with anything else) until you have another creature onto which you can move Lightning Greaves."
         }
       ],
       "subtypes": [
@@ -1310,11 +1311,11 @@
       "rulings": [
         {
           "date": "2006-09-25",
-          "text": "When damage is dealt to Phyrexian Totem, its triggered ability will trigger. A number of permanents equal to the amount of damage dealt will be sacrificed when the ability resolves. It doesn't matter if Phyrexian Totem isn't on the battlefield when the ability resolves, as long as Phyrexian Totem was a creature as it left the battlefield. If one of the permanents sacrificed is Phyrexian Totem itself, the requisite number of other permanents must still be sacrificed."
+          "text": "When damage is dealt to Phyrexian Totem, its triggered ability will trigger. A number of permanents equal to the amount of damage dealt will be sacrificed when the ability resolves. It doesn’t matter if Phyrexian Totem isn’t on the battlefield when the ability resolves, as long as Phyrexian Totem was a creature as it left the battlefield. If one of the permanents sacrificed is Phyrexian Totem itself, the requisite number of other permanents must still be sacrificed."
         },
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn’t matter how long the permanent has been a creature."
         }
       ],
       "text": "{T}: Add {B} to your mana pool.\n{2}{B}: Phyrexian Totem becomes a 5/5 black Horror artifact creature with trample until end of turn.\nWhenever Phyrexian Totem is dealt damage, if it's a creature, sacrifice that many permanents.",
@@ -1604,7 +1605,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "You don't draw a card if this spell is countered."
+          "text": "You don’t draw a card if this spell is countered."
         }
       ],
       "text": "Destroy target green creature. It can't be regenerated.\nDraw a card.",
@@ -1614,7 +1615,7 @@
       ]
     },
     {
-      "artist": "Zoltan Boros &amp; Gabor Szikszai",
+      "artist": "Zoltan Boros & Gabor Szikszai",
       "cmc": 3,
       "colorIdentity": [
         "B"
@@ -1844,7 +1845,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "You can pay 0 life if you want, but it's not useful most of the time."
+          "text": "You can pay 0 life if you want, but it’s not useful most of the time."
         }
       ],
       "text": "As Phyrexian Processor enters the battlefield, pay any amount of life.\n{4}, {T}: Create an X/X black Minion creature token, where X is the life paid as Phyrexian Processor entered the battlefield.",
@@ -1919,7 +1920,7 @@
         },
         {
           "date": "2009-10-01",
-          "text": "If the targeted creature is an illegal target by the time Tendrils of Corruption would resolve, the entire spell is countered. You won't gain any life."
+          "text": "If the targeted creature is an illegal target by the time Tendrils of Corruption would resolve, the entire spell is countered. You won’t gain any life."
         }
       ],
       "text": "Tendrils of Corruption deals X damage to target creature and you gain X life, where X is the number of Swamps you control.",
@@ -1986,7 +1987,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "The creatures which are sacrificed can't be regenerated."
+          "text": "The creatures which are sacrificed can’t be regenerated."
         },
         {
           "date": "2004-10-04",
@@ -1994,7 +1995,7 @@
         },
         {
           "date": "2013-09-20",
-          "text": "\"All cards he or she exiled this way\" refers only to the cards exiled in the first part of the effect. If a replacement effect (such as Leyline of the Void) exiles any of the sacrificed creatures instead of putting them into the graveyard, those cards aren't returned to the battlefield."
+          "text": "“All cards he or she exiled this way” refers only to the cards exiled in the first part of the effect. If a replacement effect (such as Leyline of the Void) exiles any of the sacrificed creatures instead of putting them into the graveyard, those cards aren’t returned to the battlefield."
         }
       ],
       "text": "Each player exiles all creature cards from his or her graveyard, then sacrifices all creatures he or she controls, then puts all cards he or she exiled this way onto the battlefield.",
@@ -2034,6 +2035,10 @@
       "imageName": "swamp1",
       "layout": "normal",
       "legalities": [
+        {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
         {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
@@ -2180,8 +2185,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -2254,7 +2259,8 @@
         "DDR",
         "KLD",
         "C16",
-        "PCA"
+        "PCA",
+        "AKH"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -2271,7 +2277,8 @@
         210505,
         210508,
         210506
-      ]
+      ],
+      "watermark": "Black"
     },
     {
       "artist": "Rob Alexander",
@@ -2304,6 +2311,10 @@
       "imageName": "swamp2",
       "layout": "normal",
       "legalities": [
+        {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
         {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
@@ -2450,8 +2461,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -2524,7 +2535,8 @@
         "DDR",
         "KLD",
         "C16",
-        "PCA"
+        "PCA",
+        "AKH"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -2541,7 +2553,8 @@
         210505,
         210508,
         210507
-      ]
+      ],
+      "watermark": "Black"
     },
     {
       "artist": "Ron Spencer",
@@ -2574,6 +2587,10 @@
       "imageName": "swamp3",
       "layout": "normal",
       "legalities": [
+        {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
         {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
@@ -2720,8 +2737,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -2794,7 +2811,8 @@
         "DDR",
         "KLD",
         "C16",
-        "PCA"
+        "PCA",
+        "AKH"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -2811,7 +2829,8 @@
         210508,
         210507,
         210506
-      ]
+      ],
+      "watermark": "Black"
     },
     {
       "artist": "Ron Spencer",
@@ -2844,6 +2863,10 @@
       "imageName": "swamp4",
       "layout": "normal",
       "legalities": [
+        {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
         {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
@@ -2990,8 +3013,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -3064,7 +3087,8 @@
         "DDR",
         "KLD",
         "C16",
-        "PCA"
+        "PCA",
+        "AKH"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -3081,7 +3105,8 @@
         210505,
         210507,
         210506
-      ]
+      ],
+      "watermark": "Black"
     },
     {
       "artist": "Jim Murray",
@@ -3136,11 +3161,11 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "This spell has a self-replacement in it . This means that if Urza's Rage is kicked, the 3 damage is replaced with 10 unpreventable damage before any other replacements can be applied. For example, you can't use Healing Salve to prevent the 3 damage before it gets changed."
+          "text": "This spell has a self-replacement in it . This means that if Urza’s Rage is kicked, the 3 damage is replaced with 10 unpreventable damage before any other replacements can be applied. For example, you can’t use Healing Salve to prevent the 3 damage before it gets changed."
         },
         {
           "date": "2004-10-04",
-          "text": "You can target this spell with spells and abilities, so you can change its target. Those spells and abilities just can't counter it."
+          "text": "You can target this spell with spells and abilities, so you can change its target. Those spells and abilities just can’t counter it."
         },
         {
           "date": "2004-10-04",
@@ -3152,7 +3177,7 @@
         },
         {
           "date": "2004-10-04",
-          "text": "Counterspells can be cast that target it, but when they resolve they simply don't counter it since it can't be countered."
+          "text": "Counterspells can be cast that target it, but when they resolve they simply don’t counter it since it can’t be countered."
         }
       ],
       "text": "Kicker {8}{R} (You may pay an additional {8}{R} as you cast this spell.)\nUrza's Rage can't be countered by spells or abilities.\nUrza's Rage deals 3 damage to target creature or player. If Urza's Rage was kicked, instead it deals 10 damage to that creature or player and the damage can't be prevented.",
@@ -3544,19 +3569,19 @@
       "rulings": [
         {
           "date": "2017-03-14",
-          "text": "You choose whether to kick a spell as you cast it, and you pay that much along with the spell's mana cost at the same time. Kicking a spell is always optional."
+          "text": "You choose whether to kick a spell as you cast it, and you pay that much along with the spell’s mana cost at the same time. Kicking a spell is always optional."
         },
         {
           "date": "2017-03-14",
-          "text": "You can pay any particular kicker cost only once. You can't pay it multiple times to get multiples of either triggered ability."
+          "text": "You can pay any particular kicker cost only once. You can’t pay it multiple times to get multiples of either triggered ability."
         },
         {
           "date": "2017-03-14",
-          "text": "If Thornscape Battlemage is put onto the battlefield as the result of a spell or ability, there's no opportunity to kick it."
+          "text": "If Thornscape Battlemage is put onto the battlefield as the result of a spell or ability, there’s no opportunity to kick it."
         },
         {
           "date": "2017-03-14",
-          "text": "Kicker costs don't change a spell's mana cost or converted mana cost."
+          "text": "Kicker costs don’t change a spell’s mana cost or converted mana cost."
         }
       ],
       "subtypes": [
@@ -4104,7 +4129,7 @@
         },
         {
           "date": "2009-02-01",
-          "text": "A number of nonbasic lands have basic land types. Domain abilities don't count the number of lands you control -- they count the number of basic land types among lands you control, even if that means checking the same land twice. For example, if you control a Tundra, an Overgrown Tomb, and a Madblind Mountain, you'll have a Plains, Island, Swamp, Mountain, and Forest among the lands you control. Your domain abilities will be maxed out."
+          "text": "A number of nonbasic lands have basic land types. Domain abilities don’t count the number of lands you control — they count the number of basic land types among lands you control, even if that means checking the same land twice. For example, if you control a Tundra, an Overgrown Tomb, and a Madblind Mountain, you’ll have a Plains, Island, Swamp, Mountain, and Forest among the lands you control. Your domain abilities will be maxed out."
         }
       ],
       "text": "Domain — Counter target spell unless its controller pays {1} for each basic land type among lands you control.",
@@ -4185,7 +4210,7 @@
         },
         {
           "date": "2009-02-01",
-          "text": "A number of nonbasic lands have basic land types. Domain abilities don't count the number of lands you control -- they count the number of basic land types among lands you control, even if that means checking the same land twice. For example, if you control a Tundra, an Overgrown Tomb, and a Madblind Mountain, you'll have a Plains, Island, Swamp, Mountain, and Forest among the lands you control. Your domain abilities will be maxed out."
+          "text": "A number of nonbasic lands have basic land types. Domain abilities don’t count the number of lands you control — they count the number of basic land types among lands you control, even if that means checking the same land twice. For example, if you control a Tundra, an Overgrown Tomb, and a Madblind Mountain, you’ll have a Plains, Island, Swamp, Mountain, and Forest among the lands you control. Your domain abilities will be maxed out."
         }
       ],
       "text": "Domain — Tribal Flames deals X damage to target creature or player, where X is the number of basic land types among lands you control.",
@@ -4518,7 +4543,7 @@
         },
         {
           "date": "2009-02-01",
-          "text": "A number of nonbasic lands have basic land types. Domain abilities don't count the number of lands you control -- they count the number of basic land types among lands you control, even if that means checking the same land twice. For example, if you control a Tundra, an Overgrown Tomb, and a Madblind Mountain, you'll have a Plains, Island, Swamp, Mountain, and Forest among the lands you control. Your domain abilities will be maxed out."
+          "text": "A number of nonbasic lands have basic land types. Domain abilities don’t count the number of lands you control — they count the number of basic land types among lands you control, even if that means checking the same land twice. For example, if you control a Tundra, an Overgrown Tomb, and a Madblind Mountain, you’ll have a Plains, Island, Swamp, Mountain, and Forest among the lands you control. Your domain abilities will be maxed out."
         }
       ],
       "subtypes": [
@@ -4601,7 +4626,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "The sacrifice of a land is part of the cost of casting Harrow. You can't pay this cost more than once to get a multiple effect."
+          "text": "The sacrifice of a land is part of the cost of casting Harrow. You can’t pay this cost more than once to get a multiple effect."
         },
         {
           "date": "2004-10-04",
@@ -4609,7 +4634,7 @@
         },
         {
           "date": "2004-10-04",
-          "text": "Because the \"search\" requires you to find a card with certain characteristics, you don't have to find the card if you don't want to."
+          "text": "Because the “search” requires you to find a card with certain characteristics, you don’t have to find the card if you don’t want to."
         }
       ],
       "text": "As an additional cost to cast Harrow, sacrifice a land.\nSearch your library for up to two basic land cards and put them onto the battlefield. Then shuffle your library.",
@@ -4677,11 +4702,11 @@
       "rulings": [
         {
           "date": "2016-06-08",
-          "text": "While Armadillo Cloak's last ability is similar to lifelink, it isn't lifelink—it's a normal triggered ability. If a creature you control with lifelink wears an Armadillo Cloak and deals damage, first you'll gain that much life for lifelink, and then Armadillo Cloak's triggered ability is put onto the stack. This also means that multiple instances of Armadillo Cloak's triggered ability do trigger separately."
+          "text": "While Armadillo Cloak’s last ability is similar to lifelink, it isn’t lifelink—it’s a normal triggered ability. If a creature you control with lifelink wears an Armadillo Cloak and deals damage, first you’ll gain that much life for lifelink, and then Armadillo Cloak’s triggered ability is put onto the stack. This also means that multiple instances of Armadillo Cloak’s triggered ability do trigger separately."
         },
         {
           "date": "2016-06-08",
-          "text": "If Armadillo Cloak enchants a creature you don't control, you'll gain life when it deals damage, as long as that damage hasn't already caused you to lose the game."
+          "text": "If Armadillo Cloak enchants a creature you don’t control, you’ll gain life when it deals damage, as long as that damage hasn’t already caused you to lose the game."
         }
       ],
       "subtypes": [
@@ -4925,7 +4950,7 @@
         },
         {
           "date": "2009-02-01",
-          "text": "A number of nonbasic lands have basic land types. Domain abilities don't count the number of lands you control -- they count the number of basic land types among lands you control, even if that means checking the same land twice. For example, if you control a Tundra, an Overgrown Tomb, and a Madblind Mountain, you'll have a Plains, Island, Swamp, Mountain, and Forest among the lands you control. Your domain abilities will be maxed out."
+          "text": "A number of nonbasic lands have basic land types. Domain abilities don’t count the number of lands you control — they count the number of basic land types among lands you control, even if that means checking the same land twice. For example, if you control a Tundra, an Overgrown Tomb, and a Madblind Mountain, you’ll have a Plains, Island, Swamp, Mountain, and Forest among the lands you control. Your domain abilities will be maxed out."
         }
       ],
       "text": "Domain — {3}, {T}: Target creature gets +1/+1 until end of turn for each basic land type among lands you control.",
@@ -4999,7 +5024,7 @@
         },
         {
           "date": "2009-02-01",
-          "text": "A number of nonbasic lands have basic land types. Domain abilities don't count the number of lands you control -- they count the number of basic land types among lands you control, even if that means checking the same land twice. For example, if you control a Tundra, an Overgrown Tomb, and a Madblind Mountain, you'll have a Plains, Island, Swamp, Mountain, and Forest among the lands you control. Your domain abilities will be maxed out."
+          "text": "A number of nonbasic lands have basic land types. Domain abilities don’t count the number of lands you control — they count the number of basic land types among lands you control, even if that means checking the same land twice. For example, if you control a Tundra, an Overgrown Tomb, and a Madblind Mountain, you’ll have a Plains, Island, Swamp, Mountain, and Forest among the lands you control. Your domain abilities will be maxed out."
         }
       ],
       "text": "Domain — Target player draws a card for each basic land type among lands he or she controls.",
@@ -5207,6 +5232,10 @@
       "layout": "normal",
       "legalities": [
         {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
         },
@@ -5354,8 +5383,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -5424,7 +5453,8 @@
         "SOI",
         "KLD",
         "C16",
-        "PCA"
+        "PCA",
+        "AKH"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -5436,7 +5466,8 @@
       "type": "Basic Land — Plains",
       "types": [
         "Land"
-      ]
+      ],
+      "watermark": "White"
     },
     {
       "artist": "Terese Nielsen",
@@ -5454,6 +5485,10 @@
       "imageName": "island",
       "layout": "normal",
       "legalities": [
+        {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
         {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
@@ -5600,8 +5635,8 @@
         "USG",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -5669,7 +5704,9 @@
         "SOI",
         "KLD",
         "C16",
-        "PCA"
+        "PCA",
+        "DDS",
+        "AKH"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -5681,7 +5718,8 @@
       "type": "Basic Land — Island",
       "types": [
         "Land"
-      ]
+      ],
+      "watermark": "Blue"
     },
     {
       "artist": "Scott Bailey",
@@ -5699,6 +5737,10 @@
       "imageName": "mountain",
       "layout": "normal",
       "legalities": [
+        {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
         {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
@@ -5826,9 +5868,9 @@
         "LEA",
         "LEB",
         "2ED",
-        "ARN",
         "CED",
         "CEI",
+        "ARN",
         "3ED",
         "4ED",
         "ICE",
@@ -5847,8 +5889,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -5920,7 +5962,9 @@
         "SOI",
         "KLD",
         "C16",
-        "PCA"
+        "PCA",
+        "DDS",
+        "AKH"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -5932,7 +5976,8 @@
       "type": "Basic Land — Mountain",
       "types": [
         "Land"
-      ]
+      ],
+      "watermark": "Red"
     },
     {
       "artist": "John Avon",
@@ -5955,6 +6000,10 @@
       "imageName": "forest1",
       "layout": "normal",
       "legalities": [
+        {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
         {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
@@ -6101,8 +6150,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -6173,7 +6222,9 @@
         "DDR",
         "KLD",
         "C16",
-        "PCA"
+        "PCA",
+        "DDS",
+        "AKH"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -6188,7 +6239,8 @@
       ],
       "variations": [
         210510
-      ]
+      ],
+      "watermark": "Green"
     },
     {
       "artist": "Alan Pollack",
@@ -6211,6 +6263,10 @@
       "imageName": "forest2",
       "layout": "normal",
       "legalities": [
+        {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
         {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
@@ -6357,8 +6413,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -6429,7 +6485,9 @@
         "DDR",
         "KLD",
         "C16",
-        "PCA"
+        "PCA",
+        "DDS",
+        "AKH"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -6444,7 +6502,8 @@
       ],
       "variations": [
         210509
-      ]
+      ],
+      "watermark": "Green"
     },
     {
       "artist": "Ron Spencer",
