@@ -3158,6 +3158,8 @@ Array.prototype.pushAll = function(otherArray) {
         'Kaladesh Inventions'
       ],
       code : "MPS",
+      magicCardsInfoCode:"mpskld",
+      gathererCode: "MPS_KLD",
       releaseDate : "2016-09-30",
       border : "black",
       type : "masterpiece"
