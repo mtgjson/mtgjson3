@@ -3,11 +3,11 @@
 "use strict";
 /*global setImmediate: true*/
 
-var base = require("xbase"),
+var base = require('@sembiance/xbase'),
 	fs = require("fs"),
 	url = require("url"),
 	path = require("path"),
-	httpUtil = require("xutil").http,
+	httpUtil = require('@sembiance/xutil').http,
 	domino = require("domino"),
 	tiptoe = require("tiptoe");
 

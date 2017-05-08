@@ -1,6 +1,6 @@
 "use strict";
 
-var base = require("xbase"),
+var base = require('@sembiance/xbase'),
 	shared = require("shared");
 
 if (process.argv.length < 3) {

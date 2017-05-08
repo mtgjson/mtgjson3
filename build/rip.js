@@ -656,6 +656,9 @@ var addLegalitiesToCard = function (card, cb) {
 			delete card.legalities;
 			card.legalities = [];
 
+			if (typeof doc.querySelectorAll("table.cardList")[1] === "undefined") {
+				console.log("invalid printings for " + card.multiverseid);
+			}
 			Array.toArray(doc.querySelectorAll("table.cardList")[1].querySelectorAll("tr.cardItem")).forEach(function (cardRow) {
 				var format = getTextContent(cardRow.querySelector("td:nth-child(1)")).trim();
 				var legality = getTextContent(cardRow.querySelector("td:nth-child(2)")).trim();
@@ -720,6 +723,9 @@ var addPrintingsToCard = function (nonGathererSets, card, cb) {
 
 			var printings = [];
 			docs.forEach(function (doc) {
+				if (typeof doc.querySelectorAll("table.cardList")[0] === "undefined") {
+					console.log("invalid printings for " + card.multiverseid);
+				}
 				Array.toArray(doc.querySelectorAll("table.cardList")[0].querySelectorAll("tr.cardItem")).forEach(function (cardRow) {
 					var printing = getTextContent(cardRow.querySelector("td:nth-child(3)")).trim();
 					if (printing && !C.IGNORE_GATHERER_PRINTINGS.contains(printing))
