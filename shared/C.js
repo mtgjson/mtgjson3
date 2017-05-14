@@ -5813,6 +5813,11 @@ Array.prototype.pushAll = function(otherArray) {
       { match: { multiverseid: 410049 }, replace: { number: '281a', colorIdentity: [ 'B' ] } },
       { match: { multiverseid: 410050 }, replace: { number: '281b', colors: [ 'Black' ], colorIdentity: [ 'B' ] } }
     ],
+    EMN: [
+      // Ulrich of the Krallenhorde / Ulrich, Uncontested Alpha
+      // 414496
+      { match: { multiverseid: 414497 }, replace: { colors: [ 'Red', 'Green' ] } }
+    ],
     KLD: [
       { match: { multiverseid: [417820, 417581, 417777, 417687, 417614] }, replace: { watermark: 'Planeswalker' } }
     ],
