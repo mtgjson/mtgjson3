@@ -94,7 +94,7 @@ exports.cardComparator = function(a, b)
 	return 0;
 };
 
-exports.buildMultiverseLanguagesURL = function(multiverseid)
+exports.buildMultiverseLanguagesURL = function(multiverseid, page)
 {
 	if(!multiverseid)
 		throw new Error("Invalid multiverseid");
@@ -104,7 +104,7 @@ exports.buildMultiverseLanguagesURL = function(multiverseid)
 		protocol : "http",
 		host     : "gatherer.wizards.com",
 		pathname : "/Pages/Card/Languages.aspx",
-		query    : { multiverseid : multiverseid }
+		query    : { multiverseid : multiverseid, page : page }
 	};
 
 	return url.format(urlConfig);
