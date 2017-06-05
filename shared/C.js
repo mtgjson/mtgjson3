@@ -3146,6 +3146,7 @@ Array.prototype.pushAll = function(otherArray) {
       // http://magic.wizards.com/en/content/kaladesh-information
       name : "Kaladesh",
       code : "KLD",
+      gathererCode: "MPS_KLD",
       releaseDate : "2016-09-30",
       border : "black",
       type : "expansion",
