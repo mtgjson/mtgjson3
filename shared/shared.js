@@ -663,9 +663,9 @@ exports.getURLAsDoc = function(targetURL, cb, retryCount) {
 					base.error("No page contents");
 				}
 
+				/*
 				var pageString = pageHTML ? pageHTML.toString('utf8').trim().toLowerCase() : '';
 
-				/*
 				if (!targetURL.contains("www.magiclibrarities.net") && (!pageString.endsWith('</html>') || !pageString.endsWith('</string>'))) {
 					success = false;
 					base.error('Invalid page format.');
