@@ -1,7 +1,7 @@
 "use strict";
 
-var C = require("C"),
-	shared = require("shared"),
+var C = require('../shared/C'),
+	shared = require('../shared/shared'),
 	diffUtil = require('@sembiance/xutil').diffUtil;
 
 /**

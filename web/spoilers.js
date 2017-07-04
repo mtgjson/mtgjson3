@@ -1,7 +1,7 @@
 "use strict";
 
 var base = require('@sembiance/xbase'),
-	C = require("C"),
+	C = require('../shared/C'),
 	runUtil = require('@sembiance/xutil').run,
 	rimraf = require("rimraf"),
 	printUtil = require('@sembiance/xutil').print,
@@ -11,7 +11,7 @@ var base = require('@sembiance/xbase'),
 	path = require("path"),
 	dustUtil = require('@sembiance/xutil').dust,
 	moment = require("moment"),
-	shared = require("shared"),
+	shared = require('../shared/shared'),
 	tiptoe = require("tiptoe");
 
 var dustData =  {

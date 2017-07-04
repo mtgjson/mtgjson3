@@ -1,7 +1,7 @@
 "use strict";
 
 var base = require('@sembiance/xbase'),
-	shared = require("shared");
+	shared = require('../shared/shared');
 
 if (process.argv.length < 3) {
 	base.error("Usage: node %s <url>", process.argv[1]);

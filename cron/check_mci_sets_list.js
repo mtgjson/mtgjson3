@@ -4,7 +4,7 @@
 
 var base = require('@sembiance/xbase'),
 	url = require("url"),
-	C = require("C"),
+	C = require('../shared/C'),
 	path = require("path"),
 	httpUtil = require('@sembiance/xutil').http,
 	domino = require("domino"),

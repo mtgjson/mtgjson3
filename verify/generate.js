@@ -1,7 +1,7 @@
 "use strict";
 
 var base = require('@sembiance/xbase'),
-	C = require("C"),
+	C = require('../shared/C'),
 	util = require("util"),
 	fs = require("fs"),
 	path = require("path"),

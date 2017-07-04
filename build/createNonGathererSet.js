@@ -2,11 +2,11 @@
 "use strict";
 
 var base = require('@sembiance/xbase'),
-	C = require("C"),
+	C = require('../shared/C'),
 	path = require("path"),
 	moment = require("moment"),
 	fs = require("fs"),
-	shared = require("shared"),
+	shared = require('../shared/shared'),
 	tiptoe = require("tiptoe");
 
 var targetSetCode = process.argv[2];

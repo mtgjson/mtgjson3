@@ -2,7 +2,7 @@
 
 var fs = require('fs');
 var path = require('path');
-var C = require('C');
+var C = require('../shared/C');
 var async = require('async');
 var tiptoe = require('tiptoe');
 var diffUtil = require('@sembiance/xutil').diff;

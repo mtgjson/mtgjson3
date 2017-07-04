@@ -3,7 +3,7 @@
 
 var base = require('@sembiance/xbase'),
 	fs = require("fs"),
-	shared = require("shared"),
+	shared = require('../shared/shared'),
 	path = require("path"),
 	tiptoe = require("tiptoe");
 
