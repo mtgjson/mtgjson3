@@ -15,10 +15,6 @@ Setup
 -----
 
     npm install
-    cd node_modules
-    ln -s ../shared/C.js
-    ln -s ../shared/shared.js
-    cd ..
     # See 'Other' below
 
 Usage

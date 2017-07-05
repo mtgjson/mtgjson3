@@ -2,10 +2,10 @@
 "use strict";
 
 var base = require('@sembiance/xbase'),
-	C = require("C"),
+	C = require('../shared/C'),
 	fs = require("fs"),
 	path = require("path"),
-	shared = require("shared"),
+	shared = require('../shared/shared'),
 	tiptoe = require("tiptoe");
 
 var setsToDo = shared.getSetsToDo();

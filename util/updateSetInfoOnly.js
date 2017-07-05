@@ -2,9 +2,9 @@
 /*global setImmediate: true*/
 
 var base = require('@sembiance/xbase'),
-	C = require("C"),
+	C = require('../shared/C'),
 	fs = require("fs"),
-	shared = require("shared"),
+	shared = require('../shared/shared'),
 	path = require("path"),
 	tiptoe = require("tiptoe");
 

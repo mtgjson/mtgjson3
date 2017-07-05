@@ -1,6 +1,6 @@
 'use strict';
 
-var C = require('C');
+var C = require('../shared/C');
 var async = require('async');
 var tiptoe = require('tiptoe');
 
