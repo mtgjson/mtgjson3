@@ -1066,6 +1066,7 @@ var ripMCISet = function(set, cb) {
 			fillImageNames(set);
 
 			if (fs.existsSync(path.join(__dirname, "..", "json", set.code + ".json"))) {
+				shared.performSetCorrections(shared.getSetCorrections(set.code), set);
 				addPrintingsToMCISet(set, this.parallel());
 				addMagicLibraritiesInfoToMCISet(set, this.parallel());
 			}
@@ -1104,7 +1105,7 @@ var ripMCISet = function(set, cb) {
 			this();
 		},
 		function fixCommanderIdentity() {
-			base.info("Fixing double-faced cards...");
+			base.info("Fixing color identity...");
 
 			fixCommanderIdentityForCards(set.cards, this.parallel());
 			fixCMC(set.cards, this.parallel());
