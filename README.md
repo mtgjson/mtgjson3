@@ -47,7 +47,7 @@ If you're building mtgjson data on your own, you should follow the following ste
 * check your json files to see if everything is in order
 * `node util/updatePrintingsFromSet NEWSETCODE` -- This will update the printings on the previous sets, using the data from the new set.
 * `node util/updateRulingsFromSet NEWSETCODE` -- Same as above, but for rulings.
-* `node util/updateLelalitiesFromSet NEWSETCODE` -- Same as above, but for legalities.
+* `node util/updateLegalitiesFromSet NEWSETCODE` -- Same as above, but for legalities.
 
 Other
 -----
