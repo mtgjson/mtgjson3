@@ -1064,16 +1064,7 @@ var ripMCISet = function(set, cb) {
 
 			set.cards = cards.filterEmpty().sort(shared.cardComparator);
 			fillImageNames(set);
-
-			if (fs.existsSync(path.join(__dirname, "..", "json", set.code + ".json"))) {
-				shared.performSetCorrections(shared.getSetCorrections(set.code), set);
-				addPrintingsToMCISet(set, this.parallel());
-				addMagicLibraritiesInfoToMCISet(set, this.parallel());
-			}
-			else {
-				base.warn("RUN ONE MORE TIME FOR PRINTINGS!");
-				this();
-			}
+			addMagicLibraritiesInfoToMCISet(set, this);
 		},
 		function applyLatestOracleFields() {
 			base.info("Applying latest oracle fields to MCI cards...");
@@ -1115,6 +1106,16 @@ var ripMCISet = function(set, cb) {
 			shared.performSetCorrections(shared.getSetCorrections(set.code), set);
 
 			this();
+		},
+		function addPrintings() {
+			if (fs.existsSync(path.join(__dirname, "..", "json", set.code + ".json"))) {
+				base.info("Updating printings...");
+				addPrintingsToMCISet(set, this);
+			}
+			else {
+				base.warn("RUN ONE MORE TIME FOR PRINTINGS!");
+				this();
+			}
 		},
 		function finish(err) {
 			if (err) {
