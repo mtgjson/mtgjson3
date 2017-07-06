@@ -464,6 +464,7 @@ exports.performSetCorrections = function(setCorrections, fullSet)
 		card.flavor = card.flavor.replaceAll("“", "\"");
 		card.flavor = card.flavor.replaceAll("”", "\"");
 		card.flavor = card.flavor.replaceAll("＂", "\"");
+		card.flavor = card.flavor.replaceAll("’", "'");
 
 		while(card.flavor.contains(" \n"))
 		{
@@ -479,6 +480,11 @@ exports.performSetCorrections = function(setCorrections, fullSet)
 
 		card.rulings.forEach(function(ruling)
 		{
+			ruling.text = ruling.text.replaceAll("“", "\"");
+			ruling.text = ruling.text.replaceAll("”", "\"");
+			ruling.text = ruling.text.replaceAll("＂", "\"");
+			ruling.text = ruling.text.replaceAll("’", "'");
+
 			Object.forEach(C.SYMBOL_MANA, function(manaSymbol)
 			{
 				var newText = ruling.text.replaceAll("\\{" + manaSymbol.toUpperCase() + "\\]", "{" + manaSymbol.toUpperCase() + "}");

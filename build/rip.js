@@ -1074,12 +1074,6 @@ var ripMCISet = function(set, cb) {
 				this();
 			}
 		},
-		function performCorrections() {
-			base.info("Doing set corrections...");
-			shared.performSetCorrections(shared.getSetCorrections(set.code), set);
-
-			this();
-		},
 		function applyLatestOracleFields() {
 			base.info("Applying latest oracle fields to MCI cards...");
 
@@ -1106,6 +1100,18 @@ var ripMCISet = function(set, cb) {
 					card[oracleField] = oracleCards[card.name][oracleField];
 				});
 			});
+
+			this();
+		},
+		function fixCommanderIdentity() {
+			base.info("Fixing double-faced cards...");
+
+			fixCommanderIdentityForCards(set.cards, this.parallel());
+			fixCMC(set.cards, this.parallel());
+		},
+		function performCorrections() {
+			base.info("Doing set corrections...");
+			shared.performSetCorrections(shared.getSetCorrections(set.code), set);
 
 			this();
 		},
@@ -1556,7 +1562,7 @@ var processTextBoxChildren = function(children) {
 var getTextContent = function(item) {
 	var ret = '';
 	if (item) {
-		ret = item.innerHTML
+		ret = item.textContent
 		.replace(/<img .*?alt="([^"]*)"[^>]*>/g, function(match, alt) {
 			if (!SYMBOL_CONVERSION_MAP[alt.toLowerCase()]) {
 				console.log("Can't find symbol: %s", alt);
