@@ -23,14 +23,6 @@ Array.prototype.pushAll = function(otherArray) {
   exports.SETS_NOT_ON_GATHERER = ["ATH", "ITP", "DKM", "RQS", "DPA"];
   exports.SETS_WITH_NO_IMAGES = [];
 
-  var DDS = require('./sets/DDS');
-  var W17_SET = require('./sets/W17');
-  var AKH_SET = require('./sets/AKH');
-  var MPS_AKH_SET = require('./sets/MPS_AKH');
-  var CMA = require('./sets/CMA');
-  var E01 = require('./sets/E01');
-  var HOU = require('./sets/HOU');
-
   exports.SETS = [
     {
       name : "Limited Edition Alpha",
@@ -3205,14 +3197,7 @@ Array.prototype.pushAll = function(otherArray) {
       border : "black",
       type : "reprint",
       booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", ["foil mythic rare", "foil rare", "foil uncommon", "foil common"]]
-    },
-    DDS,
-    W17_SET,
-    AKH_SET,
-    MPS_AKH_SET,
-    CMA,
-    E01,
-    HOU
+    }
   ];
 
   exports.IGNORE_GATHERER_PRINTINGS = ["Promo set for Gatherer"];
@@ -4850,9 +4835,6 @@ Array.prototype.pushAll = function(otherArray) {
     AER: [
       { match: { multiverseid: [423678, 423758, 423698, 423720, 423795] }, replace: { watermark: 'Planeswalker' } }
     ],
-    AKH: [
-      { match: { multiverseid: [426727, 426786, 426704, 426825, 426717] }, replace: { watermark: 'Planeswalker' } }
-    ],
     "*" :
     [
       "recalculateStandard",
@@ -4957,6 +4939,25 @@ Array.prototype.pushAll = function(otherArray) {
       { "match": { "name": "Æthersnatch" }, "replace": { "name": "Aethersnatch" } }
     ]
   };
+
+  var requireDir = require('require-dir');
+  var setConfigs = requireDir('./set_configs', {'recurse': true});
+  var configStack = [setConfigs];
+
+  while (configStack.length > 0) {
+      var config = configStack.pop();
+      if (typeof config.SET !== 'undefined') {
+          exports.SETS.push(config.SET);
+          if (typeof config.SET_CORRECTIONS !== 'undefined') {
+              var setCode = config.SET.code;
+              exports.SET_CORRECTIONS[setCode] = config.SET_CORRECTIONS;
+          }
+      } else {
+          for (var child in config) {
+              configStack.push(config[child]);
+          }
+      }
+  }
 
   exports.SET_SPOILER_IMAGE_DIFF_SRC_NUMBER =
   {
