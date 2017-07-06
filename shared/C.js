@@ -3757,7 +3757,7 @@ Array.prototype.pushAll = function(otherArray) {
 			{ match : {name : "Overbeing of Myth"}, replace : {flavor : "\"She walks among us unseen, learning from our imperfections.\"\n—The Seer's Parables"}},
 			{ match : {name : "Wren's Run Packmaster"}, replace : {releaseDate : "2007-09-29"}},
 			{ match : {name : "Sultai Ascendacy"}, replace : {name : "Sultai Ascendancy", imageName : "sultai ascendancy"}},
-            { match : {name : "Nissa, Vastwood Seer"}, replace : {artist : "Wesley Burt"}}
+			{ match : {name : "Nissa, Vastwood Seer"}, replace : {artist : "Wesley Burt"}}
 		],
 		TMP :
 		[
