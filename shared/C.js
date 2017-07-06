@@ -29,6 +29,7 @@ Array.prototype.pushAll = function(otherArray) {
   var MPS_AKH_SET = require('./sets/MPS_AKH');
   var CMA = require('./sets/CMA');
   var E01 = require('./sets/E01');
+  var HOU = require('./sets/HOU');
 
   exports.SETS = [
     {
@@ -3210,7 +3211,8 @@ Array.prototype.pushAll = function(otherArray) {
     AKH_SET,
     MPS_AKH_SET,
     CMA,
-    E01
+    E01,
+    HOU
   ];
 
   exports.IGNORE_GATHERER_PRINTINGS = ["Promo set for Gatherer"];
