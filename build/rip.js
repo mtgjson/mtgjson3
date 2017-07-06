@@ -1102,6 +1102,7 @@ var ripMCISet = function(set, cb) {
 			fixCMC(set.cards, this.parallel());
 		},
 		function performCorrections() {
+			// The first pass is primarily to fix will-o'-the-wisp; otherwise it doesn't get other printings
 			base.info("Doing set corrections...");
 			shared.performSetCorrections(shared.getSetCorrections(set.code), set);
 
@@ -1116,6 +1117,12 @@ var ripMCISet = function(set, cb) {
 				base.warn("RUN ONE MORE TIME FOR PRINTINGS!");
 				this();
 			}
+		},
+		function performCorrections() {
+			base.info("Doing set corrections (again)...");
+			shared.performSetCorrections(shared.getSetCorrections(set.code), set);
+
+			this();
 		},
 		function finish(err) {
 			if (err) {
