@@ -1,0 +1,22 @@
+{
+  "SET": {
+    "name": "Friday Night Magic",
+    "code": "pFNM",
+    "magicCardsInfoCode": "fnmp",
+    "magicRaritiesCodes": ["72-rarities-friday-night-magic"],
+    "isMCISet": true,
+    "releaseDate": "2000-02-01",
+    "border": "black",
+    "type": "promo",
+    "mkm_name": "Friday Night Magic Promos",
+    "mkm_id": 72
+  },
+  "SET_CORRECTIONS":
+  [
+    {"match": {"name": "Crystalline Sliver"}, "replace": {"releaseDate":"2008-06", "source": "Summer Series Grand Prix events participation bonus. Creating a Magic Online account or filling out a survey on site at PAX East."}},
+    {"match": {"name": "Engineered Plague"}, "replace": {"flavor": "\"The admixture of bitterwort in the viral brew has produced most favorable results.\"\n—Phyrexian progress notes"}},
+    {"match": {"name": ["Fact or Fiction", "Force Spike"]}, "remove": ["flavor"]},
+    {"match": {"name": "Ophidian"}, "replace": {"flavor": "\"I will ... tell thee more than thou hast wit to ask.\"\n—Christopher Marlowe, Doctor Faustus"}},
+    {"match": {"name": "Wing Shards"}, "replace": {"releaseDate":"2007-09-01", "source": "Friday Night Magic prize"}}
+  ]
+}

@@ -59,15 +59,6 @@ Array.prototype.pushAll = function(otherArray) {
       mkm_id : 77
     },
     {
-      name : "Dragon Con",
-      code : "pDRC",
-      magicCardsInfoCode : "drc",
-      isMCISet : true,
-      releaseDate : "1994-01-01",
-      border : "black",
-      type : "promo"
-    },
-    {
       name : "Antiquities",
       code : "ATQ",
       gathererCode : "AQ",
@@ -137,30 +128,6 @@ Array.prototype.pushAll = function(otherArray) {
       booster : ["uncommon", "uncommon", "common", "common", "common", "common", "common", "common"],
       mkm_name : "Fallen Empires",
       mkm_id : 9
-    },
-    {
-      name : "Media Inserts",
-      code : "pMEI",
-      magicCardsInfoCode : "mbp",
-      magicRaritiesCodes : ["189-rarities-agent-of-artifice-novel-promo-insert", "109-rarities-harperprism-book-inserts", "20-rarities-armada-comics-book-promos", "175-rarities-coro-coro-comic-book-inserts", "296-rarities-dengeki-maoh-magazine-inserts",
-                  "81-rarities-gotta-magazine-cards", "196-rarities-hachette-french-magic-encyclopedia-inserts", "197-rarities-hachette-italian-magic-encyclopedia-inserts", "765-rarities-idw-comics-book-inserts",
-                  "16-rarities-kartefakt-magazine-promo", "121-rarities-players-guide-inserts", "228-rarities-rpg-magazine-inserts", "135-rarities-salvat-magic-encyclopedia-cards", "134-rarities-the-cardz-magazine-inserts",
-                  "22-rarities-the-duelist-cards", "18-rarities-topdeck-cards", "258-rarities-buy-a-box-promos", "787-rarities-holiday-gift-box", "224-rarities-duels-of-the-planeswalkers-software-promos",
-                  "160-rarities-resale-promos", "686-rarities-convention-and-various-promos"],
-      isMCISet : true,
-      releaseDate : "1995-01-01",
-      border : "black",
-      type : "promo"
-    },
-    {
-      name : "Legend Membership",
-      code : "pLGM",
-      magicCardsInfoCode : "dcilm",
-      magicRaritiesCodes : ["23-rarities-dci-legend-membership-promos"],
-      isMCISet : true,
-      releaseDate : "1995-01-01",
-      border : "black",
-      type : "promo"
     },
     {
       name : "Fourth Edition",
@@ -261,26 +228,6 @@ Array.prototype.pushAll = function(otherArray) {
       type : "box"
     },
     {
-      name : "Arena League",
-      code : "pARL",
-      magicCardsInfoCode : "arena",
-      magicRaritiesCodes : ["7-rarities-arena-league-promos"],
-      isMCISet : true,
-      releaseDate : "1996-08-02",
-      border : "black",
-      type : "promo"
-    },
-    {
-      name : "Celebration",
-      code : "pCEL",
-      magicCardsInfoCode : "uqc",
-      magicRaritiesCodes : ["353-rarities-unique-cards", "352-rarities-garfield-event-cards", "798-rarities-special-guest-gift-cards"],
-      isMCISet : true,
-      releaseDate : "1996-08-14",
-      border : "black",
-      type : "promo"
-    },
-    {
       name : "Mirage",
       code : "MIR",
       gathererCode : "MI",
@@ -368,15 +315,6 @@ Array.prototype.pushAll = function(otherArray) {
       mkm_id : 23
     },
     {
-      name : "Portal Demo Game",
-      code : "pPOD",
-      magicCardsInfoCode : "pot",
-      isMCISet : true,
-      releaseDate : "1997-05-01",
-      border : "black",
-      type : "promo"
-    },
-    {
       name : "Portal",
       code : "POR",
       gathererCode : "PO",
@@ -421,16 +359,6 @@ Array.prototype.pushAll = function(otherArray) {
       },
       mkm_name : "Weatherlight",
       mkm_id : 18
-    },
-    {
-      name : "Prerelease Events",
-      code : "pPRE",
-      magicCardsInfoCode : "ptc",
-      magicRaritiesCodes : ["82-rarities-prerelease-events-promos"],
-      isMCISet : true,
-      releaseDate : "1997-10-04",
-      border : "black",
-      type : "promo"
     },
     {
       name : "Tempest",
@@ -493,18 +421,6 @@ Array.prototype.pushAll = function(otherArray) {
       mkm_id : 24
     },
     {
-      name : "Judge Gift Program",
-      code : "pJGP",
-      magicCardsInfoCode : "jr",
-      magicRaritiesCodes : ["56-rarities-judge-gift-cards"],
-      isMCISet : true,
-      releaseDate : "1998-06-01",
-      border : "black",
-      type : "promo",
-      mkm_name : "Judge Rewards Promos",
-      mkm_id : 80
-    },
-    {
       name : "Exodus",
       code : "EXO",
       gathererCode : "EX",
@@ -535,18 +451,6 @@ Array.prototype.pushAll = function(otherArray) {
       booster : ["rare", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "land"],
       mkm_name : "Unglued",
       mkm_id : 22
-    },
-    {
-      name : "Asia Pacific Land Program",
-      code : "pALP",
-      magicCardsInfoCode : "apac",
-      magicRaritiesCodes : ["44-rarities-apac-lands"],
-      isMCISet : true,
-      releaseDate : "1998-09-01",
-      border : "black",
-      type : "promo",
-      mkm_name : "APAC Lands",
-      mkm_id : 97
     },
     {
       name : "Urza's Saga",
@@ -666,38 +570,6 @@ Array.prototype.pushAll = function(otherArray) {
       mkm_id : 63
     },
     {
-      name : "Guru",
-      code : "pGRU",
-      magicCardsInfoCode : "guru",
-      magicRaritiesCodes : ["50-rarities-guru-lands"],
-      isMCISet : true,
-      releaseDate : "1999-07-12",
-      border : "black",
-      type : "promo",
-      mkm_name : "Guru Lands",
-      mkm_id : 88
-    },
-    {
-      name : "Worlds",
-      code : "pWOR",
-      magicCardsInfoCode : "wrl",
-      magicRaritiesCodes : ["15-rarities-worlds-card"],
-      isMCISet : true,
-      releaseDate : "1999-08-04",
-      border : "black",
-      type : "promo"
-    },
-    {
-      name : "Wizards of the Coast Online Store",
-      code : "pWOS",
-      magicCardsInfoCode : "wotc",
-      magicRaritiesCodes : ["51-rarities-wizards-of-the-coast-online-store"],
-      isMCISet : true,
-      releaseDate : "1999-09-04",
-      border : "black",
-      type : "promo"
-    },
-    {
       name : "Mercadian Masques",
       code : "MMQ",
       gathererCode : "MM",
@@ -727,38 +599,6 @@ Array.prototype.pushAll = function(otherArray) {
       type : "box",
       mkm_name : "Battle Royale",
       mkm_id : 64
-    },
-    {
-      name : "Super Series",
-      code : "pSUS",
-      magicCardsInfoCode : "sus",
-      magicRaritiesCodes : ["36-rarities-junior-super-series"],
-      isMCISet : true,
-      releaseDate : "1999-12-01",
-      border : "black",
-      type : "promo"
-    },
-    {
-      name : "Friday Night Magic",
-      code : "pFNM",
-      magicCardsInfoCode : "fnmp",
-      magicRaritiesCodes : ["72-rarities-friday-night-magic"],
-      isMCISet : true,
-      releaseDate : "2000-02-01",
-      border : "black",
-      type : "promo",
-      mkm_name : "Friday Night Magic Promos",
-      mkm_id : 72
-    },
-    {
-      name : "European Land Program",
-      code : "pELP",
-      magicCardsInfoCode : "euro",
-      magicRaritiesCodes : ["46-rarities-euro-lands"],
-      isMCISet : true,
-      releaseDate : "2000-02-05",
-      border : "black",
-      type : "promo"
     },
     {
       name : "Nemesis",
@@ -888,16 +728,6 @@ Array.prototype.pushAll = function(otherArray) {
       },
       mkm_name : "Seventh Edition",
       mkm_id : 37
-    },
-    {
-      name : "Magic Player Rewards",
-      code : "pMPR",
-      magicCardsInfoCode : "mprp",
-      magicRaritiesCodes : ["29-rarities-magic-player-rewards"],
-      isMCISet : true,
-      releaseDate : "2001-05-01",
-      border : "black",
-      type : "promo"
     },
     {
       name : "Apocalypse",
@@ -1044,16 +874,6 @@ Array.prototype.pushAll = function(otherArray) {
       },
       mkm_name : "Scourge",
       mkm_id : 43
-    },
-    {
-      name : "Release Events",
-      code : "pREL",
-      magicCardsInfoCode : "rep",
-      magicRaritiesCodes : ["94-rarities-release-events-promos"],
-      isMCISet : true,
-      releaseDate : "2003-07-26",
-      border : "black",
-      type : "promo"
     },
     {
       name : "Eighth Edition",
@@ -1257,26 +1077,6 @@ Array.prototype.pushAll = function(otherArray) {
       mkm_id : 55
     },
     {
-      name : "Two-Headed Giant Tournament",
-      code : "p2HG",
-      magicCardsInfoCode : "thgt",
-      magicRaritiesCodes : ["13-rarities-two-headed-giant"],
-      isMCISet : true,
-      releaseDate : "2005-12-09",
-      border : "black",
-      type : "promo"
-    },
-    {
-      name : "Gateway",
-      code : "pGTW",
-      magicCardsInfoCode : "grc",
-      magicRaritiesCodes : ["76-rarities-gateway-promos"],
-      isMCISet : true,
-      releaseDate : "2006-01-01",
-      border : "black",
-      type : "promo"
-    },
-    {
       name : "Guildpact",
       code : "GPT",
       magicCardsInfoCode : "gp",
@@ -1297,16 +1097,6 @@ Array.prototype.pushAll = function(otherArray) {
       },
       mkm_name : "Guildpact",
       mkm_id : 54
-    },
-    {
-      name : "Champs and States",
-      code : "pCMP",
-      magicCardsInfoCode : "cp",
-      magicRaritiesCodes : ["54-rarities-champs-cards"],
-      isMCISet : true,
-      releaseDate : "2006-03-18",
-      border : "black",
-      type : "promo"
     },
     {
       name : "Dissension",
@@ -1414,19 +1204,6 @@ Array.prototype.pushAll = function(otherArray) {
       mkm_id : 56
     },
     {
-      name : "Happy Holidays",
-      code : "pHHO",
-      oldCode : "HHO",
-      magicCardsInfoCode : "hho",
-      magicRaritiesCodes : ["19-rarities-happy-holidays-gift-card"],
-      isMCISet : true,
-      releaseDate : "2006-12-31",
-      border : "silver",
-      type : "promo",
-      mkm_name : "Happy Holidays Promos",
-      mkm_id : 1247
-    },
-    {
       name : "Planar Chaos",
       code : "PLC",
       magicCardsInfoCode : "pc",
@@ -1447,26 +1224,6 @@ Array.prototype.pushAll = function(otherArray) {
       },
       mkm_name : "Planar Chaos",
       mkm_id : 58
-    },
-    {
-      name : "Pro Tour",
-      code : "pPRO",
-      magicCardsInfoCode : "pro",
-      magicRaritiesCodes : ["14-rarities-pro-tour-card"],
-      isMCISet : true,
-      releaseDate : "2007-02-09",
-      border : "black",
-      type : "promo"
-    },
-    {
-      name : "Grand Prix",
-      code : "pGPX",
-      magicCardsInfoCode : "gpx",
-      magicRaritiesCodes : ["73-rarities-grand-prix-promos"],
-      isMCISet : true,
-      releaseDate : "2007-02-24",
-      border : "black",
-      type : "promo"
     },
     {
       name : "Future Sight",
@@ -1513,16 +1270,6 @@ Array.prototype.pushAll = function(otherArray) {
       mkm_id : 74
     },
     {
-      name : "Magic Game Day",
-      code : "pMGD",
-      magicCardsInfoCode : "mgdc",
-      magicRaritiesCodes : ["119-rarities-magic-game-day-cards"],
-      isMCISet : true,
-      releaseDate : "2007-07-14",
-      border : "black",
-      type : "promo"
-    },
-    {
       name : "Masters Edition",
       code : "MED",
       magicCardsInfoCode : "med",
@@ -1566,16 +1313,6 @@ Array.prototype.pushAll = function(otherArray) {
       mkm_id : 91
     },
     {
-      name : "Launch Parties",
-      code : "pLPA",
-      magicCardsInfoCode : "mlp",
-      magicRaritiesCodes : ["226-rarities-pre-launch-party-cards"],
-      isMCISet : true,
-      releaseDate : "2008-02-01",
-      border : "black",
-      type : "promo"
-    },
-    {
       name : "Morningtide",
       code : "MOR",
       magicCardsInfoCode : "mt",
@@ -1598,16 +1335,6 @@ Array.prototype.pushAll = function(otherArray) {
       mkm_id : 92
     },
     {
-      name : "15th Anniversary",
-      code : "p15A",
-      magicCardsInfoCode : "15ann",
-      magicRaritiesCodes : ["178-rarities-mtg-15th-anniversary"],
-      isMCISet : true,
-      releaseDate : "2008-04-01",
-      border : "black",
-      type : "promo"
-    },
-    {
       name : "Shadowmoor",
       code : "SHM",
       magicCardsInfoCode : "shm",
@@ -1628,18 +1355,6 @@ Array.prototype.pushAll = function(otherArray) {
       },
       mkm_name : "Shadowmoor",
       mkm_id : 95
-    },
-    {
-      name : "Summer of Magic",
-      code : "pSUM",
-      magicCardsInfoCode : "sum",
-      magicRaritiesCodes : ["118-rarities-summer-of-magic-tournament"],
-      isMCISet : true,
-      releaseDate : "2007-07-21",
-      border : "black",
-      type : "promo",
-      mkm_name : "Summer Magic",
-      mkm_id : 76
     },
     {
       name : "Eventide",
@@ -1682,16 +1397,6 @@ Array.prototype.pushAll = function(otherArray) {
       type : "masters",
       onlineOnly : true,
       booster : ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land"]
-    },
-    {
-      name : "Wizards Play Network",
-      code : "pWPN",
-      magicCardsInfoCode : "grc",
-      magicRaritiesCodes : ["255-rarities-wpn-promos"],
-      isMCISet : true,
-      releaseDate : "2008-10-01",
-      border : "black",
-      type : "promo"
     },
     {
       name : "Shards of Alara",
@@ -2408,16 +2113,6 @@ Array.prototype.pushAll = function(otherArray) {
       },
       mkm_name : "Duel Decks: Sorin vs. Tibalt",
       mkm_id : 1430
-    },
-    {
-      name : "World Magic Cup Qualifiers",
-      code : "pWCQ",
-      magicCardsInfoCode : "wmcq",
-      magicRaritiesCodes : ["780-rarities-world-magic-cup-qualifiers-promos"],
-      isMCISet : true,
-      releaseDate : "2013-04-06",
-      border : "black",
-      type : "promo"
     },
     {
       name : "Dragon's Maze",
@@ -3218,10 +2913,6 @@ Array.prototype.pushAll = function(otherArray) {
             "noBasicLandWatermarks",
             { match : "*", remove : ["number"] }
         ],
-		pDRC :
-		[
-			{ match : {name : "Nalathni Dragon"}, replace : {multiverseid : 97050} }
-		],
 		ATQ :
 		[
 			{ match : {name : "Gate to Phyrexia"}, flavorAddDash : true },
@@ -3286,23 +2977,6 @@ Array.prototype.pushAll = function(otherArray) {
 			{ match : {name : "Goblin Hero"}, replace : {flavor : "They attacked in an orgy of rage and madness, but only one seemed as focused on killing us as on the sheer joy of battle."} },
 			{ match : {name : "Marsh Viper"}, replace : {flavor : "\"All we had left were their black and bloated bodies.\" —Maeveen O'Donagh, Memoirs of a Soldier"} },
 			{ match : {name : "Savaen Elves"}, replace : {flavor : "\"Purity of magic can only come from purity of the land. How can a meal nourish if the ingredients are spoiled?\" —Sidaine of Savaen"}}
-		],
-		pMEI :
-		[
-			{match : {name : "Arrest"}, replace : {flavor : "Fayden didn't know if the giant had created the spehere's magic—only that he had to escape it to find Sifa."}},
-			{match : {name : ["Bloodthrone Vampire", "Kor Skyfisher", "Merfolk Mesmerist"]}, replace : {flavor : "www.MagicTheGathering.com"}},
-			{match : {name : "Knight Exemplar"}, replace : {flavor : "\"If you think you are brave enough to walk the path of honor, follow me into the dragon's den.\""}},
-			{match : {name : ["Blue Elemental Blast", "Fireball", "Spined Wurm"]}, replace : {border : "white"}},
-			{match : {name : "Wash Out"}, replace : {releaseDate : "2014-01-15"}},
-			{match : {name : "Duress"}, replace : {artist : "Michael Komarck"}},
-			{match : {name : "Avalance Tusker"}, replace : {name:"Avalanche Tusker", imageName : "avalanche tusker", manaCost : "{2}{G}{U}{R}"}},
-			{match : {name : "Arena"}, replace : {multiverseid : 97042}},
-			{match : {name : "Giant Badger"}, replace : {multiverseid : 97045}},
-			{match : {name : "Mana Crypt"}, replace : {multiverseid : 97048}},
-			{match : {name : "Nalathni Dragon"}, replace : {multiverseid : 97050}},
-			{match : {name : "Sewers of Estark"}, replace : {multiverseid : 97054}},
-			{match : {name : "Windseeker Centaur"}, replace : {multiverseid : 97057}},
-			{match : {name : "Grave Titan"}, replace : {artist : "Lucas Graciano"}}
 		],
 		FEM :
 		[
@@ -3449,23 +3123,6 @@ Array.prototype.pushAll = function(otherArray) {
 			{ match : {name : ["Misinformation", "Nature's Blessing", "Sol Grail", "Urza's Engine", "Varchild's War-Riders"]}, flavorAddDash : true },
 			{ match : {name : "Kaysa"}, replace : {flavor : "Kaysa speaks as the Elder Druid, but the Yavimaya recognizes only one voice: its own."}}
 		],
-		pARL :
-		[
-            "noBasicLandWatermarks",
-			{ match : {name : ["Ashnod's Coupon", "Booster Tutor", "Circle of Protection: Art", "Goblin Mime", "Granny's Payback", "Mise"]}, replace : {border : "silver"}},
-			{ match : {name : "Castigate"}, replace : {flavor : "\"We have no need for military might. We wield two of the sharpest swords ever forged: Faith in our left hand, Wealth in our right.\"\n—Vuliev of the Ghost Council"}},
-			{ match : {name : "Goblin Mime"}, replace : {flavor : "Mung noticed a few clouds gathering in the sky. Perhaps today he could perform his \"walking against the wind\" routine."}},
-			{ match : {name : "Man-o'-War"}, replace : {flavor : "\"Beauty to the eye does not always translate to the touch.\"\n—Naimah, Femeref philospher"}},
-			{ match : {name : "Pouncing Jaguar"}, replace : {flavor : "One pounce, she's hungry—you die quickly. Two, she's teaching her cubs—you're in for a long day."}},
-			{ match : {name : "Rewind"}, replace : {flavor : "\"Time flows like a river. In Tolaria we practice the art of building dams.\"\n—Barrin, master wizard"}}
-		],
-		pCEL :
-		[
-			{ match : {name : "Fraternal Exaltation"}, replace : {text : "Sneak into your parents' closet to get a deck. Your new brother is joining the game."}},
-			{ match : {name : "Proposal"}, replace : {text : "Allows Richard to propose to Lily. If the proposal is accepted both players win; mix the cards in play, both libraries, and both graveyards as a shared deck."}},
-			{ match : {name : "Shichifukujin Dragon"}, replace : {text : {"on it." : "on it.\n"}}},
-			{ match : {name : "Splendid Genesis"}, replace : {text : "Shuffle all cards in the game together and deal them into three decks. The game continues with a new player."}}
-		],
 		MIR :
 		[
             "noBasicLandWatermarks",
@@ -3557,11 +3214,6 @@ Array.prototype.pushAll = function(otherArray) {
 			{ match : {name : "Wall of Spears"}, replace : {flavor : "Even the most conservative generals revised their tactics after the Battle of Sarinth, during which a handful of peasant-pikemen held off a trio of rampaging craw wurms."}},
 			{ match : {name : "Wall of Stone"}, replace : {flavor : "The ground itself lends its strength to these walls of living stone, which possess the stability of ancient mountains. These mighty bulwarks thwart ground-based troops, providing welcome relief for weary warriors who defend the land."}},
 			{ match : {name : "Winter Blast"}, replace : {flavor : "\"Blow, winds, and crack your cheeks! rage! blow!\" —William Shakespeare, King Lear"} }
-		],
-		pPOD :
-		[
-			{ match : {name : "Feral Shadow"}, replace : {flavor : "Not all shadows are cast by light—some are cast by darkness."}},
-			{ match : "*", replace : {releaseDate : "1997-05-01"}}
 		],
 		POR :
 		[
@@ -3663,19 +3315,6 @@ Array.prototype.pushAll = function(otherArray) {
 			{ match : {name : "Vodalian Illusionist"}, replace : {flavor : "\"Torahn gore these shifty fishtails! You can't even get close to one.\"\n—Tahngarth of the Weatherlight"}},
 			{ match : {name : "Phantom Wings"}, replace : {flavor : "\"But you said ‘when goats fly!'\" Squee whined."}}
 		],
-		pPRE :
-		[
-            "noBasicLandWatermarks",
-			{ match : {name : "Archdemon of Greed"}, replace : {layout : "double-faced", names : ["Ravenous Demon", "Archdemon of Greed"]}},
-			{ match : {name : "Ravenous Demon"}, replace : {layout : "double-faced", names : ["Ravenous Demon", "Archdemon of Greed"]}},
-			{ match : {name : "Demigod of Revenge"}, replace : {flavor : "\"His laugh, a bellowing, deathly din, slices through the heavens, making them bleed.\"\n—The Seer's Parables"}},
-			{ match : {name : "Howlpack Alpha"}, remove : ["flavor"], replace : {layout : "double-faced", names : ["Mayor of Avabruck", "Howlpack Alpha"]}},
-			{ match : {name : "Howlpack Alpha"}, replace : {layout : "double-faced", names : ["Mayor of Avabruck", "Howlpack Alpha"]}},
-			{ match : {name : "Overbeing of Myth"}, replace : {flavor : "\"She walks among us unseen, learning from our imperfections.\"\n—The Seer's Parables"}},
-			{ match : {name : "Wren's Run Packmaster"}, replace : {releaseDate : "2007-09-29"}},
-			{ match : {name : "Sultai Ascendacy"}, replace : {name : "Sultai Ascendancy", imageName : "sultai ascendancy"}},
-			{ match : {name : "Nissa, Vastwood Seer"}, replace : {artist : "Wesley Burt"}}
-		],
 		TMP :
 		[
             "noBasicLandWatermarks",
@@ -3710,11 +3349,6 @@ Array.prototype.pushAll = function(otherArray) {
 			{ match : {name : "Steam Catapult"}, replace : {flavor : "\"You idiots! Turn it around! Turn it around!\""}},
 			{ match : {name : "Stone Rain"}, replace : {flavor : "There goes the neighborhood!"}}
 		],
-		pJGP :
-		[
-			{ match : {name : "Burning Wish"}, remove : ["flavor"] },
-			{ match : {name : "Pernicious Deed"}, replace : {flavor : "\"The tyrannous and bloody deed is done, The most arch deed of piteous massacre That ever yet this land was guilty of.\"\n—William Shakespeare, Richard III"}}
-		],
 		EXO :
 		[
 			{ match : {name : ["Erratic Portal", "Pandemonium"]}, flavorAddExclamation : true },
@@ -3736,11 +3370,6 @@ Array.prototype.pushAll = function(otherArray) {
 			{ match : {name : "Handcuffs"}, replace : {flavor : "\"That was fun! Now me.\"\n—Gwendlyn Di Corci"}},
 			{ match : {name : "Mesa Chicken"}, replace : {flavor : "\"Lo! lord of layers proudly comb-crested\nHero to hens father to feathers\nCrowing sun-caller weaver of wattle\nElder to eggs.\"\n—Rooster Saga"}},
 			{ match : {name : "Denied!"}, replace : {type : "Instant", types : ["Instant"]}},
-		],
-		pALP :
-		[
-            "noBasicLandWatermarks",
-			{ match : "*", replace : {releaseDate : "1998"}}
 		],
 		USG :
 		[
@@ -3870,10 +3499,6 @@ Array.prototype.pushAll = function(otherArray) {
 			{ match : {name : "Feral Shadow"}, replace : {artist : "Cliff Nielsen"}},
 			{ match : {name : ["Mons's Goblin Raiders", "Goblin Hero"]}, replace : {rarity : "Common"}}
 		],
-		pWOR :
-		[
-			{ match : {name : "Balduvian Horde"}, remove : ["flavor"]}
-		],
 		MMQ :
 		[
 			{ match : {name : "Squee, Goblin Nabob"}, replace : {flavor : "\"General?!\" Tahngarth roared. \"General nuisance, maybe.\""}}
@@ -3890,20 +3515,6 @@ Array.prototype.pushAll = function(otherArray) {
 			{ match : {name : "Curfew"}, replace : {flavor : "\". . . But I'm not tired!\""}},
 			{ match : {name : "Pincher Beetles"}, replace : {flavor : "\"No fair! Since when does a bug get ta munch on me?\"\n—Squee, goblin cabin hand"}},
 			{ match : {name : "Lhurgoyf"}, replace : {flavor : "\"Ach! Hans, run! It's the Lhurgoyf!\"\n—Saffi Eriksdotter, last words"}},
-		],
-		pSUS :
-		[
-			{ match : {name : "City of Brass"}, replace : {flavor : "\"Enter this palace-gate and ask the news Of greatness fallen into dust and clay.\"\n—The Arabian Nights, trans. Burton"}},
-			{ match : {name : "Elvish Champion"}, replace : {flavor : "\"We've endured your slights to Gaea with the grace of tolerance. Now behold the grace of our ferocity.\""}},
-			{ match : {name : "Whirling Dervish"}, replace : {flavor : "Amid this whirling hurricane of blades, there is no calm eye in which the hapless can find shelter."}}
-		],
-		pFNM :
-		[
-			{ match : {name : "Crystalline Sliver"}, replace : {releaseDate:"2008-06", source : "Summer Series Grand Prix events participation bonus. Creating a Magic Online account or filling out a survey on site at PAX East."}},
-			{ match : {name : "Engineered Plague"}, replace : {flavor : "\"The admixture of bitterwort in the viral brew has produced most favorable results.\"\n—Phyrexian progress notes"}},
-			{ match : {name : ["Fact or Fiction", "Force Spike"]}, remove : ["flavor"]},
-			{ match : {name : "Ophidian"}, replace : {flavor : "\"I will ... tell thee more than thou hast wit to ask.\"\n—Christopher Marlowe, Doctor Faustus"}},
-			{ match : {name : "Wing Shards"}, replace : {releaseDate:"2007-09-01", source : "Friday Night Magic prize"}}
 		],
 		NMS :
 		[
@@ -3961,10 +3572,6 @@ Array.prototype.pushAll = function(otherArray) {
 		"7ED" :
 		[
 			{ match : {name : ["Fear", "Flying Carpet", "Lava Axe", "Might of Oaks", "Persecute", "Reprisal", "Sabretooth Tiger", "Scavenger Folk", "Sea Monster", "Treasure Trove"]}, flavorAddExclamation : true }
-		],
-		pMPR :
-		[
-			{ match : {name : ["Brave the Elements", "Doom Blade", "Treasure Hunt"]}, remove : ["flavor"]}
 		],
 		APC :
 		[
@@ -4058,13 +3665,6 @@ Array.prototype.pushAll = function(otherArray) {
 		SCG :
 		[
 			{ match : {name: "Goblin War Strike"}, flavorAddExclamation : true }
-		],
-		pREL :
-		[
-			{ match : {	name :"Force of Nature"}, remove : ["flavor"] },
-			{ match : { name : "Ichiga, Who Topples Oaks"}, replace : { layout : "flip", names : ["Budoka Pupil", "Ichiga, Who Topples Oaks"], source : "Betrayers of Kamigawa Release Event participation bonus.", releaseDate : "2005-02-04"}},
-			{ match : { name : "Budoka Pupil"}, replace : { names : ["Budoka Pupil", "Ichiga, Who Topples Oaks"]}},
-			{ match : { name : "Ass Whuppin'"}, replace : { border : "silver"}}
 		],
 		"8ED" :
 		[
@@ -4230,25 +3830,6 @@ Array.prototype.pushAll = function(otherArray) {
 			{ match : {name : ["Overwhelm"]}, flavorAddExclamation : true },
 			{ match : {name : "Thundersong Trumpeter"}, replace : {flavor : "\"Hear that? Those notes mean we've arrived at Sunhome! Let our allies' hearts soar and our enemies' hearts shatter at the sound!\"\n—Klattic, Boros legionnaire"}}
 		],
-		pGTW :
-		[
-			{ match : {number : ">20"}, removeCard : true}
-		],
-		pWPN :
-		[
-			{ match : {number : "<21"}, removeCard : true},
-			{ match : {name : "Deathless Angel"}, replace : {releaseDate : "2010"}},
-			{ match : {name : "Emeria Angel"}, replace : {releaseDate : "2009"}},
-			{ match : {name : "Hada Freeblade"}, replace : {releaseDate : "2010"}},
-			{ match : {name : "Kalastria Highborn"}, replace : {releaseDate : "2010"}},
-			{ match : {name : "Mycoid Shepherd"}, replace : {releaseDate : "2009"}},
-			{ match : {name : "Naya Sojourners"}, replace : {releaseDate : "2010"}},
-			{ match : {name : "Nissa's Chosen"}, replace : {releaseDate : "2009"}},
-			{ match : {name : "Staggershock"}, replace : {releaseDate : "2010"}},
-			{ match : {imageName : "fling1"}, replace : {releaseDate : "2014"}},
-			{ match : {imageName : "sylvan ranger1"}, replace : {releaseDate : "2014"}},
-			{ match : {name : "Curse of Thirst"}, replace : {artist : "Dave Kendall"}}
-		],
 		GPT :
 		[
 			{ match : {name : ["Gelectrode", "Schismotivate", "Skarrg, the Rage Pits", "Skarrgan Skybreaker", "Train of Thought", "Wreak Havoc"]}, flavorAddExclamation : true },
@@ -4295,40 +3876,6 @@ Array.prototype.pushAll = function(otherArray) {
 			{ match : {name : ["Pandemonium"]}, flavorAddExclamation : true },
 			{ match : {name : "Craw Giant"}, replace : {flavor : "Harthag gave a jolly laugh as he surveyed the army before him. \"Ho ho ho! Midgets! You think you can stand in my way?\""}}
 		],
-		pHHO :
-		[
-			{ match : {name : "Naughty/Nice"}, replace :
-				{
-					layout      : "split",
-					name        : "Naughty",
-					manaCost    : "{1}{B}{B}",
-					releaseDate : "2012",
-					cmc         : 3,
-					imageName   : "naughtynice",
-					colors      : ["Black"],
-					names       : ["Naughty", "Nice"],
-					text        : "Search another target player's library for a card and put that card into your hand. Then shuffle that player's library.",
-					number      : "7a",
-					source      : "Holiday gift to Wizards internal teams and business partners.",
-					printings    : ["pHHO"]
-				}
-			},
-			{ copyCard : "Naughty", replace :
-				{
-					name         : "Nice",
-					number       : "7b",
-					text         : "Search your library for a card and put it into another target player's hand. Then shuffle your library.",
-					manaCost     : "{1}{W}{W}",
-					colors       : ["White"],
-					printings    : ["pHHO"]
-				}
-			},
-			{ match : {name : "Mishra's Toy Workshop"}, replace : {artist : "Jung Park"}},
-			{ match : {name : "Gifts Given"}, replace : {text : "Search target opponent's library for four cards with different names and reveal them. That player chooses two of those cards. Put the chosen cards into the player's graveyard and the rest into your hand. Then that player shuffles his or her library."}},
-			{ match : {name : "Evil Presents"}, replace : {flavor : "'Tis better to give than to receive."}},
-			{ match : {name : "Gifts Given"}, replace : {flavor : "\"Thanks! You shouldn't have.\""}},
-			{ match : {name : "Season's Beatings"}, replace : {flavor : "Arriving home, he suddenly longed for the bloodsoaked battlefields behind him."}}
-		],
 		PLC :
 		[
 			{ match : {multiverseid : [130715, 122321, 122373, 122360, 122423, 128940, 122428, 122374, 122402, 122367, 122280, 122429, 122362, 122371, 122405, 122451, 131006, 122481, 122324, 130714, 125877, 126214, 134738, 124033, 125874, 126212,
@@ -4358,11 +3905,6 @@ Array.prototype.pushAll = function(otherArray) {
 			{ match : {name : "Mogg Fanatic"}, replace : {flavor : "\"I got it! I got it! I—\""}},
 			{ match : {name : "Overgrowth"}, replace : {flavor : "\"Let the forest spread! From salt, stone, and fen, let the new trees rise.\"\n—Molimo, maro-sorcerer"}}
 		],
-		pMGD :
-		[
-			{ match : {name : ["Black Sun's Zenith", "Cryptborn Horror", "Dictate of Kruphix", "Dryad Militant", "Dungrove Elder", "Kiora's Follower", "Liliana's Specter", "Myr Superion", "Pain Seer", "Priest of Urabrask", "Squelching Leeches",
-							   "Stormblood Berserker", "Strangleroot Geist", "Tempered Steel", "Zombie Apocalypse"]}, remove : ["flavor"] }
-		],
 		MED :
 		[
 			{ match : {name : "Order of Leitbur"}, replace : {artist : "Randy Asplund-Faith"}},
@@ -4380,15 +3922,6 @@ Array.prototype.pushAll = function(otherArray) {
 			{ match : {name : "Elemental"}, replace : {number : "T1", layout : "token"}},
 			{ match : {name : "Elf Warrior"}, replace : {number : "T2", layout : "token"}},
 			{ match : {name : "Goblin"}, replace : {number : "T3", layout : "token"}}
-		],
-		pLPA :
-		[
-			{ match : {name : "Ajani Vengeant"}, replace : {source : "Shards of Alara Launch Party participation bonus", releaseDate : "2008-10-03"}},
-			{ match : {name : "Ludevic's Abomination"}, replace : {layout : "double-faced", names :["Ludevic's Test Subject", "Ludevic's Abomination"]}},
-			{ match : {name : "Ludevic's Test Subject"}, replace : {names :["Ludevic's Test Subject", "Ludevic's Abomination"]}},
-			{ match : {name : "Mondronen Shaman"}, replace : {names :["Mondronen Shaman", "Tovolar's Magehunter"]}},
-			{ match : {name : "Tovolar's Magehunter"}, replace : {layout : "double-faced", names :["Mondronen Shaman", "Tovolar's Magehunter"]}, remove : ["flavor"]},
-			{ match : {name : "Dragone Throne of Tarkir"}, replace : {name : "Dragon Throne of Tarkir", imageName : "dragon throne of tarkir"}}
 		],
 		MOR :
 		[
@@ -4905,10 +4438,6 @@ Array.prototype.pushAll = function(otherArray) {
       "Thousand Winds" : 3
     }
   };
-
-  exports.SET_CORRECTIONS.LEB.pushAll(exports.SET_CORRECTIONS.LEA);  // All of LEA rules apply to LEB
-  exports.SET_CORRECTIONS['2ED'].pushAll(exports.SET_CORRECTIONS.LEA);  // All of LEA rules apply to 2ED
-  exports.SETS.forEach(function(SET) { if(SET.isMCISet) { if(!exports.SET_CORRECTIONS.hasOwnProperty(SET.code)) { exports.SET_CORRECTIONS[SET.code] = []; } exports.SET_CORRECTIONS[SET.code].push({match : "*", fixFlavorNewlines:true}); }});
 
   exports.ARTIST_CORRECTIONS = {
     "Brian Snõddy"                        : ["Brian Snōddy", "Brian Snoddy", "Brian Snøddy"],
