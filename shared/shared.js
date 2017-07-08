@@ -455,51 +455,53 @@ exports.performSetCorrections = function(setCorrections, fullSet)
 		});
 	});
 
-	// Flavor text changes
-	cards.forEach(function(card)
-	{
-		if(!card.flavor)
-			return;
-
-		card.flavor = card.flavor.replaceAll("“", "\"");
-		card.flavor = card.flavor.replaceAll("”", "\"");
-		card.flavor = card.flavor.replaceAll("＂", "\"");
-		card.flavor = card.flavor.replaceAll("’", "'");
-
-		while(card.flavor.contains(" \n"))
-		{
-			card.flavor = card.flavor.replaceAll(" \n", "\n");
+	// Homogenize quotes and remove extra newlines and trailing spaces
+	function fixText(text) {
+		var newText = text;
+		newText = newText.replaceAll("“", "\"");
+		newText = newText.replaceAll("”", "\"");
+		newText = newText.replaceAll("＂", "\"");
+		newText = newText.replaceAll("’", "'");
+		newText = newText.replaceAll("‘", "'");
+		while (newText.contains(" \n")) {
+			newText = newText.replaceAll(" \n", "\n");
 		}
-	});
+		while (newText.contains("\n ")) {
+			newText = newText.replaceAll("\n ", "\n");
+		}
+		while (newText.contains("\n\n")) {
+			newText = newText.replaceAll("\n\n", "\n");
+		}
+		return newText;
+	}
 
-	// Rulings corrections
+	// Card / flavor / ruling text changes
 	cards.forEach(function(card)
 	{
-		if(!card.hasOwnProperty("rulings") || card.rulings.length===0)
-			return;
+		if(card.text)
+			card.text = fixText(card.text);
 
-		card.rulings.forEach(function(ruling)
-		{
-			ruling.text = ruling.text.replaceAll("“", "\"");
-			ruling.text = ruling.text.replaceAll("”", "\"");
-			ruling.text = ruling.text.replaceAll("＂", "\"");
-			ruling.text = ruling.text.replaceAll("’", "'");
+		if(card.flavor)
+			card.flavor = fixText(card.flavor);
 
-			Object.forEach(C.SYMBOL_MANA, function(manaSymbol)
-			{
-				var newText = ruling.text.replaceAll("\\{" + manaSymbol.toUpperCase() + "\\]", "{" + manaSymbol.toUpperCase() + "}");
-				if(newText===ruling.text)
-					ruling.text.replaceAll("\\[" + manaSymbol.toUpperCase() + "\\}", "{" + manaSymbol.toUpperCase() + "}");
-				if(newText===ruling.text)
-					ruling.text.replaceAll("\\[" + manaSymbol.toUpperCase() + "\\]", "{" + manaSymbol.toUpperCase() + "}");
+		if(card.hasOwnProperty("rulings") && card.rulings.length!==0) {
+			card.rulings.forEach(function(ruling) {
+				ruling.text = fixText(ruling.text);
 
-				if(newText!==ruling.text)
-				{
-					base.warn("Auto correcting set %s Card [%s] (%s) that has ruling with invalid symbol: %s", fullSet.code, card.name, card.multiverseid || "", ruling.text);
-					ruling.text = newText;
-				}
+				Object.forEach(C.SYMBOL_MANA, function(manaSymbol) {
+					var newText = ruling.text.replaceAll("\\{" + manaSymbol.toUpperCase() + "\\]", "{" + manaSymbol.toUpperCase() + "}");
+					if(newText===ruling.text)
+						ruling.text.replaceAll("\\[" + manaSymbol.toUpperCase() + "\\}", "{" + manaSymbol.toUpperCase() + "}");
+					if(newText===ruling.text)
+						ruling.text.replaceAll("\\[" + manaSymbol.toUpperCase() + "\\]", "{" + manaSymbol.toUpperCase() + "}");
+
+					if(newText!==ruling.text) {
+						base.warn("Auto correcting set %s Card [%s] (%s) that has ruling with invalid symbol: %s", fullSet.code, card.name, card.multiverseid || "", ruling.text);
+						ruling.text = newText;
+					}
+				});
 			});
-		});
+		}
 	});
 
 	// Final Release date validation
