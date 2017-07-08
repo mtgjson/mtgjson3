@@ -1064,21 +1064,7 @@ var ripMCISet = function(set, cb) {
 
 			set.cards = cards.filterEmpty().sort(shared.cardComparator);
 			fillImageNames(set);
-
-			if (fs.existsSync(path.join(__dirname, "..", "json", set.code + ".json"))) {
-				addPrintingsToMCISet(set, this.parallel());
-				addMagicLibraritiesInfoToMCISet(set, this.parallel());
-			}
-			else {
-				base.warn("RUN ONE MORE TIME FOR PRINTINGS!");
-				this();
-			}
-		},
-		function performCorrections() {
-			base.info("Doing set corrections...");
-			shared.performSetCorrections(shared.getSetCorrections(set.code), set);
-
-			this();
+			addMagicLibraritiesInfoToMCISet(set, this);
 		},
 		function applyLatestOracleFields() {
 			base.info("Applying latest oracle fields to MCI cards...");
@@ -1107,6 +1093,33 @@ var ripMCISet = function(set, cb) {
 				});
 			});
 
+			this();
+		},
+		function fixCommanderIdentity() {
+			base.info("Fixing color identity...");
+
+			fixCommanderIdentityForCards(set.cards, this.parallel());
+			fixCMC(set.cards, this.parallel());
+		},
+		function performCorrections() {
+			base.info("Doing set corrections...");
+			shared.performSetCorrections(shared.getSetCorrections(set.code), set);
+
+			this();
+		},
+		function addPrintings() {
+			if (fs.existsSync(path.join(__dirname, "..", "json", set.code + ".json"))) {
+				base.info("Updating printings...");
+				addPrintingsToMCISet(set, this);
+			}
+			else {
+				base.warn("RUN ONE MORE TIME FOR PRINTINGS!");
+				this();
+			}
+		},
+		function finalizePrintings() {
+			base.info("Cleaning up duplicate printings.");
+			set.cards.forEach(shared.finalizePrintings);
 			this();
 		},
 		function finish(err) {
@@ -1556,7 +1569,7 @@ var processTextBoxChildren = function(children) {
 var getTextContent = function(item) {
 	var ret = '';
 	if (item) {
-		ret = item.innerHTML
+		ret = item.textContent
 		.replace(/<img .*?alt="([^"]*)"[^>]*>/g, function(match, alt) {
 			if (!SYMBOL_CONVERSION_MAP[alt.toLowerCase()]) {
 				console.log("Can't find symbol: %s", alt);
