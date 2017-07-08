@@ -2264,7 +2264,7 @@ Array.prototype.pushAll = function(otherArray) {
       border : "black",
       type : "expansion",
       block : "Innistrad",
-      booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"],
+      booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", ["marketing", "checklist"]],
       translations: {
         de: 'Dunkles Erwachen',
         fr: 'Obscure ascension',
@@ -2942,7 +2942,7 @@ Array.prototype.pushAll = function(otherArray) {
       releaseDate : "2015-07-17",
       border : "black",
       type : "core",
-      booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"],
+      booster : [["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", ["marketing", "checklist"]],
       translations: {
         de: 'Magic Ursprünge',
         fr: 'Magic Origines',
