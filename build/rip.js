@@ -1569,16 +1569,18 @@ var processTextBoxChildren = function(children) {
 var getTextContent = function(item) {
 	var ret = '';
 	if (item) {
-		ret = item.textContent
-		.replace(/<img .*?alt="([^"]*)"[^>]*>/g, function(match, alt) {
-			if (!SYMBOL_CONVERSION_MAP[alt.toLowerCase()]) {
-				console.log("Can't find symbol: %s", alt);
-			}
-			return('{' + SYMBOL_CONVERSION_MAP[alt.toLowerCase()] + '}');
-		})
-		.replace(/<[^>]*>/g, '')
-		.replaceAll("&amp;", "&")
-		.replaceAll("&nbsp;", " ");
+		ret = typeof item.innerHTML !== 'undefined' ? item.innerHTML : item.textContent;
+		ret = ret
+			.replace(/<img .*?alt="([^"]*)"[^>]*>/g, function(match, alt) {
+				if (!SYMBOL_CONVERSION_MAP[alt.toLowerCase()]) {
+					console.log("Can't find symbol: %s", alt);
+				}
+				return('{' + SYMBOL_CONVERSION_MAP[alt.toLowerCase()] + '}');
+			})
+			.replace(/<[^>]*>/g, '');
+		ret = ret
+			.replaceAll("&amp;", "&")
+			.replaceAll("&nbsp;", " ");
 	}
 	return(ret);
 };
