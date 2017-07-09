@@ -181,19 +181,20 @@ function clearCacheForSet(code, cacheTypes, cb) {
 			var set = JSON.parse(setRaw);
 			base.info("%s: %d cards found.", set.code, set.cards.length);
 
+			var eachCb = this;
 			async.each(
 				cacheTypes,
-				function(cacheType, cb) {
+				function(cacheType) {
 					base.info("Clearing cache type: %s", cacheType);
 
 					if (cacheType === "mcilist") {
-						getURLSForMcilistCache(setInfo, set, cb);
+						getURLSForMcilistCache(setInfo, set, eachCb);
 					}
 					else if (cacheType === "listings") {
-						shared.buildMultiverseListingURLs(setName, cb);
+						shared.buildMultiverseListingURLs(setName, eachCb);
 					}
 					else {
-						getURLSForCacheType(setInfo, set, cacheType, cb);
+						getURLSForCacheType(setInfo, set, cacheType, eachCb);
 					}
 				},
 				this
