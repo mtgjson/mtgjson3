@@ -1,11 +1,14 @@
+dist: trusty
+sudo: false
+
 language: node_js
 node_js:
   - 8
   - 6
 
 env:
-  - CXX=g++-6
+  - CXX=g++-4.8
 addons:
   apt:
     packages:
-    - g++-6
+    - g++-4.8
