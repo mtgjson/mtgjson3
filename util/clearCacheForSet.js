@@ -111,8 +111,7 @@ function getURLSForCacheType(setInfo, set, cacheType, callback) {
 				function(err, url) {
 					urls.push(url);
 					subcb();
-				},
-				true
+				}
 			);
 		},
 		function(err) {
