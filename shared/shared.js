@@ -675,7 +675,6 @@ exports.getURLAsDoc = function(targetURL, getCb) {
                 return getCb(err);
             }
         } else {
-            base.info('Found in cache: %s', targetURL);
             return getCb(null, domino.createWindow(doc).document);
         }
     });
