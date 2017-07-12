@@ -10,12 +10,12 @@ var querystring = require("querystring");
 var tiptoe = require("tiptoe");
 var fs = require("fs");
 var url = require("url");
-var httpUtil = require("@sembiance/xutil").http;
 var urlUtil = require("@sembiance/xutil").url;
 var unicodeUtil = require("@sembiance/xutil").unicode;
-var cache = require('cache');
 
-exports.cache = cache(path.join(__dirname, '..', 'cache'), { compress: true });
+var request = require('request');
+var levelup = require('level');
+exports.cache = levelup(path.join(__dirname, '..', 'cache'));
 
 exports.getSetsToDo = function(startAt) {
 	startAt = startAt || 2;
@@ -536,10 +536,6 @@ exports.performSetCorrections = function(setCorrections, fullSet)
 	});
 };
 
-exports.generateCacheFilePath = function(targetUrl) {
-	exports.cache.cachname(targetUrl);
-};
-
 exports.finalizePrintings = finalizePrintings;
 function finalizePrintings(card)
 {
@@ -585,12 +581,20 @@ function getReleaseDateForSetCode(setCode)
 }
 
 exports.clearCacheFile = function(targetUrl, cb) {
-	exports.cache.delete(targetUrl).done(cb);
+    exports.cache.get(targetUrl, function(err) {
+        if (err && err.notFound) return cb();
+        if (err) return cb(err);
+        exports.cache.del(targetUrl, {}, function(err) {
+            if (err) return cb(err);
+            base.info('Cleared from cache: %s', targetUrl);
+            return cb();
+        });
+    });
 };
 
-exports.buildCacheFileURLs = function(card, cacheType, cb, fromCache) {
+exports.buildCacheFileURLs = function(card, cacheType, cb) {
 	if (cacheType==="printings")
-		return exports.buildMultiverseAllPrintingsURLs(card.multiverseid, cb, fromCache);
+		return exports.buildMultiverseAllPrintingsURLs(card.multiverseid, cb);
 
 	var urls = [];
 	if (cacheType==="oracle") {
@@ -641,94 +645,54 @@ exports.buildMultiverseListingURLs = function(setName, cb) {
 	);
 };
 
-exports.getURLAsDoc = function(targetURL, cb, retryCount) {
-	retryCount = 0;
+exports.getURLAsDoc = function(targetURL, getCb) {
+    function downloadHTML(dlCb) {
+        var options = {
+            url: targetURL,
+            headers: { 'User-Agent': 'mtgjson.com/1.0' }
+        };
+        request(options, function(err, response, body) {
+            if (!err && response && response.statusCode !== 200)
+                err = new Error('Server responded with statusCode: ' + response.statusCode);
+            if (!err && (!body || body.length === 0))
+                err = new Error('No page contents');
+            if (body.indexOf('Server Error') !== -1)
+                err = new Error('Gatherer Server Error despite statusCode: ' + response.statusCode);
+            if (err) {
+                base.error('Error downloading: %s', targetURL);
+                base.error(err);
+                return dlCb(err);
+            }
+            base.info('Retrieved: %s', targetURL);
+            dlCb(null, body);
+        });
+    }
 
-	// Downloads the targetURL.
-	var downloadDoc = function(cb) {
-		if (retryCount > 103) {
-			cb(new Error("Invalid pageHTML for " + targetURL));
-			return;
-		}
+    function downloadCb(err, body) {
+        if (err) return getCb(err);
+        exports.cache.put(targetURL, body);
+        getCb(null, domino.createWindow(body).document);
+    }
 
-		httpUtil.get(
-			targetURL,
-			{
-				timeout: base.SECOND * 10,
-				retry: 105,
-				'User-Agent': 'mtgjson.com/1.0'
-			},
-			function(err, pageHTML, responseHeaders, responseStatusCode) {
-				if (err || (responseStatusCode && responseStatusCode!==200)) {
-					base.error("Error downloading: " + targetURL);
-					base.error(err);
-					return(setImmediate(cb, err));
-				}
+    function cacheCb(err, doc) {
+        if (err && err.notFound)
+            downloadHTML(downloadCb);
+        else if (err)
+            getCb(err);
+        else
+            getCb(null, domino.createWindow(doc).document);
+    }
 
-				var success = true;
-				if (!pageHTML || pageHTML.length === 0) {
-					success = false;
-					base.error("No page contents");
-				}
-
-				/*
-				var pageString = pageHTML ? pageHTML.toString('utf8').trim().toLowerCase() : '';
-
-				if (!targetURL.contains("www.magiclibrarities.net") && (!pageString.endsWith('</html>') || !pageString.endsWith('</string>'))) {
-					success = false;
-					base.error('Invalid page format.');
-					base.error(pageString.substr(-80));
-				}
-				*/
-
-				if (!success) {
-					retryCount++;
-					base.error("FAILED DOWNLOADING (%s), TRYING AGAIN RETRY %d", targetURL, retryCount);
-					return(setImmediate(downloadDoc, cb));	
-				}
-
-				setImmediate(cb, null, pageHTML);
-			}
-		);
-	};
-
-	exports.cache.get(
-		targetURL,
-		function(cachecb) {
-			base.info("Requesting from web: %s", targetURL);
-			downloadDoc(function(err, html) {
-				if (err)
-					throw(err);
-				cachecb(html);
-			});
-		}
-	).done(function(err, html) {
-		if (err) {
-			console.error('Error downloading %s', targetURL);
-			exports.cache.delete(targetURL).done(function() { throw(err); });
-			return;
-		}
-		setImmediate(cb, null, domino.createWindow(html).document);
-	});
+    exports.cache.get(targetURL, cacheCb);
 };
 
-exports.buildMultiverseAllPrintingsURLs = function(multiverseid, cb, fromCache) {
+exports.buildMultiverseAllPrintingsURLs = function(multiverseid, cb) {
 	tiptoe(
 		function getFirstPage() {
 			var targetURL = exports.buildMultiversePrintingsURL(multiverseid, 0);
-			if (fromCache) {
-				exports.cache.get(targetURL, function(cachecb) {
-					httpUtil.get(targetURL, function(err, html) {
-						if (err) throw(err);
-						cachecb(html);
-					});
-				})
-				.done(this);
-			}
-			else
-				httpUtil.get(targetURL, this);
+            exports.getURLAsDoc(targetURL, this);
 		},
-		function getAllPages(err, rawHTML) {
+		function getAllPages(err, doc) {
 			if(err) {
 				base.error(exports.buildMultiversePrintingsURL(multiverseid, 0));
 				base.error(err);
@@ -737,7 +701,7 @@ exports.buildMultiverseAllPrintingsURLs = function(multiverseid, cb, fromCache) 
 
 			var urls = [];
 
-			var numPages = exports.getPagingNumPages(domino.createWindow(rawHTML).document, "printings");
+			var numPages = exports.getPagingNumPages(doc, "printings");
 			for(var i = 0; i < numPages; i++) {
 				urls.push(exports.buildMultiversePrintingsURL(multiverseid, i));
 			}
