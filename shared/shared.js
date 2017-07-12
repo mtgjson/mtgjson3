@@ -581,8 +581,12 @@ function getReleaseDateForSetCode(setCode)
 }
 
 exports.clearCacheFile = function(targetUrl, cb) {
-    base.info('Clearing from cache: %s', targetUrl);
-	exports.cache.del(targetUrl, {}, cb);
+	function clearedCb(err) {
+		if (err) cb(err);
+		base.info('Cleared from cache: %s', targetUrl);
+		return cb();
+	}
+	exports.cache.del(targetUrl, {}, clearedCb);
 };
 
 exports.buildCacheFileURLs = function(card, cacheType, cb) {
@@ -639,45 +643,48 @@ exports.buildMultiverseListingURLs = function(setName, cb) {
 };
 
 exports.getURLAsDoc = function(targetURL, getCb) {
-    var downloadHTML = function(dlCb) {
+    function downloadHTML(dlCb) {
         var options = {
             url: targetURL,
             headers: { 'User-Agent': 'mtgjson.com/1.0' }
         };
-        base.info('Requesting from web: %s', targetURL);
-    	request(options, function(err, response, body) {
-    		if (err) {
+        request(options, function(err, response, body) {
+            if (err) {
                 base.error('Error downloading: ' + targetURL);
                 base.error(err);
                 return dlCb(err);
             }
-    		if (response && response.statusCode !== 200) {
+            if (response && response.statusCode !== 200) {
+                base.error('Error downloading: ' + targetURL);
                 base.error('Server responded with statusCode: '+ response.statusCode);
                 return dlCb(response.statusCode);
             }
-    		if (!body || body.length === 0) {
-    			base.error('No page contents');
+            if (!body || body.length === 0) {
+                base.error('Error downloading: ' + targetURL);
+                base.error('No page contents');
                 return dlCb('No page contents');
             }
-    		return dlCb(null, body);
-    	});
-    };
+            base.info('Retrieved: %s', targetURL);
+            dlCb(null, body);
+        });
+    }
 
-    exports.cache.get(targetURL, function(err, doc) {
-        if (err) {
-            if (err.notFound) {
-                downloadHTML(function(err, body) {
-                    if (err) return getCb(err);
-                    exports.cache.put(targetURL, body);
-                    return getCb(null, domino.createWindow(body).document);
-                });
-            } else {
-                return getCb(err);
-            }
-        } else {
-            return getCb(null, domino.createWindow(doc).document);
-        }
-    });
+    function downloadCb(err, body) {
+        if (err) return getCb(err);
+        exports.cache.put(targetURL, body);
+        getCb(null, domino.createWindow(body).document);
+    }
+
+    function cacheCb(err, doc) {
+        if (err && err.notFound)
+            downloadHTML(downloadCb);
+        else if (err)
+            getCb(err);
+        else
+            getCb(null, domino.createWindow(doc).document);
+    }
+
+    exports.cache.get(targetURL, cacheCb);
 };
 
 exports.buildMultiverseAllPrintingsURLs = function(multiverseid, cb) {
