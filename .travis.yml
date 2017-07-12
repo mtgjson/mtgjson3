@@ -5,6 +5,10 @@ node_js:
   - 6
   - 8
 
+script:
+  - npm test
+  - util/travis.sh
+
 env:
   - CXX=g++-4.8
 addons:
