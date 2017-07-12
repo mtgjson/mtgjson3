@@ -581,12 +581,15 @@ function getReleaseDateForSetCode(setCode)
 }
 
 exports.clearCacheFile = function(targetUrl, cb) {
-	function clearedCb(err) {
-		if (err) cb(err);
-		base.info('Cleared from cache: %s', targetUrl);
-		return cb();
-	}
-	exports.cache.del(targetUrl, {}, clearedCb);
+    exports.cache.get(targetUrl, function(err) {
+        if (err && err.notFound) return cb();
+        if (err) return cb(err);
+        exports.cache.del(targetUrl, {}, function(err) {
+            if (err) return cb(err);
+            base.info('Cleared from cache: %s', targetUrl);
+            return cb();
+        });
+    });
 };
 
 exports.buildCacheFileURLs = function(card, cacheType, cb) {
@@ -649,20 +652,16 @@ exports.getURLAsDoc = function(targetURL, getCb) {
             headers: { 'User-Agent': 'mtgjson.com/1.0' }
         };
         request(options, function(err, response, body) {
+            if (!err && response && response.statusCode !== 200)
+                err = new Error('Server responded with statusCode: ' + response.statusCode);
+            if (!err && (!body || body.length === 0))
+                err = new Error('No page contents');
+            if (body.indexOf('Server Error') !== -1)
+                err = new Error('Gatherer Server Error despite statusCode: ' + response.statusCode);
             if (err) {
-                base.error('Error downloading: ' + targetURL);
+                base.error('Error downloading: %s', targetURL);
                 base.error(err);
                 return dlCb(err);
-            }
-            if (response && response.statusCode !== 200) {
-                base.error('Error downloading: ' + targetURL);
-                base.error('Server responded with statusCode: '+ response.statusCode);
-                return dlCb(response.statusCode);
-            }
-            if (!body || body.length === 0) {
-                base.error('Error downloading: ' + targetURL);
-                base.error('No page contents');
-                return dlCb('No page contents');
             }
             base.info('Retrieved: %s', targetURL);
             dlCb(null, body);
