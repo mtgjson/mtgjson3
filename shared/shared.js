@@ -13,6 +13,7 @@ var url = require("url");
 var urlUtil = require("@sembiance/xutil").url;
 var unicodeUtil = require("@sembiance/xutil").unicode;
 
+var retry = require('retry');
 var request = require('request');
 var levelup = require('level');
 exports.cache = levelup(path.join(__dirname, '..', 'cache'));
@@ -656,7 +657,7 @@ exports.getURLAsDoc = function(targetURL, getCb) {
                 err = new Error('Server responded with statusCode: ' + response.statusCode);
             if (!err && (!body || body.length === 0))
                 err = new Error('No page contents');
-            if (body.indexOf('Server Error') !== -1)
+            if (!err && body.indexOf('Server Error') !== -1)
                 err = new Error('Gatherer Server Error despite statusCode: ' + response.statusCode);
             if (err) {
                 base.error('Error downloading: %s', targetURL);
@@ -668,6 +669,20 @@ exports.getURLAsDoc = function(targetURL, getCb) {
         });
     }
 
+    function retryDl(dlCb) {
+        var operation = retry.operation({ retries: 5});
+        operation.attempt(function(currentAttempt) {
+            downloadHTML(function(err, body) {
+                if (operation.retry(err)){
+                    base.info('Retry %d of fetch: %s', currentAttempt, targetURL);
+                    return;
+                }
+
+                dlCb(err ? operation.mainError() : null, body);
+            });
+        });
+    }
+
     function downloadCb(err, body) {
         if (err) return getCb(err);
         exports.cache.put(targetURL, body);
@@ -676,7 +691,7 @@ exports.getURLAsDoc = function(targetURL, getCb) {
 
     function cacheCb(err, doc) {
         if (err && err.notFound)
-            downloadHTML(downloadCb);
+            retryDl(downloadCb);
         else if (err)
             getCb(err);
         else
