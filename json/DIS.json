@@ -15337,8 +15337,9 @@
       "artist": "Jim Nelson",
       "cmc": 5,
       "colorIdentity": [
-        "B",
-        "G"
+        "U",
+        "G",
+        "B"
       ],
       "colors": [
         "Black",
@@ -15386,8 +15387,8 @@
           "multiverseid": 123869
         }
       ],
-      "id": "995f8adc7ca24c1371071e11606b1db36c106029",
-      "imageName": "bounddetermined1",
+      "id": "00a87665335ba1129ccfa6bbaba611d52abe933d",
+      "imageName": "bounddetermined",
       "layout": "split",
       "legalities": [
         {
@@ -15445,59 +15446,60 @@
     },
     {
       "artist": "Jim Nelson",
-      "cmc": 5,
+      "cmc": 2,
       "colorIdentity": [
-        "B",
-        "G"
+        "U",
+        "G",
+        "B"
       ],
       "colors": [
-        "Black",
+        "Blue",
         "Green"
       ],
       "foreignNames": [
         {
           "language": "Chinese Simplified",
-          "name": "Bound",
+          "name": "Determined",
           "multiverseid": 122609
         },
         {
           "language": "French",
-          "name": "Bound",
+          "name": "Determined",
           "multiverseid": 122789
         },
         {
           "language": "German",
-          "name": "Bound",
+          "name": "Determined",
           "multiverseid": 122969
         },
         {
           "language": "Italian",
-          "name": "Bound",
+          "name": "Determined",
           "multiverseid": 123149
         },
         {
           "language": "Japanese",
-          "name": "Bound",
+          "name": "Determined",
           "multiverseid": 123329
         },
         {
           "language": "Portuguese (Brazil)",
-          "name": "Bound",
+          "name": "Determined",
           "multiverseid": 123509
         },
         {
           "language": "Russian",
-          "name": "Bound",
+          "name": "Determined",
           "multiverseid": 123689
         },
         {
           "language": "Spanish",
-          "name": "Bound",
+          "name": "Determined",
           "multiverseid": 123869
         }
       ],
-      "id": "266a1515eeccf294b8d1edb6a4bbfbef12bab679",
-      "imageName": "bounddetermined2",
+      "id": "666f62c2d97a35376a9e4fa6bc8997ccc5d434f9",
+      "imageName": "bounddetermined",
       "layout": "split",
       "legalities": [
         {
@@ -15521,16 +15523,16 @@
           "legality": "Legal"
         }
       ],
-      "manaCost": "{3}{B}{G}",
-      "mciNumber": "149a",
+      "manaCost": "{G}{U}",
+      "mciNumber": "149b",
       "multiverseid": 107373,
-      "name": "Bound",
+      "name": "Determined",
       "names": [
         "Bound",
         "Determined"
       ],
-      "number": "149a",
-      "originalText": "Sacrifice a creature. Return up to X cards from your graveyard to your hand, where X is the number of colors that creature was. Then remove this card from the game.",
+      "number": "149b",
+      "originalText": "Other spells you control can't be countered by spells or abilities this turn.\nDraw a card.",
       "originalType": "Instant",
       "printings": [
         "DIS"
@@ -15539,225 +15541,228 @@
       "rulings": [
         {
           "date": "2006-05-01",
-          "text": "The creature is sacrificed when Bound resolves. It's not an additional cost. It's not optional. If you can't sacrifice a creature or a colorless creature is sacrificed, no cards are returned."
+          "text": "After Determined resolves, any spells or abilities that would counter a spell you control that turn will still resolve. They just won't counter that spell."
         },
         {
           "date": "2006-05-01",
-          "text": "The cards in the graveyard that you return as part of Bound's effect aren't targeted. They're chosen when the spell resolves. The creature you sacrificed may be one of them."
+          "text": "Spells you control may be countered by spells or abilities while Determined is on the stack, waiting to resolve."
         }
       ],
-      "text": "Sacrifice a creature. Return up to X cards from your graveyard to your hand, where X is the number of colors that creature was. Exile this card.",
+      "text": "Other spells you control can't be countered by spells or abilities this turn.\nDraw a card.",
       "type": "Instant",
       "types": [
         "Instant"
+      ],
+      "watermark": "Simic"
+    },
+    {
+      "artist": "Randy Gallegos",
+      "cmc": 5,
+      "colorIdentity": [
+        "B",
+        "G",
+        "W"
+      ],
+      "colors": [
+        "White",
+        "Black"
+      ],
+      "foreignNames": [
+        {
+          "language": "Chinese Simplified",
+          "name": "Crime",
+          "multiverseid": 122620
+        },
+        {
+          "language": "French",
+          "name": "Crime",
+          "multiverseid": 122800
+        },
+        {
+          "language": "German",
+          "name": "Crime",
+          "multiverseid": 122980
+        },
+        {
+          "language": "Italian",
+          "name": "Crime",
+          "multiverseid": 123160
+        },
+        {
+          "language": "Japanese",
+          "name": "Crime",
+          "multiverseid": 123340
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Crime",
+          "multiverseid": 123520
+        },
+        {
+          "language": "Russian",
+          "name": "Crime",
+          "multiverseid": 123700
+        },
+        {
+          "language": "Spanish",
+          "name": "Crime",
+          "multiverseid": 123880
+        }
+      ],
+      "id": "dd1703f683ea220039ec7c40d8533773c9617753",
+      "imageName": "crimepunishment",
+      "layout": "split",
+      "legalities": [
+        {
+          "format": "Commander",
+          "legality": "Legal"
+        },
+        {
+          "format": "Legacy",
+          "legality": "Legal"
+        },
+        {
+          "format": "Modern",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ravnica Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Vintage",
+          "legality": "Legal"
+        }
+      ],
+      "manaCost": "{3}{W}{B}",
+      "mciNumber": "150a",
+      "multiverseid": 107285,
+      "name": "Crime",
+      "names": [
+        "Crime",
+        "Punishment"
+      ],
+      "number": "150a",
+      "originalText": "Put target creature or enchantment card in an opponent's graveyard into play under your control.",
+      "originalType": "Sorcery",
+      "printings": [
+        "DIS"
+      ],
+      "rarity": "Rare",
+      "text": "Put target creature or enchantment card from an opponent's graveyard onto the battlefield under your control.",
+      "type": "Sorcery",
+      "types": [
+        "Sorcery"
+      ],
+      "watermark": "Orzhov"
+    },
+    {
+      "artist": "Randy Gallegos",
+      "cmc": 2,
+      "colorIdentity": [
+        "B",
+        "G",
+        "W"
+      ],
+      "colors": [
+        "Black",
+        "Green"
+      ],
+      "foreignNames": [
+        {
+          "language": "Chinese Simplified",
+          "name": "Punishment",
+          "multiverseid": 122620
+        },
+        {
+          "language": "French",
+          "name": "Punishment",
+          "multiverseid": 122800
+        },
+        {
+          "language": "German",
+          "name": "Punishment",
+          "multiverseid": 122980
+        },
+        {
+          "language": "Italian",
+          "name": "Punishment",
+          "multiverseid": 123160
+        },
+        {
+          "language": "Japanese",
+          "name": "Punishment",
+          "multiverseid": 123340
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Punishment",
+          "multiverseid": 123520
+        },
+        {
+          "language": "Russian",
+          "name": "Punishment",
+          "multiverseid": 123700
+        },
+        {
+          "language": "Spanish",
+          "name": "Punishment",
+          "multiverseid": 123880
+        }
+      ],
+      "id": "f5de68f3f1cb2029c5129c2dfd07a03739202cb7",
+      "imageName": "crimepunishment",
+      "layout": "split",
+      "legalities": [
+        {
+          "format": "Commander",
+          "legality": "Legal"
+        },
+        {
+          "format": "Legacy",
+          "legality": "Legal"
+        },
+        {
+          "format": "Modern",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ravnica Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Vintage",
+          "legality": "Legal"
+        }
+      ],
+      "manaCost": "{X}{B}{G}",
+      "mciNumber": "150b",
+      "multiverseid": 107285,
+      "name": "Punishment",
+      "names": [
+        "Crime",
+        "Punishment"
+      ],
+      "number": "150b",
+      "originalText": "Destroy each artifact, creature, and enchantment with converted mana cost X.",
+      "originalType": "Sorcery",
+      "printings": [
+        "DIS"
+      ],
+      "rarity": "Rare",
+      "text": "Destroy each artifact, creature, and enchantment with converted mana cost X.",
+      "type": "Sorcery",
+      "types": [
+        "Sorcery"
       ],
       "watermark": "Golgari"
     },
     {
-      "artist": "Randy Gallegos",
-      "cmc": 5,
-      "colorIdentity": [
-        "W",
-        "B"
-      ],
-      "colors": [
-        "White",
-        "Black"
-      ],
-      "foreignNames": [
-        {
-          "language": "Chinese Simplified",
-          "name": "Crime",
-          "multiverseid": 122620
-        },
-        {
-          "language": "French",
-          "name": "Crime",
-          "multiverseid": 122800
-        },
-        {
-          "language": "German",
-          "name": "Crime",
-          "multiverseid": 122980
-        },
-        {
-          "language": "Italian",
-          "name": "Crime",
-          "multiverseid": 123160
-        },
-        {
-          "language": "Japanese",
-          "name": "Crime",
-          "multiverseid": 123340
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Crime",
-          "multiverseid": 123520
-        },
-        {
-          "language": "Russian",
-          "name": "Crime",
-          "multiverseid": 123700
-        },
-        {
-          "language": "Spanish",
-          "name": "Crime",
-          "multiverseid": 123880
-        }
-      ],
-      "id": "0a6f3ca74eadb1f54cb1adbb8ee4102e86cc8080",
-      "imageName": "crimepunishment2",
-      "layout": "split",
-      "legalities": [
-        {
-          "format": "Commander",
-          "legality": "Legal"
-        },
-        {
-          "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Ravnica Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Vintage",
-          "legality": "Legal"
-        }
-      ],
-      "manaCost": "{3}{W}{B}",
-      "mciNumber": "150a",
-      "multiverseid": 107285,
-      "name": "Crime",
-      "names": [
-        "Crime",
-        "Punishment"
-      ],
-      "number": "150a",
-      "originalText": "Put target creature or enchantment card in an opponent's graveyard into play under your control.",
-      "originalType": "Sorcery",
-      "printings": [
-        "DIS"
-      ],
-      "rarity": "Rare",
-      "text": "Put target creature or enchantment card from an opponent's graveyard onto the battlefield under your control.",
-      "type": "Sorcery",
-      "types": [
-        "Sorcery"
-      ],
-      "watermark": "Orzhov"
-    },
-    {
-      "artist": "Randy Gallegos",
-      "cmc": 5,
-      "colorIdentity": [
-        "W",
-        "B"
-      ],
-      "colors": [
-        "White",
-        "Black"
-      ],
-      "foreignNames": [
-        {
-          "language": "Chinese Simplified",
-          "name": "Crime",
-          "multiverseid": 122620
-        },
-        {
-          "language": "French",
-          "name": "Crime",
-          "multiverseid": 122800
-        },
-        {
-          "language": "German",
-          "name": "Crime",
-          "multiverseid": 122980
-        },
-        {
-          "language": "Italian",
-          "name": "Crime",
-          "multiverseid": 123160
-        },
-        {
-          "language": "Japanese",
-          "name": "Crime",
-          "multiverseid": 123340
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Crime",
-          "multiverseid": 123520
-        },
-        {
-          "language": "Russian",
-          "name": "Crime",
-          "multiverseid": 123700
-        },
-        {
-          "language": "Spanish",
-          "name": "Crime",
-          "multiverseid": 123880
-        }
-      ],
-      "id": "7255b137dfeca225d6241ebfc000944a0bb14a0a",
-      "imageName": "crimepunishment1",
-      "layout": "split",
-      "legalities": [
-        {
-          "format": "Commander",
-          "legality": "Legal"
-        },
-        {
-          "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Ravnica Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Vintage",
-          "legality": "Legal"
-        }
-      ],
-      "manaCost": "{3}{W}{B}",
-      "mciNumber": "150a",
-      "multiverseid": 107285,
-      "name": "Crime",
-      "names": [
-        "Crime",
-        "Punishment"
-      ],
-      "number": "150a",
-      "originalText": "Put target creature or enchantment card in an opponent's graveyard into play under your control.",
-      "originalType": "Sorcery",
-      "printings": [
-        "DIS"
-      ],
-      "rarity": "Rare",
-      "text": "Put target creature or enchantment card from an opponent's graveyard onto the battlefield under your control.",
-      "type": "Sorcery",
-      "types": [
-        "Sorcery"
-      ],
-      "watermark": "Orzhov"
-    },
-    {
       "artist": "Zoltan Boros & Gabor Szikszai",
       "cmc": 2,
       "colorIdentity": [
         "W",
+        "B",
         "R"
       ],
       "colors": [
@@ -15806,8 +15811,8 @@
           "multiverseid": 123914
         }
       ],
-      "id": "9a4562f7ed9511fc4a852e930fa36c1619c1707d",
-      "imageName": "hideseek1",
+      "id": "315e555a13236d27d6b7dde860d150866ad22beb",
+      "imageName": "hideseek",
       "layout": "split",
       "legalities": [
         {
@@ -15858,56 +15863,57 @@
       "cmc": 2,
       "colorIdentity": [
         "W",
+        "B",
         "R"
       ],
       "colors": [
         "White",
-        "Red"
+        "Black"
       ],
       "foreignNames": [
         {
           "language": "Chinese Simplified",
-          "name": "Hide",
+          "name": "Seek",
           "multiverseid": 122654
         },
         {
           "language": "French",
-          "name": "Hide",
+          "name": "Seek",
           "multiverseid": 122834
         },
         {
           "language": "German",
-          "name": "Hide",
+          "name": "Seek",
           "multiverseid": 123014
         },
         {
           "language": "Italian",
-          "name": "Hide",
+          "name": "Seek",
           "multiverseid": 123194
         },
         {
           "language": "Japanese",
-          "name": "Hide",
+          "name": "Seek",
           "multiverseid": 123374
         },
         {
           "language": "Portuguese (Brazil)",
-          "name": "Hide",
+          "name": "Seek",
           "multiverseid": 123554
         },
         {
           "language": "Russian",
-          "name": "Hide",
+          "name": "Seek",
           "multiverseid": 123734
         },
         {
           "language": "Spanish",
-          "name": "Hide",
+          "name": "Seek",
           "multiverseid": 123914
         }
       ],
-      "id": "1299d5bc7ef3873b6eecf8dbc2cb142d22d63ec4",
-      "imageName": "hideseek2",
+      "id": "8486f3df8930f031a3ac13c850b6a12cd29ebb3f",
+      "imageName": "hideseek",
       "layout": "split",
       "legalities": [
         {
@@ -15931,34 +15937,35 @@
           "legality": "Legal"
         }
       ],
-      "manaCost": "{R}{W}",
-      "mciNumber": "151a",
+      "manaCost": "{W}{B}",
+      "mciNumber": "151b",
       "multiverseid": 107315,
-      "name": "Hide",
+      "name": "Seek",
       "names": [
         "Hide",
         "Seek"
       ],
-      "number": "151a",
-      "originalText": "Put target artifact or enchantment on the bottom of its owner's library.",
+      "number": "151b",
+      "originalText": "Search target opponent's library for a card and remove that card from the game. You gain life equal to its converted mana cost. Then that player shuffles his or her library.",
       "originalType": "Instant",
       "printings": [
         "DIS"
       ],
       "rarity": "Rare",
-      "text": "Put target artifact or enchantment on the bottom of its owner's library.",
+      "text": "Search target opponent's library for a card and exile it. You gain life equal to its converted mana cost. Then that player shuffles his or her library.",
       "type": "Instant",
       "types": [
         "Instant"
       ],
-      "watermark": "Boros"
+      "watermark": "Orzhov"
     },
     {
       "artist": "Darrell Riche",
       "cmc": 3,
       "colorIdentity": [
-        "B",
-        "R"
+        "R",
+        "G",
+        "B"
       ],
       "colors": [
         "Black",
@@ -16006,8 +16013,8 @@
           "multiverseid": 123915
         }
       ],
-      "id": "ce81efce3723b771a88ae42c7dd19c84912eb8e2",
-      "imageName": "hitrun2",
+      "id": "b63f858f0df0da3bcbfb5b027fba0fd12ccc11fa",
+      "imageName": "hitrun",
       "layout": "split",
       "legalities": [
         {
@@ -16055,59 +16062,60 @@
     },
     {
       "artist": "Darrell Riche",
-      "cmc": 3,
+      "cmc": 5,
       "colorIdentity": [
-        "B",
-        "R"
+        "R",
+        "G",
+        "B"
       ],
       "colors": [
-        "Black",
-        "Red"
+        "Red",
+        "Green"
       ],
       "foreignNames": [
         {
           "language": "Chinese Simplified",
-          "name": "Hit",
+          "name": "Run",
           "multiverseid": 122655
         },
         {
           "language": "French",
-          "name": "Hit",
+          "name": "Run",
           "multiverseid": 122835
         },
         {
           "language": "German",
-          "name": "Hit",
+          "name": "Run",
           "multiverseid": 123015
         },
         {
           "language": "Italian",
-          "name": "Hit",
+          "name": "Run",
           "multiverseid": 123195
         },
         {
           "language": "Japanese",
-          "name": "Hit",
+          "name": "Run",
           "multiverseid": 123375
         },
         {
           "language": "Portuguese (Brazil)",
-          "name": "Hit",
+          "name": "Run",
           "multiverseid": 123555
         },
         {
           "language": "Russian",
-          "name": "Hit",
+          "name": "Run",
           "multiverseid": 123735
         },
         {
           "language": "Spanish",
-          "name": "Hit",
+          "name": "Run",
           "multiverseid": 123915
         }
       ],
-      "id": "adc39d0b2d5abf95c9ac0dc659d9b2360cdd68b4",
-      "imageName": "hitrun1",
+      "id": "5e045be65ea8161cfdb37a598ffa94188332f887",
+      "imageName": "hitrun",
       "layout": "split",
       "legalities": [
         {
@@ -16131,34 +16139,35 @@
           "legality": "Legal"
         }
       ],
-      "manaCost": "{1}{B}{R}",
-      "mciNumber": "152a",
+      "manaCost": "{3}{R}{G}",
+      "mciNumber": "152b",
       "multiverseid": 107387,
-      "name": "Hit",
+      "name": "Run",
       "names": [
         "Hit",
         "Run"
       ],
-      "number": "152a",
-      "originalText": "Target player sacrifices an artifact or creature. Hit deals damage to that player equal to that permanent's converted mana cost.",
+      "number": "152b",
+      "originalText": "Attacking creatures you control get +1/+0 until end of turn for each other attacking creature.",
       "originalType": "Instant",
       "printings": [
         "DIS"
       ],
       "rarity": "Uncommon",
-      "text": "Target player sacrifices an artifact or creature. Hit deals damage to that player equal to that permanent's converted mana cost.",
+      "text": "Attacking creatures you control get +1/+0 until end of turn for each other attacking creature.",
       "type": "Instant",
       "types": [
         "Instant"
       ],
-      "watermark": "Rakdos"
+      "watermark": "Gruul"
     },
     {
       "artist": "Michael Sutfin",
       "cmc": 2,
       "colorIdentity": [
         "U",
-        "R"
+        "R",
+        "W"
       ],
       "colors": [
         "Blue",
@@ -16206,8 +16215,8 @@
           "multiverseid": 123939
         }
       ],
-      "id": "63482b62aad036a45b0d8638d5141dc9655e772a",
-      "imageName": "oddsends2",
+      "id": "afc5fe1bd7322cb1dbd0789d287597fdb49d1458",
+      "imageName": "oddsends",
       "layout": "split",
       "legalities": [
         {
@@ -16261,59 +16270,60 @@
     },
     {
       "artist": "Michael Sutfin",
-      "cmc": 2,
+      "cmc": 5,
       "colorIdentity": [
         "U",
-        "R"
+        "R",
+        "W"
       ],
       "colors": [
-        "Blue",
+        "White",
         "Red"
       ],
       "foreignNames": [
         {
           "language": "Chinese Simplified",
-          "name": "Odds",
+          "name": "Ends",
           "multiverseid": 122679
         },
         {
           "language": "French",
-          "name": "Odds",
+          "name": "Ends",
           "multiverseid": 122859
         },
         {
           "language": "German",
-          "name": "Odds",
+          "name": "Ends",
           "multiverseid": 123039
         },
         {
           "language": "Italian",
-          "name": "Odds",
+          "name": "Ends",
           "multiverseid": 123219
         },
         {
           "language": "Japanese",
-          "name": "Odds",
+          "name": "Ends",
           "multiverseid": 123399
         },
         {
           "language": "Portuguese (Brazil)",
-          "name": "Odds",
+          "name": "Ends",
           "multiverseid": 123579
         },
         {
           "language": "Russian",
-          "name": "Odds",
+          "name": "Ends",
           "multiverseid": 123759
         },
         {
           "language": "Spanish",
-          "name": "Odds",
+          "name": "Ends",
           "multiverseid": 123939
         }
       ],
-      "id": "b4e9b0627c29a09bbdc778a137a1e1502203cbe3",
-      "imageName": "oddsends1",
+      "id": "fac7ed1af9c636fb8845af45422a592e511948a8",
+      "imageName": "oddsends",
       "layout": "split",
       "legalities": [
         {
@@ -16337,40 +16347,35 @@
           "legality": "Legal"
         }
       ],
-      "manaCost": "{U}{R}",
-      "mciNumber": "153a",
+      "manaCost": "{3}{R}{W}",
+      "mciNumber": "153b",
       "multiverseid": 107445,
-      "name": "Odds",
+      "name": "Ends",
       "names": [
         "Odds",
         "Ends"
       ],
-      "number": "153a",
-      "originalText": "Flip a coin. If it comes up heads, counter target instant or sorcery spell. If it comes up tails, copy that spell and you may choose new targets for the copy.",
+      "number": "153b",
+      "originalText": "Target player sacrifices two attacking creatures.",
       "originalType": "Instant",
       "printings": [
         "DIS"
       ],
       "rarity": "Rare",
-      "rulings": [
-        {
-          "date": "2006-05-01",
-          "text": "The Odds coin flip has no winner or loser, and no player calls \"heads\" or \"tails.\""
-        }
-      ],
-      "text": "Flip a coin. If it comes up heads, counter target instant or sorcery spell. If it comes up tails, copy that spell and you may choose new targets for the copy.",
+      "text": "Target player sacrifices two attacking creatures.",
       "type": "Instant",
       "types": [
         "Instant"
       ],
-      "watermark": "Izzet"
+      "watermark": "Boros"
     },
     {
       "artist": "Paolo Parente",
       "cmc": 3,
       "colorIdentity": [
-        "R",
-        "G"
+        "W",
+        "G",
+        "R"
       ],
       "colors": [
         "Red",
@@ -16418,8 +16423,8 @@
           "multiverseid": 123958
         }
       ],
-      "id": "a452be1a86e203cf6865199c4a1fefc5be83f792",
-      "imageName": "puresimple1",
+      "id": "54e3d13fb3ac4af10b8b9464a1d637f7499bb289",
+      "imageName": "puresimple",
       "layout": "split",
       "legalities": [
         {
@@ -16469,57 +16474,58 @@
       "artist": "Paolo Parente",
       "cmc": 3,
       "colorIdentity": [
-        "R",
-        "G"
+        "W",
+        "G",
+        "R"
       ],
       "colors": [
-        "Red",
+        "White",
         "Green"
       ],
       "foreignNames": [
         {
           "language": "Chinese Simplified",
-          "name": "Pure",
+          "name": "Simple",
           "multiverseid": 122698
         },
         {
           "language": "French",
-          "name": "Pure",
+          "name": "Simple",
           "multiverseid": 122878
         },
         {
           "language": "German",
-          "name": "Pure",
+          "name": "Simple",
           "multiverseid": 123058
         },
         {
           "language": "Italian",
-          "name": "Pure",
+          "name": "Simple",
           "multiverseid": 123238
         },
         {
           "language": "Japanese",
-          "name": "Pure",
+          "name": "Simple",
           "multiverseid": 123418
         },
         {
           "language": "Portuguese (Brazil)",
-          "name": "Pure",
+          "name": "Simple",
           "multiverseid": 123598
         },
         {
           "language": "Russian",
-          "name": "Pure",
+          "name": "Simple",
           "multiverseid": 123778
         },
         {
           "language": "Spanish",
-          "name": "Pure",
+          "name": "Simple",
           "multiverseid": 123958
         }
       ],
-      "id": "af74da978170cb89dc26545c691a0c2298eb777e",
-      "imageName": "puresimple2",
+      "id": "d9de6787675669b0889eb67fd576e4c427975c11",
+      "imageName": "puresimple",
       "layout": "split",
       "legalities": [
         {
@@ -16543,34 +16549,35 @@
           "legality": "Legal"
         }
       ],
-      "manaCost": "{1}{R}{G}",
-      "mciNumber": "154a",
+      "manaCost": "{1}{G}{W}",
+      "mciNumber": "154b",
       "multiverseid": 107532,
-      "name": "Pure",
+      "name": "Simple",
       "names": [
         "Pure",
         "Simple"
       ],
-      "number": "154a",
-      "originalText": "Destroy target multicolored permanent.",
+      "number": "154b",
+      "originalText": "Destroy all Auras and Equipment.",
       "originalType": "Sorcery",
       "printings": [
         "DIS"
       ],
       "rarity": "Uncommon",
-      "text": "Destroy target multicolored permanent.",
+      "text": "Destroy all Auras and Equipment.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
       ],
-      "watermark": "Gruul"
+      "watermark": "Selesnya"
     },
     {
       "artist": "Greg Staples",
       "cmc": 2,
       "colorIdentity": [
         "U",
-        "G"
+        "G",
+        "R"
       ],
       "colors": [
         "Blue",
@@ -16618,8 +16625,8 @@
           "multiverseid": 123970
         }
       ],
-      "id": "8adaea3d2bb2565829322e0d4341b00db70bc07c",
-      "imageName": "researchdevelopment1",
+      "id": "2d3521c06d54442f4a2e9b81527d2752650b5e64",
+      "imageName": "researchdevelopment",
       "layout": "split",
       "legalities": [
         {
@@ -16677,59 +16684,60 @@
     },
     {
       "artist": "Greg Staples",
-      "cmc": 2,
+      "cmc": 5,
       "colorIdentity": [
         "U",
-        "G"
+        "G",
+        "R"
       ],
       "colors": [
         "Blue",
-        "Green"
+        "Red"
       ],
       "foreignNames": [
         {
           "language": "Chinese Simplified",
-          "name": "Research",
+          "name": "Development",
           "multiverseid": 122710
         },
         {
           "language": "French",
-          "name": "Research",
+          "name": "Development",
           "multiverseid": 122890
         },
         {
           "language": "German",
-          "name": "Research",
+          "name": "Development",
           "multiverseid": 123070
         },
         {
           "language": "Italian",
-          "name": "Research",
+          "name": "Development",
           "multiverseid": 123250
         },
         {
           "language": "Japanese",
-          "name": "Research",
+          "name": "Development",
           "multiverseid": 123430
         },
         {
           "language": "Portuguese (Brazil)",
-          "name": "Research",
+          "name": "Development",
           "multiverseid": 123610
         },
         {
           "language": "Russian",
-          "name": "Research",
+          "name": "Development",
           "multiverseid": 123790
         },
         {
           "language": "Spanish",
-          "name": "Research",
+          "name": "Development",
           "multiverseid": 123970
         }
       ],
-      "id": "dd82c128c6e63f17cf3cab7a671c25a0d5e985cd",
-      "imageName": "researchdevelopment2",
+      "id": "b9c653f3a2ed6e4e67bc341c09a075649b9dedea",
+      "imageName": "researchdevelopment",
       "layout": "split",
       "legalities": [
         {
@@ -16753,16 +16761,16 @@
           "legality": "Legal"
         }
       ],
-      "manaCost": "{G}{U}",
-      "mciNumber": "155a",
+      "manaCost": "{3}{U}{R}",
+      "mciNumber": "155b",
       "multiverseid": 107375,
-      "name": "Research",
+      "name": "Development",
       "names": [
         "Research",
         "Development"
       ],
-      "number": "155a",
-      "originalText": "Choose up to four cards you own from outside the game and shuffle them into your library.",
+      "number": "155b",
+      "originalText": "Put a 3/1 red Elemental creature token into play unless an opponent lets you draw a card. Repeat this process two more times.",
       "originalType": "Instant",
       "printings": [
         "DIS"
@@ -16770,27 +16778,28 @@
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2009-10-01",
-          "text": "A card \"from outside the game\" may be a card from your collection or a card from your sideboard. In tournament play, you can't choose a card from your collection. The cards you choose don't all have to come from the same place."
+          "date": "2006-05-01",
+          "text": "Development's effect is repeated three times no matter which option the opponent chooses. The opponent may choose a different option each time. You'll wind up with three Elemental tokens, two tokens and a card, one token and two cards, or three cards, whichever your opponent chooses."
         },
         {
-          "date": "2009-10-01",
-          "text": "The exile zone is a part of the game, so you can't get exiled cards."
+          "date": "2006-05-01",
+          "text": "In a multiplayer game, each opponent, in turn, has the option to let you draw a card. If no opponent does, you put a token onto the battlefield. Then the process repeats two more times. A different opponent may let you draw a card each time."
         }
       ],
-      "text": "Choose up to four cards you own from outside the game and shuffle them into your library.",
+      "text": "Create a 3/1 red Elemental creature token unless any opponent has you draw a card. Repeat this process two more times.",
       "type": "Instant",
       "types": [
         "Instant"
       ],
-      "watermark": "Simic"
+      "watermark": "Izzet"
     },
     {
       "artist": "Pete Venters",
       "cmc": 2,
       "colorIdentity": [
         "U",
-        "B"
+        "B",
+        "R"
       ],
       "colors": [
         "Blue",
@@ -16838,8 +16847,8 @@
           "multiverseid": 123972
         }
       ],
-      "id": "325c93788a6071fbe171ccf6e5ef1cbddcd9c098",
-      "imageName": "risefall1",
+      "id": "2cb37d9c5f10a2617a83a1456944b26b1b35ed42",
+      "imageName": "risefall",
       "layout": "split",
       "legalities": [
         {
@@ -16891,6 +16900,413 @@
       "cmc": 2,
       "colorIdentity": [
         "U",
+        "B",
+        "R"
+      ],
+      "colors": [
+        "Black",
+        "Red"
+      ],
+      "foreignNames": [
+        {
+          "language": "Chinese Simplified",
+          "name": "Fall",
+          "multiverseid": 122712
+        },
+        {
+          "language": "French",
+          "name": "Fall",
+          "multiverseid": 122892
+        },
+        {
+          "language": "German",
+          "name": "Fall",
+          "multiverseid": 123072
+        },
+        {
+          "language": "Italian",
+          "name": "Fall",
+          "multiverseid": 123252
+        },
+        {
+          "language": "Japanese",
+          "name": "Fall",
+          "multiverseid": 123432
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Fall",
+          "multiverseid": 123612
+        },
+        {
+          "language": "Russian",
+          "name": "Fall",
+          "multiverseid": 123792
+        },
+        {
+          "language": "Spanish",
+          "name": "Fall",
+          "multiverseid": 123972
+        }
+      ],
+      "id": "9c37d1c17bc4417de8170a8a10a1eb45ad4d9740",
+      "imageName": "risefall",
+      "layout": "split",
+      "legalities": [
+        {
+          "format": "Commander",
+          "legality": "Legal"
+        },
+        {
+          "format": "Legacy",
+          "legality": "Legal"
+        },
+        {
+          "format": "Modern",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ravnica Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Vintage",
+          "legality": "Legal"
+        }
+      ],
+      "manaCost": "{B}{R}",
+      "mciNumber": "156b",
+      "multiverseid": 107423,
+      "name": "Fall",
+      "names": [
+        "Rise",
+        "Fall"
+      ],
+      "number": "156b",
+      "originalText": "Target player reveals two cards at random from his or her hand, then discards each nonland card revealed this way.",
+      "originalType": "Sorcery",
+      "printings": [
+        "DIS",
+        "DDH"
+      ],
+      "rarity": "Uncommon",
+      "text": "Target player reveals two cards at random from his or her hand, then discards each nonland card revealed this way.",
+      "type": "Sorcery",
+      "types": [
+        "Sorcery"
+      ],
+      "watermark": "Rakdos"
+    },
+    {
+      "artist": "Daren Bader",
+      "cmc": 2,
+      "colorIdentity": [
+        "W",
+        "G",
+        "U"
+      ],
+      "colors": [
+        "White",
+        "Green"
+      ],
+      "foreignNames": [
+        {
+          "language": "Chinese Simplified",
+          "name": "Supply",
+          "multiverseid": 122742
+        },
+        {
+          "language": "French",
+          "name": "Supply",
+          "multiverseid": 122922
+        },
+        {
+          "language": "German",
+          "name": "Supply",
+          "multiverseid": 123102
+        },
+        {
+          "language": "Italian",
+          "name": "Supply",
+          "multiverseid": 123282
+        },
+        {
+          "language": "Japanese",
+          "name": "Supply",
+          "multiverseid": 123462
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Supply",
+          "multiverseid": 123642
+        },
+        {
+          "language": "Russian",
+          "name": "Supply",
+          "multiverseid": 123822
+        },
+        {
+          "language": "Spanish",
+          "name": "Supply",
+          "multiverseid": 124002
+        }
+      ],
+      "id": "2f2c700e1ebb888d59afe92634b2b6c178e4234b",
+      "imageName": "supplydemand",
+      "layout": "split",
+      "legalities": [
+        {
+          "format": "Commander",
+          "legality": "Legal"
+        },
+        {
+          "format": "Legacy",
+          "legality": "Legal"
+        },
+        {
+          "format": "Modern",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ravnica Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Vintage",
+          "legality": "Legal"
+        }
+      ],
+      "manaCost": "{X}{G}{W}",
+      "mciNumber": "157a",
+      "multiverseid": 107464,
+      "name": "Supply",
+      "names": [
+        "Supply",
+        "Demand"
+      ],
+      "number": "157a",
+      "originalText": "Put X 1/1 green Saproling creature tokens into play.",
+      "originalType": "Sorcery",
+      "printings": [
+        "DIS"
+      ],
+      "rarity": "Uncommon",
+      "text": "Create X 1/1 green Saproling creature tokens.",
+      "type": "Sorcery",
+      "types": [
+        "Sorcery"
+      ],
+      "watermark": "Selesnya"
+    },
+    {
+      "artist": "Daren Bader",
+      "cmc": 3,
+      "colorIdentity": [
+        "W",
+        "G",
+        "U"
+      ],
+      "colors": [
+        "White",
+        "Blue"
+      ],
+      "foreignNames": [
+        {
+          "language": "Chinese Simplified",
+          "name": "Demand",
+          "multiverseid": 122742
+        },
+        {
+          "language": "French",
+          "name": "Demand",
+          "multiverseid": 122922
+        },
+        {
+          "language": "German",
+          "name": "Demand",
+          "multiverseid": 123102
+        },
+        {
+          "language": "Italian",
+          "name": "Demand",
+          "multiverseid": 123282
+        },
+        {
+          "language": "Japanese",
+          "name": "Demand",
+          "multiverseid": 123462
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Demand",
+          "multiverseid": 123642
+        },
+        {
+          "language": "Russian",
+          "name": "Demand",
+          "multiverseid": 123822
+        },
+        {
+          "language": "Spanish",
+          "name": "Demand",
+          "multiverseid": 124002
+        }
+      ],
+      "id": "095f175b1a5b2ed825ba6b52b1da022a71bbf195",
+      "imageName": "supplydemand",
+      "layout": "split",
+      "legalities": [
+        {
+          "format": "Commander",
+          "legality": "Legal"
+        },
+        {
+          "format": "Legacy",
+          "legality": "Legal"
+        },
+        {
+          "format": "Modern",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ravnica Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Vintage",
+          "legality": "Legal"
+        }
+      ],
+      "manaCost": "{1}{W}{U}",
+      "mciNumber": "157b",
+      "multiverseid": 107464,
+      "name": "Demand",
+      "names": [
+        "Supply",
+        "Demand"
+      ],
+      "number": "157b",
+      "originalText": "Search your library for a multicolored card, reveal it, and put it into your hand. Then shuffle your library.",
+      "originalType": "Sorcery",
+      "printings": [
+        "DIS"
+      ],
+      "rarity": "Uncommon",
+      "text": "Search your library for a multicolored card, reveal it, and put it into your hand. Then shuffle your library.",
+      "type": "Sorcery",
+      "types": [
+        "Sorcery"
+      ],
+      "watermark": "Azorius"
+    },
+    {
+      "artist": "Ron Spears & Wayne Reynolds",
+      "cmc": 2,
+      "colorIdentity": [
+        "W",
+        "U",
+        "B"
+      ],
+      "colors": [
+        "White",
+        "Blue"
+      ],
+      "foreignNames": [
+        {
+          "language": "Chinese Simplified",
+          "name": "Trial",
+          "multiverseid": 122748
+        },
+        {
+          "language": "French",
+          "name": "Trial",
+          "multiverseid": 122928
+        },
+        {
+          "language": "German",
+          "name": "Trial",
+          "multiverseid": 123108
+        },
+        {
+          "language": "Italian",
+          "name": "Trial",
+          "multiverseid": 123288
+        },
+        {
+          "language": "Japanese",
+          "name": "Trial",
+          "multiverseid": 123468
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Trial",
+          "multiverseid": 123648
+        },
+        {
+          "language": "Russian",
+          "name": "Trial",
+          "multiverseid": 123828
+        },
+        {
+          "language": "Spanish",
+          "name": "Trial",
+          "multiverseid": 124008
+        }
+      ],
+      "id": "bba85719dbb6bac73c8ecb33d7b0bba3e30e189a",
+      "imageName": "trialerror",
+      "layout": "split",
+      "legalities": [
+        {
+          "format": "Commander",
+          "legality": "Legal"
+        },
+        {
+          "format": "Legacy",
+          "legality": "Legal"
+        },
+        {
+          "format": "Modern",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ravnica Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Vintage",
+          "legality": "Legal"
+        }
+      ],
+      "manaCost": "{W}{U}",
+      "mciNumber": "158a",
+      "multiverseid": 107259,
+      "name": "Trial",
+      "names": [
+        "Trial",
+        "Error"
+      ],
+      "number": "158a",
+      "originalText": "Return all creatures blocking or blocked by target creature to their owner's hand.",
+      "originalType": "Instant",
+      "printings": [
+        "DIS",
+        "C16"
+      ],
+      "rarity": "Uncommon",
+      "text": "Return all creatures blocking or blocked by target creature to their owner's hand.",
+      "type": "Instant",
+      "types": [
+        "Instant"
+      ],
+      "watermark": "Azorius"
+    },
+    {
+      "artist": "Ron Spears & Wayne Reynolds",
+      "cmc": 2,
+      "colorIdentity": [
+        "W",
+        "U",
         "B"
       ],
       "colors": [
@@ -16900,47 +17316,47 @@
       "foreignNames": [
         {
           "language": "Chinese Simplified",
-          "name": "Rise",
-          "multiverseid": 122712
+          "name": "Error",
+          "multiverseid": 122748
         },
         {
           "language": "French",
-          "name": "Rise",
-          "multiverseid": 122892
+          "name": "Error",
+          "multiverseid": 122928
         },
         {
           "language": "German",
-          "name": "Rise",
-          "multiverseid": 123072
+          "name": "Error",
+          "multiverseid": 123108
         },
         {
           "language": "Italian",
-          "name": "Rise",
-          "multiverseid": 123252
+          "name": "Error",
+          "multiverseid": 123288
         },
         {
           "language": "Japanese",
-          "name": "Rise",
-          "multiverseid": 123432
+          "name": "Error",
+          "multiverseid": 123468
         },
         {
           "language": "Portuguese (Brazil)",
-          "name": "Rise",
-          "multiverseid": 123612
+          "name": "Error",
+          "multiverseid": 123648
         },
         {
           "language": "Russian",
-          "name": "Rise",
-          "multiverseid": 123792
+          "name": "Error",
+          "multiverseid": 123828
         },
         {
           "language": "Spanish",
-          "name": "Rise",
-          "multiverseid": 123972
+          "name": "Error",
+          "multiverseid": 124008
         }
       ],
-      "id": "b9f151ecc4af5bdefc63b39e132340617e34cb5b",
-      "imageName": "risefall2",
+      "id": "e2014ced3e2eb8b2f03130e5841d34fe54957196",
+      "imageName": "trialerror",
       "layout": "split",
       "legalities": [
         {
@@ -16965,429 +17381,27 @@
         }
       ],
       "manaCost": "{U}{B}",
-      "mciNumber": "156a",
-      "multiverseid": 107423,
-      "name": "Rise",
+      "mciNumber": "158b",
+      "multiverseid": 107259,
+      "name": "Error",
       "names": [
-        "Rise",
-        "Fall"
+        "Trial",
+        "Error"
       ],
-      "number": "156a",
-      "originalText": "Return target creature card in a graveyard and target creature in play to their owners' hands.",
-      "originalType": "Sorcery",
+      "number": "158b",
+      "originalText": "Counter target multicolored spell.",
+      "originalType": "Instant",
       "printings": [
         "DIS",
-        "DDH"
+        "C16"
       ],
       "rarity": "Uncommon",
-      "text": "Return target creature card from a graveyard and target creature on the battlefield to their owners' hands.",
-      "type": "Sorcery",
+      "text": "Counter target multicolored spell.",
+      "type": "Instant",
       "types": [
-        "Sorcery"
+        "Instant"
       ],
       "watermark": "Dimir"
-    },
-    {
-      "artist": "Daren Bader",
-      "cmc": 2,
-      "colorIdentity": [
-        "W",
-        "G"
-      ],
-      "colors": [
-        "White",
-        "Green"
-      ],
-      "foreignNames": [
-        {
-          "language": "Chinese Simplified",
-          "name": "Supply",
-          "multiverseid": 122742
-        },
-        {
-          "language": "French",
-          "name": "Supply",
-          "multiverseid": 122922
-        },
-        {
-          "language": "German",
-          "name": "Supply",
-          "multiverseid": 123102
-        },
-        {
-          "language": "Italian",
-          "name": "Supply",
-          "multiverseid": 123282
-        },
-        {
-          "language": "Japanese",
-          "name": "Supply",
-          "multiverseid": 123462
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Supply",
-          "multiverseid": 123642
-        },
-        {
-          "language": "Russian",
-          "name": "Supply",
-          "multiverseid": 123822
-        },
-        {
-          "language": "Spanish",
-          "name": "Supply",
-          "multiverseid": 124002
-        }
-      ],
-      "id": "21166fc0a72f92f7d20b167a177d00c0fe728896",
-      "imageName": "supplydemand1",
-      "layout": "split",
-      "legalities": [
-        {
-          "format": "Commander",
-          "legality": "Legal"
-        },
-        {
-          "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Ravnica Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Vintage",
-          "legality": "Legal"
-        }
-      ],
-      "manaCost": "{X}{G}{W}",
-      "mciNumber": "157a",
-      "multiverseid": 107464,
-      "name": "Supply",
-      "names": [
-        "Supply",
-        "Demand"
-      ],
-      "number": "157a",
-      "originalText": "Put X 1/1 green Saproling creature tokens into play.",
-      "originalType": "Sorcery",
-      "printings": [
-        "DIS"
-      ],
-      "rarity": "Uncommon",
-      "text": "Create X 1/1 green Saproling creature tokens.",
-      "type": "Sorcery",
-      "types": [
-        "Sorcery"
-      ],
-      "watermark": "Selesnya"
-    },
-    {
-      "artist": "Daren Bader",
-      "cmc": 2,
-      "colorIdentity": [
-        "W",
-        "G"
-      ],
-      "colors": [
-        "White",
-        "Green"
-      ],
-      "foreignNames": [
-        {
-          "language": "Chinese Simplified",
-          "name": "Supply",
-          "multiverseid": 122742
-        },
-        {
-          "language": "French",
-          "name": "Supply",
-          "multiverseid": 122922
-        },
-        {
-          "language": "German",
-          "name": "Supply",
-          "multiverseid": 123102
-        },
-        {
-          "language": "Italian",
-          "name": "Supply",
-          "multiverseid": 123282
-        },
-        {
-          "language": "Japanese",
-          "name": "Supply",
-          "multiverseid": 123462
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Supply",
-          "multiverseid": 123642
-        },
-        {
-          "language": "Russian",
-          "name": "Supply",
-          "multiverseid": 123822
-        },
-        {
-          "language": "Spanish",
-          "name": "Supply",
-          "multiverseid": 124002
-        }
-      ],
-      "id": "20012f426bcb181955e9832bf8f4b1e74660f0fd",
-      "imageName": "supplydemand2",
-      "layout": "split",
-      "legalities": [
-        {
-          "format": "Commander",
-          "legality": "Legal"
-        },
-        {
-          "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Ravnica Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Vintage",
-          "legality": "Legal"
-        }
-      ],
-      "manaCost": "{X}{G}{W}",
-      "mciNumber": "157a",
-      "multiverseid": 107464,
-      "name": "Supply",
-      "names": [
-        "Supply",
-        "Demand"
-      ],
-      "number": "157a",
-      "originalText": "Put X 1/1 green Saproling creature tokens into play.",
-      "originalType": "Sorcery",
-      "printings": [
-        "DIS"
-      ],
-      "rarity": "Uncommon",
-      "text": "Create X 1/1 green Saproling creature tokens.",
-      "type": "Sorcery",
-      "types": [
-        "Sorcery"
-      ],
-      "watermark": "Selesnya"
-    },
-    {
-      "artist": "Ron Spears & Wayne Reynolds",
-      "cmc": 2,
-      "colorIdentity": [
-        "W",
-        "U"
-      ],
-      "colors": [
-        "White",
-        "Blue"
-      ],
-      "foreignNames": [
-        {
-          "language": "Chinese Simplified",
-          "name": "Trial",
-          "multiverseid": 122748
-        },
-        {
-          "language": "French",
-          "name": "Trial",
-          "multiverseid": 122928
-        },
-        {
-          "language": "German",
-          "name": "Trial",
-          "multiverseid": 123108
-        },
-        {
-          "language": "Italian",
-          "name": "Trial",
-          "multiverseid": 123288
-        },
-        {
-          "language": "Japanese",
-          "name": "Trial",
-          "multiverseid": 123468
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Trial",
-          "multiverseid": 123648
-        },
-        {
-          "language": "Russian",
-          "name": "Trial",
-          "multiverseid": 123828
-        },
-        {
-          "language": "Spanish",
-          "name": "Trial",
-          "multiverseid": 124008
-        }
-      ],
-      "id": "00cfd26f71fa336fee01f8e209f5d460aa607398",
-      "imageName": "trialerror1",
-      "layout": "split",
-      "legalities": [
-        {
-          "format": "Commander",
-          "legality": "Legal"
-        },
-        {
-          "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Ravnica Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Vintage",
-          "legality": "Legal"
-        }
-      ],
-      "manaCost": "{W}{U}",
-      "mciNumber": "158a",
-      "multiverseid": 107259,
-      "name": "Trial",
-      "names": [
-        "Trial",
-        "Error"
-      ],
-      "number": "158a",
-      "originalText": "Return all creatures blocking or blocked by target creature to their owner's hand.",
-      "originalType": "Instant",
-      "printings": [
-        "DIS",
-        "C16"
-      ],
-      "rarity": "Uncommon",
-      "text": "Return all creatures blocking or blocked by target creature to their owner's hand.",
-      "type": "Instant",
-      "types": [
-        "Instant"
-      ],
-      "watermark": "Azorius"
-    },
-    {
-      "artist": "Ron Spears & Wayne Reynolds",
-      "cmc": 2,
-      "colorIdentity": [
-        "W",
-        "U"
-      ],
-      "colors": [
-        "White",
-        "Blue"
-      ],
-      "foreignNames": [
-        {
-          "language": "Chinese Simplified",
-          "name": "Trial",
-          "multiverseid": 122748
-        },
-        {
-          "language": "French",
-          "name": "Trial",
-          "multiverseid": 122928
-        },
-        {
-          "language": "German",
-          "name": "Trial",
-          "multiverseid": 123108
-        },
-        {
-          "language": "Italian",
-          "name": "Trial",
-          "multiverseid": 123288
-        },
-        {
-          "language": "Japanese",
-          "name": "Trial",
-          "multiverseid": 123468
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Trial",
-          "multiverseid": 123648
-        },
-        {
-          "language": "Russian",
-          "name": "Trial",
-          "multiverseid": 123828
-        },
-        {
-          "language": "Spanish",
-          "name": "Trial",
-          "multiverseid": 124008
-        }
-      ],
-      "id": "1497e3966cef9a24784d952b08a8d974ead350fe",
-      "imageName": "trialerror2",
-      "layout": "split",
-      "legalities": [
-        {
-          "format": "Commander",
-          "legality": "Legal"
-        },
-        {
-          "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Ravnica Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Vintage",
-          "legality": "Legal"
-        }
-      ],
-      "manaCost": "{W}{U}",
-      "mciNumber": "158a",
-      "multiverseid": 107259,
-      "name": "Trial",
-      "names": [
-        "Trial",
-        "Error"
-      ],
-      "number": "158a",
-      "originalText": "Return all creatures blocking or blocked by target creature to their owner's hand.",
-      "originalType": "Instant",
-      "printings": [
-        "DIS",
-        "C16"
-      ],
-      "rarity": "Uncommon",
-      "text": "Return all creatures blocking or blocked by target creature to their owner's hand.",
-      "type": "Instant",
-      "types": [
-        "Instant"
-      ],
-      "watermark": "Azorius"
     },
     {
       "artist": "Greg Hildebrandt",
