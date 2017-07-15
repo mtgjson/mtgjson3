@@ -254,10 +254,6 @@ var processMultiverseDocs = function(docs, callback) {
 
 		multiverseDocCardParts.forEach(function (cardPart, i) {
 			var newCard = processCardPart(multiverseDoc, cardPart, printedMultiverseDoc, printedMultiverseDocCardParts[i]);
-
-			if (newCard.layout==="split" && i===1)
-				return;
-
 			newCards.push(newCard);
 		});
 
@@ -565,16 +561,7 @@ var getURLsForMultiverseid = function (multiverseid, cb) {
 				throw new Error(errorString);
 			}
 
-			cardParts.forEach(function (cardPart, i) {
-				var card = processCardPart(doc, cardPart, printedDoc, printedCardParts[i]);
-				if (card.layout === "split") {
-					urls.push(shared.buildMultiverseURL(multiverseid, card.names[0]));
-					urls.push(shared.buildMultiverseURL(multiverseid, card.names[1]));
-				}
-				else {
-					urls.push(shared.buildMultiverseURL(multiverseid));
-				}
-			});
+            urls.push(shared.buildMultiverseURL(multiverseid));
 			urls = urls.unique();
 
 			setImmediate(cb, null, urls);
@@ -1706,12 +1693,12 @@ var fixCommanderIdentityForCards = function(cards, cb) {
 		}
 
 		// Process split and double-faced cards
-		if (card.layout == "double-faced" || card.layout == "split") {
+		if (card.layout == "double-faced" || card.layout == "split" || card.layout == "aftermath") {
 			var otherSideNum = card.number.substr(0, card.number.length - 1) + ((card.number.substr(-1) == "a") ? "b" : "a");
 			var otherCard = findCardByNumber(otherSideNum);
 
 			if (!otherCard) {
-				base.error("Current side name: %s", card.number);
+				base.error("Current side name: %s", card.name);
 				base.error("-> Other Side num: %s", otherSideNum);
 
 				//throw Error("Error: Cannot find other side of card " + card.name);
