@@ -211,7 +211,6 @@ var ripSet = function(setName, cb) {
 			}
 		},
 		function compareToEssentialMagic() {
-			return this();
 			if (!this.data.set.essentialMagicCode) {
 				base.warn("SKIPPING comparing to essentialmagic.com (no essentialMagicCode)...");
 				this();
