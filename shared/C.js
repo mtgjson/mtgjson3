@@ -1,14 +1,5 @@
 "use strict";
 
-Array.prototype.pushAll = function(otherArray) {
-  var i;
-  for (i = 0; i < otherArray.length; i++) {
-    this.push(otherArray[i]);
-  }
-
-  return(this);
-};
-
 (function(exports) {
   exports.SUPERTYPES = ["Basic", "Legendary", "Snow", "World", "Ongoing"];
   exports.TYPES = ["Instant", "Sorcery", "Artifact", "Creature", "Enchantment", "Land", "Planeswalker", "Tribal", "Plane", "Phenomenon", "Scheme", "Vanguard", "Conspiracy"];
@@ -166,22 +157,24 @@ Array.prototype.pushAll = function(otherArray) {
 
   var requireDir = require('require-dir');
   var setConfigs = requireDir('./set_configs', {'recurse': true});
-  var configStack = [setConfigs];
+  var configStack = [setConfigs];  // LIFO stack of configs or trees containing configs
 
   exports.SETS = [];
   while (configStack.length > 0) {
       var config = configStack.pop();
-      if (typeof config.SET !== 'undefined') {
-          exports.SETS.push(config.SET);
-          if (typeof config.SET_CORRECTIONS !== 'undefined') {
-              var setCode = config.SET.code;
-              exports.SET_CORRECTIONS[setCode] = config.SET_CORRECTIONS;
-          }
-      } else {
-          for (var child in config) {
-              configStack.push(config[child]);
-          }
+      if (typeof config.SET === 'undefined') {
+          for (var child in config)
+            configStack.push(config[child]);
+          continue;
       }
+
+      var set = config.SET;
+      var corrections = (typeof config.SET_CORRECTIONS !== 'undefined') ? config.SET_CORRECTIONS : [];
+      if (set.isMCISet)
+        corrections.push({match : "*", fixFlavorNewlines:true});
+
+      exports.SETS.push(set);
+      exports.SET_CORRECTIONS[set.code] = corrections;
   }
 
   exports.SET_SPOILER_IMAGE_DIFF_SRC_NUMBER =
