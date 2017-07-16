@@ -1,0 +1,82 @@
+{
+  "SET": {
+    "name": "Urza's Saga",
+    "code": "USG",
+    "gathererCode": "UZ",
+    "magicCardsInfoCode": "us",
+    "releaseDate": "1998-10-12",
+    "border": "black",
+    "type": "expansion",
+    "block": "Urza's",
+    "booster": ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"],
+    "translations": {
+      "de": "Urzas Saga",
+      "fr": "Epopée d'Urza",
+      "it": "Saga di Urza",
+      "es": "La Saga de Urza",
+      "pt": "A Saga de Urza"
+    },
+    "mkm_name": "Urza's Saga",
+    "mkm_id": 26
+  },
+  "SET_CORRECTIONS": ["noBasicLandWatermarks", {
+    "match": {
+      "name": ["Bull Hippo", "Curfew", "Goblin Cadets", "Goblin Spelunkers"]
+    },
+    "flavorAddExclamation": true
+  }, {
+    "match": {
+      "name": "Argothian Swine"
+    },
+    "replace": {
+      "flavor": "In Argoth, the shortest path between two points is the one the swine make."
+    }
+  }, {
+    "match": {
+      "name": "Headlong Rush"
+    },
+    "replace": {
+      "flavor": "A landslide of goblins poured toward the defenders—tumbling, rolling, and bouncing their way down the steep hillside."
+    }
+  }, {
+    "match": {
+      "name": "Pegasus Charger"
+    },
+    "replace": {
+      "flavor": "\"The clouds came alive and dove to the earth! Hooves flashed among the dark army, who fled before the spectacle of fury.\"\n—Song of All, canto 211"
+    }
+  }, {
+    "match": {
+      "name": "Bulwark"
+    },
+    "replace": {
+      "flavor": "\"It will be the goblin's first bath, and its last.\" —Fire Eye, viashino bey"
+    }
+  }, {
+    "match": {
+      "name": "Priest of Titania"
+    },
+    "replace": {
+      "flavor": "Titania rewards all those who honor the forest by making them a living part of it."
+    }
+  }, {
+    "match": {
+      "name": "Phyrexian Colossus"
+    },
+    "replace": {
+      "number": "305"
+    }
+  }, {
+    "match": {
+      "name": "Sanguine Guard"
+    },
+    "replace": {
+      "flavor": "\"Father of Machines! Your filigree gaze carves us, and the scars dance upon our grateful flesh.\"\n—Phyrexian Scriptures"
+    }
+  }, {
+    "match": {
+      "name": "Serra Zealot"
+    },
+    "fixFlavorNewlines": true
+  }]
+}

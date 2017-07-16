@@ -1,0 +1,37 @@
+{
+  "SET": {
+    "name": "Ravnica: City of Guilds",
+    "code": "RAV",
+    "magicCardsInfoCode": "rav",
+    "releaseDate": "2005-10-07",
+    "border": "black",
+    "type": "expansion",
+    "block": "Ravnica",
+    "booster": ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"],
+    "translations": {
+      "de": "Ravnica: Stadt der Gilden",
+      "fr": "Ravnica: La Cité des Guildes",
+      "it": "Ravnica: Città delle Gilde",
+      "es": "Rávnica: Ciudad de Gremios",
+      "pt": "Ravnica: A Cidade das Guildas",
+      "jp": "ラブニカ：ギルドの都",
+      "cn": "拉尼卡公会城",
+      "ru": "Равника: Город Гильдий"
+    },
+    "mkm_name": "Ravnica: City of Guilds",
+    "mkm_id": 55
+  },
+  "SET_CORRECTIONS": [{
+    "match": {
+      "name": ["Overwhelm"]
+    },
+    "flavorAddExclamation": true
+  }, {
+    "match": {
+      "name": "Thundersong Trumpeter"
+    },
+    "replace": {
+      "flavor": "\"Hear that? Those notes mean we've arrived at Sunhome! Let our allies' hearts soar and our enemies' hearts shatter at the sound!\"\n—Klattic, Boros legionnaire"
+    }
+  }]
+}

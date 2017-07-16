@@ -1,0 +1,71 @@
+{
+  "SET": {
+    "name": "Portal Second Age",
+    "code": "PO2",
+    "gathererCode": "P2",
+    "magicCardsInfoCode": "po2",
+    "oldCode": "P02",
+    "releaseDate": "1998-06-24",
+    "border": "black",
+    "type": "starter",
+    "booster": ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"],
+    "translations": {
+      "de": "Portal Zweites Zeitalter",
+      "fr": "Portal Second Age",
+      "it": "Portal Seconda Era",
+      "es": "Portal Segunda Edad",
+      "pt": "Portal Segunda Era"
+    },
+    "mkm_name": "Portal Second Age",
+    "mkm_id": 24
+  },
+  "SET_CORRECTIONS": [{
+    "renumberImages": "Forest",
+    "order": [8409, 8410, 8408]
+  }, {
+    "renumberImages": "Island",
+    "order": [8387, 8390, 8391]
+  }, {
+    "renumberImages": "Mountain",
+    "order": [8395, 8406, 8407]
+  }, {
+    "renumberImages": "Plains",
+    "order": [8380, 8374, 8354]
+  }, {
+    "renumberImages": "Swamp",
+    "order": [8394, 8392, 8393]
+  }, {
+    "match": {
+      "name": ["Goblin War Cry", "Norwood Riders", "Plated Wurm", "Town Sentry"]
+    },
+    "flavorAddExclamation": true
+  }, {
+    "match": {
+      "name": "Alaborn Cavalier"
+    },
+    "replace": {
+      "flavor": "\"Course he ran! I wouldn't want to stare down that barrel, either!\"\n—Alaborn soldier"
+    }
+  }, {
+    "match": {
+      "name": "Blaze"
+    },
+    "replace": {
+      "flavor": "\"This isn't what I meant by ‘facing the heat of battle!'\"\n—Jefan, Talas ship captain"
+    }
+  }, {
+    "match": {
+      "name": "Steam Catapult"
+    },
+    "replace": {
+      "flavor": "\"You idiots! Turn it around! Turn it around!\""
+    }
+  }, {
+    "match": {
+      "name": "Stone Rain"
+    },
+    "replace": {
+      "flavor": "There goes the neighborhood!"
+    }
+  }]
+}

@@ -1,0 +1,161 @@
+{
+  "SET": {
+    "name": "Fifth Edition",
+    "code": "5ED",
+    "gathererCode": "5E",
+    "magicCardsInfoCode": "5e",
+    "releaseDate": "1997-03-24",
+    "border": "white",
+    "type": "core",
+    "booster": ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"],
+    "translations": {
+      "de": "Fünfte Edition",
+      "fr": "Cinquième Edition",
+      "it": "Quinta Edizione",
+      "es": "Quinta Edición",
+      "pt": "Quinta Edição"
+    },
+    "mkm_name": "Fifth Edition",
+    "mkm_id": 23
+  },
+  "SET_CORRECTIONS": ["noBasicLandWatermarks", {
+    "match": {
+      "name": "Pyrotechnics"
+    },
+    "replace": {
+      "flavor": "\"Hi! ni! ya! Behold the man of flint, that's me! / Four lightnings zigzag from me, strike and return.\"\n—Navajo war chant"
+    }
+  }, {
+    "renumberImages": "Forest",
+    "order": [4171, 4172, 4173, 4174]
+  }, {
+    "renumberImages": "Island",
+    "order": [4199, 4200, 4201, 4202]
+  }, {
+    "renumberImages": "Mountain",
+    "order": [4195, 4196, 4197, 4198]
+  }, {
+    "renumberImages": "Plains",
+    "order": [4204, 4206, 4205, 4203]
+  }, {
+    "renumberImages": "Swamp",
+    "order": [4169, 4168, 4167, 4170]
+  }, {
+    "match": {
+      "name": ["Ambush Party", "Conquer", "Death Speakers", "Elvish Archers", "Goblin Digging Team", "Goblin Hero", "Goblin War Drums", "Knight of Stromgald", "Sabretooth Tiger"]
+    },
+    "flavorAddExclamation": true
+  }, {
+    "match": {
+      "name": "Blinking Spirit"
+    },
+    "replace": {
+      "flavor": "\"Don't look at it! Maybe it'll go away!\"\n—Ib Halfheart, goblin tactician"
+    }
+  }, {
+    "match": {
+      "name": "Boomerang"
+    },
+    "replace": {
+      "flavor": "\"O! call back yesterday, bid time return.\" —William Shakespeare, King Richard the Second"
+    }
+  }, {
+    "match": {
+      "name": "Craw Giant"
+    },
+    "replace": {
+      "flavor": "Harthag gave a jolly laugh as he surveyed the army before him. \"Ho ho ho! Midgets! You think you can stand in my way?\""
+    }
+  }, {
+    "match": {
+      "name": "Gaseous Form"
+    },
+    "replace": {
+      "flavor": "\". . . [A]nd gives to airy nothing\nA local habitation and a name.\"\n—William Shakespeare, A Midsummer-Night's Dream"
+    }
+  }, {
+    "match": {
+      "name": "Brassclaw Orcs"
+    },
+    "replace": {
+      "flavor": "\"Modern Sarpadia's swarming with thrulls. It's a testament to the orcs that they've survived there so long.\"\n—Elbieta, Argivian scholar"
+    }
+  }, {
+    "match": {
+      "name": "Giant Strength"
+    },
+    "replace": {
+      "flavor": "\"O! it is excellent / To have a giant's strength, but it is tyrannous / To use it like a giant.\"\n—William Shakespeare,\nMeasure for Measure"
+    }
+  }, {
+    "match": {
+      "name": "Ironroot Treefolk"
+    },
+    "replace": {
+      "flavor": "\"‘I'll show you how to handle the treefolk!' the giant bragged, and he strode off into the forest. Two days later he returned, his face masked in sap and a nest behind his ear. None dared ask who won.\"\n—Azeworai, \"The Treeling\""
+    }
+  }, {
+    "match": {
+      "name": "Lhurgoyf"
+    },
+    "replace": {
+      "flavor": "\"Ach! Hans, run! It's the lhurgoyf!\"\n—Saffi Eriksdotter, last words"
+    }
+  }, {
+    "match": {
+      "name": "Pearled Unicorn"
+    },
+    "replace": {
+      "flavor": "\"‘Do you know, I always thought Unicorns were fabulous monsters, too? I never saw one alive before!' ‘Well, now that we have seen each other,' said the Unicorn, ‘if you'll believe in me, I'll believe in you.'\"\n—Lewis Carroll, Through the Looking-Glass"
+    }
+  }, {
+    "match": {
+      "name": "Segovian Leviathan"
+    },
+    "replace": {
+      "flavor": "\"Leviathan, too! Can you catch him with a fish-hook or run a line round his tongue?\" —The Bible, Job 41:1"
+    }
+  }, {
+    "match": {
+      "name": "Time Elemental"
+    },
+    "replace": {
+      "artist": "Amy Weber"
+    }
+  }, {
+    "match": {
+      "name": "Aladdin's Ring"
+    },
+    "replace": {
+      "flavor": "\". . . [T]he magician drew a ring off his finger . . . , saying: 'It is a talisman against all evil, so long as you obey me.'\"\n—The Arabian Nights,\nJunior Classics trans."
+    }
+  }, {
+    "match": {
+      "name": "Updraft"
+    },
+    "replace": {
+      "flavor": "\"Come one, come all! this rock shall fly From its firm base as soon as I.\"\n—Sir Walter Scott, \"The Lady of the Lake\""
+    }
+  }, {
+    "match": {
+      "name": "Wall of Spears"
+    },
+    "replace": {
+      "flavor": "Even the most conservative generals revised their tactics after the Battle of Sarinth, during which a handful of peasant-pikemen held off a trio of rampaging craw wurms."
+    }
+  }, {
+    "match": {
+      "name": "Wall of Stone"
+    },
+    "replace": {
+      "flavor": "The ground itself lends its strength to these walls of living stone, which possess the stability of ancient mountains. These mighty bulwarks thwart ground-based troops, providing welcome relief for weary warriors who defend the land."
+    }
+  }, {
+    "match": {
+      "name": "Winter Blast"
+    },
+    "replace": {
+      "flavor": "\"Blow, winds, and crack your cheeks! rage! blow!\" —William Shakespeare, King Lear"
+    }
+  }]
+}

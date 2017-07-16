@@ -1,0 +1,38 @@
+{
+  "SET": {
+    "name": "Magic 2014 Core Set",
+    "code": "M14",
+    "magicCardsInfoCode": "m14",
+    "releaseDate": "2013-07-19",
+    "border": "black",
+    "type": "core",
+    "booster": [
+      ["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"
+    ],
+    "translations": {
+      "de": "Hauptset Magic 2014",
+      "fr": "Édition de base Magic 2014",
+      "it": "Set Base Magic 2014",
+      "es": "Colección básica Magic 2014",
+      "pt": "Coleção Básica Magic 2014",
+      "jp": "マジック基本セット2014",
+      "cn": "魔法風雲會2014核心系列",
+      "ru": "Базовый выпуск Magic 2014",
+      "tw": "万智牌2014核心系列",
+      "ko": "매직 2014 코어세트"
+    },
+    "mkm_name": "Magic 2014",
+    "mkm_id": 1449
+  },
+  "SET_CORRECTIONS": [{
+    "match": "*",
+    "fixFlavorNewlines": true
+  }, {
+    "match": {
+      "name": "Canyon Minotaur"
+    },
+    "replace": {
+      "flavor": "\"We'll scale these cliffs, traverse Brittle Bridge, and then fight our way down the volcanic slopes on the other side.\"\n\"Isn't the shortest route through the canyon?\"\n\"Yes.\"\n\"So shouldn't we—\"\n\"No.\""
+    }
+  }]
+}

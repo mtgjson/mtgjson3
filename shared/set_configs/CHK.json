@@ -1,0 +1,48 @@
+{
+  "SET": {
+    "name": "Champions of Kamigawa",
+    "code": "CHK",
+    "magicCardsInfoCode": "chk",
+    "releaseDate": "2004-10-01",
+    "border": "black",
+    "type": "expansion",
+    "block": "Kamigawa",
+    "booster": ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"],
+    "translations": {
+      "de": "Meister von Kamigawa",
+      "fr": "Guerriers de Kamigawa",
+      "it": "Campioni di Kamigawa",
+      "es": "Campeones de Kamigawa",
+      "pt": "Campeões de Kamigawa",
+      "jp": "神河物語",
+      "cn": "神河群英录"
+    },
+    "mkm_name": "Champions of Kamigawa",
+    "mkm_id": 48
+  },
+  "SET_CORRECTIONS": [{
+    "renumberImages": "Brothers Yamazaki",
+    "order": [78968, 85106]
+  }, {
+    "match": {
+      "multiverseid": 78968
+    },
+    "replace": {
+      "number": "160a"
+    }
+  }, {
+    "match": {
+      "multiverseid": 85106
+    },
+    "replace": {
+      "number": "160b"
+    }
+  }, {
+    "match": {
+      "name": ["Feral Deceiver", "Hikari, Twilight Guardian", "Soratami Seer"]
+    },
+    "replace": {
+      "artist": "Glen Angus"
+    }
+  }]
+}

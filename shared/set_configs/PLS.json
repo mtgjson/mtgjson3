@@ -1,0 +1,65 @@
+{
+  "SET": {
+    "name": "Planeshift",
+    "code": "PLS",
+    "gathererCode": "PS",
+    "magicCardsInfoCode": "ps",
+    "releaseDate": "2001-02-05",
+    "border": "black",
+    "type": "expansion",
+    "block": "Invasion",
+    "booster": ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"],
+    "translations": {
+      "de": "Weltenwechsel",
+      "fr": "Planeshift",
+      "it": "Congiunzione",
+      "es": "Transmigración",
+      "pt": "Conjunção"
+    },
+    "mkm_name": "Planeshift",
+    "mkm_id": 35
+  },
+  "SET_CORRECTIONS": [{
+    "renumberImages": "Ertai, the Corrupted",
+    "order": [25614, 29292]
+  }, {
+    "match": {
+      "multiverseid": 29292
+    },
+    "replace": {
+      "number": "★107"
+    }
+  }, {
+    "renumberImages": "Skyship Weatherlight",
+    "order": [26480, 29293]
+  }, {
+    "match": {
+      "multiverseid": 29293
+    },
+    "replace": {
+      "number": "★133"
+    }
+  }, {
+    "renumberImages": "Tahngarth, Talruum Hero",
+    "order": [26408, 29291]
+  }, {
+    "match": {
+      "multiverseid": 29291
+    },
+    "replace": {
+      "number": "★74"
+    }
+  }, {
+    "match": {
+      "name": "Gerrard's Command"
+    },
+    "flavorAddExclamation": true
+  }, {
+    "match": {
+      "name": "Gaea's Herald"
+    },
+    "replace": {
+      "flavor": "\"I bring word from Gaea. Fight on! She will never allow her children to die alone.\""
+    }
+  }]
+}

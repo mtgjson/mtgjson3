@@ -1,0 +1,63 @@
+{
+  "SET": {
+    "name": "Time Spiral",
+    "code": "TSP",
+    "magicCardsInfoCode": "ts",
+    "releaseDate": "2006-10-06",
+    "border": "black",
+    "type": "expansion",
+    "block": "Time Spiral",
+    "booster": ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "timeshifted purple"],
+    "translations": {
+      "de": "Zeitspirale",
+      "fr": "Spirale Temporelle",
+      "it": "Spirale Temporale",
+      "es": "Espiral del Tiempo",
+      "pt": "Time Spiral",
+      "jp": "時のらせん",
+      "cn": "Time Spiral",
+      "ru": "Спираль времени"
+    },
+    "mkm_name": "Time Spiral",
+    "mkm_id": 56
+  },
+  "SET_CORRECTIONS": [{
+    "match": {
+      "name": ["Ib Halfheart, Goblin Tactician", "Think Twice", "Word of Seizing"]
+    },
+    "flavorAddExclamation": true
+  }, {
+    "match": {
+      "name": ["Evil Eye of Urborg"]
+    },
+    "flavorAddDash": true
+  }, {
+    "match": {
+      "name": "Coal Stoker"
+    },
+    "replace": {
+      "flavor": "\"The day is mine! I sent three such creatures against my foe, then watched as my magefire popped her soldiers like overripe spleenfruits.\"\n—Dobruk the Unstable, pyromancer"
+    }
+  }, {
+    "match": {
+      "name": "Kher Keep"
+    },
+    "replace": {
+      "flavor": "\"They're still here?! The cockroach may have finally met its match.\"\n—Teferi"
+    }
+  }, {
+    "match": {
+      "name": "Magus of the Mirror"
+    },
+    "replace": {
+      "flavor": "\"Behold! The image of the enemy and all that she has. Trust your envy, and take it.\""
+    }
+  }, {
+    "match": {
+      "name": "Orcish Cannonade"
+    },
+    "replace": {
+      "flavor": "\"Crispy! Scarback! Load another volcano-ball.\"\n—Stumphobbler Thuj, Orcish captain"
+    }
+  }]
+}

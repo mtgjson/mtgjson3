@@ -1,0 +1,75 @@
+{
+  "SET": {
+    "name": "Odyssey",
+    "code": "ODY",
+    "gathererCode": "OD",
+    "magicCardsInfoCode": "od",
+    "essentialMagicCode": "41",
+    "releaseDate": "2001-10-01",
+    "border": "black",
+    "type": "expansion",
+    "block": "Odyssey",
+    "booster": ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"],
+    "translations": {
+      "de": "Odyssee",
+      "fr": "Odyssée",
+      "it": "Odissea",
+      "es": "Odisea",
+      "pt": "Odisséia"
+    },
+    "mkm_name": "Odyssey",
+    "mkm_id": 38
+  },
+  "SET_CORRECTIONS": [{
+    "match": {
+      "name": "Impulsive Maneuvers"
+    },
+    "replace": {
+      "artist": "Dave Dorman"
+    }
+  }, {
+    "match": {
+      "name": "Cursed Monstrosity"
+    },
+    "replace": {
+      "flavor": {
+        "un away": "un away!"
+      }
+    }
+  }, {
+    "match": {
+      "name": "Psionic Gift"
+    },
+    "replace": {
+      "flavor": {
+        "spellcrafting": "spellcrafting!"
+      }
+    }
+  }, {
+    "match": {
+      "name": "Decompose"
+    },
+    "replace": {
+      "flavor": {
+        "Sheesh": "Sheesh!"
+      }
+    }
+  }, {
+    "match": {
+      "name": "Gorilla Titan"
+    },
+    "flavorAddExclamation": true
+  }, {
+    "match": {
+      "name": "Dusk Imp"
+    },
+    "replace": {
+      "flavor": "It despises humans and squirrels and beasts and dwarves and cephalids . . . well, it despises just about everything."
+    }
+  }, {
+    "match": {
+      "name": "Charmed Pendant"
+    },
+    "remove": ["colorIdentity"]
+  }]
+}

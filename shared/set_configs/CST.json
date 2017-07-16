@@ -1,0 +1,36 @@
+{
+  "SET": {
+    "name": "Coldsnap Theme Decks",
+    "code": "CST",
+    "magicCardsInfoCode": "cstd",
+    "magicRaritiesCodes": ["230-rarities-coldsnap-preconstructed-reprint-cards"],
+    "isMCISet": true,
+    "useMagicRaritiesNumber": true,
+    "releaseDate": "2006-07-21",
+    "border": "black",
+    "type": "box",
+    "translations": {
+      "de": "Kälteeinbruch-Themendecks",
+      "it": "Coldsnap Theme Decks"
+    },
+    "mkm_name": "Coldsnap Theme Decks",
+    "mkm_id": 82
+  },
+  "SET_CORRECTIONS": ["sortCards", {
+    "match": {
+      "name": ["Forest", "Island", "Mountain", "Plains", "Swamp"]
+    },
+    "incrementNumber": true
+  }, {
+    "match": {
+      "name": "Legions of Lim-Dûl"
+    },
+    "replace": {
+      "number": "142",
+      "source": "Snowscape Theme Deck"
+    }
+  }, {
+    "match": "*",
+    "remove": ["releaseDate"]
+  }]
+}
