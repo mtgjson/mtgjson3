@@ -257,7 +257,7 @@ var processMultiverseDocs = function(docs, callback) {
 			newCards.push(newCard);
 		});
 
-		if (newCards.length === 2 && newCards[0].layout === "double-faced") {
+		if (newCards.length === 2 && (newCards[0].layout === "double-faced" || newCards[0].layout === "meld")) {
 			var doubleFacedCardName = newCards[0].names.concat().sort().join(":::");
 			if (!doubleFacedCardNames.contains(doubleFacedCardName))
 				doubleFacedCardNames.push(doubleFacedCardName);
@@ -370,6 +370,8 @@ var processCardPart = function(doc, cardPart, printedDoc, printedCardPart) {
 				card.layout = "flip";
 			else if (firstCardText.contains("transform"))
 				card.layout = "double-faced";
+			else if (firstCardText.contains("meld"))
+				card.layout = "meld";
 			else {
 				// Can't find a suitable match on the first card text. Let's search on the second...
 				// TODO: This bunch of code needs to be optimized.
