@@ -1,0 +1,42 @@
+{
+  "SET": {
+    "name": "Stronghold",
+    "code": "STH",
+    "gathererCode": "ST",
+    "magicCardsInfoCode": "sh",
+    "releaseDate": "1998-03-02",
+    "border": "black",
+    "type": "expansion",
+    "block": "Tempest",
+    "booster": ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"],
+    "translations": {
+      "de": "Felsenburg",
+      "fr": "Forteresse",
+      "it": "Fortezza",
+      "es": "Fortaleza",
+      "pt": "Fortaleza"
+    },
+    "mkm_name": "Stronghold",
+    "mkm_id": 20
+  },
+  "SET_CORRECTIONS": [{
+    "match": {
+      "name": ["Awakening", "Heat of Battle", "Primal Rage", "Torment"]
+    },
+    "flavorAddExclamation": true
+  }, {
+    "match": {
+      "name": "Invasion Plans"
+    },
+    "replace": {
+      "flavor": "Gerrard studied the globe as Mirri kept watch. Suddenly, his eyes widened. \"This is Dominaria!\""
+    }
+  }, {
+    "match": {
+      "name": "Stronghold Assassin"
+    },
+    "replace": {
+      "flavor": "The assassin sees only throats and hears only heartbeats."
+    }
+  }]
+}

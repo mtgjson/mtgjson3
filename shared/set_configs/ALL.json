@@ -1,0 +1,139 @@
+{
+  "SET": {
+    "name": "Alliances",
+    "code": "ALL",
+    "gathererCode": "AL",
+    "magicCardsInfoCode": "ai",
+    "releaseDate": "1996-06-10",
+    "border": "black",
+    "type": "expansion",
+    "block": "Ice Age",
+    "booster": ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common"],
+    "translations": {
+      "de": "Allianzen",
+      "fr": "Alliances",
+      "it": "Alleanze",
+      "es": "Alianzas",
+      "pt": "Alianças"
+    },
+    "mkm_name": "Alliances",
+    "mkm_id": 15
+  },
+  "SET_CORRECTIONS": [{
+    "renumberImages": "Astrolabe",
+    "order": [3044, 3043]
+  }, {
+    "renumberImages": "Balduvian War-Makers",
+    "order": [3162, 3163]
+  }, {
+    "renumberImages": "Benthic Explorers",
+    "order": [3102, 3101]
+  }, {
+    "renumberImages": "Deadly Insect",
+    "order": [3129, 3130]
+  }, {
+    "renumberImages": "Enslaved Scout",
+    "order": [3169, 3170]
+  }, {
+    "renumberImages": "Errand of Duty",
+    "order": [3193, 3192]
+  }, {
+    "renumberImages": "False Demise",
+    "order": [3106, 3105]
+  }, {
+    "renumberImages": "Foresight",
+    "order": [3108, 3109]
+  }, {
+    "renumberImages": "Gift of the Woods",
+    "order": [3138, 3139]
+  }, {
+    "renumberImages": "Gorilla Berserkers",
+    "order": [3140, 3141]
+  }, {
+    "renumberImages": "Gorilla Chieftain",
+    "order": [3143, 3142]
+  }, {
+    "renumberImages": "Gorilla War Cry",
+    "order": [3173, 3174]
+  }, {
+    "renumberImages": "Kjeldoran Pride",
+    "order": [3201, 3202]
+  }, {
+    "renumberImages": "Lim-Dûl's High Guard",
+    "order": [3083, 3082]
+  }, {
+    "renumberImages": "Phyrexian War Beast",
+    "order": [3053, 3054]
+  }, {
+    "renumberImages": "Royal Herbalist",
+    "order": [3213, 3212]
+  }, {
+    "renumberImages": "Soldevi Sage",
+    "order": [3117, 3116]
+  }, {
+    "renumberImages": "Soldevi Steam Beast",
+    "order": [3061, 3062]
+  }, {
+    "renumberImages": "Taste of Paradise",
+    "order": [3150, 3149]
+  }, {
+    "renumberImages": "Varchild's Crusader",
+    "order": [3186, 3185]
+  }, {
+    "renumberImages": "Viscerid Armor",
+    "order": [3126, 3125]
+  }, {
+    "renumberImages": "Whip Vine",
+    "order": [3154, 3155]
+  }, {
+    "renumberImages": "Wild Aesthir",
+    "order": [3220, 3219]
+  }, {
+    "match": {
+      "name": ["Balduvian War-Makers", "Burnout", "Mystic Compass", "Omen of Fire", "Urza's Engine"]
+    },
+    "flavorAddExclamation": true
+  }, {
+    "match": {
+      "name": "Carrier Pigeons"
+    },
+    "replace": {
+      "flavor": {
+        "borders": "borders!"
+      }
+    }
+  }, {
+    "match": {
+      "multiverseid": [3163, 3190, 3174, 3083, 3186, 3189]
+    },
+    "flavorAddDash": true
+  }, {
+    "match": {
+      "name": ["Lat-Nam's Legacy", "Undergrowth"]
+    },
+    "flavorAddDash": true
+  }, {
+    "match": {
+      "multiverseid": [3173, 3152]
+    },
+    "flavorAddExclamation": true,
+    "flavorAddDash": true
+  }, {
+    "match": {
+      "multiverseid": 3185
+    },
+    "flavorAddExclamation": true
+  }, {
+    "match": {
+      "name": ["Misinformation", "Nature's Blessing", "Sol Grail", "Urza's Engine", "Varchild's War-Riders"]
+    },
+    "flavorAddDash": true
+  }, {
+    "match": {
+      "name": "Kaysa"
+    },
+    "replace": {
+      "flavor": "Kaysa speaks as the Elder Druid, but the Yavimaya recognizes only one voice: its own."
+    }
+  }]
+}

@@ -1,0 +1,58 @@
+{
+  "SET": {
+    "name": "Apocalypse",
+    "code": "APC",
+    "gathererCode": "AP",
+    "magicCardsInfoCode": "ap",
+    "releaseDate": "2001-06-04",
+    "border": "black",
+    "type": "expansion",
+    "block": "Invasion",
+    "booster": ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"],
+    "translations": {
+      "de": "Apokalypse",
+      "fr": "Apocalypse",
+      "it": "Apocalisse",
+      "es": "Apocalipsis",
+      "pt": "Apocalipse"
+    },
+    "mkm_name": "Apocalypse",
+    "mkm_id": 36
+  },
+  "SET_CORRECTIONS": [{
+    "match": {
+      "name": "Fire"
+    },
+    "replace": {
+      "originalText": "Fire deals 2 damage divided as you choose among any number of target creatures and/or players."
+    }
+  }, {
+    "match": {
+      "name": "Illusion"
+    },
+    "replace": {
+      "originalText": "Target spell or permanent becomes the color of your choice until end of turn."
+    }
+  }, {
+    "match": {
+      "name": "Life"
+    },
+    "replace": {
+      "originalText": "Until end of turn, all lands you control are 1/1 creatures that are still lands."
+    }
+  }, {
+    "match": {
+      "name": "Day"
+    },
+    "replace": {
+      "originalText": "Creatures target player controls get +1/+1 until end of turn."
+    }
+  }, {
+    "match": {
+      "name": "Order"
+    },
+    "replace": {
+      "originalText": "Remove target attacking creature from the game."
+    }
+  }]
+}

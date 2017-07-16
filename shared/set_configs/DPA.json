@@ -1,0 +1,80 @@
+{
+  "SET": {
+    "name": "Duels of the Planeswalkers",
+    "code": "DPA",
+    "magicCardsInfoCode": "dpa",
+    "releaseDate": "2010-06-04",
+    "border": "black",
+    "type": "box",
+    "mkm_name": "Duels of the Planeswalkers Decks",
+    "mkm_id": 1193
+  },
+  "SET_CORRECTIONS": ["numberCards", "sortCards", {
+    "match": {
+      "name": ["Duskdale Wurm", "Molimo, Maro-Sorcerer", "Mortivore", "Roughshod Mentor", "Talara's Battalion", "Troll Ascetic"]
+    },
+    "remove": ["flavor"]
+  }, {
+    "match": {
+      "name": "Forest"
+    },
+    "replace": {
+      "number": "110"
+    },
+    "incrementNumber": true
+  }, {
+    "match": {
+      "name": "Island"
+    },
+    "replace": {
+      "number": "98"
+    },
+    "incrementNumber": true
+  }, {
+    "match": {
+      "name": "Mind Control"
+    },
+    "replace": {
+      "artist": "Ryan Pancoast"
+    }
+  }, {
+    "match": {
+      "name": "Mountain"
+    },
+    "replace": {
+      "number": "106"
+    },
+    "incrementNumber": true
+  }, {
+    "match": {
+      "name": "River Boa"
+    },
+    "replace": {
+      "artist": "Paul Bonner"
+    },
+    "remove": ["flavor"]
+  }, {
+    "match": {
+      "name": "Shock"
+    },
+    "replace": {
+      "artist": "Jon Foster"
+    }
+  }, {
+    "match": {
+      "name": "Swamp"
+    },
+    "replace": {
+      "number": "102"
+    },
+    "incrementNumber": true
+  }, {
+    "match": {
+      "name": "The Rack"
+    },
+    "replace": {
+      "artist": "Nic Klein"
+    },
+    "remove": ["flavor"]
+  }]
+}

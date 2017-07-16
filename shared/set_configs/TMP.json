@@ -1,0 +1,94 @@
+{
+  "SET": {
+    "name": "Tempest",
+    "code": "TMP",
+    "gathererCode": "TE",
+    "magicCardsInfoCode": "tp",
+    "releaseDate": "1997-10-14",
+    "border": "black",
+    "type": "expansion",
+    "block": "Tempest",
+    "booster": ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"],
+    "translations": {
+      "de": "Sturmwind",
+      "fr": "Tempête",
+      "it": "Tempesta",
+      "es": "Tempestad",
+      "pt": "Tempestade"
+    },
+    "mkm_name": "Tempest",
+    "mkm_id": 19
+  },
+  "SET_CORRECTIONS": ["noBasicLandWatermarks", {
+    "renumberImages": "Plains",
+    "order": [4953, 4954, 4955, 4956]
+  }, {
+    "match": {
+      "name": ["Bayou Dragonfly", "Lowland Giant", "Mindwhip Sliver", "Repentance", "Shatter", "Staunch Defenders", "Sudden Impact", "Tahngarth's Rage", "Time Warp"]
+    },
+    "flavorAddExclamation": true
+  }, {
+    "match": {
+      "name": "Deadshot"
+    },
+    "replace": {
+      "flavor": "\"Carrion! Keep your distance. My blade will come to you!\"\n—Crovax"
+    }
+  }, {
+    "match": {
+      "name": "Dregs of Sorrow"
+    },
+    "replace": {
+      "flavor": "Crovax gazed upon the dead, and for one dark moment he saw a banquet."
+    }
+  }, {
+    "match": {
+      "name": "Gerrard's Battle Cry"
+    },
+    "replace": {
+      "flavor": "Gerrard grinned and drew his sword. \"This won't be a fair fight,\" he called to his crew. \"They should have brought a second ship!\""
+    }
+  }, {
+    "match": {
+      "name": "Mogg Conscripts"
+    },
+    "replace": {
+      "flavor": "\"Torahn's horns! They've seen us. Now, statue, you must fight to save yourself!\"\n—Tahngarth, aboard the Predator"
+    }
+  }, {
+    "match": {
+      "name": "Mogg Fanatic"
+    },
+    "replace": {
+      "flavor": "\"I got it! I got it! I—\""
+    }
+  }, {
+    "match": {
+      "name": "Pincher Beetles"
+    },
+    "replace": {
+      "flavor": "\"No fair! Since when does a bug get ta munch on me?\"\n—Squee, goblin cabin hand"
+    }
+  }, {
+    "match": {
+      "name": "Rootwater Shaman"
+    },
+    "replace": {
+      "flavor": "\"Ugh! When did orcs and fish start having kids?\"\n—Gerrard of the Weatherlight"
+    }
+  }, {
+    "match": {
+      "name": "Staunch Defenders"
+    },
+    "replace": {
+      "flavor": "\"Hold your position! Leave doubt for the dying!\"\n—Tahngarth of the Weatherlight"
+    }
+  }, {
+    "match": {
+      "name": "Talon Sliver"
+    },
+    "replace": {
+      "flavor": "\"Keep them at sword's length!\" Gerrard's order fell flat as each sliver's talon suddenly grew longer. \"Hold on—break out the polearms!\""
+    }
+  }]
+}

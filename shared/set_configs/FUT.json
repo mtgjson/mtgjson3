@@ -1,0 +1,74 @@
+{
+  "SET": {
+    "name": "Future Sight",
+    "code": "FUT",
+    "magicCardsInfoCode": "fut",
+    "releaseDate": "2007-05-04",
+    "border": "black",
+    "type": "expansion",
+    "block": "Time Spiral",
+    "booster": [
+      ["rare", "timeshifted rare"],
+      ["uncommon", "timeshifted uncommon"],
+      ["uncommon", "timeshifted uncommon"],
+      ["uncommon", "timeshifted uncommon"],
+      ["common", "timeshifted common"],
+      ["common", "timeshifted common"],
+      ["common", "timeshifted common"],
+      ["common", "timeshifted common"],
+      ["common", "timeshifted common"],
+      ["common", "timeshifted common"],
+      ["common", "timeshifted common"],
+      ["common", "timeshifted common"],
+      ["common", "timeshifted common"],
+      ["common", "timeshifted common"],
+      ["common", "timeshifted common"]
+    ],
+    "translations": {
+      "de": "Blick in die Zukunft",
+      "fr": "Vision de l'Avenir",
+      "it": "Visione Futura",
+      "es": "Visión del Futuro",
+      "pt": "Visão do Futuro",
+      "jp": "未来予知",
+      "cn": "预知将来",
+      "ru": "Взгляд в Будущее"
+    },
+    "mkm_name": "Future Sight",
+    "mkm_id": 70
+  },
+  "SET_CORRECTIONS": [{
+    "match": {
+      "multiverseid": [136055, 136204, 136155, 136049, 130676, 126143, 130686, 130672, 132229, 130334, 136054, 130684, 126211, 130635, 136043, 132226, 136196, 126132, 136215, 132220, 132227, 126149, 126187, 136044, 130311, 132211, 130581, 136040, 130595, 130695, 126162, 130574, 136201, 130634, 136208, 136198, 126151, 130691, 126186, 126165, 126158, 136202, 130346, 130614, 130588, 136140, 136138, 136045, 130564, 136210, 136213, 126160, 136153, 136145, 126210, 136212, 136158, 130347, 136137, 136214, 136160, 130708, 136032, 130659, 130344, 130323, 136151, 130675, 136205, 136142, 136139, 130630, 130338, 136041, 130325, 130644, 136141, 126178, 132222, 130702, 132215]
+    },
+    "replace": {
+      "timeshifted": true
+    }
+  }, {
+    "match": {
+      "name": ["Grinning Ignus"]
+    },
+    "flavorAddExclamation": true
+  }, {
+    "match": {
+      "name": "Bloodshot Trainee"
+    },
+    "replace": {
+      "flavor": "\"Hrrngh! Someday I'm going to hurl this . . . er . . . roll this . . . hrrngh . . . nudge this boulder right down a cliff.\""
+    }
+  }, {
+    "match": {
+      "name": "Rites of Flourishing"
+    },
+    "replace": {
+      "flavor": "\"Dance, and bring forth the coil! It is an umbilical to Gaea herself, fattening us with the earth's rich bounty.\""
+    }
+  }, {
+    "match": {
+      "name": "Steamflogger Boss"
+    },
+    "replace": {
+      "flavor": "\"Whip the Xs ! Pinch the Os!\nWhat we're building, no one knows!\""
+    }
+  }]
+}

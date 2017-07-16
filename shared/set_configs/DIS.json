@@ -1,0 +1,58 @@
+{
+  "SET": {
+    "name": "Dissension",
+    "code": "DIS",
+    "magicCardsInfoCode": "di",
+    "releaseDate": "2006-05-05",
+    "border": "black",
+    "type": "expansion",
+    "block": "Ravnica",
+    "booster": ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"],
+    "translations": {
+      "de": "Zwietracht",
+      "fr": "Discorde",
+      "it": "Discordia",
+      "es": "Discordia",
+      "pt": "Insurreição",
+      "jp": "ディセンション",
+      "cn": "纷争",
+      "ru": "Раскол"
+    },
+    "mkm_name": "Dissension",
+    "mkm_id": 53
+  },
+  "SET_CORRECTIONS": [{
+    "match": {
+      "name": ["Condemn", "Flame-Kin War Scout", "Kindle the Carnage", "Protean Hulk", "Psychic Possession", "Unliving Psychopath"]
+    },
+    "flavorAddExclamation": true
+  }, {
+    "match": {
+      "name": "Azorius Æthermage"
+    },
+    "replace": {
+      "artist": "Heather Hudson"
+    }
+  }, {
+    "match": {
+      "name": "Bronze Bombshell"
+    },
+    "replace": {
+      "flavor": "\"Ooh, shiny! Let's pull off the chain and take her with us.\"\n—Ukl, Gruul raider, last words"
+    }
+  }, {
+    "match": {
+      "name": ["Drekavac", "Magewright's Stone"]
+    },
+    "replace": {
+      "artist": "Carl Critchlow"
+    }
+  }, {
+    "match": {
+      "name": "Ignorant Bliss"
+    },
+    "replace": {
+      "artist": "Jeff Miracola"
+    }
+  }]
+}

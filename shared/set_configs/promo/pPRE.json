@@ -1,0 +1,24 @@
+{
+  "SET": {
+    "name": "Prerelease Events",
+    "code": "pPRE",
+    "magicCardsInfoCode": "ptc",
+    "magicRaritiesCodes": ["82-rarities-prerelease-events-promos"],
+    "isMCISet": true,
+    "releaseDate": "1997-10-04",
+    "border": "black",
+    "type": "promo"
+  },
+  "SET_CORRECTIONS": [
+    "noBasicLandWatermarks",
+    {"match": {"name": "Archdemon of Greed"}, "replace": {"layout": "double-faced", "names": ["Ravenous Demon", "Archdemon of Greed"]}},
+    {"match": {"name": "Ravenous Demon"}, "replace": {"layout": "double-faced", "names": ["Ravenous Demon", "Archdemon of Greed"]}},
+    {"match": {"name": "Demigod of Revenge"}, "replace": {"flavor": "\"His laugh, a bellowing, deathly din, slices through the heavens, making them bleed.\"\n—The Seer's Parables"}},
+    {"match": {"name": "Howlpack Alpha"}, "remove": ["flavor"], "replace": {"layout": "double-faced", "names": ["Mayor of Avabruck", "Howlpack Alpha"]}},
+    {"match": {"name": "Howlpack Alpha"}, "replace": {"layout": "double-faced", "names": ["Mayor of Avabruck", "Howlpack Alpha"]}},
+    {"match": {"name": "Overbeing of Myth"}, "replace": {"flavor": "\"She walks among us unseen, learning from our imperfections.\"\n—The Seer's Parables"}},
+    {"match": {"name": "Wren's Run Packmaster"}, "replace": {"releaseDate": "2007-09-29"}},
+    {"match": {"name": "Sultai Ascendacy"}, "replace": {"name": "Sultai Ascendancy", "imageName": "sultai ascendancy"}},
+    {"match": {"name": "Nissa, Vastwood Seer"}, "replace": {"artist": "Wesley Burt"}}
+  ]
+}

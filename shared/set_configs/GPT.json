@@ -1,0 +1,72 @@
+{
+  "SET": {
+    "name": "Guildpact",
+    "code": "GPT",
+    "magicCardsInfoCode": "gp",
+    "releaseDate": "2006-02-03",
+    "border": "black",
+    "type": "expansion",
+    "block": "Ravnica",
+    "booster": ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"],
+    "translations": {
+      "de": "Gildenbund",
+      "fr": "Le Pacte des Guildes",
+      "it": "Patto delle Gilde",
+      "es": "El Pacto entre Gremios",
+      "pt": "Pacto das Guildas",
+      "jp": "ギルドパクト",
+      "cn": "十會盟",
+      "ru": "Договор Гильдий"
+    },
+    "mkm_name": "Guildpact",
+    "mkm_id": 54
+  },
+  "SET_CORRECTIONS": [{
+    "match": {
+      "name": ["Gelectrode", "Schismotivate", "Skarrg, the Rage Pits", "Skarrgan Skybreaker", "Train of Thought", "Wreak Havoc"]
+    },
+    "flavorAddExclamation": true
+  }, {
+    "match": {
+      "name": "Borborygmos"
+    },
+    "replace": {
+      "flavor": "\"It's easy to see why those Gruul dirtbags follow him—the only orders he gives are ‘Crush them!' and ‘We eat!'\"\n—Teysa"
+    }
+  }, {
+    "match": {
+      "name": "Gruul War Plow"
+    },
+    "replace": {
+      "flavor": "\"Steering apparatus?! What for? Rip it out, sharpen it, and lash it to the front!\"\n—Ktank, Gruul plowmaster"
+    }
+  }, {
+    "match": {
+      "name": "Killer Instinct"
+    },
+    "replace": {
+      "flavor": "\"Take the bridge, men! Victory! Victory is ou— Retreat! RETREAT!\""
+    }
+  }, {
+    "match": {
+      "name": "Tin Street Hooligan"
+    },
+    "replace": {
+      "flavor": "\"Rauck-Chauv's like a holiday! Only it isn't on the calendars, and instead of dancing you knock people flat, and instead of giving gifts you break stuff.\""
+    }
+  }, {
+    "match": {
+      "name": "Torch Drake"
+    },
+    "replace": {
+      "flavor": "\"Drakes? Bah! Things that breathe don't interest me. It breathes fire, you say? Well, that's a different story!\"\n—Zataz, Izzet clockwork artificer"
+    }
+  }, {
+    "match": {
+      "name": "Niv-Mizzet, the Firemind"
+    },
+    "replace": {
+      "flavor": "\"(Z–>)90° – (E–N²W)90°t = 1\""
+    }
+  }]
+}

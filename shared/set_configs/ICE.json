@@ -1,0 +1,90 @@
+{
+  "SET": {
+    "name": "Ice Age",
+    "code": "ICE",
+    "gathererCode": "IA",
+    "magicCardsInfoCode": "ia",
+    "releaseDate": "1995-06-01",
+    "border": "black",
+    "type": "expansion",
+    "block": "Ice Age",
+    "booster": ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"],
+    "translations": {
+      "de": "Eiszeit",
+      "fr": "Ere Glaciaire",
+      "it": "Era Glaciale",
+      "es": "Era Glacial",
+      "pt": "Era Glacial"
+    },
+    "mkm_name": "Ice Age",
+    "mkm_id": 11
+  },
+  "SET_CORRECTIONS": ["noBasicLandWatermarks", {
+    "renumberImages": "Forest",
+    "order": [2748, 2746, 2747]
+  }, {
+    "renumberImages": "Island",
+    "order": [2768, 2767, 2769]
+  }, {
+    "renumberImages": "Mountain",
+    "order": [2763, 2765, 2764]
+  }, {
+    "renumberImages": "Plains",
+    "order": [2773, 2771, 2772]
+  }, {
+    "renumberImages": "Swamp",
+    "order": [2744, 2743, 2745]
+  }, {
+    "match": {
+      "name": ["Aegis of the Meek", "Conquer", "Despotic Scepter", "Disenchant", "Fanatical Fever", "Goblin Ski Patrol", "Knight of Stromgald", "Lava Burst", "Panic", "Polar Kraken", "Spoils of War", "Woolly Mammoths"]
+    },
+    "flavorAddExclamation": true
+  }, {
+    "match": {
+      "name": ["Fiery Justice", "Mind Whip", "Prismatic Ward", "Snow Devil"]
+    },
+    "flavorAddDash": true
+  }, {
+    "match": {
+      "name": "Blinking Spirit"
+    },
+    "replace": {
+      "flavor": "\"Don't look at it! Maybe it'll go away!\"\n—Ib Halfheart, Goblin Tactician"
+    }
+  }, {
+    "match": {
+      "name": "Breath of Dreams"
+    },
+    "replace": {
+      "flavor": "\"Get up, blast you! They're attacking! Why are you all so slow?\"\n—General Jarkeld, the Arctic Fox"
+    }
+  }, {
+    "match": {
+      "name": "Grizzled Wolverine"
+    },
+    "replace": {
+      "flavor": "\"Before you release a Wolverine from the trap, make sure it's really dead.\"\n—Lovisa Coldeyes,\nBalduvian Chieftain"
+    }
+  }, {
+    "match": {
+      "name": "Mercenaries"
+    },
+    "replace": {
+      "flavor": "\"Blasted amateurs! Doesn't the queen think we can fight well enough on our own?\"\n—Avram Garrisson, Leader of the Knights of Stromgald"
+    }
+  }, {
+    "match": {
+      "name": "Lhurgoyf"
+    },
+    "replace": {
+      "flavor": "\"Ach! Hans, run! It's the Lhurgoyf!\"\n—Saffi Eriksdotter, last words"
+    }
+  }, {
+    "match": {
+      "name": "Rally"
+    },
+    "replace": {
+      "flavor": "\"Stand your ground, troops! This shall be our finest hour!\"\n—General Jarkeld, the Arctic Fox, last words"
+    }
+  }]
+}

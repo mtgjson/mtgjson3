@@ -1,0 +1,34 @@
+{
+  "SET": {
+    "name": "Antiquities",
+    "code": "ATQ",
+    "gathererCode": "AQ",
+    "magicCardsInfoCode": "aq",
+    "releaseDate": "1994-03-04",
+    "border": "black",
+    "type": "expansion",
+    "booster": ["uncommon", "uncommon", "common", "common", "common", "common", "common", "common"],
+    "mkm_name": "Antiquities",
+    "mkm_id": 5
+  },
+  "SET_CORRECTIONS": [{
+    "match": {
+      "name": "Gate to Phyrexia"
+    },
+    "flavorAddDash": true
+  }, {
+    "match": {
+      "name": "Feldon's Cane"
+    },
+    "replace": {
+      "flavor": "Feldon found the first of these canes frozen in the Ronom Glacier."
+    }
+  }, {
+    "match": {
+      "name": "Triskelion"
+    },
+    "replace": {
+      "flavor": "A brainchild of Tawnos, the Triskelion proved its versatility and usefulness in many of the later battles between the brothers."
+    }
+  }]
+}

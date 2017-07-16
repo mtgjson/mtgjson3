@@ -1,0 +1,42 @@
+{
+  "SET": {
+    "name": "Time Spiral \"Timeshifted\"",
+    "code": "TSB",
+    "magicCardsInfoCode": "tsts",
+    "releaseDate": "2006-10-06",
+    "border": "black",
+    "type": "expansion",
+    "block": "Time Spiral",
+    "booster": ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "timeshifted purple"],
+    "translations": {
+      "de": "Zeitspirale",
+      "fr": "Spirale Temporelle",
+      "it": "Spirale Temporale",
+      "es": "Espiral del Tiempo",
+      "pt": "Time Spiral",
+      "jp": "時のらせん",
+      "cn": "Time Spiral",
+      "ru": "Спираль времени"
+    },
+    "mkm_name": "Time Spiral",
+    "mkm_id": 56
+  },
+  "SET_CORRECTIONS": [{
+    "match": "*",
+    "replace": {
+      "timeshifted": true
+    }
+  }, {
+    "match": {
+      "name": ["Pandemonium"]
+    },
+    "flavorAddExclamation": true
+  }, {
+    "match": {
+      "name": "Craw Giant"
+    },
+    "replace": {
+      "flavor": "Harthag gave a jolly laugh as he surveyed the army before him. \"Ho ho ho! Midgets! You think you can stand in my way?\""
+    }
+  }]
+}

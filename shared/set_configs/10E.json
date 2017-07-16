@@ -1,0 +1,51 @@
+{
+  "SET": {
+    "name": "Tenth Edition",
+    "code": "10E",
+    "magicCardsInfoCode": "10e",
+    "releaseDate": "2007-07-13",
+    "border": "black",
+    "type": "core",
+    "booster": ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing"],
+    "translations": {
+      "de": "Zehnte Edition",
+      "fr": "Dixième édition",
+      "it": "Decima Edizione",
+      "es": "Décima Edición",
+      "pt": "Décima Edição",
+      "jp": "第10版",
+      "cn": "第十版",
+      "ru": "Десятое Издание",
+      "tw": "Tenth Edition"
+    },
+    "mkm_name": "Tenth Edition",
+    "mkm_id": 74
+  },
+  "SET_CORRECTIONS": [{
+    "match": {
+      "name": ["Condemn", "Duct Crawler", "Horseshoe Crab", "Lava Axe", "Might of Oaks", "Squee, Goblin Nabob"]
+    },
+    "flavorAddExclamation": true
+  }, {
+    "match": {
+      "name": "Flashfreeze"
+    },
+    "replace": {
+      "flavor": "\"Nature? Fire? Bah! Both are chaotic and difficult to control. Ice is structured, latticed, light as a feather, massive as a glacier. In ice, there is power!\"\n—Heidar, Rimewind master"
+    }
+  }, {
+    "match": {
+      "name": "Mogg Fanatic"
+    },
+    "replace": {
+      "flavor": "\"I got it! I got it! I—\""
+    }
+  }, {
+    "match": {
+      "name": "Overgrowth"
+    },
+    "replace": {
+      "flavor": "\"Let the forest spread! From salt, stone, and fen, let the new trees rise.\"\n—Molimo, maro-sorcerer"
+    }
+  }]
+}

@@ -1,0 +1,104 @@
+{
+  "SET": {
+    "name": "Betrayers of Kamigawa",
+    "code": "BOK",
+    "magicCardsInfoCode": "bok",
+    "releaseDate": "2005-02-04",
+    "border": "black",
+    "type": "expansion",
+    "block": "Kamigawa",
+    "booster": ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"],
+    "translations": {
+      "de": "Verräter von Kamigawa",
+      "fr": "Traîtres de Kamigawa",
+      "it": "Traditori di Kamigawa",
+      "es": "Traidores de Kamigawa",
+      "pt": "Traidores de Kamigawa",
+      "jp": "神河謀叛",
+      "cn": "神河叛将谱"
+    },
+    "mkm_name": "Betrayers of Kamigawa",
+    "mkm_id": 51
+  },
+  "SET_CORRECTIONS": [{
+    "match": {
+      "name": "Budoka Pupil"
+    },
+    "replace": {
+      "number": "122a",
+      "layout": "flip",
+      "names": ["Budoka Pupil", "Ichiga, Who Topples Oaks"]
+    }
+  }, {
+    "match": {
+      "name": "Callow Jushi"
+    },
+    "replace": {
+      "number": "31a",
+      "layout": "flip",
+      "names": ["Callow Jushi", "Jaraku the Interloper"],
+      "text": "Whenever you cast a Spirit or Arcane spell, you may put a ki counter on Callow Jushi.\nAt the beginning of the end step, if there are two or more ki counters on Callow Jushi, you may flip it."
+    }
+  }, {
+    "copyCard": "Callow Jushi",
+    "replace": {
+      "name": "Jaraku the Interloper",
+      "number": "31b",
+      "text": "Remove a ki counter from Jaraku the Interloper: Counter target spell unless its controller pays {2}.",
+      "type": "Legendary Creature — Spirit",
+      "supertypes": ["Legendary"],
+      "types": ["Creature"],
+      "subtypes": ["Spirit"],
+      "power": "3",
+      "toughness": "4",
+      "imageName": "jaraku the interloper"
+    }
+  }, {
+    "match": {
+      "name": "Cunning Bandit"
+    },
+    "replace": {
+      "number": "99a",
+      "layout": "flip",
+      "names": ["Cunning Bandit", "Azamuki, Treachery Incarnate"]
+    }
+  }, {
+    "match": {
+      "name": "Hired Muscle"
+    },
+    "replace": {
+      "number": "69a",
+      "layout": "flip",
+      "names": ["Hired Muscle", "Scarmaker"],
+      "text": "Whenever you cast a Spirit or Arcane spell, you may put a ki counter on Hired Muscle.\nAt the beginning of the end step, if there are two or more ki counters on Hired Muscle, you may flip it."
+    }
+  }, {
+    "copyCard": "Hired Muscle",
+    "replace": {
+      "name": "Scarmaker",
+      "number": "69b",
+      "text": "Remove a ki counter from Scarmaker: Target creature gains fear until end of turn. (It can't be blocked except by artifact creatures and/or black creatures.)",
+      "type": "Legendary Creature — Spirit",
+      "supertypes": ["Legendary"],
+      "types": ["Creature"],
+      "subtypes": ["Spirit"],
+      "power": "4",
+      "toughness": "4",
+      "imageName": "scarmaker"
+    }
+  }, {
+    "match": {
+      "name": "Minamo's Meddling"
+    },
+    "replace": {
+      "artist": "Alex Horley-Orlandelli"
+    }
+  }, {
+    "match": {
+      "name": "Nezumi Shadow-Watcher"
+    },
+    "replace": {
+      "flavor": "\"The Okiba Gang! Night-cursed thieves and assassins! I've had enough of their meddling! Triple the guard!\"\n—Marrow-Gnawer"
+    }
+  }]
+}

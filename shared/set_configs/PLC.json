@@ -1,0 +1,44 @@
+{
+  "SET": {
+    "name": "Planar Chaos",
+    "code": "PLC",
+    "magicCardsInfoCode": "pc",
+    "releaseDate": "2007-02-02",
+    "border": "black",
+    "type": "expansion",
+    "block": "Time Spiral",
+    "booster": ["rare", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "timeshifted common", "timeshifted common", "timeshifted common", ["timeshifted rare", "timeshifted uncommon"]],
+    "translations": {
+      "de": "Weltenchaos",
+      "fr": "Chaos planaire",
+      "it": "Caos Dimensionale",
+      "es": "Caos planar",
+      "pt": "Caos Planar",
+      "jp": "次元の混乱",
+      "cn": "时空混沌",
+      "ru": "Вселенский Хаос"
+    },
+    "mkm_name": "Planar Chaos",
+    "mkm_id": 58
+  },
+  "SET_CORRECTIONS": [{
+    "match": {
+      "multiverseid": [130715, 122321, 122373, 122360, 122423, 128940, 122428, 122374, 122402, 122367, 122280, 122429, 122362, 122371, 122405, 122451, 131006, 122481, 122324, 130714, 125877, 126214, 134738, 124033, 125874, 126212, 124066, 124470, 124757, 122338, 122436, 130718, 126818, 122282, 122325, 130816, 122442, 125873, 124445, 122285, 124474, 125879, 131011, 122355, 122366]
+    },
+    "replace": {
+      "timeshifted": true
+    }
+  }, {
+    "match": {
+      "name": ["Prodigal Pyromancer"]
+    },
+    "flavorAddExclamation": true
+  }, {
+    "match": {
+      "name": "Merfolk Thaumaturgist"
+    },
+    "replace": {
+      "flavor": "\"Blasted fishtails! It's not enough that they meddle with my head, but they twist my body as well.\"\n—Tahngarth of the Weatherlight"
+    }
+  }]
+}
