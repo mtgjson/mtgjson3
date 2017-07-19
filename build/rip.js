@@ -145,7 +145,7 @@ var TEXT_TO_SYMBOL_MAP = {
 var doubleFacedCardNames = [];
 
 var ripSet = function(setName, cb) {
-	base.info("====================================================================================================================");
+	base.info("========================================================================================================");
 	base.info("Ripping Set: %s", setName);
 
 	tiptoe(
@@ -526,7 +526,7 @@ var processCardPart = function(doc, cardPart, printedDoc, printedCardPart) {
 	}
 
 	// Variations
-	if (card.layout !== "split" && card.layout !== "double-faced" && card.layout !== "flip") {
+	if (card.layout !== "split" && card.layout !== "double-faced" && card.layout !== "flip" && card.layout !== "meld") {
 		var variationLinks = cardPart.querySelectorAll(idPrefix + "_variationLinks a.variationLink");
 		if (variationLinks.length)
 			card.variations = Array.toArray(variationLinks).map(function (variationLink) { return +variationLink.getAttribute("id").trim(); }).filter(function (variation) { return variation!==card.multiverseid; });
@@ -1021,7 +1021,7 @@ var compareCardsToEssentialMagic = function(set, cb) {
 };
 
 var ripMCISet = function(set, cb) {
-	base.info("====================================================================================================================");
+	base.info("========================================================================================================");
 	base.info("Ripping set: %s (%s)", set.name, set.code);
 
 	tiptoe(
@@ -1243,6 +1243,8 @@ var ripMCICard = function(set, mciCardURL, cb) {
 					card.layout = "flip";
 				else if (card.text.toLowerCase().contains("transform"))
 					card.layout = "double-faced";
+                else if (card.text.toLowerCase().contains("meld"))
+                    card.layout = 'meld';
 			}
 			card.text.replaceAll("{UP}", "{U/P}").replaceAll("{BP}", "{B/P}").replaceAll("{RP}", "{R/P}").replaceAll("{GP}", "{G/P}").replaceAll("{WP}", "{W/P}");
 
@@ -1695,7 +1697,7 @@ var fixCommanderIdentityForCards = function(cards, cb) {
 		}
 
 		// Process split and double-faced cards
-		if (card.layout == "double-faced" || card.layout == "split" || card.layout == "aftermath") {
+		if (card.layout == "double-faced" || card.layout == "split" || card.layout == "aftermath" || card.layout == "meld") {
 			var otherSideNum = card.number.substr(0, card.number.length - 1) + ((card.number.substr(-1) == "a") ? "b" : "a");
 			var otherCard = findCardByNumber(otherSideNum);
 
