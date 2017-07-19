@@ -853,6 +853,8 @@ var compareCardsToMCI = function(set, cb) {
 					return setImmediate(subcb);
 
 				var mciCardLink = mciCardLinks.filter(function (link) { return link.textContent.trim().toLowerCase()===createMCICardName(card).toLowerCase(); });
+                if (card.layout==="meld")
+                    mciCardLink = mciCardLinks.filter(function (link) { return link.getAttribute("href").indexOf('/' + card.number) !== -1; });
 				if (mciCardLink.length!==1) {
 					base.warn("MISSING: Could not find MagicCards.info match for card: %s", card.name);
 					return setImmediate(subcb);

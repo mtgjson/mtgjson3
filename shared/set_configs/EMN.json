@@ -5,7 +5,6 @@
     "code": "EMN",
     "magicCardsInfoCode": "emn",
     "releaseDate": "2016-07-22",
-    "isMCISet": true,
     "border": "black",
     "type": "expansion",
     "block": "Shadows over Innistrad",
@@ -14,5 +13,74 @@
       ["double faced common", "double faced uncommon"],
       ["land", "checklist"], "marketing"
     ]
-  }
+  },
+  "SET_CORRECTIONS": [{
+      "match": {
+        "imageName": "brisela, voice of nightmares1"
+      },
+      "replace": {
+        "number": "15b",
+        "names": [
+          "Bruna, the Fading Light",
+          "Brisela, Voice of Nightmares"
+        ]
+      }
+    },
+    {
+      "match": {
+        "imageName": "brisela, voice of nightmares2"
+      },
+      "replace": {
+        "number": "28b",
+        "names": [
+          "Gisela, the Broken Blade",
+          "Brisela, Voice of Nightmares"
+        ]
+      }
+    }, {
+      "match": {
+        "imageName": "chittering host1"
+      },
+      "replace": {
+        "number": "91b",
+        "names": [
+          "Graf Rats",
+          "Chittering Host"
+        ]
+      }
+    }, {
+      "match": {
+        "imageName": "chittering host2"
+      },
+      "replace": {
+        "number": "96b",
+        "names": [
+          "Midnight Scavengers",
+          "Chittering Host"
+        ]
+      }
+    }, {
+      "match": {
+        "imageName": "hanweir, the writhing township1"
+      },
+      "replace": {
+        "number": "130b",
+        "names": [
+          "Hanweir Garrison",
+          "Hanweir, the Writhing Township"
+        ]
+      }
+    }, {
+      "match": {
+        "imageName": "hanweir, the writhing township2"
+      },
+      "replace": {
+        "number": "204b",
+        "names": [
+          "Hanweir Battlements",
+          "Hanweir, the Writhing Township"
+        ]
+      }
+    }
+  ]
 }
