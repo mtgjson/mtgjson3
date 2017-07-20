@@ -6,7 +6,7 @@ block contents
       a(name='sets')
       h2 Sets
       p
-        | The
+        | The 
         strong AllSets.json
         |  file is an object that looks like this:
       pre
@@ -18,9 +18,9 @@ block contents
             ...
           }
       p
-        | A flat array of all sets is also available:
+        | A flat array of all sets is also available: 
         a(href="/json/AllSetsArray.json") AllSetsArray.json
-        | and
+        | and 
         a(href="/json/AllSetsArray-x.json") AllSetsArray-x.json
       p Each individual set is a JSON object like this:
       pre
@@ -43,7 +43,7 @@ block contents
             "cards" : [ {}, {}, {}, ... ]  // The cards in the set
           }
       p
-        | Some software (Magic Workstation) uses non-standard set codes. You can find those
+        | Some software (Magic Workstation) uses non-standard set codes. You can find those 
         a(href='http://www.slightlymagic.net/forum/viewtopic.php?f=2&t=581#p6454') in this post
     div
       a(name='booster')
@@ -114,13 +114,7 @@ block contents
             td names
             td [ "Research", "Development" ]
             td
-              | Only used for split, flip, double-faced, and meld cards. Will contain all the names on this physical card,
-              | front or back.
-              | For the front side of meld cards, the first name will be the front of the card, and the second name
-              | will be the back of the card. For the back side of meld cards, all three names will be present: the
-              | first being the front of the top half (the card that contains the meld conditions); the second being
-              | the front of the bottom half (the card that says "Melds with ..."); and the third name being the
-              | back (melded) half.
+              | Only used for split, flip, double-faced, and meld cards. Will contain all the names on this card, front or back. For meld cards, the first name is the card with the meld ability, which has the top half on its back, the second name is the card with the reminder text, and the third name is the melded back face.
           tr
             td manaCost
             td "{G}{U}"
@@ -219,7 +213,7 @@ block contents
             td
               | This used to refer to the mtgimage.com file name for this card.
               br
-              | mtgimage.com has been
+              | mtgimage.com has been 
               strong(style='color: red;') SHUT DOWN
               |  by Wizards of the Coast.
               br
@@ -250,7 +244,7 @@ block contents
             td reserved
             td true
             td
-              | Set to true if this card is reserved by Wizards
+              | Set to true if this card is reserved by Wizards 
               a(href='http://archive.wizards.com/Magic/tcg/article.aspx?x=magic/products/reprintpolicy') Official Reprint Policy
           tr
             td releaseDate
@@ -331,7 +325,7 @@ block contents
       a(name='allcards')
       h2 AllCards.json
       p
-        | The
+        | The 
         strong AllCards.json
         |  file is organized by card name and merges card data from multiple sets into a single card object.
         br
