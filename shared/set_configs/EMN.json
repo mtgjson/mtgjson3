@@ -21,11 +21,6 @@
       "replace": {
         "imageName": "brisela, voice of nightmares",
         "number": "15b",
-        "names": [
-          "Gisela, the Broken Blade",
-          "Bruna, the Fading Light",
-          "Brisela, Voice of Nightmares"
-        ],
         "colorIdentity": [
           "W"
         ]
@@ -38,16 +33,26 @@
       "removeCard": true
     }, {
       "match": {
+        "name": [
+          "Gisela, the Broken Blade",
+          "Bruna, the Fading Light",
+          "Brisela, Voice of Nightmares"
+        ]
+      },
+      "replace": {
+        "names": [
+          "Gisela, the Broken Blade",
+          "Bruna, the Fading Light",
+          "Brisela, Voice of Nightmares"
+        ]
+      }
+    }, {
+      "match": {
         "imageName": "chittering host1"
       },
       "replace": {
         "imageName": "chittering host",
         "number": "91b",
-        "names": [
-          "Graf Rats",
-          "Midnight Scavengers",
-          "Chittering Host"
-        ],
         "colorIdentity": [
           "B"
         ]
@@ -59,16 +64,26 @@
       "removeCard": true
     }, {
       "match": {
+        "name": [
+          "Graf Rats",
+          "Midnight Scavengers",
+          "Chittering Host"
+        ]
+      },
+      "replace": {
+        "names": [
+          "Graf Rats",
+          "Midnight Scavengers",
+          "Chittering Host"
+        ]
+      }
+    }, {
+      "match": {
         "imageName": "hanweir, the writhing township1"
       },
       "replace": {
         "imageName": "hanweir, the writhing township",
         "number": "130b",
-        "names": [
-          "Hanweir Battlements",
-          "Hanweir Garrison",
-          "Hanweir, the Writhing Township"
-        ],
         "colorIdentity": [
           "R"
         ]
@@ -78,6 +93,21 @@
         "imageName": "hanweir, the writhing township2"
       },
       "removeCard": true
+    }, {
+      "match": {
+        "name": [
+          "Hanweir Battlements",
+          "Hanweir Garrison",
+          "Hanweir, the Writhing Township"
+        ]
+      },
+      "replace": {
+        "names": [
+          "Hanweir Battlements",
+          "Hanweir Garrison",
+          "Hanweir, the Writhing Township"
+        ]
+      }
     }
   ]
 }
