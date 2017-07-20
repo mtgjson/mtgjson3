@@ -115,8 +115,12 @@ block contents
             td [ "Research", "Development" ]
             td
               | Only used for split, flip, double-faced, and meld cards. Will contain all the names on this physical card,
-              | front or back. For meld cards, the first name is the front of the card and the second name is the back.
-              | For meld cards, this means the back face card will appear twice in a set.
+              | front or back.
+              | For the front side of meld cards, the first name will be the front of the card, and the second name
+              | will be the back of the card. For the back side of meld cards, all three names will be present: the
+              | first being the front of the top half (the card that contains the meld conditions); the second being
+              | the front of the bottom half (the card that says "Melds with ..."); and the third name being the
+              | back (melded) half.
           tr
             td manaCost
             td "{G}{U}"
