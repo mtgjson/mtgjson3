@@ -883,7 +883,7 @@ var normalizeFlavor = function(flavor) {
 
 var getMCINumber = function(mciCardURL) {
     return mciCardURL.replace(/.*\/([1-9][0-9]*[a-z]?)\.html/, '$1');
-}
+};
 
 var compareCardToMCI = function(set, card, mciCardURL, cb) {
 	var cardCorrection = null;
