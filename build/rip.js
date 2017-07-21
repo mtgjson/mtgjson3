@@ -885,6 +885,10 @@ var normalizeFlavor = function(flavor) {
 	return flavor;
 };
 
+var getMCINumber = function(mciCardURL) {
+    return mciCardURL.replace(/.*\/([1-9][0-9]*[a-z]?)\.html/, '$1');
+};
+
 var compareCardToMCI = function(set, card, mciCardURL, cb) {
 	var cardCorrection = null;
 	if (C.SET_CORRECTIONS.hasOwnProperty(set.code)) {
@@ -905,7 +909,7 @@ var compareCardToMCI = function(set, card, mciCardURL, cb) {
 	if (cardCorrection && cardCorrection.replace && cardCorrection.replace.artist)
 		hasArtistCorrection = true;
 
-	var mciNumber = mciCardURL.match(/\/(\w+)(\.html)?$/)[1];
+	var mciNumber = getMCINumber(mciCardURL);
 	var mciURL = "http://magiccards.info" + mciCardURL;
 
 	tiptoe(
@@ -1150,7 +1154,7 @@ var ripMCICard = function(set, mciCardURL, cb) {
 				colors     : []
 			};
 
-			card.mciNumber = mciCardURL.replace(/.*\/([0-9]*)\.html/, '$1');
+			card.mciNumber = getMCINumber(mciCardURL);
 
 			var cardNameElement = mciCardDoc.querySelector("a[href=\"" + mciCardURL + "\"]");
 			if (!cardNameElement)

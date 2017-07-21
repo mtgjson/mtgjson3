@@ -1,0 +1,305 @@
+{
+  "additionalProperties": false,
+  "description": "Validation schema for MTGJSON for single sets (ex: HOU.json && HOU-x.json)",
+  "properties": {
+    "alternativeNames": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "block": {
+      "type": "string"
+    },
+    "booster": {
+      "items": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        ]
+      },
+      "type": "array"
+    },
+    "border": {
+      "type": "string"
+    },
+    "cards": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "artist": {
+            "type": "string"
+          },
+          "border": {
+            "type": "string"
+          },
+          "cmc": {
+            "type": "number"
+          },
+          "colorIdentity": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "colors": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "flavor": {
+            "type": "string"
+          },
+          "foreignNames": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "language": {
+                  "type": "string"
+                },
+                "multiverseid": {
+                  "type": "integer"
+                },
+                "name": {
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "hand": {
+            "type": "integer"
+          },
+          "id": {
+            "type": "string"
+          },
+          "imageName": {
+            "type": "string"
+          },
+          "layout": {
+            "type": "string"
+          },
+          "legalities": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "format": {
+                  "type": "string"
+                },
+                "legality": {
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "life": {
+            "type": "integer"
+          },
+          "loyalty": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "manaCost": {
+            "type": "string"
+          },
+          "mciNumber": {
+            "type": "string"
+          },
+          "multiverseid": {
+            "type": "integer"
+          },
+          "name": {
+            "type": "string"
+          },
+          "names": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "number": {
+            "type": "string"
+          },
+          "originalText": {
+            "type": "string"
+          },
+          "originalType": {
+            "type": "string"
+          },
+          "power": {
+            "type": "string"
+          },
+          "printings": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "rarity": {
+            "type": "string"
+          },
+          "releaseDate": {
+            "type": "string"
+          },
+          "reserved": {
+            "type": "boolean"
+          },
+          "rulings": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "date": {
+                  "type": "string"
+                },
+                "text": {
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "source": {
+            "type": "string"
+          },
+          "starter": {
+            "type": "boolean"
+          },
+          "subtypes": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "supertypes": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "text": {
+            "type": "string"
+          },
+          "timeshifted": {
+            "type": "boolean"
+          },
+          "toughness": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "types": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "variations": {
+            "items": {
+              "type": "integer"
+            },
+            "type": "array"
+          },
+          "watermark": {
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "code": {
+      "type": "string"
+    },
+    "gathererCode": {
+      "type": "string"
+    },
+    "magicCardsInfoCode": {
+      "type": "string"
+    },
+    "magicRaritiesCodes": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "mkm_id": {
+      "type": "integer"
+    },
+    "mkm_name": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "oldCode": {
+      "type": "string"
+    },
+    "onlineOnly": {
+      "type": "boolean"
+    },
+    "releaseDate": {
+      "type": "string"
+    },
+    "translations": {
+      "additionalProperties": false,
+      "properties": {
+        "cn": {
+          "type": "string"
+        },
+        "de": {
+          "type": "string"
+        },
+        "es": {
+          "type": "string"
+        },
+        "fr": {
+          "type": "string"
+        },
+        "it": {
+          "type": "string"
+        },
+        "jp": {
+          "type": "string"
+        },
+        "ko": {
+          "type": "string"
+        },
+        "pt": {
+          "type": "string"
+        },
+        "ru": {
+          "type": "string"
+        },
+        "tw": {
+          "type": "string"
+        },
+        "zh-hans": {
+          "type": "string"
+        },
+        "zh-hant": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "type": {
+      "type": "string"
+    }
+  },
+  "type": "object"
+}
