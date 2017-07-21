@@ -145,7 +145,7 @@ var TEXT_TO_SYMBOL_MAP = {
 var doubleFacedCardNames = [];
 
 var ripSet = function(setName, cb) {
-	base.info("====================================================================================================================");
+	base.info("========================================================================================================");
 	base.info("Ripping Set: %s", setName);
 
 	tiptoe(
@@ -257,7 +257,7 @@ var processMultiverseDocs = function(docs, callback) {
 			newCards.push(newCard);
 		});
 
-		if (newCards.length === 2 && newCards[0].layout === "double-faced") {
+		if (newCards.length === 2 && (newCards[0].layout === "double-faced" || newCards[0].layout === "meld")) {
 			var doubleFacedCardName = newCards[0].names.concat().sort().join(":::");
 			if (!doubleFacedCardNames.contains(doubleFacedCardName))
 				doubleFacedCardNames.push(doubleFacedCardName);
@@ -370,6 +370,8 @@ var processCardPart = function(doc, cardPart, printedDoc, printedCardPart) {
 				card.layout = "flip";
 			else if (firstCardText.contains("transform"))
 				card.layout = "double-faced";
+			else if (firstCardText.contains("meld"))
+				card.layout = "meld";
 			else {
 				// Can't find a suitable match on the first card text. Let's search on the second...
 				// TODO: This bunch of code needs to be optimized.
@@ -524,7 +526,7 @@ var processCardPart = function(doc, cardPart, printedDoc, printedCardPart) {
 	}
 
 	// Variations
-	if (card.layout !== "split" && card.layout !== "double-faced" && card.layout !== "flip") {
+	if (card.layout !== "split" && card.layout !== "double-faced" && card.layout !== "flip" && card.layout !== "meld") {
 		var variationLinks = cardPart.querySelectorAll(idPrefix + "_variationLinks a.variationLink");
 		if (variationLinks.length)
 			card.variations = Array.toArray(variationLinks).map(function (variationLink) { return +variationLink.getAttribute("id").trim(); }).filter(function (variation) { return variation!==card.multiverseid; });
@@ -851,6 +853,8 @@ var compareCardsToMCI = function(set, cb) {
 					return setImmediate(subcb);
 
 				var mciCardLink = mciCardLinks.filter(function (link) { return link.textContent.trim().toLowerCase()===createMCICardName(card).toLowerCase(); });
+                if (card.layout==="meld")
+                    mciCardLink = mciCardLinks.filter(function (link) { return link.getAttribute("href").indexOf('/' + card.number) !== -1; });
 				if (mciCardLink.length!==1) {
 					base.warn("MISSING: Could not find MagicCards.info match for card: %s", card.name);
 					return setImmediate(subcb);
@@ -1023,7 +1027,7 @@ var compareCardsToEssentialMagic = function(set, cb) {
 };
 
 var ripMCISet = function(set, cb) {
-	base.info("====================================================================================================================");
+	base.info("========================================================================================================");
 	base.info("Ripping set: %s (%s)", set.name, set.code);
 
 	tiptoe(
@@ -1245,6 +1249,8 @@ var ripMCICard = function(set, mciCardURL, cb) {
 					card.layout = "flip";
 				else if (card.text.toLowerCase().contains("transform"))
 					card.layout = "double-faced";
+                else if (card.text.toLowerCase().contains("meld"))
+                    card.layout = 'meld';
 			}
 			card.text.replaceAll("{UP}", "{U/P}").replaceAll("{BP}", "{B/P}").replaceAll("{RP}", "{R/P}").replaceAll("{GP}", "{G/P}").replaceAll("{WP}", "{W/P}");
 
@@ -1697,7 +1703,7 @@ var fixCommanderIdentityForCards = function(cards, cb) {
 		}
 
 		// Process split and double-faced cards
-		if (card.layout == "double-faced" || card.layout == "split" || card.layout == "aftermath") {
+		if (card.layout == "double-faced" || card.layout == "split" || card.layout == "aftermath" || card.layout == "meld") {
 			var otherSideNum = card.number.substr(0, card.number.length - 1) + ((card.number.substr(-1) == "a") ? "b" : "a");
 			var otherCard = findCardByNumber(otherSideNum);
 
