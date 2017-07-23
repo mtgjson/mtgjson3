@@ -850,11 +850,11 @@ var compareCardsToMCI = function(set, cb) {
 			var mciCardLinks = Array.toArray(listDoc.querySelectorAll("table tr td a"));
 			async.each(set.cards, function (card, subcb) {
 				if (card.variations) {
-					base.warn("VARIATIONS: Could not find MagicCards.info match for card: %s", card.name)
+					base.warn("VARIATIONS: Could not find MagicCards.info match for card: %s", card.name);
 					return setImmediate(subcb);
 				}
 				if (card.layout==="token") {
-					base.warn("TOKEN: Cannot match MagicCards.info for token: %s", card.name)
+					base.warn("TOKEN: Cannot match MagicCards.info for token: %s", card.name);
 					return setImmediate(subcb);
 				}
 
