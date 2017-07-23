@@ -1045,7 +1045,7 @@ var ripMCISet = function(set, cb) {
 			var cards = [];
 			var self = this;
 
-			async.eachSeries(mciCardLinks, function(mciCardLink, subcb) {
+			async.each(mciCardLinks, function(mciCardLink, subcb) {
 				var href = mciCardLink.getAttribute("href");
 				if (!href || !href.startsWith("/" + set.magicCardsInfoCode.toLowerCase() + "/en/"))
 					return setImmediate(subcb);
