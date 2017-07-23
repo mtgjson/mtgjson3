@@ -848,9 +848,15 @@ var compareCardsToMCI = function(set, cb) {
 		},
 		function processSetCardList(listDoc) {
 			var mciCardLinks = Array.toArray(listDoc.querySelectorAll("table tr td a"));
-			async.eachSeries(set.cards, function (card, subcb) {
-				if (card.variations || card.layout==="token")
+			async.each(set.cards, function (card, subcb) {
+				if (card.variations) {
+					base.warn("VARIATIONS: Could not find MagicCards.info match for card: %s", card.name);
 					return setImmediate(subcb);
+				}
+				if (card.layout==="token") {
+					base.warn("TOKEN: Cannot match MagicCards.info for token: %s", card.name);
+					return setImmediate(subcb);
+				}
 
 				var mciCardLink = mciCardLinks.filter(function (link) { return link.textContent.trim().toLowerCase()===createMCICardName(card).toLowerCase(); });
                 if (card.layout==="meld")
@@ -1039,7 +1045,7 @@ var ripMCISet = function(set, cb) {
 			var cards = [];
 			var self = this;
 
-			async.eachSeries(mciCardLinks, function(mciCardLink, subcb) {
+			async.each(mciCardLinks, function(mciCardLink, subcb) {
 				var href = mciCardLink.getAttribute("href");
 				if (!href || !href.startsWith("/" + set.magicCardsInfoCode.toLowerCase() + "/en/"))
 					return setImmediate(subcb);
