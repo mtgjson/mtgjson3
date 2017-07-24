@@ -858,7 +858,11 @@ var compareCardsToMCI = function(set, cb) {
 					return setImmediate(subcb);
 				}
 
-				var mciCardLink = mciCardLinks.filter(function (link) { return link.textContent.trim().toLowerCase()===createMCICardName(card).toLowerCase(); });
+				var mciCardLink = mciCardLinks.filter(function (link) {
+                    var name = link.textContent.trim();
+                    name = name.replaceAll("Æ", "Ae").replaceAll("“", "\"").replaceAll("”", "\"");
+                    return name.toLowerCase() === createMCICardName(card).toLowerCase();
+                });
                 if (card.layout==="meld")
                     mciCardLink = mciCardLinks.filter(function (link) { return link.getAttribute("href").indexOf('/' + card.number) !== -1; });
 				if (mciCardLink.length!==1) {
