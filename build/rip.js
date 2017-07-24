@@ -1615,7 +1615,7 @@ var getSetNameMultiverseIds = function(setName, cb) {
 };
 
 /**
- * Fix converted mana cost for double-faced cards using the new SOI rule
+ * Fix converted mana cost for cards
  */
 var fixCMC = function(cards, cb) {
 	var findCardByNumber = function(number) {
@@ -1624,18 +1624,26 @@ var fixCMC = function(cards, cb) {
 
 	async.each(cards,
 		function(card, subcb) {
-			if (card.layout != 'double-faced')
-				return(setImmediate(subcb));
 			if (card.hasOwnProperty('cmc'))
-				return(setImmediate(subcb));
+				return subcb();
 
-			var otherSideNum = card.number.substr(0, card.number.length - 1) + ((card.number.substr(-1) == 'a')?'b':'a');
-			var otherCard = findCardByNumber(otherSideNum);
+			if (card.layout === 'double-faced') {
+				// Fix the back of double-faced cards
 
-			if (otherCard.hasOwnProperty('cmc'))
-				card.cmc = otherCard.cmc;
+					var otherSideNum = card.number.substr(0, card.number.length - 1) + ((card.number.substr(-1) == 'a')?'b':'a');
+					var otherCard = findCardByNumber(otherSideNum);
+					if (otherCard.hasOwnProperty('cmc'))
+						card.cmc = otherCard.cmc;
+                    return subcb();
+			}
 
-			setImmediate(subcb);
+            if (!card.manaCost) {
+                // Fix cards with no mana cost
+                card.cmc = 0;
+                return subcb();
+            }
+
+            return subcb();
 		},
 		cb
 	);
