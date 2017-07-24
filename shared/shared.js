@@ -758,8 +758,16 @@ exports.updateStandardForCard = function(card) {
 		return; // Can't check if it's standard if we don't have printings.
 
 	// Update standard legalities
+	var banned = false;
 	if (card.legalities)
-		card.legalities = card.legalities.filter(function(cardLegality) { return(cardLegality.format != "Standard"); });
+		card.legalities = card.legalities.filter(function(cardLegality) {
+			if (cardLegality.format === 'Standard') {
+				if (cardLegality.legality === 'Banned') banned = true;
+				return false;
+			} else {
+				return true;
+			}
+		});
 
 	var standard = false;
 	card.printings.forEach(function(value) {
@@ -769,7 +777,8 @@ exports.updateStandardForCard = function(card) {
 		}
 	});
 	if (standard === true) {
-		var legalityObject = {format:"Standard", legality: "Legal"};
+		var legality = banned ? 'Banned' : 'Legal';
+		var legalityObject = {format:"Standard", legality: legality};
 		if (card.legalities === undefined)
 			card.legalities = [];
 
