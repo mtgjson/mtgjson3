@@ -30,7 +30,7 @@
   },
   "scripts": {
     "test": "jshint build/*.js shared/*.js util/*.js",
-    "checkJSON": "jslint --edition=latest cron/*.json json/*.json decks/*.json shared/set_configs/**/*.json util/**/*.json web/*.json",
-    "validateSchema": "validateJson -s json/schema/singleSet.schema.json -d json/*.json"
+    "checkJSON": "jslint --edition=latest cron/*.json json/*.json decks/*.json shared/set_configs/**/*.json util/**/*.json web/*.json > /dev/null",
+    "validateSchema": "validateJson -s json/schema/singleSet.schema.json -d json/*.json > /dev/null"
   }
 }
