@@ -1,5 +1,24 @@
 [
   {
+    "version": "3.10.6",
+    "when": "2017-07-25",
+    "changes": [
+      "Split CP into CP1 and CP2",
+      "Carve CP3 out from pMEI"
+    ],
+    "newSetFiles": [
+      "CP1", "CP1-x",
+      "CP2", "CP2-x",
+      "CP3", "CP3-x"
+    ],
+    "removedSetFiles": [
+      "CPK", "CPK-x"
+    ],
+    "updatedSetFiles": [
+      "pMEI", "pMEI-x"
+    ]
+  },
+  {
     "version": "3.10.5",
     "when": "2017-07-24",
     "changes": [
