@@ -12,23 +12,44 @@
     "mkm_id": 5
   },
   "SET_CORRECTIONS": [{
-    "match": {
-      "name": "Gate to Phyrexia"
+      "match": {
+        "name": "Gate to Phyrexia"
+      },
+      "flavorAddDash": true
+    }, {
+      "match": {
+        "name": "Feldon's Cane"
+      },
+      "replace": {
+        "flavor": "Feldon found the first of these canes frozen in the Ronom Glacier."
+      }
+    }, {
+      "match": {
+        "name": "Triskelion"
+      },
+      "replace": {
+        "flavor": "A brainchild of Tawnos, the Triskelion proved its versatility and usefulness in many of the later battles between the brothers."
+      }
     },
-    "flavorAddDash": true
-  }, {
-    "match": {
-      "name": "Feldon's Cane"
+    {
+      "renumberImages": "Mishra's Factory",
+      "order": [1072, 1073, 1071, 1074]
     },
-    "replace": {
-      "flavor": "Feldon found the first of these canes frozen in the Ronom Glacier."
+    {
+      "renumberImages": "Strip Mine",
+      "order": [1078, 1077, 1079, 1076]
+    },
+    {
+      "renumberImages": "Urza's Mine",
+      "order": [1082, 1081, 1080, 1083]
+    },
+    {
+      "renumberImages": "Urza's Power Plant",
+      "order": [1086, 1085, 1084, 1087]
+    },
+    {
+      "renumberImages": "Urza's Tower",
+      "order": [1088, 1091, 1090, 1089]
     }
-  }, {
-    "match": {
-      "name": "Triskelion"
-    },
-    "replace": {
-      "flavor": "A brainchild of Tawnos, the Triskelion proved its versatility and usefulness in many of the later battles between the brothers."
-    }
-  }]
+  ]
 }
