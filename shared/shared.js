@@ -518,13 +518,18 @@ exports.performSetCorrections = function(setCorrections, fullSet)
 		}
 	});
 
-	// Sort legalities and foreign names
+	// Sort and clean up legalities and foreign names
 	cards.forEach(function(card)
 	{
 		if(card.hasOwnProperty("legalities"))
 			card.legalities = card.legalities.sort(function(a, b) { var al = a.format.toLowerCase().charAt(0); var bl = b.format.toLowerCase().charAt(0); return (al<bl ? -1 : (al>bl ? 1 : 0)); });
-		if(card.hasOwnProperty("foreignNames"))
-			card.foreignNames = card.foreignNames.sort(function(a, b) { var al = a.language.toLowerCase().charAt(0); var bl = b.language.toLowerCase().charAt(0); return (al<bl ? -1 : (al>bl ? 1 : 0)); });
+		if(card.hasOwnProperty("foreignNames")) {
+			card.foreignNames = card.foreignNames.filter(function(a) {
+				return (typeof a.name !== undefined && a.name !== '');
+			}).sort(function(a, b) {
+				var al = a.language.toLowerCase().charAt(0); var bl = b.language.toLowerCase().charAt(0); return (al<bl ? -1 : (al>bl ? 1 : 0));
+			});
+		}
 	});
 
 	// Finalize printings
