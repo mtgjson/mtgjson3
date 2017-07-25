@@ -7,68 +7,81 @@
     "releaseDate": "1995-07-01",
     "border": "white",
     "type": "reprint",
-    "booster": ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common"],
+    "booster": ["uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common"],
     "mkm_name": "Chronicles",
     "mkm_id": 12
   },
   "SET_CORRECTIONS": [{
-    "match": {
-      "name": "Boomerang"
+      "match": {
+        "name": "Boomerang"
+      },
+      "replace": {
+        "flavor": "\"O! call back yesterday, bid time return.\" —William Shakespeare, King Richard the Second"
+      }
+    }, {
+      "match": {
+        "name": "Craw Giant"
+      },
+      "replace": {
+        "flavor": "Harthag gave a jolly laugh as he surveyed the army before him. \"Ho ho ho! Midgets! You think you can stand in my way?\""
+      }
+    }, {
+      "match": {
+        "name": "Keepers of the Faith"
+      },
+      "replace": {
+        "flavor": "And then the Archangel Anthius spoke to them, saying, \"Fear shall be vanquished by the Sword of Faith.\""
+      }
+    }, {
+      "match": {
+        "name": "Scavenger Folk"
+      },
+      "replace": {
+        "flavor": "String, weapons, wax, or jewels—it makes no difference. Leave nothing unguarded in Scarwood."
+      }
+    }, {
+      "match": {
+        "name": "Wall of Vapor"
+      },
+      "replace": {
+        "flavor": "\"Walls of a castle are made out of stone,/ Walls of a house out of bricks or of wood./ My walls are made out of magic alone,/ Stronger than any that ever have stood.\" —Chrysoberyl Earthsdaughter, Incantations"
+      }
+    }, {
+      "match": {
+        "name": ["Goblin Digging Team", "Transmutation"]
+      },
+      "flavorAddExclamation": true
+    }, {
+      "match": {
+        "name": ["Goblin Shrine", "Revelation"]
+      },
+      "flavorAddDash": true
+    }, {
+      "match": {
+        "name": "Divine Offering"
+      },
+      "replace": {
+        "flavor": "D'Haren stared at the twisted lump of metal that had been a prized artifact. The fight was getting ugly."
+      }
+    }, {
+      "match": {
+        "name": "Xira Arien"
+      },
+      "replace": {
+        "flavor": "A regular guest at the Royal Masquerade, Arien is the envy of the Court. She appears in a new costume every hour."
+      }
     },
-    "replace": {
-      "flavor": "\"O! call back yesterday, bid time return.\" —William Shakespeare, King Richard the Second"
+    {
+      "renumberImages": "Urza's Mine",
+      "order": [2889, 2888, 2890, 2891]
+    },
+    {
+      "renumberImages": "Urza's Power Plant",
+      "order": [2895, 2893, 2892, 2894]
+    },
+    {
+      "renumberImages": "Urza's Tower",
+      "order": [2896, 2898, 2897, 2899]
     }
-  }, {
-    "match": {
-      "name": "Craw Giant"
-    },
-    "replace": {
-      "flavor": "Harthag gave a jolly laugh as he surveyed the army before him. \"Ho ho ho! Midgets! You think you can stand in my way?\""
-    }
-  }, {
-    "match": {
-      "name": "Keepers of the Faith"
-    },
-    "replace": {
-      "flavor": "And then the Archangel Anthius spoke to them, saying, \"Fear shall be vanquished by the Sword of Faith.\""
-    }
-  }, {
-    "match": {
-      "name": "Scavenger Folk"
-    },
-    "replace": {
-      "flavor": "String, weapons, wax, or jewels—it makes no difference. Leave nothing unguarded in Scarwood."
-    }
-  }, {
-    "match": {
-      "name": "Wall of Vapor"
-    },
-    "replace": {
-      "flavor": "\"Walls of a castle are made out of stone,/ Walls of a house out of bricks or of wood./ My walls are made out of magic alone,/ Stronger than any that ever have stood.\" —Chrysoberyl Earthsdaughter, Incantations"
-    }
-  }, {
-    "match": {
-      "name": ["Goblin Digging Team", "Transmutation"]
-    },
-    "flavorAddExclamation": true
-  }, {
-    "match": {
-      "name": ["Goblin Shrine", "Revelation"]
-    },
-    "flavorAddDash": true
-  }, {
-    "match": {
-      "name": "Divine Offering"
-    },
-    "replace": {
-      "flavor": "D'Haren stared at the twisted lump of metal that had been a prized artifact. The fight was getting ugly."
-    }
-  }, {
-    "match": {
-      "name": "Xira Arien"
-    },
-    "replace": {
-      "flavor": "A regular guest at the Royal Masquerade, Arien is the envy of the Court. She appears in a new costume every hour."
-    }
-  }]
+  ]
 }
