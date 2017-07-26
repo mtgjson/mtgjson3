@@ -1,0 +1,57 @@
+{
+  "CP1": {
+    "SET": {
+      "name": "Magic 2015 Clash Pack",
+      "code": "CP1",
+      "isMCISet": true,
+      "magicCardsInfoCode": "clash",
+      "releaseDate": "2014-07-18",
+      "border": "black",
+      "type": "starter"
+    },
+    "SET_CORRECTIONS": [
+      {"match": {"number": ">6"}, "removeCard": true}
+    ]
+  },
+  "CP2": {
+    "SET": {
+      "name": "Fate Reforged Clash Pack",
+      "code": "CP2",
+      "isMCISet": true,
+      "magicCardsInfoCode": "clash",
+      "releaseDate": "2015-01-23",
+      "border": "black",
+      "type": "starter"
+    },
+    "SET_CORRECTIONS": [
+      {"match": {"number": "<7"}, "removeCard": true},
+      {"match": {"number": "7"}, "replace": {"number": "1"}},
+      {"match": {"number": "8"}, "replace": {"number": "2"}},
+      {"match": {"number": "9"}, "replace": {"number": "3"}},
+      {"match": {"number": "10"}, "replace": {"number": "4"}},
+      {"match": {"number": "11"}, "replace": {"number": "5"}},
+      {"match": {"number": "12"}, "replace": {"number": "6"}}
+    ]
+  },
+  "CP3": {
+    "SET": {
+      "name": "Magic Origins Clash Pack",
+      "code": "CP3",
+      "isMCISet": true,
+      "magicCardsInfoCode": "mbp",
+      "releaseDate": "2015-07-17",
+      "border": "black",
+      "type": "starter"
+    },
+    "SET_CORRECTIONS": [
+      {"match": {"number": "<129"}, "removeCard": true},
+      {"match": {"number": ">134"}, "removeCard": true},
+      {"match": {"number": "129"}, "replace": {"number": "1"}},
+      {"match": {"number": "130"}, "replace": {"number": "2"}},
+      {"match": {"number": "131"}, "replace": {"number": "3"}},
+      {"match": {"number": "132"}, "replace": {"number": "4"}},
+      {"match": {"number": "133"}, "replace": {"number": "5"}},
+      {"match": {"number": "134"}, "replace": {"number": "6"}}
+    ]
+  }
+}
