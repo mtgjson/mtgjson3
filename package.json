@@ -30,7 +30,7 @@
   },
   "scripts": {
     "test": "jshint build/*.js shared/*.js util/*.js",
-    "checkJSON": "jslint --edition=latest cron/*.json json/*.json decks/*.json shared/set_configs/**/*.json util/**/*.json web/*.json > /dev/null",
+    "checkJSON": "jslint --edition=latest cron/*.json decks/*.json shared/set_configs/**/*.json util/**/*.json web/*.json > /dev/null",
     "validateSchema": "./scripts/checkSchemaOfAllJsonFiles.py"
   }
 }
