@@ -12,19 +12,19 @@ def main():
     # files quicker. Any error will trigger a failure.
     lcProcessingPool = multiprocessing.Pool(None)
     lnTaskCount = range(len(gasJSONFiles))
-    lasResults =[]
+    lasResults = []
 
     lcRunningTask = lcProcessingPool.map_async(validateSchema, lnTaskCount, callback=lasResults.append)
     lcRunningTask.wait()  # Wait on the results
 
     # Now print the results to the user
-    lbAllPass = 0
+    lnAllPass = 0
     for lsResult in lasResults[0]:
         if lsResult:
             print(lsResult)
-            lbAllPass += 1
+            lnAllPass += 1
 
-    exit(lbAllPass)
+    exit(lnAllPass)
 
 def validateSchema(value):
     try:
