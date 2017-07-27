@@ -1,9 +1,29 @@
 [
   {
-    "version": "3.10.6",
-    "when": "2-17-07-24",
+    "version": "3.10.7",
+    "when": "2017-07-27",
     "changes": [
-        "Travis JSLINT checking"
+      "Add lint checking for all non-set JSON files",
+      "Add schema&lint checking for all json/*.json files"
+    ]
+  },
+  {
+    "version": "3.10.6",
+    "when": "2017-07-25",
+    "changes": [
+      "Split CP into CP1 and CP2",
+      "Carve CP3 out from pMEI"
+    ],
+    "newSetFiles": [
+      "CP1", "CP1-x",
+      "CP2", "CP2-x",
+      "CP3", "CP3-x"
+    ],
+    "removedSetFiles": [
+      "CPK", "CPK-x"
+    ],
+    "updatedSetFiles": [
+      "pMEI", "pMEI-x"
     ]
   },
   {
