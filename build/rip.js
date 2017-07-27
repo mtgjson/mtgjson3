@@ -1485,8 +1485,6 @@ var addMagicLibraritiesInfoToMCISet = function(set, cb) {
 	);
 };
 
-
-
 var processSymbol = function(symbol) {
 	var symbols = symbol.toLowerCase().split(" or ").map(function (symbolPart) {
 		symbolPart = symbolPart.trim();
@@ -1502,6 +1500,10 @@ var processSymbol = function(symbol) {
 	});
 
 	return "{" + (symbols.length>1 ? symbols.join("/") : symbols[0]) + "}";
+};
+
+var stripUnsafeChars = function(text) {
+    return text.replace(/[\x00-\x08\x0E-\x1F\x7F\x80-\x9F]/g, "");
 };
 
 var processTextBlocks = function(textBlocks) {
@@ -1525,6 +1527,7 @@ var processTextBlocks = function(textBlocks) {
 
 	result = result.replaceAll("\u00a0", " ");
 	result = result.replaceAll("―", "—");
+    result = stripUnsafeChars(result);
 	return result;
 };
 
@@ -1589,6 +1592,7 @@ var getTextContent = function(item) {
 			.replaceAll("&amp;", "&")
 			.replaceAll("&nbsp;", " ");
 	}
+    ret = stripUnsafeChars(ret);
 	return(ret);
 };
 
