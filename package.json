@@ -31,6 +31,6 @@
   "scripts": {
     "test": "jshint build/*.js shared/*.js util/*.js",
     "checkJSON": "jslint --edition=latest cron/*.json json/*.json decks/*.json shared/set_configs/**/*.json util/**/*.json web/*.json > /dev/null",
-    "validateSchema": "./scripts/validate.py"
+    "validateSchema": "scripts/validate.py"
   }
 }
