@@ -7,6 +7,8 @@ node_js:
 
 script:
   - npm test
+  - npm run checkJSON
+  - npm run validateSchema
   - util/travis.sh
 
 env:
