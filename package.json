@@ -23,7 +23,7 @@
   "devDependencies": {
     "jshint": "^2.9",
     "jslint": "^0.11.0",
-    "jsonschema-cli": "^0.1.2"
+    "jsonlint-cli": "^1.0.1"
   },
   "engines": {
     "node": ">= 0.12.0"
@@ -31,6 +31,6 @@
   "scripts": {
     "test": "jshint build/*.js shared/*.js util/*.js",
     "checkJSON": "jslint --edition=latest cron/*.json json/*.json decks/*.json shared/set_configs/**/*.json util/**/*.json web/*.json > /dev/null",
-    "validateSchema": "validateJson -s json/schema/singleSet.schema.json -d json/*.json > /dev/null"
+    "validateSchema": "./scripts/validate.py"
   }
 }
