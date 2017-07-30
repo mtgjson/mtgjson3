@@ -1,18 +1,11 @@
 "use strict";
 
-var base = require('@sembiance/xbase'),
-	C = require('../shared/C'),
-	runUtil = require('@sembiance/xutil').run,
-	rimraf = require("rimraf"),
-	printUtil = require('@sembiance/xutil').print,
-	diffUtil = require('@sembiance/xutil').diff,
-	unicodeUtil = require('@sembiance/xutil').unicode,
+var C = require('../shared/C'),
 	fs = require("fs"),
 	path = require("path"),
 	dustUtil = require('@sembiance/xutil').dust,
-	moment = require("moment"),
-	shared = require('../shared/shared'),
-	tiptoe = require("tiptoe");
+	tiptoe = require("tiptoe"),
+	winston = require("winston");
 
 var dustData =  {
 	title : "Spoilers"
@@ -86,7 +79,7 @@ function generateSpoilerForSetName(setName, lang, cb) {
 	});
 
 	if (mySet == null) {
-		base.error('Cannot find set %s', setName);
+		winston.error('Cannot find set %s', setName);
 		if (cb) cb(null);
 		return;
 	}
@@ -95,7 +88,7 @@ function generateSpoilerForSetName(setName, lang, cb) {
 
 	tiptoe(
 		function loadSet() {
-			base.info('Generating spoilers for set %s', setName);
+			winston.info('Generating spoilers for set %s', setName);
 			set = allSets(setName);
 			this();
 		},
@@ -130,7 +123,7 @@ function generateSpoilerForSetName(setName, lang, cb) {
 						var printingCard = allSets.findCardName(printingName, card.name);
 						var set = allSets(printingName);
 						if (!printingCard) {
-							base.error("Cannot find card '%s' on set '%s'", printingName, card.name);
+							winston.error("Cannot find card '%s' on set '%s'", printingName, card.name);
 							return;
 						}
 
@@ -199,7 +192,7 @@ function generateSpoilerForSetName(setName, lang, cb) {
 		function finish(err, html) {
 			if (err) throw(err);
 			if (cb)
-				cb(null, html);	
+				cb(null, html);
 		}
 	);
 }
@@ -228,6 +221,6 @@ C.SETS.serialForEach(
 	},
 	function(err) {
 		if (err) throw(err);
-		base.info('All done.');
+		winston.info('All done.');
 	}
 );

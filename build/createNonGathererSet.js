@@ -1,18 +1,19 @@
 /*jslint node: true */
 "use strict";
 
-var base = require('@sembiance/xbase'),
-	C = require('../shared/C'),
+var C = require('../shared/C'),
 	path = require("path"),
 	moment = require("moment"),
 	fs = require("fs"),
 	shared = require('../shared/shared'),
-	tiptoe = require("tiptoe");
+	tiptoe = require("tiptoe"),
+    winston = require("winston"),
+    cloneDeep = require("clone-deep");
 
 var targetSetCode = process.argv[2];
 if(!C.SETS_NOT_ON_GATHERER.contains(targetSetCode))
 {
-	base.error("Usage: node %s <set code>", process.argv[1]);
+	winston.error("Usage: node %s <set code>", process.argv[1]);
 	process.exit(1);
 }
 
@@ -20,7 +21,7 @@ var targetSet = C.SETS.mutateOnce(function(SET) { if(SET.code===targetSetCode) {
 if(!C.NON_GATHERER_SET_CARD_LISTS.hasOwnProperty(targetSet.code))
 	process.exit(0);
 
-var newSet = base.clone(targetSet);
+var newSet = cloneDeep(targetSet);
 newSet.cards = [];
 
 tiptoe(
@@ -36,7 +37,7 @@ tiptoe(
 	{
 		if(err)
 		{
-			base.error(err);
+			winston.error(err);
 			process.exit(1);
 		}
 
@@ -61,7 +62,7 @@ function processSet(setCode, targetMultiverseids, cb)
 		function loadSetJSON()
 		{
 			fs.readFile(path.join(__dirname, "..", "json", setCode + ".json"), {encoding : "utf8"}, this);
-			
+
 		},
 		function processSetJSON(err, setRaw)
 		{
@@ -74,7 +75,7 @@ function processSet(setCode, targetMultiverseids, cb)
 			{
 				if(card.multiverseid && targetMultiverseids.contains(card.multiverseid))
 				{
-					var newCard = base.clone(card, true);
+					var newCard = cloneDeep(card, true);
 					delete newCard.multiverseid;
 					delete newCard.variations;
 					delete newCard.number;
@@ -165,7 +166,7 @@ function getMultiverseidsForSet(setCode, cb)
 				validSets = C.SETS.filter(function(SET) { return (moment(SET.releaseDate, "YYYY-MM-DD").unix()<moment(targetSet.releaseDate, "YYYY-MM-DD").unix()) || (EXTRA_SETS_TO_ALLOW.hasOwnProperty(targetSetCode) && EXTRA_SETS_TO_ALLOW[targetSetCode].contains(SET.code)); });
 
 			validSets = validSets.reverse();
-			
+
 			var coreSets = validSets.filter(function(SET) { return SET.type==="core"; });
 			var nonCoreSets = validSets.filter(function(SET) { return SET.type!=="core"; });
 			coreSets.concat(nonCoreSets).map(function(SET) { return SET.code; }).serialForEach(loadSetCards, this);
@@ -176,7 +177,7 @@ function getMultiverseidsForSet(setCode, cb)
 				return setImmediate(function() { cb(err); });
 
 			var allCards = Array.prototype.slice.apply(arguments).flatten().flatten();
-			var cardsToGet = base.clone(C.NON_GATHERER_SET_CARD_LISTS[targetSet.code]);
+			var cardsToGet = cloneDeep(C.NON_GATHERER_SET_CARD_LISTS[targetSet.code]);
 
 			var multiverseids = [];
 			allCards.forEach(function(card)
@@ -186,7 +187,7 @@ function getMultiverseidsForSet(setCode, cb)
 
 				if(cardsToGet.contains(card.name) && (!SPECIFIC_CARD_MULTIVERSEIDS.hasOwnProperty(targetSetCode) || !SPECIFIC_CARD_MULTIVERSEIDS[targetSetCode].hasOwnProperty(card.name) || SPECIFIC_CARD_MULTIVERSEIDS[targetSetCode][card.name]===card.multiverseid))
 				{
-					//base.info("Getting [%s] from multiverseid: %d", card.name, card.multiverseid);
+					//winston.info("Getting [%s] from multiverseid: %d", card.name, card.multiverseid);
 					cardsToGet.remove(card.name);
 					multiverseids.push(card.multiverseid);
 				}

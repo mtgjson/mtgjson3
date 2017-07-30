@@ -1,15 +1,15 @@
 "use strict";
 
-var base = require('@sembiance/xbase'),
-	fs = require("fs"),
+var fs = require("fs"),
 	path = require("path"),
 	shared = require('../shared/shared'),
 	tiptoe = require("tiptoe"),
-	rip = require('../build/rip.js');
+	rip = require('../build/rip.js'),
+    winston = require("winston");
 
 shared.getSetsToDo().serialForEach(processSet, function(err) {
 	if(err) {
-		base.error(err);
+		winston.error(err);
 		process.exit(1);
 	}
 
@@ -17,7 +17,7 @@ shared.getSetsToDo().serialForEach(processSet, function(err) {
 });
 
 function processSet(code, cb) {
-	base.info("Processing ColorIdentity for set: %s", code);
+	winston.info("Processing ColorIdentity for set: %s", code);
 
 	var set = null;
 

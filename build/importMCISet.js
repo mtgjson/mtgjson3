@@ -1,27 +1,27 @@
 /*jslint node: true */
 'use strict';
 
-var base = require('@sembiance/xbase');
 var C = require('../shared/C');
 var shared = require('../shared/shared');
 var tiptoe = require('tiptoe');
 var rip = require('./rip.js');
 var async = require('async');
+var winston = require("winston");
 
 var setsToDo = shared.getSetsToDo();
 
-base.info('Doing sets: %s', setsToDo);
+winston.info('Doing sets: %s', setsToDo);
 
 async.eachSeries(setsToDo, function(arg, callback) {
 	var targetSet = C.SETS.mutateOnce(function(SET) { if (SET.name.toLowerCase() === arg.toLowerCase() || SET.code.toLowerCase() === arg.toLowerCase()) { return SET; } });
 
 	if(!targetSet) {
-		base.error('Set %s not found!', arg);
+		winston.error('Set %s not found!', arg);
 		return setImmediate(callback);
 	}
 
 	if(!targetSet.isMCISet) {
-		base.error('Set %s is not an MCI set (isMCISet is not set)', arg);
+		winston.error('Set %s is not an MCI set (isMCISet is not set)', arg);
 		return setImmediate(callback);
 	}
 
@@ -37,7 +37,7 @@ async.eachSeries(setsToDo, function(arg, callback) {
 
 }, function exit(err) {
 	if(err) {
-		base.error(err);
+		winston.error(err);
 		process.exit(1);
 	}
 

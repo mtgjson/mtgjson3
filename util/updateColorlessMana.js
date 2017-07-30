@@ -1,14 +1,14 @@
 "use strict";
 
-var base = require('@sembiance/xbase'),
-	fs = require("fs"),
+var fs = require("fs"),
 	path = require("path"),
 	shared = require('../shared/shared'),
-	tiptoe = require("tiptoe");
+	tiptoe = require("tiptoe"),
+    winston = require("winston");
 
 shared.getSetsToDo().serialForEach(processSet, function(err) {
 	if(err) {
-		base.error(err);
+		winston.error(err);
 		process.exit(1);
 	}
 
@@ -33,7 +33,7 @@ function fixCard(card) {
 }
 
 function processSet(code, cb) {
-	base.info("Fixing mana generation for set: %s", code);
+	winston.info("Fixing mana generation for set: %s", code);
 
 	var set = null;
 

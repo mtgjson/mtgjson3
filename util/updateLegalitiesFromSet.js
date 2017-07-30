@@ -1,16 +1,16 @@
 "use strict";
 /*global setImmediate: true*/
 
-var base = require('@sembiance/xbase'),
-	fs = require("fs"),
+var fs = require("fs"),
 	shared = require('../shared/shared'),
 	path = require("path"),
-	tiptoe = require("tiptoe");
+	tiptoe = require("tiptoe"),
+    winston = require("winston");;
 
 if (require.main == module) {
 	shared.getSetsToDo().serialForEach(processSet, function(err) {
 		if(err) {
-			base.error(err);
+			winston.error(err);
 			process.exit(1);
 		}
 
@@ -19,7 +19,7 @@ if (require.main == module) {
 }
 
 function processSet(code, cb) {
-	base.info("Processing set: %s", code);
+	winston.info("Processing set: %s", code);
 
 	tiptoe(
 		function getJSON() {
@@ -74,7 +74,7 @@ function processSet(code, cb) {
  * @param cb Function with the callback to pass the error or pass no parameter
  */
 function updateLegalitiesForSetCards(setCode, targetCardNames, cardLegalitiesByName, cb) {
-	base.info("Adding legalities to set [%s] for all cards: %s", setCode, targetCardNames.join(", "));
+	winston.info("Adding legalities to set [%s] for all cards: %s", setCode, targetCardNames.join(", "));
 
 	var processFunction = function(set) {
 		set.cards.forEach(function(card) {

@@ -3,12 +3,12 @@
 
 var fs = require('fs');
 var path = require('path');
-var base = require('@sembiance/xbase');
 var C = require('../shared/C');
 var shared = require('../shared/shared');
 var tiptoe = require('tiptoe');
 var rip = require('./rip.js');
 var async = require('async');
+var winston = require('winston');
 
 var langRef = {
 	"ch": "Chinese Simplified",		// TODO: Fixme.
@@ -27,7 +27,7 @@ var langRef = {
 if (require.main == module) {
 	// Only fetch automatically if we're called directly.
 	if (process.argv.length < 4) {
-		base.error("Usage: node %s <2-digit-lang|all> <set codes>\n- Only one language at a time\n- The set must already be retrieved by 'buildSet'", process.argv[1]);
+		winston.error("Usage: node %s <2-digit-lang|all> <set codes>\n- Only one language at a time\n- The set must already be retrieved by 'buildSet'", process.argv[1]);
 		process.exit(1);
 	}
 
@@ -152,7 +152,7 @@ function retrieve(lang, set, callback) {
 				return(card);
 			});
 
-			base.info("Doing set corrections...");
+			winston.info("Doing set corrections...");
 			shared.performSetCorrections(shared.getSetCorrections(fullSet.code), fullSet);
 
 			shared.saveSet(fullSet, this);

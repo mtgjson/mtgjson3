@@ -7,9 +7,10 @@ var rimraf = require('rimraf');
 var tiptoe = require('tiptoe');
 var async = require('async');
 var moment = require('moment');
+var winston = require('winston');
+var childProcess = require("child_process");
 
 var diffUtil = require('@sembiance/xutil').diff;
-var runUtil = require('@sembiance/xutil').run;
 
 var C = require('../shared/C');
 var clone = require('../clonekit');
@@ -83,9 +84,9 @@ function processCard(SET, card, callback) {
 
 		if (taint) {
 			taintedCards.push({ card: card, fieldName: fieldName });
-			console.log("Tainted field %s on card '%s' (%s)", fieldName, card.name, SET.code);
+			winston.info("Tainted field %s on card '%s' (%s)", fieldName, card.name, SET.code);
 			if (diff)
-				console.log(diff);
+				winston.info(diff);
 		}
 	};
 
@@ -119,7 +120,7 @@ function processCard(SET, card, callback) {
 }
 
 function processSet(SET, callback) {
-	console.log(SET.code);
+	winston.info(SET.code);
 	// Fix cards
 	async.each(
 		SET.cards,
@@ -232,7 +233,7 @@ var walk = function(dir, callback) {
 // Start processing...
 tiptoe(
 	function removeDirectory() {
-		console.log("Clearing Output directory...");
+		winston.info("Clearing Output directory...");
 		rimraf(output, this);
 	},
 	function createDirectoryStructure() {
@@ -247,7 +248,7 @@ tiptoe(
 		);
 	},
 	function loadJSON() {
-		console.log("Loading JSON...");
+		winston.info("Loading JSON...");
 		async.eachSeries(
 			C.SETS,
 			function(SET, cb) {
@@ -322,7 +323,7 @@ tiptoe(
 		async.eachSeries(
 			Object.keys(dataBlock),
 			function(block, cb) {
-				console.log("Saving %s...", block);
+				winston.info("Saving %s...", block);
 				save(block, dataBlock[block].data, function(err, size) {
 					if (err) throw(err);
 					dataBlock[dataBlock[block].param] = size;
@@ -398,33 +399,47 @@ tiptoe(
 		save('documentation.pug', 'documentation.html', this.parallel());
 	},
 	function zipFiles() {
-		console.log("Compressing JSON files...");
-		var self = this;
-		var runParams = { cwd: jsonRoot, silent : true };
-		fs.readdir(
-			jsonRoot,
-			function(err, files) {
-				async.eachSeries(
-					files,
-					function(fn, cb) {
-						tiptoe(
-							function() {
-								runUtil.run('zip', [ '-9', fn + '.zip', fn ], runParams, this.parallel());
-								runUtil.run('gzip', [ '-k', fn ], runParams, this.parallel());
-							},
-							cb
-						);
-					},
-					self
-				);
-			}
-		);
+		winston.info("Compressing JSON files...");
+        var self = this;
+		var options = {cwd: jsonRoot};
+        fs.readdir(jsonRoot, function(err, files) {
+            if (err) return self(err);
+            async.eachSeries(files, function(file, subcb) {
+                var cmds = [
+                    'zip -9 ' + file + '.zip ' + file,
+                    'gzip -k ' + file
+                ];
+                async.eachSeries(cmds, function(cmd, cmdcb) {
+                    childProcess.exec(cmd, options, function(err, stdout, stderr) {
+                        if (stdout) winston.info(stdout);
+                        if (stderr) winston.error(stderr);
+                        return cmdcb(err);
+                    });
+                }, subcb);
+            }, self);
+        });
 	},
 	function zipSpecial() {
-		var runParams = { cwd: jsonRoot, silent : true };
-		runUtil.run("zip", ["-9", "AllSetFiles.zip"].concat(C.SETS.map(function(SET) { return SET.code + ".json"; })), runParams, this.parallel());
-		runUtil.run("zip", ["-9", "AllSetFiles-x.zip"].concat(C.SETS.map(function(SET) { return SET.code + "-x.json"; })), runParams, this.parallel());
-		runUtil.run("zip", ["-9", "AllSetFilesWindows.zip"].concat(C.SETS.map(function(SET) { return SET.code + (SET.code==="CON" ? "_" : "") + ".json"; })), runParams, this.parallel());
+        var self = this;
+        var options = {cwd: jsonRoot};
+
+        var allCodes = C.SETS.map(function(SET) { return SET.code + ".json"; });
+        var allCodesX = C.SETS.map(function(SET) { return SET.code + "-x.json"; });
+        var allCodesWin = C.SETS.map(function(SET) { return SET.code + (SET.code==="CON" ? "_" : "") + ".json"; });
+
+
+        var cmds = [
+            'zip -9 AllSetFiles.zip ' + allCodes.join(' '),
+            'zip -9 AllSetFiles-x.zip ' + allCodesX.join(' '),
+            'zip -9 AllSetFilesWindows ' + allCodesWin.join(' ')
+        ];
+        async.eachSeries(cmds, function(cmd, cmdcb) {
+            childProcess.exec(cmd, options, function(err, stdout, stderr) {
+                if (stdout) winston.info(stdout);
+                if (stderr) winston.error(stderr);
+                return cmdcb(err);
+            });
+        }, self);
 	},
 	function createFolders() {
 		// Create folders. This should me automated on copyFiles() step somehow.
@@ -434,7 +449,7 @@ tiptoe(
 	},
 	function generateList() {
 		var self = this;
-		console.log("Generating static file list...");
+		winston.info("Generating static file list...");
 
 		walk(__dirname, function(err, files) {
 			var relative = files.map(function(value) { return(value.replace(__dirname + '/', '')); });
@@ -464,9 +479,9 @@ tiptoe(
 			function () { self(null, files); }
 		);
 	},
-	function zipFiles(files) {
+	function zipFiles() {
 		var self = this;
-		console.log("GZipping static files...");
+		winston.info("GZipping static files...");
 
 		walk(output, function(err, files) {
 			if (err) {
@@ -477,19 +492,20 @@ tiptoe(
 				return(value.match(/\.(css|java|eot|svg|ttf|woff|html?|xml)$/) != null);
 			});
 
-			async.each(
-				final,
-				function(file, cb) {
-					var runParams = { cwd: path.dirname(file), silent : true };
-					runUtil.run('gzip', [ '-k', path.basename(file) ], runParams, cb);
-				},
-				self
-			);
+			async.each(final, function(file, cb) {
+                var cmd = 'gzip -k ' + path.basename(file);
+                var options = {cwd: path.dirname(file)};
+                childProcess.exec(cmd, options, function(err, stdout, stderr) {
+                    if (stdout) winston.info(stdout);
+                    if (stderr) winston.error(stderr);
+                    return cb(err);
+                });
+			}, self);
 		});
 	},
 	function(err) {
 		if (err) throw(err);
 
-		console.log('public folder generation finished.');
+		winston.info('public folder generation finished.');
 	}
 );

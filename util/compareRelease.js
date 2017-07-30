@@ -1,14 +1,14 @@
 "use strict";
 /*global setImmediate: true*/
 
-var base = require('@sembiance/xbase'),
-	httpUtil = require('@sembiance/xutil').http,
+var httpUtil = require('@sembiance/xutil').http,
 	fs = require("fs"),
 	shared = require('../shared/shared'),
 	color = require("cli-color"),
 	diffUtil = require('@sembiance/xutil').diff,
 	path = require("path"),
-	tiptoe = require("tiptoe");
+	tiptoe = require("tiptoe"),
+	winston = require("winston");;
 
 var setsToDo = shared.getSetsToDo();
 var updatedSetFiles = [];
@@ -32,13 +32,13 @@ tiptoe(
 	{
 		fs.writeFileSync("/tmp/changedSets.json", JSON.stringify(updatedSetFiles.uniqueBySort().sort()), {encoding:"utf8"});
 
-		base.info("\n\n\n");
-		base.info(JSON.stringify(updatedSetFiles.uniqueBySort().sort()));
-		base.info("\n\n\n");
+		winston.info("\n\n\n");
+		winston.info(JSON.stringify(updatedSetFiles.uniqueBySort().sort()));
+		winston.info("\n\n\n");
 
 		if(err)
 		{
-			base.error(err);
+			winston.error(err);
 			process.exit(1);
 		}
 
@@ -50,7 +50,7 @@ var imageNameAlerts = [];
 function processSet(code, cb)
 {
 	imageNameAlerts = [];
-	base.info("%s", code);
+	winston.info("%s", code);
 
 	tiptoe(
 		function getJSON()
@@ -66,8 +66,8 @@ function processSet(code, cb)
 
 			if(imageNameAlerts.length>0)
 			{
-				base.info("WARNING!! IMAGE NAMES HAVE CHANGED!!!");
-				base.info(imageNameAlerts.join("\n"));
+				winston.info("WARNING!! IMAGE NAMES HAVE CHANGED!!!");
+				winston.info(imageNameAlerts.join("\n"));
 			}
 
 			this();

@@ -1,16 +1,17 @@
 "use strict";
 
-var base = require('@sembiance/xbase'),
-	C = require('../shared/C'),
+var C = require('../shared/C'),
 	util = require("util"),
 	fs = require("fs"),
 	path = require("path"),
 	dustUtil = require('@sembiance/xutil').dust,
-	tiptoe = require("tiptoe");
+	tiptoe = require("tiptoe"),
+    winston = require("winston"),
+    cloneDeep = require("clone-deep");
 
 function usage()
 {
-	base.error("Usage: node %s <set code or name> [cardtype]", process.argv[1]);
+	winston.error("Usage: node %s <set code or name> [cardtype]", process.argv[1]);
 	process.exit(1);
 }
 
@@ -20,7 +21,7 @@ if(process.argv.length<3 || !process.argv[2].length)
 var targetSet = C.SETS.mutateOnce(function(SET) { if(SET.name.toLowerCase()===process.argv[2].toLowerCase() || SET.code.toLowerCase()===process.argv[2].toLowerCase()) { return SET; } });
 if(!targetSet)
 {
-	base.error("Set %s not found!", process.argv[2]);
+	winston.error("Set %s not found!", process.argv[2]);
 	usage();
 }
 
@@ -45,7 +46,7 @@ tiptoe(
 	{
 		if(err)
 		{
-			base.error(err);
+			winston.error(err);
 			process.exit(1);
 		}
 
@@ -67,7 +68,7 @@ function renderSet(setRaw, original, cb)
 			card.type = card.originalType;
 		}
 
-		var dup = base.clone(card, true);
+		var dup = cloneDeep(card, true);
 		["name", "manaCost", "cmc", "type", "supertypes", "types", "subtypes", "rarity", "artist", "number", "loyalty", "releaseDate", "source",
 		 "power", "toughness", "text", "originalText", "originalType", "flavor", "imageName", "rulings", "layout", "multiverseid", "colors", "names",
 		 "foreignNames", "printings", "legalities", "id"].forEach(function(key) { delete dup[key]; });

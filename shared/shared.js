@@ -1,6 +1,5 @@
 "use strict";
 
-var base = require("@sembiance/xbase");
 var C = require("./C");
 var hash = require("mhash");
 var path = require("path");
@@ -12,6 +11,8 @@ var fs = require("fs");
 var url = require("url");
 var urlUtil = require("@sembiance/xutil").url;
 var unicodeUtil = require("@sembiance/xutil").unicode;
+var winston = require("winston");
+var cloneDeep = require("clone-deep");
 
 var retry = require('retry');
 var request = require('request');
@@ -22,7 +23,7 @@ exports.getSetsToDo = function(startAt) {
 	startAt = startAt || 2;
 	if(process.argv.length<(startAt+1))
 	{
-		base.error("Usage: node %s <set code|'allsets'>", process.argv[1]);
+		winston.error("Usage: node %s <set code|'allsets'>", process.argv[1]);
 		process.exit(1);
 	}
 
@@ -378,11 +379,11 @@ exports.performSetCorrections = function(setCorrections, fullSet)
 			{
 				var newCard;
 				if(setCorrection.copyCard)
-					newCard = base.clone(cards.mutateOnce(function(card) { return card.name===setCorrection.copyCard ? card : undefined; }), true);
+					newCard = cloneDeep(cards.mutateOnce(function(card) { return card.name===setCorrection.copyCard ? card : undefined; }), true);
 				else if(setCorrection.importCard)
 					newCard = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "json", setCorrection.importCard.set + ".json"), {encoding:"utf8"})).cards.mutateOnce(function(card) { return card.name===setCorrection.importCard.name ? card : undefined; });
 				else if(setCorrection.addCard)
-					newCard = base.clone(setCorrection.addCard, true);
+					newCard = cloneDeep(setCorrection.addCard, true);
 
 				if(setCorrection.replace)
 					Object.forEach(setCorrection.replace, function(key, value) { newCard[key] = value; });
@@ -498,7 +499,7 @@ exports.performSetCorrections = function(setCorrections, fullSet)
 						ruling.text.replaceAll("\\[" + manaSymbol.toUpperCase() + "\\]", "{" + manaSymbol.toUpperCase() + "}");
 
 					if(newText!==ruling.text) {
-						base.warn("Auto correcting set %s Card [%s] (%s) that has ruling with invalid symbol: %s", fullSet.code, card.name, card.multiverseid || "", ruling.text);
+						winston.warn("Auto correcting set %s Card [%s] (%s) that has ruling with invalid symbol: %s", fullSet.code, card.name, card.multiverseid || "", ruling.text);
 						ruling.text = newText;
 					}
 				});
@@ -514,7 +515,7 @@ exports.performSetCorrections = function(setCorrections, fullSet)
 
 		if(["YYYY-MM-DD", "YYYY-MM", "YYYY"].some(function(dateFormat) { return !moment(card.releaseDate, dateFormat).isValid(); }))
 		{
-			base.warn("Set [%s] and card [%s] release date format invalid: %s", fullSet.code, card.name, card.releaseDate);
+			winston.warn("Set [%s] and card [%s] release date format invalid: %s", fullSet.code, card.name, card.releaseDate);
 			delete card.releaseDate;
 		}
 	});
@@ -569,7 +570,7 @@ function getSetCodeFromName(setName) {
 
 	if (!setInfo) {
 		console.trace();
-		base.error("Failed to get set code for '%s'; please add the set to shared/C.js", setName);
+		winston.error("Failed to get set code for '%s'; please add the set to shared/C.js", setName);
 		process.exit(1);
 	}
 	return(setInfo.code);
@@ -593,7 +594,7 @@ exports.clearCacheFile = function(targetUrl, cb) {
         if (err) return cb(err);
         exports.cache.del(targetUrl, {}, function(err) {
             if (err) return cb(err);
-            base.info('Cleared from cache: %s', targetUrl);
+            winston.info('Cleared from cache: %s', targetUrl);
             return cb();
         });
     });
@@ -635,7 +636,7 @@ exports.buildCacheFileURLs = function(card, cacheType, cb) {
 };
 
 exports.buildMultiverseListingURLs = function(setName, cb) {
-	base.info("building multiverse listing url for " + setName);
+	winston.info("building multiverse listing url for " + setName);
 	tiptoe(
 		function getFirstListingsPage() {
 			exports.getURLAsDoc(exports.buildListingsURL(setName, 0), this);
@@ -667,11 +668,11 @@ exports.getURLAsDoc = function(targetURL, getCb) {
                          body.indexOf('You Just Exploded the Internet.') !== -1 )
                 err = new Error('Gatherer Server Error despite statusCode: ' + response.statusCode);
             if (err) {
-                base.error('Error downloading: %s', targetURL);
-                base.error(err);
+                winston.error('Error downloading: %s', targetURL);
+                winston.error(err);
                 return dlCb(err);
             }
-            base.info('Retrieved: %s', targetURL);
+            winston.info('Retrieved: %s', targetURL);
             dlCb(null, body);
         });
     }
@@ -681,7 +682,7 @@ exports.getURLAsDoc = function(targetURL, getCb) {
         operation.attempt(function(currentAttempt) {
             downloadHTML(function(err, body) {
                 if (operation.retry(err)){
-                    base.info('Retry %d of fetch: %s', currentAttempt, targetURL);
+                    winston.info('Retry %d of fetch: %s', currentAttempt, targetURL);
                     return;
                 }
 
@@ -716,8 +717,8 @@ exports.buildMultiverseAllPrintingsURLs = function(multiverseid, cb) {
 		},
 		function getAllPages(err, doc) {
 			if(err) {
-				base.error(exports.buildMultiversePrintingsURL(multiverseid, 0));
-				base.error(err);
+				winston.error(exports.buildMultiversePrintingsURL(multiverseid, 0));
+				winston.error(err);
 				return setImmediate(function() { cb(err); });
 			}
 
@@ -780,7 +781,7 @@ exports.updateStandardForCard = function(card) {
 	card.printings.forEach(function(value) {
 		if (!standard && C.STANDARD_SETS.indexOf(value) >= 0) {
 			standard = true;
-			//base.info("Card %s is in standard set (%s).", card.name, value);
+			//winston.info("Card %s is in standard set (%s).", card.name, value);
 		}
 	});
 	if (standard === true) {

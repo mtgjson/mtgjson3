@@ -2,12 +2,12 @@
 
 "use strict";
 
-var base = require('@sembiance/xbase'),
-	fs = require("fs"),
+var fs = require("fs"),
 	path = require("path"),
 	httpUtil = require('@sembiance/xutil').http,
 	domino = require("domino"),
-	tiptoe = require("tiptoe");
+	tiptoe = require("tiptoe"),
+    winston = require("winston");
 
 tiptoe(
 	function getPageAndPrevious()
@@ -20,7 +20,7 @@ tiptoe(
 		var cards = Array.toArray(domino.createWindow(cardsHTML[0]).document.querySelectorAll("ul.list-links li a")).map(function(o) { return o.textContent.trim(); }).filterEmpty();
 		if(cards.length<1)
 		{
-			base.error("No cards found! Probably a temporary error...");
+			winston.error("No cards found! Probably a temporary error...");
 			process.exit(1);
 		}
 
@@ -28,11 +28,11 @@ tiptoe(
 
 		var removedCards = previousCards.subtract(cards);
 		if(removedCards.length)
-			base.info("Cards Removed: %s", removedCards.join(", "));
+			winston.info("Cards Removed: %s", removedCards.join(", "));
 
 		var addedCards = cards.subtract(previousCards);
 		if(addedCards.length)
-			base.info("Cards Added: %s", addedCards.join(", "));
+			winston.info("Cards Added: %s", addedCards.join(", "));
 
 		fs.writeFile(path.join(__dirname, "previous_banned_commander_cards.json"), JSON.stringify(cards, null, '  '), {encoding : "utf8"}, this);
 	},
@@ -40,7 +40,7 @@ tiptoe(
 	{
 		if(err)
 		{
-			base.error(err);
+			winston.error(err);
 			process.exit(1);
 		}
 

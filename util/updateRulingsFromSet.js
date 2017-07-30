@@ -1,16 +1,16 @@
 'use strict';
 
-var base = require('@sembiance/xbase');
 var fs = require('fs');
 var shared = require('../shared/shared');
 var path = require('path');
 var tiptoe = require('tiptoe');
 var async = require('async');
+var winston = require("winston");
 
 if (require.main == module) {
 	shared.getSetsToDo().serialForEach(processSet, function(err) {
 		if(err) {
-			base.error(err);
+			winston.error(err);
 			process.exit(1);
 		}
 
@@ -19,7 +19,7 @@ if (require.main == module) {
 }
 
 function processSet(code, cb) {
-	base.info("Processing set: %s", code);
+	winston.info("Processing set: %s", code);
 
 	// Will contain all rulings on this set.
 	var cardRulingsByName = {};
@@ -71,7 +71,7 @@ function processSet(code, cb) {
 }
 
 function addRulingsToSetCards(setCode, targetCardNames, cardRulingsByName, cb) {
-	base.info("Adding rulings to set [%s] for all cards: %s", setCode, targetCardNames.join(", "));
+	winston.info("Adding rulings to set [%s] for all cards: %s", setCode, targetCardNames.join(", "));
 
 	var processFunction = function(set) {
 		set.cards.forEach(function(card) {

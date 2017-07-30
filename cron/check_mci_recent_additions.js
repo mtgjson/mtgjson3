@@ -1,15 +1,13 @@
 #!/usr/local/bin/node
 
 "use strict";
-/*global setImmediate: true*/
 
-var base = require('@sembiance/xbase'),
-	fs = require("fs"),
-	url = require("url"),
+var fs = require("fs"),
 	path = require("path"),
 	httpUtil = require('@sembiance/xutil').http,
 	domino = require("domino"),
-	tiptoe = require("tiptoe");
+	tiptoe = require("tiptoe"),
+    winston = require("winston");
 
 tiptoe(
 	function getPageAndPrevious()
@@ -23,14 +21,14 @@ tiptoe(
 		var additions = Array.toArray(domino.createWindow(setsHTML[0]).document.querySelector("h1").nextElementSibling.querySelectorAll("tr td:nth-child(1) a")).map(function(o) { return o.textContent.trim(); }).filterEmpty();
 		if(additions.length<1)
 		{
-			base.error("No additions found! Probably a temporary error...");
+			winston.error("No additions found! Probably a temporary error...");
 			process.exit(1);
 		}
 
 		var previousAdditions = JSON.parse(previousSetsJSON);
 
 		if(additions.join(", ")!==previousAdditions.join(", "))
-			base.info("Sets changed.\nBefore: %s\n\nAfter: %s", previousAdditions.join(", "), additions.join(", "));
+			winston.info("Sets changed.\nBefore: %s\n\nAfter: %s", previousAdditions.join(", "), additions.join(", "));
 
 		fs.writeFile(path.join(__dirname, "previous_mci_additions.json"), JSON.stringify(additions, null, '  '), {encoding : "utf8"}, this);
 	},
@@ -38,7 +36,7 @@ tiptoe(
 	{
 		if(err)
 		{
-			base.error(err);
+			winston.error(err);
 			process.exit(1);
 		}
 

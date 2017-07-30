@@ -1,10 +1,10 @@
 "use strict";
 
-var base = require('@sembiance/xbase'),
-	shared = require('../shared/shared'),
+var shared = require('../shared/shared'),
 	fs = require("fs"),
 	path = require("path"),
-	tiptoe = require("tiptoe");
+	tiptoe = require("tiptoe"),
+    winston = require("winston");
 
 var CARD_FIELDS = [ "name", "number", "rarity", "type", "manaCost", "text", "flavor", "artist", "power", "toughness"];
 
@@ -14,7 +14,7 @@ shared.getSetsToDo().serialForEach(processSet, function(err)
 {
 	if(err)
 	{
-		base.error(err);
+		winston.error(err);
 		process.exit(1);
 	}
 

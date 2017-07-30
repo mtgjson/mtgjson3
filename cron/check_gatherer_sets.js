@@ -1,15 +1,13 @@
 #!/usr/local/bin/node
 
 "use strict";
-/*global setImmediate: true*/
 
-var base = require('@sembiance/xbase'),
-	fs = require("fs"),
-	url = require("url"),
+var fs = require("fs"),
 	path = require("path"),
 	httpUtil = require('@sembiance/xutil').http,
 	domino = require("domino"),
-	tiptoe = require("tiptoe");
+	tiptoe = require("tiptoe"),
+    winston = require("winston");
 
 tiptoe(
 	function getPageAndPrevious()
@@ -23,7 +21,7 @@ tiptoe(
 		var sets = Array.toArray(domino.createWindow(setsHTML[0]).document.querySelectorAll("select#ctl00_ctl00_MainContent_Content_SearchControls_setAddText option")).map(function(o) { return o.getAttribute("value").trim(); }).filterEmpty();
 		if(sets.length<1)
 		{
-			base.error("No sets found! Probably a temporary error...");
+			winston.error("No sets found! Probably a temporary error...");
 			process.exit(1);
 		}
 
@@ -31,11 +29,11 @@ tiptoe(
 
 		var removedSets = previousSets.subtract(sets);
 		if(removedSets.length)
-			base.info("Sets Removed: %s", removedSets.join(", "));
+			winston.info("Sets Removed: %s", removedSets.join(", "));
 
 		var addedSets = sets.subtract(previousSets);
 		if(addedSets.length)
-			base.info("Sets Added: %s", addedSets.join(", "));
+			winston.info("Sets Added: %s", addedSets.join(", "));
 
 		fs.writeFile(path.join(__dirname, "previous_sets.json"), JSON.stringify(sets, null, '  '), {encoding : "utf8"}, this);
 	},
@@ -43,7 +41,7 @@ tiptoe(
 	{
 		if(err)
 		{
-			base.error(err);
+			winston.error(err);
 			process.exit(1);
 		}
 

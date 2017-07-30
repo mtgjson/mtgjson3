@@ -1,7 +1,6 @@
 /*jslint node: true */
 'use strict';
 
-var base = require("@sembiance/xbase");
 var C = require("../shared/C");
 var fs = require("fs");
 var url = require("url");
@@ -14,6 +13,8 @@ var urlUtil = require("@sembiance/xutil").url;
 var querystring = require("querystring");
 var tiptoe = require("tiptoe");
 var async = require('async');
+var winston = require("winston");
+var cloneDeep = require("clone-deep");
 
 (function (exports) {
 
@@ -145,27 +146,27 @@ var TEXT_TO_SYMBOL_MAP = {
 var doubleFacedCardNames = [];
 
 var ripSet = function(setName, cb) {
-	base.info("========================================================================================================");
-	base.info("Ripping Set: %s", setName);
+	winston.info("========================================================================================================");
+	winston.info("Ripping Set: %s", setName);
 
 	tiptoe(
 		function getListHTML() {
-			base.info("Getting card lists...");
+			winston.info("Getting card lists...");
 
 			getSetNameMultiverseIds(setName, this);
 		},
 		function processFirstBatch(multiverseids) {
-			this.data.set = base.clone(C.SETS.mutateOnce(function (SET) { return SET.name===setName ? SET : undefined; }));
+			this.data.set = cloneDeep(C.SETS.mutateOnce(function (SET) { return SET.name===setName ? SET : undefined; }));
 			processMultiverseids(multiverseids, this);
 		},
 		function processVariations(cards) {
-			base.info("Processing variations...");
+			winston.info("Processing variations...");
 
 			this.data.set.cards = cards;
 			processMultiverseids(cards.map(function (card) { return (card.variations && card.variations.length) ? card.variations : []; }).flatten().unique().subtract(cards.map(function (card) { return card.multiverseid; })), this);
 		},
 		function addAdditionalFields(cards) {
-			base.info("Adding additional fields...");
+			winston.info("Adding additional fields...");
 
 			this.data.set.cards = this.data.set.cards.concat(cards).sort(shared.cardComparator);
 
@@ -174,55 +175,55 @@ var ripSet = function(setName, cb) {
 			this();
 		},
 		function fixCommanderIdentity() {
-			base.info("Fixing double-faced cards...");
+			winston.info("Fixing double-faced cards...");
 
 			fixCommanderIdentityForCards(this.data.set.cards, this.parallel());
 			fixCMC(this.data.set.cards, this.parallel());
 		},
 		function addForeignNames() {
-			base.info("Adding foreign names to cards...");
+			winston.info("Adding foreign names to cards...");
 
 			addForeignNamesToCards(this.data.set.cards, this);
 		},
 		function addLegalities() {
-			base.info("Adding legalities to cards...");
+			winston.info("Adding legalities to cards...");
 
 			addLegalitiesToCards(this.data.set.cards, this);
 		},
 		function addPrintings() {
-			base.info("Adding printings to cards...");
+			winston.info("Adding printings to cards...");
 
 			addPrintingsToCards(this.data.set, this);
 		},
 		function performCorrections() {
-			base.info("Doing set corrections...");
+			winston.info("Doing set corrections...");
 			shared.performSetCorrections(shared.getSetCorrections(this.data.set.code), this.data.set);
 
 			this();
 		},
 		function compareToMagicCardsInfo() {
 			if (!this.data.set.magicCardsInfoCode) {
-				base.warn("SKIPPING comparing to MagicCards.info (no MCI code)...");
+				winston.warn("SKIPPING comparing to MagicCards.info (no MCI code)...");
 				this();
 			}
 			else {
-				base.info("Comparing cards to MagicCards.info...");
+				winston.info("Comparing cards to MagicCards.info...");
 				compareCardsToMCI(this.data.set, this);
 			}
 		},
 		function compareToEssentialMagic() {
 			if (!this.data.set.essentialMagicCode) {
-				base.warn("SKIPPING comparing to essentialmagic.com (no essentialMagicCode)...");
+				winston.warn("SKIPPING comparing to essentialmagic.com (no essentialMagicCode)...");
 				this();
 			}
 			else {
-				base.info("Comparing cards to essentialmagic.com...");
+				winston.info("Comparing cards to essentialmagic.com...");
 				compareCardsToEssentialMagic(this.data.set, this);
 			}
 		},
 		function finish(err) {
 			if (err) {
-				base.error("Error ripping: %s (%s)", this.data.set.code, setName);
+				winston.error("Error ripping: %s (%s)", this.data.set.code, setName);
 				return setImmediate(function () { cb(err); });
 			}
 
@@ -231,9 +232,9 @@ var ripSet = function(setName, cb) {
 			// Warn about missing fields
 			this.data.set.cards.forEach(function (card) {
 				if (!card.rarity)
-					base.warn("Rarity not found for card: %s", card.name);
+					winston.warn("Rarity not found for card: %s", card.name);
 				if (!card.artist)
-					base.warn("Artist not found for card: %s", card.name);
+					winston.warn("Artist not found for card: %s", card.name);
 			});
 
 			setImmediate(cb, err, this.data.set);
@@ -276,7 +277,7 @@ var processMultiverseids = function (multiverseids, cb) {
 	var cards = [];
 	doubleFacedCardNames = [];
 
-	base.info("Processing %d multiverseids", multiverseids.unique().length);
+	winston.info("Processing %d multiverseids", multiverseids.unique().length);
 
 	multiverseids.unique().serialForEach(function (multiverseid, subcb) {
 		tiptoe(
@@ -350,7 +351,7 @@ var processCardPart = function(doc, cardPart, printedDoc, printedCardPart) {
 	if (cardText && !card.type.toLowerCase().startsWith("basic land")) {
 		card.text = cardText;
 		if (card.text.contains("{UNKNOWN}"))
-			base.warn("Invalid symbol in oracle card text for card: %s", card.name);
+			winston.warn("Invalid symbol in oracle card text for card: %s", card.name);
 	}
 
 	if (cardText && cardText.toLowerCase().startsWith("level up {"))
@@ -380,9 +381,9 @@ var processCardPart = function(doc, cardPart, printedDoc, printedCardPart) {
 				else if (secondCardText.contains("transform"))
 					card.layout = "double-faced";
 				else {
-					base.warn("Unknown card layout for multiverseid: %s", card.multiverseid);
-					base.warn("card0 text: %s", firstCardText);
-					base.warn("card1 text: %s", secondCardText);
+					winston.warn("Unknown card layout for multiverseid: %s", card.multiverseid);
+					winston.warn("card0 text: %s", firstCardText);
+					winston.warn("card1 text: %s", secondCardText);
 				}
 			}
 
@@ -436,7 +437,7 @@ var processCardPart = function(doc, cardPart, printedDoc, printedCardPart) {
 		else if (card.types.contains("Vanguard")) {
 			var handLifeParts = powerToughnessValue.trim().strip("+)(").replaceAll("Hand Modifier: ", "").replaceAll("Life Modifier: ", "").split(",").map(function (a) { return a.trim(); });
 			if (handLifeParts.length!==2) {
-				base.warn("Power toughness invalid [%s] for card: %s", getTextContent(cardPart.querySelector(idPrefix + "_ptRow .value")).trim(), card.name);
+				winston.warn("Power toughness invalid [%s] for card: %s", getTextContent(cardPart.querySelector(idPrefix + "_ptRow .value")).trim(), card.name);
 			}
 			else {
 				card.hand = parseInt(handLifeParts[0], 10);
@@ -451,7 +452,7 @@ var processCardPart = function(doc, cardPart, printedDoc, printedCardPart) {
 
 			var powerToughnessParts = powerToughnessValue.split("/");
 			if (powerToughnessParts.length!==2) {
-				base.warn("Power toughness invalid [%s] for card: %s", getTextContent(cardPart.querySelector(idPrefix + "_ptRow .value")).trim(), card.name);
+				winston.warn("Power toughness invalid [%s] for card: %s", getTextContent(cardPart.querySelector(idPrefix + "_ptRow .value")).trim(), card.name);
 			}
 			else {
 				card.power = powerToughnessParts[0].trim();
@@ -482,7 +483,7 @@ var processCardPart = function(doc, cardPart, printedDoc, printedCardPart) {
 	if (originalCardText) {
 		card.originalText = originalCardText;
 		if (card.originalText.contains("{UNKNOWN}"))
-			base.warn("Invalid symbol in printed card text for card: %s", card.name);
+			winston.warn("Invalid symbol in printed card text for card: %s", card.name);
 	}
 
 	// Flavor Text
@@ -601,7 +602,7 @@ var addForeignNamesToCard = function (card, cb) {
 
 				if (foreignCardName.contains("//")) {
 					if (!card.hasOwnProperty("names")) {
-						base.error("Card [%s] (%d) has foreignCardName [%s] but has no 'names' property.", card.name, card.multiverseid, foreignCardName);
+						winston.error("Card [%s] (%d) has foreignCardName [%s] but has no 'names' property.", card.name, card.multiverseid, foreignCardName);
 						process.exit(0);
 					}
 
@@ -742,7 +743,7 @@ var addPrintingsToCard = function (nonGathererSets, card, cb) {
 var fillCardTypes = function (card, rawTypeFull) {
 	// Some gatherer entries have a regular dash instead of a 'long dash'
 	if (!rawTypeFull.contains("—") && rawTypeFull.contains(" - "))  {
-		base.warn("Raw type for card [%s] does not contain a long dash for type [%s] but does contain a small dash surrounded by spaces ' - '. Auto-correcting!", card.name, rawTypeFull);
+		winston.warn("Raw type for card [%s] does not contain a long dash for type [%s] but does contain a small dash surrounded by spaces ' - '. Auto-correcting!", card.name, rawTypeFull);
 		rawTypeFull = rawTypeFull.replace(" - ", "—");
 	}
 	var rawTypes = rawTypeFull.split(/[—]/);
@@ -761,7 +762,7 @@ var fillCardTypes = function (card, rawTypeFull) {
 		else if (C.TYPES.contains(rawType))
 			card.types.push(rawType);
 		else
-			base.warn("Raw type not found [%s] for card: %s", rawType, card.name);
+			winston.warn("Raw type not found [%s] for card: %s", rawType, card.name);
 	});
 	if (rawTypes.length>1) {
 		card.subtypes = card.types.contains("Plane") ? [rawTypes[1].trim()] : rawTypes[1].split(" ").filterEmpty().map(function (subtype) { return subtype.trim(); });	// 205.3b Planes have just a single subtype
@@ -850,11 +851,11 @@ var compareCardsToMCI = function(set, cb) {
 			var mciCardLinks = Array.toArray(listDoc.querySelectorAll("table tr td a"));
 			async.each(set.cards, function (card, subcb) {
 				if (card.variations) {
-					base.warn("VARIATIONS: Could not find MagicCards.info match for card: %s", card.name);
+					winston.warn("VARIATIONS: Could not find MagicCards.info match for card: %s", card.name);
 					return setImmediate(subcb);
 				}
 				if (card.layout==="token") {
-					base.warn("TOKEN: Cannot match MagicCards.info for token: %s", card.name);
+					winston.warn("TOKEN: Cannot match MagicCards.info for token: %s", card.name);
 					return setImmediate(subcb);
 				}
 
@@ -866,7 +867,7 @@ var compareCardsToMCI = function(set, cb) {
                 if (card.layout==="meld")
                     mciCardLink = mciCardLinks.filter(function (link) { return link.getAttribute("href").indexOf('/' + card.number) !== -1; });
 				if (mciCardLink.length!==1) {
-					base.warn("MISSING: Could not find MagicCards.info match for card: %s", card.name);
+					winston.warn("MISSING: Could not find MagicCards.info match for card: %s", card.name);
 					return setImmediate(subcb);
 				}
 
@@ -936,11 +937,11 @@ var compareCardToMCI = function(set, card, mciCardURL, cb) {
 					if (mciCardDoc)
 						mciFlavor = normalizeFlavor(processTextBlocks(mciCardDoc.querySelector("table tr td p i")));
 					if (!mciFlavor && cardFlavor)
-						base.warn("FLAVOR: %s (%s) has flavor but MagicCardsInfo (%s) does not.", card.name, card.multiverseid, mciCardURL);
+						winston.warn("FLAVOR: %s (%s) has flavor but MagicCardsInfo (%s) does not.", card.name, card.multiverseid, mciCardURL);
 					else if (mciFlavor && !cardFlavor)
-						base.warn("FLAVOR: %s (%s) does not have flavor but MagicCardsInfo (%s) does.", card.name, card.multiverseid, mciCardURL);
+						winston.warn("FLAVOR: %s (%s) does not have flavor but MagicCardsInfo (%s) does.", card.name, card.multiverseid, mciCardURL);
 					else if (mciFlavor!==cardFlavor)
-						base.warn("FLAVOR: %s (%s) flavor does not match MagicCardsInfo (%s).\n%s", card.name, card.multiverseid, mciCardURL, diffUtil.diff(cardFlavor, mciFlavor));
+						winston.warn("FLAVOR: %s (%s) flavor does not match MagicCardsInfo (%s).\n%s", card.name, card.multiverseid, mciCardURL, diffUtil.diff(cardFlavor, mciFlavor));
 				}
 			}
 
@@ -954,7 +955,7 @@ var compareCardToMCI = function(set, card, mciCardURL, cb) {
 						}
 					);
 					if (mciArtist.length === 0) {
-						base.error('no MCIArtist! for url %s (cache: %s)', mciCardURL, shared.cache.cachname(mciURL));
+						winston.error('no MCIArtist! for url %s (cache: %s)', mciCardURL, shared.cache.cachname(mciURL));
 						shared.cache.delete(mciURL);
 						mciArtist = null;
 					}
@@ -964,11 +965,11 @@ var compareCardToMCI = function(set, card, mciCardURL, cb) {
 				}
 				var cardArtist = (card.artist || "").trim().replaceAll("\n", " ").innerTrim();
 				if (!mciArtist && cardArtist)
-					base.warn("ARTIST: %s (%s) has artist but MagicCardsInfo (%s) does not.", card.name, card.multiverseid, mciCardURL);
+					winston.warn("ARTIST: %s (%s) has artist but MagicCardsInfo (%s) does not.", card.name, card.multiverseid, mciCardURL);
 				else if (mciArtist && !cardArtist)
-					base.warn("ARTIST: %s (%s) does not have artist but MagicCardsInfo (%s) does.", card.name, card.multiverseid, mciCardURL);
+					winston.warn("ARTIST: %s (%s) does not have artist but MagicCardsInfo (%s) does.", card.name, card.multiverseid, mciCardURL);
 				else if (mciArtist!==cardArtist && !C.ARTIST_CORRECTIONS.hasOwnProperty(cardArtist))
-					base.warn("ARTIST: %s (%s) artist does not match MagicCardsInfo (%s).\n%s", card.name, card.multiverseid, mciCardURL, diffUtil.diff(cardArtist, mciArtist));
+					winston.warn("ARTIST: %s (%s) artist does not match MagicCardsInfo (%s).\n%s", card.name, card.multiverseid, mciCardURL, diffUtil.diff(cardArtist, mciArtist));
 			}
 
 			this();
@@ -988,7 +989,7 @@ var compareCardsToEssentialMagic = function(set, cb) {
 			Array.toArray(listDoc.querySelectorAll("table td#contentarea div#main table tr")).forEach(function (cardRow) {
 				var cardName = processTextBlocks(cardRow.querySelector("td:nth-child(2) b a")).innerTrim().trim();
 				if (!cardName) {
-					base.warn("Missing card name: %s", cardRow.innerHTML);
+					winston.warn("Missing card name: %s", cardRow.innerHTML);
 					return;
 				}
 
@@ -1019,11 +1020,11 @@ var compareCardsToEssentialMagic = function(set, cb) {
 						var cardFlavor = normalizeFlavor(card.flavor || "");
 						var essentialFlavor = normalizeFlavor(processTextBlocks(cardRow.querySelector("td:nth-child(2) i")));
 						if (!essentialFlavor && cardFlavor)
-							base.warn("FLAVOR: %s (%s) has flavor but essentialMagic does not.", card.name, card.multiverseid);
+							winston.warn("FLAVOR: %s (%s) has flavor but essentialMagic does not.", card.name, card.multiverseid);
 						else if (essentialFlavor && !cardFlavor)
-							base.warn("FLAVOR: %s (%s) does not have flavor but essentialMagic does.", card.name, card.multiverseid);
+							winston.warn("FLAVOR: %s (%s) does not have flavor but essentialMagic does.", card.name, card.multiverseid);
 						else if (essentialFlavor !== cardFlavor)
-							base.warn("FLAVOR: %s (%s) flavor does not match essentialMagic.\n%s", card.name, card.multiverseid, diffUtil.diff(cardFlavor, essentialFlavor));
+							winston.warn("FLAVOR: %s (%s) flavor does not match essentialMagic.\n%s", card.name, card.multiverseid, diffUtil.diff(cardFlavor, essentialFlavor));
 					}
 				});
 			});
@@ -1037,8 +1038,8 @@ var compareCardsToEssentialMagic = function(set, cb) {
 };
 
 var ripMCISet = function(set, cb) {
-	base.info("========================================================================================================");
-	base.info("Ripping set: %s (%s)", set.name, set.code);
+	winston.info("========================================================================================================");
+	winston.info("Ripping set: %s (%s)", set.name, set.code);
 
 	tiptoe(
 		function getCardList() {
@@ -1065,14 +1066,14 @@ var ripMCISet = function(set, cb) {
 			});
 		},
 		function addAdditionalFields(cards) {
-			base.info("Adding additional fields...");
+			winston.info("Adding additional fields...");
 
 			set.cards = cards.filterEmpty().sort(shared.cardComparator);
 			fillImageNames(set);
 			addMagicLibraritiesInfoToMCISet(set, this);
 		},
 		function applyLatestOracleFields() {
-			base.info("Applying latest oracle fields to MCI cards...");
+			winston.info("Applying latest oracle fields to MCI cards...");
 
 			var oracleCards = {};
 			C.SETS.map(function (SET) { return SET.code; }).removeAll(shared.getMCISetCodes()).removeAll(C.SETS_NOT_ON_GATHERER).reverse().forEach(function (SETCODE) {
@@ -1101,35 +1102,35 @@ var ripMCISet = function(set, cb) {
 			this();
 		},
 		function fixCommanderIdentity() {
-			base.info("Fixing color identity...");
+			winston.info("Fixing color identity...");
 
 			fixCommanderIdentityForCards(set.cards, this.parallel());
 			fixCMC(set.cards, this.parallel());
 		},
 		function performCorrections() {
-			base.info("Doing set corrections...");
+			winston.info("Doing set corrections...");
 			shared.performSetCorrections(shared.getSetCorrections(set.code), set);
 
 			this();
 		},
 		function addPrintings() {
 			if (fs.existsSync(path.join(__dirname, "..", "json", set.code + ".json"))) {
-				base.info("Updating printings...");
+				winston.info("Updating printings...");
 				addPrintingsToMCISet(set, this);
 			}
 			else {
-				base.warn("RUN ONE MORE TIME FOR PRINTINGS!");
+				winston.warn("RUN ONE MORE TIME FOR PRINTINGS!");
 				this();
 			}
 		},
 		function finalizePrintings() {
-			base.info("Cleaning up duplicate printings.");
+			winston.info("Cleaning up duplicate printings.");
 			set.cards.forEach(shared.finalizePrintings);
 			this();
 		},
 		function finish(err) {
 			if (err) {
-				base.error("Error ripping: %s", set.name);
+				winston.error("Error ripping: %s", set.name);
 				return setImmediate(function () { cb(err); });
 			}
 
@@ -1138,12 +1139,12 @@ var ripMCISet = function(set, cb) {
 			// Warn about missing fields
 			set.cards.forEach(function (card) {
 				if (!card.rarity)
-					base.warn("Rarity not found for card: %s", card.name);
+					winston.warn("Rarity not found for card: %s", card.name);
 				if (!card.artist)
-					base.warn("Artist not found for card: %s", card.name);
+					winston.warn("Artist not found for card: %s", card.name);
 			});
 
-			//base.info("Other Printings: %s", (this.data.set.cards.map(function (card) { return card.printings; }).flatten().unique().map(function (setName) { return C.SETS.mutateOnce(function (SET) { return SET.name===setName ? SET.code : undefined; }); }).remove(this.data.set.code) || []).join(" "));
+			//winston.info("Other Printings: %s", (this.data.set.cards.map(function (card) { return card.printings; }).flatten().unique().map(function (setName) { return C.SETS.mutateOnce(function (SET) { return SET.name===setName ? SET.code : undefined; }); }).remove(this.data.set.code) || []).join(" "));
 
 			setImmediate(cb, err, set);
 		}
@@ -1182,7 +1183,7 @@ var ripMCICard = function(set, mciCardURL, cb) {
 				card.layout = "split";
 			}
 
-			//base.info("Processing: %s", card.name);
+			//winston.info("Processing: %s", card.name);
 
 			// Card Rarity
 			var inEditions = false;
@@ -1208,7 +1209,7 @@ var ripMCICard = function(set, mciCardURL, cb) {
 			if (!cardInfoParts)
 				cardInfoParts = cardInfoRaw.match(/^([^0-9*,(]+)\(?([^/:]*)\:?\/?([^,)]*)\)?,? ?([^(]*)\(?([^)]*)\)?$/);
 			if (!cardInfoParts || cardInfoParts.length!==6) {
-				base.warn("Unable to get cardInfoParts from card [%s]: %s", card.name, getTextContent(cardNameElement.parentNode.nextElementSibling).innerTrim().trim());
+				winston.warn("Unable to get cardInfoParts from card [%s]: %s", card.name, getTextContent(cardNameElement.parentNode.nextElementSibling).innerTrim().trim());
 				throw new Error("Card failed");
 			}
 			cardInfoParts = cardInfoParts.map(function (cardInfoPart) { return cardInfoPart.trim(); });
@@ -1330,7 +1331,7 @@ var ripMCICard = function(set, mciCardURL, cb) {
 						cardForeignName.language = C.MCI_LANGUAGE_TO_GATHERER[cardForeignName.language];
 
 					if (!C.VALID_LANGUAGES.contains(cardForeignName.language)) {
-						base.error("Invalid MCI language: %s", cardForeignName.language);
+						winston.error("Invalid MCI language: %s", cardForeignName.language);
 						process.exit(0);
 					}
 				});
@@ -1460,7 +1461,7 @@ var addMagicLibraritiesInfoToMCISet = function(set, cb) {
 					cardNames.forEach(function (cardName) { if (!magicLibraritiesInfo.hasOwnProperty(cardName)) { magicLibraritiesInfo[cardName] = cardInfo; }});
 				}
 				else {
-					base.warn("Unknown release date format: " + releaseDateText);
+					winston.warn("Unknown release date format: " + releaseDateText);
 				}
 			});
 
@@ -1492,7 +1493,7 @@ var processSymbol = function(symbol) {
 			return symbolPart.toUpperCase();
 
 		if (!SYMBOL_CONVERSION_MAP.hasOwnProperty(symbolPart)) {
-			base.warn("Invalid symbolPart [%s] with full value: %s", symbolPart, symbol);
+			winston.warn("Invalid symbolPart [%s] with full value: %s", symbolPart, symbol);
 			return "UNKNOWN";
 		}
 
@@ -1548,7 +1549,7 @@ var processTextBoxChildren = function(children) {
 			else if (childNodeName==="br")
 				result += "\n";
 			else
-				base.warn("Unsupported text child tag name %s", childNodeName);
+				winston.warn("Unsupported text child tag name %s", childNodeName);
 		}
 		else if (child.nodeType===3) {
 			var childText = child.data;
@@ -1569,7 +1570,7 @@ var processTextBoxChildren = function(children) {
 			result += childText;
 		}
 		else {
-			base.warn("Unknown text child type: %s", child.nodeType);
+			winston.warn("Unknown text child type: %s", child.nodeType);
 		}
 	});
 
@@ -1734,8 +1735,8 @@ var fixCommanderIdentityForCards = function(cards, cb) {
 			var otherCard = findCardByNumber(otherSideNum);
 
 			if (!otherCard) {
-				base.error("Current side name: %s", card.name);
-				base.error("-> Other Side num: %s", otherSideNum);
+				winston.error("Current side name: %s", card.name);
+				winston.error("-> Other Side num: %s", otherSideNum);
 
 				//throw Error("Error: Cannot find other side of card " + card.name);
 			}
