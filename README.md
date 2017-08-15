@@ -42,7 +42,7 @@ Including a new set
 If you're building mtgjson data on your own, you should follow the following steps to be able to grab the new set data:
 
 * make sure the new set is already available on gatherer
-* update C.js (this is done manually by editing the file)
+* add a file describing the set in `shared/set_configs` or an appropriate subdirectory
 * `node build/buildSet NEWSETCODE`
 * check your json files to see if everything is in order
 * `node util/updatePrintingsFromSet NEWSETCODE` -- This will update the printings on the previous sets, using the data from the new set.
