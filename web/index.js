@@ -64,7 +64,7 @@ function processCard(SET, card, callback) {
 		// Do nothing if we do not have a previous value.
 		if (!allCardsWithExtras[card.name].hasOwnProperty(fieldName))
 			return;
-		
+
 		var previousValue = allCardsWithExtras[card.name][fieldName];
 
 		var taint = false;
@@ -73,7 +73,7 @@ function processCard(SET, card, callback) {
 			if (!fieldValue) {
 				taint = true;
 			}
-			else 
+			else
 				diff = diffUtil.diff(previousValue, fieldValue);
 
 			if (diff) {
@@ -362,7 +362,7 @@ tiptoe(
 		fs.writeFile(path.join(jsonRoot, 'SetCodes.jsonp'), JSONP_PREFIX + setCodes + ', "SetCodes"' + JSONP_SUFFIX, { encoding : 'utf8' }, this.parallel());
 
 		// SetList
-		var setList = JSON.stringify(C.SETS.map(function(SET) { return { name : SET.name, code : SET.code, releaseDate : SET.releaseDate }; }), null, 2);
+		var setList = JSON.stringify(C.SETS.map(function(SET) { return { name : SET.name, code : SET.code, releaseDate : SET.releaseDate, block: SET.block }; }), null, 2);
 		fs.writeFile(path.join(jsonRoot, 'SetList.json'), setList, { encoding : 'utf8' }, this.parallel());
 		fs.writeFile(path.join(jsonRoot, 'SetList.jsonp'), JSONP_PREFIX + setList + ', "SetList"' + JSONP_SUFFIX, { encoding : 'utf8' }, this.parallel());
 
