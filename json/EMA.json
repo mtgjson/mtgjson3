@@ -4313,8 +4313,11 @@
       "subtypes": [
         "Jace"
       ],
+      "supertypes": [
+        "Legendary"
+      ],
       "text": "+2: Look at the top card of target player's library. You may put that card on the bottom of that player's library.\n0: Draw three cards, then put two cards from your hand on top of your library in any order.\n−1: Return target creature to its owner's hand.\n−12: Exile all cards from target player's library, then that player shuffles his or her hand into his or her library.",
-      "type": "Planeswalker — Jace",
+      "type": "Legendary Planeswalker — Jace",
       "types": [
         "Planeswalker"
       ]
@@ -6394,6 +6397,10 @@
           "legality": "Legal"
         },
         {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Khans of Tarkir Block",
           "legality": "Legal"
         },
@@ -7969,7 +7976,7 @@
       "rulings": [
         {
           "date": "2016-06-08",
-          "text": "You'll sacrifice Skulking Ghost even if you counter the spell or ability that targets it. If that spell has no other targets, it'll be countered when it tries to resolve."
+          "text": "You'll sacrifice this creature even if you counter the spell or ability that targets it. If that spell has no other targets, it'll be countered when it tries to resolve."
         }
       ],
       "subtypes": [
@@ -14784,8 +14791,11 @@
       "subtypes": [
         "Dack"
       ],
+      "supertypes": [
+        "Legendary"
+      ],
       "text": "+1: Target player draws two cards, then discards two cards.\n−2: Gain control of target artifact.\n−6: You get an emblem with \"Whenever you cast a spell that targets one or more permanents, gain control of those permanents.\"",
-      "type": "Planeswalker — Dack",
+      "type": "Legendary Planeswalker — Dack",
       "types": [
         "Planeswalker"
       ]
@@ -16637,16 +16647,12 @@
         {
           "date": "2016-06-08",
           "text": "If, during your declare attackers step, Juggernaut is tapped, is affected by a spell or ability that says it can't attack, or you haven't controlled it continuously since the beginning of your turn, then it doesn't attack. If there's a cost associated with having Juggernaut attack, you aren't forced to pay that cost, so it doesn't have to attack in that case either."
-        },
-        {
-          "date": "2016-06-08",
-          "text": "If there are multiple combat phases in a turn, Juggernaut must attack only in the first one in which it's able to."
         }
       ],
       "subtypes": [
         "Juggernaut"
       ],
-      "text": "Juggernaut attacks each turn if able.\nJuggernaut can't be blocked by Walls.",
+      "text": "Juggernaut attacks each combat if able.\nJuggernaut can't be blocked by Walls.",
       "toughness": "3",
       "type": "Artifact Creature — Juggernaut",
       "types": [

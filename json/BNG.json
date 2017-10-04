@@ -12175,7 +12175,7 @@
         "Human",
         "Soldier"
       ],
-      "text": "Flying, haste\nImpetuous Sunchaser attacks each turn if able.",
+      "text": "Flying, haste\nImpetuous Sunchaser attacks each combat if able.",
       "toughness": "1",
       "type": "Creature — Human Soldier",
       "types": [
@@ -14736,10 +14736,6 @@
         {
           "date": "2014-02-01",
           "text": "The controller of the creature chooses which attacking creature that creature blocks."
-        },
-        {
-          "date": "2014-02-01",
-          "text": "If there are multiple combat phases in a turn, the creature must block only in the first one in which it's able to."
         }
       ],
       "text": "Target creature blocks this turn if able.",
@@ -18370,8 +18366,11 @@
       "subtypes": [
         "Kiora"
       ],
+      "supertypes": [
+        "Legendary"
+      ],
       "text": "+1: Until your next turn, prevent all damage that would be dealt to and dealt by target permanent an opponent controls.\n−1: Draw a card. You may play an additional land this turn.\n−5: You get an emblem with \"At the beginning of your end step, create a 9/9 blue Kraken creature token.\"",
-      "type": "Planeswalker — Kiora",
+      "type": "Legendary Planeswalker — Kiora",
       "types": [
         "Planeswalker"
       ]

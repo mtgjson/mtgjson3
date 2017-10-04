@@ -1514,16 +1514,12 @@
         {
           "date": "2010-06-15",
           "text": "If, during your declare attackers step, Ulamog's Crusher is tapped, is affected by a spell or ability that says it can't attack, or is affected by \"summoning sickness,\" then it doesn't attack. If there's a cost associated with having Ulamog's Crusher attack, you aren't forced to pay that cost, so it doesn't have to attack in that case either."
-        },
-        {
-          "date": "2010-06-15",
-          "text": "If there are multiple combat phases in a turn, Ulamog's Crusher must attack only in the first one in which it's able to."
         }
       ],
       "subtypes": [
         "Eldrazi"
       ],
-      "text": "Annihilator 2 (Whenever this creature attacks, defending player sacrifices two permanents.)\nUlamog's Crusher attacks each turn if able.",
+      "text": "Annihilator 2 (Whenever this creature attacks, defending player sacrifices two permanents.)\nUlamog's Crusher attacks each combat if able.",
       "toughness": "8",
       "type": "Creature — Eldrazi",
       "types": [
@@ -2022,6 +2018,10 @@
           "legality": "Legal"
         },
         {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -2473,8 +2473,11 @@
       "subtypes": [
         "Gideon"
       ],
+      "supertypes": [
+        "Legendary"
+      ],
       "text": "+2: During target opponent's next turn, creatures that player controls attack Gideon Jura if able.\n−2: Destroy target tapped creature.\n0: Until end of turn, Gideon Jura becomes a 6/6 Human Soldier creature that's still a planeswalker. Prevent all damage that would be dealt to him this turn.",
-      "type": "Planeswalker — Gideon",
+      "type": "Legendary Planeswalker — Gideon",
       "types": [
         "Planeswalker"
       ]
@@ -17722,16 +17725,12 @@
         {
           "date": "2010-06-15",
           "text": "If, during its controller's declare attackers step, the enchanted creature is tapped, is affected by a spell or ability that says it can't attack, or is affected by \"summoning sickness,\" then that creature doesn't attack. If there's a cost associated with having that creature attack, its controller isn't forced to pay that cost, so the creature doesn't have to attack in that case either."
-        },
-        {
-          "date": "2010-06-15",
-          "text": "If there are multiple combat phases in a turn, the enchanted creature must attack only in the first one in which it's able to."
         }
       ],
       "subtypes": [
         "Aura"
       ],
-      "text": "Enchant creature\nWhenever enchanted creature becomes tapped, Lust for War deals 3 damage to that creature's controller.\nEnchanted creature attacks each turn if able.",
+      "text": "Enchant creature\nWhenever enchanted creature becomes tapped, Lust for War deals 3 damage to that creature's controller.\nEnchanted creature attacks each combat if able.",
       "type": "Enchantment — Aura",
       "types": [
         "Enchantment"
@@ -21215,10 +21214,6 @@
         {
           "date": "2010-06-15",
           "text": "If the affected creature attacks, the defending player must assign at least one blocker to it during the declare blockers step, unless that player controls no creatures that could block it."
-        },
-        {
-          "date": "2010-06-15",
-          "text": "If there are multiple combat phases in a turn, the affected creature must be blocked only in the first one in which it's able to be blocked."
         }
       ],
       "text": "Target creature must be blocked this turn if able.\nDraw a card.",
@@ -23785,7 +23780,7 @@
         },
         {
           "date": "2010-06-15",
-          "text": "This ability affects only sacrifices. It won't stop a creature from being put into the graveyard due to lethal damage or having 0 toughness, and it won't stop a permanent from being put into the graveyard due to the \"legend rule\" or the \"planeswalker uniqueness rule.\" None of these are sacrifices; they're the result of game rules."
+          "text": "This ability affects only sacrifices. It won't stop a creature from being put into the graveyard due to lethal damage or having 0 toughness, and it won't stop a permanent from being put into the graveyard due to the \"legend rule.\" None of these are sacrifices; they're the result of game rules."
         }
       ],
       "subtypes": [
@@ -24145,8 +24140,11 @@
       "subtypes": [
         "Sarkhan"
       ],
+      "supertypes": [
+        "Legendary"
+      ],
       "text": "0: Reveal the top card of your library and put it into your hand. Sarkhan the Mad deals damage to himself equal to that card's converted mana cost.\n−2: Target creature's controller sacrifices it, then that player creates a 5/5 red Dragon creature token with flying.\n−4: Each Dragon creature you control deals damage equal to its power to target player.",
-      "type": "Planeswalker — Sarkhan",
+      "type": "Legendary Planeswalker — Sarkhan",
       "types": [
         "Planeswalker"
       ]
@@ -25544,7 +25542,22 @@
         {
           "language": "Chinese Simplified",
           "name": "平原",
+          "multiverseid": 216285
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "平原",
+          "multiverseid": 216288
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "平原",
           "multiverseid": 216290
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "平原",
+          "multiverseid": 216296
         },
         {
           "language": "French",
@@ -25647,24 +25660,9 @@
           "multiverseid": 217040
         },
         {
-          "language": "Spanish",
-          "name": "Llanura",
-          "multiverseid": 217277
-        },
-        {
-          "language": "Spanish",
-          "name": "Llanura",
-          "multiverseid": 217280
-        },
-        {
-          "language": "Spanish",
-          "name": "Llanura",
-          "multiverseid": 217282
-        },
-        {
-          "language": "Spanish",
-          "name": "Llanura",
-          "multiverseid": 217288
+          "language": "Russian",
+          "name": "Равнина",
+          "multiverseid": 216037
         }
       ],
       "id": "24c7dff0c8da63136fa45e228cc8dfdc2735a489",
@@ -25693,6 +25691,10 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
           "legality": "Legal"
         },
         {
@@ -25928,7 +25930,22 @@
         {
           "language": "Chinese Simplified",
           "name": "平原",
+          "multiverseid": 216285
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "平原",
+          "multiverseid": 216288
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "平原",
           "multiverseid": 216290
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "平原",
+          "multiverseid": 216296
         },
         {
           "language": "French",
@@ -26031,24 +26048,9 @@
           "multiverseid": 217040
         },
         {
-          "language": "Spanish",
-          "name": "Llanura",
-          "multiverseid": 217277
-        },
-        {
-          "language": "Spanish",
-          "name": "Llanura",
-          "multiverseid": 217280
-        },
-        {
-          "language": "Spanish",
-          "name": "Llanura",
-          "multiverseid": 217282
-        },
-        {
-          "language": "Spanish",
-          "name": "Llanura",
-          "multiverseid": 217288
+          "language": "Russian",
+          "name": "Равнина",
+          "multiverseid": 216037
         }
       ],
       "id": "8017540d63417b7ad5aee8d0a1c929b72721f852",
@@ -26077,6 +26079,10 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
           "legality": "Legal"
         },
         {
@@ -26312,7 +26318,22 @@
         {
           "language": "Chinese Simplified",
           "name": "平原",
+          "multiverseid": 216285
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "平原",
+          "multiverseid": 216288
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "平原",
           "multiverseid": 216290
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "平原",
+          "multiverseid": 216296
         },
         {
           "language": "French",
@@ -26415,24 +26436,9 @@
           "multiverseid": 217040
         },
         {
-          "language": "Spanish",
-          "name": "Llanura",
-          "multiverseid": 217277
-        },
-        {
-          "language": "Spanish",
-          "name": "Llanura",
-          "multiverseid": 217280
-        },
-        {
-          "language": "Spanish",
-          "name": "Llanura",
-          "multiverseid": 217282
-        },
-        {
-          "language": "Spanish",
-          "name": "Llanura",
-          "multiverseid": 217288
+          "language": "Russian",
+          "name": "Равнина",
+          "multiverseid": 216037
         }
       ],
       "id": "366ae50b7194c2cad9281961e9d1665a4acf0c71",
@@ -26461,6 +26467,10 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
           "legality": "Legal"
         },
         {
@@ -26848,6 +26858,10 @@
           "legality": "Legal"
         },
         {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Kaladesh Block",
           "legality": "Legal"
         },
@@ -27080,6 +27094,21 @@
         {
           "language": "Chinese Simplified",
           "name": "海岛",
+          "multiverseid": 216291
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "海岛",
+          "multiverseid": 216297
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "海岛",
+          "multiverseid": 216301
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "海岛",
           "multiverseid": 216302
         },
         {
@@ -27186,21 +27215,6 @@
           "language": "Spanish",
           "name": "Isla",
           "multiverseid": 217283
-        },
-        {
-          "language": "Spanish",
-          "name": "Isla",
-          "multiverseid": 217289
-        },
-        {
-          "language": "Spanish",
-          "name": "Isla",
-          "multiverseid": 217293
-        },
-        {
-          "language": "Spanish",
-          "name": "Isla",
-          "multiverseid": 217294
         }
       ],
       "id": "e47f727d2ba3d2054769d0e97f64f11ea73ae06a",
@@ -27229,6 +27243,10 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
           "legality": "Legal"
         },
         {
@@ -27462,6 +27480,21 @@
         {
           "language": "Chinese Simplified",
           "name": "海岛",
+          "multiverseid": 216291
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "海岛",
+          "multiverseid": 216297
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "海岛",
+          "multiverseid": 216301
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "海岛",
           "multiverseid": 216302
         },
         {
@@ -27568,21 +27601,6 @@
           "language": "Spanish",
           "name": "Isla",
           "multiverseid": 217283
-        },
-        {
-          "language": "Spanish",
-          "name": "Isla",
-          "multiverseid": 217289
-        },
-        {
-          "language": "Spanish",
-          "name": "Isla",
-          "multiverseid": 217293
-        },
-        {
-          "language": "Spanish",
-          "name": "Isla",
-          "multiverseid": 217294
         }
       ],
       "id": "ad8fadf1bdf40eb1385aebdd205428578dcd76fb",
@@ -27611,6 +27629,10 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
           "legality": "Legal"
         },
         {
@@ -27844,6 +27866,21 @@
         {
           "language": "Chinese Simplified",
           "name": "海岛",
+          "multiverseid": 216291
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "海岛",
+          "multiverseid": 216297
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "海岛",
+          "multiverseid": 216301
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "海岛",
           "multiverseid": 216302
         },
         {
@@ -27950,21 +27987,6 @@
           "language": "Spanish",
           "name": "Isla",
           "multiverseid": 217283
-        },
-        {
-          "language": "Spanish",
-          "name": "Isla",
-          "multiverseid": 217289
-        },
-        {
-          "language": "Spanish",
-          "name": "Isla",
-          "multiverseid": 217293
-        },
-        {
-          "language": "Spanish",
-          "name": "Isla",
-          "multiverseid": 217294
         }
       ],
       "id": "30012656940d54621c971539fd3156ce170799b3",
@@ -27993,6 +28015,10 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
           "legality": "Legal"
         },
         {
@@ -28226,6 +28252,21 @@
         {
           "language": "Chinese Simplified",
           "name": "海岛",
+          "multiverseid": 216291
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "海岛",
+          "multiverseid": 216297
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "海岛",
+          "multiverseid": 216301
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "海岛",
           "multiverseid": 216302
         },
         {
@@ -28332,21 +28373,6 @@
           "language": "Spanish",
           "name": "Isla",
           "multiverseid": 217283
-        },
-        {
-          "language": "Spanish",
-          "name": "Isla",
-          "multiverseid": 217289
-        },
-        {
-          "language": "Spanish",
-          "name": "Isla",
-          "multiverseid": 217293
-        },
-        {
-          "language": "Spanish",
-          "name": "Isla",
-          "multiverseid": 217294
         }
       ],
       "id": "d62e9d23cb924c0404648b4d7a1ffed081f7fbc4",
@@ -28375,6 +28401,10 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
           "legality": "Legal"
         },
         {
@@ -28608,6 +28638,21 @@
         {
           "language": "Chinese Simplified",
           "name": "沼泽",
+          "multiverseid": 216298
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "沼泽",
+          "multiverseid": 216299
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "沼泽",
+          "multiverseid": 216300
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "沼泽",
           "multiverseid": 216304
         },
         {
@@ -28696,21 +28741,6 @@
           "multiverseid": 217042
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Pântano",
-          "multiverseid": 217043
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Pântano",
-          "multiverseid": 217044
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Pântano",
-          "multiverseid": 217048
-        },
-        {
           "language": "Spanish",
           "name": "Pantano",
           "multiverseid": 217290
@@ -28757,6 +28787,10 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
           "legality": "Legal"
         },
         {
@@ -28995,6 +29029,21 @@
         {
           "language": "Chinese Simplified",
           "name": "沼泽",
+          "multiverseid": 216298
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "沼泽",
+          "multiverseid": 216299
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "沼泽",
+          "multiverseid": 216300
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "沼泽",
           "multiverseid": 216304
         },
         {
@@ -29083,21 +29132,6 @@
           "multiverseid": 217042
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Pântano",
-          "multiverseid": 217043
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Pântano",
-          "multiverseid": 217044
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Pântano",
-          "multiverseid": 217048
-        },
-        {
           "language": "Spanish",
           "name": "Pantano",
           "multiverseid": 217290
@@ -29144,6 +29178,10 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
           "legality": "Legal"
         },
         {
@@ -29382,6 +29420,21 @@
         {
           "language": "Chinese Simplified",
           "name": "沼泽",
+          "multiverseid": 216298
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "沼泽",
+          "multiverseid": 216299
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "沼泽",
+          "multiverseid": 216300
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "沼泽",
           "multiverseid": 216304
         },
         {
@@ -29470,21 +29523,6 @@
           "multiverseid": 217042
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Pântano",
-          "multiverseid": 217043
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Pântano",
-          "multiverseid": 217044
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Pântano",
-          "multiverseid": 217048
-        },
-        {
           "language": "Spanish",
           "name": "Pantano",
           "multiverseid": 217290
@@ -29531,6 +29569,10 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
           "legality": "Legal"
         },
         {
@@ -29769,6 +29811,21 @@
         {
           "language": "Chinese Simplified",
           "name": "沼泽",
+          "multiverseid": 216298
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "沼泽",
+          "multiverseid": 216299
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "沼泽",
+          "multiverseid": 216300
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "沼泽",
           "multiverseid": 216304
         },
         {
@@ -29857,21 +29914,6 @@
           "multiverseid": 217042
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Pântano",
-          "multiverseid": 217043
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Pântano",
-          "multiverseid": 217044
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Pântano",
-          "multiverseid": 217048
-        },
-        {
           "language": "Spanish",
           "name": "Pantano",
           "multiverseid": 217290
@@ -29918,6 +29960,10 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
           "legality": "Legal"
         },
         {
@@ -30256,22 +30302,22 @@
         {
           "language": "Portuguese (Brazil)",
           "name": "Montanha",
-          "multiverseid": 217028
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Montanha",
-          "multiverseid": 217030
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Montanha",
-          "multiverseid": 217039
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Montanha",
           "multiverseid": 217047
+        },
+        {
+          "language": "Russian",
+          "name": "Гора",
+          "multiverseid": 216036
+        },
+        {
+          "language": "Russian",
+          "name": "Гора",
+          "multiverseid": 216038
+        },
+        {
+          "language": "Russian",
+          "name": "Гора",
+          "multiverseid": 216047
         },
         {
           "language": "Russian",
@@ -30305,6 +30351,10 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
           "legality": "Legal"
         },
         {
@@ -30644,22 +30694,22 @@
         {
           "language": "Portuguese (Brazil)",
           "name": "Montanha",
-          "multiverseid": 217028
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Montanha",
-          "multiverseid": 217030
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Montanha",
-          "multiverseid": 217039
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Montanha",
           "multiverseid": 217047
+        },
+        {
+          "language": "Russian",
+          "name": "Гора",
+          "multiverseid": 216036
+        },
+        {
+          "language": "Russian",
+          "name": "Гора",
+          "multiverseid": 216038
+        },
+        {
+          "language": "Russian",
+          "name": "Гора",
+          "multiverseid": 216047
         },
         {
           "language": "Russian",
@@ -30693,6 +30743,10 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
           "legality": "Legal"
         },
         {
@@ -30935,21 +30989,6 @@
           "multiverseid": 216284
         },
         {
-          "language": "Chinese Simplified",
-          "name": "山脉",
-          "multiverseid": 216286
-        },
-        {
-          "language": "Chinese Simplified",
-          "name": "山脉",
-          "multiverseid": 216295
-        },
-        {
-          "language": "Chinese Simplified",
-          "name": "山脉",
-          "multiverseid": 216303
-        },
-        {
           "language": "French",
           "name": "Montagne",
           "multiverseid": 215788
@@ -31030,29 +31069,44 @@
           "multiverseid": 216799
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Montanha",
-          "multiverseid": 217028
+          "language": "Russian",
+          "name": "Гора",
+          "multiverseid": 216036
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Montanha",
-          "multiverseid": 217030
+          "language": "Russian",
+          "name": "Гора",
+          "multiverseid": 216038
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Montanha",
-          "multiverseid": 217039
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Montanha",
-          "multiverseid": 217047
+          "language": "Russian",
+          "name": "Гора",
+          "multiverseid": 216047
         },
         {
           "language": "Russian",
           "name": "Гора",
           "multiverseid": 216055
+        },
+        {
+          "language": "Spanish",
+          "name": "Montaña",
+          "multiverseid": 217276
+        },
+        {
+          "language": "Spanish",
+          "name": "Montaña",
+          "multiverseid": 217278
+        },
+        {
+          "language": "Spanish",
+          "name": "Montaña",
+          "multiverseid": 217287
+        },
+        {
+          "language": "Spanish",
+          "name": "Montaña",
+          "multiverseid": 217295
         }
       ],
       "id": "666b8af4c15dba6e7902f2c9135d1a23e14645f8",
@@ -31081,6 +31135,10 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
           "legality": "Legal"
         },
         {
@@ -31323,21 +31381,6 @@
           "multiverseid": 216284
         },
         {
-          "language": "Chinese Simplified",
-          "name": "山脉",
-          "multiverseid": 216286
-        },
-        {
-          "language": "Chinese Simplified",
-          "name": "山脉",
-          "multiverseid": 216295
-        },
-        {
-          "language": "Chinese Simplified",
-          "name": "山脉",
-          "multiverseid": 216303
-        },
-        {
           "language": "French",
           "name": "Montagne",
           "multiverseid": 215788
@@ -31418,29 +31461,44 @@
           "multiverseid": 216799
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Montanha",
-          "multiverseid": 217028
+          "language": "Russian",
+          "name": "Гора",
+          "multiverseid": 216036
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Montanha",
-          "multiverseid": 217030
+          "language": "Russian",
+          "name": "Гора",
+          "multiverseid": 216038
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Montanha",
-          "multiverseid": 217039
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Montanha",
-          "multiverseid": 217047
+          "language": "Russian",
+          "name": "Гора",
+          "multiverseid": 216047
         },
         {
           "language": "Russian",
           "name": "Гора",
           "multiverseid": 216055
+        },
+        {
+          "language": "Spanish",
+          "name": "Montaña",
+          "multiverseid": 217276
+        },
+        {
+          "language": "Spanish",
+          "name": "Montaña",
+          "multiverseid": 217278
+        },
+        {
+          "language": "Spanish",
+          "name": "Montaña",
+          "multiverseid": 217287
+        },
+        {
+          "language": "Spanish",
+          "name": "Montaña",
+          "multiverseid": 217295
         }
       ],
       "id": "31d9182cbee3328454b5af7cc4b7617e8e00644e",
@@ -31469,6 +31527,10 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
           "legality": "Legal"
         },
         {
@@ -31808,27 +31870,27 @@
         {
           "language": "Portuguese (Brazil)",
           "name": "Floresta",
-          "multiverseid": 217031
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Floresta",
           "multiverseid": 217036
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Floresta",
-          "multiverseid": 217037
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 217279
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Floresta",
-          "multiverseid": 217049
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 217284
         },
         {
-          "language": "Russian",
-          "name": "Лес",
-          "multiverseid": 216039
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 217285
+        },
+        {
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 217297
         }
       ],
       "id": "2a542c906d2f38ae987335675ab8f8eb80852e8f",
@@ -31857,6 +31919,10 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
           "legality": "Legal"
         },
         {
@@ -32194,27 +32260,27 @@
         {
           "language": "Portuguese (Brazil)",
           "name": "Floresta",
-          "multiverseid": 217031
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Floresta",
           "multiverseid": 217036
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Floresta",
-          "multiverseid": 217037
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 217279
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Floresta",
-          "multiverseid": 217049
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 217284
         },
         {
-          "language": "Russian",
-          "name": "Лес",
-          "multiverseid": 216039
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 217285
+        },
+        {
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 217297
         }
       ],
       "id": "4268ca33a79503c9c9aeacf1693f6361b6e01999",
@@ -32243,6 +32309,10 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
           "legality": "Legal"
         },
         {
@@ -32580,27 +32650,27 @@
         {
           "language": "Portuguese (Brazil)",
           "name": "Floresta",
-          "multiverseid": 217031
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Floresta",
           "multiverseid": 217036
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Floresta",
-          "multiverseid": 217037
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 217279
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Floresta",
-          "multiverseid": 217049
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 217284
         },
         {
-          "language": "Russian",
-          "name": "Лес",
-          "multiverseid": 216039
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 217285
+        },
+        {
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 217297
         }
       ],
       "id": "a392dce5e28997ce7a4d97672a190d10855f58b9",
@@ -32629,6 +32699,10 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
           "legality": "Legal"
         },
         {
@@ -32966,27 +33040,27 @@
         {
           "language": "Portuguese (Brazil)",
           "name": "Floresta",
-          "multiverseid": 217031
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Floresta",
           "multiverseid": 217036
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Floresta",
-          "multiverseid": 217037
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 217279
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Floresta",
-          "multiverseid": 217049
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 217284
         },
         {
-          "language": "Russian",
-          "name": "Лес",
-          "multiverseid": 216039
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 217285
+        },
+        {
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 217297
         }
       ],
       "id": "3cf81e7c94e62f019d03f4fe8dea6811c6ac4619",
@@ -33015,6 +33089,10 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
           "legality": "Legal"
         },
         {
