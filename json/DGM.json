@@ -4412,7 +4412,7 @@
         "Goblin",
         "Berserker"
       ],
-      "text": "First strike\nRiot Piker attacks each turn if able.",
+      "text": "First strike\nRiot Piker attacks each combat if able.",
       "toughness": "1",
       "type": "Creature — Goblin Berserker",
       "types": [
@@ -8362,7 +8362,7 @@
           "text": "You don't choose the value of X. The bonus Feral Animist gets is based on its power when the ability resolves. For example, if you activate the ability twice, the first ability will give it +2/+0 and the second one will give it +4/+0."
         },
         {
-          "date": "2017-06-27",
+          "date": "2017-07-14",
           "text": "If this creature's power is negative as its ability resolves, X is considered to be 0. (This is a change from previous rulings.)"
         }
       ],
@@ -11299,8 +11299,11 @@
       "subtypes": [
         "Ral"
       ],
+      "supertypes": [
+        "Legendary"
+      ],
       "text": "+1: Tap target permanent, then untap another target permanent.\n−2: Ral Zarek deals 3 damage to target creature or player.\n−7: Flip five coins. Take an extra turn after this one for each coin that comes up heads.",
-      "type": "Planeswalker — Ral",
+      "type": "Legendary Planeswalker — Ral",
       "types": [
         "Planeswalker"
       ]
@@ -11915,7 +11918,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "Vigilance, reach\nRuric Thar, the Unbowed attacks each turn if able.\nWhenever a player casts a noncreature spell, Ruric Thar deals 6 damage to that player.",
+      "text": "Vigilance, reach\nRuric Thar, the Unbowed attacks each combat if able.\nWhenever a player casts a noncreature spell, Ruric Thar deals 6 damage to that player.",
       "toughness": "6",
       "type": "Legendary Creature — Ogre Warrior",
       "types": [
@@ -15021,10 +15024,6 @@
         {
           "date": "2013-04-15",
           "text": "As blockers are declared, any creature that's tapped or affected by a spell or ability that says it can't block doesn't block. If there's a cost associated with having the creature block, no player is forced to pay that cost, so it doesn't block if that cost isn't paid."
-        },
-        {
-          "date": "2013-04-15",
-          "text": "If there are multiple combat phases, creatures that blocked the creature targeted by Dangerous in the first combat aren't required to block it again in subsequent combats."
         },
         {
           "date": "2013-04-15",

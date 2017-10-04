@@ -1123,11 +1123,7 @@
         },
         {
           "date": "2011-09-22",
-          "text": "In most cases, when determining whether a creature entering the battlefield under your control should get a +1/+1 counter, you'll simply look at what the creature will looklike on the battlefield. You'llconsider any effects affecting acreature entering the battlefield under your control that fall under one of these categories: --Replacement effects that have already modified how the permanent enters the battlefield, like the one created by Clone. --Continuous effects that changed the permanent's creature type on the stack, like the one created by Artificial Evolution. --Effects from the permanent's own static abilities, as long as they affect only that permanent, like Adaptive Automaton's."
-        },
-        {
-          "date": "2011-09-22",
-          "text": "However, you'll ignore the continuous effects of static abilities that come from other sources. For example, if you control Xenograft with Human as the chosen creature type, a Vampire creature would not enter the battlefield with a +1/+1 counter."
+          "text": "In most cases, when determining whether a creature entering the battlefield under your control should get a +1/+1 counter, you'll simply look at what the creature will looklike on the battlefield. You'll consider any effects affecting a creature entering the battlefield under your control."
         }
       ],
       "subtypes": [
@@ -12212,8 +12208,11 @@
       "subtypes": [
         "Liliana"
       ],
+      "supertypes": [
+        "Legendary"
+      ],
       "text": "+1: Each player discards a card.\n−2: Target player sacrifices a creature.\n−6: Separate all permanents target player controls into two piles. That player sacrifices all permanents in the pile of his or her choice.",
-      "type": "Planeswalker — Liliana",
+      "type": "Legendary Planeswalker — Liliana",
       "types": [
         "Planeswalker"
       ]
@@ -15120,7 +15119,7 @@
       "subtypes": [
         "Vampire"
       ],
-      "text": "Bloodcrazed Neonate attacks each turn if able.\nWhenever Bloodcrazed Neonate deals combat damage to a player, put a +1/+1 counter on it.",
+      "text": "Bloodcrazed Neonate attacks each combat if able.\nWhenever Bloodcrazed Neonate deals combat damage to a player, put a +1/+1 counter on it.",
       "toughness": "1",
       "type": "Creature — Vampire",
       "types": [
@@ -15770,10 +15769,6 @@
         },
         {
           "date": "2011-09-22",
-          "text": "If there are multiple combat phases in a turn, each creature must attack only in the first one in which it's able to."
-        },
-        {
-          "date": "2011-09-22",
           "text": "If, during the enchanted player's declare attackers step, a creature he or she controls is tapped, is affected by a spell or ability that says it can't attack, or hasn't been under that player's control continuously since the turn began (and doesn't have haste), then it doesn't attack. If there's a cost associated with having the creature attack, the player isn't forced to pay that cost, so it doesn't have to attack in that case either."
         }
       ],
@@ -15781,7 +15776,7 @@
         "Aura",
         "Curse"
       ],
-      "text": "Enchant player\nCreatures enchanted player controls attack each turn if able.",
+      "text": "Enchant player\nCreatures enchanted player controls attack each combat if able.",
       "type": "Enchantment — Aura Curse",
       "types": [
         "Enchantment"
@@ -16408,17 +16403,13 @@
         },
         {
           "date": "2011-09-22",
-          "text": "If there are multiple combat phases in a turn, the enchanted creature must attack only in the first one in which it's able to."
-        },
-        {
-          "date": "2011-09-22",
           "text": "If, during its controller's declare attackers step, the enchanted creature is tapped, is affected by a spell or ability that says it can't attack, or hasn't been under that player's control continuously since the turn began (and doesn't have haste), then it doesn't attack. If there's a cost associated with having the creature attack, the player isn't forced to pay that cost, so it doesn't have to attack in that case either."
         }
       ],
       "subtypes": [
         "Aura"
       ],
-      "text": "Enchant creature\nEnchanted creature gets +2/+2 and attacks each turn if able.",
+      "text": "Enchant creature\nEnchanted creature gets +2/+2 and attacks each combat if able.",
       "type": "Enchantment — Aura",
       "types": [
         "Enchantment"
@@ -16740,7 +16731,7 @@
       "subtypes": [
         "Werewolf"
       ],
-      "text": "Bane of Hanweir attacks each turn if able.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform Bane of Hanweir.",
+      "text": "Bane of Hanweir attacks each combat if able.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform Bane of Hanweir.",
       "toughness": "5",
       "type": "Creature — Werewolf",
       "types": [
@@ -21316,8 +21307,11 @@
       "subtypes": [
         "Garruk"
       ],
+      "supertypes": [
+        "Legendary"
+      ],
       "text": "When Garruk Relentless has two or fewer loyalty counters on him, transform him.\n0: Garruk Relentless deals 3 damage to target creature. That creature deals damage equal to its power to him.\n0: Create a 2/2 green Wolf creature token.",
-      "type": "Planeswalker — Garruk",
+      "type": "Legendary Planeswalker — Garruk",
       "types": [
         "Planeswalker"
       ]
@@ -21436,8 +21430,11 @@
       "subtypes": [
         "Garruk"
       ],
+      "supertypes": [
+        "Legendary"
+      ],
       "text": "+1: Create a 1/1 black Wolf creature token with deathtouch.\n−1: Sacrifice a creature. If you do, search your library for a creature card, reveal it, put it into your hand, then shuffle your library.\n−3: Creatures you control gain trample and get +X/+X until end of turn, where X is the number of creature cards in your graveyard.",
-      "type": "Planeswalker — Garruk",
+      "type": "Legendary Planeswalker — Garruk",
       "types": [
         "Planeswalker"
       ]
@@ -26214,6 +26211,10 @@
           "legality": "Legal"
         },
         {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -26550,7 +26551,7 @@
       "subtypes": [
         "Juggernaut"
       ],
-      "text": "Galvanic Juggernaut attacks each turn if able.\nGalvanic Juggernaut doesn't untap during your untap step.\nWhenever another creature dies, untap Galvanic Juggernaut.",
+      "text": "Galvanic Juggernaut attacks each combat if able.\nGalvanic Juggernaut doesn't untap during your untap step.\nWhenever another creature dies, untap Galvanic Juggernaut.",
       "toughness": "5",
       "type": "Artifact Creature — Juggernaut",
       "types": [
@@ -29295,6 +29296,16 @@
         {
           "language": "French",
           "name": "Plaine",
+          "multiverseid": 273096
+        },
+        {
+          "language": "French",
+          "name": "Plaine",
+          "multiverseid": 273097
+        },
+        {
+          "language": "French",
+          "name": "Plaine",
           "multiverseid": 273098
         },
         {
@@ -29375,17 +29386,7 @@
         {
           "language": "Spanish",
           "name": "Llanura",
-          "multiverseid": 273948
-        },
-        {
-          "language": "Spanish",
-          "name": "Llanura",
           "multiverseid": 273949
-        },
-        {
-          "language": "Spanish",
-          "name": "Llanura",
-          "multiverseid": 273950
         }
       ],
       "id": "cc259b9098635ee38eb6f1d3e531f049e2cf5311",
@@ -29414,6 +29415,10 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
           "legality": "Legal"
         },
         {
@@ -29678,6 +29683,16 @@
         {
           "language": "French",
           "name": "Plaine",
+          "multiverseid": 273096
+        },
+        {
+          "language": "French",
+          "name": "Plaine",
+          "multiverseid": 273097
+        },
+        {
+          "language": "French",
+          "name": "Plaine",
           "multiverseid": 273098
         },
         {
@@ -29758,17 +29773,7 @@
         {
           "language": "Spanish",
           "name": "Llanura",
-          "multiverseid": 273948
-        },
-        {
-          "language": "Spanish",
-          "name": "Llanura",
           "multiverseid": 273949
-        },
-        {
-          "language": "Spanish",
-          "name": "Llanura",
-          "multiverseid": 273950
         }
       ],
       "id": "ac2ca0ea5f300977be80c134fe2fce4f19b01a1f",
@@ -29797,6 +29802,10 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
           "legality": "Legal"
         },
         {
@@ -30183,6 +30192,10 @@
           "legality": "Legal"
         },
         {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Kaladesh Block",
           "legality": "Legal"
         },
@@ -30563,6 +30576,10 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
           "legality": "Legal"
         },
         {
@@ -30947,6 +30964,10 @@
           "legality": "Legal"
         },
         {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Kaladesh Block",
           "legality": "Legal"
         },
@@ -31239,6 +31260,16 @@
           "multiverseid": 274235
         },
         {
+          "language": "Italian",
+          "name": "Isola",
+          "multiverseid": 274236
+        },
+        {
+          "language": "Italian",
+          "name": "Isola",
+          "multiverseid": 274237
+        },
+        {
           "language": "Japanese",
           "name": "島",
           "multiverseid": 274519
@@ -31287,16 +31318,6 @@
           "language": "Spanish",
           "name": "Isla",
           "multiverseid": 273951
-        },
-        {
-          "language": "Spanish",
-          "name": "Isla",
-          "multiverseid": 273952
-        },
-        {
-          "language": "Spanish",
-          "name": "Isla",
-          "multiverseid": 273953
         }
       ],
       "id": "ceffad0e1cf401b651eedf592ba4a283156c7769",
@@ -31325,6 +31346,10 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
           "legality": "Legal"
         },
         {
@@ -31602,7 +31627,17 @@
         {
           "language": "German",
           "name": "Sumpf",
+          "multiverseid": 273670
+        },
+        {
+          "language": "German",
+          "name": "Sumpf",
           "multiverseid": 273671
+        },
+        {
+          "language": "German",
+          "name": "Sumpf",
+          "multiverseid": 273672
         },
         {
           "language": "Italian",
@@ -31668,16 +31703,6 @@
           "language": "Spanish",
           "name": "Pantano",
           "multiverseid": 273954
-        },
-        {
-          "language": "Spanish",
-          "name": "Pantano",
-          "multiverseid": 273955
-        },
-        {
-          "language": "Spanish",
-          "name": "Pantano",
-          "multiverseid": 273956
         }
       ],
       "id": "879285d7ada62b81797d9aec0427783df258f3ff",
@@ -31706,6 +31731,10 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
           "legality": "Legal"
         },
         {
@@ -31988,22 +32017,22 @@
         {
           "language": "German",
           "name": "Sumpf",
+          "multiverseid": 273670
+        },
+        {
+          "language": "German",
+          "name": "Sumpf",
           "multiverseid": 273671
         },
         {
-          "language": "Italian",
-          "name": "Palude",
-          "multiverseid": 274238
+          "language": "German",
+          "name": "Sumpf",
+          "multiverseid": 273672
         },
         {
           "language": "Italian",
           "name": "Palude",
           "multiverseid": 274239
-        },
-        {
-          "language": "Italian",
-          "name": "Palude",
-          "multiverseid": 274240
         },
         {
           "language": "Japanese",
@@ -32092,6 +32121,10 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
           "legality": "Legal"
         },
         {
@@ -32374,22 +32407,22 @@
         {
           "language": "German",
           "name": "Sumpf",
+          "multiverseid": 273670
+        },
+        {
+          "language": "German",
+          "name": "Sumpf",
           "multiverseid": 273671
         },
         {
-          "language": "Italian",
-          "name": "Palude",
-          "multiverseid": 274238
+          "language": "German",
+          "name": "Sumpf",
+          "multiverseid": 273672
         },
         {
           "language": "Italian",
           "name": "Palude",
           "multiverseid": 274239
-        },
-        {
-          "language": "Italian",
-          "name": "Palude",
-          "multiverseid": 274240
         },
         {
           "language": "Japanese",
@@ -32478,6 +32511,10 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
           "legality": "Legal"
         },
         {
@@ -32867,6 +32904,10 @@
           "legality": "Legal"
         },
         {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Kaladesh Block",
           "legality": "Legal"
         },
@@ -33132,17 +33173,7 @@
         {
           "language": "French",
           "name": "Montagne",
-          "multiverseid": 273105
-        },
-        {
-          "language": "French",
-          "name": "Montagne",
           "multiverseid": 273106
-        },
-        {
-          "language": "French",
-          "name": "Montagne",
-          "multiverseid": 273107
         },
         {
           "language": "German",
@@ -33222,6 +33253,16 @@
         {
           "language": "Spanish",
           "name": "Montaña",
+          "multiverseid": 273957
+        },
+        {
+          "language": "Spanish",
+          "name": "Montaña",
+          "multiverseid": 273958
+        },
+        {
+          "language": "Spanish",
+          "name": "Montaña",
           "multiverseid": 273959
         }
       ],
@@ -33251,6 +33292,10 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
           "legality": "Legal"
         },
         {
@@ -33519,17 +33564,7 @@
         {
           "language": "French",
           "name": "Montagne",
-          "multiverseid": 273105
-        },
-        {
-          "language": "French",
-          "name": "Montagne",
           "multiverseid": 273106
-        },
-        {
-          "language": "French",
-          "name": "Montagne",
-          "multiverseid": 273107
         },
         {
           "language": "German",
@@ -33609,6 +33644,16 @@
         {
           "language": "Spanish",
           "name": "Montaña",
+          "multiverseid": 273957
+        },
+        {
+          "language": "Spanish",
+          "name": "Montaña",
+          "multiverseid": 273958
+        },
+        {
+          "language": "Spanish",
+          "name": "Montaña",
           "multiverseid": 273959
         }
       ],
@@ -33638,6 +33683,10 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
           "legality": "Legal"
         },
         {
@@ -33906,16 +33955,6 @@
         {
           "language": "French",
           "name": "Forêt",
-          "multiverseid": 273108
-        },
-        {
-          "language": "French",
-          "name": "Forêt",
-          "multiverseid": 273109
-        },
-        {
-          "language": "French",
-          "name": "Forêt",
           "multiverseid": 273110
         },
         {
@@ -33996,7 +34035,17 @@
         {
           "language": "Spanish",
           "name": "Bosque",
+          "multiverseid": 273960
+        },
+        {
+          "language": "Spanish",
+          "name": "Bosque",
           "multiverseid": 273961
+        },
+        {
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 273962
         }
       ],
       "id": "e9abef8533c9ce6549147232c5fceff75ffb460a",
@@ -34025,6 +34074,10 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
           "legality": "Legal"
         },
         {
@@ -34291,16 +34344,6 @@
         {
           "language": "French",
           "name": "Forêt",
-          "multiverseid": 273108
-        },
-        {
-          "language": "French",
-          "name": "Forêt",
-          "multiverseid": 273109
-        },
-        {
-          "language": "French",
-          "name": "Forêt",
           "multiverseid": 273110
         },
         {
@@ -34381,7 +34424,17 @@
         {
           "language": "Spanish",
           "name": "Bosque",
+          "multiverseid": 273960
+        },
+        {
+          "language": "Spanish",
+          "name": "Bosque",
           "multiverseid": 273961
+        },
+        {
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 273962
         }
       ],
       "id": "3c509643d7f7827b2debf968c05cb800cb772360",
@@ -34410,6 +34463,10 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
           "legality": "Legal"
         },
         {
@@ -34795,6 +34852,10 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
           "legality": "Legal"
         },
         {

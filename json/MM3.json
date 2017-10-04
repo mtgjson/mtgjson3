@@ -3930,6 +3930,10 @@
           "legality": "Legal"
         },
         {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -4975,7 +4979,7 @@
           "text": "In a Two-Headed Giant game, your life total is your team's life total."
         },
         {
-          "date": "2017-06-27",
+          "date": "2017-07-14",
           "text": "If your life total is negative, X is considered to be 0. (This is a change from previous rulings.)"
         }
       ],
@@ -5910,8 +5914,11 @@
       "subtypes": [
         "Liliana"
       ],
+      "supertypes": [
+        "Legendary"
+      ],
       "text": "+1: Each player discards a card.\n−2: Target player sacrifices a creature.\n−6: Separate all permanents target player controls into two piles. That player sacrifices all permanents in the pile of his or her choice.",
-      "type": "Planeswalker — Liliana",
+      "type": "Legendary Planeswalker — Liliana",
       "types": [
         "Planeswalker"
       ]
@@ -6951,11 +6958,11 @@
         },
         {
           "date": "2017-03-14",
-          "text": "If a nonbasic land has an ability that causes it to enter the battlefield tapped, that ability will still function. For example, if Blood Crypt is entering the battlefield, its controller may pay 2 life to have it enter untapped. Regardless of this choice, it will be only a Mountain and not a Swamp. The same is also true of any other abilities that modify how a land enters the battlefield or apply \"as\" a land enters the battlefield, such as the first ability of Cavern of Souls."
+          "text": "If a nonbasic land has an ability that triggers \"when\" it enters the battlefield, it will lose that ability before it triggers."
         },
         {
-          "date": "2017-03-14",
-          "text": "If a nonbasic land has an ability that triggers \"when\" it enters the battlefield, it will lose that ability before it triggers."
+          "date": "2017-09-29",
+          "text": "If a nonbasic land has an ability that causes it to enter the battlefield tapped, it lose will that ability before it applies. The same is also true of any other abilities that modify how a land enters the battlefield or apply \"as\" a land enters the battlefield, such as the first ability of Cavern of Souls. This is a change from previous rulings."
         }
       ],
       "text": "Nonbasic lands are Mountains.",
@@ -7359,7 +7366,7 @@
           "text": "Goblin Assault's second ability affects all Goblin creatures controlled by all players. It's not limited to the tokens created with the first ability."
         }
       ],
-      "text": "At the beginning of your upkeep, create a 1/1 red Goblin creature token with haste.\nGoblin creatures attack each turn if able.",
+      "text": "At the beginning of your upkeep, create a 1/1 red Goblin creature token with haste.\nGoblin creatures attack each combat if able.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -12534,8 +12541,11 @@
       "subtypes": [
         "Domri"
       ],
+      "supertypes": [
+        "Legendary"
+      ],
       "text": "+1: Look at the top card of your library. If it's a creature card, you may reveal it and put it into your hand.\n−2: Target creature you control fights another target creature.\n−7: You get an emblem with \"Creatures you control have double strike, trample, hexproof, and haste.\"",
-      "type": "Planeswalker — Domri",
+      "type": "Legendary Planeswalker — Domri",
       "types": [
         "Planeswalker"
       ]
@@ -17244,18 +17254,6 @@
         {
           "date": "2017-03-14",
           "text": "The second ability doesn't stop players from playing land cards from graveyards or libraries since lands aren't cast."
-        },
-        {
-          "date": "2017-04-18",
-          "text": "A noncreature card can enter the battlefield from a graveyard or library if another card's effect (such as that of March of the Machines) will make it a creature after it has entered the battlefield."
-        },
-        {
-          "date": "2017-04-18",
-          "text": "If an object has a static ability that could cause it to become a creature or stop being a creature, that ability is considered when applying Grafdigger's Cage. For example, Rusted Relic can enter the battlefield from a graveyard or library only if you control fewer than three artifacts before it enters. Thassa, God of the Sea can enter only if your devotion to blue is less than five before it enters."
-        },
-        {
-          "date": "2017-04-18",
-          "text": "Applying a replacement effect may cause Grafdigger's Cage to stop an object from entering the battlefield. For example, Sculpting Steel can enter the battlefield from a graveyard or library only if it's not entering as a copy of an artifact creature. However, a replacement effect can't be applied to cause Grafdigger's Cage to not apply. Phyrexian Metamorph can't enter the battlefield even if you wish to copy a noncreature artifact."
         }
       ],
       "text": "Creature cards can't enter the battlefield from graveyards or libraries.\nPlayers can't cast spells from graveyards or libraries.",

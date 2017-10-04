@@ -384,18 +384,18 @@
         },
         {
           "date": "2006-09-25",
-          "text": "\"Enters the battlefield\" triggered abilities of lands you play won't trigger since the lands will enter the battlefield as Plains. Effects that modify how those lands enter the battlefield, however, will still work. For example, if you play a Dimir Aqueduct, it will enter the battlefield tapped as a Plains, but you won't return a land to your hand."
-        },
-        {
-          "date": "2006-09-25",
           "text": "If you use a text-changing effect such as Mind Bend on Celestial Dawn to change the word \"Plains\" to a different land type, your lands are all of that new land type, and they will produce mana of the appropriate color for that type."
         },
         {
           "date": "2006-09-25",
           "text": "If a permanent enters the battlefield while Celestial Dawn is on the battlefield, and then Celestial Dawn leaves the battlefield, the permanent's color will revert to the colors in its mana cost."
+        },
+        {
+          "date": "2017-09-29",
+          "text": "If a nonbasic land has an ability that causes it to enter the battlefield tapped, it lose will that ability before it applies. The same is also true of any other abilities that modify how a land enters the battlefield or apply \"as\" a land enters the battlefield, such as the first ability of Cavern of Souls. This is a change from previous rulings."
         }
       ],
-      "text": "Lands you control are Plains.\nNonland cards you own that aren't on the battlefield, spells you control, and nonland permanents you control are white.\nYou may spend white mana as though it were mana of any color. You may spend other mana only as though it were colorless mana.",
+      "text": "Lands you control are Plains.\nNonland permanents you control are white. The same is true for spells you control and nonland cards you own that aren't on the battlefield.\nYou may spend white mana as though it were mana of any color. You may spend other mana only as though it were colorless mana.",
       "timeshifted": true,
       "type": "Enchantment",
       "types": [
@@ -4383,9 +4383,13 @@
         {
           "date": "2013-09-20",
           "text": "Affected spells, cards, and creatures lose all of their other creature types."
+        },
+        {
+          "date": "2017-09-29",
+          "text": "Replacement effects that modify creatures of a certain type as they enter the battlefield will apply (or not apply) after you apply this effect. For example, if Warrior is the chosen creature type and you control Bramblewood Paragon, a Runeclaw Bear would enter the battlefield with an additional +1/+1 counter."
         }
       ],
-      "text": "As Conspiracy enters the battlefield, choose a creature type.\nCreature cards you own that aren't on the battlefield, creature spells you control, and creatures you control are the chosen type.",
+      "text": "As Conspiracy enters the battlefield, choose a creature type.\nCreatures you control are the chosen type. The same is true for creature spells you control and creature cards you own that aren't on the battlefield.",
       "timeshifted": true,
       "type": "Enchantment",
       "types": [
@@ -4588,7 +4592,7 @@
         "Dauthi",
         "Soldier"
       ],
-      "text": "Shadow (This creature can block or be blocked by only creatures with shadow.)\nDauthi Slayer attacks each turn if able.",
+      "text": "Shadow (This creature can block or be blocked by only creatures with shadow.)\nDauthi Slayer attacks each combat if able.",
       "timeshifted": true,
       "toughness": "2",
       "type": "Creature — Dauthi Soldier",
