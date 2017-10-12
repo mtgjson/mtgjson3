@@ -419,15 +419,12 @@
   exports.VALID_COLORS = [ 'W', 'U', 'B', 'R', 'G' ];
 
   exports.STANDARD_SETS = [
-    'BFZ',
-    'OGW',
-    'SOI',
-    'EMN',
-    'W16',
     'KLD',
     'AER',
     'AKH',
-    'HOU'
+    'W17',
+    'HOU',
+    'IXN'
   ];
 
 })(typeof exports==="undefined" ? window.C={} : exports);
