@@ -282,6 +282,7 @@ exports.performSetCorrections = function(setCorrections, fullSet)
 						card.flavor = card.flavor.replace(/([A-Za-z])"/, "$1!\"", "gm");
 
 					if(setCorrection.addPrinting) {
+						if(!card.printings) card.printings = [];
 						card.printings = card.printings.concat(Array.toArray(setCorrection.addPrinting));
 						exports.finalizePrintings(card);
 					}
