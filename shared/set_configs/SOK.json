@@ -1,0 +1,57 @@
+{
+  "SET": {
+    "name": "Saviors of Kamigawa",
+    "code": "SOK",
+    "magicCardsInfoCode": "sok",
+    "releaseDate": "2005-06-03",
+    "border": "black",
+    "type": "expansion",
+    "block": "Kamigawa",
+    "booster": ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"],
+    "translations": {
+      "de": "Retter von Kamigawa",
+      "fr": "Libérateurs de Kamigawa",
+      "it": "Liberatori di Kamigawa",
+      "es": "Salvadores de Kamigawa",
+      "pt": "Salvadores Kamigawa",
+      "jp": "神河救済",
+      "cn": "Saviors of Kamigawa"
+    },
+    "mkm_name": "Saviors of Kamigawa",
+    "mkm_id": 50
+  },
+  "SET_CORRECTIONS": [{
+    "match": {
+      "name": ["Erayo's Essence", "Homura's Essence", "Kuon's Essence", "Rune-Tail's Essence", "Sasaya's Essence"]
+    },
+    "remove": ["power", "toughness"]
+  }, {
+    "match": {
+      "name": "Adamaro, First to Desire"
+    },
+    "replace": {
+      "flavor": "\"Beware Adamaro! In him all pain and anger is perfected.\"\n—Isao, Enlightened Bushi"
+    }
+  }, {
+    "match": {
+      "name": "Akki Drillmaster"
+    },
+    "replace": {
+      "flavor": "\"What part of ‘hayaku ikee!' did you not understand?\""
+    }
+  }, {
+    "match": {
+      "name": "Descendant of Soramaro"
+    },
+    "replace": {
+      "flavor": "\"Soramaro speaks through me. Listen! And I will tell the wisdom of the ancestors.\""
+    }
+  }, {
+    "match": {
+      "name": "Inner Fire"
+    },
+    "replace": {
+      "flavor": "\"Heart of Sokenzan, I call to you! Lend me your fire.\""
+    }
+  }]
+}

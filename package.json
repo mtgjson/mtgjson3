@@ -5,19 +5,33 @@
   "description": "Provides MTG JSON files",
   "private": true,
   "dependencies": {
+    "@sembiance/xbase": "git://github.com/Sembiance/xbase.git",
+    "@sembiance/xutil": "git://github.com/Sembiance/xutil.git",
     "async": "^2.0.0-rc.3",
-    "cache": "git+https://github.com/mtgjson/cache.git",
     "cli-color": ">= 0.2.3",
     "domino": ">= 1.0.19",
+    "level": "^1.7.0",
     "mhash": ">= 2.0.2",
     "moment": ">= 2.10.6",
     "pug": "^2.0.0-alpha8",
+    "request": "^2.81.0",
+    "require-dir": "^0.3.2",
+    "retry": "^0.10.1",
     "rimraf": ">= 2.4.2",
     "tiptoe": ">= 1.0.0",
-    "xbase": "git://github.com/Sembiance/xbase.git",
-    "xutil": "git://github.com/Sembiance/xutil.git"
+    "xxhash": "^0.2.4"
+  },
+  "devDependencies": {
+    "ajv-cli": "^2.1.0",
+    "jshint": "^2.9",
+    "jslint": "^0.11.0"
   },
   "engines": {
     "node": ">= 0.12.0"
+  },
+  "scripts": {
+    "test": "jshint build/*.js shared/*.js util/*.js",
+    "checkJson": "jslint cron/*.json decks/*.json shared/set_configs/**/*.json util/**/*.json web/*.json",
+    "validateSchema": "ajv -s schema/singleSet.schema.json -d 'json/*.json'"
   }
 }

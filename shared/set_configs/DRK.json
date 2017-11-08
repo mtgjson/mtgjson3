@@ -1,0 +1,49 @@
+{
+  "SET": {
+    "name": "The Dark",
+    "code": "DRK",
+    "gathererCode": "DK",
+    "magicCardsInfoCode": "dk",
+    "releaseDate": "1994-08-08",
+    "border": "black",
+    "type": "expansion",
+    "booster": ["uncommon", "uncommon", "common", "common", "common", "common", "common", "common"],
+    "translations": {
+      "it": "L'Oscurità"
+    },
+    "mkm_name": "The Dark",
+    "mkm_id": 8
+  },
+  "SET_CORRECTIONS": [{
+    "match": {
+      "name": "Goblin Digging Team"
+    },
+    "flavorAddExclamation": true
+  }, {
+    "match": {
+      "name": ["Amnesia", "Carnivorous Plant", "Coal Golem", "Dark Sphere", "Diabolic Machine", "Elves of Deep Shadow", "Fissure", "Ghost Ship", "Goblin Shrine", "Grave Robbers", "Hidden Path", "Holy Light", "Inferno", "Knights of Thorn", "Land Leeches", "Marsh Gas", "Martyr's Cry", "Miracle Worker", "Morale", "Orc General", "People of the Woods", "Pikemen", "Squire", "Venom", "Word of Binding"]
+    },
+    "flavorAddDash": true
+  }, {
+    "match": {
+      "name": "Goblin Hero"
+    },
+    "replace": {
+      "flavor": "They attacked in an orgy of rage and madness, but only one seemed as focused on killing us as on the sheer joy of battle."
+    }
+  }, {
+    "match": {
+      "name": "Marsh Viper"
+    },
+    "replace": {
+      "flavor": "\"All we had left were their black and bloated bodies.\" —Maeveen O'Donagh, Memoirs of a Soldier"
+    }
+  }, {
+    "match": {
+      "name": "Savaen Elves"
+    },
+    "replace": {
+      "flavor": "\"Purity of magic can only come from purity of the land. How can a meal nourish if the ingredients are spoiled?\" —Sidaine of Savaen"
+    }
+  }]
+}

@@ -1,0 +1,51 @@
+{
+  "SET": {
+    "name": "Media Inserts",
+    "code": "pMEI",
+    "magicCardsInfoCode": "mbp",
+    "magicRaritiesCodes": [
+      "189-rarities-agent-of-artifice-novel-promo-insert",
+      "109-rarities-harperprism-book-inserts",
+      "20-rarities-armada-comics-book-promos",
+      "175-rarities-coro-coro-comic-book-inserts",
+      "296-rarities-dengeki-maoh-magazine-inserts",
+      "81-rarities-gotta-magazine-cards",
+      "196-rarities-hachette-french-magic-encyclopedia-inserts",
+      "197-rarities-hachette-italian-magic-encyclopedia-inserts",
+      "765-rarities-idw-comics-book-inserts",
+      "16-rarities-kartefakt-magazine-promo",
+      "121-rarities-players-guide-inserts",
+      "228-rarities-rpg-magazine-inserts",
+      "135-rarities-salvat-magic-encyclopedia-cards",
+      "134-rarities-the-cardz-magazine-inserts",
+      "22-rarities-the-duelist-cards",
+      "18-rarities-topdeck-cards",
+      "258-rarities-buy-a-box-promos",
+      "787-rarities-holiday-gift-box",
+      "224-rarities-duels-of-the-planeswalkers-software-promos",
+      "160-rarities-resale-promos",
+      "686-rarities-convention-and-various-promos"
+    ],
+    "isMCISet": true,
+    "releaseDate": "1995-01-01",
+    "border": "black",
+    "type": "promo"
+  },
+  "SET_CORRECTIONS": [
+    {"match": {"number": ["129", "130", "131", "132", "133", "134"]}, "removeCard": true},
+    {"match": {"name": "Arrest"}, "replace": {"flavor": "Fayden didn't know if the giant had created the spehere's magic—only that he had to escape it to find Sifa."}},
+    {"match": {"name": ["Bloodthrone Vampire", "Kor Skyfisher", "Merfolk Mesmerist"]}, "replace": {"flavor": "www.MagicTheGathering.com"}},
+    {"match": {"name": "Knight Exemplar"}, "replace": {"flavor": "\"If you think you are brave enough to walk the path of honor, follow me into the dragon's den.\""}},
+    {"match": {"name": ["Blue Elemental Blast", "Fireball", "Spined Wurm"]}, "replace": {"border": "white"}},
+    {"match": {"name": "Wash Out"}, "replace": {"releaseDate": "2014-01-15"}},
+    {"match": {"name": "Duress"}, "replace": {"artist": "Michael Komarck"}},
+    {"match": {"name": "Avalance Tusker"}, "replace": {"name":"Avalanche Tusker", "imageName": "avalanche tusker", "manaCost": "{2}{G}{U}{R}"}},
+    {"match": {"name": "Arena"}, "replace": {"multiverseid": 97042}},
+    {"match": {"name": "Giant Badger"}, "replace": {"multiverseid": 97045}},
+    {"match": {"name": "Mana Crypt"}, "replace": {"multiverseid": 97048}},
+    {"match": {"name": "Nalathni Dragon"}, "replace": {"multiverseid": 97050}},
+    {"match": {"name": "Sewers of Estark"}, "replace": {"multiverseid": 97054}},
+    {"match": {"name": "Windseeker Centaur"}, "replace": {"multiverseid": 97057}},
+    {"match": {"name": "Grave Titan"}, "replace": {"artist": "Lucas Graciano"}}
+  ]
+}

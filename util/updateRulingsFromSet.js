@@ -1,9 +1,8 @@
 'use strict';
 
-var base = require('xbase');
-var C = require('C');
+var base = require('@sembiance/xbase');
 var fs = require('fs');
-var shared = require('shared');
+var shared = require('../shared/shared');
 var path = require('path');
 var tiptoe = require('tiptoe');
 var async = require('async');

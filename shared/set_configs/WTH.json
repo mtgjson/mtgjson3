@@ -1,0 +1,70 @@
+{
+  "SET": {
+    "name": "Weatherlight",
+    "code": "WTH",
+    "gathererCode": "WL",
+    "magicCardsInfoCode": "wl",
+    "releaseDate": "1997-06-09",
+    "border": "black",
+    "type": "expansion",
+    "block": "Mirage",
+    "booster": ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"],
+    "translations": {
+      "de": "Wetterlicht",
+      "fr": "Aquilon",
+      "it": "Cavalcavento",
+      "es": "El Vientoligero",
+      "pt": "Alisios"
+    },
+    "mkm_name": "Weatherlight",
+    "mkm_id": 18
+  },
+  "SET_CORRECTIONS": [{
+    "match": {
+      "name": ["Benalish Missionary", "Fervor", "Null Rod"]
+    },
+    "flavorAddExclamation": true
+  }, {
+    "match": {
+      "name": "Boiling Blood"
+    },
+    "replace": {
+      "flavor": "Your father has no horns!\nYour mother wears a bell\nYou drink the milk of goats!\n—Talruum taunts"
+    }
+  }, {
+    "match": {
+      "name": "Firestorm"
+    },
+    "replace": {
+      "flavor": "\"Glok loved storms! He'd sit an' watch an' laugh through the whole thing. I miss him.\"\n—Squee, goblin cabin hand"
+    }
+  }, {
+    "match": {
+      "name": "Inner Sanctum"
+    },
+    "replace": {
+      "flavor": "\"Save me from Maraxus,\" Starke pleaded, \"or condemn me to his wrath. Either way, do not ignore me!\""
+    }
+  }, {
+    "match": {
+      "name": "Mwonvuli Ooze"
+    },
+    "replace": {
+      "flavor": "\"Ewww!\""
+    }
+  }, {
+    "match": {
+      "name": "Vodalian Illusionist"
+    },
+    "replace": {
+      "flavor": "\"Torahn gore these shifty fishtails! You can't even get close to one.\"\n—Tahngarth of the Weatherlight"
+    }
+  }, {
+    "match": {
+      "name": "Phantom Wings"
+    },
+    "replace": {
+      "flavor": "\"But you said ‘when goats fly!'\" Squee whined."
+    }
+  }]
+}

@@ -1,20 +1,19 @@
+/*jslint node: true */
 'use strict';
-/*global setImmediate: true*/
 
-var base = require("xbase"),
-	C = require("C"),
-	fs = require("fs"),
-	url = require("url"),
-	moment = require("moment"),
-	unicodeUtil = require("xutil").unicode,
-	diffUtil = require("xutil").diff,
-	path = require("path"),
-	shared = require("shared"),
-	urlUtil = require("xutil").url,
-	querystring = require("querystring"),
-	tiptoe = require("tiptoe"),
-	async = require('async');
-
+var base = require("@sembiance/xbase");
+var C = require("../shared/C");
+var fs = require("fs");
+var url = require("url");
+var moment = require("moment");
+var path = require("path");
+var shared = require("../shared/shared");
+var unicodeUtil = require("@sembiance/xutil").unicode;
+var diffUtil = require("@sembiance/xutil").diff;
+var urlUtil = require("@sembiance/xutil").url;
+var querystring = require("querystring");
+var tiptoe = require("tiptoe");
+var async = require('async');
 
 (function (exports) {
 
@@ -96,9 +95,20 @@ var SYMBOL_CONVERSION_MAP = {
     "bp"                 : "B/P",
     "rp"                 : "R/P",
     "gp"                 : "G/P",
+    "white or blue"      : "W/U",
+    "white or black"     : "W/B",
+    "blue or red"        : "U/R",
+    "blue or black"      : "U/B",
+    "black or red"       : "B/R",
+    "black or green"     : "B/G",
+    "red or green"       : "R/G",
+    "red or white"       : "R/W",
+    "green or white"     : "G/W",
+    "green or blue"      : "G/U",
     // Planechase Planes
-    "chaos"              : "C",
-    "[chaos]"            : "C",
+    "chaos"              : "CHAOS",
+    "[chaos]"            : "CHAOS",
+    "planeswalk"         : "PW",
     // Unglued, Unhinged
     "100"                : "100",
     "500"                : "500",
@@ -135,7 +145,7 @@ var TEXT_TO_SYMBOL_MAP = {
 var doubleFacedCardNames = [];
 
 var ripSet = function(setName, cb) {
-	base.info("====================================================================================================================");
+	base.info("========================================================================================================");
 	base.info("Ripping Set: %s", setName);
 
 	tiptoe(
@@ -234,8 +244,6 @@ var ripSet = function(setName, cb) {
 var processMultiverseDocs = function(docs, callback) {
 	var cards = [];
 
-	var i = 0;
-
 	docs.forEachBatch(function (multiverseDoc, printedMultiverseDoc) {
 		var newCards = [];
 		var multiverseDocCardParts = getCardParts(multiverseDoc);
@@ -246,14 +254,10 @@ var processMultiverseDocs = function(docs, callback) {
 
 		multiverseDocCardParts.forEach(function (cardPart, i) {
 			var newCard = processCardPart(multiverseDoc, cardPart, printedMultiverseDoc, printedMultiverseDocCardParts[i]);
-
-			if (newCard.layout==="split" && i===1)
-				return;
-
 			newCards.push(newCard);
 		});
 
-		if (newCards.length === 2 && newCards[0].layout === "double-faced") {
+		if (newCards.length === 2 && (newCards[0].layout === "double-faced" || newCards[0].layout === "meld")) {
 			var doubleFacedCardName = newCards[0].names.concat().sort().join(":::");
 			if (!doubleFacedCardNames.contains(doubleFacedCardName))
 				doubleFacedCardNames.push(doubleFacedCardName);
@@ -291,7 +295,7 @@ var processMultiverseids = function (multiverseids, cb) {
 			},
 			function addToCards(newCards) {
 				newCards.map(function (c) {
-					if (c.multiverseid == null)
+					if (c.multiverseid === null)
 						c.multiverseid = multiverseid;
 					cards.push(c);
 				});
@@ -354,32 +358,41 @@ var processCardPart = function(doc, cardPart, printedDoc, printedCardPart) {
 
 	// Check for flip or double-faced card
 	var cardParts = getCardParts(doc);
-	if (card.layout !== "split" && cardParts.length === 2) {
+	if (cardParts.length === 2) {
 		var firstCardText = processTextBlocks(cardParts[0].querySelectorAll(getCardPartIDPrefix(cardParts[0]) + "_textRow .value .cardtextbox")).trim().toLowerCase();
-		if (firstCardText.contains("flip"))
-			card.layout = "flip";
-		else if (firstCardText.contains("transform"))
-			card.layout = "double-faced";
-		else {
-			// Can't find a suitable match on the first card text. Let's search on the second...
-			// TODO: This bunch of code needs to be optimized.
-			var secondCardText = processTextBlocks(cardParts[1].querySelectorAll(getCardPartIDPrefix(cardParts[1]) + "_textRow .value .cardtextbox")).trim().toLowerCase();
-			if (secondCardText.contains("flip"))
-				card.layout = "flip";
-			else if (secondCardText.contains("transform"))
-				card.layout = "double-faced";
-			else {
-				base.warn("Unknown card layout for multiverseid: %s", card.multiverseid);
-				base.warn("card0 text: %s", firstCardText);
-				base.warn("card1 text: %s", secondCardText);
-			}
-		}
+		var secondCardText = processTextBlocks(cardParts[1].querySelectorAll(getCardPartIDPrefix(cardParts[1]) + "_textRow .value .cardtextbox")).trim().toLowerCase();
 
-		card.names = [
-			getTextContent(cardParts[0].querySelector(getCardPartIDPrefix(cardParts[0]) + "_nameRow .value")).trim(),
-			getTextContent(cardParts[1].querySelector(getCardPartIDPrefix(cardParts[1]) + "_nameRow .value")).trim()
-		];
+		if (card.layout === 'split') {
+			if (secondCardText.contains('aftermath')) card.layout = 'aftermath';
+		}
+		else {
+			if (firstCardText.contains("flip"))
+				card.layout = "flip";
+			else if (firstCardText.contains("transform"))
+				card.layout = "double-faced";
+			else if (firstCardText.contains("meld"))
+				card.layout = "meld";
+			else {
+				// Can't find a suitable match on the first card text. Let's search on the second...
+				// TODO: This bunch of code needs to be optimized.
+				if (secondCardText.contains("flip"))
+					card.layout = "flip";
+				else if (secondCardText.contains("transform"))
+					card.layout = "double-faced";
+				else {
+					base.warn("Unknown card layout for multiverseid: %s", card.multiverseid);
+					base.warn("card0 text: %s", firstCardText);
+					base.warn("card1 text: %s", secondCardText);
+				}
+			}
+
+			card.names = [
+				getTextContent(cardParts[0].querySelector(getCardPartIDPrefix(cardParts[0]) + "_nameRow .value")).trim(),
+				getTextContent(cardParts[1].querySelector(getCardPartIDPrefix(cardParts[1]) + "_nameRow .value")).trim()
+			];
+		}
 	}
+
 
 	// Card Name
 	//card.name = getTextContent(printedCardPart.querySelector(idPrefix + "_nameRow .value")).trim();
@@ -485,7 +498,7 @@ var processCardPart = function(doc, cardPart, printedDoc, printedCardPart) {
 	if (cardNumberValue) {
 		if (card.layout === "split")
 			cardNumberValue = cardNumberValue.replace(/[^\d.]/g, "") + ["a", "b"][card.names.indexOf(card.name)];
-		
+
 		card.number = cardNumberValue;
 	}
 
@@ -497,13 +510,23 @@ var processCardPart = function(doc, cardPart, printedDoc, printedCardPart) {
 	// Rulings
 	var rulingRows = cardPart.querySelectorAll(idPrefix + "_rulingsContainer table tr.post");
 	if (rulingRows.length) {
-		card.rulings = Array.toArray(rulingRows).map(function (rulingRow) { return { date : moment(getTextContent(rulingRow.querySelector("td:first-child")).trim(), "MM/DD/YYYY").format("YYYY-MM-DD"), text : getTextContent(rulingRow.querySelector("td:last-child")).innerTrim().trim()}; });
+		card.rulings = Array.toArray(rulingRows).map(function (rulingRow) {
+			return({
+				date : moment(getTextContent(rulingRow.querySelector("td:first-child")).trim(), "MM/DD/YYYY").format("YYYY-MM-DD"),
+				text : getTextContent(rulingRow.querySelector("td:last-child")).innerTrim().trim()
+			});
+		});
+
 		var seenRulings = [];
-		card.rulings = card.rulings.reverse().filter(function (ruling) { if (seenRulings.contains(ruling.text)) { return false; } seenRulings.push(ruling.text); return true; }).reverse();
+		card.rulings = card.rulings.reverse().filter(function (ruling) {
+			if (seenRulings.contains(ruling.text)) { return false; }
+			seenRulings.push(ruling.text);
+			return true;
+		}).reverse();
 	}
 
 	// Variations
-	if (card.layout !== "split" && card.layout !== "double-faced" && card.layout !== "flip") {
+	if (card.layout !== "split" && card.layout !== "double-faced" && card.layout !== "flip" && card.layout !== "meld") {
 		var variationLinks = cardPart.querySelectorAll(idPrefix + "_variationLinks a.variationLink");
 		if (variationLinks.length)
 			card.variations = Array.toArray(variationLinks).map(function (variationLink) { return +variationLink.getAttribute("id").trim(); }).filter(function (variation) { return variation!==card.multiverseid; });
@@ -540,16 +563,7 @@ var getURLsForMultiverseid = function (multiverseid, cb) {
 				throw new Error(errorString);
 			}
 
-			cardParts.forEach(function (cardPart, i) {
-				var card = processCardPart(doc, cardPart, printedDoc, printedCardParts[i]);
-				if (card.layout === "split") {
-					urls.push(shared.buildMultiverseURL(multiverseid, card.names[0]));
-					urls.push(shared.buildMultiverseURL(multiverseid, card.names[1]));
-				}
-				else {
-					urls.push(shared.buildMultiverseURL(multiverseid));
-				}
-			});
+            urls.push(shared.buildMultiverseURL(multiverseid));
 			urls = urls.unique();
 
 			setImmediate(cb, null, urls);
@@ -631,6 +645,9 @@ var addLegalitiesToCard = function (card, cb) {
 			delete card.legalities;
 			card.legalities = [];
 
+			if (typeof doc.querySelectorAll("table.cardList")[1] === "undefined") {
+				console.log("invalid printings for " + card.multiverseid);
+			}
 			Array.toArray(doc.querySelectorAll("table.cardList")[1].querySelectorAll("tr.cardItem")).forEach(function (cardRow) {
 				var format = getTextContent(cardRow.querySelector("td:nth-child(1)")).trim();
 				var legality = getTextContent(cardRow.querySelector("td:nth-child(2)")).trim();
@@ -639,7 +656,7 @@ var addLegalitiesToCard = function (card, cb) {
 					var legalityObject = {format:format, legality:legality};
 					if (condition && condition.length>0)
 						legalityObject.condition = condition;
-					
+
 					card.legalities.push(legalityObject);
 				}
 			});
@@ -695,6 +712,9 @@ var addPrintingsToCard = function (nonGathererSets, card, cb) {
 
 			var printings = [];
 			docs.forEach(function (doc) {
+				if (typeof doc.querySelectorAll("table.cardList")[0] === "undefined") {
+					console.log("invalid printings for " + card.multiverseid);
+				}
 				Array.toArray(doc.querySelectorAll("table.cardList")[0].querySelectorAll("tr.cardItem")).forEach(function (cardRow) {
 					var printing = getTextContent(cardRow.querySelector("td:nth-child(3)")).trim();
 					if (printing && !C.IGNORE_GATHERER_PRINTINGS.contains(printing))
@@ -759,7 +779,7 @@ var fillCardTypes = function (card, rawTypeFull) {
 			card.layout = "scheme";
 		else if (card.types.contains("Phenomenon"))
 			card.layout = "phenomenon";
-		
+
 		if (card.types.map(function (type) { return type.toLowerCase(); }).contains("vanguard"))
 			card.layout = "vanguard";
 	}
@@ -805,7 +825,7 @@ var fillImageNames = function (set) {
 			var numberOrder = setCorrections.mutateOnce(function (setCorrection) { return setCorrection.renumberImages===card.name ? setCorrection.order : undefined; });
 			if (numberOrder)
 				imageNumber = numberOrder.indexOf(card.multiverseid)+1;
-			
+
 			card.imageName += imageNumber;
 		}
 
@@ -828,11 +848,23 @@ var compareCardsToMCI = function(set, cb) {
 		},
 		function processSetCardList(listDoc) {
 			var mciCardLinks = Array.toArray(listDoc.querySelectorAll("table tr td a"));
-			async.eachSeries(set.cards, function (card, subcb) {
-				if (card.variations || card.layout==="token")
+			async.each(set.cards, function (card, subcb) {
+				if (card.variations) {
+					base.warn("VARIATIONS: Could not find MagicCards.info match for card: %s", card.name);
 					return setImmediate(subcb);
+				}
+				if (card.layout==="token") {
+					base.warn("TOKEN: Cannot match MagicCards.info for token: %s", card.name);
+					return setImmediate(subcb);
+				}
 
-				var mciCardLink = mciCardLinks.filter(function (link) { return link.textContent.trim().toLowerCase()===createMCICardName(card).toLowerCase(); });
+				var mciCardLink = mciCardLinks.filter(function (link) {
+                    var name = link.textContent.trim();
+                    name = name.replaceAll("Æ", "Ae").replaceAll("“", "\"").replaceAll("”", "\"");
+                    return name.toLowerCase() === createMCICardName(card).toLowerCase();
+                });
+                if (card.layout==="meld")
+                    mciCardLink = mciCardLinks.filter(function (link) { return link.getAttribute("href").indexOf('/' + card.number) !== -1; });
 				if (mciCardLink.length!==1) {
 					base.warn("MISSING: Could not find MagicCards.info match for card: %s", card.name);
 					return setImmediate(subcb);
@@ -863,6 +895,10 @@ var normalizeFlavor = function(flavor) {
 	return flavor;
 };
 
+var getMCINumber = function(mciCardURL) {
+    return mciCardURL.replace(/.*\/([1-9][0-9]*[a-z]?)\.html/, '$1');
+};
+
 var compareCardToMCI = function(set, card, mciCardURL, cb) {
 	var cardCorrection = null;
 	if (C.SET_CORRECTIONS.hasOwnProperty(set.code)) {
@@ -883,7 +919,7 @@ var compareCardToMCI = function(set, card, mciCardURL, cb) {
 	if (cardCorrection && cardCorrection.replace && cardCorrection.replace.artist)
 		hasArtistCorrection = true;
 
-	var mciNumber = mciCardURL.match(/\/(\w+)(\.html)?$/)[1]
+	var mciNumber = getMCINumber(mciCardURL);
 	var mciURL = "http://magiccards.info" + mciCardURL;
 
 	tiptoe(
@@ -917,7 +953,7 @@ var compareCardToMCI = function(set, card, mciCardURL, cb) {
 							return p.textContent.startsWith("Illus.");
 						}
 					);
-					if (mciArtist.length == 0) {
+					if (mciArtist.length === 0) {
 						base.error('no MCIArtist! for url %s (cache: %s)', mciCardURL, shared.cache.cachname(mciURL));
 						shared.cache.delete(mciURL);
 						mciArtist = null;
@@ -991,7 +1027,7 @@ var compareCardsToEssentialMagic = function(set, cb) {
 					}
 				});
 			});
-			
+
 			this();
 		},
 		function finish(err) {
@@ -1001,7 +1037,7 @@ var compareCardsToEssentialMagic = function(set, cb) {
 };
 
 var ripMCISet = function(set, cb) {
-	base.info("====================================================================================================================");
+	base.info("========================================================================================================");
 	base.info("Ripping set: %s (%s)", set.name, set.code);
 
 	tiptoe(
@@ -1013,7 +1049,7 @@ var ripMCISet = function(set, cb) {
 			var cards = [];
 			var self = this;
 
-			async.eachSeries(mciCardLinks, function(mciCardLink, subcb) {
+			async.each(mciCardLinks, function(mciCardLink, subcb) {
 				var href = mciCardLink.getAttribute("href");
 				if (!href || !href.startsWith("/" + set.magicCardsInfoCode.toLowerCase() + "/en/"))
 					return setImmediate(subcb);
@@ -1033,21 +1069,7 @@ var ripMCISet = function(set, cb) {
 
 			set.cards = cards.filterEmpty().sort(shared.cardComparator);
 			fillImageNames(set);
-
-			if (fs.existsSync(path.join(__dirname, "..", "json", set.code + ".json"))) {
-				addPrintingsToMCISet(set, this.parallel());
-				addMagicLibraritiesInfoToMCISet(set, this.parallel());
-			}
-			else {
-				base.warn("RUN ONE MORE TIME FOR PRINTINGS!");
-				this();
-			}
-		},
-		function performCorrections() {
-			base.info("Doing set corrections...");
-			shared.performSetCorrections(shared.getSetCorrections(set.code), set);
-
-			this();
+			addMagicLibraritiesInfoToMCISet(set, this);
 		},
 		function applyLatestOracleFields() {
 			base.info("Applying latest oracle fields to MCI cards...");
@@ -1076,6 +1098,33 @@ var ripMCISet = function(set, cb) {
 				});
 			});
 
+			this();
+		},
+		function fixCommanderIdentity() {
+			base.info("Fixing color identity...");
+
+			fixCommanderIdentityForCards(set.cards, this.parallel());
+			fixCMC(set.cards, this.parallel());
+		},
+		function performCorrections() {
+			base.info("Doing set corrections...");
+			shared.performSetCorrections(shared.getSetCorrections(set.code), set);
+
+			this();
+		},
+		function addPrintings() {
+			if (fs.existsSync(path.join(__dirname, "..", "json", set.code + ".json"))) {
+				base.info("Updating printings...");
+				addPrintingsToMCISet(set, this);
+			}
+			else {
+				base.warn("RUN ONE MORE TIME FOR PRINTINGS!");
+				this();
+			}
+		},
+		function finalizePrintings() {
+			base.info("Cleaning up duplicate printings.");
+			set.cards.forEach(shared.finalizePrintings);
 			this();
 		},
 		function finish(err) {
@@ -1115,7 +1164,7 @@ var ripMCICard = function(set, mciCardURL, cb) {
 				colors     : []
 			};
 
-			card.mciNumber = mciCardURL.replace(/.*\/([0-9]*)\.html/, '$1');
+			card.mciNumber = getMCINumber(mciCardURL);
 
 			var cardNameElement = mciCardDoc.querySelector("a[href=\"" + mciCardURL + "\"]");
 			if (!cardNameElement)
@@ -1210,6 +1259,8 @@ var ripMCICard = function(set, mciCardURL, cb) {
 					card.layout = "flip";
 				else if (card.text.toLowerCase().contains("transform"))
 					card.layout = "double-faced";
+                else if (card.text.toLowerCase().contains("meld"))
+                    card.layout = 'meld';
 			}
 			card.text.replaceAll("{UP}", "{U/P}").replaceAll("{BP}", "{B/P}").replaceAll("{RP}", "{R/P}").replaceAll("{GP}", "{G/P}").replaceAll("{WP}", "{W/P}");
 
@@ -1260,11 +1311,11 @@ var ripMCICard = function(set, mciCardURL, cb) {
 			do
 			{
 				if (languageElement.nodeName.toLowerCase()==="img") {
-					cardForeignName["language"] = languageElement.getAttribute("alt");
+					cardForeignName.language = languageElement.getAttribute("alt");
 				}
 				else if (languageElement.nodeName.toLowerCase()==="a") {
 					if (cardForeignName.hasOwnProperty("language")) {
-						cardForeignName["name"] = getTextContent(languageElement).trim();
+						cardForeignName.name = getTextContent(languageElement).trim();
 						cardForeignNames.push(cardForeignName);
 					}
 					cardForeignName = {};
@@ -1400,11 +1451,11 @@ var addMagicLibraritiesInfoToMCISet = function(set, cb) {
 				if (releaseDate || sourceText || numberText) {
 					var cardInfo = {};
 					if (releaseDate)
-						cardInfo["releaseDate"] = releaseDate.replace(/-([0-9])$/, "-0$1");
+						cardInfo.releaseDate = releaseDate.replace(/-([0-9])$/, "-0$1");
 					if (sourceText)
-						cardInfo["source"] = sourceText;
+						cardInfo.source = sourceText;
 					if (numberText)
-						cardInfo["number"] = numberText;
+						cardInfo.number = numberText;
 
 					cardNames.forEach(function (cardName) { if (!magicLibraritiesInfo.hasOwnProperty(cardName)) { magicLibraritiesInfo[cardName] = cardInfo; }});
 				}
@@ -1419,7 +1470,7 @@ var addMagicLibraritiesInfoToMCISet = function(set, cb) {
 					return;
 
 				if (magicLibraritiesInfo[cardNameNormalized].source)
-					card.source = magicLibraritiesInfo[cardNameNormalized].source.replaceAll("� ", " ");
+				    card.source = magicLibraritiesInfo[cardNameNormalized].source.replaceAll(String.fromCharCode(65533) + " ", " ");
 				if (magicLibraritiesInfo[cardNameNormalized].releaseDate)
 					card.releaseDate = magicLibraritiesInfo[cardNameNormalized].releaseDate;
 				if (magicLibraritiesInfo[cardNameNormalized].number)
@@ -1433,8 +1484,6 @@ var addMagicLibraritiesInfoToMCISet = function(set, cb) {
 		}
 	);
 };
-
-
 
 var processSymbol = function(symbol) {
 	var symbols = symbol.toLowerCase().split(" or ").map(function (symbolPart) {
@@ -1453,6 +1502,10 @@ var processSymbol = function(symbol) {
 	return "{" + (symbols.length>1 ? symbols.join("/") : symbols[0]) + "}";
 };
 
+var stripUnsafeChars = function(text) {
+    return text.replace(/[\x00-\x08\x0E-\x1F\x7F\x80-\x9F]/g, "");
+};
+
 var processTextBlocks = function(textBlocks) {
 	var result = "";
 	if (!textBlocks)
@@ -1466,6 +1519,7 @@ var processTextBlocks = function(textBlocks) {
 	});
 
 	result = result.replaceAll("\u2028", "\n");
+	result = result.replaceAll("&amp;", "&");
 
 	while(result.contains("\n\n")) {
 		result = result.replaceAll("\n\n", "\n");
@@ -1473,6 +1527,7 @@ var processTextBlocks = function(textBlocks) {
 
 	result = result.replaceAll("\u00a0", " ");
 	result = result.replaceAll("―", "—");
+    result = stripUnsafeChars(result);
 	return result;
 };
 
@@ -1501,7 +1556,7 @@ var processTextBoxChildren = function(children) {
 				childText = childText.replaceAll("o" + text, "{" + symbol + "}");
 				childText = childText.replaceAll(text, "{" + symbol + "}");
 			});
-			
+
 			childText = childText.replaceAll("roll chaos", "roll {C}");
 			childText = childText.replaceAll("chaos roll", "{C} roll");
 
@@ -1522,7 +1577,23 @@ var processTextBoxChildren = function(children) {
 };
 
 var getTextContent = function(item) {
-	return (item && item.textContent ? item.textContent : "");
+	var ret = '';
+	if (item) {
+		ret = typeof item.innerHTML !== 'undefined' ? item.innerHTML : item.textContent;
+		ret = ret
+			.replace(/<img .*?alt="([^"]*)"[^>]*>/g, function(match, alt) {
+				if (!SYMBOL_CONVERSION_MAP[alt.toLowerCase()]) {
+					console.log("Can't find symbol: %s", alt);
+				}
+				return('{' + SYMBOL_CONVERSION_MAP[alt.toLowerCase()] + '}');
+			})
+			.replace(/<[^>]*>/g, '');
+		ret = ret
+			.replaceAll("&amp;", "&")
+			.replaceAll("&nbsp;", " ");
+	}
+    ret = stripUnsafeChars(ret);
+	return(ret);
 };
 
 var getSetNameMultiverseIds = function(setName, cb) {
@@ -1552,7 +1623,7 @@ var getSetNameMultiverseIds = function(setName, cb) {
 };
 
 /**
- * Fix converted mana cost for double-faced cards using the new SOI rule
+ * Fix converted mana cost for cards
  */
 var fixCMC = function(cards, cb) {
 	var findCardByNumber = function(number) {
@@ -1561,18 +1632,26 @@ var fixCMC = function(cards, cb) {
 
 	async.each(cards,
 		function(card, subcb) {
-			if (card.layout != 'double-faced')
-				return(setImmediate(subcb));
 			if (card.hasOwnProperty('cmc'))
-				return(setImmediate(subcb));
+				return subcb();
 
-			var otherSideNum = card.number.substr(0, card.number.length - 1) + ((card.number.substr(-1) == 'a')?'b':'a');
-			var otherCard = findCardByNumber(otherSideNum);
+			if (card.layout === 'double-faced') {
+				// Fix the back of double-faced cards
 
-			if (otherCard.hasOwnProperty('cmc'))
-				card.cmc = otherCard.cmc;
+					var otherSideNum = card.number.substr(0, card.number.length - 1) + ((card.number.substr(-1) == 'a')?'b':'a');
+					var otherCard = findCardByNumber(otherSideNum);
+					if (otherCard.hasOwnProperty('cmc'))
+						card.cmc = otherCard.cmc;
+                    return subcb();
+			}
 
-			setImmediate(subcb);
+            if (!card.manaCost) {
+                // Fix cards with no mana cost
+                card.cmc = 0;
+                return subcb();
+            }
+
+            return subcb();
 		},
 		cb
 	);
@@ -1583,8 +1662,6 @@ var fixCMC = function(cards, cb) {
  * cb() is called upon finish.
  */
 var fixCommanderIdentityForCards = function(cards, cb) {
-	var size = cards.length;
-
 	var findCardByNumber = function(number) {
 		return(cards.find(function(card) { return(card.number === number); }));
 	};
@@ -1631,14 +1708,16 @@ var fixCommanderIdentityForCards = function(cards, cb) {
 
 		// Process card text and mana cost
 		var fullText = card.manaCost;
-		if (card.text) 
-			fullText += card.text.replace(/\([^\)]*\)/gi,'');
+		if (card.text)
+		    fullText += card.text.replace(/\([^\)]*\)/gi,'');
 
-		while (res = regex.exec(fullText)) {
-			res[1].split("/").forEach(function (idx) {
-				if ((C.VALID_COLORS.indexOf(idx) >= 0) && (colors.indexOf(idx) == -1))
-					colors.push(idx);
-			});
+            var addColor = function(idx) {
+                if (C.VALID_COLORS.indexOf(idx) >= 0 && colors.indexOf(idx) < 0)
+                    colors.push(idx);
+            };
+
+		while ((res = regex.exec(fullText))) {
+		    res[1].split("/").forEach(addColor);
 		}
 
 		if (colors.length > 0) {
@@ -1646,18 +1725,19 @@ var fixCommanderIdentityForCards = function(cards, cb) {
 		}
 
 		// Process split and double-faced cards
-		if (card.layout == "double-faced" || card.layout == "split") {
-			var otherSideNum = card.number.substr(0, card.number.length - 1) + ((card.number.substr(-1) == "a")?"b":"a");
+		if (card.layout == "double-faced" || card.layout == "split" || card.layout == "aftermath" || card.layout == "meld") {
+			var otherSideNum = card.number.substr(0, card.number.length - 1) + ((card.number.substr(-1) == "a") ? "b" : "a");
 			var otherCard = findCardByNumber(otherSideNum);
 
-			if (otherCard == null) {
-				base.error("Current side name: %s", card.number);
+			if (!otherCard) {
+				base.error("Current side name: %s", card.name);
 				base.error("-> Other Side num: %s", otherSideNum);
-				throw Error("Error: Cannot find other side of card " + card.name);
+
+				//throw Error("Error: Cannot find other side of card " + card.name);
 			}
 
 			if (card.colorIdentity) colors = colors.concat(card.colorIdentity);
-			if (otherCard.colorIdentity) colors = colors.concat(otherCard.colorIdentity);
+			if (otherCard && otherCard.colorIdentity) colors = colors.concat(otherCard.colorIdentity);
 
 			// Remove duplicates
 			var uniqueColors = colors.filter(function (elem, pos) {
@@ -1668,7 +1748,7 @@ var fixCommanderIdentityForCards = function(cards, cb) {
 			colors.sort();
 
 			if (uniqueColors.length > 0) {
-				otherCard.colorIdentity = uniqueColors;
+				if (otherCard) otherCard.colorIdentity = uniqueColors;
 				card.colorIdentity = uniqueColors;
 			}
 		}

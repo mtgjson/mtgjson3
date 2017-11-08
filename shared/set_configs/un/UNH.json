@@ -1,0 +1,180 @@
+{
+  "SET": {
+    "name": "Unhinged",
+    "code": "UNH",
+    "magicCardsInfoCode": "uh",
+    "releaseDate": "2004-11-20",
+    "border": "silver",
+    "type": "un",
+    "booster": ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land"],
+    "mkm_name": "Unhinged",
+    "mkm_id": 59
+  },
+  "SET_CORRECTIONS": [{
+    "match": {
+      "name": "Super Secret Tech"
+    },
+    "replace": {
+      "rarity": "Rare"
+    }
+  }, {
+    "match": {
+      "name": "Cheap Ass"
+    },
+    "replace": {
+      "text": "Spells you play cost {½} less to play."
+    }
+  }, {
+    "match": {
+      "name": "\"Ach! Hans, Run!\""
+    },
+    "replace": {
+      "text": "At the beginning of your upkeep, you may say \"Ach! Hans, run! It's the . . .\" and name a creature card. If you do, search your library for the named card, put it into play, then shuffle your library. That creature has haste. Remove it from the game at end of turn.",
+      "originalText": "At the beginning of your upkeep, you may say \"Ach! Hans, run! It's the . . .\" and name a creature card. If you do, search your library for the named card, put it into play, then shuffle your library. That creature has haste. Remove it from the game at end of turn."
+    }
+  }, {
+    "match": {
+      "name": "Flaccify"
+    },
+    "replace": {
+      "text": "Counter target spell unless its controller pays {3}{½}."
+    }
+  }, {
+    "match": {
+      "name": "Kill Destroy"
+    },
+    "replace": {
+      "name": "Kill! Destroy!",
+      "imageName": "kill! destroy!"
+    }
+  }, {
+    "match": {
+      "name": "Little Girl"
+    },
+    "replace": {
+      "manaCost": "{hw}"
+    }
+  }, {
+    "match": {
+      "name": "Look at Me, I'm R&D"
+    },
+    "replace": {
+      "artist": "spork;"
+    }
+  }, {
+    "match": {
+      "name": "Our Market Research Shows That Players Like Really Long Card Names So We Made this Card to Have the Absolute Longest Card Name Ever Elemental"
+    },
+    "replace": {
+      "imageName": "our market research shows that players like really long card names so we made"
+    }
+  }, {
+    "match": {
+      "name": ["Forest", "Island", "Mountain", "Plains", "Swamp"]
+    },
+    "replace": {
+      "border": "black"
+    }
+  }, {
+    "match": {
+      "name": "Who/What/When/Where/Why"
+    },
+    "replace": {
+      "layout": "split",
+      "names": ["Who", "What", "When", "Where", "Why"]
+    }
+  }, {
+    "copyCard": "Who/What/When/Where/Why",
+    "replace": {
+      "name": "Who",
+      "number": "120a",
+      "text": "Target player gains X life.",
+      "originalText": "Target player gains X life.",
+      "manaCost": "{X}{W}",
+      "cmc": 1,
+      "colors": ["White"],
+      "foreignNames": [{
+        "language": "French",
+        "name": "Qui"
+      }]
+    }
+  }, {
+    "copyCard": "Who/What/When/Where/Why",
+    "replace": {
+      "name": "What",
+      "number": "120b",
+      "text": "Destroy target artifact.",
+      "originalText": "Destroy target artifact.",
+      "manaCost": "{2}{R}",
+      "cmc": 3,
+      "colors": ["Red"],
+      "foreignNames": [{
+        "language": "French",
+        "name": "Quoi"
+      }]
+    }
+  }, {
+    "copyCard": "Who/What/When/Where/Why",
+    "replace": {
+      "name": "When",
+      "number": "120c",
+      "text": "Counter target creature spell.",
+      "originalText": "Counter target creature spell.",
+      "manaCost": "{2}{U}",
+      "cmc": 3,
+      "colors": ["Blue"],
+      "foreignNames": [{
+        "language": "French",
+        "name": "Quand"
+      }]
+    }
+  }, {
+    "copyCard": "Who/What/When/Where/Why",
+    "replace": {
+      "name": "Where",
+      "number": "120d",
+      "text": "Destroy target land.",
+      "originalText": "Destroy target land.",
+      "manaCost": "{3}{B}",
+      "cmc": 4,
+      "colors": ["Black"],
+      "foreignNames": [{
+        "language": "French",
+        "name": "Où"
+      }]
+    }
+  }, {
+    "match": {
+      "name": "Who/What/When/Where/Why"
+    },
+    "replace": {
+      "name": "Why",
+      "number": "120e",
+      "text": "Destroy target enchantment.",
+      "originalText": "Destroy target enchantment.",
+      "manaCost": "{1}{G}",
+      "cmc": 2,
+      "colors": ["Green"],
+      "foreignNames": [{
+        "language": "French",
+        "name": "Pourquoi"
+      }]
+    }
+  }, {
+    "match": {
+      "name": "Curse of the Fire Penguin"
+    },
+    "replace": {
+      "text": {
+        "Penquin": "Penguin"
+      }
+    }
+  }, {
+    "match": {
+      "name": "Yet Another Æther Vortex"
+    },
+    "replace": {
+      "name": "Yet Another Aether Vortex"
+    }
+  }]
+}

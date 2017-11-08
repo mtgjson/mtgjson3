@@ -1,0 +1,63 @@
+{
+  "SET": {
+    "name": "Visions",
+    "code": "VIS",
+    "gathererCode": "VI",
+    "magicCardsInfoCode": "vi",
+    "releaseDate": "1997-02-03",
+    "border": "black",
+    "type": "expansion",
+    "block": "Mirage",
+    "booster": ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"],
+    "translations": {
+      "de": "Visionen",
+      "fr": "Visions",
+      "it": "Visioni",
+      "es": "Visiones",
+      "pt": "Visões"
+    },
+    "mkm_name": "Visions",
+    "mkm_id": 17
+  },
+  "SET_CORRECTIONS": [{
+    "match": {
+      "name": ["Goblin Recruiter", "Helm of Awakening", "Scalebane's Elite"]
+    },
+    "flavorAddExclamation": true
+  }, {
+    "match": {
+      "name": "Daraja Griffin"
+    },
+    "replace": {
+      "flavor": "\"And the flamingos said, ‘Get out of our nest—we can't be seen with the likes of you!' So, the griffin ate them.\"\n—Azeworai, \"The Ugly Bird\""
+    }
+  }, {
+    "match": {
+      "name": "Freewind Falcon"
+    },
+    "replace": {
+      "flavor": "\"That does it! I'm going back to hunting chickens!\"\n—Rhirhok, goblin archer"
+    }
+  }, {
+    "match": {
+      "name": "Guiding Spirit"
+    },
+    "replace": {
+      "flavor": "\"Retainer of eternal Sun! Life flash again upon thy wings.\"\n—\"Song to the Sun,\" Femeref song"
+    }
+  }, {
+    "match": {
+      "name": "Longbow Archer"
+    },
+    "replace": {
+      "flavor": "\"If it bears wings, I will pin it to the skies over Tefemburu.\"\n—Ruya, Zhalfirin archer"
+    }
+  }, {
+    "match": {
+      "name": "Magma Mine"
+    },
+    "replace": {
+      "flavor": "BOOM!"
+    }
+  }]
+}

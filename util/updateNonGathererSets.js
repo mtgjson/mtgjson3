@@ -1,10 +1,9 @@
 "use strict";
-/*global setImmediate: true*/
 
-var base = require("xbase"),
-	C = require("C"),
+var base = require('@sembiance/xbase'),
+	C = require('../shared/C'),
 	path = require("path"),
-	runUtil = require("xutil").run,
+	runUtil = require('@sembiance/xutil').run,
 	tiptoe = require("tiptoe");
 
 tiptoe(

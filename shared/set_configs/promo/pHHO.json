@@ -1,0 +1,48 @@
+{
+  "SET": {
+    "name": "Happy Holidays",
+    "code": "pHHO",
+    "oldCode": "HHO",
+    "magicCardsInfoCode": "hho",
+    "magicRaritiesCodes": ["19-rarities-happy-holidays-gift-card"],
+    "isMCISet": true,
+    "releaseDate": "2006-12-31",
+    "border": "silver",
+    "type": "promo",
+    "mkm_name": "Happy Holidays Promos",
+    "mkm_id": 1247
+  },
+  "SET_CORRECTIONS": [
+    {"match": {"name": "Naughty/Nice"}, "replace" :
+      {
+        "layout": "split",
+        "name": "Naughty",
+        "manaCost": "{1}{B}{B}",
+        "releaseDate": "2012",
+        "cmc": 3,
+        "imageName": "naughtynice",
+        "colors": ["Black"],
+        "names": ["Naughty", "Nice"],
+        "text": "Search another target player's library for a card and put that card into your hand. Then shuffle that player's library.",
+        "number": "7a",
+        "source": "Holiday gift to Wizards internal teams and business partners.",
+        "printings": ["pHHO"]
+      }
+    },
+    { "copyCard": "Naughty", "replace" :
+      {
+        "name": "Nice",
+        "number": "7b",
+        "text": "Search your library for a card and put it into another target player's hand. Then shuffle your library.",
+        "manaCost": "{1}{W}{W}",
+        "colors": ["White"],
+        "printings": ["pHHO"]
+      }
+    },
+    {"match": {"name": "Mishra's Toy Workshop"}, "replace": {"artist": "Jung Park"}},
+    {"match": {"name": "Gifts Given"}, "replace": {"text": "Search target opponent's library for four cards with different names and reveal them. That player chooses two of those cards. Put the chosen cards into the player's graveyard and the rest into your hand. Then that player shuffles his or her library."}},
+    {"match": {"name": "Evil Presents"}, "replace": {"flavor": "'Tis better to give than to receive."}},
+    {"match": {"name": "Gifts Given"}, "replace": {"flavor": "\"Thanks! You shouldn't have.\""}},
+    {"match": {"name": "Season's Beatings"}, "replace": {"flavor": "Arriving home, he suddenly longed for the bloodsoaked battlefields behind him."}}
+  ]
+}

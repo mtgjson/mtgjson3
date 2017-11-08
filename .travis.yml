@@ -1,0 +1,26 @@
+sudo: false
+
+language: node_js
+node_js:
+  - 6
+  - 8
+
+script:
+  - npm test
+  - npm run checkJson
+  - npm run validateSchema
+  - util/travis.sh
+
+env:
+  - CXX=g++-4.8
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - g++-4.8
+      - unicode-data
+
+cache:
+  directories:
+    - node_modules

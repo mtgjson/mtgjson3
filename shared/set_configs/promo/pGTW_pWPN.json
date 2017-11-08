@@ -1,0 +1,43 @@
+{
+  "pGTW": {
+    "SET": {
+      "name": "Gateway",
+      "code": "pGTW",
+      "magicCardsInfoCode": "grc",
+      "magicRaritiesCodes": ["76-rarities-gateway-promos"],
+      "isMCISet": true,
+      "releaseDate": "2006-01-01",
+      "border": "black",
+      "type": "promo"
+    },
+    "SET_CORRECTIONS": [
+      {"match": {"number": ">20"}, "removeCard": true}
+    ]
+  },
+  "pWPN": {
+    "SET": {
+      "name": "Wizards Play Network",
+      "code": "pWPN",
+      "magicCardsInfoCode": "grc",
+      "magicRaritiesCodes": ["255-rarities-wpn-promos"],
+      "isMCISet": true,
+      "releaseDate": "2008-10-01",
+      "border": "black",
+      "type": "promo"
+    },
+    "SET_CORRECTIONS": [
+      {"match": {"number": "<21"}, "removeCard": true},
+      {"match": {"name": "Deathless Angel"}, "replace": {"releaseDate": "2010"}},
+      {"match": {"name": "Emeria Angel"}, "replace": {"releaseDate": "2009"}},
+      {"match": {"name": "Hada Freeblade"}, "replace": {"releaseDate": "2010"}},
+      {"match": {"name": "Kalastria Highborn"}, "replace": {"releaseDate": "2010"}},
+      {"match": {"name": "Mycoid Shepherd"}, "replace": {"releaseDate": "2009"}},
+      {"match": {"name": "Naya Sojourners"}, "replace": {"releaseDate": "2010"}},
+      {"match": {"name": "Nissa's Chosen"}, "replace": {"releaseDate": "2009"}},
+      {"match": {"name": "Staggershock"}, "replace": {"releaseDate": "2010"}},
+      {"match": {"imageName": "fling1"}, "replace": {"releaseDate": "2014"}},
+      {"match": {"imageName": "sylvan ranger1"}, "replace": {"releaseDate": "2014"}},
+      {"match": {"name": "Curse of Thirst"}, "replace": {"artist": "Dave Kendall"}}
+    ]
+  }
+}

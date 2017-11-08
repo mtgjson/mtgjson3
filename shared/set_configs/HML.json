@@ -1,0 +1,81 @@
+{
+  "SET": {
+    "name": "Homelands",
+    "code": "HML",
+    "gathererCode": "HM",
+    "magicCardsInfoCode": "hl",
+    "releaseDate": "1995-10-14",
+    "border": "black",
+    "type": "expansion",
+    "booster": [
+      ["rare", "uncommon"],
+      ["rare", "uncommon"], "common", "common", "common", "common", "common", "common"
+    ],
+    "translations": {
+      "de": "Heimatländer",
+      "fr": "Terres Natales",
+      "it": "Origini",
+      "es": "Tierras Natales",
+      "pt": "Terras Natais"
+    },
+    "mkm_name": "Homelands",
+    "mkm_id": 14
+  },
+  "SET_CORRECTIONS": [{
+    "renumberImages": "Abbey Matron",
+    "order": [3011, 3012]
+  }, {
+    "renumberImages": "Ambush Party",
+    "order": [2989, 2988]
+  }, {
+    "renumberImages": "Anaba Bodyguard",
+    "order": [2992, 2993]
+  }, {
+    "renumberImages": "Anaba Shaman",
+    "order": [2995, 2994]
+  }, {
+    "renumberImages": "Carapace",
+    "order": [2963, 2964]
+  }, {
+    "renumberImages": "Dark Maze",
+    "order": [2940, 2939]
+  }, {
+    "renumberImages": "Dwarven Trader",
+    "order": [3000, 3001]
+  }, {
+    "renumberImages": "Folk of An-Havva",
+    "order": [2968, 2967]
+  }, {
+    "renumberImages": "Hungry Mist",
+    "order": [2969, 2970]
+  }, {
+    "renumberImages": "Mesa Falcon",
+    "order": [3022, 3021]
+  }, {
+    "renumberImages": "Reef Pirates",
+    "order": [2955, 2954]
+  }, {
+    "renumberImages": "Sengir Bats",
+    "order": [2930, 2929]
+  }, {
+    "renumberImages": "Willow Faerie",
+    "order": [2982, 2983]
+  }, {
+    "match": {
+      "name": ["Narwhal"]
+    },
+    "flavorAddExclamation": true
+  }, {
+    "match": {
+      "name": ["Baron Sengir", "Spectral Bears"]
+    },
+    "flavorAddDash": true
+  }, {
+    "match": {
+      "name": "Roterothopter"
+    },
+    "replace": {
+      "flavor": "\"The Roterothopter is as insidious as it is ingenious. It is one of the few creations of our school that I take no pride in.\" —Baki, Wizard Attendant"
+    }
+  }]
+}

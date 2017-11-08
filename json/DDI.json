@@ -70,7 +70,7 @@
       "rulings": [
         {
           "date": "2011-01-01",
-          "text": "Emblems behave similarly to enchantments: They have an ability that, in a general sense, continually affects the game. The primary difference between them is that emblems aren’t permanents and don’t exist on the battlefield. Nothing in the game can remove an emblem, simply because no other spell or ability references them. Once you get an emblem, you keep it for the rest of the game. Emblems have no color, name, card type, or other characteristics beyond the listed ability"
+          "text": "Emblems behave similarly to enchantments: They have an ability that, in a general sense, continually affects the game. The primary difference between them is that emblems aren't permanents and don't exist on the battlefield. Nothing in the game can remove an emblem, simply because no other spell or ability references them. Once you get an emblem, you keep it for the rest of the game. Emblems have no color, name, card type, or other characteristics beyond the listed ability."
         },
         {
           "date": "2011-01-01",
@@ -78,7 +78,7 @@
         },
         {
           "date": "2011-01-01",
-          "text": "If the first ability exiles a token, that token will cease to exist. It won’t return to the battlefield."
+          "text": "If the first ability exiles a token, that token will cease to exist. It won't return to the battlefield."
         },
         {
           "date": "2011-01-01",
@@ -86,26 +86,29 @@
         },
         {
           "date": "2011-01-01",
-          "text": "Venser’s second ability doesn’t lock in what it applies to. That’s because the effect states a true thing about creatures, but doesn’t actually change the characteristics of those creatures. As a result, all creatures can’t be blocked that turn, including creatures you don’t control, creatures that weren’t on the battlefield at the time the ability resolved, and creatures that have lost all abilities."
+          "text": "Venser's second ability doesn't lock in what it applies to. That's because the effect states a true thing about creatures, but doesn't actually change the characteristics of those creatures. As a result, all creatures can't be blocked that turn, including creatures you don't control, creatures that weren't on the battlefield at the time the ability resolved, and creatures that have lost all abilities."
         },
         {
           "date": "2011-01-01",
-          "text": "Venser’s last ability creates an emblem with a triggered ability. The emblem is the source of the triggered ability. Because emblems are colorless, you can target permanents with protection from white or from blue, for example, with the triggered ability."
+          "text": "Venser's last ability creates an emblem with a triggered ability. The emblem is the source of the triggered ability. Because emblems are colorless, you can target permanents with protection from white or from blue, for example, with the triggered ability."
         },
         {
           "date": "2011-01-01",
-          "text": "Whenever you cast a spell, the emblem’s ability triggers and goes on the stack on top of it. It will resolve before the spell does."
+          "text": "Whenever you cast a spell, the emblem's ability triggers and goes on the stack on top of it. It will resolve before the spell does."
         },
         {
           "date": "2011-01-01",
-          "text": "If you control more than one such emblem, each one’s ability will trigger separately whenever you cast a spell."
+          "text": "If you control more than one such emblem, each one's ability will trigger separately whenever you cast a spell."
         }
       ],
       "subtypes": [
         "Venser"
       ],
+      "supertypes": [
+        "Legendary"
+      ],
       "text": "+2: Exile target permanent you own. Return it to the battlefield under your control at the beginning of the next end step.\n−1: Creatures can't be blocked this turn.\n−8: You get an emblem with \"Whenever you cast a spell, exile target permanent.\"",
-      "type": "Planeswalker — Venser",
+      "type": "Legendary Planeswalker — Venser",
       "types": [
         "Planeswalker"
       ]
@@ -170,11 +173,11 @@
       "rulings": [
         {
           "date": "2016-06-08",
-          "text": "You may return this creature itself to its owner’s hand as its triggered ability resolves. If you don't control enough other creatures, you must return it."
+          "text": "You may return this creature itself to its owner's hand as its triggered ability resolves. If you don't control enough other creatures, you must return it."
         },
         {
           "date": "2016-06-08",
-          "text": "The ability doesn’t target any creature. You don’t choose what to return until the ability resolves. Once the ability has started to resolve, no one can respond to the choice."
+          "text": "The ability doesn't target any creature. You don't choose what to return until the ability resolves. Once the ability has started to resolve, no one can respond to the choice."
         }
       ],
       "subtypes": [
@@ -212,27 +215,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -251,7 +238,8 @@
       "printings": [
         "M11",
         "DDI",
-        "PC2"
+        "PC2",
+        "PCA"
       ],
       "rarity": "Common",
       "subtypes": [
@@ -317,7 +305,7 @@
       "rulings": [
         {
           "date": "2013-04-15",
-          "text": "An ability that triggers when something “attacks and isn’t blocked” triggers in the declare blockers step after blockers are declared if (1) that creature is attacking and (2) no creatures are declared to block it. It will trigger even if that creature was put onto the battlefield attacking rather than having been declared as an attacker in the declare attackers step."
+          "text": "An ability that triggers when something \"attacks and isn't blocked\" triggers in the declare blockers step after blockers are declared if (1) that creature is attacking and (2) no creatures are declared to block it. It will trigger even if that creature was put onto the battlefield attacking rather than having been declared as an attacker in the declare attackers step."
         }
       ],
       "subtypes": [
@@ -452,7 +440,9 @@
       "printings": [
         "SHM",
         "DDI",
-        "C13"
+        "C13",
+        "MM3",
+        "CMA"
       ],
       "rarity": "Uncommon",
       "subtypes": [
@@ -699,19 +689,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
           "legality": "Legal"
         },
         {
@@ -802,7 +780,8 @@
       "printings": [
         "ARB",
         "CMD",
-        "DDI"
+        "DDI",
+        "MM3"
       ],
       "rarity": "Uncommon",
       "subtypes": [
@@ -872,7 +851,7 @@
       "rulings": [
         {
           "date": "2007-10-01",
-          "text": "Galepowder Mage’s ability can target a creature controlled by any player. It’s not optional."
+          "text": "Galepowder Mage's ability can target a creature controlled by any player. It's not optional."
         },
         {
           "date": "2007-10-01",
@@ -1038,7 +1017,7 @@
         },
         {
           "date": "2007-07-15",
-          "text": "Any enters-the-battlefield abilities of the copied creature will trigger when Clone enters the battlefield. Any “as [this creature] enters the battlefield” or “[this creature] enters the battlefield with” abilities of the chosen creature will also work."
+          "text": "Any enters-the-battlefield abilities of the copied creature will trigger when Clone enters the battlefield. Any \"as [this creature] enters the battlefield\" or \"[this creature] enters the battlefield with\" abilities of the chosen creature will also work."
         },
         {
           "date": "2009-10-01",
@@ -1046,11 +1025,11 @@
         },
         {
           "date": "2012-07-01",
-          "text": "Clone copies exactly what was printed on the original creature and nothing more (unless that creature is copying something else or is a token; see below). It doesn’t copy whether that creature is tapped or untapped, whether it has any counters on it or Auras attached to it, or any non-copy effects that have changed its power, toughness, types, color, or so on."
+          "text": "Clone copies exactly what was printed on the original creature and nothing more (unless that creature is copying something else or is a token; see below). It doesn't copy whether that creature is tapped or untapped, whether it has any counters on it or Auras attached to it, or any non-copy effects that have changed its power, toughness, types, color, or so on."
         },
         {
           "date": "2012-07-01",
-          "text": "If Clone somehow enters the battlefield at the same time as another creature, Clone can’t become a copy of that creature. You may only choose a creature that’s already on the battlefield."
+          "text": "If Clone somehow enters the battlefield at the same time as another creature, Clone can't become a copy of that creature. You may only choose a creature that's already on the battlefield."
         },
         {
           "date": "2012-07-01",
@@ -1058,7 +1037,7 @@
         },
         {
           "date": "2013-07-01",
-          "text": "Clone’s ability doesn’t target the chosen creature."
+          "text": "Clone's ability doesn't target the chosen creature."
         }
       ],
       "subtypes": [
@@ -1128,7 +1107,7 @@
       "rulings": [
         {
           "date": "2007-05-01",
-          "text": "You do the three different scry actions in sequence, in the order they’re printed on the card."
+          "text": "You do the three different scry actions in sequence, in the order they're printed on the card."
         }
       ],
       "subtypes": [
@@ -1168,10 +1147,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -1180,19 +1155,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Time Spiral Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -1211,7 +1174,8 @@
       "printings": [
         "PLC",
         "DDI",
-        "PC2"
+        "PC2",
+        "PCA"
       ],
       "rarity": "Common",
       "rulings": [
@@ -1373,7 +1337,7 @@
       "rulings": [
         {
           "date": "2008-08-01",
-          "text": "This ability isn’t targeted. You choose a permanent to return when the ability resolves. No one will be able to respond to the choice."
+          "text": "This ability isn't targeted. You choose a permanent to return when the ability resolves. No one will be able to respond to the choice."
         }
       ],
       "subtypes": [
@@ -1450,7 +1414,7 @@
         },
         {
           "date": "2013-04-15",
-          "text": "Switching a creature’s power and toughness twice (or any even number of times) effectively returns the creature to the power and toughness it had before any switches."
+          "text": "Switching a creature's power and toughness twice (or any even number of times) effectively returns the creature to the power and toughness it had before any switches."
         }
       ],
       "subtypes": [
@@ -1589,7 +1553,7 @@
       "rulings": [
         {
           "date": "2011-01-01",
-          "text": "The second ability destroys each creature that’s tapped at the time it resolves, including creatures you control. If Sunblast Angel has become tapped by the time its ability resolves, it will be destroyed too."
+          "text": "The second ability destroys each creature that's tapped at the time it resolves, including creatures you control. If Sunblast Angel has become tapped by the time its ability resolves, it will be destroyed too."
         }
       ],
       "subtypes": [
@@ -1662,7 +1626,7 @@
         },
         {
           "date": "2011-09-22",
-          "text": "A pile can have no cards in it. In this case, you’ll choose whether to put all the revealed cards into your hand or into your graveyard."
+          "text": "A pile can have no cards in it. In this case, you'll choose whether to put all the revealed cards into your hand or into your graveyard."
         },
         {
           "date": "2011-09-22",
@@ -1670,7 +1634,7 @@
         },
         {
           "date": "2011-09-22",
-          "text": "In multiplayer games, you choose an opponent to separate the cards when the ability resolves. This doesn’t target that opponent. Because the cards are revealed, all players may see the cards and offer opinions."
+          "text": "In multiplayer games, you choose an opponent to separate the cards when the ability resolves. This doesn't target that opponent. Because the cards are revealed, all players may see the cards and offer opinions."
         }
       ],
       "subtypes": [
@@ -1708,10 +1672,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -1720,19 +1680,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
           "format": "Shards of Alara Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -1748,19 +1696,26 @@
       "originalText": "Exile target creature. Its controller may search his or her library for a basic land card, put that card onto the battlefield tapped, then shuffle his or her library.",
       "originalType": "Instant",
       "printings": [
+        "pFNM",
         "pWPN",
         "CON",
         "ARC",
         "CMD",
         "DDI",
         "MMA",
-        "MD1"
+        "MD1",
+        "MM3",
+        "CMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2009-02-01",
-          "text": "If the targeted creature becomes an illegal target by the time Path to Exile would resolve, the entire spell is countered. The creature's controller won't get to search for a basic land card."
+          "date": "2017-03-14",
+          "text": "If the targeted creature becomes an illegal target by the time Path to Exile would resolve, the entire spell is countered. The creature's controller won't search for a basic land card."
+        },
+        {
+          "date": "2017-03-14",
+          "text": "The controller of the exiled creature isn't required to search his or her library for a basic land. If that player doesn't, the player won't shuffle his or her library."
         }
       ],
       "text": "Exile target creature. Its controller may search his or her library for a basic land card, put that card onto the battlefield tapped, then shuffle his or her library.",
@@ -2090,11 +2045,11 @@
         },
         {
           "date": "2008-10-01",
-          "text": "If the exiled card is an Aura, that card’s owner chooses what it will enchant as it comes back onto the battlefield. An Aura put onto the battlefield this way doesn’t target anything, but the Aura’s enchant ability restricts what it can be attached to. If the Aura can’t legally be attached to anything, it remains exiled forever."
+          "text": "If the exiled card is an Aura, that card's owner chooses what it will enchant as it comes back onto the battlefield. An Aura put onto the battlefield this way doesn't target anything, but the Aura's enchant ability restricts what it can be attached to. If the Aura can't legally be attached to anything, it remains exiled forever."
         },
         {
           "date": "2012-07-01",
-          "text": "Auras attached to the exiled permanent will be put into their owners’ graveyards. Equipment attached to the exiled permanent will become unattached and remain on the battlefield. Any counters on the exiled permanent will cease to exist."
+          "text": "Auras attached to the exiled permanent will be put into their owners' graveyards. Equipment attached to the exiled permanent will become unattached and remain on the battlefield. Any counters on the exiled permanent will cease to exist."
         }
       ],
       "text": "When Oblivion Ring enters the battlefield, exile another target nonland permanent.\nWhen Oblivion Ring leaves the battlefield, return the exiled card to the battlefield under its owner's control.",
@@ -2162,15 +2117,15 @@
         },
         {
           "date": "2009-10-01",
-          "text": "Safe Passage will prevent damage dealt to creatures that weren’t on the battlefield at the time it resolved."
+          "text": "Safe Passage will prevent damage dealt to creatures that weren't on the battlefield at the time it resolved."
         },
         {
           "date": "2009-10-01",
-          "text": "Safe Passage doesn’t prevent damage that would be dealt to planeswalkers you control. Although it can’t prevent combat damage that would be dealt to your planeswalkers, it can still prevent noncombat damage that your opponent would want to redirect from you to one of your planeswalkers. Just apply Safe Passage’s prevention effect to that damage first, and there won’t be any damage to redirect."
+          "text": "Safe Passage doesn't prevent damage that would be dealt to planeswalkers you control. Although it can't prevent combat damage that would be dealt to your planeswalkers, it can still prevent noncombat damage that your opponent would want to redirect from you to one of your planeswalkers. Just apply Safe Passage's prevention effect to that damage first, and there won't be any damage to redirect."
         },
         {
           "date": "2009-10-01",
-          "text": "Safe Passage has no effect on damage that’s already been dealt."
+          "text": "Safe Passage has no effect on damage that's already been dealt."
         }
       ],
       "text": "Prevent all damage that would be dealt to you and creatures you control this turn.",
@@ -2302,21 +2257,22 @@
       "originalType": "Instant",
       "printings": [
         "CSP",
-        "DDI"
+        "DDI",
+        "MM3"
       ],
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2006-07-15",
-          "text": "Vanish into Memory cares about the creature’s power just before it left the battlefield and its toughness just after it returns to the battlefield. For example, if you target a Vigean Hydropon with two +1/+1 counters on it, you’ll draw two cards, then when the Hydropon returns to the battlefield with five +1/+1 counters on it, you’ll discard five cards."
+          "date": "2017-03-14",
+          "text": "Vanish into Memory cares about the creature's power just before it left the battlefield and its toughness just after it returns to the battlefield. For example, if you target a 2/2 creature with two +1/+1 counters on it, you'll draw four cards, then when it returns to the battlefield without any counters on it, you'll discard two cards."
         },
         {
-          "date": "2006-07-15",
-          "text": "If the creature exiled with Vanish into Memory never returns to the battlefield (because it was a token creature, for example), you don’t discard any cards"
+          "date": "2017-03-14",
+          "text": "If the creature exiled with Vanish into Memory never returns to the battlefield (because it was a token creature, for example), you don't discard any cards."
         },
         {
-          "date": "2006-07-15",
-          "text": "If the creature exiled with Vanish into Memory isn’t a creature card (for example, it was an animated Gruul War Plow), that card will still be returned to the battlefield, but not as a creature. Since the card returned to the battlefield has no toughness, you discard no cards."
+          "date": "2017-03-14",
+          "text": "If the creature exiled with Vanish into Memory isn't a creature card (for example, a crewed Vehicle), that card will still be returned to the battlefield, but not as a creature. Since the card returned to the battlefield has no toughness, you discard no cards."
         }
       ],
       "text": "Exile target creature. You draw cards equal to that creature's power. At the beginning of your next upkeep, return that card to the battlefield under its owner's control. If you do, discard cards equal to that creature's toughness.",
@@ -2384,7 +2340,7 @@
       "rulings": [
         {
           "date": "2006-05-01",
-          "text": "You gain the life whether or not the spell’s controller pays {X} and whether or not the spell is countered."
+          "text": "You gain the life whether or not the spell's controller pays {X} and whether or not the spell is countered."
         }
       ],
       "text": "Counter target spell unless its controller pays {X}. You gain X life.",
@@ -2395,6 +2351,7 @@
     },
     {
       "artist": "John Avon",
+      "cmc": 0,
       "colorIdentity": [
         "W",
         "U"
@@ -2442,7 +2399,9 @@
         "CMD",
         "DDI",
         "C13",
-        "MM2"
+        "MM2",
+        "C16",
+        "CMA"
       ],
       "rarity": "Common",
       "rulings": [
@@ -2459,6 +2418,7 @@
     },
     {
       "artist": "Pat Morrissey",
+      "cmc": 0,
       "foreignNames": [
         {
           "language": "Japanese",
@@ -2502,7 +2462,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "Because the “search” requires you to find a card with certain characteristics, you don’t have to find the card if you don’t want to."
+          "text": "Because the \"search\" requires you to find a card with certain characteristics, you don't have to find the card if you don't want to."
         }
       ],
       "text": "Flood Plain enters the battlefield tapped.\n{T}, Sacrifice Flood Plain: Search your library for a Plains or Island card and put it onto the battlefield. Then shuffle your library.",
@@ -2513,6 +2473,7 @@
     },
     {
       "artist": "Richard Wright",
+      "cmc": 0,
       "colorIdentity": [
         "W"
       ],
@@ -2570,6 +2531,7 @@
     },
     {
       "artist": "Ryan Pancoast",
+      "cmc": 0,
       "colorIdentity": [
         "W",
         "U"
@@ -2615,7 +2577,8 @@
       "printings": [
         "ZEN",
         "DDI",
-        "C13"
+        "C13",
+        "CMA"
       ],
       "rarity": "Uncommon",
       "text": "Sejiri Refuge enters the battlefield tapped.\nWhen Sejiri Refuge enters the battlefield, you gain 1 life.\n{T}: Add {W} or {U} to your mana pool.",
@@ -2626,6 +2589,7 @@
     },
     {
       "artist": "Izzy",
+      "cmc": 0,
       "colorIdentity": [
         "U"
       ],
@@ -2680,6 +2644,7 @@
     },
     {
       "artist": "John Avon",
+      "cmc": 0,
       "colorIdentity": [
         "W"
       ],
@@ -2705,6 +2670,10 @@
       "layout": "normal",
       "legalities": [
         {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
         },
@@ -2722,6 +2691,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -2847,8 +2824,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -2915,7 +2892,15 @@
         "C15",
         "DDQ",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -2931,10 +2916,12 @@
       "variations": [
         284498,
         284499
-      ]
+      ],
+      "watermark": "White"
     },
     {
       "artist": "James Paick",
+      "cmc": 0,
       "colorIdentity": [
         "W"
       ],
@@ -2960,6 +2947,10 @@
       "layout": "normal",
       "legalities": [
         {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
         },
@@ -2977,6 +2968,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -3102,8 +3101,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -3170,7 +3169,15 @@
         "C15",
         "DDQ",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -3186,10 +3193,12 @@
       "variations": [
         284498,
         284497
-      ]
+      ],
+      "watermark": "White"
     },
     {
       "artist": "Martina Pilcerova",
+      "cmc": 0,
       "colorIdentity": [
         "W"
       ],
@@ -3215,6 +3224,10 @@
       "layout": "normal",
       "legalities": [
         {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
         },
@@ -3232,6 +3245,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -3357,8 +3378,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -3425,7 +3446,15 @@
         "C15",
         "DDQ",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -3441,10 +3470,12 @@
       "variations": [
         284499,
         284497
-      ]
+      ],
+      "watermark": "White"
     },
     {
       "artist": "Rob Alexander",
+      "cmc": 0,
       "colorIdentity": [
         "U"
       ],
@@ -3470,6 +3501,10 @@
       "layout": "normal",
       "legalities": [
         {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
         },
@@ -3487,6 +3522,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -3610,8 +3653,8 @@
         "USG",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -3677,7 +3720,16 @@
         "C15",
         "DDQ",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "DDS",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -3693,10 +3745,12 @@
       "variations": [
         284490,
         284492
-      ]
+      ],
+      "watermark": "Blue"
     },
     {
       "artist": "Jung Park",
+      "cmc": 0,
       "colorIdentity": [
         "U"
       ],
@@ -3722,6 +3776,10 @@
       "layout": "normal",
       "legalities": [
         {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
         },
@@ -3739,6 +3797,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -3862,8 +3928,8 @@
         "USG",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -3929,7 +3995,16 @@
         "C15",
         "DDQ",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "DDS",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -3945,10 +4020,12 @@
       "variations": [
         284492,
         284491
-      ]
+      ],
+      "watermark": "Blue"
     },
     {
       "artist": "Martina Pilcerova",
+      "cmc": 0,
       "colorIdentity": [
         "U"
       ],
@@ -3974,6 +4051,10 @@
       "layout": "normal",
       "legalities": [
         {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
         },
@@ -3991,6 +4072,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -4114,8 +4203,8 @@
         "USG",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -4181,7 +4270,16 @@
         "C15",
         "DDQ",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "DDS",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -4197,7 +4295,8 @@
       "variations": [
         284490,
         284491
-      ]
+      ],
+      "watermark": "Blue"
     },
     {
       "artist": "Eric Deschamps",
@@ -4256,30 +4355,33 @@
       "rulings": [
         {
           "date": "2011-01-01",
-          "text": "Emblems behave similarly to enchantments: They have an ability that, in a general sense, continually affects the game. The primary difference between them is that emblems aren’t permanents and don’t exist on the battlefield. Nothing in the game can remove an emblem, simply because no other spell or ability references them. Once you get an emblem, you keep it for the rest of the game. Emblems have no color, name, card type, or other characteristics beyond the listed ability"
+          "text": "Emblems behave similarly to enchantments: They have an ability that, in a general sense, continually affects the game. The primary difference between them is that emblems aren't permanents and don't exist on the battlefield. Nothing in the game can remove an emblem, simply because no other spell or ability references them. Once you get an emblem, you keep it for the rest of the game. Emblems have no color, name, card type, or other characteristics beyond the listed ability."
         },
         {
           "date": "2011-01-01",
-          "text": "Koth’s first ability can target any Mountain, including an untapped Mountain and/or a Mountain another player controls."
+          "text": "Koth's first ability can target any Mountain, including an untapped Mountain and/or a Mountain another player controls."
         },
         {
           "date": "2011-01-01",
-          "text": "If Koth’s first ability animates a Mountain that came under your control that turn, it will have “summoning sickness” and be unable to attack. It will also be unable to be tapped to activate an ability with the {T} symbol in its cost, such as the Mountain’s mana ability or the ability granted to it by Koth’s emblem."
+          "text": "If Koth's first ability animates a Mountain that came under your control that turn, it will have \"summoning sickness\" and be unable to attack. It will also be unable to be tapped to activate an ability with the {T} symbol in its cost, such as the Mountain's mana ability or the ability granted to it by Koth's emblem."
         },
         {
           "date": "2011-01-01",
-          "text": "Loyalty abilities can’t be mana abilities. Koth’s second ability uses the stack and can be countered or otherwise responded to. Like all loyalty abilities, it can be activated only once per turn, during your main phase, when the stack is empty, and only if no other loyalty abilities of this permanent have been activated this turn."
+          "text": "Loyalty abilities can't be mana abilities. Koth's second ability uses the stack and can be countered or otherwise responded to. Like all loyalty abilities, it can be activated only once per turn, during your main phase, when the stack is empty, and only if no other loyalty abilities of this permanent have been activated this turn."
         },
         {
           "date": "2011-01-01",
-          "text": "Koth’s emblem grants an activated ability to each Mountain you control at any given time for the rest of the game. It will continuously check which permanents you control are Mountains to determine what has the ability. For example, a Mountain that comes under your control later in the game will have the ability, while a Mountain you controlled at the time the emblem was created, but that later came under the control of another player, will no longer have the ability."
+          "text": "Koth's emblem grants an activated ability to each Mountain you control at any given time for the rest of the game. It will continuously check which permanents you control are Mountains to determine what has the ability. For example, a Mountain that comes under your control later in the game will have the ability, while a Mountain you controlled at the time the emblem was created, but that later came under the control of another player, will no longer have the ability."
         }
       ],
       "subtypes": [
         "Koth"
       ],
-      "text": "+1: Untap target Mountain. It becomes a 4/4 red Elemental creature until end of turn. It's still a land.\n−2: Add {R} to your mana pool for each Mountain you control.\n−5: You get an emblem with \"Mountains you control have ‘{T}: This land deals 1 damage to target creature or player.'\"",
-      "type": "Planeswalker — Koth",
+      "supertypes": [
+        "Legendary"
+      ],
+      "text": "+1: Untap target Mountain. It becomes a 4/4 red Elemental creature until end of turn. It's still a land.\n−2: Add {R} to your mana pool for each Mountain you control.\n−5: You get an emblem with \"Mountains you control have '{T}: This land deals 1 damage to target creature or player.'\"",
+      "type": "Legendary Planeswalker — Koth",
       "types": [
         "Planeswalker"
       ]
@@ -4342,7 +4444,7 @@
       "rulings": [
         {
           "date": "2009-10-01",
-          "text": "The landfall ability triggers whenever a land enters the battlefield under your control for any reason. It triggers whenever you play a land, as well as whenever a spell or ability (such as Rampant Growth) causes you to put a land onto the battlefield under your control. It will even trigger when a spell or ability causes another player to put a land onto the battlefield under your control (as can happen with Yavimaya Dryad’s ability, for example)."
+          "text": "The landfall ability triggers whenever a land enters the battlefield under your control for any reason. It triggers whenever you play a land, as well as whenever a spell or ability (such as Rampant Growth) causes you to put a land onto the battlefield under your control. It will even trigger when a spell or ability causes another player to put a land onto the battlefield under your control (as can happen with Yavimaya Dryad's ability, for example)."
         },
         {
           "date": "2009-10-01",
@@ -4479,7 +4581,8 @@
         "C13",
         "C14",
         "BFZ",
-        "EMA"
+        "EMA",
+        "CMA"
       ],
       "rarity": "Common",
       "subtypes": [
@@ -4509,7 +4612,7 @@
           "multiverseid": 300755
         }
       ],
-      "id": "f441a6c12d8e459693e3dc29b37f2f2fdb8f380f",
+      "id": "bb7a3fefde935db24ab9c08ae3e3d08714d5d7c7",
       "imageName": "aether membrane",
       "layout": "normal",
       "legalities": [
@@ -4537,7 +4640,7 @@
       "manaCost": "{1}{R}{R}",
       "mciNumber": "48",
       "multiverseid": 270856,
-      "name": "Æther Membrane",
+      "name": "Aether Membrane",
       "number": "48",
       "originalText": "Defender\nReach (This creature can block creatures with flying.)\nWhenever Æther Membrane blocks a creature, return that creature to its owner's hand at end of combat.",
       "originalType": "Creature — Wall",
@@ -4550,13 +4653,13 @@
       "rulings": [
         {
           "date": "2007-02-01",
-          "text": "The blocked creature is returned to its owner’s hand at end of combat only if the blocked creature is still on the battlefield. It doesn’t matter whether AEther Membrane is on the battlefield."
+          "text": "The blocked creature is returned to its owner's hand at end of combat only if the blocked creature is still on the battlefield. It doesn't matter whether Aether Membrane is on the battlefield."
         }
       ],
       "subtypes": [
         "Wall"
       ],
-      "text": "Defender; reach (This creature can block creatures with flying.)\nWhenever Æther Membrane blocks a creature, return that creature to its owner's hand at end of combat.",
+      "text": "Defender; reach (This creature can block creatures with flying.)\nWhenever Aether Membrane blocks a creature, return that creature to its owner's hand at end of combat.",
       "toughness": "5",
       "type": "Creature — Wall",
       "types": [
@@ -4594,10 +4697,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -4748,13 +4847,14 @@
       "printings": [
         "JUD",
         "CMD",
-        "DDI"
+        "DDI",
+        "CMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "The timestamp for the “in your graveyard” ability is set at the time that this card goes to your graveyard, regardless of whether you control a Mountain at that time."
+          "text": "The timestamp for the \"in your graveyard\" ability is set at the time that this card goes to your graveyard, regardless of whether you control a Mountain at that time."
         }
       ],
       "subtypes": [
@@ -4825,7 +4925,7 @@
       "rulings": [
         {
           "date": "2010-03-01",
-          "text": "The landfall ability triggers whenever a land enters the battlefield under your control for any reason. It triggers whenever you play a land, as well as whenever a spell or ability (such as Rampant Growth) causes you to put a land onto the battlefield under your control. It will even trigger when a spell or ability causes another player to put a land onto the battlefield under your control (as can happen with Yavimaya Dryad’s ability, for example)."
+          "text": "The landfall ability triggers whenever a land enters the battlefield under your control for any reason. It triggers whenever you play a land, as well as whenever a spell or ability (such as Rampant Growth) causes you to put a land onto the battlefield under your control. It will even trigger when a spell or ability causes another player to put a land onto the battlefield under your control (as can happen with Yavimaya Dryad's ability, for example)."
         },
         {
           "date": "2010-03-01",
@@ -5033,19 +5133,19 @@
       "rulings": [
         {
           "date": "2008-08-01",
-          "text": "If the Giant’s power and/or toughness change so that its toughness is less than its power, you can have the ability target the Giant itself."
+          "text": "If the Giant's power and/or toughness change so that its toughness is less than its power, you can have the ability target the Giant itself."
         },
         {
           "date": "2009-10-01",
-          "text": "To work as an evasion ability, an attacking creature must already have flying when the declare blockers step begins. Once a creature has become blocked, giving it flying won’t change that."
+          "text": "To work as an evasion ability, an attacking creature must already have flying when the declare blockers step begins. Once a creature has become blocked, giving it flying won't change that."
         },
         {
           "date": "2009-10-01",
-          "text": "If Stone Giant’s ability is activated during a turn’s end step, the delayed triggered ability won’t trigger until the beginning of the next turn’s end step. The targeted creature will be destroyed at that time."
+          "text": "If Stone Giant's ability is activated during a turn's end step, the delayed triggered ability won't trigger until the beginning of the next turn's end step. The targeted creature will be destroyed at that time."
         },
         {
           "date": "2009-10-01",
-          "text": "When the delayed triggered ability resolves, the targeted creature is destroyed, even if it’s no longer a creature, no longer under your control, or no longer has toughness less than Stone Giant’s power at that time."
+          "text": "When the delayed triggered ability resolves, the targeted creature is destroyed, even if it's no longer a creature, no longer under your control, or no longer has toughness less than Stone Giant's power at that time."
         }
       ],
       "subtypes": [
@@ -5116,7 +5216,7 @@
       "rulings": [
         {
           "date": "2009-10-01",
-          "text": "The landfall ability triggers whenever a land enters the battlefield under your control for any reason. It triggers whenever you play a land, as well as whenever a spell or ability (such as Rampant Growth) causes you to put a land onto the battlefield under your control. It will even trigger when a spell or ability causes another player to put a land onto the battlefield under your control (as can happen with Yavimaya Dryad’s ability, for example)."
+          "text": "The landfall ability triggers whenever a land enters the battlefield under your control for any reason. It triggers whenever you play a land, as well as whenever a spell or ability (such as Rampant Growth) causes you to put a land onto the battlefield under your control. It will even trigger when a spell or ability causes another player to put a land onto the battlefield under your control (as can happen with Yavimaya Dryad's ability, for example)."
         },
         {
           "date": "2009-10-01",
@@ -5246,21 +5346,22 @@
       "power": "3",
       "printings": [
         "PLC",
-        "DDI"
+        "DDI",
+        "E01"
       ],
       "rarity": "Rare",
       "rulings": [
         {
           "date": "2007-02-01",
-          "text": "When the third ability resolves, you must change the target if able. If you can’t choose a legal target for the spell when this ability resolves, that spell’s target doesn’t change."
+          "text": "When the third ability resolves, you must change the target if able. If you can't choose a legal target for the spell when this ability resolves, that spell's target doesn't change."
         },
         {
           "date": "2007-02-01",
-          "text": "If a spell targets multiple things, you can’t target it with Torchling’s third ability, even if all but one of those targets has become illegal."
+          "text": "If a spell targets multiple things, you can't target it with Torchling's third ability, even if all but one of those targets has become illegal."
         },
         {
           "date": "2007-02-01",
-          "text": "If a spell has multiple targets, but it’s targeting Torchling with all of them (such as Seeds of Strength targeting Torchling three times), you can target that spell with Torchling’s third ability. In that case, you change all of those targets to the same new target, as long as it meets each of the spell’s targeting conditions."
+          "text": "If a spell has multiple targets, but it's targeting Torchling with all of them (such as Seeds of Strength targeting Torchling three times), you can target that spell with Torchling's third ability. In that case, you change all of those targets to the same new target, as long as it meets each of the spell's targeting conditions."
         }
       ],
       "subtypes": [
@@ -5331,7 +5432,7 @@
       "rulings": [
         {
           "date": "2009-02-01",
-          "text": "Unlike the normal cycling ability, Mountaincycling doesn’t allow you to draw a card. Instead, it lets you search your library for a Mountain card. After you find a Mountain card in your library, you reveal it, put it into your hand, then shuffle your library."
+          "text": "Unlike the normal cycling ability, Mountaincycling doesn't allow you to draw a card. Instead, it lets you search your library for a Mountain card. After you find a Mountain card in your library, you reveal it, put it into your hand, then shuffle your library."
         },
         {
           "date": "2009-02-01",
@@ -5482,11 +5583,11 @@
       "rulings": [
         {
           "date": "2006-07-15",
-          "text": "After Greater Stone Spirit’s activated ability is activated, the affected creature gains an activated ability that only that creature’s controller can activate."
+          "text": "After Greater Stone Spirit's activated ability is activated, the affected creature gains an activated ability that only that creature's controller can activate."
         },
         {
           "date": "2007-05-01",
-          "text": "Creatures with the Reach ability (such as Giant Spider) can block this because they don’t actually have Flying."
+          "text": "Creatures with the Reach ability (such as Giant Spider) can block this because they don't actually have Flying."
         }
       ],
       "subtypes": [
@@ -5616,7 +5717,8 @@
         "C13",
         "C14",
         "MM2",
-        "C15"
+        "C15",
+        "C17"
       ],
       "rarity": "Common",
       "text": "{2}, {T}, Sacrifice Wayfarer's Bauble: Search your library for a basic land card and put that card onto the battlefield tapped. Then shuffle your library.",
@@ -5674,7 +5776,10 @@
         "CMD",
         "DDI",
         "PC2",
-        "C13"
+        "C13",
+        "PCA",
+        "CMA",
+        "C17"
       ],
       "rarity": "Common",
       "text": "{2}, {T}, Sacrifice Armillary Sphere: Search your library for up to two basic land cards, reveal them, and put them into your hand. Then shuffle your library.",
@@ -5859,7 +5964,7 @@
         },
         {
           "date": "2010-03-01",
-          "text": "The landfall ability checks for an action that has happened in the past. It doesn’t matter if a land that entered the battlefield under your control previously in the turn is still on the battlefield, is still under your control, or is still a land."
+          "text": "The landfall ability checks for an action that has happened in the past. It doesn't matter if a land that entered the battlefield under your control previously in the turn is still on the battlefield, is still under your control, or is still a land."
         },
         {
           "date": "2010-03-01",
@@ -5867,11 +5972,11 @@
         },
         {
           "date": "2010-03-01",
-          "text": "The effect of this spell’s landfall ability replaces its normal effect. If you had a land enter the battlefield under your control this turn, only the landfall-based effect happens."
+          "text": "The effect of this spell's landfall ability replaces its normal effect. If you had a land enter the battlefield under your control this turn, only the landfall-based effect happens."
         },
         {
           "date": "2010-03-01",
-          "text": "You must choose two targets as you cast Searing Blaze: a player and a creature that player controls. If you can’t (because there are no creatures on the battlefield, perhaps), then you can’t cast the spell."
+          "text": "You must choose two targets as you cast Searing Blaze: a player and a creature that player controls. If you can't (because there are no creatures on the battlefield, perhaps), then you can't cast the spell."
         },
         {
           "date": "2010-03-01",
@@ -6171,7 +6276,7 @@
       "rulings": [
         {
           "date": "2008-05-01",
-          "text": "The amount of damage is locked in as you cast Jaws of Stone. It won’t change, even if the number of Mountains you control changes."
+          "text": "The amount of damage is locked in as you cast Jaws of Stone. It won't change, even if the number of Mountains you control changes."
         },
         {
           "date": "2008-05-01",
@@ -6240,7 +6345,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "You can’t choose zero targets. You must choose between 1 and 6 targets."
+          "text": "You can't choose zero targets. You must choose between 1 and 6 targets."
         }
       ],
       "text": "Volley of Boulders deals 6 damage divided as you choose among any number of target creatures and/or players.\nFlashback {R}{R}{R}{R}{R}{R} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
@@ -6251,6 +6356,7 @@
     },
     {
       "artist": "Tomasz Jedruszek",
+      "cmc": 0,
       "colorIdentity": [
         "R"
       ],
@@ -6281,6 +6387,10 @@
       "layout": "normal",
       "legalities": [
         {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
         },
@@ -6298,6 +6408,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -6402,9 +6520,9 @@
         "LEA",
         "LEB",
         "2ED",
-        "ARN",
         "CED",
         "CEI",
+        "ARN",
         "3ED",
         "4ED",
         "ICE",
@@ -6423,8 +6541,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -6494,7 +6612,16 @@
         "BFZ",
         "C15",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "DDS",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -6511,10 +6638,12 @@
         284495,
         284493,
         284496
-      ]
+      ],
+      "watermark": "Red"
     },
     {
       "artist": "Tomasz Jedruszek",
+      "cmc": 0,
       "colorIdentity": [
         "R"
       ],
@@ -6545,6 +6674,10 @@
       "layout": "normal",
       "legalities": [
         {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
         },
@@ -6562,6 +6695,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -6666,9 +6807,9 @@
         "LEA",
         "LEB",
         "2ED",
-        "ARN",
         "CED",
         "CEI",
+        "ARN",
         "3ED",
         "4ED",
         "ICE",
@@ -6687,8 +6828,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -6758,7 +6899,16 @@
         "BFZ",
         "C15",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "DDS",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -6775,10 +6925,12 @@
         284495,
         284494,
         284493
-      ]
+      ],
+      "watermark": "Red"
     },
     {
       "artist": "Martina Pilcerova",
+      "cmc": 0,
       "colorIdentity": [
         "R"
       ],
@@ -6809,6 +6961,10 @@
       "layout": "normal",
       "legalities": [
         {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
         },
@@ -6826,6 +6982,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -6930,9 +7094,9 @@
         "LEA",
         "LEB",
         "2ED",
-        "ARN",
         "CED",
         "CEI",
+        "ARN",
         "3ED",
         "4ED",
         "ICE",
@@ -6951,8 +7115,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -7022,7 +7186,16 @@
         "BFZ",
         "C15",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "DDS",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -7039,10 +7212,12 @@
         284495,
         284494,
         284496
-      ]
+      ],
+      "watermark": "Red"
     },
     {
       "artist": "Mark Tedin",
+      "cmc": 0,
       "colorIdentity": [
         "R"
       ],
@@ -7073,6 +7248,10 @@
       "layout": "normal",
       "legalities": [
         {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
         },
@@ -7090,6 +7269,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -7194,9 +7381,9 @@
         "LEA",
         "LEB",
         "2ED",
-        "ARN",
         "CED",
         "CEI",
+        "ARN",
         "3ED",
         "4ED",
         "ICE",
@@ -7215,8 +7402,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -7286,7 +7473,16 @@
         "BFZ",
         "C15",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "DDS",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -7303,7 +7499,8 @@
         284494,
         284493,
         284496
-      ]
+      ],
+      "watermark": "Red"
     }
   ]
 }

@@ -1,10 +1,9 @@
 "use strict";
 
-var base = require("xbase"),
-	C = require("C"),
+var base = require('@sembiance/xbase'),
 	fs = require("fs"),
 	path = require("path"),
-	shared = require("shared"),
+	shared = require('../shared/shared'),
 	tiptoe = require("tiptoe"),
 	rip = require('../build/rip.js');
 
@@ -32,7 +31,7 @@ function processSet(code, cb) {
 			rip.fixCommanderIdentityForCards(set.cards, this);
 		},
 		function saveSet() {
-			if (set == null) {
+			if (set === null) {
 				throw('Error processing set');
 			}
 

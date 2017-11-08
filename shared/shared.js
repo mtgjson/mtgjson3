@@ -1,25 +1,24 @@
 "use strict";
-/*global setImmediate: true*/
 
-var base = require("xbase"),
-	C = require("C"),
-	hash = require("mhash"),
-	path = require("path"),
-	moment = require("moment"),
-	domino = require("domino"),
-	querystring = require("querystring"),
-	tiptoe = require("tiptoe"),
-	httpUtil = require("xutil").http,
-	fs = require("fs"),
-	urlUtil = require("xutil").url,
-	url = require("url"),
-	unicodeUtil = require("xutil").unicode,
-	cache = require('cache');
+var base = require("@sembiance/xbase");
+var C = require("./C");
+var hash = require("mhash");
+var path = require("path");
+var moment = require("moment");
+var domino = require("domino");
+var querystring = require("querystring");
+var tiptoe = require("tiptoe");
+var fs = require("fs");
+var url = require("url");
+var urlUtil = require("@sembiance/xutil").url;
+var unicodeUtil = require("@sembiance/xutil").unicode;
 
-exports.cache = cache(path.join(__dirname, '..', 'cache'), { compress: true });
+var retry = require('retry');
+var request = require('request');
+var levelup = require('level');
+exports.cache = levelup(path.join(__dirname, '..', 'cache'));
 
-exports.getSetsToDo = function(startAt)
-{
+exports.getSetsToDo = function(startAt) {
 	startAt = startAt || 2;
 	if(process.argv.length<(startAt+1))
 	{
@@ -199,9 +198,14 @@ exports.getSetCorrections = function(setCode)
 exports.performSetCorrections = function(setCorrections, fullSet)
 {
 	var cards = fullSet.cards;
+    var addBasicLandWatermarks = true;
 	setCorrections.forEach(function(setCorrection)
 	{
-		if(setCorrection==="numberCards")
+        if(setCorrection==="noBasicLandWatermarks")
+        {
+            addBasicLandWatermarks = false;
+        }
+		else if(setCorrection==="numberCards")
 		{
 			var COLOR_ORDER = ["Blue", "Black", "Red", "Green", "White"];
 			var LAND_ORDER = ["Island", "Swamp", "Mountain", "Forest", "Plains"];
@@ -278,6 +282,7 @@ exports.performSetCorrections = function(setCorrections, fullSet)
 						card.flavor = card.flavor.replace(/([A-Za-z])"/, "$1!\"", "gm");
 
 					if(setCorrection.addPrinting) {
+						if(!card.printings) card.printings = [];
 						card.printings = card.printings.concat(Array.toArray(setCorrection.addPrinting));
 						exports.finalizePrintings(card);
 					}
@@ -410,8 +415,25 @@ exports.performSetCorrections = function(setCorrections, fullSet)
 	{
 		if(card.supertypes && card.supertypes.contains("Basic") && card.types && card.types.contains("Land"))
 		{
-			delete card.text;
-			card.rarity = "Basic Land";
+            if(card.name!=="Wastes")
+                delete card.text;
+            if(card.name in ["Plains", "Island", "Swamp", "Mountain", "Forest"] || !(fullSet.code in ["CSP", "OGW"]))
+                card.rarity = "Basic Land";
+            if(addBasicLandWatermarks)
+            {
+                if('subtypes' in card && card.subtypes.contains("Plains"))
+                    card.watermark = "White";
+                else if('subtypes' in card && card.subtypes.contains("Island"))
+                    card.watermark = "Blue";
+                else if('subtypes' in card && card.subtypes.contains("Swamp"))
+                    card.watermark = "Black";
+                else if('subtypes' in card && card.subtypes.contains("Mountain"))
+                    card.watermark = "Red";
+                else if('subtypes' in card && card.subtypes.contains("Forest"))
+                    card.watermark = "Green";
+                else
+                    card.watermark = "Colorless";
+            }
 		}
 	});
 
@@ -435,45 +457,53 @@ exports.performSetCorrections = function(setCorrections, fullSet)
 		});
 	});
 
-	// Flavor text changes
-	cards.forEach(function(card)
-	{
-		if(!card.flavor)
-			return;
-
-		card.flavor = card.flavor.replaceAll("“", "\"");
-		card.flavor = card.flavor.replaceAll("”", "\"");
-		card.flavor = card.flavor.replaceAll("＂", "\"");
-
-		while(card.flavor.contains(" \n"))
-		{
-			card.flavor = card.flavor.replaceAll(" \n", "\n");
+	// Homogenize quotes and remove extra newlines and trailing spaces
+	function fixText(text) {
+		var newText = text;
+		newText = newText.replaceAll("“", "\"");
+		newText = newText.replaceAll("”", "\"");
+		newText = newText.replaceAll("＂", "\"");
+		newText = newText.replaceAll("’", "'");
+		newText = newText.replaceAll("‘", "'");
+		while (newText.contains(" \n")) {
+			newText = newText.replaceAll(" \n", "\n");
 		}
-	});
+		while (newText.contains("\n ")) {
+			newText = newText.replaceAll("\n ", "\n");
+		}
+		while (newText.contains("\n\n")) {
+			newText = newText.replaceAll("\n\n", "\n");
+		}
+		return newText;
+	}
 
-	// Rulings corrections
+	// Card / flavor / ruling text changes
 	cards.forEach(function(card)
 	{
-		if(!card.hasOwnProperty("rulings") || card.rulings.length===0)
-			return;
+		if(card.text)
+			card.text = fixText(card.text);
 
-		card.rulings.forEach(function(ruling)
-		{
-			Object.forEach(C.SYMBOL_MANA, function(manaSymbol)
-			{
-				var newText = ruling.text.replaceAll("\\{" + manaSymbol.toUpperCase() + "\\]", "{" + manaSymbol.toUpperCase() + "}");
-				if(newText===ruling.text)
-					ruling.text.replaceAll("\\[" + manaSymbol.toUpperCase() + "\\}", "{" + manaSymbol.toUpperCase() + "}");
-				if(newText===ruling.text)
-					ruling.text.replaceAll("\\[" + manaSymbol.toUpperCase() + "\\]", "{" + manaSymbol.toUpperCase() + "}");
+		if(card.flavor)
+			card.flavor = fixText(card.flavor);
 
-				if(newText!==ruling.text)
-				{
-					base.warn("Auto correcting set %s Card [%s] (%s) that has ruling with invalid symbol: %s", fullSet.code, card.name, card.multiverseid || "", ruling.text);
-					ruling.text = newText;
-				}
+		if(card.hasOwnProperty("rulings") && card.rulings.length!==0) {
+			card.rulings.forEach(function(ruling) {
+				ruling.text = fixText(ruling.text);
+
+				Object.forEach(C.SYMBOL_MANA, function(manaSymbol) {
+					var newText = ruling.text.replaceAll("\\{" + manaSymbol.toUpperCase() + "\\]", "{" + manaSymbol.toUpperCase() + "}");
+					if(newText===ruling.text)
+						ruling.text.replaceAll("\\[" + manaSymbol.toUpperCase() + "\\}", "{" + manaSymbol.toUpperCase() + "}");
+					if(newText===ruling.text)
+						ruling.text.replaceAll("\\[" + manaSymbol.toUpperCase() + "\\]", "{" + manaSymbol.toUpperCase() + "}");
+
+					if(newText!==ruling.text) {
+						base.warn("Auto correcting set %s Card [%s] (%s) that has ruling with invalid symbol: %s", fullSet.code, card.name, card.multiverseid || "", ruling.text);
+						ruling.text = newText;
+					}
+				});
 			});
-		});
+		}
 	});
 
 	// Final Release date validation
@@ -489,13 +519,18 @@ exports.performSetCorrections = function(setCorrections, fullSet)
 		}
 	});
 
-	// Sort legalities and foreign names
+	// Sort and clean up legalities and foreign names
 	cards.forEach(function(card)
 	{
 		if(card.hasOwnProperty("legalities"))
 			card.legalities = card.legalities.sort(function(a, b) { var al = a.format.toLowerCase().charAt(0); var bl = b.format.toLowerCase().charAt(0); return (al<bl ? -1 : (al>bl ? 1 : 0)); });
-		if(card.hasOwnProperty("foreignNames"))
-			card.foreignNames = card.foreignNames.sort(function(a, b) { var al = a.language.toLowerCase().charAt(0); var bl = b.language.toLowerCase().charAt(0); return (al<bl ? -1 : (al>bl ? 1 : 0)); });
+		if(card.hasOwnProperty("foreignNames")) {
+			card.foreignNames = card.foreignNames.filter(function(a) {
+				return (typeof a.name !== undefined && a.name !== '');
+			}).sort(function(a, b) {
+				var al = a.language.toLowerCase().charAt(0); var bl = b.language.toLowerCase().charAt(0); return (al<bl ? -1 : (al>bl ? 1 : 0));
+			});
+		}
 	});
 
 	// Finalize printings
@@ -506,10 +541,6 @@ exports.performSetCorrections = function(setCorrections, fullSet)
 	{
 		card.id = hash("sha1", (fullSet.code + card.name + card.imageName));
 	});
-};
-
-exports.generateCacheFilePath = function(targetUrl) {
-	exports.cache.cachname(targetUrl);
 };
 
 exports.finalizePrintings = finalizePrintings;
@@ -523,16 +554,25 @@ function finalizePrintings(card)
 }
 
 exports.getSetCodeFromName = getSetCodeFromName;
-function getSetCodeFromName(setName)
-{
-	var setCode = C.SETS.mutateOnce(function(SET) { return SET.name.toLowerCase()===setName.toLowerCase() ? SET.code : undefined; });
-	if(!setCode)
-	{
+function getSetCodeFromName(setName) {
+	var setInfo = C.SETS.find(function(SET) {
+		if (SET.name.toLowerCase() === setName.toLowerCase())
+			return(true);
+		if (SET.alternativeNames) {
+			var i;
+			for (i = 0; i < SET.alternativeNames.length; i++)
+				if (SET.alternativeNames[i].toLowerCase() === setName.toLowerCase())
+					return(true);
+		}
+		return(false);
+	});
+
+	if (!setInfo) {
 		console.trace();
-		base.error("FAILED TO GET SET CODE FOR NAME: %s", setName);
+		base.error("Failed to get set code for '%s'; please add the set to shared/C.js", setName);
 		process.exit(1);
 	}
-	return setCode;
+	return(setInfo.code);
 }
 
 exports.getReleaseDateForSetName = getReleaseDateForSetName;
@@ -548,12 +588,20 @@ function getReleaseDateForSetCode(setCode)
 }
 
 exports.clearCacheFile = function(targetUrl, cb) {
-	exports.cache.delete(targetUrl).done(cb);
+    exports.cache.get(targetUrl, function(err) {
+        if (err && err.notFound) return cb();
+        if (err) return cb(err);
+        exports.cache.del(targetUrl, {}, function(err) {
+            if (err) return cb(err);
+            base.info('Cleared from cache: %s', targetUrl);
+            return cb();
+        });
+    });
 };
 
-exports.buildCacheFileURLs = function(card, cacheType, cb, fromCache) {
+exports.buildCacheFileURLs = function(card, cacheType, cb) {
 	if (cacheType==="printings")
-		return exports.buildMultiverseAllPrintingsURLs(card.multiverseid, cb, fromCache);
+		return exports.buildMultiverseAllPrintingsURLs(card.multiverseid, cb);
 
 	var urls = [];
 	if (cacheType==="oracle") {
@@ -604,79 +652,68 @@ exports.buildMultiverseListingURLs = function(setName, cb) {
 	);
 };
 
-exports.getURLAsDoc = function(targetURL, cb, retryCount) {
-	var retryCount = 0;
+exports.getURLAsDoc = function(targetURL, getCb) {
+    function downloadHTML(dlCb) {
+        var options = {
+            url: targetURL,
+            headers: { 'User-Agent': 'mtgjson.com/1.0' }
+        };
+        request(options, function(err, response, body) {
+            if (!err && response && response.statusCode !== 200)
+                err = new Error('Server responded with statusCode: ' + response.statusCode);
+            if (!err && (!body || body.length === 0))
+                err = new Error('No page contents');
+            if (!err && body.indexOf('Server Error') !== -1)
+                err = new Error('Gatherer Server Error despite statusCode: ' + response.statusCode);
+            if (err) {
+                base.error('Error downloading: %s', targetURL);
+                base.error(err);
+                return dlCb(err);
+            }
+            base.info('Retrieved: %s', targetURL);
+            dlCb(null, body);
+        });
+    }
 
-	// Downloads the targetURL.
-	var downloadDoc = function(cb) {
-		if (retryCount > 3) {
-			cb(new Error("Invalid pageHTML for " + targetURL));
-			return;
-		}
+    function retryDl(dlCb) {
+        var operation = retry.operation({ retries: 5});
+        operation.attempt(function(currentAttempt) {
+            downloadHTML(function(err, body) {
+                if (operation.retry(err)){
+                    base.info('Retry %d of fetch: %s', currentAttempt, targetURL);
+                    return;
+                }
 
-		httpUtil.get(
-			targetURL,
-			{
-				timeout: base.SECOND * 10,
-				retry: 5,
-				'User-Agent': 'mtgjson.com/1.0'
-			},
-			function(err, pageHTML, responseHeaders, responseStatusCode) {
-				if(err || (responseStatusCode && responseStatusCode!==200)) {
-					base.error("Error downloading: " + targetURL);
-					base.error(err);
-					return(setImmediate(cb, err));
-				}
+                dlCb(err ? operation.mainError() : null, body);
+            });
+        });
+    }
 
-				if(!pageHTML || pageHTML.length===0 || (!targetURL.contains("www.magiclibrarities.net") && !pageHTML.toString("utf8").trim().toLowerCase().endsWith("</html>"))) {
-					retryCount++;
-					base.error("FAILED DOWNLOADING (%s), TRYING AGAIN RETRY %d", targetURL, retryCount);
+    function downloadCb(err, body) {
+        if (err) return getCb(err);
+        exports.cache.put(targetURL, body);
+        getCb(null, domino.createWindow(body).document);
+    }
 
-					return(setImmediate(downloadDoc, cb));
-				}
+    function cacheCb(err, doc) {
+        if (err && err.notFound)
+            retryDl(downloadCb);
+        else if (err)
+            getCb(err);
+        else
+            getCb(null, domino.createWindow(doc).document);
+    }
 
-				setImmediate(cb, null, pageHTML);
-			}
-		);
-	};
-
-	exports.cache.get(
-		targetURL,
-		function(cachecb) {
-			base.info("Requesting from web: %s", targetURL);
-			downloadDoc(function(err, html) {
-				if (err)
-					throw(err);
-				cachecb(html);
-			});
-		}
-	).done(function(err, html) {
-		if (err) {
-			console.error('Error downloading %s', targetURL);
-			exports.cache.delete(targetURL).done(function() { throw(err); });
-			return;
-		}
-		setImmediate(cb, null, domino.createWindow(html).document);
-	});
+    exports.cache.get(targetURL, cacheCb);
 };
 
-exports.buildMultiverseAllPrintingsURLs = function(multiverseid, cb, fromCache) {
+exports.buildMultiverseAllPrintingsURLs = function(multiverseid, cb) {
 	tiptoe(
 		function getFirstPage() {
 			var targetURL = exports.buildMultiversePrintingsURL(multiverseid, 0);
-			if (fromCache) {
-				exports.cache.get(targetURL, function(cachecb) {
-					httpUtil.get(targetURL, function(err, html) {
-						if (err) throw(err);
-						cachecb(html);
-					});
-				})
-				.done(this);
-			}
-			else
-				httpUtil.get(targetURL, this);
+            exports.getURLAsDoc(targetURL, this);
 		},
-		function getAllPages(err, rawHTML) {
+		function getAllPages(err, doc) {
 			if(err) {
 				base.error(exports.buildMultiversePrintingsURL(multiverseid, 0));
 				base.error(err);
@@ -685,7 +722,7 @@ exports.buildMultiverseAllPrintingsURLs = function(multiverseid, cb, fromCache) 
 
 			var urls = [];
 
-			var numPages = exports.getPagingNumPages(domino.createWindow(rawHTML).document, "printings");
+			var numPages = exports.getPagingNumPages(doc, "printings");
 			for(var i = 0; i < numPages; i++) {
 				urls.push(exports.buildMultiversePrintingsURL(multiverseid, i));
 			}
@@ -727,8 +764,16 @@ exports.updateStandardForCard = function(card) {
 		return; // Can't check if it's standard if we don't have printings.
 
 	// Update standard legalities
+	var banned = false;
 	if (card.legalities)
-		card.legalities = card.legalities.filter(function(cardLegality) { return(cardLegality.format != "Standard"); });
+		card.legalities = card.legalities.filter(function(cardLegality) {
+			if (cardLegality.format === 'Standard') {
+				if (cardLegality.legality === 'Banned') banned = true;
+				return false;
+			} else {
+				return true;
+			}
+		});
 
 	var standard = false;
 	card.printings.forEach(function(value) {
@@ -737,9 +782,10 @@ exports.updateStandardForCard = function(card) {
 			//base.info("Card %s is in standard set (%s).", card.name, value);
 		}
 	});
-	if (standard == true) {
-		var legalityObject = {format:"Standard", legality: "Legal"};
-		if (card.legalities == undefined)
+	if (standard === true) {
+		var legality = banned ? 'Banned' : 'Legal';
+		var legalityObject = {format:"Standard", legality: legality};
+		if (card.legalities === undefined)
 			card.legalities = [];
 
 		card.legalities.push(legalityObject);
@@ -763,15 +809,15 @@ exports.saveSet = function(set, callback) {
 	set.cards.sort(function(a, b) {
 		var ret = 0;
 		if (a.number && b.number) {
-			var ret = exports.alphanum(a.number, b.number);
-			if (ret == 0)
+			ret = exports.alphanum(a.number, b.number);
+			if (ret === 0)
 				ret = (a.multiverseid > b.multiverseid)?1:-1;
 		}
 
-		if (ret == 0)
+		if (ret === 0)
 			ret = a.name.localeCompare(b.name);
 
-		if (ret == 0)
+		if (ret === 0)
 			ret = (a.multiverseid > b.multiverseid)?1:-1;
 
 		return(ret);
@@ -782,11 +828,11 @@ exports.saveSet = function(set, callback) {
 		// 2. Foreign Names
 		if (card.foreignNames)
 			card.foreignNames.sort(function(a, b){
-				var ret = a.language.localeCompare(b.language)
-				if (ret == 0 && a.multiverseid != b.multiverseid) {
-					ret = (a.multiverseid > b.multiverseid)?1:-1;
-				}
-				return(ret);
+			    var ret = a.language.localeCompare(b.language);
+			    if (ret === 0 && a.multiverseid != b.multiverseid) {
+				ret = (a.multiverseid > b.multiverseid)?1:-1;
+			    }
+			    return(ret);
 			});
 
 		// 3. Legalities
@@ -816,10 +862,10 @@ exports.saveSet = function(set, callback) {
 // Thanks to Brian Huisman at http://web.archive.org/web/20130826203933/http://my.opera.com/GreyWyvern/blog/show.dml/1671288 and http://www.davekoelle.com/alphanum.html
 exports.alphanum = function(a, b) {
   function chunkify(t) {
-    var tz = new Array();
+    var tz = [];
     var x = 0, y = -1, n = 0, i, j;
 
-    while (i = (j = t.charAt(x++)).charCodeAt(0)) {
+      while ((i = (j = t.charAt(x++)).charCodeAt(0))) {
       var m = (i == 46 || (i >=48 && i <= 57));
       if (m !== n) {
         tz[++y] = "";

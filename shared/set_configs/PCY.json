@@ -1,0 +1,42 @@
+{
+  "SET": {
+    "name": "Prophecy",
+    "code": "PCY",
+    "gathererCode": "PR",
+    "magicCardsInfoCode": "pr",
+    "releaseDate": "2000-06-05",
+    "border": "black",
+    "type": "expansion",
+    "block": "Masques",
+    "booster": ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"],
+    "translations": {
+      "de": "Prophezeihung",
+      "fr": "Prophétie",
+      "it": "Profezia",
+      "es": "Profecía",
+      "pt": "Profecia"
+    },
+    "mkm_name": "Prophecy",
+    "mkm_id": 33
+  },
+  "SET_CORRECTIONS": [{
+    "match": {
+      "name": ["Quicksilver Wall"]
+    },
+    "flavorAddExclamation": true
+  }, {
+    "match": {
+      "name": "Reveille Squad"
+    },
+    "replace": {
+      "flavor": "\"To arms! To arms! The Lion roars!\""
+    }
+  }, {
+    "match": {
+      "name": "Withdraw"
+    },
+    "replace": {
+      "flavor": "\"We outnumber them! Charge! Charge! Hey, where'd you guys go? Retreat! Retreat!\""
+    }
+  }]
+}

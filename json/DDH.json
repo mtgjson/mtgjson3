@@ -90,18 +90,21 @@
       "rulings": [
         {
           "date": "2008-10-01",
-          "text": "You may target any permanent with Ajani Vengeant’s first ability. It doesn’t have to be tapped."
+          "text": "You may target any permanent with Ajani Vengeant's first ability. It doesn't have to be tapped."
         },
         {
           "date": "2008-10-01",
-          "text": "The first ability tracks the permanent, but not its controller. If the permanent changes controllers before its first controller’s next untap step has come around, then it won’t untap during its new controller’s next untap step."
+          "text": "The first ability tracks the permanent, but not its controller. If the permanent changes controllers before its first controller's next untap step has come around, then it won't untap during its new controller's next untap step."
         }
       ],
       "subtypes": [
         "Ajani"
       ],
+      "supertypes": [
+        "Legendary"
+      ],
       "text": "+1: Target permanent doesn't untap during its controller's next untap step.\n−2: Ajani Vengeant deals 3 damage to target creature or player and you gain 3 life.\n−7: Destroy all lands target player controls.",
-      "type": "Planeswalker — Ajani",
+      "type": "Legendary Planeswalker — Ajani",
       "types": [
         "Planeswalker"
       ]
@@ -256,7 +259,8 @@
       "printings": [
         "PLC",
         "DDH",
-        "C14"
+        "C14",
+        "CMA"
       ],
       "rarity": "Common",
       "rulings": [
@@ -358,7 +362,7 @@
       "rulings": [
         {
           "date": "2008-10-01",
-          "text": "Wild Nacatl’s abilities check for lands with the subtypes Mountain and Plains. Those lands don’t need to be named Mountain and Plains. Wild Nacatl will get both bonuses if those two subtypes are contained among the lands you control, even if they’re from the same land (such as Plateau or Sacred Foundry)."
+          "text": "Wild Nacatl's abilities check for lands with the subtypes Mountain and Plains. Those lands don't need to be named Mountain and Plains. Wild Nacatl will get both bonuses if those two subtypes are contained among the lands you control, even if they're from the same land (such as Plateau or Sacred Foundry)."
         }
       ],
       "subtypes": [
@@ -445,7 +449,7 @@
       "rulings": [
         {
           "date": "2010-03-01",
-          "text": "Loam Lion either gets +1/+2 or it doesn’t. It doesn’t get the bonus for each Forest you control."
+          "text": "Loam Lion either gets +1/+2 or it doesn't. It doesn't get the bonus for each Forest you control."
         }
       ],
       "subtypes": [
@@ -611,7 +615,7 @@
         "Human",
         "Shaman"
       ],
-      "text": "{2}{G}: Put a 1/1 green Saproling creature token onto the battlefield.",
+      "text": "{2}{G}: Create a 1/1 green Saproling creature token.",
       "toughness": "1",
       "type": "Creature — Human Shaman",
       "types": [
@@ -683,7 +687,9 @@
         "pWPN",
         "M11",
         "DDH",
-        "C14"
+        "C14",
+        "MM3",
+        "CMA"
       ],
       "rarity": "Common",
       "subtypes": [
@@ -768,11 +774,11 @@
       "rulings": [
         {
           "date": "2014-07-18",
-          "text": "The ability triggers just once for each life-gaining event, whether it’s 1 life from Soulmender or 8 life from Meditation Puzzle."
+          "text": "The ability triggers just once for each life-gaining event, whether it's 1 life from Soulmender or 8 life from Meditation Puzzle."
         },
         {
           "date": "2014-07-18",
-          "text": "A creature with lifelink dealing combat damage is a single life-gaining event. For example, if two creatures you control with lifelink deal combat damage at the same time, Ajani’s Pridemate’s ability will trigger twice. However, if a single creature you control with lifelink deals combat damage to multiple creatures, players, and/or planeswalkers at the same time (perhaps because it has trample or was blocked by more than one creature), the ability will trigger only once."
+          "text": "A creature with lifelink dealing combat damage is a single life-gaining event. For example, if two creatures you control with lifelink deal combat damage at the same time, Ajani's Pridemate's ability will trigger twice. However, if a single creature you control with lifelink deals combat damage to multiple creatures, players, and/or planeswalkers at the same time (perhaps because it has trample or was blocked by more than one creature), the ability will trigger only once."
         }
       ],
       "subtypes": [
@@ -856,7 +862,8 @@
       "printings": [
         "pFNM",
         "ARB",
-        "DDH"
+        "DDH",
+        "C17"
       ],
       "rarity": "Common",
       "subtypes": [
@@ -911,27 +918,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -1133,7 +1124,8 @@
       "printings": [
         "pWPN",
         "ALA",
-        "DDH"
+        "DDH",
+        "MM3"
       ],
       "rarity": "Uncommon",
       "subtypes": [
@@ -1396,7 +1388,7 @@
       "rulings": [
         {
           "date": "2008-08-01",
-          "text": "Even if the amount of damage dealt to Spitemare is enough to destroy it, Spitemare’s ability will trigger and it will deal the full amount of damage to the target."
+          "text": "Even if the amount of damage dealt to Spitemare is enough to destroy it, Spitemare's ability will trigger and it will deal the full amount of damage to the target."
         }
       ],
       "subtypes": [
@@ -1641,11 +1633,11 @@
       "rulings": [
         {
           "date": "2008-04-01",
-          "text": "If this creature is attacking a planeswalker, assigning its damage as though it weren’t blocked means the damage is assigned to the planeswalker, not to the defending player."
+          "text": "If this creature is attacking a planeswalker, assigning its damage as though it weren't blocked means the damage is assigned to the planeswalker, not to the defending player."
         },
         {
           "date": "2008-04-01",
-          "text": "When assigning combat damage, you choose whether you want to assign all damage to blocking creatures, or if you want to assign all of it to the defending player or planeswalker. You can’t split the damage assignment between them."
+          "text": "When assigning combat damage, you choose whether you want to assign all damage to blocking creatures, or if you want to assign all of it to the defending player or planeswalker. You can't split the damage assignment between them."
         },
         {
           "date": "2008-04-01",
@@ -1653,7 +1645,7 @@
         },
         {
           "date": "2008-04-01",
-          "text": "If blocked by a creature with banding, the defending player decides whether or not the damage is assigned “as though it weren’t blocked\"."
+          "text": "If blocked by a creature with banding, the defending player decides whether or not the damage is assigned \"as though it weren't blocked\"."
         }
       ],
       "subtypes": [
@@ -1741,7 +1733,7 @@
       "rulings": [
         {
           "date": "2009-02-01",
-          "text": "If either ability is activated after blockers have been declared, it won’t cause those blocks to change."
+          "text": "If either ability is activated after blockers have been declared, it won't cause those blocks to change."
         },
         {
           "date": "2009-02-01",
@@ -1833,7 +1825,7 @@
       "rulings": [
         {
           "date": "2005-10-01",
-          "text": "If you return Firemane Angel from your graveyard to the battlefield during your upkeep before its life-gain ability resolves, you won’t gain 1 life. (Most of the time, players will let the triggered ability resolve before activating its activated ability.)"
+          "text": "If you return Firemane Angel from your graveyard to the battlefield during your upkeep before its life-gain ability resolves, you won't gain 1 life. (Most of the time, players will let the triggered ability resolve before activating its activated ability.)"
         },
         {
           "date": "2006-07-01",
@@ -1964,10 +1956,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -1976,19 +1964,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
           "format": "Ravnica Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -2064,10 +2040,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -2076,19 +2048,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
           "format": "Scars of Mirrodin Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -2188,13 +2148,13 @@
       "rulings": [
         {
           "date": "2006-09-25",
-          "text": "If Griffin Guide and the enchanted creature go to the graveyard at the same time, Griffin Guide’s ability will trigger."
+          "text": "If Griffin Guide and the enchanted creature go to the graveyard at the same time, Griffin Guide's ability will trigger."
         }
       ],
       "subtypes": [
         "Aura"
       ],
-      "text": "Enchant creature\nEnchanted creature gets +2/+2 and has flying.\nWhen enchanted creature dies, put a 2/2 white Griffin creature token with flying onto the battlefield.",
+      "text": "Enchant creature\nEnchanted creature gets +2/+2 and has flying.\nWhen enchanted creature dies, create a 2/2 white Griffin creature token with flying.",
       "type": "Enchantment — Aura",
       "types": [
         "Enchantment"
@@ -2272,7 +2232,7 @@
       "rulings": [
         {
           "date": "2008-08-01",
-          "text": "The triggered ability is on the Aura, not the creature. It triggers at the beginning of the upkeep of Recumbent Bliss’s controller, not the enchanted creature’s controller, and Recumbent Bliss’s controller will gain the life."
+          "text": "The triggered ability is on the Aura, not the creature. It triggers at the beginning of the upkeep of Recumbent Bliss's controller, not the enchanted creature's controller, and Recumbent Bliss's controller will gain the life."
         }
       ],
       "subtypes": [
@@ -2358,7 +2318,7 @@
       "rulings": [
         {
           "date": "2005-10-01",
-          "text": "Searing Meditation doesn’t care how much life you gain. It triggers just once for each life-gaining event, whether it’s 1 life from Firemane Angel or 15 life from Brightflame."
+          "text": "Searing Meditation doesn't care how much life you gain. It triggers just once for each life-gaining event, whether it's 1 life from Firemane Angel or 15 life from Brightflame."
         }
       ],
       "text": "Whenever you gain life, you may pay {2}. If you do, Searing Meditation deals 2 damage to target creature or player.",
@@ -2436,19 +2396,20 @@
       "printings": [
         "ARB",
         "DDH",
-        "C13"
+        "C13",
+        "C17"
       ],
       "rarity": "Uncommon",
       "rulings": [
         {
           "date": "2009-10-01",
-          "text": "Multiple instances of lifelink are redundant. If a creature with multiple instances of lifelink deals damage, its controller still only gains life equal to the damage dealt."
+          "text": "multiple instances of lifelink on the same creature are redundant. If a creature with multiple instances of lifelink deals damage, its controller still only gains life equal to the damage dealt."
         }
       ],
       "subtypes": [
         "Equipment"
       ],
-      "text": "Equipped creature gets +2/+2 and has lifelink and trample.\nEquip {3}",
+      "text": "Equipped creature gets +2/+2 and has trample and lifelink.\nEquip {3}",
       "type": "Artifact — Equipment",
       "types": [
         "Artifact"
@@ -2525,17 +2486,18 @@
       "printings": [
         "ALA",
         "DDH",
-        "C13"
+        "C13",
+        "C16"
       ],
       "rarity": "Uncommon",
       "rulings": [
         {
           "date": "2008-10-01",
-          "text": "You can choose a mode only if you can choose legal targets for that mode. If you can’t choose legal targets for any of the modes, you can’t cast the spell."
+          "text": "You can choose a mode only if you can choose legal targets for that mode. If you can't choose legal targets for any of the modes, you can't cast the spell."
         },
         {
           "date": "2008-10-01",
-          "text": "While the spell is on the stack, treat it as though its only text is the chosen mode. The other two modes are treated as though they don’t exist. You don’t choose targets for those modes."
+          "text": "While the spell is on the stack, treat it as though its only text is the chosen mode. The other two modes are treated as though they don't exist. You don't choose targets for those modes."
         },
         {
           "date": "2008-10-01",
@@ -2617,13 +2579,14 @@
         "DDH",
         "MMA",
         "MM2",
-        "CN2"
+        "CN2",
+        "E01"
       ],
       "rarity": "Common",
       "rulings": [
         {
           "date": "2009-02-01",
-          "text": "Unlike the normal cycling ability, basic landcycling doesn’t allow you to draw a card. Instead, it lets you search your library for a basic land card. You don’t choose the type of basic land card you’ll find until you’re performing the search. After you choose a basic land card in your library, you reveal it, put it into your hand, then shuffle your library."
+          "text": "Unlike the normal cycling ability, basic landcycling doesn't allow you to draw a card. Instead, it lets you search your library for a basic land card. You don't choose the type of basic land card you'll find until you're performing the search. After you choose a basic land card in your library, you reveal it, put it into your hand, then shuffle your library."
         },
         {
           "date": "2009-02-01",
@@ -2728,10 +2691,10 @@
         },
         {
           "date": "2009-10-01",
-          "text": "If a creature you control already has lifelink, Titanic Ultimatum will give it a second instance of lifelink; however, multiple instances of lifelink are redundant. You still only gain life equal to the amount of damage dealt, regardless of how many instances of lifelink the creature has."
+          "text": "If a creature you control already has lifelink, Titanic Ultimatum will give it a second instance of lifelink; however, multiple instances of lifelink on the same creature are redundant. You still only gain life equal to the amount of damage dealt, regardless of how many instances of lifelink the creature has."
         }
       ],
-      "text": "Until end of turn, creatures you control get +5/+5 and gain first strike, lifelink, and trample.",
+      "text": "Until end of turn, creatures you control get +5/+5 and gain first strike, trample, and lifelink.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -2739,6 +2702,7 @@
     },
     {
       "artist": "Steven Belledin",
+      "cmc": 0,
       "flavor": "Every world is an organism, able to grow new lands. Some just do it faster than others.",
       "foreignNames": [
         {
@@ -2766,6 +2730,10 @@
       "imageName": "evolving wilds",
       "layout": "normal",
       "legalities": [
+        {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
         {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
@@ -2829,7 +2797,11 @@
         "DDP",
         "BFZ",
         "C15",
-        "CN2"
+        "CN2",
+        "C16",
+        "AKH",
+        "CMA",
+        "C17"
       ],
       "rarity": "Common",
       "text": "{T}, Sacrifice Evolving Wilds: Search your library for a basic land card and put it onto the battlefield tapped. Then shuffle your library.",
@@ -2840,6 +2812,7 @@
     },
     {
       "artist": "Philip Straub",
+      "cmc": 0,
       "colorIdentity": [
         "G",
         "W"
@@ -2875,27 +2848,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -2918,7 +2875,9 @@
         "ARC",
         "DDH",
         "PC2",
-        "DDP"
+        "DDP",
+        "PCA",
+        "C17"
       ],
       "rarity": "Uncommon",
       "text": "Graypelt Refuge enters the battlefield tapped.\nWhen Graypelt Refuge enters the battlefield, you gain 1 life.\n{T}: Add {G} or {W} to your mana pool.",
@@ -2929,6 +2888,7 @@
     },
     {
       "artist": "Wayne Reynolds",
+      "cmc": 0,
       "colorIdentity": [
         "R",
         "G",
@@ -2991,7 +2951,10 @@
       "printings": [
         "ALA",
         "DDH",
-        "C13"
+        "C13",
+        "C16",
+        "MM3",
+        "C17"
       ],
       "rarity": "Uncommon",
       "text": "Jungle Shrine enters the battlefield tapped.\n{T}: Add {R}, {G}, or {W} to your mana pool.",
@@ -3002,6 +2965,7 @@
     },
     {
       "artist": "Franz Vohwinkel",
+      "cmc": 0,
       "colorIdentity": [
         "R",
         "G"
@@ -3066,7 +3030,8 @@
         "DDH",
         "PC2",
         "DDL",
-        "C13"
+        "C13",
+        "PCA"
       ],
       "rarity": "Uncommon",
       "text": "Kazandu Refuge enters the battlefield tapped.\nWhen Kazandu Refuge enters the battlefield, you gain 1 life.\n{T}: Add {R} or {G} to your mana pool.",
@@ -3077,6 +3042,7 @@
     },
     {
       "artist": "Aleksi Briclot",
+      "cmc": 0,
       "colorIdentity": [
         "G"
       ],
@@ -3149,6 +3115,7 @@
     },
     {
       "artist": "Martina Pilcerova",
+      "cmc": 0,
       "colorIdentity": [
         "G",
         "W"
@@ -3212,10 +3179,11 @@
         "ARC",
         "DDH",
         "PC2",
-        "C13"
+        "C13",
+        "PCA"
       ],
       "rarity": "Uncommon",
-      "text": "{T}: Add {C} to your mana pool.\n{2}{G}{W}, {T}: Put a 1/1 green Saproling creature token onto the battlefield.",
+      "text": "{T}: Add {C} to your mana pool.\n{2}{G}{W}, {T}: Create a 1/1 green Saproling creature token.",
       "type": "Land",
       "types": [
         "Land"
@@ -3223,6 +3191,7 @@
     },
     {
       "artist": "Zoltan Boros & Gabor Szikszai",
+      "cmc": 0,
       "colorIdentity": [
         "G"
       ],
@@ -3273,6 +3242,10 @@
       "layout": "normal",
       "legalities": [
         {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
         },
@@ -3290,6 +3263,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -3414,8 +3395,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -3484,7 +3465,16 @@
         "C15",
         "SOI",
         "DDR",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "DDS",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -3499,10 +3489,12 @@
       ],
       "variations": [
         259285
-      ]
+      ],
+      "watermark": "Green"
     },
     {
       "artist": "Zoltan Boros & Gabor Szikszai",
+      "cmc": 0,
       "colorIdentity": [
         "G"
       ],
@@ -3553,6 +3545,10 @@
       "layout": "normal",
       "legalities": [
         {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
         },
@@ -3570,6 +3566,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -3694,8 +3698,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -3764,7 +3768,16 @@
         "C15",
         "SOI",
         "DDR",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "DDS",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -3779,10 +3792,12 @@
       ],
       "variations": [
         262651
-      ]
+      ],
+      "watermark": "Green"
     },
     {
       "artist": "Zoltan Boros & Gabor Szikszai",
+      "cmc": 0,
       "colorIdentity": [
         "W"
       ],
@@ -3813,6 +3828,10 @@
       "layout": "normal",
       "legalities": [
         {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
         },
@@ -3830,6 +3849,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -3956,8 +3983,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -4024,7 +4051,15 @@
         "C15",
         "DDQ",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -4036,10 +4071,12 @@
       "type": "Basic Land — Plains",
       "types": [
         "Land"
-      ]
+      ],
+      "watermark": "White"
     },
     {
       "artist": "Zoltan Boros & Gabor Szikszai",
+      "cmc": 0,
       "colorIdentity": [
         "R"
       ],
@@ -4090,6 +4127,10 @@
       "layout": "normal",
       "legalities": [
         {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
         },
@@ -4107,6 +4148,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -4211,9 +4260,9 @@
         "LEA",
         "LEB",
         "2ED",
-        "ARN",
         "CED",
         "CEI",
+        "ARN",
         "3ED",
         "4ED",
         "ICE",
@@ -4232,8 +4281,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -4303,7 +4352,16 @@
         "BFZ",
         "C15",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "DDS",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -4318,7 +4376,8 @@
       ],
       "variations": [
         259286
-      ]
+      ],
+      "watermark": "Red"
     },
     {
       "artist": "Izzy",
@@ -4391,7 +4450,8 @@
       "printings": [
         "CON",
         "DDH",
-        "M13"
+        "M13",
+        "E01"
       ],
       "rarity": "Mythic Rare",
       "rulings": [
@@ -4401,7 +4461,7 @@
         },
         {
           "date": "2012-07-01",
-          "text": "If the damage from Nicol Bolas’s third ability is prevented or redirected, the rest of the effect will still happen. Specifically, the number of cards discarded and permanents sacrificed isn’t tied to the amount of damage dealt."
+          "text": "If the damage from Nicol Bolas's third ability is prevented or redirected, the rest of the effect will still happen. Specifically, the number of cards discarded and permanents sacrificed isn't tied to the amount of damage dealt."
         },
         {
           "date": "2012-07-01",
@@ -4411,8 +4471,11 @@
       "subtypes": [
         "Bolas"
       ],
+      "supertypes": [
+        "Legendary"
+      ],
       "text": "+3: Destroy target noncreature permanent.\n−2: Gain control of target creature.\n−9: Nicol Bolas, Planeswalker deals 7 damage to target player. That player discards seven cards, then sacrifices seven permanents.",
-      "type": "Planeswalker — Bolas",
+      "type": "Legendary Planeswalker — Bolas",
       "types": [
         "Planeswalker"
       ]
@@ -4563,7 +4626,8 @@
         "PLS",
         "DDH",
         "C13",
-        "VMA"
+        "VMA",
+        "E01"
       ],
       "rarity": "Common",
       "rulings": [
@@ -4573,7 +4637,7 @@
         },
         {
           "date": "2004-10-04",
-          "text": "The generic X cost is still considered generic even if there is a requirement that a specific color be used for it. For example, “only black mana can be spent this way\". This distinction is important for effects which reduce the generic portion of a spell’s cost."
+          "text": "The generic X cost is still considered generic even if there is a requirement that a specific color be used for it. For example, \"only black mana can be spent this way\". This distinction is important for effects which reduce the generic portion of a spell's cost."
         },
         {
           "date": "2004-10-04",
@@ -4593,7 +4657,7 @@
         },
         {
           "date": "2004-10-04",
-          "text": "If this card is sacrificed to pay part of a spell’s cost, the cost reduction still applies."
+          "text": "If this card is sacrificed to pay part of a spell's cost, the cost reduction still applies."
         }
       ],
       "subtypes": [
@@ -4917,11 +4981,11 @@
       "rulings": [
         {
           "date": "2009-10-01",
-          "text": "Hellfire Mongrel’s triggered ability has an “intervening ‘if’ clause.” That means (1) the ability won’t trigger at all unless the opponent whose turn it is has two or fewer cards in hand as his or her upkeep starts, and (2) the ability will do nothing if that player has three or more cards in hand by the time it resolves."
+          "text": "Hellfire Mongrel's triggered ability has an \"intervening 'if' clause.\" That means (1) the ability won't trigger at all unless the opponent whose turn it is has two or fewer cards in hand as his or her upkeep starts, and (2) the ability will do nothing if that player has three or more cards in hand by the time it resolves."
         },
         {
           "date": "2009-10-01",
-          "text": "In a Two-Headed Giant game, this ability will potentially trigger twice at the beginning of the opposing team’s upkeep -- once for each player on that team."
+          "text": "In a Two-Headed Giant game, this ability will potentially trigger twice at the beginning of the opposing team's upkeep — once for each player on that team."
         }
       ],
       "subtypes": [
@@ -5059,10 +5123,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -5071,19 +5131,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
           "format": "Ravnica Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -5184,7 +5232,8 @@
       "power": "4",
       "printings": [
         "RAV",
-        "DDH"
+        "DDH",
+        "MM3"
       ],
       "rarity": "Uncommon",
       "subtypes": [
@@ -5351,23 +5400,23 @@
       "rulings": [
         {
           "date": "2008-10-01",
-          "text": "If you activate a card’s unearth ability but that card is removed from your graveyard before the ability resolves, that unearth ability will resolve and do nothing."
+          "text": "If you activate a card's unearth ability but that card is removed from your graveyard before the ability resolves, that unearth ability will resolve and do nothing."
         },
         {
           "date": "2008-10-01",
-          "text": "Activating a creature card’s unearth ability isn’t the same as casting the creature card. The unearth ability is put on the stack, but the creature card is not. Spells and abilities that interact with activated abilities (such as Stifle) will interact with unearth, but spells and abilities that interact with spells (such as Remove Soul) will not."
+          "text": "Activating a creature card's unearth ability isn't the same as casting the creature card. The unearth ability is put on the stack, but the creature card is not. Spells and abilities that interact with activated abilities (such as Stifle) will interact with unearth, but spells and abilities that interact with spells (such as Remove Soul) will not."
         },
         {
           "date": "2008-10-01",
-          "text": "At the beginning of the end step, a creature returned to the battlefield with unearth is exiled. This is a delayed triggered ability, and it can be countered by effects such as Stifle or Voidslime that counter triggered abilities. If the ability is countered, the creature will stay on the battlefield and the delayed trigger won’t trigger again. However, the replacement effect will still exile the creature when it eventually leaves the battlefield."
+          "text": "At the beginning of the end step, a creature returned to the battlefield with unearth is exiled. This is a delayed triggered ability, and it can be countered by effects such as Stifle or Voidslime that counter triggered abilities. If the ability is countered, the creature will stay on the battlefield and the delayed trigger won't trigger again. However, the replacement effect will still exile the creature when it eventually leaves the battlefield."
         },
         {
           "date": "2008-10-01",
-          "text": "Unearth grants haste to the creature that’s returned to the battlefield. However, neither of the “exile” abilities is granted to that creature. If that creature loses all its abilities, it will still be exiled at the beginning of the end step, and if it would leave the battlefield, it is still exiled instead."
+          "text": "Unearth grants haste to the creature that's returned to the battlefield. However, neither of the \"exile\" abilities is granted to that creature. If that creature loses all its abilities, it will still be exiled at the beginning of the end step, and if it would leave the battlefield, it is still exiled instead."
         },
         {
           "date": "2008-10-01",
-          "text": "If a creature returned to the battlefield with unearth would leave the battlefield for any reason, it’s exiled instead -- unless the spell or ability that’s causing the creature to leave the battlefield is actually trying to exile it! In that case, it succeeds at exiling it. If it later returns the creature card to the battlefield (as Oblivion Ring or Flickerwisp might, for example), the creature card will return to the battlefield as a new object with no relation to its previous existence. The unearth effect will no longer apply to it."
+          "text": "If a creature returned to the battlefield with unearth would leave the battlefield for any reason, it's exiled instead — unless the spell or ability that's causing the creature to leave the battlefield is actually trying to exile it! In that case, it succeeds at exiling it. If it later returns the creature card to the battlefield (as Oblivion Ring or Flickerwisp might, for example), the creature card will return to the battlefield as a new object with no relation to its previous existence. The unearth effect will no longer apply to it."
         }
       ],
       "subtypes": [
@@ -5452,7 +5501,8 @@
         "CMD",
         "DDH",
         "C14",
-        "C15"
+        "C15",
+        "CMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
@@ -5513,10 +5563,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -5525,19 +5571,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
           "format": "Ravnica Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -5666,7 +5700,7 @@
         },
         {
           "date": "2009-05-01",
-          "text": "A landcycling ability lets you search for any card in your library with the stated land type. It doesn’t have to be a basic land."
+          "text": "A landcycling ability lets you search for any card in your library with the stated land type. It doesn't have to be a basic land."
         },
         {
           "date": "2009-05-01",
@@ -5769,7 +5803,7 @@
         },
         {
           "date": "2009-05-01",
-          "text": "A landcycling ability lets you search for any card in your library with the stated land type. It doesn’t have to be a basic land."
+          "text": "A landcycling ability lets you search for any card in your library with the stated land type. It doesn't have to be a basic land."
         },
         {
           "date": "2009-05-01",
@@ -6005,7 +6039,8 @@
       "printings": [
         "ALA",
         "DDH",
-        "C13"
+        "C13",
+        "E01"
       ],
       "rarity": "Common",
       "text": "{T}: Add {U}, {B}, or {R} to your mana pool.",
@@ -6237,11 +6272,11 @@
       "rulings": [
         {
           "date": "2008-10-01",
-          "text": "You can choose a mode only if you can choose legal targets for that mode. If you can’t choose legal targets for any of the modes, you can’t cast the spell."
+          "text": "You can choose a mode only if you can choose legal targets for that mode. If you can't choose legal targets for any of the modes, you can't cast the spell."
         },
         {
           "date": "2008-10-01",
-          "text": "While the spell is on the stack, treat it as though its only text is the chosen mode. The other two modes are treated as though they don’t exist. You don’t choose targets for those modes."
+          "text": "While the spell is on the stack, treat it as though its only text is the chosen mode. The other two modes are treated as though they don't exist. You don't choose targets for those modes."
         },
         {
           "date": "2008-10-01",
@@ -6335,19 +6370,19 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "Tapping a card with an effect like this will never pay the cost of an ability. For example, tapping a land with this card will not put mana into a player’s pool."
+          "text": "Tapping a card with an effect like this will never pay the cost of an ability. For example, tapping a land with this card will not put mana into a player's pool."
         },
         {
           "date": "2004-10-04",
-          "text": "Icy Manipulator can’t be used to stop someone from using an ability of the permanent you plan to tap. It can be used to make a player use the ability now or to not use it."
+          "text": "Icy Manipulator can't be used to stop someone from using an ability of the permanent you plan to tap. It can be used to make a player use the ability now or to not use it."
         },
         {
           "date": "2004-10-04",
-          "text": "The ability can target a tapped card, but tapping a tapped card does nothing useful. And it will not trigger “if the card becomes tapped” effects."
+          "text": "The ability can target a tapped card, but tapping a tapped card does nothing useful. And it will not trigger \"if the card becomes tapped\" effects."
         },
         {
           "date": "2004-10-04",
-          "text": "If you want to stop someone from attacking with a creature by using this card, you must do so before attackers are declared. You can’t wait until after attackers are declared and then try to use it to make a creature stop attacking. Note that your opponent can’t start declaring attackers without letting you use the Icy Manipulator."
+          "text": "If you want to stop someone from attacking with a creature by using this card, you must do so before attackers are declared. You can't wait until after attackers are declared and then try to use it to make a creature stop attacking. Note that your opponent can't start declaring attackers without letting you use the Icy Manipulator."
         },
         {
           "date": "2004-10-04",
@@ -6577,7 +6612,8 @@
       "printings": [
         "pWPN",
         "ARB",
-        "DDH"
+        "DDH",
+        "E01"
       ],
       "rarity": "Uncommon",
       "rulings": [
@@ -6587,7 +6623,7 @@
         },
         {
           "date": "2009-05-01",
-          "text": "If you don’t control the targeted creature when the “at end of turn” ability resolves, it won’t be sacrificed. If it’s still on the battlefield but under another player’s control, the ability won’t try to have you sacrifice it again at the end of the turn after that."
+          "text": "If you don't control the targeted creature when the \"at end of turn\" ability resolves, it won't be sacrificed. If it's still on the battlefield but under another player's control, the ability won't try to have you sacrifice it again at the end of the turn after that."
         }
       ],
       "text": "Gain control of target creature. Untap that creature. It gains haste until end of turn. Sacrifice it at the beginning of the next end step.",
@@ -6756,21 +6792,23 @@
         "ALA",
         "DDH",
         "V13",
-        "C13"
+        "C13",
+        "MM3",
+        "E01"
       ],
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2008-10-01",
-          "text": "Cruel Ultimatum’s only target is an opponent. You don’t choose which creature card in your graveyard you’ll return to your hand until Cruel Ultimatum resolves."
+          "date": "2017-03-14",
+          "text": "Cruel Ultimatum's only target is an opponent. You don't choose which creature card in your graveyard you'll return to your hand until Cruel Ultimatum resolves."
         },
         {
-          "date": "2008-10-01",
-          "text": "All of these actions are performed sequentially, in the order listed. Earlier actions may affect how you perform later actions. (For example, if the opponent sacrifices a creature that he or she controls but you own, it will end up in your graveyard. When Cruel Ultimatum lets you return a creature card from your graveyard to your hand, you can choose that one.)"
+          "date": "2017-03-14",
+          "text": "All of the actions for Cruel Ultimatum are performed sequentially, in the order listed. Earlier actions may affect how you perform later actions. For example, if the opponent sacrifices a creature that he or she controls but you own, it will end up in your graveyard. When Cruel Ultimatum lets you return a creature card from your graveyard to your hand, you can choose that one."
         },
         {
-          "date": "2008-10-01",
-          "text": "If, as Cruel Ultimatum begins to resolve, your opponent’s life total is 5 or less and you have two or fewer cards in your library, the game will result in a draw. Your opponent’s life total will drop to 0 or less, but Cruel Ultimatum must finish resolving completely before state-based actions are checked. You’ll then be forced to draw three cards and fail to draw one. When state-based actions are finally checked, you and your opponent will both lose the game at the same time, which means the game is a draw."
+          "date": "2017-03-14",
+          "text": "If, as Cruel Ultimatum begins to resolve, your opponent's life total is 5 or less and you have two or fewer cards in your library, the game will result in a draw. Your opponent's life total will drop to 0 or less, but Cruel Ultimatum must finish resolving completely before state-based actions are performed. You'll then be forced to draw three cards and fail to draw one. When state-based actions are finally performed, you and your opponent will both lose the game at the same time, which means the game is a draw."
         }
       ],
       "text": "Target opponent sacrifices a creature, discards three cards, then loses 5 life. You return a creature card from your graveyard to your hand, draw three cards, then gain 5 life.",
@@ -6853,10 +6891,10 @@
       "rulings": [
         {
           "date": "2007-10-01",
-          "text": "The value chosen for X applies to each X in the spell’s effect. You pay {X} only once."
+          "text": "The value chosen for X applies to each X in the spell's effect. You pay {X} only once."
         }
       ],
-      "text": "Choose two —\n• Target player loses X life. \n• Return target creature card with converted mana cost X or less from your graveyard to the battlefield.\n• Target creature gets -X/-X until end of turn.\n• Up to X target creatures gain fear until end of turn. (They can't be blocked except by artifact creatures and/or black creatures.)",
+      "text": "Choose two —\n• Target player loses X life.\n• Return target creature card with converted mana cost X or less from your graveyard to the battlefield.\n• Target creature gets -X/-X until end of turn.\n• Up to X target creatures gain fear until end of turn. (They can't be blocked except by artifact creatures and/or black creatures.)",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -6924,7 +6962,7 @@
         "Malice"
       ],
       "number": "71a",
-      "originalText": "Counter target noncreature spell.\n//\nMalice\n{3}{B}\nInstant\nDestroy target nonblack creature. It can't be regenerated.",
+      "originalText": "Counter target noncreature spell.",
       "originalType": "Instant",
       "printings": [
         "INV",
@@ -6999,7 +7037,7 @@
         "Malice"
       ],
       "number": "71b",
-      "originalText": "Counter target noncreature spell.\n//\nMalice\n{3}{B}\nInstant\nDestroy target nonblack creature. It can't be regenerated.",
+      "originalText": "Destroy target nonblack creature. It can't be regenerated.",
       "originalType": "Instant",
       "printings": [
         "INV",
@@ -7074,7 +7112,7 @@
         "Suffering"
       ],
       "number": "72a",
-      "originalText": "Target player discards a card.\n//\nSuffering\n{3}{R}\nSorcery\nDestroy target land.",
+      "originalText": "Target player discards a card.",
       "originalType": "Sorcery",
       "printings": [
         "INV",
@@ -7149,7 +7187,7 @@
         "Suffering"
       ],
       "number": "72b",
-      "originalText": "Target player discards a card.\n//\nSuffering\n{3}{R}\nSorcery\nDestroy target land.",
+      "originalText": "Destroy target land.",
       "originalType": "Sorcery",
       "printings": [
         "INV",
@@ -7230,7 +7268,7 @@
         "Fall"
       ],
       "number": "73a",
-      "originalText": "Return target creature card from a graveyard and target creature on the battlefield to their owners' hands.\n//\nFall\n{B}{R}\nSorcery\nTarget player reveals two cards at random from his or her hand, then discards each nonland card revealed this way.",
+      "originalText": "Return target creature card from a graveyard and target creature on the battlefield to their owners' hands.",
       "originalType": "Sorcery",
       "printings": [
         "DIS",
@@ -7311,7 +7349,7 @@
         "Fall"
       ],
       "number": "73b",
-      "originalText": "Return target creature card from a graveyard and target creature on the battlefield to their owners' hands.\n//\nFall\n{B}{R}\nSorcery\nTarget player reveals two cards at random from his or her hand, then discards each nonland card revealed this way.",
+      "originalText": "Target player reveals two cards at random from his or her hand, then discards each nonland card revealed this way.",
       "originalType": "Sorcery",
       "printings": [
         "DIS",
@@ -7326,6 +7364,7 @@
     },
     {
       "artist": "Dave Kendall",
+      "cmc": 0,
       "colorIdentity": [
         "U",
         "B",
@@ -7388,7 +7427,11 @@
       "printings": [
         "ALA",
         "DDH",
-        "C13"
+        "C13",
+        "C16",
+        "MM3",
+        "E01",
+        "C17"
       ],
       "rarity": "Uncommon",
       "text": "Crumbling Necropolis enters the battlefield tapped.\n{T}: Add {U}, {B}, or {R} to your mana pool.",
@@ -7399,6 +7442,7 @@
     },
     {
       "artist": "Jaime Jones",
+      "cmc": 0,
       "foreignNames": [
         {
           "language": "French",
@@ -7458,7 +7502,10 @@
         "CMD",
         "DDH",
         "PC2",
-        "C13"
+        "C13",
+        "C16",
+        "PCA",
+        "CMA"
       ],
       "rarity": "Common",
       "text": "Rupture Spire enters the battlefield tapped.\nWhen Rupture Spire enters the battlefield, sacrifice it unless you pay {1}.\n{T}: Add one mana of any color to your mana pool.",
@@ -7469,6 +7516,7 @@
     },
     {
       "artist": "Dan Scott",
+      "cmc": 0,
       "flavor": "Take two steps north into the unsettled future, south into the unquiet past, east into the present day, or west into the great unknown.",
       "foreignNames": [
         {
@@ -7539,7 +7587,11 @@
         "C13",
         "DDN",
         "C14",
-        "C15"
+        "C15",
+        "C16",
+        "PCA",
+        "CMA",
+        "C17"
       ],
       "rarity": "Common",
       "text": "{T}, Sacrifice Terramorphic Expanse: Search your library for a basic land card and put it onto the battlefield tapped. Then shuffle your library.",
@@ -7550,6 +7602,7 @@
     },
     {
       "artist": "Mark Tedin",
+      "cmc": 0,
       "colorIdentity": [
         "B"
       ],
@@ -7600,6 +7653,10 @@
       "layout": "normal",
       "legalities": [
         {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
         },
@@ -7617,6 +7674,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -7741,8 +7806,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -7813,7 +7878,15 @@
         "DDQ",
         "SOI",
         "DDR",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -7828,10 +7901,12 @@
       ],
       "variations": [
         259283
-      ]
+      ],
+      "watermark": "Black"
     },
     {
       "artist": "Mark Tedin",
+      "cmc": 0,
       "colorIdentity": [
         "B"
       ],
@@ -7882,6 +7957,10 @@
       "layout": "normal",
       "legalities": [
         {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
         },
@@ -7899,6 +7978,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -8023,8 +8110,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -8095,7 +8182,15 @@
         "DDQ",
         "SOI",
         "DDR",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -8110,10 +8205,12 @@
       ],
       "variations": [
         262652
-      ]
+      ],
+      "watermark": "Black"
     },
     {
       "artist": "Mark Tedin",
+      "cmc": 0,
       "colorIdentity": [
         "U"
       ],
@@ -8144,6 +8241,10 @@
       "layout": "normal",
       "legalities": [
         {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
         },
@@ -8161,6 +8262,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -8285,8 +8394,8 @@
         "USG",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -8352,7 +8461,16 @@
         "C15",
         "DDQ",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "DDS",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -8364,10 +8482,12 @@
       "type": "Basic Land — Island",
       "types": [
         "Land"
-      ]
+      ],
+      "watermark": "Blue"
     },
     {
       "artist": "Mark Tedin",
+      "cmc": 0,
       "colorIdentity": [
         "R"
       ],
@@ -8418,6 +8538,10 @@
       "layout": "normal",
       "legalities": [
         {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
         },
@@ -8435,6 +8559,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -8539,9 +8671,9 @@
         "LEA",
         "LEB",
         "2ED",
-        "ARN",
         "CED",
         "CEI",
+        "ARN",
         "3ED",
         "4ED",
         "ICE",
@@ -8560,8 +8692,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -8631,7 +8763,16 @@
         "BFZ",
         "C15",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "DDS",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -8646,7 +8787,8 @@
       ],
       "variations": [
         259284
-      ]
+      ],
+      "watermark": "Red"
     }
   ]
 }

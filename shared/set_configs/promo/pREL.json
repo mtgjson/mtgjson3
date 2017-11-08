@@ -1,0 +1,18 @@
+{
+  "SET": {
+    "name": "Release Events",
+    "code": "pREL",
+    "magicCardsInfoCode": "rep",
+    "magicRaritiesCodes": ["94-rarities-release-events-promos"],
+    "isMCISet": true,
+    "releaseDate": "2003-07-26",
+    "border": "black",
+    "type": "promo"
+  },
+  "SET_CORRECTIONS": [
+    {"match": {"name": "Force of Nature"}, "remove": ["flavor"]},
+    {"match": {"name": "Ichiga, Who Topples Oaks"}, "replace": {"layout": "flip", "names": ["Budoka Pupil", "Ichiga, Who Topples Oaks"], "source": "Betrayers of Kamigawa Release Event participation bonus.", "releaseDate": "2005-02-04"}},
+    {"match": {"name": "Budoka Pupil"}, "replace": {"names": ["Budoka Pupil", "Ichiga, Who Topples Oaks"]}},
+    {"match": {"name": "Ass Whuppin'"}, "replace": {"border": "silver"}}
+  ]
+}

@@ -73,6 +73,7 @@
         }
       ],
       "manaCost": "{3}{B}{G}",
+      "mciNumber": "1",
       "name": "Spiritmonger",
       "number": "1",
       "power": "6",
@@ -168,17 +169,20 @@
         }
       ],
       "manaCost": "{2}{G}",
+      "mciNumber": "2",
       "name": "Call of the Herd",
       "number": "2",
       "printings": [
         "ODY",
         "TSB",
-        "pGPX"
+        "pGPX",
+        "MM3",
+        "DDS"
       ],
       "rarity": "Special",
       "releaseDate": "2008",
       "source": "Grand Prix Tournament participation bonus.",
-      "text": "Put a 3/3 green Elephant creature token onto the battlefield.\nFlashback {3}{G} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "text": "Create a 3/3 green Elephant creature token.\nFlashback {3}{G} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -188,6 +192,10 @@
       "artist": "Alan Pollack",
       "cmc": 0,
       "foreignNames": [
+        {
+          "language": "Chinese Simplified",
+          "name": "五彩玛珂"
+        },
         {
           "language": "French",
           "name": "Mox de chrome"
@@ -239,6 +247,7 @@
         }
       ],
       "manaCost": "{0}",
+      "mciNumber": "3",
       "name": "Chrome Mox",
       "number": "3",
       "printings": [
@@ -252,11 +261,11 @@
       "rulings": [
         {
           "date": "2016-06-08",
-          "text": "If no card is imprinted on Chrome Mox, it can’t add mana to your mana pool. It can never add colorless mana to your mana pool, even if the imprinted card has a colorless mana symbol in its mana cost."
+          "text": "If no card is imprinted on Chrome Mox, it can't add mana to your mana pool. It can never add colorless mana to your mana pool, even if the imprinted card has a colorless mana symbol in its mana cost."
         },
         {
           "date": "2016-06-08",
-          "text": "If you imprinted a multicolored card, you choose one of that card’s colors each time Chrome Mox’s ability resolves."
+          "text": "If you imprinted a multicolored card, you choose one of that card's colors each time Chrome Mox's ability resolves."
         }
       ],
       "source": "Grand Prix Tournament participation bonus.",
@@ -325,6 +334,7 @@
         }
       ],
       "manaCost": "{2}",
+      "mciNumber": "4",
       "name": "Umezawa's Jitte",
       "number": "4",
       "printings": [
@@ -337,23 +347,23 @@
       "rulings": [
         {
           "date": "2005-02-01",
-          "text": "Umezawa’s Jitte’s activated ability generates a modal choice. The choice is made when the ability is activated."
+          "text": "Umezawa's Jitte's activated ability generates a modal choice. The choice is made when the ability is activated."
         },
         {
           "date": "2005-02-01",
-          "text": "If the “target creature gets -1/-1 until end of turn” mode is chosen, the target creature must also be announced."
+          "text": "If the \"target creature gets -1/-1 until end of turn\" mode is chosen, the target creature must also be announced."
         },
         {
           "date": "2005-02-01",
-          "text": "The ability can be used any time Umezawa’s Jitte’s controller has priority -- only the “target creature” choice has additional requirements. Choosing the “Equipped creature gets +2/+2 until end of turn” mode does nothing if the Jitte isn’t equipped to a creature when the ability resolves."
+          "text": "The ability can be used any time Umezawa's Jitte's controller has priority — only the \"target creature\" choice has additional requirements. Choosing the \"Equipped creature gets +2/+2 until end of turn\" mode does nothing if the Jitte isn't equipped to a creature when the ability resolves."
         },
         {
           "date": "2005-02-01",
-          "text": "If the Jitte is moved after the “+2/+2” mode is announced but before it resolves, the bonus is given to the creature that is equipped when the ability resolves."
+          "text": "If the Jitte is moved after the \"+2/+2\" mode is announced but before it resolves, the bonus is given to the creature that is equipped when the ability resolves."
         },
         {
           "date": "2005-02-01",
-          "text": "If the Jitte leaves the battlefield after the “+2/+2” mode is announced but before it resolves, the bonus is given to the creature that was most recently equipped once the ability resolves."
+          "text": "If the Jitte leaves the battlefield after the \"+2/+2\" mode is announced but before it resolves, the bonus is given to the creature that was most recently equipped once the ability resolves."
         }
       ],
       "source": "Grand Prix Tournament participation bonus.",
@@ -441,12 +451,14 @@
         }
       ],
       "manaCost": "{1}{B}{G}",
+      "mciNumber": "5",
       "name": "Maelstrom Pulse",
       "number": "5",
       "printings": [
         "pGPX",
         "ARB",
-        "MMA"
+        "MMA",
+        "MPS_AKH"
       ],
       "rarity": "Special",
       "releaseDate": "2011",
@@ -457,15 +469,15 @@
         },
         {
           "date": "2009-05-01",
-          "text": "The name of a creature token is the same as its creature types unless the token is a copy of another creature or the effect that created the token specifically gives it a different name. For example, a 1/1 Soldier creature token is named “Soldier.”"
+          "text": "The name of a creature token is the same as its creature types unless the token is a copy of another creature or the effect that created the token specifically gives it a different name. For example, a 1/1 Soldier creature token is named \"Soldier.\""
         },
         {
           "date": "2009-05-01",
-          "text": "A face-down creature has no name, so it doesn’t have the same name as anything else."
+          "text": "A face-down creature has no name, so it doesn't have the same name as anything else."
         },
         {
           "date": "2013-07-01",
-          "text": "If Maelstrom Pulse resolves but the targeted permanent isn’t destroyed (perhaps because it regenerates or has indestructible), all other permanents with the same name as it will still be destroyed (unless they also have indestructible."
+          "text": "If Maelstrom Pulse resolves but the targeted permanent isn't destroyed (perhaps because it regenerates or has indestructible), all other permanents with the same name as it will still be destroyed (unless they also have indestructible."
         }
       ],
       "source": "Grand Prix Tournament participation bonus.",
@@ -528,27 +540,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -561,12 +557,14 @@
         }
       ],
       "manaCost": "{R}",
+      "mciNumber": "6",
       "name": "Goblin Guide",
       "number": "6",
       "power": "2",
       "printings": [
         "pGPX",
-        "ZEN"
+        "ZEN",
+        "MM3"
       ],
       "rarity": "Special",
       "releaseDate": "2012",
@@ -635,27 +633,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -668,6 +650,7 @@
         }
       ],
       "manaCost": "{1}{G}",
+      "mciNumber": "7",
       "name": "Lotus Cobra",
       "number": "7",
       "power": "2",
@@ -768,6 +751,7 @@
         }
       ],
       "manaCost": "{4}{G}{G}",
+      "mciNumber": "8",
       "name": "Primeval Titan",
       "number": "8",
       "power": "6",
@@ -860,6 +844,7 @@
         }
       ],
       "manaCost": "{7}",
+      "mciNumber": "9",
       "name": "All Is Dust",
       "number": "9",
       "printings": [
@@ -876,7 +861,7 @@
         },
         {
           "date": "2010-06-15",
-          "text": "Tokens may also be colored permanents. The effect that creates a token states what color it is or whether it’s colorless."
+          "text": "Tokens may also be colored permanents. The effect that creates a token states what color it is or whether it's colorless."
         },
         {
           "date": "2010-06-15",
@@ -888,7 +873,7 @@
         },
         {
           "date": "2013-07-01",
-          "text": "All Is Dust doesn’t destroy permanents. Rather, it causes them to be sacrificed. Regeneration, totem armor, and indestructibile can’t save permanents from All Is Dust."
+          "text": "All Is Dust doesn't destroy permanents. Rather, it causes them to be sacrificed. Regeneration, totem armor, and indestructibile can't save permanents from All Is Dust."
         }
       ],
       "source": "Grand Prix Tournament participation bonus.",
@@ -969,6 +954,7 @@
         }
       ],
       "manaCost": "{5}",
+      "mciNumber": "10",
       "name": "Batterskull",
       "number": "10",
       "printings": [
@@ -980,14 +966,14 @@
       "rulings": [
         {
           "date": "2011-06-01",
-          "text": "The ability to return Batterskull to its owner’s hand can only be activated if Batterskull is on the battlefield. If Batterskull is no longer on the battlefield when the ability resolves, it will have no effect."
+          "text": "The ability to return Batterskull to its owner's hand can only be activated if Batterskull is on the battlefield. If Batterskull is no longer on the battlefield when the ability resolves, it will have no effect."
         }
       ],
       "source": "Grand Prix Tournament participation bonus.",
       "subtypes": [
         "Equipment"
       ],
-      "text": "Living weapon (When this Equipment enters the battlefield, put a 0/0 black Germ creature token onto the battlefield, then attach this to it.)\nEquipped creature gets +4/+4 and has vigilance and lifelink.\n{3}: Return Batterskull to its owner's hand.\nEquip {5}",
+      "text": "Living weapon (When this Equipment enters the battlefield, create a 0/0 black Germ creature token, then attach this to it.)\nEquipped creature gets +4/+4 and has vigilance and lifelink.\n{3}: Return Batterskull to its owner's hand.\nEquip {5}",
       "type": "Artifact — Equipment",
       "types": [
         "Artifact"
@@ -1071,19 +1057,21 @@
         }
       ],
       "manaCost": "{4}{B}{B}{B}{B}",
+      "mciNumber": "11",
       "name": "Griselbrand",
       "number": "11",
       "power": "7",
       "printings": [
         "pGPX",
-        "AVR"
+        "AVR",
+        "MM3"
       ],
       "rarity": "Special",
       "releaseDate": "2015",
       "rulings": [
         {
           "date": "2012-05-01",
-          "text": "You can’t activate Griselbrand’s ability if you have 6 or less life."
+          "text": "You can't activate Griselbrand's ability if you have 6 or less life."
         }
       ],
       "source": "Grand Prix Tournament participation bonus.",
@@ -1096,6 +1084,107 @@
       "text": "Flying, lifelink\nPay 7 life: Draw seven cards.",
       "toughness": "7",
       "type": "Legendary Creature — Demon",
+      "types": [
+        "Creature"
+      ]
+    },
+    {
+      "artist": "Johannes Voss",
+      "cmc": 2,
+      "colorIdentity": [
+        "W"
+      ],
+      "colors": [
+        "White"
+      ],
+      "foreignNames": [
+        {
+          "language": "Chinese Simplified",
+          "name": "锻石秘教徒"
+        },
+        {
+          "language": "French",
+          "name": "Mystique forgepierre"
+        },
+        {
+          "language": "German",
+          "name": "Steinschmelz-Mystiker"
+        },
+        {
+          "language": "Italian",
+          "name": "Mistica Forgiapietra"
+        },
+        {
+          "language": "Japanese",
+          "name": "石鍛冶の神秘家"
+        },
+        {
+          "language": "Korean",
+          "name": "Stoneforge Mystic"
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Místico Litoforjador"
+        },
+        {
+          "language": "Russian",
+          "name": "Мистик-Кователь Камней"
+        },
+        {
+          "language": "Spanish",
+          "name": "Mística fragua de piedra"
+        }
+      ],
+      "id": "3ca89e8de106d017f6f49a7d92ab0c905a1ce751",
+      "imageName": "stoneforge mystic",
+      "layout": "normal",
+      "legalities": [
+        {
+          "format": "Commander",
+          "legality": "Legal"
+        },
+        {
+          "format": "Legacy",
+          "legality": "Legal"
+        },
+        {
+          "format": "Modern",
+          "legality": "Banned"
+        },
+        {
+          "format": "Vintage",
+          "legality": "Legal"
+        },
+        {
+          "format": "Zendikar Block",
+          "legality": "Legal"
+        }
+      ],
+      "manaCost": "{1}{W}",
+      "mciNumber": "12",
+      "name": "Stoneforge Mystic",
+      "number": "12",
+      "power": "1",
+      "printings": [
+        "pGPX",
+        "WWK"
+      ],
+      "rarity": "Special",
+      "releaseDate": "2016",
+      "rulings": [
+        {
+          "date": "2010-03-01",
+          "text": "When Stoneforge Mystic's second ability resolves, you may put any Equipment card from your hand onto the battlefield, not just the one you searched for with its first ability. The Equipment is put onto the battlefield unattached."
+        }
+      ],
+      "source": "Grand Prix Tournament participation bonus.",
+      "subtypes": [
+        "Kor",
+        "Artificer"
+      ],
+      "text": "When Stoneforge Mystic enters the battlefield, you may search your library for an Equipment card, reveal it, put it into your hand, then shuffle your library.\n{1}{W}, {T}: You may put an Equipment card from your hand onto the battlefield.",
+      "toughness": "2",
+      "type": "Creature — Kor Artificer",
       "types": [
         "Creature"
       ]

@@ -1,0 +1,36 @@
+{
+  "SET": {
+    "name": "Starter 2000",
+    "code": "S00",
+    "gathererCode": "P4",
+    "magicCardsInfoCode": "st2k",
+    "releaseDate": "2000-04-24",
+    "border": "white",
+    "type": "starter",
+    "translations": {
+      "de": "Starter 2000",
+      "fr": "Starter 2000",
+      "it": "Starter 2000",
+      "es": "Starter 2000",
+      "pt": "Starter 2000"
+    },
+    "mkm_name": "Starter 2000",
+    "mkm_id": 65
+  },
+  "SET_CORRECTIONS": [{
+    "importCard": {
+      "name": "Rhox",
+      "set": "10E"
+    }
+  }, {
+    "match": {
+      "name": "Rhox"
+    },
+    "replace": {
+      "number": "112a",
+      "text": "You may have Rhox assign its combat damage as though it weren't blocked.\n{2}{G}: Regenerate Rhox. (The next time this creature would be destroyed this turn, it isn't. Instead tap it, remove all damage from it, and remove it from combat.)",
+      "originalText": "You may have Rhox deal combat damage to defending player as though it weren't blocked.\n{2}{G}: Regenerate Rhox."
+    },
+    "remove": ["multiverseid", "flavor", "number"]
+  }]
+}

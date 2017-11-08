@@ -1,0 +1,21 @@
+{
+  "SET": {
+    "name": "Arena League",
+    "code": "pARL",
+    "magicCardsInfoCode": "arena",
+    "magicRaritiesCodes": ["7-rarities-arena-league-promos"],
+    "isMCISet": true,
+    "releaseDate": "1996-08-02",
+    "border": "black",
+    "type": "promo"
+  },
+  "SET_CORRECTIONS": [
+    "noBasicLandWatermarks",
+    {"match": {"name": ["Ashnod's Coupon", "Booster Tutor", "Circle of Protection: Art", "Goblin Mime", "Granny's Payback", "Mise"]}, "replace": {"border": "silver"}},
+    {"match": {"name": "Castigate"}, "replace": {"flavor": "\"We have no need for military might. We wield two of the sharpest swords ever forged: Faith in our left hand, Wealth in our right.\"\n—Vuliev of the Ghost Council"}},
+    {"match": {"name": "Goblin Mime"}, "replace": {"flavor": "Mung noticed a few clouds gathering in the sky. Perhaps today he could perform his \"walking against the wind\" routine."}},
+    {"match": {"name": "Man-o'-War"}, "replace": {"flavor": "\"Beauty to the eye does not always translate to the touch.\"\n—Naimah, Femeref philospher"}},
+    {"match": {"name": "Pouncing Jaguar"}, "replace": {"flavor": "One pounce, she's hungry—you die quickly. Two, she's teaching her cubs—you're in for a long day."}},
+    {"match": {"name": "Rewind"}, "replace": {"flavor": "\"Time flows like a river. In Tolaria we practice the art of building dams.\"\n—Barrin, master wizard"}}
+  ]
+}

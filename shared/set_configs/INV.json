@@ -1,0 +1,58 @@
+{
+  "SET": {
+    "name": "Invasion",
+    "code": "INV",
+    "gathererCode": "IN",
+    "magicCardsInfoCode": "in",
+    "releaseDate": "2000-10-02",
+    "border": "black",
+    "type": "expansion",
+    "block": "Invasion",
+    "booster": ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"],
+    "translations": {
+      "de": "Invasion",
+      "fr": "Invasion",
+      "it": "Invasione",
+      "es": "Invasión",
+      "pt": "Invasão"
+    },
+    "mkm_name": "Invasion",
+    "mkm_id": 34
+  },
+  "SET_CORRECTIONS": [{
+    "match": {
+      "name": "Assault"
+    },
+    "replace": {
+      "originalText": "Assault deals 2 damage to target creature or player."
+    }
+  }, {
+    "match": {
+      "name": "Spite"
+    },
+    "replace": {
+      "originalText": "Counter target noncreature spell."
+    }
+  }, {
+    "match": {
+      "name": "Pain"
+    },
+    "replace": {
+      "originalText": "Target player discards a card from his or her hand."
+    }
+  }, {
+    "match": {
+      "name": "Stand"
+    },
+    "replace": {
+      "originalText": "Prevent the next 2 damage that would be dealt to target creature this turn."
+    }
+  }, {
+    "match": {
+      "name": "Wax"
+    },
+    "replace": {
+      "originalText": "Target creature gets +2/+2 until end of turn."
+    }
+  }]
+}

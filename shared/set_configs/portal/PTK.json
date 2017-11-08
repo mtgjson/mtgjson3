@@ -1,0 +1,94 @@
+{
+  "SET": {
+    "name": "Portal Three Kingdoms",
+    "code": "PTK",
+    "gathererCode": "PK",
+    "magicCardsInfoCode": "p3k",
+    "releaseDate": "1999-05-01",
+    "border": "white",
+    "type": "starter",
+    "booster": ["rare", "uncommon", "uncommon", "common", "common", "common", "common", "common", "land", "land"],
+    "translations": {
+      "jp": "Portal Three Kingdoms",
+      "cn": "Portal Three Kingdoms"
+    },
+    "mkm_name": "Portal Three Kingdoms",
+    "mkm_id": 30
+  },
+  "SET_CORRECTIONS": [{
+    "match": {
+      "name": ["Ravages of War"]
+    },
+    "flavorAddDash": true
+  }, {
+    "match": {
+      "name": "Brilliant Plan"
+    },
+    "replace": {
+      "flavor": "At Red Cliffs, Kongming and Zhou Yu each wrote his plan for defeating the Wei on the palm of his hand. They laughed as they both revealed the same word, \"Fire.\""
+    }
+  }, {
+    "match": {
+      "name": "Imperial Edict"
+    },
+    "replace": {
+      "flavor": "Frustrated with Cao Cao's control of the imperial court, Emporer Xian secretly issued an edict condemning him, using his own blood as ink."
+    }
+  }, {
+    "match": {
+      "name": "Lady Zhurong, Warrior Queen"
+    },
+    "replace": {
+      "flavor": "\"A man, and such a fool! I, a woman, will fight them for you.\"\n—Lady Zhurong to her husband Meng Huo, before leading an army against the Shu"
+    }
+  }, {
+    "match": {
+      "name": "Meng Huo's Horde"
+    },
+    "replace": {
+      "artist": "Li Tie"
+    }
+  }, {
+    "match": {
+      "name": "Trip Wire"
+    },
+    "replace": {
+      "number": "156"
+    }
+  }, {
+    "match": {
+      "name": "Trained Cheetah"
+    },
+    "replace": {
+      "number": "154"
+    }
+  }, {
+    "match": {
+      "name": "Shu Defender"
+    },
+    "replace": {
+      "flavor": "Confronting Cao Cao's army at Steepslope Bridge, Zhang Fei bellowed, \"I am Zhang Fei of Yan! Who dares fight me to the death?\" Cao Cao's army cowered and fled."
+    }
+  }, {
+    "match": {
+      "name": "Shu Foot Soldiers"
+    },
+    "replace": {
+      "flavor": "Liu Bei lost many men at the battle of Runan because of his lack of strategy. It wasn't until he met Kongming that he began to truly succeed as a leader."
+    }
+  }, {
+    "match": {
+      "name": "Xun Yu, Wei Advisor"
+    },
+    "replace": {
+      "flavor": "\"A splendid talent, admired of all men! His folly lay in serving Cao Cao's power.\""
+    }
+  }, {
+    "match": {
+      "name": "Zhao Zilong, Tiger General"
+    },
+    "replace": {
+      "flavor": "Zhao Zilong was a brave and noble warrior. Twice he rescued Liu Bei's son, Liu Shan."
+    }
+  }]
+}

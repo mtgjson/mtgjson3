@@ -64,7 +64,7 @@
         },
         {
           "date": "2016-06-08",
-          "text": "Balance doesn’t have targets, so permanents that can’t be targeted, such as a creature with shroud or protection from white, are valid choices to be sacrificed."
+          "text": "Balance doesn't have targets, so permanents that can't be targeted, such as a creature with shroud or protection from white, are valid choices to be sacrificed."
         },
         {
           "date": "2016-06-08",
@@ -184,7 +184,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "You can’t pay life you don’t have. In other words, you can’t Channel yourself below zero life."
+          "text": "You can't pay life you don't have. In other words, you can't Channel yourself below zero life."
         }
       ],
       "text": "Until end of turn, any time you could activate a mana ability, you may pay 1 life. If you do, add {C} to your mana pool.",
@@ -237,13 +237,14 @@
       "printings": [
         "CHK",
         "V09",
-        "MMA"
+        "MMA",
+        "MM3"
       ],
       "rarity": "Mythic Rare",
       "rulings": [
         {
-          "date": "2004-12-01",
-          "text": "You can choose to find fewer than four cards if you want, but your opponent will still put two of those cards into your graveyard."
+          "date": "2017-03-14",
+          "text": "You can choose to find fewer than four cards if you want. If you find one or two cards, your opponent must choose for them to be put into your graveyard, even if he or she doesn't want to."
         }
       ],
       "text": "Search your library for up to four cards with different names and reveal them. Target opponent chooses two of those cards. Put the chosen cards into your graveyard and the rest into your hand. Then shuffle your library.",
@@ -300,7 +301,7 @@
       "rulings": [
         {
           "date": "2008-08-01",
-          "text": "A Goblin permanent card is an artifact, creature, land, and/or enchantment card with the creature type “Goblin\". Usually such cards will be creatures in addition to any other types, but they may be tribal instead. For example, you could put Boggart Shenanigans onto the battlefield with this effect."
+          "text": "A Goblin permanent card is an artifact, creature, land, and/or enchantment card with the creature type \"Goblin\". Usually such cards will be creatures in addition to any other types, but they may be tribal instead. For example, you could put Boggart Shenanigans onto the battlefield with this effect."
         }
       ],
       "subtypes": [
@@ -466,7 +467,7 @@
       "rulings": [
         {
           "date": "2016-06-08",
-          "text": "The “shuffle and put the card on top” is a single action. If an effect causes the top card of the library to be face up, the second card down is not revealed."
+          "text": "The \"shuffle and put the card on top\" is a single action. If an effect causes the top card of the library to be face up, the second card down is not revealed."
         }
       ],
       "text": "Search your library for an instant or sorcery card and reveal that card. Shuffle your library, then put the card on top of it.",
@@ -525,11 +526,11 @@
       "rulings": [
         {
           "date": "2016-06-08",
-          "text": "Necropotence’s last ability creates a delayed triggered ability that will put the exiled card into your hand. That ability still triggers even if Necropotence is removed from the battlefield before your end step."
+          "text": "Necropotence's last ability creates a delayed triggered ability that will put the exiled card into your hand. That ability still triggers even if Necropotence is removed from the battlefield before your end step."
         },
         {
           "date": "2016-06-08",
-          "text": "If the discarded card isn’t put into your graveyard (due to an effect such as madness) or leaves your graveyard (perhaps because another effect returned it to your hand), it won’t be exiled."
+          "text": "If the discarded card isn't put into your graveyard (due to an effect such as madness) or leaves your graveyard (perhaps because another effect returned it to your hand), it won't be exiled."
         }
       ],
       "text": "Skip your draw step.\nWhenever you discard a card, exile that card from your graveyard.\nPay 1 life: Exile the top card of your library face down. Put that card into your hand at the beginning of your next end step.",
@@ -555,7 +556,7 @@
         },
         {
           "format": "Legacy",
-          "legality": "Legal"
+          "legality": "Banned"
         },
         {
           "format": "Modern",
@@ -582,11 +583,11 @@
       "rulings": [
         {
           "date": "2016-06-08",
-          "text": "Sensei’s Divining Top’s second ability may be activated in response to its first ability. If so, you’ll draw a card, put Sensei’s Divining Top on top of your library, and then look at the top three cards and rearrange them."
+          "text": "Sensei's Divining Top's second ability may be activated in response to its first ability. If so, you'll draw a card, put Sensei's Divining Top on top of your library, and then look at the top three cards and rearrange them."
         },
         {
           "date": "2016-06-08",
-          "text": "If Sensei’s Divining Top leaves the battlefield while its second ability is on the stack, you’ll draw a card and leave Sensei’s Divining Top in the zone it’s moved to."
+          "text": "If Sensei's Divining Top leaves the battlefield while its second ability is on the stack, you'll draw a card and leave Sensei's Divining Top in the zone it's moved to."
         }
       ],
       "text": "{1}: Look at the top three cards of your library, then put them back in any order.\n{T}: Draw a card, then put Sensei's Divining Top on top of its owner's library.",
@@ -691,7 +692,10 @@
         "CMD",
         "VMA",
         "C14",
-        "C15"
+        "C15",
+        "C16",
+        "CMA",
+        "C17"
       ],
       "rarity": "Mythic Rare",
       "subtypes": [
@@ -705,6 +709,7 @@
     },
     {
       "artist": "John Avon",
+      "cmc": 0,
       "flavor": "Unlike previous conflicts, the war between Urza and Mishra made Dominaria itself a casualty of war.",
       "id": "7a8a73bd54984534fe06ea82b3557e84a8eb2eec",
       "imageName": "strip mine",
@@ -715,23 +720,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
-          "legality": "Banned"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Banned"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Banned"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Banned"
         },
         {
@@ -780,23 +769,7 @@
           "legality": "Banned"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
-          "legality": "Banned"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Banned"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Banned"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Banned"
         },
         {
@@ -845,10 +818,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -858,18 +827,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -886,7 +843,8 @@
       "originalType": "Artifact",
       "printings": [
         "DST",
-        "V09"
+        "V09",
+        "MPS"
       ],
       "rarity": "Mythic Rare",
       "rulings": [

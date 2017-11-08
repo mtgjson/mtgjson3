@@ -1,0 +1,61 @@
+{
+  "SET": {
+    "name": "Ninth Edition",
+    "code": "9ED",
+    "oldCode": "9E",
+    "magicCardsInfoCode": "9e",
+    "releaseDate": "2005-07-29",
+    "border": "white",
+    "type": "core",
+    "booster": ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land"],
+    "translations": {
+      "de": "Haupt-Set - Neunte Edition",
+      "fr": "Édition de base - Neuvième Edition",
+      "it": "Set base - Nona Edizione",
+      "es": "Colección Básica - Novena Edición",
+      "pt": "Kit Básico - Nona Edição",
+      "jp": "第9版",
+      "cn": "第九版",
+      "ru": "Девятая редакция",
+      "tw": "Ninth Edition",
+      "ko": "Ninth Edition"
+    },
+    "mkm_name": "Ninth Edition",
+    "mkm_id": 49
+  },
+  "SET_CORRECTIONS": [{
+    "match": {
+      "name": ["Holy Day", "Inspirit", "Lava Axe", "Might of Oaks"]
+    },
+    "flavorAddExclamation": true
+  }, {
+    "match": {
+      "name": "Blinking Spirit"
+    },
+    "replace": {
+      "flavor": "\"Don't look at it! Maybe it'll go away!\"\n—Ib Halfheart, goblin tactician"
+    }
+  }, {
+    "match": {
+      "name": "Sea's Claim"
+    },
+    "replace": {
+      "flavor": "\"Who's the crazy one now!?\"\n—Torgle, mountaintop boatmaker"
+    }
+  }, {
+    "match": {
+      "name": "Swarm of Rats"
+    },
+    "replace": {
+      "flavor": "\"Rats, rats, rats! Hundreds, thousands, millions of them, and every one a life.\"\n—Bram Stoker, Dracula"
+    }
+  }, {
+    "match": {
+      "multiverseid": [83064, 83319, 84073, 83104, 94912, 94911, 94910, 83075, 94914]
+    },
+    "replace": {
+      "starter": true
+    },
+    "prefixNumber": "S"
+  }]
+}

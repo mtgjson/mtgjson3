@@ -1,10 +1,10 @@
 "use strict";
 /*global setImmediate: true*/
 
-var base = require("xbase"),
-	C = require("C"),
+var base = require('@sembiance/xbase'),
+	C = require('../shared/C'),
 	fs = require("fs"),
-	shared = require("shared"),
+	shared = require('../shared/shared'),
 	path = require("path"),
 	async = require('async'),
 	tiptoe = require("tiptoe");
@@ -92,53 +92,48 @@ function getURLSForMcilistCache(setInfo, set, callback) {
  * Calls the callback with a list MCI urls for the given set
  * @param setInfo object with set description
  * @param set object with set contents
- * @param cacheStype string with the type to get the urls from. Valid values are: 
+ * @param cacheStype string with the type to get the urls from. Valid values are:
  *                        "oracle", "original", "languages", "printings", "legalities"
  * @param callback function to call upon finish with format function(err, urls)
  */
 function getURLSForCacheType(setInfo, set, cacheType, callback) {
-	var urls = [];
-	async.eachSeries(
-		set.cards.filter(
-			function(card) {
-				return(card.hasOwnProperty("multiverseid"));
-			}
-		),
-		function(card, subcb) {
-			shared.buildCacheFileURLs(
-				card,
-				cacheType,
-				function(err, url) {
-					urls.push(url);
-					subcb();
-				},
-				true
-			);
-		},
-		function(err) {
-			// FIX Urls
-			var ret = [];
+    if (cacheType === 'mcilist')
+        return getURLSForMcilistCache(setInfo, set, callback);
+    if (cacheType === 'listings')
+        return shared.buildMultiverseListingURLs(setInfo.name, callback);
 
-			if (err)
-				return(setImmediate(callback, err));
+    var urls = [];
+    var cards = set.cards.filter(function(card) {
+        return card.hasOwnProperty('multiverseid');
+    });
 
-			async.eachSeries(
-				urls,
-				function(url, cb) {
-					if (Array.isArray(url)) {
-						url.forEach(function(x) { ret.push(x); });
-					}
-					else
-						ret.push(url);
+    function cardURL(card, cardCb) {
+        shared.buildCacheFileURLs(card, cacheType, function(err, url) {
+            if (err) return cardCb(err);
+            urls.push(url);
+            cardCb();
+        });
+    }
 
-					setImmediate(cb);
-				},
-				function(err) {
-					setImmediate(callback, err, ret);
-				}
-			);
-		}
-	);
+    function done(err) {
+        if (err) return callback(err);
+        var ret = [];
+        async.each(
+            urls,
+            function(url, cb) {
+                if (Array.isArray(url))
+                    url.forEach(function(x) { ret.push(x); });
+                else
+                    ret.push(url);
+                cb();
+            },
+            function(err) {
+                callback(err, ret);
+            }
+        );
+    }
+
+    async.each(cards, cardURL, done);
 }
 
 /**
@@ -155,7 +150,6 @@ function clearCacheForSet(code, cacheTypes, cb) {
 			}
 		}
 	);
-	var setName = setInfo.name;
 
 	if (typeof(cacheTypes) === 'string') {
 		cacheTypes = [ cacheTypes ];
@@ -165,7 +159,7 @@ function clearCacheForSet(code, cacheTypes, cb) {
 		return(setImmediate(cb, new Error('Invalid cacheTypes format.')));
 	}
 
-	cacheTypes = cacheTypes.filter(function(cacheType) { 
+	cacheTypes = cacheTypes.filter(function(cacheType) {
 		if (VALID_TYPES.indexOf(cacheType.toLowerCase()) < 0) {
 			base.error('Invalid cacheType: %s', cacheType);
 			return(false);
@@ -173,49 +167,33 @@ function clearCacheForSet(code, cacheTypes, cb) {
 		return(true);
 	});
 
-	tiptoe(
-		function loadSetJSON() {
-			fs.readFile(path.join(__dirname, "..", "json", code + ".json"), { encoding : "utf8" }, this);
-		},
-		function getCacheURLS(setRaw) {
-			var set = JSON.parse(setRaw);
-			base.info("%s: %d cards found.", set.code, set.cards.length);
+    function clearCb(err, cacheType, urls, cb) {
+        base.info('Clearing cache type: %s', cacheType);
+        if (!err && !urls) err = new Error('No urls for clearCacheFiles().');
+        if (err) return cb(err);
 
-			async.each(
-				cacheTypes,
-				function(cacheType, cb) {
-					base.info("Clearing cache type: %s", cacheType);
+        urls = urls.flatten().uniqueBySort().filter(function (url) { return(url !== null && url !== undefined && url !== ''); });
+        base.info("Clearing %d URLs", urls.length);
+        async.each(urls, shared.clearCacheFile, cb);
+    }
 
-					if (cacheType === "mcilist") {
-						getURLSForMcilistCache(setInfo, set, this.parallel());
-					}
-					else if (cacheType === "listings") {
-						shared.buildMultiverseListingURLs(setName, this.parallel());
-					}
-					else {
-						getURLSForCacheType(setInfo, set, cacheType, this.parallel());
-					}
-				}.bind(this)
-			);
-		},
-		function clearCacheFiles() {
-			var urls = [].concat(Array.prototype.slice.call(arguments));
+    function rawSetCb(err, setRaw) {
+        if (err) return cb(err);
+        var set = JSON.parse(setRaw);
+        base.info('%s: %d cards found.', set.code, set.cards.length);
+        async.eachSeries(
+            cacheTypes,
+            function(cacheType, cb) {
+                function getUrlCb(err, urls) {
+                    clearCb(err, cacheType, urls, cb);
+                }
+                getURLSForCacheType(setInfo, set, cacheType, getUrlCb);
+            },
+            cb
+        );
+    }
 
-			if (!urls)
-				return(setImmediate(this, new Error("No urls for clearCacheFiles().")));
-			urls = urls.flatten().uniqueBySort().filter(function (url) { return(url != null && url != undefined && url != ''); });
-
-			base.info("Clearing %d URLS", urls.length);
-			async.eachSeries(
-				urls,
-				shared.clearCacheFile,
-				this
-			);
-		},
-		function finish(err) {
-			setImmediate(cb, err);
-		}
-	);
+    fs.readFile(path.join(__dirname, '..', 'json', code + '.json'), { encoding :'utf8'}, rawSetCb);
 }
 
 module.exports = clearCacheForSet;

@@ -2,11 +2,10 @@
 
 var fs = require('fs');
 var path = require('path');
-var shared = require('shared');
-var C = require('C');
+var C = require('../shared/C');
 var async = require('async');
 var tiptoe = require('tiptoe');
-var diffUtil = require('xutil').diff;
+var diffUtil = require('@sembiance/xutil').diff;
 
 var allCardsWithExtras = {};
 var previousSeenSetCodes = {};
@@ -81,7 +80,7 @@ var checkTaintField = function(SET, card, fieldName, fieldValue) {
 			diff = diffUtil.diff(previousValue, fieldValue);
 
 		if (diff) {
-			taint = true
+			taint = true;
 		}
 	}
 
@@ -167,7 +166,7 @@ module.exports = {
 if (require.main == module) {
 	console.log("Checking for tainted cards...");
 	checkAll(function() {
-		var output = JSON.stringify(taintedCards, null, 2)
+		var output = JSON.stringify(taintedCards, null, 2);
 		fs.writeFile(path.join(__dirname, '..', 'taint.json'), output, 'utf-8');
 		console.log('total tainted cards: %d', taintedCards.length);
 	});

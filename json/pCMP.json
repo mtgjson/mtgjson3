@@ -81,6 +81,7 @@
         }
       ],
       "manaCost": "{1}{U}{R}",
+      "mciNumber": "1",
       "name": "Electrolyze",
       "number": "1",
       "printings": [
@@ -96,7 +97,7 @@
       "rulings": [
         {
           "date": "2006-02-01",
-          "text": "If all chosen targets are illegal as Electrolyze tries to resolve, it will be countered and none of its effects will happen. No damage will be dealt and you won’t draw a card."
+          "text": "If all chosen targets are illegal as Electrolyze tries to resolve, it will be countered and none of its effects will happen. No damage will be dealt and you won't draw a card."
         }
       ],
       "source": "CHAMPS Tournament participation bonus.",
@@ -177,6 +178,7 @@
         }
       ],
       "manaCost": "{2}{U}{U}{R}{R}",
+      "mciNumber": "2",
       "name": "Niv-Mizzet, the Firemind",
       "number": "2",
       "power": "4",
@@ -185,7 +187,8 @@
         "pCMP",
         "DRB",
         "DDJ",
-        "MM2"
+        "MM2",
+        "C17"
       ],
       "rarity": "Special",
       "releaseDate": "2006-03-18",
@@ -275,6 +278,7 @@
         }
       ],
       "manaCost": "{B/R}{B/R}",
+      "mciNumber": "3",
       "name": "Rakdos Guildmage",
       "number": "3",
       "power": "2",
@@ -288,7 +292,7 @@
       "rulings": [
         {
           "date": "2006-05-01",
-          "text": "If the second ability is activated during the End step, the token won’t be exiled until the following turn’s End step."
+          "text": "If the second ability is activated during the End step, the token won't be exiled until the following turn's End step."
         }
       ],
       "source": "CHAMPS Tournament participation bonus.",
@@ -296,7 +300,7 @@
         "Zombie",
         "Shaman"
       ],
-      "text": "({B/R} can be paid with either {B} or {R}.)\n{3}{B}, Discard a card: Target creature gets -2/-2 until end of turn.\n{3}{R}: Put a 2/1 red Goblin creature token with haste onto the battlefield. Exile it at the beginning of the next end step.",
+      "text": "({B/R} can be paid with either {B} or {R}.)\n{3}{B}, Discard a card: Target creature gets -2/-2 until end of turn.\n{3}{R}: Create a 2/1 red Goblin creature token with haste. Exile it at the beginning of the next end step.",
       "toughness": "2",
       "type": "Creature — Zombie Shaman",
       "types": [
@@ -357,10 +361,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -369,19 +369,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
           "format": "Ravnica Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -390,6 +378,7 @@
         }
       ],
       "manaCost": "{G}{U}{U}",
+      "mciNumber": "4",
       "name": "Voidslime",
       "number": "4",
       "printings": [
@@ -400,8 +389,8 @@
       "releaseDate": "2006-06-24",
       "rulings": [
         {
-          "date": "2013-07-01",
-          "text": "Activated abilities contain a colon. They're generally written \"[Cost]: [Effect].\" Some keywords are activated abilities and will have colons in their reminder texts."
+          "date": "2016-06-08",
+          "text": "Activated abilities contain a colon. They're generally written \"[Cost]: [Effect].\" Some keywords are activated abilities and will have colons in their reminder text."
         }
       ],
       "source": "CHAMPS Prize for 8th place or better.",
@@ -413,6 +402,7 @@
     },
     {
       "artist": "Mark Tedin",
+      "cmc": 0,
       "foreignNames": [
         {
           "language": "Chinese Simplified",
@@ -472,6 +462,7 @@
           "legality": "Legal"
         }
       ],
+      "mciNumber": "5",
       "name": "Urza's Factory",
       "number": "5",
       "printings": [
@@ -484,14 +475,14 @@
       "rulings": [
         {
           "date": "2006-09-25",
-          "text": "Although Urza’s Factory has the Urza’s land type, it doesn’t interact with Urza’s Tower, Urza’s Mine, or Urza’s Power Plant."
+          "text": "Although Urza's Factory has the Urza's land type, it doesn't interact with Urza's Tower, Urza's Mine, or Urza's Power Plant."
         }
       ],
       "source": "CHAMPS Tournament participation bonus.",
       "subtypes": [
         "Urza’s"
       ],
-      "text": "{T}: Add {C} to your mana pool.\n{7}, {T}: Put a 2/2 colorless Assembly-Worker artifact creature token onto the battlefield.",
+      "text": "{T}: Add {C} to your mana pool.\n{7}, {T}: Create a 2/2 colorless Assembly-Worker artifact creature token.",
       "type": "Land — Urza’s",
       "types": [
         "Land"
@@ -574,6 +565,7 @@
         }
       ],
       "manaCost": "{W}{W}",
+      "mciNumber": "6",
       "name": "Serra Avenger",
       "number": "6",
       "power": "3",
@@ -587,7 +579,7 @@
       "rulings": [
         {
           "date": "2006-09-25",
-          "text": "You can cast Serra Avenger during another player’s first, second, or third turns of the game if some other effect (such as Vedalken Orrery) enables that."
+          "text": "You can cast Serra Avenger during another player's first, second, or third turns of the game if some other effect (such as Vedalken Orrery) enables that."
         },
         {
           "date": "2012-07-01",
@@ -595,7 +587,7 @@
         },
         {
           "date": "2012-07-01",
-          "text": "If the game is restarted (by Karn Liberated), you can’t cast Serra Avenger in your first, second, or third turn in the new game."
+          "text": "If the game is restarted (by Karn Liberated), you can't cast Serra Avenger in your first, second, or third turn in the new game."
         }
       ],
       "source": "CHAMPS Prize for 8th place or better.",
@@ -678,6 +670,7 @@
         }
       ],
       "manaCost": "{R}{R}",
+      "mciNumber": "7",
       "name": "Blood Knight",
       "number": "7",
       "power": "2",
@@ -774,6 +767,7 @@
         }
       ],
       "manaCost": "{G}{G}{G}",
+      "mciNumber": "8",
       "name": "Groundbreaker",
       "number": "8",
       "power": "6",
@@ -877,6 +871,7 @@
         }
       ],
       "manaCost": "{2}{G}",
+      "mciNumber": "9",
       "name": "Imperious Perfect",
       "number": "9",
       "power": "2",
@@ -887,7 +882,8 @@
         "DPA",
         "C14",
         "DD3_EVG",
-        "EMA"
+        "EMA",
+        "CMA"
       ],
       "rarity": "Special",
       "releaseDate": "2007-10-27",
@@ -896,7 +892,7 @@
         "Elf",
         "Warrior"
       ],
-      "text": "Other Elf creatures you control get +1/+1.\n{G}, {T}: Put a 1/1 green Elf Warrior creature token onto the battlefield.",
+      "text": "Other Elf creatures you control get +1/+1.\n{G}, {T}: Create a 1/1 green Elf Warrior creature token.",
       "toughness": "2",
       "type": "Creature — Elf Warrior",
       "types": [
@@ -963,10 +959,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -979,23 +971,12 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
       ],
       "manaCost": "{B}{G}{W}",
+      "mciNumber": "10",
       "name": "Doran, the Siege Tower",
       "number": "10",
       "power": "0",
@@ -1091,10 +1072,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -1107,23 +1084,12 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
       ],
       "manaCost": "{1}{G}",
+      "mciNumber": "11",
       "name": "Bramblewood Paragon",
       "number": "11",
       "power": "2",
@@ -1169,6 +1135,7 @@
     },
     {
       "artist": "Fred Fields",
+      "cmc": 0,
       "foreignNames": [
         {
           "language": "Chinese Simplified",
@@ -1236,6 +1203,7 @@
           "legality": "Legal"
         }
       ],
+      "mciNumber": "12",
       "name": "Mutavault",
       "number": "12",
       "printings": [
@@ -1248,11 +1216,11 @@
       "rulings": [
         {
           "date": "2008-04-01",
-          "text": "Although Mutavault has all creature types while it’s animated, it does not have the changeling keyword ability."
+          "text": "Although Mutavault has all creature types while it's animated, it does not have the changeling keyword ability."
         },
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn’t matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
         },
         {
           "date": "2013-07-01",

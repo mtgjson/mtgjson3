@@ -1,0 +1,57 @@
+{
+  "SET": {
+    "name": "Arabian Nights",
+    "code": "ARN",
+    "gathererCode": "AN",
+    "magicCardsInfoCode": "an",
+    "releaseDate": "1993-12-17",
+    "border": "black",
+    "type": "expansion",
+    "booster": ["uncommon", "uncommon", "common", "common", "common", "common", "common", "common"],
+    "mkm_name": "Arabian Nights",
+    "mkm_id": 4
+  },
+  "SET_CORRECTIONS": [{
+    "match": {
+      "name": "Bazaar of Baghdad"
+    },
+    "replace": {
+      "artist": "Jeff A. Menges"
+    }
+  }, {
+    "match": {
+      "name": "Bottle of Suleiman"
+    },
+    "replace": {
+      "originalText": "{1}: Flip a coin, with opponent calling heads or tails while coin is in the air. If the flip ends up in opponent's favor, Bottle of Suleiman does 5 damage to you. Otherwise, a 5/5 flying Djinn immediately comes into play on your side. Use a counter to represent Djinn. Djinn is treated exactly like a normal artifact creature except that if it leaves play it is removed from the game entirely. No matter how the flip turns out, Bottle of Suleiman is discarded after use."
+    }
+  }, {
+    "match": {
+      "name": "Library of Alexandria"
+    },
+    "replace": {
+      "artist": "Mark Poole"
+    }
+  }, {
+    "match": {
+      "name": "Ali Baba"
+    },
+    "replace": {
+      "flavor": "\"When he reached the entrance of the cavern, he pronounced the words, ‘Open, Sesame!'\" —The Arabian Nights, Junior Classics trans."
+    }
+  }, {
+    "match": {
+      "name": "Army of Allah"
+    },
+    "replace": {
+      "flavor": {
+        "Arab": " —Arab"
+      }
+    }
+  }, {
+    "match": {
+      "name": ["Bird Maiden", "Piety", "War Elephant", "Wyluli Wolf", "Aladdin's Ring", "Juzám Djinn", "King Suleiman", "Repentant Blacksmith"]
+    },
+    "flavorAddDash": true
+  }]
+}

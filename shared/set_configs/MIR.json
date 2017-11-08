@@ -1,0 +1,118 @@
+{
+  "SET": {
+    "name": "Mirage",
+    "code": "MIR",
+    "gathererCode": "MI",
+    "magicCardsInfoCode": "mr",
+    "releaseDate": "1996-10-08",
+    "border": "black",
+    "type": "expansion",
+    "block": "Mirage",
+    "booster": ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"],
+    "translations": {
+      "de": "Trugbilder",
+      "fr": "Mirage",
+      "it": "Mirage",
+      "es": "Espejismo",
+      "pt": "Miragem"
+    },
+    "mkm_name": "Mirage",
+    "mkm_id": 16
+  },
+  "SET_CORRECTIONS": ["noBasicLandWatermarks", {
+    "renumberImages": "Forest",
+    "order": [3569, 3567, 3568, 3566]
+  }, {
+    "renumberImages": "Island",
+    "order": [3584, 3582, 3583, 3581]
+  }, {
+    "renumberImages": "Mountain",
+    "order": [3580, 3578, 3579, 3577]
+  }, {
+    "renumberImages": "Plains",
+    "order": [3585, 3587, 3586, 3588]
+  }, {
+    "renumberImages": "Swamp",
+    "order": [3562, 3563, 3564, 3565]
+  }, {
+    "match": {
+      "name": ["Acidic Dagger", "Harbor Guardian"]
+    },
+    "replace": {
+      "artist": "Stuart Beel"
+    }
+  }, {
+    "match": {
+      "name": ["Cerulean Wyvern", "Dwarven Miner", "Ekundu Cyclops", "Ether Well", "Floodgate", "Goblin Scouts", "Infernal Contract"]
+    },
+    "flavorAddExclamation": true
+  }, {
+    "match": {
+      "name": ["Ersatz Gnomes", "Mtenda Griffin"]
+    },
+    "flavorAddDash": true
+  }, {
+    "match": {
+      "name": ["Cinder Cloud", "Dwarven Miner", "Kukemssa Pirates"]
+    },
+    "replace": {
+      "artist": "JOCK"
+    }
+  }, {
+    "match": {
+      "name": "Femeref Knight"
+    },
+    "replace": {
+      "flavor": "\"I will return / with lizard skins for your sandals. Paint your eyes black and wait for me.\" —\"Love Song of Night and Day\""
+    }
+  }, {
+    "match": {
+      "name": "Kaervek's Torch"
+    },
+    "replace": {
+      "flavor": "The pulsing heat of the midday Sun burns in the Lion's eye.\n—Stone inscription, source unknown"
+    }
+  }, {
+    "match": {
+      "name": "Merfolk Raiders"
+    },
+    "replace": {
+      "flavor": "\"Turn your back for a second and they just vanish! As if they weren't shifty enough before.\"\n—Rhirhok, goblin archer"
+    }
+  }, {
+    "match": {
+      "name": "Mtenda Lion"
+    },
+    "replace": {
+      "flavor": "\"The lion drank that lake right up! In thanks, he gave Siti the power to speak with lions and make them leave the goats alone.\"\n—Afari, Tales"
+    }
+  }, {
+    "match": {
+      "name": "Polymorph"
+    },
+    "replace": {
+      "flavor": "\"Ahh! Opposable digits!\""
+    }
+  }, {
+    "match": {
+      "name": "Savage Twister"
+    },
+    "replace": {
+      "flavor": "\"Frozen, we watched the funnel pluck up three of the goats—pook! pook! pook!—before we ran for the wadi.\"\n—Travelogue of Najat"
+    }
+  }, {
+    "match": {
+      "name": "Wall of Corpses"
+    },
+    "replace": {
+      "flavor": "\"I shall make walls of their flesh, and their blood will be my mortar.\"\n—Kaervek"
+    }
+  }, {
+    "match": {
+      "name": "Ersatz Gnomes"
+    },
+    "replace": {
+      "flavor": "From jungle to sea, from sea to stone, from stone to field, from field to bone. What am I? —Zhalfirin riddle"
+    }
+  }]
+}

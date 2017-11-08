@@ -1,0 +1,38 @@
+{
+  "SET": {
+    "name": "Nemesis",
+    "code": "NMS",
+    "gathererCode": "NE",
+    "magicCardsInfoCode": "ne",
+    "oldCode": "NEM",
+    "releaseDate": "2000-02-14",
+    "border": "black",
+    "type": "expansion",
+    "block": "Masques",
+    "booster": ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"],
+    "translations": {
+      "de": "Nemesis",
+      "fr": "Némésis",
+      "it": "Nemesis",
+      "es": "Némesis",
+      "pt": "Nêmesis"
+    },
+    "mkm_name": "Nemesis",
+    "mkm_id": 32
+  },
+  "SET_CORRECTIONS": [{
+    "match": {
+      "name": "Wild Mammoth"
+    },
+    "replace": {
+      "flavor": "\"Sit. Heel! Down! HELP!\""
+    }
+  }, {
+    "match": {
+      "name": "Rhox"
+    },
+    "replace": {
+      "originalText": "You may have Rhox deal combat damage to defending player as though it weren't blocked.\n{2}{G}: Regenerate Rhox."
+    }
+  }]
+}

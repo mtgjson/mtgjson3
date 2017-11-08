@@ -2449,7 +2449,7 @@
         },
         {
           "date": "2004-10-04",
-          "text": "You don’t have to decide whether or not you are drawing until after the player decides whether or not to pay."
+          "text": "You don't have to decide whether or not you are drawing until after the player decides whether or not to pay."
         }
       ],
       "text": "Whenever an opponent casts a spell, you may draw a card unless that player pays {1}.",
@@ -2675,7 +2675,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "The spell’s controller gets the option to pay when this ability resolves."
+          "text": "The spell's controller gets the option to pay when this ability resolves."
         }
       ],
       "subtypes": [
@@ -3078,7 +3078,8 @@
         "ARC",
         "CMD",
         "PD3",
-        "CN2"
+        "CN2",
+        "MPS_AKH"
       ],
       "rarity": "Rare",
       "rulings": [
@@ -3737,7 +3738,7 @@
           "text": "If the card has no mana cost (for instance, if it's a land), then its converted mana cost is 0. This means no tokens will be created."
         }
       ],
-      "text": "At the beginning of each player's upkeep, that player puts the top card of his or her library into his or her graveyard. Then he or she puts X 1/1 black Minion creature tokens onto the battlefield, where X is that card's converted mana cost.",
+      "text": "At the beginning of each player's upkeep, that player puts the top card of his or her library into his or her graveyard. Then he or she creates X 1/1 black Minion creature tokens, where X is that card's converted mana cost.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -4474,7 +4475,8 @@
       "power": "6",
       "printings": [
         "PCY",
-        "CMD"
+        "CMD",
+        "E01"
       ],
       "rarity": "Rare",
       "rulings": [
@@ -4648,8 +4650,8 @@
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2013-07-01",
-          "text": "Activated abilities contain a colon. They're generally written \"[Cost]: [Effect].\" Some keywords are activated abilities and will have colons in their reminder texts."
+          "date": "2016-06-08",
+          "text": "Activated abilities contain a colon. They're generally written \"[Cost]: [Effect].\" Some keywords are activated abilities and will have colons in their reminder text."
         }
       ],
       "text": "Activated abilities of nontoken Rebels cost an additional \"Sacrifice a land\" to activate.",
@@ -4939,10 +4941,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -4956,18 +4954,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -6137,7 +6123,7 @@
           "text": "If a legendary creature enters the battlefield, the token is put onto the battlefield and then the \"legend rule\" forces its controller to put either the original or the token into its owner's graveyard before any player can take any actions."
         }
       ],
-      "text": "Whenever a nontoken creature enters the battlefield, its controller puts a token that's a copy of that creature onto the battlefield.\nWhenever a nontoken creature leaves the battlefield, exile all tokens with the same name as that creature.\nWhen Dual Nature leaves the battlefield, exile all tokens put onto the battlefield with Dual Nature.",
+      "text": "Whenever a nontoken creature enters the battlefield, its controller creates a token that's a copy of that creature.\nWhenever a nontoken creature leaves the battlefield, exile all tokens with the same name as that creature.\nWhen Dual Nature leaves the battlefield, exile all tokens created with Dual Nature.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -6190,7 +6176,7 @@
           "text": "The token creatures' power and toughness continuously adjust. They are not \"locked in\" when the spell resolves. This is because the tokens get an ability, rather than simply having their power and toughness set."
         }
       ],
-      "text": "Each player puts a green Elephant creature token onto the battlefield. Those creatures have \"This creature's power and toughness are each equal to the number of creature cards in its controller's graveyard.\"",
+      "text": "Each player creates a green Elephant creature token. Those creatures have \"This creature's power and toughness are each equal to the number of creature cards in its controller's graveyard.\"",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -6310,7 +6296,7 @@
         },
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn’t matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
         }
       ],
       "subtypes": [
@@ -6436,7 +6422,7 @@
         },
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn’t matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
         }
       ],
       "subtypes": [
@@ -6977,7 +6963,7 @@
         "Human",
         "Druid"
       ],
-      "text": "{1}{G}, Sacrifice a land: Put two 1/1 green Squirrel creature tokens onto the battlefield.\n{1}{G}, Sacrifice a land: Squirrel creatures get +1/+1 until end of turn.",
+      "text": "{1}{G}, Sacrifice a land: Create two 1/1 green Squirrel creature tokens.\n{1}{G}, Sacrifice a land: Squirrel creatures get +1/+1 until end of turn.",
       "toughness": "2",
       "type": "Creature — Human Druid",
       "types": [
@@ -7092,7 +7078,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "It means X different creatures. You can’t give more than one +1/+1 counter to a creature with this spell."
+          "text": "It means X different creatures. You can't give more than one +1/+1 counter to a creature with this spell."
         }
       ],
       "text": "Put a +1/+1 counter on each of X target creatures.",
@@ -7458,7 +7444,7 @@
         },
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn’t matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
         }
       ],
       "text": "{0}: Tap all lands you control. Chimeric Idol becomes a 3/3 Turtle artifact creature until end of turn.",
@@ -7703,6 +7689,7 @@
     },
     {
       "artist": "Rob Alexander",
+      "cmc": 0,
       "flavor": "\"All mages dip into the same well; some are just in more of a hurry.\"\n—Alexi, zephyr mage",
       "id": "f05831cf6d7449eb4468194817470d141af909ca",
       "imageName": "rhystic cave",
@@ -7738,7 +7725,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "If a player pays {1}, Rhystic Cave does not produce any mana, but is still considered to have been tapped for mana. Things which trigger of the land being tapped for mana will trigger, but things which try to replace mana production will have nothing to replace."
+          "text": "If a player pays {1}, Rhystic Cave does not produce any mana, and is not considered to have been tapped for mana. Things which trigger of the land being tapped for mana will not trigger."
         },
         {
           "date": "2004-10-04",
@@ -7757,6 +7744,7 @@
     },
     {
       "artist": "Tom Wänerstrand",
+      "cmc": 0,
       "flavor": "Dark is light and day is night\nWhen the winter moon shines.",
       "id": "b1a42534b3163321f8ee173fcbbc604ae2a61676",
       "imageName": "wintermoon mesa",

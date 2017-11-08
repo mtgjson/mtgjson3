@@ -1,13 +1,9 @@
 "use strict";
-/*global setImmediate: true*/
 
-var base = require("xbase"),
-	path = require("path"),
-	shared = require("shared"),
-	tiptoe = require("tiptoe");
+var base = require('@sembiance/xbase'),
+	shared = require('../shared/shared');
 
-if(process.argv.length<3)
-{
+if (process.argv.length < 3) {
 	base.error("Usage: node %s <url>", process.argv[1]);
 	process.exit(1);
 }

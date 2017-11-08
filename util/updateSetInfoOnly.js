@@ -1,21 +1,15 @@
 "use strict";
 /*global setImmediate: true*/
 
-var base = require("xbase"),
-	C = require("C"),
+var base = require('@sembiance/xbase'),
+	C = require('../shared/C'),
 	fs = require("fs"),
-	url = require("url"),
-	color = require("cli-color"),
-	fileUtil = require("xutil").file,
-	shared = require("shared"),
-	diffUtil = require("xutil").diff,
+	shared = require('../shared/shared'),
 	path = require("path"),
 	tiptoe = require("tiptoe");
 
-shared.getSetsToDo().serialForEach(processSet, function(err)
-{
-	if(err)
-	{
+shared.getSetsToDo().serialForEach(processSet, function(err) {
+	if (err) {
 		base.error(err);
 		process.exit(1);
 	}
@@ -23,26 +17,22 @@ shared.getSetsToDo().serialForEach(processSet, function(err)
 	process.exit(0);
 });
 
-function processSet(code, cb)
-{
+function processSet(code, cb) {
 	base.info("Processing set: %s", code);
 
 	tiptoe(
-		function getJSON()
-		{
+		function getJSON() {
 			fs.readFile(path.join(__dirname, "..", "json", code + ".json"), {encoding : "utf8"}, this);
 		},
-		function processCards(setRaw)
-		{
+		function processCards(setRaw) {
 			var newSet = base.clone(C.SETS.mutateOnce(function(SET) { return SET.code===code ? SET : undefined; }));
 			newSet.cards = JSON.parse(setRaw).cards;
 			newSet.code = code; // Needed for shared.saveSet()
 
 			shared.saveSet(newSet, this);
 		},
-		function finish(err)
-		{
-			setImmediate(function() { cb(err); });
+		function finish(err){
+			setImmediate(cb, err);
 		}
 	);
 }

@@ -147,8 +147,11 @@
       "subtypes": [
         "Ajani"
       ],
-      "text": "+1: You gain 2 life.\n−1: Put a +1/+1 counter on each creature you control. Those creatures gain vigilance until end of turn.\n−6: Put a white Avatar creature token onto the battlefield. It has \"This creature's power and toughness are each equal to your life total.\"",
-      "type": "Planeswalker — Ajani",
+      "supertypes": [
+        "Legendary"
+      ],
+      "text": "+1: You gain 2 life.\n−1: Put a +1/+1 counter on each creature you control. Those creatures gain vigilance until end of turn.\n−6: Create a white Avatar creature token. It has \"This creature's power and toughness are each equal to your life total.\"",
+      "type": "Legendary Planeswalker — Ajani",
       "types": [
         "Planeswalker"
       ]
@@ -256,7 +259,7 @@
         },
         {
           "date": "2007-10-01",
-          "text": "In other multiplayer formats, each player’s life total is set to the highest life total within his or her range of influence. These changes happen at the same time. For example, if each player has a range of influence of one, and the players in the game are Alice (4 life), Barry (8 life), Carrie (11 life), and Doug (7 life), in that order, then Alice’s life total will become 8 and Barry and Doug’s life totals will each become 11."
+          "text": "In other multiplayer formats, each player's life total is set to the highest life total within his or her range of influence. These changes happen at the same time. For example, if each player has a range of influence of one, and the players in the game are Alice (4 life), Barry (8 life), Carrie (11 life), and Doug (7 life), in that order, then Alice's life total will become 8 and Barry and Doug's life totals will each become 11."
         },
         {
           "date": "2010-06-15",
@@ -364,7 +367,8 @@
       "originalType": "Sorcery",
       "printings": [
         "LRW",
-        "CMD"
+        "CMD",
+        "MPS_AKH"
       ],
       "rarity": "Rare",
       "rulings": [
@@ -566,10 +570,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -591,7 +591,7 @@
       "rulings": [
         {
           "date": "2014-07-18",
-          "text": "If a creature loses double strike after dealing combat damage in the first combat damage step, it won’t assign combat damage in the second one."
+          "text": "If a creature loses double strike after dealing combat damage in the first combat damage step, it won't assign combat damage in the second one."
         }
       ],
       "subtypes": [
@@ -777,10 +777,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -790,18 +786,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -1145,7 +1129,7 @@
         "Giant",
         "Warrior"
       ],
-      "text": "When Cloudgoat Ranger enters the battlefield, put three 1/1 white Kithkin Soldier creature tokens onto the battlefield.\nTap three untapped Kithkin you control: Cloudgoat Ranger gets +2/+0 and gains flying until end of turn.",
+      "text": "When Cloudgoat Ranger enters the battlefield, create three 1/1 white Kithkin Soldier creature tokens.\nTap three untapped Kithkin you control: Cloudgoat Ranger gets +2/+0 and gains flying until end of turn.",
       "toughness": "3",
       "type": "Creature — Giant Warrior",
       "types": [
@@ -1248,7 +1232,7 @@
       "subtypes": [
         "Shapeshifter"
       ],
-      "text": "Changeling (This card is every creature type.)\nExile target creature. Its controller puts a 1/1 colorless Shapeshifter creature token with changeling onto the battlefield.",
+      "text": "Changeling (This card is every creature type.)\nExile target creature. Its controller creates a 1/1 colorless Shapeshifter creature token with changeling.",
       "type": "Tribal Instant — Shapeshifter",
       "types": [
         "Tribal",
@@ -1459,7 +1443,7 @@
       "rulings": [
         {
           "date": "2013-09-20",
-          "text": "If you clash because of a spell or ability an opponent controls, the ability will still trigger. Likewise, you can still win the clash even if you weren’t the player to initiate it."
+          "text": "If you clash because of a spell or ability an opponent controls, the ability will still trigger. Likewise, you can still win the clash even if you weren't the player to initiate it."
         }
       ],
       "text": "Whenever you clash, tap target creature an opponent controls. If you won, that creature doesn't untap during its controller's next untap step. (This ability triggers after the clash ends.)",
@@ -1564,7 +1548,7 @@
       "rulings": [
         {
           "date": "2007-10-01",
-          "text": "If there’s a tie for highest converted mana cost, all of those creatures have protection from all colors."
+          "text": "If there's a tie for highest converted mana cost, all of those creatures have protection from all colors."
         },
         {
           "date": "2007-10-01",
@@ -1572,7 +1556,7 @@
         },
         {
           "date": "2007-10-01",
-          "text": "If a creature has X in its mana cost, that X is treated as 0 for the purposes of this effect. It doesn’t matter what the value of X was while the creature was on the stack."
+          "text": "If a creature has X in its mana cost, that X is treated as 0 for the purposes of this effect. It doesn't matter what the value of X was while the creature was on the stack."
         }
       ],
       "subtypes": [
@@ -1682,7 +1666,7 @@
       "rulings": [
         {
           "date": "2007-10-01",
-          "text": "Galepowder Mage’s ability can target a creature controlled by any player. It’s not optional."
+          "text": "Galepowder Mage's ability can target a creature controlled by any player. It's not optional."
         },
         {
           "date": "2007-10-01",
@@ -1801,7 +1785,7 @@
       "rulings": [
         {
           "date": "2007-10-01",
-          "text": "After Goldmeadow Dodger becomes blocked, increasing the blocking creature’s power to 4 or greater has no effect on the block."
+          "text": "After Goldmeadow Dodger becomes blocked, increasing the blocking creature's power to 4 or greater has no effect on the block."
         }
       ],
       "subtypes": [
@@ -2326,19 +2310,20 @@
       "originalText": "Whenever you draw a card, you may put a hoofprint counter on Hoofprints of the Stag.\n{2}{W}, Remove four hoofprint counters from Hoofprints of the Stag: Put a 4/4 white Elemental creature token with flying into play. Play this ability only during your turn.",
       "originalType": "Tribal Enchantment — Elemental",
       "printings": [
-        "LRW"
+        "LRW",
+        "C16"
       ],
       "rarity": "Rare",
       "rulings": [
         {
           "date": "2007-10-01",
-          "text": "If a spell or ability has you draw multiple cards, Hoofprints of the Stag’s ability triggers that many times."
+          "text": "If a spell or ability has you draw multiple cards, Hoofprints of the Stag's ability triggers that many times."
         }
       ],
       "subtypes": [
         "Elemental"
       ],
-      "text": "Whenever you draw a card, you may put a hoofprint counter on Hoofprints of the Stag.\n{2}{W}, Remove four hoofprint counters from Hoofprints of the Stag: Put a 4/4 white Elemental creature token with flying onto the battlefield. Activate this ability only during your turn.",
+      "text": "Whenever you draw a card, you may put a hoofprint counter on Hoofprints of the Stag.\n{2}{W}, Remove four hoofprint counters from Hoofprints of the Stag: Create a 4/4 white Elemental creature token with flying. Activate this ability only during your turn.",
       "type": "Tribal Enchantment — Elemental",
       "types": [
         "Tribal",
@@ -2442,11 +2427,11 @@
       "rulings": [
         {
           "date": "2007-10-01",
-          "text": "This is a triggered ability, not an activated ability. It doesn’t allow you to tap the creature whenever you want; rather, you need some other way of tapping it, such as by attacking with the creature."
+          "text": "This is a triggered ability, not an activated ability. It doesn't allow you to tap the creature whenever you want; rather, you need some other way of tapping it, such as by attacking with the creature."
         },
         {
           "date": "2007-10-01",
-          "text": "For the ability to trigger, the creature has to actually change from untapped to tapped. If an effect attempts to tap the creature, but it was already tapped at the time, this ability won’t trigger."
+          "text": "For the ability to trigger, the creature has to actually change from untapped to tapped. If an effect attempts to tap the creature, but it was already tapped at the time, this ability won't trigger."
         }
       ],
       "subtypes": [
@@ -2631,10 +2616,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -2644,18 +2625,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -2786,7 +2755,7 @@
       "rulings": [
         {
           "date": "2013-06-07",
-          "text": "If, after dealing first-strike combat damage, Kithkin Greatheart loses first strike (perhaps because the Giant you controlled was destroyed by first-strike combat damage), it won’t deal regular combat damage."
+          "text": "If, after dealing first-strike combat damage, Kithkin Greatheart loses first strike (perhaps because the Giant you controlled was destroyed by first-strike combat damage), it won't deal regular combat damage."
         }
       ],
       "subtypes": [
@@ -3213,7 +3182,7 @@
       "rulings": [
         {
           "date": "2007-10-01",
-          "text": "Lairwatch Giant’s second ability triggers if it blocks at least two creatures when blockers are declared. It will also trigger if it blocks fewer than two creatures when blockers are declared and effects then cause it to block more creatures. However, if Lairwatch Giant is already blocking two or more creatures, and effects then cause it to block more creatures, the ability won’t trigger again."
+          "text": "Lairwatch Giant's second ability triggers if it blocks at least two creatures when blockers are declared. It will also trigger if it blocks fewer than two creatures when blockers are declared and effects then cause it to block more creatures. However, if Lairwatch Giant is already blocking two or more creatures, and effects then cause it to block more creatures, the ability won't trigger again."
         }
       ],
       "subtypes": [
@@ -3323,17 +3292,17 @@
       "rulings": [
         {
           "date": "2007-10-01",
-          "text": "The token enters the battlefield attacking. It doesn’t trigger “when a creature attacks” triggers and is not subject to restrictions on declaring attackers."
+          "text": "The token enters the battlefield attacking. It doesn't trigger \"when a creature attacks\" triggers and is not subject to restrictions on declaring attackers."
         },
         {
           "date": "2007-10-01",
-          "text": "You choose which player or planeswalker the token is attacking. It doesn’t have to attack the same player or planeswalker as the creature that caused the ability to trigger."
+          "text": "You choose which player or planeswalker the token is attacking. It doesn't have to attack the same player or planeswalker as the creature that caused the ability to trigger."
         }
       ],
       "subtypes": [
         "Kithkin"
       ],
-      "text": "Whenever a nontoken creature you control attacks, you may pay {W}. If you do, put a 1/1 white Kithkin Soldier creature token onto the battlefield tapped and attacking.",
+      "text": "Whenever a nontoken creature you control attacks, you may pay {W}. If you do, create a 1/1 white Kithkin Soldier creature token that's tapped and attacking.",
       "type": "Tribal Enchantment — Kithkin",
       "types": [
         "Tribal",
@@ -3433,7 +3402,9 @@
       "printings": [
         "LRW",
         "C13",
-        "MM2"
+        "MM2",
+        "C16",
+        "CMA"
       ],
       "rarity": "Rare",
       "rulings": [
@@ -3447,7 +3418,7 @@
         },
         {
           "date": "2009-10-01",
-          "text": "You apply power/toughness changing effects in a series of sublayers in the following order: (a) effects from characteristic-defining abilities; (b) effects that set power and/or toughness to a specific number or value; (c) effects that modify power and/or toughness but don’t set power and/or toughness to a specific number or value; (d) changes from counters; (e) effects that switch a creature’s power and toughness. This card’s effect is always applied in (b), which means that effects applied in sublayer (c), (d), or (e) will not be overwritten; they will be applied to the new value."
+          "text": "You apply power/toughness changing effects in a series of sublayers in the following order: (a) effects from characteristic-defining abilities; (b) effects that set power and/or toughness to a specific number or value; (c) effects that modify power and/or toughness but don't set power and/or toughness to a specific number or value; (d) changes from counters; (e) effects that switch a creature's power and toughness. This card's effect is always applied in (b), which means that effects applied in sublayer (c), (d), or (e) will not be overwritten; they will be applied to the new value."
         },
         {
           "date": "2013-07-01",
@@ -3785,11 +3756,11 @@
         },
         {
           "date": "2008-10-01",
-          "text": "If the exiled card is an Aura, that card’s owner chooses what it will enchant as it comes back onto the battlefield. An Aura put onto the battlefield this way doesn’t target anything, but the Aura’s enchant ability restricts what it can be attached to. If the Aura can’t legally be attached to anything, it remains exiled forever."
+          "text": "If the exiled card is an Aura, that card's owner chooses what it will enchant as it comes back onto the battlefield. An Aura put onto the battlefield this way doesn't target anything, but the Aura's enchant ability restricts what it can be attached to. If the Aura can't legally be attached to anything, it remains exiled forever."
         },
         {
           "date": "2012-07-01",
-          "text": "Auras attached to the exiled permanent will be put into their owners’ graveyards. Equipment attached to the exiled permanent will become unattached and remain on the battlefield. Any counters on the exiled permanent will cease to exist."
+          "text": "Auras attached to the exiled permanent will be put into their owners' graveyards. Equipment attached to the exiled permanent will become unattached and remain on the battlefield. Any counters on the exiled permanent will cease to exist."
         }
       ],
       "text": "When Oblivion Ring enters the battlefield, exile another target nonland permanent.\nWhen Oblivion Ring leaves the battlefield, return the exiled card to the battlefield under its owner's control.",
@@ -4099,19 +4070,19 @@
       "rulings": [
         {
           "date": "2007-10-01",
-          "text": "The last ability triggers when the Incarnation is put into its owner’s graveyard from any zone, not just from on the battlefield."
+          "text": "The last ability triggers when the Incarnation is put into its owner's graveyard from any zone, not just from on the battlefield."
         },
         {
           "date": "2007-10-01",
-          "text": "Although this ability triggers when the Incarnation is put into a graveyard from the battlefield, it doesn’t *specifically* trigger on leaving the battlefield, so it doesn’t behave like other leaves-the-battlefield abilities. The ability will trigger from the graveyard."
+          "text": "Although this ability triggers when the Incarnation is put into a graveyard from the battlefield, it doesn't *specifically* trigger on leaving the battlefield, so it doesn't behave like other leaves-the-battlefield abilities. The ability will trigger from the graveyard."
         },
         {
           "date": "2007-10-01",
-          "text": "If the Incarnation had lost this ability while on the battlefield (due to Lignify, for example) and then was destroyed, the ability would still trigger and it would get shuffled into its owner’s library. However, if the Incarnation lost this ability when it was put into the graveyard (due to Yixlid Jailer, for example), the ability wouldn’t trigger and the Incarnation would remain in the graveyard."
+          "text": "If the Incarnation had lost this ability while on the battlefield (due to Lignify, for example) and then was destroyed, the ability would still trigger and it would get shuffled into its owner's library. However, if the Incarnation lost this ability when it was put into the graveyard (due to Yixlid Jailer, for example), the ability wouldn't trigger and the Incarnation would remain in the graveyard."
         },
         {
           "date": "2007-10-01",
-          "text": "If the Incarnation is removed from the graveyard after the ability triggers but before it resolves, it won’t get shuffled into its owner’s library. Similarly, if a replacement effect has the Incarnation move to a different zone instead of being put into the graveyard, the ability won’t trigger at all."
+          "text": "If the Incarnation is removed from the graveyard after the ability triggers but before it resolves, it will remain in its new zone when its owner shuffles his or her library. Similarly, if a replacement effect has the Incarnation move to a different zone instead of being put into the graveyard, the ability won't trigger at all."
         }
       ],
       "subtypes": [
@@ -4645,7 +4616,7 @@
       "subtypes": [
         "Merfolk"
       ],
-      "text": "Put two 1/1 blue Merfolk Wizard creature tokens onto the battlefield.\nTap four untapped Merfolk you control: Return Summon the School from your graveyard to your hand.",
+      "text": "Create two 1/1 blue Merfolk Wizard creature tokens.\nTap four untapped Merfolk you control: Return Summon the School from your graveyard to your hand.",
       "type": "Tribal Sorcery — Merfolk",
       "types": [
         "Tribal",
@@ -5057,11 +5028,11 @@
       "rulings": [
         {
           "date": "2007-10-01",
-          "text": "This is a triggered ability, not an activated ability. It doesn’t allow you to tap the creature whenever you want; rather, you need some other way of tapping it, such as by attacking with the creature."
+          "text": "This is a triggered ability, not an activated ability. It doesn't allow you to tap the creature whenever you want; rather, you need some other way of tapping it, such as by attacking with the creature."
         },
         {
           "date": "2007-10-01",
-          "text": "For the ability to trigger, the creature has to actually change from untapped to tapped. If an effect attempts to tap the creature, but it was already tapped at the time, this ability won’t trigger."
+          "text": "For the ability to trigger, the creature has to actually change from untapped to tapped. If an effect attempts to tap the creature, but it was already tapped at the time, this ability won't trigger."
         }
       ],
       "subtypes": [
@@ -5172,11 +5143,11 @@
       "rulings": [
         {
           "date": "2007-10-01",
-          "text": "The targeted creature must be tapped when the ability is activated and when it resolves. It doesn’t need to remain tapped in between."
+          "text": "The targeted creature must be tapped when the ability is activated and when it resolves. It doesn't need to remain tapped in between."
         },
         {
           "date": "2007-10-01",
-          "text": "Once the ability has resolved, all damage that would be dealt to that creature for the rest of the turn will be prevented, regardless of whether it’s tapped or untapped at the time that damage would be dealt."
+          "text": "Once the ability has resolved, all damage that would be dealt to that creature for the rest of the turn will be prevented, regardless of whether it's tapped or untapped at the time that damage would be dealt."
         }
       ],
       "subtypes": [
@@ -5460,7 +5431,7 @@
           "multiverseid": 156564
         }
       ],
-      "id": "8f380039b7e85bc974564f42e83adfb5da481657",
+      "id": "089500c7da7cf672a7a9fef62340c63ca535c9d0",
       "imageName": "aethersnipe",
       "layout": "normal",
       "legalities": [
@@ -5488,7 +5459,7 @@
       "manaCost": "{5}{U}",
       "mciNumber": "50",
       "multiverseid": 145817,
-      "name": "Æthersnipe",
+      "name": "Aethersnipe",
       "number": "50",
       "originalText": "When Æthersnipe comes into play, return target nonland permanent to its owner's hand.\nEvoke {1}{U}{U} (You may play this spell for its evoke cost. If you do, it's sacrificed when it comes into play.)",
       "originalType": "Creature — Elemental",
@@ -5511,7 +5482,7 @@
       "subtypes": [
         "Elemental"
       ],
-      "text": "When Æthersnipe enters the battlefield, return target nonland permanent to its owner's hand.\nEvoke {1}{U}{U} (You may cast this spell for its evoke cost. If you do, it's sacrificed when it enters the battlefield.)",
+      "text": "When Aethersnipe enters the battlefield, return target nonland permanent to its owner's hand.\nEvoke {1}{U}{U} (You may cast this spell for its evoke cost. If you do, it's sacrificed when it enters the battlefield.)",
       "toughness": "4",
       "type": "Creature — Elemental",
       "types": [
@@ -5583,10 +5554,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -5596,18 +5563,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -5847,7 +5802,7 @@
       "subtypes": [
         "Elemental"
       ],
-      "text": "When Benthicore enters the battlefield, put two 1/1 blue Merfolk Wizard creature tokens onto the battlefield.\nTap two untapped Merfolk you control: Untap Benthicore. It gains shroud until end of turn. (It can't be the target of spells or abilities.)",
+      "text": "When Benthicore enters the battlefield, create two 1/1 blue Merfolk Wizard creature tokens.\nTap two untapped Merfolk you control: Untap Benthicore. It gains shroud until end of turn. (It can't be the target of spells or abilities.)",
       "toughness": "5",
       "type": "Creature — Elemental",
       "types": [
@@ -5949,7 +5904,7 @@
       "rulings": [
         {
           "date": "2007-10-01",
-          "text": "The opponent you clash with doesn’t have to be the controller of the targeted spell."
+          "text": "The opponent you clash with doesn't have to be the controller of the targeted spell."
         },
         {
           "date": "2007-10-01",
@@ -6057,19 +6012,19 @@
       "rulings": [
         {
           "date": "2007-10-01",
-          "text": "The ability triggers at the end of Captivating Glance’s controller’s turn. “You” refers to the controller of Captivating Glance, not the controller of the enchanted creature."
+          "text": "The ability triggers at the end of Captivating Glance's controller's turn. \"You\" refers to the controller of Captivating Glance, not the controller of the enchanted creature."
         },
         {
           "date": "2007-10-01",
-          "text": "The opponent you clash with doesn’t have to be the controller of the enchanted creature."
+          "text": "The opponent you clash with doesn't have to be the controller of the enchanted creature."
         },
         {
           "date": "2007-10-01",
-          "text": "If you win the clash, you gain control of the enchanted creature (even if the other player won the clash too; this can happen if a split card is revealed). If you don’t win the clash, the other player gains control of the enchanted creature (even if that player didn’t win the clash either)."
+          "text": "If you win the clash, you gain control of the enchanted creature. If you don't win the clash, the other player gains control of the enchanted creature (even if that player didn't win the clash either)."
         },
         {
           "date": "2007-10-01",
-          "text": "Captivating Glance’s controller never changes as a result of this card."
+          "text": "Captivating Glance's controller never changes as a result of this card."
         },
         {
           "date": "2007-10-01",
@@ -6077,7 +6032,7 @@
         },
         {
           "date": "2007-10-01",
-          "text": "Captivating Glance’s control-change effect continues to apply even if Captivating Glance leaves the battlefield."
+          "text": "Captivating Glance's control-change effect continues to apply even if Captivating Glance leaves the battlefield."
         }
       ],
       "subtypes": [
@@ -6181,7 +6136,8 @@
         "pMPR",
         "LRW",
         "MMA",
-        "MM2"
+        "MM2",
+        "MPS_AKH"
       ],
       "rarity": "Rare",
       "rulings": [
@@ -6191,7 +6147,7 @@
         },
         {
           "date": "2013-06-07",
-          "text": "Look at both chosen modes to determine how many targets Cryptic Command has, if any. If it has at least one target, and all its targets are illegal when it tries to resolve, then it will be countered and none of its effects will happen. For example, if you choose the second and fourth modes, and the permanent is an illegal target when Cryptic Command tries to resolve, you won’t draw a card."
+          "text": "Look at both chosen modes to determine how many targets Cryptic Command has, if any. If it has at least one target, and all its targets are illegal when it tries to resolve, then it will be countered and none of its effects will happen. For example, if you choose the second and fourth modes, and the permanent is an illegal target when Cryptic Command tries to resolve, you won't draw a card."
         }
       ],
       "text": "Choose two —\n• Counter target spell.\n• Return target permanent to its owner's hand.\n• Tap all creatures your opponents control.\n• Draw a card.",
@@ -6937,11 +6893,11 @@
       "rulings": [
         {
           "date": "2007-10-01",
-          "text": "This is a triggered ability, not an activated ability. It doesn’t allow you to tap the creature whenever you want; rather, you need some other way of tapping it, such as by attacking with the creature."
+          "text": "This is a triggered ability, not an activated ability. It doesn't allow you to tap the creature whenever you want; rather, you need some other way of tapping it, such as by attacking with the creature."
         },
         {
           "date": "2007-10-01",
-          "text": "For the ability to trigger, the creature has to actually change from untapped to tapped. If an effect attempts to tap the creature, but it was already tapped at the time, this ability won’t trigger."
+          "text": "For the ability to trigger, the creature has to actually change from untapped to tapped. If an effect attempts to tap the creature, but it was already tapped at the time, this ability won't trigger."
         }
       ],
       "subtypes": [
@@ -7045,9 +7001,16 @@
       "originalText": "As an additional cost to play Familiar's Ruse, return a creature you control to its owner's hand.\nCounter target spell.",
       "originalType": "Instant",
       "printings": [
-        "LRW"
+        "LRW",
+        "MM3"
       ],
       "rarity": "Uncommon",
+      "rulings": [
+        {
+          "date": "2017-03-14",
+          "text": "Familiar's Ruse can't be cast without a target spell. It can't target itself."
+        }
+      ],
       "text": "As an additional cost to cast Familiar's Ruse, return a creature you control to its owner's hand.\nCounter target spell.",
       "type": "Instant",
       "types": [
@@ -7254,7 +7217,7 @@
       "rulings": [
         {
           "date": "2007-10-01",
-          "text": "Yes, the opponent draws seven cards. It’s not optional."
+          "text": "Yes, the opponent draws seven cards. It's not optional."
         }
       ],
       "text": "Whenever an opponent casts a spell, that player draws seven cards.",
@@ -7472,7 +7435,7 @@
         },
         {
           "date": "2007-10-01",
-          "text": "If the enchanted creature becomes untapped, Glimmerdust Nap is put into its owner’s graveyard as a state-based action."
+          "text": "If the enchanted creature becomes untapped, Glimmerdust Nap is put into its owner's graveyard as a state-based action."
         }
       ],
       "subtypes": [
@@ -7583,7 +7546,7 @@
       "rulings": [
         {
           "date": "2007-10-01",
-          "text": "Guile’s second ability replaces “counter [a certain spell]” with “exile [a certain spell] and you may cast it without paying its mana cost.” You have the option to cast it immediately upon its exile. If you choose not to, it remains exiled and you don’t get another chance to cast it. If the spell or ability that tried to counter the spell has additional effects, it then continues to resolve."
+          "text": "Guile's second ability replaces \"counter [a certain spell]\" with \"exile [a certain spell] and you may cast it without paying its mana cost.\" You have the option to cast it immediately upon its exile. If you choose not to, it remains exiled and you don't get another chance to cast it. If the spell or ability that tried to counter the spell has additional effects, it then continues to resolve."
         },
         {
           "date": "2007-10-01",
@@ -7595,23 +7558,23 @@
         },
         {
           "date": "2007-10-01",
-          "text": "If a spell or ability you control attempts to counter a spell that can’t be countered, it doesn’t. Since the spell wouldn’t be countered, Guile’s ability has no effect on it. The spell will continue to resolve normally."
+          "text": "If a spell or ability you control attempts to counter a spell that can't be countered, it doesn't. Since the spell wouldn't be countered, Guile's ability has no effect on it. The spell will continue to resolve normally."
         },
         {
           "date": "2007-10-01",
-          "text": "The last ability triggers when the Incarnation is put into its owner’s graveyard from any zone, not just from on the battlefield."
+          "text": "The last ability triggers when the Incarnation is put into its owner's graveyard from any zone, not just from on the battlefield."
         },
         {
           "date": "2007-10-01",
-          "text": "Although this ability triggers when the Incarnation is put into a graveyard from the battlefield, it doesn’t *specifically* trigger on leaving the battlefield, so it doesn’t behave like other leaves-the-battlefield abilities. The ability will trigger from the graveyard."
+          "text": "Although this ability triggers when the Incarnation is put into a graveyard from the battlefield, it doesn't *specifically* trigger on leaving the battlefield, so it doesn't behave like other leaves-the-battlefield abilities. The ability will trigger from the graveyard."
         },
         {
           "date": "2007-10-01",
-          "text": "If the Incarnation had lost this ability while on the battlefield (due to Lignify, for example) and then was destroyed, the ability would still trigger and it would get shuffled into its owner’s library. However, if the Incarnation lost this ability when it was put into the graveyard (due to Yixlid Jailer, for example), the ability wouldn’t trigger and the Incarnation would remain in the graveyard."
+          "text": "If the Incarnation had lost this ability while on the battlefield (due to Lignify, for example) and then was destroyed, the ability would still trigger and it would get shuffled into its owner's library. However, if the Incarnation lost this ability when it was put into the graveyard (due to Yixlid Jailer, for example), the ability wouldn't trigger and the Incarnation would remain in the graveyard."
         },
         {
           "date": "2007-10-01",
-          "text": "If the Incarnation is removed from the graveyard after the ability triggers but before it resolves, it won’t get shuffled into its owner’s library. Similarly, if a replacement effect has the Incarnation move to a different zone instead of being put into the graveyard, the ability won’t trigger at all."
+          "text": "If the Incarnation is removed from the graveyard after the ability triggers but before it resolves, it will remain in its new zone when its owner shuffles his or her library. Similarly, if a replacement effect has the Incarnation move to a different zone instead of being put into the graveyard, the ability won't trigger at all."
         }
       ],
       "subtypes": [
@@ -7831,14 +7794,17 @@
       "rulings": [
         {
           "date": "2009-10-01",
-          "text": "If there are fewer than twenty cards in the targeted player’s library, that player puts all the cards from his or her library into his or her graveyard."
+          "text": "If there are fewer than twenty cards in the targeted player's library, that player puts all the cards from his or her library into his or her graveyard."
         }
       ],
       "subtypes": [
         "Jace"
       ],
+      "supertypes": [
+        "Legendary"
+      ],
       "text": "+2: Each player draws a card.\n−1: Target player draws a card.\n−10: Target player puts the top twenty cards of his or her library into his or her graveyard.",
-      "type": "Planeswalker — Jace",
+      "type": "Legendary Planeswalker — Jace",
       "types": [
         "Planeswalker"
       ]
@@ -8997,11 +8963,11 @@
       "rulings": [
         {
           "date": "2007-10-01",
-          "text": "You decide whether or not to add that much {C} to your mana pool as the delayed triggered ability resolves at the beginning of your next main phase. You don’t decide before then."
+          "text": "You decide whether or not to add that much {C} to your mana pool as the delayed triggered ability resolves at the beginning of your next main phase. You don't decide before then."
         },
         {
           "date": "2007-10-01",
-          "text": "You can’t add just some of the mana to your mana pool. You either add all the mana to your mana pool or none of it."
+          "text": "You can't add just some of the mana to your mana pool. You either add all the mana to your mana pool or none of it."
         }
       ],
       "text": "Counter target spell. Clash with an opponent. If you win, at the beginning of your next main phase, you may add an amount of {C} to your mana pool equal to that spell's converted mana cost. (Each clashing player reveals the top card of his or her library, then puts that card on the top or bottom. A player wins if his or her card had a higher converted mana cost.)",
@@ -9317,19 +9283,11 @@
       "rulings": [
         {
           "date": "2007-10-01",
-          "text": "If the targeted Shapeshifter becomes an illegal target but the targeted creature doesn’t, the ability will resolve but have no effect."
+          "text": "The copy effect doesn't wear off until just before your next untap step (even if an effect will cause that untap step to be skipped)."
         },
         {
           "date": "2007-10-01",
-          "text": "If the targeted creature becomes an illegal target but the targeted Shapeshifter doesn’t, the Shapeshifter will still become a copy of the object. The effect will use the illegal target’s current copiable characteristics if it’s still on the battlefield, or its last known copiable characteristics if it has left the battlefield."
-        },
-        {
-          "date": "2007-10-01",
-          "text": "The copy effect doesn’t wear off until just before your next untap step (even if an effect will cause that untap step to be skipped)."
-        },
-        {
-          "date": "2007-10-01",
-          "text": "If Shapesharer itself becomes a copy of another creature, it loses both changeling and its activated ability (unless it’s copying another creature with changeling and/or another Shapesharer, of course)."
+          "text": "If Shapesharer itself becomes a copy of another creature, it loses both changeling and its activated ability (unless it's copying another creature with changeling and/or another Shapesharer, of course)."
         },
         {
           "date": "2007-10-01",
@@ -9337,19 +9295,23 @@
         },
         {
           "date": "2007-10-01",
-          "text": "The targeted Shapeshifter copies the printed values of the targeted creature, plus any copy effects that have been applied to it. It won’t copy counters on that creature. It won’t copy effects that have changed the creature’s power, toughness, types, color, and so on."
+          "text": "The targeted Shapeshifter copies the printed values of the targeted creature, plus any copy effects that have been applied to it. It won't copy counters on that creature. It won't copy effects that have changed the creature's power, toughness, types, color, and so on."
         },
         {
           "date": "2007-10-01",
-          "text": "If the targeted Shapeshifter copies a creature that’s copying a creature, it will become whatever the chosen creature is copying."
+          "text": "If the targeted Shapeshifter copies a creature that's copying a creature, it will become whatever the chosen creature is copying."
         },
         {
           "date": "2007-10-01",
-          "text": "If the targeted Shapeshifter becomes a copy of a face-down creature, it will become a 2/2 creature with no name, creature type, abilities, mana cost, or color. It will not become face down and thus can’t be turned face up."
+          "text": "If the targeted Shapeshifter becomes a copy of a face-down creature, it will become a 2/2 creature with no name, creature type, abilities, mana cost, or color. It will not become face down and thus can't be turned face up."
         },
         {
           "date": "2007-10-01",
           "text": "Effects that have already applied to the targeted Shapeshifter will continue to apply to it. For example, if Giant Growth had given it +3/+3 earlier in the turn, then this ability makes it a copy of Grizzly Bears, it will be a 5/5 Grizzly Bears."
+        },
+        {
+          "date": "2017-09-29",
+          "text": "If either target becomes an illegal target, the ability will resolve but have no effect."
         }
       ],
       "subtypes": [
@@ -9564,11 +9526,11 @@
       "rulings": [
         {
           "date": "2007-10-01",
-          "text": "A permanent that’s both a Merfolk and a Faerie is counted only once when determining X."
+          "text": "A permanent that's both a Merfolk and a Faerie is counted only once when determining X."
         },
         {
           "date": "2007-10-01",
-          "text": "The value of X is determined when Silvergill Douser’s ability resolves. It won’t change later, even if the number of Merfolk and/or Faeries you control changes."
+          "text": "The value of X is determined when Silvergill Douser's ability resolves. It won't change later, even if the number of Merfolk and/or Faeries you control changes."
         }
       ],
       "subtypes": [
@@ -9795,7 +9757,7 @@
       "rulings": [
         {
           "date": "2007-10-01",
-          "text": "The value of X needs to be determined both when the ability triggers (so you can choose a target) and again when the ability resolves (to check if that target is still legal). If the number of Faeries you control has decreased enough in that time to make the target illegal, Spellstutter Sprite’s ability will be countered (and the targeted spell will resolve as normal)."
+          "text": "The value of X needs to be determined both when the ability triggers (so you can choose a target) and again when the ability resolves (to check if that target is still legal). If the number of Faeries you control has decreased enough in that time to make the target illegal, Spellstutter Sprite's ability will be countered (and the targeted spell will resolve as normal)."
         }
       ],
       "subtypes": [
@@ -10116,11 +10078,11 @@
       "rulings": [
         {
           "date": "2007-10-01",
-          "text": "This is a triggered ability, not an activated ability. It doesn’t allow you to tap the creature whenever you want; rather, you need some other way of tapping it, such as by attacking with the creature."
+          "text": "This is a triggered ability, not an activated ability. It doesn't allow you to tap the creature whenever you want; rather, you need some other way of tapping it, such as by attacking with the creature."
         },
         {
           "date": "2007-10-01",
-          "text": "For the ability to trigger, the creature has to actually change from untapped to tapped. If an effect attempts to tap the creature, but it was already tapped at the time, this ability won’t trigger."
+          "text": "For the ability to trigger, the creature has to actually change from untapped to tapped. If an effect attempts to tap the creature, but it was already tapped at the time, this ability won't trigger."
         }
       ],
       "subtypes": [
@@ -10340,7 +10302,7 @@
         },
         {
           "date": "2013-04-15",
-          "text": "Switching a creature’s power and toughness twice (or any even number of times) effectively returns the creature to the power and toughness it had before any switches."
+          "text": "Switching a creature's power and toughness twice (or any even number of times) effectively returns the creature to the power and toughness it had before any switches."
         }
       ],
       "subtypes": [
@@ -10557,11 +10519,11 @@
         },
         {
           "date": "2007-10-01",
-          "text": "If you don’t win the clash, the targeted creature always goes to its owner’s hand. If you win the clash, you choose whether the creature goes to its owner’s hand or the top of its owner’s library."
+          "text": "If you don't win the clash, the targeted creature always goes to its owner's hand. If you win the clash, you choose whether the creature goes to its owner's hand or the top of its owner's library."
         },
         {
           "date": "2007-10-01",
-          "text": "If you clash with the owner of the targeted creature and win, the owner of the creature decides where to put to card revealed during the clash before you decide whether to put the creature on top of that library. You know the player’s decision before you make your decision."
+          "text": "If you clash with the owner of the targeted creature and win, the owner of the creature decides where to put to card revealed during the clash before you decide whether to put the creature on top of that library. You know the player's decision before you make your decision."
         }
       ],
       "text": "Clash with an opponent, then return target creature to its owner's hand. If you win, you may put that creature on top of its owner's library instead. (Each clashing player reveals the top card of his or her library, then puts that card on the top or bottom. A player wins if his or her card had a higher converted mana cost.)",
@@ -11400,7 +11362,7 @@
         "Goblin",
         "Warrior"
       ],
-      "text": "Champion a Goblin (When this enters the battlefield, sacrifice it unless you exile another Goblin you control. When this leaves the battlefield, that card returns to the battlefield.)\nWhenever a Goblin you control deals combat damage to a player, you may put a 1/1 black Goblin Rogue creature token onto the battlefield.",
+      "text": "Champion a Goblin (When this enters the battlefield, sacrifice it unless you exile another Goblin you control. When this leaves the battlefield, that card returns to the battlefield.)\nWhenever a Goblin you control deals combat damage to a player, you may create a 1/1 black Goblin Rogue creature token.",
       "toughness": "5",
       "type": "Creature — Goblin Warrior",
       "types": [
@@ -11503,7 +11465,7 @@
       "rulings": [
         {
           "date": "2007-10-01",
-          "text": "Cairn Wanderer’s ability looks at all cards in all graveyards. It gains any landwalk abilities and any protection abilities."
+          "text": "Cairn Wanderer's ability looks at all cards in all graveyards. It gains any landwalk abilities and any protection abilities."
         }
       ],
       "subtypes": [
@@ -11611,11 +11573,11 @@
       "rulings": [
         {
           "date": "2007-10-01",
-          "text": "The turn you cast Colfenor’s Plans, you have cast (at least) one spell that turn. After it enters the battlefield and its last ability goes into effect, you can’t cast any more spells that turn."
+          "text": "The turn you cast Colfenor's Plans, you have cast (at least) one spell that turn. After it enters the battlefield and its last ability goes into effect, you can't cast any more spells that turn."
         },
         {
           "date": "2007-10-01",
-          "text": "Playing a card exiled with Colfenor’s Plans follows all the normal rules for playing that card. You must pay its costs, and you must follow all timing restrictions, for example."
+          "text": "Playing a card exiled with Colfenor's Plans follows all the normal rules for playing that card. You must pay its costs, and you must follow all timing restrictions, for example."
         },
         {
           "date": "2007-10-01",
@@ -11623,7 +11585,7 @@
         },
         {
           "date": "2013-04-15",
-          "text": "If Colfenor’s Plans leaves the battlefield, you can continue to look at cards exiled by it, but you can no longer play them."
+          "text": "If Colfenor's Plans leaves the battlefield, you can continue to look at cards exiled by it, but you can no longer play them."
         }
       ],
       "text": "When Colfenor's Plans enters the battlefield, exile the top seven cards of your library face down.\nYou may look at and play cards exiled with Colfenor's Plans.\nSkip your draw step.\nYou can't cast more than one spell each turn.",
@@ -11728,19 +11690,19 @@
       "rulings": [
         {
           "date": "2007-10-01",
-          "text": "The last ability triggers when the Incarnation is put into its owner’s graveyard from any zone, not just from on the battlefield."
+          "text": "The last ability triggers when the Incarnation is put into its owner's graveyard from any zone, not just from on the battlefield."
         },
         {
           "date": "2007-10-01",
-          "text": "Although this ability triggers when the Incarnation is put into a graveyard from the battlefield, it doesn’t *specifically* trigger on leaving the battlefield, so it doesn’t behave like other leaves-the-battlefield abilities. The ability will trigger from the graveyard."
+          "text": "Although this ability triggers when the Incarnation is put into a graveyard from the battlefield, it doesn't *specifically* trigger on leaving the battlefield, so it doesn't behave like other leaves-the-battlefield abilities. The ability will trigger from the graveyard."
         },
         {
           "date": "2007-10-01",
-          "text": "If the Incarnation had lost this ability while on the battlefield (due to Lignify, for example) and then was destroyed, the ability would still trigger and it would get shuffled into its owner’s library. However, if the Incarnation lost this ability when it was put into the graveyard (due to Yixlid Jailer, for example), the ability wouldn’t trigger and the Incarnation would remain in the graveyard."
+          "text": "If the Incarnation had lost this ability while on the battlefield (due to Lignify, for example) and then was destroyed, the ability would still trigger and it would get shuffled into its owner's library. However, if the Incarnation lost this ability when it was put into the graveyard (due to Yixlid Jailer, for example), the ability wouldn't trigger and the Incarnation would remain in the graveyard."
         },
         {
           "date": "2007-10-01",
-          "text": "If the Incarnation is removed from the graveyard after the ability triggers but before it resolves, it won’t get shuffled into its owner’s library. Similarly, if a replacement effect has the Incarnation move to a different zone instead of being put into the graveyard, the ability won’t trigger at all."
+          "text": "If the Incarnation is removed from the graveyard after the ability triggers but before it resolves, it will remain in its new zone when its owner shuffles his or her library. Similarly, if a replacement effect has the Incarnation move to a different zone instead of being put into the graveyard, the ability won't trigger at all."
         }
       ],
       "subtypes": [
@@ -12272,7 +12234,7 @@
       "rulings": [
         {
           "date": "2007-10-01",
-          "text": "You choose either to have each opponent lose 1 life or to have no opponent lose any life. You don’t choose for each opponent individually."
+          "text": "You choose either to have each opponent lose 1 life or to have no opponent lose any life. You don't choose for each opponent individually."
         }
       ],
       "subtypes": [
@@ -12588,7 +12550,7 @@
         },
         {
           "date": "2007-10-01",
-          "text": "You can cast this with zero targets. If you do, you’ll get to draw a card. However, if you cast this with at least one target and all of those targets become illegal, the spell will be countered and you won’t get to draw a card."
+          "text": "You can cast this with zero targets. If you do, you'll get to draw a card. However, if you cast this with at least one target and all of those targets become illegal, the spell will be countered and you won't get to draw a card."
         }
       ],
       "text": "Put any number of target creature cards from your graveyard on top of your library.\nDraw a card.",
@@ -12797,7 +12759,7 @@
       "rulings": [
         {
           "date": "2007-10-01",
-          "text": "The effect will automatically repeat itself until its controller doesn’t win the clash. There’s no other way to stop it."
+          "text": "The effect will automatically repeat itself until its controller doesn't win the clash. There's no other way to stop it."
         }
       ],
       "text": "You lose 2 life and draw two cards, then clash with an opponent. If you win, repeat this process. (Each clashing player reveals the top card of his or her library, then puts that card on the top or bottom. A player wins if his or her card had a higher converted mana cost.)",
@@ -12903,7 +12865,7 @@
       "rulings": [
         {
           "date": "2007-10-01",
-          "text": "Hornet Harasser’s ability is mandatory. If you’re the only player who controls any creatures, you must give one of your own creatures -2/-2."
+          "text": "Hornet Harasser's ability is mandatory. If you're the only player who controls any creatures, you must give one of your own creatures -2/-2."
         }
       ],
       "subtypes": [
@@ -13235,14 +13197,17 @@
       "rulings": [
         {
           "date": "2009-10-01",
-          "text": "A “creature card” is any card with the type Creature, even if it has other types such as Artifact, Enchantment, or Land. Older cards of type Summon are also Creature cards."
+          "text": "A \"creature card\" is any card with the type creature, even if it has other types such as artifact, enchantment, or land. Older cards of type summon are also creature cards."
         }
       ],
       "subtypes": [
         "Liliana"
       ],
+      "supertypes": [
+        "Legendary"
+      ],
       "text": "+1: Target player discards a card.\n−2: Search your library for a card, then shuffle your library and put that card on top of it.\n−8: Put all creature cards from all graveyards onto the battlefield under your control.",
-      "type": "Planeswalker — Liliana",
+      "type": "Legendary Planeswalker — Liliana",
       "types": [
         "Planeswalker"
       ]
@@ -13345,7 +13310,7 @@
       "rulings": [
         {
           "date": "2016-06-08",
-          "text": "The number of Elves you control is counted only as Lys Alana Scarblade’s ability resolves. If Lys Alana Scarblade is still on the battlefield, it’ll count itself."
+          "text": "The number of Elves you control is counted only as Lys Alana Scarblade's ability resolves. If Lys Alana Scarblade is still on the battlefield, it'll count itself."
         }
       ],
       "subtypes": [
@@ -13669,14 +13634,14 @@
       "rulings": [
         {
           "date": "2009-10-01",
-          "text": "The effect from the ability overwrites other effects that set power and/or toughness if and only if those effects existed before the ability resolved. It will not overwrite effects that modify power or toughness (whether from a static ability, counters, or a resolved spell or ability), nor will it overwrite effects that set power and toughness which come into existence after the ability resolves. Effects that switch the creature’s power and toughness are always applied after any other power or toughness changing effects, including this one, regardless of the order in which they are created."
+          "text": "The effect from the ability overwrites other effects that set power and/or toughness if and only if those effects existed before the ability resolved. It will not overwrite effects that modify power or toughness (whether from a static ability, counters, or a resolved spell or ability), nor will it overwrite effects that set power and toughness which come into existence after the ability resolves. Effects that switch the creature's power and toughness are always applied after any other power or toughness changing effects, including this one, regardless of the order in which they are created."
         }
       ],
       "subtypes": [
         "Faerie",
         "Rogue"
       ],
-      "text": "Flying\nWhen Marsh Flitter enters the battlefield, put two 1/1 black Goblin Rogue creature tokens onto the battlefield.\nSacrifice a Goblin: Marsh Flitter has base power and toughness 3/3 until end of turn.",
+      "text": "Flying\nWhen Marsh Flitter enters the battlefield, create two 1/1 black Goblin Rogue creature tokens.\nSacrifice a Goblin: Marsh Flitter has base power and toughness 3/3 until end of turn.",
       "toughness": "1",
       "type": "Creature — Faerie Rogue",
       "types": [
@@ -13749,10 +13714,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -13762,18 +13723,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -14341,7 +14290,7 @@
       "rulings": [
         {
           "date": "2007-10-01",
-          "text": "Nettlevine Blight grants the triggered ability to the enchanted permanent, so “you” refers to that permanent’s controller. The ability will trigger at the end of that player’s turn, and that player chooses the new creature or land to attach Nettlevine Blight to. The player must choose a creature or land he or she controls."
+          "text": "Nettlevine Blight grants the triggered ability to the enchanted permanent, so \"you\" refers to that permanent's controller. The ability will trigger at the end of that player's turn, and that player chooses the new creature or land to attach Nettlevine Blight to. The player must choose a creature or land he or she controls."
         }
       ],
       "subtypes": [
@@ -14772,10 +14721,10 @@
       "rulings": [
         {
           "date": "2007-10-01",
-          "text": "The value chosen for X applies to each X in the spell’s effect. You pay {X} only once."
+          "text": "The value chosen for X applies to each X in the spell's effect. You pay {X} only once."
         }
       ],
-      "text": "Choose two —\n• Target player loses X life. \n• Return target creature card with converted mana cost X or less from your graveyard to the battlefield.\n• Target creature gets -X/-X until end of turn.\n• Up to X target creatures gain fear until end of turn. (They can't be blocked except by artifact creatures and/or black creatures.)",
+      "text": "Choose two —\n• Target player loses X life.\n• Return target creature card with converted mana cost X or less from your graveyard to the battlefield.\n• Target creature gets -X/-X until end of turn.\n• Up to X target creatures gain fear until end of turn. (They can't be blocked except by artifact creatures and/or black creatures.)",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -14877,13 +14826,13 @@
       "rulings": [
         {
           "date": "2007-10-01",
-          "text": "If Prowess of the Fair and another nontoken Elf are put into your graveyard simultaneously (by Akroma’s Vengeance, for example), the other Elf will cause Prowess of the Fair’s ability to trigger."
+          "text": "If Prowess of the Fair and another nontoken Elf are put into your graveyard simultaneously (by Akroma's Vengeance, for example), the other Elf will cause Prowess of the Fair's ability to trigger."
         }
       ],
       "subtypes": [
         "Elf"
       ],
-      "text": "Whenever another nontoken Elf is put into your graveyard from the battlefield, you may put a 1/1 green Elf Warrior creature token onto the battlefield.",
+      "text": "Whenever another nontoken Elf is put into your graveyard from the battlefield, you may create a 1/1 green Elf Warrior creature token.",
       "type": "Tribal Enchantment — Elf",
       "types": [
         "Tribal",
@@ -15092,7 +15041,7 @@
       "rulings": [
         {
           "date": "2007-10-01",
-          "text": "If you activate the ability, the Elf card is exiled as a cost. This action can’t be responded to."
+          "text": "If you activate the ability, the Elf card is exiled as a cost. This action can't be responded to."
         }
       ],
       "subtypes": [
@@ -15202,7 +15151,8 @@
         "CMD",
         "DDH",
         "C14",
-        "C15"
+        "C15",
+        "CMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
@@ -15817,10 +15767,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -15833,19 +15779,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Theros Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -15862,13 +15796,14 @@
       "originalType": "Sorcery",
       "printings": [
         "LRW",
-        "THS"
+        "THS",
+        "MPS_AKH"
       ],
       "rarity": "Rare",
       "rulings": [
         {
           "date": "2013-09-15",
-          "text": "The loss of life is part of the spell’s effect. It’s not an additional cost. If Thoughtseize is countered, you won’t lose life."
+          "text": "The loss of life is part of the spell's effect. It's not an additional cost. If Thoughtseize is countered, you won't lose life."
         },
         {
           "date": "2014-02-01",
@@ -15983,7 +15918,7 @@
         },
         {
           "date": "2007-10-01",
-          "text": "If the card is an illegla target as the ability resolves, the ability will be countered and none of its effects will happen. Warren Pilferers won’t gain haste."
+          "text": "If the card is an illegla target as the ability resolves, the ability will be countered and none of its effects will happen. Warren Pilferers won't gain haste."
         }
       ],
       "subtypes": [
@@ -16295,19 +16230,19 @@
       "rulings": [
         {
           "date": "2007-10-01",
-          "text": "“That much damage” refers to the number of +1/+1 counters removed from Ashling the Pilgrim. Since the counters are removed, it’s likely that the damage will kill Ashling."
+          "text": "\"That much damage\" refers to the number of +1/+1 counters removed from Ashling the Pilgrim. Since the counters are removed, it's likely that the damage will kill Ashling."
         },
         {
           "date": "2007-10-01",
-          "text": "Counts resolutions, not activations. Any such abilities that are still on the stack won’t count toward the total."
+          "text": "Counts resolutions, not activations. Any such abilities that are still on the stack won't count toward the total."
         },
         {
           "date": "2007-10-01",
-          "text": "When the ability resolves, it counts the number of times that same ability from that this creature has already resolved that turn. It doesn’t matter who controlled the creature or the previous abilities when they resolved. A copy of this ability (created by Rings of Brighthearth, for example) will count toward the total. Abilities from other creatures with the same name don’t count towards the total. Neither does an ability that’s been countered."
+          "text": "When the ability resolves, it counts the number of times that same ability from that this creature has already resolved that turn. It doesn't matter who controlled the creature or the previous abilities when they resolved. A copy of this ability (created by Rings of Brighthearth, for example) will count toward the total. Abilities from other creatures with the same name don't count towards the total. Neither does an ability that's been countered."
         },
         {
           "date": "2007-10-01",
-          "text": "You get the bonus only the third time the ability resolves. You won’t get the bonus the fourth, fifth, sixth, or any subsequent times."
+          "text": "You get the bonus only the third time the ability resolves. You won't get the bonus the fourth, fifth, sixth, or any subsequent times."
         }
       ],
       "subtypes": [
@@ -16419,11 +16354,11 @@
       "rulings": [
         {
           "date": "2007-10-01",
-          "text": "The “chosen value” is either “odd” or “even.” So either creatures with odd converted mana costs enter the battlefield tapped and creatures with even converted mana costs have haste, or vice versa."
+          "text": "The \"chosen value\" is either \"odd\" or \"even.\" So either creatures with odd converted mana costs enter the battlefield tapped and creatures with even converted mana costs have haste, or vice versa."
         },
         {
           "date": "2007-10-01",
-          "text": "If a creature has X in its mana cost, that X is treated as 0 for the purposes of these effects. It doesn’t matter what the value of X was while the creature was on the stack."
+          "text": "If a creature has X in its mana cost, that X is treated as 0 for the purposes of these effects. It doesn't matter what the value of X was while the creature was on the stack."
         }
       ],
       "text": "As Ashling's Prerogative enters the battlefield, choose odd or even. (Zero is even.)\nEach creature with converted mana cost of the chosen value has haste.\nEach creature without converted mana cost of the chosen value enters the battlefield tapped.",
@@ -16743,7 +16678,7 @@
       "rulings": [
         {
           "date": "2013-06-07",
-          "text": "Blind-Spot Giant checks if you control another Giant only as you declare it as an attacking or blocking creature. Once you do, if you lose control of your other Giants, Blind-Spot Giant won’t stop attacking or blocking."
+          "text": "Blind-Spot Giant checks if you control another Giant only as you declare it as an attacking or blocking creature. Once you do, if you lose control of your other Giants, Blind-Spot Giant won't stop attacking or blocking."
         }
       ],
       "subtypes": [
@@ -17169,7 +17104,7 @@
       "rulings": [
         {
           "date": "2007-10-01",
-          "text": "Each creature you control that’s both a Goblin and an Elemental can’t be blocked except by two or more creatures (as opposed to four or more creatures)."
+          "text": "Each creature you control that's both a Goblin and an Elemental can't be blocked except by two or more creatures (as opposed to four or more creatures)."
         }
       ],
       "subtypes": [
@@ -17280,7 +17215,7 @@
       "rulings": [
         {
           "date": "2007-10-01",
-          "text": "This triggers whenever you activate an activated ability of an Elemental permanent, but not when you activate an activated ability of an Elemental source that’s not on the battlefield."
+          "text": "This triggers whenever you activate an activated ability of an Elemental permanent, but not when you activate an activated ability of an Elemental source that's not on the battlefield."
         }
       ],
       "subtypes": [
@@ -17394,14 +17329,17 @@
       "rulings": [
         {
           "date": "2007-10-01",
-          "text": "To activate the second ability, you choose a value of X equal to or less than the number of loyalty counters on Chandra Nalaar. You may choose 0. You can’t choose a negative number."
+          "text": "To activate the second ability, you choose a value of X equal to or less than the number of loyalty counters on Chandra Nalaar. You may choose 0. You can't choose a negative number."
         }
       ],
       "subtypes": [
         "Chandra"
       ],
+      "supertypes": [
+        "Legendary"
+      ],
       "text": "+1: Chandra Nalaar deals 1 damage to target player.\n−X: Chandra Nalaar deals X damage to target creature.\n−8: Chandra Nalaar deals 10 damage to target player and each creature he or she controls.",
-      "type": "Planeswalker — Chandra",
+      "type": "Legendary Planeswalker — Chandra",
       "types": [
         "Planeswalker"
       ]
@@ -17709,7 +17647,7 @@
       "rulings": [
         {
           "date": "2013-06-07",
-          "text": "Crush Underfoot doesn’t target the Giant creature you control. You choose that Giant as Crush Underfoot resolves. If you don’t control a Giant creature at that time, the spell will finish resolving with no effect."
+          "text": "Crush Underfoot doesn't target the Giant creature you control. You choose that Giant as Crush Underfoot resolves. If you don't control a Giant creature at that time, the spell will finish resolving with no effect."
         }
       ],
       "subtypes": [
@@ -18214,10 +18152,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -18227,18 +18161,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -19020,7 +18942,7 @@
         "Giant",
         "Warrior"
       ],
-      "text": "When Hearthcage Giant enters the battlefield, put two 3/1 red Elemental Shaman creature tokens onto the battlefield.\nSacrifice an Elemental: Target Giant creature gets +3/+1 until end of turn.",
+      "text": "When Hearthcage Giant enters the battlefield, create two 3/1 red Elemental Shaman creature tokens.\nSacrifice an Elemental: Target Giant creature gets +3/+1 until end of turn.",
       "toughness": "5",
       "type": "Creature — Giant Warrior",
       "types": [
@@ -19120,7 +19042,7 @@
         "LRW"
       ],
       "rarity": "Rare",
-      "text": "Put a token that's a copy of target creature onto the battlefield. That token has haste and \"At the beginning of the end step, exile this permanent.\"",
+      "text": "Create a token that's a copy of target creature. That token has haste and \"At the beginning of the end step, exile this permanent.\"",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -19225,30 +19147,30 @@
       "rulings": [
         {
           "date": "2007-10-01",
-          "text": "If a spell you control would deal damage to an opponent and that opponent controls a planeswalker, that opponent chooses which of your effects to apply first. -- If that player chooses to apply Hostility’s effect first, the damage is prevented, you put some tokens onto the battlefield, and the planeswalker redirection effect is moot because there’s no damage to redirect. -- If that player chooses to apply the planeswalker redirection effect first, you have a choice. You can redirect the damage to the planeswalker (in which case Hostility’s prevention effect is moot because nothing’s dealing damage to the player anymore) or you can have your spell continue to deal damage to the opponent. If you choose the latter, Hostility’s effect then applies, the damage is prevented, and you get the tokens."
+          "text": "If a spell you control would deal damage to an opponent and that opponent controls a planeswalker, that opponent chooses which of your effects to apply first. — If that player chooses to apply Hostility's effect first, the damage is prevented, you put some tokens onto the battlefield, and the planeswalker redirection effect is moot because there's no damage to redirect. — If that player chooses to apply the planeswalker redirection effect first, you have a choice. You can redirect the damage to the planeswalker (in which case Hostility's prevention effect is moot because nothing's dealing damage to the player anymore) or you can have your spell continue to deal damage to the opponent. If you choose the latter, Hostility's effect then applies, the damage is prevented, and you get the tokens."
         },
         {
           "date": "2007-10-01",
-          "text": "The last ability triggers when the Incarnation is put into its owner’s graveyard from any zone, not just from on the battlefield."
+          "text": "The last ability triggers when the Incarnation is put into its owner's graveyard from any zone, not just from on the battlefield."
         },
         {
           "date": "2007-10-01",
-          "text": "Although this ability triggers when the Incarnation is put into a graveyard from the battlefield, it doesn’t *specifically* trigger on leaving the battlefield, so it doesn’t behave like other leaves-the-battlefield abilities. The ability will trigger from the graveyard."
+          "text": "Although this ability triggers when the Incarnation is put into a graveyard from the battlefield, it doesn't *specifically* trigger on leaving the battlefield, so it doesn't behave like other leaves-the-battlefield abilities. The ability will trigger from the graveyard."
         },
         {
           "date": "2007-10-01",
-          "text": "If the Incarnation had lost this ability while on the battlefield (due to Lignify, for example) and then was destroyed, the ability would still trigger and it would get shuffled into its owner’s library. However, if the Incarnation lost this ability when it was put into the graveyard (due to Yixlid Jailer, for example), the ability wouldn’t trigger and the Incarnation would remain in the graveyard."
+          "text": "If the Incarnation had lost this ability while on the battlefield (due to Lignify, for example) and then was destroyed, the ability would still trigger and it would get shuffled into its owner's library. However, if the Incarnation lost this ability when it was put into the graveyard (due to Yixlid Jailer, for example), the ability wouldn't trigger and the Incarnation would remain in the graveyard."
         },
         {
           "date": "2007-10-01",
-          "text": "If the Incarnation is removed from the graveyard after the ability triggers but before it resolves, it won’t get shuffled into its owner’s library. Similarly, if a replacement effect has the Incarnation move to a different zone instead of being put into the graveyard, the ability won’t trigger at all."
+          "text": "If the Incarnation is removed from the graveyard after the ability triggers but before it resolves, it will remain in its new zone when its owner shuffles his or her library. Similarly, if a replacement effect has the Incarnation move to a different zone instead of being put into the graveyard, the ability won't trigger at all."
         }
       ],
       "subtypes": [
         "Elemental",
         "Incarnation"
       ],
-      "text": "Haste\nIf a spell you control would deal damage to an opponent, prevent that damage. Put a 3/1 red Elemental Shaman creature token with haste onto the battlefield for each 1 damage prevented this way.\nWhen Hostility is put into a graveyard from anywhere, shuffle it into its owner's library.",
+      "text": "Haste\nIf a spell you control would deal damage to an opponent, prevent that damage. Create a 3/1 red Elemental Shaman creature token with haste for each 1 damage prevented this way.\nWhen Hostility is put into a graveyard from anywhere, shuffle it into its owner's library.",
       "toughness": "6",
       "type": "Creature — Elemental Incarnation",
       "types": [
@@ -19882,15 +19804,15 @@
       "rulings": [
         {
           "date": "2007-10-01",
-          "text": "Counts resolutions, not activations. Any such abilities that are still on the stack won’t count toward the total."
+          "text": "Counts resolutions, not activations. Any such abilities that are still on the stack won't count toward the total."
         },
         {
           "date": "2007-10-01",
-          "text": "When the ability resolves, it counts the number of times that same ability from that this creature has already resolved that turn. It doesn’t matter who controlled the creature or the previous abilities when they resolved. A copy of this ability (created by Rings of Brighthearth, for example) will count toward the total. Abilities from other creatures with the same name don’t count towards the total. Neither does an ability that’s been countered."
+          "text": "When the ability resolves, it counts the number of times that same ability from that this creature has already resolved that turn. It doesn't matter who controlled the creature or the previous abilities when they resolved. A copy of this ability (created by Rings of Brighthearth, for example) will count toward the total. Abilities from other creatures with the same name don't count towards the total. Neither does an ability that's been countered."
         },
         {
           "date": "2007-10-01",
-          "text": "You get the bonus only the third time the ability resolves. You won’t get the bonus the fourth, fifth, sixth, or any subsequent times."
+          "text": "You get the bonus only the third time the ability resolves. You won't get the bonus the fourth, fifth, sixth, or any subsequent times."
         }
       ],
       "subtypes": [
@@ -20203,7 +20125,9 @@
         "EVG",
         "DDG",
         "PC2",
-        "DD3_EVG"
+        "DD3_EVG",
+        "PCA",
+        "MM3"
       ],
       "rarity": "Common",
       "subtypes": [
@@ -20515,13 +20439,13 @@
       "rulings": [
         {
           "date": "2013-09-20",
-          "text": "If you clash because of a spell or ability an opponent controls, the ability will still trigger. Likewise, you can still win the clash even if you weren’t the player to initiate it."
+          "text": "If you clash because of a spell or ability an opponent controls, the ability will still trigger. Likewise, you can still win the clash even if you weren't the player to initiate it."
         }
       ],
       "subtypes": [
         "Elemental"
       ],
-      "text": "Whenever you clash, you may pay {1}. If you do, put a 3/1 red Elemental Shaman creature token onto the battlefield. If you won, that token gains haste until end of turn. (This ability triggers after the clash ends.)",
+      "text": "Whenever you clash, you may pay {1}. If you do, create a 3/1 red Elemental Shaman creature token. If you won, that token gains haste until end of turn. (This ability triggers after the clash ends.)",
       "type": "Tribal Enchantment — Elemental",
       "types": [
         "Tribal",
@@ -20627,15 +20551,15 @@
       "rulings": [
         {
           "date": "2007-10-01",
-          "text": "The mana can be two mana of the same color, or one mana of each of two different colors. The mana can’t be colorless."
+          "text": "The mana can be two mana of the same color, or one mana of each of two different colors. The mana can't be colorless."
         },
         {
           "date": "2007-10-01",
-          "text": "You can use this mana to pay an alternative cost (such as evoke) or additional cost incurred while casting an Elemental spell. It’s not limited to just that spell’s mana cost."
+          "text": "You can use this mana to pay an alternative cost (such as evoke) or additional cost incurred while casting an Elemental spell. It's not limited to just that spell's mana cost."
         },
         {
           "date": "2007-10-01",
-          "text": "The mana can’t be spent to activate activated abilities of Elemental sources that aren’t on the battlefield."
+          "text": "The mana can't be spent to activate activated abilities of Elemental sources that aren't on the battlefield."
         }
       ],
       "subtypes": [
@@ -20749,19 +20673,19 @@
       "rulings": [
         {
           "date": "2007-10-01",
-          "text": "Soulbright Flamekin’s ability uses the stack and can be responded to. It’s not a mana ability because it has a target."
+          "text": "Soulbright Flamekin's ability uses the stack and can be responded to. It's not a mana ability because it has a target."
         },
         {
           "date": "2007-10-01",
-          "text": "Counts resolutions, not activations. Any such abilities that are still on the stack won’t count toward the total."
+          "text": "Counts resolutions, not activations. Any such abilities that are still on the stack won't count toward the total."
         },
         {
           "date": "2007-10-01",
-          "text": "When the ability resolves, it counts the number of times that same ability from that this creature has already resolved that turn. It doesn’t matter who controlled the creature or the previous abilities when they resolved. A copy of this ability (created by Rings of Brighthearth, for example) will count toward the total. Abilities from other creatures with the same name don’t count towards the total. Neither does an ability that’s been countered."
+          "text": "When the ability resolves, it counts the number of times that same ability from that this creature has already resolved that turn. It doesn't matter who controlled the creature or the previous abilities when they resolved. A copy of this ability (created by Rings of Brighthearth, for example) will count toward the total. Abilities from other creatures with the same name don't count towards the total. Neither does an ability that's been countered."
         },
         {
           "date": "2007-10-01",
-          "text": "You get the bonus only the third time the ability resolves. You won’t get the bonus the fourth, fifth, sixth, or any subsequent times."
+          "text": "You get the bonus only the third time the ability resolves. You won't get the bonus the fourth, fifth, sixth, or any subsequent times."
         }
       ],
       "subtypes": [
@@ -21407,19 +21331,19 @@
       "rulings": [
         {
           "date": "2013-07-01",
-          "text": "Wild Ricochet can target (and copy) any instant or sorcery spell, not just one with targets. It doesn’t matter who controls it."
+          "text": "Wild Ricochet can target (and copy) any instant or sorcery spell, not just one with targets. It doesn't matter who controls it."
         },
         {
           "date": "2013-07-01",
-          "text": "When Wild Ricochet resolves, it creates a copy of a spell. You control the copy. The controller of the original spell retains control of that spell. The copy is created on the stack, so it’s not “cast.” Abilities that trigger when a player casts a spell won’t trigger. The copy will then resolve like a normal spell, after players get a chance to cast spells and activate abilities. The copy resolves before the original spell."
+          "text": "When Wild Ricochet resolves, it creates a copy of a spell. You control the copy. The controller of the original spell retains control of that spell. The copy is created on the stack, so it's not \"cast.\" Abilities that trigger when a player casts a spell won't trigger. The copy will then resolve like a normal spell, after players get a chance to cast spells and activate abilities. The copy resolves before the original spell."
         },
         {
           "date": "2013-07-01",
-          "text": "The copy will have the same targets as the spell it’s copying unless you choose new ones. You may change any number of the targets, including all of them or none of them. If, for one of the targets, you can’t choose a new legal target, then it remains unchanged (even if the current target is illegal)."
+          "text": "The copy will have the same targets as the spell it's copying unless you choose new ones. You may change any number of the targets, including all of them or none of them. If, for one of the targets, you can't choose a new legal target, then it remains unchanged (even if the current target is illegal)."
         },
         {
           "date": "2013-07-01",
-          "text": "If the spell Wild Ricochet copies is modal (that is, it says “Choose one —” or the like), the copy will have the same mode. You can’t choose a different one."
+          "text": "If the spell Wild Ricochet copies is modal (that is, it says \"Choose one —\" or the like), the copy will have the same mode. You can't choose a different one."
         },
         {
           "date": "2013-07-01",
@@ -21427,11 +21351,11 @@
         },
         {
           "date": "2013-07-01",
-          "text": "You can’t choose to pay any additional costs for the copy. However, effects based on any additional costs that were paid for the original spell are copied as though those same costs were paid for the copy too. For example, if a player sacrifices a 3/3 creature to cast Fling, and you copy it with Wild Ricochet, the copy of Fling will also deal 3 damage to its target."
+          "text": "You can't choose to pay any additional costs for the copy. However, effects based on any additional costs that were paid for the original spell are copied as though those same costs were paid for the copy too. For example, if a player sacrifices a 3/3 creature to cast Fling, and you copy it with Wild Ricochet, the copy of Fling will also deal 3 damage to its target."
         },
         {
           "date": "2013-07-01",
-          "text": "If the copy says that it affects “you,” it affects the controller of the copy, not the controller of the original spell. Similarly, if the copy says that it affects an “opponent,” it affects an opponent of the copy’s controller, not an opponent of the original spell’s controller."
+          "text": "If the copy says that it affects \"you,\" it affects the controller of the copy, not the controller of the original spell. Similarly, if the copy says that it affects an \"opponent,\" it affects an opponent of the copy's controller, not an opponent of the original spell's controller."
         }
       ],
       "text": "You may choose new targets for target instant or sorcery spell. Then copy that spell. You may choose new targets for the copy.",
@@ -21955,7 +21879,8 @@
       "originalType": "Creature — Treefolk Warrior",
       "power": "3",
       "printings": [
-        "LRW"
+        "LRW",
+        "DDS"
       ],
       "rarity": "Common",
       "subtypes": [
@@ -22061,7 +21986,8 @@
       "printings": [
         "LRW",
         "C15",
-        "DDR"
+        "DDR",
+        "CMA"
       ],
       "rarity": "Rare",
       "rulings": [
@@ -22181,7 +22107,7 @@
         },
         {
           "date": "2007-10-01",
-          "text": "A permanent that’s both a Forest and a Treefolk will be counted twice when determining Dauntless Dourbark’s power and toughness."
+          "text": "A permanent that's both a Forest and a Treefolk will be counted twice when determining Dauntless Dourbark's power and toughness."
         }
       ],
       "subtypes": [
@@ -22292,7 +22218,7 @@
       "rulings": [
         {
           "date": "2007-10-01",
-          "text": "The value of X is determined when the ability resolves. It won’t change later, even if the number of Elves you control changes."
+          "text": "The value of X is determined when the ability resolves. It won't change later, even if the number of Elves you control changes."
         },
         {
           "date": "2007-10-01",
@@ -22300,7 +22226,7 @@
         },
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn’t matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
         }
       ],
       "subtypes": [
@@ -22738,7 +22664,7 @@
       "subtypes": [
         "Elf"
       ],
-      "text": "Put a 1/1 green Elf Warrior creature token onto the battlefield for each Elf you control.",
+      "text": "Create a 1/1 green Elf Warrior creature token for each Elf you control.",
       "type": "Tribal Sorcery — Elf",
       "types": [
         "Tribal",
@@ -22943,7 +22869,7 @@
       "subtypes": [
         "Elemental"
       ],
-      "text": "Whenever an opponent casts a blue spell during your turn, you may put a 4/4 green Elemental creature token onto the battlefield.",
+      "text": "Whenever an opponent casts a blue spell during your turn, you may create a 4/4 green Elemental creature token.",
       "type": "Tribal Enchantment — Elemental",
       "types": [
         "Tribal",
@@ -23016,10 +22942,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Invasion Block",
           "legality": "Legal"
         },
@@ -23033,18 +22955,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -23073,12 +22983,6 @@
         "DDE"
       ],
       "rarity": "Common",
-      "rulings": [
-        {
-          "date": "2004-10-04",
-          "text": "The color of mana to be generated is chosen when tapping the land for mana."
-        }
-      ],
       "subtypes": [
         "Aura"
       ],
@@ -23288,18 +23192,21 @@
       "rulings": [
         {
           "date": "2009-10-01",
-          "text": "The first ability can target any two lands. They don’t have to be tapped."
+          "text": "The first ability can target any two lands. They don't have to be tapped."
         },
         {
           "date": "2009-10-01",
-          "text": "The third ability affects only creatures you control at the time it resolves. It won’t affect creatures that come under your control later in the turn."
+          "text": "The third ability affects only creatures you control at the time it resolves. It won't affect creatures that come under your control later in the turn."
         }
       ],
       "subtypes": [
         "Garruk"
       ],
-      "text": "+1: Untap two target lands.\n−1: Put a 3/3 green Beast creature token onto the battlefield.\n−4: Creatures you control get +3/+3 and gain trample until end of turn.",
-      "type": "Planeswalker — Garruk",
+      "supertypes": [
+        "Legendary"
+      ],
+      "text": "+1: Untap two target lands.\n−1: Create a 3/3 green Beast creature token.\n−4: Creatures you control get +3/+3 and gain trample until end of turn.",
+      "type": "Legendary Planeswalker — Garruk",
       "types": [
         "Planeswalker"
       ]
@@ -23399,7 +23306,7 @@
       "subtypes": [
         "Elf"
       ],
-      "text": "Put two 1/1 green Elf Warrior creature tokens onto the battlefield. Clash with an opponent. If you win, those creatures gain deathtouch until end of turn. (Each clashing player reveals the top card of his or her library, then puts that card on the top or bottom. A player wins if his or her card had a higher converted mana cost. Any amount of damage a creature with deathtouch deals to a creature is enough to destroy it.)",
+      "text": "Create two 1/1 green Elf Warrior creature tokens. Clash with an opponent. If you win, those creatures gain deathtouch until end of turn. (Each clashing player reveals the top card of his or her library, then puts that card on the top or bottom. A player wins if his or her card had a higher converted mana cost. Any amount of damage a creature with deathtouch deals to a creature is enough to destroy it.)",
       "type": "Tribal Instant — Elf",
       "types": [
         "Tribal",
@@ -23610,7 +23517,7 @@
         "Treefolk",
         "Shaman"
       ],
-      "text": "When Guardian of Cloverdell enters the battlefield, put three 1/1 white Kithkin Soldier creature tokens onto the battlefield.\n{G}, Sacrifice a Kithkin: You gain 1 life.",
+      "text": "When Guardian of Cloverdell enters the battlefield, create three 1/1 white Kithkin Soldier creature tokens.\n{G}, Sacrifice a Kithkin: You gain 1 life.",
       "toughness": "5",
       "type": "Creature — Treefolk Shaman",
       "types": [
@@ -23818,7 +23725,7 @@
       "rulings": [
         {
           "date": "2007-10-01",
-          "text": "If the first creature targeted by Hunt Down can’t block the second targeted creature (for example, because the second creature has flying and the first doesn’t, or because both creatures are controlled by the same player), the ability does nothing and the first creature is free to block whichever creature its controller chooses, or block no creatures at all."
+          "text": "If the first creature targeted by Hunt Down can't block the second targeted creature (for example, because the second creature has flying and the first doesn't, or because both creatures are controlled by the same player), the ability does nothing and the first creature is free to block whichever creature its controller chooses, or block no creatures at all."
         }
       ],
       "text": "Target creature blocks target creature this turn if able.",
@@ -23920,7 +23827,8 @@
       "printings": [
         "LRW",
         "DPA",
-        "C14"
+        "C14",
+        "CMA"
       ],
       "rarity": "Rare",
       "subtypes": [
@@ -24031,14 +23939,15 @@
         "DPA",
         "C14",
         "DD3_EVG",
-        "EMA"
+        "EMA",
+        "CMA"
       ],
       "rarity": "Uncommon",
       "subtypes": [
         "Elf",
         "Warrior"
       ],
-      "text": "Other Elf creatures you control get +1/+1.\n{G}, {T}: Put a 1/1 green Elf Warrior creature token onto the battlefield.",
+      "text": "Other Elf creatures you control get +1/+1.\n{G}, {T}: Create a 1/1 green Elf Warrior creature token.",
       "toughness": "2",
       "type": "Creature — Elf Warrior",
       "types": [
@@ -24124,6 +24033,10 @@
         },
         {
           "format": "Modern",
+          "legality": "Legal"
+        },
+        {
+          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -24226,10 +24139,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -24239,18 +24148,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -24484,7 +24381,7 @@
       "rulings": [
         {
           "date": "2007-10-01",
-          "text": "If an attacking creature that’s both a Kithkin and an Elf is put into your graveyard from the battlefield, Kithkin Mourncaller’s ability triggers only once."
+          "text": "If an attacking creature that's both a Kithkin and an Elf is put into your graveyard from the battlefield, Kithkin Mourncaller's ability triggers only once."
         }
       ],
       "subtypes": [
@@ -24697,7 +24594,7 @@
         "LRW"
       ],
       "rarity": "Uncommon",
-      "text": "Name a card, then target player puts the top card of his or her library into his or her graveyard. If that card is the named card, you gain life equal to its converted mana cost.\nDraw a card.",
+      "text": "Choose a card name, then target player puts the top card of his or her library into his or her graveyard. If that card has the chosen name, you gain life equal to its converted mana cost.\nDraw a card.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -24778,10 +24675,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -24912,7 +24805,7 @@
       "rulings": [
         {
           "date": "2007-10-01",
-          "text": "Lignify overwrites characteristic-defining abilities that specify the enchanted creature’s power or toughness (such as the one Dauntless Dourbark has) or that specify its creature types (such as changeling does)."
+          "text": "Lignify overwrites characteristic-defining abilities that specify the enchanted creature's power or toughness (such as the one Dauntless Dourbark has) or that specify its creature types (such as changeling does)."
         },
         {
           "date": "2007-10-01",
@@ -24920,7 +24813,7 @@
         },
         {
           "date": "2007-10-01",
-          "text": "Lignify overwrites previous effects that changed the enchanted creature’s creature types. Any such effects that apply after Lignify enters the battlefield will work normally."
+          "text": "Lignify overwrites previous effects that changed the enchanted creature's creature types. Any such effects that apply after Lignify enters the battlefield will work normally."
         },
         {
           "date": "2007-10-01",
@@ -24928,11 +24821,11 @@
         },
         {
           "date": "2007-10-01",
-          "text": "If a previous effect switched the creature’s power and toughness, that effect still applies (though it will apply to the creature’s new power and toughness)."
+          "text": "If a previous effect switched the creature's power and toughness, that effect still applies (though it will apply to the creature's new power and toughness)."
         },
         {
           "date": "2007-10-01",
-          "text": "If the enchanted creature has a characteristic-defining ability that specifies its color, that ability will still have its effect because it’s applied before the creature loses the ability."
+          "text": "If the enchanted creature has a characteristic-defining ability that specifies its color, that ability will still have its effect because it's applied before the creature loses the ability."
         },
         {
           "date": "2007-10-01",
@@ -24940,11 +24833,11 @@
         },
         {
           "date": "2009-10-01",
-          "text": "Lignify will overwrite any previous effects that set the enchanted creature’s power or toughness (such as Serendib Sorcerer does). Any such effects that apply after Lignify entered the battlefield will work normally."
+          "text": "Lignify will overwrite any previous effects that set the enchanted creature's power or toughness (such as Serendib Sorcerer does). Any such effects that apply after Lignify entered the battlefield will work normally."
         },
         {
           "date": "2009-10-01",
-          "text": "Lignify will not overwrite effects such as those from Glorious Anthem, counters, or Giant Growth that change the enchanted creature’s power or toughness without setting it to a specific value. Apply such effects after applying Lignify."
+          "text": "Lignify will not overwrite effects such as those from Glorious Anthem, counters, or Giant Growth that change the enchanted creature's power or toughness without setting it to a specific value. Apply such effects after applying Lignify."
         }
       ],
       "subtypes": [
@@ -25054,20 +24947,21 @@
         "DPA",
         "C14",
         "DD3_EVG",
-        "EMA"
+        "EMA",
+        "CMA"
       ],
       "rarity": "Common",
       "rulings": [
         {
           "date": "2016-06-08",
-          "text": "Lys Alana Huntmaster’s ability will resolve before the Elf spell that caused it to trigger."
+          "text": "Lys Alana Huntmaster's ability will resolve before the Elf spell that caused it to trigger."
         }
       ],
       "subtypes": [
         "Elf",
         "Warrior"
       ],
-      "text": "Whenever you cast an Elf spell, you may put a 1/1 green Elf Warrior creature token onto the battlefield.",
+      "text": "Whenever you cast an Elf spell, you may create a 1/1 green Elf Warrior creature token.",
       "toughness": "3",
       "type": "Creature — Elf Warrior",
       "types": [
@@ -25167,7 +25061,8 @@
       "printings": [
         "LRW",
         "MMA",
-        "C14"
+        "C14",
+        "CMA"
       ],
       "rarity": "Rare",
       "rulings": [
@@ -25466,10 +25361,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -25479,18 +25370,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -25508,13 +25387,18 @@
       "printings": [
         "LRW",
         "ARC",
-        "DDP"
+        "DDP",
+        "MM3"
       ],
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2013-07-01",
-          "text": "This card won't be put into your graveyard until after it's finished resolving, which means it won't be shuffled into your library as part of its own effect."
+          "date": "2017-03-14",
+          "text": "Primal Command's modes are performed in the order listed. If you put a noncreature permanent on top of its owner's library and have that player shuffle his or her graveyard into his or her library, that card is shuffled away."
+        },
+        {
+          "date": "2017-03-14",
+          "text": "Primal Command won't be put into your graveyard until after it's finished resolving, which means it won't be shuffled into your library as part of its own effect if you target yourself with its third mode."
         }
       ],
       "text": "Choose two —\n• Target player gains 7 life.\n• Put target noncreature permanent on top of its owner's library.\n• Target player shuffles his or her graveyard into his or her library.\n• Search your library for a creature card, reveal it, put it into your hand, then shuffle your library.",
@@ -25830,7 +25714,7 @@
         },
         {
           "date": "2013-09-20",
-          "text": "If you win the clash and the targeted enchantment is controlled by an opponent, it will be destroyed a second time if it’s still on the battlefield (for instance, if it somehow regenerated)."
+          "text": "If you win the clash and the targeted enchantment is controlled by an opponent, it will be destroyed a second time if it's still on the battlefield (for instance, if it somehow regenerated)."
         }
       ],
       "text": "Destroy target enchantment. Clash with an opponent. If you win, destroy all enchantments your opponents control. (Each clashing player reveals the top card of his or her library, then puts that card on the top or bottom. A player wins if his or her card had a higher converted mana cost.)",
@@ -26041,7 +25925,7 @@
       "rulings": [
         {
           "date": "2013-07-01",
-          "text": "If Timber Protector somehow becomes a Forest, it doesn’t give itself indestructible."
+          "text": "If Timber Protector somehow becomes a Forest, it doesn't give itself indestructible."
         }
       ],
       "subtypes": [
@@ -26224,10 +26108,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -26237,18 +26117,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -26284,7 +26152,7 @@
         },
         {
           "date": "2007-10-01",
-          "text": "If the Incarnation is removed from the graveyard after the ability triggers but before it resolves, it won't get shuffled into its owner's library. Similarly, if a replacement effect has the Incarnation move to a different zone instead of being put into the graveyard, the ability won't trigger at all."
+          "text": "If the Incarnation is removed from the graveyard after the ability triggers but before it resolves, it will remain in its new zone when its owner shuffles his or her library. Similarly, if a replacement effect has the Incarnation move to a different zone instead of being put into the graveyard, the ability won't trigger at all."
         }
       ],
       "subtypes": [
@@ -26697,24 +26565,25 @@
       "printings": [
         "pPRE",
         "LRW",
-        "C14"
+        "C14",
+        "CMA"
       ],
       "rarity": "Rare",
       "rulings": [
         {
           "date": "2007-10-01",
-          "text": "Wren’s Run Packmaster gives deathtouch to all Wolf permanents you control, not just the tokens it creates."
+          "text": "Wren's Run Packmaster gives deathtouch to all Wolf permanents you control, not just the tokens it creates."
         },
         {
           "date": "2009-10-01",
-          "text": "A Wolf’s deathtouch ability will apply if both Wren’s Run Packmaster and that Wolf are on the battlefield at the time the Wolf deals damage. The creature dealt damage by the Wolf will be destroyed the next time state-based actions are checked, even if the Wolf or Wren’s Run Packmaster leaves the battlefield."
+          "text": "A Wolf's deathtouch ability will apply if both Wren's Run Packmaster and that Wolf are on the battlefield at the time the Wolf deals damage. The creature dealt damage by the Wolf will be destroyed the next time state-based actions are checked, even if the Wolf or Wren's Run Packmaster leaves the battlefield."
         }
       ],
       "subtypes": [
         "Elf",
         "Warrior"
       ],
-      "text": "Champion an Elf (When this creature enters the battlefield, sacrifice it unless you exile another Elf you control. When this creature leaves the battlefield, that card returns to the battlefield.)\n{2}{G}: Put a 2/2 green Wolf creature token onto the battlefield.\nWolves you control have deathtouch.",
+      "text": "Champion an Elf (When this creature enters the battlefield, sacrifice it unless you exile another Elf you control. When this creature leaves the battlefield, that card returns to the battlefield.)\n{2}{G}: Create a 2/2 green Wolf creature token.\nWolves you control have deathtouch.",
       "toughness": "5",
       "type": "Creature — Elf Warrior",
       "types": [
@@ -27009,10 +26878,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -27022,18 +26887,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -27182,7 +27035,7 @@
       "rulings": [
         {
           "date": "2007-10-01",
-          "text": "If one half of a split card has a converted mana cost of 3 or less and doesn’t have an {X} in its mana cost, Gaddock Teeg lets you cast that half."
+          "text": "If one half of a split card has a converted mana cost of 3 or less and doesn't have an {X} in its mana cost, Gaddock Teeg lets you cast that half."
         }
       ],
       "subtypes": [
@@ -27414,7 +27267,8 @@
       "originalType": "Legendary Creature — Elf Warrior",
       "power": "4",
       "printings": [
-        "LRW"
+        "LRW",
+        "C16"
       ],
       "rarity": "Rare",
       "subtypes": [
@@ -27424,7 +27278,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "At the beginning of your upkeep, you may have target opponent discard a card at random.\nWhenever an opponent discards a card, you may put a 1/1 green Elf Warrior creature token onto the battlefield.",
+      "text": "At the beginning of your upkeep, you may have target opponent discard a card at random.\nWhenever an opponent discards a card, you may create a 1/1 green Elf Warrior creature token.",
       "toughness": "4",
       "type": "Legendary Creature — Elf Warrior",
       "types": [
@@ -27850,15 +27704,15 @@
       "rulings": [
         {
           "date": "2007-10-01",
-          "text": "The second ability checks how many creatures have been exiled with Colfenor’s Urn over the course of the entire game."
+          "text": "The second ability checks how many creatures have been exiled with Colfenor's Urn over the course of the entire game."
         },
         {
           "date": "2007-10-01",
-          "text": "The second ability forces you to sacrifice Colfenor’s Urn. If the ability triggers and the Urn isn’t sacrificed (because it left the battlefield or changed controllers, for example), the exiled cards won’t be returned to the battlefield."
+          "text": "The second ability forces you to sacrifice Colfenor's Urn. If the ability triggers and the Urn isn't sacrificed (because it left the battlefield or changed controllers, for example), the exiled cards won't be returned to the battlefield."
         },
         {
           "date": "2007-10-01",
-          "text": "The first ability triggers when a token creature with toughness 4 or greater is put into your graveyard. However, that token will cease to exist before Colfenor’s Plans can exile it."
+          "text": "The first ability triggers when a token creature with toughness 4 or greater is put into your graveyard. However, that token will cease to exist before Colfenor's Plans can exile it."
         }
       ],
       "text": "Whenever a creature with toughness 4 or greater is put into your graveyard from the battlefield, you may exile it.\nAt the beginning of the end step, if three or more cards have been exiled with Colfenor's Urn, sacrifice it. If you do, return those cards to the battlefield under their owner's control.",
@@ -27926,10 +27780,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -27939,18 +27789,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -28358,7 +28196,7 @@
       "rulings": [
         {
           "date": "2013-04-15",
-          "text": "A mana ability is an ability that (1) isn’t a loyalty ability, (2) doesn’t target, and (3) could put mana into a player’s mana pool when it resolves."
+          "text": "A mana ability is an ability that (1) isn't a loyalty ability, (2) doesn't target, and (3) could put mana into a player's mana pool when it resolves."
         }
       ],
       "text": "Whenever you activate an ability, if it isn't a mana ability, you may pay {2}. If you do, copy that ability. You may choose new targets for the copy.",
@@ -28559,7 +28397,7 @@
       "rulings": [
         {
           "date": "2014-02-01",
-          "text": "You can tap a creature that hasn’t been under your control since your most recent turn began to activate the ability."
+          "text": "You can tap a creature that hasn't been under your control since your most recent turn began to activate the ability."
         }
       ],
       "text": "{T}, Tap an untapped creature you control: Add one mana of any color to your mana pool.",
@@ -28641,7 +28479,7 @@
         },
         {
           "format": "Vintage",
-          "legality": "Legal"
+          "legality": "Restricted"
         }
       ],
       "manaCost": "{2}",
@@ -28746,13 +28584,14 @@
       "originalType": "Artifact",
       "printings": [
         "LRW",
-        "C13"
+        "C13",
+        "CMA"
       ],
       "rarity": "Rare",
       "rulings": [
         {
           "date": "2007-10-01",
-          "text": "Thousand-Year Elixir doesn’t actually grant haste to creatures you control, nor does it let you attack with them as though they had haste."
+          "text": "Thousand-Year Elixir doesn't actually grant haste to creatures you control, nor does it let you attack with them as though they had haste."
         }
       ],
       "text": "You may activate abilities of creatures you control as though those creatures had haste.\n{1}, {T}: Untap target creature.",
@@ -28851,19 +28690,19 @@
       "rulings": [
         {
           "date": "2007-10-01",
-          "text": "Activating Twinning Glass’s ability allows you to cast a single card from your hand as it resolves. It doesn’t create a continuous effect, and it doesn’t let you cast multiple cards for free."
+          "text": "Activating Twinning Glass's ability allows you to cast a single card from your hand as it resolves. It doesn't create a continuous effect, and it doesn't let you cast multiple cards for free."
         },
         {
           "date": "2007-10-01",
-          "text": "It doesn’t matter who cast the first spell."
+          "text": "It doesn't matter who cast the first spell."
         },
         {
           "date": "2007-10-01",
-          "text": "You can’t pay any alternative costs (such as those from evoke or morph) when casting the card. On the other hand, if the card has additional costs (such as those from kicker or buyback), you may pay those."
+          "text": "You can't pay any alternative costs (such as those from evoke or morph) when casting the card. On the other hand, if the card has additional costs (such as those from kicker or buyback), you may pay those."
         },
         {
           "date": "2007-10-01",
-          "text": "If one half of a split card has been cast this turn, you may use Twinning Glass’s ability to cast either half of a split card with that name. For example, if Dead from Dead/Gone has been cast, you may use Twinning Glass’s ability to cast either Dead or Gone."
+          "text": "If one half of a split card has been cast this turn, you may use Twinning Glass's ability to cast either half of a split card with that name. For example, if Dead from Dead/Gone has been cast, you may use Twinning Glass's ability to cast either Dead or Gone."
         }
       ],
       "text": "{1}, {T}: You may cast a nonland card from your hand without paying its mana cost if it has the same name as a spell that was cast this turn.",
@@ -28967,6 +28806,7 @@
     },
     {
       "artist": "Rob Alexander",
+      "cmc": 0,
       "colorIdentity": [
         "R",
         "W"
@@ -29063,6 +28903,7 @@
     },
     {
       "artist": "Wayne Reynolds",
+      "cmc": 0,
       "colorIdentity": [
         "B",
         "R"
@@ -29158,6 +28999,7 @@
     },
     {
       "artist": "Christopher Moeller",
+      "cmc": 0,
       "colorIdentity": [
         "B",
         "G"
@@ -29253,6 +29095,7 @@
     },
     {
       "artist": "John Howe",
+      "cmc": 0,
       "colorIdentity": [
         "B"
       ],
@@ -29346,6 +29189,7 @@
     },
     {
       "artist": "Jeremy Jarvis",
+      "cmc": 0,
       "colorIdentity": [
         "G"
       ],
@@ -29432,7 +29276,9 @@
         "ARC",
         "C13",
         "C15",
-        "DDR"
+        "DDR",
+        "C16",
+        "C17"
       ],
       "rarity": "Rare",
       "text": "Hideaway (This land enters the battlefield tapped. When it does, look at the top four cards of your library, exile one face down, then put the rest on the bottom of your library.)\n{T}: Add {G} to your mana pool.\n{G}, {T}: You may play the exiled card without paying its mana cost if creatures you control have total power 10 or greater.",
@@ -29443,6 +29289,7 @@
     },
     {
       "artist": "Terese Nielsen",
+      "cmc": 0,
       "colorIdentity": [
         "U",
         "B"
@@ -29538,6 +29385,7 @@
     },
     {
       "artist": "Mark Tedin",
+      "cmc": 0,
       "colorIdentity": [
         "U"
       ],
@@ -29626,7 +29474,7 @@
       "rulings": [
         {
           "date": "2007-10-01",
-          "text": "It doesn’t matter which library has twenty or fewer cards in it, and you don’t have to specify a library."
+          "text": "It doesn't matter which library has twenty or fewer cards in it, and you don't have to specify a library."
         }
       ],
       "text": "Hideaway (This land enters the battlefield tapped. When it does, look at the top four cards of your library, exile one face down, then put the rest on the bottom of your library.)\n{T}: Add {U} to your mana pool.\n{U}, {T}: You may play the exiled card without paying its mana cost if a library has twenty or fewer cards in it.",
@@ -29637,6 +29485,7 @@
     },
     {
       "artist": "Alan Pollack",
+      "cmc": 0,
       "flavor": "Once each year, the sun's rays reach the hidden chamber of Velis Vel, and the changelings congregate from afar to bathe in the ever-shifting light.",
       "foreignNames": [
         {
@@ -29725,7 +29574,9 @@
         "ISD",
         "PC2",
         "M14",
-        "CN2"
+        "CN2",
+        "PCA",
+        "MM3"
       ],
       "rarity": "Common",
       "text": "{T}: Add {C} to your mana pool.\n{1}, {T}: Add one mana of any color to your mana pool.",
@@ -29736,6 +29587,7 @@
     },
     {
       "artist": "Steve Prescott",
+      "cmc": 0,
       "colorIdentity": [
         "R"
       ],
@@ -29819,21 +29671,22 @@
       "originalType": "Land",
       "printings": [
         "LRW",
-        "C15"
+        "C15",
+        "C16"
       ],
       "rarity": "Rare",
       "rulings": [
         {
           "date": "2007-10-01",
-          "text": "At the time the last ability resolves, you’ll get to play the card if a player who is currently your opponent, or a player who was your opponent at the time he or she left the game, has been dealt 7 damage over the course of the turn."
+          "text": "At the time the last ability resolves, you'll get to play the card if a player who is currently your opponent, or a player who was your opponent at the time he or she left the game, has been dealt 7 damage over the course of the turn."
         },
         {
           "date": "2007-10-01",
-          "text": "It doesn’t matter how the opponent was dealt damage or by whom, as long as the total damage is 7 or more. You don’t specify an opponent when you activate the ability."
+          "text": "It doesn't matter how the opponent was dealt damage or by whom, as long as the total damage is 7 or more. You don't specify an opponent when you activate the ability."
         },
         {
           "date": "2007-10-01",
-          "text": "You’ll get to play the card even if Spinerock Knoll wasn’t on the battlefield at the time some or all of the 7 damage was dealt."
+          "text": "You'll get to play the card even if Spinerock Knoll wasn't on the battlefield at the time some or all of the 7 damage was dealt."
         }
       ],
       "text": "Hideaway (This land enters the battlefield tapped. When it does, look at the top four cards of your library, exile one face down, then put the rest on the bottom of your library.)\n{T}: Add {R} to your mana pool.\n{R}, {T}: You may play the exiled card without paying its mana cost if an opponent was dealt 7 or more damage this turn.",
@@ -29844,6 +29697,7 @@
     },
     {
       "artist": "Martina Pilcerova",
+      "cmc": 0,
       "colorIdentity": [
         "R"
       ],
@@ -29930,7 +29784,8 @@
         "CMD",
         "MMA",
         "C13",
-        "C15"
+        "C15",
+        "C17"
       ],
       "rarity": "Uncommon",
       "text": "Vivid Crag enters the battlefield tapped with two charge counters on it.\n{T}: Add {R} to your mana pool.\n{T}, Remove a charge counter from Vivid Crag: Add one mana of any color to your mana pool.",
@@ -29941,6 +29796,7 @@
     },
     {
       "artist": "Fred Fields",
+      "cmc": 0,
       "colorIdentity": [
         "U"
       ],
@@ -30029,7 +29885,9 @@
         "PC2",
         "MMA",
         "C13",
-        "C15"
+        "C15",
+        "PCA",
+        "C17"
       ],
       "rarity": "Uncommon",
       "text": "Vivid Creek enters the battlefield tapped with two charge counters on it.\n{T}: Add {U} to your mana pool.\n{T}, Remove a charge counter from Vivid Creek: Add one mana of any color to your mana pool.",
@@ -30040,6 +29898,7 @@
     },
     {
       "artist": "Howard Lyon",
+      "cmc": 0,
       "colorIdentity": [
         "G"
       ],
@@ -30127,7 +29986,9 @@
         "CMD",
         "MMA",
         "C13",
-        "C15"
+        "C15",
+        "CMA",
+        "C17"
       ],
       "rarity": "Uncommon",
       "text": "Vivid Grove enters the battlefield tapped with two charge counters on it.\n{T}: Add {G} to your mana pool.\n{T}, Remove a charge counter from Vivid Grove: Add one mana of any color to your mana pool.",
@@ -30138,6 +29999,7 @@
     },
     {
       "artist": "John Avon",
+      "cmc": 0,
       "colorIdentity": [
         "B"
       ],
@@ -30224,7 +30086,9 @@
         "CMD",
         "MMA",
         "C13",
-        "C15"
+        "C15",
+        "CMA",
+        "C17"
       ],
       "rarity": "Uncommon",
       "text": "Vivid Marsh enters the battlefield tapped with two charge counters on it.\n{T}: Add {B} to your mana pool.\n{T}, Remove a charge counter from Vivid Marsh: Add one mana of any color to your mana pool.",
@@ -30235,6 +30099,7 @@
     },
     {
       "artist": "Rob Alexander",
+      "cmc": 0,
       "colorIdentity": [
         "W"
       ],
@@ -30320,7 +30185,9 @@
         "LRW",
         "CMD",
         "MMA",
-        "C15"
+        "C15",
+        "CMA",
+        "C17"
       ],
       "rarity": "Uncommon",
       "text": "Vivid Meadow enters the battlefield tapped with two charge counters on it.\n{T}: Add {W} to your mana pool.\n{T}, Remove a charge counter from Vivid Meadow: Add one mana of any color to your mana pool.",
@@ -30331,6 +30198,7 @@
     },
     {
       "artist": "Warren Mahy",
+      "cmc": 0,
       "colorIdentity": [
         "W",
         "U"
@@ -30426,6 +30294,7 @@
     },
     {
       "artist": "Omar Rayyan",
+      "cmc": 0,
       "colorIdentity": [
         "W"
       ],
@@ -30485,10 +30354,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -30498,18 +30363,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -30526,7 +30379,8 @@
       "printings": [
         "LRW",
         "V12",
-        "MD1"
+        "MD1",
+        "C16"
       ],
       "rarity": "Rare",
       "rulings": [
@@ -30543,6 +30397,7 @@
     },
     {
       "artist": "Warren Mahy",
+      "cmc": 0,
       "colorIdentity": [
         "W"
       ],
@@ -30650,22 +30505,22 @@
         {
           "language": "Portuguese (Brazil)",
           "name": "Planície",
+          "multiverseid": 158989
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Planície",
+          "multiverseid": 158990
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Planície",
+          "multiverseid": 158991
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Planície",
           "multiverseid": 158992
-        },
-        {
-          "language": "Russian",
-          "name": "Равнина",
-          "multiverseid": 158924
-        },
-        {
-          "language": "Russian",
-          "name": "Равнина",
-          "multiverseid": 158925
-        },
-        {
-          "language": "Russian",
-          "name": "Равнина",
-          "multiverseid": 158926
         },
         {
           "language": "Russian",
@@ -30677,6 +30532,10 @@
       "imageName": "plains1",
       "layout": "normal",
       "legalities": [
+        {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
         {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
@@ -30695,6 +30554,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -30820,8 +30687,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -30888,7 +30755,15 @@
         "C15",
         "DDQ",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -30905,10 +30780,12 @@
         143630,
         143620,
         143622
-      ]
+      ],
+      "watermark": "White"
     },
     {
       "artist": "Fred Fields",
+      "cmc": 0,
       "colorIdentity": [
         "W"
       ],
@@ -31016,22 +30893,22 @@
         {
           "language": "Portuguese (Brazil)",
           "name": "Planície",
+          "multiverseid": 158989
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Planície",
+          "multiverseid": 158990
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Planície",
+          "multiverseid": 158991
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Planície",
           "multiverseid": 158992
-        },
-        {
-          "language": "Russian",
-          "name": "Равнина",
-          "multiverseid": 158924
-        },
-        {
-          "language": "Russian",
-          "name": "Равнина",
-          "multiverseid": 158925
-        },
-        {
-          "language": "Russian",
-          "name": "Равнина",
-          "multiverseid": 158926
         },
         {
           "language": "Russian",
@@ -31043,6 +30920,10 @@
       "imageName": "plains2",
       "layout": "normal",
       "legalities": [
+        {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
         {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
@@ -31061,6 +30942,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -31186,8 +31075,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -31254,7 +31143,15 @@
         "C15",
         "DDQ",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -31271,10 +31168,12 @@
         143621,
         143620,
         143622
-      ]
+      ],
+      "watermark": "White"
     },
     {
       "artist": "Larry MacDougall",
+      "cmc": 0,
       "colorIdentity": [
         "W"
       ],
@@ -31382,22 +31281,22 @@
         {
           "language": "Portuguese (Brazil)",
           "name": "Planície",
+          "multiverseid": 158989
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Planície",
+          "multiverseid": 158990
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Planície",
+          "multiverseid": 158991
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Planície",
           "multiverseid": 158992
-        },
-        {
-          "language": "Russian",
-          "name": "Равнина",
-          "multiverseid": 158924
-        },
-        {
-          "language": "Russian",
-          "name": "Равнина",
-          "multiverseid": 158925
-        },
-        {
-          "language": "Russian",
-          "name": "Равнина",
-          "multiverseid": 158926
         },
         {
           "language": "Russian",
@@ -31409,6 +31308,10 @@
       "imageName": "plains3",
       "layout": "normal",
       "legalities": [
+        {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
         {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
@@ -31427,6 +31330,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -31552,8 +31463,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -31620,7 +31531,15 @@
         "C15",
         "DDQ",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -31637,10 +31556,12 @@
         143621,
         143630,
         143620
-      ]
+      ],
+      "watermark": "White"
     },
     {
       "artist": "Omar Rayyan",
+      "cmc": 0,
       "colorIdentity": [
         "W"
       ],
@@ -31748,22 +31669,22 @@
         {
           "language": "Portuguese (Brazil)",
           "name": "Planície",
+          "multiverseid": 158989
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Planície",
+          "multiverseid": 158990
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Planície",
+          "multiverseid": 158991
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Planície",
           "multiverseid": 158992
-        },
-        {
-          "language": "Russian",
-          "name": "Равнина",
-          "multiverseid": 158924
-        },
-        {
-          "language": "Russian",
-          "name": "Равнина",
-          "multiverseid": 158925
-        },
-        {
-          "language": "Russian",
-          "name": "Равнина",
-          "multiverseid": 158926
         },
         {
           "language": "Russian",
@@ -31775,6 +31696,10 @@
       "imageName": "plains4",
       "layout": "normal",
       "legalities": [
+        {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
         {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
@@ -31793,6 +31718,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -31918,8 +31851,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -31986,7 +31919,15 @@
         "C15",
         "DDQ",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -32003,10 +31944,12 @@
         143621,
         143630,
         143622
-      ]
+      ],
+      "watermark": "White"
     },
     {
       "artist": "Warren Mahy",
+      "cmc": 0,
       "colorIdentity": [
         "U"
       ],
@@ -32114,33 +32057,37 @@
         {
           "language": "Portuguese (Brazil)",
           "name": "Ilha",
+          "multiverseid": 158993
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Ilha",
+          "multiverseid": 158994
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Ilha",
+          "multiverseid": 158995
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Ilha",
           "multiverseid": 158996
         },
         {
           "language": "Russian",
           "name": "Остров",
-          "multiverseid": 158928
-        },
-        {
-          "language": "Russian",
-          "name": "Остров",
           "multiverseid": 158929
-        },
-        {
-          "language": "Russian",
-          "name": "Остров",
-          "multiverseid": 158930
-        },
-        {
-          "language": "Russian",
-          "name": "Остров",
-          "multiverseid": 158931
         }
       ],
       "id": "94a74ecea5069dcd21ddc9fd966fa899e1f977f7",
       "imageName": "island1",
       "layout": "normal",
       "legalities": [
+        {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
         {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
@@ -32159,6 +32106,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -32282,8 +32237,8 @@
         "USG",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -32349,7 +32304,16 @@
         "C15",
         "DDQ",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "DDS",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -32366,10 +32330,12 @@
         143619,
         143632,
         143624
-      ]
+      ],
+      "watermark": "Blue"
     },
     {
       "artist": "Ron Spears",
+      "cmc": 0,
       "colorIdentity": [
         "U"
       ],
@@ -32477,33 +32443,37 @@
         {
           "language": "Portuguese (Brazil)",
           "name": "Ilha",
+          "multiverseid": 158993
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Ilha",
+          "multiverseid": 158994
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Ilha",
+          "multiverseid": 158995
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Ilha",
           "multiverseid": 158996
         },
         {
           "language": "Russian",
           "name": "Остров",
-          "multiverseid": 158928
-        },
-        {
-          "language": "Russian",
-          "name": "Остров",
           "multiverseid": 158929
-        },
-        {
-          "language": "Russian",
-          "name": "Остров",
-          "multiverseid": 158930
-        },
-        {
-          "language": "Russian",
-          "name": "Остров",
-          "multiverseid": 158931
         }
       ],
       "id": "cd8cb5c09008e59e920c2b70868170bcdcfea7a9",
       "imageName": "island2",
       "layout": "normal",
       "legalities": [
+        {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
         {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
@@ -32522,6 +32492,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -32645,8 +32623,8 @@
         "USG",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -32712,7 +32690,16 @@
         "C15",
         "DDQ",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "DDS",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -32729,10 +32716,12 @@
         143619,
         143632,
         143628
-      ]
+      ],
+      "watermark": "Blue"
     },
     {
       "artist": "Martina Pilcerova",
+      "cmc": 0,
       "colorIdentity": [
         "U"
       ],
@@ -32840,33 +32829,37 @@
         {
           "language": "Portuguese (Brazil)",
           "name": "Ilha",
+          "multiverseid": 158993
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Ilha",
+          "multiverseid": 158994
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Ilha",
+          "multiverseid": 158995
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Ilha",
           "multiverseid": 158996
         },
         {
           "language": "Russian",
           "name": "Остров",
-          "multiverseid": 158928
-        },
-        {
-          "language": "Russian",
-          "name": "Остров",
           "multiverseid": 158929
-        },
-        {
-          "language": "Russian",
-          "name": "Остров",
-          "multiverseid": 158930
-        },
-        {
-          "language": "Russian",
-          "name": "Остров",
-          "multiverseid": 158931
         }
       ],
       "id": "10ef97b9961f9ae4e3a4b6aea5256a3efa35fa40",
       "imageName": "island3",
       "layout": "normal",
       "legalities": [
+        {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
         {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
@@ -32885,6 +32878,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -33008,8 +33009,8 @@
         "USG",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -33075,7 +33076,16 @@
         "C15",
         "DDQ",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "DDS",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -33092,10 +33102,12 @@
         143619,
         143624,
         143628
-      ]
+      ],
+      "watermark": "Blue"
     },
     {
       "artist": "Rob Alexander",
+      "cmc": 0,
       "colorIdentity": [
         "U"
       ],
@@ -33203,33 +33215,37 @@
         {
           "language": "Portuguese (Brazil)",
           "name": "Ilha",
+          "multiverseid": 158993
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Ilha",
+          "multiverseid": 158994
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Ilha",
+          "multiverseid": 158995
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Ilha",
           "multiverseid": 158996
         },
         {
           "language": "Russian",
           "name": "Остров",
-          "multiverseid": 158928
-        },
-        {
-          "language": "Russian",
-          "name": "Остров",
           "multiverseid": 158929
-        },
-        {
-          "language": "Russian",
-          "name": "Остров",
-          "multiverseid": 158930
-        },
-        {
-          "language": "Russian",
-          "name": "Остров",
-          "multiverseid": 158931
         }
       ],
       "id": "8c453bbafb9b0d0c4f396c067b1513a4c67122b5",
       "imageName": "island4",
       "layout": "normal",
       "legalities": [
+        {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
         {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
@@ -33248,6 +33264,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -33371,8 +33395,8 @@
         "USG",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -33438,7 +33462,16 @@
         "C15",
         "DDQ",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "DDS",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -33455,14 +33488,21 @@
         143632,
         143624,
         143628
-      ]
+      ],
+      "watermark": "Blue"
     },
     {
       "artist": "Fred Fields",
+      "cmc": 0,
       "colorIdentity": [
         "B"
       ],
       "foreignNames": [
+        {
+          "language": "Chinese Simplified",
+          "name": "沼泽",
+          "multiverseid": 158914
+        },
         {
           "language": "Chinese Traditional",
           "name": "沼澤",
@@ -33564,35 +33604,34 @@
           "multiverseid": 159020
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Pântano",
-          "multiverseid": 158997
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Pântano",
-          "multiverseid": 158998
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Pântano",
-          "multiverseid": 158999
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Pântano",
-          "multiverseid": 159000
+          "language": "Russian",
+          "name": "Болото",
+          "multiverseid": 158932
         },
         {
           "language": "Russian",
           "name": "Болото",
           "multiverseid": 158933
+        },
+        {
+          "language": "Russian",
+          "name": "Болото",
+          "multiverseid": 158934
+        },
+        {
+          "language": "Russian",
+          "name": "Болото",
+          "multiverseid": 158935
         }
       ],
       "id": "893a2fd8b08bb359867aaf9095aa855edd69ce5a",
       "imageName": "swamp1",
       "layout": "normal",
       "legalities": [
+        {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
         {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
@@ -33611,6 +33650,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -33735,8 +33782,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -33807,7 +33854,15 @@
         "DDQ",
         "SOI",
         "DDR",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -33824,14 +33879,21 @@
         143634,
         143629,
         143635
-      ]
+      ],
+      "watermark": "Black"
     },
     {
       "artist": "Ron Spears",
+      "cmc": 0,
       "colorIdentity": [
         "B"
       ],
       "foreignNames": [
+        {
+          "language": "Chinese Simplified",
+          "name": "沼泽",
+          "multiverseid": 158914
+        },
         {
           "language": "Chinese Traditional",
           "name": "沼澤",
@@ -33933,35 +33995,34 @@
           "multiverseid": 159020
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Pântano",
-          "multiverseid": 158997
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Pântano",
-          "multiverseid": 158998
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Pântano",
-          "multiverseid": 158999
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Pântano",
-          "multiverseid": 159000
+          "language": "Russian",
+          "name": "Болото",
+          "multiverseid": 158932
         },
         {
           "language": "Russian",
           "name": "Болото",
           "multiverseid": 158933
+        },
+        {
+          "language": "Russian",
+          "name": "Болото",
+          "multiverseid": 158934
+        },
+        {
+          "language": "Russian",
+          "name": "Болото",
+          "multiverseid": 158935
         }
       ],
       "id": "657dd6aec954665f36eadc122770dc672dd2c3d9",
       "imageName": "swamp2",
       "layout": "normal",
       "legalities": [
+        {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
         {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
@@ -33980,6 +34041,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -34104,8 +34173,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -34176,7 +34245,15 @@
         "DDQ",
         "SOI",
         "DDR",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -34193,14 +34270,21 @@
         143629,
         143636,
         143635
-      ]
+      ],
+      "watermark": "Black"
     },
     {
       "artist": "Wayne Reynolds",
+      "cmc": 0,
       "colorIdentity": [
         "B"
       ],
       "foreignNames": [
+        {
+          "language": "Chinese Simplified",
+          "name": "沼泽",
+          "multiverseid": 158914
+        },
         {
           "language": "Chinese Traditional",
           "name": "沼澤",
@@ -34302,35 +34386,34 @@
           "multiverseid": 159020
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Pântano",
-          "multiverseid": 158997
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Pântano",
-          "multiverseid": 158998
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Pântano",
-          "multiverseid": 158999
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Pântano",
-          "multiverseid": 159000
+          "language": "Russian",
+          "name": "Болото",
+          "multiverseid": 158932
         },
         {
           "language": "Russian",
           "name": "Болото",
           "multiverseid": 158933
+        },
+        {
+          "language": "Russian",
+          "name": "Болото",
+          "multiverseid": 158934
+        },
+        {
+          "language": "Russian",
+          "name": "Болото",
+          "multiverseid": 158935
         }
       ],
       "id": "c49db6b8c310f6915a73766e9e235be1cde229a1",
       "imageName": "swamp3",
       "layout": "normal",
       "legalities": [
+        {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
         {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
@@ -34349,6 +34432,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -34473,8 +34564,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -34545,7 +34636,15 @@
         "DDQ",
         "SOI",
         "DDR",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -34562,14 +34661,21 @@
         143634,
         143636,
         143635
-      ]
+      ],
+      "watermark": "Black"
     },
     {
       "artist": "Steve Prescott",
+      "cmc": 0,
       "colorIdentity": [
         "B"
       ],
       "foreignNames": [
+        {
+          "language": "Chinese Simplified",
+          "name": "沼泽",
+          "multiverseid": 158914
+        },
         {
           "language": "Chinese Traditional",
           "name": "沼澤",
@@ -34671,35 +34777,34 @@
           "multiverseid": 159020
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Pântano",
-          "multiverseid": 158997
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Pântano",
-          "multiverseid": 158998
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Pântano",
-          "multiverseid": 158999
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Pântano",
-          "multiverseid": 159000
+          "language": "Russian",
+          "name": "Болото",
+          "multiverseid": 158932
         },
         {
           "language": "Russian",
           "name": "Болото",
           "multiverseid": 158933
+        },
+        {
+          "language": "Russian",
+          "name": "Болото",
+          "multiverseid": 158934
+        },
+        {
+          "language": "Russian",
+          "name": "Болото",
+          "multiverseid": 158935
         }
       ],
       "id": "c3ba4951cc6277cb32fd46adf37e6acf1f9dd6aa",
       "imageName": "swamp4",
       "layout": "normal",
       "legalities": [
+        {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
         {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
@@ -34718,6 +34823,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -34842,8 +34955,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -34914,7 +35027,15 @@
         "DDQ",
         "SOI",
         "DDR",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -34931,14 +35052,36 @@
         143634,
         143629,
         143636
-      ]
+      ],
+      "watermark": "Black"
     },
     {
       "artist": "Larry MacDougall",
+      "cmc": 0,
       "colorIdentity": [
         "R"
       ],
       "foreignNames": [
+        {
+          "language": "Chinese Simplified",
+          "name": "山脉",
+          "multiverseid": 158916
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "Mountain",
+          "multiverseid": 158917
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "山脉",
+          "multiverseid": 158918
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "山脉",
+          "multiverseid": 158919
+        },
         {
           "language": "Chinese Traditional",
           "name": "山脈",
@@ -35002,47 +35145,7 @@
         {
           "language": "Italian",
           "name": "Montagne",
-          "multiverseid": 158871
-        },
-        {
-          "language": "Italian",
-          "name": "Montagne",
-          "multiverseid": 158872
-        },
-        {
-          "language": "Italian",
-          "name": "Montagne",
-          "multiverseid": 158873
-        },
-        {
-          "language": "Italian",
-          "name": "Montagne",
           "multiverseid": 158874
-        },
-        {
-          "language": "Japanese",
-          "name": "山",
-          "multiverseid": 159021
-        },
-        {
-          "language": "Japanese",
-          "name": "山",
-          "multiverseid": 159022
-        },
-        {
-          "language": "Japanese",
-          "name": "山",
-          "multiverseid": 159023
-        },
-        {
-          "language": "Japanese",
-          "name": "山",
-          "multiverseid": 159024
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Montanha",
-          "multiverseid": 159003
         },
         {
           "language": "Russian",
@@ -35063,12 +35166,36 @@
           "language": "Russian",
           "name": "Гора",
           "multiverseid": 158939
+        },
+        {
+          "language": "Spanish",
+          "name": "Montaña",
+          "multiverseid": 158981
+        },
+        {
+          "language": "Spanish",
+          "name": "Montaña",
+          "multiverseid": 158982
+        },
+        {
+          "language": "Spanish",
+          "name": "Montaña",
+          "multiverseid": 158983
+        },
+        {
+          "language": "Spanish",
+          "name": "Montaña",
+          "multiverseid": 158984
         }
       ],
       "id": "175d11e11c1ce2417d608bd79fdb24394f1b30fa",
       "imageName": "mountain1",
       "layout": "normal",
       "legalities": [
+        {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
         {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
@@ -35087,6 +35214,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -35191,9 +35326,9 @@
         "LEA",
         "LEB",
         "2ED",
-        "ARN",
         "CED",
         "CEI",
+        "ARN",
         "3ED",
         "4ED",
         "ICE",
@@ -35212,8 +35347,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -35283,7 +35418,16 @@
         "BFZ",
         "C15",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "DDS",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -35300,14 +35444,36 @@
         143626,
         143627,
         143631
-      ]
+      ],
+      "watermark": "Red"
     },
     {
       "artist": "Martina Pilcerova",
+      "cmc": 0,
       "colorIdentity": [
         "R"
       ],
       "foreignNames": [
+        {
+          "language": "Chinese Simplified",
+          "name": "山脉",
+          "multiverseid": 158916
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "Mountain",
+          "multiverseid": 158917
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "山脉",
+          "multiverseid": 158918
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "山脉",
+          "multiverseid": 158919
+        },
         {
           "language": "Chinese Traditional",
           "name": "山脈",
@@ -35389,26 +35555,6 @@
           "multiverseid": 158874
         },
         {
-          "language": "Japanese",
-          "name": "山",
-          "multiverseid": 159021
-        },
-        {
-          "language": "Japanese",
-          "name": "山",
-          "multiverseid": 159022
-        },
-        {
-          "language": "Japanese",
-          "name": "山",
-          "multiverseid": 159023
-        },
-        {
-          "language": "Japanese",
-          "name": "山",
-          "multiverseid": 159024
-        },
-        {
           "language": "Portuguese (Brazil)",
           "name": "Montanha",
           "multiverseid": 159003
@@ -35439,6 +35585,10 @@
       "layout": "normal",
       "legalities": [
         {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
         },
@@ -35456,6 +35606,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -35560,9 +35718,9 @@
         "LEA",
         "LEB",
         "2ED",
-        "ARN",
         "CED",
         "CEI",
+        "ARN",
         "3ED",
         "4ED",
         "ICE",
@@ -35581,8 +35739,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -35652,7 +35810,16 @@
         "BFZ",
         "C15",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "DDS",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -35669,14 +35836,36 @@
         143626,
         143631,
         143623
-      ]
+      ],
+      "watermark": "Red"
     },
     {
       "artist": "Wayne Reynolds",
+      "cmc": 0,
       "colorIdentity": [
         "R"
       ],
       "foreignNames": [
+        {
+          "language": "Chinese Simplified",
+          "name": "山脉",
+          "multiverseid": 158916
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "Mountain",
+          "multiverseid": 158917
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "山脉",
+          "multiverseid": 158918
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "山脉",
+          "multiverseid": 158919
+        },
         {
           "language": "Chinese Traditional",
           "name": "山脈",
@@ -35740,47 +35929,7 @@
         {
           "language": "Italian",
           "name": "Montagne",
-          "multiverseid": 158871
-        },
-        {
-          "language": "Italian",
-          "name": "Montagne",
-          "multiverseid": 158872
-        },
-        {
-          "language": "Italian",
-          "name": "Montagne",
-          "multiverseid": 158873
-        },
-        {
-          "language": "Italian",
-          "name": "Montagne",
           "multiverseid": 158874
-        },
-        {
-          "language": "Japanese",
-          "name": "山",
-          "multiverseid": 159021
-        },
-        {
-          "language": "Japanese",
-          "name": "山",
-          "multiverseid": 159022
-        },
-        {
-          "language": "Japanese",
-          "name": "山",
-          "multiverseid": 159023
-        },
-        {
-          "language": "Japanese",
-          "name": "山",
-          "multiverseid": 159024
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Montanha",
-          "multiverseid": 159003
         },
         {
           "language": "Russian",
@@ -35801,12 +35950,36 @@
           "language": "Russian",
           "name": "Гора",
           "multiverseid": 158939
+        },
+        {
+          "language": "Spanish",
+          "name": "Montaña",
+          "multiverseid": 158981
+        },
+        {
+          "language": "Spanish",
+          "name": "Montaña",
+          "multiverseid": 158982
+        },
+        {
+          "language": "Spanish",
+          "name": "Montaña",
+          "multiverseid": 158983
+        },
+        {
+          "language": "Spanish",
+          "name": "Montaña",
+          "multiverseid": 158984
         }
       ],
       "id": "d8deb574007089e6a20dfe4e42707ae584f683cd",
       "imageName": "mountain3",
       "layout": "normal",
       "legalities": [
+        {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
         {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
@@ -35825,6 +35998,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -35929,9 +36110,9 @@
         "LEA",
         "LEB",
         "2ED",
-        "ARN",
         "CED",
         "CEI",
+        "ARN",
         "3ED",
         "4ED",
         "ICE",
@@ -35950,8 +36131,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -36021,7 +36202,16 @@
         "BFZ",
         "C15",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "DDS",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -36038,14 +36228,36 @@
         143626,
         143627,
         143623
-      ]
+      ],
+      "watermark": "Red"
     },
     {
       "artist": "Darrell Riche",
+      "cmc": 0,
       "colorIdentity": [
         "R"
       ],
       "foreignNames": [
+        {
+          "language": "Chinese Simplified",
+          "name": "山脉",
+          "multiverseid": 158916
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "Mountain",
+          "multiverseid": 158917
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "山脉",
+          "multiverseid": 158918
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "山脉",
+          "multiverseid": 158919
+        },
         {
           "language": "Chinese Traditional",
           "name": "山脈",
@@ -36127,26 +36339,6 @@
           "multiverseid": 158874
         },
         {
-          "language": "Japanese",
-          "name": "山",
-          "multiverseid": 159021
-        },
-        {
-          "language": "Japanese",
-          "name": "山",
-          "multiverseid": 159022
-        },
-        {
-          "language": "Japanese",
-          "name": "山",
-          "multiverseid": 159023
-        },
-        {
-          "language": "Japanese",
-          "name": "山",
-          "multiverseid": 159024
-        },
-        {
           "language": "Portuguese (Brazil)",
           "name": "Montanha",
           "multiverseid": 159003
@@ -36177,6 +36369,10 @@
       "layout": "normal",
       "legalities": [
         {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
         },
@@ -36194,6 +36390,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -36298,9 +36502,9 @@
         "LEA",
         "LEB",
         "2ED",
-        "ARN",
         "CED",
         "CEI",
+        "ARN",
         "3ED",
         "4ED",
         "ICE",
@@ -36319,8 +36523,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -36390,7 +36594,16 @@
         "BFZ",
         "C15",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "DDS",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -36407,10 +36620,12 @@
         143627,
         143631,
         143623
-      ]
+      ],
+      "watermark": "Red"
     },
     {
       "artist": "Omar Rayyan",
+      "cmc": 0,
       "colorIdentity": [
         "G"
       ],
@@ -36546,6 +36761,10 @@
       "layout": "normal",
       "legalities": [
         {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
         },
@@ -36563,6 +36782,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -36687,8 +36914,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -36757,7 +36984,16 @@
         "C15",
         "SOI",
         "DDR",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "DDS",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -36774,10 +37010,12 @@
         143625,
         143633,
         143617
-      ]
+      ],
+      "watermark": "Green"
     },
     {
       "artist": "Rob Alexander",
+      "cmc": 0,
       "colorIdentity": [
         "G"
       ],
@@ -36913,6 +37151,10 @@
       "layout": "normal",
       "legalities": [
         {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
         },
@@ -36930,6 +37172,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -37054,8 +37304,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -37124,7 +37374,16 @@
         "C15",
         "SOI",
         "DDR",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "DDS",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -37141,10 +37400,12 @@
         143633,
         143617,
         143618
-      ]
+      ],
+      "watermark": "Green"
     },
     {
       "artist": "Steve Prescott",
+      "cmc": 0,
       "colorIdentity": [
         "G"
       ],
@@ -37280,6 +37541,10 @@
       "layout": "normal",
       "legalities": [
         {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
         },
@@ -37297,6 +37562,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -37421,8 +37694,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -37491,7 +37764,16 @@
         "C15",
         "SOI",
         "DDR",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "DDS",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -37508,10 +37790,12 @@
         143625,
         143633,
         143618
-      ]
+      ],
+      "watermark": "Green"
     },
     {
       "artist": "Darrell Riche",
+      "cmc": 0,
       "colorIdentity": [
         "G"
       ],
@@ -37647,6 +37931,10 @@
       "layout": "normal",
       "legalities": [
         {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
         },
@@ -37664,6 +37952,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -37788,8 +38084,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -37858,7 +38154,16 @@
         "C15",
         "SOI",
         "DDR",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "DDS",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -37875,7 +38180,8 @@
         143625,
         143617,
         143618
-      ]
+      ],
+      "watermark": "Green"
     }
   ]
 }

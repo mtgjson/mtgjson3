@@ -1,0 +1,43 @@
+{
+  "SET": {
+    "name": "Beatdown Box Set",
+    "code": "BTD",
+    "gathererCode": "BD",
+    "magicCardsInfoCode": "bd",
+    "releaseDate": "2000-10-01",
+    "border": "white",
+    "type": "box",
+    "mkm_name": "Beatdown",
+    "mkm_id": 62
+  },
+  "SET_CORRECTIONS": [{
+    "renumberImages": "Forest",
+    "order": [27242, 27243, 27244]
+  }, {
+    "renumberImages": "Island",
+    "order": [27236, 27237, 27238]
+  }, {
+    "renumberImages": "Mountain",
+    "order": [27239, 27240, 27241]
+  }, {
+    "renumberImages": "Swamp",
+    "order": [27233, 27234, 27235]
+  }, {
+    "match": {
+      "name": ["Lava Axe", "Lowland Giant"]
+    },
+    "flavorAddExclamation": true
+  }, {
+    "match": {
+      "name": ["Fallen Angel"]
+    },
+    "flavorAddDash": true
+  }, "numberCards", {
+    "match": {
+      "multiverseid": 99999
+    },
+    "replace": {
+      "number": 99
+    }
+  }]
+}

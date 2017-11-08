@@ -55,7 +55,7 @@
       "rulings": [
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn’t matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
         }
       ],
       "subtypes": [
@@ -120,19 +120,19 @@
       "rulings": [
         {
           "date": "2006-07-15",
-          "text": "Paying the alternative cost doesn’t change when you can cast the spell. A creature spell you cast this way, for example, can still only be cast during your main phase while the stack is empty."
+          "text": "Paying the alternative cost doesn't change when you can cast the spell. A creature spell you cast this way, for example, can still only be cast during your main phase while the stack is empty."
         },
         {
           "date": "2006-07-15",
-          "text": "You may pay the alternative cost rather than the card’s mana cost. Any additional costs are paid as normal."
+          "text": "You may pay the alternative cost rather than the card's mana cost. Any additional costs are paid as normal."
         },
         {
           "date": "2006-07-15",
-          "text": "If you don’t have two cards of the right color in your hand, you can’t choose to cast the spell using the alternative cost."
+          "text": "If you don't have two cards of the right color in your hand, you can't choose to cast the spell using the alternative cost."
         },
         {
           "date": "2006-07-15",
-          "text": "You can’t exile a card from your hand to pay for itself. At the time you would pay costs, that card is on the stack, not in your hand."
+          "text": "You can't exile a card from your hand to pay for itself. At the time you would pay costs, that card is on the stack, not in your hand."
         }
       ],
       "subtypes": [
@@ -392,11 +392,11 @@
         },
         {
           "date": "2008-10-01",
-          "text": "The cycling ability and the triggered ability are separate. If the triggered ability is countered (with Stifle, for example, or if all its targets have become illegal), the cycling ability will still resolve and you’ll draw a card."
+          "text": "The cycling ability and the triggered ability are separate. If the triggered ability is countered (with Stifle, for example, or if all its targets have become illegal), the cycling ability will still resolve and you'll draw a card."
         },
         {
           "date": "2008-10-01",
-          "text": "You can cycle this card even if there are no targets for the triggered ability. That’s because the cycling ability itself has no targets."
+          "text": "You can cycle this card even if there are no targets for the triggered ability. That's because the cycling ability itself has no targets."
         }
       ],
       "subtypes": [
@@ -515,14 +515,15 @@
         "DPA",
         "C14",
         "DD3_EVG",
-        "EMA"
+        "EMA",
+        "CMA"
       ],
       "rarity": "Uncommon",
       "subtypes": [
         "Elf",
         "Warrior"
       ],
-      "text": "Other Elf creatures you control get +1/+1.\n{G}, {T}: Put a 1/1 green Elf Warrior creature token onto the battlefield.",
+      "text": "Other Elf creatures you control get +1/+1.\n{G}, {T}: Create a 1/1 green Elf Warrior creature token.",
       "toughness": "2",
       "type": "Creature — Elf Warrior",
       "types": [
@@ -593,7 +594,8 @@
         "M12",
         "C14",
         "DD3_EVG",
-        "EMA"
+        "EMA",
+        "CMA"
       ],
       "rarity": "Common",
       "subtypes": [
@@ -656,20 +658,21 @@
         "DPA",
         "C14",
         "DD3_EVG",
-        "EMA"
+        "EMA",
+        "CMA"
       ],
       "rarity": "Common",
       "rulings": [
         {
           "date": "2016-06-08",
-          "text": "Lys Alana Huntmaster’s ability will resolve before the Elf spell that caused it to trigger."
+          "text": "Lys Alana Huntmaster's ability will resolve before the Elf spell that caused it to trigger."
         }
       ],
       "subtypes": [
         "Elf",
         "Warrior"
       ],
-      "text": "Whenever you cast an Elf spell, you may put a 1/1 green Elf Warrior creature token onto the battlefield.",
+      "text": "Whenever you cast an Elf spell, you may create a 1/1 green Elf Warrior creature token.",
       "toughness": "3",
       "type": "Creature — Elf Warrior",
       "types": [
@@ -762,10 +765,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -839,13 +838,14 @@
         "EVG",
         "C14",
         "DD3_EVG",
-        "EMA"
+        "EMA",
+        "CMA"
       ],
       "rarity": "Common",
       "rulings": [
         {
           "date": "2016-06-08",
-          "text": "The number of Elves on the battlefield is counted only as Timberwatch Elf’s ability resolves. If Timberwatch Elf is still on the battlefield, it’ll count itself."
+          "text": "The number of Elves on the battlefield is counted only as Timberwatch Elf's ability resolves. If Timberwatch Elf is still on the battlefield, it'll count itself."
         }
       ],
       "subtypes": [
@@ -906,7 +906,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "Since the ability does not have the {Tap} symbol, you can use the ability before this creature begins a turn under your control."
+          "text": "Since the ability does not have the {T} symbol, you can use the ability before this creature begins a turn under your control."
         },
         {
           "date": "2004-10-04",
@@ -916,7 +916,7 @@
       "subtypes": [
         "Elf"
       ],
-      "text": "Tap five untapped Elves you control: Put a 7/7 green Elemental creature token with trample onto the battlefield.",
+      "text": "Tap five untapped Elves you control: Create a 7/7 green Elemental creature token with trample.",
       "toughness": "2",
       "type": "Creature — Elf",
       "types": [
@@ -966,7 +966,8 @@
         "ONS",
         "EVG",
         "C14",
-        "DD3_EVG"
+        "DD3_EVG",
+        "CMA"
       ],
       "rarity": "Common",
       "subtypes": [
@@ -1145,13 +1146,14 @@
         "C14",
         "DD3_EVG",
         "C15",
-        "DDR"
+        "DDR",
+        "CMA"
       ],
       "rarity": "Common",
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "Because the “search” requires you to find a card with certain characteristics, you don’t have to find the card if you don’t want to."
+          "text": "Because the \"search\" requires you to find a card with certain characteristics, you don't have to find the card if you don't want to."
         }
       ],
       "subtypes": [
@@ -1277,7 +1279,7 @@
       "subtypes": [
         "Elf"
       ],
-      "text": "Put a 1/1 green Elf Warrior creature token onto the battlefield for each Elf you control.",
+      "text": "Create a 1/1 green Elf Warrior creature token for each Elf you control.",
       "type": "Tribal Sorcery — Elf",
       "types": [
         "Tribal",
@@ -1424,7 +1426,10 @@
         "C13",
         "DD3_EVG",
         "DD3_GVL",
-        "EMA"
+        "EMA",
+        "MM3",
+        "DDS",
+        "C17"
       ],
       "rarity": "Uncommon",
       "rulings": [
@@ -1593,6 +1598,7 @@
     },
     {
       "artist": "Anthony S. Waters",
+      "cmc": 0,
       "colorIdentity": [
         "G"
       ],
@@ -1637,6 +1643,7 @@
     },
     {
       "artist": "Heather Hudson",
+      "cmc": 0,
       "colorIdentity": [
         "G"
       ],
@@ -1676,7 +1683,9 @@
         "C13",
         "VMA",
         "C14",
-        "DD3_EVG"
+        "DD3_EVG",
+        "CMA",
+        "C17"
       ],
       "rarity": "Common",
       "rulings": [
@@ -1693,6 +1702,7 @@
     },
     {
       "artist": "Glen Angus",
+      "cmc": 0,
       "colorIdentity": [
         "G"
       ],
@@ -1700,6 +1710,10 @@
       "imageName": "forest1",
       "layout": "normal",
       "legalities": [
+        {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
         {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
@@ -1718,6 +1732,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -1841,8 +1863,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -1911,7 +1933,16 @@
         "C15",
         "SOI",
         "DDR",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "DDS",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -1928,10 +1959,12 @@
         157948,
         159041,
         159042
-      ]
+      ],
+      "watermark": "Green"
     },
     {
       "artist": "John Avon",
+      "cmc": 0,
       "colorIdentity": [
         "G"
       ],
@@ -1939,6 +1972,10 @@
       "imageName": "forest2",
       "layout": "normal",
       "legalities": [
+        {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
         {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
@@ -1957,6 +1994,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -2080,8 +2125,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -2150,7 +2195,16 @@
         "C15",
         "SOI",
         "DDR",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "DDS",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -2167,10 +2221,12 @@
         157946,
         159041,
         159042
-      ]
+      ],
+      "watermark": "Green"
     },
     {
       "artist": "John Avon",
+      "cmc": 0,
       "colorIdentity": [
         "G"
       ],
@@ -2178,6 +2234,10 @@
       "imageName": "forest3",
       "layout": "normal",
       "legalities": [
+        {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
         {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
@@ -2196,6 +2256,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -2319,8 +2387,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -2389,7 +2457,16 @@
         "C15",
         "SOI",
         "DDR",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "DDS",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -2406,10 +2483,12 @@
         157948,
         157946,
         159041
-      ]
+      ],
+      "watermark": "Green"
     },
     {
       "artist": "Rob Alexander",
+      "cmc": 0,
       "colorIdentity": [
         "G"
       ],
@@ -2417,6 +2496,10 @@
       "imageName": "forest4",
       "layout": "normal",
       "legalities": [
+        {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
         {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
@@ -2435,6 +2518,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -2558,8 +2649,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -2628,7 +2719,16 @@
         "C15",
         "SOI",
         "DDR",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "DDS",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -2645,7 +2745,8 @@
         157948,
         157946,
         159042
-      ]
+      ],
+      "watermark": "Green"
     },
     {
       "artist": "Lucio Parrillo",
@@ -2701,17 +2802,17 @@
       "rulings": [
         {
           "date": "2016-06-08",
-          "text": "You can sacrifice any Goblin you control to activate Siege-Gang Commander’s activated ability, not just the ones its triggered ability puts onto the battlefield. You can even sacrifice Siege-Gang Commander itself."
+          "text": "You can sacrifice any Goblin you control to activate Siege-Gang Commander's activated ability, not just the ones its triggered ability puts onto the battlefield. You can even sacrifice Siege-Gang Commander itself."
         },
         {
           "date": "2016-06-08",
-          "text": "If you sacrifice an attacking or blocking Goblin during the declare blockers step, it won’t deal combat damage. If you wait until the combat damage step, but that Goblin has been dealt lethal damage, it’ll be destroyed before you get a chance to sacrifice it."
+          "text": "If you sacrifice an attacking or blocking Goblin during the declare blockers step, it won't deal combat damage. If you wait until the combat damage step, but that Goblin has been dealt lethal damage, it'll be destroyed before you get a chance to sacrifice it."
         }
       ],
       "subtypes": [
         "Goblin"
       ],
-      "text": "When Siege-Gang Commander enters the battlefield, put three 1/1 red Goblin creature tokens onto the battlefield.\n{1}{R}, Sacrifice a Goblin: Siege-Gang Commander deals 2 damage to target creature or player.",
+      "text": "When Siege-Gang Commander enters the battlefield, create three 1/1 red Goblin creature tokens.\n{1}{R}, Sacrifice a Goblin: Siege-Gang Commander deals 2 damage to target creature or player.",
       "toughness": "2",
       "type": "Creature — Goblin",
       "types": [
@@ -3004,7 +3105,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "The target of the ability can’t be a creature with Protection from Creatures, with Protection from Goblins, or with Protection from Red."
+          "text": "The target of the ability can't be a creature with Protection from Creatures, with Protection from Goblins, or with Protection from Red."
         },
         {
           "date": "2008-10-01",
@@ -3016,11 +3117,11 @@
         },
         {
           "date": "2008-10-01",
-          "text": "The cycling ability and the triggered ability are separate. If the triggered ability is countered (with Stifle, for example, or if all its targets have become illegal), the cycling ability will still resolve and you’ll draw a card."
+          "text": "The cycling ability and the triggered ability are separate. If the triggered ability is countered (with Stifle, for example, or if all its targets have become illegal), the cycling ability will still resolve and you'll draw a card."
         },
         {
           "date": "2008-10-01",
-          "text": "You can cycle this card even if there are no targets for the triggered ability. That’s because the cycling ability itself has no targets."
+          "text": "You can cycle this card even if there are no targets for the triggered ability. That's because the cycling ability itself has no targets."
         }
       ],
       "subtypes": [
@@ -3145,11 +3246,11 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "Because the “search” requires you to find a card with certain characteristics, you don’t have to find the card if you don’t want to."
+          "text": "Because the \"search\" requires you to find a card with certain characteristics, you don't have to find the card if you don't want to."
         },
         {
           "date": "2008-04-01",
-          "text": "You can search for any card with the creature type Goblin, including Creature or Tribal cards. Older cards of type “Summon Goblin” and “Summon Goblins” also count. You can’t search for cards that have Goblin in the name but don’t have the creature type Goblin."
+          "text": "You can search for any card with the creature type Goblin, including Creature or Tribal cards. Older cards of type \"Summon Goblin\" and \"Summon Goblins\" also count. You can't search for cards that have Goblin in the name but don't have the creature type Goblin."
         }
       ],
       "subtypes": [
@@ -3227,7 +3328,7 @@
       "colors": [
         "Red"
       ],
-      "flavor": "\"Let's play ‘sled.' Here's how it works: you're the sled.\"",
+      "flavor": "\"Let's play 'sled.' Here's how it works: you're the sled.\"",
       "id": "ad4edb282de70e13ebc6e29c38d0046c416843fa",
       "imageName": "goblin sledder",
       "layout": "normal",
@@ -3384,7 +3485,7 @@
       "rulings": [
         {
           "date": "2006-09-25",
-          "text": "If you don’t actually sacrifice the Goblin (because it was removed from the battlefield before the ability resolved, for example), no damage is dealt."
+          "text": "If you don't actually sacrifice the Goblin (because it was removed from the battlefield before the ability resolved, for example), no damage is dealt."
         }
       ],
       "subtypes": [
@@ -3394,7 +3495,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "Whenever another Goblin you control becomes blocked, sacrifice it. If you do, it deals 4 damage to each creature blocking it.\nSacrifice two Mountains: Put two 1/1 red Goblin creature tokens onto the battlefield.",
+      "text": "Whenever another Goblin you control becomes blocked, sacrifice it. If you do, it deals 4 damage to each creature blocking it.\nSacrifice two Mountains: Create two 1/1 red Goblin creature tokens.",
       "toughness": "2",
       "type": "Legendary Creature — Goblin Advisor",
       "types": [
@@ -3460,7 +3561,7 @@
       "rulings": [
         {
           "date": "2016-06-08",
-          "text": "Once Mogg Fanatic has dealt and been dealt combat damage, it’s too late to activate its ability before it’s destroyed."
+          "text": "Once Mogg Fanatic has dealt and been dealt combat damage, it's too late to activate its ability before it's destroyed."
         }
       ],
       "subtypes": [
@@ -3527,7 +3628,7 @@
         "Goblin",
         "Warrior"
       ],
-      "text": "Echo {1}{R} (At the beginning of your upkeep, if this came under your control since the beginning of your last upkeep, sacrifice it unless you pay its echo cost.)\nWhen Mogg War Marshal enters the battlefield or dies, put a 1/1 red Goblin creature token onto the battlefield.",
+      "text": "Echo {1}{R} (At the beginning of your upkeep, if this came under your control since the beginning of your last upkeep, sacrifice it unless you pay its echo cost.)\nWhen Mogg War Marshal enters the battlefield or dies, create a 1/1 red Goblin creature token.",
       "toughness": "1",
       "type": "Creature — Goblin Warrior",
       "types": [
@@ -3582,7 +3683,9 @@
         "EVG",
         "DDG",
         "PC2",
-        "DD3_EVG"
+        "DD3_EVG",
+        "PCA",
+        "MM3"
       ],
       "rarity": "Common",
       "subtypes": [
@@ -3641,8 +3744,8 @@
       "power": "1",
       "printings": [
         "POR",
-        "PO2",
         "EXO",
+        "PO2",
         "ATH",
         "6ED",
         "S99",
@@ -3828,7 +3931,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "Since the ability does not have the {Tap} symbol, you can use the ability before this creature begins a turn under your control."
+          "text": "Since the ability does not have the {T} symbol, you can use the ability before this creature begins a turn under your control."
         },
         {
           "date": "2004-10-04",
@@ -4208,6 +4311,7 @@
     },
     {
       "artist": "Tony Szczudlo",
+      "cmc": 0,
       "colorIdentity": [
         "R"
       ],
@@ -4247,7 +4351,8 @@
         "VMA",
         "C14",
         "DD3_EVG",
-        "C15"
+        "C15",
+        "CMA"
       ],
       "rarity": "Common",
       "rulings": [
@@ -4264,6 +4369,7 @@
     },
     {
       "artist": "David Martin",
+      "cmc": 0,
       "colorIdentity": [
         "R"
       ],
@@ -4308,6 +4414,7 @@
     },
     {
       "artist": "David Day",
+      "cmc": 0,
       "colorIdentity": [
         "R"
       ],
@@ -4315,6 +4422,10 @@
       "imageName": "mountain1",
       "layout": "normal",
       "legalities": [
+        {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
         {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
@@ -4333,6 +4444,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -4436,9 +4555,9 @@
         "LEA",
         "LEB",
         "2ED",
-        "ARN",
         "CED",
         "CEI",
+        "ARN",
         "3ED",
         "4ED",
         "ICE",
@@ -4457,8 +4576,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -4528,7 +4647,16 @@
         "BFZ",
         "C15",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "DDS",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -4545,10 +4673,12 @@
         157941,
         157939,
         159061
-      ]
+      ],
+      "watermark": "Red"
     },
     {
       "artist": "Jeff Miracola",
+      "cmc": 0,
       "colorIdentity": [
         "R"
       ],
@@ -4556,6 +4686,10 @@
       "imageName": "mountain2",
       "layout": "normal",
       "legalities": [
+        {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
         {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
@@ -4574,6 +4708,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -4677,9 +4819,9 @@
         "LEA",
         "LEB",
         "2ED",
-        "ARN",
         "CED",
         "CEI",
+        "ARN",
         "3ED",
         "4ED",
         "ICE",
@@ -4698,8 +4840,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -4769,7 +4911,16 @@
         "BFZ",
         "C15",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "DDS",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -4786,10 +4937,12 @@
         157941,
         157939,
         157940
-      ]
+      ],
+      "watermark": "Red"
     },
     {
       "artist": "Rob Alexander",
+      "cmc": 0,
       "colorIdentity": [
         "R"
       ],
@@ -4797,6 +4950,10 @@
       "imageName": "mountain3",
       "layout": "normal",
       "legalities": [
+        {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
         {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
@@ -4815,6 +4972,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -4918,9 +5083,9 @@
         "LEA",
         "LEB",
         "2ED",
-        "ARN",
         "CED",
         "CEI",
+        "ARN",
         "3ED",
         "4ED",
         "ICE",
@@ -4939,8 +5104,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -5010,7 +5175,16 @@
         "BFZ",
         "C15",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "DDS",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -5027,10 +5201,12 @@
         157941,
         159061,
         157940
-      ]
+      ],
+      "watermark": "Red"
     },
     {
       "artist": "Sam Wood",
+      "cmc": 0,
       "colorIdentity": [
         "R"
       ],
@@ -5038,6 +5214,10 @@
       "imageName": "mountain4",
       "layout": "normal",
       "legalities": [
+        {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
         {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
@@ -5056,6 +5236,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -5159,9 +5347,9 @@
         "LEA",
         "LEB",
         "2ED",
-        "ARN",
         "CED",
         "CEI",
+        "ARN",
         "3ED",
         "4ED",
         "ICE",
@@ -5180,8 +5368,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -5251,7 +5439,16 @@
         "BFZ",
         "C15",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "DDS",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -5268,10 +5465,12 @@
         157939,
         159061,
         157940
-      ]
+      ],
+      "watermark": "Red"
     },
     {
       "artist": "Anthony S. Waters",
+      "cmc": 0,
       "id": "c05b9398b2862d7e9c7457368729a5cf819b86ed",
       "imageName": "elemental",
       "layout": "token",
@@ -5298,6 +5497,7 @@
     },
     {
       "artist": "Dominick Domingo",
+      "cmc": 0,
       "id": "9751be51a3d179eaa355c55fe9007b5a96a03bc5",
       "imageName": "elf warrior",
       "layout": "token",
@@ -5322,23 +5522,10 @@
     },
     {
       "artist": "Dave Kendall",
+      "cmc": 0,
       "id": "a5de8cdeaa5edf5c87bf83b3e46eb80696fe465e",
       "imageName": "goblin",
       "layout": "token",
-      "legalities": [
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
-          "legality": "Legal"
-        }
-      ],
       "multiverseid": 159056,
       "name": "Goblin",
       "number": "T3",

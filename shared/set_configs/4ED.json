@@ -1,0 +1,139 @@
+{
+  "SET": {
+    "name": "Fourth Edition",
+    "code": "4ED",
+    "gathererCode": "4E",
+    "magicCardsInfoCode": "4e",
+    "essentialMagicCode": "6",
+    "releaseDate": "1995-04-01",
+    "border": "white",
+    "type": "core",
+    "booster": ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"],
+    "translations": {
+      "de": "Vierte Edition",
+      "fr": "Quatrième Edition",
+      "it": "Quarta Edizione",
+      "es": "Cuarta Edición",
+      "pt": "Quarta Edição"
+    },
+    "mkm_name": "Fourth Edition",
+    "mkm_id": 10
+  },
+  "SET_CORRECTIONS": ["noBasicLandWatermarks", {
+    "match": {
+      "name": "Pyrotechnics"
+    },
+    "replace": {
+      "flavor": "\"Hi! ni! ya! Behold the man of flint, that's me!\nFour lightnings zigzag from me, strike and return.\" —Navajo war chant"
+    }
+  }, {
+    "renumberImages": "Forest",
+    "order": [2377, 2378, 2379]
+  }, {
+    "renumberImages": "Island",
+    "order": [2390, 2389, 2391]
+  }, {
+    "renumberImages": "Mountain",
+    "order": [2383, 2381, 2382]
+  }, {
+    "renumberImages": "Plains",
+    "order": [2386, 2385, 2384]
+  }, {
+    "renumberImages": "Swamp",
+    "order": [2375, 2376, 2374]
+  }, {
+    "match": {
+      "name": "Cosmic Horror"
+    },
+    "replace": {
+      "flavor": "\". . . [S]creams of horror rend th' affrighted skies.\" —Alexander Pope, The Rape of the Lock"
+    }
+  }, {
+    "match": {
+      "name": "Aladdin's Ring"
+    },
+    "replace": {
+      "flavor": "\"After these words the magician drew a ring off his finger, and put it on one of Aladdin's, saying: 'It is a talisman against all evil, so long as you obey me.'\" —The Arabian Nights, Junior Classics trans."
+    }
+  }, {
+    "match": {
+      "name": "Giant Strength"
+    },
+    "replace": {
+      "flavor": "\"O! it is excellent\nTo have a giant's strength, but it is tyrannous\nTo use it like a giant.\"\n—William Shakespeare, Measure for Measure"
+    }
+  }, {
+    "match": {
+      "name": "Ley Druid"
+    },
+    "replace": {
+      "flavor": "After years of training, the Druid becomes one with nature, drawing power from the land and returning it when needed."
+    }
+  }, {
+    "match": {
+      "name": "Pearled Unicorn"
+    },
+    "replace": {
+      "flavor": "\"‘Do you know, I always thought Unicorns were fabulous monsters, too? I never saw one alive before!' ‘Well, now that we have seen each other,' said the Unicorn, ‘if you'll believe in me, I'll believe in you.'\" —Lewis Carroll"
+    }
+  }, {
+    "match": {
+      "name": "Segovian Leviathan"
+    },
+    "replace": {
+      "flavor": "\"Leviathan, too! Can you catch him with a fish-hook or run a line round his tongue?\" —Job 40:25"
+    }
+  }, {
+    "match": {
+      "name": "Winter Blast"
+    },
+    "replace": {
+      "flavor": "\"Blow, winds, and crack your cheeks! rage! blow!\" —William Shakespeare, King Lear"
+    }
+  }, {
+    "match": {
+      "name": "Hypnotic Specter"
+    },
+    "replace": {
+      "flavor": "\"...There was no trace\nOf aught on that illumined face....\"\n—Samuel Coleridge, \"Phantom\""
+    }
+  }, {
+    "match": {
+      "name": "Marsh Viper"
+    },
+    "replace": {
+      "flavor": "\"All we had left were their black and bloated bodies.\" —Maeveen O'Donagh, Memoirs of a Soldier"
+    }
+  }, {
+    "match": {
+      "name": "Gaseous Form"
+    },
+    "replace": {
+      "flavor": "\". . . [A]nd gives to airy nothing\nA local habitation and a name.\"\n—William Shakespeare, A Midsummer-Night's Dream"
+    }
+  }, {
+    "match": {
+      "name": "Scathe Zombies"
+    },
+    "replace": {
+      "flavor": "\"They groaned, they stirred, they all uprose, Nor spake, nor moved their eyes; It had been strange, even in a dream, To have seen those dead men rise.\" —Samuel Coleridge, \"The Rime of the Ancient Mariner\""
+    }
+  }, {
+    "match": {
+      "name": "Ali Baba"
+    },
+    "replace": {
+      "flavor": "\"When he reached the entrance of the cavern, he pronounced the words, ‘Open, Sesame!'\"\n—The Arabian Nights, Junior Classics trans."
+    }
+  }, {
+    "match": {
+      "name": ["Elvish Archers", "Goblin Balloon Brigade", "Visions", "Wall of Air"]
+    },
+    "flavorAddExclamation": true
+  }, {
+    "match": {
+      "name": ["Dragon Whelp", "Northern Paladin"]
+    },
+    "flavorAddDash": true
+  }]
+}

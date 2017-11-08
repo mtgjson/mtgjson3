@@ -1,0 +1,71 @@
+{
+  "SET": {
+    "name": "Magic Origins",
+    "code": "ORI",
+    "magicCardsInfoCode": "ori",
+    "essentialMagicCode": "107",
+    "releaseDate": "2015-07-17",
+    "border": "black",
+    "type": "core",
+    "booster": [
+      ["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", ["marketing", "checklist"]
+    ],
+    "translations": {
+      "de": "Magic Ursprünge",
+      "fr": "Magic Origines",
+      "it": "Magic Origins",
+      "es": "Magic Orígenes",
+      "pt": "Magic – Origens",
+      "jp": "マジック・オリジン",
+      "cn": "万智牌：起源",
+      "ru": "Magic: Истоки",
+      "tw": "魔法風雲會：起源",
+      "ko": "매직의 기원"
+    },
+    "mkm_name": "Magic Origins",
+    "mkm_id": 1652
+  },
+  "SET_CORRECTIONS": [{
+    "match": {
+      "name": "Chandra, Roaring Flame"
+    },
+    "replace": {
+      "colors": ["Red"]
+    }
+  }, {
+    "match": {
+      "name": "Gideon, Battle-Forged"
+    },
+    "replace": {
+      "colors": ["White"]
+    }
+  }, {
+    "match": {
+      "name": "Jace, Telepath Unbound"
+    },
+    "replace": {
+      "colors": ["Blue"]
+    }
+  }, {
+    "match": {
+      "name": "Liliana, Defiant Necromancer"
+    },
+    "replace": {
+      "colors": ["Black"]
+    }
+  }, {
+    "match": {
+      "name": "Nissa, Sage Animist"
+    },
+    "replace": {
+      "colors": ["Green"]
+    }
+  }, {
+    "match": {
+      "number": ["273", "274", "275", "276", "277", "278", "279", "280", "281", "282", "283", "284", "285", "286", "287", "288"]
+    },
+    "replace": {
+      "starter": true
+    }
+  }]
+}

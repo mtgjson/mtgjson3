@@ -1,0 +1,44 @@
+{
+  "SET": {
+    "name": "Coldsnap",
+    "code": "CSP",
+    "magicCardsInfoCode": "cs",
+    "releaseDate": "2006-07-21",
+    "border": "black",
+    "type": "expansion",
+    "block": "Ice Age",
+    "booster": ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"],
+    "translations": {
+      "de": "Kälteeinbruch",
+      "fr": "Souffle glaciaire",
+      "it": "Ondata Glaciale",
+      "es": "Ola de frío",
+      "pt": "Frente Fria",
+      "jp": "コールドスナップ",
+      "cn": "骤霜",
+      "ru": "Стужа"
+    },
+    "mkm_name": "Coldsnap",
+    "mkm_id": 52
+  },
+  "SET_CORRECTIONS": [{
+    "match": {
+      "name": ["Heidar, Rimewind Master", "Lovisa Coldeyes"]
+    },
+    "flavorAddExclamation": true
+  }, {
+    "match": {
+      "name": "Flashfreeze"
+    },
+    "replace": {
+      "flavor": "\"Nature? Fire? Bah! Both are chaotic and difficult to control. Ice is structured, latticed, light as a feather, massive as a glacier. In ice, there is power!\"\n—Heidar, Rimewind master"
+    }
+  }, {
+    "match": {
+      "name": ["Snow-Covered Forest", "Snow-Covered Island", "Snow-Covered Mountain", "Snow-Covered Plain", "Snow-Covered Swamp"]
+    },
+    "replace": {
+      "rarity": "Common"
+    }
+  }]
+}

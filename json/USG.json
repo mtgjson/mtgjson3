@@ -474,7 +474,8 @@
         "HOP",
         "CMD",
         "M14",
-        "M15"
+        "M15",
+        "CMA"
       ],
       "rarity": "Common",
       "rulings": [
@@ -566,27 +567,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Onslaught Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -1137,11 +1122,11 @@
       "rulings": [
         {
           "date": "2016-06-08",
-          "text": "Humble overwrites all previous effects that set the creature’s base power and toughness to specific values. Any power- or toughness-setting effects that start to apply after Humble resolves will overwrite this effect."
+          "text": "Humble overwrites all previous effects that set the creature's base power and toughness to specific values. Any power- or toughness-setting effects that start to apply after Humble resolves will overwrite this effect."
         },
         {
           "date": "2016-06-08",
-          "text": "Effects that modify a creature’s power and/or toughness, such as the effect of Seal of Strength, will apply to the creature no matter when they started to take effect. The same is true for any counters that change its power and/or toughness and effects that switch its power and toughness."
+          "text": "Effects that modify a creature's power and/or toughness, such as the effect of Seal of Strength, will apply to the creature no matter when they started to take effect. The same is true for any counters that change its power and/or toughness and effects that switch its power and toughness."
         },
         {
           "date": "2016-06-08",
@@ -1149,7 +1134,7 @@
         },
         {
           "date": "2016-06-08",
-          "text": "Humble doesn’t counter abilities that have already triggered or been activated. In particular, casting this spell won’t stop a creature’s ability that says “At the beginning of your upkeep,” “When this creature enters the battlefield,” or similar from triggering."
+          "text": "Humble doesn't counter abilities that have already triggered or been activated. In particular, casting this spell won't stop a creature's ability that says \"At the beginning of your upkeep,\" \"When this creature enters the battlefield,\" or similar from triggering."
         }
       ],
       "text": "Until end of turn, target creature loses all abilities and has base power and toughness 0/1.",
@@ -1211,7 +1196,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "The power of the creature is checked on activation and on resolution. If the targeted creature’s power is not 4 or greater on resolution, the ability is countered."
+          "text": "The power of the creature is checked on activation and on resolution. If the targeted creature's power is not 4 or greater on resolution, the ability is countered."
         }
       ],
       "subtypes": [
@@ -1270,12 +1255,6 @@
         "EMA"
       ],
       "rarity": "Uncommon",
-      "rulings": [
-        {
-          "date": "2004-10-04",
-          "text": "You can cast this if there are no enchantments in your graveyard. The enters the battlefield ability just doesn’t do anything."
-        }
-      ],
       "subtypes": [
         "Human",
         "Monk",
@@ -1737,10 +1716,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Tempest Block",
           "legality": "Legal"
         },
@@ -1845,7 +1820,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "You can attach this to an opponent’s creature, and all damage done to you is instead done to their creature."
+          "text": "You can attach this to an opponent's creature, and all damage done to you is instead done to their creature."
         },
         {
           "date": "2004-10-04",
@@ -1855,7 +1830,7 @@
       "subtypes": [
         "Aura"
       ],
-      "text": "Enchant creature (Target a creature as you cast this. This card enters the battlefield attached to that creature.)\nAll damage that would be dealt to you is dealt to enchanted creature instead.",
+      "text": "Enchant creature\nAll damage that would be dealt to you is dealt to enchanted creature instead.",
       "type": "Enchantment — Aura",
       "types": [
         "Enchantment"
@@ -1909,7 +1884,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "If the spell fails because the target is not there or isn’t legal, the owner does not gain any life."
+          "text": "If the spell fails because the target is not there or isn't legal, the owner does not gain any life."
         }
       ],
       "text": "Destroy target creature. Its owner gains 4 life.",
@@ -2866,19 +2841,19 @@
       "rulings": [
         {
           "date": "2008-10-01",
-          "text": "Whether or not the ability triggers depends on if the Avatar has the ability while in the graveyard. If it doesn’t (thanks to Yixlid Jailer, for instance), then the ability won’t trigger. It doesn’t matter whether the Avatar had the ability in its previous zone (it will trigger even if it had been on the battlefield with Humility)."
+          "text": "Whether or not the ability triggers depends on if the Avatar has the ability while in the graveyard. If it doesn't (thanks to Yixlid Jailer, for instance), then the ability won't trigger. It doesn't matter whether the Avatar had the ability in its previous zone (it will trigger even if it had been on the battlefield with Humility)."
         },
         {
           "date": "2012-07-01",
-          "text": "Serra Avatar’s power and toughness are constantly updated as your life total changes."
+          "text": "Serra Avatar's power and toughness are constantly updated as your life total changes."
         },
         {
           "date": "2012-07-01",
-          "text": "The ability that defines Serra Avatar’s power and toughness works in all zones, not just the battlefield."
+          "text": "The ability that defines Serra Avatar's power and toughness works in all zones, not just the battlefield."
         },
         {
           "date": "2012-07-01",
-          "text": "If Serra Avatar is no longer in your graveyard when its triggered ability resolves, you won’t shuffle your library."
+          "text": "If Serra Avatar is no longer in your graveyard when its triggered ability resolves, you won't shuffle your library."
         }
       ],
       "subtypes": [
@@ -3500,7 +3475,7 @@
         "USG"
       ],
       "rarity": "Uncommon",
-      "text": "Put three 2/2 white Knight creature tokens onto the battlefield. Exile them at the beginning of the next cleanup step.",
+      "text": "Create three 2/2 white Knight creature tokens. Exile them at the beginning of the next cleanup step.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -3552,7 +3527,8 @@
         "USG",
         "7ED",
         "8ED",
-        "9ED"
+        "9ED",
+        "MPS_AKH"
       ],
       "rarity": "Rare",
       "rulings": [
@@ -3621,7 +3597,7 @@
       "rulings": [
         {
           "date": "2007-07-15",
-          "text": "You can’t put an Aura card from your hand onto the battlefield this way if that Aura can’t legally enchant Academy Researchers. For example, you can’t put an Aura with “enchant land” or “enchant green creature” onto the battlefield attached to Academy Researchers (unless Academy Researchers somehow turned into a land or a green creature before the ability resolved)."
+          "text": "You can't put an Aura card from your hand onto the battlefield this way if that Aura can't legally enchant Academy Researchers. For example, you can't put an Aura with \"enchant land\" or \"enchant green creature\" onto the battlefield attached to Academy Researchers (unless Academy Researchers somehow turned into a land or a green creature before the ability resolved)."
         }
       ],
       "subtypes": [
@@ -3654,10 +3630,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -3670,19 +3642,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Theros Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -4160,7 +4120,8 @@
         "7ED",
         "M10",
         "M12",
-        "M14"
+        "M14",
+        "W17"
       ],
       "rarity": "Common",
       "subtypes": [
@@ -4556,7 +4517,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "The creatures and lands are only prevented from untapping during the targeted player’s next untap step. They can still can untap during other player’s untap steps."
+          "text": "The creatures and lands are only prevented from untapping during the targeted player's next untap step. They can still can untap during other player's untap steps."
         },
         {
           "date": "2009-10-01",
@@ -4622,7 +4583,7 @@
       "rulings": [
         {
           "date": "2012-07-01",
-          "text": "If Fog Bank blocks a creature with trample, that creature’s controller must assign 2 damage to Fog Bank (assuming it’s blocking no other creatures, there was no damage marked on it, and nothing has changed its toughness). The remainder can be assigned to the defending player or planeswalker."
+          "text": "If Fog Bank blocks a creature with trample, that creature's controller must assign 2 damage to Fog Bank (assuming it's blocking no other creatures, there was no damage marked on it, and nothing has changed its toughness). The remainder can be assigned to the defending player or planeswalker."
         }
       ],
       "subtypes": [
@@ -4745,12 +4706,8 @@
       "reserved": true,
       "rulings": [
         {
-          "date": "2004-10-04",
-          "text": "You can untap another player's lands."
-        },
-        {
-          "date": "2004-10-04",
-          "text": "This does not target the lands."
+          "date": "2016-06-08",
+          "text": "You choose which lands to untap as the triggered ability resolves. They aren't targeted, and they don't have to be lands that you control."
         }
       ],
       "subtypes": [
@@ -4977,7 +4934,7 @@
       "rulings": [
         {
           "date": "2005-08-01",
-          "text": "Imaginary Pet’s ability triggers only if you have cards in your hand as your upkeep begins, and the ability checks again as it resolves. If your hand is empty at both those times, Imaginary Pet stays on the battlefield."
+          "text": "Imaginary Pet's ability triggers only if you have cards in your hand as your upkeep begins, and the ability checks again as it resolves. If your hand is empty at both those times, Imaginary Pet stays on the battlefield."
         }
       ],
       "subtypes": [
@@ -5367,13 +5324,14 @@
       "printings": [
         "USG",
         "PC2",
-        "EMA"
+        "EMA",
+        "PCA"
       ],
       "rarity": "Uncommon",
       "rulings": [
         {
           "date": "2016-06-08",
-          "text": "You choose which lands to untap as the triggered ability resolves. They aren’t targeted, and they don’t have to be lands that you control."
+          "text": "You choose which lands to untap as the triggered ability resolves. They aren't targeted, and they don't have to be lands that you control."
         }
       ],
       "subtypes": [
@@ -5462,11 +5420,11 @@
         },
         {
           "date": "2004-10-04",
-          "text": "When this spell resolves, you either pay X mana or let your lands become tapped. The lands that become tapped are not “tapped for mana\". If you choose to pay, you may pay the X mana using whatever mana abilities you want to use."
+          "text": "When this spell resolves, you either pay X mana or let your lands become tapped. The lands that become tapped are not \"tapped for mana\". If you choose to pay, you may pay the X mana using whatever mana abilities you want to use."
         },
         {
           "date": "2010-03-01",
-          "text": "Only lands that actually have mana abilities will get tappped. This includes basic lands and lands with mana abilities printed on them, as well as lands which have been granted a mana ability by some effect."
+          "text": "Only lands that actually have mana abilities will get tapped. This includes basic lands and lands with mana abilities printed on them, as well as lands which have been granted a mana ability by some effect."
         }
       ],
       "text": "Counter target spell unless its controller pays {X}. If he or she doesn't, that player taps all lands with mana abilities he or she controls and empties his or her mana pool.",
@@ -5685,25 +5643,26 @@
         "USG",
         "8ED",
         "9ED",
-        "M13"
+        "M13",
+        "MM3"
       ],
       "rarity": "Common",
       "rulings": [
         {
-          "date": "2012-07-01",
-          "text": "Rewind targets only a spell. It doesn’t target any lands. The lands are chosen on resolution. It doesn’t matter who controls the lands."
+          "date": "2017-03-14",
+          "text": "Rewind targets only a spell. It doesn't target any lands. The lands are chosen as Rewind resolves."
         },
         {
-          "date": "2012-07-01",
-          "text": "When Rewind resolves, you choose up to four lands and those lands untap once. You can’t choose one land and have it untap four times, for example."
+          "date": "2017-03-14",
+          "text": "You can choose up to four lands, no matter who controls any of them. Those lands untap once. You can't choose one land and have it untap four times, for example."
         },
         {
-          "date": "2012-07-01",
-          "text": "If the spell is an illegal target when Rewind tries to resolve, perhaps because it was countered by another spell or ability, Rewind will be countered and none of its effects will happen. You won’t untap any lands."
+          "date": "2017-03-14",
+          "text": "If the spell is an illegal target when Rewind tries to resolve, perhaps because it was countered by another spell or ability, Rewind will be countered and none of its effects will happen. You won't untap any lands."
         },
         {
-          "date": "2012-07-01",
-          "text": "If Rewind resolves but the target spell can’t be countered, you’ll still untap lands."
+          "date": "2017-03-14",
+          "text": "If Rewind resolves but the target spell can't be countered, you'll still untap lands."
         }
       ],
       "text": "Counter target spell. Untap up to four lands.",
@@ -6163,7 +6122,8 @@
       "originalText": "Return all lands to owners' hands.",
       "originalType": "Instant",
       "printings": [
-        "USG"
+        "USG",
+        "MPS_AKH"
       ],
       "rarity": "Rare",
       "rulings": [
@@ -6279,12 +6239,8 @@
       "reserved": true,
       "rulings": [
         {
-          "date": "2004-10-04",
-          "text": "You can untap another player's lands."
-        },
-        {
-          "date": "2004-10-04",
-          "text": "This does not target the lands."
+          "date": "2016-06-08",
+          "text": "You choose which lands to untap as the triggered ability resolves. They aren't targeted, and they don't have to be lands that you control."
         }
       ],
       "text": "Exile Time Spiral. Each player shuffles his or her graveyard and hand into his or her library, then draws seven cards. You untap up to six lands.",
@@ -6778,7 +6734,8 @@
         "USG",
         "BRB",
         "CMD",
-        "C15"
+        "C15",
+        "C16"
       ],
       "rarity": "Uncommon",
       "text": "Each player discards his or her hand, then draws cards equal to the greatest number of cards a player discarded this way.",
@@ -7541,14 +7498,14 @@
         },
         {
           "date": "2010-08-15",
-          "text": "The amount of damage dealt to a creature is not bounded by its toughness, and the amount of damage dealt to a player is not bounded by that player’s life total. For example, if Corrupt deals 6 damage to a 2/2 creature, you’ll gain 6 life."
+          "text": "The amount of damage dealt to a creature is not bounded by its toughness, and the amount of damage dealt to a player is not bounded by that player's life total. For example, if Corrupt deals 6 damage to a 2/2 creature, you'll gain 6 life."
         },
         {
           "date": "2013-07-01",
           "text": "Corrupt counts any land you control with the subtype Swamp, not just ones named Swamp."
         }
       ],
-      "text": "Corrupt deals damage equal to the number of Swamps you control to target creature or player. You gain life equal to the damage dealt this way.",
+      "text": "Corrupt deals damage to target creature or player equal to the number of Swamps you control. You gain life equal to the damage dealt this way.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -7650,7 +7607,8 @@
         "USG",
         "CMD",
         "PC2",
-        "VMA"
+        "VMA",
+        "PCA"
       ],
       "rarity": "Rare",
       "subtypes": [
@@ -7745,7 +7703,8 @@
         "V13",
         "VMA",
         "DD3_DVD",
-        "TPR"
+        "TPR",
+        "MPS_AKH"
       ],
       "rarity": "Common",
       "text": "Add {B}{B}{B} to your mana pool.",
@@ -7899,13 +7858,14 @@
       "printings": [
         "USG",
         "PD3",
-        "C15"
+        "C15",
+        "CMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "If the creature is on the battlefield and is returned to its owner’s hand or is exiled, this card loses track of the creature and has no further effects in the future."
+          "text": "If the creature is on the battlefield and is returned to its owner's hand or is exiled, this card loses track of the creature and has no further effects in the future."
         }
       ],
       "text": "When Diabolic Servitude enters the battlefield, return target creature card from your graveyard to the battlefield.\nWhen the creature put onto the battlefield with Diabolic Servitude dies, exile it and return Diabolic Servitude to its owner's hand.\nWhen Diabolic Servitude leaves the battlefield, exile the creature put onto the battlefield with Diabolic Servitude.",
@@ -7986,6 +7946,10 @@
           "legality": "Legal"
         },
         {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Khans of Tarkir Block",
           "legality": "Legal"
         },
@@ -7995,10 +7959,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -8032,7 +7992,8 @@
         "MD1",
         "DD3_DVD",
         "DTK",
-        "EMA"
+        "EMA",
+        "XLN"
       ],
       "rarity": "Common",
       "text": "Target opponent reveals his or her hand. You choose a noncreature, nonland card from it. That player discards that card.",
@@ -8345,19 +8306,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
           "legality": "Legal"
         },
         {
@@ -8509,7 +8458,7 @@
         },
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn’t matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
         }
       ],
       "text": "Pay half your life, rounded up: Lurking Evil becomes a 4/4 Horror creature with flying.",
@@ -8620,7 +8569,7 @@
       "rulings": [
         {
           "date": "2007-07-15",
-          "text": "It doesn’t matter who controlled the creature cards when they were on the battlefield. As long as they were put into your graveyard, you get to put them into your hand."
+          "text": "It doesn't matter who controlled the creature cards when they were on the battlefield. As long as they were put into your graveyard, you get to put them into your hand."
         },
         {
           "date": "2007-07-15",
@@ -8701,18 +8650,6 @@
         },
         {
           "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -8918,7 +8855,7 @@
         },
         {
           "date": "2011-06-01",
-          "text": "Note that “until end of turn” effects wear off after “at the beginning of the end step” triggered abilities, so an artifact that animates until end of turn can keep this on the battlefield."
+          "text": "Note that \"until end of turn\" effects wear off after \"at the beginning of the end step\" triggered abilities, so an artifact that animates until end of turn can keep this on the battlefield."
         },
         {
           "date": "2011-06-01",
@@ -8951,18 +8888,6 @@
         },
         {
           "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -9081,18 +9006,6 @@
         },
         {
           "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -9384,18 +9297,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
-          "legality": "Legal"
-        },
-        {
           "format": "Urza Block",
           "legality": "Legal"
         },
@@ -9591,7 +9492,7 @@
         },
         {
           "date": "2008-04-01",
-          "text": "A “creature spell” is any spell with the type Creature, even if it has other types such as Artifact or Enchantment. Older cards of type Summon are also Creature spells."
+          "text": "A \"creature spell\" is any spell with the type Creature, even if it has other types such as Artifact or Enchantment. Older cards of type Summon are also Creature spells."
         }
       ],
       "subtypes": [
@@ -9654,7 +9555,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "This card is a bit weird. When it enters the battlefield under your control, you give control of it to an opponent. After that it damages them each turn because the “you” on the card means its controller."
+          "text": "This card is a bit weird. When it enters the battlefield under your control, you give control of it to an opponent. After that it damages them each turn because the \"you\" on the card means its controller."
         }
       ],
       "subtypes": [
@@ -9731,7 +9632,7 @@
         "Black"
       ],
       "flavor": "Gix despised the sylvan morass. The gouge that the portal had torn in the forest was the only pleasing sight.",
-      "id": "7b5d3b07baba5743a199e91ae64ecd5927f2b38b",
+      "id": "2e60cb0099f1c1676d8765d2b3d6361d3f3e9700",
       "imageName": "tainted aether",
       "layout": "normal",
       "legalities": [
@@ -9755,7 +9656,7 @@
       "manaCost": "{2}{B}{B}",
       "mciNumber": "161",
       "multiverseid": 5752,
-      "name": "Tainted Æther",
+      "name": "Tainted Aether",
       "number": "161",
       "originalText": "Whenever a creature comes into play, its controller sacrifices a creature or land.",
       "originalType": "Enchantment",
@@ -9779,7 +9680,7 @@
         },
         {
           "date": "2004-10-04",
-          "text": "Tainted AEther’s controller is the one that controls its triggered ability, but the controller of the creature that entered the battlefield chooses what creature they sacrifice during resolution."
+          "text": "Tainted Aether's controller is the one that controls its triggered ability, but the controller of the creature that entered the battlefield chooses what creature they sacrifice during resolution."
         }
       ],
       "text": "Whenever a creature enters the battlefield, its controller sacrifices a creature or land.",
@@ -10049,25 +9950,26 @@
         "CNS",
         "C14",
         "C15",
-        "EMA"
+        "EMA",
+        "CMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
         {
           "date": "2016-06-08",
-          "text": "You must choose two targets. You can’t cast Victimize targeting only one creature card."
+          "text": "You must choose two targets. You can't cast Victimize targeting only one creature card."
         },
         {
           "date": "2016-06-08",
-          "text": "The creature you sacrifice isn’t chosen until Victimize resolves. You can’t return the creature you sacrifice because it will still be on the battlefield at the time targets are chosen."
+          "text": "The creature you sacrifice isn't chosen until Victimize resolves. You can't return the creature you sacrifice because it will still be on the battlefield at the time targets are chosen."
         },
         {
           "date": "2016-06-08",
-          "text": "As Victimize resolves, you must sacrifice a creature if able. You can’t change your mind and choose not to sacrifice anything."
+          "text": "As Victimize resolves, you must sacrifice a creature if able. You can't change your mind and choose not to sacrifice anything."
         },
         {
           "date": "2016-06-08",
-          "text": "If one of the targeted creature cards is an illegal target (for instance, because it has left your graveyard before Victimize resolves), you’ll still sacrifice a creature and put the other card onto the battlefield. If both are illegal targets, Victimize will be countered. You won’t sacrifice a creature."
+          "text": "If one of the targeted creature cards is an illegal target (for instance, because it has left your graveyard before Victimize resolves), you'll still sacrifice a creature and put the other card onto the battlefield. If both are illegal targets, Victimize will be countered. You won't sacrifice a creature."
         },
         {
           "date": "2016-06-08",
@@ -10356,7 +10258,7 @@
         },
         {
           "date": "2004-10-04",
-          "text": "If an effect asks you to discard a card, you can’t “discard” something that is in your graveyard. Those cards are not in your hand. Thus, Cycling abilities of cards in the graveyard can’t be activated."
+          "text": "If an effect asks you to discard a card, you can't \"discard\" something that is in your graveyard. Those cards are not in your hand. Thus, Cycling abilities of cards in the graveyard can't be activated."
         },
         {
           "date": "2004-10-04",
@@ -10364,11 +10266,11 @@
         },
         {
           "date": "2004-10-04",
-          "text": "If you play a card using Yawgmoth’s Will and something triggers only when “cast from your hand\", that something will not trigger. Such things trigger based on where the card came from."
+          "text": "If you play a card using Yawgmoth's Will and something triggers only when \"cast from your hand\", that something will not trigger. Such things trigger based on where the card came from."
         },
         {
           "date": "2004-10-04",
-          "text": "To “play a card” is to either cast a spell or to put a land onto the battlefield using the main phase special action."
+          "text": "To \"play a card\" is to either cast a spell or to put a land onto the battlefield using the main phase special action."
         },
         {
           "date": "2006-10-15",
@@ -10507,7 +10409,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
+          "format": "Khans of Tarkir Block",
           "legality": "Legal"
         },
         {
@@ -10516,26 +10418,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tarkir Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Standard",
           "legality": "Legal"
         },
         {
@@ -10843,12 +10725,6 @@
         "EMA"
       ],
       "rarity": "Rare",
-      "rulings": [
-        {
-          "date": "2004-10-04",
-          "text": "The ability does 4 damage to every creature on the battlefield other than Crater Hellion."
-        }
-      ],
       "subtypes": [
         "Hellion",
         "Beast"
@@ -11026,11 +10902,11 @@
         }
       ],
       "subtypes": [
-        "Lizard"
+        "Dinosaur"
       ],
       "text": "Whenever Dromosaur blocks or becomes blocked, it gets +2/-2 until end of turn.",
       "toughness": "3",
-      "type": "Creature — Lizard",
+      "type": "Creature — Dinosaur",
       "types": [
         "Creature"
       ]
@@ -11451,7 +11327,7 @@
       "rulings": [
         {
           "date": "2008-08-01",
-          "text": "A Goblin permanent card is an artifact, creature, land, and/or enchantment card with the creature type “Goblin\". Usually such cards will be creatures in addition to any other types, but they may be tribal instead. For example, you could put Boggart Shenanigans onto the battlefield with this effect."
+          "text": "A Goblin permanent card is an artifact, creature, land, and/or enchantment card with the creature type \"Goblin\". Usually such cards will be creatures in addition to any other types, but they may be tribal instead. For example, you could put Boggart Shenanigans onto the battlefield with this effect."
         }
       ],
       "subtypes": [
@@ -11516,11 +11392,11 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "Because the “search” requires you to find a card with certain characteristics, you don’t have to find the card if you don’t want to."
+          "text": "Because the \"search\" requires you to find a card with certain characteristics, you don't have to find the card if you don't want to."
         },
         {
           "date": "2008-04-01",
-          "text": "You can search for any card with the creature type Goblin, including Creature or Tribal cards. Older cards of type “Summon Goblin” and “Summon Goblins” also count. You can’t search for cards that have Goblin in the name but don’t have the creature type Goblin."
+          "text": "You can search for any card with the creature type Goblin, including Creature or Tribal cards. Older cards of type \"Summon Goblin\" and \"Summon Goblins\" also count. You can't search for cards that have Goblin in the name but don't have the creature type Goblin."
         }
       ],
       "subtypes": [
@@ -11583,7 +11459,7 @@
           "text": "The tokens are named \"Goblin\" and are of creature type \"Goblin\"."
         }
       ],
-      "text": "Put X 1/1 red Goblin creature tokens onto the battlefield.",
+      "text": "Create X 1/1 red Goblin creature tokens.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -11724,10 +11600,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -11736,19 +11608,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
           "format": "Ravnica Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -12065,27 +11925,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Onslaught Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -12819,11 +12663,11 @@
       "rulings": [
         {
           "date": "2010-08-15",
-          "text": "Only Shiv’s Embrace’s controller (who is not necessarily the enchanted creature’s controller) can activate its activated ability."
+          "text": "Only Shiv's Embrace's controller (who is not necessarily the enchanted creature's controller) can activate its activated ability."
         },
         {
           "date": "2010-08-15",
-          "text": "When Shiv’s Embrace’s activated ability resolves, the creature Shiv’s Embrace is enchanting at that time will get +1/+0 (regardless of what creature Shiv’s Embrace was enchanting when the ability was activated). If Shiv’s Embrace has left the battlefield by then, the creature it was enchanting at the time it left the battlefield will get +1/+0."
+          "text": "When Shiv's Embrace's activated ability resolves, the creature Shiv's Embrace is enchanting at that time will get +1/+0 (regardless of what creature Shiv's Embrace was enchanting when the ability was activated). If Shiv's Embrace has left the battlefield by then, the creature it was enchanting at the time it left the battlefield will get +1/+0."
         }
       ],
       "subtypes": [
@@ -12937,11 +12781,11 @@
       ],
       "rarity": "Uncommon",
       "subtypes": [
-        "Lizard"
+        "Dinosaur"
       ],
       "text": "First strike, haste\nEcho {2}{R} (At the beginning of your upkeep, if this came under your control since the beginning of your last upkeep, sacrifice it unless you pay its echo cost.)",
       "toughness": "1",
-      "type": "Creature — Lizard",
+      "type": "Creature — Dinosaur",
       "types": [
         "Creature"
       ]
@@ -13053,7 +12897,7 @@
         },
         {
           "date": "2016-06-08",
-          "text": "You only sacrifice the creature if you still control it at end of turn. If that creature has left the battlefield, even if it came back, you don’t sacrifice it. Likewise, if an opponent has gained control of it, it won’t be sacrificed and will remain on the battlefield indefinitely."
+          "text": "You only sacrifice the creature if you still control it at end of turn. If that creature has left the battlefield, even if it came back, you don't sacrifice it. Likewise, if an opponent has gained control of it, it won't be sacrificed and will remain on the battlefield indefinitely."
         },
         {
           "date": "2016-06-08",
@@ -13221,7 +13065,8 @@
         "BTD",
         "10E",
         "MMA",
-        "M15"
+        "M15",
+        "W17"
       ],
       "rarity": "Uncommon",
       "subtypes": [
@@ -13656,7 +13501,8 @@
       "printings": [
         "USG",
         "10E",
-        "DDR"
+        "DDR",
+        "C17"
       ],
       "rarity": "Rare",
       "rulings": [
@@ -13670,11 +13516,11 @@
         },
         {
           "date": "2004-10-04",
-          "text": "If no card of the chosen type is found before your library empties, you don’t get a card, but you do get to order all the cards in your library any way you choose."
+          "text": "If no card of the chosen type is found before your library empties, you don't get a card, but you do get to order all the cards in your library any way you choose."
         },
         {
           "date": "2007-07-15",
-          "text": "If your library is empty, Abundance can prevent you from losing the game for being unable to draw a card. If an effect or turn-based action would cause you to draw a card, you can replace that draw with Abundance’s replacement effect. (It doesn’t matter that you’d be unable to actually draw a card.) Since Abundance’s effect has you put a card into your hand instead of drawing a card, you’ll never be forced to draw a card with an empty library."
+          "text": "If your library is empty, Abundance can prevent you from losing the game for being unable to draw a card. If an effect or turn-based action would cause you to draw a card, you can replace that draw with Abundance's replacement effect. (It doesn't matter that you'd be unable to actually draw a card.) Since Abundance's effect has you put a card into your hand instead of drawing a card, you'll never be forced to draw a card with an empty library."
         }
       ],
       "text": "If you would draw a card, you may instead choose land or nonland and reveal cards from the top of your library until you reveal a card of the chosen kind. Put that card into your hand and put all other cards revealed this way on the bottom of your library in any order.",
@@ -13902,7 +13748,7 @@
         },
         {
           "date": "2004-10-04",
-          "text": "The ability must target two different lands. It can’t be activated if there is just one land to target."
+          "text": "The ability must target two different lands. It can't be activated if there is just one land to target."
         }
       ],
       "subtypes": [
@@ -13963,15 +13809,15 @@
       "rulings": [
         {
           "date": "2016-06-08",
-          "text": "Argothian Enchantress’s last ability will resolve before the spell that caused it to trigger."
+          "text": "Argothian Enchantress's last ability will resolve before the spell that caused it to trigger."
         },
         {
           "date": "2016-06-08",
-          "text": "If the enchantment spell is countered, Argothian Enchantress’s last ability still resolves and causes you to draw a card."
+          "text": "If the enchantment spell is countered, Argothian Enchantress's last ability still resolves and causes you to draw a card."
         },
         {
           "date": "2016-06-08",
-          "text": "Enchantments put onto the battlefield without being cast won’t cause Argothian Enchantress’s last ability to trigger."
+          "text": "Enchantments put onto the battlefield without being cast won't cause Argothian Enchantress's last ability to trigger."
         }
       ],
       "subtypes": [
@@ -14116,27 +13962,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -14336,7 +14166,7 @@
           "text": "The ability is not a mana ability."
         }
       ],
-      "text": "At the beginning of each of your main phases, if you haven't added mana to your mana pool with this ability this turn, you may add up to X mana of any one color to your mana pool, where X is the number of Islands target opponent controls.",
+      "text": "At the beginning of each of your main phases, if you haven't added mana to your mana pool with this ability this turn, you may add X mana of any one color to your mana pool, where X is the number of Islands target opponent controls.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -14857,19 +14687,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
           "legality": "Legal"
         },
         {
@@ -14973,10 +14791,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Invasion Block",
           "legality": "Legal"
         },
@@ -14990,18 +14804,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -15030,12 +14832,6 @@
         "DDE"
       ],
       "rarity": "Common",
-      "rulings": [
-        {
-          "date": "2004-10-04",
-          "text": "The color of mana to be generated is chosen when tapping the land for mana."
-        }
-      ],
       "subtypes": [
         "Aura"
       ],
@@ -15311,7 +15107,7 @@
         },
         {
           "date": "2005-08-01",
-          "text": "You draw cards equal to the creature’s power when you sacrificed it. This includes any bonuses from effects like Giant Growth."
+          "text": "You draw cards equal to the creature's power when you sacrificed it. This includes any bonuses from effects like Giant Growth."
         }
       ],
       "text": "Sacrifice a creature: Draw cards equal to the sacrificed creature's power, then discard three cards.",
@@ -15367,7 +15163,7 @@
           "text": "The ability does not trigger unless the player has more lands at the beginning of upkeep. This is checked again on resolution, and if the player does not still have more lands, no token is generated."
         }
       ],
-      "text": "At the beginning of each player's upkeep, if that player controls more lands than each other player, the player puts a 1/1 green Saproling creature token onto the battlefield.",
+      "text": "At the beginning of each player's upkeep, if that player controls more lands than each other player, the player creates a 1/1 green Saproling creature token.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -15947,7 +15743,7 @@
           "text": "Adding a counter is optional. If you forget to add one during your upkeep, you cannot back up and add one later."
         }
       ],
-      "text": "At the beginning of your upkeep, you may put a verse counter on Midsummer Revel.\n{G}, Sacrifice Midsummer Revel: Put X 3/3 green Beast creature tokens onto the battlefield, where X is the number of verse counters on Midsummer Revel.",
+      "text": "At the beginning of your upkeep, you may put a verse counter on Midsummer Revel.\n{G}, Sacrifice Midsummer Revel: Create X 3/3 green Beast creature tokens, where X is the number of verse counters on Midsummer Revel.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -16049,13 +15845,14 @@
       "printings": [
         "USG",
         "pFNM",
-        "C14"
+        "C14",
+        "CMA"
       ],
       "rarity": "Common",
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "Since he is an Elf, he counts himself."
+          "text": "Since it is an Elf, it counts itself."
         }
       ],
       "subtypes": [
@@ -16229,7 +16026,7 @@
           "text": "Adding a counter is optional. If you forget to add one during your upkeep, you cannot back up and add one later."
         }
       ],
-      "text": "At the beginning of your upkeep, you may put a fungus counter on target nontoken creature.\nWhenever a creature with a fungus counter on it dies, put a 1/1 green Saproling creature token onto the battlefield for each fungus counter on that creature.\nWhen Sporogenesis leaves the battlefield, remove all fungus counters from all creatures.",
+      "text": "At the beginning of your upkeep, you may put a fungus counter on target nontoken creature.\nWhenever a creature with a fungus counter on it dies, create a 1/1 green Saproling creature token for each fungus counter on that creature.\nWhen Sporogenesis leaves the battlefield, remove all fungus counters from all creatures.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -16284,7 +16081,7 @@
       "rulings": [
         {
           "date": "2008-04-01",
-          "text": "This card now has Enchant Swamp, which works exactly like any other Enchant ability. This means it can only be cast targeting a Swamp, and it will be put into its owner’s graveyard if the permanent it’s attached to ever stops being a Swamp."
+          "text": "This card now has Enchant Swamp, which works exactly like any other Enchant ability. This means it can only be cast targeting a Swamp, and it will be put into its owner's graveyard if the permanent it's attached to ever stops being a Swamp."
         }
       ],
       "subtypes": [
@@ -16434,7 +16231,8 @@
       "power": "1",
       "printings": [
         "USG",
-        "C14"
+        "C14",
+        "CMA"
       ],
       "rarity": "Uncommon",
       "subtypes": [
@@ -16778,7 +16576,8 @@
       "printings": [
         "USG",
         "S99",
-        "C14"
+        "C14",
+        "CMA"
       ],
       "rarity": "Rare",
       "text": "Destroy all creatures with flying.",
@@ -17000,7 +16799,7 @@
         },
         {
           "date": "2011-01-25",
-          "text": "You get the mana whether you want it or not. If you don’t spend it, it will disappear at the end of the current step (or phase)."
+          "text": "You get the mana whether you want it or not. If you don't spend it, it will disappear at the end of the current step (or phase)."
         }
       ],
       "subtypes": [
@@ -17058,11 +16857,11 @@
       "rulings": [
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn’t matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
         },
         {
           "date": "2009-10-01",
-          "text": "If Chimeric Staff is already an artifact creature when you activate its ability, Chimeric Staff stays an artifact creature but the ability resets its creature types. You always apply the effect from this card before counters or other effects that modify power and toughness. For example, if you pay {3} to make it a 3/3, then someone gives it -1/-1, it will be a 2/2. If you then activate the ability with {4}, you will apply the “4/4” effect before the -1/-1 effect, so the end result will be a 3/3. Damage that was dealt to the creature stays on it."
+          "text": "If Chimeric Staff is already an artifact creature when you activate its ability, Chimeric Staff stays an artifact creature but the ability resets its creature types. You always apply the effect from this card before counters or other effects that modify power and toughness. For example, if you pay {3} to make it a 3/3, then someone gives it -1/-1, it will be a 2/2. If you then activate the ability with {4}, you will apply the \"4/4\" effect before the -1/-1 effect, so the end result will be a 3/3. Damage that was dealt to the creature stays on it."
         }
       ],
       "text": "{X}: Chimeric Staff becomes an X/X Construct artifact creature until end of turn.",
@@ -17408,7 +17207,7 @@
         "USG"
       ],
       "rarity": "Rare",
-      "text": "Cycling abilities you activate cost you up to {2} less to activate.",
+      "text": "Cycling abilities you activate cost up to {2} less to activate.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -17552,7 +17351,7 @@
         },
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn’t matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
         }
       ],
       "subtypes": [
@@ -17715,7 +17514,7 @@
         "USG"
       ],
       "rarity": "Rare",
-      "text": "When a spell or ability an opponent controls causes you to discard Metrognome, put four 1/1 colorless Gnome artifact creature tokens onto the battlefield.\n{4}, {T}: Put a 1/1 colorless Gnome artifact creature token onto the battlefield.",
+      "text": "When a spell or ability an opponent controls causes you to discard Metrognome, create four 1/1 colorless Gnome artifact creature tokens.\n{4}, {T}: Create a 1/1 colorless Gnome artifact creature token.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -17875,27 +17674,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -17973,10 +17756,10 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "You can pay 0 life if you want, but it’s not useful most of the time."
+          "text": "You can pay 0 life if you want, but it's not useful most of the time."
         }
       ],
-      "text": "As Phyrexian Processor enters the battlefield, pay any amount of life.\n{4}, {T}: Put an X/X black Minion creature token onto the battlefield, where X is the life paid as Phyrexian Processor entered the battlefield.",
+      "text": "As Phyrexian Processor enters the battlefield, pay any amount of life.\n{4}, {T}: Create an X/X black Minion creature token, where X is the life paid as Phyrexian Processor entered the battlefield.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -18225,14 +18008,14 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "The ability is optional. And you can add 0, 1, or 2 mana. You decide how much during resolution."
+          "text": "The ability is optional. And you can add {C}{C}, {C}, or no mana. You decide how much during resolution."
         },
         {
           "date": "2011-01-25",
           "text": "Any of this mana that isn't spent during your upkeep step will be removed before your draw step begins. You cannot save it to be spent on the card you will draw this turn."
         }
       ],
-      "text": "At the beginning of your upkeep, you may add {C} or {C}{C} to your mana pool. You can't spend this mana to cast spells.",
+      "text": "At the beginning of your upkeep, you may add {C}{C} to your mana pool. You can't spend this mana to cast spells.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -18593,7 +18376,8 @@
         "DDE",
         "C14",
         "C15",
-        "EMA"
+        "EMA",
+        "C17"
       ],
       "rarity": "Uncommon",
       "text": "Worn Powerstone enters the battlefield tapped.\n{T}: Add {C}{C} to your mana pool.",
@@ -18604,6 +18388,7 @@
     },
     {
       "artist": "Ciruelo",
+      "cmc": 0,
       "id": "7236bb4c077eb749bcdf214978a8f2c6b8b2279f",
       "imageName": "blasted landscape",
       "layout": "normal",
@@ -18650,6 +18435,7 @@
     },
     {
       "artist": "Bob Eggleton",
+      "cmc": 0,
       "colorIdentity": [
         "W"
       ],
@@ -18703,6 +18489,7 @@
     },
     {
       "artist": "Mark Zug",
+      "cmc": 0,
       "colorIdentity": [
         "G"
       ],
@@ -18751,6 +18538,7 @@
     },
     {
       "artist": "Chippy",
+      "cmc": 0,
       "colorIdentity": [
         "B"
       ],
@@ -18797,6 +18585,7 @@
     },
     {
       "artist": "Stephen Daniele",
+      "cmc": 0,
       "colorIdentity": [
         "B"
       ],
@@ -18836,7 +18625,8 @@
         "PD3",
         "C14",
         "DD3_GVL",
-        "C15"
+        "C15",
+        "CMA"
       ],
       "rarity": "Common",
       "rulings": [
@@ -18853,6 +18643,7 @@
     },
     {
       "artist": "Ciruelo",
+      "cmc": 0,
       "colorIdentity": [
         "U"
       ],
@@ -18904,6 +18695,7 @@
     },
     {
       "artist": "Ciruelo",
+      "cmc": 0,
       "colorIdentity": [
         "W"
       ],
@@ -18951,6 +18743,7 @@
     },
     {
       "artist": "John Matson",
+      "cmc": 0,
       "colorIdentity": [
         "R"
       ],
@@ -19004,6 +18797,7 @@
     },
     {
       "artist": "Stephen Daniele",
+      "cmc": 0,
       "colorIdentity": [
         "G"
       ],
@@ -19043,7 +18837,8 @@
         "C13",
         "C14",
         "DD3_GVL",
-        "C15"
+        "C15",
+        "CMA"
       ],
       "rarity": "Common",
       "rulings": [
@@ -19060,6 +18855,7 @@
     },
     {
       "artist": "Mark Tedin",
+      "cmc": 0,
       "colorIdentity": [
         "R"
       ],
@@ -19113,6 +18909,7 @@
     },
     {
       "artist": "Michael Sutfin",
+      "cmc": 0,
       "id": "6d9d7cce6f505d9f7dabd4a47a167dc1dd0f3bf9",
       "imageName": "thran quarry",
       "layout": "normal",
@@ -19159,6 +18956,7 @@
     },
     {
       "artist": "Stephen Daniele",
+      "cmc": 0,
       "colorIdentity": [
         "U"
       ],
@@ -19207,6 +19005,7 @@
     },
     {
       "artist": "Rob Alexander",
+      "cmc": 0,
       "colorIdentity": [
         "W"
       ],
@@ -19214,6 +19013,10 @@
       "imageName": "plains1",
       "layout": "normal",
       "legalities": [
+        {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
         {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
@@ -19232,6 +19035,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -19357,8 +19168,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -19425,7 +19236,15 @@
         "C15",
         "DDQ",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -19446,6 +19265,7 @@
     },
     {
       "artist": "Rob Alexander",
+      "cmc": 0,
       "colorIdentity": [
         "W"
       ],
@@ -19453,6 +19273,10 @@
       "imageName": "plains2",
       "layout": "normal",
       "legalities": [
+        {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
         {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
@@ -19471,6 +19295,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -19596,8 +19428,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -19664,7 +19496,15 @@
         "C15",
         "DDQ",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -19685,6 +19525,7 @@
     },
     {
       "artist": "Rob Alexander",
+      "cmc": 0,
       "colorIdentity": [
         "W"
       ],
@@ -19692,6 +19533,10 @@
       "imageName": "plains3",
       "layout": "normal",
       "legalities": [
+        {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
         {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
@@ -19710,6 +19555,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -19835,8 +19688,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -19903,7 +19756,15 @@
         "C15",
         "DDQ",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -19924,6 +19785,7 @@
     },
     {
       "artist": "Rob Alexander",
+      "cmc": 0,
       "colorIdentity": [
         "W"
       ],
@@ -19931,6 +19793,10 @@
       "imageName": "plains4",
       "layout": "normal",
       "legalities": [
+        {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
         {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
@@ -19949,6 +19815,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -20074,8 +19948,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -20142,7 +20016,15 @@
         "C15",
         "DDQ",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -20163,6 +20045,7 @@
     },
     {
       "artist": "Donato Giancola",
+      "cmc": 0,
       "colorIdentity": [
         "U"
       ],
@@ -20170,6 +20053,10 @@
       "imageName": "island1",
       "layout": "normal",
       "legalities": [
+        {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
         {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
@@ -20188,6 +20075,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -20311,8 +20206,8 @@
         "USG",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -20378,7 +20273,16 @@
         "C15",
         "DDQ",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "DDS",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -20399,6 +20303,7 @@
     },
     {
       "artist": "Donato Giancola",
+      "cmc": 0,
       "colorIdentity": [
         "U"
       ],
@@ -20406,6 +20311,10 @@
       "imageName": "island2",
       "layout": "normal",
       "legalities": [
+        {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
         {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
@@ -20424,6 +20333,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -20547,8 +20464,8 @@
         "USG",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -20614,7 +20531,16 @@
         "C15",
         "DDQ",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "DDS",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -20635,6 +20561,7 @@
     },
     {
       "artist": "Donato Giancola",
+      "cmc": 0,
       "colorIdentity": [
         "U"
       ],
@@ -20642,6 +20569,10 @@
       "imageName": "island3",
       "layout": "normal",
       "legalities": [
+        {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
         {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
@@ -20660,6 +20591,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -20783,8 +20722,8 @@
         "USG",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -20850,7 +20789,16 @@
         "C15",
         "DDQ",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "DDS",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -20871,6 +20819,7 @@
     },
     {
       "artist": "Donato Giancola",
+      "cmc": 0,
       "colorIdentity": [
         "U"
       ],
@@ -20878,6 +20827,10 @@
       "imageName": "island4",
       "layout": "normal",
       "legalities": [
+        {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
         {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
@@ -20896,6 +20849,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -21019,8 +20980,8 @@
         "USG",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -21086,7 +21047,16 @@
         "C15",
         "DDQ",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "DDS",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -21107,6 +21077,7 @@
     },
     {
       "artist": "John Avon",
+      "cmc": 0,
       "colorIdentity": [
         "B"
       ],
@@ -21114,6 +21085,10 @@
       "imageName": "swamp1",
       "layout": "normal",
       "legalities": [
+        {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
         {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
@@ -21132,6 +21107,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -21256,8 +21239,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -21328,7 +21311,15 @@
         "DDQ",
         "SOI",
         "DDR",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -21349,6 +21340,7 @@
     },
     {
       "artist": "John Avon",
+      "cmc": 0,
       "colorIdentity": [
         "B"
       ],
@@ -21356,6 +21348,10 @@
       "imageName": "swamp2",
       "layout": "normal",
       "legalities": [
+        {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
         {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
@@ -21374,6 +21370,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -21498,8 +21502,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -21570,7 +21574,15 @@
         "DDQ",
         "SOI",
         "DDR",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -21591,6 +21603,7 @@
     },
     {
       "artist": "John Avon",
+      "cmc": 0,
       "colorIdentity": [
         "B"
       ],
@@ -21598,6 +21611,10 @@
       "imageName": "swamp3",
       "layout": "normal",
       "legalities": [
+        {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
         {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
@@ -21616,6 +21633,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -21740,8 +21765,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -21812,7 +21837,15 @@
         "DDQ",
         "SOI",
         "DDR",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -21833,6 +21866,7 @@
     },
     {
       "artist": "John Avon",
+      "cmc": 0,
       "colorIdentity": [
         "B"
       ],
@@ -21840,6 +21874,10 @@
       "imageName": "swamp4",
       "layout": "normal",
       "legalities": [
+        {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
         {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
@@ -21858,6 +21896,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -21982,8 +22028,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -22054,7 +22100,15 @@
         "DDQ",
         "SOI",
         "DDR",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -22075,6 +22129,7 @@
     },
     {
       "artist": "John Avon",
+      "cmc": 0,
       "colorIdentity": [
         "R"
       ],
@@ -22082,6 +22137,10 @@
       "imageName": "mountain1",
       "layout": "normal",
       "legalities": [
+        {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
         {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
@@ -22100,6 +22159,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -22204,9 +22271,9 @@
         "LEA",
         "LEB",
         "2ED",
-        "ARN",
         "CED",
         "CEI",
+        "ARN",
         "3ED",
         "4ED",
         "ICE",
@@ -22225,8 +22292,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -22296,7 +22363,16 @@
         "BFZ",
         "C15",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "DDS",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -22317,6 +22393,7 @@
     },
     {
       "artist": "John Avon",
+      "cmc": 0,
       "colorIdentity": [
         "R"
       ],
@@ -22324,6 +22401,10 @@
       "imageName": "mountain2",
       "layout": "normal",
       "legalities": [
+        {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
         {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
@@ -22342,6 +22423,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -22446,9 +22535,9 @@
         "LEA",
         "LEB",
         "2ED",
-        "ARN",
         "CED",
         "CEI",
+        "ARN",
         "3ED",
         "4ED",
         "ICE",
@@ -22467,8 +22556,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -22538,7 +22627,16 @@
         "BFZ",
         "C15",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "DDS",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -22559,6 +22657,7 @@
     },
     {
       "artist": "John Avon",
+      "cmc": 0,
       "colorIdentity": [
         "R"
       ],
@@ -22566,6 +22665,10 @@
       "imageName": "mountain3",
       "layout": "normal",
       "legalities": [
+        {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
         {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
@@ -22584,6 +22687,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -22688,9 +22799,9 @@
         "LEA",
         "LEB",
         "2ED",
-        "ARN",
         "CED",
         "CEI",
+        "ARN",
         "3ED",
         "4ED",
         "ICE",
@@ -22709,8 +22820,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -22780,7 +22891,16 @@
         "BFZ",
         "C15",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "DDS",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -22801,6 +22921,7 @@
     },
     {
       "artist": "John Avon",
+      "cmc": 0,
       "colorIdentity": [
         "R"
       ],
@@ -22808,6 +22929,10 @@
       "imageName": "mountain4",
       "layout": "normal",
       "legalities": [
+        {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
         {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
@@ -22826,6 +22951,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -22930,9 +23063,9 @@
         "LEA",
         "LEB",
         "2ED",
-        "ARN",
         "CED",
         "CEI",
+        "ARN",
         "3ED",
         "4ED",
         "ICE",
@@ -22951,8 +23084,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -23022,7 +23155,16 @@
         "BFZ",
         "C15",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "DDS",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -23043,6 +23185,7 @@
     },
     {
       "artist": "Anthony S. Waters",
+      "cmc": 0,
       "colorIdentity": [
         "G"
       ],
@@ -23050,6 +23193,10 @@
       "imageName": "forest1",
       "layout": "normal",
       "legalities": [
+        {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
         {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
@@ -23068,6 +23215,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -23192,8 +23347,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -23262,7 +23417,16 @@
         "C15",
         "SOI",
         "DDR",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "DDS",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -23283,6 +23447,7 @@
     },
     {
       "artist": "Anthony S. Waters",
+      "cmc": 0,
       "colorIdentity": [
         "G"
       ],
@@ -23290,6 +23455,10 @@
       "imageName": "forest2",
       "layout": "normal",
       "legalities": [
+        {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
         {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
@@ -23308,6 +23477,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -23432,8 +23609,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -23502,7 +23679,16 @@
         "C15",
         "SOI",
         "DDR",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "DDS",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -23523,6 +23709,7 @@
     },
     {
       "artist": "Anthony S. Waters",
+      "cmc": 0,
       "colorIdentity": [
         "G"
       ],
@@ -23530,6 +23717,10 @@
       "imageName": "forest3",
       "layout": "normal",
       "legalities": [
+        {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
         {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
@@ -23548,6 +23739,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -23672,8 +23871,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -23742,7 +23941,16 @@
         "C15",
         "SOI",
         "DDR",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "DDS",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -23763,6 +23971,7 @@
     },
     {
       "artist": "Anthony S. Waters",
+      "cmc": 0,
       "colorIdentity": [
         "G"
       ],
@@ -23770,6 +23979,10 @@
       "imageName": "forest4",
       "layout": "normal",
       "legalities": [
+        {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
         {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
@@ -23788,6 +24001,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -23912,8 +24133,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -23982,7 +24203,16 @@
         "C15",
         "SOI",
         "DDR",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "DDS",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [

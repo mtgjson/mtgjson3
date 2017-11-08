@@ -4,7 +4,7 @@
   "gathererCode": "P2",
   "magicCardsInfoCode": "po2",
   "oldCode": "P02",
-  "releaseDate": "1998-06-01",
+  "releaseDate": "1998-06-24",
   "border": "black",
   "type": "starter",
   "booster": [
@@ -74,7 +74,7 @@
       "rulings": [
         {
           "date": "2013-04-15",
-          "text": "An ability that triggers when something “attacks and isn’t blocked” triggers in the declare blockers step after blockers are declared if (1) that creature is attacking and (2) no creatures are declared to block it. It will trigger even if that creature was put onto the battlefield attacking rather than having been declared as an attacker in the declare attackers step."
+          "text": "An ability that triggers when something \"attacks and isn't blocked\" triggers in the declare blockers step after blockers are declared if (1) that creature is attacking and (2) no creatures are declared to block it. It will trigger even if that creature was put onto the battlefield attacking rather than having been declared as an attacker in the declare attackers step."
         }
       ],
       "subtypes": [
@@ -103,6 +103,10 @@
       "legalities": [
         {
           "format": "Commander",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
           "legality": "Legal"
         },
         {
@@ -147,7 +151,9 @@
         "M10",
         "DPA",
         "ME4",
-        "DD3_JVC"
+        "DD3_JVC",
+        "W17",
+        "XLN"
       ],
       "rarity": "Uncommon",
       "subtypes": [
@@ -592,11 +598,11 @@
       "rulings": [
         {
           "date": "2008-10-01",
-          "text": "If Angel of Fury is removed from the graveyard after the ability triggers but before it resolves, it won’t get shuffled into its owner’s library. Similarly, if a replacement effect has the Incarnation move to a different zone instead of being put into the graveyard, the ability won’t trigger at all."
+          "text": "If Angel of Fury is removed from the graveyard after the ability triggers but before it resolves, it will remain in its zone when its owner shuffles his or her library. Similarly, if a replacement effect has it move to a different zone instead of being put into the graveyard, the ability won't trigger at all."
         },
         {
           "date": "2008-10-01",
-          "text": "Angel of Fury’s second ability is a leaves-the-battlefield ability. Because it works only from on the battlefield, it behaves differently than the _Lorwyn_ Incarnations. When Angel of Fury is put into a graveyard from the battlefield, it will look back in time (to the point just before it left the battlefield) to see if its ability triggers. That means the following: -- If Angel of Fury lost its triggered ability while on the battlefield (due to Snakeform, for example) and then was destroyed, the ability would not trigger. Angel of Fury would stay in its owner’s graveyard. -- If Angel of Fury had its triggered ability when it left the battlefield, but lost it when it was put into the graveyard (due to Yixlid Jailer, for example), the ability would still trigger. Angel of Fury would be shuffled into its owner’s library."
+          "text": "Angel of Fury's second ability is a leaves-the-battlefield ability. Because it works only from on the battlefield, it behaves differently than the _Lorwyn_ Incarnations. When Angel of Fury is put into a graveyard from the battlefield, it will look back in time (to the point just before it left the battlefield) to see if its ability triggers. That means the following: — If Angel of Fury lost its triggered ability while on the battlefield (due to Snakeform, for example) and then was destroyed, the ability would not trigger. Angel of Fury would stay in its owner's graveyard. — If Angel of Fury had its triggered ability when it left the battlefield, but lost it when it was put into the graveyard (due to Yixlid Jailer, for example), the ability would still trigger. Angel of Fury would be shuffled into its owner's library."
         }
       ],
       "subtypes": [
@@ -714,8 +720,8 @@
       "originalType": "Sorcery",
       "printings": [
         "POR",
-        "PO2",
         "EXO",
+        "PO2",
         "S99",
         "S00",
         "9ED",
@@ -963,7 +969,8 @@
         "MED",
         "ME4",
         "VMA",
-        "V14"
+        "V14",
+        "MPS_AKH"
       ],
       "rarity": "Rare",
       "text": "Destroy all lands.",
@@ -1039,23 +1046,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -1073,7 +1064,8 @@
       "printings": [
         "PO2",
         "ME2",
-        "PC2"
+        "PC2",
+        "PCA"
       ],
       "rarity": "Uncommon",
       "subtypes": [
@@ -1277,7 +1269,7 @@
       "colors": [
         "Red"
       ],
-      "flavor": "\"This isn't what I meant by ‘facing the heat of battle!'\"\n—Jefan, Talas ship captain",
+      "flavor": "\"This isn't what I meant by 'facing the heat of battle!'\"\n—Jefan, Talas ship captain",
       "id": "03bd8bf8af08ae6e505de519fdf6fa8ecbf41cb1",
       "imageName": "blaze",
       "layout": "normal",
@@ -1287,27 +1279,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -2061,11 +2037,11 @@
       "rulings": [
         {
           "date": "2008-04-01",
-          "text": "If this creature is attacking a planeswalker, assigning its damage as though it weren’t blocked means the damage is assigned to the planeswalker, not to the defending player."
+          "text": "If this creature is attacking a planeswalker, assigning its damage as though it weren't blocked means the damage is assigned to the planeswalker, not to the defending player."
         },
         {
           "date": "2008-04-01",
-          "text": "When assigning combat damage, you choose whether you want to assign all damage to blocking creatures, or if you want to assign all of it to the defending player or planeswalker. You can’t split the damage assignment between them."
+          "text": "When assigning combat damage, you choose whether you want to assign all damage to blocking creatures, or if you want to assign all of it to the defending player or planeswalker. You can't split the damage assignment between them."
         },
         {
           "date": "2008-04-01",
@@ -2073,7 +2049,7 @@
         },
         {
           "date": "2008-04-01",
-          "text": "If blocked by a creature with banding, the defending player decides whether or not the damage is assigned “as though it weren’t blocked\"."
+          "text": "If blocked by a creature with banding, the defending player decides whether or not the damage is assigned \"as though it weren't blocked\"."
         }
       ],
       "subtypes": [
@@ -2191,27 +2167,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -2294,7 +2254,9 @@
         "7ED",
         "M10",
         "CMD",
-        "C15"
+        "C15",
+        "CMA",
+        "C17"
       ],
       "rarity": "Rare",
       "rulings": [
@@ -2361,7 +2323,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "The creatures and lands are only prevented from untapping during the targeted player’s next untap step. They can still can untap during other player’s untap steps."
+          "text": "The creatures and lands are only prevented from untapping during the targeted player's next untap step. They can still can untap during other player's untap steps."
         },
         {
           "date": "2009-10-01",
@@ -2549,6 +2511,7 @@
     },
     {
       "artist": "Quinton Hoover",
+      "cmc": 0,
       "colorIdentity": [
         "G"
       ],
@@ -2556,6 +2519,10 @@
       "imageName": "forest3",
       "layout": "normal",
       "legalities": [
+        {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
         {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
@@ -2574,6 +2541,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -2697,8 +2672,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -2767,7 +2742,16 @@
         "C15",
         "SOI",
         "DDR",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "DDS",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -2783,10 +2767,12 @@
       "variations": [
         8410,
         8409
-      ]
+      ],
+      "watermark": "Green"
     },
     {
       "artist": "Quinton Hoover",
+      "cmc": 0,
       "colorIdentity": [
         "G"
       ],
@@ -2794,6 +2780,10 @@
       "imageName": "forest1",
       "layout": "normal",
       "legalities": [
+        {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
         {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
@@ -2812,6 +2802,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -2935,8 +2933,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -3005,7 +3003,16 @@
         "C15",
         "SOI",
         "DDR",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "DDS",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -3021,10 +3028,12 @@
       "variations": [
         8408,
         8410
-      ]
+      ],
+      "watermark": "Green"
     },
     {
       "artist": "Quinton Hoover",
+      "cmc": 0,
       "colorIdentity": [
         "G"
       ],
@@ -3032,6 +3041,10 @@
       "imageName": "forest2",
       "layout": "normal",
       "legalities": [
+        {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
         {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
@@ -3050,6 +3063,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -3173,8 +3194,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -3243,7 +3264,16 @@
         "C15",
         "SOI",
         "DDR",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "DDS",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -3259,7 +3289,8 @@
       "variations": [
         8408,
         8409
-      ]
+      ],
+      "watermark": "Green"
     },
     {
       "artist": "rk post",
@@ -3617,11 +3648,11 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "Because the “search” requires you to find a card with certain characteristics, you don’t have to find the card if you don’t want to."
+          "text": "Because the \"search\" requires you to find a card with certain characteristics, you don't have to find the card if you don't want to."
         },
         {
           "date": "2008-04-01",
-          "text": "You can search for any card with the creature type Goblin, including Creature or Tribal cards. Older cards of type “Summon Goblin” and “Summon Goblins” also count. You can’t search for cards that have Goblin in the name but don’t have the creature type Goblin."
+          "text": "You can search for any card with the creature type Goblin, including Creature or Tribal cards. Older cards of type \"Summon Goblin\" and \"Summon Goblins\" also count. You can't search for cards that have Goblin in the name but don't have the creature type Goblin."
         }
       ],
       "subtypes": [
@@ -3873,27 +3904,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Onslaught Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -3912,7 +3927,7 @@
         "SCG"
       ],
       "rarity": "Common",
-      "text": "Goblin War Strike deals damage equal to the number of Goblins you control to target player.",
+      "text": "Goblin War Strike deals damage to target player equal to the number of Goblins you control.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -4070,10 +4085,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -4083,18 +4094,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -4260,6 +4259,7 @@
     },
     {
       "artist": "John Avon",
+      "cmc": 0,
       "colorIdentity": [
         "U"
       ],
@@ -4267,6 +4267,10 @@
       "imageName": "island1",
       "layout": "normal",
       "legalities": [
+        {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
         {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
@@ -4285,6 +4289,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -4407,8 +4419,8 @@
         "USG",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -4474,7 +4486,16 @@
         "C15",
         "DDQ",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "DDS",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -4490,10 +4511,12 @@
       "variations": [
         8391,
         8390
-      ]
+      ],
+      "watermark": "Blue"
     },
     {
       "artist": "John Avon",
+      "cmc": 0,
       "colorIdentity": [
         "U"
       ],
@@ -4501,6 +4524,10 @@
       "imageName": "island2",
       "layout": "normal",
       "legalities": [
+        {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
         {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
@@ -4519,6 +4546,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -4641,8 +4676,8 @@
         "USG",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -4708,7 +4743,16 @@
         "C15",
         "DDQ",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "DDS",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -4724,10 +4768,12 @@
       "variations": [
         8391,
         8387
-      ]
+      ],
+      "watermark": "Blue"
     },
     {
       "artist": "John Avon",
+      "cmc": 0,
       "colorIdentity": [
         "U"
       ],
@@ -4735,6 +4781,10 @@
       "imageName": "island3",
       "layout": "normal",
       "legalities": [
+        {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
         {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
@@ -4753,6 +4803,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -4875,8 +4933,8 @@
         "USG",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -4942,7 +5000,16 @@
         "C15",
         "DDQ",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "DDS",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -4958,7 +5025,8 @@
       "variations": [
         8387,
         8390
-      ]
+      ],
+      "watermark": "Blue"
     },
     {
       "artist": "Michael Weaver",
@@ -5213,11 +5281,11 @@
       "rulings": [
         {
           "date": "2008-04-01",
-          "text": "If this creature is attacking a planeswalker, assigning its damage as though it weren’t blocked means the damage is assigned to the planeswalker, not to the defending player."
+          "text": "If this creature is attacking a planeswalker, assigning its damage as though it weren't blocked means the damage is assigned to the planeswalker, not to the defending player."
         },
         {
           "date": "2008-04-01",
-          "text": "When assigning combat damage, you choose whether you want to assign all damage to blocking creatures, or if you want to assign all of it to the defending player or planeswalker. You can’t split the damage assignment between them."
+          "text": "When assigning combat damage, you choose whether you want to assign all damage to blocking creatures, or if you want to assign all of it to the defending player or planeswalker. You can't split the damage assignment between them."
         },
         {
           "date": "2008-04-01",
@@ -5225,7 +5293,7 @@
         },
         {
           "date": "2008-04-01",
-          "text": "If blocked by a creature with banding, the defending player decides whether or not the damage is assigned “as though it weren’t blocked\"."
+          "text": "If blocked by a creature with banding, the defending player decides whether or not the damage is assigned \"as though it weren't blocked\"."
         }
       ],
       "subtypes": [
@@ -5410,6 +5478,10 @@
           "legality": "Legal"
         },
         {
+          "format": "Kaladesh Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Khans of Tarkir Block",
           "legality": "Legal"
         },
@@ -5570,6 +5642,7 @@
     },
     {
       "artist": "Rob Alexander",
+      "cmc": 0,
       "colorIdentity": [
         "R"
       ],
@@ -5577,6 +5650,10 @@
       "imageName": "mountain1",
       "layout": "normal",
       "legalities": [
+        {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
         {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
@@ -5595,6 +5672,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -5698,9 +5783,9 @@
         "LEA",
         "LEB",
         "2ED",
-        "ARN",
         "CED",
         "CEI",
+        "ARN",
         "3ED",
         "4ED",
         "ICE",
@@ -5719,8 +5804,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -5790,7 +5875,16 @@
         "BFZ",
         "C15",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "DDS",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -5806,10 +5900,12 @@
       "variations": [
         8407,
         8406
-      ]
+      ],
+      "watermark": "Red"
     },
     {
       "artist": "Rob Alexander",
+      "cmc": 0,
       "colorIdentity": [
         "R"
       ],
@@ -5817,6 +5913,10 @@
       "imageName": "mountain2",
       "layout": "normal",
       "legalities": [
+        {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
         {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
@@ -5835,6 +5935,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -5938,9 +6046,9 @@
         "LEA",
         "LEB",
         "2ED",
-        "ARN",
         "CED",
         "CEI",
+        "ARN",
         "3ED",
         "4ED",
         "ICE",
@@ -5959,8 +6067,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -6030,7 +6138,16 @@
         "BFZ",
         "C15",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "DDS",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -6046,10 +6163,12 @@
       "variations": [
         8407,
         8395
-      ]
+      ],
+      "watermark": "Red"
     },
     {
       "artist": "Rob Alexander",
+      "cmc": 0,
       "colorIdentity": [
         "R"
       ],
@@ -6057,6 +6176,10 @@
       "imageName": "mountain3",
       "layout": "normal",
       "legalities": [
+        {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
         {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
@@ -6075,6 +6198,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -6178,9 +6309,9 @@
         "LEA",
         "LEB",
         "2ED",
-        "ARN",
         "CED",
         "CEI",
+        "ARN",
         "3ED",
         "4ED",
         "ICE",
@@ -6199,8 +6330,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -6270,7 +6401,16 @@
         "BFZ",
         "C15",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "DDS",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -6286,7 +6426,8 @@
       "variations": [
         8406,
         8395
-      ]
+      ],
+      "watermark": "Red"
     },
     {
       "artist": "Una Fricker",
@@ -6399,10 +6540,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -6411,19 +6548,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Tempest Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -6505,7 +6630,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "Because the “search” requires you to find a card with certain characteristics, you don’t have to find the card if you don’t want to."
+          "text": "Because the \"search\" requires you to find a card with certain characteristics, you don't have to find the card if you don't want to."
         },
         {
           "date": "2008-08-01",
@@ -6575,7 +6700,7 @@
       "colors": [
         "Green"
       ],
-      "flavor": "\"‘Air superiority?' Not while our archers scan the skies.\"\n—Elvish scout",
+      "flavor": "\"'Air superiority?' Not while our archers scan the skies.\"\n—Elvish scout",
       "id": "e13ef5868e2bd35b2fe43fb799d7521604d683fc",
       "imageName": "norwood archers",
       "layout": "normal",
@@ -7122,7 +7247,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "If the spell fails because the target is not there or isn’t legal, the owner does not gain any life."
+          "text": "If the spell fails because the target is not there or isn't legal, the owner does not gain any life."
         }
       ],
       "text": "Destroy target creature. Its owner gains 4 life.",
@@ -7177,6 +7302,7 @@
     },
     {
       "artist": "Fred Fields",
+      "cmc": 0,
       "colorIdentity": [
         "W"
       ],
@@ -7184,6 +7310,10 @@
       "imageName": "plains3",
       "layout": "normal",
       "legalities": [
+        {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
         {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
@@ -7202,6 +7332,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -7326,8 +7464,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -7394,7 +7532,15 @@
         "C15",
         "DDQ",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -7410,10 +7556,12 @@
       "variations": [
         8374,
         8380
-      ]
+      ],
+      "watermark": "White"
     },
     {
       "artist": "Fred Fields",
+      "cmc": 0,
       "colorIdentity": [
         "W"
       ],
@@ -7421,6 +7569,10 @@
       "imageName": "plains2",
       "layout": "normal",
       "legalities": [
+        {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
         {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
@@ -7439,6 +7591,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -7563,8 +7723,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -7631,7 +7791,15 @@
         "C15",
         "DDQ",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -7647,10 +7815,12 @@
       "variations": [
         8354,
         8380
-      ]
+      ],
+      "watermark": "White"
     },
     {
       "artist": "Fred Fields",
+      "cmc": 0,
       "colorIdentity": [
         "W"
       ],
@@ -7658,6 +7828,10 @@
       "imageName": "plains1",
       "layout": "normal",
       "legalities": [
+        {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
         {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
@@ -7676,6 +7850,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -7800,8 +7982,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -7868,7 +8050,15 @@
         "C15",
         "DDQ",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -7884,7 +8074,8 @@
       "variations": [
         8354,
         8374
-      ]
+      ],
+      "watermark": "White"
     },
     {
       "artist": "Daniel Gelon",
@@ -8073,8 +8264,8 @@
       "power": "1",
       "printings": [
         "POR",
-        "PO2",
         "EXO",
+        "PO2",
         "ATH",
         "6ED",
         "S99",
@@ -8247,7 +8438,8 @@
         "7ED",
         "8ED",
         "9ED",
-        "CN2"
+        "CN2",
+        "W17"
       ],
       "rarity": "Common",
       "rulings": [
@@ -8261,7 +8453,7 @@
         },
         {
           "date": "2008-04-01",
-          "text": "A “creature card” is any card with the type creature, even if it has other types such as artifact, enchantment, or land. Older cards of type summon are also creature cards."
+          "text": "A \"creature card\" is any card with the type creature, even if it has other types such as artifact, enchantment, or land. Older cards of type summon are also creature cards."
         }
       ],
       "text": "Return target creature card from your graveyard to your hand.",
@@ -8449,10 +8641,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -8462,18 +8650,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -8671,10 +8847,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -8683,19 +8855,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
           "format": "Return to Ravnica Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -8958,7 +9118,7 @@
       "rulings": [
         {
           "date": "2008-10-01",
-          "text": "When the ability resolves, if one of the lands has become an illegal target (because it’s no longer on the battlefield, for example), you return the other one to your hand. If both of the lands have become illegal targets, the ability is countered. This has no effect on Sea Drake."
+          "text": "When the ability resolves, if one of the lands has become an illegal target (because it's no longer on the battlefield, for example), you return the other one to your hand. If both of the lands have become illegal targets, the ability is countered. This has no effect on Sea Drake."
         }
       ],
       "subtypes": [
@@ -9282,6 +9442,7 @@
     },
     {
       "artist": "Susan Van Camp",
+      "cmc": 0,
       "colorIdentity": [
         "B"
       ],
@@ -9289,6 +9450,10 @@
       "imageName": "swamp2",
       "layout": "normal",
       "legalities": [
+        {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
         {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
@@ -9307,6 +9472,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -9430,8 +9603,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -9502,7 +9675,15 @@
         "DDQ",
         "SOI",
         "DDR",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -9518,10 +9699,12 @@
       "variations": [
         8393,
         8394
-      ]
+      ],
+      "watermark": "Black"
     },
     {
       "artist": "Susan Van Camp",
+      "cmc": 0,
       "colorIdentity": [
         "B"
       ],
@@ -9529,6 +9712,10 @@
       "imageName": "swamp3",
       "layout": "normal",
       "legalities": [
+        {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
         {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
@@ -9547,6 +9734,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -9670,8 +9865,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -9742,7 +9937,15 @@
         "DDQ",
         "SOI",
         "DDR",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -9758,10 +9961,12 @@
       "variations": [
         8392,
         8394
-      ]
+      ],
+      "watermark": "Black"
     },
     {
       "artist": "Susan Van Camp",
+      "cmc": 0,
       "colorIdentity": [
         "B"
       ],
@@ -9769,6 +9974,10 @@
       "imageName": "swamp1",
       "layout": "normal",
       "legalities": [
+        {
+          "format": "Amonkhet Block",
+          "legality": "Legal"
+        },
         {
           "format": "Battle for Zendikar Block",
           "legality": "Legal"
@@ -9787,6 +9996,14 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Kaladesh Block",
           "legality": "Legal"
         },
         {
@@ -9910,8 +10127,8 @@
         "ATH",
         "6ED",
         "PTK",
-        "S99",
         "pGRU",
+        "S99",
         "MMQ",
         "BRB",
         "pELP",
@@ -9982,7 +10199,15 @@
         "DDQ",
         "SOI",
         "DDR",
-        "KLD"
+        "KLD",
+        "C16",
+        "PCA",
+        "AKH",
+        "CMA",
+        "E01",
+        "HOU",
+        "C17",
+        "XLN"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -9998,7 +10223,8 @@
       "variations": [
         8392,
         8393
-      ]
+      ],
+      "watermark": "Black"
     },
     {
       "artist": "Kev Walker",
@@ -10604,7 +10830,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "If multiple “extra turn” effects resolve in the same turn, take them in the reverse of the order that the effects resolved."
+          "text": "If multiple \"extra turn\" effects resolve in the same turn, take them in the reverse of the order that the effects resolved."
         }
       ],
       "text": "Take an extra turn after this one.",
@@ -10652,8 +10878,8 @@
       "originalType": "Sorcery",
       "printings": [
         "POR",
-        "PO2",
         "EXO",
+        "PO2",
         "ME4"
       ],
       "rarity": "Uncommon",
@@ -10909,11 +11135,11 @@
       ],
       "rarity": "Common",
       "subtypes": [
-        "Ape"
+        "Monkey"
       ],
       "text": "Reach (This creature can block creatures with flying.)",
       "toughness": "1",
-      "type": "Creature — Ape",
+      "type": "Creature — Monkey",
       "types": [
         "Creature"
       ]
@@ -11071,7 +11297,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "The two creatures may have different owners and return to their respective owner’s hands."
+          "text": "The two creatures may have different owners and return to their respective owner's hands."
         }
       ],
       "text": "Return two target creatures to their owners' hands.",
@@ -11128,7 +11354,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "Because the “search” requires you to find a card with certain characteristics, you don’t have to find the card if you don’t want to."
+          "text": "Because the \"search\" requires you to find a card with certain characteristics, you don't have to find the card if you don't want to."
         },
         {
           "date": "2006-10-15",

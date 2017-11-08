@@ -3,7 +3,7 @@
   "code": "FEM",
   "gathererCode": "FE",
   "magicCardsInfoCode": "fe",
-  "releaseDate": "1994-11-01",
+  "releaseDate": "1994-11-15",
   "border": "black",
   "type": "expansion",
   "booster": [
@@ -522,6 +522,7 @@
     },
     {
       "artist": "Pat Morrissey",
+      "cmc": 0,
       "colorIdentity": [
         "B"
       ],
@@ -555,7 +556,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "It is considered “tapped for mana” if you activate its mana ability, even if you choose to take zero mana from it."
+          "text": "It is only considered \"tapped for mana\" if you activate its mana ability and generate mana from it."
         },
         {
           "date": "2004-10-04",
@@ -843,7 +844,7 @@
           "text": "Breeding Pit must actually be on the battlefield at the beginning of the endstep in order for you to get a Thrull. The getting of the Thrull is not part of paying the upkeep, it is part of having the card on the battlefield."
         }
       ],
-      "text": "At the beginning of your upkeep, sacrifice Breeding Pit unless you pay {B}{B}.\nAt the beginning of your end step, put a 0/1 black Thrull creature token onto the battlefield.",
+      "text": "At the beginning of your upkeep, sacrifice Breeding Pit unless you pay {B}{B}.\nAt the beginning of your end step, create a 0/1 black Thrull creature token.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -1108,7 +1109,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "You draw two cards, then put one back as part of the same effect. You can’t do anything in between. Anything that triggers off of card drawing will wait until you finish resolving this ability before going on the stack."
+          "text": "You draw two cards, then put one back as part of the same effect. You can't do anything in between. Anything that triggers off of card drawing will wait until you finish resolving this ability before going on the stack."
         }
       ],
       "text": "{1}, {T}, Sacrifice Conch Horn: Draw two cards, then put a card from your hand on top of your library.",
@@ -1199,7 +1200,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "If you use the ability after blockers are declared, it won’t trigger at all. So you want to use it before blockers are declared."
+          "text": "If you use the ability after blockers are declared, it won't trigger at all. So you want to use it before blockers are declared."
         },
         {
           "date": "2004-10-04",
@@ -1207,7 +1208,7 @@
         },
         {
           "date": "2013-04-15",
-          "text": "An ability that triggers when something “attacks and isn’t blocked” triggers in the declare blockers step after blockers are declared if (1) that creature is attacking and (2) no creatures are declared to block it. It will trigger even if that creature was put onto the battlefield attacking rather than having been declared as an attacker in the declare attackers step."
+          "text": "An ability that triggers when something \"attacks and isn't blocked\" triggers in the declare blockers step after blockers are declared if (1) that creature is attacking and (2) no creatures are declared to block it. It will trigger even if that creature was put onto the battlefield attacking rather than having been declared as an attacker in the declare attackers step."
         }
       ],
       "text": "{T}, Sacrifice Delif's Cone: This turn, when target creature you control attacks and isn't blocked, you may gain life equal to its power. If you do, it assigns no combat damage this turn.",
@@ -1250,7 +1251,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "If you use the ability after blockers are declared, it won’t trigger at all. So you want to use it before blockers are declared."
+          "text": "If you use the ability after blockers are declared, it won't trigger at all. So you want to use it before blockers are declared."
         },
         {
           "date": "2004-10-04",
@@ -1258,7 +1259,7 @@
         },
         {
           "date": "2013-04-15",
-          "text": "An ability that triggers when something “attacks and isn’t blocked” triggers in the declare blockers step after blockers are declared if (1) that creature is attacking and (2) no creatures are declared to block it. It will trigger even if that creature was put onto the battlefield attacking rather than having been declared as an attacker in the declare attackers step."
+          "text": "An ability that triggers when something \"attacks and isn't blocked\" triggers in the declare blockers step after blockers are declared if (1) that creature is attacking and (2) no creatures are declared to block it. It will trigger even if that creature was put onto the battlefield attacking rather than having been declared as an attacker in the declare attackers step."
         }
       ],
       "text": "{2}, {T}: This turn, when target creature you control attacks and isn't blocked, it assigns no combat damage this turn and you put a cube counter on Delif's Cube.\n{2}, Remove a cube counter from Delif's Cube: Regenerate target creature.",
@@ -1472,6 +1473,7 @@
     },
     {
       "artist": "Pat Morrissey",
+      "cmc": 0,
       "colorIdentity": [
         "R"
       ],
@@ -1505,7 +1507,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "It is considered “tapped for mana” if you activate its mana ability, even if you choose to take zero mana from it."
+          "text": "It is only considered \"tapped for mana\" if you activate its mana ability and generate mana from it."
         },
         {
           "date": "2004-10-04",
@@ -1581,6 +1583,7 @@
     },
     {
       "artist": "Mark Poole",
+      "cmc": 0,
       "colorIdentity": [
         "R"
       ],
@@ -1834,6 +1837,7 @@
     },
     {
       "artist": "Mark Poole",
+      "cmc": 0,
       "colorIdentity": [
         "B"
       ],
@@ -1846,23 +1850,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -2159,7 +2147,7 @@
       "subtypes": [
         "Elf"
       ],
-      "text": "At the beginning of your upkeep, put a spore counter on Elvish Farmer.\nRemove three spore counters from Elvish Farmer: Put a 1/1 green Saproling creature token onto the battlefield.\nSacrifice a Saproling: You gain 2 life.",
+      "text": "At the beginning of your upkeep, put a spore counter on Elvish Farmer.\nRemove three spore counters from Elvish Farmer: Create a 1/1 green Saproling creature token.\nSacrifice a Saproling: You gain 2 life.",
       "toughness": "2",
       "type": "Creature — Elf",
       "types": [
@@ -2207,15 +2195,15 @@
       "rulings": [
         {
           "date": "2008-10-01",
-          "text": "You may target any creature with this ability. It doesn’t have to be tapped."
+          "text": "You may target any creature with this ability. It doesn't have to be tapped."
         },
         {
           "date": "2008-10-01",
-          "text": "If the targeted creature is untapped at the time its controller’s next untap step begins, this ability has no effect. It won’t apply at some later time when the targeted creature is tapped."
+          "text": "If the targeted creature is untapped at the time its controller's next untap step begins, this ability has no effect. It won't apply at some later time when the targeted creature is tapped."
         },
         {
           "date": "2008-10-01",
-          "text": "Elvish Hunter doesn’t track the creature’s controller. If the affected creature changes controllers before its old controller’s next untap step, Elvish Hunter will prevent it from being untapped during its new controller’s next untap step."
+          "text": "Elvish Hunter doesn't track the creature's controller. If the affected creature changes controllers before its old controller's next untap step, Elvish Hunter will prevent it from being untapped during its new controller's next untap step."
         }
       ],
       "subtypes": [
@@ -2274,15 +2262,15 @@
       "rulings": [
         {
           "date": "2008-10-01",
-          "text": "You may target any creature with this ability. It doesn’t have to be tapped."
+          "text": "You may target any creature with this ability. It doesn't have to be tapped."
         },
         {
           "date": "2008-10-01",
-          "text": "If the targeted creature is untapped at the time its controller’s next untap step begins, this ability has no effect. It won’t apply at some later time when the targeted creature is tapped."
+          "text": "If the targeted creature is untapped at the time its controller's next untap step begins, this ability has no effect. It won't apply at some later time when the targeted creature is tapped."
         },
         {
           "date": "2008-10-01",
-          "text": "Elvish Hunter doesn’t track the creature’s controller. If the affected creature changes controllers before its old controller’s next untap step, Elvish Hunter will prevent it from being untapped during its new controller’s next untap step."
+          "text": "Elvish Hunter doesn't track the creature's controller. If the affected creature changes controllers before its old controller's next untap step, Elvish Hunter will prevent it from being untapped during its new controller's next untap step."
         }
       ],
       "subtypes": [
@@ -2341,15 +2329,15 @@
       "rulings": [
         {
           "date": "2008-10-01",
-          "text": "You may target any creature with this ability. It doesn’t have to be tapped."
+          "text": "You may target any creature with this ability. It doesn't have to be tapped."
         },
         {
           "date": "2008-10-01",
-          "text": "If the targeted creature is untapped at the time its controller’s next untap step begins, this ability has no effect. It won’t apply at some later time when the targeted creature is tapped."
+          "text": "If the targeted creature is untapped at the time its controller's next untap step begins, this ability has no effect. It won't apply at some later time when the targeted creature is tapped."
         },
         {
           "date": "2008-10-01",
-          "text": "Elvish Hunter doesn’t track the creature’s controller. If the affected creature changes controllers before its old controller’s next untap step, Elvish Hunter will prevent it from being untapped during its new controller’s next untap step."
+          "text": "Elvish Hunter doesn't track the creature's controller. If the affected creature changes controllers before its old controller's next untap step, Elvish Hunter will prevent it from being untapped during its new controller's next untap step."
         }
       ],
       "subtypes": [
@@ -2563,27 +2551,27 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "If you put this on your opponent’s creature, they decide whether or not to make their creature deal no damage to you."
+          "text": "If you put this on your opponent's creature, they decide whether or not to make their creature deal no damage to you."
         },
         {
           "date": "2008-10-01",
-          "text": "This ability resolves during the declare blockers step. If the damage dealt this way is enough to destroy an attacking or blocking creature, that other creature won’t be around to deal its combat damage."
+          "text": "This ability resolves during the declare blockers step. If the damage dealt this way is enough to destroy an attacking or blocking creature, that other creature won't be around to deal its combat damage."
         },
         {
           "date": "2008-10-01",
-          "text": "If the same creature is enchanted with more than one Farrel’s Mantle, they’ll each trigger if that creature attacks and isn’t blocked. The creature’s controller may have it deal damage multiple times. As long as the enchanted creature’s controller chooses to use Farrel’s Mantle’s ability at least once to deal damage, the enchanted creature will deal no combat damage."
+          "text": "If the same creature is enchanted with more than one Farrel's Mantle, they'll each trigger if that creature attacks and isn't blocked. The creature's controller may have it deal damage multiple times. As long as the enchanted creature's controller chooses to use Farrel's Mantle's ability at least once to deal damage, the enchanted creature will deal no combat damage."
         },
         {
           "date": "2008-10-01",
-          "text": "If the enchanted creature’s controller chooses to have it deal no combat damage, that combat damage is not prevented. It’s simply not dealt. A creature whose damage can’t be prevented (such as Excruciator) would deal no combat damage this way."
+          "text": "If the enchanted creature's controller chooses to have it deal no combat damage, that combat damage is not prevented. It's simply not dealt. A creature whose damage can't be prevented (such as Excruciator) would deal no combat damage this way."
         },
         {
           "date": "2011-01-25",
-          "text": "The enchanted creature’s controller cannot choose to have the enchanted creature deal damage to itself. If there are no other creatures on the battlefield, then a legal target cannot be chosen so the ability does nothing."
+          "text": "The enchanted creature's controller cannot choose to have the enchanted creature deal damage to itself. If there are no other creatures on the battlefield, then a legal target cannot be chosen so the ability does nothing."
         },
         {
           "date": "2013-04-15",
-          "text": "An ability that triggers when something “attacks and isn’t blocked” triggers in the declare blockers step after blockers are declared if (1) that creature is attacking and (2) no creatures are declared to block it. It will trigger even if that creature was put onto the battlefield attacking rather than having been declared as an attacker in the declare attackers step."
+          "text": "An ability that triggers when something \"attacks and isn't blocked\" triggers in the declare blockers step after blockers are declared if (1) that creature is attacking and (2) no creatures are declared to block it. It will trigger even if that creature was put onto the battlefield attacking rather than having been declared as an attacker in the declare attackers step."
         }
       ],
       "subtypes": [
@@ -2640,15 +2628,15 @@
         },
         {
           "date": "2008-10-01",
-          "text": "This ability resolves during the declare blockers step. If the damage dealt this way is enough to destroy an attacking or blocking creature, that other creature won’t be around to deal its combat damage."
+          "text": "This ability resolves during the declare blockers step. If the damage dealt this way is enough to destroy an attacking or blocking creature, that other creature won't be around to deal its combat damage."
         },
         {
           "date": "2008-10-01",
-          "text": "If there are no other creatures on the battlefield, Farrel’s Zealot will have to target itself. Of course, you can choose not to use the ability when it resolves."
+          "text": "If there are no other creatures on the battlefield, Farrel's Zealot will have to target itself. Of course, you can choose not to use the ability when it resolves."
         },
         {
           "date": "2013-04-15",
-          "text": "An ability that triggers when something “attacks and isn’t blocked” triggers in the declare blockers step after blockers are declared if (1) that creature is attacking and (2) no creatures are declared to block it. It will trigger even if that creature was put onto the battlefield attacking rather than having been declared as an attacker in the declare attackers step."
+          "text": "An ability that triggers when something \"attacks and isn't blocked\" triggers in the declare blockers step after blockers are declared if (1) that creature is attacking and (2) no creatures are declared to block it. It will trigger even if that creature was put onto the battlefield attacking rather than having been declared as an attacker in the declare attackers step."
         }
       ],
       "subtypes": [
@@ -2710,15 +2698,15 @@
         },
         {
           "date": "2008-10-01",
-          "text": "This ability resolves during the declare blockers step. If the damage dealt this way is enough to destroy an attacking or blocking creature, that other creature won’t be around to deal its combat damage."
+          "text": "This ability resolves during the declare blockers step. If the damage dealt this way is enough to destroy an attacking or blocking creature, that other creature won't be around to deal its combat damage."
         },
         {
           "date": "2008-10-01",
-          "text": "If there are no other creatures on the battlefield, Farrel’s Zealot will have to target itself. Of course, you can choose not to use the ability when it resolves."
+          "text": "If there are no other creatures on the battlefield, Farrel's Zealot will have to target itself. Of course, you can choose not to use the ability when it resolves."
         },
         {
           "date": "2013-04-15",
-          "text": "An ability that triggers when something “attacks and isn’t blocked” triggers in the declare blockers step after blockers are declared if (1) that creature is attacking and (2) no creatures are declared to block it. It will trigger even if that creature was put onto the battlefield attacking rather than having been declared as an attacker in the declare attackers step."
+          "text": "An ability that triggers when something \"attacks and isn't blocked\" triggers in the declare blockers step after blockers are declared if (1) that creature is attacking and (2) no creatures are declared to block it. It will trigger even if that creature was put onto the battlefield attacking rather than having been declared as an attacker in the declare attackers step."
         }
       ],
       "subtypes": [
@@ -2780,15 +2768,15 @@
         },
         {
           "date": "2008-10-01",
-          "text": "This ability resolves during the declare blockers step. If the damage dealt this way is enough to destroy an attacking or blocking creature, that other creature won’t be around to deal its combat damage."
+          "text": "This ability resolves during the declare blockers step. If the damage dealt this way is enough to destroy an attacking or blocking creature, that other creature won't be around to deal its combat damage."
         },
         {
           "date": "2008-10-01",
-          "text": "If there are no other creatures on the battlefield, Farrel’s Zealot will have to target itself. Of course, you can choose not to use the ability when it resolves."
+          "text": "If there are no other creatures on the battlefield, Farrel's Zealot will have to target itself. Of course, you can choose not to use the ability when it resolves."
         },
         {
           "date": "2013-04-15",
-          "text": "An ability that triggers when something “attacks and isn’t blocked” triggers in the declare blockers step after blockers are declared if (1) that creature is attacking and (2) no creatures are declared to block it. It will trigger even if that creature was put onto the battlefield attacking rather than having been declared as an attacker in the declare attackers step."
+          "text": "An ability that triggers when something \"attacks and isn't blocked\" triggers in the declare blockers step after blockers are declared if (1) that creature is attacking and (2) no creatures are declared to block it. It will trigger even if that creature was put onto the battlefield attacking rather than having been declared as an attacker in the declare attackers step."
         }
       ],
       "subtypes": [
@@ -3083,7 +3071,7 @@
       "colors": [
         "Red"
       ],
-      "flavor": "\"I asked one of my aides how they do it, but all he'd say was, ‘Trust me, Mayor, you don't want to know.'\"\n—Lydia Wynforth, Mayor of Trokair",
+      "flavor": "\"I asked one of my aides how they do it, but all he'd say was, 'Trust me, Mayor, you don't want to know.'\"\n—Lydia Wynforth, Mayor of Trokair",
       "id": "976694af815b0844e474d7a83eb76f653b66daa7",
       "imageName": "goblin chirurgeon2",
       "layout": "normal",
@@ -3232,7 +3220,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "You can’t sacrifice more than one Goblin to get a greater effect."
+          "text": "You can't sacrifice more than one Goblin to get a greater effect."
         },
         {
           "date": "2011-09-22",
@@ -3240,7 +3228,7 @@
         },
         {
           "date": "2011-09-22",
-          "text": "The Goblin you sacrifice to cast Goblin Grenade doesn’t have to be a creature. For example, you could sacrifice Boggart Shenanigans (a tribal enchantment with the subtype Goblin)."
+          "text": "The Goblin you sacrifice to cast Goblin Grenade doesn't have to be a creature. For example, you could sacrifice Boggart Shenanigans (a tribal enchantment with the subtype Goblin)."
         }
       ],
       "text": "As an additional cost to cast Goblin Grenade, sacrifice a Goblin.\nGoblin Grenade deals 5 damage to target creature or player.",
@@ -3299,7 +3287,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "You can’t sacrifice more than one Goblin to get a greater effect."
+          "text": "You can't sacrifice more than one Goblin to get a greater effect."
         },
         {
           "date": "2011-09-22",
@@ -3307,7 +3295,7 @@
         },
         {
           "date": "2011-09-22",
-          "text": "The Goblin you sacrifice to cast Goblin Grenade doesn’t have to be a creature. For example, you could sacrifice Boggart Shenanigans (a tribal enchantment with the subtype Goblin)."
+          "text": "The Goblin you sacrifice to cast Goblin Grenade doesn't have to be a creature. For example, you could sacrifice Boggart Shenanigans (a tribal enchantment with the subtype Goblin)."
         }
       ],
       "text": "As an additional cost to cast Goblin Grenade, sacrifice a Goblin.\nGoblin Grenade deals 5 damage to target creature or player.",
@@ -3366,7 +3354,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "You can’t sacrifice more than one Goblin to get a greater effect."
+          "text": "You can't sacrifice more than one Goblin to get a greater effect."
         },
         {
           "date": "2011-09-22",
@@ -3374,7 +3362,7 @@
         },
         {
           "date": "2011-09-22",
-          "text": "The Goblin you sacrifice to cast Goblin Grenade doesn’t have to be a creature. For example, you could sacrifice Boggart Shenanigans (a tribal enchantment with the subtype Goblin)."
+          "text": "The Goblin you sacrifice to cast Goblin Grenade doesn't have to be a creature. For example, you could sacrifice Boggart Shenanigans (a tribal enchantment with the subtype Goblin)."
         }
       ],
       "text": "As an additional cost to cast Goblin Grenade, sacrifice a Goblin.\nGoblin Grenade deals 5 damage to target creature or player.",
@@ -3470,7 +3458,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "When combined with an effect that reads “Each creature you control can’t be blocked by more than one creature,” none of your creatures can be blocked."
+          "text": "When combined with an effect that reads \"Each creature you control can't be blocked by more than one creature,\" none of your creatures can be blocked."
         },
         {
           "date": "2004-10-04",
@@ -3529,7 +3517,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "When combined with an effect that reads “Each creature you control can’t be blocked by more than one creature,” none of your creatures can be blocked."
+          "text": "When combined with an effect that reads \"Each creature you control can't be blocked by more than one creature,\" none of your creatures can be blocked."
         },
         {
           "date": "2004-10-04",
@@ -3588,7 +3576,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "When combined with an effect that reads “Each creature you control can’t be blocked by more than one creature,” none of your creatures can be blocked."
+          "text": "When combined with an effect that reads \"Each creature you control can't be blocked by more than one creature,\" none of your creatures can be blocked."
         },
         {
           "date": "2004-10-04",
@@ -3647,7 +3635,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "When combined with an effect that reads “Each creature you control can’t be blocked by more than one creature,” none of your creatures can be blocked."
+          "text": "When combined with an effect that reads \"Each creature you control can't be blocked by more than one creature,\" none of your creatures can be blocked."
         },
         {
           "date": "2004-10-04",
@@ -3712,7 +3700,7 @@
           "text": "The token Goblins can be sacrificed to the Warrens to generate new Goblins."
         }
       ],
-      "text": "{2}{R}, Sacrifice two Goblins: Put three 1/1 red Goblin creature tokens onto the battlefield.",
+      "text": "{2}{R}, Sacrifice two Goblins: Create three 1/1 red Goblin creature tokens.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -3776,6 +3764,7 @@
     },
     {
       "artist": "Mark Poole",
+      "cmc": 0,
       "colorIdentity": [
         "G"
       ],
@@ -3807,7 +3796,8 @@
         "6ED",
         "BTD",
         "ME2",
-        "C14"
+        "C14",
+        "CMA"
       ],
       "rarity": "Uncommon",
       "text": "Havenwood Battleground enters the battlefield tapped.\n{T}: Add {G} to your mana pool.\n{T}, Sacrifice Havenwood Battleground: Add {G}{G} to your mana pool.",
@@ -3856,7 +3846,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "The cost to avoid the penalty must be paid when the spell resolves. You can’t wait until later to do so."
+          "text": "The cost to avoid the penalty must be paid when the ability resolves. You can't wait until later to do so."
         },
         {
           "date": "2004-10-04",
@@ -4048,6 +4038,7 @@
     },
     {
       "artist": "Pat Morrissey",
+      "cmc": 0,
       "colorIdentity": [
         "G"
       ],
@@ -4081,7 +4072,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "It is considered “tapped for mana” if you activate its mana ability, even if you choose to take zero mana from it."
+          "text": "It is only considered \"tapped for mana\" if you activate its mana ability and generate mana from it."
         },
         {
           "date": "2004-10-04",
@@ -4397,7 +4388,7 @@
         "MED"
       ],
       "rarity": "Uncommon",
-      "text": "{1}{U}{U}, Sacrifice a blue creature: Put X 1/1 blue Camarid creature tokens onto the battlefield, where X is the sacrificed creature's converted mana cost.",
+      "text": "{1}{U}{U}, Sacrifice a blue creature: Create X 1/1 blue Camarid creature tokens, where X is the sacrificed creature's converted mana cost.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -4837,7 +4828,7 @@
       "rulings": [
         {
           "date": "2008-10-01",
-          "text": "If a creature with banding attacks, it can team up with any number of other attacking creatures with banding (and up to one nonbanding creature) and attack as a unit called a “band.” The band can be blocked by any creature that could block a single creature in the band. Blocking any creature in a band blocks the entire band. If a creature with banding is blocked, the attacking player chooses how the blockers’ damage is assigned."
+          "text": "If a creature with banding attacks, it can team up with any number of other attacking creatures with banding (and up to one nonbanding creature) and attack as a unit called a \"band.\" The band can be blocked by any creature that could block a single creature in the band. Blocking any creature in a band blocks the entire band. If a creature with banding is blocked, the attacking player chooses how the blockers' damage is assigned."
         },
         {
           "date": "2008-10-01",
@@ -4908,7 +4899,7 @@
       "rulings": [
         {
           "date": "2008-10-01",
-          "text": "If a creature with banding attacks, it can team up with any number of other attacking creatures with banding (and up to one nonbanding creature) and attack as a unit called a “band.” The band can be blocked by any creature that could block a single creature in the band. Blocking any creature in a band blocks the entire band. If a creature with banding is blocked, the attacking player chooses how the blockers’ damage is assigned."
+          "text": "If a creature with banding attacks, it can team up with any number of other attacking creatures with banding (and up to one nonbanding creature) and attack as a unit called a \"band.\" The band can be blocked by any creature that could block a single creature in the band. Blocking any creature in a band blocks the entire band. If a creature with banding is blocked, the attacking player chooses how the blockers' damage is assigned."
         },
         {
           "date": "2008-10-01",
@@ -4979,7 +4970,7 @@
       "rulings": [
         {
           "date": "2008-10-01",
-          "text": "If a creature with banding attacks, it can team up with any number of other attacking creatures with banding (and up to one nonbanding creature) and attack as a unit called a “band.” The band can be blocked by any creature that could block a single creature in the band. Blocking any creature in a band blocks the entire band. If a creature with banding is blocked, the attacking player chooses how the blockers’ damage is assigned."
+          "text": "If a creature with banding attacks, it can team up with any number of other attacking creatures with banding (and up to one nonbanding creature) and attack as a unit called a \"band.\" The band can be blocked by any creature that could block a single creature in the band. Blocking any creature in a band blocks the entire band. If a creature with banding is blocked, the attacking player chooses how the blockers' damage is assigned."
         },
         {
           "date": "2008-10-01",
@@ -5050,7 +5041,7 @@
       "rulings": [
         {
           "date": "2008-10-01",
-          "text": "If a creature with banding attacks, it can team up with any number of other attacking creatures with banding (and up to one nonbanding creature) and attack as a unit called a “band.” The band can be blocked by any creature that could block a single creature in the band. Blocking any creature in a band blocks the entire band. If a creature with banding is blocked, the attacking player chooses how the blockers’ damage is assigned."
+          "text": "If a creature with banding attacks, it can team up with any number of other attacking creatures with banding (and up to one nonbanding creature) and attack as a unit called a \"band.\" The band can be blocked by any creature that could block a single creature in the band. Blocking any creature in a band blocks the entire band. If a creature with banding is blocked, the attacking player chooses how the blockers' damage is assigned."
         },
         {
           "date": "2008-10-01",
@@ -5099,10 +5090,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -5111,19 +5098,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Time Spiral Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -5179,10 +5154,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -5191,19 +5162,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Time Spiral Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -5259,10 +5218,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -5271,19 +5226,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Time Spiral Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -5565,7 +5508,7 @@
       "rulings": [
         {
           "date": "2008-10-01",
-          "text": "If a creature with banding attacks, it can team up with any number of other attacking creatures with banding (and up to one nonbanding creature) and attack as a unit called a “band.” The band can be blocked by any creature that could block a single creature in the band. Blocking any creature in a band blocks the entire band. If a creature with banding is blocked, the attacking player chooses how the blockers’ damage is assigned."
+          "text": "If a creature with banding attacks, it can team up with any number of other attacking creatures with banding (and up to one nonbanding creature) and attack as a unit called a \"band.\" The band can be blocked by any creature that could block a single creature in the band. Blocking any creature in a band blocks the entire band. If a creature with banding is blocked, the attacking player chooses how the blockers' damage is assigned."
         },
         {
           "date": "2008-10-01",
@@ -5913,7 +5856,7 @@
       "rulings": [
         {
           "date": "2008-10-01",
-          "text": "If a creature with banding attacks, it can team up with any number of other attacking creatures with banding (and up to one nonbanding creature) and attack as a unit called a “band.” The band can be blocked by any creature that could block a single creature in the band. Blocking any creature in a band blocks the entire band. If a creature with banding is blocked, the attacking player chooses how the blockers’ damage is assigned."
+          "text": "If a creature with banding attacks, it can team up with any number of other attacking creatures with banding (and up to one nonbanding creature) and attack as a unit called a \"band.\" The band can be blocked by any creature that could block a single creature in the band. Blocking any creature in a band blocks the entire band. If a creature with banding is blocked, the attacking player chooses how the blockers' damage is assigned."
         },
         {
           "date": "2008-10-01",
@@ -5941,6 +5884,7 @@
     },
     {
       "artist": "Pat Morrissey",
+      "cmc": 0,
       "colorIdentity": [
         "W"
       ],
@@ -5974,7 +5918,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "It is considered “tapped for mana” if you activate its mana ability, even if you choose to take zero mana from it."
+          "text": "It is only considered \"tapped for mana\" if you activate its mana ability and generate mana from it."
         },
         {
           "date": "2004-10-04",
@@ -6039,7 +5983,7 @@
         "MED"
       ],
       "rarity": "Rare",
-      "text": "Put four 1/1 white Citizen creature tokens onto the battlefield.",
+      "text": "Create four 1/1 white Citizen creature tokens.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -6124,7 +6068,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "Mana which “changes color” as it goes through the Hand forgets its original source because the old mana gets used up and new mana gets generated."
+          "text": "Mana which \"changes color\" as it goes through the Hand forgets its original source because the old mana gets used up and new mana gets generated."
         }
       ],
       "subtypes": [
@@ -6182,7 +6126,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "Mana which “changes color” as it goes through the Hand forgets its original source because the old mana gets used up and new mana gets generated."
+          "text": "Mana which \"changes color\" as it goes through the Hand forgets its original source because the old mana gets used up and new mana gets generated."
         }
       ],
       "subtypes": [
@@ -6240,7 +6184,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "Mana which “changes color” as it goes through the Hand forgets its original source because the old mana gets used up and new mana gets generated."
+          "text": "Mana which \"changes color\" as it goes through the Hand forgets its original source because the old mana gets used up and new mana gets generated."
         }
       ],
       "subtypes": [
@@ -6538,7 +6482,7 @@
         },
         {
           "date": "2013-04-15",
-          "text": "An ability that triggers when something “attacks and isn’t blocked” triggers in the declare blockers step after blockers are declared if (1) that creature is attacking and (2) no creatures are declared to block it. It will trigger even if that creature was put onto the battlefield attacking rather than having been declared as an attacker in the declare attackers step."
+          "text": "An ability that triggers when something \"attacks and isn't blocked\" triggers in the declare blockers step after blockers are declared if (1) that creature is attacking and (2) no creatures are declared to block it. It will trigger even if that creature was put onto the battlefield attacking rather than having been declared as an attacker in the declare attackers step."
         }
       ],
       "subtypes": [
@@ -6600,7 +6544,7 @@
         },
         {
           "date": "2013-04-15",
-          "text": "An ability that triggers when something “attacks and isn’t blocked” triggers in the declare blockers step after blockers are declared if (1) that creature is attacking and (2) no creatures are declared to block it. It will trigger even if that creature was put onto the battlefield attacking rather than having been declared as an attacker in the declare attackers step."
+          "text": "An ability that triggers when something \"attacks and isn't blocked\" triggers in the declare blockers step after blockers are declared if (1) that creature is attacking and (2) no creatures are declared to block it. It will trigger even if that creature was put onto the battlefield attacking rather than having been declared as an attacker in the declare attackers step."
         }
       ],
       "subtypes": [
@@ -6662,7 +6606,7 @@
         },
         {
           "date": "2013-04-15",
-          "text": "An ability that triggers when something “attacks and isn’t blocked” triggers in the declare blockers step after blockers are declared if (1) that creature is attacking and (2) no creatures are declared to block it. It will trigger even if that creature was put onto the battlefield attacking rather than having been declared as an attacker in the declare attackers step."
+          "text": "An ability that triggers when something \"attacks and isn't blocked\" triggers in the declare blockers step after blockers are declared if (1) that creature is attacking and (2) no creatures are declared to block it. It will trigger even if that creature was put onto the battlefield attacking rather than having been declared as an attacker in the declare attackers step."
         }
       ],
       "subtypes": [
@@ -6721,7 +6665,7 @@
       "rulings": [
         {
           "date": "2013-04-15",
-          "text": "An ability that triggers when something “attacks and isn’t blocked” triggers in the declare blockers step after blockers are declared if (1) that creature is attacking and (2) no creatures are declared to block it. It will trigger even if that creature was put onto the battlefield attacking rather than having been declared as an attacker in the declare attackers step."
+          "text": "An ability that triggers when something \"attacks and isn't blocked\" triggers in the declare blockers step after blockers are declared if (1) that creature is attacking and (2) no creatures are declared to block it. It will trigger even if that creature was put onto the battlefield attacking rather than having been declared as an attacker in the declare attackers step."
         }
       ],
       "subtypes": [
@@ -6780,7 +6724,7 @@
       "rulings": [
         {
           "date": "2013-04-15",
-          "text": "An ability that triggers when something “attacks and isn’t blocked” triggers in the declare blockers step after blockers are declared if (1) that creature is attacking and (2) no creatures are declared to block it. It will trigger even if that creature was put onto the battlefield attacking rather than having been declared as an attacker in the declare attackers step."
+          "text": "An ability that triggers when something \"attacks and isn't blocked\" triggers in the declare blockers step after blockers are declared if (1) that creature is attacking and (2) no creatures are declared to block it. It will trigger even if that creature was put onto the battlefield attacking rather than having been declared as an attacker in the declare attackers step."
         }
       ],
       "subtypes": [
@@ -6839,7 +6783,7 @@
       "rulings": [
         {
           "date": "2013-04-15",
-          "text": "An ability that triggers when something “attacks and isn’t blocked” triggers in the declare blockers step after blockers are declared if (1) that creature is attacking and (2) no creatures are declared to block it. It will trigger even if that creature was put onto the battlefield attacking rather than having been declared as an attacker in the declare attackers step."
+          "text": "An ability that triggers when something \"attacks and isn't blocked\" triggers in the declare blockers step after blockers are declared if (1) that creature is attacking and (2) no creatures are declared to block it. It will trigger even if that creature was put onto the battlefield attacking rather than having been declared as an attacker in the declare attackers step."
         }
       ],
       "subtypes": [
@@ -6897,14 +6841,14 @@
       "rulings": [
         {
           "date": "2008-04-01",
-          "text": "A “creature card” is any card with the type Creature, even if it has other types such as Artifact, Enchantment, or Land. Older cards of type Summon are also Creature cards."
+          "text": "A \"creature card\" is any card with the type creature, even if it has other types such as artifact, enchantment, or land. Older cards of type summon are also creature cards."
         },
         {
           "date": "2008-10-01",
-          "text": "The two creature cards are exiled as a cost. No one can respond to this. If no graveyard has two creature cards in it, the cost can’t be paid."
+          "text": "The two creature cards are exiled as a cost. No one can respond to this. If no graveyard has two creature cards in it, the cost can't be paid."
         }
       ],
-      "text": "{1}, Exile two creature cards from a single graveyard: Put a 1/1 green Saproling creature token onto the battlefield.",
+      "text": "{1}, Exile two creature cards from a single graveyard: Create a 1/1 green Saproling creature token.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -6955,14 +6899,14 @@
       "rulings": [
         {
           "date": "2008-04-01",
-          "text": "A “creature card” is any card with the type Creature, even if it has other types such as Artifact, Enchantment, or Land. Older cards of type Summon are also Creature cards."
+          "text": "A \"creature card\" is any card with the type creature, even if it has other types such as artifact, enchantment, or land. Older cards of type summon are also creature cards."
         },
         {
           "date": "2008-10-01",
-          "text": "The two creature cards are exiled as a cost. No one can respond to this. If no graveyard has two creature cards in it, the cost can’t be paid."
+          "text": "The two creature cards are exiled as a cost. No one can respond to this. If no graveyard has two creature cards in it, the cost can't be paid."
         }
       ],
-      "text": "{1}, Exile two creature cards from a single graveyard: Put a 1/1 green Saproling creature token onto the battlefield.",
+      "text": "{1}, Exile two creature cards from a single graveyard: Create a 1/1 green Saproling creature token.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -7013,14 +6957,14 @@
       "rulings": [
         {
           "date": "2008-04-01",
-          "text": "A “creature card” is any card with the type Creature, even if it has other types such as Artifact, Enchantment, or Land. Older cards of type Summon are also Creature cards."
+          "text": "A \"creature card\" is any card with the type creature, even if it has other types such as artifact, enchantment, or land. Older cards of type summon are also creature cards."
         },
         {
           "date": "2008-10-01",
-          "text": "The two creature cards are exiled as a cost. No one can respond to this. If no graveyard has two creature cards in it, the cost can’t be paid."
+          "text": "The two creature cards are exiled as a cost. No one can respond to this. If no graveyard has two creature cards in it, the cost can't be paid."
         }
       ],
-      "text": "{1}, Exile two creature cards from a single graveyard: Put a 1/1 green Saproling creature token onto the battlefield.",
+      "text": "{1}, Exile two creature cards from a single graveyard: Create a 1/1 green Saproling creature token.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -7073,7 +7017,7 @@
       "rulings": [
         {
           "date": "2008-10-01",
-          "text": "You choose the target when you activate the ability. You don’t flip a coin until the ability resolves."
+          "text": "You choose the target when you activate the ability. You don't flip a coin until the ability resolves."
         }
       ],
       "subtypes": [
@@ -7898,7 +7842,7 @@
         },
         {
           "date": "2004-10-04",
-          "text": "The color of creature to be tapped is set when the effect is announced and even if you use Sleight of Mind after that, you can’t change what color creature needs to be tapped to prevent the destruction."
+          "text": "The color of creature to be tapped is set when the effect is announced and even if you use Sleight of Mind after that, you can't change what color creature needs to be tapped to prevent the destruction."
         },
         {
           "date": "2004-10-04",
@@ -7913,6 +7857,7 @@
     },
     {
       "artist": "Kaja Foglio",
+      "cmc": 0,
       "flavor": "In the feudal days of Icatia, finding the Rainbow Vale was often the goal of Knights' quests.",
       "id": "cf4746423ec382d9f7ad245bc23dfdc4b08affbd",
       "imageName": "rainbow vale",
@@ -7953,19 +7898,19 @@
         },
         {
           "date": "2007-09-16",
-          "text": "If control of Rainbow Vale has somehow changed before the “at end of turn” ability resolves, the player who activated the mana ability (not the current controller of Rainbow Vale) chooses one of his or her opponents to gain control of it."
+          "text": "If control of Rainbow Vale has somehow changed before the \"at end of turn\" ability resolves, the player who activated the mana ability (not the current controller of Rainbow Vale) chooses one of his or her opponents to gain control of it."
         },
         {
           "date": "2007-09-16",
-          "text": "If Rainbow Vale’s ability is activated during an End step, its “at the beginning of the end step” trigger won’t trigger until the End step of the next turn. If its ability is activated again during that turn, its “at the beginning of the end step” ability will trigger twice at the End step of that turn."
+          "text": "If Rainbow Vale's ability is activated during an End step, its \"at the beginning of the end step\" trigger won't trigger until the End step of the next turn. If its ability is activated again during that turn, its \"at the beginning of the end step\" ability will trigger twice at the End step of that turn."
         },
         {
           "date": "2007-09-16",
-          "text": "If more than one player manages to tap it for mana in a given turn, then two control-change abilities will trigger at end of the turn. These abilities resolve using the standard order for such things, so the active player’s triggers are put on the stack first, then the opponents’."
+          "text": "If more than one player manages to tap it for mana in a given turn, then two control-change abilities will trigger at end of the turn. These abilities resolve using the standard order for such things, so the active player's triggers are put on the stack first, then the opponents'."
         },
         {
           "date": "2007-09-16",
-          "text": "The opponent is chosen when the “at end of turn” triggered ability resolves."
+          "text": "The opponent is chosen when the \"at end of turn\" triggered ability resolves."
         }
       ],
       "text": "{T}: Add one mana of any color to your mana pool. An opponent gains control of Rainbow Vale at the beginning of the next end step.",
@@ -8065,6 +8010,7 @@
     },
     {
       "artist": "Mark Poole",
+      "cmc": 0,
       "colorIdentity": [
         "W"
       ],
@@ -8105,6 +8051,7 @@
     },
     {
       "artist": "Pat Morrissey",
+      "cmc": 0,
       "colorIdentity": [
         "U"
       ],
@@ -8138,7 +8085,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "It is considered “tapped for mana” if you activate its mana ability, even if you choose to take zero mana from it."
+          "text": "It is only considered \"tapped for mana\" if you activate its mana ability and generate mana from it."
         },
         {
           "date": "2004-10-04",
@@ -8209,11 +8156,11 @@
         },
         {
           "date": "2007-09-16",
-          "text": "If a creature’s controller doesn’t control an Island, that creature is an illegal target. Whether that player controls an Island is checked both when Seasinger’s ability is activated and when it resolves. However, targeting restrictions aren’t checked continually while a spell or ability is on the stack."
+          "text": "If a creature's controller doesn't control an Island, that creature is an illegal target. Whether that player controls an Island is checked both when Seasinger's ability is activated and when it resolves. However, targeting restrictions aren't checked continually while a spell or ability is on the stack."
         },
         {
           "date": "2007-09-16",
-          "text": "Whether you control Seasinger is checked continually, starting when the ability is activated. If, before the ability resolves, there’s any point at which you don’t control Seasinger, the ability has no effect -- even if you control Seasinger again by the time the ability resolves. The same is true regarding whether Seasinger remains tapped."
+          "text": "Whether you control Seasinger is checked continually, starting when the ability is activated. If, before the ability resolves, there's any point at which you don't control Seasinger, the ability has no effect — even if you control Seasinger again by the time the ability resolves. The same is true regarding whether Seasinger remains tapped."
         }
       ],
       "subtypes": [
@@ -8270,11 +8217,11 @@
         },
         {
           "date": "2004-10-04",
-          "text": "You exile exactly one creature. You can’t exile more than one in an attempt to get a larger effect."
+          "text": "You exile exactly one creature. You can't exile more than one in an attempt to get a larger effect."
         },
         {
           "date": "2008-04-01",
-          "text": "A “creature card” is any card with the type Creature, even if it has other types such as Artifact, Enchantment, or Land. Older cards of type Summon are also Creature cards."
+          "text": "A \"creature card\" is any card with the type creature, even if it has other types such as artifact, enchantment, or land. Older cards of type summon are also creature cards."
         }
       ],
       "text": "As an additional cost to cast Soul Exchange, exile a creature you control.\nReturn target creature card from your graveyard to the battlefield. Put a +2/+2 counter on that creature if the exiled creature was a Thrull.",
@@ -8364,11 +8311,11 @@
         },
         {
           "date": "2008-10-01",
-          "text": "If a creature affected by Spore Cloud is untapped at the time its controller’s next untap step begins, the “doesn’t untap” effect doesn’t do anything. It won’t apply at some later time when that creature is tapped."
+          "text": "If a creature affected by Spore Cloud is untapped at the time its controller's next untap step begins, the \"doesn't untap\" effect doesn't do anything. It won't apply at some later time when that creature is tapped."
         },
         {
           "date": "2008-10-01",
-          "text": "Spore Cloud doesn’t track the creatures’ controllers. If an affected creature changes controllers before its old controller’s next untap step, Spore Cloud will prevent it from being untapped during its new controller’s next untap step."
+          "text": "Spore Cloud doesn't track the creatures' controllers. If an affected creature changes controllers before its old controller's next untap step, Spore Cloud will prevent it from being untapped during its new controller's next untap step."
         }
       ],
       "text": "Tap all blocking creatures. Prevent all combat damage that would be dealt this turn. Each attacking creature and each blocking creature doesn't untap during its controller's next untap step.",
@@ -8424,11 +8371,11 @@
         },
         {
           "date": "2008-10-01",
-          "text": "If a creature affected by Spore Cloud is untapped at the time its controller’s next untap step begins, the “doesn’t untap” effect doesn’t do anything. It won’t apply at some later time when that creature is tapped."
+          "text": "If a creature affected by Spore Cloud is untapped at the time its controller's next untap step begins, the \"doesn't untap\" effect doesn't do anything. It won't apply at some later time when that creature is tapped."
         },
         {
           "date": "2008-10-01",
-          "text": "Spore Cloud doesn’t track the creatures’ controllers. If an affected creature changes controllers before its old controller’s next untap step, Spore Cloud will prevent it from being untapped during its new controller’s next untap step."
+          "text": "Spore Cloud doesn't track the creatures' controllers. If an affected creature changes controllers before its old controller's next untap step, Spore Cloud will prevent it from being untapped during its new controller's next untap step."
         }
       ],
       "text": "Tap all blocking creatures. Prevent all combat damage that would be dealt this turn. Each attacking creature and each blocking creature doesn't untap during its controller's next untap step.",
@@ -8484,11 +8431,11 @@
         },
         {
           "date": "2008-10-01",
-          "text": "If a creature affected by Spore Cloud is untapped at the time its controller’s next untap step begins, the “doesn’t untap” effect doesn’t do anything. It won’t apply at some later time when that creature is tapped."
+          "text": "If a creature affected by Spore Cloud is untapped at the time its controller's next untap step begins, the \"doesn't untap\" effect doesn't do anything. It won't apply at some later time when that creature is tapped."
         },
         {
           "date": "2008-10-01",
-          "text": "Spore Cloud doesn’t track the creatures’ controllers. If an affected creature changes controllers before its old controller’s next untap step, Spore Cloud will prevent it from being untapped during its new controller’s next untap step."
+          "text": "Spore Cloud doesn't track the creatures' controllers. If an affected creature changes controllers before its old controller's next untap step, Spore Cloud will prevent it from being untapped during its new controller's next untap step."
         }
       ],
       "text": "Tap all blocking creatures. Prevent all combat damage that would be dealt this turn. Each attacking creature and each blocking creature doesn't untap during its controller's next untap step.",
@@ -8610,6 +8557,7 @@
     },
     {
       "artist": "Mark Poole",
+      "cmc": 0,
       "colorIdentity": [
         "U"
       ],
@@ -8699,7 +8647,7 @@
       "subtypes": [
         "Fungus"
       ],
-      "text": "At the beginning of your upkeep, put a spore counter on Thallid.\nRemove three spore counters from Thallid: Put a 1/1 green Saproling creature token onto the battlefield.",
+      "text": "At the beginning of your upkeep, put a spore counter on Thallid.\nRemove three spore counters from Thallid: Create a 1/1 green Saproling creature token.",
       "toughness": "1",
       "type": "Creature — Fungus",
       "types": [
@@ -8761,7 +8709,7 @@
       "subtypes": [
         "Fungus"
       ],
-      "text": "At the beginning of your upkeep, put a spore counter on Thallid.\nRemove three spore counters from Thallid: Put a 1/1 green Saproling creature token onto the battlefield.",
+      "text": "At the beginning of your upkeep, put a spore counter on Thallid.\nRemove three spore counters from Thallid: Create a 1/1 green Saproling creature token.",
       "toughness": "1",
       "type": "Creature — Fungus",
       "types": [
@@ -8823,7 +8771,7 @@
       "subtypes": [
         "Fungus"
       ],
-      "text": "At the beginning of your upkeep, put a spore counter on Thallid.\nRemove three spore counters from Thallid: Put a 1/1 green Saproling creature token onto the battlefield.",
+      "text": "At the beginning of your upkeep, put a spore counter on Thallid.\nRemove three spore counters from Thallid: Create a 1/1 green Saproling creature token.",
       "toughness": "1",
       "type": "Creature — Fungus",
       "types": [
@@ -8885,7 +8833,7 @@
       "subtypes": [
         "Fungus"
       ],
-      "text": "At the beginning of your upkeep, put a spore counter on Thallid.\nRemove three spore counters from Thallid: Put a 1/1 green Saproling creature token onto the battlefield.",
+      "text": "At the beginning of your upkeep, put a spore counter on Thallid.\nRemove three spore counters from Thallid: Create a 1/1 green Saproling creature token.",
       "toughness": "1",
       "type": "Creature — Fungus",
       "types": [
@@ -8938,7 +8886,7 @@
       "subtypes": [
         "Fungus"
       ],
-      "text": "At the beginning of your upkeep, put a spore counter on Thallid Devourer.\nRemove three spore counters from Thallid Devourer: Put a 1/1 green Saproling creature token onto the battlefield.\nSacrifice a Saproling: Thallid Devourer gets +1/+2 until end of turn.",
+      "text": "At the beginning of your upkeep, put a spore counter on Thallid Devourer.\nRemove three spore counters from Thallid Devourer: Create a 1/1 green Saproling creature token.\nSacrifice a Saproling: Thallid Devourer gets +1/+2 until end of turn.",
       "toughness": "2",
       "type": "Creature — Fungus",
       "types": [
@@ -9099,7 +9047,7 @@
         },
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn’t matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
         }
       ],
       "subtypes": [
@@ -9434,7 +9382,7 @@
         },
         {
           "date": "2007-09-16",
-          "text": "Unlike many similar creatures, Thrull Champion untaps as normal during your untap step. Whether it’s tapped or untapped has no bearing on the control-change effect."
+          "text": "Unlike many similar creatures, Thrull Champion untaps as normal during your untap step. Whether it's tapped or untapped has no bearing on the control-change effect."
         }
       ],
       "subtypes": [
@@ -9489,7 +9437,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "This leaves the battlefield when you activate its activated ability, but the enchanted creature won’t be regenerated until the ability resolves. In the intervening time, the creature will no longer have the bonus that this had been giving it. This may cause the creature to be destroyed before the regeneration shield is created."
+          "text": "This leaves the battlefield when you activate its activated ability, but the enchanted creature won't be regenerated until the ability resolves. In the intervening time, the creature will no longer have the bonus that this had been giving it. This may cause the creature to be destroyed before the regeneration shield is created."
         }
       ],
       "subtypes": [
@@ -10335,7 +10283,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "The Merfolk are tapped during announcement and as a cost. The ability can’t be announced if the Merfolk are not in an untapped state."
+          "text": "The Merfolk are tapped during announcement and as a cost. The ability can't be announced if the Merfolk are not in an untapped state."
         }
       ],
       "subtypes": [

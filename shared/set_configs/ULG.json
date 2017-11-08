@@ -1,0 +1,56 @@
+{
+  "SET": {
+    "name": "Urza's Legacy",
+    "code": "ULG",
+    "gathererCode": "GU",
+    "magicCardsInfoCode": "ul",
+    "releaseDate": "1999-02-15",
+    "border": "black",
+    "type": "expansion",
+    "block": "Urza's",
+    "booster": ["rare", "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common"],
+    "translations": {
+      "de": "Urzas Vermächtnis",
+      "fr": "Héritage d'Urza",
+      "it": "Eredità di Urza",
+      "es": "El Legado de Urza",
+      "pt": "O Legado de Urza"
+    },
+    "mkm_name": "Urza's Legacy",
+    "mkm_id": 27
+  },
+  "SET_CORRECTIONS": [{
+    "match": {
+      "name": ["Knighthood", "Lava Axe"]
+    },
+    "flavorAddExclamation": true
+  }, {
+    "match": {
+      "name": "Goblin Welder"
+    },
+    "replace": {
+      "flavor": "\"I wrecked your metal guy, boss. But look! I made you an ashtray.\""
+    }
+  }, {
+    "match": {
+      "name": "Purify"
+    },
+    "replace": {
+      "flavor": "\"Our Mother! The sky was Her hair; the sun, Her face. She danced on the grass and in the hills.\"\n—Song of All, canto 23"
+    }
+  }, {
+    "match": {
+      "name": "Quicksilver Amulet"
+    },
+    "replace": {
+      "flavor": "\"Wonderful! You got a lion on your first try. Now put it back.\""
+    }
+  }, {
+    "match": {
+      "name": "Molten Hydra"
+    },
+    "replace": {
+      "flavor": "Keep off the glass. —Hydra warning sign"
+    }
+  }]
+}

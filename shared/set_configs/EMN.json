@@ -1,0 +1,126 @@
+{
+  "PRODUCT_PAGE": "http://magic.wizards.com/en/articles/archive/news/announcing-eldritch-moon-2016-02-08",
+  "SET": {
+    "name": "Eldritch Moon",
+    "code": "EMN",
+    "magicCardsInfoCode": "emn",
+    "releaseDate": "2016-07-22",
+    "border": "black",
+    "type": "expansion",
+    "block": "Shadows over Innistrad",
+    "booster": [
+      ["rare", "mythic rare"], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", ["common", "double faced rare", "double faced mythic rare"],
+      ["double faced common", "double faced uncommon"],
+      ["land", "checklist"], "marketing"
+    ]
+  },
+  "SET_CORRECTIONS": [{
+      "match": {
+        "name": "Ulrich, Uncontested Alpha"
+      },
+      "replace": {
+        "colors": [
+          "Red",
+          "Green"
+        ]
+      }
+    }, {
+      "match": {
+        "imageName": "brisela, voice of nightmares1"
+      },
+      "replace": {
+        "imageName": "brisela, voice of nightmares",
+        "number": "15b",
+        "cmc": 11,
+        "colorIdentity": [
+          "W"
+        ]
+      }
+    },
+    {
+      "match": {
+        "imageName": "brisela, voice of nightmares2"
+      },
+      "removeCard": true
+    }, {
+      "match": {
+        "name": [
+          "Gisela, the Broken Blade",
+          "Bruna, the Fading Light",
+          "Brisela, Voice of Nightmares"
+        ]
+      },
+      "replace": {
+        "names": [
+          "Gisela, the Broken Blade",
+          "Bruna, the Fading Light",
+          "Brisela, Voice of Nightmares"
+        ]
+      }
+    }, {
+      "match": {
+        "imageName": "chittering host1"
+      },
+      "replace": {
+        "imageName": "chittering host",
+        "number": "91b",
+        "cmc": 7,
+        "colorIdentity": [
+          "B"
+        ]
+      }
+    }, {
+      "match": {
+        "imageName": "chittering host2"
+      },
+      "removeCard": true
+    }, {
+      "match": {
+        "name": [
+          "Graf Rats",
+          "Midnight Scavengers",
+          "Chittering Host"
+        ]
+      },
+      "replace": {
+        "names": [
+          "Graf Rats",
+          "Midnight Scavengers",
+          "Chittering Host"
+        ]
+      }
+    }, {
+      "match": {
+        "imageName": "hanweir, the writhing township1"
+      },
+      "replace": {
+        "imageName": "hanweir, the writhing township",
+        "number": "130b",
+        "cmc": 3,
+        "colorIdentity": [
+          "R"
+        ]
+      }
+    }, {
+      "match": {
+        "imageName": "hanweir, the writhing township2"
+      },
+      "removeCard": true
+    }, {
+      "match": {
+        "name": [
+          "Hanweir Battlements",
+          "Hanweir Garrison",
+          "Hanweir, the Writhing Township"
+        ]
+      },
+      "replace": {
+        "names": [
+          "Hanweir Battlements",
+          "Hanweir Garrison",
+          "Hanweir, the Writhing Township"
+        ]
+      }
+    }
+  ]
+}
