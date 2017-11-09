@@ -1,6 +1,7 @@
 "use strict";
 
 var C = require("./C");
+var clone = require("clone");
 var hash = require("mhash");
 var path = require("path");
 var moment = require("moment");
@@ -12,7 +13,6 @@ var url = require("url");
 var urlUtil = require("@sembiance/xutil").url;
 var unicodeUtil = require("@sembiance/xutil").unicode;
 var winston = require("winston");
-var cloneDeep = require("clone-deep");
 
 winston.level = 'info';
 winston.cli()
@@ -382,11 +382,11 @@ exports.performSetCorrections = function(setCorrections, fullSet)
 			{
 				var newCard;
 				if(setCorrection.copyCard)
-					newCard = cloneDeep(cards.mutateOnce(function(card) { return card.name===setCorrection.copyCard ? card : undefined; }), true);
+					newCard = clone(cards.mutateOnce(function(card) { return card.name===setCorrection.copyCard ? card : undefined; }));
 				else if(setCorrection.importCard)
 					newCard = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "json", setCorrection.importCard.set + ".json"), {encoding:"utf8"})).cards.mutateOnce(function(card) { return card.name===setCorrection.importCard.name ? card : undefined; });
 				else if(setCorrection.addCard)
-					newCard = cloneDeep(setCorrection.addCard, true);
+					newCard = clone(setCorrection.addCard);
 
 				if(setCorrection.replace)
 					Object.forEach(setCorrection.replace, function(key, value) { newCard[key] = value; });

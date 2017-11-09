@@ -2,13 +2,13 @@
 "use strict";
 
 var C = require('../shared/C'),
+	clone = require('clone'),
 	path = require("path"),
 	moment = require("moment"),
 	fs = require("fs"),
 	shared = require('../shared/shared'),
 	tiptoe = require("tiptoe"),
-    winston = require("winston"),
-    cloneDeep = require("clone-deep");
+	winston = require("winston");
 
 var targetSetCode = process.argv[2];
 if(!C.SETS_NOT_ON_GATHERER.contains(targetSetCode))
@@ -21,7 +21,7 @@ var targetSet = C.SETS.mutateOnce(function(SET) { if(SET.code===targetSetCode) {
 if(!C.NON_GATHERER_SET_CARD_LISTS.hasOwnProperty(targetSet.code))
 	process.exit(0);
 
-var newSet = cloneDeep(targetSet);
+var newSet = clone(targetSet);
 newSet.cards = [];
 
 tiptoe(
@@ -75,7 +75,7 @@ function processSet(setCode, targetMultiverseids, cb)
 			{
 				if(card.multiverseid && targetMultiverseids.contains(card.multiverseid))
 				{
-					var newCard = cloneDeep(card, true);
+					var newCard = clone(card);
 					delete newCard.multiverseid;
 					delete newCard.variations;
 					delete newCard.number;
@@ -177,7 +177,7 @@ function getMultiverseidsForSet(setCode, cb)
 				return setImmediate(function() { cb(err); });
 
 			var allCards = Array.prototype.slice.apply(arguments).flatten().flatten();
-			var cardsToGet = cloneDeep(C.NON_GATHERER_SET_CARD_LISTS[targetSet.code]);
+			var cardsToGet = clone(C.NON_GATHERER_SET_CARD_LISTS[targetSet.code]);
 
 			var multiverseids = [];
 			allCards.forEach(function(card)

@@ -2,12 +2,12 @@
 /*global setImmediate: true*/
 
 var C = require('../shared/C'),
+	clone = require('clone'),
 	fs = require("fs"),
 	shared = require('../shared/shared'),
 	path = require("path"),
 	tiptoe = require("tiptoe"),
-	winston = require("winston"),
-	cloneDeep = require("clone-deep");
+	winston = require("winston");
 
 shared.getSetsToDo().serialForEach(processSet, function(err) {
 	if (err) {
@@ -26,7 +26,7 @@ function processSet(code, cb) {
 			fs.readFile(path.join(__dirname, "..", "json", code + ".json"), {encoding : "utf8"}, this);
 		},
 		function processCards(setRaw) {
-			var newSet = cloneDeep(C.SETS.mutateOnce(function(SET) { return SET.code===code ? SET : undefined; }));
+			var newSet = clone(C.SETS.mutateOnce(function(SET) { return SET.code===code ? SET : undefined; }));
 			newSet.cards = JSON.parse(setRaw).cards;
 			newSet.code = code; // Needed for shared.saveSet()
 

@@ -1,13 +1,13 @@
 "use strict";
 
 var C = require('../shared/C'),
+	clone = require('clone'),
 	util = require("util"),
 	fs = require("fs"),
 	path = require("path"),
 	dustUtil = require('@sembiance/xutil').dust,
 	tiptoe = require("tiptoe"),
-	winston = require("winston"),
-	cloneDeep = require("clone-deep");
+	winston = require("winston");
 
 function usage()
 {
@@ -68,7 +68,7 @@ function renderSet(setRaw, original, cb)
 			card.type = card.originalType;
 		}
 
-		var dup = cloneDeep(card, true);
+		var dup = clone(card);
 		["name", "manaCost", "cmc", "type", "supertypes", "types", "subtypes", "rarity", "artist", "number", "loyalty", "releaseDate", "source",
 		 "power", "toughness", "text", "originalText", "originalType", "flavor", "imageName", "rulings", "layout", "multiverseid", "colors", "names",
 		 "foreignNames", "printings", "legalities", "id"].forEach(function(key) { delete dup[key]; });

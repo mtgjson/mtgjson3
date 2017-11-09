@@ -2,6 +2,7 @@
 'use strict';
 
 var C = require("../shared/C");
+var clone = require("clone");
 var fs = require("fs");
 var url = require("url");
 var moment = require("moment");
@@ -14,8 +15,6 @@ var querystring = require("querystring");
 var tiptoe = require("tiptoe");
 var winston = require("winston");
 var async = require('async');
-var winston = require("winston");
-var cloneDeep = require("clone-deep");
 
 (function (exports) {
 
@@ -157,7 +156,7 @@ var ripSet = function(setName, cb) {
 			getSetNameMultiverseIds(setName, this);
 		},
 		function processFirstBatch(multiverseids) {
-			this.data.set = cloneDeep(C.SETS.mutateOnce(function (SET) { return SET.name===setName ? SET : undefined; }));
+			this.data.set = clone(C.SETS.mutateOnce(function (SET) { return SET.name===setName ? SET : undefined; }));
 			processMultiverseids(multiverseids, this);
 		},
 		function processVariations(cards) {
