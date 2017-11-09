@@ -6,8 +6,8 @@ var C = require('../shared/C'),
 	shared = require('../shared/shared'),
 	path = require("path"),
 	tiptoe = require("tiptoe"),
-    winston = require("winston"),
-    cloneDeep = require("clone-deep");
+	winston = require("winston"),
+	cloneDeep = require("clone-deep");
 
 shared.getSetsToDo().serialForEach(processSet, function(err) {
 	if (err) {

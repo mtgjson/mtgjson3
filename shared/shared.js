@@ -14,6 +14,9 @@ var unicodeUtil = require("@sembiance/xutil").unicode;
 var winston = require("winston");
 var cloneDeep = require("clone-deep");
 
+winston.level = 'info';
+winston.cli()
+
 var retry = require('retry');
 var request = require('request');
 var levelup = require('level');

@@ -6,8 +6,8 @@ var C = require('../shared/C'),
 	path = require("path"),
 	dustUtil = require('@sembiance/xutil').dust,
 	tiptoe = require("tiptoe"),
-    winston = require("winston"),
-    cloneDeep = require("clone-deep");
+	winston = require("winston"),
+	cloneDeep = require("clone-deep");
 
 function usage()
 {

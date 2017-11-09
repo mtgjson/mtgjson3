@@ -7,7 +7,7 @@ var fs = require("fs"),
 	httpUtil = require('@sembiance/xutil').http,
 	domino = require("domino"),
 	tiptoe = require("tiptoe"),
-    winston = require("winston");
+	winston = require("winston");
 
 tiptoe(
 	function getPageAndPrevious()

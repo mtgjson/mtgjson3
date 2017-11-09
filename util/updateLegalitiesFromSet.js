@@ -5,7 +5,7 @@ var fs = require("fs"),
 	shared = require('../shared/shared'),
 	path = require("path"),
 	tiptoe = require("tiptoe"),
-    winston = require("winston");;
+	winston = require("winston");
 
 if (require.main == module) {
 	shared.getSetsToDo().serialForEach(processSet, function(err) {

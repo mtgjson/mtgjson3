@@ -4,7 +4,7 @@ var shared = require('../shared/shared'),
 	fs = require("fs"),
 	path = require("path"),
 	tiptoe = require("tiptoe"),
-    winston = require("winston");
+	winston = require("winston");
 
 var CARD_FIELDS = [ "name", "number", "rarity", "type", "manaCost", "text", "flavor", "artist", "power", "toughness"];
 

@@ -4,7 +4,7 @@ var C = require('../shared/C'),
 	path = require("path"),
 	runUtil = require('@sembiance/xutil').run,
 	tiptoe = require("tiptoe"),
-    winston = require("winston");
+	winston = require("winston");
 
 tiptoe(
 	function updateNonGathererSets()

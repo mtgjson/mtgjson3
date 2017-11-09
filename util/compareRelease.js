@@ -8,7 +8,7 @@ var httpUtil = require('@sembiance/xutil').http,
 	diffUtil = require('@sembiance/xutil').diff,
 	path = require("path"),
 	tiptoe = require("tiptoe"),
-	winston = require("winston");;
+	winston = require("winston");
 
 var setsToDo = shared.getSetsToDo();
 var updatedSetFiles = [];

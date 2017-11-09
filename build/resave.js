@@ -6,7 +6,7 @@ var C = require('../shared/C'),
 	path = require("path"),
 	shared = require('../shared/shared'),
 	tiptoe = require("tiptoe"),
-    winston = require("winston");
+	winston = require("winston");
 
 var setsToDo = shared.getSetsToDo();
 

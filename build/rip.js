@@ -12,6 +12,7 @@ var diffUtil = require("@sembiance/xutil").diff;
 var urlUtil = require("@sembiance/xutil").url;
 var querystring = require("querystring");
 var tiptoe = require("tiptoe");
+var winston = require("winston");
 var async = require('async');
 var winston = require("winston");
 var cloneDeep = require("clone-deep");

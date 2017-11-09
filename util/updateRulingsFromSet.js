@@ -4,6 +4,7 @@ var fs = require('fs');
 var shared = require('../shared/shared');
 var path = require('path');
 var tiptoe = require('tiptoe');
+var winston = require('winston');
 var async = require('async');
 var winston = require("winston");
 

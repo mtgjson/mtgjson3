@@ -4,8 +4,8 @@ var fs = require("fs"),
 	shared = require('../shared/shared'),
 	path = require("path"),
 	tiptoe = require("tiptoe"),
-    winston = require("winston"),
-    childProcess = require("child_process");
+	winston = require("winston"),
+	childProcess = require("child_process");
 
 var cardsByName = {};
 

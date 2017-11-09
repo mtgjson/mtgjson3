@@ -5,6 +5,7 @@ var C = require('../shared/C');
 var shared = require('../shared/shared');
 var tiptoe = require('tiptoe');
 var rip = require('./rip.js');
+var winston = require("winston");
 var async = require('async');
 var winston = require("winston");
 
