@@ -1198,16 +1198,17 @@
       "originalType": "Creature — Cat Illusion",
       "power": "4",
       "printings": [
-        "C15"
+        "C15",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2015-11-04",
+          "date": "2017-11-17",
           "text": "Creatures may be dealt damage greater than their toughness. For example, if a source deals 5 damage to Illusory Ambusher, you'll draw five cards."
         },
         {
-          "date": "2015-11-04",
+          "date": "2017-11-17",
           "text": "If Illusory Ambusher blocks a creature with trample, that creature's controller can assign any amount of damage from 1 to that creature's power to Illusory Ambusher. Excess damage doesn't have to be assigned to the defending player."
         }
       ],
@@ -5123,7 +5124,8 @@
       "originalType": "Artifact Creature — Sphinx",
       "power": "4",
       "printings": [
-        "C15"
+        "C15",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "subtypes": [
@@ -8089,6 +8091,10 @@
           "legality": "Legal"
         },
         {
+          "format": "Standard",
+          "legality": "Legal"
+        },
+        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -8286,12 +8292,13 @@
       "printings": [
         "GTC",
         "DDO",
-        "C15"
+        "C15",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2013-01-24",
+          "date": "2017-11-17",
           "text": "An \"attacking creature\" is one that has been declared as an attacker this combat, or one that was put onto the battlefield attacking this combat. Unless that creature leaves combat, it continues to be an attacking creature through the end of combat step, even if the player it was attacking has left the game, or the planeswalker it was attacking has left combat. There's no such thing as an attacking creature outside of the combat phase."
         }
       ],
@@ -8877,17 +8884,26 @@
       "originalType": "Enchantment",
       "printings": [
         "SCG",
-        "C15"
+        "C15",
+        "IMA"
       ],
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2004-10-04",
-          "text": "The exiled cards are face up while exiled."
+          "date": "2017-11-17",
+          "text": "Auras attached to the exiled creatures will be put into their owners' graveyards. Equipment attached to the exiled creatures will become unattached and remain on the battlefield. Any counters on the exiled creatures will cease to exist."
         },
         {
-          "date": "2004-10-04",
-          "text": "The exiled cards return to the battlefield face up."
+          "date": "2017-11-17",
+          "text": "Token creatures will count to determine how many Dragon tokens you create, but they won't be returned to the battlefield when Day of the Dragons leaves the battlefield."
+        },
+        {
+          "date": "2017-11-17",
+          "text": "If Day of the Dragons leaves the battlefield before its first ability has resolved, its second ability will trigger and you'll sacrifice any Dragons you already control. Then its first ability will resolve and exile your creatures forever, leaving you with that many Dragon tokens."
+        },
+        {
+          "date": "2017-11-17",
+          "text": "All of the nontoken creatures you exiled return to the battlefield when Day of the Dragons leaves the battlefield, even if some or all of the Dragon tokens had already left the battlefield."
         }
       ],
       "text": "When Day of the Dragons enters the battlefield, exile all creatures you control. Then create that many 5/5 red Dragon creature tokens with flying.\nWhen Day of the Dragons leaves the battlefield, sacrifice all Dragons you control. Then return the exiled cards to the battlefield under your control.",
@@ -10085,7 +10101,8 @@
         "GPT",
         "DDN",
         "MM2",
-        "C15"
+        "C15",
+        "IMA"
       ],
       "rarity": "Common",
       "text": "Return target nonland permanent with converted mana cost X to its owner's hand.\nDraw a card.",
@@ -10759,7 +10776,8 @@
         "BRB",
         "CMD",
         "C15",
-        "C16"
+        "C16",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "text": "Each player discards his or her hand, then draws cards equal to the greatest number of cards a player discarded this way.",
@@ -10832,10 +10850,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -12806,7 +12820,8 @@
         "DD3_GVL",
         "C15",
         "EMA",
-        "CMA"
+        "CMA",
+        "IMA"
       ],
       "rarity": "Common",
       "subtypes": [
@@ -12967,10 +12982,6 @@
         },
         {
           "format": "Shadows over Innistrad Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -14054,17 +14065,22 @@
         "ISD",
         "C13",
         "C15",
-        "CN2"
+        "CN2",
+        "IMA"
       ],
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2011-09-22",
-          "text": "The instant or sorcery card returned to your hand is chosen at random as the triggered ability resolves. If any player responds to the ability, that player won't yet know what card will be returned."
+          "date": "2017-11-17",
+          "text": "The instant or sorcery card returned to your hand is chosen at random as Charmbreaker Devils's first ability resolves. If any player responds to the ability, that player won't yet know what card will be returned."
         },
         {
-          "date": "2011-09-22",
+          "date": "2017-11-17",
           "text": "Because the first ability doesn't target the instant or sorcery card, any instants or sorceries put into your graveyard in response to that ability may be returned to your hand."
+        },
+        {
+          "date": "2017-11-17",
+          "text": "All players get to see which card you chose at random as it's returned to your hand."
         }
       ],
       "subtypes": [
@@ -23643,7 +23659,8 @@
       "printings": [
         "EVE",
         "MMA",
-        "C15"
+        "C15",
+        "DDT"
       ],
       "rarity": "Rare",
       "subtypes": [
@@ -25262,7 +25279,8 @@
         "C14",
         "DD3_JVC",
         "DDP",
-        "C15"
+        "C15",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "text": "{T}: Add {C} to your mana pool.\n{1}, {T}, Sacrifice Mind Stone: Draw a card.",
@@ -26980,7 +26998,8 @@
         "C15",
         "C16",
         "CMA",
-        "C17"
+        "C17",
+        "IMA"
       ],
       "rarity": "Common",
       "rulings": [
@@ -27382,10 +27401,11 @@
         "C16",
         "AKH",
         "CMA",
-        "C17"
+        "C17",
+        "IMA"
       ],
       "rarity": "Common",
-      "text": "{T}, Sacrifice Evolving Wilds: Search your library for a basic land card and put it onto the battlefield tapped. Then shuffle your library.",
+      "text": "{T}, Sacrifice Evolving Wilds: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle your library.",
       "type": "Land",
       "types": [
         "Land"
@@ -27466,7 +27486,8 @@
         "C14",
         "DD3_EVG",
         "C15",
-        "CMA"
+        "CMA",
+        "DDT"
       ],
       "rarity": "Common",
       "rulings": [
@@ -27759,7 +27780,8 @@
         "MM2",
         "C15",
         "C16",
-        "CMA"
+        "CMA",
+        "IMA"
       ],
       "rarity": "Common",
       "rulings": [
@@ -28012,7 +28034,8 @@
         "MM2",
         "C15",
         "C16",
-        "C17"
+        "C17",
+        "IMA"
       ],
       "rarity": "Common",
       "rulings": [
@@ -28725,7 +28748,8 @@
         "C15",
         "C16",
         "CMA",
-        "C17"
+        "C17",
+        "IMA"
       ],
       "rarity": "Common",
       "rulings": [
@@ -29356,7 +29380,8 @@
         "CMD",
         "MM2",
         "C15",
-        "C16"
+        "C16",
+        "IMA"
       ],
       "rarity": "Common",
       "rulings": [
@@ -32730,7 +32755,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -33111,7 +33137,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -33492,7 +33519,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -33873,7 +33901,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -35804,7 +35833,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -36191,7 +36221,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -36578,7 +36609,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -36965,7 +36997,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [

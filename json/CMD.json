@@ -724,13 +724,22 @@
       "printings": [
         "LRW",
         "CMD",
-        "MPS_AKH"
+        "MPS_AKH",
+        "IMA"
       ],
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2007-10-01",
-          "text": "If the first and third modes are chosen, an artifact creature with converted mana cost 3 or less would be destroyed twice by this spell. It would have to be regenerated twice to survive. (A similar thing happens with most of the other combinations.)"
+          "date": "2017-11-17",
+          "text": "Each of the chosen modes happens sequentially. If a permanent has an ability that triggers whenever it or another permanent is destroyed, it will see permanents destroyed at the same time as it or before it, but not permanents destroyed by later modes."
+        },
+        {
+          "date": "2017-11-17",
+          "text": "If the first and third modes are chosen, an artifact creature with converted mana cost 3 or less will have to be regenerated twice to survive. This is because the modes happen sequentially, and the regeneration \"shield\" is used up by the first one. (A similar thing happens with most of the other combinations.)"
+        },
+        {
+          "date": "2017-11-17",
+          "text": "If a card is exiled \"until\" another permanent leaves the battlefield, the exiled card returns to the battlefield immediately after that permanent leaves the battlefield during Austere Command's resolution, and it may be destroyed by a later mode."
         }
       ],
       "text": "Choose two —\n• Destroy all artifacts.\n• Destroy all enchantments.\n• Destroy all creatures with converted mana cost 3 or less.\n• Destroy all creatures with converted mana cost 4 or greater.",
@@ -2704,7 +2713,8 @@
         "W16",
         "EMA",
         "W17",
-        "CMA"
+        "CMA",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "subtypes": [
@@ -4118,7 +4128,8 @@
       "printings": [
         "pJGP",
         "CMD",
-        "VMA"
+        "VMA",
+        "IMA"
       ],
       "rarity": "Rare",
       "rulings": [
@@ -4223,13 +4234,14 @@
         "CMD",
         "M13",
         "C13",
-        "C14"
+        "C14",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2012-07-01",
-          "text": "If Fog Bank blocks a creature with trample, that creature's controller must assign 2 damage to Fog Bank (assuming it's blocking no other creatures, there was no damage marked on it, and nothing has changed its toughness). The remainder can be assigned to the defending player or planeswalker."
+          "date": "2017-11-17",
+          "text": "Fog Bank's prevention effect isn't considered while assigning combat damage from a creature with trample. For example, if it blocks a 5/5 creature with trample, that creature's controller must assign 2 of that creature's combat damage to Fog Bank and the remainder can be assigned to the defending player or planeswalker."
         }
       ],
       "subtypes": [
@@ -6208,7 +6220,8 @@
         "BRB",
         "CMD",
         "C15",
-        "C16"
+        "C16",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "text": "Each player discards his or her hand, then draws cards equal to the greatest number of cards a player discarded this way.",
@@ -6931,7 +6944,8 @@
         "M12",
         "M14",
         "DDR",
-        "E01"
+        "E01",
+        "IMA"
       ],
       "rarity": "Common",
       "text": "Destroy target nonblack creature.",
@@ -8693,10 +8707,6 @@
         },
         {
           "format": "Shadows over Innistrad Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -11221,7 +11231,8 @@
         "M13",
         "M15",
         "DD3_JVC",
-        "CMA"
+        "CMA",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "subtypes": [
@@ -14409,7 +14420,8 @@
       "originalType": "Instant",
       "printings": [
         "SCG",
-        "CMD"
+        "CMD",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
@@ -16637,7 +16649,8 @@
         "DRB",
         "CMD",
         "CMA",
-        "C17"
+        "C17",
+        "IMA"
       ],
       "rarity": "Rare",
       "subtypes": [
@@ -17780,12 +17793,21 @@
         "pCMP",
         "CMD",
         "MMA",
-        "MM2"
+        "MM2",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2006-02-01",
+          "date": "2017-11-17",
+          "text": "You divide the damage as you cast Electrolyze, not as it resolves. Each target must be assigned at least 1 damage. In other words, as you cast Electrolyze, you choose whether to have it deal 2 damage to a single target, or deal 1 damage to each of two targets."
+        },
+        {
+          "date": "2017-11-17",
+          "text": "If Electrolyze targets two creatures and one becomes an illegal target, the remaining target is dealt 1 damage, not 2. You'll still draw a card."
+        },
+        {
+          "date": "2017-11-17",
           "text": "If all chosen targets are illegal as Electrolyze tries to resolve, it will be countered and none of its effects will happen. No damage will be dealt and you won't draw a card."
         }
       ],
@@ -18892,16 +18914,17 @@
         "pPRE",
         "CON",
         "CMD",
-        "CMA"
+        "CMA",
+        "IMA"
       ],
       "rarity": "Mythic Rare",
       "rulings": [
         {
-          "date": "2009-02-01",
-          "text": "This ability is not optional. You must discard your entire hand no matter how many creatures your opponents control."
+          "date": "2017-11-17",
+          "text": "Malfegor's ability is not optional. You must discard your entire hand no matter how many creatures your opponents control."
         },
         {
-          "date": "2009-02-01",
+          "date": "2017-11-17",
           "text": "After you discard your hand and the number of creatures each opponent must sacrifice has been determined, each opponent in turn order, starting with the player whose turn it is if that player is your opponent, chooses which creatures he or she will sacrifice, then all the chosen creatures are all sacrificed at the same time."
         }
       ],
@@ -20628,7 +20651,8 @@
         "DIS",
         "CMD",
         "DDO",
-        "MM3"
+        "MM3",
+        "IMA"
       ],
       "rarity": "Rare",
       "subtypes": [
@@ -23166,7 +23190,8 @@
       "printings": [
         "MRD",
         "CMD",
-        "MPS"
+        "MPS",
+        "IMA"
       ],
       "rarity": "Rare",
       "text": "{4}, {T}: Put a fate counter on target permanent.\n{5}, {T}, Sacrifice Oblivion Stone: Destroy each nonland permanent without a fate counter on it, then remove all fate counters from all permanents.",
@@ -24075,7 +24100,8 @@
         "C13",
         "MM2",
         "C16",
-        "CMA"
+        "CMA",
+        "IMA"
       ],
       "rarity": "Common",
       "rulings": [
@@ -24329,7 +24355,8 @@
         "C15",
         "C16",
         "CMA",
-        "C17"
+        "C17",
+        "IMA"
       ],
       "rarity": "Common",
       "rulings": [
@@ -24501,7 +24528,8 @@
         "MM2",
         "C16",
         "PCA",
-        "C17"
+        "C17",
+        "IMA"
       ],
       "rarity": "Common",
       "rulings": [
@@ -24699,10 +24727,11 @@
         "C16",
         "AKH",
         "CMA",
-        "C17"
+        "C17",
+        "IMA"
       ],
       "rarity": "Common",
-      "text": "{T}, Sacrifice Evolving Wilds: Search your library for a basic land card and put it onto the battlefield tapped. Then shuffle your library.",
+      "text": "{T}, Sacrifice Evolving Wilds: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle your library.",
       "type": "Land",
       "types": [
         "Land"
@@ -24778,7 +24807,8 @@
         "C14",
         "DD3_EVG",
         "C15",
-        "CMA"
+        "CMA",
+        "DDT"
       ],
       "rarity": "Common",
       "rulings": [
@@ -24942,7 +24972,8 @@
         "MM2",
         "C15",
         "C16",
-        "CMA"
+        "CMA",
+        "IMA"
       ],
       "rarity": "Common",
       "rulings": [
@@ -25029,7 +25060,8 @@
         "PC2",
         "MM2",
         "C16",
-        "PCA"
+        "PCA",
+        "IMA"
       ],
       "rarity": "Common",
       "rulings": [
@@ -25193,7 +25225,8 @@
         "MM2",
         "C15",
         "C16",
-        "C17"
+        "C17",
+        "IMA"
       ],
       "rarity": "Common",
       "rulings": [
@@ -25436,7 +25469,8 @@
         "DDJ",
         "C13",
         "VMA",
-        "C14"
+        "C14",
+        "DDT"
       ],
       "rarity": "Common",
       "rulings": [
@@ -25602,7 +25636,8 @@
         "C15",
         "C16",
         "CMA",
-        "C17"
+        "C17",
+        "IMA"
       ],
       "rarity": "Common",
       "rulings": [
@@ -25691,7 +25726,8 @@
         "MM2",
         "C16",
         "CMA",
-        "C17"
+        "C17",
+        "IMA"
       ],
       "rarity": "Common",
       "rulings": [
@@ -25947,7 +25983,8 @@
         "C16",
         "PCA",
         "CMA",
-        "C17"
+        "C17",
+        "IMA"
       ],
       "rarity": "Common",
       "rulings": [
@@ -26032,7 +26069,8 @@
         "CMD",
         "MM2",
         "C15",
-        "C16"
+        "C16",
+        "IMA"
       ],
       "rarity": "Common",
       "rulings": [
@@ -28662,7 +28700,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -29023,7 +29062,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -29384,7 +29424,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -29745,7 +29786,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -31576,7 +31618,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -31943,7 +31986,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -32310,7 +32354,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -32677,7 +32722,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [

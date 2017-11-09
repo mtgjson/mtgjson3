@@ -254,17 +254,26 @@
         "M11",
         "DDH",
         "C13",
-        "M15"
+        "M15",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2014-07-18",
-          "text": "The ability triggers just once for each life-gaining event, whether it's 1 life from Soulmender or 8 life from Meditation Puzzle."
+          "date": "2017-11-17",
+          "text": "The ability of Ajani's Pridemate triggers just once for each life-gaining event, whether it's 1 life from Auriok Champion or 6 life from Tavern Swindler."
         },
         {
-          "date": "2014-07-18",
-          "text": "A creature with lifelink dealing combat damage is a single life-gaining event. For example, if two creatures you control with lifelink deal combat damage at the same time, Ajani's Pridemate's ability will trigger twice. However, if a single creature you control with lifelink deals combat damage to multiple creatures, players, and/or planeswalkers at the same time (perhaps because it has trample or was blocked by more than one creature), the ability will trigger only once."
+          "date": "2017-11-17",
+          "text": "If Ajani's Pridemate is dealt lethal damage at the same time that you gain life, it won't receive a counter from its ability in time to save it."
+        },
+        {
+          "date": "2017-11-17",
+          "text": "Each creature with lifelink dealing combat damage causes a separate life-gaining event. For example, if two creatures you control with lifelink deal combat damage at the same time, Ajani's Pridemate's ability will trigger twice. However, if a single creature you control with lifelink deals combat damage to multiple creatures, players, and/or planeswalkers at the same time (perhaps because it has trample or was blocked by more than one creature), the ability will trigger only once."
+        },
+        {
+          "date": "2017-11-17",
+          "text": "In a Two-Headed Giant game, life gained by your teammate won't cause the ability to trigger, even though it causes your team's life total to increase."
         }
       ],
       "subtypes": [
@@ -2143,7 +2152,8 @@
       "originalType": "Sorcery",
       "printings": [
         "ROE",
-        "C13"
+        "C13",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
@@ -4075,13 +4085,14 @@
         "CMD",
         "M13",
         "C13",
-        "C14"
+        "C14",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2012-07-01",
-          "text": "If Fog Bank blocks a creature with trample, that creature's controller must assign 2 damage to Fog Bank (assuming it's blocking no other creatures, there was no damage marked on it, and nothing has changed its toughness). The remainder can be assigned to the defending player or planeswalker."
+          "date": "2017-11-17",
+          "text": "Fog Bank's prevention effect isn't considered while assigning combat damage from a creature with trample. For example, if it blocks a 5/5 creature with trample, that creature's controller must assign 2 of that creature's combat damage to Fog Bank and the remainder can be assigned to the defending player or planeswalker."
         }
       ],
       "subtypes": [
@@ -4633,7 +4644,8 @@
         "ROE",
         "THS",
         "C13",
-        "CN2"
+        "CN2",
+        "IMA"
       ],
       "rarity": "Common",
       "subtypes": [
@@ -8320,7 +8332,8 @@
         "M10",
         "M14",
         "C13",
-        "C17"
+        "C17",
+        "IMA"
       ],
       "rarity": "Rare",
       "rulings": [
@@ -9051,13 +9064,18 @@
         "GTC",
         "C13",
         "DDM",
-        "C16"
+        "C16",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2013-01-24",
-          "text": "Wight of Precinct Six's ability applies only if Wight of Precinct Six is on the battlefield."
+          "date": "2017-11-17",
+          "text": "Wight of Precinct Six's ability applies only while it's on the battlefield. In all other zones, it's a 1/1 creature."
+        },
+        {
+          "date": "2017-11-17",
+          "text": "If Wight of Precinct Six is dealt lethal damage at the same time as a creature an opponent controls, they're destroyed at the same time. It won't get an additional +1/+1 from its ability in time to save it."
         }
       ],
       "subtypes": [
@@ -9326,17 +9344,22 @@
         "ISD",
         "C13",
         "C15",
-        "CN2"
+        "CN2",
+        "IMA"
       ],
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2011-09-22",
-          "text": "The instant or sorcery card returned to your hand is chosen at random as the triggered ability resolves. If any player responds to the ability, that player won't yet know what card will be returned."
+          "date": "2017-11-17",
+          "text": "The instant or sorcery card returned to your hand is chosen at random as Charmbreaker Devils's first ability resolves. If any player responds to the ability, that player won't yet know what card will be returned."
         },
         {
-          "date": "2011-09-22",
+          "date": "2017-11-17",
           "text": "Because the first ability doesn't target the instant or sorcery card, any instants or sorceries put into your graveyard in response to that ability may be returned to your hand."
+        },
+        {
+          "date": "2017-11-17",
+          "text": "All players get to see which card you chose at random as it's returned to your hand."
         }
       ],
       "subtypes": [
@@ -9627,28 +9650,25 @@
         "ME4",
         "M12",
         "C13",
-        "DD3_JVC"
+        "DD3_JVC",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2004-12-01",
-          "text": "The additional cost is paid when you pay the rest of Fireball's costs, even though that text appears second on the card (to make the card easier to read). The additional cost doesn't count toward Fireball's converted mana cost."
+          "date": "2017-11-17",
+          "text": "For example, if X is 5 and you choose three target creatures, Fireball has a total cost of {7}{R} (even though its mana cost is just {5}{R} and its converted mana cost is 6). If those creatures are all still legal targets as Fireball resolves, it deals 1 damage to each of them."
         },
         {
-          "date": "2004-12-01",
-          "text": "If, for example, X is 5 and you choose three target creatures, Fireball has a total cost of {7}{R} (even though its mana cost is just {5}{R}). If those creatures are all still legal targets as Fireball resolves, it deals 1 damage to each of them."
-        },
-        {
-          "date": "2009-05-01",
+          "date": "2017-11-17",
           "text": "You may cast Fireball with zero targets, regardless of the value chosen for X. If you do so, it will not be a targeted spell, and no damage will actually be dealt when it resolves."
         },
         {
-          "date": "2009-10-01",
-          "text": "Fireball's damage is divided as Fireball resolves, not as it's cast, because there are no choices involved. The division involves only targets that are still legal at that time."
+          "date": "2017-11-17",
+          "text": "Fireball's damage is divided as Fireball resolves, not as it's cast, because there are no choices involved. The division involves only targets that are still legal as Fireball resolves."
         },
         {
-          "date": "2009-10-01",
+          "date": "2017-11-17",
           "text": "You can target more than X creatures. However, if the number of legal targets at the time Fireball resolves is greater than X, none of them will be dealt any damage."
         }
       ],
@@ -10145,13 +10165,14 @@
         "RTR",
         "C13",
         "CN2",
-        "E01"
+        "E01",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2012-10-01",
-          "text": "Guttersnipe's ability resolves and Guttersnipe deals damage before the instant or sorcery spell resolves."
+          "date": "2017-11-17",
+          "text": "Guttersnipe's ability resolves before the spell that caused it to trigger."
         }
       ],
       "subtypes": [
@@ -12768,7 +12789,8 @@
       "originalType": "Enchantment — Aura Curse",
       "printings": [
         "C13",
-        "CMA"
+        "CMA",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
@@ -14932,7 +14954,8 @@
         "C13",
         "C14",
         "CMA",
-        "E01"
+        "E01",
+        "IMA"
       ],
       "rarity": "Mythic Rare",
       "rulings": [
@@ -20598,17 +20621,22 @@
       "power": "2",
       "printings": [
         "GTC",
-        "C13"
+        "C13",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2013-01-24",
-          "text": "multiple instances of lifelink on the same creature are redundant. Giving the same creature lifelink more than once won't cause you to gain additional life."
+          "date": "2017-11-17",
+          "text": "Multiple instances of lifelink on the same creature are redundant"
         },
         {
-          "date": "2013-01-24",
-          "text": "Each time the second ability resolves, a delayed triggered ability is created. Whenever you gain life that turn, each of those abilities will trigger. For example, if you activate the second ability twice (and let those abilities resolve) and then you gain 2 life, each opponent will lose a total of 4 life. Each instance will cause two abilities to trigger, each causing that player to lose 2 life."
+          "date": "2017-11-17",
+          "text": "Each time Vizkopa Guildmage's second ability resolves, a delayed triggered ability is created. Whenever you gain life that turn, each of those abilities will trigger. For example, if you activate the second ability twice, let those abilities resolve, then gain 2 life, each opponent will lose a total of 4 life."
+        },
+        {
+          "date": "2017-11-17",
+          "text": "In a Two-Headed Giant game, Vizkopa Guildmage's delayed triggered ability causes the opposing team to lose twice the life you gained."
         }
       ],
       "subtypes": [
@@ -22979,10 +23007,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         },
@@ -23178,7 +23202,8 @@
         "pMGD",
         "NPH",
         "C13",
-        "C14"
+        "C14",
+        "IMA"
       ],
       "rarity": "Common",
       "rulings": [
@@ -24698,7 +24723,8 @@
         "C13",
         "MM2",
         "C16",
-        "CMA"
+        "CMA",
+        "IMA"
       ],
       "rarity": "Common",
       "rulings": [
@@ -25119,7 +25145,8 @@
         "C15",
         "C16",
         "CMA",
-        "C17"
+        "C17",
+        "IMA"
       ],
       "rarity": "Common",
       "rulings": [
@@ -25827,10 +25854,11 @@
         "C16",
         "AKH",
         "CMA",
-        "C17"
+        "C17",
+        "IMA"
       ],
       "rarity": "Common",
-      "text": "{T}, Sacrifice Evolving Wilds: Search your library for a basic land card and put it onto the battlefield tapped. Then shuffle your library.",
+      "text": "{T}, Sacrifice Evolving Wilds: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle your library.",
       "type": "Land",
       "types": [
         "Land"
@@ -25994,7 +26022,8 @@
         "C14",
         "DD3_EVG",
         "C15",
-        "CMA"
+        "CMA",
+        "DDT"
       ],
       "rarity": "Common",
       "rulings": [
@@ -26177,7 +26206,8 @@
         "MM2",
         "C15",
         "C16",
-        "CMA"
+        "CMA",
+        "IMA"
       ],
       "rarity": "Common",
       "rulings": [
@@ -26587,7 +26617,8 @@
         "MM2",
         "C15",
         "C16",
-        "C17"
+        "C17",
+        "IMA"
       ],
       "rarity": "Common",
       "rulings": [
@@ -27320,7 +27351,8 @@
         "DDJ",
         "C13",
         "VMA",
-        "C14"
+        "C14",
+        "DDT"
       ],
       "rarity": "Common",
       "rulings": [
@@ -27801,7 +27833,8 @@
         "C15",
         "C16",
         "CMA",
-        "C17"
+        "C17",
+        "IMA"
       ],
       "rarity": "Common",
       "rulings": [
@@ -27984,7 +28017,8 @@
         "MM2",
         "C16",
         "CMA",
-        "C17"
+        "C17",
+        "IMA"
       ],
       "rarity": "Common",
       "rulings": [
@@ -28747,7 +28781,8 @@
         "C16",
         "PCA",
         "CMA",
-        "C17"
+        "C17",
+        "IMA"
       ],
       "rarity": "Common",
       "rulings": [
@@ -31713,7 +31748,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -32074,7 +32110,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -32435,7 +32472,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -32796,7 +32834,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -34627,7 +34666,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -34994,7 +35034,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -35361,7 +35402,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -35728,7 +35770,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [

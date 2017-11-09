@@ -2930,16 +2930,17 @@
         "VMA",
         "EMA",
         "C16",
-        "C17"
+        "C17",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2016-06-08",
-          "text": "The amount of life gained is equal to the power of the targeted creature as it last existed on the battlefield."
+          "date": "2017-11-17",
+          "text": "The amount of life gained is equal to the power of the target creature as it last existed on the battlefield."
         },
         {
-          "date": "2016-06-08",
+          "date": "2017-11-17",
           "text": "If the creature's power is negative, its controller doesn't lose or gain life."
         }
       ],
@@ -3969,7 +3970,8 @@
       "printings": [
         "pJGP",
         "CMD",
-        "VMA"
+        "VMA",
+        "IMA"
       ],
       "rarity": "Rare",
       "rulings": [
@@ -4575,20 +4577,21 @@
         "LEG",
         "pJGP",
         "ME3",
-        "VMA"
+        "VMA",
+        "IMA"
       ],
       "rarity": "Mythic Rare",
       "rulings": [
         {
-          "date": "2009-10-01",
-          "text": "If the targeted spell \"can't be countered,\" it remains on the stack. Mana Drain continues to resolve. At the beginning of your next main phase, the delayed triggered ability will still add the mana to your mana pool."
+          "date": "2017-11-17",
+          "text": "Mana Drain can target a spell that can't be countered. When Mana Drain resolves, that spell won't be countered, but you'll still add mana to your mana pool at the beginning of your next main phase."
         },
         {
-          "date": "2009-10-01",
-          "text": "If the targeted spell is an illegal target by the time Mana Drain resolves, Mana Drain is countered. You won't get any mana later."
+          "date": "2017-11-17",
+          "text": "If the target spell is an illegal target when Mana Drain tries to resolve, it will be countered and none of its effects will happen. You won't get any mana."
         },
         {
-          "date": "2009-10-01",
+          "date": "2017-11-17",
           "text": "Mana Drain's delayed triggered ability will usually trigger at the beginning of your precombat main phase. However, if you cast Mana Drain during your precombat main phase or during your combat phase, its delayed triggered ability will trigger at the beginning of that turn's postcombat main phase."
         }
       ],
@@ -7635,17 +7638,22 @@
         "ME2",
         "V09",
         "VMA",
-        "EMA"
+        "EMA",
+        "IMA"
       ],
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2016-06-08",
-          "text": "Necropotence's last ability creates a delayed triggered ability that will put the exiled card into your hand. That ability still triggers even if Necropotence is removed from the battlefield before your end step."
+          "date": "2017-11-17",
+          "text": "If a discarded card isn't put into your graveyard (due to an effect such as that of Obstinate Baloth) or leaves your graveyard (perhaps because another effect returned it to your hand), it won't be exiled."
         },
         {
-          "date": "2016-06-08",
-          "text": "If the discarded card isn't put into your graveyard (due to an effect such as madness) or leaves your graveyard (perhaps because another effect returned it to your hand), it won't be exiled."
+          "date": "2017-11-17",
+          "text": "If you discard a card with madness and wish to cast it, Necropotence's ability won't exile that card. If you don't wish to cast it, you choose whether it ends up exiled or in your graveyard."
+        },
+        {
+          "date": "2017-11-17",
+          "text": "Necropotence's last ability creates a delayed triggered ability that will put the exiled card into your hand. That ability still triggers even if Necropotence is removed from the battlefield before your end step."
         }
       ],
       "text": "Skip your draw step.\nWhenever you discard a card, exile that card from your graveyard.\nPay 1 life: Exile the top card of your library face down. Put that card into your hand at the beginning of your next end step.",
@@ -9831,7 +9839,8 @@
       "power": "6",
       "printings": [
         "LGN",
-        "VMA"
+        "VMA",
+        "DDT"
       ],
       "rarity": "Uncommon",
       "subtypes": [
@@ -10138,7 +10147,8 @@
         "APC",
         "EVG",
         "VMA",
-        "DD3_EVG"
+        "DD3_EVG",
+        "DDT"
       ],
       "rarity": "Uncommon",
       "subtypes": [
@@ -11762,13 +11772,14 @@
         "4ED",
         "V09",
         "ME4",
-        "VMA"
+        "VMA",
+        "IMA"
       ],
       "rarity": "Mythic Rare",
       "rulings": [
         {
-          "date": "2004-10-04",
-          "text": "You can't pay life you don't have. In other words, you can't Channel yourself below zero life."
+          "date": "2017-11-17",
+          "text": "Once your life total is 0, you can't pay any more life, even if you've somehow not lost the game yet."
         }
       ],
       "text": "Until end of turn, any time you could activate a mana ability, you may pay 1 life. If you do, add {C} to your mana pool.",
@@ -12547,10 +12558,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -15544,7 +15551,8 @@
         "APC",
         "pGPX",
         "CNS",
-        "VMA"
+        "VMA",
+        "IMA"
       ],
       "rarity": "Rare",
       "subtypes": [
@@ -17378,7 +17386,8 @@
         "C14",
         "DD3_EVG",
         "C15",
-        "CMA"
+        "CMA",
+        "DDT"
       ],
       "rarity": "Common",
       "rulings": [
@@ -17723,7 +17732,8 @@
         "DDJ",
         "C13",
         "VMA",
-        "C14"
+        "C14",
+        "DDT"
       ],
       "rarity": "Common",
       "rulings": [

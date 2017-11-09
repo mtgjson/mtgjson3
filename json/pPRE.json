@@ -1953,7 +1953,8 @@
         "CHK",
         "ARC",
         "MMA",
-        "C17"
+        "C17",
+        "IMA"
       ],
       "rarity": "Special",
       "releaseDate": "2004-09-18",
@@ -3410,8 +3411,11 @@
       "subtypes": [
         "Ajani"
       ],
+      "supertypes": [
+        "Legendary"
+      ],
       "text": "+1: Target permanent doesn't untap during its controller's next untap step.\n−2: Ajani Vengeant deals 3 damage to target creature or player and you gain 3 life.\n−7: Destroy all lands target player controls.",
-      "type": "Planeswalker — Ajani",
+      "type": "Legendary Planeswalker — Ajani",
       "types": [
         "Planeswalker"
       ]
@@ -3496,17 +3500,18 @@
         "pPRE",
         "CON",
         "CMD",
-        "CMA"
+        "CMA",
+        "IMA"
       ],
       "rarity": "Special",
       "releaseDate": "2009-01-31",
       "rulings": [
         {
-          "date": "2009-02-01",
-          "text": "This ability is not optional. You must discard your entire hand no matter how many creatures your opponents control."
+          "date": "2017-11-17",
+          "text": "Malfegor's ability is not optional. You must discard your entire hand no matter how many creatures your opponents control."
         },
         {
-          "date": "2009-02-01",
+          "date": "2017-11-17",
           "text": "After you discard your hand and the number of creatures each opponent must sacrifice has been determined, each opponent in turn order, starting with the player whose turn it is if that player is your opponent, chooses which creatures he or she will sacrifice, then all the chosen creatures are all sacrificed at the same time."
         }
       ],
@@ -3826,7 +3831,8 @@
         "C13",
         "C14",
         "CMA",
-        "E01"
+        "E01",
+        "IMA"
       ],
       "rarity": "Special",
       "releaseDate": "2009-09-26",
@@ -4591,17 +4597,26 @@
       "power": "6",
       "printings": [
         "pPRE",
-        "NPH"
+        "NPH",
+        "IMA"
       ],
       "rarity": "Special",
       "releaseDate": "2011-05-07",
       "rulings": [
         {
-          "date": "2011-06-01",
-          "text": "The player whose upkeep it is chooses a creature to sacrifice when the ability resolves."
+          "date": "2017-11-17",
+          "text": "Swampwalk is a keyword ability that means \"This creature can't be blocked if defending player controls a Swamp.\" Most nonbasic lands don't have basic land types, even if they produce colored mana. For example, Graven Cairns is neither a Swamp nor a Mountain, while Blood Crypt is both."
         },
         {
-          "date": "2011-06-01",
+          "date": "2017-11-17",
+          "text": "If another triggered ability during your upkeep causes you to sacrifice a creature, such as that of Lord of the Pit, you won't be able to target it with Sheoldred's triggered ability as that ability is put on the stack."
+        },
+        {
+          "date": "2017-11-17",
+          "text": "The opponent whose upkeep it is chooses a creature to sacrifice when Sheoldred's second triggered ability resolves."
+        },
+        {
+          "date": "2017-11-17",
           "text": "In a Two-Headed Giant game, the last ability will trigger twice at the beginning of the opposing team's upkeep, once for each player on that team. Each player sacrifices only a creature he or she controls."
         }
       ],
@@ -5561,18 +5576,19 @@
       "power": "4",
       "printings": [
         "pPRE",
-        "RTR"
+        "RTR",
+        "IMA"
       ],
       "rarity": "Special",
       "releaseDate": "2012-09-29",
       "rulings": [
         {
-          "date": "2012-10-01",
-          "text": "The last ability applies to sorcery cards in any zone, provided something is allowing you to cast them. For example, you could cast a sorcery with flashback as though it had flash."
+          "date": "2017-11-17",
+          "text": "Hypersonic Dragon's last ability applies to sorcery cards in any zone, provided something is allowing you to cast them. For example, you could cast a sorcery with flashback as though it had flash."
         },
         {
-          "date": "2012-10-01",
-          "text": "The last ability has no effect on abilities that you can activate \"any time you could cast a sorcery.\""
+          "date": "2017-11-17",
+          "text": "Hypersonic Dragon's last ability has no effect on abilities that you can activate \"any time you could cast a sorcery.\""
         }
       ],
       "source": "Return to Ravnica Izzet Prerelease participation bonus",
@@ -5793,18 +5809,19 @@
       "printings": [
         "pPRE",
         "RTR",
-        "C16"
+        "C16",
+        "IMA"
       ],
       "rarity": "Special",
       "releaseDate": "2012-09-29",
       "rulings": [
         {
-          "date": "2012-10-01",
+          "date": "2017-11-17",
           "text": "If a creature you control would enter the battlefield with a number of +1/+1 counters on it, it enters with twice that many instead."
         },
         {
-          "date": "2012-10-01",
-          "text": "If you control two Corpsejack Menaces, the number of +1/+1 counters placed is four times the original number. Three Corpsejack Menaces multiplies the original number by eight, and so on."
+          "date": "2017-11-17",
+          "text": "If you control two Corpsejack Menaces, the number of +1/+1 counters put on a creature is four times the original number. Three Corpsejack Menaces multiplies the original number by eight, and so on."
         }
       ],
       "source": "Return to Ravnica Golgari Prerelease participation bonus",
@@ -6680,6 +6697,10 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
           "legality": "Legal"
         },
         {
@@ -8710,17 +8731,18 @@
       "power": "0",
       "printings": [
         "pPRE",
-        "JOU"
+        "JOU",
+        "IMA"
       ],
       "rarity": "Special",
       "releaseDate": "2014-04-26",
       "rulings": [
         {
-          "date": "2014-04-26",
+          "date": "2017-11-17",
           "text": "The value of X is determined using the power of Heroes' Bane when the ability resolves."
         },
         {
-          "date": "2014-04-26",
+          "date": "2017-11-17",
           "text": "If Heroes' Bane's power is less than 0 when its second ability resolves, X is considered to be 0."
         }
       ],
@@ -9054,17 +9076,18 @@
       "printings": [
         "pPRE",
         "M15",
-        "DDR"
+        "DDR",
+        "IMA"
       ],
       "rarity": "Special",
       "releaseDate": "2014-07-12",
       "rulings": [
         {
-          "date": "2014-07-18",
+          "date": "2017-11-17",
           "text": "The opponent chooses whether he or she sacrifices a creature, pays 3 life, or allows you to draw a card. That player can't make an impossible choice, such as sacrificing a creature while he or she controls no creatures."
         },
         {
-          "date": "2014-07-18",
+          "date": "2017-11-17",
           "text": "If there are no legal targets to choose, perhaps because all your opponents have hexproof, the ability is removed from the stack with no effect. You won't draw a card. This is also true if the target opponent becomes an illegal target in response to the ability."
         }
       ],
@@ -9812,11 +9835,11 @@
           "text": "The activated ability can be activated only if Bloodsoaked Champion is in your graveyard. Notably, if it attacks and then dies later in the turn, you can use its ability to return it to the battlefield, as its attack satisfies its own activation instruction."
         },
         {
-          "date": "2014-09-20",
+          "date": "2017-09-29",
           "text": "Raid abilities care only that you attacked with a creature. It doesn't matter how many creatures you attacked with, or which opponent or planeswalker controlled by an opponent those creatures attacked."
         },
         {
-          "date": "2014-09-20",
+          "date": "2017-09-29",
           "text": "Raid abilities evaluate the entire turn to see if you attacked with a creature. That creature doesn't have to still be on the battlefield. Similarly, the player or planeswalker it attacked doesn't have to still be in the game or on the battlefield, respectively."
         }
       ],
@@ -10938,7 +10961,7 @@
       "rulings": [
         {
           "date": "2014-09-20",
-          "text": "\"Placed on a creature you control\" includes that creature entering the battlefield with +1/+1 counters on it. If a creature would enter the battlefield with a number of +1/+1 counters on it while you control Hardened Scales, it enters with that many counters plus one."
+          "text": "\"Put on a creature you control\" includes that creature entering the battlefield with +1/+1 counters on it. If a creature would enter the battlefield with a number of +1/+1 counters on it while you control Hardened Scales, it enters with that many counters plus one."
         },
         {
           "date": "2014-09-20",
@@ -15033,7 +15056,7 @@
       "subtypes": [
         "Phoenix"
       ],
-      "text": "Flying, haste\nFlamewake Phoenix attacks each turn if able.\nFerocious — At the beginning of combat on your turn, if you control a creature with power 4 or greater, you may pay {R}. If you do, return Flamewake Phoenix from your graveyard to the battlefield.",
+      "text": "Flying, haste\nFlamewake Phoenix attacks each combat if able.\nFerocious — At the beginning of combat on your turn, if you control a creature with power 4 or greater, you may pay {R}. If you do, return Flamewake Phoenix from your graveyard to the battlefield.",
       "toughness": "2",
       "type": "Creature — Phoenix",
       "types": [
@@ -22479,10 +22502,6 @@
         },
         {
           "date": "2015-06-22",
-          "text": "Although the two rules are similar, the \"legend rule\" and the \"planeswalker uniqueness rule\" affect different kinds of permanents. You can control two of this permanent, one front face-up and the other back-face up at the same time. However, if the former is exiled and enters the battlefield transformed, you'll then control two planeswalkers with the same subtype. You'll choose one to remain on the battlefield, and the other will be put into its owner's graveyard."
-        },
-        {
-          "date": "2015-06-22",
           "text": "A double-faced card enters the battlefield with its front face up by default, unless a spell or ability instructs you to put it onto the battlefield transformed, in which case it enters with its back face up."
         },
         {
@@ -22508,6 +22527,10 @@
         {
           "date": "2016-07-13",
           "text": "For more information on double-faced cards, see the Shadows over Innistrad mechanics article (http://magic.wizards.com/en/articles/archive/feature/shadows-over-innistrad-mechanics)."
+        },
+        {
+          "date": "2017-09-29",
+          "text": "You can control two of this permanent, one front-face up and the other back-face up, at the same time."
         }
       ],
       "source": "Magic Origins Chandra Prerelease participation bonus",
@@ -23732,7 +23755,8 @@
       "printings": [
         "pPRE",
         "ORI",
-        "C17"
+        "C17",
+        "DDT"
       ],
       "rarity": "Special",
       "releaseDate": "2015-07-11",
@@ -24089,10 +24113,6 @@
         },
         {
           "date": "2015-06-22",
-          "text": "Although the two rules are similar, the \"legend rule\" and the \"planeswalker uniqueness rule\" affect different kinds of permanents. You can control two of this permanent, one front face-up and the other back-face up at the same time. However, if the former is exiled and enters the battlefield transformed, you'll then control two planeswalkers with the same subtype. You'll choose one to remain on the battlefield, and the other will be put into its owner's graveyard."
-        },
-        {
-          "date": "2015-06-22",
           "text": "A double-faced card enters the battlefield with its front face up by default, unless a spell or ability instructs you to put it onto the battlefield transformed, in which case it enters with its back face up."
         },
         {
@@ -24122,6 +24142,10 @@
         {
           "date": "2016-07-13",
           "text": "For more information on double-faced cards, see the Shadows over Innistrad mechanics article (http://magic.wizards.com/en/articles/archive/feature/shadows-over-innistrad-mechanics)."
+        },
+        {
+          "date": "2017-09-29",
+          "text": "You can control two of this permanent, one front-face up and the other back-face up, at the same time."
         }
       ],
       "source": "Magic Origins",
@@ -24575,10 +24599,6 @@
         },
         {
           "date": "2015-06-22",
-          "text": "Although the two rules are similar, the \"legend rule\" and the \"planeswalker uniqueness rule\" affect different kinds of permanents. You can control two of this permanent, one front face-up and the other back-face up at the same time. However, if the former is exiled and enters the battlefield transformed, you'll then control two planeswalkers with the same subtype. You'll choose one to remain on the battlefield, and the other will be put into its owner's graveyard."
-        },
-        {
-          "date": "2015-06-22",
           "text": "A double-faced card enters the battlefield with its front face up by default, unless a spell or ability instructs you to put it onto the battlefield transformed, in which case it enters with its back face up."
         },
         {
@@ -24604,6 +24624,10 @@
         {
           "date": "2016-07-13",
           "text": "For more information on double-faced cards, see the Shadows over Innistrad mechanics article (http://magic.wizards.com/en/articles/archive/feature/shadows-over-innistrad-mechanics)."
+        },
+        {
+          "date": "2017-09-29",
+          "text": "You can control two of this permanent, one front-face up and the other back-face up, at the same time."
         }
       ],
       "source": "Magic Origins Gideon Prerelease participation bonus",
@@ -24819,10 +24843,6 @@
         },
         {
           "date": "2015-06-22",
-          "text": "Although the two rules are similar, the \"legend rule\" and the \"planeswalker uniqueness rule\" affect different kinds of permanents. You can control two of this permanent, one front face-up and the other back-face up at the same time. However, if the former is exiled and enters the battlefield transformed, you'll then control two planeswalkers with the same subtype. You'll choose one to remain on the battlefield, and the other will be put into its owner's graveyard."
-        },
-        {
-          "date": "2015-06-22",
           "text": "A double-faced card enters the battlefield with its front face up by default, unless a spell or ability instructs you to put it onto the battlefield transformed, in which case it enters with its back face up."
         },
         {
@@ -24848,6 +24868,10 @@
         {
           "date": "2016-07-13",
           "text": "For more information on double-faced cards, see the Shadows over Innistrad mechanics article (http://magic.wizards.com/en/articles/archive/feature/shadows-over-innistrad-mechanics)."
+        },
+        {
+          "date": "2017-09-29",
+          "text": "You can control two of this permanent, one front-face up and the other back-face up, at the same time."
         }
       ],
       "source": "Magic Origins Liliana Prerelease participation bonus",
@@ -25295,10 +25319,6 @@
         },
         {
           "date": "2015-06-22",
-          "text": "Although the two rules are similar, the \"legend rule\" and the \"planeswalker uniqueness rule\" affect different kinds of permanents. You can control two of this permanent, one front face-up and the other back-face up at the same time. However, if the former is exiled and enters the battlefield transformed, you'll then control two planeswalkers with the same subtype. You'll choose one to remain on the battlefield, and the other will be put into its owner's graveyard."
-        },
-        {
-          "date": "2015-06-22",
           "text": "A double-faced card enters the battlefield with its front face up by default, unless a spell or ability instructs you to put it onto the battlefield transformed, in which case it enters with its back face up."
         },
         {
@@ -25324,6 +25344,10 @@
         {
           "date": "2016-07-13",
           "text": "For more information on double-faced cards, see the Shadows over Innistrad mechanics article (http://magic.wizards.com/en/articles/archive/feature/shadows-over-innistrad-mechanics)."
+        },
+        {
+          "date": "2017-09-29",
+          "text": "You can control two of this permanent, one front-face up and the other back-face up, at the same time."
         }
       ],
       "source": "Magic Origins Nissa Prerelease participation bonus",
@@ -26578,10 +26602,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -26627,7 +26647,7 @@
       "subtypes": [
         "Phoenix"
       ],
-      "text": "Flying, haste\nAkoum Firebird attacks each turn if able.\nLandfall — Whenever a land enters the battlefield under your control, you may pay {4}{R}{R}. If you do, return Akoum Firebird from your graveyard to the battlefield.",
+      "text": "Flying, haste\nAkoum Firebird attacks each combat if able.\nLandfall — Whenever a land enters the battlefield under your control, you may pay {4}{R}{R}. If you do, return Akoum Firebird from your graveyard to the battlefield.",
       "toughness": "3",
       "type": "Creature — Phoenix",
       "types": [
@@ -26703,10 +26723,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -26814,10 +26830,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -26942,10 +26954,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -27048,10 +27056,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -27159,10 +27163,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -27292,10 +27292,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -27397,10 +27393,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -27540,10 +27532,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -27674,10 +27662,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -27816,10 +27800,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -27942,10 +27922,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -28056,10 +28032,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -28162,10 +28134,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -28306,10 +28274,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -28418,10 +28382,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -28518,10 +28478,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -28627,10 +28583,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -28740,10 +28692,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -28891,10 +28839,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -29027,10 +28971,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -29146,10 +29086,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -29246,10 +29182,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -29371,10 +29303,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -29508,10 +29436,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         },
@@ -29620,10 +29544,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -29762,10 +29682,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -29803,8 +29719,11 @@
       "subtypes": [
         "Gideon"
       ],
+      "supertypes": [
+        "Legendary"
+      ],
       "text": "+1: Until end of turn, Gideon, Ally of Zendikar becomes a 5/5 Human Soldier Ally creature with indestructible that's still a planeswalker. Prevent all damage that would be dealt to him this turn.\n0: Create a 2/2 white Knight Ally creature token.\n−4: You get an emblem with \"Creatures you control get +1/+1.\"",
-      "type": "Planeswalker — Gideon",
+      "type": "Legendary Planeswalker — Gideon",
       "types": [
         "Planeswalker"
       ]
@@ -29878,10 +29797,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -29988,10 +29903,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -30082,10 +29993,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -30209,10 +30116,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -30323,10 +30226,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -30443,10 +30342,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -30480,8 +30375,11 @@
       "subtypes": [
         "Kiora"
       ],
+      "supertypes": [
+        "Legendary"
+      ],
       "text": "+1: Untap up to one target creature and up to one target land.\n−2: Reveal the top four cards of your library. You may put a creature card and/or a land card from among them into your hand. Put the rest into your graveyard.\n−8: You get an emblem with \"Whenever a creature enters the battlefield under your control, you may have it fight target creature.\" Then create three 8/8 blue Octopus creature tokens.",
-      "type": "Planeswalker — Kiora",
+      "type": "Legendary Planeswalker — Kiora",
       "types": [
         "Planeswalker"
       ]
@@ -30556,10 +30454,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -30672,10 +30566,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -30792,10 +30682,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -30888,10 +30774,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -31008,10 +30890,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -31105,10 +30983,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -31224,10 +31098,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -31254,8 +31124,11 @@
       "subtypes": [
         "Nixilis"
       ],
+      "supertypes": [
+        "Legendary"
+      ],
       "text": "+1: You draw a card and you lose 1 life.\n−3: Destroy target creature.\n−8: Target opponent gets an emblem with \"Whenever a player draws a card, you lose 2 life.\"",
-      "type": "Planeswalker — Nixilis",
+      "type": "Legendary Planeswalker — Nixilis",
       "types": [
         "Planeswalker"
       ]
@@ -31324,10 +31197,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -31439,10 +31308,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -31569,10 +31434,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -31689,10 +31550,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -31806,10 +31663,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -31936,10 +31789,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -32062,10 +31911,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -32181,10 +32026,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -32297,10 +32138,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -32428,10 +32265,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -32545,10 +32378,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -32666,10 +32495,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -32759,10 +32584,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -32879,10 +32700,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -33011,10 +32828,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -33124,10 +32937,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -33216,10 +33025,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -33350,10 +33155,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -33459,10 +33260,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -33597,10 +33394,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -33713,10 +33506,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -33812,10 +33601,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -33931,10 +33716,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -34060,10 +33841,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -34175,10 +33952,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -34296,10 +34069,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -34441,10 +34210,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -34563,10 +34328,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {

@@ -57,6 +57,10 @@
           "legality": "Legal"
         },
         {
+          "format": "Standard",
+          "legality": "Legal"
+        },
+        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -1827,13 +1831,14 @@
         "4ED",
         "V09",
         "ME4",
-        "VMA"
+        "VMA",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2004-10-04",
-          "text": "You can't pay life you don't have. In other words, you can't Channel yourself below zero life."
+          "date": "2017-11-17",
+          "text": "Once your life total is 0, you can't pay any more life, even if you've somehow not lost the game yet."
         }
       ],
       "text": "Until end of turn, any time you could activate a mana ability, you may pay 1 life. If you do, add {C} to your mana pool.",
@@ -3981,7 +3986,8 @@
         "ME2",
         "ME3",
         "TPR",
-        "CN2"
+        "CN2",
+        "IMA"
       ],
       "rarity": "Common",
       "rulings": [
@@ -4574,7 +4580,8 @@
         "4ED",
         "S99",
         "10E",
-        "DPA"
+        "DPA",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "subtypes": [
@@ -5246,28 +5253,25 @@
         "ME4",
         "M12",
         "C13",
-        "DD3_JVC"
+        "DD3_JVC",
+        "IMA"
       ],
       "rarity": "Common",
       "rulings": [
         {
-          "date": "2004-12-01",
-          "text": "The additional cost is paid when you pay the rest of Fireball's costs, even though that text appears second on the card (to make the card easier to read). The additional cost doesn't count toward Fireball's converted mana cost."
+          "date": "2017-11-17",
+          "text": "For example, if X is 5 and you choose three target creatures, Fireball has a total cost of {7}{R} (even though its mana cost is just {5}{R} and its converted mana cost is 6). If those creatures are all still legal targets as Fireball resolves, it deals 1 damage to each of them."
         },
         {
-          "date": "2004-12-01",
-          "text": "If, for example, X is 5 and you choose three target creatures, Fireball has a total cost of {7}{R} (even though its mana cost is just {5}{R}). If those creatures are all still legal targets as Fireball resolves, it deals 1 damage to each of them."
-        },
-        {
-          "date": "2009-05-01",
+          "date": "2017-11-17",
           "text": "You may cast Fireball with zero targets, regardless of the value chosen for X. If you do so, it will not be a targeted spell, and no damage will actually be dealt when it resolves."
         },
         {
-          "date": "2009-10-01",
-          "text": "Fireball's damage is divided as Fireball resolves, not as it's cast, because there are no choices involved. The division involves only targets that are still legal at that time."
+          "date": "2017-11-17",
+          "text": "Fireball's damage is divided as Fireball resolves, not as it's cast, because there are no choices involved. The division involves only targets that are still legal as Fireball resolves."
         },
         {
-          "date": "2009-10-01",
+          "date": "2017-11-17",
           "text": "You can target more than X creatures. However, if the number of legal targets at the time Fireball resolves is greater than X, none of them will be dealt any damage."
         }
       ],
@@ -8876,7 +8880,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -9132,7 +9137,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -9388,7 +9394,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -10932,20 +10939,21 @@
         "5ED",
         "10E",
         "DDC",
-        "DD3_DVD"
+        "DD3_DVD",
+        "IMA"
       ],
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2004-10-04",
-          "text": "You can select creatures with Protection from Black to be sacrificed."
+          "date": "2017-11-17",
+          "text": "If you control any other creatures as Lord of the Pit's triggered ability resolves, you must sacrifice one. You can't choose to be dealt 7 damage instead."
         },
         {
-          "date": "2004-10-04",
-          "text": "If you have a creature, you must sacrifice it. The 7 damage can only be taken if no creature can be sacrificed."
+          "date": "2017-11-17",
+          "text": "If Lord of the Pit has gained lifelink, being dealt 7 damage by it doesn't cause your life total to change, even though you gain and lose life. If your life total is less than 7, you won't lose the game."
         },
         {
-          "date": "2004-10-04",
+          "date": "2017-11-17",
           "text": "If you have two Lords of the Pit, you can sacrifice them to each other."
         }
       ],
@@ -11023,21 +11031,18 @@
         "8ED",
         "CHK",
         "10E",
-        "M12"
+        "M12",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2004-10-04",
-          "text": "Lure does not give a creature the ability to block the Lured creature, it just forces those creatures which are already able to block the Lured creature to do so."
+          "date": "2017-11-17",
+          "text": "Lure doesn't give any creatures the ability to block the target creature. It just forces those creatures that are already able to block the creature to do so."
         },
         {
-          "date": "2004-10-04",
-          "text": "If a Lured creature is in a band, only blockers able to block the Lured creature are affected by the Lure."
-        },
-        {
-          "date": "2004-10-04",
-          "text": "The opponent does not have to activate any abilities in an attempt to make his or her creatures block. More specifically, a cost to block of zero mana is an optional cost you can choose not to pay."
+          "date": "2017-11-17",
+          "text": "As blockers are declared, any creature that's tapped or affected by a spell or ability that says it can't block doesn't block. If there's a cost associated with having the creature block, no player is forced to pay that cost, so it doesn't block if that cost isn't paid."
         }
       ],
       "subtypes": [
@@ -11190,7 +11195,8 @@
         "DPA",
         "ME4",
         "M15",
-        "ORI"
+        "ORI",
+        "IMA"
       ],
       "rarity": "Rare",
       "subtypes": [
@@ -12014,7 +12020,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -12276,7 +12283,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -12538,7 +12546,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -13811,7 +13820,8 @@
         "ITP",
         "5ED",
         "MED",
-        "EMA"
+        "EMA",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "subtypes": [
@@ -15288,6 +15298,10 @@
         },
         {
           "format": "Modern",
+          "legality": "Legal"
+        },
+        {
+          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -16780,7 +16794,8 @@
         "W16",
         "EMA",
         "W17",
-        "CMA"
+        "CMA",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "subtypes": [
@@ -18757,16 +18772,17 @@
         "VMA",
         "EMA",
         "C16",
-        "C17"
+        "C17",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2016-06-08",
-          "text": "The amount of life gained is equal to the power of the targeted creature as it last existed on the battlefield."
+          "date": "2017-11-17",
+          "text": "The amount of life gained is equal to the power of the target creature as it last existed on the battlefield."
         },
         {
-          "date": "2016-06-08",
+          "date": "2017-11-17",
           "text": "If the creature's power is negative, its controller doesn't lose or gain life."
         }
       ],

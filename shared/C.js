@@ -424,7 +424,7 @@
     'AKH',
     'W17',
     'HOU',
-    'IXN'
+    'XLN'
   ];
 
 })(typeof exports==="undefined" ? window.C={} : exports);

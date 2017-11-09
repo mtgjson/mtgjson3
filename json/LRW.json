@@ -368,13 +368,22 @@
       "printings": [
         "LRW",
         "CMD",
-        "MPS_AKH"
+        "MPS_AKH",
+        "IMA"
       ],
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2007-10-01",
-          "text": "If the first and third modes are chosen, an artifact creature with converted mana cost 3 or less would be destroyed twice by this spell. It would have to be regenerated twice to survive. (A similar thing happens with most of the other combinations.)"
+          "date": "2017-11-17",
+          "text": "Each of the chosen modes happens sequentially. If a permanent has an ability that triggers whenever it or another permanent is destroyed, it will see permanents destroyed at the same time as it or before it, but not permanents destroyed by later modes."
+        },
+        {
+          "date": "2017-11-17",
+          "text": "If the first and third modes are chosen, an artifact creature with converted mana cost 3 or less will have to be regenerated twice to survive. This is because the modes happen sequentially, and the regeneration \"shield\" is used up by the first one. (A similar thing happens with most of the other combinations.)"
+        },
+        {
+          "date": "2017-11-17",
+          "text": "If a card is exiled \"until\" another permanent leaves the battlefield, the exiled card returns to the battlefield immediately after that permanent leaves the battlefield during Austere Command's resolution, and it may be destroyed by a later mode."
         }
       ],
       "text": "Choose two —\n• Destroy all artifacts.\n• Destroy all enchantments.\n• Destroy all creatures with converted mana cost 3 or less.\n• Destroy all creatures with converted mana cost 4 or greater.",
@@ -803,13 +812,22 @@
       "power": "1",
       "printings": [
         "LRW",
-        "MD1"
+        "MD1",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2007-10-01",
-          "text": "If the red source you chose changes colors before the damage is dealt, the damage-prevention effect doesn't apply."
+          "date": "2017-11-17",
+          "text": "If the red source you chose changes colors before it deals damage, the damage-prevention effect doesn't apply."
+        },
+        {
+          "date": "2017-11-17",
+          "text": "The last ability of Burrenton Forge-Tender doesn't target anything. You choose a source of damage as the ability resolves, if able. You can activate it even if there is no source to choose."
+        },
+        {
+          "date": "2017-11-17",
+          "text": "If a permanent spell is chosen as the source of damage, Burrenton Forge-Tender's prevention effect continues to apply for the rest of the turn to the permanent that spell becomes once it has entered the battlefield."
         }
       ],
       "subtypes": [
@@ -5693,7 +5711,8 @@
       "originalText": "Put a flood counter on target land. That land is an Island in addition to its other types as long as it has a flood counter on it. If you control a Merfolk, draw a card.",
       "originalType": "Tribal Sorcery — Merfolk",
       "printings": [
-        "LRW"
+        "LRW",
+        "DDT"
       ],
       "rarity": "Common",
       "subtypes": [
@@ -6137,16 +6156,17 @@
         "LRW",
         "MMA",
         "MM2",
-        "MPS_AKH"
+        "MPS_AKH",
+        "IMA"
       ],
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2013-06-07",
+          "date": "2017-11-17",
           "text": "You choose both modes as you cast Cryptic Command. You must choose two different modes."
         },
         {
-          "date": "2013-06-07",
+          "date": "2017-11-17",
           "text": "Look at both chosen modes to determine how many targets Cryptic Command has, if any. If it has at least one target, and all its targets are illegal when it tries to resolve, then it will be countered and none of its effects will happen. For example, if you choose the second and fourth modes, and the permanent is an illegal target when Cryptic Command tries to resolve, you won't draw a card."
         }
       ],
@@ -7679,7 +7699,8 @@
       "originalType": "Creature — Merfolk Soldier",
       "power": "3",
       "printings": [
-        "LRW"
+        "LRW",
+        "DDT"
       ],
       "rarity": "Common",
       "subtypes": [
@@ -8108,7 +8129,8 @@
       "power": "2",
       "printings": [
         "pFNM",
-        "LRW"
+        "LRW",
+        "DDT"
       ],
       "rarity": "Uncommon",
       "subtypes": [
@@ -9967,7 +9989,8 @@
       "originalType": "Creature — Merfolk Scout",
       "power": "2",
       "printings": [
-        "LRW"
+        "LRW",
+        "DDT"
       ],
       "rarity": "Common",
       "subtypes": [
@@ -15797,7 +15820,8 @@
       "printings": [
         "LRW",
         "THS",
-        "MPS_AKH"
+        "MPS_AKH",
+        "IMA"
       ],
       "rarity": "Rare",
       "rulings": [
@@ -21112,7 +21136,8 @@
       "printings": [
         "LRW",
         "EVG",
-        "DD3_EVG"
+        "DD3_EVG",
+        "DDT"
       ],
       "rarity": "Common",
       "subtypes": [
@@ -24033,10 +24058,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -28096,10 +28117,11 @@
         "LRW",
         "EVG",
         "DDF",
-        "DD3_EVG"
+        "DD3_EVG",
+        "IMA"
       ],
       "rarity": "Common",
-      "text": "Sacrifice Moonglove Extract: Moonglove Extract deals 2 damage to target creature or player.",
+      "text": "Sacrifice Moonglove Extract: It deals 2 damage to target creature or player.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -29576,7 +29598,8 @@
         "M14",
         "CN2",
         "PCA",
-        "MM3"
+        "MM3",
+        "IMA"
       ],
       "rarity": "Common",
       "text": "{T}: Add {C} to your mana pool.\n{1}, {T}: Add one mana of any color to your mana pool.",
@@ -32313,7 +32336,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -32699,7 +32723,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -33085,7 +33110,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -33471,7 +33497,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -35427,7 +35454,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -35819,7 +35847,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -35929,7 +35958,27 @@
         {
           "language": "Italian",
           "name": "Montagne",
+          "multiverseid": 158871
+        },
+        {
+          "language": "Italian",
+          "name": "Montagne",
+          "multiverseid": 158872
+        },
+        {
+          "language": "Italian",
+          "name": "Montagne",
+          "multiverseid": 158873
+        },
+        {
+          "language": "Italian",
+          "name": "Montagne",
           "multiverseid": 158874
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Montanha",
+          "multiverseid": 159003
         },
         {
           "language": "Russian",
@@ -35950,26 +35999,6 @@
           "language": "Russian",
           "name": "Гора",
           "multiverseid": 158939
-        },
-        {
-          "language": "Spanish",
-          "name": "Montaña",
-          "multiverseid": 158981
-        },
-        {
-          "language": "Spanish",
-          "name": "Montaña",
-          "multiverseid": 158982
-        },
-        {
-          "language": "Spanish",
-          "name": "Montaña",
-          "multiverseid": 158983
-        },
-        {
-          "language": "Spanish",
-          "name": "Montaña",
-          "multiverseid": 158984
         }
       ],
       "id": "d8deb574007089e6a20dfe4e42707ae584f683cd",
@@ -36211,7 +36240,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -36603,7 +36633,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [

@@ -133,7 +133,8 @@
       "originalType": "Creature — Dragon Spirit",
       "power": "4",
       "printings": [
-        "DTK"
+        "DTK",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
@@ -2477,7 +2478,8 @@
       "originalText": "Creatures you control get +2/+1 until end of turn.\nRebound (If you cast this spell from your hand, exile it as it resolves. At the beginning of your next upkeep, you may cast this card from exile without paying its mana cost.)",
       "originalType": "Sorcery",
       "printings": [
-        "DTK"
+        "DTK",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
@@ -2512,6 +2514,10 @@
         {
           "date": "2015-02-25",
           "text": "If you cast a card from exile this way, it will go to its owner's graveyard when it resolves or is countered. It won't go back to exile."
+        },
+        {
+          "date": "2017-11-17",
+          "text": "Great Teacher's Decree affects only creatures you control at the time it resolves. It won't affect creatures that come under your control later in the turn."
         }
       ],
       "text": "Creatures you control get +2/+1 until end of turn.\nRebound (If you cast this spell from your hand, exile it as it resolves. At the beginning of your next upkeep, you may cast this card from exile without paying its mana cost.)",
@@ -4775,7 +4781,8 @@
       "originalType": "Creature — Human Monk",
       "power": "2",
       "printings": [
-        "DTK"
+        "DTK",
+        "IMA"
       ],
       "rarity": "Common",
       "subtypes": [
@@ -5316,10 +5323,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -6330,12 +6333,13 @@
       "originalType": "Creature — Human Monk",
       "power": "1",
       "printings": [
-        "DTK"
+        "DTK",
+        "IMA"
       ],
       "rarity": "Common",
       "rulings": [
         {
-          "date": "2015-02-25",
+          "date": "2017-11-17",
           "text": "Once Elusive Spellfist has been blocked, causing its ability to trigger won't change or undo that block."
         }
       ],
@@ -8078,18 +8082,11 @@
       "originalText": "Tap target creature. It doesn't untap during its controller's next untap step.\nRebound (If you cast this spell from your hand, exile it as it resolves. At the beginning of your next upkeep, you may cast this card from exile without paying its mana cost.)",
       "originalType": "Instant",
       "printings": [
-        "DTK"
+        "DTK",
+        "IMA"
       ],
       "rarity": "Common",
       "rulings": [
-        {
-          "date": "2015-02-25",
-          "text": "Ojutai's Breath can target a creature that's already tapped. It still won't untap during its controller's next untap step."
-        },
-        {
-          "date": "2015-02-25",
-          "text": "Ojutai's Breath tracks the creature, but not its controller. If the creature changes controllers before its first controller's next untap step has come around, then it won't untap during its new controller's next untap step."
-        },
         {
           "date": "2015-02-25",
           "text": "Casting the card again due to the delayed triggered ability is optional. If you choose not to cast the card, or if you can't (perhaps because there are no legal targets available), the card will stay exiled. You won't get another chance to cast it on a future turn."
@@ -8121,6 +8118,10 @@
         {
           "date": "2015-02-25",
           "text": "If you cast a card from exile this way, it will go to its owner's graveyard when it resolves or is countered. It won't go back to exile."
+        },
+        {
+          "date": "2017-11-17",
+          "text": "Ojutai's Breath can target a creature that's already tapped. It still won't untap during its controller's next untap step."
         }
       ],
       "text": "Tap target creature. It doesn't untap during its controller's next untap step.\nRebound (If you cast this spell from your hand, exile it as it resolves. At the beginning of your next upkeep, you may cast this card from exile without paying its mana cost.)",
@@ -9630,13 +9631,14 @@
       "originalText": "Whenever you cast a noncreature spell, you may pay {1}{U}. If you do, put a 2/2 blue Djinn Monk creature token with flying onto the battlefield.",
       "originalType": "Enchantment",
       "printings": [
-        "DTK"
+        "DTK",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2015-02-25",
-          "text": "The ability will trigger only once for each noncreature spell you cast. You can pay {1}{U} only once and create one Djinn Monk."
+          "date": "2017-11-17",
+          "text": "While resolving the triggered ability of Skywise Teachings, you can't pay {1}{U} multiple times to create more tokens."
         }
       ],
       "text": "Whenever you cast a noncreature spell, you may pay {1}{U}. If you do, create a 2/2 blue Djinn Monk creature token with flying.",
@@ -10958,9 +10960,16 @@
       "originalText": "Target creature gets +3/+0 and gains lifelink until end of turn. Regenerate it. (Damage dealt by a creature with lifelink also causes its controller to gain that much life.)",
       "originalType": "Instant",
       "printings": [
-        "DTK"
+        "DTK",
+        "IMA"
       ],
       "rarity": "Common",
+      "rulings": [
+        {
+          "date": "2017-11-17",
+          "text": "Multiple instances of lifelink on the same creature are redundant."
+        }
+      ],
       "text": "Target creature gets +3/+0 and gains lifelink until end of turn. Regenerate it. (Damage dealt by a creature with lifelink also causes its controller to gain that much life.)",
       "type": "Instant",
       "types": [
@@ -11850,7 +11859,8 @@
         "DD3_DVD",
         "DTK",
         "EMA",
-        "XLN"
+        "XLN",
+        "IMA"
       ],
       "rarity": "Common",
       "text": "Target opponent reveals his or her hand. You choose a noncreature, nonland card from it. That player discards that card.",
@@ -12278,7 +12288,8 @@
       "originalText": "As an additional cost to cast Foul-Tongue Invocation, you may reveal a Dragon card from your hand.\nTarget player sacrifices a creature. If you revealed a Dragon card or controlled a Dragon as you cast Foul-Tongue Invocation, you gain 4 life.",
       "originalType": "Instant",
       "printings": [
-        "DTK"
+        "DTK",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
@@ -16177,7 +16188,8 @@
       "originalText": "As an additional cost to cast Draconic Roar, you may reveal a Dragon card from your hand.\nDraconic Roar deals 3 damage to target creature. If you revealed a Dragon card or controlled a Dragon as you cast Draconic Roar, Draconic Roar deals 3 damage to that creature's controller.",
       "originalType": "Instant",
       "printings": [
-        "DTK"
+        "DTK",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
@@ -16414,16 +16426,21 @@
       "originalType": "Enchantment",
       "printings": [
         "DTK",
-        "C17"
+        "C17",
+        "IMA"
       ],
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2015-02-25",
-          "text": "Use the number of Dragons you control as the last ability resolves to determine the value of X."
+          "date": "2017-11-17",
+          "text": "The amount of damage dealt by the Dragon that entered the battlefield is based on the number of Dragons you control when the ability resolves."
         },
         {
-          "date": "2015-02-25",
+          "date": "2017-11-17",
+          "text": "If a Dragon entering the battlefield causes Dragon Tempest's second ability to trigger but leaves the battlefield before that ability resolves, that Dragon still deals damage."
+        },
+        {
+          "date": "2017-11-17",
           "text": "The two abilities aren't mutually exclusive. If a Dragon with flying (which is most of them) enters the battlefield under your control, both abilities will trigger."
         }
       ],
@@ -16655,7 +16672,8 @@
       "printings": [
         "pMEI",
         "DTK",
-        "C17"
+        "C17",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
@@ -17893,10 +17911,6 @@
         },
         {
           "format": "Shadows over Innistrad Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -19654,12 +19668,13 @@
         "DTK",
         "SOI",
         "CN2",
-        "AKH"
+        "AKH",
+        "IMA"
       ],
       "rarity": "Common",
       "rulings": [
         {
-          "date": "2015-02-25",
+          "date": "2017-11-17",
           "text": "Because discarding a card is an additional cost, you can't cast Tormenting Voice if you have no other cards in hand."
         }
       ],
@@ -20851,17 +20866,18 @@
       "originalText": "Each creature you control assigns combat damage equal to its toughness rather than its power.\n{G}: Target creature with defender can attack this turn as though it didn't have defender.\n{2}{G}: Creatures you control get +0/+1 until end of turn.",
       "originalType": "Enchantment",
       "printings": [
-        "DTK"
+        "DTK",
+        "IMA"
       ],
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2015-02-25",
+          "date": "2017-11-17",
           "text": "For example, a 2/3 creature will assign 3 combat damage rather than 2."
         },
         {
-          "date": "2015-02-25",
-          "text": "The first ability doesn't actually change any creature's power. It changes only the value of the combat damage it assigns. All other rules and effects that check power or toughness use the real values."
+          "date": "2017-11-17",
+          "text": "Assault Formation's first ability doesn't actually change any creature's power. It changes only the amount of combat damage it assigns. All other rules and effects that check power or toughness use the real values. For example, Hunt the Weak won't cause a creature to fight with its toughness."
         }
       ],
       "text": "Each creature you control assigns combat damage equal to its toughness rather than its power.\n{G}: Target creature with defender can attack this turn as though it didn't have defender.\n{2}{G}: Creatures you control get +0/+1 until end of turn.",
@@ -23001,16 +23017,17 @@
       "originalType": "Instant",
       "printings": [
         "DTK",
-        "C16"
+        "C16",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2015-02-25",
+          "date": "2017-11-17",
           "text": "Once a creature gains indestructible, it will have it for the turn, even if it loses all its +1/+1 counters."
         },
         {
-          "date": "2015-02-25",
+          "date": "2017-11-17",
           "text": "Creatures you control that have +1/+1 counters put on them after Inspiring Call resolves won't gain indestructible."
         }
       ],
@@ -28551,7 +28568,8 @@
       "originalType": "Artifact Creature — Gargoyle",
       "power": "3",
       "printings": [
-        "DTK"
+        "DTK",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "subtypes": [
@@ -29007,7 +29025,8 @@
       "originalText": "{T}: Add {B} or {R} to your mana pool.\n{4}{B}{R}: Kolaghan Monument becomes a 4/4 black and red Dragon artifact creature with flying until end of turn.",
       "originalType": "Artifact",
       "printings": [
-        "DTK"
+        "DTK",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
@@ -29816,10 +29835,11 @@
         "C16",
         "AKH",
         "CMA",
-        "C17"
+        "C17",
+        "IMA"
       ],
       "rarity": "Common",
-      "text": "{T}, Sacrifice Evolving Wilds: Search your library for a basic land card and put it onto the battlefield tapped. Then shuffle your library.",
+      "text": "{T}, Sacrifice Evolving Wilds: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle your library.",
       "type": "Land",
       "types": [
         "Land"
@@ -30428,24 +30448,24 @@
           "multiverseid": 396499
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Planície",
-          "multiverseid": 396761
-        },
-        {
           "language": "Russian",
           "name": "Равнина",
           "multiverseid": 397025
         },
         {
-          "language": "Russian",
-          "name": "Равнина",
-          "multiverseid": 397026
+          "language": "Spanish",
+          "name": "Llanura",
+          "multiverseid": 397289
         },
         {
-          "language": "Russian",
-          "name": "Равнина",
-          "multiverseid": 397027
+          "language": "Spanish",
+          "name": "Llanura",
+          "multiverseid": 397290
+        },
+        {
+          "language": "Spanish",
+          "name": "Llanura",
+          "multiverseid": 397291
         }
       ],
       "id": "1b30b26ecfd822dabfe77c9cb7861aaaeef42406",
@@ -30815,24 +30835,24 @@
           "multiverseid": 396499
         },
         {
+          "language": "Portuguese (Brazil)",
+          "name": "Planície",
+          "multiverseid": 396761
+        },
+        {
           "language": "Russian",
           "name": "Равнина",
           "multiverseid": 397025
         },
         {
-          "language": "Spanish",
-          "name": "Llanura",
-          "multiverseid": 397289
+          "language": "Russian",
+          "name": "Равнина",
+          "multiverseid": 397026
         },
         {
-          "language": "Spanish",
-          "name": "Llanura",
-          "multiverseid": 397290
-        },
-        {
-          "language": "Spanish",
-          "name": "Llanura",
-          "multiverseid": 397291
+          "language": "Russian",
+          "name": "Равнина",
+          "multiverseid": 397027
         }
       ],
       "id": "2706918905238fe191b59fe7de1f3d3f30424a8a",
@@ -31202,24 +31222,24 @@
           "multiverseid": 396453
         },
         {
+          "language": "Portuguese (Brazil)",
+          "name": "Ilha",
+          "multiverseid": 396715
+        },
+        {
           "language": "Russian",
           "name": "Остров",
           "multiverseid": 396979
         },
         {
-          "language": "Spanish",
-          "name": "Isla",
-          "multiverseid": 397243
+          "language": "Russian",
+          "name": "Остров",
+          "multiverseid": 396980
         },
         {
-          "language": "Spanish",
-          "name": "Isla",
-          "multiverseid": 397244
-        },
-        {
-          "language": "Spanish",
-          "name": "Isla",
-          "multiverseid": 397245
+          "language": "Russian",
+          "name": "Остров",
+          "multiverseid": 396981
         }
       ],
       "id": "bc4390fb406b0224d3e43b50f019b6d8ec43098a",
@@ -31455,7 +31475,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -31587,24 +31608,24 @@
           "multiverseid": 396453
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Ilha",
-          "multiverseid": 396715
-        },
-        {
           "language": "Russian",
           "name": "Остров",
           "multiverseid": 396979
         },
         {
-          "language": "Russian",
-          "name": "Остров",
-          "multiverseid": 396980
+          "language": "Spanish",
+          "name": "Isla",
+          "multiverseid": 397243
         },
         {
-          "language": "Russian",
-          "name": "Остров",
-          "multiverseid": 396981
+          "language": "Spanish",
+          "name": "Isla",
+          "multiverseid": 397244
+        },
+        {
+          "language": "Spanish",
+          "name": "Isla",
+          "multiverseid": 397245
         }
       ],
       "id": "72a2138c9526730770b10689cb19cf0e397d938a",
@@ -31840,7 +31861,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -31972,24 +31994,24 @@
           "multiverseid": 396453
         },
         {
+          "language": "Portuguese (Brazil)",
+          "name": "Ilha",
+          "multiverseid": 396715
+        },
+        {
           "language": "Russian",
           "name": "Остров",
           "multiverseid": 396979
         },
         {
-          "language": "Spanish",
-          "name": "Isla",
-          "multiverseid": 397243
+          "language": "Russian",
+          "name": "Остров",
+          "multiverseid": 396980
         },
         {
-          "language": "Spanish",
-          "name": "Isla",
-          "multiverseid": 397244
-        },
-        {
-          "language": "Spanish",
-          "name": "Isla",
-          "multiverseid": 397245
+          "language": "Russian",
+          "name": "Остров",
+          "multiverseid": 396981
         }
       ],
       "id": "8029724b37e7fb6379cf946c6c8127cde0342408",
@@ -32225,7 +32247,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -32251,11 +32274,6 @@
         "B"
       ],
       "foreignNames": [
-        {
-          "language": "Chinese Simplified",
-          "name": "沼泽",
-          "multiverseid": 394986
-        },
         {
           "language": "Chinese Traditional",
           "name": "沼澤",
@@ -32352,16 +32370,6 @@
           "multiverseid": 396834
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Pântano",
-          "multiverseid": 396835
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Pântano",
-          "multiverseid": 396836
-        },
-        {
           "language": "Russian",
           "name": "Болото",
           "multiverseid": 397098
@@ -32375,6 +32383,21 @@
           "language": "Russian",
           "name": "Болото",
           "multiverseid": 397100
+        },
+        {
+          "language": "Spanish",
+          "name": "Pantano",
+          "multiverseid": 397362
+        },
+        {
+          "language": "Spanish",
+          "name": "Pantano",
+          "multiverseid": 397363
+        },
+        {
+          "language": "Spanish",
+          "name": "Pantano",
+          "multiverseid": 397364
         }
       ],
       "id": "4d385e45457aa45458dc475e6aadbe3cf1ad750d",
@@ -33032,11 +33055,6 @@
       ],
       "foreignNames": [
         {
-          "language": "Chinese Simplified",
-          "name": "沼泽",
-          "multiverseid": 394986
-        },
-        {
           "language": "Chinese Traditional",
           "name": "沼澤",
           "multiverseid": 395250
@@ -33132,16 +33150,6 @@
           "multiverseid": 396834
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Pântano",
-          "multiverseid": 396835
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Pântano",
-          "multiverseid": 396836
-        },
-        {
           "language": "Russian",
           "name": "Болото",
           "multiverseid": 397098
@@ -33155,6 +33163,21 @@
           "language": "Russian",
           "name": "Болото",
           "multiverseid": 397100
+        },
+        {
+          "language": "Spanish",
+          "name": "Pantano",
+          "multiverseid": 397362
+        },
+        {
+          "language": "Spanish",
+          "name": "Pantano",
+          "multiverseid": 397363
+        },
+        {
+          "language": "Spanish",
+          "name": "Pantano",
+          "multiverseid": 397364
         }
       ],
       "id": "690962598696e28b6c239a48d4410e55618804d6",
@@ -33786,7 +33809,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -34177,7 +34201,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -34203,11 +34228,6 @@
         "R"
       ],
       "foreignNames": [
-        {
-          "language": "Chinese Simplified",
-          "name": "山脉",
-          "multiverseid": 394892
-        },
         {
           "language": "Chinese Traditional",
           "name": "山脈",
@@ -34319,14 +34339,19 @@
           "multiverseid": 397004
         },
         {
-          "language": "Russian",
-          "name": "Гора",
-          "multiverseid": 397005
+          "language": "Spanish",
+          "name": "Montaña",
+          "multiverseid": 397268
         },
         {
-          "language": "Russian",
-          "name": "Гора",
-          "multiverseid": 397006
+          "language": "Spanish",
+          "name": "Montaña",
+          "multiverseid": 397269
+        },
+        {
+          "language": "Spanish",
+          "name": "Montaña",
+          "multiverseid": 397270
         }
       ],
       "id": "71367d754c0fe4b433a8c524d4d21f4b6c5dbcf4",
@@ -34568,7 +34593,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -34594,11 +34620,6 @@
         "G"
       ],
       "foreignNames": [
-        {
-          "language": "Chinese Simplified",
-          "name": "树林",
-          "multiverseid": 394837
-        },
         {
           "language": "Chinese Traditional",
           "name": "樹林",
@@ -34710,14 +34731,19 @@
           "multiverseid": 396949
         },
         {
-          "language": "Russian",
-          "name": "Лес",
-          "multiverseid": 396950
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 397213
         },
         {
-          "language": "Russian",
-          "name": "Лес",
-          "multiverseid": 396951
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 397214
+        },
+        {
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 397215
         }
       ],
       "id": "219c67c7af510d9a0705e0a3780a2755a56d6c76",

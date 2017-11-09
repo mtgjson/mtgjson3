@@ -1640,8 +1640,12 @@ var fixCMC = function(cards, cb) {
 
 					var otherSideNum = card.number.substr(0, card.number.length - 1) + ((card.number.substr(-1) == 'a')?'b':'a');
 					var otherCard = findCardByNumber(otherSideNum);
-					if (otherCard.hasOwnProperty('cmc'))
+					if (otherCard.hasOwnProperty('cmc')) {
 						card.cmc = otherCard.cmc;
+					} else {
+						// The other card has no mama cost so it's a land, set CMC to land mana cost (0).
+						card.cmc = 0;
+					}
                     return subcb();
 			}
 

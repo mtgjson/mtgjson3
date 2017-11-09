@@ -10915,21 +10915,26 @@
       "originalType": "Creature — Human Wizard",
       "power": "2",
       "printings": [
-        "FUT"
+        "FUT",
+        "IMA"
       ],
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2008-04-01",
-          "text": "Nonbasic lands that are turned into Mountains are still nonbasic. Magus of the Moon does nothing to change the land's supertype."
-        },
-        {
-          "date": "2008-04-01",
-          "text": "Lands that are turned into Mountains will have \"{T}: Add {R} to your mana pool."
-        },
-        {
           "date": "2017-09-29",
           "text": "If a nonbasic land has an ability that causes it to enter the battlefield tapped, it lose will that ability before it applies. The same is also true of any other abilities that modify how a land enters the battlefield or apply \"as\" a land enters the battlefield, such as the first ability of Cavern of Souls. This is a change from previous rulings."
+        },
+        {
+          "date": "2017-11-17",
+          "text": "Nonbasic lands lose any other land types and abilities they had. They gain the land type Mountain and gain the ability \"{T}: Add {R} to your mana pool.\""
+        },
+        {
+          "date": "2017-11-17",
+          "text": "Magus of the Moon's effect doesn't affect names or supertypes. It won't turn any land into a basic land or remove the legendary supertype from a legendary land, and the lands won't be named Mountain."
+        },
+        {
+          "date": "2017-11-17",
+          "text": "If a nonbasic land has an ability that triggers \"when\" it enters the battlefield, it will lose that ability before it triggers."
         }
       ],
       "subtypes": [
@@ -12455,7 +12460,8 @@
       "originalType": "Instant",
       "printings": [
         "FUT",
-        "DDG"
+        "DDG",
+        "DDT"
       ],
       "rarity": "Common",
       "rulings": [
@@ -18970,7 +18976,8 @@
       "printings": [
         "FUT",
         "SHM",
-        "EXP"
+        "EXP",
+        "IMA"
       ],
       "rarity": "Rare",
       "rulings": [
@@ -19069,7 +19076,8 @@
       "originalType": "Land",
       "printings": [
         "FUT",
-        "V12"
+        "V12",
+        "IMA"
       ],
       "rarity": "Rare",
       "text": "{T}: Add {C} to your mana pool.\n{T}: Add {R} or {G} to your mana pool. Each opponent gains 1 life.",
@@ -19162,7 +19170,8 @@
       "originalType": "Land",
       "printings": [
         "FUT",
-        "EXP"
+        "EXP",
+        "IMA"
       ],
       "rarity": "Rare",
       "text": "{T}, Pay 1 life: Add {G} or {W} to your mana pool.\n{1}, {T}, Sacrifice Horizon Canopy: Draw a card.",
@@ -19254,9 +19263,16 @@
       "originalText": "{T}: Add {1} to your mana pool.\n{T}: Add {W} to your mana pool. Play this ability only if you control an Island.\n{T}: Add {U} to your mana pool. Play this ability only if you control a Plains.",
       "originalType": "Land",
       "printings": [
-        "FUT"
+        "FUT",
+        "IMA"
       ],
       "rarity": "Rare",
+      "rulings": [
+        {
+          "date": "2017-11-17",
+          "text": "Nimbus Maze's last two abilities check the subtypes of lands you control, not their names. You can activate the appropriate abilities as long as you control a land with the corresponding subtype, Plains or Island. Most nonbasic lands don't have basic land types, even if they produce colored mana. For example, Nimbus Maze itself is neither a Plains nor an Island, while Hallowed Fountain is both."
+        }
+      ],
       "text": "{T}: Add {C} to your mana pool.\n{T}: Add {W} to your mana pool. Activate this ability only if you control an Island.\n{T}: Add {U} to your mana pool. Activate this ability only if you control a Plains.",
       "timeshifted": true,
       "type": "Land",
@@ -19346,17 +19362,18 @@
       "originalText": "{T}: Add {U} to your mana pool. If you played a land this turn, add {B} to your mana pool instead.",
       "originalType": "Land",
       "printings": [
-        "FUT"
+        "FUT",
+        "IMA"
       ],
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2007-05-01",
+          "date": "2017-11-17",
           "text": "The turn you play River of Tears, it will produce {B} when tapped for mana."
         },
         {
-          "date": "2007-05-01",
-          "text": "The land produces {B} only after you've played a land, not after you've put a land directly onto the battlefield (such as with Rampant Growth)."
+          "date": "2017-11-17",
+          "text": "River of Tears produces {B} only after you've played a land, not after you've put a land onto the battlefield (such as with Evolving Wilds)."
         }
       ],
       "text": "{T}: Add {U} to your mana pool. If you played a land this turn, add {B} to your mana pool instead.",

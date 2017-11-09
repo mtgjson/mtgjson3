@@ -56,7 +56,7 @@ function processSet(code, cb)
 		function getJSON()
 		{
 			httpUtil.get("http://mtgjson.com/json/" + code + ".json", this.parallel());
-			fs.readFile(path.join(__dirname, "..", "web", "json", code + ".json"), {encoding : "utf8"}, this.parallel());
+			fs.readFile(path.join(__dirname, "..", "json", code + ".json"), {encoding : "utf8"}, this.parallel());
 		},
 		function compare(oldJSONArgs, newJSON)
 		{

@@ -293,7 +293,8 @@
       "originalType": "Creature — Human Cleric",
       "power": "1",
       "printings": [
-        "5DN"
+        "5DN",
+        "IMA"
       ],
       "rarity": "Rare",
       "rulings": [
@@ -2576,9 +2577,20 @@
       "printings": [
         "5DN",
         "DD2",
-        "DD3_JVC"
+        "DD3_JVC",
+        "IMA"
       ],
       "rarity": "Common",
+      "rulings": [
+        {
+          "date": "2017-11-17",
+          "text": "You must be able to target another spell to cast Condescend. Condescend can't target itself."
+        },
+        {
+          "date": "2017-11-17",
+          "text": "You scry 2 even if the spell's controller pays {X}."
+        }
+      ],
       "text": "Counter target spell unless its controller pays {X}. Scry 2. (Look at the top two cards of your library, then put any number of them on the bottom of your library and the rest on top in any order.)",
       "type": "Instant",
       "types": [
@@ -6202,7 +6214,8 @@
         "M13",
         "M15",
         "DD3_JVC",
-        "CMA"
+        "CMA",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "subtypes": [
@@ -12163,13 +12176,22 @@
       "originalText": "Guardian Idol comes into play tapped.\n{T}: Add {1} to your mana pool.\n{2}: Guardian Idol becomes a 2/2 artifact creature until end of turn.",
       "originalType": "Artifact",
       "printings": [
-        "5DN"
+        "5DN",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
         {
           "date": "2008-08-01",
           "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+        },
+        {
+          "date": "2017-11-17",
+          "text": "If Guardian Idol has any +1/+1 counters on it, those counters will remain on it after it stops being a creature. Those counters will have no effect as long as Guardian Idol isn't a creature, but they will apply again if it later becomes a creature."
+        },
+        {
+          "date": "2017-11-17",
+          "text": "Activating the last ability of Guardian Idol while it's already a creature will override any effects that set its power or toughness to a specific value. Effects that modify power or toughness without setting them to a specific value will continue to apply."
         }
       ],
       "text": "Guardian Idol enters the battlefield tapped.\n{T}: Add {C} to your mana pool.\n{2}: Guardian Idol becomes a 2/2 Golem artifact creature until end of turn.",
