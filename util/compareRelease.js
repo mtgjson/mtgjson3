@@ -1,12 +1,12 @@
 "use strict";
 /*global setImmediate: true*/
 
-var httpUtil = require('@sembiance/xutil').http,
-	fs = require("fs"),
+var fs = require("fs"),
 	shared = require('../shared/shared'),
 	color = require("cli-color"),
-	diffUtil = require('@sembiance/xutil').diff,
+	ansidiff = require('ansidiff'),
 	path = require("path"),
+	request = require("request"),
 	tiptoe = require("tiptoe"),
 	winston = require("winston");
 
@@ -55,7 +55,7 @@ function processSet(code, cb)
 	tiptoe(
 		function getJSON()
 		{
-			httpUtil.get("http://mtgjson.com/json/" + code + ".json", this.parallel());
+			request("http://mtgjson.com/json/" + code + ".json", this.parallel());
 			fs.readFile(path.join(__dirname, "..", "json", code + ".json"), {encoding : "utf8"}, this.parallel());
 		},
 		function compare(oldJSONArgs, newJSON)
@@ -91,7 +91,7 @@ function compareSets(oldSet, newSet, filename)
 	delete oldSet.cards;
 	delete newSet.cards;
 
-	var setChanged = diffUtil.diff(oldSet, newSet);
+	var setChanged = ansidiff.words(oldSet, newSet);
 	if(setChanged)
 	{
 		updatedSetFiles.push(filename);
@@ -99,7 +99,7 @@ function compareSets(oldSet, newSet, filename)
 		result += setChanged;
 	}
 
-	var cardsChanged = diffUtil.diff(Object.keys(oldCardsMap), Object.keys(newCardsMap));
+	var cardsChanged = ansidiff.words(Object.keys(oldCardsMap), Object.keys(newCardsMap));
 	if(cardsChanged)
 	{
 		updatedSetFiles.push(filename);
@@ -114,7 +114,7 @@ function compareSets(oldSet, newSet, filename)
 
 		var newCard = newCardsMap[key];
 
-		var subResult = diffUtil.diff(oldCard, newCard);
+		var subResult = ansidiff.words(oldCard, newCard);
 		if(subResult)
 		{
 			updatedSetFiles.push(filename);

@@ -4,7 +4,7 @@
 
 var fs = require("fs"),
 	path = require("path"),
-	httpUtil = require('@sembiance/xutil').http,
+	request = require('request'),
 	domino = require("domino"),
 	tiptoe = require("tiptoe"),
 	winston = require("winston");
@@ -12,7 +12,7 @@ var fs = require("fs"),
 tiptoe(
 	function getPageAndPrevious()
 	{
-		httpUtil.get("http://gatherer.wizards.com/Pages/Default.aspx", this.parallel());
+		request("http://gatherer.wizards.com/Pages/Default.aspx", this.parallel());
 		fs.readFile(path.join(__dirname, "previous_sets.json"), { encoding : "utf8"}, this.parallel());
 	},
 	function compareVersions(setsHTML, previousSetsJSON)

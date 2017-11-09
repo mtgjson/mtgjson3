@@ -5,7 +5,7 @@
 var url = require("url"),
 	C = require('../shared/C'),
 	path = require("path"),
-	httpUtil = require('@sembiance/xutil').http,
+	request = require('request'),
 	domino = require("domino"),
 	tiptoe = require("tiptoe"),
 	winston = require("winston");
@@ -15,7 +15,7 @@ var MCI_SETS_TO_IGNORE = ["9eb", "8eb", "uhaa"];
 tiptoe(
 	function getPageAndPrevious()
 	{
-		httpUtil.get("http://magiccards.info/sitemap.html", this);
+		request("http://magiccards.info/sitemap.html", this);
 	},
 	function compareVersions(setsHTML)
 	{

@@ -10,8 +10,7 @@ var querystring = require("querystring");
 var tiptoe = require("tiptoe");
 var fs = require("fs");
 var url = require("url");
-var urlUtil = require("@sembiance/xutil").url;
-var unicodeUtil = require("@sembiance/xutil").unicode;
+var unidecode = require("unidecode");
 var winston = require("winston");
 
 winston.level = 'info';
@@ -86,7 +85,7 @@ exports.getMCISetCodes = function()
 
 exports.cardComparator = function(a, b)
 {
-	var result = unicodeUtil.unicodeToAscii(a.name).toLowerCase().localeCompare(unicodeUtil.unicodeToAscii(b.name).toLowerCase());
+	var result = unidecode(a.name).toLowerCase().localeCompare(unidecode(b.name).toLowerCase());
 	if(result!==0)
 		return result;
 
@@ -616,10 +615,10 @@ exports.buildCacheFileURLs = function(card, cacheType, cb) {
 		}
 	}
 	else if (cacheType==="original") {
-		urls.push(urlUtil.setQueryParam(exports.buildMultiverseURL(card.multiverseid), "printed", "true"));
+		urls.push(exports.buildMultiverseURL(card.multiverseid).replace("printed=false", "printed=true"));
 		if (card.layout==="split") {
-			urls.push(urlUtil.setQueryParam(exports.buildMultiverseURL(card.multiverseid, card.names[0]), "printed", "true"));
-			urls.push(urlUtil.setQueryParam(exports.buildMultiverseURL(card.multiverseid, card.names[1]), "printed", "true"));
+			urls.push(exports.buildMultiverseURL(card.multiverseid, card.names[0]).replace("printed=false", "printed=true"));
+			urls.push(exports.buildMultiverseURL(card.multiverseid, card.names[1]).replace("printed=false", "printed=true"));
 		}
 	}
 	else if (cacheType==="languages") {

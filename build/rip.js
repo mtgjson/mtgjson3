@@ -8,9 +8,8 @@ var url = require("url");
 var moment = require("moment");
 var path = require("path");
 var shared = require("../shared/shared");
-var unicodeUtil = require("@sembiance/xutil").unicode;
-var diffUtil = require("@sembiance/xutil").diff;
-var urlUtil = require("@sembiance/xutil").url;
+var unidecode = require("unidecode");
+var ansidiff = require("ansidiff");
 var querystring = require("querystring");
 var tiptoe = require("tiptoe");
 var winston = require("winston");
@@ -287,7 +286,7 @@ var processMultiverseids = function (multiverseids, cb) {
 			function getMultiverseDocs(urls) {
 				urls.forEach(function (multiverseURL) {
 					shared.getURLAsDoc(multiverseURL, this.parallel());
-					shared.getURLAsDoc(urlUtil.setQueryParam(multiverseURL, "printed", "true"), this.parallel());
+					shared.getURLAsDoc(multiverseURL.replace("printed=false", "printed=true"), this.parallel());
 				}.bind(this));
 			},
 			function () {
@@ -542,7 +541,7 @@ var getCardParts = function (doc) {
 
 var getURLsForMultiverseid = function (multiverseid, cb) {
 	var docUrl = shared.buildMultiverseURL(multiverseid);
-	var printedUrl = urlUtil.setQueryParam(shared.buildMultiverseURL(multiverseid), "printed", "true");
+    var printedUrl = docUrl.replace("printed=false", "printed=true");
 
 	tiptoe(
 		function getDefaultDoc() {
@@ -818,7 +817,7 @@ var fillImageNames = function (set) {
 	var setCorrections = shared.getSetCorrections(set.code);
 
 	set.cards.forEach(function (card) {
-		card.imageName = unicodeUtil.unicodeToAscii((card.layout==="split" ? card.names.join("") : card.name));
+		card.imageName = unidecode((card.layout==="split" ? card.names.join("") : card.name));
 
 		if (cardNameCounts.hasOwnProperty(card.name)) {
 			var imageNumber = cardNameCounts[card.name]--;
@@ -888,7 +887,7 @@ var createMCICardName = function(card) {
 };
 
 var normalizeFlavor = function(flavor) {
-	flavor = unicodeUtil.unicodeToAscii(flavor.trim().replaceAll("\n", " "), {'—':'-','―':'-','”':'"','“':'"','‘':'\''}).innerTrim().replaceAll(" —", "—");
+	flavor = unidecode(flavor).trim().replaceAll("\n", " ").innerTrim().replaceAll(" —", "—");
 	while (flavor.contains(". .")) { flavor = flavor.replaceAll("[.] [.]", ".."); }
 	while (flavor.contains(" .")) { flavor = flavor.replaceAll(" [.]", "."); }
 	while (flavor.contains(". ")) { flavor = flavor.replaceAll("[.] ", "."); }
@@ -941,7 +940,7 @@ var compareCardToMCI = function(set, card, mciCardURL, cb) {
 					else if (mciFlavor && !cardFlavor)
 						winston.warn("FLAVOR: %s (%s) does not have flavor but MagicCardsInfo (%s) does.", card.name, card.multiverseid, mciCardURL);
 					else if (mciFlavor!==cardFlavor)
-						winston.warn("FLAVOR: %s (%s) flavor does not match MagicCardsInfo (%s).\n%s", card.name, card.multiverseid, mciCardURL, diffUtil.diff(cardFlavor, mciFlavor));
+						winston.warn("FLAVOR: %s (%s) flavor does not match MagicCardsInfo (%s).\n%s", card.name, card.multiverseid, mciCardURL, ansidiff.words(cardFlavor, mciFlavor));
 				}
 			}
 
@@ -969,7 +968,7 @@ var compareCardToMCI = function(set, card, mciCardURL, cb) {
 				else if (mciArtist && !cardArtist)
 					winston.warn("ARTIST: %s (%s) does not have artist but MagicCardsInfo (%s) does.", card.name, card.multiverseid, mciCardURL);
 				else if (mciArtist!==cardArtist && !C.ARTIST_CORRECTIONS.hasOwnProperty(cardArtist))
-					winston.warn("ARTIST: %s (%s) artist does not match MagicCardsInfo (%s).\n%s", card.name, card.multiverseid, mciCardURL, diffUtil.diff(cardArtist, mciArtist));
+					winston.warn("ARTIST: %s (%s) artist does not match MagicCardsInfo (%s).\n%s", card.name, card.multiverseid, mciCardURL, ansidiff.words(cardArtist, mciArtist));
 			}
 
 			this();
@@ -1024,7 +1023,7 @@ var compareCardsToEssentialMagic = function(set, cb) {
 						else if (essentialFlavor && !cardFlavor)
 							winston.warn("FLAVOR: %s (%s) does not have flavor but essentialMagic does.", card.name, card.multiverseid);
 						else if (essentialFlavor !== cardFlavor)
-							winston.warn("FLAVOR: %s (%s) flavor does not match essentialMagic.\n%s", card.name, card.multiverseid, diffUtil.diff(cardFlavor, essentialFlavor));
+							winston.warn("FLAVOR: %s (%s) flavor does not match essentialMagic.\n%s", card.name, card.multiverseid, ansidiff.words(cardFlavor, essentialFlavor));
 					}
 				});
 			});

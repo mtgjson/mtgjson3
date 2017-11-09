@@ -2,7 +2,7 @@
 
 var C = require('../shared/C'),
 	shared = require('../shared/shared'),
-	diffUtil = require('@sembiance/xutil').diffUtil;
+	ansidiff = require('ansidiff'),
     winston = require('winston');
 
 /**
@@ -84,7 +84,7 @@ setNames(function(err, setList) {
 					}
 				}
 				else {
-					var fieldDifference = diffUtil.diff(card[field], allCards[card.name][field]);
+					var fieldDifference = ansidiff.words(card[field], allCards[card.name][field]);
 					if (fieldDifference)
 						winston.info("'%s' (%s) has a field '%s' mismatch: '%s' (previous sets: %s)",
 							card.name,

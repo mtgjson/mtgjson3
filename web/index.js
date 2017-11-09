@@ -10,7 +10,7 @@ var moment = require('moment');
 var winston = require('winston');
 var childProcess = require("child_process");
 
-var diffUtil = require('@sembiance/xutil').diff;
+var ansidiff = require('ansidiff');
 
 var C = require('../shared/C');
 var clone = require('../clonekit');
@@ -75,7 +75,7 @@ function processCard(SET, card, callback) {
 				taint = true;
 			}
 			else
-				diff = diffUtil.diff(previousValue, fieldValue);
+				diff = ansidiff.words(previousValue, fieldValue);
 
 			if (diff) {
 				taint = true

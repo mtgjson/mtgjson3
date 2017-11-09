@@ -5,7 +5,7 @@ var path = require('path');
 var C = require('../shared/C');
 var async = require('async');
 var tiptoe = require('tiptoe');
-var diffUtil = require('@sembiance/xutil').diff;
+var ansidiff = require('ansidiff');
 
 var allCardsWithExtras = {};
 var previousSeenSetCodes = {};
@@ -77,7 +77,7 @@ var checkTaintField = function(SET, card, fieldName, fieldValue) {
 			taint = true;
 		}
 		else
-			diff = diffUtil.diff(previousValue, fieldValue);
+			diff = ansidiff.words(previousValue, fieldValue);
 
 		if (diff) {
 			taint = true;

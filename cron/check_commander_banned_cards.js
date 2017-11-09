@@ -4,7 +4,7 @@
 
 var fs = require("fs"),
 	path = require("path"),
-	httpUtil = require('@sembiance/xutil').http,
+	request = require('request'),
 	domino = require("domino"),
 	tiptoe = require("tiptoe"),
 	winston = require("winston");
@@ -12,7 +12,7 @@ var fs = require("fs"),
 tiptoe(
 	function getPageAndPrevious()
 	{
-		httpUtil.get("http://magic.wizards.com/en/gameinfo/gameplay/formats/commander", this.parallel());
+		request("http://magic.wizards.com/en/gameinfo/gameplay/formats/commander", this.parallel());
 		fs.readFile(path.join(__dirname, "previous_banned_commander_cards.json"), { encoding : "utf8"}, this.parallel());
 	},
 	function compareVersions(cardsHTML, previousCardsJSON)
