@@ -13,6 +13,8 @@ var url = require("url");
 var unidecode = require("unidecode");
 var winston = require("winston");
 
+require("@sembiance/xbase");
+
 winston.level = 'info';
 winston.cli()
 
