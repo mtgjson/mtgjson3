@@ -42,14 +42,14 @@ if (require.main == module) {
 			C.SETS.map(function(x) { if (x.code == code) setInfo = x; });
 
 			if (setInfo === null) {
-				console.error("Invalid set: %s", code);
+				winston.error("Invalid set: %s", code);
 				return(setImmediate(subcb));
 			}
 
 			var langs = [];
 
 			if (!setInfo.translations) {
-				console.error("No translations for set: %s", code);
+				winston.error("No translations for set: %s", code);
 				return(setImmediate(subcb));
 			}
 
@@ -70,21 +70,21 @@ if (require.main == module) {
 		},
 		function(err) {
 			if (err) {
-				console.error(err);
+				winston.error(err);
 				throw(err);
 			}
 
-			console.log('done.');
+			winston.info('done.');
 		}
 	);
 }
 
 function buildLang(lang, setCode, callback) {
-	console.log('%s:%s', setCode, lang);
+	winston.info('%s:%s', setCode, lang);
 
 	fs.readFile(path.join(__dirname, '..', 'json', setCode.toUpperCase() + '.json'), 'utf8', function(err, data) {
 		if (err) {
-			console.error(err);
+			winston.error(err);
 			return(setImmediate(function() { callback(err); }));
 		}
 
@@ -92,12 +92,12 @@ function buildLang(lang, setCode, callback) {
 		var setData = JSON.parse(data);
 		if (!setData.translations) {
 			msg = "Set " + setCode + " does not have any translations.";
-			console.error(msg);
+			winston.error(msg);
 			return(setImmediate(callback, msg));
 		}
 		if (!setData.translations[lang]) {
 			msg = "Set " + setCode + " does not have the requested translation: '" + lang + "'.";
-			console.error(msg);
+			winston.error(msg);
 			return(setImmediate(callback, msg));
 		}
 
@@ -112,7 +112,7 @@ function retrieve(lang, set, callback) {
 		'language': lang
 	};
 
-	console.log("Processing %d cards", set.cards.length);
+	winston.info("Processing %d cards", set.cards.length);
 
 	var multiverseids = [];
 
@@ -129,7 +129,7 @@ function retrieve(lang, set, callback) {
 					}
 
 					if (multiverseid === null) {
-						console.error("Cannot find correct multiverseid for card '%s'", card.name);
+						winston.error("Cannot find correct multiverseid for card '%s'", card.name);
 						return(setImmediate(cb));
 					}
 
@@ -159,7 +159,7 @@ function retrieve(lang, set, callback) {
 		},
 		function finish(err) {
 			if (callback) callback(err);
-			console.log('done fetching set ' + set.code);
+			winston.info('done fetching set ' + set.code);
 		}
 	);
 }

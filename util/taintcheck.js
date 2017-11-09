@@ -17,7 +17,7 @@ var checkCard = function(SET, card, callback) {
 	if (!allCardsWithExtras.hasOwnProperty(card.name))
 		allCardsWithExtras[card.name] = {};
 
-	//console.log('[%s] %s', SET.code, card.name);
+	//winston.info('[%s] %s', SET.code, card.name);
 
 	async.each(
 		Object.keys(C.FIELD_TYPES),
@@ -73,10 +73,10 @@ var checkTaintField = function(SET, card, fieldName, fieldValue) {
 	var diff = null;
 	if (previousValue) {
 		if (!fieldValue) {
-			console.log("No value present");
+			winston.info("No value present");
 			taint = true;
 		}
-		else 
+		else
 			diff = diffUtil.diff(previousValue, fieldValue);
 
 		if (diff) {
@@ -97,12 +97,12 @@ var checkTaintField = function(SET, card, fieldName, fieldValue) {
 
 		if (obj.sets.indexOf(SET.code) < 0)
 			obj.sets.push(SET.code);
-		
-		console.log("Tainted field %s on card '%s' (%s)", fieldName, card.name, SET.code);
+
+		winston.info("Tainted field %s on card '%s' (%s)", fieldName, card.name, SET.code);
 		if (diff)
-			console.log(diff);
-		console.log('Past sets: %s', obj.sets.join(','));
-		console.log('Card sets: %s', card.printings.join(','));
+			winston.info(diff);
+		winston.info('Past sets: %s', obj.sets.join(','));
+		winston.info('Card sets: %s', card.printings.join(','));
 	}
 };
 
@@ -124,7 +124,7 @@ var processSet = function(SET, cb) {
 		},
 		function(err) {
 			if (err) {
-				console.error('Error while processing set %s', SET.name);
+				winston.error('Error while processing set %s', SET.name);
 				throw(err);
 			}
 			setImmediate(cb);
@@ -136,7 +136,7 @@ var checkAll = function(callback) {
 	async.eachSeries(
 		C.SETS,
 		function(SET, cb) {
-			console.log("Processing set %s (%s)", SET.name, SET.code);
+			winston.info("Processing set %s (%s)", SET.name, SET.code);
 			processSet(SET, cb);
 		},
 		callback
@@ -164,10 +164,10 @@ module.exports = {
 };
 
 if (require.main == module) {
-	console.log("Checking for tainted cards...");
+	winston.info("Checking for tainted cards...");
 	checkAll(function() {
 		var output = JSON.stringify(taintedCards, null, 2);
 		fs.writeFile(path.join(__dirname, '..', 'taint.json'), output, 'utf-8');
-		console.log('total tainted cards: %d', taintedCards.length);
+		winston.info('total tainted cards: %d', taintedCards.length);
 	});
 }

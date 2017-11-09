@@ -3,6 +3,7 @@
 var C = require('../shared/C'),
 	shared = require('../shared/shared'),
 	diffUtil = require('@sembiance/xutil').diffUtil;
+    winston = require('winston');
 
 /**
  * Load the codes of all sets on C.SETS
@@ -65,7 +66,7 @@ setNames(function(err, setList) {
 
 	var checkCard = function(card, setCode) {
 		if (!card.name) {
-			console.error("Card with no name.");
+			winston.error("Card with no name.");
 		}
 
 		if (card.name.match(/B.F.M. \(Big Furry Monster\)/gi))
@@ -79,13 +80,13 @@ setNames(function(err, setList) {
 				// Compare
 				if (!card[field]) {
 					if (allCards[card.name][field]) {
-						console.log("'%s' (%s) mismatch for field '%s' (previous sets: %s)", card.name, setCode, field, allCards[card.name]._sets.join(','));
+						winston.info("'%s' (%s) mismatch for field '%s' (previous sets: %s)", card.name, setCode, field, allCards[card.name]._sets.join(','));
 					}
 				}
 				else {
 					var fieldDifference = diffUtil.diff(card[field], allCards[card.name][field]);
 					if (fieldDifference)
-						console.log("'%s' (%s) has a field '%s' mismatch: '%s' (previous sets: %s)",
+						winston.info("'%s' (%s) has a field '%s' mismatch: '%s' (previous sets: %s)",
 							card.name,
 							setCode,
 							field,
@@ -99,7 +100,7 @@ setNames(function(err, setList) {
 			allCards[card.name] = card;
 			allCards[card.name]._sets = [];
 		}
-		
+
 		allCards[card.name]._sets.push(setCode);
 	};
 

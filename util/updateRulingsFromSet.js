@@ -65,7 +65,7 @@ function processSet(code, cb) {
 			}, this);
 		},
 		function finish(err) {
-			console.log('done');
+			winston.info('done');
 			setImmediate(cb, err);
 		}
 	);

@@ -2,7 +2,7 @@
 
 var C = require('../shared/C'),
 	path = require("path"),
-	runUtil = require('@sembiance/xutil').run,
+	childProcess = require("child_process"),
 	tiptoe = require("tiptoe"),
 	winston = require("winston");
 
@@ -10,9 +10,13 @@ tiptoe(
 	function updateNonGathererSets()
 	{
 		winston.info("Updating non-gatherer sets...");
-		C.SETS_NOT_ON_GATHERER.serialForEach(function(setCode, subcb)
-		{
-			runUtil.run("node", [path.join(__dirname, "..", "build", "createNonGathererSet.js"), setCode], {"redirect-stderr" : false}, subcb);
+		C.SETS_NOT_ON_GATHERER.serialForEach(function(setCode, subcb) {
+            var cmd = "node " + path.join(__dirname, "..", "build", "createNonGathererSet.js") + " " + setCode;
+            childProcess.exec(cmd, function(err, stdout, stderr) {
+                if (stdout) winston.info(stdout);
+                if (stderr) winston.error(stderr);
+                return subcb(err);
+            });
 		}, this);
 	},
 	function finish(err)

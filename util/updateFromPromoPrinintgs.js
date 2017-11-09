@@ -59,7 +59,7 @@ tiptoe(
         var cmd = 'node ' + path.join(__dirname, 'updatePrintingsFromSet.js') + ' mcisets';
         childProcess.exec(cmd, function(err, stdout, stderr) {
             if (stdout) winston.info(stdout);
-            if (stderr) winston.console.error(stderr);
+            if (stderr) winston.error(stderr);
             return cb(err);
         });
 	},

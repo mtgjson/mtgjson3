@@ -62,7 +62,7 @@ function processSet(code, cb)
 		{
 			var result = compareSets(JSON.parse(oldJSONArgs[0]), JSON.parse(newJSON), code);
 			if(result)
-				console.log(result);
+				winston.info(result);
 
 			if(imageNameAlerts.length>0)
 			{

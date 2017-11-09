@@ -8,7 +8,7 @@ var shared = require('../shared/shared'),
 
 var CARD_FIELDS = [ "name", "number", "rarity", "type", "manaCost", "text", "flavor", "artist", "power", "toughness"];
 
-console.log("Set Name\tSet Code\t" + CARD_FIELDS.join("\t"));
+winston.info("Set Name\tSet Code\t" + CARD_FIELDS.join("\t"));
 
 shared.getSetsToDo().serialForEach(processSet, function(err)
 {
