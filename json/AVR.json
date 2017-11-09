@@ -721,17 +721,26 @@
       "power": "8",
       "printings": [
         "AVR",
-        "V15"
+        "V15",
+        "IMA"
       ],
       "rarity": "Mythic Rare",
       "rulings": [
         {
-          "date": "2013-07-01",
+          "date": "2017-11-17",
+          "text": "A permanent with indestructible can't be destroyed, but it can still be sacrificed, exiled, put into a graveyard, and so on. Notably, a permanent with indestructible can be put into its owner's graveyard due to the \"legend rule.\""
+        },
+        {
+          "date": "2017-11-17",
           "text": "Creatures with indestructible still have damage marked on them, even though that damage won't destroy them. If Avacyn leaves the battlefield, creatures that lose indestructible and have lethal damage marked on them will be destroyed."
         },
         {
-          "date": "2013-07-01",
-          "text": "A permanent with indestructible can't be destroyed, but it can still be sacrificed, exiled, put into a graveyard, and so on."
+          "date": "2017-11-17",
+          "text": "A creature with 0 toughness is put into its owner's graveyard even if it has indestructible."
+        },
+        {
+          "date": "2017-11-17",
+          "text": "A planeswalker with indestructible still loses loyalty as it's dealt damage. It is put into its owner's graveyard if its loyalty becomes 0."
         }
       ],
       "subtypes": [
@@ -3666,9 +3675,28 @@
       "printings": [
         "pLPA",
         "AVR",
-        "MM3"
+        "MM3",
+        "IMA"
       ],
       "rarity": "Rare",
+      "rulings": [
+        {
+          "date": "2017-11-17",
+          "text": "Once the exiled creature returns, it's considered a new object with no relation to the object that it was. Auras attached to the exiled creature will be put into their owners' graveyards. Equipment attached to the exiled creature will become unattached and remain on the battlefield. Any counters on the exiled creature will cease to exist."
+        },
+        {
+          "date": "2017-11-17",
+          "text": "The returned creature won't be the target of any spells or abilities that targeted it before. Any spells that don't target it, such as Austere Command, will still affect it."
+        },
+        {
+          "date": "2017-11-17",
+          "text": "If you target a creature that you control but don't own, you control the returned creature indefinitely after it returns. When you leave a multiplayer game, exile any objects that you put onto the battlefield under your control but don't own."
+        },
+        {
+          "date": "2017-11-17",
+          "text": "If a token is exiled this way, it will cease to exist and won't return to the battlefield."
+        }
+      ],
       "subtypes": [
         "Angel"
       ],
@@ -4870,12 +4898,13 @@
       "originalText": "Draw three cards, then put a card from your hand on the bottom of your library.",
       "originalType": "Sorcery",
       "printings": [
-        "AVR"
+        "AVR",
+        "IMA"
       ],
       "rarity": "Common",
       "rulings": [
         {
-          "date": "2012-05-01",
+          "date": "2017-11-17",
           "text": "If you cast Amass the Components with fewer than three cards in your library, you'll draw the remaining cards in your library, put a card from your hand on the bottom of your library, then lose the game for drawing a card from a library with no cards in it the next time state-based actions are performed."
         }
       ],
@@ -10015,10 +10044,6 @@
         },
         {
           "format": "Shards of Alara Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -16674,10 +16699,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -17038,17 +17059,18 @@
       "originalType": "Sorcery",
       "printings": [
         "pFNM",
-        "AVR"
+        "AVR",
+        "IMA"
       ],
       "rarity": "Common",
       "rulings": [
         {
-          "date": "2012-05-01",
-          "text": "A creature dealt damage by Pillar of Flame that dies that turn will be exiled even if it wasn't the target of Pillar of Flame (because the damage was redirected somehow)."
+          "date": "2017-11-17",
+          "text": "A creature dealt damage by Pillar of Flame that dies this turn will be exiled even if it wasn't the target of Pillar of Flame (because the damage was redirected somehow). If the target creature isn't dealt damage (most likely because the damage was prevented), it won't be exiled if it dies that turn."
         },
         {
-          "date": "2012-05-01",
-          "text": "A creature dealt damage by Pillar of Flame that turn will be exiled no matter why the creature would die. It could have its toughness reduced to 0 or less or be destroyed by another spell or ability."
+          "date": "2017-11-17",
+          "text": "A creature dealt damage by Pillar of Flame will be exiled no matter why the creature would die that turn. It could have its toughness reduced to 0 or less or be destroyed by another spell or ability."
         }
       ],
       "text": "Pillar of Flame deals 2 damage to target creature or player. If a creature dealt damage this way would die this turn, exile it instead.",
@@ -20524,10 +20546,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -22193,10 +22211,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -22439,12 +22453,13 @@
       "originalType": "Creature — Human Scout",
       "power": "1",
       "printings": [
-        "AVR"
+        "AVR",
+        "IMA"
       ],
       "rarity": "Common",
       "rulings": [
         {
-          "date": "2012-05-01",
+          "date": "2017-11-17",
           "text": "You may choose Timberland Guide as the target of its own ability."
         }
       ],
@@ -25979,6 +25994,11 @@
           "multiverseid": 295218
         },
         {
+          "language": "French",
+          "name": "Plaine",
+          "multiverseid": 295706
+        },
+        {
           "language": "German",
           "name": "Ebene",
           "multiverseid": 340750
@@ -26029,6 +26049,16 @@
           "multiverseid": 294970
         },
         {
+          "language": "Korean",
+          "name": "들",
+          "multiverseid": 294973
+        },
+        {
+          "language": "Korean",
+          "name": "들",
+          "multiverseid": 294974
+        },
+        {
           "language": "Portuguese (Brazil)",
           "name": "Planície",
           "multiverseid": 295458
@@ -26057,21 +26087,6 @@
           "language": "Russian",
           "name": "Равнина",
           "multiverseid": 295950
-        },
-        {
-          "language": "Spanish",
-          "name": "Llanura",
-          "multiverseid": 296190
-        },
-        {
-          "language": "Spanish",
-          "name": "Llanura",
-          "multiverseid": 296193
-        },
-        {
-          "language": "Spanish",
-          "name": "Llanura",
-          "multiverseid": 296194
         }
       ],
       "id": "743e831c2bc516702d09e396ac09bd091a1226ac",
@@ -26366,6 +26381,11 @@
           "multiverseid": 295218
         },
         {
+          "language": "French",
+          "name": "Plaine",
+          "multiverseid": 295706
+        },
+        {
           "language": "German",
           "name": "Ebene",
           "multiverseid": 340750
@@ -26416,6 +26436,16 @@
           "multiverseid": 294970
         },
         {
+          "language": "Korean",
+          "name": "들",
+          "multiverseid": 294973
+        },
+        {
+          "language": "Korean",
+          "name": "들",
+          "multiverseid": 294974
+        },
+        {
           "language": "Portuguese (Brazil)",
           "name": "Planície",
           "multiverseid": 295458
@@ -26444,21 +26474,6 @@
           "language": "Russian",
           "name": "Равнина",
           "multiverseid": 295950
-        },
-        {
-          "language": "Spanish",
-          "name": "Llanura",
-          "multiverseid": 296190
-        },
-        {
-          "language": "Spanish",
-          "name": "Llanura",
-          "multiverseid": 296193
-        },
-        {
-          "language": "Spanish",
-          "name": "Llanura",
-          "multiverseid": 296194
         }
       ],
       "id": "3d7f393fe040a449f8a8fd350653a0d374be2081",
@@ -26753,6 +26768,11 @@
           "multiverseid": 295218
         },
         {
+          "language": "French",
+          "name": "Plaine",
+          "multiverseid": 295706
+        },
+        {
           "language": "German",
           "name": "Ebene",
           "multiverseid": 340750
@@ -26803,6 +26823,16 @@
           "multiverseid": 294970
         },
         {
+          "language": "Korean",
+          "name": "들",
+          "multiverseid": 294973
+        },
+        {
+          "language": "Korean",
+          "name": "들",
+          "multiverseid": 294974
+        },
+        {
           "language": "Portuguese (Brazil)",
           "name": "Planície",
           "multiverseid": 295458
@@ -26831,21 +26861,6 @@
           "language": "Russian",
           "name": "Равнина",
           "multiverseid": 295950
-        },
-        {
-          "language": "Spanish",
-          "name": "Llanura",
-          "multiverseid": 296190
-        },
-        {
-          "language": "Spanish",
-          "name": "Llanura",
-          "multiverseid": 296193
-        },
-        {
-          "language": "Spanish",
-          "name": "Llanura",
-          "multiverseid": 296194
         }
       ],
       "id": "c13ffde1f1da1dd8056337f2162a3b00a0cd982f",
@@ -27145,6 +27160,16 @@
           "multiverseid": 295695
         },
         {
+          "language": "French",
+          "name": "Île",
+          "multiverseid": 295701
+        },
+        {
+          "language": "French",
+          "name": "Île",
+          "multiverseid": 295707
+        },
+        {
           "language": "German",
           "name": "Insel",
           "multiverseid": 340753
@@ -27158,6 +27183,11 @@
           "language": "German",
           "name": "Insel",
           "multiverseid": 340755
+        },
+        {
+          "language": "Italian",
+          "name": "Isola",
+          "multiverseid": 296427
         },
         {
           "language": "Japanese",
@@ -27218,21 +27248,6 @@
           "language": "Russian",
           "name": "Остров",
           "multiverseid": 295951
-        },
-        {
-          "language": "Spanish",
-          "name": "Isla",
-          "multiverseid": 296183
-        },
-        {
-          "language": "Spanish",
-          "name": "Isla",
-          "multiverseid": 296189
-        },
-        {
-          "language": "Spanish",
-          "name": "Isla",
-          "multiverseid": 296195
         }
       ],
       "id": "6559f8fa3c49831a3fb07c6709d97b3e037c2339",
@@ -27468,7 +27483,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -27853,7 +27869,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -27915,6 +27932,16 @@
           "multiverseid": 295695
         },
         {
+          "language": "French",
+          "name": "Île",
+          "multiverseid": 295701
+        },
+        {
+          "language": "French",
+          "name": "Île",
+          "multiverseid": 295707
+        },
+        {
           "language": "German",
           "name": "Insel",
           "multiverseid": 340753
@@ -27928,6 +27955,11 @@
           "language": "German",
           "name": "Insel",
           "multiverseid": 340755
+        },
+        {
+          "language": "Italian",
+          "name": "Isola",
+          "multiverseid": 296427
         },
         {
           "language": "Japanese",
@@ -27988,21 +28020,6 @@
           "language": "Russian",
           "name": "Остров",
           "multiverseid": 295951
-        },
-        {
-          "language": "Spanish",
-          "name": "Isla",
-          "multiverseid": 296183
-        },
-        {
-          "language": "Spanish",
-          "name": "Isla",
-          "multiverseid": 296189
-        },
-        {
-          "language": "Spanish",
-          "name": "Isla",
-          "multiverseid": 296195
         }
       ],
       "id": "0e517503cac94c8f6e48eec9095efcd48b2f7392",
@@ -28238,7 +28255,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -28297,16 +28315,6 @@
         {
           "language": "French",
           "name": "Marais",
-          "multiverseid": 295696
-        },
-        {
-          "language": "French",
-          "name": "Marais",
-          "multiverseid": 295699
-        },
-        {
-          "language": "French",
-          "name": "Marais",
           "multiverseid": 295708
         },
         {
@@ -28323,11 +28331,6 @@
           "language": "German",
           "name": "Sumpf",
           "multiverseid": 340758
-        },
-        {
-          "language": "Italian",
-          "name": "Palude",
-          "multiverseid": 296440
         },
         {
           "language": "Japanese",
@@ -28388,6 +28391,21 @@
           "language": "Russian",
           "name": "Болото",
           "multiverseid": 295952
+        },
+        {
+          "language": "Spanish",
+          "name": "Pantano",
+          "multiverseid": 296184
+        },
+        {
+          "language": "Spanish",
+          "name": "Pantano",
+          "multiverseid": 296187
+        },
+        {
+          "language": "Spanish",
+          "name": "Pantano",
+          "multiverseid": 296196
         }
       ],
       "id": "0d743f5f674959a14541dd6e59f8d68ba02cdd41",
@@ -28687,16 +28705,6 @@
         {
           "language": "French",
           "name": "Marais",
-          "multiverseid": 295696
-        },
-        {
-          "language": "French",
-          "name": "Marais",
-          "multiverseid": 295699
-        },
-        {
-          "language": "French",
-          "name": "Marais",
           "multiverseid": 295708
         },
         {
@@ -28713,11 +28721,6 @@
           "language": "German",
           "name": "Sumpf",
           "multiverseid": 340758
-        },
-        {
-          "language": "Italian",
-          "name": "Palude",
-          "multiverseid": 296440
         },
         {
           "language": "Japanese",
@@ -28778,6 +28781,21 @@
           "language": "Russian",
           "name": "Болото",
           "multiverseid": 295952
+        },
+        {
+          "language": "Spanish",
+          "name": "Pantano",
+          "multiverseid": 296184
+        },
+        {
+          "language": "Spanish",
+          "name": "Pantano",
+          "multiverseid": 296187
+        },
+        {
+          "language": "Spanish",
+          "name": "Pantano",
+          "multiverseid": 296196
         }
       ],
       "id": "9c5af6d8c995b55e6b3212813605b62e6155dadf",
@@ -29077,6 +29095,16 @@
         {
           "language": "French",
           "name": "Marais",
+          "multiverseid": 295696
+        },
+        {
+          "language": "French",
+          "name": "Marais",
+          "multiverseid": 295699
+        },
+        {
+          "language": "French",
+          "name": "Marais",
           "multiverseid": 295708
         },
         {
@@ -29093,6 +29121,11 @@
           "language": "German",
           "name": "Sumpf",
           "multiverseid": 340758
+        },
+        {
+          "language": "Italian",
+          "name": "Palude",
+          "multiverseid": 296440
         },
         {
           "language": "Japanese",
@@ -29153,21 +29186,6 @@
           "language": "Russian",
           "name": "Болото",
           "multiverseid": 295952
-        },
-        {
-          "language": "Spanish",
-          "name": "Pantano",
-          "multiverseid": 296184
-        },
-        {
-          "language": "Spanish",
-          "name": "Pantano",
-          "multiverseid": 296187
-        },
-        {
-          "language": "Spanish",
-          "name": "Pantano",
-          "multiverseid": 296196
         }
       ],
       "id": "37cef482b6423d19f74457b22a0ef0ffe8bb1f88",
@@ -29799,7 +29817,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -30190,7 +30209,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -30247,6 +30267,11 @@
           "multiverseid": 295212
         },
         {
+          "language": "French",
+          "name": "Montagne",
+          "multiverseid": 295698
+        },
+        {
           "language": "German",
           "name": "Gebirge",
           "multiverseid": 340759
@@ -30294,7 +30319,17 @@
         {
           "language": "Korean",
           "name": "산",
+          "multiverseid": 294962
+        },
+        {
+          "language": "Korean",
+          "name": "산",
           "multiverseid": 294966
+        },
+        {
+          "language": "Korean",
+          "name": "산",
+          "multiverseid": 294968
         },
         {
           "language": "Portuguese (Brazil)",
@@ -30325,21 +30360,6 @@
           "language": "Russian",
           "name": "Гора",
           "multiverseid": 295944
-        },
-        {
-          "language": "Spanish",
-          "name": "Montaña",
-          "multiverseid": 296182
-        },
-        {
-          "language": "Spanish",
-          "name": "Montaña",
-          "multiverseid": 296186
-        },
-        {
-          "language": "Spanish",
-          "name": "Montaña",
-          "multiverseid": 296188
         }
       ],
       "id": "8a731b999a1e511964b9c002527931237b60abf8",
@@ -30581,7 +30601,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -31027,11 +31048,6 @@
           "multiverseid": 295216
         },
         {
-          "language": "French",
-          "name": "Forêt",
-          "multiverseid": 295704
-        },
-        {
           "language": "German",
           "name": "Wald",
           "multiverseid": 340762
@@ -31045,16 +31061,6 @@
           "language": "German",
           "name": "Wald",
           "multiverseid": 340764
-        },
-        {
-          "language": "Italian",
-          "name": "Foresta",
-          "multiverseid": 296429
-        },
-        {
-          "language": "Italian",
-          "name": "Foresta",
-          "multiverseid": 296435
         },
         {
           "language": "Italian",
@@ -31120,6 +31126,21 @@
           "language": "Russian",
           "name": "Лес",
           "multiverseid": 295948
+        },
+        {
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 296185
+        },
+        {
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 296191
+        },
+        {
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 296192
         }
       ],
       "id": "ae2a2a3d73ae478e9f7236110ca5afb63e97a7f4",

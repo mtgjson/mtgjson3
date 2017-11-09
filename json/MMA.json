@@ -2377,13 +2377,30 @@
       "power": "5",
       "printings": [
         "CHK",
-        "MMA"
+        "MMA",
+        "IMA"
       ],
       "rarity": "Mythic Rare",
       "rulings": [
         {
-          "date": "2013-06-07",
-          "text": "The triggered ability targets the player and up to five permanents that player controls. If all targets are illegal as the ability tries to resolve, it will be countered and none of its effects will happen."
+          "date": "2017-11-17",
+          "text": "If any of the targets of Yosei's ability are illegal, they won't be tapped."
+        },
+        {
+          "date": "2017-11-17",
+          "text": "If all of the permanents targeted by Yosei's ability become illegal targets, nothing becomes tapped, but the target player still skips his or her untap step."
+        },
+        {
+          "date": "2017-11-17",
+          "text": "If the player becomes an illegal target, the target permanents are tapped, but the player doesn't skip his or her untap step."
+        },
+        {
+          "date": "2017-11-17",
+          "text": "If a permanent won't untap during its controller's next untap step, that effect waits to apply until its controller has an untap step that isn't skipped."
+        },
+        {
+          "date": "2017-11-17",
+          "text": "If more than one effect instructs a player to skip his or her next untap step, such as if Yosei dies more than once in a turn, that player skips that many untap steps. This is different from effects that state that something doesn't untap during an untap step."
         }
       ],
       "subtypes": [
@@ -2566,16 +2583,17 @@
         "LRW",
         "MMA",
         "MM2",
-        "MPS_AKH"
+        "MPS_AKH",
+        "IMA"
       ],
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2013-06-07",
+          "date": "2017-11-17",
           "text": "You choose both modes as you cast Cryptic Command. You must choose two different modes."
         },
         {
-          "date": "2013-06-07",
+          "date": "2017-11-17",
           "text": "Look at both chosen modes to determine how many targets Cryptic Command has, if any. If it has at least one target, and all its targets are illegal when it tries to resolve, then it will be countered and none of its effects will happen. For example, if you choose the second and fourth modes, and the permanent is an illegal target when Cryptic Command tries to resolve, you won't draw a card."
         }
       ],
@@ -3267,9 +3285,16 @@
       "power": "5",
       "printings": [
         "CHK",
-        "MMA"
+        "MMA",
+        "IMA"
       ],
       "rarity": "Mythic Rare",
+      "rulings": [
+        {
+          "date": "2017-11-17",
+          "text": "Keiga's effect lasts indefinitely. It doesn't wear off during the cleanup step."
+        }
+      ],
       "subtypes": [
         "Dragon",
         "Spirit"
@@ -5903,7 +5928,8 @@
       "printings": [
         "CHK",
         "DRB",
-        "MMA"
+        "MMA",
+        "IMA"
       ],
       "rarity": "Mythic Rare",
       "subtypes": [
@@ -7622,7 +7648,8 @@
       "originalType": "Instant",
       "printings": [
         "PLC",
-        "MMA"
+        "MMA",
+        "IMA"
       ],
       "rarity": "Common",
       "text": "Choose one —\n• Destroy target artifact.\n• Target creature gets +1/+1 and gains trample until end of turn.\n• Remove two time counters from target permanent or suspended card.",
@@ -8052,17 +8079,30 @@
         "CHK",
         "V11",
         "MMA",
-        "MM2"
+        "MM2",
+        "IMA"
       ],
       "rarity": "Mythic Rare",
       "rulings": [
         {
-          "date": "2013-06-07",
-          "text": "As the token is created, it checks the printed values of the creature it's copying — or, if that creature is itself a token, the original characteristics of that token as stated by the effect that put it onto the battlefield — as well as any copy effects that have been applied to it. It won't copy counters on the creature, nor will it copy other effects that have changed the creature's power, toughness, types, color, or so on."
+          "date": "2017-11-17",
+          "text": "The token copies exactly what was printed on the creature and nothing else (unless that creature was copying something else or was a token; see below). It doesn't copy whether that creature was tapped or untapped, whether it had any counters on it or Auras and/or Equipment attached to it, or any non-copy effects that changed its power, toughness, types, color, and so on."
         },
         {
-          "date": "2013-06-07",
-          "text": "Haste is part of the token's copiable values. Copies of that token will also have haste."
+          "date": "2017-11-17",
+          "text": "If the copied creature had {X} in its mana cost, X is 0."
+        },
+        {
+          "date": "2017-11-17",
+          "text": "If the copied creature was copying something else, the tokens enter the battlefield as whatever that creature was copying."
+        },
+        {
+          "date": "2017-11-17",
+          "text": "If the copied creature is a token, the tokens created by Kiki-Jiki's ability copies the original characteristics of that token as stated by the effect that put it onto the battlefield."
+        },
+        {
+          "date": "2017-11-17",
+          "text": "Any enters-the-battlefield abilities of the copied creature will trigger when the tokens enter the battlefield. Any \"As [this creature] enters the battlefield\" or \"[This creature] enters the battlefield with\" abilities of the copied creature will also work."
         }
       ],
       "subtypes": [
@@ -8489,7 +8529,8 @@
         "pFNM",
         "TSP",
         "MMA",
-        "DDS"
+        "DDS",
+        "IMA"
       ],
       "rarity": "Common",
       "rulings": [
@@ -8655,7 +8696,8 @@
         "CHK",
         "ARC",
         "MMA",
-        "C17"
+        "C17",
+        "IMA"
       ],
       "rarity": "Mythic Rare",
       "subtypes": [
@@ -9152,6 +9194,10 @@
           "legality": "Legal"
         },
         {
+          "format": "Standard",
+          "legality": "Legal"
+        },
+        {
           "format": "Urza Block",
           "legality": "Legal"
         },
@@ -9515,6 +9561,10 @@
         {
           "date": "2005-10-01",
           "text": "If there are two Doubling Seasons on the battlefield, then the number of tokens or counters is four times the original number. If there are three on the battlefield, then the number of tokens or counters is eight times the original number, and so on."
+        },
+        {
+          "date": "2005-10-01",
+          "text": "Planeswalkers will enter the battlefield with double the normal amount of loyalty counters. However, if you activate an ability whose cost has you put loyalty counters on a planeswalker, the number you put on isn't doubled. This is because those counters are put on as a cost, not as an effect."
         }
       ],
       "text": "If an effect would create one or more tokens under your control, it creates twice that many of those tokens instead.\nIf an effect would put one or more counters on a permanent you control, it puts twice that many of those counters on that permanent instead.",
@@ -9567,7 +9617,8 @@
       "power": "5",
       "printings": [
         "TSP",
-        "MMA"
+        "MMA",
+        "IMA"
       ],
       "rarity": "Common",
       "rulings": [
@@ -10087,10 +10138,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -10169,13 +10216,18 @@
       "power": "5",
       "printings": [
         "CHK",
-        "MMA"
+        "MMA",
+        "IMA"
       ],
       "rarity": "Mythic Rare",
       "rulings": [
         {
-          "date": "2013-06-07",
-          "text": "You announce the target creatures and how you're distributing the +1/+1 counters as you put the triggered ability on the stack. If one of the target creatures becomes illegal, you can't change how the counters will be distributed."
+          "date": "2017-11-17",
+          "text": "You choose how many targets Jugan's triggered ability has and how the counters are distributed as you put the ability onto the stack. Each target must receive at least one counter."
+        },
+        {
+          "date": "2017-11-17",
+          "text": "If some of the creatures are illegal targets as Jugan's triggered ability tries to resolve, the original distribution of counters still applies and the counters that would have been put on the illegal targets are lost. They won't be put instead on a legal target."
         }
       ],
       "subtypes": [
@@ -10594,7 +10646,8 @@
       "power": "3",
       "printings": [
         "TSP",
-        "MMA"
+        "MMA",
+        "IMA"
       ],
       "rarity": "Common",
       "rulings": [
@@ -10960,7 +11013,8 @@
       "printings": [
         "TSP",
         "HOP",
-        "MMA"
+        "MMA",
+        "IMA"
       ],
       "rarity": "Common",
       "rulings": [
@@ -11005,7 +11059,7 @@
           "text": "A creature cast using suspend will enter the battlefield with haste. It will have haste until another player gains control of it (or, in some rare cases, gains control of the creature spell itself)."
         }
       ],
-      "text": "Search your library for a basic land card and put it onto the battlefield. Then shuffle your library.\nSuspend 2—{G} (Rather than cast this card from your hand, you may pay {G} and exile it with two time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)",
+      "text": "Search your library for a basic land card, put it onto the battlefield, then shuffle your library.\nSuspend 2—{G} (Rather than cast this card from your hand, you may pay {G} and exile it with two time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -11947,12 +12001,21 @@
         "pCMP",
         "CMD",
         "MMA",
-        "MM2"
+        "MM2",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2006-02-01",
+          "date": "2017-11-17",
+          "text": "You divide the damage as you cast Electrolyze, not as it resolves. Each target must be assigned at least 1 damage. In other words, as you cast Electrolyze, you choose whether to have it deal 2 damage to a single target, or deal 1 damage to each of two targets."
+        },
+        {
+          "date": "2017-11-17",
+          "text": "If Electrolyze targets two creatures and one becomes an illegal target, the remaining target is dealt 1 damage, not 2. You'll still draw a card."
+        },
+        {
+          "date": "2017-11-17",
           "text": "If all chosen targets are illegal as Electrolyze tries to resolve, it will be countered and none of its effects will happen. No damage will be dealt and you won't draw a card."
         }
       ],
@@ -12184,20 +12247,25 @@
       "printings": [
         "CON",
         "DDG",
-        "MMA"
+        "MMA",
+        "IMA"
       ],
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2009-02-01",
-          "text": "The activated ability's cost checks the land's subtype, not its name. You can sacrifice a nonbasic land this way as long as it has the subtype Forest or Plains."
+          "date": "2017-11-17",
+          "text": "Knight of the Reliquary's first ability applies only while it's on the battlefield. In all other zones, it's a 2/2 creature."
         },
         {
-          "date": "2009-02-01",
+          "date": "2017-11-17",
+          "text": "The activated ability's cost checks the land's subtype, not its name. You can sacrifice a nonbasic land this way as long as it has the subtype Forest or Plains. Most nonbasic lands don't have basic land types, even if they produce colored mana. For example, Horizon Canopy is neither a Forest nor a Plains, while Temple Garden is both."
+        },
+        {
+          "date": "2017-11-17",
           "text": "Sacrificing a Forest or Plains is part of the cost of Knight of the Reliquary's activated ability. Assuming that sacrificing the land puts it into your graveyard, Knight of the Reliquary's first ability will immediately give it an additional +1/+1 when that cost is paid because there'll be a new land card in your graveyard. Paying a cost can't be responded to (with Shock, for example)."
         },
         {
-          "date": "2009-02-01",
+          "date": "2017-11-17",
           "text": "Knight of the Reliquary's activated ability lets you find any land card, not just a basic land card."
         }
       ],
@@ -12262,13 +12330,14 @@
         "HOP",
         "DDH",
         "MMA",
-        "DDN"
+        "DDN",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2013-06-07",
-          "text": "If the creature or player is an illegal target as Lightning Helix tries to resolve, it will be countered and none of its effects will happen. You won't gain 3 life."
+          "date": "2017-11-17",
+          "text": "If the chosen target is illegal when Lightning Helix tries to resolve, it will be countered and none of its effects will happen. You won't gain 3 life."
         }
       ],
       "text": "Lightning Helix deals 3 damage to target creature or player and you gain 3 life.",
@@ -12748,7 +12817,8 @@
       "printings": [
         "EVE",
         "MMA",
-        "C15"
+        "C15",
+        "DDT"
       ],
       "rarity": "Rare",
       "subtypes": [
@@ -13528,9 +13598,20 @@
         "DST",
         "V10",
         "MMA",
-        "MPS"
+        "MPS",
+        "IMA"
       ],
       "rarity": "Rare",
+      "rulings": [
+        {
+          "date": "2017-11-17",
+          "text": "If Aether Vial leaves the battlefield while its second ability is on the stack, use its last known number of charge counters to determine what you may put from your hand onto the battlefield."
+        },
+        {
+          "date": "2017-11-17",
+          "text": "If a card in a player's hand has {X} in its mana cost, X is considered to be 0."
+        }
+      ],
       "text": "At the beginning of your upkeep, you may put a charge counter on Aether Vial.\n{T}: You may put a creature card with converted mana cost equal to the number of charge counters on Aether Vial from your hand onto the battlefield.",
       "type": "Artifact",
       "types": [

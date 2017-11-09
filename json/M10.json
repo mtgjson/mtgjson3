@@ -548,7 +548,8 @@
       "power": "1",
       "printings": [
         "M10",
-        "M11"
+        "M11",
+        "IMA"
       ],
       "rarity": "Common",
       "subtypes": [
@@ -836,6 +837,10 @@
         },
         {
           "format": "Modern",
+          "legality": "Legal"
+        },
+        {
+          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -3086,7 +3091,8 @@
         "W16",
         "EMA",
         "W17",
-        "CMA"
+        "CMA",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "subtypes": [
@@ -3682,6 +3688,10 @@
         },
         {
           "format": "Modern",
+          "legality": "Legal"
+        },
+        {
+          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -4388,6 +4398,10 @@
           "legality": "Legal"
         },
         {
+          "format": "Standard",
+          "legality": "Legal"
+        },
+        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -4999,6 +5013,10 @@
           "legality": "Legal"
         },
         {
+          "format": "Standard",
+          "legality": "Legal"
+        },
+        {
           "format": "Urza Block",
           "legality": "Legal"
         },
@@ -5439,7 +5457,8 @@
         "DPA",
         "M13",
         "M14",
-        "AKH"
+        "AKH",
+        "DDT"
       ],
       "rarity": "Common",
       "rulings": [
@@ -6491,7 +6510,8 @@
         "M12",
         "TPR",
         "EMA",
-        "CN2"
+        "CN2",
+        "DDT"
       ],
       "rarity": "Common",
       "subtypes": [
@@ -6588,7 +6608,8 @@
       "power": "2",
       "printings": [
         "M10",
-        "M11"
+        "M11",
+        "DDT"
       ],
       "rarity": "Rare",
       "rulings": [
@@ -6797,7 +6818,8 @@
       "printings": [
         "MOR",
         "M10",
-        "DPA"
+        "DPA",
+        "DDT"
       ],
       "rarity": "Rare",
       "text": "Draw X cards.",
@@ -9384,7 +9406,8 @@
         "DDK",
         "M14",
         "M15",
-        "CN2"
+        "CN2",
+        "IMA"
       ],
       "rarity": "Common",
       "subtypes": [
@@ -9908,7 +9931,8 @@
         "M12",
         "M14",
         "DDR",
-        "E01"
+        "E01",
+        "IMA"
       ],
       "rarity": "Common",
       "text": "Destroy target nonblack creature.",
@@ -10233,7 +10257,8 @@
         "DD3_DVD",
         "DTK",
         "EMA",
-        "XLN"
+        "XLN",
+        "IMA"
       ],
       "rarity": "Common",
       "text": "Target opponent reveals his or her hand. You choose a noncreature, nonland card from it. That player discards that card.",
@@ -11641,10 +11666,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -11896,7 +11917,8 @@
         "M10",
         "M14",
         "C13",
-        "C17"
+        "C17",
+        "IMA"
       ],
       "rarity": "Rare",
       "rulings": [
@@ -13585,13 +13607,22 @@
         "DRB",
         "M10",
         "DDG",
-        "C14"
+        "C14",
+        "IMA"
       ],
       "rarity": "Mythic Rare",
       "rulings": [
         {
-          "date": "2009-10-01",
-          "text": "The number of targets chosen for the enters-the-battlefield ability must be at least 1 and at most 5. You divide the damage as you put the ability on the stack, not as it resolves. Each target must be assigned at least 1 damage."
+          "date": "2017-11-17",
+          "text": "You choose how many targets Bogardan Hellkite's triggered ability has and how the damage is divided as you put the ability onto the stack. Each target must receive at least 1 damage."
+        },
+        {
+          "date": "2017-11-17",
+          "text": "You can't deal damage with Bogardan Hellkite's triggered ability to both a player and a planeswalker that player controls. You also can't deal damage to more than one planeswalker controlled by the same player. If you choose to redirect the damage being dealt to a player to a planeswalker, you must redirect all the damage to a single planeswalker."
+        },
+        {
+          "date": "2017-11-17",
+          "text": "If some of the creatures or players are illegal targets as Bogardan Hellkite's triggered ability tries to resolve, the original division of damage still applies and the damage that would have been dealt to the illegal targets is lost. It won't be dealt instead to a legal target."
         }
       ],
       "subtypes": [
@@ -14571,28 +14602,25 @@
         "ME4",
         "M12",
         "C13",
-        "DD3_JVC"
+        "DD3_JVC",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2004-12-01",
-          "text": "The additional cost is paid when you pay the rest of Fireball's costs, even though that text appears second on the card (to make the card easier to read). The additional cost doesn't count toward Fireball's converted mana cost."
+          "date": "2017-11-17",
+          "text": "For example, if X is 5 and you choose three target creatures, Fireball has a total cost of {7}{R} (even though its mana cost is just {5}{R} and its converted mana cost is 6). If those creatures are all still legal targets as Fireball resolves, it deals 1 damage to each of them."
         },
         {
-          "date": "2004-12-01",
-          "text": "If, for example, X is 5 and you choose three target creatures, Fireball has a total cost of {7}{R} (even though its mana cost is just {5}{R}). If those creatures are all still legal targets as Fireball resolves, it deals 1 damage to each of them."
-        },
-        {
-          "date": "2009-05-01",
+          "date": "2017-11-17",
           "text": "You may cast Fireball with zero targets, regardless of the value chosen for X. If you do so, it will not be a targeted spell, and no damage will actually be dealt when it resolves."
         },
         {
-          "date": "2009-10-01",
-          "text": "Fireball's damage is divided as Fireball resolves, not as it's cast, because there are no choices involved. The division involves only targets that are still legal at that time."
+          "date": "2017-11-17",
+          "text": "Fireball's damage is divided as Fireball resolves, not as it's cast, because there are no choices involved. The division involves only targets that are still legal as Fireball resolves."
         },
         {
-          "date": "2009-10-01",
+          "date": "2017-11-17",
           "text": "You can target more than X creatures. However, if the number of legal targets at the time Fireball resolves is greater than X, none of them will be dealt any damage."
         }
       ],
@@ -14908,7 +14936,8 @@
       "printings": [
         "M10",
         "M11",
-        "M12"
+        "M12",
+        "DDT"
       ],
       "rarity": "Rare",
       "subtypes": [
@@ -16195,7 +16224,8 @@
         "10E",
         "M10",
         "DPA",
-        "M11"
+        "M11",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
@@ -17216,7 +17246,8 @@
         "M13",
         "CNS",
         "KTK",
-        "CN2"
+        "CN2",
+        "IMA"
       ],
       "rarity": "Common",
       "rulings": [
@@ -21903,6 +21934,10 @@
           "legality": "Legal"
         },
         {
+          "format": "Standard",
+          "legality": "Legal"
+        },
+        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -24988,29 +25023,9 @@
           "multiverseid": 199788
         },
         {
-          "language": "Italian",
-          "name": "Pianura",
-          "multiverseid": 200535
-        },
-        {
           "language": "Japanese",
           "name": "平地",
           "multiverseid": 200034
-        },
-        {
-          "language": "Japanese",
-          "name": "平地",
-          "multiverseid": 200035
-        },
-        {
-          "language": "Japanese",
-          "name": "平地",
-          "multiverseid": 200036
-        },
-        {
-          "language": "Japanese",
-          "name": "平地",
-          "multiverseid": 200037
         },
         {
           "language": "Portuguese (Brazil)",
@@ -25051,6 +25066,26 @@
           "language": "Russian",
           "name": "Равнина",
           "multiverseid": 200286
+        },
+        {
+          "language": "Spanish",
+          "name": "Llanura",
+          "multiverseid": 200781
+        },
+        {
+          "language": "Spanish",
+          "name": "Llanura",
+          "multiverseid": 200782
+        },
+        {
+          "language": "Spanish",
+          "name": "Llanura",
+          "multiverseid": 200783
+        },
+        {
+          "language": "Spanish",
+          "name": "Llanura",
+          "multiverseid": 200784
         }
       ],
       "id": "e5c2e1c3503b67ef5dca442ea45a1436985e35ae",
@@ -25376,29 +25411,9 @@
           "multiverseid": 199788
         },
         {
-          "language": "Italian",
-          "name": "Pianura",
-          "multiverseid": 200535
-        },
-        {
           "language": "Japanese",
           "name": "平地",
           "multiverseid": 200034
-        },
-        {
-          "language": "Japanese",
-          "name": "平地",
-          "multiverseid": 200035
-        },
-        {
-          "language": "Japanese",
-          "name": "平地",
-          "multiverseid": 200036
-        },
-        {
-          "language": "Japanese",
-          "name": "平地",
-          "multiverseid": 200037
         },
         {
           "language": "Portuguese (Brazil)",
@@ -25439,6 +25454,26 @@
           "language": "Russian",
           "name": "Равнина",
           "multiverseid": 200286
+        },
+        {
+          "language": "Spanish",
+          "name": "Llanura",
+          "multiverseid": 200781
+        },
+        {
+          "language": "Spanish",
+          "name": "Llanura",
+          "multiverseid": 200782
+        },
+        {
+          "language": "Spanish",
+          "name": "Llanura",
+          "multiverseid": 200783
+        },
+        {
+          "language": "Spanish",
+          "name": "Llanura",
+          "multiverseid": 200784
         }
       ],
       "id": "245af318ee6d2825838d6a5c498baa62edb06ba1",
@@ -25764,9 +25799,29 @@
           "multiverseid": 199788
         },
         {
+          "language": "Italian",
+          "name": "Pianura",
+          "multiverseid": 200535
+        },
+        {
           "language": "Japanese",
           "name": "平地",
           "multiverseid": 200034
+        },
+        {
+          "language": "Japanese",
+          "name": "平地",
+          "multiverseid": 200035
+        },
+        {
+          "language": "Japanese",
+          "name": "平地",
+          "multiverseid": 200036
+        },
+        {
+          "language": "Japanese",
+          "name": "平地",
+          "multiverseid": 200037
         },
         {
           "language": "Portuguese (Brazil)",
@@ -25807,26 +25862,6 @@
           "language": "Russian",
           "name": "Равнина",
           "multiverseid": 200286
-        },
-        {
-          "language": "Spanish",
-          "name": "Llanura",
-          "multiverseid": 200781
-        },
-        {
-          "language": "Spanish",
-          "name": "Llanura",
-          "multiverseid": 200782
-        },
-        {
-          "language": "Spanish",
-          "name": "Llanura",
-          "multiverseid": 200783
-        },
-        {
-          "language": "Spanish",
-          "name": "Llanura",
-          "multiverseid": 200784
         }
       ],
       "id": "e548c6b2e7f71d1a67d34767c987dab325f2913f",
@@ -26450,7 +26485,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -26836,7 +26872,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -27222,7 +27259,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -27608,7 +27646,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -29564,7 +29603,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -29594,7 +29634,22 @@
         {
           "language": "Chinese Simplified",
           "name": "山脉",
+          "multiverseid": 201042
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "山脉",
           "multiverseid": 201043
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "山脉",
+          "multiverseid": 201044
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "山脉",
+          "multiverseid": 201045
         },
         {
           "language": "French",
@@ -29697,24 +29752,9 @@
           "multiverseid": 199302
         },
         {
-          "language": "Spanish",
-          "name": "Montaña",
-          "multiverseid": 200793
-        },
-        {
-          "language": "Spanish",
-          "name": "Montaña",
-          "multiverseid": 200794
-        },
-        {
-          "language": "Spanish",
-          "name": "Montaña",
-          "multiverseid": 200795
-        },
-        {
-          "language": "Spanish",
-          "name": "Montaña",
-          "multiverseid": 200796
+          "language": "Russian",
+          "name": "Гора",
+          "multiverseid": 200295
         }
       ],
       "id": "eb48e99765ee93b7d4178c8395499306b5d3d48f",
@@ -29956,7 +29996,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -30348,7 +30389,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -30378,22 +30420,7 @@
         {
           "language": "Chinese Simplified",
           "name": "山脉",
-          "multiverseid": 201042
-        },
-        {
-          "language": "Chinese Simplified",
-          "name": "山脉",
           "multiverseid": 201043
-        },
-        {
-          "language": "Chinese Simplified",
-          "name": "山脉",
-          "multiverseid": 201044
-        },
-        {
-          "language": "Chinese Simplified",
-          "name": "山脉",
-          "multiverseid": 201045
         },
         {
           "language": "French",
@@ -30496,9 +30523,24 @@
           "multiverseid": 199302
         },
         {
-          "language": "Russian",
-          "name": "Гора",
-          "multiverseid": 200295
+          "language": "Spanish",
+          "name": "Montaña",
+          "multiverseid": 200793
+        },
+        {
+          "language": "Spanish",
+          "name": "Montaña",
+          "multiverseid": 200794
+        },
+        {
+          "language": "Spanish",
+          "name": "Montaña",
+          "multiverseid": 200795
+        },
+        {
+          "language": "Spanish",
+          "name": "Montaña",
+          "multiverseid": 200796
         }
       ],
       "id": "d07e128647cd1b0bea9d76aa7538bcf5b4b91927",
@@ -30740,7 +30782,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -31183,6 +31226,21 @@
           "multiverseid": 199552
         },
         {
+          "language": "French",
+          "name": "Forêt",
+          "multiverseid": 199553
+        },
+        {
+          "language": "French",
+          "name": "Forêt",
+          "multiverseid": 199554
+        },
+        {
+          "language": "French",
+          "name": "Forêt",
+          "multiverseid": 199555
+        },
+        {
           "language": "German",
           "name": "Wald",
           "multiverseid": 199801
@@ -31223,6 +31281,11 @@
           "multiverseid": 200551
         },
         {
+          "language": "Japanese",
+          "name": "森",
+          "multiverseid": 200050
+        },
+        {
           "language": "Portuguese (Brazil)",
           "name": "Floresta",
           "multiverseid": 199303
@@ -31261,26 +31324,6 @@
           "language": "Russian",
           "name": "Лес",
           "multiverseid": 200302
-        },
-        {
-          "language": "Spanish",
-          "name": "Bosque",
-          "multiverseid": 200797
-        },
-        {
-          "language": "Spanish",
-          "name": "Bosque",
-          "multiverseid": 200798
-        },
-        {
-          "language": "Spanish",
-          "name": "Bosque",
-          "multiverseid": 200799
-        },
-        {
-          "language": "Spanish",
-          "name": "Bosque",
-          "multiverseid": 200800
         }
       ],
       "id": "5a5828fdddc018a7a6278111ace0e7d65451e4ea",

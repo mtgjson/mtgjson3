@@ -768,17 +768,26 @@
         "M11",
         "DDH",
         "C13",
-        "M15"
+        "M15",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2014-07-18",
-          "text": "The ability triggers just once for each life-gaining event, whether it's 1 life from Soulmender or 8 life from Meditation Puzzle."
+          "date": "2017-11-17",
+          "text": "The ability of Ajani's Pridemate triggers just once for each life-gaining event, whether it's 1 life from Auriok Champion or 6 life from Tavern Swindler."
         },
         {
-          "date": "2014-07-18",
-          "text": "A creature with lifelink dealing combat damage is a single life-gaining event. For example, if two creatures you control with lifelink deal combat damage at the same time, Ajani's Pridemate's ability will trigger twice. However, if a single creature you control with lifelink deals combat damage to multiple creatures, players, and/or planeswalkers at the same time (perhaps because it has trample or was blocked by more than one creature), the ability will trigger only once."
+          "date": "2017-11-17",
+          "text": "If Ajani's Pridemate is dealt lethal damage at the same time that you gain life, it won't receive a counter from its ability in time to save it."
+        },
+        {
+          "date": "2017-11-17",
+          "text": "Each creature with lifelink dealing combat damage causes a separate life-gaining event. For example, if two creatures you control with lifelink deal combat damage at the same time, Ajani's Pridemate's ability will trigger twice. However, if a single creature you control with lifelink deals combat damage to multiple creatures, players, and/or planeswalkers at the same time (perhaps because it has trample or was blocked by more than one creature), the ability will trigger only once."
+        },
+        {
+          "date": "2017-11-17",
+          "text": "In a Two-Headed Giant game, life gained by your teammate won't cause the ability to trigger, even though it causes your team's life total to increase."
         }
       ],
       "subtypes": [
@@ -1819,17 +1828,14 @@
       "power": "4",
       "printings": [
         "RAV",
-        "DDH"
+        "DDH",
+        "IMA"
       ],
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2005-10-01",
-          "text": "If you return Firemane Angel from your graveyard to the battlefield during your upkeep before its life-gain ability resolves, you won't gain 1 life. (Most of the time, players will let the triggered ability resolve before activating its activated ability.)"
-        },
-        {
-          "date": "2006-07-01",
-          "text": "If Firemane Angel changes zones after its ability has triggered but before it resolves, the ability will do nothing."
+          "date": "2017-11-17",
+          "text": "If Firemane Angel is put into your graveyard from the battlefield or returned from your graveyard to the battlefield during your upkeep before its triggered ability resolves, you won't gain 1 life."
         }
       ],
       "subtypes": [
@@ -1985,13 +1991,14 @@
         "HOP",
         "DDH",
         "MMA",
-        "DDN"
+        "DDN",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2013-06-07",
-          "text": "If the creature or player is an illegal target as Lightning Helix tries to resolve, it will be countered and none of its effects will happen. You won't gain 3 life."
+          "date": "2017-11-17",
+          "text": "If the chosen target is illegal when Lightning Helix tries to resolve, it will be countered and none of its effects will happen. You won't gain 3 life."
         }
       ],
       "text": "Lightning Helix deals 3 damage to target creature or player and you gain 3 life.",
@@ -2066,7 +2073,8 @@
       "printings": [
         "MBS",
         "DDH",
-        "CNS"
+        "CNS",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "text": "Look at the top five cards of your library. You may reveal any number of creature cards from among them and put the revealed cards into your hand. Put the rest on the bottom of your library in any order.",
@@ -2801,10 +2809,11 @@
         "C16",
         "AKH",
         "CMA",
-        "C17"
+        "C17",
+        "IMA"
       ],
       "rarity": "Common",
-      "text": "{T}, Sacrifice Evolving Wilds: Search your library for a basic land card and put it onto the battlefield tapped. Then shuffle your library.",
+      "text": "{T}, Sacrifice Evolving Wilds: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle your library.",
       "type": "Land",
       "types": [
         "Land"
@@ -4361,7 +4370,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -8470,7 +8480,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -8772,7 +8783,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [

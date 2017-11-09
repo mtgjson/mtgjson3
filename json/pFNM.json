@@ -1254,17 +1254,18 @@
         "VMA",
         "EMA",
         "C16",
-        "C17"
+        "C17",
+        "IMA"
       ],
       "rarity": "Special",
       "releaseDate": "2001-06-01",
       "rulings": [
         {
-          "date": "2016-06-08",
-          "text": "The amount of life gained is equal to the power of the targeted creature as it last existed on the battlefield."
+          "date": "2017-11-17",
+          "text": "The amount of life gained is equal to the power of the target creature as it last existed on the battlefield."
         },
         {
-          "date": "2016-06-08",
+          "date": "2017-11-17",
           "text": "If the creature's power is negative, its controller doesn't lose or gain life."
         }
       ],
@@ -3013,7 +3014,8 @@
         "ME2",
         "ME3",
         "TPR",
-        "CN2"
+        "CN2",
+        "IMA"
       ],
       "rarity": "Special",
       "releaseDate": "2003-07-01",
@@ -5851,17 +5853,13 @@
         {
           "date": "2016-06-08",
           "text": "If, during your declare attackers step, Juggernaut is tapped, is affected by a spell or ability that says it can't attack, or you haven't controlled it continuously since the beginning of your turn, then it doesn't attack. If there's a cost associated with having Juggernaut attack, you aren't forced to pay that cost, so it doesn't have to attack in that case either."
-        },
-        {
-          "date": "2016-06-08",
-          "text": "If there are multiple combat phases in a turn, Juggernaut must attack only in the first one in which it's able to."
         }
       ],
       "source": "Friday Night Magic prize",
       "subtypes": [
         "Juggernaut"
       ],
-      "text": "Juggernaut attacks each turn if able.\nJuggernaut can't be blocked by Walls.",
+      "text": "Juggernaut attacks each combat if able.\nJuggernaut can't be blocked by Walls.",
       "toughness": "3",
       "type": "Artifact Creature — Juggernaut",
       "types": [
@@ -6137,6 +6135,10 @@
           "legality": "Legal"
         },
         {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Khans of Tarkir Block",
           "legality": "Legal"
         },
@@ -6177,7 +6179,8 @@
         "DD3_DVD",
         "DTK",
         "EMA",
-        "XLN"
+        "XLN",
+        "IMA"
       ],
       "rarity": "Special",
       "releaseDate": "2005-10-01",
@@ -8214,7 +8217,8 @@
         "APC",
         "EVG",
         "VMA",
-        "DD3_EVG"
+        "DD3_EVG",
+        "DDT"
       ],
       "rarity": "Special",
       "releaseDate": "2007-08-01",
@@ -8297,7 +8301,8 @@
         "pFNM",
         "SCG",
         "C14",
-        "C17"
+        "C17",
+        "IMA"
       ],
       "rarity": "Special",
       "releaseDate": "2007-09-01",
@@ -9199,10 +9204,17 @@
         "MIR",
         "pFNM",
         "TSB",
-        "ARC"
+        "ARC",
+        "IMA"
       ],
       "rarity": "Special",
       "releaseDate": "2008-07-01",
+      "rulings": [
+        {
+          "date": "2017-11-17",
+          "text": "If you must sacrifice a creature to pay a casting or activation cost that also includes mana, such as that of Bubbling Cauldron's abilities, you may put a -0/-1 counter on Wall of Roots to make its toughness 0 and then sacrifice it to pay that cost."
+        }
+      ],
       "source": "Friday Night Magic prize",
       "subtypes": [
         "Plant",
@@ -10110,7 +10122,8 @@
       "power": "2",
       "printings": [
         "pFNM",
-        "LRW"
+        "LRW",
+        "DDT"
       ],
       "rarity": "Special",
       "releaseDate": "2009-04-04",
@@ -11934,7 +11947,8 @@
         "pFNM",
         "TSP",
         "MMA",
-        "DDS"
+        "DDS",
+        "IMA"
       ],
       "rarity": "Special",
       "releaseDate": "2010-10-01",
@@ -14343,12 +14357,13 @@
         "C16",
         "AKH",
         "CMA",
-        "C17"
+        "C17",
+        "IMA"
       ],
       "rarity": "Special",
       "releaseDate": "2012-10-01",
       "source": "Friday Night Magic prize",
-      "text": "{T}, Sacrifice Evolving Wilds: Search your library for a basic land card and put it onto the battlefield tapped. Then shuffle your library.",
+      "text": "{T}, Sacrifice Evolving Wilds: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle your library.",
       "type": "Land",
       "types": [
         "Land"
@@ -14437,18 +14452,19 @@
       "number": "150",
       "printings": [
         "pFNM",
-        "AVR"
+        "AVR",
+        "IMA"
       ],
       "rarity": "Special",
       "releaseDate": "2012-11-01",
       "rulings": [
         {
-          "date": "2012-05-01",
-          "text": "A creature dealt damage by Pillar of Flame that dies that turn will be exiled even if it wasn't the target of Pillar of Flame (because the damage was redirected somehow)."
+          "date": "2017-11-17",
+          "text": "A creature dealt damage by Pillar of Flame that dies this turn will be exiled even if it wasn't the target of Pillar of Flame (because the damage was redirected somehow). If the target creature isn't dealt damage (most likely because the damage was prevented), it won't be exiled if it dies that turn."
         },
         {
-          "date": "2012-05-01",
-          "text": "A creature dealt damage by Pillar of Flame that turn will be exiled no matter why the creature would die. It could have its toughness reduced to 0 or less or be destroyed by another spell or ability."
+          "date": "2017-11-17",
+          "text": "A creature dealt damage by Pillar of Flame will be exiled no matter why the creature would die that turn. It could have its toughness reduced to 0 or less or be destroyed by another spell or ability."
         }
       ],
       "source": "Friday Night Magic prize",
@@ -16417,7 +16433,8 @@
       "number": "169",
       "printings": [
         "pFNM",
-        "THS"
+        "THS",
+        "IMA"
       ],
       "rarity": "Special",
       "releaseDate": "2014-06-01",
@@ -17438,7 +17455,8 @@
       "number": "178",
       "printings": [
         "pFNM",
-        "KTK"
+        "KTK",
+        "DDT"
       ],
       "rarity": "Special",
       "releaseDate": "2015-03-01",
@@ -18368,10 +18386,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -18757,10 +18771,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {

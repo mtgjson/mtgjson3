@@ -3461,10 +3461,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -5519,10 +5515,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -7350,10 +7342,6 @@
         },
         {
           "format": "Scars of Mirrodin Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -13843,33 +13831,34 @@
       "originalText": "Reveal the top X cards of your library. You may put any number of permanent cards with converted mana cost X or less from among them onto the battlefield. Then put all cards revealed this way that weren't put onto the battlefield into your graveyard.",
       "originalType": "Sorcery",
       "printings": [
-        "SOM"
+        "SOM",
+        "IMA"
       ],
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2011-01-01",
+          "date": "2017-11-17",
           "text": "If you have fewer than X cards in your library, you reveal all of them."
         },
         {
-          "date": "2011-01-01",
+          "date": "2017-11-17",
+          "text": "If a card in a player's library has {X} in its mana cost, X is considered to be 0."
+        },
+        {
+          "date": "2017-11-17",
           "text": "A permanent card is an artifact, creature, enchantment, land, or planeswalker card."
         },
         {
-          "date": "2011-01-01",
-          "text": "The converted mana cost of a card in your library is determined solely by the mana symbols printed in its upper right corner. The converted mana cost is the total amount of mana in that cost, regardless of color. For example, a card with mana cost {3}{U}{U} has converted mana cost 5."
-        },
-        {
-          "date": "2011-01-01",
-          "text": "If the mana cost of a card in your library includes {X}, X is considered to be 0."
-        },
-        {
-          "date": "2011-01-01",
+          "date": "2017-11-17",
           "text": "If a card in your library has no mana symbols in its upper right corner (because it's a land card, for example), its converted mana cost is 0. Such cards can always be put onto the battlefield with Genesis Wave."
         },
         {
-          "date": "2011-01-01",
+          "date": "2017-11-17",
           "text": "You don't have to put permanent cards revealed this way onto the battlefield if you choose not to, regardless of their converted mana costs."
+        },
+        {
+          "date": "2017-11-17",
+          "text": "All of the permanents put onto the battlefield this way enter at the same time. If any have triggered abilities that trigger on something else entering the battlefield, they'll see each other."
         }
       ],
       "text": "Reveal the top X cards of your library. You may put any number of permanent cards with converted mana cost X or less from among them onto the battlefield. Then put all cards revealed this way that weren't put onto the battlefield into your graveyard.",
@@ -16906,7 +16895,8 @@
       "originalType": "Artifact — Equipment",
       "printings": [
         "SOM",
-        "MM2"
+        "MM2",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
@@ -21412,7 +21402,8 @@
       "power": "2",
       "printings": [
         "SOM",
-        "C14"
+        "C14",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "subtypes": [
@@ -23326,10 +23317,6 @@
         },
         {
           "format": "Scars of Mirrodin Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -26071,29 +26058,9 @@
       ],
       "foreignNames": [
         {
-          "language": "Chinese Simplified",
-          "name": "平原",
-          "multiverseid": 232519
-        },
-        {
-          "language": "Chinese Traditional",
-          "name": "平原",
-          "multiverseid": 232270
-        },
-        {
           "language": "Chinese Traditional",
           "name": "平原",
           "multiverseid": 232271
-        },
-        {
-          "language": "Chinese Traditional",
-          "name": "平原",
-          "multiverseid": 232272
-        },
-        {
-          "language": "Chinese Traditional",
-          "name": "平原",
-          "multiverseid": 232273
         },
         {
           "language": "French",
@@ -26194,6 +26161,26 @@
           "language": "Portuguese (Brazil)",
           "name": "Planície",
           "multiverseid": 231028
+        },
+        {
+          "language": "Spanish",
+          "name": "Llanura",
+          "multiverseid": 232768
+        },
+        {
+          "language": "Spanish",
+          "name": "Llanura",
+          "multiverseid": 232769
+        },
+        {
+          "language": "Spanish",
+          "name": "Llanura",
+          "multiverseid": 232770
+        },
+        {
+          "language": "Spanish",
+          "name": "Llanura",
+          "multiverseid": 232771
         }
       ],
       "id": "7c14777b9b4fc14fb0fc085e281327858894e259",
@@ -27593,7 +27580,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -27979,7 +27967,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -28365,7 +28354,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -28751,7 +28741,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -30343,6 +30334,11 @@
       ],
       "foreignNames": [
         {
+          "language": "Chinese Simplified",
+          "name": "山脉",
+          "multiverseid": 232533
+        },
+        {
           "language": "Chinese Traditional",
           "name": "山脈",
           "multiverseid": 232282
@@ -30445,27 +30441,22 @@
         {
           "language": "Portuguese (Brazil)",
           "name": "Montanha",
+          "multiverseid": 231037
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Montanha",
+          "multiverseid": 231038
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Montanha",
           "multiverseid": 231039
         },
         {
-          "language": "Spanish",
-          "name": "Montaña",
-          "multiverseid": 232780
-        },
-        {
-          "language": "Spanish",
-          "name": "Montaña",
-          "multiverseid": 232781
-        },
-        {
-          "language": "Spanish",
-          "name": "Montaña",
-          "multiverseid": 232782
-        },
-        {
-          "language": "Spanish",
-          "name": "Montaña",
-          "multiverseid": 232783
+          "language": "Portuguese (Brazil)",
+          "name": "Montanha",
+          "multiverseid": 231040
         }
       ],
       "id": "b67b08ce11eec127343298547a438dd8beac6107",
@@ -30707,7 +30698,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -30734,6 +30726,11 @@
         "R"
       ],
       "foreignNames": [
+        {
+          "language": "Chinese Simplified",
+          "name": "山脉",
+          "multiverseid": 232533
+        },
         {
           "language": "Chinese Traditional",
           "name": "山脈",
@@ -30837,27 +30834,22 @@
         {
           "language": "Portuguese (Brazil)",
           "name": "Montanha",
+          "multiverseid": 231037
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Montanha",
+          "multiverseid": 231038
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Montanha",
           "multiverseid": 231039
         },
         {
-          "language": "Spanish",
-          "name": "Montaña",
-          "multiverseid": 232780
-        },
-        {
-          "language": "Spanish",
-          "name": "Montaña",
-          "multiverseid": 232781
-        },
-        {
-          "language": "Spanish",
-          "name": "Montaña",
-          "multiverseid": 232782
-        },
-        {
-          "language": "Spanish",
-          "name": "Montaña",
-          "multiverseid": 232783
+          "language": "Portuguese (Brazil)",
+          "name": "Montanha",
+          "multiverseid": 231040
         }
       ],
       "id": "702c04b535ebd0fd5e76408aa6fce7c83016adb0",
@@ -31099,7 +31091,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -31126,6 +31119,11 @@
         "R"
       ],
       "foreignNames": [
+        {
+          "language": "Chinese Simplified",
+          "name": "山脉",
+          "multiverseid": 232533
+        },
         {
           "language": "Chinese Traditional",
           "name": "山脈",
@@ -31229,27 +31227,22 @@
         {
           "language": "Portuguese (Brazil)",
           "name": "Montanha",
+          "multiverseid": 231037
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Montanha",
+          "multiverseid": 231038
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Montanha",
           "multiverseid": 231039
         },
         {
-          "language": "Spanish",
-          "name": "Montaña",
-          "multiverseid": 232780
-        },
-        {
-          "language": "Spanish",
-          "name": "Montaña",
-          "multiverseid": 232781
-        },
-        {
-          "language": "Spanish",
-          "name": "Montaña",
-          "multiverseid": 232782
-        },
-        {
-          "language": "Spanish",
-          "name": "Montaña",
-          "multiverseid": 232783
+          "language": "Portuguese (Brazil)",
+          "name": "Montanha",
+          "multiverseid": 231040
         }
       ],
       "id": "504c2109bcf6a74972057c6fd60073b39a470605",
@@ -31491,7 +31484,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -31883,7 +31877,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -32013,27 +32008,27 @@
         {
           "language": "Portuguese (Brazil)",
           "name": "Floresta",
-          "multiverseid": 231041
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Floresta",
           "multiverseid": 231042
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Floresta",
-          "multiverseid": 231043
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 232784
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Floresta",
-          "multiverseid": 231044
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 232785
         },
         {
-          "language": "Russian",
-          "name": "Лес",
-          "multiverseid": 231539
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 232786
+        },
+        {
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 232787
         }
       ],
       "id": "42faf7f81557186a980af6ac1f270519b2cbb77a",
@@ -33183,27 +33178,27 @@
         {
           "language": "Portuguese (Brazil)",
           "name": "Floresta",
-          "multiverseid": 231041
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Floresta",
           "multiverseid": 231042
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Floresta",
-          "multiverseid": 231043
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 232784
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Floresta",
-          "multiverseid": 231044
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 232785
         },
         {
-          "language": "Russian",
-          "name": "Лес",
-          "multiverseid": 231539
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 232786
+        },
+        {
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 232787
         }
       ],
       "id": "2c03f30abf845c60723c1a5cdfce1ffe59cfcc8d",

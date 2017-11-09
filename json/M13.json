@@ -1358,6 +1358,10 @@
           "legality": "Legal"
         },
         {
+          "format": "Standard",
+          "legality": "Legal"
+        },
+        {
           "format": "Theros Block",
           "legality": "Legal"
         },
@@ -3623,7 +3627,8 @@
         "W16",
         "EMA",
         "W17",
-        "CMA"
+        "CMA",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "subtypes": [
@@ -5824,7 +5829,8 @@
         "DPA",
         "M13",
         "M14",
-        "AKH"
+        "AKH",
+        "DDT"
       ],
       "rarity": "Common",
       "rulings": [
@@ -6046,13 +6052,14 @@
         "CMD",
         "M13",
         "C13",
-        "C14"
+        "C14",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2012-07-01",
-          "text": "If Fog Bank blocks a creature with trample, that creature's controller must assign 2 damage to Fog Bank (assuming it's blocking no other creatures, there was no damage marked on it, and nothing has changed its toughness). The remainder can be assigned to the defending player or planeswalker."
+          "date": "2017-11-17",
+          "text": "Fog Bank's prevention effect isn't considered while assigning combat damage from a creature with trample. For example, if it blocks a 5/5 creature with trample, that creature's controller must assign 2 of that creature's combat damage to Fog Bank and the remainder can be assigned to the defending player or planeswalker."
         }
       ],
       "subtypes": [
@@ -6606,16 +6613,21 @@
       "power": "1",
       "printings": [
         "M13",
-        "DDM"
+        "DDM",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2012-07-01",
-          "text": "The last ability constantly monitors each opponent's graveyard to see if the bonus applies. If the stated condition becomes no longer true, the bonus immediately stops applying."
+          "date": "2017-11-17",
+          "text": "The last ability of Jace's Phantasm constantly monitors each opponent's graveyard to see if the bonus applies. If the stated condition becomes no longer true, the bonus immediately stops applying."
         },
         {
-          "date": "2012-07-01",
+          "date": "2017-11-17",
+          "text": "If Jace's Phantasm is dealt lethal damage at the same time as an opponent's creature, and that creature will become that opponent's tenth card in his or her graveyard, Jace's Phantasm will be destroyed before it gets +4/+4. This is because all creatures that have been dealt lethal damage are destroyed at the same time."
+        },
+        {
+          "date": "2017-11-17",
           "text": "In a multiplayer game, a single opponent must have ten or more cards in his or her graveyard for the bonus to apply, although this opponent may change over the course of the game. You don't have to pick a single opponent; the ability will monitor each opponent's graveyard."
         }
       ],
@@ -6830,7 +6842,8 @@
       "originalType": "Creature — Merfolk",
       "power": "2",
       "printings": [
-        "M13"
+        "M13",
+        "DDT"
       ],
       "rarity": "Rare",
       "subtypes": [
@@ -7664,7 +7677,8 @@
         "M11",
         "DDI",
         "M13",
-        "M14"
+        "M14",
+        "DDT"
       ],
       "rarity": "Common",
       "rulings": [
@@ -8028,24 +8042,21 @@
         "DDI",
         "M13",
         "DDN",
-        "C14"
+        "C14",
+        "IMA"
       ],
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2011-09-22",
+          "date": "2017-11-17",
           "text": "You (not your opponent) choose which pile to put into your hand and which to put into your graveyard."
         },
         {
-          "date": "2011-09-22",
+          "date": "2017-11-17",
           "text": "A pile can have no cards in it. In this case, you'll choose whether to put all the revealed cards into your hand or into your graveyard."
         },
         {
-          "date": "2011-09-22",
-          "text": "If your library has fewer than five cards, you reveal all the cards in it, then your opponent separates them into two piles."
-        },
-        {
-          "date": "2011-09-22",
+          "date": "2017-11-17",
           "text": "In multiplayer games, you choose an opponent to separate the cards when the ability resolves. This doesn't target that opponent. Because the cards are revealed, all players may see the cards and offer opinions."
         }
       ],
@@ -8594,6 +8605,10 @@
         },
         {
           "format": "Modern",
+          "legality": "Legal"
+        },
+        {
+          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -9524,6 +9539,10 @@
           "legality": "Legal"
         },
         {
+          "format": "Standard",
+          "legality": "Legal"
+        },
+        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -10449,7 +10468,8 @@
         "DD3_DVD",
         "DTK",
         "EMA",
-        "XLN"
+        "XLN",
+        "IMA"
       ],
       "rarity": "Common",
       "text": "Target opponent reveals his or her hand. You choose a noncreature, nonland card from it. That player discards that card.",
@@ -11672,10 +11692,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -12388,10 +12404,6 @@
         },
         {
           "format": "Shadows over Innistrad Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -13433,10 +13445,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -14484,7 +14492,8 @@
       "originalText": "Creatures you control gain double strike until end of turn. (They deal both first-strike and regular combat damage.)",
       "originalType": "Sorcery",
       "printings": [
-        "M13"
+        "M13",
+        "DDT"
       ],
       "rarity": "Uncommon",
       "rulings": [
@@ -15362,7 +15371,8 @@
         "M13",
         "M15",
         "DD3_JVC",
-        "CMA"
+        "CMA",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "subtypes": [
@@ -15932,7 +15942,8 @@
       "power": "3",
       "printings": [
         "M13",
-        "DDN"
+        "DDN",
+        "DDT"
       ],
       "rarity": "Rare",
       "rulings": [
@@ -16047,7 +16058,8 @@
       "originalType": "Sorcery",
       "printings": [
         "M13",
-        "DDN"
+        "DDN",
+        "DDT"
       ],
       "rarity": "Common",
       "text": "Create two 1/1 red Goblin creature tokens.",
@@ -16263,16 +16275,17 @@
         "ZEN",
         "PC2",
         "M13",
-        "PCA"
+        "PCA",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2009-10-01",
-          "text": "You may target a creature you already control. You may target a creature that's already untapped."
+          "date": "2017-11-17",
+          "text": "Mark of Mutiny can target any creature, even one that you already control or that is already untapped."
         },
         {
-          "date": "2009-10-01",
+          "date": "2017-11-17",
           "text": "The +1/+1 counter remains on the creature after the control-changing effect ends."
         }
       ],
@@ -17329,16 +17342,17 @@
       "originalType": "Creature — Dragon",
       "power": "5",
       "printings": [
-        "M13"
+        "M13",
+        "IMA"
       ],
       "rarity": "Mythic Rare",
       "rulings": [
         {
-          "date": "2012-07-01",
+          "date": "2017-11-17",
           "text": "Thundermaw Hellkite will deal 1 damage to each creature with flying your opponents control whether those creatures are tapped or untapped."
         },
         {
-          "date": "2012-07-01",
+          "date": "2017-11-17",
           "text": "If the damage that would be dealt to a creature with flying is prevented, that creature will still be tapped. If that damage is redirected to another creature, the creature with flying will be tapped, not necessarily the creature that ultimately was dealt damage."
         }
       ],
@@ -17568,7 +17582,8 @@
         "M13",
         "CNS",
         "KTK",
-        "CN2"
+        "CN2",
+        "IMA"
       ],
       "rarity": "Common",
       "rulings": [
@@ -19114,7 +19129,8 @@
         "EVE",
         "DPA",
         "M11",
-        "M13"
+        "M13",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "subtypes": [
@@ -20633,10 +20649,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -25526,10 +25538,11 @@
         "C16",
         "AKH",
         "CMA",
-        "C17"
+        "C17",
+        "IMA"
       ],
       "rarity": "Common",
-      "text": "{T}, Sacrifice Evolving Wilds: Search your library for a basic land card and put it onto the battlefield tapped. Then shuffle your library.",
+      "text": "{T}, Sacrifice Evolving Wilds: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle your library.",
       "type": "Land",
       "types": [
         "Land"
@@ -26539,9 +26552,29 @@
           "multiverseid": 332009
         },
         {
+          "language": "Japanese",
+          "name": "平地",
+          "multiverseid": 332756
+        },
+        {
+          "language": "Korean",
+          "name": "들",
+          "multiverseid": 330512
+        },
+        {
           "language": "Korean",
           "name": "들",
           "multiverseid": 330513
+        },
+        {
+          "language": "Korean",
+          "name": "들",
+          "multiverseid": 330514
+        },
+        {
+          "language": "Korean",
+          "name": "들",
+          "multiverseid": 330515
         },
         {
           "language": "Portuguese (Brazil)",
@@ -26582,26 +26615,6 @@
           "language": "Russian",
           "name": "Равнина",
           "multiverseid": 331760
-        },
-        {
-          "language": "Spanish",
-          "name": "Llanura",
-          "multiverseid": 332255
-        },
-        {
-          "language": "Spanish",
-          "name": "Llanura",
-          "multiverseid": 332256
-        },
-        {
-          "language": "Spanish",
-          "name": "Llanura",
-          "multiverseid": 332257
-        },
-        {
-          "language": "Spanish",
-          "name": "Llanura",
-          "multiverseid": 332258
         }
       ],
       "id": "dcc91f8db182c5c2d59bc7761a0b4d34035b77d0",
@@ -27315,9 +27328,29 @@
           "multiverseid": 332009
         },
         {
+          "language": "Japanese",
+          "name": "平地",
+          "multiverseid": 332756
+        },
+        {
+          "language": "Korean",
+          "name": "들",
+          "multiverseid": 330512
+        },
+        {
           "language": "Korean",
           "name": "들",
           "multiverseid": 330513
+        },
+        {
+          "language": "Korean",
+          "name": "들",
+          "multiverseid": 330514
+        },
+        {
+          "language": "Korean",
+          "name": "들",
+          "multiverseid": 330515
         },
         {
           "language": "Portuguese (Brazil)",
@@ -27358,26 +27391,6 @@
           "language": "Russian",
           "name": "Равнина",
           "multiverseid": 331760
-        },
-        {
-          "language": "Spanish",
-          "name": "Llanura",
-          "multiverseid": 332255
-        },
-        {
-          "language": "Spanish",
-          "name": "Llanura",
-          "multiverseid": 332256
-        },
-        {
-          "language": "Spanish",
-          "name": "Llanura",
-          "multiverseid": 332257
-        },
-        {
-          "language": "Spanish",
-          "name": "Llanura",
-          "multiverseid": 332258
         }
       ],
       "id": "611e3d2d540cc994b6675b8a6cbae3fe11940d7a",
@@ -27705,27 +27718,7 @@
         {
           "language": "Japanese",
           "name": "島",
-          "multiverseid": 332745
-        },
-        {
-          "language": "Japanese",
-          "name": "島",
-          "multiverseid": 332746
-        },
-        {
-          "language": "Japanese",
-          "name": "島",
-          "multiverseid": 332747
-        },
-        {
-          "language": "Japanese",
-          "name": "島",
           "multiverseid": 332748
-        },
-        {
-          "language": "Korean",
-          "name": "섬",
-          "multiverseid": 330506
         },
         {
           "language": "Portuguese (Brazil)",
@@ -27766,6 +27759,26 @@
           "language": "Russian",
           "name": "Остров",
           "multiverseid": 331752
+        },
+        {
+          "language": "Spanish",
+          "name": "Isla",
+          "multiverseid": 332247
+        },
+        {
+          "language": "Spanish",
+          "name": "Isla",
+          "multiverseid": 332248
+        },
+        {
+          "language": "Spanish",
+          "name": "Isla",
+          "multiverseid": 332249
+        },
+        {
+          "language": "Spanish",
+          "name": "Isla",
+          "multiverseid": 332250
         }
       ],
       "id": "22a3bc9d2b184974928d426d87a1fe09f1477186",
@@ -28001,7 +28014,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -28387,7 +28401,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -28477,7 +28492,27 @@
         {
           "language": "Japanese",
           "name": "島",
+          "multiverseid": 332745
+        },
+        {
+          "language": "Japanese",
+          "name": "島",
+          "multiverseid": 332746
+        },
+        {
+          "language": "Japanese",
+          "name": "島",
+          "multiverseid": 332747
+        },
+        {
+          "language": "Japanese",
+          "name": "島",
           "multiverseid": 332748
+        },
+        {
+          "language": "Korean",
+          "name": "섬",
+          "multiverseid": 330506
         },
         {
           "language": "Portuguese (Brazil)",
@@ -28518,26 +28553,6 @@
           "language": "Russian",
           "name": "Остров",
           "multiverseid": 331752
-        },
-        {
-          "language": "Spanish",
-          "name": "Isla",
-          "multiverseid": 332247
-        },
-        {
-          "language": "Spanish",
-          "name": "Isla",
-          "multiverseid": 332248
-        },
-        {
-          "language": "Spanish",
-          "name": "Isla",
-          "multiverseid": 332249
-        },
-        {
-          "language": "Spanish",
-          "name": "Isla",
-          "multiverseid": 332250
         }
       ],
       "id": "df0953298870db476d9008f6b406eaa9e08ff405",
@@ -28773,7 +28788,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -29159,7 +29175,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -29232,21 +29249,6 @@
           "multiverseid": 331514
         },
         {
-          "language": "French",
-          "name": "Marais",
-          "multiverseid": 331515
-        },
-        {
-          "language": "French",
-          "name": "Marais",
-          "multiverseid": 331516
-        },
-        {
-          "language": "French",
-          "name": "Marais",
-          "multiverseid": 331517
-        },
-        {
           "language": "German",
           "name": "Sumpf",
           "multiverseid": 332012
@@ -29265,11 +29267,6 @@
           "language": "German",
           "name": "Sumpf",
           "multiverseid": 332015
-        },
-        {
-          "language": "Japanese",
-          "name": "沼",
-          "multiverseid": 332760
         },
         {
           "language": "Portuguese (Brazil)",
@@ -29310,6 +29307,26 @@
           "language": "Russian",
           "name": "Болото",
           "multiverseid": 331766
+        },
+        {
+          "language": "Spanish",
+          "name": "Pantano",
+          "multiverseid": 332261
+        },
+        {
+          "language": "Spanish",
+          "name": "Pantano",
+          "multiverseid": 332262
+        },
+        {
+          "language": "Spanish",
+          "name": "Pantano",
+          "multiverseid": 332263
+        },
+        {
+          "language": "Spanish",
+          "name": "Pantano",
+          "multiverseid": 332264
         }
       ],
       "id": "dc324acfbece444e5e8d31f6d8315896af1e9f0a",
@@ -30014,21 +30031,6 @@
           "multiverseid": 331514
         },
         {
-          "language": "French",
-          "name": "Marais",
-          "multiverseid": 331515
-        },
-        {
-          "language": "French",
-          "name": "Marais",
-          "multiverseid": 331516
-        },
-        {
-          "language": "French",
-          "name": "Marais",
-          "multiverseid": 331517
-        },
-        {
           "language": "German",
           "name": "Sumpf",
           "multiverseid": 332012
@@ -30047,11 +30049,6 @@
           "language": "German",
           "name": "Sumpf",
           "multiverseid": 332015
-        },
-        {
-          "language": "Japanese",
-          "name": "沼",
-          "multiverseid": 332760
         },
         {
           "language": "Portuguese (Brazil)",
@@ -30092,6 +30089,26 @@
           "language": "Russian",
           "name": "Болото",
           "multiverseid": 331766
+        },
+        {
+          "language": "Spanish",
+          "name": "Pantano",
+          "multiverseid": 332261
+        },
+        {
+          "language": "Spanish",
+          "name": "Pantano",
+          "multiverseid": 332262
+        },
+        {
+          "language": "Spanish",
+          "name": "Pantano",
+          "multiverseid": 332263
+        },
+        {
+          "language": "Spanish",
+          "name": "Pantano",
+          "multiverseid": 332264
         }
       ],
       "id": "c05236f21db03c14107981b8b8d71e31203cd87f",
@@ -30405,21 +30422,6 @@
           "multiverseid": 331514
         },
         {
-          "language": "French",
-          "name": "Marais",
-          "multiverseid": 331515
-        },
-        {
-          "language": "French",
-          "name": "Marais",
-          "multiverseid": 331516
-        },
-        {
-          "language": "French",
-          "name": "Marais",
-          "multiverseid": 331517
-        },
-        {
           "language": "German",
           "name": "Sumpf",
           "multiverseid": 332012
@@ -30438,11 +30440,6 @@
           "language": "German",
           "name": "Sumpf",
           "multiverseid": 332015
-        },
-        {
-          "language": "Japanese",
-          "name": "沼",
-          "multiverseid": 332760
         },
         {
           "language": "Portuguese (Brazil)",
@@ -30483,6 +30480,26 @@
           "language": "Russian",
           "name": "Болото",
           "multiverseid": 331766
+        },
+        {
+          "language": "Spanish",
+          "name": "Pantano",
+          "multiverseid": 332261
+        },
+        {
+          "language": "Spanish",
+          "name": "Pantano",
+          "multiverseid": 332262
+        },
+        {
+          "language": "Spanish",
+          "name": "Pantano",
+          "multiverseid": 332263
+        },
+        {
+          "language": "Spanish",
+          "name": "Pantano",
+          "multiverseid": 332264
         }
       ],
       "id": "26a6228d3706c4edea95c60e9837bba7d61e3f2c",
@@ -30813,22 +30830,7 @@
         {
           "language": "Italian",
           "name": "Montagna",
-          "multiverseid": 332500
-        },
-        {
-          "language": "Italian",
-          "name": "Montagna",
-          "multiverseid": 332501
-        },
-        {
-          "language": "Italian",
-          "name": "Montagna",
           "multiverseid": 332502
-        },
-        {
-          "language": "Italian",
-          "name": "Montagna",
-          "multiverseid": 332503
         },
         {
           "language": "Japanese",
@@ -30871,9 +30873,24 @@
           "multiverseid": 330511
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Montanha",
-          "multiverseid": 331258
+          "language": "Spanish",
+          "name": "Montaña",
+          "multiverseid": 332251
+        },
+        {
+          "language": "Spanish",
+          "name": "Montaña",
+          "multiverseid": 332252
+        },
+        {
+          "language": "Spanish",
+          "name": "Montaña",
+          "multiverseid": 332253
+        },
+        {
+          "language": "Spanish",
+          "name": "Montaña",
+          "multiverseid": 332254
         }
       ],
       "id": "00ee8693a4a785b3898a252d7950988590aee0f2",
@@ -31115,7 +31132,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -31205,22 +31223,7 @@
         {
           "language": "Italian",
           "name": "Montagna",
-          "multiverseid": 332500
-        },
-        {
-          "language": "Italian",
-          "name": "Montagna",
-          "multiverseid": 332501
-        },
-        {
-          "language": "Italian",
-          "name": "Montagna",
           "multiverseid": 332502
-        },
-        {
-          "language": "Italian",
-          "name": "Montagna",
-          "multiverseid": 332503
         },
         {
           "language": "Japanese",
@@ -31263,9 +31266,24 @@
           "multiverseid": 330511
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Montanha",
-          "multiverseid": 331258
+          "language": "Spanish",
+          "name": "Montaña",
+          "multiverseid": 332251
+        },
+        {
+          "language": "Spanish",
+          "name": "Montaña",
+          "multiverseid": 332252
+        },
+        {
+          "language": "Spanish",
+          "name": "Montaña",
+          "multiverseid": 332253
+        },
+        {
+          "language": "Spanish",
+          "name": "Montaña",
+          "multiverseid": 332254
         }
       ],
       "id": "e403bc52a8ee2bab31165f7ddc92c511923031de",
@@ -31507,7 +31525,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -31899,7 +31918,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -32291,7 +32311,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -33121,27 +33142,7 @@
         {
           "language": "Chinese Traditional",
           "name": "樹林",
-          "multiverseid": 330748
-        },
-        {
-          "language": "Chinese Traditional",
-          "name": "樹林",
-          "multiverseid": 330749
-        },
-        {
-          "language": "Chinese Traditional",
-          "name": "樹林",
-          "multiverseid": 330750
-        },
-        {
-          "language": "Chinese Traditional",
-          "name": "樹林",
           "multiverseid": 330751
-        },
-        {
-          "language": "French",
-          "name": "Forêt",
-          "multiverseid": 331496
         },
         {
           "language": "German",
@@ -33222,6 +33223,26 @@
           "language": "Russian",
           "name": "Лес",
           "multiverseid": 331747
+        },
+        {
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 332242
+        },
+        {
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 332243
+        },
+        {
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 332244
+        },
+        {
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 332245
         }
       ],
       "id": "1f842563223d1965581cf8d27b7941038cf892c1",

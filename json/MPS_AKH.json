@@ -53,13 +53,22 @@
       "printings": [
         "LRW",
         "CMD",
-        "MPS_AKH"
+        "MPS_AKH",
+        "IMA"
       ],
       "rarity": "Special",
       "rulings": [
         {
-          "date": "2007-10-01",
-          "text": "If the first and third modes are chosen, an artifact creature with converted mana cost 3 or less would be destroyed twice by this spell. It would have to be regenerated twice to survive. (A similar thing happens with most of the other combinations.)"
+          "date": "2017-11-17",
+          "text": "Each of the chosen modes happens sequentially. If a permanent has an ability that triggers whenever it or another permanent is destroyed, it will see permanents destroyed at the same time as it or before it, but not permanents destroyed by later modes."
+        },
+        {
+          "date": "2017-11-17",
+          "text": "If the first and third modes are chosen, an artifact creature with converted mana cost 3 or less will have to be regenerated twice to survive. This is because the modes happen sequentially, and the regeneration \"shield\" is used up by the first one. (A similar thing happens with most of the other combinations.)"
+        },
+        {
+          "date": "2017-11-17",
+          "text": "If a card is exiled \"until\" another permanent leaves the battlefield, the exiled card returns to the battlefield immediately after that permanent leaves the battlefield during Austere Command's resolution, and it may be destroyed by a later mode."
         }
       ],
       "text": "Choose two —\n• Destroy all artifacts.\n• Destroy all enchantments.\n• Destroy all creatures with converted mana cost 3 or less.\n• Destroy all creatures with converted mana cost 4 or greater.",
@@ -528,20 +537,21 @@
       "power": "4",
       "printings": [
         "MBS",
-        "MPS_AKH"
+        "MPS_AKH",
+        "IMA"
       ],
       "rarity": "Special",
       "rulings": [
         {
-          "date": "2011-06-01",
+          "date": "2017-11-17",
           "text": "You may either draw two cards or not draw at all. You can't choose to draw only one card."
         },
         {
-          "date": "2011-06-01",
+          "date": "2017-11-17",
           "text": "The ability triggers once for each card an opponent draws. You choose whether to draw two cards as each of those abilities resolves."
         },
         {
-          "date": "2011-06-01",
+          "date": "2017-11-17",
           "text": "If each player controls a Consecrated Sphinx, their abilities will cause each other to trigger until one player chooses not to draw cards."
         }
       ],
@@ -745,16 +755,17 @@
         "LRW",
         "MMA",
         "MM2",
-        "MPS_AKH"
+        "MPS_AKH",
+        "IMA"
       ],
       "rarity": "Special",
       "rulings": [
         {
-          "date": "2013-06-07",
+          "date": "2017-11-17",
           "text": "You choose both modes as you cast Cryptic Command. You must choose two different modes."
         },
         {
-          "date": "2013-06-07",
+          "date": "2017-11-17",
           "text": "Look at both chosen modes to determine how many targets Cryptic Command has, if any. If it has at least one target, and all its targets are illegal when it tries to resolve, then it will be countered and none of its effects will happen. For example, if you choose the second and fourth modes, and the permanent is an illegal target when Cryptic Command tries to resolve, you won't draw a card."
         }
       ],
@@ -2836,7 +2847,8 @@
       "printings": [
         "LRW",
         "THS",
-        "MPS_AKH"
+        "MPS_AKH",
+        "IMA"
       ],
       "rarity": "Special",
       "rulings": [

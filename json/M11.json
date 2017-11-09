@@ -344,17 +344,26 @@
         "M11",
         "DDH",
         "C13",
-        "M15"
+        "M15",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2014-07-18",
-          "text": "The ability triggers just once for each life-gaining event, whether it's 1 life from Soulmender or 8 life from Meditation Puzzle."
+          "date": "2017-11-17",
+          "text": "The ability of Ajani's Pridemate triggers just once for each life-gaining event, whether it's 1 life from Auriok Champion or 6 life from Tavern Swindler."
         },
         {
-          "date": "2014-07-18",
-          "text": "A creature with lifelink dealing combat damage is a single life-gaining event. For example, if two creatures you control with lifelink deal combat damage at the same time, Ajani's Pridemate's ability will trigger twice. However, if a single creature you control with lifelink deals combat damage to multiple creatures, players, and/or planeswalkers at the same time (perhaps because it has trample or was blocked by more than one creature), the ability will trigger only once."
+          "date": "2017-11-17",
+          "text": "If Ajani's Pridemate is dealt lethal damage at the same time that you gain life, it won't receive a counter from its ability in time to save it."
+        },
+        {
+          "date": "2017-11-17",
+          "text": "Each creature with lifelink dealing combat damage causes a separate life-gaining event. For example, if two creatures you control with lifelink deal combat damage at the same time, Ajani's Pridemate's ability will trigger twice. However, if a single creature you control with lifelink deals combat damage to multiple creatures, players, and/or planeswalkers at the same time (perhaps because it has trample or was blocked by more than one creature), the ability will trigger only once."
+        },
+        {
+          "date": "2017-11-17",
+          "text": "In a Two-Headed Giant game, life gained by your teammate won't cause the ability to trigger, even though it causes your team's life total to increase."
         }
       ],
       "subtypes": [
@@ -911,7 +920,8 @@
       "power": "1",
       "printings": [
         "M10",
-        "M11"
+        "M11",
+        "IMA"
       ],
       "rarity": "Common",
       "subtypes": [
@@ -1966,7 +1976,8 @@
         "9ED",
         "M11",
         "DDF",
-        "DDN"
+        "DDN",
+        "IMA"
       ],
       "rarity": "Common",
       "rulings": [
@@ -3023,7 +3034,8 @@
         "W16",
         "EMA",
         "W17",
-        "CMA"
+        "CMA",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "subtypes": [
@@ -3122,12 +3134,17 @@
       "originalType": "Creature — Human Monk",
       "power": "1",
       "printings": [
-        "M11"
+        "M11",
+        "IMA"
       ],
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2010-08-15",
+          "date": "2017-11-17",
+          "text": "If Serra Ascendant is dealt damage at the same time that you gain life (most likely because it dealt combat damage to a creature blocking or blocked by it), and your life total becomes 30 or greater, apply its last effect before considering whether or not the damage dealt to it is lethal."
+        },
+        {
+          "date": "2017-11-17",
           "text": "In a Two-Headed Giant game, anything that cares about your life total checks your team's life total. Serra Ascendant gets +5/+5 and has flying as long as your team has 30 or more life."
         }
       ],
@@ -3726,6 +3743,10 @@
         },
         {
           "format": "Modern",
+          "legality": "Legal"
+        },
+        {
+          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -4632,10 +4653,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -5784,17 +5801,18 @@
       "originalText": "Target creature becomes 1/1 until end of turn.",
       "originalType": "Instant",
       "printings": [
-        "M11"
+        "M11",
+        "IMA"
       ],
       "rarity": "Common",
       "rulings": [
         {
-          "date": "2010-08-15",
-          "text": "Diminish overwrites all previous effects that set the targeted creature's power and toughness to specific values. Other effects that set its power or toughness to specific values that start to apply after Diminish resolves will overwrite this effect."
+          "date": "2017-11-17",
+          "text": "Diminish overwrites all previous effects that set the target creature's power and toughness to specific values. Other effects that set its power or toughness to specific values that start to apply after Diminish resolves will overwrite this effect."
         },
         {
-          "date": "2010-08-15",
-          "text": "Effects that modify the targeted creature's power or toughness, such as the effects of Giant Growth or Honor of the Pure, will apply to it no matter when they started to take effect. The same is true for counters that change the creature's power or toughness (such as +1/+1 counters) and effects that switch its power and toughness."
+          "date": "2017-11-17",
+          "text": "Effects that modify the target creature's power or toughness, such as the effects of Elesh Norn, Grand Cenobite or prowess, will apply to it no matter when they started to take effect. The same is true for counters that change the creature's power or toughness (such as +1/+1 counters)."
         }
       ],
       "text": "Target creature has base power and toughness 1/1 until end of turn.",
@@ -6868,7 +6886,8 @@
         "M12",
         "DDN",
         "TPR",
-        "MM2"
+        "MM2",
+        "IMA"
       ],
       "rarity": "Common",
       "text": "Counter target spell unless its controller pays {3}.",
@@ -7177,7 +7196,8 @@
       "power": "2",
       "printings": [
         "M10",
-        "M11"
+        "M11",
+        "DDT"
       ],
       "rarity": "Rare",
       "rulings": [
@@ -7965,7 +7985,8 @@
         "M11",
         "DDI",
         "M13",
-        "M14"
+        "M14",
+        "DDT"
       ],
       "rarity": "Common",
       "rulings": [
@@ -9720,7 +9741,8 @@
         "DDK",
         "M14",
         "M15",
-        "CN2"
+        "CN2",
+        "IMA"
       ],
       "rarity": "Common",
       "subtypes": [
@@ -10506,7 +10528,8 @@
         "M12",
         "M14",
         "DDR",
-        "E01"
+        "E01",
+        "IMA"
       ],
       "rarity": "Common",
       "text": "Destroy target nonblack creature.",
@@ -10628,7 +10651,8 @@
         "DD3_DVD",
         "DTK",
         "EMA",
-        "XLN"
+        "XLN",
+        "IMA"
       ],
       "rarity": "Common",
       "text": "Target opponent reveals his or her hand. You choose a noncreature, nonland card from it. That player discards that card.",
@@ -12627,10 +12651,6 @@
         },
         {
           "format": "Shadows over Innistrad Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -15013,7 +15033,8 @@
       "originalType": "Creature — Goblin",
       "power": "2",
       "printings": [
-        "M11"
+        "M11",
+        "DDT"
       ],
       "rarity": "Uncommon",
       "subtypes": [
@@ -15367,28 +15388,25 @@
         "ME4",
         "M12",
         "C13",
-        "DD3_JVC"
+        "DD3_JVC",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2004-12-01",
-          "text": "The additional cost is paid when you pay the rest of Fireball's costs, even though that text appears second on the card (to make the card easier to read). The additional cost doesn't count toward Fireball's converted mana cost."
+          "date": "2017-11-17",
+          "text": "For example, if X is 5 and you choose three target creatures, Fireball has a total cost of {7}{R} (even though its mana cost is just {5}{R} and its converted mana cost is 6). If those creatures are all still legal targets as Fireball resolves, it deals 1 damage to each of them."
         },
         {
-          "date": "2004-12-01",
-          "text": "If, for example, X is 5 and you choose three target creatures, Fireball has a total cost of {7}{R} (even though its mana cost is just {5}{R}). If those creatures are all still legal targets as Fireball resolves, it deals 1 damage to each of them."
-        },
-        {
-          "date": "2009-05-01",
+          "date": "2017-11-17",
           "text": "You may cast Fireball with zero targets, regardless of the value chosen for X. If you do so, it will not be a targeted spell, and no damage will actually be dealt when it resolves."
         },
         {
-          "date": "2009-10-01",
-          "text": "Fireball's damage is divided as Fireball resolves, not as it's cast, because there are no choices involved. The division involves only targets that are still legal at that time."
+          "date": "2017-11-17",
+          "text": "Fireball's damage is divided as Fireball resolves, not as it's cast, because there are no choices involved. The division involves only targets that are still legal as Fireball resolves."
         },
         {
-          "date": "2009-10-01",
+          "date": "2017-11-17",
           "text": "You can target more than X creatures. However, if the number of legal targets at the time Fireball resolves is greater than X, none of them will be dealt any damage."
         }
       ],
@@ -15745,7 +15763,8 @@
       "printings": [
         "M10",
         "M11",
-        "M12"
+        "M12",
+        "DDT"
       ],
       "rarity": "Rare",
       "subtypes": [
@@ -15957,7 +15976,8 @@
         "ROE",
         "M11",
         "M12",
-        "CN2"
+        "CN2",
+        "DDT"
       ],
       "rarity": "Common",
       "rulings": [
@@ -16068,20 +16088,21 @@
       "power": "4",
       "printings": [
         "M11",
-        "M15"
+        "M15",
+        "IMA"
       ],
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2014-07-18",
+          "date": "2017-11-17",
           "text": "The artifact card you find is exiled face up. All players can see what it is."
         },
         {
-          "date": "2014-07-18",
+          "date": "2017-11-17",
           "text": "Hoarding Dragon's two abilities are linked. The second ability refers only to the card exiled by that Hoarding Dragon's first ability. In other words, each Dragon has its own hoard."
         },
         {
-          "date": "2014-07-18",
+          "date": "2017-11-17",
           "text": "If Hoarding Dragon dies before its first ability resolves, its second ability will trigger and do nothing. Then its first ability will resolve. If you choose to exile an artifact card from your library, it will be exiled indefinitely."
         }
       ],
@@ -16977,7 +16998,8 @@
         "10E",
         "M10",
         "DPA",
-        "M11"
+        "M11",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
@@ -18987,7 +19009,8 @@
         "EVE",
         "DPA",
         "M11",
-        "M13"
+        "M13",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "subtypes": [
@@ -20148,7 +20171,8 @@
       "power": "3",
       "printings": [
         "M11",
-        "M12"
+        "M12",
+        "IMA"
       ],
       "rarity": "Common",
       "subtypes": [
@@ -21001,17 +21025,18 @@
       "originalType": "Creature — Beast",
       "power": "4",
       "printings": [
-        "M11"
+        "M11",
+        "IMA"
       ],
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2010-08-15",
-          "text": "If a spell or ability an opponent controls causes you to discard Obstinate Baloth, and both Obstinate Baloth's ability and another ability (such as the one from an opponent's Leyline of the Void) instruct you to put Obstinate Baloth somewhere else instead of putting it into your graveyard, you choose which one to apply."
+          "date": "2017-11-17",
+          "text": "If a spell or ability an opponent controls causes you to discard Obstinate Baloth, and both Obstinate Baloth's ability and another ability (such as that of an opponent's Leyline of the Void) instruct you to put Obstinate Baloth somewhere else instead of putting it into your graveyard, you choose which one to apply."
         },
         {
-          "date": "2010-08-15",
-          "text": "If you discard Obstinate Baloth and wind up putting it onto the battlefield, you've still discarded it. Abilities that trigger when you discard a card (such as the one from Liliana's Caress) will still trigger."
+          "date": "2017-11-17",
+          "text": "If you discard Obstinate Baloth and put it onto the battlefield, you've still discarded it. Abilities that trigger when you discard a card (such as that of Raiders' Wake) will still trigger."
         }
       ],
       "subtypes": [
@@ -21203,10 +21228,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -21438,12 +21459,13 @@
         "pGPX",
         "M11",
         "M12",
-        "MM2"
+        "MM2",
+        "IMA"
       ],
       "rarity": "Mythic Rare",
       "rulings": [
         {
-          "date": "2010-08-15",
+          "date": "2017-11-17",
           "text": "You may find any land cards, not just basic land cards."
         }
       ],
@@ -22517,7 +22539,8 @@
       "originalText": "{4}, {T}, Exile Brittle Effigy: Exile target creature.",
       "originalType": "Artifact",
       "printings": [
-        "M11"
+        "M11",
+        "DDT"
       ],
       "rarity": "Rare",
       "rulings": [
@@ -26214,22 +26237,7 @@
         {
           "language": "German",
           "name": "Ebene",
-          "multiverseid": 224739
-        },
-        {
-          "language": "German",
-          "name": "Ebene",
           "multiverseid": 224740
-        },
-        {
-          "language": "German",
-          "name": "Ebene",
-          "multiverseid": 224741
-        },
-        {
-          "language": "German",
-          "name": "Ebene",
-          "multiverseid": 224742
         },
         {
           "language": "Italian",
@@ -26292,9 +26300,24 @@
           "multiverseid": 225240
         },
         {
-          "language": "Russian",
-          "name": "Равнина",
-          "multiverseid": 225487
+          "language": "Spanish",
+          "name": "Llanura",
+          "multiverseid": 224988
+        },
+        {
+          "language": "Spanish",
+          "name": "Llanura",
+          "multiverseid": 224989
+        },
+        {
+          "language": "Spanish",
+          "name": "Llanura",
+          "multiverseid": 224990
+        },
+        {
+          "language": "Spanish",
+          "name": "Llanura",
+          "multiverseid": 224991
         }
       ],
       "id": "cdac4642a350f674909009d8e43365cfacd8651a",
@@ -26602,7 +26625,22 @@
         {
           "language": "German",
           "name": "Ebene",
+          "multiverseid": 224739
+        },
+        {
+          "language": "German",
+          "name": "Ebene",
           "multiverseid": 224740
+        },
+        {
+          "language": "German",
+          "name": "Ebene",
+          "multiverseid": 224741
+        },
+        {
+          "language": "German",
+          "name": "Ebene",
+          "multiverseid": 224742
         },
         {
           "language": "Italian",
@@ -26665,24 +26703,9 @@
           "multiverseid": 225240
         },
         {
-          "language": "Spanish",
-          "name": "Llanura",
-          "multiverseid": 224988
-        },
-        {
-          "language": "Spanish",
-          "name": "Llanura",
-          "multiverseid": 224989
-        },
-        {
-          "language": "Spanish",
-          "name": "Llanura",
-          "multiverseid": 224990
-        },
-        {
-          "language": "Spanish",
-          "name": "Llanura",
-          "multiverseid": 224991
+          "language": "Russian",
+          "name": "Равнина",
+          "multiverseid": 225487
         }
       ],
       "id": "ec191208ec4bb76aae5911ffb26e4c24d9cf2e52",
@@ -27306,7 +27329,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -27692,7 +27716,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -28078,7 +28103,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -28464,7 +28490,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -30076,6 +30103,11 @@
           "multiverseid": 226248
         },
         {
+          "language": "Chinese Traditional",
+          "name": "山脈",
+          "multiverseid": 225998
+        },
+        {
           "language": "French",
           "name": "Montagne",
           "multiverseid": 224731
@@ -30098,7 +30130,22 @@
         {
           "language": "Italian",
           "name": "Montagna",
+          "multiverseid": 225747
+        },
+        {
+          "language": "Italian",
+          "name": "Montagna",
+          "multiverseid": 225748
+        },
+        {
+          "language": "Italian",
+          "name": "Montagna",
           "multiverseid": 225749
+        },
+        {
+          "language": "Italian",
+          "name": "Montagna",
+          "multiverseid": 225750
         },
         {
           "language": "Japanese",
@@ -30159,26 +30206,6 @@
           "language": "Russian",
           "name": "Гора",
           "multiverseid": 225501
-        },
-        {
-          "language": "Spanish",
-          "name": "Montaña",
-          "multiverseid": 225000
-        },
-        {
-          "language": "Spanish",
-          "name": "Montaña",
-          "multiverseid": 225001
-        },
-        {
-          "language": "Spanish",
-          "name": "Montaña",
-          "multiverseid": 225002
-        },
-        {
-          "language": "Spanish",
-          "name": "Montaña",
-          "multiverseid": 225003
         }
       ],
       "id": "057d073787f94c8dfc2a05aa8ba4ad96d167be88",
@@ -30420,7 +30447,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -30468,6 +30496,11 @@
           "multiverseid": 226248
         },
         {
+          "language": "Chinese Traditional",
+          "name": "山脈",
+          "multiverseid": 225998
+        },
+        {
           "language": "French",
           "name": "Montagne",
           "multiverseid": 224731
@@ -30490,7 +30523,22 @@
         {
           "language": "Italian",
           "name": "Montagna",
+          "multiverseid": 225747
+        },
+        {
+          "language": "Italian",
+          "name": "Montagna",
+          "multiverseid": 225748
+        },
+        {
+          "language": "Italian",
+          "name": "Montagna",
           "multiverseid": 225749
+        },
+        {
+          "language": "Italian",
+          "name": "Montagna",
+          "multiverseid": 225750
         },
         {
           "language": "Japanese",
@@ -30551,26 +30599,6 @@
           "language": "Russian",
           "name": "Гора",
           "multiverseid": 225501
-        },
-        {
-          "language": "Spanish",
-          "name": "Montaña",
-          "multiverseid": 225000
-        },
-        {
-          "language": "Spanish",
-          "name": "Montaña",
-          "multiverseid": 225001
-        },
-        {
-          "language": "Spanish",
-          "name": "Montaña",
-          "multiverseid": 225002
-        },
-        {
-          "language": "Spanish",
-          "name": "Montaña",
-          "multiverseid": 225003
         }
       ],
       "id": "1b37310a2c616101333be4fe4e721364f5e6f03a",
@@ -30812,7 +30840,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -31204,7 +31233,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -31252,6 +31282,11 @@
           "multiverseid": 226248
         },
         {
+          "language": "Chinese Traditional",
+          "name": "山脈",
+          "multiverseid": 225998
+        },
+        {
           "language": "French",
           "name": "Montagne",
           "multiverseid": 224731
@@ -31274,7 +31309,22 @@
         {
           "language": "Italian",
           "name": "Montagna",
+          "multiverseid": 225747
+        },
+        {
+          "language": "Italian",
+          "name": "Montagna",
+          "multiverseid": 225748
+        },
+        {
+          "language": "Italian",
+          "name": "Montagna",
           "multiverseid": 225749
+        },
+        {
+          "language": "Italian",
+          "name": "Montagna",
+          "multiverseid": 225750
         },
         {
           "language": "Japanese",
@@ -31335,26 +31385,6 @@
           "language": "Russian",
           "name": "Гора",
           "multiverseid": 225501
-        },
-        {
-          "language": "Spanish",
-          "name": "Montaña",
-          "multiverseid": 225000
-        },
-        {
-          "language": "Spanish",
-          "name": "Montaña",
-          "multiverseid": 225001
-        },
-        {
-          "language": "Spanish",
-          "name": "Montaña",
-          "multiverseid": 225002
-        },
-        {
-          "language": "Spanish",
-          "name": "Montaña",
-          "multiverseid": 225003
         }
       ],
       "id": "e067da091dee6acd8a2e1ea451c30696c5e5a686",
@@ -31596,7 +31626,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -31726,27 +31757,27 @@
         {
           "language": "Portuguese (Brazil)",
           "name": "Floresta",
+          "multiverseid": 225253
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Floresta",
+          "multiverseid": 225254
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Floresta",
+          "multiverseid": 225255
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Floresta",
           "multiverseid": 225256
         },
         {
-          "language": "Spanish",
-          "name": "Bosque",
-          "multiverseid": 225004
-        },
-        {
-          "language": "Spanish",
-          "name": "Bosque",
-          "multiverseid": 225005
-        },
-        {
-          "language": "Spanish",
-          "name": "Bosque",
-          "multiverseid": 225006
-        },
-        {
-          "language": "Spanish",
-          "name": "Bosque",
-          "multiverseid": 225007
+          "language": "Russian",
+          "name": "Лес",
+          "multiverseid": 225502
         }
       ],
       "id": "712cc986e850477e0cb81a89cf4f85d22548b05c",
@@ -32116,27 +32147,27 @@
         {
           "language": "Portuguese (Brazil)",
           "name": "Floresta",
+          "multiverseid": 225253
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Floresta",
+          "multiverseid": 225254
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Floresta",
+          "multiverseid": 225255
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Floresta",
           "multiverseid": 225256
         },
         {
-          "language": "Spanish",
-          "name": "Bosque",
-          "multiverseid": 225004
-        },
-        {
-          "language": "Spanish",
-          "name": "Bosque",
-          "multiverseid": 225005
-        },
-        {
-          "language": "Spanish",
-          "name": "Bosque",
-          "multiverseid": 225006
-        },
-        {
-          "language": "Spanish",
-          "name": "Bosque",
-          "multiverseid": 225007
+          "language": "Russian",
+          "name": "Лес",
+          "multiverseid": 225502
         }
       ],
       "id": "e0c73661a5b55452a2f152d226bdb3e3d739df0d",
@@ -32506,27 +32537,27 @@
         {
           "language": "Portuguese (Brazil)",
           "name": "Floresta",
+          "multiverseid": 225253
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Floresta",
+          "multiverseid": 225254
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Floresta",
+          "multiverseid": 225255
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Floresta",
           "multiverseid": 225256
         },
         {
-          "language": "Spanish",
-          "name": "Bosque",
-          "multiverseid": 225004
-        },
-        {
-          "language": "Spanish",
-          "name": "Bosque",
-          "multiverseid": 225005
-        },
-        {
-          "language": "Spanish",
-          "name": "Bosque",
-          "multiverseid": 225006
-        },
-        {
-          "language": "Spanish",
-          "name": "Bosque",
-          "multiverseid": 225007
+          "language": "Russian",
+          "name": "Лес",
+          "multiverseid": 225502
         }
       ],
       "id": "7ede4f6af35276d5d7df02c8dc44b4f7e863b132",

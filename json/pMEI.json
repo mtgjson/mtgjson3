@@ -378,29 +378,26 @@
         "ME4",
         "M12",
         "C13",
-        "DD3_JVC"
+        "DD3_JVC",
+        "IMA"
       ],
       "rarity": "Special",
       "releaseDate": "1995-07",
       "rulings": [
         {
-          "date": "2004-12-01",
-          "text": "The additional cost is paid when you pay the rest of Fireball's costs, even though that text appears second on the card (to make the card easier to read). The additional cost doesn't count toward Fireball's converted mana cost."
+          "date": "2017-11-17",
+          "text": "For example, if X is 5 and you choose three target creatures, Fireball has a total cost of {7}{R} (even though its mana cost is just {5}{R} and its converted mana cost is 6). If those creatures are all still legal targets as Fireball resolves, it deals 1 damage to each of them."
         },
         {
-          "date": "2004-12-01",
-          "text": "If, for example, X is 5 and you choose three target creatures, Fireball has a total cost of {7}{R} (even though its mana cost is just {5}{R}). If those creatures are all still legal targets as Fireball resolves, it deals 1 damage to each of them."
-        },
-        {
-          "date": "2009-05-01",
+          "date": "2017-11-17",
           "text": "You may cast Fireball with zero targets, regardless of the value chosen for X. If you do so, it will not be a targeted spell, and no damage will actually be dealt when it resolves."
         },
         {
-          "date": "2009-10-01",
-          "text": "Fireball's damage is divided as Fireball resolves, not as it's cast, because there are no choices involved. The division involves only targets that are still legal at that time."
+          "date": "2017-11-17",
+          "text": "Fireball's damage is divided as Fireball resolves, not as it's cast, because there are no choices involved. The division involves only targets that are still legal as Fireball resolves."
         },
         {
-          "date": "2009-10-01",
+          "date": "2017-11-17",
           "text": "You can target more than X creatures. However, if the number of legal targets at the time Fireball resolves is greater than X, none of them will be dealt any damage."
         }
       ],
@@ -1206,7 +1203,8 @@
         "DD3_GVL",
         "C15",
         "EMA",
-        "CMA"
+        "CMA",
+        "IMA"
       ],
       "rarity": "Special",
       "releaseDate": "2001",
@@ -1318,8 +1316,11 @@
       "subtypes": [
         "Jace"
       ],
+      "supertypes": [
+        "Legendary"
+      ],
       "text": "+2: Each player draws a card.\n−1: Target player draws a card.\n−10: Target player puts the top twenty cards of his or her library into his or her graveyard.",
-      "type": "Planeswalker — Jace",
+      "type": "Legendary Planeswalker — Jace",
       "types": [
         "Planeswalker"
       ]
@@ -1426,8 +1427,11 @@
       "subtypes": [
         "Garruk"
       ],
+      "supertypes": [
+        "Legendary"
+      ],
       "text": "+1: Untap two target lands.\n−1: Create a 3/3 green Beast creature token.\n−4: Creatures you control get +3/+3 and gain trample until end of turn.",
-      "type": "Planeswalker — Garruk",
+      "type": "Legendary Planeswalker — Garruk",
       "types": [
         "Planeswalker"
       ]
@@ -2527,8 +2531,11 @@
       "subtypes": [
         "Nissa"
       ],
+      "supertypes": [
+        "Legendary"
+      ],
       "text": "+1: Search your library for a card named Nissa's Chosen and put it onto the battlefield. Then shuffle your library.\n+1: You gain 2 life for each Elf you control.\n−7: Search your library for any number of Elf creature cards and put them onto the battlefield. Then shuffle your library.",
-      "type": "Planeswalker — Nissa",
+      "type": "Legendary Planeswalker — Nissa",
       "types": [
         "Planeswalker"
       ]
@@ -2842,8 +2849,11 @@
       "subtypes": [
         "Liliana"
       ],
+      "supertypes": [
+        "Legendary"
+      ],
       "text": "+1: Target player discards a card.\n−2: Search your library for a card, then shuffle your library and put that card on top of it.\n−8: Put all creature cards from all graveyards onto the battlefield under your control.",
-      "type": "Planeswalker — Liliana",
+      "type": "Legendary Planeswalker — Liliana",
       "types": [
         "Planeswalker"
       ]
@@ -4059,13 +4069,22 @@
         "pCMP",
         "CMD",
         "MMA",
-        "MM2"
+        "MM2",
+        "IMA"
       ],
       "rarity": "Special",
       "releaseDate": "2012-05-23",
       "rulings": [
         {
-          "date": "2006-02-01",
+          "date": "2017-11-17",
+          "text": "You divide the damage as you cast Electrolyze, not as it resolves. Each target must be assigned at least 1 damage. In other words, as you cast Electrolyze, you choose whether to have it deal 2 damage to a single target, or deal 1 damage to each of two targets."
+        },
+        {
+          "date": "2017-11-17",
+          "text": "If Electrolyze targets two creatures and one becomes an illegal target, the remaining target is dealt 1 damage, not 2. You'll still draw a card."
+        },
+        {
+          "date": "2017-11-17",
           "text": "If all chosen targets are illegal as Electrolyze tries to resolve, it will be countered and none of its effects will happen. No damage will be dealt and you won't draw a card."
         }
       ],
@@ -5529,7 +5548,8 @@
       "number": "56",
       "printings": [
         "pMEI",
-        "RTR"
+        "RTR",
+        "IMA"
       ],
       "rarity": "Special",
       "releaseDate": "2012",
@@ -7145,8 +7165,11 @@
       "subtypes": [
         "Ajani"
       ],
+      "supertypes": [
+        "Legendary"
+      ],
       "text": "+1: Put a +1/+1 counter on up to one target creature.\n−3: Target creature gains flying and double strike until end of turn.\n−8: Create X 2/2 white Cat creature tokens, where X is your life total.",
-      "type": "Planeswalker — Ajani",
+      "type": "Legendary Planeswalker — Ajani",
       "types": [
         "Planeswalker"
       ]
@@ -7254,8 +7277,11 @@
       "subtypes": [
         "Jace"
       ],
+      "supertypes": [
+        "Legendary"
+      ],
       "text": "+1: Draw a card. Target player puts the top card of his or her library into his or her graveyard.\n0: Target player puts the top ten cards of his or her library into his or her graveyard.\n−7: Any number of target players each draw twenty cards.",
-      "type": "Planeswalker — Jace",
+      "type": "Legendary Planeswalker — Jace",
       "types": [
         "Planeswalker"
       ]
@@ -7366,8 +7392,11 @@
       "subtypes": [
         "Liliana"
       ],
+      "supertypes": [
+        "Legendary"
+      ],
       "text": "+1: Search your library for a Swamp card, reveal it, and put it into your hand. Then shuffle your library.\n−3: Target creature gets +X/+X or -X/-X until end of turn, where X is the number of Swamps you control.\n−6: You get an emblem with \"Swamps you control have '{T}: Add {B}{B}{B}{B} to your mana pool.'\"",
-      "type": "Planeswalker — Liliana",
+      "type": "Legendary Planeswalker — Liliana",
       "types": [
         "Planeswalker"
       ]
@@ -7499,8 +7528,11 @@
       "subtypes": [
         "Chandra"
       ],
+      "supertypes": [
+        "Legendary"
+      ],
       "text": "+1: Chandra, Pyromaster deals 1 damage to target player and 1 damage to up to one target creature that player controls. That creature can't block this turn.\n0: Exile the top card of your library. You may play it this turn.\n−7: Exile the top ten cards of your library. Choose an instant or sorcery card exiled this way and copy it three times. You may cast the copies without paying their mana costs.",
-      "type": "Planeswalker — Chandra",
+      "type": "Legendary Planeswalker — Chandra",
       "types": [
         "Planeswalker"
       ]
@@ -7602,8 +7634,11 @@
       "subtypes": [
         "Garruk"
       ],
+      "supertypes": [
+        "Legendary"
+      ],
       "text": "+1: Reveal the top five cards of your library. Put all creature cards revealed this way into your hand and the rest on the bottom of your library in any order.\n−3: You may put a green creature card from your hand onto the battlefield.\n−7: You get an emblem with \"Whenever you cast a creature spell, you may search your library for a creature card, put it onto the battlefield, then shuffle your library.\"",
-      "type": "Planeswalker — Garruk",
+      "type": "Legendary Planeswalker — Garruk",
       "types": [
         "Planeswalker"
       ]
@@ -8321,6 +8356,10 @@
           "legality": "Legal"
         },
         {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Khans of Tarkir Block",
           "legality": "Legal"
         },
@@ -8361,7 +8400,8 @@
         "DD3_DVD",
         "DTK",
         "EMA",
-        "XLN"
+        "XLN",
+        "IMA"
       ],
       "rarity": "Special",
       "releaseDate": "2014-03-19",
@@ -8851,6 +8891,10 @@
         },
         {
           "format": "Return to Ravnica Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -9871,7 +9915,8 @@
       "power": "2",
       "printings": [
         "pMEI",
-        "M15"
+        "M15",
+        "DDT"
       ],
       "rarity": "Special",
       "releaseDate": "2014",
@@ -9894,7 +9939,7 @@
         "Goblin",
         "Warrior"
       ],
-      "text": "Other Goblin creatures you control attack each turn if able.\nAt the beginning of combat on your turn, create a 1/1 red Goblin creature token with haste.\nWhenever Goblin Rabblemaster attacks, it gets +1/+0 until end of turn for each other attacking Goblin.",
+      "text": "Other Goblin creatures you control attack each combat if able.\nAt the beginning of combat on your turn, create a 1/1 red Goblin creature token with haste.\nWhenever Goblin Rabblemaster attacks, it gets +1/+0 until end of turn for each other attacking Goblin.",
       "toughness": "2",
       "type": "Creature — Goblin Warrior",
       "types": [
@@ -10010,8 +10055,11 @@
       "subtypes": [
         "Ajani"
       ],
+      "supertypes": [
+        "Legendary"
+      ],
       "text": "+1: Until end of turn, up to one target creature gets +1/+1 and gains first strike, vigilance, and lifelink.\n−2: Put a +1/+1 counter on each creature you control and a loyalty counter on each other planeswalker you control.\n−7: You get an emblem with \"If a source would deal damage to you or a planeswalker you control, prevent all but 1 of that damage.\"",
-      "type": "Planeswalker — Ajani",
+      "type": "Legendary Planeswalker — Ajani",
       "types": [
         "Planeswalker"
       ]
@@ -10113,8 +10161,11 @@
       "subtypes": [
         "Jace"
       ],
+      "supertypes": [
+        "Legendary"
+      ],
       "text": "+1: Look at the top two cards of your library. Put one of them into your graveyard.\n−3: Return another target nonland permanent to its owner's hand.\n−8: Each player shuffles his or her hand and graveyard into his or her library. You draw seven cards.",
-      "type": "Planeswalker — Jace",
+      "type": "Legendary Planeswalker — Jace",
       "types": [
         "Planeswalker"
       ]
@@ -10221,8 +10272,11 @@
       "subtypes": [
         "Liliana"
       ],
+      "supertypes": [
+        "Legendary"
+      ],
       "text": "+1: Target player discards a card.\n−2: Search your library for a card, then shuffle your library and put that card on top of it.\n−8: Put all creature cards from all graveyards onto the battlefield under your control.",
-      "type": "Planeswalker — Liliana",
+      "type": "Legendary Planeswalker — Liliana",
       "types": [
         "Planeswalker"
       ]
@@ -10354,8 +10408,11 @@
       "subtypes": [
         "Chandra"
       ],
+      "supertypes": [
+        "Legendary"
+      ],
       "text": "+1: Chandra, Pyromaster deals 1 damage to target player and 1 damage to up to one target creature that player controls. That creature can't block this turn.\n0: Exile the top card of your library. You may play it this turn.\n−7: Exile the top ten cards of your library. Choose an instant or sorcery card exiled this way and copy it three times. You may cast the copies without paying their mana costs.",
-      "type": "Planeswalker — Chandra",
+      "type": "Legendary Planeswalker — Chandra",
       "types": [
         "Planeswalker"
       ]
@@ -10458,8 +10515,11 @@
       "subtypes": [
         "Nissa"
       ],
+      "supertypes": [
+        "Legendary"
+      ],
       "text": "+1: Target land you control becomes a 4/4 Elemental creature with trample. It's still a land.\n+1: Untap up to four target Forests.\n−7: Search your library for any number of basic land cards, put them onto the battlefield, then shuffle your library. Those lands become 4/4 Elemental creatures with trample. They're still lands.",
-      "type": "Planeswalker — Nissa",
+      "type": "Legendary Planeswalker — Nissa",
       "types": [
         "Planeswalker"
       ]
@@ -10571,8 +10631,11 @@
       "subtypes": [
         "Garruk"
       ],
+      "supertypes": [
+        "Legendary"
+      ],
       "text": "+1: Destroy another target planeswalker.\n+1: Create a 3/3 black Beast creature token with deathtouch.\n−3: Destroy target creature. You gain life equal to its toughness.\n−8: Target opponent gets an emblem with \"Whenever a creature attacks you, it gets +5/+5 and gains trample until end of turn.\"",
-      "type": "Planeswalker — Garruk",
+      "type": "Legendary Planeswalker — Garruk",
       "types": [
         "Planeswalker"
       ]
@@ -12364,7 +12427,8 @@
       "printings": [
         "pMEI",
         "DTK",
-        "C17"
+        "C17",
+        "IMA"
       ],
       "rarity": "Special",
       "rulings": [
@@ -12511,11 +12575,12 @@
         "C16",
         "AKH",
         "CMA",
-        "C17"
+        "C17",
+        "IMA"
       ],
       "rarity": "Special",
       "source": "Tarkir Dragonfury Promo",
-      "text": "{T}, Sacrifice Evolving Wilds: Search your library for a basic land card and put it onto the battlefield tapped. Then shuffle your library.",
+      "text": "{T}, Sacrifice Evolving Wilds: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle your library.",
       "type": "Land",
       "types": [
         "Land"
@@ -13369,10 +13434,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -13494,10 +13555,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -13602,10 +13659,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -13754,10 +13807,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -13865,10 +13914,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -13996,10 +14041,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -14112,10 +14153,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -14239,25 +14276,34 @@
       "power": "0",
       "printings": [
         "pMEI",
-        "M15"
+        "M15",
+        "IMA"
       ],
       "rarity": "Special",
       "releaseDate": "2015",
       "rulings": [
         {
-          "date": "2014-07-18",
+          "date": "2017-11-17",
           "text": "Genesis Hydra's first ability will resolve before Genesis Hydra does. Notably, if you put an Aura card onto the battlefield this way, it can't enchant Genesis Hydra."
         },
         {
-          "date": "2014-07-18",
-          "text": "If you put an Aura onto the battlefield this way, you choose what it enchants as it enters the battlefield. This doesn't target any permanent or player. For example, you could put an Aura onto the battlefield enchanting a creature with hexproof controlled by an opponent."
+          "date": "2017-11-17",
+          "text": "If you have fewer than X cards in your library, you reveal all of them."
         },
         {
-          "date": "2014-07-18",
-          "text": "If there's an {X} in the mana cost of the nonland permanent card, X is 0."
+          "date": "2017-11-17",
+          "text": "If a card in a player's library has {X} in its mana cost, X is considered to be 0."
         },
         {
-          "date": "2014-07-18",
+          "date": "2017-11-17",
+          "text": "A nonland permanent card is an artifact, creature, enchantment, or planeswalker card."
+        },
+        {
+          "date": "2017-11-17",
+          "text": "If you put an Aura onto the battlefield this way, you choose what it enchants as it enters the battlefield. This doesn't target any permanent or player, but it must be able to enchant that permanent or player. For example, you could put a green Aura onto the battlefield enchanting a creature with hexproof controlled by an opponent, but not one with protection from green."
+        },
+        {
+          "date": "2017-11-17",
           "text": "If \"the rest\" is zero cards, either because X was 0 or because X was 1 and that card was put onto the battlefield, the library is still shuffled."
         }
       ],
@@ -14343,10 +14389,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -14452,10 +14494,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -14554,10 +14592,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -14665,10 +14699,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -14784,10 +14814,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -14912,10 +14938,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {

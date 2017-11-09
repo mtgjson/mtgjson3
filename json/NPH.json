@@ -1098,13 +1098,14 @@
       "printings": [
         "pJGP",
         "NPH",
-        "MM2"
+        "MM2",
+        "IMA"
       ],
       "rarity": "Mythic Rare",
       "rulings": [
         {
-          "date": "2013-07-01",
-          "text": "If more than one Elesh Norn, Grand Cenobite is under your control, all of their static abilities will briefly apply. Any creatures that have 0 or less toughness and any creatures that now have lethal damage marked on them will be put into graveyards at the same time that the \"legend rule\" causes all but one of the Elesh Norns to be put into their owners' graveyards."
+          "date": "2017-11-17",
+          "text": "If a second Elesh Norn, Grand Cenobite comes under your control, you'll put one into its owner's graveyard due to the \"legend rule\" at the same time that any of your opponents' creatures getting -4/-4 are put into their owner's graveyard for having 0 or less toughness."
         }
       ],
       "subtypes": [
@@ -4242,21 +4243,22 @@
       "originalType": "Legendary Creature — Praetor",
       "power": "5",
       "printings": [
-        "NPH"
+        "NPH",
+        "IMA"
       ],
       "rarity": "Mythic Rare",
       "rulings": [
         {
-          "date": "2011-06-01",
-          "text": "Jin-Gitaxias doesn't affect the maximum hand size of its controller."
+          "date": "2017-11-17",
+          "text": "If a player has more cards in his or her hand than his or her maximum hand size during the cleanup step of that player's turn, that player discards until he or she has that many cards. A player's maximum hand size isn't checked at any time other than his or her own cleanup step."
         },
         {
-          "date": "2011-06-01",
-          "text": "If a player has more cards in his or her hand than his or her maximum hand size during the cleanup step (after the end step) of that player's turn, that player discards until he or she has that many cards. A player's maximum hand size isn't checked at any time other than his or her own cleanup step."
+          "date": "2017-11-17",
+          "text": "Jin-Gitaxias doesn't affect the maximum hand size of its controller. Because the cleanup step is after the end step, its controller may have to discard some of the cards that were just drawn."
         },
         {
-          "date": "2011-06-01",
-          "text": "Unless another spell or ability is affecting your opponent's maximum hand size, Jin-Gitaxias's ability will result in your opponent having a maximum hand size of zero. He or she will discard each card from his or her hand during the cleanup step at the end of his or her turn."
+          "date": "2017-11-17",
+          "text": "Unless another spell or ability is affecting your opponent's maximum hand size, Jin-Gitaxias's ability will result in your opponent having a maximum hand size of zero. He or she will discard each card from his or her hand during his or her cleanup step."
         }
       ],
       "subtypes": [
@@ -8355,16 +8357,25 @@
       "power": "6",
       "printings": [
         "pPRE",
-        "NPH"
+        "NPH",
+        "IMA"
       ],
       "rarity": "Mythic Rare",
       "rulings": [
         {
-          "date": "2011-06-01",
-          "text": "The player whose upkeep it is chooses a creature to sacrifice when the ability resolves."
+          "date": "2017-11-17",
+          "text": "Swampwalk is a keyword ability that means \"This creature can't be blocked if defending player controls a Swamp.\" Most nonbasic lands don't have basic land types, even if they produce colored mana. For example, Graven Cairns is neither a Swamp nor a Mountain, while Blood Crypt is both."
         },
         {
-          "date": "2011-06-01",
+          "date": "2017-11-17",
+          "text": "If another triggered ability during your upkeep causes you to sacrifice a creature, such as that of Lord of the Pit, you won't be able to target it with Sheoldred's triggered ability as that ability is put on the stack."
+        },
+        {
+          "date": "2017-11-17",
+          "text": "The opponent whose upkeep it is chooses a creature to sacrifice when Sheoldred's second triggered ability resolves."
+        },
+        {
+          "date": "2017-11-17",
           "text": "In a Two-Headed Giant game, the last ability will trigger twice at the beginning of the opposing team's upkeep, once for each player on that team. Each player sacrifices only a creature he or she controls."
         }
       ],
@@ -11205,13 +11216,18 @@
       "originalType": "Legendary Creature — Praetor",
       "power": "4",
       "printings": [
-        "NPH"
+        "NPH",
+        "IMA"
       ],
       "rarity": "Mythic Rare",
       "rulings": [
         {
-          "date": "2011-06-01",
+          "date": "2017-11-17",
           "text": "Urabrask the Hidden gives itself haste while it's on the battlefield."
+        },
+        {
+          "date": "2017-11-17",
+          "text": "If a creature an opponent controls enters the battlefield at the same time that Urabrask the Hidden enters the battlefield under your control, Urabrask's effect doesn't apply to your opponent's creature."
         }
       ],
       "subtypes": [
@@ -14421,9 +14437,24 @@
       "originalType": "Legendary Creature — Praetor",
       "power": "7",
       "printings": [
-        "NPH"
+        "NPH",
+        "IMA"
       ],
       "rarity": "Mythic Rare",
+      "rulings": [
+        {
+          "date": "2017-11-17",
+          "text": "The types of mana are white, blue, black, red, green, and colorless."
+        },
+        {
+          "date": "2017-11-17",
+          "text": "If a land you control produces multiple mana of more than one type, Vorinclex's first triggered ability adds one mana of only one of those types. You choose which of those types it adds."
+        },
+        {
+          "date": "2017-11-17",
+          "text": "If Vorinclex leaves the battlefield after its second ability has triggered, that ability still resolves and the affected land won't untap during its controller's next untap step."
+        }
+      ],
       "subtypes": [
         "Praetor"
       ],
@@ -16149,9 +16180,16 @@
       "originalText": "Whenever an opponent loses life, that player puts that many cards from the top of his or her library into his or her graveyard. (Damage dealt by sources without infect causes loss of life.)",
       "originalType": "Artifact",
       "printings": [
-        "NPH"
+        "NPH",
+        "IMA"
       ],
       "rarity": "Uncommon",
+      "rulings": [
+        {
+          "date": "2017-11-17",
+          "text": "Damage dealt to an opponent usually causes that opponent to lose life. An opponent paying life also causes loss of life."
+        }
+      ],
       "text": "Whenever an opponent loses life, that player puts that many cards from the top of his or her library into his or her graveyard. (Damage dealt by sources without infect causes loss of life.)",
       "type": "Artifact",
       "types": [
@@ -16875,7 +16913,8 @@
         "pMGD",
         "NPH",
         "C13",
-        "C14"
+        "C14",
+        "IMA"
       ],
       "rarity": "Common",
       "rulings": [
@@ -19382,7 +19421,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -19731,7 +19771,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -20794,7 +20835,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -21149,7 +21191,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [

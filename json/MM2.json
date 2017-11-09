@@ -1407,13 +1407,14 @@
       "printings": [
         "pJGP",
         "NPH",
-        "MM2"
+        "MM2",
+        "IMA"
       ],
       "rarity": "Mythic Rare",
       "rulings": [
         {
-          "date": "2013-07-01",
-          "text": "If more than one Elesh Norn, Grand Cenobite is under your control, all of their static abilities will briefly apply. Any creatures that have 0 or less toughness and any creatures that now have lethal damage marked on them will be put into graveyards at the same time that the \"legend rule\" causes all but one of the Elesh Norns to be put into their owners' graveyards."
+          "date": "2017-11-17",
+          "text": "If a second Elesh Norn, Grand Cenobite comes under your control, you'll put one into its owner's graveyard due to the \"legend rule\" at the same time that any of your opponents' creatures getting -4/-4 are put into their owner's graveyard for having 0 or less toughness."
         }
       ],
       "subtypes": [
@@ -3226,10 +3227,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -3475,16 +3472,17 @@
         "LRW",
         "MMA",
         "MM2",
-        "MPS_AKH"
+        "MPS_AKH",
+        "IMA"
       ],
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2013-06-07",
+          "date": "2017-11-17",
           "text": "You choose both modes as you cast Cryptic Command. You must choose two different modes."
         },
         {
-          "date": "2013-06-07",
+          "date": "2017-11-17",
           "text": "Look at both chosen modes to determine how many targets Cryptic Command has, if any. If it has at least one target, and all its targets are illegal when it tries to resolve, then it will be countered and none of its effects will happen. For example, if you choose the second and fourth modes, and the permanent is an illegal target when Cryptic Command tries to resolve, you won't draw a card."
         }
       ],
@@ -4043,7 +4041,8 @@
         "M12",
         "DDN",
         "TPR",
-        "MM2"
+        "MM2",
+        "IMA"
       ],
       "rarity": "Common",
       "text": "Counter target spell unless its controller pays {3}.",
@@ -4490,7 +4489,8 @@
         "GPT",
         "DDN",
         "MM2",
-        "C15"
+        "C15",
+        "IMA"
       ],
       "rarity": "Common",
       "text": "Return target nonland permanent with converted mana cost X to its owner's hand.\nDraw a card.",
@@ -5806,10 +5806,6 @@
         },
         {
           "format": "Shards of Alara Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -8985,10 +8981,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         },
@@ -9479,17 +9471,30 @@
         "CHK",
         "V11",
         "MMA",
-        "MM2"
+        "MM2",
+        "IMA"
       ],
       "rarity": "Mythic Rare",
       "rulings": [
         {
-          "date": "2013-06-07",
-          "text": "As the token is created, it checks the printed values of the creature it's copying — or, if that creature is itself a token, the original characteristics of that token as stated by the effect that put it onto the battlefield — as well as any copy effects that have been applied to it. It won't copy counters on the creature, nor will it copy other effects that have changed the creature's power, toughness, types, color, or so on."
+          "date": "2017-11-17",
+          "text": "The token copies exactly what was printed on the creature and nothing else (unless that creature was copying something else or was a token; see below). It doesn't copy whether that creature was tapped or untapped, whether it had any counters on it or Auras and/or Equipment attached to it, or any non-copy effects that changed its power, toughness, types, color, and so on."
         },
         {
-          "date": "2013-06-07",
-          "text": "Haste is part of the token's copiable values. Copies of that token will also have haste."
+          "date": "2017-11-17",
+          "text": "If the copied creature had {X} in its mana cost, X is 0."
+        },
+        {
+          "date": "2017-11-17",
+          "text": "If the copied creature was copying something else, the tokens enter the battlefield as whatever that creature was copying."
+        },
+        {
+          "date": "2017-11-17",
+          "text": "If the copied creature is a token, the tokens created by Kiki-Jiki's ability copies the original characteristics of that token as stated by the effect that put it onto the battlefield."
+        },
+        {
+          "date": "2017-11-17",
+          "text": "Any enters-the-battlefield abilities of the copied creature will trigger when the tokens enter the battlefield. Any \"As [this creature] enters the battlefield\" or \"[This creature] enters the battlefield with\" abilities of the copied creature will also work."
         }
       ],
       "subtypes": [
@@ -12173,10 +12178,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -12263,12 +12264,13 @@
         "pGPX",
         "M11",
         "M12",
-        "MM2"
+        "MM2",
+        "IMA"
       ],
       "rarity": "Mythic Rare",
       "rulings": [
         {
-          "date": "2010-08-15",
+          "date": "2017-11-17",
           "text": "You may find any land cards, not just basic land cards."
         }
       ],
@@ -13715,12 +13717,21 @@
         "pCMP",
         "CMD",
         "MMA",
-        "MM2"
+        "MM2",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2006-02-01",
+          "date": "2017-11-17",
+          "text": "You divide the damage as you cast Electrolyze, not as it resolves. Each target must be assigned at least 1 damage. In other words, as you cast Electrolyze, you choose whether to have it deal 2 damage to a single target, or deal 1 damage to each of two targets."
+        },
+        {
+          "date": "2017-11-17",
+          "text": "If Electrolyze targets two creatures and one becomes an illegal target, the remaining target is dealt 1 damage, not 2. You'll still draw a card."
+        },
+        {
+          "date": "2017-11-17",
           "text": "If all chosen targets are illegal as Electrolyze tries to resolve, it will be countered and none of its effects will happen. No damage will be dealt and you won't draw a card."
         }
       ],
@@ -16327,7 +16338,8 @@
       "originalType": "Artifact — Equipment",
       "printings": [
         "SOM",
-        "MM2"
+        "MM2",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
@@ -17601,7 +17613,8 @@
         "MM2",
         "ORI",
         "DDP",
-        "CN2"
+        "CN2",
+        "IMA"
       ],
       "rarity": "Common",
       "subtypes": [
@@ -18231,7 +18244,8 @@
         "C13",
         "MM2",
         "C16",
-        "CMA"
+        "CMA",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
@@ -18381,7 +18395,8 @@
         "C15",
         "C16",
         "CMA",
-        "C17"
+        "C17",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
@@ -18522,7 +18537,8 @@
         "MM2",
         "C16",
         "PCA",
-        "C17"
+        "C17",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
@@ -18693,10 +18709,11 @@
         "C16",
         "AKH",
         "CMA",
-        "C17"
+        "C17",
+        "IMA"
       ],
       "rarity": "Common",
-      "text": "{T}, Sacrifice Evolving Wilds: Search your library for a basic land card and put it onto the battlefield tapped. Then shuffle your library.",
+      "text": "{T}, Sacrifice Evolving Wilds: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle your library.",
       "type": "Land",
       "types": [
         "Land"
@@ -18836,7 +18853,8 @@
         "MM2",
         "C15",
         "C16",
-        "CMA"
+        "CMA",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
@@ -18908,7 +18926,8 @@
         "PC2",
         "MM2",
         "C16",
-        "PCA"
+        "PCA",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
@@ -18981,7 +19000,8 @@
         "MM2",
         "C15",
         "C16",
-        "C17"
+        "C17",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
@@ -19054,7 +19074,8 @@
         "C15",
         "C16",
         "CMA",
-        "C17"
+        "C17",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
@@ -19128,7 +19149,8 @@
         "MM2",
         "C16",
         "CMA",
-        "C17"
+        "C17",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
@@ -19203,7 +19225,8 @@
         "C16",
         "PCA",
         "CMA",
-        "C17"
+        "C17",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
@@ -19273,7 +19296,8 @@
         "CMD",
         "MM2",
         "C15",
-        "C16"
+        "C16",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "rulings": [

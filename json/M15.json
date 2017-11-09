@@ -265,17 +265,26 @@
         "M11",
         "DDH",
         "C13",
-        "M15"
+        "M15",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2014-07-18",
-          "text": "The ability triggers just once for each life-gaining event, whether it's 1 life from Soulmender or 8 life from Meditation Puzzle."
+          "date": "2017-11-17",
+          "text": "The ability of Ajani's Pridemate triggers just once for each life-gaining event, whether it's 1 life from Auriok Champion or 6 life from Tavern Swindler."
         },
         {
-          "date": "2014-07-18",
-          "text": "A creature with lifelink dealing combat damage is a single life-gaining event. For example, if two creatures you control with lifelink deal combat damage at the same time, Ajani's Pridemate's ability will trigger twice. However, if a single creature you control with lifelink deals combat damage to multiple creatures, players, and/or planeswalkers at the same time (perhaps because it has trample or was blocked by more than one creature), the ability will trigger only once."
+          "date": "2017-11-17",
+          "text": "If Ajani's Pridemate is dealt lethal damage at the same time that you gain life, it won't receive a counter from its ability in time to save it."
+        },
+        {
+          "date": "2017-11-17",
+          "text": "Each creature with lifelink dealing combat damage causes a separate life-gaining event. For example, if two creatures you control with lifelink deal combat damage at the same time, Ajani's Pridemate's ability will trigger twice. However, if a single creature you control with lifelink deals combat damage to multiple creatures, players, and/or planeswalkers at the same time (perhaps because it has trample or was blocked by more than one creature), the ability will trigger only once."
+        },
+        {
+          "date": "2017-11-17",
+          "text": "In a Two-Headed Giant game, life gained by your teammate won't cause the ability to trigger, even though it causes your team's life total to increase."
         }
       ],
       "subtypes": [
@@ -2089,10 +2098,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -6455,21 +6460,14 @@
       "originalType": "Creature — Elemental Cat",
       "power": "2",
       "printings": [
-        "M15"
+        "M15",
+        "IMA"
       ],
       "rarity": "Common",
       "rulings": [
         {
-          "date": "2014-07-18",
+          "date": "2017-11-17",
           "text": "Frost Lynx's ability can target a creature that's already tapped. That creature still won't untap during its controller's next untap step."
-        },
-        {
-          "date": "2014-07-18",
-          "text": "Frost Lynx's ability tracks the creature, not the creature's controller. That is, if the creature changes controllers before its first controller's next untap step, then it won't untap during its new controller's next untap step."
-        },
-        {
-          "date": "2014-07-18",
-          "text": "If the creature isn't tapped during its controller's next untap step (perhaps because it was untapped by a spell), Frost Lynx's ability has no effect at that time. It won't try to keep the creature tapped on subsequent turns."
         }
       ],
       "subtypes": [
@@ -6904,16 +6902,13 @@
       "printings": [
         "PC2",
         "M15",
-        "PCA"
+        "PCA",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2012-06-01",
-          "text": "Notably, if you exile Illusory Angel because of a cascade ability of a spell with converted mana cost 4 or greater, you'll be able to cast Illusory Angel."
-        },
-        {
-          "date": "2014-07-18",
+          "date": "2017-11-17",
           "text": "It doesn't matter whether the other spell resolved. It could have been countered or, if you've somehow cast Illusory Angel as though it had flash, it could still be on the stack."
         }
       ],
@@ -10461,7 +10456,8 @@
         "DDK",
         "M14",
         "M15",
-        "CN2"
+        "CN2",
+        "IMA"
       ],
       "rarity": "Common",
       "subtypes": [
@@ -11042,9 +11038,20 @@
       "originalText": "Enchant creature\nEnchanted creature has lifelink and \"Whenever a creature an opponent controls dies, put a +1/+1 counter on this creature.\" (Damage dealt by a creature with lifelink also causes its controller to gain that much life.)",
       "originalType": "Enchantment — Aura",
       "printings": [
-        "M15"
+        "M15",
+        "IMA"
       ],
       "rarity": "Common",
+      "rulings": [
+        {
+          "date": "2017-11-17",
+          "text": "Multiple instances of lifelink on the same creature are redundant."
+        },
+        {
+          "date": "2017-11-17",
+          "text": "If the enchanted creature is dealt lethal damage at the same time as a creature an opponent controls, they're destroyed at the same time. It won't receive a +1/+1 counter from its ability in time to save it."
+        }
+      ],
       "subtypes": [
         "Aura"
       ],
@@ -11716,16 +11723,17 @@
       "printings": [
         "pPRE",
         "M15",
-        "DDR"
+        "DDR",
+        "IMA"
       ],
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2014-07-18",
+          "date": "2017-11-17",
           "text": "The opponent chooses whether he or she sacrifices a creature, pays 3 life, or allows you to draw a card. That player can't make an impossible choice, such as sacrificing a creature while he or she controls no creatures."
         },
         {
-          "date": "2014-07-18",
+          "date": "2017-11-17",
           "text": "If there are no legal targets to choose, perhaps because all your opponents have hexproof, the ability is removed from the stack with no effect. You won't draw a card. This is also true if the target opponent becomes an illegal target in response to the ability."
         }
       ],
@@ -12964,7 +12972,8 @@
       "originalType": "Creature — Insect",
       "power": "3",
       "printings": [
-        "M15"
+        "M15",
+        "IMA"
       ],
       "rarity": "Common",
       "rulings": [
@@ -13760,12 +13769,13 @@
       "originalText": "Target creature gets -3/-3 until end of turn. You lose 3 life.",
       "originalType": "Instant",
       "printings": [
-        "M15"
+        "M15",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2014-07-18",
+          "date": "2017-11-17",
           "text": "The loss of life isn't a cost. If the target creature is an illegal target when Ulcerate tries to resolve, it will be countered and none of its effects will happen. You won't lose any life."
         }
       ],
@@ -15095,10 +15105,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -15114,7 +15120,8 @@
       "printings": [
         "M15",
         "W16",
-        "EMA"
+        "EMA",
+        "IMA"
       ],
       "rarity": "Common",
       "subtypes": [
@@ -15799,10 +15806,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -16067,7 +16070,8 @@
       "printings": [
         "ALA",
         "M15",
-        "C17"
+        "C17",
+        "IMA"
       ],
       "rarity": "Rare",
       "text": "Dragon creatures you control get +3/+3.",
@@ -16289,7 +16293,8 @@
       "power": "1",
       "printings": [
         "GTC",
-        "M15"
+        "M15",
+        "DDT"
       ],
       "rarity": "Common",
       "subtypes": [
@@ -16742,7 +16747,8 @@
       "power": "2",
       "printings": [
         "pMEI",
-        "M15"
+        "M15",
+        "DDT"
       ],
       "rarity": "Rare",
       "rulings": [
@@ -16970,7 +16976,8 @@
       "originalType": "Enchantment — Aura",
       "printings": [
         "M15",
-        "E01"
+        "E01",
+        "IMA"
       ],
       "rarity": "Common",
       "subtypes": [
@@ -17084,7 +17091,8 @@
         "USG",
         "BRB",
         "ROE",
-        "M15"
+        "M15",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "text": "Heat Ray deals X damage to target creature.",
@@ -17185,20 +17193,21 @@
       "power": "4",
       "printings": [
         "M11",
-        "M15"
+        "M15",
+        "IMA"
       ],
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2014-07-18",
+          "date": "2017-11-17",
           "text": "The artifact card you find is exiled face up. All players can see what it is."
         },
         {
-          "date": "2014-07-18",
+          "date": "2017-11-17",
           "text": "Hoarding Dragon's two abilities are linked. The second ability refers only to the card exiled by that Hoarding Dragon's first ability. In other words, each Dragon has its own hoard."
         },
         {
-          "date": "2014-07-18",
+          "date": "2017-11-17",
           "text": "If Hoarding Dragon dies before its first ability resolves, its second ability will trigger and do nothing. Then its first ability will resolve. If you choose to exile an artifact card from your library, it will be exiled indefinitely."
         }
       ],
@@ -19004,6 +19013,10 @@
           "legality": "Legal"
         },
         {
+          "format": "Standard",
+          "legality": "Legal"
+        },
+        {
           "format": "Urza Block",
           "legality": "Legal"
         },
@@ -20301,24 +20314,33 @@
       "power": "0",
       "printings": [
         "pMEI",
-        "M15"
+        "M15",
+        "IMA"
       ],
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2014-07-18",
+          "date": "2017-11-17",
           "text": "Genesis Hydra's first ability will resolve before Genesis Hydra does. Notably, if you put an Aura card onto the battlefield this way, it can't enchant Genesis Hydra."
         },
         {
-          "date": "2014-07-18",
-          "text": "If you put an Aura onto the battlefield this way, you choose what it enchants as it enters the battlefield. This doesn't target any permanent or player. For example, you could put an Aura onto the battlefield enchanting a creature with hexproof controlled by an opponent."
+          "date": "2017-11-17",
+          "text": "If you have fewer than X cards in your library, you reveal all of them."
         },
         {
-          "date": "2014-07-18",
-          "text": "If there's an {X} in the mana cost of the nonland permanent card, X is 0."
+          "date": "2017-11-17",
+          "text": "If a card in a player's library has {X} in its mana cost, X is considered to be 0."
         },
         {
-          "date": "2014-07-18",
+          "date": "2017-11-17",
+          "text": "A nonland permanent card is an artifact, creature, enchantment, or planeswalker card."
+        },
+        {
+          "date": "2017-11-17",
+          "text": "If you put an Aura onto the battlefield this way, you choose what it enchants as it enters the battlefield. This doesn't target any permanent or player, but it must be able to enchant that permanent or player. For example, you could put a green Aura onto the battlefield enchanting a creature with hexproof controlled by an opponent, but not one with protection from green."
+        },
+        {
+          "date": "2017-11-17",
           "text": "If \"the rest\" is zero cards, either because X was 0 or because X was 1 and that card was put onto the battlefield, the library is still shuffled."
         }
       ],
@@ -20654,21 +20676,22 @@
         "M14",
         "M15",
         "FRF",
-        "KLD"
+        "KLD",
+        "IMA"
       ],
       "rarity": "Common",
       "rulings": [
         {
-          "date": "2016-09-20",
+          "date": "2017-11-17",
           "text": "You can't cast Hunt the Weak unless you choose both a creature you control and a creature you don't control as targets."
         },
         {
-          "date": "2016-09-20",
-          "text": "If either target is an illegal target as Hunt the Weak resolves, neither creature will deal or be dealt damage."
+          "date": "2017-11-17",
+          "text": "If either target is an illegal target as Hunt the Weak tries to resolve, neither creature will deal or be dealt damage."
         },
         {
-          "date": "2016-09-20",
-          "text": "If the creature you control is an illegal target as Hunt the Weak tries to resolve, you won't put a +1/+1 counter on it. If that creature is a legal target but the other creature isn't, you'll still put the counter on the creature you control."
+          "date": "2017-11-17",
+          "text": "If the creature you control is an illegal target as Hunt the Weak tries to resolve, you won't put a +1/+1 counter on it. If that creature is a legal target but the creature you don't control isn't, you'll still put the counter on the creature you control."
         }
       ],
       "text": "Put a +1/+1 counter on target creature you control. Then that creature fights target creature you don't control. (Each deals damage equal to its power to the other.)",
@@ -21477,10 +21500,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -21497,7 +21516,8 @@
         "M15",
         "DDO",
         "OGW",
-        "CN2"
+        "CN2",
+        "IMA"
       ],
       "rarity": "Common",
       "subtypes": [
@@ -22191,10 +22211,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -27879,10 +27895,11 @@
         "C16",
         "AKH",
         "CMA",
-        "C17"
+        "C17",
+        "IMA"
       ],
       "rarity": "Common",
-      "text": "{T}, Sacrifice Evolving Wilds: Search your library for a basic land card and put it onto the battlefield tapped. Then shuffle your library.",
+      "text": "{T}, Sacrifice Evolving Wilds: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle your library.",
       "type": "Land",
       "types": [
         "Land"
@@ -28086,7 +28103,8 @@
       "originalText": "When Radiant Fountain enters the battlefield, you gain 2 life.\n{T}: Add {1} to your mana pool.",
       "originalType": "Land",
       "printings": [
-        "M15"
+        "M15",
+        "IMA"
       ],
       "rarity": "Common",
       "text": "When Radiant Fountain enters the battlefield, you gain 2 life.\n{T}: Add {C} to your mana pool.",
@@ -28549,11 +28567,6 @@
       ],
       "foreignNames": [
         {
-          "language": "Chinese Simplified",
-          "name": "平原",
-          "multiverseid": 383630
-        },
-        {
           "language": "Chinese Traditional",
           "name": "平原",
           "multiverseid": 383914
@@ -28639,21 +28652,6 @@
           "multiverseid": 385050
         },
         {
-          "language": "Japanese",
-          "name": "平地",
-          "multiverseid": 385051
-        },
-        {
-          "language": "Japanese",
-          "name": "平地",
-          "multiverseid": 385052
-        },
-        {
-          "language": "Japanese",
-          "name": "平地",
-          "multiverseid": 385053
-        },
-        {
           "language": "Korean",
           "name": "들",
           "multiverseid": 385334
@@ -28672,6 +28670,26 @@
           "language": "Korean",
           "name": "들",
           "multiverseid": 385337
+        },
+        {
+          "language": "Spanish",
+          "name": "Llanura",
+          "multiverseid": 386186
+        },
+        {
+          "language": "Spanish",
+          "name": "Llanura",
+          "multiverseid": 386187
+        },
+        {
+          "language": "Spanish",
+          "name": "Llanura",
+          "multiverseid": 386188
+        },
+        {
+          "language": "Spanish",
+          "name": "Llanura",
+          "multiverseid": 386189
         }
       ],
       "id": "dec8380db34752f51cd8a6fe1fedc6d17c570cdf",
@@ -30101,6 +30119,11 @@
       ],
       "foreignNames": [
         {
+          "language": "Chinese Simplified",
+          "name": "海岛",
+          "multiverseid": 383565
+        },
+        {
           "language": "Chinese Traditional",
           "name": "海島",
           "multiverseid": 383849
@@ -30124,6 +30147,21 @@
           "language": "French",
           "name": "Île",
           "multiverseid": 384417
+        },
+        {
+          "language": "French",
+          "name": "Île",
+          "multiverseid": 384418
+        },
+        {
+          "language": "French",
+          "name": "Île",
+          "multiverseid": 384419
+        },
+        {
+          "language": "French",
+          "name": "Île",
+          "multiverseid": 384420
         },
         {
           "language": "German",
@@ -30204,26 +30242,6 @@
           "language": "Korean",
           "name": "섬",
           "multiverseid": 385272
-        },
-        {
-          "language": "Spanish",
-          "name": "Isla",
-          "multiverseid": 386121
-        },
-        {
-          "language": "Spanish",
-          "name": "Isla",
-          "multiverseid": 386122
-        },
-        {
-          "language": "Spanish",
-          "name": "Isla",
-          "multiverseid": 386123
-        },
-        {
-          "language": "Spanish",
-          "name": "Isla",
-          "multiverseid": 386124
         }
       ],
       "id": "f30894b8936790f5b29399c229f7f616baaa9915",
@@ -30459,7 +30477,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -30487,6 +30506,11 @@
       ],
       "foreignNames": [
         {
+          "language": "Chinese Simplified",
+          "name": "海岛",
+          "multiverseid": 383565
+        },
+        {
           "language": "Chinese Traditional",
           "name": "海島",
           "multiverseid": 383849
@@ -30510,6 +30534,21 @@
           "language": "French",
           "name": "Île",
           "multiverseid": 384417
+        },
+        {
+          "language": "French",
+          "name": "Île",
+          "multiverseid": 384418
+        },
+        {
+          "language": "French",
+          "name": "Île",
+          "multiverseid": 384419
+        },
+        {
+          "language": "French",
+          "name": "Île",
+          "multiverseid": 384420
         },
         {
           "language": "German",
@@ -30590,26 +30629,6 @@
           "language": "Korean",
           "name": "섬",
           "multiverseid": 385272
-        },
-        {
-          "language": "Spanish",
-          "name": "Isla",
-          "multiverseid": 386121
-        },
-        {
-          "language": "Spanish",
-          "name": "Isla",
-          "multiverseid": 386122
-        },
-        {
-          "language": "Spanish",
-          "name": "Isla",
-          "multiverseid": 386123
-        },
-        {
-          "language": "Spanish",
-          "name": "Isla",
-          "multiverseid": 386124
         }
       ],
       "id": "a3569e3634da7efad9a68cc05f8d8fe81c9960e9",
@@ -30845,7 +30864,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -30873,6 +30893,11 @@
       ],
       "foreignNames": [
         {
+          "language": "Chinese Simplified",
+          "name": "海岛",
+          "multiverseid": 383565
+        },
+        {
           "language": "Chinese Traditional",
           "name": "海島",
           "multiverseid": 383849
@@ -30896,6 +30921,21 @@
           "language": "French",
           "name": "Île",
           "multiverseid": 384417
+        },
+        {
+          "language": "French",
+          "name": "Île",
+          "multiverseid": 384418
+        },
+        {
+          "language": "French",
+          "name": "Île",
+          "multiverseid": 384419
+        },
+        {
+          "language": "French",
+          "name": "Île",
+          "multiverseid": 384420
         },
         {
           "language": "German",
@@ -30976,26 +31016,6 @@
           "language": "Korean",
           "name": "섬",
           "multiverseid": 385272
-        },
-        {
-          "language": "Spanish",
-          "name": "Isla",
-          "multiverseid": 386121
-        },
-        {
-          "language": "Spanish",
-          "name": "Isla",
-          "multiverseid": 386122
-        },
-        {
-          "language": "Spanish",
-          "name": "Isla",
-          "multiverseid": 386123
-        },
-        {
-          "language": "Spanish",
-          "name": "Isla",
-          "multiverseid": 386124
         }
       ],
       "id": "1007e982146cfb5b9f434b761fb66bdb57fb5c0d",
@@ -31231,7 +31251,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -31259,11 +31280,6 @@
       ],
       "foreignNames": [
         {
-          "language": "Chinese Simplified",
-          "name": "海岛",
-          "multiverseid": 383565
-        },
-        {
           "language": "Chinese Traditional",
           "name": "海島",
           "multiverseid": 383849
@@ -31287,21 +31303,6 @@
           "language": "French",
           "name": "Île",
           "multiverseid": 384417
-        },
-        {
-          "language": "French",
-          "name": "Île",
-          "multiverseid": 384418
-        },
-        {
-          "language": "French",
-          "name": "Île",
-          "multiverseid": 384419
-        },
-        {
-          "language": "French",
-          "name": "Île",
-          "multiverseid": 384420
         },
         {
           "language": "German",
@@ -31382,6 +31383,26 @@
           "language": "Korean",
           "name": "섬",
           "multiverseid": 385272
+        },
+        {
+          "language": "Spanish",
+          "name": "Isla",
+          "multiverseid": 386121
+        },
+        {
+          "language": "Spanish",
+          "name": "Isla",
+          "multiverseid": 386122
+        },
+        {
+          "language": "Spanish",
+          "name": "Isla",
+          "multiverseid": 386123
+        },
+        {
+          "language": "Spanish",
+          "name": "Isla",
+          "multiverseid": 386124
         }
       ],
       "id": "a59d79f188eca6f9b98c4e05ec4ef081378c9bc2",
@@ -31617,7 +31638,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -32883,21 +32905,6 @@
           "multiverseid": 384828
         },
         {
-          "language": "Italian",
-          "name": "Palude",
-          "multiverseid": 384829
-        },
-        {
-          "language": "Italian",
-          "name": "Palude",
-          "multiverseid": 384830
-        },
-        {
-          "language": "Italian",
-          "name": "Palude",
-          "multiverseid": 384831
-        },
-        {
           "language": "Japanese",
           "name": "沼",
           "multiverseid": 385112
@@ -32938,9 +32945,24 @@
           "multiverseid": 385399
         },
         {
-          "language": "Russian",
-          "name": "Болото",
-          "multiverseid": 385964
+          "language": "Spanish",
+          "name": "Pantano",
+          "multiverseid": 386248
+        },
+        {
+          "language": "Spanish",
+          "name": "Pantano",
+          "multiverseid": 386249
+        },
+        {
+          "language": "Spanish",
+          "name": "Pantano",
+          "multiverseid": 386250
+        },
+        {
+          "language": "Spanish",
+          "name": "Pantano",
+          "multiverseid": 386251
         }
       ],
       "id": "84c2557ce59762a6eb252cb5c065e2b9958ef803",
@@ -33234,6 +33256,21 @@
           "multiverseid": 384451
         },
         {
+          "language": "French",
+          "name": "Montagne",
+          "multiverseid": 384452
+        },
+        {
+          "language": "French",
+          "name": "Montagne",
+          "multiverseid": 384453
+        },
+        {
+          "language": "French",
+          "name": "Montagne",
+          "multiverseid": 384454
+        },
+        {
           "language": "German",
           "name": "Gebirge",
           "multiverseid": 384167
@@ -33314,24 +33351,9 @@
           "multiverseid": 385306
         },
         {
-          "language": "Spanish",
-          "name": "Montaña",
-          "multiverseid": 386155
-        },
-        {
-          "language": "Spanish",
-          "name": "Montaña",
-          "multiverseid": 386156
-        },
-        {
-          "language": "Spanish",
-          "name": "Montaña",
-          "multiverseid": 386157
-        },
-        {
-          "language": "Spanish",
-          "name": "Montaña",
-          "multiverseid": 386158
+          "language": "Portuguese (Brazil)",
+          "name": "Montanha",
+          "multiverseid": 385587
         }
       ],
       "id": "a4b5e8446bce93a7cd1857799031eef4d6985e9f",
@@ -33573,7 +33595,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -33624,6 +33647,21 @@
           "language": "French",
           "name": "Montagne",
           "multiverseid": 384451
+        },
+        {
+          "language": "French",
+          "name": "Montagne",
+          "multiverseid": 384452
+        },
+        {
+          "language": "French",
+          "name": "Montagne",
+          "multiverseid": 384453
+        },
+        {
+          "language": "French",
+          "name": "Montagne",
+          "multiverseid": 384454
         },
         {
           "language": "German",
@@ -33706,24 +33744,9 @@
           "multiverseid": 385306
         },
         {
-          "language": "Spanish",
-          "name": "Montaña",
-          "multiverseid": 386155
-        },
-        {
-          "language": "Spanish",
-          "name": "Montaña",
-          "multiverseid": 386156
-        },
-        {
-          "language": "Spanish",
-          "name": "Montaña",
-          "multiverseid": 386157
-        },
-        {
-          "language": "Spanish",
-          "name": "Montaña",
-          "multiverseid": 386158
+          "language": "Portuguese (Brazil)",
+          "name": "Montanha",
+          "multiverseid": 385587
         }
       ],
       "id": "76865a4949afc8292d7a9ab29948568ac4d5e0cd",
@@ -33965,7 +33988,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -34357,7 +34381,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -34749,7 +34774,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -35662,24 +35688,24 @@
           "multiverseid": 385229
         },
         {
-          "language": "Spanish",
-          "name": "Bosque",
-          "multiverseid": 386081
+          "language": "Korean",
+          "name": "숲",
+          "multiverseid": 385230
         },
         {
-          "language": "Spanish",
-          "name": "Bosque",
-          "multiverseid": 386082
+          "language": "Korean",
+          "name": "숲",
+          "multiverseid": 385231
         },
         {
-          "language": "Spanish",
-          "name": "Bosque",
-          "multiverseid": 386083
+          "language": "Korean",
+          "name": "숲",
+          "multiverseid": 385232
         },
         {
-          "language": "Spanish",
-          "name": "Bosque",
-          "multiverseid": 386084
+          "language": "Portuguese (Brazil)",
+          "name": "Floresta",
+          "multiverseid": 385513
         }
       ],
       "id": "4dc1f2c554d461d73f4dc9acb043a719cabb513d",
@@ -36407,10 +36433,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -36532,6 +36554,10 @@
         },
         {
           "format": "Modern",
+          "legality": "Legal"
+        },
+        {
+          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -36830,7 +36856,8 @@
         "W16",
         "EMA",
         "W17",
-        "CMA"
+        "CMA",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "starter": true,
@@ -37100,7 +37127,8 @@
         "DPA",
         "ME4",
         "M15",
-        "ORI"
+        "ORI",
+        "IMA"
       ],
       "rarity": "Rare",
       "starter": true,
@@ -37492,10 +37520,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -37628,7 +37652,8 @@
         "M13",
         "M15",
         "DD3_JVC",
-        "CMA"
+        "CMA",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "starter": true,

@@ -375,20 +375,21 @@
       "originalText": "At the beginning of each end step, if you gained 4 or more life this turn, put a 4/4 white Angel creature token with flying onto the battlefield.",
       "originalType": "Enchantment",
       "printings": [
-        "M14"
+        "M14",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2013-07-01",
+          "date": "2017-11-17",
           "text": "Angelic Accord's ability checks how much life you've gained during the turn, not what your life total is compared to what it was when the turn began. For example, if you start the turn at 10 life, gain 6 life during the turn, then lose 6 life later that turn, the ability will trigger."
         },
         {
-          "date": "2013-07-01",
+          "date": "2017-11-17",
           "text": "If you haven't gained 4 or more life during the turn when the end step begins, the ability won't trigger at all. Gaining life during the end step won't cause the ability to trigger."
         },
         {
-          "date": "2013-07-01",
+          "date": "2017-11-17",
           "text": "In a Two-Headed Giant game, life gained by your teammate isn't considered, even though it causes your team's life total to increase."
         }
       ],
@@ -607,20 +608,25 @@
       "originalType": "Creature — Angel",
       "power": "3",
       "printings": [
-        "M14"
+        "M14",
+        "IMA"
       ],
       "rarity": "Mythic Rare",
       "rulings": [
         {
-          "date": "2013-07-01",
-          "text": "The ability triggers just once from each life-gaining event, whether it's 1 life from Soulmender or 5 life from Elixir of Immortality."
+          "date": "2017-11-17",
+          "text": "Archangel of Thune's last ability triggers just once for each life-gaining event, whether it's 1 life from Auriok Champion or 6 life from Tavern Swindler."
         },
         {
-          "date": "2013-07-01",
-          "text": "A creature with lifelink dealing combat damage is a single life-gaining event. For example, if two creatures you control with lifelink deal combat damage at the same time, Archangel of Thune's ability will trigger twice. However, if a single creature with lifelink deals combat damage to multiple creatures, players, and/or planeswalkers at the same time (perhaps because it has trample or was blocked by more than one creature), the ability will trigger only once."
+          "date": "2017-11-17",
+          "text": "If a creature you control is dealt lethal damage at the same time that you gain life, it won't receive a counter from Archangel of Thune's last ability in time to save it."
         },
         {
-          "date": "2013-07-01",
+          "date": "2017-11-17",
+          "text": "Each creature with lifelink dealing combat damage causes a separate life-gaining event. For example, if two creatures you control with lifelink deal combat damage at the same time, Archangel of Thune's last ability will trigger twice. However, if a single creature you control with lifelink deals combat damage to multiple creatures, players, and/or planeswalkers at the same time (perhaps because it has trample or was blocked by more than one creature), the ability will trigger only once."
+        },
+        {
+          "date": "2017-11-17",
           "text": "In a Two-Headed Giant game, life gained by your teammate won't cause the ability to trigger, even though it causes your team's life total to increase."
         }
       ],
@@ -3026,25 +3032,26 @@
       "originalText": "As long your life total is greater than or equal to your starting life total, creatures you control get +1/+1.Whenever one or more creatures you control attack, you gain life equal to the number of attacking creatures.",
       "originalType": "Enchantment",
       "printings": [
-        "M14"
+        "M14",
+        "IMA"
       ],
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2013-07-01",
-          "text": "Your starting life total is the life total you began the game with, keeping in mind the format you're playing and, in some rare cases, anything that affects your starting life total (for example, a vanguard with a life modifier)."
+          "date": "2017-11-17",
+          "text": "Your starting life total is the life total you began the game with. For most two-player formats, this is 20. For Two-Headed Giant, it's the life total your team started with, usually 30. In Commander games, your starting life total is 40."
         },
         {
-          "date": "2013-07-01",
-          "text": "In most games, your starting life total is 20. In a Commander game, your starting life total is 40 instead. In a Two-Headed Giant game, Path of Bravery compares your team's life total to your team's starting life total, which is 30."
+          "date": "2017-11-17",
+          "text": "If a creature you control is dealt damage at the same time that you gain life (most likely because a source you control with lifelink deals damage at the same time), and your life total becomes greater than or equal to your starting life total, apply Path of Bravery's effect before considering whether or not the damage dealt to that creature is lethal."
         },
         {
-          "date": "2013-07-01",
-          "text": "Path of Bravery's triggered ability triggers only once, after attacking creatures are declared. For example, if you attack with five creatures, you'll gain 5 life as a single life-gain event."
+          "date": "2017-11-17",
+          "text": "Path of Bravery's triggered ability triggers only once, after attacking creatures are declared. For example, if you attack with five creatures, you'll gain 5 life as a single event."
         },
         {
-          "date": "2013-07-01",
-          "text": "If a creature enters the battlefield attacking after attacking creatures have been declared, the ability won't trigger again because you didn't declare that creature as an attacking creature. However, if enters the battlefield before the ability resolves, it will be counted when determining how much life is gained."
+          "date": "2017-11-17",
+          "text": "If a creature enters the battlefield attacking after attacking creatures have been declared, the ability won't trigger again because you didn't declare that creature as an attacking creature. However, if such a creature enters the battlefield before the ability resolves, it will be counted when determining how much life is gained."
         }
       ],
       "text": "As long as your life total is greater than or equal to your starting life total, creatures you control get +1/+1.\nWhenever one or more creatures you control attack, you gain life equal to the number of attacking creatures.",
@@ -3730,7 +3737,8 @@
         "W16",
         "EMA",
         "W17",
-        "CMA"
+        "CMA",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "subtypes": [
@@ -4815,10 +4823,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -5313,7 +5317,9 @@
         "ISD",
         "M14",
         "DDM",
-        "ORI"
+        "ORI",
+        "DDT",
+        "IMA"
       ],
       "rarity": "Common",
       "rulings": [
@@ -5705,6 +5711,10 @@
           "legality": "Legal"
         },
         {
+          "format": "Standard",
+          "legality": "Legal"
+        },
+        {
           "format": "Urza Block",
           "legality": "Legal"
         },
@@ -5922,10 +5932,6 @@
         },
         {
           "format": "Scars of Mirrodin Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -6424,7 +6430,8 @@
         "DPA",
         "M13",
         "M14",
-        "AKH"
+        "AKH",
+        "DDT"
       ],
       "rarity": "Common",
       "rulings": [
@@ -8055,7 +8062,8 @@
         "M11",
         "DDI",
         "M13",
-        "M14"
+        "M14",
+        "DDT"
       ],
       "rarity": "Common",
       "rulings": [
@@ -8508,7 +8516,8 @@
       "originalType": "Creature — Merfolk Wizard",
       "power": "2",
       "printings": [
-        "M14"
+        "M14",
+        "DDT"
       ],
       "rarity": "Rare",
       "rulings": [
@@ -9742,10 +9751,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -10225,17 +10230,14 @@
       "originalType": "Creature — Human Wizard",
       "power": "1",
       "printings": [
-        "M14"
+        "M14",
+        "IMA"
       ],
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2013-07-01",
-          "text": "You don't have to declare which card you're searching for when you activate the ability."
-        },
-        {
-          "date": "2013-07-01",
-          "text": "You put only one card onto the battlefield as the activated ability resolves."
+          "date": "2017-11-17",
+          "text": "You don't have to declare which card you're searching for when you activate Bogbrew Witch's ability. You may find either while you're searching."
         }
       ],
       "subtypes": [
@@ -10347,7 +10349,8 @@
         "DDK",
         "M14",
         "M15",
-        "CN2"
+        "CN2",
+        "IMA"
       ],
       "rarity": "Common",
       "subtypes": [
@@ -11138,7 +11141,8 @@
         "M12",
         "M14",
         "DDR",
-        "E01"
+        "E01",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "text": "Destroy target nonblack creature.",
@@ -11265,7 +11269,8 @@
         "DD3_DVD",
         "DTK",
         "EMA",
-        "XLN"
+        "XLN",
+        "IMA"
       ],
       "rarity": "Common",
       "text": "Target opponent reveals his or her hand. You choose a noncreature, nonland card from it. That player discards that card.",
@@ -11366,13 +11371,14 @@
       "originalType": "Creature — Salamander",
       "power": "1",
       "printings": [
-        "M14"
+        "M14",
+        "IMA"
       ],
       "rarity": "Common",
       "rulings": [
         {
-          "date": "2013-07-01",
-          "text": "Whether you control a creature named Bogbrew Witch is checked only as the triggered ability resolves."
+          "date": "2017-11-17",
+          "text": "Whether you control a creature named Bogbrew Witch is checked only as the triggered ability resolves. How the target creature is affected won't change if you gain or lose control of all your Bogbrew Witches later in the turn."
         }
       ],
       "subtypes": [
@@ -12971,7 +12977,8 @@
         "M10",
         "M14",
         "C13",
-        "C17"
+        "C17",
+        "IMA"
       ],
       "rarity": "Rare",
       "rulings": [
@@ -15902,7 +15909,8 @@
       "power": "0",
       "printings": [
         "M14",
-        "EMA"
+        "EMA",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "subtypes": [
@@ -16340,7 +16348,8 @@
       "power": "2",
       "printings": [
         "pMGD",
-        "M14"
+        "M14",
+        "DDT"
       ],
       "rarity": "Rare",
       "rulings": [
@@ -17459,13 +17468,18 @@
       "power": "4",
       "printings": [
         "M14",
-        "C17"
+        "C17",
+        "IMA"
       ],
       "rarity": "Mythic Rare",
       "rulings": [
         {
-          "date": "2013-07-01",
+          "date": "2017-11-17",
           "text": "The amount of damage dealt by the Dragon that entered the battlefield is based on the number of Dragons you control when the ability resolves."
+        },
+        {
+          "date": "2017-11-17",
+          "text": "If a Dragon entering the battlefield causes Scourge of Valkas's ability to trigger but leaves the battlefield before that ability resolves, that Dragon still deals damage."
         }
       ],
       "subtypes": [
@@ -19631,13 +19645,14 @@
       "originalText": "Target creature gets +7/+7 and gains trample until end of turn. It must be blocked this turn if able. (If a creature with trample would assign enough damage to its blockers to destroy them, you may have it assign the rest of its damage to defending player or planeswalker.)",
       "originalType": "Sorcery",
       "printings": [
-        "M14"
+        "M14",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2013-07-01",
-          "text": "If the creature attacks, the defending player must assign at least one blocker to it during the declare blockers step if that player controls any creatures that could block it."
+          "date": "2017-11-17",
+          "text": "If the creature attacks, the defending player must assign at least one blocker to it during the declare blockers step if that player controls any creatures that could block it. Other creatures that player controls can block other attackers or not block at all."
         }
       ],
       "text": "Target creature gets +7/+7 and gains trample until end of turn. It must be blocked this turn if able. (If a creature with trample would assign enough damage to its blockers to destroy them, you may have it assign the rest of its damage to defending player or planeswalker.)",
@@ -19961,6 +19976,10 @@
         },
         {
           "format": "Modern",
+          "legality": "Legal"
+        },
+        {
+          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -20742,21 +20761,22 @@
         "M14",
         "M15",
         "FRF",
-        "KLD"
+        "KLD",
+        "IMA"
       ],
       "rarity": "Common",
       "rulings": [
         {
-          "date": "2016-09-20",
+          "date": "2017-11-17",
           "text": "You can't cast Hunt the Weak unless you choose both a creature you control and a creature you don't control as targets."
         },
         {
-          "date": "2016-09-20",
-          "text": "If either target is an illegal target as Hunt the Weak resolves, neither creature will deal or be dealt damage."
+          "date": "2017-11-17",
+          "text": "If either target is an illegal target as Hunt the Weak tries to resolve, neither creature will deal or be dealt damage."
         },
         {
-          "date": "2016-09-20",
-          "text": "If the creature you control is an illegal target as Hunt the Weak tries to resolve, you won't put a +1/+1 counter on it. If that creature is a legal target but the other creature isn't, you'll still put the counter on the creature you control."
+          "date": "2017-11-17",
+          "text": "If the creature you control is an illegal target as Hunt the Weak tries to resolve, you won't put a +1/+1 counter on it. If that creature is a legal target but the creature you don't control isn't, you'll still put the counter on the creature you control."
         }
       ],
       "text": "Put a +1/+1 counter on target creature you control. Then that creature fights target creature you don't control. (Each deals damage equal to its power to the other.)",
@@ -21762,10 +21782,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -22199,6 +22215,10 @@
         },
         {
           "format": "Modern",
+          "legality": "Legal"
+        },
+        {
+          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -23667,7 +23687,8 @@
       "originalText": "{1}, {T}, Sacrifice a creature: You gain 4 life.{1}, {T}, Sacrifice a creature named Festering Newt: Each opponent loses 4 life. You gain life equal to the life lost this way.",
       "originalType": "Artifact",
       "printings": [
-        "M14"
+        "M14",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "text": "{1}, {T}, Sacrifice a creature: You gain 4 life.\n{1}, {T}, Sacrifice a creature named Festering Newt: Each opponent loses 4 life. You gain life equal to the life lost this way.",
@@ -26266,7 +26287,8 @@
         "M14",
         "CN2",
         "PCA",
-        "MM3"
+        "MM3",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "text": "{T}: Add {C} to your mana pool.\n{1}, {T}: Add one mana of any color to your mana pool.",
@@ -26282,11 +26304,6 @@
         "W"
       ],
       "foreignNames": [
-        {
-          "language": "Chinese Simplified",
-          "name": "平原",
-          "multiverseid": 370864
-        },
         {
           "language": "Chinese Traditional",
           "name": "平原",
@@ -26373,21 +26390,6 @@
           "multiverseid": 372109
         },
         {
-          "language": "Japanese",
-          "name": "平地",
-          "multiverseid": 372163
-        },
-        {
-          "language": "Japanese",
-          "name": "平地",
-          "multiverseid": 372173
-        },
-        {
-          "language": "Japanese",
-          "name": "平地",
-          "multiverseid": 372248
-        },
-        {
           "language": "Korean",
           "name": "들",
           "multiverseid": 372358
@@ -26406,6 +26408,26 @@
           "language": "Korean",
           "name": "들",
           "multiverseid": 372497
+        },
+        {
+          "language": "Spanish",
+          "name": "Llanura",
+          "multiverseid": 373105
+        },
+        {
+          "language": "Spanish",
+          "name": "Llanura",
+          "multiverseid": 373159
+        },
+        {
+          "language": "Spanish",
+          "name": "Llanura",
+          "multiverseid": 373169
+        },
+        {
+          "language": "Spanish",
+          "name": "Llanura",
+          "multiverseid": 373244
         }
       ],
       "id": "54ed001196351b7de6ff5ae46a4fb01743165a04",
@@ -26671,11 +26693,6 @@
       ],
       "foreignNames": [
         {
-          "language": "Chinese Simplified",
-          "name": "平原",
-          "multiverseid": 370864
-        },
-        {
           "language": "Chinese Traditional",
           "name": "平原",
           "multiverseid": 371113
@@ -26761,21 +26778,6 @@
           "multiverseid": 372109
         },
         {
-          "language": "Japanese",
-          "name": "平地",
-          "multiverseid": 372163
-        },
-        {
-          "language": "Japanese",
-          "name": "平地",
-          "multiverseid": 372173
-        },
-        {
-          "language": "Japanese",
-          "name": "平地",
-          "multiverseid": 372248
-        },
-        {
           "language": "Korean",
           "name": "들",
           "multiverseid": 372358
@@ -26794,6 +26796,26 @@
           "language": "Korean",
           "name": "들",
           "multiverseid": 372497
+        },
+        {
+          "language": "Spanish",
+          "name": "Llanura",
+          "multiverseid": 373105
+        },
+        {
+          "language": "Spanish",
+          "name": "Llanura",
+          "multiverseid": 373159
+        },
+        {
+          "language": "Spanish",
+          "name": "Llanura",
+          "multiverseid": 373169
+        },
+        {
+          "language": "Spanish",
+          "name": "Llanura",
+          "multiverseid": 373244
         }
       ],
       "id": "7a5049d97b4d4495547300eca38c67cc667446d9",
@@ -27447,11 +27469,6 @@
       ],
       "foreignNames": [
         {
-          "language": "Chinese Simplified",
-          "name": "平原",
-          "multiverseid": 370864
-        },
-        {
           "language": "Chinese Traditional",
           "name": "平原",
           "multiverseid": 371113
@@ -27537,21 +27554,6 @@
           "multiverseid": 372109
         },
         {
-          "language": "Japanese",
-          "name": "平地",
-          "multiverseid": 372163
-        },
-        {
-          "language": "Japanese",
-          "name": "平地",
-          "multiverseid": 372173
-        },
-        {
-          "language": "Japanese",
-          "name": "平地",
-          "multiverseid": 372248
-        },
-        {
           "language": "Korean",
           "name": "들",
           "multiverseid": 372358
@@ -27570,6 +27572,26 @@
           "language": "Korean",
           "name": "들",
           "multiverseid": 372497
+        },
+        {
+          "language": "Spanish",
+          "name": "Llanura",
+          "multiverseid": 373105
+        },
+        {
+          "language": "Spanish",
+          "name": "Llanura",
+          "multiverseid": 373159
+        },
+        {
+          "language": "Spanish",
+          "name": "Llanura",
+          "multiverseid": 373169
+        },
+        {
+          "language": "Spanish",
+          "name": "Llanura",
+          "multiverseid": 373244
         }
       ],
       "id": "a8b6293ac379ca9745d45c8696c97ff7de51e8b4",
@@ -28193,7 +28215,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -28579,7 +28602,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -28965,7 +28989,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -29351,7 +29376,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -30226,6 +30252,21 @@
           "multiverseid": 371948
         },
         {
+          "language": "Italian",
+          "name": "Palude",
+          "multiverseid": 371972
+        },
+        {
+          "language": "Italian",
+          "name": "Palude",
+          "multiverseid": 371976
+        },
+        {
+          "language": "Italian",
+          "name": "Palude",
+          "multiverseid": 372030
+        },
+        {
           "language": "Japanese",
           "name": "沼",
           "multiverseid": 372197
@@ -30266,24 +30307,9 @@
           "multiverseid": 372528
         },
         {
-          "language": "Spanish",
-          "name": "Pantano",
-          "multiverseid": 373193
-        },
-        {
-          "language": "Spanish",
-          "name": "Pantano",
-          "multiverseid": 373217
-        },
-        {
-          "language": "Spanish",
-          "name": "Pantano",
-          "multiverseid": 373221
-        },
-        {
-          "language": "Spanish",
-          "name": "Pantano",
-          "multiverseid": 373275
+          "language": "Russian",
+          "name": "Болото",
+          "multiverseid": 372944
         }
       ],
       "id": "a8964adf0908a2a41a0a2b4c9a32a213e7b42cb6",
@@ -30617,6 +30643,21 @@
           "multiverseid": 371948
         },
         {
+          "language": "Italian",
+          "name": "Palude",
+          "multiverseid": 371972
+        },
+        {
+          "language": "Italian",
+          "name": "Palude",
+          "multiverseid": 371976
+        },
+        {
+          "language": "Italian",
+          "name": "Palude",
+          "multiverseid": 372030
+        },
+        {
           "language": "Japanese",
           "name": "沼",
           "multiverseid": 372197
@@ -30657,24 +30698,9 @@
           "multiverseid": 372528
         },
         {
-          "language": "Spanish",
-          "name": "Pantano",
-          "multiverseid": 373193
-        },
-        {
-          "language": "Spanish",
-          "name": "Pantano",
-          "multiverseid": 373217
-        },
-        {
-          "language": "Spanish",
-          "name": "Pantano",
-          "multiverseid": 373221
-        },
-        {
-          "language": "Spanish",
-          "name": "Pantano",
-          "multiverseid": 373275
+          "language": "Russian",
+          "name": "Болото",
+          "multiverseid": 372944
         }
       ],
       "id": "5adcf08c7a990d64b6d24870dfae5a7e14f0ca6a",
@@ -30968,6 +30994,21 @@
           "multiverseid": 371579
         },
         {
+          "language": "French",
+          "name": "Montagne",
+          "multiverseid": 371584
+        },
+        {
+          "language": "French",
+          "name": "Montagne",
+          "multiverseid": 371587
+        },
+        {
+          "language": "French",
+          "name": "Montagne",
+          "multiverseid": 371721
+        },
+        {
           "language": "German",
           "name": "Gebirge",
           "multiverseid": 371330
@@ -31048,24 +31089,9 @@
           "multiverseid": 372468
         },
         {
-          "language": "Spanish",
-          "name": "Montaña",
-          "multiverseid": 373073
-        },
-        {
-          "language": "Spanish",
-          "name": "Montaña",
-          "multiverseid": 373078
-        },
-        {
-          "language": "Spanish",
-          "name": "Montaña",
-          "multiverseid": 373081
-        },
-        {
-          "language": "Spanish",
-          "name": "Montaña",
-          "multiverseid": 373215
+          "language": "Portuguese (Brazil)",
+          "name": "Montanha",
+          "multiverseid": 372575
         }
       ],
       "id": "1b479677977e3c00f34531fc0635b34ee1ae898e",
@@ -31307,7 +31333,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -31358,6 +31385,21 @@
           "language": "French",
           "name": "Montagne",
           "multiverseid": 371579
+        },
+        {
+          "language": "French",
+          "name": "Montagne",
+          "multiverseid": 371584
+        },
+        {
+          "language": "French",
+          "name": "Montagne",
+          "multiverseid": 371587
+        },
+        {
+          "language": "French",
+          "name": "Montagne",
+          "multiverseid": 371721
         },
         {
           "language": "German",
@@ -31440,24 +31482,9 @@
           "multiverseid": 372468
         },
         {
-          "language": "Spanish",
-          "name": "Montaña",
-          "multiverseid": 373073
-        },
-        {
-          "language": "Spanish",
-          "name": "Montaña",
-          "multiverseid": 373078
-        },
-        {
-          "language": "Spanish",
-          "name": "Montaña",
-          "multiverseid": 373081
-        },
-        {
-          "language": "Spanish",
-          "name": "Montaña",
-          "multiverseid": 373215
+          "language": "Portuguese (Brazil)",
+          "name": "Montanha",
+          "multiverseid": 372575
         }
       ],
       "id": "77c4c40c3b918b2c0887503ab5fdf0d8781f7503",
@@ -31699,7 +31726,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -32091,7 +32119,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -32483,7 +32512,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -32616,24 +32646,24 @@
           "multiverseid": 372341
         },
         {
-          "language": "Spanish",
-          "name": "Bosque",
-          "multiverseid": 373088
+          "language": "Korean",
+          "name": "숲",
+          "multiverseid": 372472
         },
         {
-          "language": "Spanish",
-          "name": "Bosque",
-          "multiverseid": 373219
+          "language": "Korean",
+          "name": "숲",
+          "multiverseid": 372499
         },
         {
-          "language": "Spanish",
-          "name": "Bosque",
-          "multiverseid": 373246
+          "language": "Korean",
+          "name": "숲",
+          "multiverseid": 372514
         },
         {
-          "language": "Spanish",
-          "name": "Bosque",
-          "multiverseid": 373261
+          "language": "Portuguese (Brazil)",
+          "name": "Floresta",
+          "multiverseid": 372590
         }
       ],
       "id": "5e785f572e6b75f6f945c8b9161c15cd49e6c0b4",
@@ -33786,24 +33816,24 @@
           "multiverseid": 372341
         },
         {
-          "language": "Spanish",
-          "name": "Bosque",
-          "multiverseid": 373088
+          "language": "Korean",
+          "name": "숲",
+          "multiverseid": 372472
         },
         {
-          "language": "Spanish",
-          "name": "Bosque",
-          "multiverseid": 373219
+          "language": "Korean",
+          "name": "숲",
+          "multiverseid": 372499
         },
         {
-          "language": "Spanish",
-          "name": "Bosque",
-          "multiverseid": 373246
+          "language": "Korean",
+          "name": "숲",
+          "multiverseid": 372514
         },
         {
-          "language": "Spanish",
-          "name": "Bosque",
-          "multiverseid": 373261
+          "language": "Portuguese (Brazil)",
+          "name": "Floresta",
+          "multiverseid": 372590
         }
       ],
       "id": "4c2f27035403ba5ecc9820783e53a2a56ab1473c",

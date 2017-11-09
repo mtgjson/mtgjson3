@@ -8900,7 +8900,8 @@
         "pFNM",
         "SCG",
         "C14",
-        "C17"
+        "C17",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
@@ -9478,7 +9479,8 @@
         "8ED",
         "PC2",
         "C14",
-        "PCA"
+        "PCA",
+        "DDT"
       ],
       "rarity": "Uncommon",
       "text": "Draw three cards.",
@@ -10154,13 +10156,14 @@
         "CMD",
         "M13",
         "C13",
-        "C14"
+        "C14",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2012-07-01",
-          "text": "If Fog Bank blocks a creature with trample, that creature's controller must assign 2 damage to Fog Bank (assuming it's blocking no other creatures, there was no damage marked on it, and nothing has changed its toughness). The remainder can be assigned to the defending player or planeswalker."
+          "date": "2017-11-17",
+          "text": "Fog Bank's prevention effect isn't considered while assigning combat damage from a creature with trample. For example, if it blocks a 5/5 creature with trample, that creature's controller must assign 2 of that creature's combat damage to Fog Bank and the remainder can be assigned to the defending player or planeswalker."
         }
       ],
       "subtypes": [
@@ -11935,24 +11938,21 @@
         "DDI",
         "M13",
         "DDN",
-        "C14"
+        "C14",
+        "IMA"
       ],
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2011-09-22",
+          "date": "2017-11-17",
           "text": "You (not your opponent) choose which pile to put into your hand and which to put into your graveyard."
         },
         {
-          "date": "2011-09-22",
+          "date": "2017-11-17",
           "text": "A pile can have no cards in it. In this case, you'll choose whether to put all the revealed cards into your hand or into your graveyard."
         },
         {
-          "date": "2011-09-22",
-          "text": "If your library has fewer than five cards, you reveal all the cards in it, then your opponent separates them into two piles."
-        },
-        {
-          "date": "2011-09-22",
+          "date": "2017-11-17",
           "text": "In multiplayer games, you choose an opponent to separate the cards when the ability resolves. This doesn't target that opponent. Because the cards are revealed, all players may see the cards and offer opinions."
         }
       ],
@@ -12345,37 +12345,34 @@
       "power": "6",
       "printings": [
         "WWK",
-        "C14"
+        "C14",
+        "IMA"
       ],
       "rarity": "Mythic Rare",
       "rulings": [
         {
-          "date": "2010-03-01",
+          "date": "2017-11-17",
           "text": "No game effect can cause you to win the game or cause any opponent to lose the game while you control Abyssal Persecutor. It doesn't matter whether an opponent has 0 or less life, an opponent is forced to draw a card while his or her library is empty, an opponent has ten or more poison counters, an opponent is dealt combat damage by Phage the Untouchable, you control Felidar Sovereign and have 40 or more life, or so on. You keep playing."
         },
         {
-          "date": "2010-03-01",
-          "text": "Other circumstances can still cause an opponent to lose the game, however. An opponent will lose a game if he or she concedes, if that player is penalized with a Game Loss or a Match Loss during a sanctioned tournament due to a DCI rules infraction, or if that player's _Magic Online_(R) game clock runs out of time."
+          "date": "2017-11-17",
+          "text": "Other circumstances can still cause an opponent to lose the game, however. An opponent will lose a game if he or she concedes, if that player is penalized with a Game Loss or a Match Loss during a sanctioned tournament due to a DCI rules infraction, or if that player's Magic Online® game clock runs out of time."
         },
         {
-          "date": "2010-03-01",
+          "date": "2017-11-17",
           "text": "Effects that say the game is a draw, such as the _Legends_(TM) card Divine Intervention, are not affected by Abyssal Persecutor."
         },
         {
-          "date": "2010-03-01",
+          "date": "2017-11-17",
           "text": "Abyssal Persecutor won't preclude an opponent's life total from reaching 0 or less. It will just preclude that player from losing the game as a result."
         },
         {
-          "date": "2010-03-01",
+          "date": "2017-11-17",
           "text": "If Abyssal Persecutor leaves the battlefield while an opponent has 0 or less life, that opponent will lose the game as a state-based action. No player can respond between the time Abyssal Persecutor leaves the battlefield and the time that player loses the game."
         },
         {
-          "date": "2010-03-01",
+          "date": "2017-11-17",
           "text": "Even though your opponents can't lose the game, a player can't pay an amount of life that's greater than his or her life total. If a player's life total is 0 or less, that player can't pay life at all, with one exception: a player may always pay 0 life."
-        },
-        {
-          "date": "2010-03-01",
-          "text": "If you control Abyssal Persecutor in a Two-Headed Giant game, your team can't win the game and the opposing team can't lose the game."
         }
       ],
       "subtypes": [
@@ -16348,13 +16345,22 @@
         "DRB",
         "M10",
         "DDG",
-        "C14"
+        "C14",
+        "IMA"
       ],
       "rarity": "Mythic Rare",
       "rulings": [
         {
-          "date": "2009-10-01",
-          "text": "The number of targets chosen for the enters-the-battlefield ability must be at least 1 and at most 5. You divide the damage as you put the ability on the stack, not as it resolves. Each target must be assigned at least 1 damage."
+          "date": "2017-11-17",
+          "text": "You choose how many targets Bogardan Hellkite's triggered ability has and how the damage is divided as you put the ability onto the stack. Each target must receive at least 1 damage."
+        },
+        {
+          "date": "2017-11-17",
+          "text": "You can't deal damage with Bogardan Hellkite's triggered ability to both a player and a planeswalker that player controls. You also can't deal damage to more than one planeswalker controlled by the same player. If you choose to redirect the damage being dealt to a player to a planeswalker, you must redirect all the damage to a single planeswalker."
+        },
+        {
+          "date": "2017-11-17",
+          "text": "If some of the creatures or players are illegal targets as Bogardan Hellkite's triggered ability tries to resolve, the original division of damage still applies and the damage that would have been dealt to the illegal targets is lost. It won't be dealt instead to a legal target."
         }
       ],
       "subtypes": [
@@ -20156,7 +20162,8 @@
         "C13",
         "C14",
         "CMA",
-        "E01"
+        "E01",
+        "IMA"
       ],
       "rarity": "Mythic Rare",
       "rulings": [
@@ -20422,10 +20429,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -23669,7 +23672,8 @@
         "C14",
         "DD3_JVC",
         "DDP",
-        "C15"
+        "C15",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "text": "{T}: Add {C} to your mana pool.\n{1}, {T}, Sacrifice Mind Stone: Draw a card.",
@@ -24365,7 +24369,8 @@
       "power": "2",
       "printings": [
         "SOM",
-        "C14"
+        "C14",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "subtypes": [
@@ -24714,10 +24719,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         },
@@ -24907,7 +24908,8 @@
         "pMGD",
         "NPH",
         "C13",
-        "C14"
+        "C14",
+        "IMA"
       ],
       "rarity": "Common",
       "rulings": [
@@ -26096,7 +26098,8 @@
         "UDS",
         "ARC",
         "V13",
-        "C14"
+        "C14",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "text": "{T}: Add {C}{C}{C} to your mana pool.",
@@ -27628,10 +27631,11 @@
         "C16",
         "AKH",
         "CMA",
-        "C17"
+        "C17",
+        "IMA"
       ],
       "rarity": "Common",
-      "text": "{T}, Sacrifice Evolving Wilds: Search your library for a basic land card and put it onto the battlefield tapped. Then shuffle your library.",
+      "text": "{T}, Sacrifice Evolving Wilds: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle your library.",
       "type": "Land",
       "types": [
         "Land"
@@ -27712,7 +27716,8 @@
         "C14",
         "DD3_EVG",
         "C15",
-        "CMA"
+        "CMA",
+        "DDT"
       ],
       "rarity": "Common",
       "rulings": [
@@ -28387,7 +28392,8 @@
         "DDJ",
         "C13",
         "VMA",
-        "C14"
+        "C14",
+        "DDT"
       ],
       "rarity": "Common",
       "rulings": [
@@ -31440,7 +31446,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -31821,7 +31828,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -32202,7 +32210,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -32583,7 +32592,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -34514,7 +34524,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -34901,7 +34912,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -35288,7 +35300,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -35675,7 +35688,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
