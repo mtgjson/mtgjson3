@@ -2,12 +2,13 @@
 
 var C = require('../shared/C'),
 	clone = require('clone'),
+	dust = require('dustjs-helpers'),
 	util = require("util"),
 	fs = require("fs"),
 	path = require("path"),
-	dustUtil = require('@sembiance/xutil').dust,
 	tiptoe = require("tiptoe"),
 	winston = require("winston");
+
 
 function usage()
 {
@@ -18,7 +19,9 @@ function usage()
 if(process.argv.length<3 || !process.argv[2].length)
 	usage();
 
-var targetSet = C.SETS.mutateOnce(function(SET) { if(SET.name.toLowerCase()===process.argv[2].toLowerCase() || SET.code.toLowerCase()===process.argv[2].toLowerCase()) { return SET; } });
+var targetSet = C.SETS.find(function(SET) {
+    return SET.name.toLowerCase() === process.argv[2].toLowerCase() || SET.code.toLowerCase() === process.argv[2].toLowerCase();
+})
 if(!targetSet)
 {
 	winston.error("Set %s not found!", process.argv[2]);
@@ -77,11 +80,11 @@ function renderSet(setRaw, original, cb)
 		card.symbolrarity = card.rarity==="Basic Land" ? "Common" : card.rarity;
 
 		if(card.text)
-			card.text = card.text.replaceAll("\n", "<br>");
+			card.text = card.text.replace(new RegExp("\n", "g"), "<br>");
 		if(card.originalText)
-			card.originalText = card.originalText.replaceAll("\n", "<br>");
+			card.originalText = card.originalText.replace(new RegExp("\n", "g"), "<br>");
 		if(card.flavor)
-			card.flavor = card.flavor.replaceAll("\n", "<br>");
+			card.flavor = card.flavor.replace(new RegExp("\n", "g"), "<br>");
 	});
 
 	var dustData =
@@ -91,5 +94,8 @@ function renderSet(setRaw, original, cb)
 		cards : set.cards
 	};
 
-	dustUtil.render(__dirname, "verify", dustData, cb);
+    fs.readFile(path.join(__dirname, "verify.dust"), {encoding:"utf8"}, function(err, data) {
+        if (err) cb(err);
+        dust.renderSource(data, dustData, cb);
+    })
 }

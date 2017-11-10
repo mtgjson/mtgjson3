@@ -1,11 +1,14 @@
 "use strict";
 
 var C = require('../shared/C'),
+	dust = require('dustjs-helpers'),
 	fs = require("fs"),
 	path = require("path"),
-	dustUtil = require('@sembiance/xutil').dust,
 	tiptoe = require("tiptoe"),
-	winston = require("winston");
+	winston = require("winston"),
+	async = require('async');
+
+require('@sembiance/xbase');
 
 var dustData =  {
 	title : "Spoilers"
@@ -98,7 +101,7 @@ function generateSpoilerForSetName(setName, lang, cb) {
 			dustData.cards = set.cards;
 			dustData.cards.forEach(function(card) {
 				// mtgicons set class
-				card.setClass = set.name.toLowerCase().replaceAll(' ', '-');
+				card.setClass = set.name.toLowerCase().replace(new RegExp(' ', 'g'), '-');
 				if (card.rarity.toLowerCase() !== "common")
 					card.setClass += ' ' + card.rarity.toLowerCase();
 
@@ -111,9 +114,13 @@ function generateSpoilerForSetName(setName, lang, cb) {
 
 				// Line breaks
 				if (card.text)
-					card.text = card.text.replaceAll('\n', '<br />').replaceAll('"', '&quot;');
+					card.text = card.text
+						.replace(new RegExp('\n', 'g'), '<br />')
+						.replace(new RegExp('"', 'g'), '&quot;');
 				if (card.flavor)
-					card.flavor = card.flavor.replaceAll('\n', '<br />').replaceAll('"', '&quot;');
+					card.flavor = card.flavor
+						.replace(new RegExp('\n', 'g'), '<br />')
+						.replace(new RegExp('"', 'g'), '&quot;');
 
 				// Other sets
 				card.printingLinks = [];
@@ -127,7 +134,7 @@ function generateSpoilerForSetName(setName, lang, cb) {
 							return;
 						}
 
-						var cssClass = set.name.toLowerCase().replace(/duel decks.*[,:] ?/, '').replaceAll(' ', '-').replace('.', '');
+						var cssClass = set.name.toLowerCase().replace(/duel decks.*[,:] ?/, '').replace(new RegExp(' ', 'g'), '-').replace('.', '');
 						if (printingCard.rarity)
 							if (printingCard.rarity.toLowerCase() !== "common")
 								cssClass += ' ' + printingCard.rarity.toLowerCase();
@@ -187,7 +194,10 @@ function generateSpoilerForSetName(setName, lang, cb) {
 				return(url);
 			}
 
-			dustUtil.render(__dirname, "spoiler", dustData, { keepWhitespace : true }, this);
+            fs.readFile(path.join(__dirname, "spoiler.dust"), {encoding:"utf8"}, function(err, data) {
+                if (err) cb(err);
+                dust.renderSource(data, dustData, cb);
+            });
 		},
 		function finish(err, html) {
 			if (err) throw(err);
@@ -197,7 +207,8 @@ function generateSpoilerForSetName(setName, lang, cb) {
 	);
 }
 
-C.SETS.serialForEach(
+async.eachSeries*
+    C.SETS,
 	function(setInfo, cb) {
 		var setName = setInfo.code;
 		if (setInfo.isMCISet) {
