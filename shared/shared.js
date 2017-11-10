@@ -663,7 +663,8 @@ exports.getURLAsDoc = function(targetURL, getCb) {
                 err = new Error('Server responded with statusCode: ' + response.statusCode);
             if (!err && (!body || body.length === 0))
                 err = new Error('No page contents');
-            if (!err && body.indexOf('Server Error') !== -1)
+            if (!err && (body.indexOf('Server Error') !== -1) ||
+                         body.indexOf('You Just Exploded the Internet.') !== -1 )
                 err = new Error('Gatherer Server Error despite statusCode: ' + response.statusCode);
             if (err) {
                 base.error('Error downloading: %s', targetURL);
