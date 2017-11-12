@@ -945,7 +945,7 @@ var compareCardToMCI = function(set, card, mciCardURL, cb) {
                     var cardFlavor = normalizeFlavor(card.flavor || "");
                     var mciFlavor;
                     if (mciCardDoc)
-                        mciFlavor = normalizeFlavor(processTextBlocks(mciCardDoc.querySelector("table tr td p i")));
+                        mciFlavor = normalizeFlavor(processTextBlocks([mciCardDoc.querySelector("table tr td p i")]));
                     if (!mciFlavor && cardFlavor)
                         winston.warn("FLAVOR: %s (%s) has flavor but MagicCardsInfo (%s) does not.", card.name, card.multiverseid, mciCardURL);
                     else if (mciFlavor && !cardFlavor)
@@ -1531,11 +1531,11 @@ var processTextBlocks = function(textBlocks) {
     if (!textBlocks)
         return result;
 
-    Array.from(textBlocks).forEach(function (textBox, i) {
+    textBlocks.forEach(function (textBox, i) {
         if (i>0)
             result += "\n";
 
-        result += processTextBoxChildren(textBox.childNodes);
+        result += processTextBoxChildren(Array.from(textBox.childNodes));
     });
 
     result = result.replaceAll("\u2028", "\n");
@@ -1554,7 +1554,7 @@ var processTextBlocks = function(textBlocks) {
 var processTextBoxChildren = function(children) {
     var result = "";
 
-    Array.from(children).forEach(function (child) {
+    children.forEach(function (child) {
         if (child.nodeType!==3) {
             var childNodeName = child.nodeName.toLowerCase();
             if (childNodeName==="img")
