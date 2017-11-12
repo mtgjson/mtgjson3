@@ -93,7 +93,7 @@ function processCard(SET, card, callback) {
     async.eachSeries(
         Object.keys(C.FIELD_TYPES),
         function(fieldName, subcb) {
-            if (C.SET_SPECIFIC_FIELDS.contains(fieldName)) {
+            if (C.SET_SPECIFIC_FIELDS.includes(fieldName)) {
                 setImmediate(subcb);
                 return;
             }
@@ -105,7 +105,7 @@ function processCard(SET, card, callback) {
             if (fieldName === "imageName")        // Modify for AllCards.json the imageName field
                 fieldValue = card.name.toLowerCase().strip(":\"?").replaceAll("/", " ").trim("0123456789 .").replaceAll(" token card", "");
 
-            if (C.ORACLE_FIELDS.contains(fieldName) && fieldName !== 'foreignNames') {
+            if (C.ORACLE_FIELDS.includes(fieldName) && fieldName !== 'foreignNames') {
                 checkTaint(fieldName, fieldValue);
             }
 

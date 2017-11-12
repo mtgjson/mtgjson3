@@ -61,7 +61,7 @@ function renderSet(setRaw, original, cb)
 {
     var set = JSON.parse(setRaw);
     if(onlyCardType)
-        set.cards = set.cards.filter(function(card) { return card.type.toLowerCase().split(" ").contains(onlyCardType.toLowerCase()); });
+        set.cards = set.cards.filter(function(card) { return card.type.toLowerCase().split(" ").includes(onlyCardType.toLowerCase()); });
 
     set.cards.forEach(function(card)
     {

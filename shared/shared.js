@@ -223,11 +223,11 @@ exports.performSetCorrections = function(setCorrections, fullSet)
                                     return COLOR_ORDER.indexOf(card.colors[0]);
                                 if(card.hasOwnProperty("colors") && card.colors.length>1)
                                     return 5;
-                                if(card.types.contains("Artifact"))
+                                if(card.types.includes("Artifact"))
                                     return 6;
-                                if(card.types.contains("Land") && !card.hasOwnProperty("supertypes"))
+                                if(card.types.includes("Land") && !card.hasOwnProperty("supertypes"))
                                     return 7;
-                                if(LAND_ORDER.contains(card.name))
+                                if(LAND_ORDER.includes(card.name))
                                     return 8+LAND_ORDER.indexOf(card.name);
 
                                 return 99999999;
@@ -251,7 +251,7 @@ exports.performSetCorrections = function(setCorrections, fullSet)
                 if(setCorrection.match && (setCorrection.match==="*" || (Object.every(setCorrection.match, function(key, value)
                     {
                         if(Array.isArray(value))
-                            return value.contains(card[key]);
+                            return value.includes(card[key]);
 
                         if(typeof value==="string" && value.startsWith("<"))
                             return (+card[key])<(+(value.substring(1)));
@@ -318,12 +318,12 @@ exports.performSetCorrections = function(setCorrections, fullSet)
                     }
 
                     if(setCorrection.deleteLegality && card.hasOwnProperty("legalities"))
-                        card.legalities = card.legalities.filter(function(cardLegality) { return !setCorrection.deleteLegality.contains(cardLegality.format); });
+                        card.legalities = card.legalities.filter(function(cardLegality) { return !setCorrection.deleteLegality.includes(cardLegality.format); });
 
                     if(setCorrection.flavorAddDash && card.flavor)
                     {
                         card.flavor = card.flavor.replace(/([.!?,'])(["][/]?[\n]?)(\s*)([A-Za-z])/, "$1$2$3 —$4", "gm");
-                        while(card.flavor.contains("  —"))
+                        while(card.flavor.includes("  —"))
                         {
                             card.flavor = card.flavor.replace("  —", " —");
                         }
@@ -332,7 +332,7 @@ exports.performSetCorrections = function(setCorrections, fullSet)
                     if(setCorrection.fixFlavorNewlines && card.flavor) {
                         card.flavor = card.flavor.replace(/(\s|")-\s*([^"—-]+)\s*$/, "$1—$2");
 
-                        if(card.flavor.contains("—"))
+                        if(card.flavor.includes("—"))
                         {
                             // Ensure two quotes appear before the last em-dash
                             var firstQuoteIdx = card.flavor.indexOf('"');
@@ -346,7 +346,7 @@ exports.performSetCorrections = function(setCorrections, fullSet)
                         cardsToRemove.push(card);
 
                     if(setCorrection.incrementNumber) {
-                        if(cardsToIncrementNumber.contains(card.name))
+                        if(cardsToIncrementNumber.includes(card.name))
                             card.number = "" + ((+card.number) + cardsToIncrementNumber.count(card.name));
 
                         cardsToIncrementNumber.push(card.name);
@@ -408,7 +408,7 @@ exports.performSetCorrections = function(setCorrections, fullSet)
         card.artist = card.artist.replaceAll(" and ", " & ");
         Object.forEach(C.ARTIST_CORRECTIONS, function(correctArtist, artistAliases)
         {
-            if(artistAliases.contains(card.artist))
+            if(artistAliases.includes(card.artist))
                 card.artist = correctArtist;
         });
 
@@ -418,7 +418,7 @@ exports.performSetCorrections = function(setCorrections, fullSet)
     // No text for basic lands and rarity of Basic Land
     cards.forEach(function(card)
     {
-        if(card.supertypes && card.supertypes.contains("Basic") && card.types && card.types.contains("Land"))
+        if(card.supertypes && card.supertypes.includes("Basic") && card.types && card.types.includes("Land"))
         {
             if(card.name!=="Wastes")
                 delete card.text;
@@ -426,15 +426,15 @@ exports.performSetCorrections = function(setCorrections, fullSet)
                 card.rarity = "Basic Land";
             if(addBasicLandWatermarks)
             {
-                if('subtypes' in card && card.subtypes.contains("Plains"))
+                if('subtypes' in card && card.subtypes.includes("Plains"))
                     card.watermark = "White";
-                else if('subtypes' in card && card.subtypes.contains("Island"))
+                else if('subtypes' in card && card.subtypes.includes("Island"))
                     card.watermark = "Blue";
-                else if('subtypes' in card && card.subtypes.contains("Swamp"))
+                else if('subtypes' in card && card.subtypes.includes("Swamp"))
                     card.watermark = "Black";
-                else if('subtypes' in card && card.subtypes.contains("Mountain"))
+                else if('subtypes' in card && card.subtypes.includes("Mountain"))
                     card.watermark = "Red";
-                else if('subtypes' in card && card.subtypes.contains("Forest"))
+                else if('subtypes' in card && card.subtypes.includes("Forest"))
                     card.watermark = "Green";
                 else
                     card.watermark = "Colorless";
@@ -452,7 +452,7 @@ exports.performSetCorrections = function(setCorrections, fullSet)
     // Devoid mechanic
     cards.forEach(function(card)
     {
-        if(!card.text || !card.text.contains("\n"))
+        if(!card.text || !card.text.includes("\n"))
             return;
 
         card.text.split("\n").forEach(function(textLine)
@@ -470,13 +470,13 @@ exports.performSetCorrections = function(setCorrections, fullSet)
         newText = newText.replaceAll("＂", "\"");
         newText = newText.replaceAll("’", "'");
         newText = newText.replaceAll("‘", "'");
-        while (newText.contains(" \n")) {
+        while (newText.includes(" \n")) {
             newText = newText.replaceAll(" \n", "\n");
         }
-        while (newText.contains("\n ")) {
+        while (newText.includes("\n ")) {
             newText = newText.replaceAll("\n ", "\n");
         }
-        while (newText.contains("\n\n")) {
+        while (newText.includes("\n\n")) {
             newText = newText.replaceAll("\n\n", "\n");
         }
         return newText;

@@ -12,7 +12,7 @@ var C = require('../shared/C'),
     winston = require("winston");
 
 var targetSetCode = process.argv[2];
-if(!C.SETS_NOT_ON_GATHERER.contains(targetSetCode))
+if(!C.SETS_NOT_ON_GATHERER.includes(targetSetCode))
 {
     winston.error("Usage: node %s <set code>", process.argv[1]);
     process.exit(1);
@@ -79,7 +79,7 @@ function processSet(setCode, targetMultiverseids, cb)
             var basicLandCount = {};
             set.cards.forEach(function(card)
             {
-                if(card.multiverseid && targetMultiverseids.contains(card.multiverseid))
+                if(card.multiverseid && targetMultiverseids.includes(card.multiverseid))
                 {
                     var newCard = clone(card);
                     delete newCard.multiverseid;
@@ -87,7 +87,7 @@ function processSet(setCode, targetMultiverseids, cb)
                     delete newCard.number;
                     delete newCard.border;
 
-                    if(C.SETS_WITH_NO_IMAGES.contains(targetSetCode))
+                    if(C.SETS_WITH_NO_IMAGES.includes(targetSetCode))
                     {
                         delete newCard.imageName;
                     }
@@ -106,7 +106,7 @@ function processSet(setCode, targetMultiverseids, cb)
                     if(newCard.rarity!=="Basic Land")
                         newCard.rarity = (C.NON_GATHERER_SET_RARITY_MAP[newSet.code] || [])[newCard.name] || "Special";
 
-                    if(MODERN_CREATURE_TYPES.contains(targetSetCode))
+                    if(MODERN_CREATURE_TYPES.includes(targetSetCode))
                         newCard.originalType = newCard.originalType.replace("Summon", "Creature");
 
                     newSet.cards.push(newCard);
@@ -165,11 +165,11 @@ function getMultiverseidsForSet(setCode, cb)
     tiptoe(
         function loadAllSets()
         {
-            var validSets = C.SETS.filter(function(SET) { return !C.SETS_NOT_ON_GATHERER.contains(SET.code); });
+            var validSets = C.SETS.filter(function(SET) { return !C.SETS_NOT_ON_GATHERER.includes(SET.code); });
             if(ONLY_ALLOW_SETS.hasOwnProperty(targetSetCode))
-                validSets = C.SETS.filter(function(SET) { return ONLY_ALLOW_SETS[targetSetCode].contains(SET.code); });
+                validSets = C.SETS.filter(function(SET) { return ONLY_ALLOW_SETS[targetSetCode].includes(SET.code); });
             else
-                validSets = C.SETS.filter(function(SET) { return (moment(SET.releaseDate, "YYYY-MM-DD").unix()<moment(targetSet.releaseDate, "YYYY-MM-DD").unix()) || (EXTRA_SETS_TO_ALLOW.hasOwnProperty(targetSetCode) && EXTRA_SETS_TO_ALLOW[targetSetCode].contains(SET.code)); });
+                validSets = C.SETS.filter(function(SET) { return (moment(SET.releaseDate, "YYYY-MM-DD").unix()<moment(targetSet.releaseDate, "YYYY-MM-DD").unix()) || (EXTRA_SETS_TO_ALLOW.hasOwnProperty(targetSetCode) && EXTRA_SETS_TO_ALLOW[targetSetCode].includes(SET.code)); });
 
             validSets = validSets.reverse();
 
@@ -194,7 +194,7 @@ function getMultiverseidsForSet(setCode, cb)
                 if(!card)
                     return;
 
-                if(cardsToGet.contains(card.name) && (!SPECIFIC_CARD_MULTIVERSEIDS.hasOwnProperty(targetSetCode) || !SPECIFIC_CARD_MULTIVERSEIDS[targetSetCode].hasOwnProperty(card.name) || SPECIFIC_CARD_MULTIVERSEIDS[targetSetCode][card.name]===card.multiverseid))
+                if(cardsToGet.includes(card.name) && (!SPECIFIC_CARD_MULTIVERSEIDS.hasOwnProperty(targetSetCode) || !SPECIFIC_CARD_MULTIVERSEIDS[targetSetCode].hasOwnProperty(card.name) || SPECIFIC_CARD_MULTIVERSEIDS[targetSetCode][card.name]===card.multiverseid))
                 {
                     //winston.info("Getting [%s] from multiverseid: %d", card.name, card.multiverseid);
                     cardsToGet.remove(card.name);

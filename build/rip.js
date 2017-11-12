@@ -259,7 +259,7 @@ var processMultiverseDocs = function(docs, callback) {
 
         if (newCards.length === 2 && (newCards[0].layout === "double-faced" || newCards[0].layout === "meld")) {
             var doubleFacedCardName = newCards[0].names.concat().sort().join(":::");
-            if (!doubleFacedCardNames.contains(doubleFacedCardName))
+            if (!doubleFacedCardNames.includes(doubleFacedCardName))
                 doubleFacedCardNames.push(doubleFacedCardName);
             else
                 newCards = [];
@@ -343,7 +343,7 @@ var processCardPart = function(doc, cardPart, printedDoc, printedCardPart) {
 
     // Check for split card
     var fullCardName = getTextContent(doc.querySelector("#ctl00_ctl00_ctl00_MainContent_SubContent_SubContentHeader_subtitleDisplay")).trim();
-    if (fullCardName.contains(" // ")) {
+    if (fullCardName.includes(" // ")) {
         card.layout = "split";
         card.names = fullCardName.split(" // ").filter(function (splitName) { return splitName.trim(); });
     }
@@ -352,7 +352,7 @@ var processCardPart = function(doc, cardPart, printedDoc, printedCardPart) {
     var cardText = processTextBlocks(cardPart.querySelectorAll(idPrefix + "_textRow .value .cardtextbox")).trim();
     if (cardText && !card.type.toLowerCase().startsWith("basic land")) {
         card.text = cardText;
-        if (card.text.contains("{UNKNOWN}"))
+        if (card.text.includes("{UNKNOWN}"))
             winston.warn("Invalid symbol in oracle card text for card: %s", card.name);
     }
 
@@ -366,21 +366,21 @@ var processCardPart = function(doc, cardPart, printedDoc, printedCardPart) {
         var secondCardText = processTextBlocks(cardParts[1].querySelectorAll(getCardPartIDPrefix(cardParts[1]) + "_textRow .value .cardtextbox")).trim().toLowerCase();
 
         if (card.layout === 'split') {
-            if (secondCardText.contains('aftermath')) card.layout = 'aftermath';
+            if (secondCardText.includes('aftermath')) card.layout = 'aftermath';
         }
         else {
-            if (firstCardText.contains("flip"))
+            if (firstCardText.includes("flip"))
                 card.layout = "flip";
-            else if (firstCardText.contains("transform"))
+            else if (firstCardText.includes("transform"))
                 card.layout = "double-faced";
-            else if (firstCardText.contains("meld"))
+            else if (firstCardText.includes("meld"))
                 card.layout = "meld";
             else {
                 // Can't find a suitable match on the first card text. Let's search on the second...
                 // TODO: This bunch of code needs to be optimized.
-                if (secondCardText.contains("flip"))
+                if (secondCardText.includes("flip"))
                     card.layout = "flip";
-                else if (secondCardText.contains("transform"))
+                else if (secondCardText.includes("transform"))
                     card.layout = "double-faced";
                 else {
                     winston.warn("Unknown card layout for multiverseid: %s", card.multiverseid);
@@ -433,10 +433,10 @@ var processCardPart = function(doc, cardPart, printedDoc, printedCardPart) {
     var powerToughnessValue = getTextContent(cardPart.querySelector(idPrefix + "_ptRow .value")).trim();
     if (powerToughnessValue) {
         // Loyalty
-        if (card.types.contains("Planeswalker")) {
+        if (card.types.includes("Planeswalker")) {
             card.loyalty = +powerToughnessValue.trim();
         }
-        else if (card.types.contains("Vanguard")) {
+        else if (card.types.includes("Vanguard")) {
             var handLifeParts = powerToughnessValue.trim().strip("+)(").replaceAll("Hand Modifier: ", "").replaceAll("Life Modifier: ", "").split(",").map(function (a) { return a.trim(); });
             if (handLifeParts.length!==2) {
                 winston.warn("Power toughness invalid [%s] for card: %s", getTextContent(cardPart.querySelector(idPrefix + "_ptRow .value")).trim(), card.name);
@@ -474,7 +474,7 @@ var processCardPart = function(doc, cardPart, printedDoc, printedCardPart) {
 
     var cardColorIndicators = getTextContent(cardPart.querySelector(idPrefix + "_colorIndicatorRow .value")).trim().toLowerCase().split(",").map(function (cardColorIndicator) { return cardColorIndicator.trim(); }) || [];
     cardColorIndicators.forEach(function (cardColorIndicator) {
-        if (cardColorIndicator && COLOR_ORDER.contains(cardColorIndicator))
+        if (cardColorIndicator && COLOR_ORDER.includes(cardColorIndicator))
             card.colors.push(cardColorIndicator);
     });
 
@@ -484,7 +484,7 @@ var processCardPart = function(doc, cardPart, printedDoc, printedCardPart) {
     var originalCardText = processTextBlocks(printedCardPart.querySelectorAll(idPrefixPrinted + "_textRow .value .cardtextbox")).trim();
     if (originalCardText) {
         card.originalText = originalCardText;
-        if (card.originalText.contains("{UNKNOWN}"))
+        if (card.originalText.includes("{UNKNOWN}"))
             winston.warn("Invalid symbol in printed card text for card: %s", card.name);
     }
 
@@ -522,7 +522,7 @@ var processCardPart = function(doc, cardPart, printedDoc, printedCardPart) {
 
         var seenRulings = [];
         card.rulings = card.rulings.reverse().filter(function (ruling) {
-            if (seenRulings.contains(ruling.text)) { return false; }
+            if (seenRulings.includes(ruling.text)) { return false; }
             seenRulings.push(ruling.text);
             return true;
         }).reverse();
@@ -602,7 +602,7 @@ var addForeignNamesToCard = function (card, cb) {
                 if (foreignCardName.startsWith("XX"))
                     foreignCardName = foreignCardName.substring(2);
 
-                if (foreignCardName.contains("//")) {
+                if (foreignCardName.includes("//")) {
                     if (!card.hasOwnProperty("names")) {
                         winston.error("Card [%s] (%d) has foreignCardName [%s] but has no 'names' property.", card.name, card.multiverseid, foreignCardName);
                         process.exit(0);
@@ -726,7 +726,7 @@ var addPrintingsToCard = function (nonGathererSets, card, cb) {
                 }
                 Array.from(doc.querySelectorAll("table.cardList")[0].querySelectorAll("tr.cardItem")).forEach(function (cardRow) {
                     var printing = getTextContent(cardRow.querySelector("td:nth-child(3)")).trim();
-                    if (printing && !C.IGNORE_GATHERER_PRINTINGS.contains(printing))
+                    if (printing && !C.IGNORE_GATHERER_PRINTINGS.includes(printing))
                         printings.push(shared.getSetCodeFromName(printing));
                 });
             });
@@ -734,7 +734,7 @@ var addPrintingsToCard = function (nonGathererSets, card, cb) {
             delete card.printings;
 
             nonGathererSets.forEach(function (nonGathererSet) {
-                if (nonGathererSet.cards.map(function (extraSetCard) { return extraSetCard.name; }).contains(card.name))
+                if (nonGathererSet.cards.map(function (extraSetCard) { return extraSetCard.name; }).includes(card.name))
                     printings.push(nonGathererSet.code);
             });
 
@@ -750,7 +750,7 @@ var addPrintingsToCard = function (nonGathererSets, card, cb) {
 
 var fillCardTypes = function (card, rawTypeFull) {
     // Some gatherer entries have a regular dash instead of a 'long dash'
-    if (!rawTypeFull.contains("—") && rawTypeFull.contains(" - "))  {
+    if (!rawTypeFull.includes("—") && rawTypeFull.includes(" - "))  {
         winston.warn("Raw type for card [%s] does not contain a long dash for type [%s] but does contain a small dash surrounded by spaces ' - '. Auto-correcting!", card.name, rawTypeFull);
         rawTypeFull = rawTypeFull.replace(" - ", "—");
     }
@@ -765,15 +765,15 @@ var fillCardTypes = function (card, rawTypeFull) {
             rawType = "Creature";
 
         rawType = rawType.trim().toProperCase();
-        if (C.SUPERTYPES.contains(rawType))
+        if (C.SUPERTYPES.includes(rawType))
             card.supertypes.push(rawType);
-        else if (C.TYPES.contains(rawType))
+        else if (C.TYPES.includes(rawType))
             card.types.push(rawType);
         else
             winston.warn("Raw type not found [%s] for card: %s", rawType, card.name);
     });
     if (rawTypes.length>1) {
-        card.subtypes = card.types.contains("Plane") ? [rawTypes[1].trim()] : rawTypes[1].split(" ").filterEmpty().map(function (subtype) { return subtype.trim(); });    // 205.3b Planes have just a single subtype
+        card.subtypes = card.types.includes("Plane") ? [rawTypes[1].trim()] : rawTypes[1].split(" ").filterEmpty().map(function (subtype) { return subtype.trim(); });    // 205.3b Planes have just a single subtype
         card.type += " — " + card.subtypes.join(" ");
     }
     if (!card.supertypes.length)
@@ -782,14 +782,14 @@ var fillCardTypes = function (card, rawTypeFull) {
         delete card.types;
 
     if (card.types) {
-        if (card.types.contains("Plane"))
+        if (card.types.includes("Plane"))
             card.layout = "plane";
-        else if (card.types.contains("Scheme"))
+        else if (card.types.includes("Scheme"))
             card.layout = "scheme";
-        else if (card.types.contains("Phenomenon"))
+        else if (card.types.includes("Phenomenon"))
             card.layout = "phenomenon";
 
-        if (card.types.map(function (type) { return type.toLowerCase(); }).contains("vanguard"))
+        if (card.types.map(function (type) { return type.toLowerCase(); }).includes("vanguard"))
             card.layout = "vanguard";
     }
 };
@@ -800,7 +800,7 @@ var fillCardColors = function (card) {
 
     card.manaCost.split("").forEach(function (manaCost) {
         Object.forEach(COLOR_SYMBOL_TO_NAME_MAP, function (colorSymbol, colorName) {
-            if (manaCost.contains(colorSymbol))
+            if (manaCost.includes(colorSymbol))
                 card.colors.push(colorName);
         });
     });
@@ -899,9 +899,9 @@ var createMCICardName = function(card) {
 
 var normalizeFlavor = function(flavor) {
     flavor = unidecode(flavor).trim().replaceAll("\n", " ").innerTrim().replaceAll(" —", "—");
-    while (flavor.contains(". .")) { flavor = flavor.replaceAll("[.] [.]", ".."); }
-    while (flavor.contains(" .")) { flavor = flavor.replaceAll(" [.]", "."); }
-    while (flavor.contains(". ")) { flavor = flavor.replaceAll("[.] ", "."); }
+    while (flavor.includes(". .")) { flavor = flavor.replaceAll("[.] [.]", ".."); }
+    while (flavor.includes(" .")) { flavor = flavor.replaceAll(" [.]", "."); }
+    while (flavor.includes(". ")) { flavor = flavor.replaceAll("[.] ", "."); }
 
     return flavor;
 };
@@ -917,7 +917,7 @@ var compareCardToMCI = function(set, card, mciCardURL, cb) {
             if (!setCorrection.hasOwnProperty("match") || !setCorrection.match.hasOwnProperty("name"))
                 return;
 
-            if ((typeof setCorrection.match.name==="string" && setCorrection.match.name===card.name) || (Array.isArray(setCorrection.match.name) && setCorrection.match.name.contains(card.name)))
+            if ((typeof setCorrection.match.name==="string" && setCorrection.match.name===card.name) || (Array.isArray(setCorrection.match.name) && setCorrection.match.name.includes(card.name)))
                 cardCorrection = setCorrection;
         });
     }
@@ -1013,7 +1013,7 @@ var compareCardsToEssentialMagic = function(set, cb) {
                             if (!setCorrection.hasOwnProperty("match") || !setCorrection.match.hasOwnProperty("name"))
                                 return;
 
-                            if ((typeof setCorrection.match.name === "string" && setCorrection.match.name === card.name) || (Array.isArray(setCorrection.match.name) && setCorrection.match.name.contains(card.name)))
+                            if ((typeof setCorrection.match.name === "string" && setCorrection.match.name === card.name) || (Array.isArray(setCorrection.match.name) && setCorrection.match.name.includes(card.name)))
                                 cardCorrection = setCorrection;
                         });
                     }
@@ -1024,7 +1024,7 @@ var compareCardsToEssentialMagic = function(set, cb) {
 
                     // Compare flavor
                     if (!hasFlavorCorrection) {
-                        if (C.ALLOW_ESSENTIAL_FLAVOR_MISMATCH.hasOwnProperty(set.code) && (C.ALLOW_ESSENTIAL_FLAVOR_MISMATCH[set.code].contains(card.multiverseid) || C.ALLOW_ESSENTIAL_FLAVOR_MISMATCH[set.code].contains(card.name)))
+                        if (C.ALLOW_ESSENTIAL_FLAVOR_MISMATCH.hasOwnProperty(set.code) && (C.ALLOW_ESSENTIAL_FLAVOR_MISMATCH[set.code].includes(card.multiverseid) || C.ALLOW_ESSENTIAL_FLAVOR_MISMATCH[set.code].includes(card.name)))
                             return;
 
                         var cardFlavor = normalizeFlavor(card.flavor || "");
@@ -1269,17 +1269,17 @@ var ripMCICard = function(set, mciCardURL, cb) {
             if (card.text) {
                 if (card.text.toLowerCase().startsWith("level up {"))
                     card.layout = "leveler";
-                else if (card.text.toLowerCase().contains("flip"))
+                else if (card.text.toLowerCase().includes("flip"))
                     card.layout = "flip";
-                else if (card.text.toLowerCase().contains("transform"))
+                else if (card.text.toLowerCase().includes("transform"))
                     card.layout = "double-faced";
-                else if (card.text.toLowerCase().contains("meld"))
+                else if (card.text.toLowerCase().includes("meld"))
                     card.layout = 'meld';
             }
             card.text.replaceAll("{UP}", "{U/P}").replaceAll("{BP}", "{B/P}").replaceAll("{RP}", "{R/P}").replaceAll("{GP}", "{G/P}").replaceAll("{WP}", "{W/P}");
 
             // Replace MCI ascii dashes with minus sines in planeswalker abilities
-            if (card.types.contains("Planeswalker"))
+            if (card.types.includes("Planeswalker"))
                 card.text = card.text.split("\n").map(function (textLine) { if (textLine.startsWith("-")) { textLine = textLine.replaceCharAt(0, "−"); } return textLine; }).join("\n");
 
             // Flavor Text
@@ -1343,7 +1343,7 @@ var ripMCICard = function(set, mciCardURL, cb) {
                     if (C.MCI_LANGUAGE_TO_GATHERER.hasOwnProperty(cardForeignName.language))
                         cardForeignName.language = C.MCI_LANGUAGE_TO_GATHERER[cardForeignName.language];
 
-                    if (!C.VALID_LANGUAGES.contains(cardForeignName.language)) {
+                    if (!C.VALID_LANGUAGES.includes(cardForeignName.language)) {
                         winston.error("Invalid MCI language: %s", cardForeignName.language);
                         process.exit(0);
                     }
@@ -1386,7 +1386,7 @@ var addPrintingsToMCISet = function(set, cb) {
                 var setWithExtras = JSON.parse(args[i+1]);
                 var setCardNames = setWithExtras.cards.map(function (card) { return card.name; });
                 set.cards.forEach(function (card) {
-                    if (setCardNames.contains(card.name))
+                    if (setCardNames.includes(card.name))
                         card.printings.push(setWithExtras.code);
                 });
             });
@@ -1415,7 +1415,7 @@ var addMagicLibraritiesInfoToMCISet = function(set, cb) {
                 var cardNames = [];
 
                 var cardNameRaw = getTextContent(cardNameElement.firstChild);
-                if (cardNameRaw.contains("/")) {
+                if (cardNameRaw.includes("/")) {
                     cardNameRaw.split("/").forEach(function (cardName) { cardNames.push(normalizeCardName(cardName.trim())); });
                 }
                 else {
@@ -1439,7 +1439,7 @@ var addMagicLibraritiesInfoToMCISet = function(set, cb) {
                 // Release date
                 var generalYear = getTextContent(cardNameElement.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.previousElementSibling).trim() || null;
                 var releaseDateText = getTextContent(cardNameElement.parentNode.parentNode.nextElementSibling.nextElementSibling.nextElementSibling.firstChild).trim();
-                while(releaseDateText.contains("-?")) {
+                while(releaseDateText.includes("-?")) {
                     releaseDateText = releaseDateText.replaceAll("-[?]", "");
                 }
 
@@ -1464,7 +1464,7 @@ var addMagicLibraritiesInfoToMCISet = function(set, cb) {
                 var numberText;
                 if (set.useMagicRaritiesNumber) {
                     numberText = getTextContent(cardNameElement.parentNode.parentNode.previousElementSibling.previousElementSibling);
-                    if (numberText.contains("/"))
+                    if (numberText.includes("/"))
                         numberText = numberText.substring(0, numberText.indexOf("/"));
                 }
 
@@ -1541,7 +1541,7 @@ var processTextBlocks = function(textBlocks) {
     result = result.replaceAll("\u2028", "\n");
     result = result.replaceAll("&amp;", "&");
 
-    while(result.contains("\n\n")) {
+    while(result.includes("\n\n")) {
         result = result.replaceAll("\n\n", "\n");
     }
 

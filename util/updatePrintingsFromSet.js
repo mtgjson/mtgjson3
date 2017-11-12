@@ -81,10 +81,10 @@ function addPrintingToSetCards(setCode, targetCardNames, printingCode, cb)
 
             set.cards.forEach(function(card)
             {
-                if(!targetCardNames.contains(card.name))
+                if(!targetCardNames.includes(card.name))
                     return;
 
-                if(!card.printings.contains(printingCode))
+                if(!card.printings.includes(printingCode))
                 {
                     card.printings.push(printingCode);
                     shared.finalizePrintings(card);

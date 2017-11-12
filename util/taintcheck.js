@@ -22,7 +22,7 @@ var checkCard = function(SET, card, callback) {
     async.each(
         Object.keys(C.FIELD_TYPES),
         function(fieldName, cb) {
-            if (C.SET_SPECIFIC_FIELDS.contains(fieldName)) {
+            if (C.SET_SPECIFIC_FIELDS.includes(fieldName)) {
                 return(setImmediate(cb));
             }
 
@@ -33,7 +33,7 @@ var checkCard = function(SET, card, callback) {
             if (fieldName === "imageName")        // Modify for AllCards.json the imageName field
                 fieldValue = card.name.toLowerCase().strip(":\"?").replaceAll("/", " ").trim("0123456789 .").replaceAll(" token card", "");
 
-            if (C.ORACLE_FIELDS.contains(fieldName) && fieldName !== 'foreignNames') {
+            if (C.ORACLE_FIELDS.includes(fieldName) && fieldName !== 'foreignNames') {
                 checkTaintField(SET, card, fieldName, fieldValue);
             }
 

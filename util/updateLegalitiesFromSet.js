@@ -85,7 +85,7 @@ function updateLegalitiesForSetCards(setCode, targetCardNames, cardLegalitiesByN
 
     var processFunction = function(set) {
         set.cards.forEach(function(card) {
-            if(!targetCardNames.contains(card.name))
+            if(!targetCardNames.includes(card.name))
                 return;
 
             if(!cardLegalitiesByName.hasOwnProperty(card.name))
