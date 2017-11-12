@@ -14,7 +14,7 @@ var setsToDo = shared.getSetsToDo();
 winston.info('Doing sets: %s', setsToDo);
 
 async.eachSeries(setsToDo, function(arg, callback) {
-    var targetSet = S.SETS.find(function(SET) {
+    var targetSet = C.SETS.find(function(SET) {
         return SET.name.toLowerCase() === arg.toLowerCase() || SET.code.toLowerCase() === arg.toLowerCase();
     });
 

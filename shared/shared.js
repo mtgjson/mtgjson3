@@ -665,7 +665,7 @@ exports.getURLAsDoc = function(targetURL, getCb) {
         request(options, function(err, response, body) {
             if (!err && response && response.statusCode !== 200)
                 err = new Error('Server responded with statusCode: ' + response.statusCode);
-            if (!err && (!body || body.length === 0))
+            if (!err && (!body || body.length === 0 || body === undefined))
                 err = new Error('No page contents');
             if (!err && (body.indexOf('Server Error') !== -1) ||
                          body.indexOf('You Just Exploded the Internet.') !== -1 )

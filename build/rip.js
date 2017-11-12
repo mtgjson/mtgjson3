@@ -1193,19 +1193,22 @@ var ripMCICard = function(set, mciCardURL, cb) {
                 card.layout = "split";
             }
 
-            //winston.info("Processing: %s", card.name);
+            // winston.info("Processing: %s", card.name);
 
             // Card Rarity
             var inEditions = false;
-            card.rarity = Array.toArray(rightSide.querySelectorAll("b")).mutateOnce(function (b) {
+            var rightSideBs = Array.toArray(rightSide.querySelectorAll("b"));
+            for (var i = 0; i < rightSideBs.length; i++) {
+                var b = rightSideBs[i];
                 if (b.textContent.startsWith("Editions")) {
                     inEditions = true;
-                    return undefined;
+                    continue;
                 }
-
-                if (inEditions)
-                    return b.textContent.replace(/[^(]+\(([^)]+)\)/, "$1", "g");
-            });
+                if (inEditions) {
+                    card.rarity = b.textContent.replace(/[^(]+\(([^)]+)\)/, "$1", "g");
+                    break;
+                }
+            }
 
             var cardInfoRaw = getTextContent(cardNameElement.parentNode.nextElementSibling).innerTrim().trim();
             var colorIndicator = null;
