@@ -14,33 +14,35 @@ var setsToDo = shared.getSetsToDo();
 winston.info('Doing sets: %s', setsToDo);
 
 async.eachSeries(setsToDo, function(arg, callback) {
-	var targetSet = C.SETS.mutateOnce(function(SET) { if (SET.name.toLowerCase() === arg.toLowerCase() || SET.code.toLowerCase() === arg.toLowerCase()) { return SET; } });
+    var targetSet = S.SETS.find(function(SET) {
+        return SET.name.toLowerCase() === arg.toLowerCase() || SET.code.toLowerCase() === arg.toLowerCase();
+    });
 
-	if(!targetSet) {
-		winston.error('Set %s not found!', arg);
-		return setImmediate(callback);
-	}
+    if(!targetSet) {
+        winston.error('Set %s not found!', arg);
+        return setImmediate(callback);
+    }
 
-	if(!targetSet.isMCISet) {
-		winston.error('Set %s is not an MCI set (isMCISet is not set)', arg);
-		return setImmediate(callback);
-	}
+    if(!targetSet.isMCISet) {
+        winston.error('Set %s is not an MCI set (isMCISet is not set)', arg);
+        return setImmediate(callback);
+    }
 
-	tiptoe(
-		function build() {
-			rip.ripMCISet(targetSet, this);
-		},
-		function save(set) {
-			shared.saveSet(set, this);
-		},
-		callback
-	);
+    tiptoe(
+        function build() {
+            rip.ripMCISet(targetSet, this);
+        },
+        function save(set) {
+            shared.saveSet(set, this);
+        },
+        callback
+    );
 
 }, function exit(err) {
-	if(err) {
-		winston.error(err);
-		process.exit(1);
-	}
+    if(err) {
+        winston.error(err);
+        process.exit(1);
+    }
 
-	process.exit(0);
+    process.exit(0);
 });

@@ -87,8 +87,10 @@ function processSet(code, cb)
 function compareSets(oldSet, newSet, filename)
 {
     var result = "";
-    var oldCardsMap = oldSet.cards.mutate(function(card, result) { result[(card.name + " (" + card.multiverseid + ")")] = card; return result; }, {});
-    var newCardsMap = newSet.cards.mutate(function(card, result) { result[(card.name + " (" + card.multiverseid + ")")] = card; return result; }, {});
+    var oldCardsMap = {};
+    oldSet.cards.forEach(function(card) {oldCardsMap[card.name + " (" + card.multiverseid + ")"] = card;});
+    var newCardsMap = {};
+    newSet.cards.forEach(function(card) {newCardsMap[card.name + " (" + card.multiverseid + ")"] = card;});
 
     if(oldSet.cards.length!==newSet.cards.length)
         result += "Cards length changed: Old (" + oldSet.cards.length + ") vs New ("  + newSet.cards.length + ")";

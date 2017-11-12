@@ -16,40 +16,38 @@ winston.info("Doing sets: %s", setsToDo);
 
 async.eachSeries(
     setsToDo,
-	function(arg, subcb) {
-		var targetSet = C.SETS.mutateOnce(function(SET) {
-			if (SET.name.toLowerCase() === arg.toLowerCase() || SET.code.toLowerCase() === arg.toLowerCase()) {
-				return SET;
-			}
-		});
-		if (!targetSet) {
-			winston.error("Set %s not found!", arg);
-			return setImmediate(subcb);
-		}
+    function(arg, subcb) {
+        var targetSet = C.SETS.find(function(SET) {
+            return SET.name.toLowerCase() === arg.toLowerCase() || SET.code.toLowerCase() === arg.toLowerCase();
+        });
+        if (!targetSet) {
+            winston.error("Set %s not found!", arg);
+            return setImmediate(subcb);
+        }
 
-		if (targetSet.isMCISet) {
-			winston.error("Set %s is an MCI set, use importMCISet.js instead.", arg);
-			return setImmediate(subcb);
-		}
+        if (targetSet.isMCISet) {
+            winston.error("Set %s is an MCI set, use importMCISet.js instead.", arg);
+            return setImmediate(subcb);
+        }
 
-		tiptoe(
-			function build() {
-				rip.ripSet(targetSet.name, this);
-			},
-			function save(set) {
-				shared.saveSet(set, this);
-			},
-			function finish(err) {
-				subcb(err);
-			}
-		);
-	},
-	function exit(err) {
-		if (err) {
-			winston.error(err);
-			process.exit(1);
-		}
+        tiptoe(
+            function build() {
+                rip.ripSet(targetSet.name, this);
+            },
+            function save(set) {
+                shared.saveSet(set, this);
+            },
+            function finish(err) {
+                subcb(err);
+            }
+        );
+    },
+    function exit(err) {
+        if (err) {
+            winston.error(err);
+            process.exit(1);
+        }
 
-		process.exit(0);
-	}
+        process.exit(0);
+    }
 );

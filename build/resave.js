@@ -18,7 +18,9 @@ winston.info("Doing sets: %s", setsToDo);
 async.eachSeries(
     setsToDo,
     function(arg, subcb) {
-        var targetSet = C.SETS.mutateOnce(function(SET) { if(SET.name.toLowerCase()===arg.toLowerCase() || SET.code.toLowerCase()===arg.toLowerCase()) { return SET; } });
+        var targetSet = C.SETS.find(function(SET) {
+            return SET.name.toLowerCase()===arg.toLowerCase() || SET.code.toLowerCase()===arg.toLowerCase();
+        });
         if(!targetSet)
         {
             winston.error("Set %s not found!", arg);

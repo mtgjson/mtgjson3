@@ -30,7 +30,7 @@ function processSet(code, cb) {
             fs.readFile(path.join(__dirname, "..", "json", code + ".json"), {encoding : "utf8"}, this);
         },
         function processCards(setRaw) {
-            var newSet = clone(C.SETS.mutateOnce(function(SET) { return SET.code===code ? SET : undefined; }));
+            var newSet = clone(C.SETS.find(function(SET) { return SET.code === code; }));
             newSet.cards = JSON.parse(setRaw).cards;
             newSet.code = code; // Needed for shared.saveSet()
 
