@@ -243,9 +243,10 @@ var ripSet = function(setName, cb) {
 
 var processMultiverseDocs = function(docs, callback) {
     var cards = [];
-
-    docs.forEachBatch(function (multiverseDoc, printedMultiverseDoc) {
+    for(var i = 0; i < docs.length; i += 2) {
         var newCards = [];
+        var multiverseDoc = docs[i];
+        var printedMultiverseDoc = docs[i + 1];
         var multiverseDocCardParts = getCardParts(multiverseDoc);
         var printedMultiverseDocCardParts = getCardParts(printedMultiverseDoc);
         if (multiverseDocCardParts.length!==printedMultiverseDocCardParts.length) {
@@ -266,8 +267,7 @@ var processMultiverseDocs = function(docs, callback) {
         }
 
         cards = cards.concat(newCards);
-    }, 2);
-
+    }
     if (callback)
         setImmediate(callback, null, cards);
 };
