@@ -18,7 +18,7 @@ tiptoe(
     function compareVersions(setsHTML, previousSetsJSON)
     {
 
-        var additions = Array.toArray(domino.createWindow(setsHTML[0]).document.querySelector("h1").nextElementSibling.querySelectorAll("tr td:nth-child(1) a")).map(function(o) { return o.textContent.trim(); }).filterEmpty();
+        var additions = Array.from(domino.createWindow(setsHTML[0]).document.querySelector("h1").nextElementSibling.querySelectorAll("tr td:nth-child(1) a")).map(function(o) { return o.textContent.trim(); }).filterEmpty();
         if(additions.length<1)
         {
             winston.error("No additions found! Probably a temporary error...");

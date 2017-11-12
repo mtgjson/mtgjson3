@@ -59,7 +59,7 @@
       { match : {name : "Ghostfire"}, remove : ["colors"] },
       { match : {name : "Will-O'-The-Wisp"}, replace : {name : "Will-o'-the-Wisp"}},
       { match : "*", replace : {text : {"roll {C}" : "roll CHAOS"}}},
-      { match : {name : "Rhox"}, addPrinting : "S00"},
+      { match : {name : "Rhox"}, addPrintings : ["S00"]},
       { match : {name : "Nature's Cloak"}, replace : {text : "Green creatures you control gain forestwalk until end of turn. (They can't be blocked as long as defending player controls a Forest.)"}},
       { match : {name : "Regrowth"}, setLegality : {"Vintage" : "Legal"}},
       { match : {name : ["Argothian Wurm", "Barrin, Master Wizard", "Citanul Centaurs", "Gaea's Cradle", "Gilded Drake", "Great Whale", "Herald of Serra", "Karn, Silver Golem", "Lifeline", "Lightning Dragon", "Morphling", "Opal Archangel",

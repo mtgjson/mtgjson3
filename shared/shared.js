@@ -286,9 +286,9 @@ exports.performSetCorrections = function(setCorrections, fullSet)
                     if(setCorrection.flavorAddExclamation)
                         card.flavor = card.flavor.replace(/([A-Za-z])"/, "$1!\"", "gm");
 
-                    if(setCorrection.addPrinting) {
+                    if(setCorrection.addPrintings) {
                         if(!card.printings) card.printings = [];
-                        card.printings = card.printings.concat(Array.toArray(setCorrection.addPrinting));
+                        card.printings = card.printings.concat(setCorrection.addPrintings);
                         exports.finalizePrintings(card);
                     }
 
@@ -739,7 +739,7 @@ exports.buildMultiverseAllPrintingsURLs = function(multiverseid, cb) {
 exports.getPagingNumPages = function(doc, type)
 {
     var pageControlsContainer = (type==="printings" ? "SubContent_PrintingsList_pagingControlsContainer" : "bottomPagingControlsContainer");
-    var pageLinks = Array.toArray(doc.querySelectorAll("#ctl00_ctl00_ctl00_MainContent_SubContent_" + pageControlsContainer + " a"));
+    var pageLinks = Array.from(doc.querySelectorAll("#ctl00_ctl00_ctl00_MainContent_SubContent_" + pageControlsContainer + " a"));
 
     var numPages = 1;
     if(pageLinks.length>0)

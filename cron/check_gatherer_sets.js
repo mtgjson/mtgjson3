@@ -18,7 +18,7 @@ tiptoe(
     function compareVersions(setsHTML, previousSetsJSON)
     {
 
-        var sets = Array.toArray(domino.createWindow(setsHTML[0]).document.querySelectorAll("select#ctl00_ctl00_MainContent_Content_SearchControls_setAddText option")).map(function(o) { return o.getAttribute("value").trim(); }).filterEmpty();
+        var sets = Array.from(domino.createWindow(setsHTML[0]).document.querySelectorAll("select#ctl00_ctl00_MainContent_Content_SearchControls_setAddText option")).map(function(o) { return o.getAttribute("value").trim(); }).filterEmpty();
         if(sets.length<1)
         {
             winston.error("No sets found! Probably a temporary error...");

@@ -464,7 +464,7 @@ var processCardPart = function(doc, cardPart, printedDoc, printedCardPart) {
     }
 
     // Mana Cost
-    var cardManaCosts = Array.toArray(cardPart.querySelectorAll(idPrefix + "_manaRow .value img")).map(function (o) { return processSymbol(o.getAttribute("alt")); });
+    var cardManaCosts = Array.from(cardPart.querySelectorAll(idPrefix + "_manaRow .value img")).map(function (o) { return processSymbol(o.getAttribute("alt")); });
     var cardManaCost = cardManaCosts.join("");
     if (cardManaCost)
         card.manaCost = cardManaCost;
@@ -513,7 +513,7 @@ var processCardPart = function(doc, cardPart, printedDoc, printedCardPart) {
     // Rulings
     var rulingRows = cardPart.querySelectorAll(idPrefix + "_rulingsContainer table tr.post");
     if (rulingRows.length) {
-        card.rulings = Array.toArray(rulingRows).map(function (rulingRow) {
+        card.rulings = Array.from(rulingRows).map(function (rulingRow) {
             return({
                 date : moment(getTextContent(rulingRow.querySelector("td:first-child")).trim(), "MM/DD/YYYY").format("YYYY-MM-DD"),
                 text : getTextContent(rulingRow.querySelector("td:last-child")).innerTrim().trim()
@@ -532,14 +532,14 @@ var processCardPart = function(doc, cardPart, printedDoc, printedCardPart) {
     if (card.layout !== "split" && card.layout !== "double-faced" && card.layout !== "flip" && card.layout !== "meld") {
         var variationLinks = cardPart.querySelectorAll(idPrefix + "_variationLinks a.variationLink");
         if (variationLinks.length)
-            card.variations = Array.toArray(variationLinks).map(function (variationLink) { return +variationLink.getAttribute("id").trim(); }).filter(function (variation) { return variation!==card.multiverseid; });
+            card.variations = Array.from(variationLinks).map(function (variationLink) { return +variationLink.getAttribute("id").trim(); }).filter(function (variation) { return variation!==card.multiverseid; });
     }
 
     return card;
 };
 
 var getCardParts = function (doc) {
-    return Array.toArray(doc.querySelectorAll("table.cardDetails"));
+    return Array.from(doc.querySelectorAll("table.cardDetails"));
 };
 
 var getURLsForMultiverseid = function (multiverseid, cb) {
@@ -596,7 +596,7 @@ var addForeignNamesToCard = function (card, cb) {
             delete card.foreignNames;
             card.foreignNames = [];
 
-            Array.toArray(doc.querySelectorAll("table.cardList tr.cardItem")).forEach(function (cardRow) {
+            Array.from(doc.querySelectorAll("table.cardList tr.cardItem")).forEach(function (cardRow) {
                 var language = getTextContent(cardRow.querySelector("td:nth-child(2)")).trim();
                 var foreignCardName = getTextContent(cardRow.querySelector("td:nth-child(1) a")).innerTrim().trim();
                 if (foreignCardName.startsWith("XX"))
@@ -651,7 +651,7 @@ var addLegalitiesToCard = function (card, cb) {
             if (typeof doc.querySelectorAll("table.cardList")[1] === "undefined") {
                 console.log("invalid printings for " + card.multiverseid);
             }
-            Array.toArray(doc.querySelectorAll("table.cardList")[1].querySelectorAll("tr.cardItem")).forEach(function (cardRow) {
+            Array.from(doc.querySelectorAll("table.cardList")[1].querySelectorAll("tr.cardItem")).forEach(function (cardRow) {
                 var format = getTextContent(cardRow.querySelector("td:nth-child(1)")).trim();
                 var legality = getTextContent(cardRow.querySelector("td:nth-child(2)")).trim();
                 var condition = getTextContent(cardRow.querySelector("td:nth-child(3)")).trim();
@@ -724,7 +724,7 @@ var addPrintingsToCard = function (nonGathererSets, card, cb) {
                 if (typeof doc.querySelectorAll("table.cardList")[0] === "undefined") {
                     console.log("invalid printings for " + card.multiverseid);
                 }
-                Array.toArray(doc.querySelectorAll("table.cardList")[0].querySelectorAll("tr.cardItem")).forEach(function (cardRow) {
+                Array.from(doc.querySelectorAll("table.cardList")[0].querySelectorAll("tr.cardItem")).forEach(function (cardRow) {
                     var printing = getTextContent(cardRow.querySelector("td:nth-child(3)")).trim();
                     if (printing && !C.IGNORE_GATHERER_PRINTINGS.contains(printing))
                         printings.push(shared.getSetCodeFromName(printing));
@@ -858,7 +858,7 @@ var compareCardsToMCI = function(set, cb) {
             shared.getURLAsDoc("http://magiccards.info/" + set.magicCardsInfoCode.toLowerCase() + "/en.html", this);
         },
         function processSetCardList(listDoc) {
-            var mciCardLinks = Array.toArray(listDoc.querySelectorAll("table tr td a"));
+            var mciCardLinks = Array.from(listDoc.querySelectorAll("table tr td a"));
             async.each(set.cards, function (card, subcb) {
                 if (card.variations) {
                     winston.warn("VARIATIONS: Could not find MagicCards.info match for card: %s", card.name);
@@ -996,7 +996,7 @@ var compareCardsToEssentialMagic = function(set, cb) {
             shared.getURLAsDoc("http://www.essentialmagic.com/cardsets/Spoiler.asp?ID=" + set.essentialMagicCode, this);
         },
         function processSetCardList(listDoc) {
-            Array.toArray(listDoc.querySelectorAll("table td#contentarea div#main table tr")).forEach(function (cardRow) {
+            Array.from(listDoc.querySelectorAll("table td#contentarea div#main table tr")).forEach(function (cardRow) {
                 var cardName = processTextBlocks(cardRow.querySelector("td:nth-child(2) b a")).innerTrim().trim();
                 if (!cardName) {
                     winston.warn("Missing card name: %s", cardRow.innerHTML);
@@ -1056,7 +1056,7 @@ var ripMCISet = function(set, cb) {
             shared.getURLAsDoc("http://magiccards.info/" + set.magicCardsInfoCode.toLowerCase() + "/en.html", this);
         },
         function processCardList(listDoc) {
-            var mciCardLinks = Array.toArray(listDoc.querySelectorAll("table tr td a"));
+            var mciCardLinks = Array.from(listDoc.querySelectorAll("table tr td a"));
             var cards = [];
             var self = this;
 
@@ -1197,7 +1197,7 @@ var ripMCICard = function(set, mciCardURL, cb) {
 
             // Card Rarity
             var inEditions = false;
-            var rightSideBs = Array.toArray(rightSide.querySelectorAll("b"));
+            var rightSideBs = Array.from(rightSide.querySelectorAll("b"));
             for (var i = 0; i < rightSideBs.length; i++) {
                 var b = rightSideBs[i];
                 if (b.textContent.startsWith("Editions")) {
@@ -1293,7 +1293,7 @@ var ripMCICard = function(set, mciCardURL, cb) {
                 card.artist = cardArtist.substring("Illus.".length+1);
 
             // Rulings and Legalities
-            var rulingLegalityElements = Array.toArray(cardNameElement.parentNode.parentNode.querySelectorAll("ul"));
+            var rulingLegalityElements = Array.from(cardNameElement.parentNode.parentNode.querySelectorAll("ul"));
             if (rulingLegalityElements && rulingLegalityElements.length>=1) {
                 if (rulingLegalityElements[0].querySelector("li[class=\"reserve\"]"))
                     rulingLegalityElements.shift();
@@ -1303,13 +1303,13 @@ var ripMCICard = function(set, mciCardURL, cb) {
                     legalityElementsContainer = rulingLegalityElements[1];
 
                     // Rulings
-                    card.rulings = Array.toArray(rulingLegalityElements[0].querySelectorAll("li")).map(function (rulingElement) { var rulingDate = getTextContent(rulingElement.querySelector("b")).trim(); return { date : moment(rulingDate, "MM/DD/YYYY").format("YYYY-MM-DD"), text : processTextBlocks(rulingElement).trim().substring(rulingDate.length+2) }; });
+                    card.rulings = Array.from(rulingLegalityElements[0].querySelectorAll("li")).map(function (rulingElement) { var rulingDate = getTextContent(rulingElement.querySelector("b")).trim(); return { date : moment(rulingDate, "MM/DD/YYYY").format("YYYY-MM-DD"), text : processTextBlocks(rulingElement).trim().substring(rulingDate.length+2) }; });
                 }
 
                 // Legalities
                 var legalityElements = legalityElementsContainer.querySelectorAll("li");
                 if (legalityElements && legalityElements.length>0)
-                    card.legalities = Array.toArray(legalityElements).map(function (legalityElement) { var legalityParts = getTextContent(legalityElement).match(/^([^ ]+) in ([^(]+).*$/); if (!legalityParts) { return null; } return {format:legalityParts[2].trim(), legality:legalityParts[1].trim()}; }).filterEmpty();
+                    card.legalities = Array.from(legalityElements).map(function (legalityElement) { var legalityParts = getTextContent(legalityElement).match(/^([^ ]+) in ([^(]+).*$/); if (!legalityParts) { return null; } return {format:legalityParts[2].trim(), legality:legalityParts[1].trim()}; }).filterEmpty();
             }
 
             // Number
@@ -1319,7 +1319,7 @@ var ripMCICard = function(set, mciCardURL, cb) {
 
             // Foreign Names
             var cardForeignNames = [];
-            var languagesLine = Array.toArray(rightSide.querySelectorAll("small u b")).find(function (b) { return getTextContent(b).startsWith("Languages"); }).parentNode;
+            var languagesLine = Array.from(rightSide.querySelectorAll("small u b")).find(function (b) { return getTextContent(b).startsWith("Languages"); }).parentNode;
             var languageElement = languagesLine.nextElementSibling;
             var cardForeignName = {};
             do
@@ -1410,7 +1410,7 @@ var addMagicLibraritiesInfoToMCISet = function(set, cb) {
             }.bind(this));
         },
         function populateReleaseDates() {
-            Array.prototype.slice.apply(arguments).map(function (doc) { return Array.toArray(doc.querySelectorAll("table tr td:nth-child(5) a font")); }).flatten().forEach(function (cardNameElement) {
+            Array.prototype.slice.apply(arguments).map(function (doc) { return Array.from(doc.querySelectorAll("table tr td:nth-child(5) a font")); }).flatten().forEach(function (cardNameElement) {
                 // Card Names
                 var cardNames = [];
 
@@ -1531,7 +1531,7 @@ var processTextBlocks = function(textBlocks) {
     if (!textBlocks)
         return result;
 
-    Array.toArray(textBlocks).forEach(function (textBox, i) {
+    Array.from(textBlocks).forEach(function (textBox, i) {
         if (i>0)
             result += "\n";
 
@@ -1554,7 +1554,7 @@ var processTextBlocks = function(textBlocks) {
 var processTextBoxChildren = function(children) {
     var result = "";
 
-    Array.toArray(children).forEach(function (child) {
+    Array.from(children).forEach(function (child) {
         if (child.nodeType!==3) {
             var childNodeName = child.nodeName.toLowerCase();
             if (childNodeName==="img")
@@ -1634,7 +1634,7 @@ var getSetNameMultiverseIds = function(setName, cb) {
 
             var multiverseids = [];
             listDocs.forEach(function (listDoc) {
-                multiverseids = multiverseids.concat(Array.toArray(listDoc.querySelectorAll("table.checklist tr.cardItem a.nameLink")).map(function (o) {  return +querystring.parse(url.parse(o.getAttribute("href")).query).multiverseid; }).unique());
+                multiverseids = multiverseids.concat(Array.from(listDoc.querySelectorAll("table.checklist tr.cardItem a.nameLink")).map(function (o) {  return +querystring.parse(url.parse(o.getAttribute("href")).query).multiverseid; }).unique());
             });
 
             setImmediate(cb, undefined, multiverseids.unique());

@@ -73,7 +73,7 @@ function getURLSForMcilistCache(setInfo, set, callback) {
             shared.getURLAsDoc(mciListUrl, this);
         },
         function getURLs(err, listDoc) {
-            var mciCardLinks = Array.toArray(listDoc.querySelectorAll("table tr td a"));
+            var mciCardLinks = Array.from(listDoc.querySelectorAll("table tr td a"));
             var validLinks = mciCardLinks.filter(function(link) {
                 var href = link.getAttribute("href");
                 return (href.indexOf(set.magicCardsInfoCode) >= 0);

@@ -17,7 +17,7 @@ tiptoe(
     },
     function compareVersions(cardsHTML, previousCardsJSON)
     {
-        var cards = Array.toArray(domino.createWindow(cardsHTML[0]).document.querySelectorAll("ul.list-links li a")).map(function(o) { return o.textContent.trim(); }).filterEmpty();
+        var cards = Array.from(domino.createWindow(cardsHTML[0]).document.querySelectorAll("ul.list-links li a")).map(function(o) { return o.textContent.trim(); }).filterEmpty();
         if(cards.length<1)
         {
             winston.error("No cards found! Probably a temporary error...");
