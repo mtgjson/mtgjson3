@@ -207,7 +207,7 @@ function generateSpoilerForSetName(setName, lang, cb) {
 	);
 }
 
-async.eachSeries*
+async.eachSeries(
     C.SETS,
 	function(setInfo, cb) {
 		var setName = setInfo.code;

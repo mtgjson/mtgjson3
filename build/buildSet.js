@@ -5,6 +5,7 @@ var C = require('../shared/C');
 var shared = require('../shared/shared');
 var tiptoe = require("tiptoe");
 var rip = require("./rip.js");
+var async = require("async");
 var winston = require("winston");
 
 var setsToDo = shared.getSetsToDo();
@@ -13,7 +14,8 @@ setsToDo.removeAll(C.SETS_NOT_ON_GATHERER.concat(shared.getMCISetCodes()));
 
 winston.info("Doing sets: %s", setsToDo);
 
-setsToDo.serialForEach(
+async.eachSeries(
+    setsToDo,
 	function(arg, subcb) {
 		var targetSet = C.SETS.mutateOnce(function(SET) {
 			if (SET.name.toLowerCase() === arg.toLowerCase() || SET.code.toLowerCase() === arg.toLowerCase()) {

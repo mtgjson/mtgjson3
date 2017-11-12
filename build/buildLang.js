@@ -118,7 +118,8 @@ function retrieve(lang, set, callback) {
 
 	tiptoe(
 		function getMultiverses() {
-			set.cards.serialForEach(
+            async.eachSeries(
+                set.cards,
 				function(card, cb) {
 					// Find language
 					var i, l = card.foreignNames.length;

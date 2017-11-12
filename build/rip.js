@@ -278,36 +278,39 @@ var processMultiverseids = function (multiverseids, cb) {
 
 	winston.info("Processing %d multiverseids", multiverseids.unique().length);
 
-	multiverseids.unique().serialForEach(function (multiverseid, subcb) {
-		tiptoe(
-			function getMultiverseUrls() {
-				getURLsForMultiverseid(multiverseid, this);
-			},
-			function getMultiverseDocs(urls) {
-				urls.forEach(function (multiverseURL) {
-					shared.getURLAsDoc(multiverseURL, this.parallel());
-					shared.getURLAsDoc(multiverseURL.replace("printed=false", "printed=true"), this.parallel());
-				}.bind(this));
-			},
-			function () {
-				var docs = Array.prototype.slice.call(arguments);
-				processMultiverseDocs(docs, this);
-			},
-			function addToCards(newCards) {
-				newCards.map(function (c) {
-					if (c.multiverseid === null)
-						c.multiverseid = multiverseid;
-					cards.push(c);
-				});
-				//cards.concat(newCards); // Concat not working...?
+	async.eachSeries(
+		multiverseids.unique(),
+		function (multiverseid, subcb) {
+			tiptoe(
+				function getMultiverseUrls() {
+					getURLsForMultiverseid(multiverseid, this);
+				},
+				function getMultiverseDocs(urls) {
+					urls.forEach(function (multiverseURL) {
+						shared.getURLAsDoc(multiverseURL, this.parallel());
+						shared.getURLAsDoc(multiverseURL.replace("printed=false", "printed=true"), this.parallel());
+					}.bind(this));
+				},
+				function () {
+					var docs = Array.prototype.slice.call(arguments);
+					processMultiverseDocs(docs, this);
+				},
+				function addToCards(newCards) {
+					newCards.map(function (c) {
+						if (c.multiverseid === null)
+							c.multiverseid = multiverseid;
+						cards.push(c);
+					});
+					//cards.concat(newCards); // Concat not working...?
 
-				this();
-			},
-			function finish(err) {
-				subcb(err);
-			}
-		);
-	}, function(err) { return setImmediate(cb, err, cards); });
+					this();
+				},
+				function finish(err) {
+					subcb(err);
+				}
+			);
+		},
+		function(err) { return setImmediate(cb, err, cards); });
 };
 
 var getCardPartIDPrefix = function(cardPart) {
@@ -679,16 +682,22 @@ var addPrintingsToCards = function (set, cb) {
 			// Adds non-gatherer sets and promo MCI sets and sets released since last printing to the current set
 			var nonGathererSets = C.SETS_NOT_ON_GATHERER.concat(shared.getMCISetCodes()).concat(setCodes.slice(setCodes.indexOf(C.LAST_PRINTINGS_RESET)+1)).unique();
 			nonGathererSets.remove(set.code);
-			nonGathererSets.serialForEach(function (code, subcb) {
-				fs.readFile(path.join(__dirname, "..", "json", code + ".json"), "utf8", subcb);
-			}, this);
+			async.mapSeries(
+				nonGathererSets,
+				function (code, subcb) {
+					fs.readFile(path.join(__dirname, "..", "json", code + ".json"), "utf8", subcb);
+				},
+				this);
 		},
 		function addPrintings(nonGathererSetsJSONRaw) {
 			var nonGathererSets = nonGathererSetsJSONRaw.map(function (nonGathererSetJSONRaw) { return JSON.parse(nonGathererSetJSONRaw); });
 
-			set.cards.serialForEach(function (card, subcb) {
-				addPrintingsToCard(nonGathererSets, card, subcb);
-			}, this);
+			async.eachSeriea(
+				set.cards,
+				function (card, subcb) {
+					addPrintingsToCard(nonGathererSets, card, subcb);
+				},
+				this);
 		},
 		function finish(err) {
 			setImmediate(function () { cb(err); });

@@ -1,68 +1,75 @@
 "use strict";
 /*global setImmediate: true*/
 
-var fs = require("fs"),
-	shared = require('../shared/shared'),
-	path = require("path"),
-	tiptoe = require("tiptoe"),
-	winston = require("winston");
+var async = require("async"),
+    fs = require("fs"),
+    shared = require('../shared/shared'),
+    path = require("path"),
+    tiptoe = require("tiptoe"),
+    winston = require("winston");
 
 if (require.main == module) {
-	shared.getSetsToDo().serialForEach(processSet, function(err) {
-		if(err) {
-			winston.error(err);
-			process.exit(1);
-		}
+    async.eachSeries(
+        shared.getSetsToDo(),
+        processSet,
+        function(err) {
+            if(err) {
+                winston.error(err);
+                process.exit(1);
+            }
 
-		process.exit(0);
-	});
+            process.exit(0);
+        });
 }
 
 function processSet(code, cb) {
-	winston.info("Processing set: %s", code);
+    winston.info("Processing set: %s", code);
 
-	tiptoe(
-		function getJSON() {
-			fs.readFile(path.join(__dirname, "..", "json", code + ".json"), {encoding : "utf8"}, this);
-		},
-		function processCards(setRaw) {
-			var set = JSON.parse(setRaw);
+    tiptoe(
+        function getJSON() {
+            fs.readFile(path.join(__dirname, "..", "json", code + ".json"), {encoding : "utf8"}, this);
+        },
+        function processCards(setRaw) {
+            var set = JSON.parse(setRaw);
 
-			// Will contain all legalities on this set.
-			var cardLegalitiesByName = {};
-			// Which other sets have this card?
-			var setCards = {};
+            // Will contain all legalities on this set.
+            var cardLegalitiesByName = {};
+            // Which other sets have this card?
+            var setCards = {};
 
-			// Parsing each card...
-			set.cards.forEach(function(card) {
-				card.printings.remove(set.code); // We don't want to update our own set.
+            // Parsing each card...
+            set.cards.forEach(function(card) {
+                card.printings.remove(set.code); // We don't want to update our own set.
 
-				if(!card.printings || !card.printings.length) {
-					// This card has no other printings, we don't need to bother.
-					return;
-				}
+                if(!card.printings || !card.printings.length) {
+                    // This card has no other printings, we don't need to bother.
+                    return;
+                }
 
-				cardLegalitiesByName[card.name] = card.legalities;
+                cardLegalitiesByName[card.name] = card.legalities;
 
-				// Updates the printings where we need to update something
-				card.printings.forEach(function(printingCode) {
-					if(!setCards.hasOwnProperty(printingCode))
-						setCards[printingCode] = [];
+                // Updates the printings where we need to update something
+                card.printings.forEach(function(printingCode) {
+                    if(!setCards.hasOwnProperty(printingCode))
+                        setCards[printingCode] = [];
 
-					setCards[printingCode].push(card.name);
-					setCards[printingCode] = setCards[printingCode].uniqueBySort();
-				});
-			});
+                    setCards[printingCode].push(card.name);
+                    setCards[printingCode] = setCards[printingCode].uniqueBySort();
+                });
+            });
 
-			// Go over each set and update the legalities to reflect this set.
-			Object.keys(setCards).serialForEach(function(setCode, subcb) {
-				updateLegalitiesForSetCards(setCode, setCards[setCode], cardLegalitiesByName, subcb);
-			}, this);
-		},
-		function finish(err) {
-			setImmediate(function() { cb(err); });
-		}
-	);
+            // Go over each set and update the legalities to reflect this set.
+            async.eachSeries(
+                Object.keys(setCards),
+                function(setCode, subcb) {
+                    updateLegalitiesForSetCards(setCode, setCards[setCode], cardLegalitiesByName, subcb);
+                },
+                this);
+        },
+        function finish(err) {
+            setImmediate(function() { cb(err); });
+        }
+    );
 }
 
 /**
@@ -74,24 +81,24 @@ function processSet(code, cb) {
  * @param cb Function with the callback to pass the error or pass no parameter
  */
 function updateLegalitiesForSetCards(setCode, targetCardNames, cardLegalitiesByName, cb) {
-	winston.info("Adding legalities to set [%s] for all cards: %s", setCode, targetCardNames.join(", "));
+    winston.info("Adding legalities to set [%s] for all cards: %s", setCode, targetCardNames.join(", "));
 
-	var processFunction = function(set) {
-		set.cards.forEach(function(card) {
-			if(!targetCardNames.contains(card.name))
-				return;
+    var processFunction = function(set) {
+        set.cards.forEach(function(card) {
+            if(!targetCardNames.contains(card.name))
+                return;
 
-			if(!cardLegalitiesByName.hasOwnProperty(card.name))
-				return;
+            if(!cardLegalitiesByName.hasOwnProperty(card.name))
+                return;
 
-			card.legalities = cardLegalitiesByName[card.name];
-			shared.updateStandardForCard(card);
-		});
+            card.legalities = cardLegalitiesByName[card.name];
+            shared.updateStandardForCard(card);
+        });
 
-		return(set);
-	};
+        return(set);
+    };
 
-	shared.processSet(setCode, processFunction, cb);
+    shared.processSet(setCode, processFunction, cb);
 }
 
 module.exports = processSet;

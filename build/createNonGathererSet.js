@@ -2,6 +2,7 @@
 "use strict";
 
 var C = require('../shared/C'),
+	async = require('async'),
 	clone = require('clone'),
 	path = require("path"),
 	moment = require("moment"),
@@ -31,7 +32,12 @@ tiptoe(
 	},
 	function processSets(targetMultiverseids)
 	{
-		C.SETS.map(function(SET) { return SET.code; }).serialForEach(function(setCode, subcb) { processSet(setCode, targetMultiverseids, subcb); }, this);
+		async.eachSeries(
+			C.SETS.map(function(SET) { return SET.code; }),
+			function(setCode, subcb) {
+				processSet(setCode, targetMultiverseids, subcb);
+			},
+			this);
 	},
 	function saveAndFinish(err)
 	{
@@ -169,7 +175,10 @@ function getMultiverseidsForSet(setCode, cb)
 
 			var coreSets = validSets.filter(function(SET) { return SET.type==="core"; });
 			var nonCoreSets = validSets.filter(function(SET) { return SET.type!=="core"; });
-			coreSets.concat(nonCoreSets).map(function(SET) { return SET.code; }).serialForEach(loadSetCards, this);
+			async.eachSeriea(
+				coreSets.concat(nonCoreSets).map(function(SET) { return SET.code; }),
+				loadSetCards,
+				this);
 		},
 		function getMultiverseids(err)
 		{
