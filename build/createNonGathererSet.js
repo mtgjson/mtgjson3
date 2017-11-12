@@ -4,6 +4,7 @@
 var C = require('../shared/C'),
     async = require('async'),
     clone = require('clone'),
+    flatten = require('arr-flatten'),
     path = require("path"),
     moment = require("moment"),
     fs = require("fs"),
@@ -185,7 +186,7 @@ function getMultiverseidsForSet(setCode, cb)
             if(err)
                 return setImmediate(function() { cb(err); });
 
-            var allCards = Array.prototype.slice.apply(arguments).flatten().flatten();
+            var allCards = flatten(Array.prototype.slice.apply(arguments));
             var cardsToGet = clone(C.NON_GATHERER_SET_CARD_LISTS[targetSet.code]);
 
             var multiverseids = [];

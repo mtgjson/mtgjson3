@@ -3,6 +3,7 @@
 
 var C = require("../shared/C");
 var clone = require("clone");
+var flatten = require("arr-flatten");
 var fs = require("fs");
 var url = require("url");
 var moment = require("moment");
@@ -14,6 +15,7 @@ var querystring = require("querystring");
 var tiptoe = require("tiptoe");
 var winston = require("winston");
 var async = require('async');
+var util = require("../shared/util");
 
 (function (exports) {
 
@@ -162,7 +164,15 @@ var ripSet = function(setName, cb) {
             winston.info("Processing variations...");
 
             this.data.set.cards = cards;
-            processMultiverseids(cards.map(function (card) { return (card.variations && card.variations.length) ? card.variations : []; }).flatten().unique().subtract(cards.map(function (card) { return card.multiverseid; })), this);
+            var existing = cards.map(function (c) { return c.multiverseid; });
+            var variations = flatten(cards.map(function (card) {
+                return (card.variations && card.variations.length) ? card.variations : [];
+            }))
+            processMultiverseids(
+                variations
+                    .filter(util.uniqueFilter)
+                    .filter(function (mvid) { return !existing.includes(mvid) }),
+                this);
         },
         function addAdditionalFields(cards) {
             winston.info("Adding additional fields...");
@@ -1154,7 +1164,7 @@ var ripMCISet = function(set, cb) {
                     winston.warn("Artist not found for card: %s", card.name);
             });
 
-            //winston.info("Other Printings: %s", (this.data.set.cards.map(function (card) { return card.printings; }).flatten().unique().map(function (setName) { return C.SETS.mutateOnce(function (SET) { return SET.name===setName ? SET.code : undefined; }); }).remove(this.data.set.code) || []).join(" "));
+            //winston.info("Other Printings: %s", (flatten(this.data.set.cards.map(function (card) { return card.printings; })).filter(util.uniqueFilter).map(function (setName) { return C.SETS.mutateOnce(function (SET) { return SET.name===setName ? SET.code : undefined; }); }).remove(this.data.set.code) || []).join(" "));
 
             setImmediate(cb, err, set);
         }
@@ -1410,7 +1420,7 @@ var addMagicLibraritiesInfoToMCISet = function(set, cb) {
             }.bind(this));
         },
         function populateReleaseDates() {
-            Array.prototype.slice.apply(arguments).map(function (doc) { return Array.from(doc.querySelectorAll("table tr td:nth-child(5) a font")); }).flatten().forEach(function (cardNameElement) {
+            flatten(Array.prototype.slice.apply(arguments).map(function (doc) { return Array.from(doc.querySelectorAll("table tr td:nth-child(5) a font")); })).forEach(function (cardNameElement) {
                 // Card Names
                 var cardNames = [];
 

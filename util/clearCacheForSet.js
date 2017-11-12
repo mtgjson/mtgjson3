@@ -2,6 +2,7 @@
 /*global setImmediate: true*/
 
 var C = require('../shared/C'),
+    flatten = require('arr-flatten'),
     fs = require("fs"),
     shared = require('../shared/shared'),
     path = require("path"),
@@ -166,7 +167,7 @@ function clearCacheForSet(code, cacheTypes, cb) {
         if (!err && !urls) err = new Error('No urls for clearCacheFiles().');
         if (err) return cb(err);
 
-        urls = urls.flatten().uniqueBySort().filter(function (url) { return(url !== null && url !== undefined && url !== ''); });
+        urls = flatten(urls).uniqueBySort().filter(function (url) { return(url !== null && url !== undefined && url !== ''); });
         winston.info("Clearing %d URLs", urls.length);
         async.each(urls, shared.clearCacheFile, cb);
     }
