@@ -11,6 +11,7 @@ var tiptoe = require("tiptoe");
 var fs = require("fs");
 var url = require("url");
 var unidecode = require("unidecode");
+var util = require("./util");
 var winston = require("winston");
 
 require("@sembiance/xbase");
@@ -216,24 +217,36 @@ exports.performSetCorrections = function(setCorrections, fullSet)
             var LAND_ORDER = ["Island", "Swamp", "Mountain", "Forest", "Plains"];
             var cardNumber = 1;
 
-            // COLORS, Golds, Artifacts, Non-Basic Lands, Lands
 
-            cards.multiSort([function(card) {
-                                if(card.hasOwnProperty("colors") && card.colors.length===1)
-                                    return COLOR_ORDER.indexOf(card.colors[0]);
-                                if(card.hasOwnProperty("colors") && card.colors.length>1)
-                                    return 5;
-                                if(card.types.includes("Artifact"))
-                                    return 6;
-                                if(card.types.includes("Land") && !card.hasOwnProperty("supertypes"))
-                                    return 7;
-                                if(LAND_ORDER.includes(card.name))
-                                    return 8+LAND_ORDER.indexOf(card.name);
+            function colorOrder(card) {
+                // COLORS, Golds, Artifacts, Non-Basic Lands, Lands
+                if(card.hasOwnProperty("colors") && card.colors.length===1)
+                    return COLOR_ORDER.indexOf(card.colors[0]);
+                if(card.hasOwnProperty("colors") && card.colors.length>1)
+                    return 5;
+                if(card.types.includes("Artifact"))
+                    return 6;
+                if(card.types.includes("Land") && !card.hasOwnProperty("supertypes"))
+                    return 7;
+                if(LAND_ORDER.includes(card.name))
+                    return 8+LAND_ORDER.indexOf(card.name);
+                return 99999999;
+            }
 
-                                return 99999999;
-                             },
-                             function(card) { return card.name; },
-                             function(card) { return card.multiverseid || 0; }]).forEach(function(card) { card.number = "" + (cardNumber++); });
+            function cardNumberComparator(cardA, cardB) {
+                // Compare colors
+                var colorComparison = colorOrder(cardA) - colorOrder(cardB);
+                if (colorComparison !== 0) return colorComparison;
+                // name
+                if (cardA.name < cardB.name) return -2;
+                if (cardA.name > cardB.name) return 2;
+                // multiverseid
+                if (cardA.multiverseid < cardB.multiverseid) return -1;
+                if (cardA.multiverseid > cardB.multiverseid) return 1;
+                return 0;
+            }
+
+            cards.sort(cardNumberComparator).forEach(function(card) { card.number = "" + (cardNumber++); });
         }
         else if(setCorrection==="sortCards")
         {
@@ -552,8 +565,14 @@ exports.finalizePrintings = function (card) {
     if(!card.printings)
         return;
 
-    card.printings = card.printings.unique().multiSort([function(item) { return moment(exports.getReleaseDateForSetCode(item), "YYYY-MM-DD").unix(); },
-                                                        function(item) { return item; }]);
+    function setCodeComparator(setA, setB) {
+        var releaseA = moment(exports.getReleaseDateForSetCode(setA), "YYYY-MM-DD").unix();
+        var releaseB = moment(exports.getReleaseDateForSetCode(setB), "YYYY-MM-DD").unix();
+        if (releaseA < releaseB) return -2;
+        if (releaseA > releaseB) return 2;
+        return setA.localeCompare(setB);
+    }
+    card.printings = card.printings.filter(util.uniqueFilter).sort(setCodeComparator);
 }
 
 exports.getSetCodeFromName = function (setName) {
