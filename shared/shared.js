@@ -183,12 +183,12 @@ exports.buildListingsURL = function(setName, page)
             sort    : "cn+",
             action  : "advanced",
             special : "true",
-            set     : "[" + JSON.stringify(setName.replaceAll("&", "and")) + "]",
+            set     : "[" + JSON.stringify(setName.replace(new RegExp("&", "g"), "and")) + "]",
             page    : ("" + (page || 0))
         }
     };
 
-    return url.format(urlConfig).replaceAll("%5C", "");
+    return url.format(urlConfig).replace(new RegExp("%5C", "g"), "");
 };
 
 exports.getSetCorrections = function(setCode)
@@ -283,7 +283,7 @@ exports.performSetCorrections = function(setCorrections, fullSet)
                                     if(!card.hasOwnProperty(key))
                                         return;
 
-                                    Object.forEach(value, function(findText, replaceWith) { card[key] = card[key].replaceAll(findText, replaceWith); });
+                                    Object.forEach(value, function(findText, replaceWith) { card[key] = card[key].replace(new RegExp(findText, "g"), replaceWith); });
                                 }
                                 else
                                 {
@@ -417,7 +417,7 @@ exports.performSetCorrections = function(setCorrections, fullSet)
         if(!card.artist)
             return;
 
-        card.artist = card.artist.replaceAll(" and ", " & ");
+        card.artist = card.artist.replace(new RegExp(" and ", "g"), " & ");
         Object.forEach(C.ARTIST_CORRECTIONS, function(correctArtist, artistAliases)
         {
             if(artistAliases.includes(card.artist))
@@ -477,20 +477,9 @@ exports.performSetCorrections = function(setCorrections, fullSet)
     // Homogenize quotes and remove extra newlines and trailing spaces
     function fixText(text) {
         var newText = text;
-        newText = newText.replaceAll("“", "\"");
-        newText = newText.replaceAll("”", "\"");
-        newText = newText.replaceAll("＂", "\"");
-        newText = newText.replaceAll("’", "'");
-        newText = newText.replaceAll("‘", "'");
-        while (newText.includes(" \n")) {
-            newText = newText.replaceAll(" \n", "\n");
-        }
-        while (newText.includes("\n ")) {
-            newText = newText.replaceAll("\n ", "\n");
-        }
-        while (newText.includes("\n\n")) {
-            newText = newText.replaceAll("\n\n", "\n");
-        }
+        newText = newText.replace(new RegExp("[“”＂]", "g"), "\"");
+        newText = newText.replace(new RegExp("[‘’]", "g"), "'");
+        newText = newText.replace(new RegExp(" *\n+ *", "g"), "\n");
         return newText;
     }
 
@@ -508,11 +497,11 @@ exports.performSetCorrections = function(setCorrections, fullSet)
                 ruling.text = fixText(ruling.text);
 
                 Object.forEach(C.SYMBOL_MANA, function(manaSymbol) {
-                    var newText = ruling.text.replaceAll("\\{" + manaSymbol.toUpperCase() + "\\]", "{" + manaSymbol.toUpperCase() + "}");
+                    var newText = ruling.text.replace(new RegExp("\\{" + manaSymbol.toUpperCase() + "\\]", "g"), "{" + manaSymbol.toUpperCase() + "}");
                     if(newText===ruling.text)
-                        ruling.text.replaceAll("\\[" + manaSymbol.toUpperCase() + "\\}", "{" + manaSymbol.toUpperCase() + "}");
+                        ruling.text.replace(new RegExp("\\[" + manaSymbol.toUpperCase() + "\\}", "g"), "{" + manaSymbol.toUpperCase() + "}");
                     if(newText===ruling.text)
-                        ruling.text.replaceAll("\\[" + manaSymbol.toUpperCase() + "\\]", "{" + manaSymbol.toUpperCase() + "}");
+                        ruling.text.replace(new RegExp("\\[" + manaSymbol.toUpperCase() + "\\]", "g"), "{" + manaSymbol.toUpperCase() + "}");
 
                     if(newText!==ruling.text) {
                         winston.warn("Auto correcting set %s Card [%s] (%s) that has ruling with invalid symbol: %s", fullSet.code, card.name, card.multiverseid || "", ruling.text);

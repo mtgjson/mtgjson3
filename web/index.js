@@ -103,7 +103,7 @@ function processCard(SET, card, callback) {
 
             var fieldValue = card[fieldName];
             if (fieldName === "imageName")        // Modify for AllCards.json the imageName field
-                fieldValue = card.name.toLowerCase().strip(":\"?").replaceAll("/", " ").trim("0123456789 .").replaceAll(" token card", "");
+                fieldValue = card.name.toLowerCase().strip(":\"?").replace(new RegExp("/", "g"), " ").trim("0123456789 .").replace(new RegExp(" token card", "g"), "");
 
             if (C.ORACLE_FIELDS.includes(fieldName) && fieldName !== 'foreignNames') {
                 checkTaint(fieldName, fieldValue);

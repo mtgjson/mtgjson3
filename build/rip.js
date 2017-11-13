@@ -324,7 +324,7 @@ var processMultiverseids = function (multiverseids, cb) {
 };
 
 var getCardPartIDPrefix = function(cardPart) {
-    return "#" + cardPart.querySelector(".rightCol").getAttribute("id").replaceAll("_rightCol", "");
+    return "#" + cardPart.querySelector(".rightCol").getAttribute("id").replace(new RegExp("_rightCol", "g"), "");
 };
 
 var processCardPart = function(doc, cardPart, printedDoc, printedCardPart) {
@@ -421,7 +421,7 @@ var processCardPart = function(doc, cardPart, printedDoc, printedCardPart) {
     fillCardTypes(card, rawTypeFull);
 
     // Original type
-    card.originalType = getTextContent(printedCardPart.querySelector(idPrefixPrinted + "_typeRow .value")).trim().replaceAll(" -", " —");
+    card.originalType = getTextContent(printedCardPart.querySelector(idPrefixPrinted + "_typeRow .value")).trim().replace(new RegExp(" -", "g"), " —");
 
     if (card.originalType && card.originalType.toLowerCase().startsWith("token "))
         card.layout = "token";
@@ -447,7 +447,7 @@ var processCardPart = function(doc, cardPart, printedDoc, printedCardPart) {
             card.loyalty = +powerToughnessValue.trim();
         }
         else if (card.types.includes("Vanguard")) {
-            var handLifeParts = powerToughnessValue.trim().strip("+)(").replaceAll("Hand Modifier: ", "").replaceAll("Life Modifier: ", "").split(",").map(function (a) { return a.trim(); });
+            var handLifeParts = powerToughnessValue.trim().strip("+)(").replace(new RegExp("Hand Modifier: ", "g"), "").replace(new RegExp("Life Modifier: ", "g"), "").split(",").map(function (a) { return a.trim(); });
             if (handLifeParts.length!==2) {
                 winston.warn("Power toughness invalid [%s] for card: %s", getTextContent(cardPart.querySelector(idPrefix + "_ptRow .value")).trim(), card.name);
             }
@@ -459,7 +459,7 @@ var processCardPart = function(doc, cardPart, printedDoc, printedCardPart) {
         else {
             // Power/Toughness
             Object.forEach(POWER_TOUGHNESS_REPLACE_MAP, function(find, replace) {
-                powerToughnessValue = powerToughnessValue.replaceAll(find, replace);
+                powerToughnessValue = powerToughnessValue.replace(new RegExp(find, "g"), replace);
             });
 
             var powerToughnessParts = powerToughnessValue.split("/");
@@ -848,9 +848,9 @@ var fillImageNames = function (set) {
             card.imageName += imageNumber;
         }
 
-        card.imageName = card.imageName.replaceAll("/", " ");
+        card.imageName = card.imageName.replace(new RegExp("/", "g"), " ");
 
-        card.imageName = card.imageName.strip(":\"?").replaceAll(" token card", "").toLowerCase();
+        card.imageName = card.imageName.strip(":\"?").replace(new RegExp(" token card", "g"), "").toLowerCase();
     });
 };
 
@@ -879,7 +879,7 @@ var compareCardsToMCI = function(set, cb) {
 
                 var mciCardLink = mciCardLinks.filter(function (link) {
                     var name = link.textContent.trim();
-                    name = name.replaceAll("Æ", "Ae").replaceAll("“", "\"").replaceAll("”", "\"");
+                    name = name.replace(new RegExp("Æ", "g"), "Ae").replace(new RegExp("“", "g"), "\"").replace(new RegExp("”", "g"), "\"");
                     return name.toLowerCase() === createMCICardName(card).toLowerCase();
                 });
                 if (card.layout==="meld")
@@ -906,10 +906,10 @@ var createMCICardName = function(card) {
 };
 
 var normalizeFlavor = function(flavor) {
-    flavor = unidecode(flavor).trim().replaceAll("\n", " ").innerTrim().replaceAll(" —", "—");
-    while (flavor.includes(". .")) { flavor = flavor.replaceAll("[.] [.]", ".."); }
-    while (flavor.includes(" .")) { flavor = flavor.replaceAll(" [.]", "."); }
-    while (flavor.includes(". ")) { flavor = flavor.replaceAll("[.] ", "."); }
+    flavor = unidecode(flavor).trim().replace(new RegExp("\n", "g"), " ").innerTrim().replace(new RegExp(" —", "g"), "—");
+    while (flavor.includes(". .")) { flavor = flavor.replace(new RegExp("[.] [.]", "g"), ".."); }
+    while (flavor.includes(" .")) { flavor = flavor.replace(new RegExp(" [.]", "g"), "."); }
+    while (flavor.includes(". ")) { flavor = flavor.replace(new RegExp("[.] ", "g"), "."); }
 
     return flavor;
 };
@@ -978,10 +978,10 @@ var compareCardToMCI = function(set, card, mciCardURL, cb) {
                         mciArtist = null;
                     }
                     else {
-                        mciArtist = mciArtist[0].textContent.substring(7).trim().replaceAll("\n", " ").replaceAll(" and ", " & ").innerTrim();
+                        mciArtist = mciArtist[0].textContent.substring(7).trim().replace(new RegExp("\n", "g"), " ").replace(new RegExp(" and ", "g"), " & ").innerTrim();
                     }
                 }
-                var cardArtist = (card.artist || "").trim().replaceAll("\n", " ").innerTrim();
+                var cardArtist = (card.artist || "").trim().replace(new RegExp("\n", "g"), " ").innerTrim();
                 if (!mciArtist && cardArtist)
                     winston.warn("ARTIST: %s (%s) has artist but MagicCardsInfo (%s) does not.", card.name, card.multiverseid, mciCardURL);
                 else if (mciArtist && !cardArtist)
@@ -1285,7 +1285,7 @@ var ripMCICard = function(set, mciCardURL, cb) {
                 else if (card.text.toLowerCase().includes("meld"))
                     card.layout = 'meld';
             }
-            card.text.replaceAll("{UP}", "{U/P}").replaceAll("{BP}", "{B/P}").replaceAll("{RP}", "{R/P}").replaceAll("{GP}", "{G/P}").replaceAll("{WP}", "{W/P}");
+            card.text.replace(new RegExp("{UP}", "g"), "{U/P}").replace(new RegExp("{BP}", "g"), "{B/P}").replace(new RegExp("{RP}", "g"), "{R/P}").replace(new RegExp("{GP}", "g"), "{G/P}").replace(new RegExp("{WP}", "g"), "{W/P}");
 
             // Replace MCI ascii dashes with minus sines in planeswalker abilities
             if (card.types.includes("Planeswalker"))
@@ -1449,11 +1449,11 @@ var addMagicLibraritiesInfoToMCISet = function(set, cb) {
                 var generalYear = getTextContent(cardNameElement.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.previousElementSibling).trim() || null;
                 var releaseDateText = getTextContent(cardNameElement.parentNode.parentNode.nextElementSibling.nextElementSibling.nextElementSibling.firstChild).trim();
                 while(releaseDateText.includes("-?")) {
-                    releaseDateText = releaseDateText.replaceAll("-[?]", "");
+                    releaseDateText = releaseDateText.replace(new RegExp("-[?]", "g"), "");
                 }
 
                 if (/^[0-9][0-9][0-9][0-9]\/[0-9][0-9]\/[0-9][0-9]$/.test(releaseDateText))
-                    releaseDateText = releaseDateText.replaceAll("/", "-");
+                    releaseDateText = releaseDateText.replace(new RegExp("/", "g"), "-");
 
                 var releaseDateRe = [
                     /^([0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9])\/?.*/,
@@ -1499,7 +1499,7 @@ var addMagicLibraritiesInfoToMCISet = function(set, cb) {
                     return;
 
                 if (magicLibraritiesInfo[cardNameNormalized].source)
-                    card.source = magicLibraritiesInfo[cardNameNormalized].source.replaceAll(String.fromCharCode(65533) + " ", " ");
+                    card.source = magicLibraritiesInfo[cardNameNormalized].source.replace(new RegExp(String.fromCharCode(65533) + " ", "g"), " ");
                 if (magicLibraritiesInfo[cardNameNormalized].releaseDate)
                     card.releaseDate = magicLibraritiesInfo[cardNameNormalized].releaseDate;
                 if (magicLibraritiesInfo[cardNameNormalized].number)
@@ -1547,15 +1547,15 @@ var processTextBlocks = function(textBlocks) {
         result += processTextBoxChildren(Array.from(textBox.childNodes));
     });
 
-    result = result.replaceAll("\u2028", "\n");
-    result = result.replaceAll("&amp;", "&");
+    result = result.replace(new RegExp("\u2028", "g"), "\n");
+    result = result.replace(new RegExp("&amp;", "g"), "&");
 
     while(result.includes("\n\n")) {
-        result = result.replaceAll("\n\n", "\n");
+        result = result.replace(new RegExp("\n\n", "g"), "\n");
     }
 
-    result = result.replaceAll("\u00a0", " ");
-    result = result.replaceAll("―", "—");
+    result = result.replace(new RegExp("\u00a0", "g"), " ");
+    result = result.replace(new RegExp("―", "g"), "—");
     result = stripUnsafeChars(result);
     return result;
 };
@@ -1582,12 +1582,12 @@ var processTextBoxChildren = function(children) {
         else if (child.nodeType===3) {
             var childText = child.data;
             Object.forEach(TEXT_TO_SYMBOL_MAP, function(text, symbol) {
-                childText = childText.replaceAll("o" + text, "{" + symbol + "}");
-                childText = childText.replaceAll(text, "{" + symbol + "}");
+                childText = childText.replace(new RegExp("o" + text, "g"), "{" + symbol + "}");
+                childText = childText.replace(new RegExp(text, "g"), "{" + symbol + "}");
             });
 
-            childText = childText.replaceAll("roll chaos", "roll {C}");
-            childText = childText.replaceAll("chaos roll", "{C} roll");
+            childText = childText.replace(new RegExp("roll chaos", "g"), "roll {C}");
+            childText = childText.replace(new RegExp("chaos roll", "g"), "{C} roll");
 
             // fix errors of type 'N{'... For more info, see issue #48.
             childText = childText.replace(/([0-9]){/g, '{$1}{');
@@ -1618,8 +1618,8 @@ var getTextContent = function(item) {
             })
             .replace(/<[^>]*>/g, '');
         ret = ret
-            .replaceAll("&amp;", "&")
-            .replaceAll("&nbsp;", " ");
+            .replace(new RegExp("&amp;", "g"), "&")
+            .replace(new RegExp("&nbsp;", "g"), " ");
     }
     ret = stripUnsafeChars(ret);
     return(ret);

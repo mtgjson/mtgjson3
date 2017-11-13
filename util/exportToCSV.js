@@ -43,7 +43,7 @@ function processSet(code, cb)
                         process.stdout.write("\t");
 
                     if(card.hasOwnProperty(CARD_FIELD))
-                        process.stdout.write(typeof card[CARD_FIELD]==="string" ? card[CARD_FIELD].replaceAll("\n", " ").replaceAll("\t", " ") : card[CARD_FIELD]);
+                        process.stdout.write(typeof card[CARD_FIELD]==="string" ? card[CARD_FIELD].replace(new RegExp("\n", "g"), " ").replace(new RegExp("\t", "g"), " ") : card[CARD_FIELD]);
                 });
 
                 process.stdout.write("\n");
