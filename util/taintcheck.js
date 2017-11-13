@@ -31,7 +31,7 @@ var checkCard = function(SET, card, callback) {
 
             var fieldValue = card[fieldName];
             if (fieldName === "imageName")        // Modify for AllCards.json the imageName field
-                fieldValue = card.name.toLowerCase().strip(":\"?").replace(new RegExp("/", "g"), " ").replace(new RegExp("^[0-9 \.]+|[0-9 \.]+$", "g"), "").replace(new RegExp(" token card", "g"), "");
+                fieldValue = card.name.toLowerCase().replace(new RegExp(":\"?", "g"), "").replace(new RegExp("/", "g"), " ").replace(new RegExp("^[0-9 \.]+|[0-9 \.]+$", "g"), "").replace(new RegExp(" token card", "g"), "");
 
             if (C.ORACLE_FIELDS.includes(fieldName) && fieldName !== 'foreignNames') {
                 checkTaintField(SET, card, fieldName, fieldValue);

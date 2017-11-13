@@ -447,7 +447,7 @@ var processCardPart = function(doc, cardPart, printedDoc, printedCardPart) {
             card.loyalty = +powerToughnessValue.trim();
         }
         else if (card.types.includes("Vanguard")) {
-            var handLifeParts = powerToughnessValue.trim().strip("+)(").replace(new RegExp("Hand Modifier: ", "g"), "").replace(new RegExp("Life Modifier: ", "g"), "").split(",").map(function (a) { return a.trim(); });
+            var handLifeParts = powerToughnessValue.trim().replace(new RegExp("[+)(]", "g"), "").replace(new RegExp("Hand Modifier: ", "g"), "").replace(new RegExp("Life Modifier: ", "g"), "").split(",").map(function (a) { return a.trim(); });
             if (handLifeParts.length!==2) {
                 winston.warn("Power toughness invalid [%s] for card: %s", getTextContent(cardPart.querySelector(idPrefix + "_ptRow .value")).trim(), card.name);
             }
@@ -850,7 +850,7 @@ var fillImageNames = function (set) {
 
         card.imageName = card.imageName.replace(new RegExp("/", "g"), " ");
 
-        card.imageName = card.imageName.strip(":\"?").replace(new RegExp(" token card", "g"), "").toLowerCase();
+        card.imageName = card.imageName.replace(new RegExp("[:\"?]", "g"), "").replace(new RegExp(" token card", "g"), "").toLowerCase();
     });
 };
 
@@ -1255,7 +1255,7 @@ var ripMCICard = function(set, mciCardURL, cb) {
             // Mana Cost
             var manaRegex = /{([^}]+)}/g;
             var manaCostRaw = cardInfoParts[4];
-            var manaParts = (manaCostRaw.match(manaRegex) || []).map(function (manaPart) { return manaPart.strip("{}"); });
+            var manaParts = (manaCostRaw.match(manaRegex) || []).map(function (manaPart) { return manaPart.replace(new RegExp("[{}]", "g"), ""); });
             if (SYMBOL_CONVERSION_MAP.hasOwnProperty(manaCostRaw))
                 card.manaCost = processSymbol(manaCostRaw);
             else
