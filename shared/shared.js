@@ -258,8 +258,9 @@ exports.performSetCorrections = function(setCorrections, fullSet)
             var cardsToIncrementNumber = [];
             cards.forEach(function(card)
             {
-                if(setCorrection.match && (setCorrection.match==="*" || (Object.every(setCorrection.match, function(key, value)
+                if(setCorrection.match && (setCorrection.match==="*" || (Object.keys(setCorrection.match).every(function(key)
                     {
+                        var value = setCorrection.match[key];
                         if(Array.isArray(value))
                             return value.includes(card[key]);
 
@@ -274,14 +275,18 @@ exports.performSetCorrections = function(setCorrections, fullSet)
                 {
                     if(setCorrection.replace)
                     {
-                        Object.forEach(setCorrection.replace, function(key, value)
+                        Object.keys(setCorrection.replace).forEach(function(key)
                             {
-                                if(Object.isObject(value))
+                                var value = setCorrection.replace[key];
+                                if(value !== null && !Array.isArray(value) && typeof value === "object")
                                 {
                                     if(!card.hasOwnProperty(key))
                                         return;
 
-                                    Object.forEach(value, function(findText, replaceWith) { card[key] = card[key].replace(new RegExp(findText, "g"), replaceWith); });
+                                    Object.keys(value).forEach(function(findText) {
+                                        var replaceWith = value[findText];
+                                        card[key] = card[key].replace(new RegExp(findText, "g"), replaceWith);
+                                    });
                                 }
                                 else
                                 {
@@ -303,8 +308,9 @@ exports.performSetCorrections = function(setCorrections, fullSet)
                     }
 
                     if(setCorrection.setLegality) {
-                        Object.forEach(setCorrection.setLegality, function(legalityType, legalityValue)
+                        Object.keys(setCorrection.setLegality).forEach(function(legalityType)
                         {
+                            var legalityValue = setCorrection.setLegality[legalityType];
                             var foundExisting = false;
                             if(card.hasOwnProperty("legalities"))
                             {
@@ -400,7 +406,7 @@ exports.performSetCorrections = function(setCorrections, fullSet)
                     newCard = clone(setCorrection.addCard);
 
                 if(setCorrection.replace)
-                    Object.forEach(setCorrection.replace, function(key, value) { newCard[key] = value; });
+                    Object.keys(setCorrection.replace).forEach(function(key) { newCard[key] = setCorrection.replace[key]; });
                 if(setCorrection.remove)
                     setCorrection.remove.forEach(function(removeKey) { delete newCard[removeKey]; });
 
@@ -416,8 +422,9 @@ exports.performSetCorrections = function(setCorrections, fullSet)
             return;
 
         card.artist = card.artist.replace(new RegExp(" and ", "g"), " & ");
-        Object.forEach(C.ARTIST_CORRECTIONS, function(correctArtist, artistAliases)
+        Object.keys(C.ARTIST_CORRECTIONS).forEach(function(correctArtist)
         {
+            var artistAliases = C.ARTIST_CORRECTIONS[correctArtist];
             if(artistAliases.includes(card.artist))
                 card.artist = correctArtist;
         });
@@ -494,7 +501,7 @@ exports.performSetCorrections = function(setCorrections, fullSet)
             card.rulings.forEach(function(ruling) {
                 ruling.text = fixText(ruling.text);
 
-                Object.forEach(C.SYMBOL_MANA, function(manaSymbol) {
+                Object.keys(C.SYMBOL_MANA).forEach(function(manaSymbol) {
                     var newText = ruling.text.replace(new RegExp("\\{" + manaSymbol.toUpperCase() + "\\]", "g"), "{" + manaSymbol.toUpperCase() + "}");
                     if(newText===ruling.text)
                         ruling.text.replace(new RegExp("\\[" + manaSymbol.toUpperCase() + "\\}", "g"), "{" + manaSymbol.toUpperCase() + "}");
@@ -751,7 +758,7 @@ exports.getPagingNumPages = function(doc, type)
     {
         if(type==="printings")
         {
-            var lastPageHREF = pageLinks.last().getAttribute("href");
+            var lastPageHREF = pageLinks[pageLinks.length - 1].getAttribute("href");
             numPages += +querystring.parse(lastPageHREF.substring(lastPageHREF.indexOf("?")+1)).page;
         }
         else

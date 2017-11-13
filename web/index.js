@@ -13,7 +13,7 @@ var childProcess = require("child_process");
 var ansidiff = require('ansidiff');
 
 var C = require('../shared/C');
-var clone = require('../clonekit');
+var clone = require('clone');
 
 var JSONP_PREFIX = 'mtgjsoncallback(';
 var JSONP_SUFFIX = ');';
@@ -134,7 +134,7 @@ function processSet(SET, callback) {
             delete SET.useMagicRaritiesNumber;
 
             // Create Simple Set
-            var SimpleSet = clone(SET, true);
+            var SimpleSet = clone(SET);
             async.each(SimpleSet.cards, function(card, cb) {
                 // Strip out extras
                 async.each(C.EXTRA_FIELDS, function(EXTRA_FIELD, subcb) {
@@ -303,7 +303,7 @@ tiptoe(
         };
 
         // Generate allCards object.
-        allCards = clone(allCardsWithExtras, true);
+        allCards = clone(allCardsWithExtras);
         Object.values(allCards).forEach(function(card) {
             // Strip out extras
             C.EXTRA_FIELDS.forEach(function(EXTRA_FIELD) {

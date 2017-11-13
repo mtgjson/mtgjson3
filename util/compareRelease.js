@@ -116,8 +116,9 @@ function compareSets(oldSet, newSet, filename)
         result += cardsChanged;
     }
 
-    Object.forEach(oldCardsMap, function(key, oldCard)
+    Object.keys(oldCardsMap).forEach(function(key)
     {
+        var oldCard = oldCardsMap[key];
         if(!newCardsMap.hasOwnProperty(key))
             return;
 

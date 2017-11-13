@@ -458,7 +458,8 @@ var processCardPart = function(doc, cardPart, printedDoc, printedCardPart) {
         }
         else {
             // Power/Toughness
-            Object.forEach(POWER_TOUGHNESS_REPLACE_MAP, function(find, replace) {
+            Object.keys(POWER_TOUGHNESS_REPLACE_MAP).forEach(function(find) {
+                var replace = POWER_TOUGHNESS_REPLACE_MAP[find];
                 powerToughnessValue = powerToughnessValue.replace(new RegExp(find, "g"), replace);
             });
 
@@ -689,7 +690,7 @@ var addPrintingsToCards = function (set, cb) {
             var setCodes = C.SETS.map(function (SET) { return SET.code; });
             // Adds non-gatherer sets and promo MCI sets and sets released since last printing to the current set
             var nonGathererSets = unique(C.SETS_NOT_ON_GATHERER.concat(shared.getMCISetCodes()).concat(setCodes.slice(setCodes.indexOf(C.LAST_PRINTINGS_RESET)+1)));
-            nonGathererSets.remove(set.code);
+            nonGathererSets = nonGathererSets.filter(function(s) { return s !== set.code; });
             async.mapSeries(
                 nonGathererSets,
                 function (code, subcb) {
@@ -772,7 +773,8 @@ var fillCardTypes = function (card, rawTypeFull) {
         if (rawType==="Summon")
             rawType = "Creature";
 
-        rawType = rawType.trim().toProperCase();
+        rawType = rawType.trim();
+        rawType = rawType.charAt(0).toUpperCase() + rawType.slice(1).toLowerCase();
         if (C.SUPERTYPES.includes(rawType))
             card.supertypes.push(rawType);
         else if (C.TYPES.includes(rawType))
@@ -807,7 +809,8 @@ var fillCardColors = function (card) {
         return;
 
     card.manaCost.split("").forEach(function (manaCost) {
-        Object.forEach(COLOR_SYMBOL_TO_NAME_MAP, function (colorSymbol, colorName) {
+        Object.keys(COLOR_SYMBOL_TO_NAME_MAP).forEach(function(colorSymbol) {
+            var colorName = COLOR_SYMBOL_TO_NAME_MAP[colorSymbol];
             if (manaCost.includes(colorSymbol))
                 card.colors.push(colorName);
         });
@@ -824,7 +827,8 @@ var fillImageNames = function (set) {
             cardNameCounts[card.name]++;
     });
 
-    Object.forEach(cardNameCounts, function (key, val) {
+    Object.keys(cardNameCounts).forEach(function(key) {
+        var val = cardNameCounts[key];
         if (val===0)
             delete cardNameCounts[key];
         else
@@ -855,7 +859,9 @@ var fillImageNames = function (set) {
 };
 
 var sortCardColors = function (card) {
-    card.colors = unique(card.colors).sort(function (a, b) { return COLOR_ORDER.indexOf(a)-COLOR_ORDER.indexOf(b); }).map(function (color) { return color.toProperCase(); });
+    card.colors = unique(card.colors)
+        .sort(function (a, b) { return COLOR_ORDER.indexOf(a) - COLOR_ORDER.indexOf(b); })
+        .map(function (color) { return color.charAt(0).toUpperCase() + color.slice(1).toLowerCase(); });
     if (card.colors.length===0)
         delete card.colors;
 };
@@ -1581,7 +1587,8 @@ var processTextBoxChildren = function(children) {
         }
         else if (child.nodeType===3) {
             var childText = child.data;
-            Object.forEach(TEXT_TO_SYMBOL_MAP, function(text, symbol) {
+            Object.keys(TEXT_TO_SYMBOL_MAP).forEach(function(text) {
+                var symbol = TEXT_TO_SYMBOL_MAP[text];
                 childText = childText.replace(new RegExp("o" + text, "g"), "{" + symbol + "}");
                 childText = childText.replace(new RegExp(text, "g"), "{" + symbol + "}");
             });
