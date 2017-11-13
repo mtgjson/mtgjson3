@@ -585,13 +585,12 @@ var getURLsForMultiverseid = function (multiverseid, cb) {
 };
 
 var addForeignNamesToCards = function (cards, cb) {
-    cards.parallelForEach(
+    async.each(
+        cards,
         function(card, subcb) {
             addForeignNamesToCard(card, subcb);
         },
-        cb,
-        10
-    );
+        cb);
 };
 
 var addForeignNamesToCard = function (card, cb) {
@@ -640,13 +639,12 @@ var addForeignNamesToCard = function (card, cb) {
 };
 
 var addLegalitiesToCards = function (cards, cb) {
-    cards.parallelForEach(
+    async.each(
+        cards,
         function(card, subcb) {
             addLegalitiesToCard(card, subcb);
         },
-        cb,
-        10
-    );
+        cb);
 };
 
 var addLegalitiesToCard = function (card, cb) {
