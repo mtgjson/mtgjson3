@@ -94,7 +94,7 @@ function processSet(setCode, targetMultiverseids, cb)
                     }
                     else
                     {
-                        newCard.imageName = newCard.imageName.trim("0123456789 .");
+                        newCard.imageName = newCard.imageName.replace(new RegExp("^[0-9 \.]+|[0-9 \.]+$", "g"), "");
                         if(newCard.rarity==="Basic Land")
                         {
                             if(!basicLandCount.hasOwnProperty(newCard.name))
