@@ -1004,50 +1004,49 @@ var compareCardsToEssentialMagic = function(set, cb) {
             shared.getURLAsDoc("http://www.essentialmagic.com/cardsets/Spoiler.asp?ID=" + set.essentialMagicCode, this);
         },
         function processSetCardList(listDoc) {
+            var nameToEssentialFlavor = {};
             Array.from(listDoc.querySelectorAll("table td#contentarea div#main table tr")).forEach(function (cardRow) {
-                var cardName = processTextBlocks(cardRow.querySelector("td:nth-child(2) b a")).innerTrim().trim();
+                var cardName = processTextBlocks([cardRow.querySelector("td:nth-child(2) b a")]).innerTrim().trim();
                 if (!cardName) {
                     winston.warn("Missing card name: %s", cardRow.innerHTML);
                     return;
                 }
-
-                set.cards.forEach(function (card) {
-                    if (card.name!==cardName)
-                        return;
-
-                    var cardCorrection = null;
-                    if (C.SET_CORRECTIONS.hasOwnProperty(set.code)) {
-                        C.SET_CORRECTIONS[set.code].forEach(function (setCorrection) {
-                            if (!setCorrection.hasOwnProperty("match") || !setCorrection.match.hasOwnProperty("name"))
-                                return;
-
-                            if ((typeof setCorrection.match.name === "string" && setCorrection.match.name === card.name) || (Array.isArray(setCorrection.match.name) && setCorrection.match.name.includes(card.name)))
-                                cardCorrection = setCorrection;
-                        });
-                    }
-
-                    var hasFlavorCorrection = false;
-                    if (cardCorrection && ((cardCorrection.replace && cardCorrection.replace.flavor) || cardCorrection.fixFlavorNewlines || cardCorrection.flavorAddDash || cardCorrection.flavorAddExclamation))
-                        hasFlavorCorrection = true;
-
-                    // Compare flavor
-                    if (!hasFlavorCorrection) {
-                        if (C.ALLOW_ESSENTIAL_FLAVOR_MISMATCH.hasOwnProperty(set.code) && (C.ALLOW_ESSENTIAL_FLAVOR_MISMATCH[set.code].includes(card.multiverseid) || C.ALLOW_ESSENTIAL_FLAVOR_MISMATCH[set.code].includes(card.name)))
+                nameToEssentialFlavor[cardName] = normalizeFlavor(processTextBlocks(cardRow.querySelectorAll("td:nth-child(2) i")));
+            });
+            return nameToEssentialFlavor;
+        },
+        function compareSetCardList(nameToEssentialFlavor) {
+            set.cards.forEach(function(card) {
+                var cardCorrection = null;
+                if (C.SET_CORRECTIONS.hasOwnProperty(set.code)) {
+                    C.SET_CORRECTIONS[set.code].forEach(function (setCorrection) {
+                        if (!setCorrection.hasOwnProperty("match") || !setCorrection.match.hasOwnProperty("name"))
                             return;
 
-                        var cardFlavor = normalizeFlavor(card.flavor || "");
-                        var essentialFlavor = normalizeFlavor(processTextBlocks(cardRow.querySelector("td:nth-child(2) i")));
-                        if (!essentialFlavor && cardFlavor)
-                            winston.warn("FLAVOR: %s (%s) has flavor but essentialMagic does not.", card.name, card.multiverseid);
-                        else if (essentialFlavor && !cardFlavor)
-                            winston.warn("FLAVOR: %s (%s) does not have flavor but essentialMagic does.", card.name, card.multiverseid);
-                        else if (essentialFlavor !== cardFlavor)
-                            winston.warn("FLAVOR: %s (%s) flavor does not match essentialMagic.\n%s", card.name, card.multiverseid, ansidiff.words(cardFlavor, essentialFlavor));
-                    }
-                });
-            });
+                        if ((typeof setCorrection.match.name === "string" && setCorrection.match.name === card.name) || (Array.isArray(setCorrection.match.name) && setCorrection.match.name.includes(card.name)))
+                            cardCorrection = setCorrection;
+                    });
+                }
 
-            this();
+                var hasFlavorCorrection = false;
+                if (cardCorrection && ((cardCorrection.replace && cardCorrection.replace.flavor) || cardCorrection.fixFlavorNewlines || cardCorrection.flavorAddDash || cardCorrection.flavorAddExclamation))
+                    hasFlavorCorrection = true;
+
+                // Compare flavor
+                if (!hasFlavorCorrection) {
+                    if (C.ALLOW_ESSENTIAL_FLAVOR_MISMATCH.hasOwnProperty(set.code) && (C.ALLOW_ESSENTIAL_FLAVOR_MISMATCH[set.code].includes(card.multiverseid) || C.ALLOW_ESSENTIAL_FLAVOR_MISMATCH[set.code].includes(card.name)))
+                        return;
+
+                    var cardFlavor = normalizeFlavor(card.flavor || "");
+                    var essentialFlavor = nameToEssentialFlavor[card.name];
+                    if (!essentialFlavor && cardFlavor)
+                        winston.warn("FLAVOR: %s (%s) has flavor but essentialMagic does not.", card.name, card.multiverseid);
+                    else if (essentialFlavor && !cardFlavor)
+                        winston.warn("FLAVOR: %s (%s) does not have flavor but essentialMagic does.", card.name, card.multiverseid);
+                    else if (essentialFlavor !== cardFlavor)
+                        winston.warn("FLAVOR: %s (%s) flavor does not match essentialMagic.\n%s", card.name, card.multiverseid, ansidiff.words(cardFlavor, essentialFlavor));
+                }
+            });
         },
         function finish(err) {
             setImmediate(cb, err);
