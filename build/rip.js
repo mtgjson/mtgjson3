@@ -147,7 +147,7 @@ var TEXT_TO_SYMBOL_MAP = {
 var doubleFacedCardNames = [];
 
 var ripSet = function(setName, cb) {
-    winston.info("========================================================================================================");
+    winston.info("========================================");
     winston.info("Ripping Set: %s", setName);
 
     tiptoe(
@@ -1013,7 +1013,7 @@ var compareCardsToEssentialMagic = function(set, cb) {
                 }
                 nameToEssentialFlavor[cardName] = normalizeFlavor(processTextBlocks(cardRow.querySelectorAll("td:nth-child(2) i")));
             });
-            return nameToEssentialFlavor;
+            this(null, nameToEssentialFlavor);
         },
         function compareSetCardList(nameToEssentialFlavor) {
             set.cards.forEach(function(card) {
@@ -1047,6 +1047,7 @@ var compareCardsToEssentialMagic = function(set, cb) {
                         winston.warn("FLAVOR: %s (%s) flavor does not match essentialMagic.\n%s", card.name, card.multiverseid, ansidiff.words(cardFlavor, essentialFlavor));
                 }
             });
+            this();
         },
         function finish(err) {
             setImmediate(cb, err);
@@ -1055,7 +1056,7 @@ var compareCardsToEssentialMagic = function(set, cb) {
 };
 
 var ripMCISet = function(set, cb) {
-    winston.info("========================================================================================================");
+    winston.info("========================================");
     winston.info("Ripping set: %s (%s)", set.name, set.code);
 
     tiptoe(
