@@ -147,7 +147,7 @@ var TEXT_TO_SYMBOL_MAP = {
 var doubleFacedCardNames = [];
 
 var ripSet = function(setName, cb) {
-    winston.info("========================================");
+    winston.info("===================================================================");
     winston.info("Ripping Set: %s", setName);
 
     tiptoe(
@@ -1056,7 +1056,7 @@ var compareCardsToEssentialMagic = function(set, cb) {
 };
 
 var ripMCISet = function(set, cb) {
-    winston.info("========================================");
+    winston.info("===================================================================");
     winston.info("Ripping set: %s (%s)", set.name, set.code);
 
     tiptoe(

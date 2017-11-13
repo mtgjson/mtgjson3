@@ -14,8 +14,6 @@ var unidecode = require("unidecode");
 var unique = require("array-unique");
 var winston = require("winston");
 
-require("@sembiance/xbase");
-
 winston.level = 'info';
 winston.cli()
 

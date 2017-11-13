@@ -8,8 +8,6 @@ var C = require('../shared/C'),
     winston = require("winston"),
     async = require('async');
 
-require('@sembiance/xbase');
-
 var dustData =  {
     title : "Spoilers"
 };
