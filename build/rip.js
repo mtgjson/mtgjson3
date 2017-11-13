@@ -526,7 +526,7 @@ var processCardPart = function(doc, cardPart, printedDoc, printedCardPart) {
         card.rulings = Array.from(rulingRows).map(function (rulingRow) {
             return({
                 date : moment(getTextContent(rulingRow.querySelector("td:first-child")).trim(), "MM/DD/YYYY").format("YYYY-MM-DD"),
-                text : getTextContent(rulingRow.querySelector("td:last-child")).innerTrim().trim()
+                text : getTextContent(rulingRow.querySelector("td:last-child")).replace(new RegExp("\\s+", "g"), " ").trim()
             });
         });
 
@@ -607,7 +607,7 @@ var addForeignNamesToCard = function (card, cb) {
 
             Array.from(doc.querySelectorAll("table.cardList tr.cardItem")).forEach(function (cardRow) {
                 var language = getTextContent(cardRow.querySelector("td:nth-child(2)")).trim();
-                var foreignCardName = getTextContent(cardRow.querySelector("td:nth-child(1) a")).innerTrim().trim();
+                var foreignCardName = getTextContent(cardRow.querySelector("td:nth-child(1) a")).replace(new RegExp("\\s+", "g"), " ").trim();
                 if (foreignCardName.startsWith("XX"))
                     foreignCardName = foreignCardName.substring(2);
 
@@ -906,7 +906,7 @@ var createMCICardName = function(card) {
 };
 
 var normalizeFlavor = function(flavor) {
-    flavor = unidecode(flavor).trim().replace(new RegExp("\n", "g"), " ").innerTrim().replace(new RegExp(" —", "g"), "—");
+    flavor = unidecode(flavor).trim().replace(new RegExp("\n", "g"), " ").replace(new RegExp("\\s+", "g"), " ").replace(new RegExp(" —", "g"), "—");
     while (flavor.includes(". .")) { flavor = flavor.replace(new RegExp("[.] [.]", "g"), ".."); }
     while (flavor.includes(" .")) { flavor = flavor.replace(new RegExp(" [.]", "g"), "."); }
     while (flavor.includes(". ")) { flavor = flavor.replace(new RegExp("[.] ", "g"), "."); }
@@ -978,10 +978,10 @@ var compareCardToMCI = function(set, card, mciCardURL, cb) {
                         mciArtist = null;
                     }
                     else {
-                        mciArtist = mciArtist[0].textContent.substring(7).trim().replace(new RegExp("\n", "g"), " ").replace(new RegExp(" and ", "g"), " & ").innerTrim();
+                        mciArtist = mciArtist[0].textContent.substring(7).trim().replace(new RegExp("\n", "g"), " ").replace(new RegExp(" and ", "g"), " & ").replace(new RegExp("\\s+", "g"), " ");
                     }
                 }
-                var cardArtist = (card.artist || "").trim().replace(new RegExp("\n", "g"), " ").innerTrim();
+                var cardArtist = (card.artist || "").trim().replace(new RegExp("\n", "g"), " ").replace(new RegExp("\\s+", "g"), " ");
                 if (!mciArtist && cardArtist)
                     winston.warn("ARTIST: %s (%s) has artist but MagicCardsInfo (%s) does not.", card.name, card.multiverseid, mciCardURL);
                 else if (mciArtist && !cardArtist)
@@ -1006,7 +1006,7 @@ var compareCardsToEssentialMagic = function(set, cb) {
         function processSetCardList(listDoc) {
             var nameToEssentialFlavor = {};
             Array.from(listDoc.querySelectorAll("table td#contentarea div#main table tr")).forEach(function (cardRow) {
-                var cardName = processTextBlocks([cardRow.querySelector("td:nth-child(2) b a")]).innerTrim().trim();
+                var cardName = processTextBlocks([cardRow.querySelector("td:nth-child(2) b a")]).replace(new RegExp("\\s+", "g"), " ").trim();
                 if (!cardName) {
                     winston.warn("Missing card name: %s", cardRow.innerHTML);
                     return;
@@ -1219,7 +1219,7 @@ var ripMCICard = function(set, mciCardURL, cb) {
                 }
             }
 
-            var cardInfoRaw = getTextContent(cardNameElement.parentNode.nextElementSibling).innerTrim().trim();
+            var cardInfoRaw = getTextContent(cardNameElement.parentNode.nextElementSibling).replace(new RegExp("\\s+", "g"), " ").trim();
             var colorIndicator = null;
             var colorIndicatorParts = cardInfoRaw.match(/\(Color Indicator: ([^)]+)\)/);
             if (colorIndicatorParts && colorIndicatorParts.length === 2) {
@@ -1231,7 +1231,7 @@ var ripMCICard = function(set, mciCardURL, cb) {
             if (!cardInfoParts)
                 cardInfoParts = cardInfoRaw.match(/^([^0-9*,(]+)\(?([^/:]*)\:?\/?([^,)]*)\)?,? ?([^(]*)\(?([^)]*)\)?$/);
             if (!cardInfoParts || cardInfoParts.length!==6) {
-                winston.warn("Unable to get cardInfoParts from card [%s]: %s", card.name, getTextContent(cardNameElement.parentNode.nextElementSibling).innerTrim().trim());
+                winston.warn("Unable to get cardInfoParts from card [%s]: %s", card.name, getTextContent(cardNameElement.parentNode.nextElementSibling).replace(new RegExp("\\s+", "g"), " ").trim());
                 throw new Error("Card failed");
             }
             cardInfoParts = cardInfoParts.map(function (cardInfoPart) { return cardInfoPart.trim(); });
