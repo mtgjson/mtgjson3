@@ -8,6 +8,7 @@ var url = require("url"),
     request = require('request'),
     domino = require("domino"),
     tiptoe = require("tiptoe"),
+    unique = require("array-unique");
     winston = require("winston");
 
 var MCI_SETS_TO_IGNORE = ["9eb", "8eb", "uhaa"];
@@ -26,7 +27,8 @@ tiptoe(
             process.exit(1);
         }
 
-        var newMCISets = mciSets.subtract(C.SETS.filter(function(SET) { return SET.hasOwnProperty("magicCardsInfoCode"); }).map(function(SET) { return SET.magicCardsInfoCode.toLowerCase(); }).unique().concat(MCI_SETS_TO_IGNORE));
+        var oldMCISets = unique(C.SETS.filter(function(SET) { return SET.hasOwnProperty("magicCardsInfoCode"); }).map(function(SET) { return SET.magicCardsInfoCode.toLowerCase(); }).concat(MCI_SETS_TO_IGNORE));
+        var newMCISets = mciSets.filter(function(s) { return !oldMCISets.includes(s); });
         if(newMCISets.length>0)
             winston.info(newMCISets);
 

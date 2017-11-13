@@ -27,11 +27,11 @@ tiptoe(
 
         var previousSets = JSON.parse(previousSetsJSON);
 
-        var removedSets = previousSets.subtract(sets);
+        var removedSets = previousSets.filter(function(s) { return !sets.include(s); });
         if(removedSets.length)
             winston.info("Sets Removed: %s", removedSets.join(", "));
 
-        var addedSets = sets.subtract(previousSets);
+        var addedSets = sets.filter(function(s) { return !previousSets.include(s); });
         if(addedSets.length)
             winston.info("Sets Added: %s", addedSets.join(", "));
 

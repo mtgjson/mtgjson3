@@ -26,11 +26,11 @@ tiptoe(
 
         var previousCards = JSON.parse(previousCardsJSON);
 
-        var removedCards = previousCards.subtract(cards);
+        var removedCards = previousCards.filter(function(c) { return !cards.include(c); });
         if(removedCards.length)
             winston.info("Cards Removed: %s", removedCards.join(", "));
 
-        var addedCards = cards.subtract(previousCards);
+        var addedCards = cards.filter(function(c) { return !previousCards.include(c); });
         if(addedCards.length)
             winston.info("Cards Added: %s", addedCards.join(", "));
 
