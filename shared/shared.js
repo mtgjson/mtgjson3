@@ -682,8 +682,7 @@ exports.getURLAsDoc = function(targetURL, getCb) {
                 err = new Error('Server responded with statusCode: ' + response.statusCode);
             if (!err && (!body || body.length === 0 || typeof body === 'undefined'))
                 err = new Error('No page contents');
-            if (!err && body.includes('Server Error') ||
-                        body.includes('You Just Exploded the Internet.'))
+            if (!err && (body.includes('Server Error') || body.includes('You Just Exploded the Internet.')))
                 err = new Error('Gatherer Server Error despite statusCode: ' + response.statusCode);
             if (err) {
                 winston.error('Error downloading: %s', targetURL);
