@@ -9,6 +9,7 @@ var async = require("async"),
     path = require("path"),
     request = require("request"),
     tiptoe = require("tiptoe"),
+    unique = require("array-unique"),
     winston = require("winston");
 
 var setsToDo = shared.getSetsToDo();
@@ -35,10 +36,11 @@ tiptoe(
     },
     function finish(err)
     {
-        fs.writeFileSync("/tmp/changedSets.json", JSON.stringify(updatedSetFiles.uniqueBySort().sort()), {encoding:"utf8"});
+        updatedSetFiles = unique(updatedSetFiles).sort()
+        fs.writeFileSync("/tmp/changedSets.json", JSON.stringify(updatedSetFiles), {encoding:"utf8"});
 
         winston.info("\n\n\n");
-        winston.info(JSON.stringify(updatedSetFiles.uniqueBySort().sort()));
+        winston.info(JSON.stringify(updatedSetFiles));
         winston.info("\n\n\n");
 
         if(err)

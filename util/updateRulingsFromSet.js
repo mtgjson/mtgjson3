@@ -6,6 +6,7 @@ var path = require('path');
 var tiptoe = require('tiptoe');
 var winston = require('winston');
 var async = require('async');
+var unique = require('array-unique');
 var winston = require("winston");
 
 if (require.main == module) {
@@ -54,7 +55,7 @@ function processSet(code, cb) {
                         setCards[printing] = [];
 
                     setCards[printing].push(card.name);
-                    setCards[printing] = setCards[printing].uniqueBySort();
+                    setCards[printing] = unique(setCards[printing]).sort;
 
                     subcb();
                 }, cb);

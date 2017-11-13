@@ -6,6 +6,7 @@ var async = require("async"),
     shared = require('../shared/shared'),
     path = require("path"),
     tiptoe = require("tiptoe"),
+    unique = require("array-unique"),
     winston = require("winston");
 
 if (require.main == module) {
@@ -48,7 +49,7 @@ function processSet(code, cb)
                         setCards[printing] = [];
 
                     setCards[printing].push(card.name);
-                    setCards[printing] = setCards[printing].uniqueBySort();
+                    setCards[printing] = unique(setCards[printing]).sort();
                 });
             });
 

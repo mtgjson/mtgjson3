@@ -11,7 +11,7 @@ var tiptoe = require("tiptoe");
 var fs = require("fs");
 var url = require("url");
 var unidecode = require("unidecode");
-var util = require("./util");
+var unique = require("array-unique");
 var winston = require("winston");
 
 require("@sembiance/xbase");
@@ -78,7 +78,7 @@ exports.getSetsToDo = function(startAt) {
 
     setsToDo.removeAll(setsNotToDo);
 
-    return setsToDo.uniqueBySort();
+    return unique(setsToDo).sort();
 };
 
 exports.getMCISetCodes = function()
@@ -572,7 +572,7 @@ exports.finalizePrintings = function (card) {
         if (releaseA > releaseB) return 2;
         return setA.localeCompare(setB);
     }
-    card.printings = card.printings.filter(util.uniqueFilter).sort(setCodeComparator);
+    card.printings = unique(card.printings).sort(setCodeComparator);
 }
 
 exports.getSetCodeFromName = function (setName) {

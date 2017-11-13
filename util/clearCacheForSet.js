@@ -8,6 +8,7 @@ var C = require('../shared/C'),
     path = require("path"),
     async = require('async'),
     tiptoe = require("tiptoe"),
+    unique = require("array-unique"),
     winston = require("winston");
 
 var VALID_TYPES = [ "oracle", "original", "languages", "printings", "legalities", "mcilist", "listings" ];
@@ -167,7 +168,7 @@ function clearCacheForSet(code, cacheTypes, cb) {
         if (!err && !urls) err = new Error('No urls for clearCacheFiles().');
         if (err) return cb(err);
 
-        urls = flatten(urls).uniqueBySort().filter(function (url) { return(url !== null && url !== undefined && url !== ''); });
+        urls = unique(flatten(urls)).filter(function (url) { return(url !== null && url !== undefined && url !== ''); });
         winston.info("Clearing %d URLs", urls.length);
         async.each(urls, shared.clearCacheFile, cb);
     }

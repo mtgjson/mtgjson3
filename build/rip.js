@@ -15,7 +15,7 @@ var querystring = require("querystring");
 var tiptoe = require("tiptoe");
 var winston = require("winston");
 var async = require('async');
-var util = require("../shared/util");
+var unique = require("array-unique");
 
 (function (exports) {
 
@@ -167,11 +167,10 @@ var ripSet = function(setName, cb) {
             var existing = cards.map(function (c) { return c.multiverseid; });
             var variations = flatten(cards.map(function (card) {
                 return (card.variations && card.variations.length) ? card.variations : [];
-            }))
+            }));
+            unique(variations);
             processMultiverseids(
-                variations
-                    .filter(util.uniqueFilter)
-                    .filter(function (mvid) { return !existing.includes(mvid) }),
+                variations.filter(function (mvid) { return !existing.includes(mvid) }),
                 this);
         },
         function addAdditionalFields(cards) {
@@ -283,13 +282,14 @@ var processMultiverseDocs = function(docs, callback) {
 };
 
 var processMultiverseids = function (multiverseids, cb) {
+    unique(multiverseids);
     var cards = [];
     doubleFacedCardNames = [];
 
-    winston.info("Processing %d multiverseids", multiverseids.unique().length);
+    winston.info("Processing %d multiverseids", multiverseids.length);
 
     async.eachSeries(
-        multiverseids.unique(),
+        multiverseids,
         function (multiverseid, subcb) {
             tiptoe(
                 function getMultiverseUrls() {
@@ -577,7 +577,7 @@ var getURLsForMultiverseid = function (multiverseid, cb) {
             }
 
             urls.push(shared.buildMultiverseURL(multiverseid));
-            urls = urls.unique();
+            unique(urls);
 
             setImmediate(cb, null, urls);
         }
@@ -688,7 +688,7 @@ var addPrintingsToCards = function (set, cb) {
         function loadNonGathererJSON() {
             var setCodes = C.SETS.map(function (SET) { return SET.code; });
             // Adds non-gatherer sets and promo MCI sets and sets released since last printing to the current set
-            var nonGathererSets = C.SETS_NOT_ON_GATHERER.concat(shared.getMCISetCodes()).concat(setCodes.slice(setCodes.indexOf(C.LAST_PRINTINGS_RESET)+1)).unique();
+            var nonGathererSets = unique(C.SETS_NOT_ON_GATHERER.concat(shared.getMCISetCodes()).concat(setCodes.slice(setCodes.indexOf(C.LAST_PRINTINGS_RESET)+1))();
             nonGathererSets.remove(set.code);
             async.mapSeries(
                 nonGathererSets,
@@ -763,7 +763,7 @@ var fillCardTypes = function (card, rawTypeFull) {
         rawTypeFull = rawTypeFull.replace(" - ", "—");
     }
     var rawTypes = rawTypeFull.split(/[—]/);
-    rawTypes[0].split(" ").filterEmpty().forEach(function (rawType, i) {
+    rawTypes[0].split(" ").filter(Boolean).forEach(function (rawType, i) {
         if (rawType.trim().toLowerCase()==="(none)" || rawType.trim().toLowerCase()==="token")
             return;
 
@@ -781,7 +781,7 @@ var fillCardTypes = function (card, rawTypeFull) {
             winston.warn("Raw type not found [%s] for card: %s", rawType, card.name);
     });
     if (rawTypes.length>1) {
-        card.subtypes = card.types.includes("Plane") ? [rawTypes[1].trim()] : rawTypes[1].split(" ").filterEmpty().map(function (subtype) { return subtype.trim(); });    // 205.3b Planes have just a single subtype
+        card.subtypes = card.types.includes("Plane") ? [rawTypes[1].trim()] : rawTypes[1].split(" ").filter(Boolean).map(function (subtype) { return subtype.trim(); });    // 205.3b Planes have just a single subtype
         card.type += " — " + card.subtypes.join(" ");
     }
     if (!card.supertypes.length)
@@ -855,7 +855,7 @@ var fillImageNames = function (set) {
 };
 
 var sortCardColors = function (card) {
-    card.colors = card.colors.unique().sort(function (a, b) { return COLOR_ORDER.indexOf(a)-COLOR_ORDER.indexOf(b); }).map(function (color) { return color.toProperCase(); });
+    card.colors = unique(card.colors).sort(function (a, b) { return COLOR_ORDER.indexOf(a)-COLOR_ORDER.indexOf(b); }).map(function (color) { return color.toProperCase(); });
     if (card.colors.length===0)
         delete card.colors;
 };
@@ -1086,7 +1086,7 @@ var ripMCISet = function(set, cb) {
         function addAdditionalFields(cards) {
             winston.info("Adding additional fields...");
 
-            set.cards = cards.filterEmpty().sort(shared.cardComparator);
+            set.cards = cards.filter(Boolean).sort(shared.cardComparator);
             fillImageNames(set);
             addMagicLibraritiesInfoToMCISet(set, this);
         },
@@ -1317,7 +1317,7 @@ var ripMCICard = function(set, mciCardURL, cb) {
                 // Legalities
                 var legalityElements = legalityElementsContainer.querySelectorAll("li");
                 if (legalityElements && legalityElements.length>0)
-                    card.legalities = Array.from(legalityElements).map(function (legalityElement) { var legalityParts = getTextContent(legalityElement).match(/^([^ ]+) in ([^(]+).*$/); if (!legalityParts) { return null; } return {format:legalityParts[2].trim(), legality:legalityParts[1].trim()}; }).filterEmpty();
+                    card.legalities = Array.from(legalityElements).map(function (legalityElement) { var legalityParts = getTextContent(legalityElement).match(/^([^ ]+) in ([^(]+).*$/); if (!legalityParts) { return null; } return {format:legalityParts[2].trim(), legality:legalityParts[1].trim()}; }).filter(Boolean);
             }
 
             // Number
@@ -1642,10 +1642,10 @@ var getSetNameMultiverseIds = function(setName, cb) {
 
             var multiverseids = [];
             listDocs.forEach(function (listDoc) {
-                multiverseids = multiverseids.concat(Array.from(listDoc.querySelectorAll("table.checklist tr.cardItem a.nameLink")).map(function (o) {  return +querystring.parse(url.parse(o.getAttribute("href")).query).multiverseid; }).unique());
+                multiverseids = unique(multiverseids.concat(Array.from(listDoc.querySelectorAll("table.checklist tr.cardItem a.nameLink")).map(function (o) {  return +querystring.parse(url.parse(o.getAttribute("href")).query).multiverseid; })));
             });
 
-            setImmediate(cb, undefined, multiverseids.unique());
+            setImmediate(cb, undefined, multiverseids);
         }
     );
 };

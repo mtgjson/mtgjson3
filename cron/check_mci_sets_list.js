@@ -19,7 +19,7 @@ tiptoe(
     },
     function compareVersions(setsHTML)
     {
-        var mciSets = Array.from(domino.createWindow(setsHTML).document.querySelector("a[name='en']").nextElementSibling.nextElementSibling.querySelectorAll("li a")).map(function(o) { return path.dirname(url.parse(o.getAttribute("href")).pathname).substring(1).toLowerCase(); }).filterEmpty().unique();
+        var mciSets = unique(Array.from(domino.createWindow(setsHTML).document.querySelector("a[name='en']").nextElementSibling.nextElementSibling.querySelectorAll("li a")).map(function(o) { return path.dirname(url.parse(o.getAttribute("href")).pathname).substring(1).toLowerCase(); }).filter(Boolean));
         if(mciSets.length<1)
         {
             winston.error("No MCI sets found! Probably a temporary error...");
