@@ -76,8 +76,7 @@ exports.getSetsToDo = function(startAt) {
         }
     });
 
-    setsToDo.removeAll(setsNotToDo);
-
+    setsToDo = setsToDo.filter(function(set) { return !setsNotToDo.includes(set); });
     return unique(setsToDo).sort();
 };
 
@@ -390,7 +389,7 @@ exports.performSetCorrections = function(setCorrections, fullSet)
             });
 
             if(cardsToRemove.length>0)
-                cards.removeAll(cardsToRemove);
+                cards = cards.filter(function(card) { return !cardsToRemove.includes(card); });
 
             if(setCorrection.copyCard || setCorrection.importCard || setCorrection.addCard)
             {

@@ -9,8 +9,8 @@ var async = require("async");
 var winston = require("winston");
 
 var setsToDo = shared.getSetsToDo();
-
-setsToDo.removeAll(C.SETS_NOT_ON_GATHERER.concat(shared.getMCISetCodes()));
+var excludeSets = C.SETS_NOT_ON_GATHERER.concat(shared.getMCISetCodes());
+setsToDo = setsToDo.filter(function(set) { return !excludeSets.includes(set); });
 
 winston.info("Doing sets: %s", setsToDo);
 

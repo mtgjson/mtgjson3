@@ -688,7 +688,7 @@ var addPrintingsToCards = function (set, cb) {
         function loadNonGathererJSON() {
             var setCodes = C.SETS.map(function (SET) { return SET.code; });
             // Adds non-gatherer sets and promo MCI sets and sets released since last printing to the current set
-            var nonGathererSets = unique(C.SETS_NOT_ON_GATHERER.concat(shared.getMCISetCodes()).concat(setCodes.slice(setCodes.indexOf(C.LAST_PRINTINGS_RESET)+1))();
+            var nonGathererSets = unique(C.SETS_NOT_ON_GATHERER.concat(shared.getMCISetCodes()).concat(setCodes.slice(setCodes.indexOf(C.LAST_PRINTINGS_RESET)+1)));
             nonGathererSets.remove(set.code);
             async.mapSeries(
                 nonGathererSets,
@@ -1094,7 +1094,8 @@ var ripMCISet = function(set, cb) {
             winston.info("Applying latest oracle fields to MCI cards...");
 
             var oracleCards = {};
-            C.SETS.map(function (SET) { return SET.code; }).removeAll(shared.getMCISetCodes()).removeAll(C.SETS_NOT_ON_GATHERER).reverse().forEach(function (SETCODE) {
+            var excludeSets = C.SETS_NOT_ON_GATHERER.concat(shared.getMCISetCodes());
+            C.SETS.map(function (SET) { return SET.code; }).filter(function(set) { return !excludeSets.includes(set); }).reverse().forEach(function (SETCODE) {
                 JSON.parse(fs.readFileSync(path.join(__dirname, "..", "json", SETCODE + ".json"))).cards.forEach(function (card) {
                     if (oracleCards.hasOwnProperty(card.name))
                         return;
