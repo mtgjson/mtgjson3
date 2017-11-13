@@ -1280,7 +1280,7 @@ var ripMCICard = function(set, mciCardURL, cb) {
                 card.colors = [colorIndicator];
 
             // Text
-            card.text = processTextBlocks(cardNameElement.parentNode.nextElementSibling.nextElementSibling);
+            card.text = processTextBlocks([cardNameElement.parentNode.nextElementSibling.nextElementSibling]);
             if (card.text) {
                 if (card.text.toLowerCase().startsWith("level up {"))
                     card.layout = "leveler";
@@ -1298,7 +1298,7 @@ var ripMCICard = function(set, mciCardURL, cb) {
                 card.text = card.text.split("\n").map(function (textLine) { if (textLine.startsWith("-")) { textLine = textLine.replaceCharAt(0, "−"); } return textLine; }).join("\n");
 
             // Flavor Text
-            var cardFlavorText = processTextBlocks(cardNameElement.parentNode.nextElementSibling.nextElementSibling.nextElementSibling);
+            var cardFlavorText = processTextBlocks([cardNameElement.parentNode.nextElementSibling.nextElementSibling.nextElementSibling]);
             if (cardFlavorText)
                 card.flavor = cardFlavorText;
 
@@ -1318,7 +1318,7 @@ var ripMCICard = function(set, mciCardURL, cb) {
                     legalityElementsContainer = rulingLegalityElements[1];
 
                     // Rulings
-                    card.rulings = Array.from(rulingLegalityElements[0].querySelectorAll("li")).map(function (rulingElement) { var rulingDate = getTextContent(rulingElement.querySelector("b")).trim(); return { date : moment(rulingDate, "MM/DD/YYYY").format("YYYY-MM-DD"), text : processTextBlocks(rulingElement).trim().substring(rulingDate.length+2) }; });
+                    card.rulings = Array.from(rulingLegalityElements[0].querySelectorAll("li")).map(function (rulingElement) { var rulingDate = getTextContent(rulingElement.querySelector("b")).trim(); return { date : moment(rulingDate, "MM/DD/YYYY").format("YYYY-MM-DD"), text : processTextBlocks([rulingElement]).trim().substring(rulingDate.length+2) }; });
                 }
 
                 // Legalities

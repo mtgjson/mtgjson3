@@ -362,8 +362,10 @@ exports.performSetCorrections = function(setCorrections, fullSet)
                         cardsToRemove.push(card);
 
                     if(setCorrection.incrementNumber) {
-                        if(cardsToIncrementNumber.includes(card.name))
-                            card.number = "" + ((+card.number) + cardsToIncrementNumber.count(card.name));
+                        if(cardsToIncrementNumber.includes(card.name)) {
+                            var cardCount = cardsToIncrementNumber.filter(function(c) { return c === card.name; }).length;
+                            card.number = "" + ((+card.number) + cardCount);
+                        }
 
                         cardsToIncrementNumber.push(card.name);
                     }
@@ -552,6 +554,7 @@ exports.performSetCorrections = function(setCorrections, fullSet)
     {
         card.id = hash("sha1", (fullSet.code + card.name + card.imageName));
     });
+    fullSet.cards = cards;
 };
 
 exports.finalizePrintings = function (card) {
