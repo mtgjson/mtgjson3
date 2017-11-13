@@ -15,7 +15,7 @@ var unique = require("array-unique");
 var winston = require("winston");
 
 winston.level = 'info';
-winston.cli()
+winston.cli();
 
 var retry = require('retry');
 var request = require('request');
@@ -215,7 +215,7 @@ exports.performSetCorrections = function(setCorrections, fullSet)
             var cardNumber = 1;
 
 
-            function colorOrder(card) {
+            var colorOrder = function(card) {
                 // COLORS, Golds, Artifacts, Non-Basic Lands, Lands
                 if(card.hasOwnProperty("colors") && card.colors.length===1)
                     return COLOR_ORDER.indexOf(card.colors[0]);
@@ -228,9 +228,9 @@ exports.performSetCorrections = function(setCorrections, fullSet)
                 if(LAND_ORDER.includes(card.name))
                     return 8+LAND_ORDER.indexOf(card.name);
                 return 99999999;
-            }
+            };
 
-            function cardNumberComparator(cardA, cardB) {
+            var cardNumberComparator = function(cardA, cardB) {
                 // Compare colors
                 var colorComparison = colorOrder(cardA) - colorOrder(cardB);
                 if (colorComparison !== 0) return colorComparison;
@@ -241,7 +241,7 @@ exports.performSetCorrections = function(setCorrections, fullSet)
                 if (cardA.multiverseid < cardB.multiverseid) return -1;
                 if (cardA.multiverseid > cardB.multiverseid) return 1;
                 return 0;
-            }
+            };
 
             cards.sort(cardNumberComparator).forEach(function(card) { card.number = "" + (cardNumber++); });
         }
@@ -569,7 +569,7 @@ exports.finalizePrintings = function (card) {
         return setA.localeCompare(setB);
     }
     card.printings = unique(card.printings).sort(setCodeComparator);
-}
+};
 
 exports.getSetCodeFromName = function (setName) {
     var setInfo = C.SETS.find(function(SET) {
@@ -590,21 +590,21 @@ exports.getSetCodeFromName = function (setName) {
         process.exit(1);
     }
     return(setInfo.code);
-}
+};
 
 exports.getReleaseDateForSetName = function (setName) {
     var targetSet = C.SETS.find(function(SET) { return SET.name === setName; });
     if (targetSet)
         return targetSet.releaseDate;
     return moment().format("YYYY-MM-DD");
-}
+};
 
 exports.getReleaseDateForSetCode = function (setCode) {
     var targetSet = C.SETS.find(function(SET) { return SET.code === setCode; });
     if (targetSet)
         return targetSet.releaseDate;
     return moment().format("YYYY-MM-DD");
-}
+};
 
 exports.clearCacheFile = function(targetUrl, cb) {
     exports.cache.get(targetUrl, function(err) {
@@ -680,7 +680,7 @@ exports.getURLAsDoc = function(targetURL, getCb) {
         request(options, function(err, response, body) {
             if (!err && response && response.statusCode !== 200)
                 err = new Error('Server responded with statusCode: ' + response.statusCode);
-            if (!err && (!body || body.length === 0 || body === undefined))
+            if (!err && (!body || body.length === 0 || typeof body === 'undefined'))
                 err = new Error('No page contents');
             if (!err && body.includes('Server Error') ||
                         body.includes('You Just Exploded the Internet.'))

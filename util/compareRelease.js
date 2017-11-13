@@ -36,7 +36,7 @@ tiptoe(
     },
     function finish(err)
     {
-        updatedSetFiles = unique(updatedSetFiles).sort()
+        updatedSetFiles = unique(updatedSetFiles).sort();
         fs.writeFileSync("/tmp/changedSets.json", JSON.stringify(updatedSetFiles), {encoding:"utf8"});
 
         winston.info("\n\n\n");

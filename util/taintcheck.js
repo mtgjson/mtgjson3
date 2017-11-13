@@ -6,6 +6,7 @@ var C = require('../shared/C');
 var async = require('async');
 var tiptoe = require('tiptoe');
 var ansidiff = require('ansidiff');
+var winston = require('winston');
 
 var allCardsWithExtras = {};
 var previousSeenSetCodes = {};

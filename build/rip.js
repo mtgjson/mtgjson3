@@ -170,7 +170,7 @@ var ripSet = function(setName, cb) {
             }));
             unique(variations);
             processMultiverseids(
-                variations.filter(function (mvid) { return !existing.includes(mvid) }),
+                variations.filter(function (mvid) { return !existing.includes(mvid); }),
                 this);
         },
         function addAdditionalFields(cards) {
@@ -262,8 +262,8 @@ var processMultiverseDocs = function(docs, callback) {
             throw new Error("multiverseDocCardParts length [" + multiverseDocCardParts.length + "] does not equal printedMultiverseDocCardParts length [" + printedMultiverseDocCardParts.length + "]");
         }
 
-        multiverseDocCardParts.forEach(function (cardPart, i) {
-            var newCard = processCardPart(multiverseDoc, cardPart, printedMultiverseDoc, printedMultiverseDocCardParts[i]);
+        multiverseDocCardParts.forEach(function (cardPart, j) {
+            var newCard = processCardPart(multiverseDoc, cardPart, printedMultiverseDoc, printedMultiverseDocCardParts[j]);
             newCards.push(newCard);
         });
 
@@ -844,7 +844,7 @@ var fillImageNames = function (set) {
             var imageNumber = cardNameCounts[card.name]--;
 
             var numberOrderCorrection = setCorrections.find(function(setCorrection) {
-                return setCorrection.renumberImages===card.name
+                return setCorrection.renumberImages===card.name;
             });
             if (numberOrderCorrection)
                 imageNumber = numberOrderCorrection.order.indexOf(card.multiverseid)+1;
@@ -1468,7 +1468,7 @@ var addMagicLibraritiesInfoToMCISet = function(set, cb) {
                     /^([0-9][0-9][0-9][0-9])$/
                 ].find(function(re) { return re.test(releaseDateText); });
 
-                var releaseDate = undefined;
+                var releaseDate;
                 if (releaseDateRe)
                     releaseDate = releaseDateText.replace(releaseDateRe, "$1");
 
