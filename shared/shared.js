@@ -797,9 +797,10 @@ exports.updateStandardForCard = function(card) {
  * saveSet() prepares and saves a given set to a file.
  * 1.    Each card is sorted by the following criteria:
  * 1.1   If they both have a number, they are compared and sorted accordingly.
- * 1.1.1 If the number exists and is the same, compare multiverseIDs
- * 1.2   If there are no numbers, compare the names.
- * 2.    The foreignNames array is sorted by the language name
+ * 1.2   If the number does not exist or is is the same, compare multiverseIDs
+ * 1.3   If there are no numbers, compare the imagenames.
+ * 1.4   If there are no imagenames compare names.
+ * 2.    The foreignNames array is sorted by the multiverseid
  * 3.    The legalities are sorted by format name
  * 4.    Each key value of the card is sorted.
  *
@@ -809,31 +810,26 @@ exports.saveSet = function(set, callback) {
 	// 1. Sort cards
 	set.cards.sort(function(a, b) {
 		var ret = 0;
-		if (a.number && b.number) {
+		if (a.number && b.number)
 			ret = exports.alphanum(a.number, b.number);
-			if (ret === 0)
-				ret = (a.multiverseid > b.multiverseid)?1:-1;
-		}
-
+		if (ret === 0 && a.multiverseid && b.multiverseid)
+			ret = a.multiverseid - b.multiverseid;
+		if (ret === 0 && a.imageName && b.imageName)
+			ret = a.imageName.localeCompare(b.imageName);
 		if (ret === 0)
 			ret = a.name.localeCompare(b.name);
-
-		if (ret === 0)
-			ret = (a.multiverseid > b.multiverseid)?1:-1;
-
-		return(ret);
+		return ret;
 	});
 
 	// Sort internal card stuff
 	set.cards.forEach(function(card) {
 		// 2. Foreign Names
 		if (card.foreignNames)
-			card.foreignNames.sort(function(a, b){
-			    var ret = a.language.localeCompare(b.language);
-			    if (ret === 0 && a.multiverseid != b.multiverseid) {
-				ret = (a.multiverseid > b.multiverseid)?1:-1;
-			    }
-			    return(ret);
+			card.foreignNames.sort(function(fnameA, fnameB) {
+				var result = fnameA.multiverseid - fnameB.multiverseid;
+				if (result === 0) result = fnameA.language.localeCompare(fnameB.language);
+				if (result === 0) result = fnameA.name.localeCompare(fnameB.name);
+				return result;
 			});
 
 		// 3. Legalities
