@@ -253,7 +253,6 @@ var ripSet = function(setName, cb) {
 var processMultiverseDocs = function(docs, callback) {
     var cards = [];
     for(var i = 0; i < docs.length; i += 2) {
-        var newCards = [];
         var multiverseDoc = docs[i];
         var printedMultiverseDoc = docs[i + 1];
         var multiverseDocCardParts = getCardParts(multiverseDoc);
@@ -262,10 +261,12 @@ var processMultiverseDocs = function(docs, callback) {
             throw new Error("multiverseDocCardParts length [" + multiverseDocCardParts.length + "] does not equal printedMultiverseDocCardParts length [" + printedMultiverseDocCardParts.length + "]");
         }
 
-        multiverseDocCardParts.forEach(function (cardPart, j) {
-            var newCard = processCardPart(multiverseDoc, cardPart, printedMultiverseDoc, printedMultiverseDocCardParts[j]);
-            newCards.push(newCard);
-        });
+        var newCards = [];
+        for(var j = 0; j < multiverseDocCardParts.length; j++) {
+            var cardPart = multiverseDocCardParts[j];
+            var printedCardPart = printedMultiverseDocCardParts[j];
+            newCards.push(processCardPart(multiverseDoc, cardPart, printedMultiverseDoc, printedCardPart));
+        }
 
         if (newCards.length === 2 && (newCards[0].layout === "double-faced" || newCards[0].layout === "meld")) {
             var doubleFacedCardName = newCards[0].names.concat().sort().join(":::");
