@@ -5,11 +5,14 @@
   "description": "Provides MTG JSON files",
   "private": true,
   "dependencies": {
-    "@sembiance/xbase": "git://github.com/Sembiance/xbase.git",
-    "@sembiance/xutil": "git://github.com/Sembiance/xutil.git",
+    "ansidiff": "^1.0.0",
+    "array-unique": "^0.3.2",
     "async": "^2.0.0-rc.3",
     "cli-color": ">= 0.2.3",
+    "clone": "^2.1.1",
     "domino": ">= 1.0.19",
+    "dustjs-helpers": "^1.7.3",
+    "dustjs-linkedin": "^2.7.5",
     "level": "^1.7.0",
     "mhash": ">= 2.0.2",
     "moment": ">= 2.10.6",
@@ -19,6 +22,8 @@
     "retry": "^0.10.1",
     "rimraf": ">= 2.4.2",
     "tiptoe": ">= 1.0.0",
+    "unidecode": "^0.1.8",
+    "winston": "^2.4.0",
     "xxhash": "^0.2.4"
   },
   "devDependencies": {
