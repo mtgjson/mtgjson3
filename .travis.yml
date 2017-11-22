@@ -1,3 +1,4 @@
+dist: trusty
 sudo: false
 
 language: node_js
@@ -10,16 +11,6 @@ script:
   - npm run checkJson
   - npm run validateSchema
   - util/travis.sh
-
-env:
-  - CXX=g++-4.8
-addons:
-  apt:
-    sources:
-      - ubuntu-toolchain-r-test
-    packages:
-      - g++-4.8
-      - unicode-data
 
 cache:
   directories:

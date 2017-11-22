@@ -434,8 +434,11 @@
       "subtypes": [
         "Ajani"
       ],
+      "supertypes": [
+        "Legendary"
+      ],
       "text": "+1: Target permanent doesn't untap during its controller's next untap step.\n−2: Ajani Vengeant deals 3 damage to target creature or player and you gain 3 life.\n−7: Destroy all lands target player controls.",
-      "type": "Planeswalker — Ajani",
+      "type": "Legendary Planeswalker — Ajani",
       "types": [
         "Planeswalker"
       ]
@@ -1579,6 +1582,10 @@
           "legality": "Legal"
         },
         {
+          "format": "Standard",
+          "legality": "Legal"
+        },
+        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -2136,10 +2143,29 @@
       "printings": [
         "pLPA",
         "AVR",
-        "MM3"
+        "MM3",
+        "IMA"
       ],
       "rarity": "Special",
       "releaseDate": "2012-05-04",
+      "rulings": [
+        {
+          "date": "2017-11-17",
+          "text": "Once the exiled creature returns, it's considered a new object with no relation to the object that it was. Auras attached to the exiled creature will be put into their owners' graveyards. Equipment attached to the exiled creature will become unattached and remain on the battlefield. Any counters on the exiled creature will cease to exist."
+        },
+        {
+          "date": "2017-11-17",
+          "text": "The returned creature won't be the target of any spells or abilities that targeted it before. Any spells that don't target it, such as Austere Command, will still affect it."
+        },
+        {
+          "date": "2017-11-17",
+          "text": "If you target a creature that you control but don't own, you control the returned creature indefinitely after it returns. When you leave a multiplayer game, exile any objects that you put onto the battlefield under your control but don't own."
+        },
+        {
+          "date": "2017-11-17",
+          "text": "If a token is exiled this way, it will cease to exist and won't return to the battlefield."
+        }
+      ],
       "source": "Avacyn Restored Launch Party participation bonus",
       "subtypes": [
         "Angel"
@@ -3272,7 +3298,11 @@
       "rulings": [
         {
           "date": "2014-09-20",
-          "text": "The value of X is determined as the activated ability resolves. If the equipped creature isn't on the battlefield at that time, use its power the last time it was on the battlefield to determine the value of X. If that power was negative, other creatures you control will lose power and toughness. For example, if the equipped creature was 2/2 and a spell gave it -5/-5 in response to Dragon Throne of Tarkir's activated ability, other creatures you control would get -3/-3 until end of turn."
+          "text": "The value of X is determined as the activated ability resolves. If the equipped creature isn't on the battlefield at that time, use its power the last time it was on the battlefield to determine the value of X."
+        },
+        {
+          "date": "2017-07-14",
+          "text": "If the equipped creature's power is negative while resolving the activated ability it gains, X is considered to be 0. (This is a change from previous rulings.)"
         }
       ],
       "source": "Khans of Tarkir",
@@ -3793,10 +3823,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -3922,10 +3948,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {

@@ -70,11 +70,19 @@
           "legality": "Legal"
         },
         {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
+          "legality": "Legal"
+        },
+        {
+          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -2421,13 +2429,14 @@
         "4ED",
         "V09",
         "ME4",
-        "VMA"
+        "VMA",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2004-10-04",
-          "text": "You can't pay life you don't have. In other words, you can't Channel yourself below zero life."
+          "date": "2017-11-17",
+          "text": "Once your life total is 0, you can't pay any more life, even if you've somehow not lost the game yet."
         }
       ],
       "source": "SQUARE EDGES AND GOLD-BORDERED BACKSIDE, NOT TOURNAMENT LEGAL",
@@ -5270,7 +5279,8 @@
         "ME2",
         "ME3",
         "TPR",
-        "CN2"
+        "CN2",
+        "IMA"
       ],
       "rarity": "Common",
       "rulings": [
@@ -6112,7 +6122,8 @@
         "4ED",
         "S99",
         "10E",
-        "DPA"
+        "DPA",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "source": "SQUARE EDGES AND GOLD-BORDERED BACKSIDE, NOT TOURNAMENT LEGAL",
@@ -7039,28 +7050,25 @@
         "ME4",
         "M12",
         "C13",
-        "DD3_JVC"
+        "DD3_JVC",
+        "IMA"
       ],
       "rarity": "Common",
       "rulings": [
         {
-          "date": "2004-12-01",
-          "text": "The additional cost is paid when you pay the rest of Fireball's costs, even though that text appears second on the card (to make the card easier to read). The additional cost doesn't count toward Fireball's converted mana cost."
+          "date": "2017-11-17",
+          "text": "For example, if X is 5 and you choose three target creatures, Fireball has a total cost of {7}{R} (even though its mana cost is just {5}{R} and its converted mana cost is 6). If those creatures are all still legal targets as Fireball resolves, it deals 1 damage to each of them."
         },
         {
-          "date": "2004-12-01",
-          "text": "If, for example, X is 5 and you choose three target creatures, Fireball has a total cost of {7}{R} (even though its mana cost is just {5}{R}). If those creatures are all still legal targets as Fireball resolves, it deals 1 damage to each of them."
-        },
-        {
-          "date": "2009-05-01",
+          "date": "2017-11-17",
           "text": "You may cast Fireball with zero targets, regardless of the value chosen for X. If you do so, it will not be a targeted spell, and no damage will actually be dealt when it resolves."
         },
         {
-          "date": "2009-10-01",
-          "text": "Fireball's damage is divided as Fireball resolves, not as it's cast, because there are no choices involved. The division involves only targets that are still legal at that time."
+          "date": "2017-11-17",
+          "text": "Fireball's damage is divided as Fireball resolves, not as it's cast, because there are no choices involved. The division involves only targets that are still legal as Fireball resolves."
         },
         {
-          "date": "2009-10-01",
+          "date": "2017-11-17",
           "text": "You can target more than X creatures. However, if the number of legal targets at the time Fireball resolves is greater than X, none of them will be dealt any damage."
         }
       ],
@@ -7701,6 +7709,10 @@
           "legality": "Legal"
         },
         {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Kaladesh Block",
           "legality": "Legal"
         },
@@ -7994,6 +8006,10 @@
           "legality": "Legal"
         },
         {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Kaladesh Block",
           "legality": "Legal"
         },
@@ -8284,6 +8300,10 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
           "legality": "Legal"
         },
         {
@@ -8779,11 +8799,11 @@
       "source": "SQUARE EDGES AND GOLD-BORDERED BACKSIDE, NOT TOURNAMENT LEGAL",
       "subtypes": [
         "Fungus",
-        "Lizard"
+        "Dinosaur"
       ],
       "text": "Whenever Fungusaur is dealt damage, put a +1/+1 counter on it.",
       "toughness": "2",
-      "type": "Creature — Fungus Lizard",
+      "type": "Creature — Fungus Dinosaur",
       "types": [
         "Creature"
       ]
@@ -11530,6 +11550,90 @@
     },
     {
       "artist": "Mark Poole",
+      "cmc": 2,
+      "colorIdentity": [
+        "W"
+      ],
+      "colors": [
+        "White"
+      ],
+      "foreignNames": [
+        {
+          "language": "French",
+          "name": "Ile sanctuaire"
+        },
+        {
+          "language": "German",
+          "name": "Inselheiligtum"
+        },
+        {
+          "language": "Italian",
+          "name": "Isola Santuario"
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Santuário Insular"
+        },
+        {
+          "language": "Spanish",
+          "name": "Isla santuario"
+        }
+      ],
+      "id": "0d7e51e10ce963c1bbabc60e5a3414d20acfe324",
+      "imageName": "island sanctuary",
+      "layout": "normal",
+      "legalities": [
+        {
+          "format": "Commander",
+          "legality": "Legal"
+        },
+        {
+          "format": "Legacy",
+          "legality": "Legal"
+        },
+        {
+          "format": "Vintage",
+          "legality": "Legal"
+        }
+      ],
+      "manaCost": "{1}{W}",
+      "mciNumber": "211",
+      "name": "Island Sanctuary",
+      "printings": [
+        "LEA",
+        "LEB",
+        "2ED",
+        "CED",
+        "CEI",
+        "3ED",
+        "4ED",
+        "5ED",
+        "ME4"
+      ],
+      "rarity": "Rare",
+      "rulings": [
+        {
+          "date": "2004-10-04",
+          "text": "If you get multiple draws or you use a spell or ability during the draw step to draw extra cards, you can have the replacement effect apply to any one or all of those. You need only have it apply once to get the effect. If you skip more than one, there is no additional effect."
+        },
+        {
+          "date": "2004-10-04",
+          "text": "If the replacement effect is applied, the effect will continue until your next turn even if this card leaves the battlefield."
+        },
+        {
+          "date": "2004-10-04",
+          "text": "Since the draw is replaced, you can't use the same draw to do other things."
+        }
+      ],
+      "source": "SQUARE EDGES AND GOLD-BORDERED BACKSIDE, NOT TOURNAMENT LEGAL",
+      "text": "If you would draw a card during your draw step, instead you may skip that draw. If you do, until your next turn, you can't be attacked except by creatures with flying and/or islandwalk.",
+      "type": "Enchantment",
+      "types": [
+        "Enchantment"
+      ]
+    },
+    {
+      "artist": "Mark Poole",
       "cmc": 0,
       "colorIdentity": [
         "U"
@@ -11602,6 +11706,10 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
           "legality": "Legal"
         },
         {
@@ -11802,7 +11910,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "source": "SQUARE EDGES AND GOLD-BORDERED BACKSIDE, NOT TOURNAMENT LEGAL",
@@ -11891,6 +12000,10 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
           "legality": "Legal"
         },
         {
@@ -12091,7 +12204,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "source": "SQUARE EDGES AND GOLD-BORDERED BACKSIDE, NOT TOURNAMENT LEGAL",
@@ -12180,6 +12294,10 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
           "legality": "Legal"
         },
         {
@@ -12380,7 +12498,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "source": "SQUARE EDGES AND GOLD-BORDERED BACKSIDE, NOT TOURNAMENT LEGAL",
@@ -12393,90 +12512,6 @@
       "type": "Basic Land — Island",
       "types": [
         "Land"
-      ]
-    },
-    {
-      "artist": "Mark Poole",
-      "cmc": 2,
-      "colorIdentity": [
-        "W"
-      ],
-      "colors": [
-        "White"
-      ],
-      "foreignNames": [
-        {
-          "language": "French",
-          "name": "Ile sanctuaire"
-        },
-        {
-          "language": "German",
-          "name": "Inselheiligtum"
-        },
-        {
-          "language": "Italian",
-          "name": "Isola Santuario"
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Santuário Insular"
-        },
-        {
-          "language": "Spanish",
-          "name": "Isla santuario"
-        }
-      ],
-      "id": "0d7e51e10ce963c1bbabc60e5a3414d20acfe324",
-      "imageName": "island sanctuary",
-      "layout": "normal",
-      "legalities": [
-        {
-          "format": "Commander",
-          "legality": "Legal"
-        },
-        {
-          "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Vintage",
-          "legality": "Legal"
-        }
-      ],
-      "manaCost": "{1}{W}",
-      "mciNumber": "211",
-      "name": "Island Sanctuary",
-      "printings": [
-        "LEA",
-        "LEB",
-        "2ED",
-        "CED",
-        "CEI",
-        "3ED",
-        "4ED",
-        "5ED",
-        "ME4"
-      ],
-      "rarity": "Rare",
-      "rulings": [
-        {
-          "date": "2004-10-04",
-          "text": "If you get multiple draws or you use a spell or ability during the draw step to draw extra cards, you can have the replacement effect apply to any one or all of those. You need only have it apply once to get the effect. If you skip more than one, there is no additional effect."
-        },
-        {
-          "date": "2004-10-04",
-          "text": "If the replacement effect is applied, the effect will continue until your next turn even if this card leaves the battlefield."
-        },
-        {
-          "date": "2004-10-04",
-          "text": "Since the draw is replaced, you can't use the same draw to do other things."
-        }
-      ],
-      "source": "SQUARE EDGES AND GOLD-BORDERED BACKSIDE, NOT TOURNAMENT LEGAL",
-      "text": "If you would draw a card during your draw step, instead you may skip that draw. If you do, until your next turn, you can't be attacked except by creatures with flying and/or islandwalk.",
-      "type": "Enchantment",
-      "types": [
-        "Enchantment"
       ]
     },
     {
@@ -12906,17 +12941,13 @@
         {
           "date": "2016-06-08",
           "text": "If, during your declare attackers step, Juggernaut is tapped, is affected by a spell or ability that says it can't attack, or you haven't controlled it continuously since the beginning of your turn, then it doesn't attack. If there's a cost associated with having Juggernaut attack, you aren't forced to pay that cost, so it doesn't have to attack in that case either."
-        },
-        {
-          "date": "2016-06-08",
-          "text": "If there are multiple combat phases in a turn, Juggernaut must attack only in the first one in which it's able to."
         }
       ],
       "source": "SQUARE EDGES AND GOLD-BORDERED BACKSIDE, NOT TOURNAMENT LEGAL",
       "subtypes": [
         "Juggernaut"
       ],
-      "text": "Juggernaut attacks each turn if able.\nJuggernaut can't be blocked by Walls.",
+      "text": "Juggernaut attacks each combat if able.\nJuggernaut can't be blocked by Walls.",
       "toughness": "3",
       "type": "Artifact Creature — Juggernaut",
       "types": [
@@ -14518,20 +14549,21 @@
         "5ED",
         "10E",
         "DDC",
-        "DD3_DVD"
+        "DD3_DVD",
+        "IMA"
       ],
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2004-10-04",
-          "text": "You can select creatures with Protection from Black to be sacrificed."
+          "date": "2017-11-17",
+          "text": "If you control any other creatures as Lord of the Pit's triggered ability resolves, you must sacrifice one. You can't choose to be dealt 7 damage instead."
         },
         {
-          "date": "2004-10-04",
-          "text": "If you have a creature, you must sacrifice it. The 7 damage can only be taken if no creature can be sacrificed."
+          "date": "2017-11-17",
+          "text": "If Lord of the Pit has gained lifelink, being dealt 7 damage by it doesn't cause your life total to change, even though you gain and lose life. If your life total is less than 7, you won't lose the game."
         },
         {
-          "date": "2004-10-04",
+          "date": "2017-11-17",
           "text": "If you have two Lords of the Pit, you can sacrifice them to each other."
         }
       ],
@@ -14645,21 +14677,18 @@
         "8ED",
         "CHK",
         "10E",
-        "M12"
+        "M12",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2004-10-04",
-          "text": "Lure does not give a creature the ability to block the Lured creature, it just forces those creatures which are already able to block the Lured creature to do so."
+          "date": "2017-11-17",
+          "text": "Lure doesn't give any creatures the ability to block the target creature. It just forces those creatures that are already able to block the creature to do so."
         },
         {
-          "date": "2004-10-04",
-          "text": "If a Lured creature is in a band, only blockers able to block the Lured creature are affected by the Lure."
-        },
-        {
-          "date": "2004-10-04",
-          "text": "The opponent does not have to activate any abilities in an attempt to make his or her creatures block. More specifically, a cost to block of zero mana is an optional cost you can choose not to pay."
+          "date": "2017-11-17",
+          "text": "As blockers are declared, any creature that's tapped or affected by a spell or ability that says it can't block doesn't block. If there's a cost associated with having the creature block, no player is forced to pay that cost, so it doesn't block if that cost isn't paid."
         }
       ],
       "source": "SQUARE EDGES AND GOLD-BORDERED BACKSIDE, NOT TOURNAMENT LEGAL",
@@ -14872,7 +14901,8 @@
         "DPA",
         "ME4",
         "M15",
-        "ORI"
+        "ORI",
+        "IMA"
       ],
       "rarity": "Rare",
       "source": "SQUARE EDGES AND GOLD-BORDERED BACKSIDE, NOT TOURNAMENT LEGAL",
@@ -15748,6 +15778,10 @@
           "legality": "Legal"
         },
         {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Kaladesh Block",
           "legality": "Legal"
         },
@@ -15951,7 +15985,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "source": "SQUARE EDGES AND GOLD-BORDERED BACKSIDE, NOT TOURNAMENT LEGAL",
@@ -16040,6 +16075,10 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
           "legality": "Legal"
         },
         {
@@ -16246,7 +16285,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "source": "SQUARE EDGES AND GOLD-BORDERED BACKSIDE, NOT TOURNAMENT LEGAL",
@@ -16335,6 +16375,10 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
           "legality": "Legal"
         },
         {
@@ -16541,7 +16585,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "source": "SQUARE EDGES AND GOLD-BORDERED BACKSIDE, NOT TOURNAMENT LEGAL",
@@ -17002,7 +17047,7 @@
       "subtypes": [
         "Imp"
       ],
-      "text": "{T}: Choose target non-Wall creature the active player has controlled continuously since the beginning of the turn. That creature attacks this turn if able. If it doesn't, destroy it at the beginning of the next end step. Activate this ability only during an opponent's turn, before attackers are declared.",
+      "text": "{T}: Choose target non-Wall creature the active player has controlled continuously since the beginning of the turn. That creature attacks this turn if able. Destroy it at the beginning of the next end step if it didn't attack this turn. Activate this ability only during an opponent's turn, before attackers are declared.",
       "toughness": "1",
       "type": "Creature — Imp",
       "types": [
@@ -18152,7 +18197,8 @@
         "ITP",
         "5ED",
         "MED",
-        "EMA"
+        "EMA",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "source": "SQUARE EDGES AND GOLD-BORDERED BACKSIDE, NOT TOURNAMENT LEGAL",
@@ -18411,6 +18457,10 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
           "legality": "Legal"
         },
         {
@@ -18705,6 +18755,10 @@
           "legality": "Legal"
         },
         {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Kaladesh Block",
           "legality": "Legal"
         },
@@ -18993,6 +19047,10 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
           "legality": "Legal"
         },
         {
@@ -19997,6 +20055,10 @@
         },
         {
           "format": "Modern",
+          "legality": "Legal"
+        },
+        {
+          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -22076,7 +22138,8 @@
         "W16",
         "EMA",
         "W17",
-        "CMA"
+        "CMA",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "source": "SQUARE EDGES AND GOLD-BORDERED BACKSIDE, NOT TOURNAMENT LEGAL",
@@ -23730,6 +23793,10 @@
           "legality": "Legal"
         },
         {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Kaladesh Block",
           "legality": "Legal"
         },
@@ -24024,6 +24091,10 @@
           "legality": "Legal"
         },
         {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Kaladesh Block",
           "legality": "Legal"
         },
@@ -24315,6 +24386,10 @@
         },
         {
           "format": "Invasion Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
           "legality": "Legal"
         },
         {
@@ -24620,16 +24695,17 @@
         "VMA",
         "EMA",
         "C16",
-        "C17"
+        "C17",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2016-06-08",
-          "text": "The amount of life gained is equal to the power of the targeted creature as it last existed on the battlefield."
+          "date": "2017-11-17",
+          "text": "The amount of life gained is equal to the power of the target creature as it last existed on the battlefield."
         },
         {
-          "date": "2016-06-08",
+          "date": "2017-11-17",
           "text": "If the creature's power is negative, its controller doesn't lose or gain life."
         }
       ],

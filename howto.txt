@@ -8,12 +8,12 @@ The 'shared/C.js' file contains most constants.
 Make sure that C.STANDARD_SETS is up-to-date.
 Sets with "recalculateStandard" parameter, will have its Standard legalities recalculated by mtgjson (using buildSet). This is currently set to ALL sets.
 
-The 'web/generate.js' nodejs script generates the final static files that will later be deployed to mtgjson.com using deploy/deploy.sh and served with nginx
+The 'web/index.js' nodejs script generates the final static files that will later be deployed to mtgjson.com using deploy/deploy.sh and served with nginx
 
 /-------------------------------\
 | Gatherer New Set Instructions |
 \-------------------------------/
-# Add new set to C.js to SETS
+# Add new set config as shared/set_configs/{set code}.json (in the appropriate subdirectory if a special type of set).
 
 # Run buildSet.js TWICE (first pass gets data, second pass gets foreign langauge names and additional data)
 node build/buildSet.js <expansion code>
@@ -48,7 +48,7 @@ node util/updateNonGathererSets.js
 /-----------------------------------\
 | Non-Gatherer New Set Instructions |
 \-----------------------------------/
-# Add new set to C.js in all places needed (SETS_NOT_ON_GATHERER and SETS and NON_GATHERER_SET_CARD_LISTS, etc)
+# Add new set to C.js in all places needed (SETS_NOT_ON_GATHERER and NON_GATHERER_SET_CARD_LISTS, etc.)
 node build/createNonGathererSet.js <expansion code>
 
 # Update printings
@@ -68,19 +68,21 @@ node util/updateNonGathererSets.js
 # Update changelog.json with new change log entry
 
 # Now generate web
-node web/generate.js
+node web/index.js <set codes>
 
-# ALERT: The web/generate.js file may detect old cards that need to be updated with new descriptions
+# ALERT: The web/index.js file may detect old cards that need to be updated with new descriptions
 #        These show up as 'tainted set codes'. The cache files are automatically cleared, but you then need to re-run
-#        node build/buildSet.js <tainted set codes> && node build/importMCISet.js mcisets && node util/updateNonGathererSets.js
-#        Then re-run web/generate
+#        node build/buildSet.js <tainted set codes> && node build/importMCISet.js mcisets && node util/updateNonGathererSets.json
+#        Then re-run web/index.js
+#        You may have to do this a lot of times.
 
 # Now examine JSON changes (this shows you a diff between local JSON files and those currently live on mtgjson.com)
 node util/compareRelease.js allsets not<new expansion code> | more
-(Example, if you just added set XYZ, run: `node util/compareRelease.js allsets notXYZ`)
+# Example, if you just added set XYZ, run: `node util/compareRelease.js allsets notXYZ`.
+# You need notXYZ because compareRelease.js does not handle a missing previous json file to compare to.
 
 # Update changelog.json entry's "updatedSetFiles" field with the files listed at the end of the compareRelease.js execution
-# Re-build web with `node web/generate.js`
+# Re-build web with `node web/index.js`
 
 # Test in browser
 http://dev.mtgjson.com

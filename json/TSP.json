@@ -3640,7 +3640,8 @@
       "originalText": "Enchant creature\nAs Pentarch Ward comes into play, choose a color.\nWhen Pentarch Ward comes into play, draw a card.\nEnchanted creature has protection from the chosen color. This effect doesn't remove Pentarch Ward.",
       "originalType": "Enchantment — Aura",
       "printings": [
-        "TSP"
+        "TSP",
+        "IMA"
       ],
       "rarity": "Common",
       "subtypes": [
@@ -5259,7 +5260,8 @@
       "printings": [
         "TSP",
         "DD2",
-        "DD3_JVC"
+        "DD3_JVC",
+        "IMA"
       ],
       "rarity": "Rare",
       "rulings": [
@@ -5403,9 +5405,16 @@
       "originalText": "Target creature gets -3/-0 until end of turn.\nDraw a card.",
       "originalType": "Instant",
       "printings": [
-        "TSP"
+        "TSP",
+        "IMA"
       ],
       "rarity": "Common",
+      "rulings": [
+        {
+          "date": "2017-11-17",
+          "text": "If the creature is an illegal target when Bewilder tries to resolve, it will be countered and none of its effects will happen. You won't draw a card."
+        }
+      ],
       "text": "Target creature gets -3/-0 until end of turn.\nDraw a card.",
       "type": "Instant",
       "types": [
@@ -9091,29 +9100,26 @@
       "power": "3",
       "printings": [
         "TSP",
-        "V11"
+        "V11",
+        "IMA"
       ],
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2006-09-25",
-          "text": "The last ability means that in order for an opponent to cast a spell, it must be that opponent's turn, during a main phase, and the stack must be empty. This is true even if the player doesn't have a sorcery he or she is able to cast, or if a rule or effect allows a spell to be cast at another time."
+          "date": "2007-05-01",
+          "text": "If you have Teferi on the battlefield and there's a Split Second spell on the stack (such as Sudden Death), you can't Suspend creatures until after the Split Second spell resolves."
         },
         {
-          "date": "2006-09-25",
+          "date": "2017-11-17",
+          "text": "Teferi's last ability means that in order for an opponent to cast a spell, it must be that opponent's turn, during a main phase, and the stack must be empty. This is true even if the player doesn't have a sorcery he or she is able to cast, or if a rule or effect allows a sorcery to be cast at another time."
+        },
+        {
+          "date": "2017-11-17",
           "text": "If you have Teferi on the battlefield, you may exile creature cards in your hand with suspend any time you could cast an instant."
         },
         {
-          "date": "2006-09-25",
-          "text": "If an ability lets an opponent cast a spell as part of its effect (such as Isochron Scepter's ability does), that opponent can't cast that spell since the currently resolving ability is still on the stack."
-        },
-        {
-          "date": "2006-09-25",
-          "text": "Your opponents can't cast their suspended cards, no matter what phase it is when the last time counter is removed. Your opponents can't cast cards using the madness ability either, no matter what phase it is when the card is discarded."
-        },
-        {
-          "date": "2007-05-01",
-          "text": "If you have Teferi on the battlefield and there's a Split Second spell on the stack (such as Sudden Death), you can't Suspend creatures until after the Split Second spell resolves."
+          "date": "2017-11-17",
+          "text": "If a spell or ability lets an opponent cast a card as part of its effect (such as suspend and rebound do), that opponent can't cast that card since the currently resolving ability is still on the stack. This is true even if that card is an instant."
         }
       ],
       "subtypes": [
@@ -12252,7 +12258,8 @@
       "originalText": "Target player discards two cards. If you played this spell during your main phase, that player discards four cards instead.",
       "originalType": "Instant",
       "printings": [
-        "TSP"
+        "TSP",
+        "IMA"
       ],
       "rarity": "Uncommon",
       "text": "Target player discards two cards. If you cast this spell during your main phase, that player discards four cards instead.",
@@ -16014,13 +16021,22 @@
         "DRB",
         "M10",
         "DDG",
-        "C14"
+        "C14",
+        "IMA"
       ],
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2009-10-01",
-          "text": "The number of targets chosen for the enters-the-battlefield ability must be at least 1 and at most 5. You divide the damage as you put the ability on the stack, not as it resolves. Each target must be assigned at least 1 damage."
+          "date": "2017-11-17",
+          "text": "You choose how many targets Bogardan Hellkite's triggered ability has and how the damage is divided as you put the ability onto the stack. Each target must receive at least 1 damage."
+        },
+        {
+          "date": "2017-11-17",
+          "text": "You can't deal damage with Bogardan Hellkite's triggered ability to both a player and a planeswalker that player controls. You also can't deal damage to more than one planeswalker controlled by the same player. If you choose to redirect the damage being dealt to a player to a planeswalker, you must redirect all the damage to a single planeswalker."
+        },
+        {
+          "date": "2017-11-17",
+          "text": "If some of the creatures or players are illegal targets as Bogardan Hellkite's triggered ability tries to resolve, the original division of damage still applies and the damage that would have been dealt to the illegal targets is lost. It won't be dealt instead to a legal target."
         }
       ],
       "subtypes": [
@@ -18196,7 +18212,8 @@
       "originalType": "Creature — Human Warrior",
       "power": "4",
       "printings": [
-        "TSP"
+        "TSP",
+        "IMA"
       ],
       "rarity": "Common",
       "rulings": [
@@ -18322,10 +18339,6 @@
         },
         {
           "format": "Shadows over Innistrad Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -19229,7 +19242,8 @@
         "pFNM",
         "TSP",
         "MMA",
-        "DDS"
+        "DDS",
+        "IMA"
       ],
       "rarity": "Common",
       "rulings": [
@@ -21088,7 +21102,8 @@
       "power": "5",
       "printings": [
         "TSP",
-        "MMA"
+        "MMA",
+        "IMA"
       ],
       "rarity": "Common",
       "rulings": [
@@ -22732,7 +22747,8 @@
       "power": "3",
       "printings": [
         "TSP",
-        "MMA"
+        "MMA",
+        "IMA"
       ],
       "rarity": "Common",
       "rulings": [
@@ -23573,7 +23589,8 @@
       "printings": [
         "TSP",
         "HOP",
-        "MMA"
+        "MMA",
+        "IMA"
       ],
       "rarity": "Common",
       "rulings": [
@@ -23618,7 +23635,7 @@
           "text": "A creature cast using suspend will enter the battlefield with haste. It will have haste until another player gains control of it (or, in some rare cases, gains control of the creature spell itself)."
         }
       ],
-      "text": "Search your library for a basic land card and put it onto the battlefield. Then shuffle your library.\nSuspend 2—{G} (Rather than cast this card from your hand, you may pay {G} and exile it with two time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)",
+      "text": "Search your library for a basic land card, put it onto the battlefield, then shuffle your library.\nSuspend 2—{G} (Rather than cast this card from your hand, you may pay {G} and exile it with two time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -30258,7 +30275,27 @@
         {
           "language": "French",
           "name": "Plaine",
+          "multiverseid": 132738
+        },
+        {
+          "language": "French",
+          "name": "Plaine",
           "multiverseid": 132739
+        },
+        {
+          "language": "French",
+          "name": "Plaine",
+          "multiverseid": 132740
+        },
+        {
+          "language": "French",
+          "name": "Plaine",
+          "multiverseid": 132741
+        },
+        {
+          "language": "German",
+          "name": "Ebene",
+          "multiverseid": 133039
         },
         {
           "language": "Italian",
@@ -30339,26 +30376,6 @@
           "language": "Russian",
           "name": "Равнина",
           "multiverseid": 134246
-        },
-        {
-          "language": "Spanish",
-          "name": "Llanura",
-          "multiverseid": 134544
-        },
-        {
-          "language": "Spanish",
-          "name": "Llanura",
-          "multiverseid": 134545
-        },
-        {
-          "language": "Spanish",
-          "name": "Llanura",
-          "multiverseid": 134546
-        },
-        {
-          "language": "Spanish",
-          "name": "Llanura",
-          "multiverseid": 134547
         }
       ],
       "id": "fa5fbd9a0d0bc2f1ba4fb2e3ab9e8d2d3dcb5197",
@@ -30646,27 +30663,7 @@
         {
           "language": "French",
           "name": "Plaine",
-          "multiverseid": 132738
-        },
-        {
-          "language": "French",
-          "name": "Plaine",
           "multiverseid": 132739
-        },
-        {
-          "language": "French",
-          "name": "Plaine",
-          "multiverseid": 132740
-        },
-        {
-          "language": "French",
-          "name": "Plaine",
-          "multiverseid": 132741
-        },
-        {
-          "language": "German",
-          "name": "Ebene",
-          "multiverseid": 133039
         },
         {
           "language": "Italian",
@@ -30747,6 +30744,26 @@
           "language": "Russian",
           "name": "Равнина",
           "multiverseid": 134246
+        },
+        {
+          "language": "Spanish",
+          "name": "Llanura",
+          "multiverseid": 134544
+        },
+        {
+          "language": "Spanish",
+          "name": "Llanura",
+          "multiverseid": 134545
+        },
+        {
+          "language": "Spanish",
+          "name": "Llanura",
+          "multiverseid": 134546
+        },
+        {
+          "language": "Spanish",
+          "name": "Llanura",
+          "multiverseid": 134547
         }
       ],
       "id": "de67fcd02f15728c3ea6f556e5cee88cabd6c62c",
@@ -31034,27 +31051,7 @@
         {
           "language": "French",
           "name": "Plaine",
-          "multiverseid": 132738
-        },
-        {
-          "language": "French",
-          "name": "Plaine",
           "multiverseid": 132739
-        },
-        {
-          "language": "French",
-          "name": "Plaine",
-          "multiverseid": 132740
-        },
-        {
-          "language": "French",
-          "name": "Plaine",
-          "multiverseid": 132741
-        },
-        {
-          "language": "German",
-          "name": "Ebene",
-          "multiverseid": 133039
         },
         {
           "language": "Italian",
@@ -31135,6 +31132,26 @@
           "language": "Russian",
           "name": "Равнина",
           "multiverseid": 134246
+        },
+        {
+          "language": "Spanish",
+          "name": "Llanura",
+          "multiverseid": 134544
+        },
+        {
+          "language": "Spanish",
+          "name": "Llanura",
+          "multiverseid": 134545
+        },
+        {
+          "language": "Spanish",
+          "name": "Llanura",
+          "multiverseid": 134546
+        },
+        {
+          "language": "Spanish",
+          "name": "Llanura",
+          "multiverseid": 134547
         }
       ],
       "id": "527928be65b558330743d928a19a4d99e739a2c4",
@@ -31422,27 +31439,7 @@
         {
           "language": "French",
           "name": "Plaine",
-          "multiverseid": 132738
-        },
-        {
-          "language": "French",
-          "name": "Plaine",
           "multiverseid": 132739
-        },
-        {
-          "language": "French",
-          "name": "Plaine",
-          "multiverseid": 132740
-        },
-        {
-          "language": "French",
-          "name": "Plaine",
-          "multiverseid": 132741
-        },
-        {
-          "language": "German",
-          "name": "Ebene",
-          "multiverseid": 133039
         },
         {
           "language": "Italian",
@@ -31523,6 +31520,26 @@
           "language": "Russian",
           "name": "Равнина",
           "multiverseid": 134246
+        },
+        {
+          "language": "Spanish",
+          "name": "Llanura",
+          "multiverseid": 134544
+        },
+        {
+          "language": "Spanish",
+          "name": "Llanura",
+          "multiverseid": 134545
+        },
+        {
+          "language": "Spanish",
+          "name": "Llanura",
+          "multiverseid": 134546
+        },
+        {
+          "language": "Spanish",
+          "name": "Llanura",
+          "multiverseid": 134547
         }
       ],
       "id": "084037e2e07ea3bd5558f818650f6687fbb782ab",
@@ -32146,7 +32163,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -32532,7 +32550,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -32918,7 +32937,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -33304,7 +33324,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -34996,29 +35017,29 @@
           "multiverseid": 133617
         },
         {
+          "language": "Portuguese (Brazil)",
+          "name": "Montanha",
+          "multiverseid": 133916
+        },
+        {
+          "language": "Russian",
+          "name": "Гора",
+          "multiverseid": 134216
+        },
+        {
+          "language": "Russian",
+          "name": "Гора",
+          "multiverseid": 134217
+        },
+        {
           "language": "Russian",
           "name": "Гора",
           "multiverseid": 134218
         },
         {
-          "language": "Spanish",
-          "name": "Montaña",
-          "multiverseid": 134517
-        },
-        {
-          "language": "Spanish",
-          "name": "Montaña",
-          "multiverseid": 134518
-        },
-        {
-          "language": "Spanish",
-          "name": "Montaña",
-          "multiverseid": 134519
-        },
-        {
-          "language": "Spanish",
-          "name": "Montaña",
-          "multiverseid": 134520
+          "language": "Russian",
+          "name": "Гора",
+          "multiverseid": 134219
         }
       ],
       "id": "29586e15e37cfd06224623574a63d9ca59ca690c",
@@ -35260,7 +35281,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -35652,7 +35674,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -35780,29 +35803,29 @@
           "multiverseid": 133617
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Montanha",
-          "multiverseid": 133916
-        },
-        {
-          "language": "Russian",
-          "name": "Гора",
-          "multiverseid": 134216
-        },
-        {
-          "language": "Russian",
-          "name": "Гора",
-          "multiverseid": 134217
-        },
-        {
           "language": "Russian",
           "name": "Гора",
           "multiverseid": 134218
         },
         {
-          "language": "Russian",
-          "name": "Гора",
-          "multiverseid": 134219
+          "language": "Spanish",
+          "name": "Montaña",
+          "multiverseid": 134517
+        },
+        {
+          "language": "Spanish",
+          "name": "Montaña",
+          "multiverseid": 134518
+        },
+        {
+          "language": "Spanish",
+          "name": "Montaña",
+          "multiverseid": 134519
+        },
+        {
+          "language": "Spanish",
+          "name": "Montaña",
+          "multiverseid": 134520
         }
       ],
       "id": "23643ddb0fecded15e40bdf9a9dffb5ac65bba28",
@@ -36044,7 +36067,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -36436,7 +36460,8 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "DDT"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -36874,6 +36899,11 @@
           "multiverseid": 132338
         },
         {
+          "language": "French",
+          "name": "Forêt",
+          "multiverseid": 132637
+        },
+        {
           "language": "German",
           "name": "Wald",
           "multiverseid": 132937
@@ -36916,7 +36946,22 @@
         {
           "language": "Japanese",
           "name": "森",
+          "multiverseid": 133539
+        },
+        {
+          "language": "Japanese",
+          "name": "森",
+          "multiverseid": 133540
+        },
+        {
+          "language": "Japanese",
+          "name": "森",
           "multiverseid": 133541
+        },
+        {
+          "language": "Japanese",
+          "name": "森",
+          "multiverseid": 133542
         },
         {
           "language": "Portuguese (Brazil)",
@@ -36957,26 +37002,6 @@
           "language": "Russian",
           "name": "Лес",
           "multiverseid": 134144
-        },
-        {
-          "language": "Spanish",
-          "name": "Bosque",
-          "multiverseid": 134442
-        },
-        {
-          "language": "Spanish",
-          "name": "Bosque",
-          "multiverseid": 134443
-        },
-        {
-          "language": "Spanish",
-          "name": "Bosque",
-          "multiverseid": 134444
-        },
-        {
-          "language": "Spanish",
-          "name": "Bosque",
-          "multiverseid": 134445
         }
       ],
       "id": "26c75d4c4acef224795aa056ab5501293c4d0b0d",
@@ -37654,6 +37679,11 @@
           "multiverseid": 132338
         },
         {
+          "language": "French",
+          "name": "Forêt",
+          "multiverseid": 132637
+        },
+        {
           "language": "German",
           "name": "Wald",
           "multiverseid": 132937
@@ -37696,7 +37726,22 @@
         {
           "language": "Japanese",
           "name": "森",
+          "multiverseid": 133539
+        },
+        {
+          "language": "Japanese",
+          "name": "森",
+          "multiverseid": 133540
+        },
+        {
+          "language": "Japanese",
+          "name": "森",
           "multiverseid": 133541
+        },
+        {
+          "language": "Japanese",
+          "name": "森",
+          "multiverseid": 133542
         },
         {
           "language": "Portuguese (Brazil)",
@@ -37737,26 +37782,6 @@
           "language": "Russian",
           "name": "Лес",
           "multiverseid": 134144
-        },
-        {
-          "language": "Spanish",
-          "name": "Bosque",
-          "multiverseid": 134442
-        },
-        {
-          "language": "Spanish",
-          "name": "Bosque",
-          "multiverseid": 134443
-        },
-        {
-          "language": "Spanish",
-          "name": "Bosque",
-          "multiverseid": 134444
-        },
-        {
-          "language": "Spanish",
-          "name": "Bosque",
-          "multiverseid": 134445
         }
       ],
       "id": "692d12549c3280737b8a7ddd319abac69f689558",
