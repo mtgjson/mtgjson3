@@ -24,7 +24,157 @@
     "match": {
       "name": ["Erayo's Essence", "Homura's Essence", "Kuon's Essence", "Rune-Tail's Essence", "Sasaya's Essence"]
     },
-    "remove": ["power", "toughness"]
+    "remove": ["power", "toughness"],
+    "replace": {
+      "originalType": "Legendary Enchantment"
+    }
+  }, {
+    "match": {
+      "name": "Rune-Tail's Essence"
+    },
+    "replace": {
+      "originalText": "Prevent all damage that would be dealt to creatures you control.",
+      "foreignNames": [
+         {
+           "language": "Chinese Simplified",
+           "name": "符尾菁华",
+           "multiverseid": 105010
+         },
+         {
+           "language": "French",
+           "name": "Essence de Queue-de-runes",
+           "multiverseid": 105175
+         },
+         {
+           "language": "German",
+           "name": "Runenenschwanz' Substanz",
+           "multiverseid": 105340
+         },
+         {
+           "language": "Italian",
+           "name": "Essenza di Coda-Runa",
+           "multiverseid": 105505
+         },
+         {
+           "language": "Japanese",
+           "name": "呪之尾の本質",
+           "multiverseid": 105670
+         },
+         {
+           "language": "Portuguese (Brazil)",
+           "name": "Essência de Cauda-Runa",
+           "multiverseid": 105835
+         },
+         {
+           "language": "Spanish",
+           "name": "Esencia de Cola-runa",
+           "multiverseid": 106000
+         }
+       ]
+    }
+  }, {
+    "match": {
+      "name": "Erayo's Essence"
+    },
+    "replace": {
+      "originalText": "Counter the first spell played by each opponent each turn.",
+      "foreignNames": [
+        {
+        "language": "Chinese Simplified",
+          "name": "伟代菁华",
+          "multiverseid": 104918
+        },
+        {
+          "language": "French",
+          "name": "Essence d'Erayo",
+          "multiverseid": 105083
+        },
+        {
+          "language": "German",
+          "name": "Erayos Substanz",
+          "multiverseid": 105248
+        },
+        {
+          "language": "Italian",
+          "name": "Essenza di Erayo",
+          "multiverseid": 105413
+        },
+        {
+          "language": "Japanese",
+          "name": "エラヨウの本質",
+          "multiverseid": 105578
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Essência de Erayo",
+          "multiverseid": 105743
+        },
+        {
+          "language": "Spanish",
+          "name": "Esencia de Erayo",
+           "multiverseid": 105908
+        }
+      ]
+    }
+  }, {
+    "match": {
+      "name": "Kuon's Essence"
+    },
+    "replace": {
+      "originalText": "At the beginning of each player's upkeep, that player sacrifices a creature."
+    }
+  }, {
+    "match": {
+      "name": "Homura's Essence"
+    },
+    "replace": {
+      "text": "Creatures you control get +2/+2 and have flying and \"{R}: This creature gets +1/+0 until end of turn.\"",
+      "originalText": "Creatures you control get +2/+2 and have flying and \"{R}: This creature gets +1/+0 until end of turn.\""
+    }
+  }, {
+    "match": {
+      "name": "Sasaya's Essence"
+    },
+    "replace": {
+      "originalText": "Whenever a land you control is tapped for mana, add one mana of that type to your mana pool for each other land you control with the same name.",
+      "foreignNames": [
+        {
+          "language": "Chinese Simplified",
+          "name": "筱弥菁华",
+          "multiverseid": 105014
+        },
+        {
+          "language": "French",
+          "name": "Essence de Sasaya",
+          "multiverseid": 105179
+        },
+        {
+          "language": "German",
+          "name": "Sasayas Substanz",
+          "multiverseid": 105344
+        },
+        {
+          "language": "Italian",
+          "name": "Essenza di Sasaya",
+          "multiverseid": 105509
+        },
+        {
+          "language": "Japanese",
+          "name": "ささ弥の本質",
+          "multiverseid": 105674
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Essência de Sasaya",
+          "multiverseid": 105839
+        },
+        {
+          "language": "Spanish",
+          "name": "Esencia de Sasaya",
+          "multiverseid": 106004
+        }
+      ]
+    }
   }, {
     "match": {
       "name": "Adamaro, First to Desire"
