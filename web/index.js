@@ -43,6 +43,24 @@ var allCards = {};
 var previousSeenSetCodes = {};
 var taintedCards = [];
 
+const ignoredSets = [
+  'UGL',
+  'UST',
+];
+
+function readyToDiff(obj) {
+  if (Array.isArray(obj)) {
+    return obj.join(' ');
+  }
+
+  if (typeof obj === 'object') {
+    const keys = Object.keys(obj).sort();
+    const arr = keys.map(key => `${key}:${readyToDiff(obj[key])}`);
+    return arr.join(' ');
+  }
+
+  return obj;
+}
 
 function processCard(SET, card, callback) {
     if (!allCardsWithExtras.hasOwnProperty(card.name)) {
@@ -53,7 +71,7 @@ function processCard(SET, card, callback) {
         previousSeenSetCodes[card.name] = {};
 
     var checkTaint = function(fieldName, fieldValue) {
-        if (SET.code == 'UGL')
+        if (ignoredSets.indexOf(SET.code) >= 0)
             // ignore un-sets.
             return;
 
@@ -74,8 +92,20 @@ function processCard(SET, card, callback) {
             if (!fieldValue) {
                 taint = true;
             }
-            else
-                diff = ansidiff.words(previousValue, fieldValue);
+            else {
+              try {
+                const a = readyToDiff(previousValue);
+                const b = readyToDiff(fieldValue);
+
+                diff = ansidiff.words(a, b);
+              } catch (e) {
+                console.error('error on ansidiff.words.');
+                console.error('parameters:');
+                console.error(previousValue);
+                console.error(fieldValue);
+                console.error(e);
+              }
+            }
 
             if (diff) {
                 taint = true
