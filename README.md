@@ -1,3 +1,6 @@
+[![Changelog](https://img.shields.io/badge/dynamic/json.svg?label=current%20release&colorB=green&prefix=v&query=$.version&uri=https%3A%2F%2Fmtgjson.com%2Fjson%2Fversion-full.json)](https://mtgjson.com/changelog.html)
+
+
 Intro
 -----
 
