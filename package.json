@@ -36,6 +36,7 @@
   },
   "scripts": {
     "test": "jshint build/*.js shared/*.js util/*.js",
+    "build": "node web/index.js",
     "checkJson": "jslint cron/*.json decks/*.json shared/set_configs/**/*.json util/**/*.json web/*.json",
     "validateSchema": "ajv -s schema/singleSet.schema.json -d 'json/*.json'"
   }
