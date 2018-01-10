@@ -334,12 +334,14 @@ tiptoe(
 
         // Generate allCards object.
         allCards = clone(allCardsWithExtras);
-        Object.values(allCards).forEach(function(card) {
+        Object.keys(allCards)
+          .map(function(cardKey) { return allCards[cardKey] })
+          .forEach(function(card) {
             // Strip out extras
             C.EXTRA_FIELDS.forEach(function(EXTRA_FIELD) {
                 delete card[EXTRA_FIELD];
             });
-        });
+          });
 
         var dataBlock = {
             'AllSets': { data: allSets, param: 'allSize' },
