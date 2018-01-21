@@ -23,28 +23,30 @@ if (require.main == module) {
         });
 }
 
-function processSet(code, cb)
-{
+function processSet(code, cb) {
     winston.info("Processing set: %s", code);
 
     tiptoe(
-        function getJSON()
-        {
+        function getJSON() {
             fs.readFile(path.join(__dirname, "..", "json", code + ".json"), {encoding : "utf8"}, this);
         },
-        function processCards(setRaw)
-        {
+        function processCards(setRaw) {
             var set = JSON.parse(setRaw);
 
             var setCards = {};
-            set.cards.forEach(function(card)
-            {
-                card.printings.remove(set.code);
-                if(!card.printings || !card.printings.length)
+            set.cards.forEach(function(card) {
+                if (!card.printings || !Array.isArray(card.printings)) {
+                  winston.warn('Card has none or invalid printings:', card.name);
+                  winston.warn(card.printings);
+                } else {
+                  // We don't want to update our own set.
+                  card.printings = card.printings.filter(code => code !== set.code);
+                }
+
+                if (!card.printings || !card.printings.length)
                     return;
 
-                card.printings.forEach(function(printing)
-                {
+                card.printings.forEach(function(printing) {
                     if(!setCards.hasOwnProperty(printing))
                         setCards[printing] = [];
 
@@ -58,10 +60,10 @@ function processSet(code, cb)
                 function(setCode, subcb) {
                     addPrintingToSetCards(setCode, setCards[setCode], set.code, subcb);
                 },
-                this);
+                this
+            );
         },
-        function finish(err)
-        {
+        function finish(err) {
             setImmediate(function() { cb(err); });
         }
     );
