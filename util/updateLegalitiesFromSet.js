@@ -40,7 +40,13 @@ function processSet(code, cb) {
 
             // Parsing each card...
             set.cards.forEach(function(card) {
-                card.printings.remove(set.code); // We don't want to update our own set.
+                if (!card.printings || !Array.isArray(card.printings)) {
+                  winston.warn('Card has none or invalid printings:', card.name);
+                  winston.warn(card.printings);
+                } else {
+                  // We don't want to update our own set.
+                  card.printings = card.printings.filter(code => code !== set.code);
+                }
 
                 if(!card.printings || !card.printings.length) {
                     // This card has no other printings, we don't need to bother.
