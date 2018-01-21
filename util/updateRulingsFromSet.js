@@ -1,13 +1,12 @@
 'use strict';
 
-var fs = require('fs');
-var shared = require('../shared/shared');
-var path = require('path');
-var tiptoe = require('tiptoe');
-var winston = require('winston');
-var async = require('async');
-var unique = require('array-unique');
-var winston = require("winston");
+const fs = require('fs');
+const shared = require('../shared/shared');
+const path = require('path');
+const tiptoe = require('tiptoe');
+const winston = require('winston');
+const async = require('async');
+const unique = require('array-unique');
 
 if (require.main == module) {
     async.eachSeries(
@@ -43,10 +42,16 @@ function processSet(code, cb) {
                 if (!card.rulings)
                     return(setImmediate(cb));
 
-                card.printings.remove(set.code);
+                if (!card.printings || !Array.isArray(card.printings)) {
+                  winston.warn('Card has none or invalid printings:', card.name);
+                  winston.warn(card.printings);
+                } else {
+                  // We don't want to update our own set.
+                  card.printings = card.printings.filter(code => code !== set.code);
+                }
 
                 if (!card.printings || !card.printings.length)
-                    return(setImmediate(cb));
+                    return setImmediate(cb);
 
                 cardRulingsByName[card.name] = card.rulings;
 
@@ -55,7 +60,7 @@ function processSet(code, cb) {
                         setCards[printing] = [];
 
                     setCards[printing].push(card.name);
-                    setCards[printing] = unique(setCards[printing]).sort;
+                    setCards[printing] = unique(setCards[printing]).sort();
 
                     subcb();
                 }, cb);
