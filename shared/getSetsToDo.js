@@ -1,3 +1,4 @@
+const C = require('C');
 const winston = require('winston');
 var unique = require('array-unique');
 
@@ -39,6 +40,6 @@ function getSetsToDo(startAt) {
 
   setsToDo = setsToDo.filter(set => !setsNotToDo.includes(set));
   return unique(setsToDo).sort();
-};
+}
 
 module.exports = getSetsToDo;

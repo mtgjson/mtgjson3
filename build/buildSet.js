@@ -1,7 +1,7 @@
 /*jslint node: true */
 "use strict";
 
-require('dotenv').config()
+require('dotenv').config();
 
 const C = require('../shared/C');
 const getSetsToDo = require('../shared/getSetsToDo');

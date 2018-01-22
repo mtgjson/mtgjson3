@@ -1,0 +1,22 @@
+{
+  "parserOptions": {
+    "ecmaFeatures": {
+      "spread": true,
+      "experimentalObjectRestSpread": true
+    },
+    "ecmaVersion": 8,
+    "sourceType": "module"
+  },
+  "env": {
+    "es6": true,
+    "node": true
+  },
+  "rules": {
+    "prefer-spread": "warn",
+    "comma-dangle": [ "warn", "always-multiline" ],
+    "no-undef": "error",
+    "prefer-const": "warn",
+    "one-var": [ "warn", "never" ],
+    "no-unused-vars": "warn"
+  }
+}
