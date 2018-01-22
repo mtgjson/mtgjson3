@@ -14,7 +14,7 @@ var ansidiff = require("ansidiff");
 var querystring = require("querystring");
 var tiptoe = require("tiptoe");
 var winston = require("winston");
-var async = require('async');
+const asyncModule = require('async');
 var unique = require("array-unique");
 
 (function (exports) {
@@ -289,7 +289,7 @@ var processMultiverseids = function (multiverseids, cb) {
 
     winston.info("Processing %d multiverseids", multiverseids.length);
 
-    async.eachSeries(
+    asyncModule.eachSeries(
         multiverseids,
         function (multiverseid, subcb) {
             tiptoe(
@@ -587,7 +587,7 @@ var getURLsForMultiverseid = function (multiverseid, cb) {
 };
 
 var addForeignNamesToCards = function (cards, cb) {
-    async.each(
+    asyncModule.each(
         cards,
         function(card, subcb) {
             addForeignNamesToCard(card, subcb);
@@ -641,7 +641,7 @@ var addForeignNamesToCard = function (card, cb) {
 };
 
 var addLegalitiesToCards = function (cards, cb) {
-    async.each(
+    asyncModule.each(
         cards,
         function(card, subcb) {
             addLegalitiesToCard(card, subcb);
@@ -685,47 +685,50 @@ var addLegalitiesToCard = function (card, cb) {
     );
 };
 
-const addPrintingsToCards = (set, cb) => {
-    tiptoe(
-        function loadNonGathererJSON() {
-            const setCodes = C.SETS.map(SET => SET.code);
-            // Adds non-gatherer sets and promo MCI sets and sets released since last printing to the current set
-            const nonGathererSets = unique(C.SETS_NOT_ON_GATHERER
-              .concat(shared.getMCISetCodes())
-              .concat(setCodes.slice(setCodes.indexOf(C.LAST_PRINTINGS_RESET)+1))
-            ).filter(setCode => setCode !== set.code);
-            async.mapSeries(
-                nonGathererSets,
-                function (code, subcb) {
-                    fs.readFile(path.join(__dirname, "..", "json", code + ".json"), "utf8", (err, data) => {
-                      if (err) {
-                        // just warn about errors
-                        winston.warn(err);
-                      }
-                      subcb(null, data);
-                    });
-                },
-                this
-            );
-        },
-        function removeNullObjects(rawList) {
-          return rawList.filter(entry => !!entry);
-        },
-        function addPrintings(nonGathererSetsJSONRaw) {
-            const nonGathererSets = nonGathererSetsJSONRaw.map(nonGathererSetJSONRaw => JSON.parse(nonGathererSetJSONRaw));
+const addPrintingsToCardsAsync = async (set) => {
+  const setCodes = C.SETS.map(SET => SET.code);
+  const nonGathererSets = unique(C.SETS_NOT_ON_GATHERER
+    .concat(shared.getMCISetCodes())
+    // Adds non-gatherer sets and promo MCI sets and sets released since last printing to the current set
+    .concat(setCodes.slice(setCodes.indexOf(C.LAST_PRINTINGS_RESET)+1))
+  ).filter(setCode => setCode !== set.code);
 
-            async.eachSeries(
-                set.cards,
-                function (card, subcb) {
-                    addPrintingsToCard(nonGathererSets, card, subcb);
-                },
-                this
-            );
-        },
-        function finish(err) {
-            setImmediate(function () { cb(err); });
-        }
-    );
+  const jsonRaw = [];
+
+  // TODO: implement this outside and async (do not use the function that takes a callback)
+  const addPrintingsToCardAsync = (nonGathererSets, card) => new Promise((accept, reject) => {
+    addPrintingsToCard(nonGathererSets, card, (err, data) => {
+      if (err) {
+        reject(err);
+        return;
+      }
+
+      accept(data);
+    });
+  });
+
+  for (let i = 0; i < nonGathererSets.length; i++) {
+    const code = nonGathererSets[i];
+    const jsonPath = path.join(__dirname, '..', 'json', code + '.json');
+    try {
+      const content = await shared.readFileAsync(jsonPath, 'utf8');
+      if (content) {
+        jsonRaw.push(JSON.parse(content));
+      }
+    } catch (err) {
+      winston.warn(err);
+    }
+  }
+
+  for (let i = 0; i < set.cards.length; i++) {
+    await addPrintingsToCardAsync(jsonRaw, set.cards[i]);
+  }
+};
+
+const addPrintingsToCards = (set, cb) => {
+  addPrintingsToCardsAsync(set)
+    .then(result => cb(null, result))
+    .catch(err => cb(err));
 };
 
 var addPrintingsToCard = function (nonGathererSets, card, cb) {
@@ -888,7 +891,7 @@ var compareCardsToMCI = function(set, cb) {
         },
         function processSetCardList(listDoc) {
             var mciCardLinks = Array.from(listDoc.querySelectorAll("table tr td a"));
-            async.each(set.cards, function (card, subcb) {
+            asyncModule.each(set.cards, function (card, subcb) {
                 if (card.variations) {
                     winston.warn("VARIATIONS: Could not find MagicCards.info match for card: %s", card.name);
                     return setImmediate(subcb);
@@ -1089,7 +1092,7 @@ var ripMCISet = function(set, cb) {
             var cards = [];
             var self = this;
 
-            async.each(mciCardLinks, function(mciCardLink, subcb) {
+            asyncModule.each(mciCardLinks, function(mciCardLink, subcb) {
                 var href = mciCardLink.getAttribute("href");
                 if (!href || !href.startsWith("/" + set.magicCardsInfoCode.toLowerCase() + "/en/"))
                     return setImmediate(subcb);
@@ -1681,7 +1684,7 @@ var fixCMC = function(cards, cb) {
         return(cards.find(function(card) { return(card.number === number); }));
     };
 
-    async.each(cards,
+    asyncModule.each(cards,
         function(card, subcb) {
             if (card.hasOwnProperty('cmc'))
                 return subcb();
@@ -1721,7 +1724,7 @@ var fixCommanderIdentityForCards = function(cards, cb) {
         return(cards.find(function(card) { return(card.number === number); }));
     };
 
-    async.each(cards, function(card, subcb) {
+    asyncModule.each(cards, function(card, subcb) {
         // Calculate commander color identity
         var regex = /{([^}]*)}/g;
         var colors = [];    // Holds the final color array

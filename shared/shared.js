@@ -38,6 +38,8 @@ const readFileAsync = (path, options) => new Promise((accept, reject) => {
   });
 });
 
+exports.readFileAsync = readFileAsync;
+
 exports.getSetsToDo = require('./getSetsToDo');
 
 exports.getMCISetCodes = () => C.SETS.filter(SET => SET.isMCISet).map(SET => SET.code);
