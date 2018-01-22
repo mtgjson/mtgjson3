@@ -1,53 +1,84 @@
 /*jslint node: true */
 "use strict";
 
-var C = require('../shared/C');
-var shared = require('../shared/shared');
-var tiptoe = require("tiptoe");
-var rip = require("./rip.js");
-var async = require("async");
-var winston = require("winston");
+require('dotenv').config()
 
-var setsToDo = shared.getSetsToDo();
-var excludeSets = C.SETS_NOT_ON_GATHERER.concat(shared.getMCISetCodes());
-setsToDo = setsToDo.filter(function(set) { return !excludeSets.includes(set); });
+const C = require('../shared/C');
+const shared = require('../shared/shared');
+const rip = require('./rip');
+const winston = require('winston');
 
-winston.info("Doing sets: %s", setsToDo);
+const excludeSets = C.SETS_NOT_ON_GATHERER.concat(shared.getMCISetCodes());
+const setsToDo = shared
+  .getSetsToDo()
+  .filter(set => !excludeSets.includes(set));
 
-async.eachSeries(
-    setsToDo,
-    function(arg, subcb) {
-        var targetSet = C.SETS.find(function(SET) {
-            return SET.name.toLowerCase() === arg.toLowerCase() || SET.code.toLowerCase() === arg.toLowerCase();
-        });
-        if (!targetSet) {
-            winston.error("Set %s not found!", arg);
-            return setImmediate(subcb);
-        }
+winston.info(`Doing sets: ${setsToDo}`);
 
-        if (targetSet.isMCISet) {
-            winston.error("Set %s is an MCI set, use importMCISet.js instead.", arg);
-            return setImmediate(subcb);
-        }
+function callbackToPromise(func, parameter) {
+  return new Promise((accept, reject) => {
+    func(parameter, (err, data) => {
+      if (err) {
+        reject(err);
+        return;
+      }
 
-        tiptoe(
-            function build() {
-                rip.ripSet(targetSet.name, this);
-            },
-            function save(set) {
-                shared.saveSet(set, this);
-            },
-            function finish(err) {
-                subcb(err);
-            }
-        );
-    },
-    function exit(err) {
-        if (err) {
-            winston.error(err);
-            process.exit(1);
-        }
+      accept(data);
+    });
+  });
+}
 
-        process.exit(0);
+function asyncRipSet(setName) {
+  return callbackToPromise(rip.ripSet, setName);
+}
+
+function asyncSaveSet(setData) {
+  return callbackToPromise(shared.saveSet, setData);
+}
+
+async function executeSet(setCode) {
+  const setCodeLowerCase = setCode.toLowerCase();
+  const targetSet = C.SETS.find(set => (
+    set.name.toLowerCase() === setCodeLowerCase ||
+    set.code.toLowerCase() === setCodeLowerCase
+  ));
+
+  if (!targetSet) {
+    const errorString = `Cannot find set ${setCode}`;
+    winston.error(errorString);
+    throw new Error(errorString);
+  }
+
+  if (targetSet.isMCISet) {
+    const errorString = `Set ${setCode} is an MCI set. Use importMCISet instead`;
+    winston.error(errorString);
+    throw new Error(errorString);
+  }
+
+  const rippedSet = await asyncRipSet(targetSet.name);
+
+  return asyncSaveSet(rippedSet);
+}
+
+async function execute(setList) {
+  if (!setList || !Array.isArray(setList)) {
+    throw new Error('invalid parameter');
+  }
+
+  if (setList.length <= 0) {
+    winston.warn('no sets to process.');
+    return;
+  }
+
+  for (let i = 0; i < setList.length; i++) {
+    const setCode = setList[i];
+    try {
+      const result = await executeSet(setCode);
+      winston.info(`done with ${setCode}.`);
+    } catch (e) {
+      winston.error(`something went wrong with set ${setCode}.`, e);
     }
-);
+  }
+}
+
+execute(setsToDo);

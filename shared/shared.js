@@ -695,7 +695,12 @@ exports.getURLAsDoc = function(targetURL, getCb) {
     }
 
     function retryDl(dlCb) {
-        var operation = retry.operation({ retries: 5});
+        const retryCount = process.env.RETRY_COUNT || 5;
+        const minTimeout = process.env.RETRY_MIN || 1000;
+        const operation = retry.operation({
+            retries: retryCount,
+            minTimeout: minTimeout,
+        });
         operation.attempt(function(currentAttempt) {
             downloadHTML(function(err, body) {
                 if (operation.retry(err)){
