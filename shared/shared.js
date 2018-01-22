@@ -19,8 +19,9 @@ winston.cli();
 
 var retry = require('retry');
 var request = require('request');
-var levelup = require('level');
-exports.cache = levelup(path.join(__dirname, '..', 'cache'));
+const cache = require('./cache');
+
+exports.cache = cache;
 
 const readFileAsync = (path, options) => new Promise((accept, reject) => {
   fs.readFile(path, options, (err, data) => {
@@ -33,64 +34,9 @@ const readFileAsync = (path, options) => new Promise((accept, reject) => {
   });
 });
 
-exports.getSetsToDo = function(startAt) {
-    startAt = startAt || 2;
-    if(process.argv.length<(startAt+1))
-    {
-        winston.error("Usage: node %s <set code|'allsets'>", process.argv[1]);
-        process.exit(1);
-    }
+exports.getSetsToDo = require('./getSetsToDo');
 
-    var setsNotToDo = [];
-    var setsToDo = [];
-
-    process.argv.slice(startAt).forEach(function(arg)
-    {
-        if(arg==="allsets")
-        {
-            setsToDo = C.SETS.map(function(SET) { return SET.code; });
-        }
-        else if(arg==="nongatherersets")
-        {
-            setsToDo = C.SETS_NOT_ON_GATHERER.slice();
-        }
-        else if(arg==="mcisets")
-        {
-            setsToDo = exports.getMCISetCodes();
-        }
-        else if(arg==="sincelastprintingreset")
-        {
-            var seenLastPrintingResetSet = false;
-            C.SETS.forEach(function(SET)
-            {
-                if(SET.code===C.LAST_PRINTINGS_RESET)
-                    seenLastPrintingResetSet = true;
-                else if(seenLastPrintingResetSet)
-                    setsToDo.push(SET.code);
-            });
-        }
-        else if(arg.toLowerCase().startsWith("startat"))
-        {
-            setsToDo = C.SETS.map(function(SET) { return SET.code; });
-            setsToDo = setsToDo.slice(setsToDo.indexOf(arg.substring("startat".length)));
-        }
-        else if(arg.toLowerCase().startsWith("not"))
-        {
-            setsNotToDo.push(arg);
-            setsNotToDo.push(arg.substring(3));
-        }
-        else
-        {
-            setsToDo.push(arg);
-        }
-    });
-
-    setsToDo = setsToDo.filter(function(set) { return !setsNotToDo.includes(set); });
-    return unique(setsToDo).sort();
-};
-
-exports.getMCISetCodes = function()
-{
+exports.getMCISetCodes = function() {
     return C.SETS.filter(function(SET) { return SET.isMCISet; }).map(function(SET) { return SET.code; });
 };
 
@@ -769,6 +715,10 @@ exports.buildMultiverseAllPrintingsURLs = function(multiverseid, cb) {
 exports.getPagingNumPages = function(doc, type)
 {
     var pageControlsContainer = (type==="printings" ? "SubContent_PrintingsList_pagingControlsContainer" : "bottomPagingControlsContainer");
+    if (doc === undefined) {
+      winston.warn('doc is undefined!', type);
+      return 0;
+    }
     var pageLinks = Array.from(doc.querySelectorAll("#ctl00_ctl00_ctl00_MainContent_SubContent_" + pageControlsContainer + " a"));
 
     var numPages = 1;

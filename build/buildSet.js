@@ -4,14 +4,16 @@
 require('dotenv').config()
 
 const C = require('../shared/C');
-const shared = require('../shared/shared');
-const rip = require('./rip');
+const getSetsToDo = require('../shared/getSetsToDo');
 const winston = require('winston');
+const cluster = require('cluster');
 
-const excludeSets = C.SETS_NOT_ON_GATHERER.concat(shared.getMCISetCodes());
-const setsToDo = shared
-  .getSetsToDo()
-  .filter(set => !excludeSets.includes(set));
+const processCount = process.env.THREADS || require('os').cpus().length;
+
+const getMCISetCodes = () => C.SETS.filter(SET => SET.isMCISet).map(SET => SET.code);
+
+const excludeSets = C.SETS_NOT_ON_GATHERER.concat(getMCISetCodes());
+const setsToDo = getSetsToDo().filter(set => !excludeSets.includes(set));
 
 winston.info(`Doing sets: ${setsToDo}`);
 
@@ -28,20 +30,16 @@ function callbackToPromise(func, parameter) {
   });
 }
 
-function asyncRipSet(setName) {
-  return callbackToPromise(rip.ripSet, setName);
-}
+async function executeSet(shared, setCode) {
+  const rip = require('./rip');
 
-function asyncSaveSet(setData) {
-  return callbackToPromise(shared.saveSet, setData);
-}
-
-async function executeSet(setCode) {
   const setCodeLowerCase = setCode.toLowerCase();
   const targetSet = C.SETS.find(set => (
     set.name.toLowerCase() === setCodeLowerCase ||
     set.code.toLowerCase() === setCodeLowerCase
   ));
+
+  const asyncRipSet = (setName) => callbackToPromise(rip.ripSet, setName);
 
   if (!targetSet) {
     const errorString = `Cannot find set ${setCode}`;
@@ -70,15 +68,68 @@ async function execute(setList) {
     return;
   }
 
-  for (let i = 0; i < setList.length; i++) {
-    const setCode = setList[i];
-    try {
-      const result = await executeSet(setCode);
-      winston.info(`done with ${setCode}.`);
-    } catch (e) {
-      winston.error(`something went wrong with set ${setCode}.`, e);
+  let workingClusters = 0;
+  let remainingSets = [...setList];
+
+  const nextWorker = () => {
+    if (remainingSets.length > 0) {
+      const nextSet = remainingSets[0];
+      remainingSets = remainingSets.slice(1);
+
+      spawnCluster(nextSet);
     }
+  };
+
+  const spawnCluster = (setName) => {
+    workingClusters++;
+
+    winston.info(`spawning worker for ${setName}...`);
+    const worker = cluster.fork({ setName: setName });
+    worker.on('exit', () => {
+      workingClusters--;
+      winston.info('worker done. next!');
+      nextWorker();
+    });
+  };
+
+  for (let i = 0; i < processCount; i++) {
+    nextWorker();
   }
 }
 
-execute(setsToDo);
+if (setsToDo.length > 1 && cluster.isMaster) {
+  execute(setsToDo);
+} else if (setsToDo.length === 1 && cluster.isMaster) {
+  const shared = require('../shared/shared');
+
+  const setName = setsToDo[0];
+  winston.info(`single process for set ${setName}`);
+  executeSet(shared, setName)
+    .then(() => {
+      winston.info(`worker done for ${setName}`);
+    })
+    .catch(err => {
+      winston.error(`worker finished with error for set ${setName}`);
+      winston.error(err);
+    })
+    .then(() => {
+      if (shared.cache.disconnect) shared.cache.disconnect();
+    });
+} else {
+  const shared = require('../shared/shared');
+
+  const setName = process.env.setName;
+  winston.info(`worker for set ${setName}`);
+  executeSet(shared, setName)
+    .then(() => {
+      winston.info(`worker done for ${setName}`);
+      if (shared.cache.disconnect) shared.cache.disconnect();
+      process.exit(0);
+    })
+    .catch(err => {
+      winston.error(`worker finished with error for set ${setName}`);
+      winston.error(err);
+      if (shared.cache.disconnect) shared.cache.disconnect();
+      process.exit(1);
+    });
+}
