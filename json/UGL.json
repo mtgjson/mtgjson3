@@ -50,11 +50,10 @@
         "UGL"
       ],
       "rarity": "Uncommon",
-      "text": "When Charm School comes into play, choose a color and balance Charm School on your head.\nPrevent all damage to you of the chosen color.\nIf Charm School falls off your head, sacrifice Charm School.",
-      "type": "Enchant Player",
+      "text": "As Charm School enters the battlefield, choose a color and balance Charm School on your head.\nPrevent all damage that would be dealt to you by sources of the chosen color.\nWhen Charm School falls off your head, sacrifice Charm School.",
+      "type": "Enchantment",
       "types": [
-        "Enchant",
-        "Player"
+        "Enchantment"
       ]
     },
     {
@@ -87,7 +86,7 @@
         "UGL"
       ],
       "rarity": "Rare",
-      "text": "If you control no cards in play other than The Cheese Stands Alone and have no cards in your hand, you win the game.",
+      "text": "When you control no permanents other than The Cheese Stands Alone and have no cards in hand, you win the game.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -123,7 +122,7 @@
         "UGL"
       ],
       "rarity": "Common",
-      "text": "Choose another player. Gain 5 life now and an additional 5 life at the beginning of the next game with that player.",
+      "text": "Choose another player. You gain 5 life. At the beginning of the first upkeep in your next game with that player, you gain 5 life.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -159,7 +158,7 @@
         "UGL"
       ],
       "rarity": "Uncommon",
-      "text": "Target player and each of his or her teammates exchange life totals.",
+      "text": "Target player and each of that player's teammates exchange life totals.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -194,7 +193,7 @@
         "UGL"
       ],
       "rarity": "Rare",
-      "text": "Speak only in rhyming sentences. If you do not, sacrifice I'm Rubber, You're Glue.\nSay \"I'm rubber, you're glue. Everything bounces off me and sticks to you\": Target spell or ability, which targets only you, targets another player of your choice instead. (The new target must be legal.)",
+      "text": "When you speak in non-rhyming sentences, sacrifice I'm Rubber, You're Glue.\nSay \"I'm rubber, you're glue. Everything bounces off me and sticks to you\": Change the target of target spell or ability that targets only you.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -234,9 +233,9 @@
       "subtypes": [
         "Knight"
       ],
-      "text": "First strike\n{1}{W}, Do the Hokey Pokey (Stand up, wiggle your butt, raise your hands above your head, and shake them wildly as you rotate 360 degrees): Prevent all damage to Knight of the Hokey Pokey from any one source.",
+      "text": "First strike\n{1}{W}, Do the Hokey Pokey: Prevent all damage a source of your choice would deal to Knight of the Hokey Pokey this turn. (To do the Hokey Pokey, put your right foot in. Put your right foot out. Put your right foot in. Shake it all about. Repeat this process for your left foot, right arm, left arm, and whole self.)",
       "toughness": "2",
-      "type": "Summon — Knight",
+      "type": "Creature — Knight",
       "types": [
         "Creature"
       ]
@@ -275,9 +274,9 @@
       "subtypes": [
         "Beast"
       ],
-      "text": "If Lexivore damages any player, destroy target card in play, other than Lexivore, with the most lines of text in its text box. (If more than one card has the most lines of text, you choose which of those cards to destroy.)",
+      "text": "Whenever Lexivore deals damage to a player, destroy target permanent other than Lexivore with the most lines of text in its text box. (If two or more cards are tied, target any one of them.)",
       "toughness": "3",
-      "type": "Summon — Beast",
+      "type": "Creature — Beast",
       "types": [
         "Creature"
       ]
@@ -312,7 +311,7 @@
         "UGL"
       ],
       "rarity": "Rare",
-      "text": "Ban one card, other than a basic land, for the remainder of the match. (For the remainder of the match, each player removes from the game all copies of that card in play or in any graveyard, hand, library, or sideboard.)",
+      "text": "Ban a card other than a basic land card for the rest of the match. (All cards with that name in any zone or sideboard are removed from the match.)",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -354,7 +353,7 @@
       ],
       "text": "Stand up, Flap your arms, Cluck like a chicken: Mesa Chicken gains flying until end of turn.",
       "toughness": "2",
-      "type": "Summon — Chicken",
+      "type": "Creature — Chicken",
       "types": [
         "Creature"
       ]
@@ -396,9 +395,9 @@
         "Proper",
         "Etiquette"
       ],
-      "text": "Flying, first strike\nDuring each other player's turn, compliment that player on his or her game play or sacrifice Miss Demeanor.",
+      "text": "Flying, first strike\nAt the beginning of each other player's upkeep, you may compliment that player on his or her game play. If you don't, sacrifice Miss Demeanor.",
       "toughness": "1",
-      "type": "Summon — Lady of Proper Etiquette",
+      "type": "Creature — Lady of Proper Etiquette",
       "types": [
         "Creature"
       ]
@@ -419,7 +418,7 @@
       "legalities": [
         {
           "format": "Un-Sets",
-          "legality": "Legal"
+          "legality": "Restricted"
         }
       ],
       "manaCost": "{W}{W}{W}{W}",
@@ -433,7 +432,7 @@
         "UGL"
       ],
       "rarity": "Rare",
-      "text": "Remove Once More with Feeling from the game as well as all cards in play and in all graveyards. Each player shuffles his or her hand into her or his library, then draws seven cards. Each player's life total is set to 10.\nDCI ruling: This card is restricted. (You cannot play with more than one in a deck.)",
+      "text": "Exile all permanents and all cards from all graveyards. Each player shuffles his or her hand into his or her library, then draws seven cards. Each player's life total becomes 10. Exile Once More with Feeling.\nDCI ruling — A deck can have only one card named Once More with Feeling.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -469,7 +468,7 @@
         "UGL"
       ],
       "rarity": "Common",
-      "text": "Destroy target card that does not share a color with clothing worn by its controller. You cannot choose an artifact or land card.",
+      "text": "Destroy target nonartifact, nonland permanent that doesn't share a color with clothing worn by its controller.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -504,7 +503,7 @@
         "UGL"
       ],
       "rarity": "Common",
-      "text": "Prevent up to 3 damage total to any number of creatures and/or players. If there are more players in the room of the opposite sex, prevent up to 3 additional damage total to any number of creatures and/or players.",
+      "text": "Prevent the next 3 damage that would be dealt this turn to any number of target creatures and/or players, divided as you choose. If there are more people in the room of a different gender than you are as you cast this spell, prevent the next 6 damage this way instead.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -539,7 +538,7 @@
         "UGL"
       ],
       "rarity": "Rare",
-      "text": "Pursuant to subsection 3.1(4) of Richard's Rules of Order, during the upkeep of each participant in this game of the Magic: The Gathering® trading card game (hereafter known as \"PLAYER\"), that PLAYER performs all actions in the sequence of previously added actions (hereafter known as \"ACTION QUEUE\"), in the order those actions were added, then adds another action to the end of the ACTION QUEUE. All actions must be simple physical or verbal actions that a player can perform while sitting in a chair, without jeopardizing the health and security of said PLAYER.\nIf any PLAYER does not perform all the prescribed actions in the correct order, sacrifice Bureaucracy and said PLAYER discards his or her complement of cards in hand (hereafter known as \"HAND\").",
+      "text": "Pursuant to subsection 3.1(4) of Richard's Rules of Order, at the beginning of the upkeep of each participant in this game of the Magic: The Gathering® trading card game (hereafter known as \"PLAYER\"), that PLAYER performs all actions in the sequence of previously added actions (hereafter known as \"ACTION QUEUE\"), in the order those actions were added, then adds another action to the end of the ACTION QUEUE. All actions must be simple physical or verbal actions that a player can perform while sitting in a chair, without jeopardizing the health and security of said PLAYER.\nWhen any PLAYER does not perform all the prescribed actions in the correct order, sacrifice Bureaucracy and said PLAYER discards his or her complement of cards in hand (hereafter known as \"HAND\").",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -575,7 +574,7 @@
         "UGL"
       ],
       "rarity": "Uncommon",
-      "text": "When Censorship comes into play, choose a CENSORED word.\nWhenever any CENSORED player says the chosen CENSORED word, Censorship deals 2 CENSORED damage to him or her.",
+      "text": "As Censorship enters the battlefield, choose a word.\nWhenever a player says the chosen word, Censorship deals 2 damage to that player.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -610,7 +609,7 @@
         "UGL"
       ],
       "rarity": "Uncommon",
-      "text": "Whenever any spell is played, counter that spell if each player, other than the caster and his or her teammates, agrees to choose and discard a card. Those players must discard those cards after agreeing.\nChecks and Balances may be played only in a game with three or more players.",
+      "text": "Cast Checks and Balances only if there are three or more players in the game.\nWhenever a player casts a spell, each of that player's opponents may discard a card. If they do, counter that spell.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -650,9 +649,9 @@
       "subtypes": [
         "Chicken"
       ],
-      "text": "Whenever a 6 is rolled on a six-sided die, put a +1/+1 counter on each Chicken in play. (You may roll dice only when a card instructs you to.)\nTap a Chicken you control: Roll a six-sided die.",
+      "text": "Whenever a 6 is rolled on a six-sided die, put a +1/+1 counter on each Chicken. (You may roll dice only when instructed to.)\nTap an untapped Chicken you control: Roll a six-sided die.",
       "toughness": "2",
-      "type": "Summon — Chicken",
+      "type": "Creature — Chicken",
       "types": [
         "Creature"
       ]
@@ -691,9 +690,9 @@
       "subtypes": [
         "Clamfolk"
       ],
-      "text": "If Clambassadors damages any player, choose an artifact, creature, or land you control. That player gains control of that artifact, creature, or land.",
+      "text": "Whenever Clambassadors deals damage to a player, choose an artifact, creature, or land you control. That player gains control of that permanent.",
       "toughness": "4",
-      "type": "Summon — Clamfolk",
+      "type": "Creature — Clamfolk",
       "types": [
         "Creature"
       ]
@@ -732,9 +731,9 @@
       "subtypes": [
         "Clamfolk"
       ],
-      "text": "Whenever you roll a 3 on a six-sided die, you may reroll that die.",
+      "text": "If you roll a 3 on a six-sided die, you may reroll that die.",
       "toughness": "2",
-      "type": "Summon — Clamfolk",
+      "type": "Creature — Clamfolk",
       "types": [
         "Creature"
       ]
@@ -773,9 +772,9 @@
       "subtypes": [
         "Clamfolk"
       ],
-      "text": "When Clam Session comes into play, choose a word.\nDuring your upkeep, sing at least six words of a song, one of which must be the chosen word, or sacrifice Clam Session. You cannot repeat a song.",
+      "text": "As Clam Session enters the battlefield, choose a word.\nAt the beginning of your upkeep, you may sing at least six words of a song, at least one of which is the chosen word. If you don't, sacrifice Clam Session. You can't repeat a song.",
       "toughness": "5",
-      "type": "Summon — Clamfolk",
+      "type": "Creature — Clamfolk",
       "types": [
         "Creature"
       ]
@@ -810,7 +809,7 @@
         "UGL"
       ],
       "rarity": "Uncommon",
-      "text": "Counter any spell unless its caster asks your permission to play that spell. If you refuse permission, Sacrifice Common Courtesy and counter the spell.",
+      "text": "Whenever a player casts a spell without asking your permission while casting it, counter that spell.\nWhen a player asks you permission to cast a spell and you refuse, counter that spell and sacrifice Common Courtesy.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -846,7 +845,7 @@
         "UGL"
       ],
       "rarity": "Common",
-      "text": "Play Denied only as any opponent casts target spell. Name a card, then look at all cards in that player's hand. If the named card is in the player's hand, counter target spell.",
+      "text": "Choose a card name, then target spell's controller reveals his or her hand. If a card with the chosen name is revealed this way, counter that spell.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -882,7 +881,7 @@
         "UGL"
       ],
       "rarity": "Common",
-      "text": "Choose another player. Draw two cards now and draw an additional two cards at the beginning of the next game with that player.",
+      "text": "Choose another player. You draw two cards. At the beginning of the first upkeep in your next game with that player, you draw two cards.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -918,11 +917,13 @@
         "UGL"
       ],
       "rarity": "Common",
-      "text": "Enchanted creature loses all abilities and is a 1/1 creature that counts as a Chicken.",
-      "type": "Enchant Creature",
+      "subtypes": [
+        "Aura"
+      ],
+      "text": "Enchant creature\nEnchanted creature is a Chicken with base power and toughness 1/1 and loses all abilities.",
+      "type": "Enchantment — Aura",
       "types": [
-        "Enchant",
-        "Creature"
+        "Enchantment"
       ]
     },
     {
@@ -954,7 +955,7 @@
         "UGL"
       ],
       "rarity": "Rare",
-      "text": "When Free-for-All comes into play, set aside all creatures in play, face down.\nDuring each player's upkeep, that player chooses a creature card at random from those set aside in this way and puts that creature into play under his or her control.\nIf Free-for-All leaves play, put each creature still set aside this way into its owner's graveyard.",
+      "text": "When Free-for-All enters the battlefield, exile all creatures face down.\nAt the beginning of each player's upkeep, that player chooses a card exiled with Free-for-All at random and puts it onto the battlefield.\nWhen Free-for-All leaves the battlefield, put all cards exiled with it into their owners' graveyards.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -989,7 +990,7 @@
         "UGL"
       ],
       "rarity": "Rare",
-      "text": "Each player reveals the top card of his or her library to all other players by continuously holding it against his or her forehead. This does not allow a player to look at his or her own card. (That card still counts as the top card of your library. Whenever you draw a card, draw that one and replace it with the next card of your library.)",
+      "text": "Each player plays with the top card of his or her library held against his or her forehead, revealed to each other player.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -1024,7 +1025,7 @@
         "UGL"
       ],
       "rarity": "Uncommon",
-      "text": "Before playing any spell, if a copy of that spell card is in any graveyard, the spell's caster may say \"Sorry.\" If he or she does not, any other player may counter the spell by saying \"Sorry\" as it is cast.\nIf any player says \"Sorry\" at any other time, Sorry deals 2 damage to that player.",
+      "text": "Before any player casts a spell with the same name as a card in any graveyard, that player may say \"sorry.\" If the player doesn't, any other player may say \"sorry\" as the spell is being cast. When another player says \"sorry\" this way, counter the spell.\nWhenever a player says \"sorry\" at any other time, Sorry deals 2 damage to that player.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -1034,8 +1035,8 @@
       "artist": "Douglas Shuler",
       "cmc": 0,
       "flavor": "\"It was big. Really, really big. No, bigger\nNo, more. Look, we're talking krakens and",
-      "id": "5842a42c982aa35749c953ee20c60f5f55c4f1a0",
-      "imageName": "b.f.m. 1",
+      "id": "293e696af02708e7c1f06263ac6aa0f88619c26b",
+      "imageName": "b.f.m. (big furry monster)1",
       "layout": "normal",
       "legalities": [
         {
@@ -1047,9 +1048,9 @@
       "name": "B.F.M. (Big Furry Monster)",
       "names": [
         "B.F.M. (Big Furry Monster)",
-        "B.F.M. (Big Furry Monster)"
+        "B.F.M. (Big Furry Monster, Right Side)"
       ],
-      "number": "28",
+      "number": "28a",
       "originalText": "You must play both B.F.M. cards to put\nleaves play, sacrifice the other.\nB.F.M. can be blocked only by three or",
       "originalType": "Summon — The Biggest, Baddest, Nastiest,",
       "printings": [
@@ -1062,8 +1063,46 @@
         "Baddest,",
         "Nastiest,"
       ],
-      "text": "You must play both B.F.M. cards to put\nleaves play, sacrifice the other.\nB.F.M. can be blocked only by three or",
-      "type": "Summon — The Biggest, Baddest, Nastiest,",
+      "text": "You must cast both B.F.M. cards to put\nleaves the battlefield, sacrifice the other.\nB.F.M. can't be blocked except by three or",
+      "type": "Creature — The Biggest, Baddest, Nastiest,",
+      "types": [
+        "Creature"
+      ]
+    },
+    {
+      "artist": "Douglas Shuler",
+      "cmc": 0,
+      "flavor": "\"It was big. Really, really big. No, bigger\nNo, more. Look, we're talking krakens and",
+      "id": "bfab02632795e6f03465f19a702af12536eedccd",
+      "imageName": "b.f.m. (big furry monster)2",
+      "layout": "normal",
+      "legalities": [
+        {
+          "format": "Un-Sets",
+          "legality": "Legal"
+        }
+      ],
+      "multiverseid": 9780,
+      "name": "B.F.M. (Big Furry Monster)",
+      "names": [
+        "B.F.M. (Big Furry Monster)",
+        "B.F.M. (Big Furry Monster, Right Side)"
+      ],
+      "number": "28a",
+      "originalText": "You must play both B.F.M. cards to put\nleaves play, sacrifice the other.\nB.F.M. can be blocked only by three or",
+      "originalType": "Summon — The Biggest, Baddest, Nastiest,",
+      "printings": [
+        "UGL"
+      ],
+      "rarity": "Rare",
+      "subtypes": [
+        "The",
+        "Biggest,",
+        "Baddest,",
+        "Nastiest,"
+      ],
+      "text": "You must cast both B.F.M. cards to put\nleaves the battlefield, sacrifice the other.\nB.F.M. can't be blocked except by three or",
+      "type": "Creature — The Biggest, Baddest, Nastiest,",
       "types": [
         "Creature"
       ]
@@ -1078,8 +1117,8 @@
         "Black"
       ],
       "flavor": "than that. Even bigger. Keep going. More.\ndreadnoughts for jewelry. It was big\"\n—Arna Kennerüd, skyknight",
-      "id": "135bbf78227672b452c02f3172cba264ca9d4f59",
-      "imageName": "b.f.m. 2",
+      "id": "f507bc33e26dff35c3715e99025d19c567ab6966",
+      "imageName": "b.f.m. (big furry monster, right side)1",
       "layout": "normal",
       "legalities": [
         {
@@ -1089,12 +1128,12 @@
       ],
       "manaCost": "{B}{B}{B}{B}{B}{B}{B}{B}{B}{B}{B}{B}{B}{B}{B}",
       "multiverseid": 9844,
-      "name": "B.F.M. (Big Furry Monster)",
+      "name": "B.F.M. (Big Furry Monster, Right Side)",
       "names": [
         "B.F.M. (Big Furry Monster)",
-        "B.F.M. (Big Furry Monster)"
+        "B.F.M. (Big Furry Monster, Right Side)"
       ],
-      "number": "29",
+      "number": "29b",
       "originalText": "B.F.M. into play. If either B.F.M. card\nmore creatures.",
       "originalType": "Scariest Creature You'll Ever See",
       "power": "99",
@@ -1102,13 +1141,56 @@
         "UGL"
       ],
       "rarity": "Rare",
-      "text": "B.F.M. into play. If either B.F.M. card\nmore creatures.",
+      "text": "B.F.M. onto the battlefield. If one B.F.M. card\nmore creatures.",
       "toughness": "99",
-      "type": "Scariest Creature You'll Ever See",
+      "type": "Scariest Creature You’ll Ever See",
       "types": [
         "Scariest",
         "Creature",
-        "You'll",
+        "Ever",
+        "See"
+      ]
+    },
+    {
+      "artist": "Douglas Shuler",
+      "cmc": 15,
+      "colorIdentity": [
+        "B"
+      ],
+      "colors": [
+        "Black"
+      ],
+      "flavor": "than that. Even bigger. Keep going. More.\ndreadnoughts for jewelry. It was big\"\n—Arna Kennerüd, skyknight",
+      "id": "0f4bb07c3fa89b82277f825e8d82adce70a918a7",
+      "imageName": "b.f.m. (big furry monster, right side)2",
+      "layout": "normal",
+      "legalities": [
+        {
+          "format": "Un-Sets",
+          "legality": "Legal"
+        }
+      ],
+      "manaCost": "{B}{B}{B}{B}{B}{B}{B}{B}{B}{B}{B}{B}{B}{B}{B}",
+      "multiverseid": 9844,
+      "name": "B.F.M. (Big Furry Monster, Right Side)",
+      "names": [
+        "B.F.M. (Big Furry Monster)",
+        "B.F.M. (Big Furry Monster, Right Side)"
+      ],
+      "number": "29b",
+      "originalText": "B.F.M. into play. If either B.F.M. card\nmore creatures.",
+      "originalType": "Scariest Creature You'll Ever See",
+      "power": "99",
+      "printings": [
+        "UGL"
+      ],
+      "rarity": "Rare",
+      "text": "B.F.M. onto the battlefield. If one B.F.M. card\nmore creatures.",
+      "toughness": "99",
+      "type": "Scariest Creature You’ll Ever See",
+      "types": [
+        "Scariest",
+        "Creature",
         "Ever",
         "See"
       ]
@@ -1147,9 +1229,9 @@
       "subtypes": [
         "Zombie"
       ],
-      "text": "Put Deadhead into play. Use this ability only if any opponent loses contact with his or her hand of cards and only if Deadhead is in your graveyard.",
+      "text": "{0}: Return Deadhead from your graveyard to the battlefield. Activate this ability only if an opponent isn't touching his or her hand (of cards).",
       "toughness": "3",
-      "type": "Summon — Zombie",
+      "type": "Creature — Zombie",
       "types": [
         "Creature"
       ]
@@ -1184,7 +1266,7 @@
         "UGL"
       ],
       "rarity": "Common",
-      "text": "Choose another player. Look at that player's hand and choose one of those cards other than a basic land. He or she discards that card. At the beginning of the next game with the player, look at the player's hand and choose one of those cards other than a basic land. He or she discards that card.",
+      "text": "Choose another player. Look at that player's hand and choose a card other than a basic land card from it. That player discards that card. At the beginning of the first upkeep in your next game with that player, look at that player's hand and choose a card other than a basic land card from it. That player discards that card.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -1220,7 +1302,7 @@
         "UGL"
       ],
       "rarity": "Uncommon",
-      "text": "Target player keeps both hands in contact with each other. If he or she does not, sacrifice Handcuffs and that player sacrifices three cards in play.",
+      "text": "As Handcuffs enters the battlefield, choose a player.\nWhen the chosen player's hands aren't touching each other, sacrifice Handcuffs and that player sacrifices three permanents.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -1257,12 +1339,11 @@
       ],
       "rarity": "Rare",
       "subtypes": [
-        "Demon",
         "Beast"
       ],
-      "text": "Flying, first strike\n{1}{B}, Reveal Infernal Spawn of Evil from your hand, Say \"It's coming\": Infernal Spawn of Evil deals 1 damage to target opponent. Use this ability only during your upkeep and only once each upkeep.",
+      "text": "Flying, first strike\n{1}{B}, Reveal Infernal Spawn of Evil from your hand, Say \"It's coming\": Infernal Spawn of Evil deals 1 damage to target opponent. Activate this ability only during your upkeep and only once each turn.",
       "toughness": "7",
-      "type": "Summon — Demon Beast",
+      "type": "Creature — Beast",
       "types": [
         "Creature"
       ]
@@ -1300,9 +1381,9 @@
       "subtypes": [
         "Imp"
       ],
-      "text": "Flying\nWhen you play Jumbo Imp, roll a six-sided die. Jumbo Imp comes into play with a number of +1/+1 counters on it equal to the die roll.\nDuring your upkeep, roll a six-sided die and put on Jumbo Imp a number of +1/+1 counters equal to the die roll.\nAt the end of your turn, roll a six-sided die and remove from Jumbo Imp a number of +1/+1 counters equal to the die roll.",
+      "text": "Flying\nAs Jumbo Imp enters the battlefield, roll a six-sided die. Jumbo Imp enters the battlefield with a number of +1/+1 counters on it equal to the result.\nAt the beginning of your upkeep, roll a six-sided die and put a number of +1/+1 counters on Jumbo Imp equal to the result.\nAt the beginning of your end step, roll a six-sided die and remove a number of +1/+1 counters from Jumbo Imp equal to the result.",
       "toughness": "0",
-      "type": "Summon — Imp",
+      "type": "Creature — Imp",
       "types": [
         "Creature"
       ]
@@ -1337,7 +1418,7 @@
         "UGL"
       ],
       "rarity": "Common",
-      "text": "You and your teammates may sacrifice any number of creatures. For each creature sacrificed in this way, add {B}{B} to your mana pool.",
+      "text": "Your team may sacrifice any number of creatures. For each creature sacrificed this way, you add {B}{B} to your mana pool.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -1373,7 +1454,7 @@
         "UGL"
       ],
       "rarity": "Rare",
-      "text": "Whenever any creature damages a player, for each Ow card in play, that player says \"Ow\" once or Ow deals 1 damage to him or her.",
+      "text": "Whenever a creature deals damage to a player, that player may say \"Ow\" once for each permanent named Ow. If the player doesn't, Ow deals 1 damage to him or her.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -1413,9 +1494,9 @@
       "subtypes": [
         "Chicken"
       ],
-      "text": "Flying\nWhenever a creature is put into any graveyard from play, you may roll a six-sided die. On a 1, sacrifice Poultrygeist. Otherwise, put a +1/+1 counter on Poultrygeist.",
+      "text": "Flying\nWhenever a creature dies, you may roll a six-sided die. If you roll a 1, sacrifice Poultrygeist. Otherwise, put a +1/+1 counter on Poultrygeist.",
       "toughness": "1",
-      "type": "Summon — Chicken",
+      "type": "Creature — Chicken",
       "types": [
         "Creature"
       ]
@@ -1454,9 +1535,9 @@
       "subtypes": [
         "Zombie"
       ],
-      "text": "When you play Temp of the Damned, roll a six-sided die. Temp of the Damned comes into play with a number of funk counters on it equal to the die roll.\nDuring your upkeep, remove a funk counter from Temp of the Damned or sacrifice Temp of the Damned.",
+      "text": "As Temp of the Damned enters the battlefield, roll a six-sided die. Temp of the Damned enters the battlefield with a number of funk counters on it equal to the result.\nAt the beginning of your upkeep, remove a funk counter from Temp of the Damned. If you can't, sacrifice it.",
       "toughness": "3",
-      "type": "Summon — Zombie",
+      "type": "Creature — Zombie",
       "types": [
         "Creature"
       ]
@@ -1490,11 +1571,13 @@
         "UGL"
       ],
       "rarity": "Uncommon",
-      "text": "When Volrath's Motion Sensor comes into play, choose target hand controlled by an opponent. Enchanted player balances Volrath's Motion Sensor on the back of that hand.\nIf Volrath's Motion Sensor falls off the hand, sacrifice Volrath's Motion Sensor and that player loses 3 life.",
-      "type": "Enchant Player",
+      "subtypes": [
+        "Aura"
+      ],
+      "text": "Enchant player\nAs Volrath's Motion Sensor enters the battlefield, choose one of enchanted player's hands. That player balances Volrath's Motion Sensor on the back of that hand.\nWhen Volrath's Motion Sensor falls off the chosen hand, sacrifice Volrath's Motion Sensor and enchanted player loses 3 life.",
+      "type": "Enchantment — Aura",
       "types": [
-        "Enchant",
-        "Player"
+        "Enchantment"
       ]
     },
     {
@@ -1526,7 +1609,7 @@
         "UGL"
       ],
       "rarity": "Rare",
-      "text": "Whenever any player taps a card, that player gives control of that card to an opponent at end of turn.\nIf a player does not tap any nonland cards during his or her turn, Burning Cinder Fury of Crimson Chaos Fire deals 3 damage to that player at end of turn.",
+      "text": "Whenever any player taps a permanent, that player choose one of his or her opponents. The chosen player gains control of that permanent at the beginning of the next end step.\nAt the beginning of each player's end step, if that player didn't tap any nonland permanents that turn, Burning Cinder Fury of Crimson Chaos Fire deals 3 damage to that player.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -1566,9 +1649,9 @@
       "subtypes": [
         "Egg"
       ],
-      "text": "During your upkeep, roll a six-sided die. On a 6, sacrifice Chicken Egg and put a Giant Chicken token into play. Treat this token as a 4/4 red creature that counts as a Chicken.",
+      "text": "At the beginning of your upkeep, roll a six-sided die. If you roll a 6, sacrifice Chicken Egg and create a 4/4 red Giant Chicken creature token.",
       "toughness": "1",
-      "type": "Summon — Egg",
+      "type": "Creature — Egg",
       "types": [
         "Creature"
       ]
@@ -1603,7 +1686,7 @@
         "UGL"
       ],
       "rarity": "Common",
-      "text": "Choose another player. Double Deal deals 3 damage to that player now and deals an additional 3 damage to the player at the beginning of the next game with the player.",
+      "text": "Choose another player. Double Deal deals 3 damage to that player. At the beginning of the first upkeep in your next game with that player, Double Deal deals 3 damage to the player.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -1643,9 +1726,9 @@
       "subtypes": [
         "Goblin"
       ],
-      "text": "{R}, {T}: Reflip any coin or reroll any die.",
+      "text": "{R}, {T}: Reflip any coin or reroll any die. (Activate this ability only any time it makes sense.)",
       "toughness": "1",
-      "type": "Summon — Goblin",
+      "type": "Creature — Goblin",
       "types": [
         "Creature"
       ]
@@ -1682,11 +1765,11 @@
       ],
       "rarity": "Common",
       "subtypes": [
-        "Goblins"
+        "Goblin"
       ],
-      "text": "Whenever Goblin Bowling Team damages any creature or player, roll a six-sided die. Goblin Bowling Team deals to that creature or player additional damage equal to the die roll.",
+      "text": "If Goblin Bowling Team would deal damage to a creature or player, it deals that much damage plus the result of a six-sided die roll to that creature or player instead.",
       "toughness": "1",
-      "type": "Summon — Goblins",
+      "type": "Creature — Goblin",
       "types": [
         "Creature"
       ]
@@ -1720,7 +1803,7 @@
         "UGL"
       ],
       "rarity": "Uncommon",
-      "text": "Roll a six-sided die for Goblin Tutor. On a 1, Goblin Tutor has no effect. Otherwise, search your library for the indicated card, reveal that card to all players, and put it into your hand. Shuffle your library afterwards.\n2 Any Goblin Tutor\n3 Any enchantment\n4 Any artifact\n5 Any creature\n6 Any sorcery, instant, or interrupt",
+      "text": "Roll a six-sided die. If you roll a 1, Goblin Tutor has no effect. Otherwise, search your library for the indicated card, reveal it, put it into your hand, then shuffle your library.\n2 — A card named Goblin Tutor\n3 — An enchantment card\n4 — An artifact card\n5 — A creature card\n6 — An instant or sorcery card",
       "type": "Instant",
       "types": [
         "Instant"
@@ -1760,9 +1843,9 @@
       "subtypes": [
         "Minotaur"
       ],
-      "text": "Denimwalk (If defending player is wearing any clothing made of denim, this creature is unblockable.)",
+      "text": "Denimwalk (This creature can't be blocked as long as defending player is wearing denim.)",
       "toughness": "2",
-      "type": "Summon — Minotaur",
+      "type": "Creature — Minotaur",
       "types": [
         "Creature"
       ]
@@ -1798,11 +1881,14 @@
       ],
       "rarity": "Rare",
       "subtypes": [
-        "Legend"
+        "Devil"
       ],
-      "text": "{1}{R}, {T}: Put Jalum Grifter and two lands you control face down in front of target opponent after revealing each card to him or her. Then, rearrange the order of the three cards as often as you wish, keeping them on the table at all times. That opponent then chooses one of those cards. If a land is chosen, destroy target card in play. Otherwise, sacrifice Jalum Grifter.",
+      "supertypes": [
+        "Legendary"
+      ],
+      "text": "{1}{R}, {T}: Shuffle Jalum Grifter and two lands you control face down. Target opponent  chooses one of those cards. Turn the cards face up. If the opponent chose Jalum Grifter, sacrifice it. Otherwise, destroy target permanent.",
       "toughness": "5",
-      "type": "Summon — Legend",
+      "type": "Legendary Creature — Devil",
       "types": [
         "Creature"
       ]
@@ -1841,9 +1927,9 @@
       "subtypes": [
         "Cow"
       ],
-      "text": "During your upkeep, roll a six-sided die. On a 1, sacrifice Krazy Kow and it deals 3 damage to each creature and player.",
+      "text": "At the beginning of your upkeep, roll a six-sided die. If you a roll a 1, sacrifice Krazy Kow and it deals 3 damage to each creature and each player.",
       "toughness": "3",
-      "type": "Summon — Cow",
+      "type": "Creature — Cow",
       "types": [
         "Creature"
       ]
@@ -1877,7 +1963,7 @@
         "UGL"
       ],
       "rarity": "Rare",
-      "text": "Choose a land type. Remove from play all lands of that type that you control. Drop those cards, one at a time, onto the playing area from a height of at least one foot. Destroy each card in play that is completely covered by those cards. Then return to play, tapped, all lands dropped in this way.",
+      "text": "Choose a land type. Exile all lands you control of that type. Drop those cards, one at a time, onto the playing area from a height of at least one foot. Destroy each permanent completely covered by those cards. Then return the cards you dropped to the battlefield tapped.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -1912,7 +1998,7 @@
         "UGL"
       ],
       "rarity": "Uncommon",
-      "text": "Whenever any spell targets a single player, each player rolls a six-sided die. That spell is redirected to the player or players with the lowest die roll. If two or more players tie for the lowest die roll, they reroll until there is no tie.",
+      "text": "Whenever a player casts a spell that targets a single player, each player rolls a six-sided die. Change the target of that spell to the player with the lowest result. Reroll to break ties, if necessary.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -1951,9 +2037,9 @@
       "subtypes": [
         "Beast"
       ],
-      "text": "When Spark Fiend comes into play, roll two six-sided dice. On a total of 2, 3, or 12, sacrifice Spark Fiend. On a total of 7 or 11, do not roll dice for Spark Fiend during any of your following upkeep phases. If you roll any other total, note it.\nDuring your upkeep, roll two six-sided dice. On a total of 7, sacrifice Spark Fiend. If you roll the noted total, do not roll dice for Spark Fiend during any of your following upkeep phases. On any other roll, there is no effect.",
+      "text": "When Spark Fiend enters the battlefield, roll two six-sided dice. If you rolled 2, 3, or 12, sacrifice Spark Fiend. If you rolled 7 or 11, don't roll dice for Spark Fiend during any of your following upkeeps. If you rolled any other total, note that total.\nAt the beginning of your upkeep, roll two six-sided dice. If you rolled 7, sacrifice Spark Fiend. If you roll the noted total, don't roll dice for Spark Fiend during any of your following upkeeps. Otherwise, do nothing.",
       "toughness": "6",
-      "type": "Summon — Beast",
+      "type": "Creature — Beast",
       "types": [
         "Creature"
       ]
@@ -1987,7 +2073,7 @@
         "UGL"
       ],
       "rarity": "Rare",
-      "text": "Roll a six-sided die for Strategy, Schmategy. On a 1, Strategy, Schmategy has no effect. Otherwise, it has one of the following effects.\n2 Destroy all artifacts.\n3 Destroy all lands.\n4 Strategy, Schmategy deals 3 damage to each creature and player.\n5 Each player discards his or her hand and draws seven cards.\n6 Roll the die two more times.",
+      "text": "Roll a six-sided die. Strategy, Schmategy has the indicated effect.\n1 — Do nothing.\n2 — Destroy all artifacts.\n3 — Destroy all lands.\n4 — Strategy, Schmategy deals 3 damage to each creature and each player.\n5 — Each player discards his or her hand and draws seven cards.\n6 — Repeat this process two more times.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -2002,7 +2088,7 @@
       "colors": [
         "Red"
       ],
-      "flavor": "Mon.–Fri. 9:00 A.M.–8:00 P.M. Pacific\n(206) 624-0933",
+      "flavor": "The number printed on the card is no longer in service. For help, go to wizards.custhelp.com or find us on Twitter @Wizards_Help.",
       "id": "8cdbf1ab777f480d58113641cb5b0baebba037fa",
       "imageName": "the ultimate nightmare of wizards of the coastr customer service",
       "layout": "normal",
@@ -2059,11 +2145,13 @@
         "UGL"
       ],
       "rarity": "Rare",
-      "text": "For each other Cardboard Carapace card you have with you, enchanted creature gets +1/+1.\nErrata: This does not count any Cardboard Carapace cards in play that you control or in your graveyard, hand, or library.",
-      "type": "Enchant Creature",
+      "subtypes": [
+        "Aura"
+      ],
+      "text": "Enchant creature\nFor each other card named Cardboard Carapace you have with you outside the game, enchanted creature gets +1/+1.",
+      "type": "Enchantment — Aura",
       "types": [
-        "Enchant",
-        "Creature"
+        "Enchantment"
       ]
     },
     {
@@ -2096,7 +2184,7 @@
         "UGL"
       ],
       "rarity": "Common",
-      "text": "Choose another player. Search your library for a basic land and put that land into play. At the beginning of the next game with that player, search your library for an additional basic land and put that land into play. In both cases, shuffle your library afterwards.",
+      "text": "Choose another player. Search your library for a basic land card, put it onto the battlefield, then shuffle your library. At the beginning of the first upkeep in your next game with that player, search your library for a basic land card, put it onto the battlefield, then shuffle your library.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -2136,9 +2224,9 @@
       "subtypes": [
         "Elves"
       ],
-      "text": "When you play Elvish Impersonators, roll two six-sided dice one after the other. Elvish Impersonators comes into play with power equal to the first die roll and toughness equal to the second.",
+      "text": "As Elvish Impersonators enters the battlefield, roll a six-sided die twice. Its base power becomes the first result and its base toughness becomes the second result.",
       "toughness": "*",
-      "type": "Summon — Elves",
+      "type": "Creature — Elves",
       "types": [
         "Creature"
       ]
@@ -2173,7 +2261,7 @@
         "UGL"
       ],
       "rarity": "Uncommon",
-      "text": "Flip X coins; an opponent calls heads or tails. For each flip you win, put a Rabid Sheep token into play. Treat these tokens as 2/2 green creatures that count as Sheep.",
+      "text": "Flip X coins. For each flip you win, create a 2/2 green Sheep creature token named Rabid Sheep.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -2212,9 +2300,9 @@
       "subtypes": [
         "Chicken"
       ],
-      "text": "{1}{G}: Roll two six-sided dice. If both die rolls are the same, Free-Range Chicken gets +X/+X until end of turn, where X is the number rolled on each die. Otherwise, if the total rolled is equal to any other total you have rolled this turn for Free-Range Chicken, sacrifice it. (For example, if you roll two 3s, Free-Range Chicken gets +3/+3. If you roll a total of 6 for Free-Range Chicken later in that turn, sacrifice it.)",
+      "text": "{1}{G}: Roll two six-sided dice. If both results are the same, Free-Range Chicken gets +X/+X until end of turn, where X is that result. If  the total of those results is equal to any other total you have rolled this turn for Free-Range Chicken, sacrifice it. (For example, if you roll two 3s, Free-Range Chicken gets +3/+3. If you roll a total of 6 for Free-Range Chicken later that turn, sacrifice it.)",
       "toughness": "3",
-      "type": "Summon — Chicken",
+      "type": "Creature — Chicken",
       "types": [
         "Creature"
       ]
@@ -2248,7 +2336,7 @@
         "UGL"
       ],
       "rarity": "Uncommon",
-      "text": "Remove all lands from play and shuffle them together. Randomly deal to each player one land card for each land he or she had before. Each player puts those lands into play under his or her control, untapped.",
+      "text": "Exile all lands. Give each player a number of those cards chosen at random equal to the number of those cards the player controlled. Each player returns those cards to the battlefield under that player's control.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -2287,9 +2375,9 @@
       "subtypes": [
         "Ogre"
       ],
-      "text": "When Ghazbán Ogress comes into play, the player who has won the most Magic games that day gains control of it. If more than one player has won the same number of games, you retain control of Ghazbán Ogress.",
+      "text": "When Ghazbán Ogress enters the battlefield, if one player has won more Magic games that day than any other player, that player gains control of Ghazbán Ogress.",
       "toughness": "2",
-      "type": "Summon — Ogre",
+      "type": "Creature — Ogre",
       "types": [
         "Creature"
       ]
@@ -2324,7 +2412,7 @@
         "UGL"
       ],
       "rarity": "Common",
-      "text": "Roll a six-sided die. Target creature gets +X/+X until end of turn, where X is equal to the die roll.",
+      "text": "Roll a six-sided die. Target creature gets +X/+X until end of turn, where X is the result.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -2364,9 +2452,9 @@
       "subtypes": [
         "Gus"
       ],
-      "text": "Gus comes into play with one +1/+1 counter on it for each game you have lost to your opponent since you last won a Magic game against him or her.",
+      "text": "Gus enters the battlefield with a +1/+1 counter on it for each Magic game you have lost to one of your opponents since you last won a game against that opponent.",
       "toughness": "2",
-      "type": "Summon — Gus",
+      "type": "Creature — Gus",
       "types": [
         "Creature"
       ]
@@ -2405,9 +2493,9 @@
       "subtypes": [
         "Cow"
       ],
-      "text": "During your upkeep, remove a counter from any card you control or sacrifice Hungry Hungry Heifer.",
+      "text": "At the beginning of your upkeep, you may remove a counter from a permanent you control. If you don't, sacrifice Hungry Hungry Heifer.",
       "toughness": "3",
-      "type": "Summon — Cow",
+      "type": "Creature — Cow",
       "types": [
         "Creature"
       ]
@@ -2441,7 +2529,7 @@
         "UGL"
       ],
       "rarity": "Rare",
-      "text": "Each player searches his or her library for any number of artifacts, creatures, enchantments, and lands and puts those cards into play. Each player shuffles his or her library afterwards.",
+      "text": "Each player searches his or her library for any number of artifact, creature, enchantment, and/or land cards, puts them onto the battlefield, then shuffles his or her library.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -2476,7 +2564,7 @@
         "UGL"
       ],
       "rarity": "Rare",
-      "text": "When Mine, Mine, Mine comes into play, each player puts his or her library into his or her hand.\nEach player skips his or her discard phase and does not lose as a result of being unable to draw a card.\nEach player cannot play more than one spell each turn.\nIf Mine, Mine, Mine leaves play, each player shuffles his or her hand and graveyard into his or her library.",
+      "text": "When Mine, Mine, Mine enters the battlefield, each player puts his or her library into his or her hand.\nPlayers have no maximum hand size and don't lose the game for drawing from an empty library.\nEach player can't cast more than one spell each turn.\nWhen Mine, Mine, Mine leaves the battlefield, each player shuffles his or her hand and graveyard into his or her library.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -2512,7 +2600,7 @@
         "UGL"
       ],
       "rarity": "Rare",
-      "text": "{1}{G}: Choose a card in your hand. Covering the artist's name, reveal the card to target player. If that player cannot name the artist, reveal the artist's name and put a Squirrel token into play. Treat this token as a 1/1 green creature.",
+      "text": "{1}{G}: Reveal a card in your hand, covering the artist credit. Target opponent guesses the artist. If that player guesses wrong, create a 1/1 green Squirrel creature token.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -2548,7 +2636,7 @@
         "UGL"
       ],
       "rarity": "Common",
-      "text": "All creatures controlled by target player and his or her teammates get +1/+1 until end of turn.",
+      "text": "Creatures target player's team controls get +1/+1 until end of turn.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -2586,11 +2674,15 @@
       ],
       "rarity": "Rare",
       "subtypes": [
-        "Legend"
+        "Human",
+        "Gamer"
       ],
-      "text": "{4}: Put a creature into play from your hand.",
+      "supertypes": [
+        "Legendary"
+      ],
+      "text": "{4}: You may put a creature card from your hand onto the battlefield.",
       "toughness": "1",
-      "type": "Summon — Legend",
+      "type": "Legendary Creature — Human Gamer",
       "types": [
         "Creature"
       ]
@@ -2620,7 +2712,7 @@
         "UGL"
       ],
       "rarity": "Rare",
-      "text": "{T}, Sacrifice Ashnod's Coupon: Target player gets you target drink.\nErrata: You pay any costs for the drink.",
+      "text": "{T}, Sacrifice Ashnod's Coupon: Target player gets you target drink. You pay any costs for the drink.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -2649,7 +2741,7 @@
         "UGL"
       ],
       "rarity": "Rare",
-      "text": "{T}: Tear Blacker Lotus into pieces. Add four mana of any one color to your mana pool. Play this ability as a mana source. Remove the pieces from the game afterwards.",
+      "text": "{T}: Tear Blacker Lotus into pieces. Add four mana of any one color to your mana pool. Remove the pieces from the game.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -2679,7 +2771,7 @@
         "UGL"
       ],
       "rarity": "Uncommon",
-      "text": "Your spells cost {1} less to play as long as you speak in a voice other than your normal voice.\nIf you speak in your normal voice, sacrifice Bronze Calendar.",
+      "text": "Spells you cast cost {1} less to cast.\nYou must speak in a voice other than your normal voice.\nWhen you speak in your normal voice, sacrifice Bronze Calendar.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -2709,7 +2801,7 @@
         "UGL"
       ],
       "rarity": "Common",
-      "text": "{4}, {T}: Tear Chaos Confetti into pieces. Throw the pieces onto the playing area from a distance of at least five feet. Destroy each card in play that a piece touches. Remove the pieces from the game afterwards.",
+      "text": "{4}, {T}: Tear Chaos Confetti into pieces. Throw the pieces onto the battlefield from a distance of at least five feet. Destroy each permanent that a piece touches. Remove the pieces from the game.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -2739,9 +2831,12 @@
         "UGL"
       ],
       "rarity": "Uncommon",
-      "text": "Flying\n{1}, Throw Clay Pigeon into the air at least two feet above your head while seated, Attempt to catch it with one hand: If you catch Clay Pigeon, prevent all damage to you from any one source and return Clay Pigeon to play, tapped. Otherwise, sacrifice it.",
+      "subtypes": [
+        "Bird"
+      ],
+      "text": "Flying\n{1}, Throw Clay Pigeon into the air at least two feet above your head while seated: If you catch Clay Pigeon with one hand, prevent all damage a source of your choice would deal to you this turn and tap Clay Pigeon. Otherwise, sacrifice it.",
       "toughness": "1",
-      "type": "Artifact Creature",
+      "type": "Artifact Creature — Bird",
       "types": [
         "Artifact",
         "Creature"
@@ -2771,7 +2866,7 @@
         "UGL"
       ],
       "rarity": "Rare",
-      "text": "{2}, {T}: Move target counter from one card to another. If the second card's rules text refers to any type of counters, the moved counter becomes one of those counters. Otherwise, it becomes a +1/+1 counter.",
+      "text": "{2}, {T}: Move a counter from one permanent onto another. If the second permanent refers to any kind of counter, the moved counter becomes one of those counters. Otherwise, it becomes a +1/+1 counter.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -2807,7 +2902,7 @@
         "UGL"
       ],
       "rarity": "Rare",
-      "text": "{T}: Roll a six-sided die for Jack-in-the-Mox. On a 1, sacrifice Jack-in-the-Mox and lose 5 life. Otherwise, Jack-in-the-Mox has one of the following effects. Treat this ability as a mana source.\n2 Add {W} to your mana pool.\n3 Add {U} to your mana pool.\n4 Add {B} to your mana pool.\n5 Add {R} to your mana pool.\n6 Add {G} to your mana pool.",
+      "text": "{T}: Roll a six-sided die. This ability has the indicated effect.\n1 — Sacrifice Jack-in-the-Mox and you lose 5 life.\n2 — Add {W} to your mana pool.\n3 — Add {U} to your mana pool.\n4 — Add {B} to your mana pool.\n5 — Add {R} to your mana pool.\n6 — Add {G} to your mana pool.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -2837,7 +2932,7 @@
         "UGL"
       ],
       "rarity": "Rare",
-      "text": "{2}, {T}, Sacrifice Jester's Sombrero: Look through target player's sideboard and remove any three of those cards from it for the remainder of the match.",
+      "text": "{2}, {T}, Sacrifice Jester's Sombrero: Look at target player's sideboard, choose three cards from it, and remove those cards from the match.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -2866,7 +2961,7 @@
         "UGL"
       ],
       "rarity": "Rare",
-      "text": "Mirror Mirror comes into play tapped.\n{7}, {T}, Sacrifice Mirror Mirror: At end of turn, exchange life totals with target player and exchange all cards in play that you control, and all cards in your hand, library, and graveyard, with that player until end of game.",
+      "text": "Mirror Mirror enters the battlefield tapped.\n{7}, {T}, Sacrifice Mirror Mirror: Choose target player. At the beginning of the next end step, exchange life totals with that player, exchange control of all permanents you and that player control, and exchange cards in your hands, cards in your libraries, and cards in your graveyards.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -2897,9 +2992,12 @@
         "UGL"
       ],
       "rarity": "Common",
-      "text": "Rock Lobsters cannot attack or block.",
+      "subtypes": [
+        "Cat"
+      ],
+      "text": "Creatures named Rock Lobster can't attack or block.",
       "toughness": "3",
-      "type": "Artifact Creature",
+      "type": "Artifact Creature — Cat",
       "types": [
         "Artifact",
         "Creature"
@@ -2930,9 +3028,12 @@
         "UGL"
       ],
       "rarity": "Common",
-      "text": "Scissors Lizards cannot attack or block.",
+      "subtypes": [
+        "Lobster"
+      ],
+      "text": "Creatures named Scissors Lizard can't attack or block.",
       "toughness": "3",
-      "type": "Artifact Creature",
+      "type": "Artifact Creature — Lobster",
       "types": [
         "Artifact",
         "Creature"
@@ -2963,9 +3064,12 @@
         "UGL"
       ],
       "rarity": "Common",
-      "text": "Paper Tigers cannot attack or block.",
+      "subtypes": [
+        "Lizard"
+      ],
+      "text": "Creatures named Paper Tiger can't attack or block.",
       "toughness": "3",
-      "type": "Artifact Creature",
+      "type": "Artifact Creature — Lizard",
       "types": [
         "Artifact",
         "Creature"
@@ -2995,7 +3099,7 @@
         "UGL"
       ],
       "rarity": "Uncommon",
-      "text": "{4}, {T}, Sacrifice Spatula of the Ages: Put into play from your hand any card from an Unglued supplement.",
+      "text": "{4}, {T}, Sacrifice Spatula of the Ages: You may put a silver-bordered permanent card from your hand onto the battlefield.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -3024,7 +3128,7 @@
         "UGL"
       ],
       "rarity": "Uncommon",
-      "text": "Urza's Contact Lenses comes into play tapped and does not untap during its controller's untap phase.\nAll players play with their hands face up.\nClap your hands twice: Tap or untap Urza's Contact Lenses.",
+      "text": "Urza's Contact Lenses enters the battlefield tapped.\nUrza's Contact Lenses doesn't untap during your untap step.\nAs long as Urza's Contact Lenses is untapped, all players play with their hands revealed.\nClap your hands twice: You may tap or untap Urza's Contact Lenses.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -3054,9 +3158,12 @@
         "UGL"
       ],
       "rarity": "Uncommon",
-      "text": "{2}: Roll a six-sided die for Urza's Science Fair Project.\n1 It gets -2/-2 until end of turn.\n2 It deals no combat damage this turn.\n3 Attacking does not cause it to tap this turn.\n4 It gains first strike until end of turn.\n5 It gains flying until end of turn.\n6 It gets +2/+2 until end of turn.",
+      "subtypes": [
+        "Construct"
+      ],
+      "text": "{2}: Roll a six-sided die. Urza's Science Fair Project gets the indicated result.\n1 — It gets -2/-2 until end of turn.\n2 — Prevent all combat damage it would deal this turn.\n3 — It gains vigilance until end of turn.\n4 — It gains first strike until end of turn.\n5 — It gains flying until end of turn.\n6 — It gets +2/+2 until end of turn.",
       "toughness": "4",
-      "type": "Artifact Creature",
+      "type": "Artifact Creature — Construct",
       "types": [
         "Artifact",
         "Creature"
@@ -3305,7 +3412,9 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "UST",
+        "RIX"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -3562,7 +3671,9 @@
         "HOU",
         "C17",
         "XLN",
-        "DDT"
+        "DDT",
+        "UST",
+        "RIX"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -3823,7 +3934,9 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "UST",
+        "RIX"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -4086,7 +4199,9 @@
         "HOU",
         "C17",
         "XLN",
-        "DDT"
+        "DDT",
+        "UST",
+        "RIX"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -4346,7 +4461,9 @@
         "E01",
         "HOU",
         "C17",
-        "XLN"
+        "XLN",
+        "UST",
+        "RIX"
       ],
       "rarity": "Basic Land",
       "subtypes": [
