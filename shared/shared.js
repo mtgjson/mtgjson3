@@ -38,7 +38,34 @@ const readFileAsync = (path, options) => new Promise((accept, reject) => {
   });
 });
 
+const writeFileAsync = (path, data, options) => new Promise((accept, reject) => {
+  fs.writeFile(
+    path,
+    data,
+    options,
+    (err, data) => {
+      if (err) {
+        reject(err);
+        return;
+      }
+
+      accept(data);
+    }
+  );
+});
+
+const setFileName = (setCode, language) => {
+  let fn = setCode.toUpperCase();
+  if (language)
+    fn += '.' + language.toLowerCase();
+  fn += '.json';
+
+  return path.join(__dirname, '..', 'json', fn);
+};
+
 exports.readFileAsync = readFileAsync;
+exports.writeFileAsync = writeFileAsync;
+exports.setFileName = setFileName;
 
 exports.getSetsToDo = require('./getSetsToDo');
 
@@ -778,80 +805,76 @@ exports.updateStandardForCard = function(card) {
 };
 
 /**
- * saveSet() prepares and saves a given set to a file.
- * 1.    Each card is sorted by the following criteria:
- * 1.1   If they both have a number, they are compared and sorted accordingly.
- * 1.2   If the number does not exist or is is the same, compare multiverseIDs
- * 1.3   If there are no numbers, compare the imagenames.
- * 1.4   If there are no imagenames compare names.
- * 2.    The foreignNames array is sorted by the multiverseid
- * 3.    The legalities are sorted by format name
- * 4.    Each key value of the card is sorted.
- *
- * 99. Finally, the file is saved to the <ROOT>/json/<SETNAME>.json file.
+ * saveSet() is an callback wrapper for saveSetAsync
  */
-exports.saveSet = function(set, callback) {
-    // 1. Sort cards
-    set.cards.sort(function(a, b) {
-        var ret = 0;
-        if (a.number && b.number)
-            ret = exports.alphanum(a.number, b.number);
-        if (ret === 0 && a.multiverseid && b.multiverseid)
-            ret = a.multiverseid - b.multiverseid;
-        if (ret === 0 && a.imageName && b.imageName)
-            ret = a.imageName.localeCompare(b.imageName);
-        if (ret === 0)
-            ret = a.name.localeCompare(b.name);
-        return ret;
-    });
-
-    // Sort internal card stuff
-    set.cards.forEach(function(card) {
-        // 2. Foreign Names
-        if (card.foreignNames)
-            card.foreignNames.sort(function(fnameA, fnameB) {
-                var result = fnameA.multiverseid - fnameB.multiverseid;
-                if (result === 0) result = fnameA.language.localeCompare(fnameB.language);
-                if (result === 0) result = fnameA.name.localeCompare(fnameB.name);
-                return result;
-            });
-
-        // 3. Legalities
-        if (card.legalities)
-            card.legalities.sort(function(a, b){
-                return(a.format.localeCompare(b.format));
-            });
-
-        // 4. Sort card properties
-        Object.keys(card).sort().forEach(function(key) {
-            var value = card[key];
-            delete card[key];
-            card[key] = value;
-        });
-    });
-
-    var fn = set.code;
-    if (set.language)
-        fn += '.' + set.language;
-    fn += '.json';
-
-    // 99. Save the file on the proper path
-    fs.writeFile(path.join(__dirname, "..", "json", fn), JSON.stringify(set, null, '  '), {encoding:"utf8"}, callback);
-};
+exports.saveSet = (setData, callback) => exports.saveSetAsync(setData)
+  .then(response => callback(null, response))
+  .catch(err => callback(err));
 
 /**
- * saveSetAsync() is an async wrapper for saveSet
- */
-exports.saveSetAsync = (setData) => new Promise((accept, reject) => {
-  exports.saveSet(setData, (err, data) => {
-    if (err) {
-      reject(err);
-      return;
-    }
+* saveSetAsync() prepares and saves a given set to a file.
+* 1.    Each card is sorted by the following criteria:
+* 1.1   If they both have a number, they are compared and sorted accordingly.
+* 1.2   If the number does not exist or is is the same, compare multiverseIDs
+* 1.3   If there are no numbers, compare the imagenames.
+* 1.4   If there are no imagenames compare names.
+* 2.    The foreignNames array is sorted by the multiverseid
+* 3.    The legalities are sorted by format name
+* 4.    Each key value of the card is sorted.
+*
+* 99. Finally, the file is saved to the <ROOT>/json/<SETNAME>.json file.
+*/
+exports.saveSetAsync = (setData) => {
+  // 1. Sort cards
+  setData.cards.sort((a, b) => {
+    let ret = 0;
+    if (a.number && b.number)
+        ret = exports.alphanum(a.number, b.number);
+    if (ret === 0 && a.multiverseid && b.multiverseid)
+        ret = a.multiverseid - b.multiverseid;
+    if (ret === 0 && a.imageName && b.imageName)
+        ret = a.imageName.localeCompare(b.imageName);
+    if (ret === 0)
+        ret = a.name.localeCompare(b.name);
 
-    accept(data);
+    return ret;
   });
-});
+
+  // Sort internal card stuff
+  setData.cards.forEach((card) => {
+    // 2. Foreign Names
+    if (card.foreignNames)
+      card.foreignNames.sort((fnameA, fnameB) => {
+        let result = fnameA.multiverseid - fnameB.multiverseid;
+        if (result === 0) result = fnameA.language.localeCompare(fnameB.language);
+        if (result === 0) result = fnameA.name.localeCompare(fnameB.name);
+        return result;
+      });
+
+    // 3. Legalities
+    if (card.legalities)
+      card.legalities.sort((a, b) => a.format.localeCompare(b.format));
+
+    // 4. Sort card properties
+    Object.keys(card).sort().forEach((key) => {
+      var value = card[key];
+      delete card[key];
+      card[key] = value;
+    });
+  });
+
+  let fn = setData.code;
+  if (setData.language)
+    fn += '.' + setData.language;
+  fn += '.json';
+
+  // 99. Save the file on the proper path
+  return writeFileAsync(
+    setFileName(setData.code, setData.language),
+    JSON.stringify(setData, null, '  '),
+    { encoding: 'utf8' }
+  );
+};
 
 // Natural sort implementation, for getting those card numbers in a human-readable format.
 // Thanks to Brian Huisman at http://web.archive.org/web/20130826203933/http://my.opera.com/GreyWyvern/blog/show.dml/1671288 and http://www.davekoelle.com/alphanum.html
@@ -893,28 +916,15 @@ exports.alphanum = function(a, b) {
  * @param callback Function with the callback to pass the error or pass no parameter
  */
 exports.processSet = function(setCode, processFunction, callback) {
-    tiptoe(
-        function getJSON() {
-            fs.readFile(path.join(__dirname, "..", "json", setCode + ".json"), {encoding : "utf8"}, this);
-        },
-        function updateData(rawSet) {
-            var set = JSON.parse(rawSet);
+  const returnValue = exports.processSetAsync(setCode, processFunction);
 
-            var newSet = processFunction(set);
+  if (callback) {
+    return returnValue
+      .then(data => callback(null, data))
+      .catch(err => callback(err));
+  }
 
-            if (newSet)
-                exports.saveSet(newSet, this);    // Save set if the function returned anything
-            else
-                this();
-        },
-        function finish(err) {
-            if (err)
-                throw(err);
-
-            if (callback)
-                callback();
-        }
-    );
+  return returnValue;
 };
 
 /**
@@ -923,7 +933,7 @@ exports.processSet = function(setCode, processFunction, callback) {
  * @param processFunction function to modify the set data. If data is returned, this data considered the new set data.
  */
 exports.processSetAsync = async function(setCode, processFunction) {
-  const jsonPath = path.join(__dirname, '..', 'json', setCode + '.json');
+  const jsonPath = setFileName(setCode);
   const jsonContents = await readFileAsync(jsonPath, { encoding : 'utf8' });
 
   const set = JSON.parse(jsonContents);
