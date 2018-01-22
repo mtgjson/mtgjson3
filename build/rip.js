@@ -722,6 +722,7 @@ var addPrintingsToCard = function (nonGathererSets, card, cb) {
         },
         function getAllPages(doc) {
             var numPages = shared.getPagingNumPages(doc, "printings");
+            //if (numPages > 11) numPages = 11;
             for (var i = 0; i < numPages; i++) {
                 shared.getURLAsDoc(shared.buildMultiversePrintingsURL(card.multiverseid, i), this.parallel());
             }
