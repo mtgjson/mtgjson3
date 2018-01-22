@@ -1,4 +1,4 @@
-const C = require('C');
+const C = require('./C');
 const winston = require('winston');
 var unique = require('array-unique');
 

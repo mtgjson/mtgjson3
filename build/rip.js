@@ -685,29 +685,42 @@ var addLegalitiesToCard = function (card, cb) {
     );
 };
 
-var addPrintingsToCards = function (set, cb) {
+const addPrintingsToCards = (set, cb) => {
     tiptoe(
         function loadNonGathererJSON() {
-            var setCodes = C.SETS.map(function (SET) { return SET.code; });
+            const setCodes = C.SETS.map(SET => SET.code);
             // Adds non-gatherer sets and promo MCI sets and sets released since last printing to the current set
-            var nonGathererSets = unique(C.SETS_NOT_ON_GATHERER.concat(shared.getMCISetCodes()).concat(setCodes.slice(setCodes.indexOf(C.LAST_PRINTINGS_RESET)+1)));
-            nonGathererSets = nonGathererSets.filter(function(s) { return s !== set.code; });
+            const nonGathererSets = unique(C.SETS_NOT_ON_GATHERER
+              .concat(shared.getMCISetCodes())
+              .concat(setCodes.slice(setCodes.indexOf(C.LAST_PRINTINGS_RESET)+1))
+            ).filter(setCode => setCode !== set.code);
             async.mapSeries(
                 nonGathererSets,
                 function (code, subcb) {
-                    fs.readFile(path.join(__dirname, "..", "json", code + ".json"), "utf8", subcb);
+                    fs.readFile(path.join(__dirname, "..", "json", code + ".json"), "utf8", (err, data) => {
+                      if (err) {
+                        // just warn about errors
+                        winston.warn(err);
+                      }
+                      subcb(null, data);
+                    });
                 },
-                this);
+                this
+            );
+        },
+        function removeNullObjects(rawList) {
+          return rawList.filter(entry => !!entry);
         },
         function addPrintings(nonGathererSetsJSONRaw) {
-            var nonGathererSets = nonGathererSetsJSONRaw.map(function (nonGathererSetJSONRaw) { return JSON.parse(nonGathererSetJSONRaw); });
+            const nonGathererSets = nonGathererSetsJSONRaw.map(nonGathererSetJSONRaw => JSON.parse(nonGathererSetJSONRaw));
 
             async.eachSeries(
                 set.cards,
                 function (card, subcb) {
                     addPrintingsToCard(nonGathererSets, card, subcb);
                 },
-                this);
+                this
+            );
         },
         function finish(err) {
             setImmediate(function () { cb(err); });

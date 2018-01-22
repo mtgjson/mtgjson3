@@ -1,25 +1,29 @@
 "use strict";
 
-var C = require("./C");
-var clone = require("clone");
-var hash = require("mhash");
-var path = require("path");
-var moment = require("moment");
-var domino = require("domino");
-var querystring = require("querystring");
-var tiptoe = require("tiptoe");
-var fs = require("fs");
-var url = require("url");
-var unidecode = require("unidecode");
-var unique = require("array-unique");
-var winston = require("winston");
+const C = require('./C');
+const clone = require('clone');
+const hash = require('mhash');
+const path = require('path');
+const moment = require('moment');
+const domino = require('domino');
+const querystring = require('querystring');
+const tiptoe = require('tiptoe');
+const fs = require('fs');
+const url = require('url');
+const unidecode = require('unidecode');
+const unique = require('array-unique');
+const winston = require('winston');
+const retry = require('retry');
+const request = require('request');
+const cache = require('./cache');
 
 winston.level = 'info';
 winston.cli();
 
-var retry = require('retry');
-var request = require('request');
-const cache = require('./cache');
+const COLOR_ORDER = ['Blue', 'Black', 'Red', 'Green', 'White'];
+const LAND_ORDER = ['Island', 'Swamp', 'Mountain', 'Forest', 'Plains'];
+
+const REQUEST_HOST = process.env.REQUEST_HOST || 'gatherer.wizards.com';
 
 exports.cache = cache;
 
@@ -36,9 +40,7 @@ const readFileAsync = (path, options) => new Promise((accept, reject) => {
 
 exports.getSetsToDo = require('./getSetsToDo');
 
-exports.getMCISetCodes = function() {
-    return C.SETS.filter(function(SET) { return SET.isMCISet; }).map(function(SET) { return SET.code; });
-};
+exports.getMCISetCodes = () => C.SETS.filter(SET => SET.isMCISet).map(SET => SET.code);
 
 exports.cardComparator = function(a, b)
 {
@@ -63,7 +65,7 @@ exports.buildMultiverseLanguagesURL = function(multiverseid)
     var urlConfig =
     {
         protocol : "http",
-        host     : "gatherer.wizards.com",
+        host     : REQUEST_HOST,
         pathname : "/Pages/Card/Languages.aspx",
         query    : { multiverseid : multiverseid }
     };
@@ -79,7 +81,7 @@ exports.buildMultiverseURL = function(multiverseid, part)
     var urlConfig =
     {
         protocol : "http",
-        host     : "gatherer.wizards.com",
+        host     : REQUEST_HOST,
         pathname : "/Pages/Card/Details.aspx",
         query    :
         {
@@ -101,7 +103,7 @@ exports.buildMultiverseLegalitiesURL = function(multiverseid)
     var urlConfig =
     {
         protocol : "http",
-        host     : "gatherer.wizards.com",
+        host     : REQUEST_HOST,
         pathname : "/Pages/Card/Printings.aspx",
         query    : { multiverseid : multiverseid, page : "0" }
     };
@@ -117,7 +119,7 @@ exports.buildMultiversePrintingsURL = function(multiverseid, page)
     var urlConfig =
     {
         protocol : "http",
-        host     : "gatherer.wizards.com",
+        host     : REQUEST_HOST,
         pathname : "/Pages/Card/Printings.aspx",
         query    : { multiverseid : multiverseid, page : ("" + (page || 0)) }
     };
@@ -130,7 +132,7 @@ exports.buildListingsURL = function(setName, page)
     var urlConfig =
     {
         protocol : "http",
-        host     : "gatherer.wizards.com",
+        host     : REQUEST_HOST,
         pathname : "/Pages/Search/Default.aspx",
         query    :
         {
@@ -165,12 +167,8 @@ exports.performSetCorrections = function(setCorrections, fullSet)
         {
             addBasicLandWatermarks = false;
         }
-        else if(setCorrection==="numberCards")
-        {
-            var COLOR_ORDER = ["Blue", "Black", "Red", "Green", "White"];
-            var LAND_ORDER = ["Island", "Swamp", "Mountain", "Forest", "Plains"];
+        else if (setCorrection === 'numberCards') {
             var cardNumber = 1;
-
 
             var colorOrder = function(card) {
                 // COLORS, Golds, Artifacts, Non-Basic Lands, Lands
