@@ -22,6 +22,17 @@ var request = require('request');
 var levelup = require('level');
 exports.cache = levelup(path.join(__dirname, '..', 'cache'));
 
+const readFileAsync = (path, options) => new Promise((accept, reject) => {
+  fs.readFile(path, options, (err, data) => {
+    if (err) {
+      reject(err);
+      return;
+    }
+
+    accept(data);
+  });
+});
+
 exports.getSetsToDo = function(startAt) {
     startAt = startAt || 2;
     if(process.argv.length<(startAt+1))
@@ -878,6 +889,20 @@ exports.saveSet = function(set, callback) {
     fs.writeFile(path.join(__dirname, "..", "json", fn), JSON.stringify(set, null, '  '), {encoding:"utf8"}, callback);
 };
 
+/**
+ * saveSetAsync() is an async wrapper for saveSet
+ */
+exports.saveSetAsync = (setData) => new Promise((accept, reject) => {
+  exports.saveSet(setData, (err, data) => {
+    if (err) {
+      reject(err);
+      return;
+    }
+
+    accept(data);
+  });
+});
+
 // Natural sort implementation, for getting those card numbers in a human-readable format.
 // Thanks to Brian Huisman at http://web.archive.org/web/20130826203933/http://my.opera.com/GreyWyvern/blog/show.dml/1671288 and http://www.davekoelle.com/alphanum.html
 exports.alphanum = function(a, b) {
@@ -940,4 +965,19 @@ exports.processSet = function(setCode, processFunction, callback) {
                 callback();
         }
     );
+};
+
+/**
+ * Execute a function on a given set and saves the returned data (if any)
+ * @param setCode String with the name of the set we want to update
+ * @param processFunction function to modify the set data. If data is returned, this data considered the new set data.
+ */
+exports.processSetAsync = async function(setCode, processFunction) {
+  const jsonPath = path.join(__dirname, '..', 'json', setCode + '.json');
+  const jsonContents = await readFileAsync(jsonPath, { encoding : 'utf8' });
+
+  const set = JSON.parse(jsonContents);
+  const newSet = processFunction(set);
+
+  return exports.saveSetAsync(newSet);
 };

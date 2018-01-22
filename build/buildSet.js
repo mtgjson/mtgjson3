@@ -57,7 +57,7 @@ async function executeSet(setCode) {
 
   const rippedSet = await asyncRipSet(targetSet.name);
 
-  return asyncSaveSet(rippedSet);
+  return shared.saveSetAsync(rippedSet);
 }
 
 async function execute(setList) {
