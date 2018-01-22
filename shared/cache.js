@@ -1,10 +1,14 @@
 const winston = require('winston');
 let cache = null;
 
-if (process.env.USE_REDIS && process.env.USE_REDIS !== '0') {
+const isTrue = (value) => value && value !== '0' && value !== 'false';
+
+if (isTrue(process.env.USE_REDIS)) {
   winston.info('using redis');
   const redis = require('redis');
   const client = redis.createClient();
+
+  const ignore_cache = isTrue(process.env.REDIS_IGNORE_CACHE);
 
   client.on('error', err => {
     winston.error('redis error:', err);
@@ -17,7 +21,7 @@ if (process.env.USE_REDIS && process.env.USE_REDIS !== '0') {
         return;
       }
 
-      if (!reply) {
+      if (!reply || ignore_cache) {
         callback({ notFound: true });
         return;
       }
