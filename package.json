@@ -11,12 +11,14 @@
     "cli-color": ">= 0.2.3",
     "clone": "^2.1.1",
     "domino": "^2.0.0",
+    "dotenv": "^4.0.0",
     "dustjs-helpers": "^1.7.4",
     "dustjs-linkedin": "^2.7.5",
     "level": "^1.7.0",
     "mhash": "^2.1.9",
     "moment": "^2.20.1",
     "pug": "^2.0.0-rc.4",
+    "redis": "^2.8.0",
     "request": "^2.83.0",
     "require-dir": "^0.3.2",
     "retry": "^0.10.1",
@@ -28,14 +30,14 @@
   },
   "devDependencies": {
     "ajv-cli": "^2.1.0",
-    "jshint": "^2.9",
+    "eslint": "^4.16.0",
     "jslint": "^0.11.0"
   },
   "engines": {
-    "node": ">= 0.12.0"
+    "node": ">= 9.0.0"
   },
   "scripts": {
-    "test": "jshint build/*.js shared/*.js util/*.js",
+    "test": "eslint build/*.js shared/*.js util/*.js",
     "build": "node web/index.js",
     "checkJson": "jslint cron/*.json decks/*.json shared/set_configs/**/*.json util/**/*.json web/*.json",
     "validateSchema": "ajv -s schema/singleSet.schema.json -d 'json/*.json'"

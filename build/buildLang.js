@@ -1,5 +1,6 @@
-/*jslint node: true */
-"use strict";
+'use strict';
+
+require('dotenv').config();
 
 var fs = require('fs');
 var path = require('path');
@@ -10,18 +11,18 @@ var rip = require('./rip.js');
 var winston = require('winston');
 var async = require('async');
 
-var langRef = {
-    "ch": "Chinese Simplified",        // TODO: Fixme.
-    "cn": "Chinese Simplified",        // TODO: Fixme.
-    "ch-s": "Chinese Traditional",    // TODO: Fixme.
-    "fr": "French",
-    "de": "German",
-    "it": "Italian",
-    "jp": "Japanese",
-    "ko": "Korean",
-    "pt": "Portuguese (Brazil)",
-    "ru": "Russian",
-    "es": "Spanish",
+const langRef = {
+  'ch': 'Chinese Simplified',        // TODO: Fixme.
+  'cn': 'Chinese Simplified',        // TODO: Fixme.
+  'ch-s': 'Chinese Traditional',    // TODO: Fixme.
+  'fr': 'French',
+  'de': 'German',
+  'it': 'Italian',
+  'jp': 'Japanese',
+  'ko': 'Korean',
+  'pt': 'Portuguese (Brazil)',
+  'ru': 'Russian',
+  'es': 'Spanish',
 };
 
 if (require.main == module) {
@@ -69,6 +70,7 @@ if (require.main == module) {
             );
         },
         function(err) {
+            if (shared.cache.disconnect) shared.cache.disconnect();
             if (err) {
                 winston.error(err);
                 throw(err);
@@ -82,14 +84,16 @@ if (require.main == module) {
 function buildLang(lang, setCode, callback) {
     winston.info('%s:%s', setCode, lang);
 
-    fs.readFile(path.join(__dirname, '..', 'json', setCode.toUpperCase() + '.json'), 'utf8', function(err, data) {
+    const fn = shared.setFileName(setCode);
+
+    fs.readFile(fn, 'utf8', function(err, data) {
         if (err) {
             winston.error(err);
             return(setImmediate(function() { callback(err); }));
         }
 
-                var msg;
-        var setData = JSON.parse(data);
+        let msg = null;
+        const setData = JSON.parse(data);
         if (!setData.translations) {
             msg = "Set " + setCode + " does not have any translations.";
             winston.error(msg);
@@ -106,7 +110,7 @@ function buildLang(lang, setCode, callback) {
 }
 
 function retrieve(lang, set, callback) {
-    var fullSet = {
+    const fullSet = {
         'name': set.translations[lang],
         'code': set.code,
         'language': lang
@@ -114,7 +118,7 @@ function retrieve(lang, set, callback) {
 
     winston.info("Processing %d cards", set.cards.length);
 
-    var multiverseids = [];
+    const multiverseids = [];
 
     tiptoe(
         function getMultiverses() {
@@ -149,6 +153,9 @@ function retrieve(lang, set, callback) {
                     card.rulings = null;
                     delete card.rulings;
                 }
+
+                card.name = card.originalName || card.name;
+                delete card.originalName;
 
                 return(card);
             });

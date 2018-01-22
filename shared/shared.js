@@ -1,87 +1,75 @@
 "use strict";
 
-var C = require("./C");
-var clone = require("clone");
-var hash = require("mhash");
-var path = require("path");
-var moment = require("moment");
-var domino = require("domino");
-var querystring = require("querystring");
-var tiptoe = require("tiptoe");
-var fs = require("fs");
-var url = require("url");
-var unidecode = require("unidecode");
-var unique = require("array-unique");
-var winston = require("winston");
+const C = require('./C');
+const clone = require('clone');
+const hash = require('mhash');
+const path = require('path');
+const moment = require('moment');
+const domino = require('domino');
+const querystring = require('querystring');
+const tiptoe = require('tiptoe');
+const fs = require('fs');
+const url = require('url');
+const unidecode = require('unidecode');
+const unique = require('array-unique');
+const winston = require('winston');
+const retry = require('retry');
+const request = require('request');
+const cache = require('./cache');
 
 winston.level = 'info';
 winston.cli();
 
-var retry = require('retry');
-var request = require('request');
-var levelup = require('level');
-exports.cache = levelup(path.join(__dirname, '..', 'cache'));
+const COLOR_ORDER = ['Blue', 'Black', 'Red', 'Green', 'White'];
+const LAND_ORDER = ['Island', 'Swamp', 'Mountain', 'Forest', 'Plains'];
 
-exports.getSetsToDo = function(startAt) {
-    startAt = startAt || 2;
-    if(process.argv.length<(startAt+1))
-    {
-        winston.error("Usage: node %s <set code|'allsets'>", process.argv[1]);
-        process.exit(1);
+const REQUEST_HOST = process.env.REQUEST_HOST || 'gatherer.wizards.com';
+
+exports.cache = cache;
+
+const readFileAsync = (path, options) => new Promise((accept, reject) => {
+  fs.readFile(path, options, (err, data) => {
+    if (err) {
+      reject(err);
+      return;
     }
 
-    var setsNotToDo = [];
-    var setsToDo = [];
+    accept(data);
+  });
+});
 
-    process.argv.slice(startAt).forEach(function(arg)
-    {
-        if(arg==="allsets")
-        {
-            setsToDo = C.SETS.map(function(SET) { return SET.code; });
-        }
-        else if(arg==="nongatherersets")
-        {
-            setsToDo = C.SETS_NOT_ON_GATHERER.slice();
-        }
-        else if(arg==="mcisets")
-        {
-            setsToDo = exports.getMCISetCodes();
-        }
-        else if(arg==="sincelastprintingreset")
-        {
-            var seenLastPrintingResetSet = false;
-            C.SETS.forEach(function(SET)
-            {
-                if(SET.code===C.LAST_PRINTINGS_RESET)
-                    seenLastPrintingResetSet = true;
-                else if(seenLastPrintingResetSet)
-                    setsToDo.push(SET.code);
-            });
-        }
-        else if(arg.toLowerCase().startsWith("startat"))
-        {
-            setsToDo = C.SETS.map(function(SET) { return SET.code; });
-            setsToDo = setsToDo.slice(setsToDo.indexOf(arg.substring("startat".length)));
-        }
-        else if(arg.toLowerCase().startsWith("not"))
-        {
-            setsNotToDo.push(arg);
-            setsNotToDo.push(arg.substring(3));
-        }
-        else
-        {
-            setsToDo.push(arg);
-        }
-    });
+const writeFileAsync = (path, data, options) => new Promise((accept, reject) => {
+  fs.writeFile(
+    path,
+    data,
+    options,
+    (err, data) => {
+      if (err) {
+        reject(err);
+        return;
+      }
 
-    setsToDo = setsToDo.filter(function(set) { return !setsNotToDo.includes(set); });
-    return unique(setsToDo).sort();
+      accept(data);
+    }
+  );
+});
+
+const setFileName = (setCode, language) => {
+  let fn = setCode.toUpperCase();
+  if (language)
+    fn += '.' + language.toLowerCase();
+  fn += '.json';
+
+  return path.join(__dirname, '..', 'json', fn);
 };
 
-exports.getMCISetCodes = function()
-{
-    return C.SETS.filter(function(SET) { return SET.isMCISet; }).map(function(SET) { return SET.code; });
-};
+exports.readFileAsync = readFileAsync;
+exports.writeFileAsync = writeFileAsync;
+exports.setFileName = setFileName;
+
+exports.getSetsToDo = require('./getSetsToDo');
+
+exports.getMCISetCodes = () => C.SETS.filter(SET => SET.isMCISet).map(SET => SET.code);
 
 exports.cardComparator = function(a, b)
 {
@@ -106,7 +94,7 @@ exports.buildMultiverseLanguagesURL = function(multiverseid)
     var urlConfig =
     {
         protocol : "http",
-        host     : "gatherer.wizards.com",
+        host     : REQUEST_HOST,
         pathname : "/Pages/Card/Languages.aspx",
         query    : { multiverseid : multiverseid }
     };
@@ -122,7 +110,7 @@ exports.buildMultiverseURL = function(multiverseid, part)
     var urlConfig =
     {
         protocol : "http",
-        host     : "gatherer.wizards.com",
+        host     : REQUEST_HOST,
         pathname : "/Pages/Card/Details.aspx",
         query    :
         {
@@ -144,7 +132,7 @@ exports.buildMultiverseLegalitiesURL = function(multiverseid)
     var urlConfig =
     {
         protocol : "http",
-        host     : "gatherer.wizards.com",
+        host     : REQUEST_HOST,
         pathname : "/Pages/Card/Printings.aspx",
         query    : { multiverseid : multiverseid, page : "0" }
     };
@@ -160,7 +148,7 @@ exports.buildMultiversePrintingsURL = function(multiverseid, page)
     var urlConfig =
     {
         protocol : "http",
-        host     : "gatherer.wizards.com",
+        host     : REQUEST_HOST,
         pathname : "/Pages/Card/Printings.aspx",
         query    : { multiverseid : multiverseid, page : ("" + (page || 0)) }
     };
@@ -173,7 +161,7 @@ exports.buildListingsURL = function(setName, page)
     var urlConfig =
     {
         protocol : "http",
-        host     : "gatherer.wizards.com",
+        host     : REQUEST_HOST,
         pathname : "/Pages/Search/Default.aspx",
         query    :
         {
@@ -208,12 +196,8 @@ exports.performSetCorrections = function(setCorrections, fullSet)
         {
             addBasicLandWatermarks = false;
         }
-        else if(setCorrection==="numberCards")
-        {
-            var COLOR_ORDER = ["Blue", "Black", "Red", "Green", "White"];
-            var LAND_ORDER = ["Island", "Swamp", "Mountain", "Forest", "Plains"];
+        else if (setCorrection === 'numberCards') {
             var cardNumber = 1;
-
 
             var colorOrder = function(card) {
                 // COLORS, Golds, Artifacts, Non-Basic Lands, Lands
@@ -695,7 +679,12 @@ exports.getURLAsDoc = function(targetURL, getCb) {
     }
 
     function retryDl(dlCb) {
-        var operation = retry.operation({ retries: 5});
+        const retryCount = process.env.RETRY_COUNT || 5;
+        const minTimeout = process.env.RETRY_MIN || 1000;
+        const operation = retry.operation({
+            retries: retryCount,
+            minTimeout: minTimeout,
+        });
         operation.attempt(function(currentAttempt) {
             downloadHTML(function(err, body) {
                 if (operation.retry(err)){
@@ -753,6 +742,10 @@ exports.buildMultiverseAllPrintingsURLs = function(multiverseid, cb) {
 exports.getPagingNumPages = function(doc, type)
 {
     var pageControlsContainer = (type==="printings" ? "SubContent_PrintingsList_pagingControlsContainer" : "bottomPagingControlsContainer");
+    if (doc === undefined) {
+      winston.warn('doc is undefined!', type);
+      return 0;
+    }
     var pageLinks = Array.from(doc.querySelectorAll("#ctl00_ctl00_ctl00_MainContent_SubContent_" + pageControlsContainer + " a"));
 
     var numPages = 1;
@@ -812,65 +805,75 @@ exports.updateStandardForCard = function(card) {
 };
 
 /**
- * saveSet() prepares and saves a given set to a file.
- * 1.    Each card is sorted by the following criteria:
- * 1.1   If they both have a number, they are compared and sorted accordingly.
- * 1.2   If the number does not exist or is is the same, compare multiverseIDs
- * 1.3   If there are no numbers, compare the imagenames.
- * 1.4   If there are no imagenames compare names.
- * 2.    The foreignNames array is sorted by the multiverseid
- * 3.    The legalities are sorted by format name
- * 4.    Each key value of the card is sorted.
- *
- * 99. Finally, the file is saved to the <ROOT>/json/<SETNAME>.json file.
+ * saveSet() is an callback wrapper for saveSetAsync
  */
-exports.saveSet = function(set, callback) {
-    // 1. Sort cards
-    set.cards.sort(function(a, b) {
-        var ret = 0;
-        if (a.number && b.number)
-            ret = exports.alphanum(a.number, b.number);
-        if (ret === 0 && a.multiverseid && b.multiverseid)
-            ret = a.multiverseid - b.multiverseid;
-        if (ret === 0 && a.imageName && b.imageName)
-            ret = a.imageName.localeCompare(b.imageName);
-        if (ret === 0)
-            ret = a.name.localeCompare(b.name);
-        return ret;
+exports.saveSet = (setData, callback) => exports.saveSetAsync(setData)
+  .then(response => callback(null, response))
+  .catch(err => callback(err));
+
+/**
+* saveSetAsync() prepares and saves a given set to a file.
+* 1.    Each card is sorted by the following criteria:
+* 1.1   If they both have a number, they are compared and sorted accordingly.
+* 1.2   If the number does not exist or is is the same, compare multiverseIDs
+* 1.3   If there are no numbers, compare the imagenames.
+* 1.4   If there are no imagenames compare names.
+* 2.    The foreignNames array is sorted by the multiverseid
+* 3.    The legalities are sorted by format name
+* 4.    Each key value of the card is sorted.
+*
+* 99. Finally, the file is saved to the <ROOT>/json/<SETNAME>.json file.
+*/
+exports.saveSetAsync = (setData) => {
+  // 1. Sort cards
+  setData.cards.sort((a, b) => {
+    let ret = 0;
+    if (a.number && b.number)
+        ret = exports.alphanum(a.number, b.number);
+    if (ret === 0 && a.multiverseid && b.multiverseid)
+        ret = a.multiverseid - b.multiverseid;
+    if (ret === 0 && a.imageName && b.imageName)
+        ret = a.imageName.localeCompare(b.imageName);
+    if (ret === 0)
+        ret = a.name.localeCompare(b.name);
+
+    return ret;
+  });
+
+  // Sort internal card stuff
+  setData.cards.forEach((card) => {
+    // 2. Foreign Names
+    if (card.foreignNames)
+      card.foreignNames.sort((fnameA, fnameB) => {
+        let result = fnameA.multiverseid - fnameB.multiverseid;
+        if (result === 0) result = fnameA.language.localeCompare(fnameB.language);
+        if (result === 0) result = fnameA.name.localeCompare(fnameB.name);
+        return result;
+      });
+
+    // 3. Legalities
+    if (card.legalities)
+      card.legalities.sort((a, b) => a.format.localeCompare(b.format));
+
+    // 4. Sort card properties
+    Object.keys(card).sort().forEach((key) => {
+      var value = card[key];
+      delete card[key];
+      card[key] = value;
     });
+  });
 
-    // Sort internal card stuff
-    set.cards.forEach(function(card) {
-        // 2. Foreign Names
-        if (card.foreignNames)
-            card.foreignNames.sort(function(fnameA, fnameB) {
-                var result = fnameA.multiverseid - fnameB.multiverseid;
-                if (result === 0) result = fnameA.language.localeCompare(fnameB.language);
-                if (result === 0) result = fnameA.name.localeCompare(fnameB.name);
-                return result;
-            });
+  let fn = setData.code;
+  if (setData.language)
+    fn += '.' + setData.language;
+  fn += '.json';
 
-        // 3. Legalities
-        if (card.legalities)
-            card.legalities.sort(function(a, b){
-                return(a.format.localeCompare(b.format));
-            });
-
-        // 4. Sort card properties
-        Object.keys(card).sort().forEach(function(key) {
-            var value = card[key];
-            delete card[key];
-            card[key] = value;
-        });
-    });
-
-    var fn = set.code;
-    if (set.language)
-        fn += '.' + set.language;
-    fn += '.json';
-
-    // 99. Save the file on the proper path
-    fs.writeFile(path.join(__dirname, "..", "json", fn), JSON.stringify(set, null, '  '), {encoding:"utf8"}, callback);
+  // 99. Save the file on the proper path
+  return writeFileAsync(
+    setFileName(setData.code, setData.language),
+    JSON.stringify(setData, null, '  '),
+    { encoding: 'utf8' }
+  );
 };
 
 // Natural sort implementation, for getting those card numbers in a human-readable format.
@@ -913,26 +916,28 @@ exports.alphanum = function(a, b) {
  * @param callback Function with the callback to pass the error or pass no parameter
  */
 exports.processSet = function(setCode, processFunction, callback) {
-    tiptoe(
-        function getJSON() {
-            fs.readFile(path.join(__dirname, "..", "json", setCode + ".json"), {encoding : "utf8"}, this);
-        },
-        function updateData(rawSet) {
-            var set = JSON.parse(rawSet);
+  const returnValue = exports.processSetAsync(setCode, processFunction);
 
-            var newSet = processFunction(set);
+  if (callback) {
+    return returnValue
+      .then(data => callback(null, data))
+      .catch(err => callback(err));
+  }
 
-            if (newSet)
-                exports.saveSet(newSet, this);    // Save set if the function returned anything
-            else
-                this();
-        },
-        function finish(err) {
-            if (err)
-                throw(err);
+  return returnValue;
+};
 
-            if (callback)
-                callback();
-        }
-    );
+/**
+ * Execute a function on a given set and saves the returned data (if any)
+ * @param setCode String with the name of the set we want to update
+ * @param processFunction function to modify the set data. If data is returned, this data considered the new set data.
+ */
+exports.processSetAsync = async function(setCode, processFunction) {
+  const jsonPath = setFileName(setCode);
+  const jsonContents = await readFileAsync(jsonPath, { encoding : 'utf8' });
+
+  const set = JSON.parse(jsonContents);
+  const newSet = processFunction(set);
+
+  return exports.saveSetAsync(newSet);
 };

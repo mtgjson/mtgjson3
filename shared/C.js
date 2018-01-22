@@ -1,3 +1,4 @@
+/* global window */
 "use strict";
 
 (function(exports) {
@@ -427,4 +428,4 @@
     'XLN'
   ];
 
-})(typeof exports==="undefined" ? window.C={} : exports);
+})(typeof exports === 'undefined' ? window.C = {} : exports);
