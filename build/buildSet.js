@@ -8,14 +8,21 @@ const getSetsToDo = require('../shared/getSetsToDo');
 const winston = require('winston');
 const cluster = require('cluster');
 
-const processCount = process.env.THREADS || require('os').cpus().length;
+const processCount = ((threads, use_redis) => {
+  const threadCount = parseInt(threads, 10);
+
+  // Only do multi-threading if we have a redis config.
+  if (!use_redis) return 1;
+
+  if (!threadCount) return require('os').cpus().length;
+
+  return threadCount;
+})(process.env.THREADS, process.env.USE_REDIS);
 
 const getMCISetCodes = () => C.SETS.filter(SET => SET.isMCISet).map(SET => SET.code);
 
 const excludeSets = C.SETS_NOT_ON_GATHERER.concat(getMCISetCodes());
 const setsToDo = getSetsToDo().filter(set => !excludeSets.includes(set));
-
-winston.info(`Doing sets: ${setsToDo}`);
 
 function callbackToPromise(func, parameter) {
   return new Promise((accept, reject) => {
@@ -87,7 +94,6 @@ async function execute(setList) {
     const worker = cluster.fork({ setName: setName });
     worker.on('exit', () => {
       workingClusters--;
-      winston.info('worker done. next!');
       nextWorker();
     });
   };
@@ -98,6 +104,8 @@ async function execute(setList) {
 }
 
 if (setsToDo.length > 1 && cluster.isMaster) {
+  winston.info(`Doing sets: ${setsToDo} with a maximum of ${processCount} threads`);
+
   execute(setsToDo);
 } else if (setsToDo.length === 1 && cluster.isMaster) {
   const shared = require('../shared/shared');
