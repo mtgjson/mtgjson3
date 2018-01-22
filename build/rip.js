@@ -409,8 +409,9 @@ var processCardPart = function(doc, cardPart, printedDoc, printedCardPart) {
 
 
     // Card Name
-    //card.name = getTextContent(printedCardPart.querySelector(idPrefix + "_nameRow .value")).trim();
     card.name = getTextContent(cardPart.querySelector(idPrefix + "_nameRow .value")).trim();
+    const originalName = getTextContent(printedCardPart.querySelector(idPrefix + "_nameRow .value")).trim();
+    if (originalName !== card.name) card.originalName = originalName;
 
     if (card.name.endsWith(" token card"))
         card.layout = "token";
