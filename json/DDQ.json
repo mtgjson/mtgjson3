@@ -778,8 +778,16 @@
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2011-09-22",
+          "date": "2018-03-16",
           "text": "If Fiend Hunter leaves the battlefield before its first ability has resolved, its second ability will trigger and do nothing. Then its first ability will resolve and exile the targeted creature indefinitely."
+        },
+        {
+          "date": "2018-03-16",
+          "text": "Once the exiled permanent returns, it's considered a new object with no relation to the object that it was. Auras attached to the exiled permanent will be put into their owners' graveyards. Equipment attached to the exiled permanent will become unattached and remain on the battlefield. Any counters on the exiled permanent will cease to exist."
+        },
+        {
+          "date": "2018-03-16",
+          "text": "If a token is exiled this way, it won't return to the battlefield."
         }
       ],
       "subtypes": [
@@ -2251,7 +2259,7 @@
         "DDQ"
       ],
       "rarity": "Common",
-      "text": "When Seraph Sanctuary enters the battlefield, you gain 1 life.\nWhenever an Angel enters the battlefield under your control, you gain 1 life.\n{T}: Add {C} to your mana pool.",
+      "text": "When Seraph Sanctuary enters the battlefield, you gain 1 life.\nWhenever an Angel enters the battlefield under your control, you gain 1 life.\n{T}: Add {C}.",
       "type": "Land",
       "types": [
         "Land"
@@ -2309,7 +2317,7 @@
         "EMA"
       ],
       "rarity": "Common",
-      "text": "Tranquil Cove enters the battlefield tapped.\nWhen Tranquil Cove enters the battlefield, you gain 1 life.\n{T}: Add {W} or {U} to your mana pool.",
+      "text": "Tranquil Cove enters the battlefield tapped.\nWhen Tranquil Cove enters the battlefield, you gain 1 life.\n{T}: Add {W} or {U}.",
       "type": "Land",
       "types": [
         "Land"
@@ -2589,7 +2597,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -2885,7 +2895,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -3181,7 +3193,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -3463,7 +3477,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -3742,7 +3757,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -4021,7 +4037,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -4183,11 +4200,11 @@
       "rulings": [
         {
           "date": "2016-04-08",
-          "text": "The card returned to its owner's hand may be the card he or she discards. If it's the only card in that player's hand, it must be discarded."
+          "text": "The card returned to its owner's hand may be the card they discard. If it's the only card in that player's hand, it must be discarded."
         },
         {
           "date": "2016-04-08",
-          "text": "Compelling Deterrence targets only the nonland permanent. If that permanent becomes an illegal target, Compelling Deterrence is countered and that player doesn't discard a card."
+          "text": "Compelling Deterrence targets only the nonland permanent. If that permanent becomes an illegal target, Compelling Deterrence doesn't resolve and that player doesn't discard a card."
         },
         {
           "date": "2016-04-08",
@@ -4413,7 +4430,7 @@
         "Zombie",
         "Horror"
       ],
-      "text": "As an additional cost to cast Makeshift Mauler, exile a creature card from your graveyard.",
+      "text": "As an additional cost to cast this spell, exile a creature card from your graveyard.",
       "toughness": "5",
       "type": "Creature — Zombie Horror",
       "types": [
@@ -4491,7 +4508,7 @@
       "subtypes": [
         "Zombie"
       ],
-      "text": "As an additional cost to cast Relentless Skaabs, exile a creature card from your graveyard.\nUndying (When this creature dies, if it had no +1/+1 counters on it, return it to the battlefield under its owner's control with a +1/+1 counter on it.)",
+      "text": "As an additional cost to cast this spell, exile a creature card from your graveyard.\nUndying (When this creature dies, if it had no +1/+1 counters on it, return it to the battlefield under its owner's control with a +1/+1 counter on it.)",
       "toughness": "4",
       "type": "Creature — Zombie",
       "types": [
@@ -4701,7 +4718,7 @@
         "Zombie",
         "Drake"
       ],
-      "text": "As an additional cost to cast Stitched Drake, exile a creature card from your graveyard.\nFlying",
+      "text": "As an additional cost to cast this spell, exile a creature card from your graveyard.\nFlying",
       "toughness": "4",
       "type": "Creature — Zombie Drake",
       "types": [
@@ -4839,7 +4856,7 @@
           "text": "If a card in a player's hand has {X} in its mana cost, X is 0."
         }
       ],
-      "text": "Target opponent reveals his or her hand. You choose a card from it with converted mana cost 4 or greater and exile that card.",
+      "text": "Target opponent reveals their hand. You choose a card from it with converted mana cost 4 or greater and exile that card.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -5657,7 +5674,7 @@
         },
         {
           "date": "2017-03-14",
-          "text": "If the targeted creature is an illegal target by the time Sever the Bloodline resolves, it will be countered and none of its effects will happen. No creatures will be exiled."
+          "text": "If the targeted creature is an illegal target by the time Sever the Bloodline resolves, it won't resolve and none of its effects will happen. No creatures will be exiled."
         },
         {
           "date": "2017-03-14",
@@ -6153,7 +6170,7 @@
         "C17"
       ],
       "rarity": "Common",
-      "text": "Dismal Backwater enters the battlefield tapped.\nWhen Dismal Backwater enters the battlefield, you gain 1 life.\n{T}: Add {U} or {B} to your mana pool.",
+      "text": "Dismal Backwater enters the battlefield tapped.\nWhen Dismal Backwater enters the battlefield, you gain 1 life.\n{T}: Add {U} or {B}.",
       "type": "Land",
       "types": [
         "Land"
@@ -6433,7 +6450,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -6729,7 +6748,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -7025,7 +7046,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -7310,7 +7333,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -7592,7 +7616,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -7874,7 +7899,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [

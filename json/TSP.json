@@ -1222,7 +1222,7 @@
         "Cleric",
         "Archer"
       ],
-      "text": "{T}: D'Avenant Healer deals 1 damage to target attacking or blocking creature.\n{T}: Prevent the next 1 damage that would be dealt to target creature or player this turn.",
+      "text": "{T}: D'Avenant Healer deals 1 damage to target attacking or blocking creature.\n{T}: Prevent the next 1 damage that would be dealt to any target this turn.",
       "toughness": "2",
       "type": "Creature — Human Cleric Archer",
       "types": [
@@ -1809,10 +1809,10 @@
         },
         {
           "date": "2006-09-25",
-          "text": "The target of the spell is a creature the chosen opponent controls. As Evangelize resolves, if the target isn't a creature controlled by the chosen opponent, Evangelize will be countered. If Evangelize's target is changed (via Shunt, for example), the new target must be a creature controlled by the chosen opponent."
+          "text": "The target of the spell is a creature the chosen opponent controls. As Evangelize resolves, if the target isn't a creature controlled by the chosen opponent, Evangelize won't resolve. If Evangelize's target is changed (via Shunt, for example), the new target must be a creature controlled by the chosen opponent."
         }
       ],
-      "text": "Buyback {2}{W}{W} (You may pay an additional {2}{W}{W} as you cast this spell. If you do, put this card into your hand as it resolves.)\nGain control of target creature of an opponent's choice he or she controls.",
+      "text": "Buyback {2}{W}{W} (You may pay an additional {2}{W}{W} as you cast this spell. If you do, put this card into your hand as it resolves.)\nGain control of target creature of an opponent's choice they control.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -2240,7 +2240,7 @@
           "text": "The additional cost must be paid if Gaze of Justice is cast with flashback."
         }
       ],
-      "text": "As an additional cost to cast Gaze of Justice, tap three untapped white creatures you control.\nExile target creature.\nFlashback {5}{W} (You may cast this card from your graveyard for its flashback cost and any additional costs. Then exile it.)",
+      "text": "As an additional cost to cast this spell, tap three untapped white creatures you control.\nExile target creature.\nFlashback {5}{W} (You may cast this card from your graveyard for its flashback cost and any additional costs. Then exile it.)",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -3104,7 +3104,7 @@
         },
         {
           "date": "2006-09-25",
-          "text": "If the target permanent becomes an illegal target, the ability will be countered and Mangara will remain on the battlefield."
+          "text": "If the target permanent becomes an illegal target, the ability won't resolve and Mangara will remain on the battlefield."
         }
       ],
       "subtypes": [
@@ -3334,7 +3334,7 @@
         },
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         }
       ],
       "text": "When an opponent casts a creature spell, if Opal Guardian is an enchantment, Opal Guardian becomes a 3/4 Gargoyle creature with flying and protection from red.",
@@ -3750,7 +3750,7 @@
       "subtypes": [
         "Pegasus"
       ],
-      "text": "Flash (You may cast this spell any time you could cast an instant.)\nFlying\nIf a spell would deal damage to a creature or player, prevent 1 damage that spell would deal to that creature or player.",
+      "text": "Flash (You may cast this spell any time you could cast an instant.)\nFlying\nIf a spell would deal damage to a permanent or player, prevent 1 damage that spell would deal to that permanent or player.",
       "toughness": "2",
       "type": "Creature — Pegasus",
       "types": [
@@ -4219,7 +4219,7 @@
           "text": "This has no mana cost, which means its mana cost can't be paid for effects such as replicate from Djinn Illuminatus or flashback from Snapcaster Mage."
         }
       ],
-      "text": "Suspend 6—{W} (Rather than cast this card from your hand, pay {W} and exile it with six time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)\nEach player chooses a number of lands he or she controls equal to the number of lands controlled by the player who controls the fewest, then sacrifices the rest. Players sacrifice creatures and discard cards the same way.",
+      "text": "Suspend 6—{W} (Rather than cast this card from your hand, pay {W} and exile it with six time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)\nEach player chooses a number of lands they control equal to the number of lands controlled by the player who controls the fewest, then sacrifices the rest. Players sacrifice creatures and discard cards the same way.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -4437,7 +4437,7 @@
       "subtypes": [
         "Angel"
       ],
-      "text": "You can't cast Serra Avenger during your first, second, or third turns of the game.\nFlying\nVigilance (Attacking doesn't cause this creature to tap.)",
+      "text": "You can't cast this spell during your first, second, or third turns of the game.\nFlying\nVigilance (Attacking doesn't cause this creature to tap.)",
       "toughness": "3",
       "type": "Creature — Angel",
       "types": [
@@ -5412,7 +5412,7 @@
       "rulings": [
         {
           "date": "2017-11-17",
-          "text": "If the creature is an illegal target when Bewilder tries to resolve, it will be countered and none of its effects will happen. You won't draw a card."
+          "text": "If the creature is an illegal target when Bewilder tries to resolve, it won't resolve and none of its effects will happen. You won't draw a card."
         }
       ],
       "text": "Target creature gets -3/-0 until end of turn.\nDraw a card.",
@@ -5516,14 +5516,14 @@
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2006-09-25",
-          "text": "Skipping the \"next\" step is cumulative. If a player turns two Brine Elementals face up on the same turn, that player's opponents will each skip their next two untap steps."
+          "date": "2018-03-16",
+          "text": "Skipping your \"next\" untap step is cumulative. If a player turns two Brine Elementals face up on the same turn, that player's opponents will each skip their next two untap steps."
         }
       ],
       "subtypes": [
         "Elemental"
       ],
-      "text": "Morph {5}{U}{U} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)\nWhen Brine Elemental is turned face up, each opponent skips his or her next untap step.",
+      "text": "Morph {5}{U}{U} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)\nWhen Brine Elemental is turned face up, each opponent skips their next untap step.",
       "toughness": "4",
       "type": "Creature — Elemental",
       "types": [
@@ -6351,7 +6351,7 @@
       "rulings": [
         {
           "date": "2006-09-25",
-          "text": "If the triggered ability is countered (the targeted spell becomes an illegal target, for example), Draining Whelk doesn't get any +1/+1 counters."
+          "text": "If the triggered ability doesn't resolve (the targeted spell becomes an illegal target, for example), Draining Whelk doesn't get any +1/+1 counters."
         },
         {
           "date": "2006-10-15",
@@ -7009,7 +7009,7 @@
       "subtypes": [
         "Beast"
       ],
-      "text": "Flying\n{T}: Fledgling Mawcor deals 1 damage to target creature or player.\nMorph {U}{U} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)",
+      "text": "Flying\n{T}: Fledgling Mawcor deals 1 damage to any target.\nMorph {U}{U} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)",
       "toughness": "2",
       "type": "Creature — Beast",
       "types": [
@@ -7211,10 +7211,6 @@
       "rulings": [
         {
           "date": "2006-09-25",
-          "text": "Creatures turned face down by Ixidron are 2/2 creatures with no text, no name, no subtypes, no expansion symbol, and no mana cost."
-        },
-        {
-          "date": "2006-09-25",
           "text": "If Ixidron and another creature are entering the battlefield at the same time, the other creature enters the battlefield face up."
         },
         {
@@ -7228,6 +7224,10 @@
         {
           "date": "2006-09-25",
           "text": "Turning a face-down creature face-down typically has no effect; the creature's status is unchanged."
+        },
+        {
+          "date": "2018-04-27",
+          "text": "Creatures turned face down by Ixidron are 2/2 creatures with no text, no name, no subtypes, no expansion symbol, and no mana cost. These values are copiable if an object becomes a copy of one of those creatures, and their normal values are not copiable."
         }
       ],
       "subtypes": [
@@ -7432,7 +7432,7 @@
         "Human",
         "Wizard"
       ],
-      "text": "{T}, Sacrifice Magus of the Jar: Each player exiles all cards from his or her hand face down and draws seven cards. At the beginning of the next end step, each player discards his or her hand and returns to his or her hand each card he or she exiled this way.",
+      "text": "{T}, Sacrifice Magus of the Jar: Each player exiles all cards from their hand face down and draws seven cards. At the beginning of the next end step, each player discards their hand and returns to their hand each card they exiled this way.",
       "toughness": "3",
       "type": "Creature — Human Wizard",
       "types": [
@@ -7847,7 +7847,7 @@
         },
         {
           "date": "2006-09-25",
-          "text": "If an effect causes the enchanted player to skip his or her upkeep step, this ability won't trigger."
+          "text": "If an effect causes the enchanted player to skip their upkeep step, this ability won't trigger."
         }
       ],
       "subtypes": [
@@ -7961,7 +7961,7 @@
       "subtypes": [
         "Sliver"
       ],
-      "text": "All Sliver creatures have \"{T}: This creature deals 2 damage to target creature or player and 3 damage to itself.\"",
+      "text": "All Sliver creatures have \"{T}: This creature deals 2 damage to any target and 3 damage to itself.\"",
       "toughness": "2",
       "type": "Creature — Sliver",
       "types": [
@@ -8314,7 +8314,7 @@
       "subtypes": [
         "Sliver"
       ],
-      "text": "All Slivers have \"{T}: Target player puts the top card of his or her library into his or her graveyard.\"",
+      "text": "All Slivers have \"{T}: Target player puts the top card of their library into their graveyard.\"",
       "toughness": "1",
       "type": "Creature — Sliver",
       "types": [
@@ -8616,7 +8616,7 @@
         "TSP"
       ],
       "rarity": "Common",
-      "text": "You may exile a blue card from your hand rather than pay Snapback's mana cost.\nReturn target creature to its owner's hand.",
+      "text": "You may exile a blue card from your hand rather than pay this spell's mana cost.\nReturn target creature to its owner's hand.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -9113,7 +9113,7 @@
         },
         {
           "date": "2017-11-17",
-          "text": "Teferi's last ability means that in order for an opponent to cast a spell, it must be that opponent's turn, during a main phase, and the stack must be empty. This is true even if the player doesn't have a sorcery he or she is able to cast, or if a rule or effect allows a sorcery to be cast at another time."
+          "text": "Teferi's last ability means that in order for an opponent to cast a spell, it must be that opponent's turn, during a main phase, and the stack must be empty. This is true even if the player doesn't have a sorcery they are able to cast, or if a rule or effect allows a sorcery to be cast at another time."
         },
         {
           "date": "2017-11-17",
@@ -9131,7 +9131,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "Flash (You may cast this spell any time you could cast an instant.)\nCreature cards you own that aren't on the battlefield have flash.\nEach opponent can cast spells only any time he or she could cast a sorcery.",
+      "text": "Flash (You may cast this spell any time you could cast an instant.)\nCreature cards you own that aren't on the battlefield have flash.\nEach opponent can cast spells only any time they could cast a sorcery.",
       "toughness": "4",
       "type": "Legendary Creature — Human Wizard",
       "types": [
@@ -9881,40 +9881,44 @@
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2006-09-25",
-          "text": "Essentially, each time Vesuvan Shapeshifter turns face up, it's a copy of a new creature. During your upkeep, you may turn it face down in preparation to copy something else."
+          "date": "2018-03-16",
+          "text": "Vesuvan Shapeshifter's ability to become a copy is a replacement effect. Because turning a creature face up and applying replacement effects both don't use the stack, players won't be able to take actions between the time you announce that you're turning Vesuvan Shapeshifter face up and the time it has become a copy of the creature of your choice."
         },
         {
-          "date": "2006-09-25",
-          "text": "If Vesuvan Shapeshifter is cast face up, it behaves like Clone except that it gives itself a triggered ability."
+          "date": "2018-03-16",
+          "text": "Vesuvan Shapeshifter copies exactly what was printed on the original creature (unless that creature is copying something else or is a token; see below). It doesn't copy whether that creature is tapped or untapped, whether it has any counters on it or Auras attached to it, or any non-copy effects that have changed its power, toughness, types, color, or so on."
         },
         {
-          "date": "2006-09-25",
-          "text": "If Vesuvan Shapeshifter is turned face up, the process of turning face up includes (optionally) choosing another creature on the battlefield. You'll pay {1}{U} (not the morph cost, if any, of the new creature), then Vesuvan Shapeshifter will turn face up as a copy of that creature, plus the triggered ability it gives itself. It won't turn face up as a Vesuvan Shapeshifter and then change. If the copied creature has a \"when this creature is turned face up\" ability, it will trigger for Vesuvan Shapeshifter."
+          "date": "2018-03-16",
+          "text": "If the chosen creature has {X} in its mana cost, X is considered to be 0."
         },
         {
-          "date": "2006-09-25",
-          "text": "When Vesuvan Shapeshifter is turned face down, its copy effect wears off. While it's face down, it's a face-down Vesuvan Shapeshifter that can be turned face up for a morph cost of {1}{U}."
+          "date": "2018-03-16",
+          "text": "If the chosen creature is copying something else (for example, if the chosen creature is another Vesuvan Shapeshifter), then Vesuvan Shapeshifter copies whatever the chosen creature copied."
         },
         {
-          "date": "2006-09-25",
-          "text": "If another creature copies Vesuvan Shapeshifter while it's face up, the new creature will become a copy of whatever Vesuvan Shapeshifter is copying and gain the \"you may turn this creature face down\" ability. It won't gain morph {1}{U}. If that creature is then turned face down, its copy effect will continue and it'll be a face-down version of whatever it's copying. If the creature it's copying has morph, it can be turned face up. If the creature it's copying doesn't have morph, it's stuck face down forever unless some other effect (like Break Open) turns it face up again."
+          "date": "2018-03-16",
+          "text": "If the chosen creature is a token, Vesuvan Shapeshifter copies the original characteristics of that token as stated by the effect that created the token. Vesuvan Shapeshifter is not a token in this case."
         },
         {
-          "date": "2006-09-25",
-          "text": "If Vesuvan Shapeshifter copies a face-down creature, it becomes a face-up 2/2 colorless nameless creature with no abilities other than the one it gives itself."
+          "date": "2018-03-16",
+          "text": "Any enters-the-battlefield abilities of the copied creature will trigger when Vesuvan Shapeshifter enters the battlefield. Any \"as [this creature] enters the battlefield\" or \"[this creature] enters the battlefield with\" abilities of the chosen creature will also work as it enters the battlefield. Similarly, any \"[when/as] [this creature] is turned face up\" abilities of the chosen creature will work if Vesuvan Shapeshifter is turned face up."
         },
         {
-          "date": "2006-09-25",
-          "text": "When Vesuvan Shapeshifter copies a creature that has echo, the echo ability will trigger at the beginning of your upkeep if Vesuvan Shapeshifter came under your control since the beginning of your last upkeep. If you've controlled Vesuvan Shapeshifter since your last upkeep (regardless of whether it had echo then), the echo ability won't trigger."
+          "date": "2018-03-16",
+          "text": "If Vesuvan Shapeshifter somehow enters the battlefield at the same time as another creature, Vesuvan Shapeshifter can't become a copy of that creature. You may only choose a creature that's already on the battlefield."
         },
         {
-          "date": "2006-09-25",
-          "text": "Turning Vesuvan Shapeshifter face down during your upkeep doesn't prevent you from needing to pay applicable upkeep costs such as echo."
+          "date": "2018-03-16",
+          "text": "When Vesuvan Shapeshifter is turned face down, its copy effect wears off. While it's face down, it's a 2/2 face-down Vesuvan Shapeshifter that can be turned face up for a morph cost of {1}{U}."
         },
         {
-          "date": "2006-09-25",
-          "text": "If you don't or can't choose another creature on the battlefield for Vesuvan Shapeshifter to copy, it doesn't get the triggered ability that turns it face down. It's just a 0/0 creature with morph {1}{U}."
+          "date": "2018-03-16",
+          "text": "If another creature copies Vesuvan Shapeshifter while it's face up and copying another creature, the new creature will become a copy of whatever Vesuvan Shapeshifter is copying and gain the \"you may turn this creature face down\" ability. It won't gain morph {1}{U}. If that creature is then turned face down, its copy effect will continue and it'll be a face-down version of whatever it's copying. If the creature it's copying has morph, it can be turned face up. If the creature it's copying doesn't have morph, it's stuck face down."
+        },
+        {
+          "date": "2018-03-16",
+          "text": "If Vesuvan Shapeshifter copies a face-down creature, it becomes a face-up 2/2 colorless, nameless creature with no abilities other than the one it gives itself."
         }
       ],
       "subtypes": [
@@ -10589,7 +10593,7 @@
       "subtypes": [
         "Sliver"
       ],
-      "text": "All Slivers have \"Sacrifice this permanent: Add {B}{B} to your mana pool.\"",
+      "text": "All Slivers have \"Sacrifice this permanent: Add {B}{B}.\"",
       "toughness": "2",
       "type": "Creature — Sliver",
       "types": [
@@ -10959,7 +10963,7 @@
           "text": "A creature cast using suspend will enter the battlefield with haste. It will have haste until another player gains control of it (or, in some rare cases, gains control of the creature spell itself)."
         }
       ],
-      "text": "Target player sacrifices half the permanents he or she controls, rounded down.\nSuspend 2—{2}{B}{B} (Rather than cast this card from your hand, you may pay {2}{B}{B} and exile it with two time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)\nAt the beginning of each player's upkeep, if Curse of the Cabal is suspended, that player may sacrifice a permanent. If he or she does, put two time counters on Curse of the Cabal.",
+      "text": "Target player sacrifices half the permanents they control, rounded down.\nSuspend 2—{2}{B}{B} (Rather than cast this card from your hand, you may pay {2}{B}{B} and exile it with two time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)\nAt the beginning of each player's upkeep, if Curse of the Cabal is suspended, that player may sacrifice a permanent. If the player does, put two time counters on Curse of the Cabal.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -11057,7 +11061,7 @@
       "rulings": [
         {
           "date": "2006-09-25",
-          "text": "If the triggered ability is countered (the targeted land becomes an illegal target, for example), Cyclopean Giant remains in the graveyard."
+          "text": "If the triggered ability doesn't resolve (the targeted land becomes an illegal target, for example), Cyclopean Giant remains in the graveyard."
         },
         {
           "date": "2006-09-25",
@@ -12570,7 +12574,7 @@
       "rulings": [
         {
           "date": "2006-09-25",
-          "text": "\"All cards he or she exiled this way\" refers only to the cards exiled in the first part of the effect. If a replacement effect (such as Leyline of the Void) exiles any of the sacrificed creatures instead of putting them into the graveyard, those cards aren't returned to the battlefield."
+          "text": "\"All cards they exiled this way\" refers only to the cards exiled in the first part of the effect. If a replacement effect (such as Leyline of the Void) exiles any of the sacrificed creatures instead of putting them into the graveyard, those cards aren't returned to the battlefield."
         },
         {
           "date": "2013-06-07",
@@ -12621,7 +12625,7 @@
           "text": "This has no mana cost, which means its mana cost can't be paid for effects such as replicate from Djinn Illuminatus or flashback from Snapcaster Mage."
         }
       ],
-      "text": "Suspend 3—{2}{B}{B} (Rather than cast this card from your hand, pay {2}{B}{B} and exile it with three time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)\nEach player exiles all creature cards from his or her graveyard, then sacrifices all creatures he or she controls, then puts all cards he or she exiled this way onto the battlefield.",
+      "text": "Suspend 3—{2}{B}{B} (Rather than cast this card from your hand, pay {2}{B}{B} and exile it with three time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)\nEach player exiles all creature cards from their graveyard, then sacrifices all creatures they control, then puts all cards they exiled this way onto the battlefield.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -13830,7 +13834,7 @@
         "TSP"
       ],
       "rarity": "Common",
-      "text": "Target player reveals his or her hand and the top card of his or her library. You choose a card revealed this way. That player puts the chosen card on the bottom of his or her library.\nMadness {1}{B} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)",
+      "text": "Target player reveals their hand and the top card of their library. You choose a card revealed this way. That player puts the chosen card on the bottom of their library.\nMadness {1}{B} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -14896,7 +14900,7 @@
         },
         {
           "date": "2009-10-01",
-          "text": "If the targeted creature is an illegal target by the time Tendrils of Corruption would resolve, the entire spell is countered. You won't gain any life."
+          "text": "If the targeted creature is an illegal target by the time Tendrils of Corruption would resolve, the entire spell doesn't resolve. You won't gain any life."
         }
       ],
       "text": "Tendrils of Corruption deals X damage to target creature and you gain X life, where X is the number of Swamps you control.",
@@ -15724,13 +15728,13 @@
       "rulings": [
         {
           "date": "2006-09-25",
-          "text": "The number of cards the player draws is equal to the number of cards he or she discarded, not the amount of damage dealt by Barbed Shocker."
+          "text": "The number of cards the player draws is equal to the number of cards they discarded, not the amount of damage dealt by Barbed Shocker."
         }
       ],
       "subtypes": [
         "Insect"
       ],
-      "text": "Trample, haste\nWhenever Barbed Shocker deals damage to a player, that player discards all the cards in his or her hand, then draws that many cards.",
+      "text": "Trample, haste\nWhenever Barbed Shocker deals damage to a player, that player discards all the cards in their hand, then draws that many cards.",
       "toughness": "2",
       "type": "Creature — Insect",
       "types": [
@@ -16035,17 +16039,13 @@
         },
         {
           "date": "2017-11-17",
-          "text": "You can't deal damage with Bogardan Hellkite's triggered ability to both a player and a planeswalker that player controls. You also can't deal damage to more than one planeswalker controlled by the same player. If you choose to redirect the damage being dealt to a player to a planeswalker, you must redirect all the damage to a single planeswalker."
-        },
-        {
-          "date": "2017-11-17",
           "text": "If some of the creatures or players are illegal targets as Bogardan Hellkite's triggered ability tries to resolve, the original division of damage still applies and the damage that would have been dealt to the illegal targets is lost. It won't be dealt instead to a legal target."
         }
       ],
       "subtypes": [
         "Dragon"
       ],
-      "text": "Flash\nFlying\nWhen Bogardan Hellkite enters the battlefield, it deals 5 damage divided as you choose among any number of target creatures and/or players.",
+      "text": "Flash\nFlying\nWhen Bogardan Hellkite enters the battlefield, it deals 5 damage divided as you choose among any number of targets.",
       "toughness": "5",
       "type": "Creature — Dragon",
       "types": [
@@ -16365,7 +16365,7 @@
       "subtypes": [
         "Elemental"
       ],
-      "text": "When Coal Stoker enters the battlefield, if you cast it from your hand, add {R}{R}{R} to your mana pool.",
+      "text": "When Coal Stoker enters the battlefield, if you cast it from your hand, add {R}{R}{R}.",
       "toughness": "3",
       "type": "Creature — Elemental",
       "types": [
@@ -16469,7 +16469,7 @@
           "text": "While Conflagrate is on the stack, its mana cost will reflect the value chosen for X, even if it was cast with flashback and no mana was spent on X."
         }
       ],
-      "text": "Conflagrate deals X damage divided as you choose among any number of target creatures and/or players.\nFlashback—{R}{R}, Discard X cards. (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "text": "Conflagrate deals X damage divided as you choose among any number of targets.\nFlashback—{R}{R}, Discard X cards. (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -16977,24 +16977,24 @@
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2006-09-25",
-          "text": "The first ability applies only if your life total is being reduced by damage. Other effects or costs (such as \"lose 1 life\" or \"pay 1 life\") can reduce your life total below 1 as normal."
+          "date": "2018-03-16",
+          "text": "Fortune Thief's effect applies only if your life total is being reduced by damage. Other effects or costs (such as losing or paying life) can reduce your life total below 1 as normal."
         },
         {
-          "date": "2006-09-25",
-          "text": "If an effect asks you to pay life, you can't pay more life than you have."
+          "date": "2018-03-16",
+          "text": "Fortune Thief's effect is not a prevention effect. It stops unpreventable damage from reducing your life total below 1."
         },
         {
-          "date": "2006-09-25",
-          "text": "The last sentence is not a prevention effect. It stops unpreventable damage from reducing your life total below 1."
+          "date": "2018-03-16",
+          "text": "Fortune Thief doesn't change how much damage is dealt; it just changes how much life that damage makes you lose. Abilities such as lifelink will see the full amount of damage being dealt."
         },
         {
-          "date": "2006-09-25",
-          "text": "The ability doesn't change how much damage is dealt; it just changes how much life that damage makes you lose. An effect such as Spirit Link will see the full amount of damage being dealt."
+          "date": "2018-03-16",
+          "text": "Fortune Thief won't prevent you from losing the game if your life total becomes 0 or less or if some other effect causes you to lose the game."
         },
         {
-          "date": "2006-09-25",
-          "text": "Thief won't prevent you from losing the game if your life total is 0 or less or some other effect causes you to lose the game."
+          "date": "2018-03-16",
+          "text": "If your life total is less than 1 but you've somehow avoided losing the game, Fortune Thief's effect won't apply at all if you're dealt damage."
         }
       ],
       "subtypes": [
@@ -17313,7 +17313,7 @@
         "Goblin",
         "Warrior"
       ],
-      "text": "Sacrifice Goblin Skycutter: Goblin Skycutter deals 2 damage to target creature with flying. That creature loses flying until end of turn.",
+      "text": "Sacrifice Goblin Skycutter: It deals 2 damage to target creature with flying. That creature loses flying until end of turn.",
       "toughness": "1",
       "type": "Creature — Goblin Warrior",
       "types": [
@@ -17432,7 +17432,7 @@
           "text": "You may choose new targets for any of the copies. You can choose differently for each copy."
         }
       ],
-      "text": "Grapeshot deals 1 damage to target creature or player.\nStorm (When you cast this spell, copy it for each spell cast before it this turn. You may choose new targets for the copies.)",
+      "text": "Grapeshot deals 1 damage to any target.\nStorm (When you cast this spell, copy it for each spell cast before it this turn. You may choose new targets for the copies.)",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -17915,7 +17915,7 @@
           "text": "You may choose new targets for any of the copies. You can choose differently for each copy."
         }
       ],
-      "text": "Target player reveals a card at random from his or her hand. Ignite Memories deals damage to that player equal to that card's converted mana cost.\nStorm (When you cast this spell, copy it for each spell cast before it this turn. You may choose new targets for the copies.)",
+      "text": "Target player reveals a card at random from their hand. Ignite Memories deals damage to that player equal to that card's converted mana cost.\nStorm (When you cast this spell, copy it for each spell cast before it this turn. You may choose new targets for the copies.)",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -18124,7 +18124,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "{R}, {T}, Discard a card: Destroy target blue permanent.\n{1}{R}, {T}, Discard a card: Jaya Ballard, Task Mage deals 3 damage to target creature or player. A creature dealt damage this way can't be regenerated this turn.\n{5}{R}{R}, {T}, Discard a card: Jaya Ballard deals 6 damage to each creature and each player.",
+      "text": "{R}, {T}, Discard a card: Destroy target blue permanent.\n{1}{R}, {T}, Discard a card: Jaya Ballard, Task Mage deals 3 damage to any target. A creature dealt damage this way can't be regenerated this turn.\n{5}{R}{R}, {T}, Discard a card: Jaya Ballard deals 6 damage to each creature and each player.",
       "toughness": "2",
       "type": "Legendary Creature — Human Spellshaper",
       "types": [
@@ -18376,7 +18376,7 @@
           "text": "The converted mana cost of Lightning Axe is 1, independent of which additional cost you paid."
         }
       ],
-      "text": "As an additional cost to cast Lightning Axe, discard a card or pay {5}.\nLightning Axe deals 5 damage to target creature.",
+      "text": "As an additional cost to cast this spell, discard a card or pay {5}.\nLightning Axe deals 5 damage to target creature.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -18474,7 +18474,7 @@
         "Human",
         "Wizard"
       ],
-      "text": "{3}, {T}: Choose a card name, then reveal a card at random from your hand. If that card has the chosen name, Magus of the Scroll deals 2 damage to target creature or player.",
+      "text": "{3}, {T}: Choose a card name, then reveal a card at random from your hand. If that card has the chosen name, Magus of the Scroll deals 2 damage to any target.",
       "toughness": "1",
       "type": "Creature — Human Wizard",
       "types": [
@@ -18783,7 +18783,7 @@
         "DDN"
       ],
       "rarity": "Common",
-      "text": "Orcish Cannonade deals 2 damage to target creature or player and 3 damage to you.\nDraw a card.",
+      "text": "Orcish Cannonade deals 2 damage to any target and 3 damage to you.\nDraw a card.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -19292,7 +19292,7 @@
           "text": "A creature cast using suspend will enter the battlefield with haste. It will have haste until another player gains control of it (or, in some rare cases, gains control of the creature spell itself)."
         }
       ],
-      "text": "Rift Bolt deals 3 damage to target creature or player.\nSuspend 1—{R} (Rather than cast this card from your hand, you may pay {R} and exile it with a time counter on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)",
+      "text": "Rift Bolt deals 3 damage to any target.\nSuspend 1—{R} (Rather than cast this card from your hand, you may pay {R} and exile it with a time counter on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -19622,7 +19622,7 @@
           "text": "If the resolution of a triggered ability involves casting a spell, that spell can't be cast if a spell with split second is on the stack."
         }
       ],
-      "text": "Split second (As long as this spell is on the stack, players can't cast spells or activate abilities that aren't mana abilities.)\nSudden Shock deals 2 damage to target creature or player.",
+      "text": "Split second (As long as this spell is on the stack, players can't cast spells or activate abilities that aren't mana abilities.)\nSudden Shock deals 2 damage to any target.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -20132,7 +20132,7 @@
       "rulings": [
         {
           "date": "2016-06-08",
-          "text": "If the target of Undying Rage when it's cast as a spell is an illegal target when Undying Rage tries to resolve, Undying Rage will be countered and put into its owner's graveyard. It won't return to its owner's hand."
+          "text": "If the target of Undying Rage when it's cast as a spell is an illegal target when Undying Rage tries to resolve, Undying Rage won't resolve and will be put into its owner's graveyard. It won't return to its owner's hand."
         }
       ],
       "subtypes": [
@@ -20497,7 +20497,7 @@
           "text": "This has no mana cost, which means its mana cost can't be paid for effects such as replicate from Djinn Illuminatus or flashback from Snapcaster Mage."
         }
       ],
-      "text": "Suspend 4—{1}{R} (Rather than cast this card from your hand, pay {1}{R} and exile it with four time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)\nEach player discards his or her hand, then draws seven cards.",
+      "text": "Suspend 4—{1}{R} (Rather than cast this card from your hand, pay {1}{R} and exile it with four time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)\nEach player discards their hand, then draws seven cards.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -21254,7 +21254,7 @@
       "rulings": [
         {
           "date": "2006-09-25",
-          "text": "If Durkwood Tracker has left the battlefield before the ability resolves, the ability doesn't do anything. If the targeted creature has left the battlefield before the ability resolves, the ability is countered."
+          "text": "If Durkwood Tracker has left the battlefield before the ability resolves, the ability doesn't do anything. If the targeted creature has left the battlefield before the ability resolves, the ability doesn't resolve."
         }
       ],
       "subtypes": [
@@ -21481,7 +21481,7 @@
       "subtypes": [
         "Sliver"
       ],
-      "text": "All Slivers have \"{T}: Add one mana of any color to your mana pool.\"",
+      "text": "All Slivers have \"{T}: Add one mana of any color.\"",
       "toughness": "1",
       "type": "Creature — Sliver",
       "types": [
@@ -21586,7 +21586,7 @@
       "subtypes": [
         "Snake"
       ],
-      "text": "Whenever Glass Asp deals combat damage to a player, that player loses 2 life at the beginning of his or her next draw step unless he or she pays {2} before that step.",
+      "text": "Whenever Glass Asp deals combat damage to a player, that player loses 2 life at the beginning of their next draw step unless they pay {2} before that step.",
       "toughness": "1",
       "type": "Creature — Snake",
       "types": [
@@ -21980,11 +21980,11 @@
       "rulings": [
         {
           "date": "2006-09-25",
-          "text": "In a game of N players, the process ends when all N players in sequence (starting with you) choose not to put a card onto the battlefield. It doesn't end the first time a player chooses not to put a card onto the battlefield. If a player chooses not to put a card onto the battlefield but the process continues, that player may put a card onto the battlefield the next time the process gets around to him or her."
+          "text": "In a game of N players, the process ends when all N players in sequence (starting with you) choose not to put a card onto the battlefield. It doesn't end the first time a player chooses not to put a card onto the battlefield. If a player chooses not to put a card onto the battlefield but the process continues, that player may put a card onto the battlefield the next time the process gets around to them."
         },
         {
           "date": "2006-10-15",
-          "text": "Anything that triggers during the resolution of this will wait to be put on the stack until everything is put onto the battlefield and resolution is complete. The player whose turn it is will put all of his or her triggered abilities on the stack in any order, then each other player in turn order will do the same. (The last ability put on the stack will be the first one that resolves.)"
+          "text": "Anything that triggers during the resolution of this will wait to be put on the stack until everything is put onto the battlefield and resolution is complete. The player whose turn it is will put all of their triggered abilities on the stack in any order, then each other player in turn order will do the same. (The last ability put on the stack will be the first one that resolves.)"
         },
         {
           "date": "2013-06-07",
@@ -22035,7 +22035,7 @@
           "text": "This has no mana cost, which means its mana cost can't be paid for effects such as replicate from Djinn Illuminatus or flashback from Snapcaster Mage."
         }
       ],
-      "text": "Suspend 3—{1}{G}{G} (Rather than cast this card from your hand, pay {1}{G}{G} and exile it with three time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)\nStarting with you, each player may put an artifact, creature, enchantment, or land card from his or her hand onto the battlefield. Repeat this process until no one puts a card onto the battlefield.",
+      "text": "Suspend 3—{1}{G}{G} (Rather than cast this card from your hand, pay {1}{G}{G} and exile it with three time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)\nStarting with you, each player may put an artifact, creature, enchantment, or land card from their hand onto the battlefield. Repeat this process until no one puts a card onto the battlefield.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -23842,7 +23842,7 @@
       "rulings": [
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         }
       ],
       "subtypes": [
@@ -25196,7 +25196,7 @@
       "subtypes": [
         "Insect"
       ],
-      "text": "Flying\n{G}: Unyaro Bees gets +1/+1 until end of turn.\n{3}{G}, Sacrifice Unyaro Bees: Unyaro Bees deals 2 damage to target creature or player.",
+      "text": "Flying\n{G}: Unyaro Bees gets +1/+1 until end of turn.\n{3}{G}, Sacrifice Unyaro Bees: It deals 2 damage to any target.",
       "toughness": "1",
       "type": "Creature — Insect",
       "types": [
@@ -25706,7 +25706,7 @@
       "subtypes": [
         "Sliver"
       ],
-      "text": "All Slivers have \"{T}: Choose a card name. Target opponent reveals a card at random from his or her hand. If that card has the chosen name, that player discards it. Activate this ability only during your turn.\"",
+      "text": "All Slivers have \"{T}: Choose a card name. Target opponent reveals a card at random from their hand. If that card has the chosen name, that player discards it. Activate this ability only during your turn.\"",
       "toughness": "3",
       "type": "Creature — Sliver",
       "types": [
@@ -26417,7 +26417,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "Whenever an opponent casts a spell, Kaervek the Merciless deals damage to target creature or player equal to that spell's converted mana cost.",
+      "text": "Whenever an opponent casts a spell, Kaervek the Merciless deals damage to any target equal to that spell's converted mana cost.",
       "toughness": "4",
       "type": "Legendary Creature — Human Shaman",
       "types": [
@@ -26744,7 +26744,7 @@
         },
         {
           "date": "2006-09-25",
-          "text": "Saffi can target itself, but it won't return itself to the battlefield. It will already be in the graveyard when the ability resolves, so the ability will be countered."
+          "text": "Saffi can target itself, but it won't return itself to the battlefield. It will already be in the graveyard when the ability resolves, so the ability won't resolve."
         }
       ],
       "subtypes": [
@@ -27075,8 +27075,8 @@
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2006-09-25",
-          "text": "The ability looks for creatures with the Assembly-Worker subtype, not permanents named Assembly-Worker."
+          "date": "2018-03-16",
+          "text": "Assembly-Worker's ability can target any creature with the Assembly-Worker subtype, not only creatures named Assembly-Worker."
         }
       ],
       "subtypes": [
@@ -27361,7 +27361,7 @@
         "10E"
       ],
       "rarity": "Common",
-      "text": "{1}, {T}, Sacrifice Chromatic Star: Add one mana of any color to your mana pool.\nWhen Chromatic Star is put into a graveyard from the battlefield, draw a card.",
+      "text": "{1}, {T}, Sacrifice Chromatic Star: Add one mana of any color.\nWhen Chromatic Star is put into a graveyard from the battlefield, draw a card.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -27454,10 +27454,10 @@
       "rulings": [
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         }
       ],
-      "text": "{T}: Add {U} to your mana pool.\n{1}{U}: Chronatog Totem becomes a 1/2 blue Atog artifact creature until end of turn.\n{0}: Chronatog Totem gets +3/+3 until end of turn. You skip your next turn. Activate this ability only once each turn and only if Chronatog Totem is a creature.",
+      "text": "{T}: Add {U}.\n{1}{U}: Chronatog Totem becomes a 1/2 blue Atog artifact creature until end of turn.\n{0}: Chronatog Totem gets +3/+3 until end of turn. You skip your next turn. Activate this ability only once each turn and only if Chronatog Totem is a creature.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -27549,7 +27549,7 @@
       "subtypes": [
         "Hydra"
       ],
-      "text": "Clockwork Hydra enters the battlefield with four +1/+1 counters on it.\nWhenever Clockwork Hydra attacks or blocks, remove a +1/+1 counter from it. If you do, Clockwork Hydra deals 1 damage to target creature or player.\n{T}: Put a +1/+1 counter on Clockwork Hydra.",
+      "text": "Clockwork Hydra enters the battlefield with four +1/+1 counters on it.\nWhenever Clockwork Hydra attacks or blocks, remove a +1/+1 counter from it. If you do, Clockwork Hydra deals 1 damage to any target.\n{T}: Put a +1/+1 counter on Clockwork Hydra.",
       "toughness": "0",
       "type": "Artifact Creature — Hydra",
       "types": [
@@ -27652,10 +27652,10 @@
         },
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         }
       ],
-      "text": "{T}: Add {R} to your mana pool.\n{4}{R}: Foriysian Totem becomes a 4/4 red Giant artifact creature with trample until end of turn.\nAs long as Foriysian Totem is a creature, it can block an additional creature each combat.",
+      "text": "{T}: Add {R}.\n{4}{R}: Foriysian Totem becomes a 4/4 red Giant artifact creature with trample until end of turn.\nAs long as Foriysian Totem is a creature, it can block an additional creature each combat.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -27743,7 +27743,7 @@
         "MPS"
       ],
       "rarity": "Rare",
-      "text": "As Gauntlet of Power enters the battlefield, choose a color.\nCreatures of the chosen color get +1/+1.\nWhenever a basic land is tapped for mana of the chosen color, its controller adds one mana of that color to his or her mana pool (in addition to the mana the land produces).",
+      "text": "As Gauntlet of Power enters the battlefield, choose a color.\nCreatures of the chosen color get +1/+1.\nWhenever a basic land is tapped for mana of the chosen color, its controller adds an additional one mana of that color.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -28170,7 +28170,7 @@
           "text": "This has no mana cost, which means its mana cost can't be paid for effects such as replicate from Djinn Illuminatus or flashback from Snapcaster Mage."
         }
       ],
-      "text": "Suspend 3—{0} (Rather than cast this card from your hand, pay {0} and exile it with three time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)\n{T}, Sacrifice Lotus Bloom: Add three mana of any one color to your mana pool.",
+      "text": "Suspend 3—{0} (Rather than cast this card from your hand, pay {0} and exile it with three time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)\n{T}, Sacrifice Lotus Bloom: Add three mana of any one color.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -28258,7 +28258,7 @@
         "TSP"
       ],
       "rarity": "Uncommon",
-      "text": "As Paradise Plume enters the battlefield, choose a color.\nWhenever a player casts a spell of the chosen color, you may gain 1 life.\n{T}: Add one mana of the chosen color to your mana pool.",
+      "text": "As Paradise Plume enters the battlefield, choose a color.\nWhenever a player casts a spell of the chosen color, you may gain 1 life.\n{T}: Add one mana of the chosen color.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -28356,10 +28356,10 @@
         },
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         }
       ],
-      "text": "{T}: Add {B} to your mana pool.\n{2}{B}: Phyrexian Totem becomes a 5/5 black Horror artifact creature with trample until end of turn.\nWhenever Phyrexian Totem is dealt damage, if it's a creature, sacrifice that many permanents.",
+      "text": "{T}: Add {B}.\n{2}{B}: Phyrexian Totem becomes a 5/5 black Horror artifact creature with trample until end of turn.\nWhenever Phyrexian Totem is dealt damage, if it's a creature, sacrifice that many permanents.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -28449,7 +28449,7 @@
         "E02"
       ],
       "rarity": "Common",
-      "text": "{T}: Add {C} to your mana pool.\n{1}, {T}: Add one mana of any color to your mana pool.",
+      "text": "{T}: Add {C}.\n{1}, {T}: Add one mana of any color.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -28724,10 +28724,10 @@
       "rulings": [
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         }
       ],
-      "text": "{T}: Add {W} to your mana pool.\n{1}{W}{W}: Thunder Totem becomes a 2/2 white Spirit artifact creature with flying and first strike until end of turn.",
+      "text": "{T}: Add {W}.\n{1}{W}{W}: Thunder Totem becomes a 2/2 white Spirit artifact creature with flying and first strike until end of turn.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -28819,7 +28819,7 @@
       "subtypes": [
         "Construct"
       ],
-      "text": "Flying\nTriskelavus enters the battlefield with three +1/+1 counters on it.\n{1}, Remove a +1/+1 counter from Triskelavus: Create a 1/1 colorless Triskelavite artifact creature token with flying. It has \"Sacrifice this creature: This creature deals 1 damage to target creature or player.\"",
+      "text": "Flying\nTriskelavus enters the battlefield with three +1/+1 counters on it.\n{1}, Remove a +1/+1 counter from Triskelavus: Create a 1/1 colorless Triskelavite artifact creature token with flying. It has \"Sacrifice this creature: This creature deals 1 damage to any target.\"",
       "toughness": "1",
       "type": "Artifact Creature — Construct",
       "types": [
@@ -29010,10 +29010,10 @@
         },
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         }
       ],
-      "text": "{T}: Add {G} to your mana pool.\n{2}{G}{G}{G}: Weatherseed Totem becomes a 5/3 green Treefolk artifact creature with trample until end of turn.\nWhen Weatherseed Totem is put into a graveyard from the battlefield, if it was a creature, return this card to its owner's hand.",
+      "text": "{T}: Add {G}.\n{2}{G}{G}{G}: Weatherseed Totem becomes a 5/3 green Treefolk artifact creature with trample until end of turn.\nWhen Weatherseed Totem is put into a graveyard from the battlefield, if it was a creature, return this card to its owner's hand.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -29107,7 +29107,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "{T}: Add {C} to your mana pool.\n{1}{U}, {T}: Put target artifact card from your graveyard on top of your library.",
+      "text": "{T}: Add {C}.\n{1}{U}, {T}: Put target artifact card from your graveyard on top of your library.",
       "type": "Legendary Land",
       "types": [
         "Land"
@@ -29197,7 +29197,7 @@
         "TSP"
       ],
       "rarity": "Uncommon",
-      "text": "{T}: Add {C} to your mana pool.\n{1}, {T}: Put a storage counter on Calciform Pools.\n{1}, Remove X storage counters from Calciform Pools: Add X mana in any combination of {W} and/or {U} to your mana pool.",
+      "text": "{T}: Add {C}.\n{1}, {T}: Put a storage counter on Calciform Pools.\n{1}, Remove X storage counters from Calciform Pools: Add X mana in any combination of {W} and/or {U}.",
       "type": "Land",
       "types": [
         "Land"
@@ -29289,7 +29289,7 @@
         "C16"
       ],
       "rarity": "Uncommon",
-      "text": "{T}: Add {C} to your mana pool.\n{1}, {T}: Put a storage counter on Dreadship Reef.\n{1}, Remove X storage counters from Dreadship Reef: Add X mana in any combination of {U} and/or {B} to your mana pool.",
+      "text": "{T}: Add {C}.\n{1}, {T}: Put a storage counter on Dreadship Reef.\n{1}, Remove X storage counters from Dreadship Reef: Add X mana in any combination of {U} and/or {B}.",
       "type": "Land",
       "types": [
         "Land"
@@ -29382,7 +29382,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "{T}: Add {W} to your mana pool.\nWhen Flagstones of Trokair is put into a graveyard from the battlefield, you may search your library for a Plains card and put it onto the battlefield tapped. If you do, shuffle your library.",
+      "text": "{T}: Add {W}.\nWhen Flagstones of Trokair is put into a graveyard from the battlefield, you may search your library for a Plains card and put it onto the battlefield tapped. If you do, shuffle your library.",
       "type": "Legendary Land",
       "types": [
         "Land"
@@ -29473,7 +29473,7 @@
         "CMD"
       ],
       "rarity": "Uncommon",
-      "text": "{T}: Add {C} to your mana pool.\n{1}, {T}: Put a storage counter on Fungal Reaches.\n{1}, Remove X storage counters from Fungal Reaches: Add X mana in any combination of {R} and/or {G} to your mana pool.",
+      "text": "{T}: Add {C}.\n{1}, {T}: Put a storage counter on Fungal Reaches.\n{1}, Remove X storage counters from Fungal Reaches: Add X mana in any combination of {R} and/or {G}.",
       "type": "Land",
       "types": [
         "Land"
@@ -29562,7 +29562,7 @@
       "rulings": [
         {
           "date": "2013-07-01",
-          "text": "If multiple Gemstone Caverns are put onto the battlefield under a single player's control before the game begins, the \"legend rule\" won't put the extras into that player's graveyard until just before the first player gets priority during his or her first upkeep step. There's no opportunity to tap the extras for mana."
+          "text": "If multiple Gemstone Caverns are put onto the battlefield under a single player's control before the game begins, the \"legend rule\" won't put the extras into that player's graveyard until just before the first player gets priority during their first upkeep step. There's no opportunity to tap the extras for mana."
         },
         {
           "date": "2016-06-08",
@@ -29572,7 +29572,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "If Gemstone Caverns is in your opening hand and you're not playing first, you may begin the game with Gemstone Caverns on the battlefield with a luck counter on it. If you do, exile a card from your hand.\n{T}: Add {C} to your mana pool. If Gemstone Caverns has a luck counter on it, instead add one mana of any color to your mana pool.",
+      "text": "If Gemstone Caverns is in your opening hand and you're not playing first, you may begin the game with Gemstone Caverns on the battlefield with a luck counter on it. If you do, exile a card from your hand.\n{T}: Add {C}. If Gemstone Caverns has a luck counter on it, instead add one mana of any color.",
       "type": "Legendary Land",
       "types": [
         "Land"
@@ -29666,7 +29666,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "{T}: Add {C} to your mana pool.\n{1}{R}, {T}: Create a 0/1 red Kobold creature token named Kobolds of Kher Keep.",
+      "text": "{T}: Add {C}.\n{1}{R}, {T}: Create a 0/1 red Kobold creature token named Kobolds of Kher Keep.",
       "type": "Legendary Land",
       "types": [
         "Land"
@@ -29759,7 +29759,7 @@
         "CMA"
       ],
       "rarity": "Uncommon",
-      "text": "{T}: Add {C} to your mana pool.\n{1}, {T}: Put a storage counter on Molten Slagheap.\n{1}, Remove X storage counters from Molten Slagheap: Add X mana in any combination of {B} and/or {R} to your mana pool.",
+      "text": "{T}: Add {C}.\n{1}, {T}: Put a storage counter on Molten Slagheap.\n{1}, Remove X storage counters from Molten Slagheap: Add X mana in any combination of {B} and/or {R}.",
       "type": "Land",
       "types": [
         "Land"
@@ -29852,7 +29852,7 @@
         "C17"
       ],
       "rarity": "Uncommon",
-      "text": "{T}: Add {C} to your mana pool.\n{1}, {T}: Put a storage counter on Saltcrusted Steppe.\n{1}, Remove X storage counters from Saltcrusted Steppe: Add X mana in any combination of {G} and/or {W} to your mana pool.",
+      "text": "{T}: Add {C}.\n{1}, {T}: Put a storage counter on Saltcrusted Steppe.\n{1}, Remove X storage counters from Saltcrusted Steppe: Add X mana in any combination of {G} and/or {W}.",
       "type": "Land",
       "types": [
         "Land"
@@ -29939,7 +29939,7 @@
         "TSP"
       ],
       "rarity": "Rare",
-      "text": "{T}: Add {C} to your mana pool.\n{T}: Regenerate target Insect, Rat, Spider, or Squirrel.",
+      "text": "{T}: Add {C}.\n{T}: Regenerate target Insect, Rat, Spider, or Squirrel.",
       "type": "Land",
       "types": [
         "Land"
@@ -30143,7 +30143,7 @@
       "subtypes": [
         "Urza’s"
       ],
-      "text": "{T}: Add {C} to your mana pool.\n{7}, {T}: Create a 2/2 colorless Assembly-Worker artifact creature token.",
+      "text": "{T}: Add {C}.\n{7}, {T}: Create a 2/2 colorless Assembly-Worker artifact creature token.",
       "type": "Land — Urza’s",
       "types": [
         "Land"
@@ -30243,6 +30243,10 @@
         {
           "date": "2006-10-15",
           "text": "Cornered Market won't prevent Vesuva from being played (unless there's a Vesuva on the battlefield copying nothing), since you play it before it becomes named something else."
+        },
+        {
+          "date": "2018-04-27",
+          "text": "If Vesuva somehow enters the battlefield at the same time as another land, Vesuva can't become a copy of that land. You may choose only a land that's already on the battlefield."
         }
       ],
       "text": "You may have Vesuva enter the battlefield tapped as a copy of any land on the battlefield.",
@@ -30279,29 +30283,29 @@
           "multiverseid": 132440
         },
         {
-          "language": "French",
-          "name": "Plaine",
-          "multiverseid": 132739
+          "language": "German",
+          "name": "Ebene",
+          "multiverseid": 133039
         },
         {
-          "language": "Italian",
-          "name": "Pianura",
-          "multiverseid": 133340
+          "language": "German",
+          "name": "Ebene",
+          "multiverseid": 133040
+        },
+        {
+          "language": "German",
+          "name": "Ebene",
+          "multiverseid": 133041
+        },
+        {
+          "language": "German",
+          "name": "Ebene",
+          "multiverseid": 133042
         },
         {
           "language": "Italian",
           "name": "Pianura",
           "multiverseid": 133341
-        },
-        {
-          "language": "Italian",
-          "name": "Pianura",
-          "multiverseid": 133342
-        },
-        {
-          "language": "Italian",
-          "name": "Pianura",
-          "multiverseid": 133343
         },
         {
           "language": "Japanese",
@@ -30621,7 +30625,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -30669,29 +30674,29 @@
           "multiverseid": 132440
         },
         {
-          "language": "French",
-          "name": "Plaine",
-          "multiverseid": 132739
+          "language": "German",
+          "name": "Ebene",
+          "multiverseid": 133039
         },
         {
-          "language": "Italian",
-          "name": "Pianura",
-          "multiverseid": 133340
+          "language": "German",
+          "name": "Ebene",
+          "multiverseid": 133040
+        },
+        {
+          "language": "German",
+          "name": "Ebene",
+          "multiverseid": 133041
+        },
+        {
+          "language": "German",
+          "name": "Ebene",
+          "multiverseid": 133042
         },
         {
           "language": "Italian",
           "name": "Pianura",
           "multiverseid": 133341
-        },
-        {
-          "language": "Italian",
-          "name": "Pianura",
-          "multiverseid": 133342
-        },
-        {
-          "language": "Italian",
-          "name": "Pianura",
-          "multiverseid": 133343
         },
         {
           "language": "Japanese",
@@ -31011,7 +31016,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -31059,29 +31065,29 @@
           "multiverseid": 132440
         },
         {
-          "language": "French",
-          "name": "Plaine",
-          "multiverseid": 132739
+          "language": "German",
+          "name": "Ebene",
+          "multiverseid": 133039
         },
         {
-          "language": "Italian",
-          "name": "Pianura",
-          "multiverseid": 133340
+          "language": "German",
+          "name": "Ebene",
+          "multiverseid": 133040
+        },
+        {
+          "language": "German",
+          "name": "Ebene",
+          "multiverseid": 133041
+        },
+        {
+          "language": "German",
+          "name": "Ebene",
+          "multiverseid": 133042
         },
         {
           "language": "Italian",
           "name": "Pianura",
           "multiverseid": 133341
-        },
-        {
-          "language": "Italian",
-          "name": "Pianura",
-          "multiverseid": 133342
-        },
-        {
-          "language": "Italian",
-          "name": "Pianura",
-          "multiverseid": 133343
         },
         {
           "language": "Japanese",
@@ -31401,7 +31407,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -31449,29 +31456,29 @@
           "multiverseid": 132440
         },
         {
-          "language": "French",
-          "name": "Plaine",
-          "multiverseid": 132739
+          "language": "German",
+          "name": "Ebene",
+          "multiverseid": 133039
         },
         {
-          "language": "Italian",
-          "name": "Pianura",
-          "multiverseid": 133340
+          "language": "German",
+          "name": "Ebene",
+          "multiverseid": 133040
+        },
+        {
+          "language": "German",
+          "name": "Ebene",
+          "multiverseid": 133041
+        },
+        {
+          "language": "German",
+          "name": "Ebene",
+          "multiverseid": 133042
         },
         {
           "language": "Italian",
           "name": "Pianura",
           "multiverseid": 133341
-        },
-        {
-          "language": "Italian",
-          "name": "Pianura",
-          "multiverseid": 133342
-        },
-        {
-          "language": "Italian",
-          "name": "Pianura",
-          "multiverseid": 133343
         },
         {
           "language": "Japanese",
@@ -31791,7 +31798,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -32180,7 +32188,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -32569,7 +32579,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -32958,7 +32970,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -33347,7 +33361,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -33740,7 +33756,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -34133,7 +34150,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -34526,7 +34544,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -34919,7 +34938,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -34967,9 +34987,24 @@
           "multiverseid": 132413
         },
         {
-          "language": "French",
-          "name": "Montagne",
-          "multiverseid": 132713
+          "language": "German",
+          "name": "Gebirge",
+          "multiverseid": 133012
+        },
+        {
+          "language": "German",
+          "name": "Gebirge",
+          "multiverseid": 133013
+        },
+        {
+          "language": "German",
+          "name": "Gebirge",
+          "multiverseid": 133014
+        },
+        {
+          "language": "German",
+          "name": "Gebirge",
+          "multiverseid": 133015
         },
         {
           "language": "Italian",
@@ -34994,22 +35029,7 @@
         {
           "language": "Japanese",
           "name": "山",
-          "multiverseid": 133614
-        },
-        {
-          "language": "Japanese",
-          "name": "山",
           "multiverseid": 133615
-        },
-        {
-          "language": "Japanese",
-          "name": "山",
-          "multiverseid": 133616
-        },
-        {
-          "language": "Japanese",
-          "name": "山",
-          "multiverseid": 133617
         },
         {
           "language": "Portuguese (Brazil)",
@@ -35314,7 +35334,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -35362,9 +35384,24 @@
           "multiverseid": 132413
         },
         {
-          "language": "French",
-          "name": "Montagne",
-          "multiverseid": 132713
+          "language": "German",
+          "name": "Gebirge",
+          "multiverseid": 133012
+        },
+        {
+          "language": "German",
+          "name": "Gebirge",
+          "multiverseid": 133013
+        },
+        {
+          "language": "German",
+          "name": "Gebirge",
+          "multiverseid": 133014
+        },
+        {
+          "language": "German",
+          "name": "Gebirge",
+          "multiverseid": 133015
         },
         {
           "language": "Italian",
@@ -35389,22 +35426,7 @@
         {
           "language": "Japanese",
           "name": "山",
-          "multiverseid": 133614
-        },
-        {
-          "language": "Japanese",
-          "name": "山",
           "multiverseid": 133615
-        },
-        {
-          "language": "Japanese",
-          "name": "山",
-          "multiverseid": 133616
-        },
-        {
-          "language": "Japanese",
-          "name": "山",
-          "multiverseid": 133617
         },
         {
           "language": "Portuguese (Brazil)",
@@ -35709,7 +35731,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -35757,9 +35781,24 @@
           "multiverseid": 132413
         },
         {
-          "language": "French",
-          "name": "Montagne",
-          "multiverseid": 132713
+          "language": "German",
+          "name": "Gebirge",
+          "multiverseid": 133012
+        },
+        {
+          "language": "German",
+          "name": "Gebirge",
+          "multiverseid": 133013
+        },
+        {
+          "language": "German",
+          "name": "Gebirge",
+          "multiverseid": 133014
+        },
+        {
+          "language": "German",
+          "name": "Gebirge",
+          "multiverseid": 133015
         },
         {
           "language": "Italian",
@@ -35784,22 +35823,7 @@
         {
           "language": "Japanese",
           "name": "山",
-          "multiverseid": 133614
-        },
-        {
-          "language": "Japanese",
-          "name": "山",
           "multiverseid": 133615
-        },
-        {
-          "language": "Japanese",
-          "name": "山",
-          "multiverseid": 133616
-        },
-        {
-          "language": "Japanese",
-          "name": "山",
-          "multiverseid": 133617
         },
         {
           "language": "Portuguese (Brazil)",
@@ -36104,7 +36128,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -36152,9 +36178,24 @@
           "multiverseid": 132413
         },
         {
-          "language": "French",
-          "name": "Montagne",
-          "multiverseid": 132713
+          "language": "German",
+          "name": "Gebirge",
+          "multiverseid": 133012
+        },
+        {
+          "language": "German",
+          "name": "Gebirge",
+          "multiverseid": 133013
+        },
+        {
+          "language": "German",
+          "name": "Gebirge",
+          "multiverseid": 133014
+        },
+        {
+          "language": "German",
+          "name": "Gebirge",
+          "multiverseid": 133015
         },
         {
           "language": "Italian",
@@ -36179,22 +36220,7 @@
         {
           "language": "Japanese",
           "name": "山",
-          "multiverseid": 133614
-        },
-        {
-          "language": "Japanese",
-          "name": "山",
           "multiverseid": 133615
-        },
-        {
-          "language": "Japanese",
-          "name": "山",
-          "multiverseid": 133616
-        },
-        {
-          "language": "Japanese",
-          "name": "山",
-          "multiverseid": 133617
         },
         {
           "language": "Portuguese (Brazil)",
@@ -36499,7 +36525,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -36569,27 +36597,27 @@
         {
           "language": "Italian",
           "name": "Foresta",
-          "multiverseid": 133238
-        },
-        {
-          "language": "Italian",
-          "name": "Foresta",
-          "multiverseid": 133239
-        },
-        {
-          "language": "Italian",
-          "name": "Foresta",
-          "multiverseid": 133240
-        },
-        {
-          "language": "Italian",
-          "name": "Foresta",
           "multiverseid": 133241
         },
         {
           "language": "Japanese",
           "name": "森",
+          "multiverseid": 133539
+        },
+        {
+          "language": "Japanese",
+          "name": "森",
+          "multiverseid": 133540
+        },
+        {
+          "language": "Japanese",
+          "name": "森",
           "multiverseid": 133541
+        },
+        {
+          "language": "Japanese",
+          "name": "森",
+          "multiverseid": 133542
         },
         {
           "language": "Portuguese (Brazil)",
@@ -36891,7 +36919,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -36961,27 +36991,27 @@
         {
           "language": "Italian",
           "name": "Foresta",
-          "multiverseid": 133238
-        },
-        {
-          "language": "Italian",
-          "name": "Foresta",
-          "multiverseid": 133239
-        },
-        {
-          "language": "Italian",
-          "name": "Foresta",
-          "multiverseid": 133240
-        },
-        {
-          "language": "Italian",
-          "name": "Foresta",
           "multiverseid": 133241
         },
         {
           "language": "Japanese",
           "name": "森",
+          "multiverseid": 133539
+        },
+        {
+          "language": "Japanese",
+          "name": "森",
+          "multiverseid": 133540
+        },
+        {
+          "language": "Japanese",
+          "name": "森",
           "multiverseid": 133541
+        },
+        {
+          "language": "Japanese",
+          "name": "森",
+          "multiverseid": 133542
         },
         {
           "language": "Portuguese (Brazil)",
@@ -37283,7 +37313,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -37353,27 +37385,27 @@
         {
           "language": "Italian",
           "name": "Foresta",
-          "multiverseid": 133238
-        },
-        {
-          "language": "Italian",
-          "name": "Foresta",
-          "multiverseid": 133239
-        },
-        {
-          "language": "Italian",
-          "name": "Foresta",
-          "multiverseid": 133240
-        },
-        {
-          "language": "Italian",
-          "name": "Foresta",
           "multiverseid": 133241
         },
         {
           "language": "Japanese",
           "name": "森",
+          "multiverseid": 133539
+        },
+        {
+          "language": "Japanese",
+          "name": "森",
+          "multiverseid": 133540
+        },
+        {
+          "language": "Japanese",
+          "name": "森",
           "multiverseid": 133541
+        },
+        {
+          "language": "Japanese",
+          "name": "森",
+          "multiverseid": 133542
         },
         {
           "language": "Portuguese (Brazil)",
@@ -37675,7 +37707,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -37745,27 +37779,27 @@
         {
           "language": "Italian",
           "name": "Foresta",
-          "multiverseid": 133238
-        },
-        {
-          "language": "Italian",
-          "name": "Foresta",
-          "multiverseid": 133239
-        },
-        {
-          "language": "Italian",
-          "name": "Foresta",
-          "multiverseid": 133240
-        },
-        {
-          "language": "Italian",
-          "name": "Foresta",
           "multiverseid": 133241
         },
         {
           "language": "Japanese",
           "name": "森",
+          "multiverseid": 133539
+        },
+        {
+          "language": "Japanese",
+          "name": "森",
+          "multiverseid": 133540
+        },
+        {
+          "language": "Japanese",
+          "name": "森",
           "multiverseid": 133541
+        },
+        {
+          "language": "Japanese",
+          "name": "森",
+          "multiverseid": 133542
         },
         {
           "language": "Portuguese (Brazil)",
@@ -38067,7 +38101,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [

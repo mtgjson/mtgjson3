@@ -1021,7 +1021,7 @@
         "DD3_DVD"
       ],
       "rarity": "Common",
-      "text": "Choose one —\n• Target player gains 3 life.\n• Prevent the next 3 damage that would be dealt to target creature or player this turn.",
+      "text": "Choose one —\n• Target player gains 3 life.\n• Prevent the next 3 damage that would be dealt to any target this turn.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -1200,7 +1200,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "The power of the creature is checked on activation and on resolution. If the targeted creature's power is not 4 or greater on resolution, the ability is countered."
+          "text": "The power of the creature is checked on activation and on resolution. If the targeted creature's power is not 4 or greater on resolution, the ability doesn't resolve."
         }
       ],
       "subtypes": [
@@ -1391,7 +1391,7 @@
         },
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         }
       ],
       "text": "Whenever an opponent casts a creature spell, if Opal Acrolith is an enchantment, Opal Acrolith becomes a 2/4 Soldier creature.\n{0}: Opal Acrolith becomes an enchantment.",
@@ -1461,7 +1461,7 @@
         },
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         }
       ],
       "text": "When an opponent casts a creature spell, if Opal Archangel is an enchantment, Opal Archangel becomes a 5/5 Angel creature with flying and vigilance.",
@@ -1530,7 +1530,7 @@
         },
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         }
       ],
       "text": "When an opponent casts a creature spell, if Opal Caryatid is an enchantment, Opal Caryatid becomes a 2/2 Soldier creature.",
@@ -1599,7 +1599,7 @@
         },
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         }
       ],
       "text": "When an opponent casts a creature spell, if Opal Gargoyle is an enchantment, Opal Gargoyle becomes a 2/2 Gargoyle creature with flying.",
@@ -1672,7 +1672,7 @@
         },
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         }
       ],
       "text": "When an opponent casts a creature spell, if Opal Titan is an enchantment, Opal Titan becomes a 4/4 Giant creature with protection from each of that spell's colors.",
@@ -1889,8 +1889,12 @@
       "rarity": "Common",
       "rulings": [
         {
-          "date": "2004-10-04",
-          "text": "If the spell fails because the target is not there or isn't legal, the owner does not gain any life."
+          "date": "2018-03-16",
+          "text": "You are a creature's owner if the card representing it began the game in your deck, or if it's a token that entered the battlefield under your control. If Path of Peace targets a creature that you own but an opponent controls, you'll gain 4 life."
+        },
+        {
+          "date": "2018-03-16",
+          "text": "If the target creature is an illegal target by the time Path of Peace tries to resolve, the spell doesn't resolve. No player gains life."
         }
       ],
       "text": "Destroy target creature. Its owner gains 4 life.",
@@ -2656,7 +2660,7 @@
         "Human",
         "Cleric"
       ],
-      "text": "{T}: Prevent the next 2 damage that would be dealt to target creature or player this turn.",
+      "text": "{T}: Prevent the next 2 damage that would be dealt to any target this turn.",
       "toughness": "2",
       "type": "Creature — Human Cleric",
       "types": [
@@ -2716,7 +2720,7 @@
         "Human",
         "Cleric"
       ],
-      "text": "Sacrifice Sanctum Guardian: The next time a source of your choice would deal damage to target creature or player this turn, prevent that damage.",
+      "text": "Sacrifice Sanctum Guardian: The next time a source of your choice would deal damage to any target this turn, prevent that damage.",
       "toughness": "4",
       "type": "Creature — Human Cleric",
       "types": [
@@ -3044,7 +3048,7 @@
           "text": "Adding a counter is optional. If you forget to add one during your upkeep, you cannot back up and add one later."
         }
       ],
-      "text": "At the beginning of your upkeep, you may put a verse counter on Serra's Hymn.\nSacrifice Serra's Hymn: Prevent the next X damage that would be dealt this turn to any number of target creatures and/or players, divided as you choose, where X is the number of verse counters on Serra's Hymn.",
+      "text": "At the beginning of your upkeep, you may put a verse counter on Serra's Hymn.\nSacrifice Serra's Hymn: Prevent the next X damage that would be dealt this turn to any number of targets, divided as you choose, where X is the number of verse counters on Serra's Hymn.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -4182,7 +4186,7 @@
         "BRB"
       ],
       "rarity": "Common",
-      "text": "Each player returns a creature he or she controls to its owner's hand.",
+      "text": "Each player returns a creature they control to its owner's hand.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -4527,10 +4531,10 @@
         },
         {
           "date": "2009-10-01",
-          "text": "No creatures or lands controlled by the player will untap during his or her next untap step. This includes those which entered the battlefield after Exhaustion resolved."
+          "text": "No creatures or lands controlled by the player will untap during their next untap step. This includes those which entered the battlefield after Exhaustion resolved."
         }
       ],
-      "text": "Creatures and lands target opponent controls don't untap during his or her next untap step.",
+      "text": "Creatures and lands target opponent controls don't untap during their next untap step.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -4660,7 +4664,7 @@
       "subtypes": [
         "Drake"
       ],
-      "text": "Flying\nWhen Gilded Drake enters the battlefield, exchange control of Gilded Drake and up to one target creature an opponent controls. If you don't make an exchange, sacrifice Gilded Drake. This ability can't be countered except by spells and abilities. (This effect lasts indefinitely.)",
+      "text": "Flying\nWhen Gilded Drake enters the battlefield, exchange control of Gilded Drake and up to one target creature an opponent controls. If you don't or can't make an exchange, sacrifice Gilded Drake. This ability still resolves if its target becomes illegal.",
       "toughness": "3",
       "type": "Creature — Drake",
       "types": [
@@ -4772,7 +4776,7 @@
       "subtypes": [
         "Aura"
       ],
-      "text": "Enchant creature\nEnchanted creature has \"{T}: This creature deals 1 damage to target creature or player.\"",
+      "text": "Enchant creature\nEnchanted creature has \"{T}: This creature deals 1 damage to any target.\"",
       "type": "Enchantment — Aura",
       "types": [
         "Enchantment"
@@ -5435,7 +5439,7 @@
           "text": "Only lands that actually have mana abilities will get tapped. This includes basic lands and lands with mana abilities printed on them, as well as lands which have been granted a mana ability by some effect."
         }
       ],
-      "text": "Counter target spell unless its controller pays {X}. If he or she doesn't, that player taps all lands with mana abilities he or she controls and empties his or her mana pool.",
+      "text": "Counter target spell unless its controller pays {X}. If that player doesn't, they tap all lands with mana abilities they control and lose all unspent mana.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -5491,7 +5495,7 @@
       "subtypes": [
         "Aura"
       ],
-      "text": "Enchant enchantment\nAt the beginning of the upkeep of enchanted enchantment's controller, that player loses 2 life unless he or she pays {2}.\nCycling {2} ({2}, Discard this card: Draw a card.)",
+      "text": "Enchant enchantment\nAt the beginning of the upkeep of enchanted enchantment's controller, that player loses 2 life unless they pay {2}.\nCycling {2} ({2}, Discard this card: Draw a card.)",
       "type": "Enchantment — Aura",
       "types": [
         "Enchantment"
@@ -5666,7 +5670,7 @@
         },
         {
           "date": "2017-03-14",
-          "text": "If the spell is an illegal target when Rewind tries to resolve, perhaps because it was countered by another spell or ability, Rewind will be countered and none of its effects will happen. You won't untap any lands."
+          "text": "If the spell is an illegal target when Rewind tries to resolve, perhaps because it was countered by another spell or ability, Rewind won't resolve and none of its effects will happen. You won't untap any lands."
         },
         {
           "date": "2017-03-14",
@@ -5855,7 +5859,7 @@
           "text": "The current player chooses first, then each other player chooses in turn order. A player does not have to reveal the chosen card, so long as it is clear *which* card was chosen. After all choices are made, the cards are put onto the battlefield simultaneously."
         }
       ],
-      "text": "Each player may put an artifact, creature, enchantment, or land card from his or her hand onto the battlefield.",
+      "text": "Each player may put an artifact, creature, enchantment, or land card from their hand onto the battlefield.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -6251,7 +6255,7 @@
           "text": "You choose which lands to untap as the triggered ability resolves. They aren't targeted, and they don't have to be lands that you control."
         }
       ],
-      "text": "Exile Time Spiral. Each player shuffles his or her graveyard and hand into his or her library, then draws seven cards. You untap up to six lands.",
+      "text": "Exile Time Spiral. Each player shuffles their graveyard and hand into their library, then draws seven cards. You untap up to six lands.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -6426,7 +6430,7 @@
         },
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         }
       ],
       "text": "When an opponent casts a spell, if Veil of Birds is an enchantment, Veil of Birds becomes a 1/1 Bird creature with flying.",
@@ -6495,7 +6499,7 @@
         },
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         }
       ],
       "text": "When an opponent casts a spell, if Veiled Apparition is an enchantment, Veiled Apparition becomes a 3/3 Illusion creature with flying and \"At the beginning of your upkeep, sacrifice Veiled Apparition unless you pay {1}{U}.\"",
@@ -6557,7 +6561,7 @@
         },
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         }
       ],
       "text": "When a player has no cards in hand, if Veiled Crocodile is an enchantment, Veiled Crocodile becomes a 4/4 Crocodile creature.",
@@ -6687,7 +6691,7 @@
         },
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         },
         {
           "date": "2008-10-01",
@@ -6747,7 +6751,7 @@
         "IMA"
       ],
       "rarity": "Uncommon",
-      "text": "Each player discards his or her hand, then draws cards equal to the greatest number of cards a player discarded this way.",
+      "text": "Each player discards their hand, then draws cards equal to the greatest number of cards a player discarded this way.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -7138,7 +7142,7 @@
       "subtypes": [
         "Thrull"
       ],
-      "text": "Sacrifice Blood Vassal: Add {B}{B} to your mana pool.",
+      "text": "Sacrifice Blood Vassal: Add {B}{B}.",
       "toughness": "2",
       "type": "Creature — Thrull",
       "types": [
@@ -7514,7 +7518,7 @@
           "text": "Corrupt counts any land you control with the subtype Swamp, not just ones named Swamp."
         }
       ],
-      "text": "Corrupt deals damage to target creature or player equal to the number of Swamps you control. You gain life equal to the damage dealt this way.",
+      "text": "Corrupt deals damage to any target equal to the number of Swamps you control. You gain life equal to the damage dealt this way.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -7717,7 +7721,7 @@
         "A25"
       ],
       "rarity": "Common",
-      "text": "Add {B}{B}{B} to your mana pool.",
+      "text": "Add {B}{B}{B}.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -8011,7 +8015,7 @@
         "IMA"
       ],
       "rarity": "Common",
-      "text": "Target opponent reveals his or her hand. You choose a noncreature, nonland card from it. That player discards that card.",
+      "text": "Target opponent reveals their hand. You choose a noncreature, nonland card from it. That player discards that card.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -8121,7 +8125,7 @@
         "PD3"
       ],
       "rarity": "Common",
-      "text": "Each player puts a creature card from his or her graveyard onto the battlefield.",
+      "text": "Each player puts a creature card from their graveyard onto the battlefield.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -8351,7 +8355,7 @@
           "text": "Players can get fewer than 3 cards if they want."
         }
       ],
-      "text": "Exile Ill-Gotten Gains. Each player discards his or her hand, then returns up to three cards from his or her graveyard to his or her hand.",
+      "text": "Exile Ill-Gotten Gains. Each player discards their hand, then returns up to three cards from their graveyard to their hand.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -8473,7 +8477,7 @@
         },
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         }
       ],
       "text": "Pay half your life, rounded up: Lurking Evil becomes a 4/4 Horror creature with flying.",
@@ -8806,7 +8810,7 @@
           "text": "The color is chosen on resolution."
         }
       ],
-      "text": "Choose a color. Target player reveals his or her hand and discards all cards of that color.",
+      "text": "Choose a color. Target player reveals their hand and discards all cards of that color.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -9057,7 +9061,7 @@
         "Cleric",
         "Minion"
       ],
-      "text": "When Priest of Gix enters the battlefield, add {B}{B}{B} to your mana pool.",
+      "text": "When Priest of Gix enters the battlefield, add {B}{B}{B}.",
       "toughness": "1",
       "type": "Creature — Human Cleric Minion",
       "types": [
@@ -9116,7 +9120,7 @@
           "text": "Only grants the ability to lands you control when this ability resolves."
         }
       ],
-      "text": "Until end of turn, lands you control gain \"Sacrifice this land: Add {B} to your mana pool.\"",
+      "text": "Until end of turn, lands you control gain \"Sacrifice this land: Add {B}.\"",
       "type": "Instant",
       "types": [
         "Instant"
@@ -9449,7 +9453,7 @@
       "subtypes": [
         "Imp"
       ],
-      "text": "Flying\nDiscard a card: Add {B} to your mana pool.",
+      "text": "Flying\nDiscard a card: Add {B}.",
       "toughness": "2",
       "type": "Creature — Imp",
       "types": [
@@ -9985,7 +9989,7 @@
         },
         {
           "date": "2016-06-08",
-          "text": "If one of the targeted creature cards is an illegal target (for instance, because it has left your graveyard before Victimize resolves), you'll still sacrifice a creature and put the other card onto the battlefield. If both are illegal targets, Victimize will be countered. You won't sacrifice a creature."
+          "text": "If one of the targeted creature cards is an illegal target (for instance, because it has left your graveyard before Victimize resolves), you'll still sacrifice a creature and put the other card onto the battlefield. If both are illegal targets, Victimize won't resolve. You won't sacrifice a creature."
         },
         {
           "date": "2016-06-08",
@@ -10163,7 +10167,7 @@
       "subtypes": [
         "Horror"
       ],
-      "text": "Swampwalk (This creature can't be blocked as long as defending player controls a Swamp.)\n{T}: Add {B}{B}{B}{B} to your mana pool. Target opponent gains control of Witch Engine. (Activate this ability only any time you could cast an instant.)",
+      "text": "Swampwalk (This creature can't be blocked as long as defending player controls a Swamp.)\n{T}: Add {B}{B}{B}{B}. Target opponent gains control of Witch Engine. (Activate this ability only any time you could cast an instant.)",
       "toughness": "4",
       "type": "Creature — Horror",
       "types": [
@@ -10347,7 +10351,7 @@
           "text": "This counts the lands on resolution."
         }
       ],
-      "text": "Acidic Soil deals damage to each player equal to the number of lands he or she controls.",
+      "text": "Acidic Soil deals damage to each player equal to the number of lands they control.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -10400,7 +10404,7 @@
           "text": "It looks back over the entire turn even if this card was not on the battlefield at the time."
         }
       ],
-      "text": "At the beginning of each player's end step, Antagonism deals 2 damage to that player unless one of his or her opponents was dealt damage this turn.",
+      "text": "At the beginning of each player's end step, Antagonism deals 2 damage to that player unless one of their opponents was dealt damage this turn.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -10468,10 +10472,10 @@
         },
         {
           "date": "2014-09-20",
-          "text": "If some of the creatures are illegal targets as Arc Lightning tries to resolve, the original division of damage still applies but no damage is dealt to the illegal targets. If all targets are illegal, Arc Lightning is countered."
+          "text": "If some of the creatures are illegal targets as Arc Lightning tries to resolve, the original division of damage still applies but no damage is dealt to the illegal targets. If all targets are illegal, Arc Lightning doesn't resolve."
         }
       ],
-      "text": "Arc Lightning deals 3 damage divided as you choose among one, two, or three target creatures and/or players.",
+      "text": "Arc Lightning deals 3 damage divided as you choose among one, two, or three targets.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -12298,7 +12302,7 @@
         "USG"
       ],
       "rarity": "Common",
-      "text": "As an additional cost to cast Raze, sacrifice a land.\nDestroy target land.",
+      "text": "As an additional cost to cast this spell, sacrifice a land.\nDestroy target land.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -12748,7 +12752,7 @@
       "subtypes": [
         "Dragon"
       ],
-      "text": "Flying (This creature can't be blocked except by creatures with flying or reach.)\n{1}{R}: Shivan Hellkite deals 1 damage to target creature or player.",
+      "text": "Flying (This creature can't be blocked except by creatures with flying or reach.)\n{1}{R}: Shivan Hellkite deals 1 damage to any target.",
       "toughness": "5",
       "type": "Creature — Dragon",
       "types": [
@@ -12857,7 +12861,7 @@
           "text": "If the creature leaves the battlefield before this resolves, it still damages the player."
         }
       ],
-      "text": "Shower of Sparks deals 1 damage to target creature and 1 damage to target player.",
+      "text": "Shower of Sparks deals 1 damage to target creature and 1 damage to target player or planeswalker.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -13147,7 +13151,7 @@
           "text": "Adding a counter is optional. If you forget to add one during your upkeep, you cannot back up and add one later."
         }
       ],
-      "text": "At the beginning of your upkeep, you may put a verse counter on Torch Song.\n{2}{R}, Sacrifice Torch Song: Torch Song deals X damage to target creature or player, where X is the number of verse counters on Torch Song.",
+      "text": "At the beginning of your upkeep, you may put a verse counter on Torch Song.\n{2}{R}, Sacrifice Torch Song: It deals X damage to any target, where X is the number of verse counters on Torch Song.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -13951,7 +13955,7 @@
       "rulings": [
         {
           "date": "2007-02-01",
-          "text": "When Argothian Wurm enters the battlefield, first the active player gets the option to sacrifice a land. If he or she declines, the next player in turn order gets the option. If a player elects to sacrifice a land, Argothian Wurm is put on top of its owner's library, but then all remaining players still get the option. If all players decline, then nothing happens and Argothian Wurm stays on the battlefield."
+          "text": "When Argothian Wurm enters the battlefield, first the active player gets the option to sacrifice a land. If they decline, the next player in turn order gets the option. If a player elects to sacrifice a land, Argothian Wurm is put on top of its owner's library, but then all remaining players still get the option. If all players decline, then nothing happens and Argothian Wurm stays on the battlefield."
         }
       ],
       "subtypes": [
@@ -14183,7 +14187,7 @@
           "text": "The ability is not a mana ability."
         }
       ],
-      "text": "At the beginning of each of your main phases, if you haven't added mana to your mana pool with this ability this turn, you may add X mana of any one color to your mana pool, where X is the number of Islands target opponent controls.",
+      "text": "At the beginning of each of your main phases, if you haven't added mana with this ability this turn, you may add X mana of any one color, where X is the number of Islands target opponent controls.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -14404,7 +14408,7 @@
         "Human",
         "Druid"
       ],
-      "text": "Creatures you control have \"{T}: Add {G} to your mana pool.\"",
+      "text": "Creatures you control have \"{T}: Add {G}.\"",
       "toughness": "2",
       "type": "Creature — Human Druid",
       "types": [
@@ -14852,7 +14856,7 @@
       "subtypes": [
         "Aura"
       ],
-      "text": "Enchant land\nWhenever enchanted land is tapped for mana, its controller adds one mana of any color to his or her mana pool (in addition to the mana the land produces).",
+      "text": "Enchant land\nWhenever enchanted land is tapped for mana, its controller adds an additional one mana of any color.",
       "type": "Enchantment — Aura",
       "types": [
         "Enchantment"
@@ -15292,7 +15296,7 @@
         },
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         }
       ],
       "text": "When an opponent casts an enchantment spell, if Hidden Ancients is an enchantment, Hidden Ancients becomes a 5/5 Treefolk creature.",
@@ -15353,7 +15357,7 @@
         },
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         }
       ],
       "text": "When an opponent casts an artifact spell, if Hidden Guerrillas is an enchantment, Hidden Guerrillas becomes a 5/3 Soldier creature with trample.",
@@ -15414,7 +15418,7 @@
         },
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         }
       ],
       "text": "When an opponent plays a nonbasic land, if Hidden Herd is an enchantment, Hidden Herd becomes a 3/3 Beast creature.",
@@ -15471,7 +15475,7 @@
         },
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         }
       ],
       "text": "When an opponent controls a creature with power 4 or greater, if Hidden Predators is an enchantment, Hidden Predators becomes a 4/4 Beast creature.",
@@ -15537,7 +15541,7 @@
         },
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         }
       ],
       "text": "When an opponent casts a creature spell with flying, if Hidden Spider is an enchantment, Hidden Spider becomes a 3/5 Spider creature with reach. (It can block creatures with flying.)",
@@ -15598,7 +15602,7 @@
         },
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         }
       ],
       "text": "Whenever an opponent plays a land, if Hidden Stag is an enchantment, Hidden Stag becomes a 3/2 Elk Beast creature.\nWhenever you play a land, if Hidden Stag is a creature, Hidden Stag becomes an enchantment.",
@@ -15877,7 +15881,7 @@
         "Elf",
         "Druid"
       ],
-      "text": "{T}: Add {G} to your mana pool for each Elf on the battlefield.",
+      "text": "{T}: Add {G} for each Elf on the battlefield.",
       "toughness": "1",
       "type": "Creature — Elf Druid",
       "types": [
@@ -16494,7 +16498,7 @@
           "text": "This is a triggered mana ability. It does not go on the stack."
         }
       ],
-      "text": "Whenever a Forest is tapped for mana, its controller adds {G} to his or her mana pool (in addition to the mana the land produces).",
+      "text": "Whenever a Forest is tapped for mana, its controller adds an additional {G}.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -16823,7 +16827,7 @@
       "subtypes": [
         "Construct"
       ],
-      "text": "When Cathodion dies, add {C}{C}{C} to your mana pool.",
+      "text": "When Cathodion dies, add {C}{C}{C}.",
       "toughness": "3",
       "type": "Artifact Creature — Construct",
       "types": [
@@ -16875,7 +16879,7 @@
       "rulings": [
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         },
         {
           "date": "2009-10-01",
@@ -17369,7 +17373,7 @@
         },
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         }
       ],
       "subtypes": [
@@ -17491,7 +17495,7 @@
           "text": "Adding a counter is optional. If you forget to add one during your upkeep, you cannot back up and add one later."
         }
       ],
-      "text": "At the beginning of your upkeep, you may put a petal counter on Lotus Blossom.\n{T}, Sacrifice Lotus Blossom: Add X mana of any one color to your mana pool, where X is the number of petal counters on Lotus Blossom.",
+      "text": "At the beginning of your upkeep, you may put a petal counter on Lotus Blossom.\n{T}, Sacrifice Lotus Blossom: Add X mana of any one color, where X is the number of petal counters on Lotus Blossom.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -17674,7 +17678,7 @@
           "text": "The number of cards in hand is counted on resolution of the ability."
         }
       ],
-      "text": "At the beginning of each player's upkeep, return to its owner's hand each creature that player controls with power greater than the number of cards in his or her hand.",
+      "text": "At the beginning of each player's upkeep, return to its owner's hand each creature that player controls with power greater than the number of cards in their hand.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -18029,7 +18033,7 @@
           "text": "Any of this mana that isn't spent during your upkeep step will be removed before your draw step begins. You cannot save it to be spent on the card you will draw this turn."
         }
       ],
-      "text": "At the beginning of your upkeep, you may add {C}{C} to your mana pool. You can't spend this mana to cast spells.",
+      "text": "At the beginning of your upkeep, you may add {C}{C}. You can't spend this mana to cast spells.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -18085,7 +18089,7 @@
           "text": "You choose to pay the life or not pay the life during the resolution of the ability."
         }
       ],
-      "text": "At the beginning of each player's upkeep, that player returns a permanent he or she controls to its owner's hand unless he or she pays 2 life.",
+      "text": "At the beginning of each player's upkeep, that player returns a permanent they control to its owner's hand unless they pay 2 life.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -18300,7 +18304,7 @@
           "text": "Since you are putting more than one card in the graveyard at one time, each affected player can choose the order the 2 cards go in."
         }
       ],
-      "text": "{3}: Each player puts the top two cards of his or her library into his or her graveyard.",
+      "text": "{3}: Each player puts the top two cards of their library into their graveyard.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -18394,7 +18398,7 @@
         "C17"
       ],
       "rarity": "Uncommon",
-      "text": "Worn Powerstone enters the battlefield tapped.\n{T}: Add {C}{C} to your mana pool.",
+      "text": "Worn Powerstone enters the battlefield tapped.\n{T}: Add {C}{C}.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -18441,7 +18445,7 @@
           "text": "Cycling is an activated ability. Effects that interact with activated abilities (such as Stifle or Rings of Brighthearth) will interact with cycling. Effects that interact with spells (such as Remove Soul or Faerie Tauntings) will not."
         }
       ],
-      "text": "{T}: Add {C} to your mana pool.\nCycling {2} ({2}, Discard this card: Draw a card.)",
+      "text": "{T}: Add {C}.\nCycling {2} ({2}, Discard this card: Draw a card.)",
       "type": "Land",
       "types": [
         "Land"
@@ -18495,7 +18499,7 @@
           "text": "Cycling is an activated ability. Effects that interact with activated abilities (such as Stifle or Rings of Brighthearth) will interact with cycling. Effects that interact with spells (such as Remove Soul or Faerie Tauntings) will not."
         }
       ],
-      "text": "Drifting Meadow enters the battlefield tapped.\n{T}: Add {W} to your mana pool.\nCycling {2} ({2}, Discard this card: Draw a card.)",
+      "text": "Drifting Meadow enters the battlefield tapped.\n{T}: Add {W}.\nCycling {2} ({2}, Discard this card: Draw a card.)",
       "type": "Land",
       "types": [
         "Land"
@@ -18544,7 +18548,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "{T}: Add {G} to your mana pool for each creature you control.",
+      "text": "{T}: Add {G} for each creature you control.",
       "type": "Legendary Land",
       "types": [
         "Land"
@@ -18591,7 +18595,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "{T}: Add {C} to your mana pool.\n{T}, Sacrifice a creature: Add {B}{B} to your mana pool.",
+      "text": "{T}: Add {C}.\n{T}, Sacrifice a creature: Add {B}{B}.",
       "type": "Legendary Land",
       "types": [
         "Land"
@@ -18649,7 +18653,7 @@
           "text": "Cycling is an activated ability. Effects that interact with activated abilities (such as Stifle or Rings of Brighthearth) will interact with cycling. Effects that interact with spells (such as Remove Soul or Faerie Tauntings) will not."
         }
       ],
-      "text": "Polluted Mire enters the battlefield tapped.\n{T}: Add {B} to your mana pool.\nCycling {2} ({2}, Discard this card: Draw a card.)",
+      "text": "Polluted Mire enters the battlefield tapped.\n{T}: Add {B}.\nCycling {2} ({2}, Discard this card: Draw a card.)",
       "type": "Land",
       "types": [
         "Land"
@@ -18701,7 +18705,7 @@
           "text": "Cycling is an activated ability. Effects that interact with activated abilities (such as Stifle or Rings of Brighthearth) will interact with cycling. Effects that interact with spells (such as Remove Soul or Faerie Tauntings) will not."
         }
       ],
-      "text": "Remote Isle enters the battlefield tapped.\n{T}: Add {U} to your mana pool.\nCycling {2} ({2}, Discard this card: Draw a card.)",
+      "text": "Remote Isle enters the battlefield tapped.\n{T}: Add {U}.\nCycling {2} ({2}, Discard this card: Draw a card.)",
       "type": "Land",
       "types": [
         "Land"
@@ -18749,7 +18753,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "{T}: Add {W} to your mana pool for each enchantment you control.",
+      "text": "{T}: Add {W} for each enchantment you control.",
       "type": "Legendary Land",
       "types": [
         "Land"
@@ -18803,7 +18807,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "{T}: Add {C} to your mana pool.\n{2}{R}, {T}: Shivan Gorge deals 1 damage to each opponent.",
+      "text": "{T}: Add {C}.\n{2}{R}, {T}: Shivan Gorge deals 1 damage to each opponent.",
       "type": "Legendary Land",
       "types": [
         "Land"
@@ -18861,7 +18865,7 @@
           "text": "Cycling is an activated ability. Effects that interact with activated abilities (such as Stifle or Rings of Brighthearth) will interact with cycling. Effects that interact with spells (such as Remove Soul or Faerie Tauntings) will not."
         }
       ],
-      "text": "Slippery Karst enters the battlefield tapped.\n{T}: Add {G} to your mana pool.\nCycling {2} ({2}, Discard this card: Draw a card.)",
+      "text": "Slippery Karst enters the battlefield tapped.\n{T}: Add {G}.\nCycling {2} ({2}, Discard this card: Draw a card.)",
       "type": "Land",
       "types": [
         "Land"
@@ -18915,7 +18919,7 @@
           "text": "Cycling is an activated ability. Effects that interact with activated abilities (such as Stifle or Rings of Brighthearth) will interact with cycling. Effects that interact with spells (such as Remove Soul or Faerie Tauntings) will not."
         }
       ],
-      "text": "Smoldering Crater enters the battlefield tapped.\n{T}: Add {R} to your mana pool.\nCycling {2} ({2}, Discard this card: Draw a card.)",
+      "text": "Smoldering Crater enters the battlefield tapped.\n{T}: Add {R}.\nCycling {2} ({2}, Discard this card: Draw a card.)",
       "type": "Land",
       "types": [
         "Land"
@@ -18962,7 +18966,7 @@
           "text": "Triggers at the end of every player's turn."
         }
       ],
-      "text": "At the beginning of the end step, if you control no creatures, sacrifice Thran Quarry.\n{T}: Add one mana of any color to your mana pool.",
+      "text": "At the beginning of the end step, if you control no creatures, sacrifice Thran Quarry.\n{T}: Add one mana of any color.",
       "type": "Land",
       "types": [
         "Land"
@@ -19011,7 +19015,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "{T}: Add {U} to your mana pool for each artifact you control.",
+      "text": "{T}: Add {U} for each artifact you control.",
       "type": "Legendary Land",
       "types": [
         "Land"
@@ -19205,9 +19209,12 @@
         "LRW",
         "SHM",
         "ALA",
+        "DDC",
         "M10",
         "HOP",
+        "ME3",
         "ZEN",
+        "H09",
         "DDE",
         "ROE",
         "ARC",
@@ -19245,13 +19252,20 @@
         "DDP",
         "BFZ",
         "C15",
+        "DDQ",
         "SOI",
         "KLD",
+        "C16",
+        "PCA",
         "AKH",
+        "CMA",
         "E01",
         "HOU",
+        "C17",
         "XLN",
-        "RIX"
+        "UST",
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -19458,9 +19472,12 @@
         "LRW",
         "SHM",
         "ALA",
+        "DDC",
         "M10",
         "HOP",
+        "ME3",
         "ZEN",
+        "H09",
         "DDE",
         "ROE",
         "ARC",
@@ -19498,13 +19515,20 @@
         "DDP",
         "BFZ",
         "C15",
+        "DDQ",
         "SOI",
         "KLD",
+        "C16",
+        "PCA",
         "AKH",
+        "CMA",
         "E01",
         "HOU",
+        "C17",
         "XLN",
-        "RIX"
+        "UST",
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -19711,9 +19735,12 @@
         "LRW",
         "SHM",
         "ALA",
+        "DDC",
         "M10",
         "HOP",
+        "ME3",
         "ZEN",
+        "H09",
         "DDE",
         "ROE",
         "ARC",
@@ -19751,13 +19778,20 @@
         "DDP",
         "BFZ",
         "C15",
+        "DDQ",
         "SOI",
         "KLD",
+        "C16",
+        "PCA",
         "AKH",
+        "CMA",
         "E01",
         "HOU",
+        "C17",
         "XLN",
-        "RIX"
+        "UST",
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -19964,9 +19998,12 @@
         "LRW",
         "SHM",
         "ALA",
+        "DDC",
         "M10",
         "HOP",
+        "ME3",
         "ZEN",
+        "H09",
         "DDE",
         "ROE",
         "ARC",
@@ -20004,13 +20041,20 @@
         "DDP",
         "BFZ",
         "C15",
+        "DDQ",
         "SOI",
         "KLD",
+        "C16",
+        "PCA",
         "AKH",
+        "CMA",
         "E01",
         "HOU",
+        "C17",
         "XLN",
-        "RIX"
+        "UST",
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -20219,7 +20263,9 @@
         "DD2",
         "M10",
         "HOP",
+        "ME3",
         "ZEN",
+        "H09",
         "DDE",
         "ROE",
         "DPA",
@@ -20258,11 +20304,20 @@
         "DDQ",
         "SOI",
         "KLD",
+        "C16",
+        "PCA",
+        "DDS",
         "AKH",
+        "CMA",
         "E01",
         "HOU",
+        "C17",
         "XLN",
-        "RIX"
+        "DDT",
+        "UST",
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -20471,7 +20526,9 @@
         "DD2",
         "M10",
         "HOP",
+        "ME3",
         "ZEN",
+        "H09",
         "DDE",
         "ROE",
         "DPA",
@@ -20510,11 +20567,20 @@
         "DDQ",
         "SOI",
         "KLD",
+        "C16",
+        "PCA",
+        "DDS",
         "AKH",
+        "CMA",
         "E01",
         "HOU",
+        "C17",
         "XLN",
-        "RIX"
+        "DDT",
+        "UST",
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -20723,7 +20789,9 @@
         "DD2",
         "M10",
         "HOP",
+        "ME3",
         "ZEN",
+        "H09",
         "DDE",
         "ROE",
         "DPA",
@@ -20762,11 +20830,20 @@
         "DDQ",
         "SOI",
         "KLD",
+        "C16",
+        "PCA",
+        "DDS",
         "AKH",
+        "CMA",
         "E01",
         "HOU",
+        "C17",
         "XLN",
-        "RIX"
+        "DDT",
+        "UST",
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -20975,7 +21052,9 @@
         "DD2",
         "M10",
         "HOP",
+        "ME3",
         "ZEN",
+        "H09",
         "DDE",
         "ROE",
         "DPA",
@@ -21014,11 +21093,20 @@
         "DDQ",
         "SOI",
         "KLD",
+        "C16",
+        "PCA",
+        "DDS",
         "AKH",
+        "CMA",
         "E01",
         "HOU",
+        "C17",
         "XLN",
-        "RIX"
+        "DDT",
+        "UST",
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -21226,10 +21314,13 @@
         "LRW",
         "SHM",
         "ALA",
+        "DDC",
         "M10",
         "HOP",
+        "ME3",
         "ZEN",
         "DDD",
+        "H09",
         "DDE",
         "ROE",
         "DPA",
@@ -21242,9 +21333,11 @@
         "M12",
         "DDH",
         "ISD",
+        "PD3",
         "AVR",
         "PC2",
         "M13",
+        "DDJ",
         "RTR",
         "DDK",
         "M14",
@@ -21265,13 +21358,21 @@
         "DDP",
         "BFZ",
         "C15",
+        "DDQ",
         "SOI",
+        "DDR",
         "KLD",
+        "C16",
+        "PCA",
         "AKH",
+        "CMA",
         "E01",
         "HOU",
+        "C17",
         "XLN",
-        "RIX"
+        "UST",
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -21479,10 +21580,13 @@
         "LRW",
         "SHM",
         "ALA",
+        "DDC",
         "M10",
         "HOP",
+        "ME3",
         "ZEN",
         "DDD",
+        "H09",
         "DDE",
         "ROE",
         "DPA",
@@ -21495,9 +21599,11 @@
         "M12",
         "DDH",
         "ISD",
+        "PD3",
         "AVR",
         "PC2",
         "M13",
+        "DDJ",
         "RTR",
         "DDK",
         "M14",
@@ -21518,13 +21624,21 @@
         "DDP",
         "BFZ",
         "C15",
+        "DDQ",
         "SOI",
+        "DDR",
         "KLD",
+        "C16",
+        "PCA",
         "AKH",
+        "CMA",
         "E01",
         "HOU",
+        "C17",
         "XLN",
-        "RIX"
+        "UST",
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -21732,10 +21846,13 @@
         "LRW",
         "SHM",
         "ALA",
+        "DDC",
         "M10",
         "HOP",
+        "ME3",
         "ZEN",
         "DDD",
+        "H09",
         "DDE",
         "ROE",
         "DPA",
@@ -21748,9 +21865,11 @@
         "M12",
         "DDH",
         "ISD",
+        "PD3",
         "AVR",
         "PC2",
         "M13",
+        "DDJ",
         "RTR",
         "DDK",
         "M14",
@@ -21771,13 +21890,21 @@
         "DDP",
         "BFZ",
         "C15",
+        "DDQ",
         "SOI",
+        "DDR",
         "KLD",
+        "C16",
+        "PCA",
         "AKH",
+        "CMA",
         "E01",
         "HOU",
+        "C17",
         "XLN",
-        "RIX"
+        "UST",
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -21985,10 +22112,13 @@
         "LRW",
         "SHM",
         "ALA",
+        "DDC",
         "M10",
         "HOP",
+        "ME3",
         "ZEN",
         "DDD",
+        "H09",
         "DDE",
         "ROE",
         "DPA",
@@ -22001,9 +22131,11 @@
         "M12",
         "DDH",
         "ISD",
+        "PD3",
         "AVR",
         "PC2",
         "M13",
+        "DDJ",
         "RTR",
         "DDK",
         "M14",
@@ -22024,13 +22156,21 @@
         "DDP",
         "BFZ",
         "C15",
+        "DDQ",
         "SOI",
+        "DDR",
         "KLD",
+        "C16",
+        "PCA",
         "AKH",
+        "CMA",
         "E01",
         "HOU",
+        "C17",
         "XLN",
-        "RIX"
+        "UST",
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -22243,13 +22383,16 @@
         "DD2",
         "M10",
         "HOP",
+        "ME3",
         "ZEN",
+        "H09",
         "DDE",
         "ROE",
         "DPA",
         "ARC",
         "M11",
         "SOM",
+        "PD2",
         "MBS",
         "DDG",
         "NPH",
@@ -22259,7 +22402,9 @@
         "ISD",
         "DDI",
         "AVR",
+        "PC2",
         "M13",
+        "DDJ",
         "RTR",
         "DDK",
         "M14",
@@ -22278,13 +22423,23 @@
         "ORI",
         "DDP",
         "BFZ",
+        "C15",
         "SOI",
         "KLD",
+        "C16",
+        "PCA",
+        "DDS",
         "AKH",
+        "CMA",
         "E01",
         "HOU",
+        "C17",
         "XLN",
-        "RIX"
+        "DDT",
+        "UST",
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -22497,13 +22652,16 @@
         "DD2",
         "M10",
         "HOP",
+        "ME3",
         "ZEN",
+        "H09",
         "DDE",
         "ROE",
         "DPA",
         "ARC",
         "M11",
         "SOM",
+        "PD2",
         "MBS",
         "DDG",
         "NPH",
@@ -22513,7 +22671,9 @@
         "ISD",
         "DDI",
         "AVR",
+        "PC2",
         "M13",
+        "DDJ",
         "RTR",
         "DDK",
         "M14",
@@ -22532,13 +22692,23 @@
         "ORI",
         "DDP",
         "BFZ",
+        "C15",
         "SOI",
         "KLD",
+        "C16",
+        "PCA",
+        "DDS",
         "AKH",
+        "CMA",
         "E01",
         "HOU",
+        "C17",
         "XLN",
-        "RIX"
+        "DDT",
+        "UST",
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -22751,13 +22921,16 @@
         "DD2",
         "M10",
         "HOP",
+        "ME3",
         "ZEN",
+        "H09",
         "DDE",
         "ROE",
         "DPA",
         "ARC",
         "M11",
         "SOM",
+        "PD2",
         "MBS",
         "DDG",
         "NPH",
@@ -22767,7 +22940,9 @@
         "ISD",
         "DDI",
         "AVR",
+        "PC2",
         "M13",
+        "DDJ",
         "RTR",
         "DDK",
         "M14",
@@ -22786,13 +22961,23 @@
         "ORI",
         "DDP",
         "BFZ",
+        "C15",
         "SOI",
         "KLD",
+        "C16",
+        "PCA",
+        "DDS",
         "AKH",
+        "CMA",
         "E01",
         "HOU",
+        "C17",
         "XLN",
-        "RIX"
+        "DDT",
+        "UST",
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -23005,13 +23190,16 @@
         "DD2",
         "M10",
         "HOP",
+        "ME3",
         "ZEN",
+        "H09",
         "DDE",
         "ROE",
         "DPA",
         "ARC",
         "M11",
         "SOM",
+        "PD2",
         "MBS",
         "DDG",
         "NPH",
@@ -23021,7 +23209,9 @@
         "ISD",
         "DDI",
         "AVR",
+        "PC2",
         "M13",
+        "DDJ",
         "RTR",
         "DDK",
         "M14",
@@ -23040,13 +23230,23 @@
         "ORI",
         "DDP",
         "BFZ",
+        "C15",
         "SOI",
         "KLD",
+        "C16",
+        "PCA",
+        "DDS",
         "AKH",
+        "CMA",
         "E01",
         "HOU",
+        "C17",
         "XLN",
-        "RIX"
+        "DDT",
+        "UST",
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -23257,8 +23457,10 @@
         "ALA",
         "M10",
         "HOP",
+        "ME3",
         "ZEN",
         "DDD",
+        "H09",
         "DDE",
         "ROE",
         "DPA",
@@ -23275,6 +23477,7 @@
         "AVR",
         "PC2",
         "M13",
+        "DDJ",
         "RTR",
         "M14",
         "DDL",
@@ -23293,13 +23496,23 @@
         "ORI",
         "DDP",
         "BFZ",
+        "C15",
         "SOI",
+        "DDR",
         "KLD",
+        "C16",
+        "PCA",
+        "DDS",
         "AKH",
+        "CMA",
         "E01",
         "HOU",
+        "C17",
         "XLN",
-        "RIX"
+        "UST",
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -23510,8 +23723,10 @@
         "ALA",
         "M10",
         "HOP",
+        "ME3",
         "ZEN",
         "DDD",
+        "H09",
         "DDE",
         "ROE",
         "DPA",
@@ -23528,6 +23743,7 @@
         "AVR",
         "PC2",
         "M13",
+        "DDJ",
         "RTR",
         "M14",
         "DDL",
@@ -23546,13 +23762,23 @@
         "ORI",
         "DDP",
         "BFZ",
+        "C15",
         "SOI",
+        "DDR",
         "KLD",
+        "C16",
+        "PCA",
+        "DDS",
         "AKH",
+        "CMA",
         "E01",
         "HOU",
+        "C17",
         "XLN",
-        "RIX"
+        "UST",
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -23763,8 +23989,10 @@
         "ALA",
         "M10",
         "HOP",
+        "ME3",
         "ZEN",
         "DDD",
+        "H09",
         "DDE",
         "ROE",
         "DPA",
@@ -23781,6 +24009,7 @@
         "AVR",
         "PC2",
         "M13",
+        "DDJ",
         "RTR",
         "M14",
         "DDL",
@@ -23799,13 +24028,23 @@
         "ORI",
         "DDP",
         "BFZ",
+        "C15",
         "SOI",
+        "DDR",
         "KLD",
+        "C16",
+        "PCA",
+        "DDS",
         "AKH",
+        "CMA",
         "E01",
         "HOU",
+        "C17",
         "XLN",
-        "RIX"
+        "UST",
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -24016,8 +24255,10 @@
         "ALA",
         "M10",
         "HOP",
+        "ME3",
         "ZEN",
         "DDD",
+        "H09",
         "DDE",
         "ROE",
         "DPA",
@@ -24034,6 +24275,7 @@
         "AVR",
         "PC2",
         "M13",
+        "DDJ",
         "RTR",
         "M14",
         "DDL",
@@ -24052,13 +24294,23 @@
         "ORI",
         "DDP",
         "BFZ",
+        "C15",
         "SOI",
+        "DDR",
         "KLD",
+        "C16",
+        "PCA",
+        "DDS",
         "AKH",
+        "CMA",
         "E01",
         "HOU",
+        "C17",
         "XLN",
-        "RIX"
+        "UST",
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [

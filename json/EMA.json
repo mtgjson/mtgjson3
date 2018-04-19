@@ -180,7 +180,7 @@
           "text": "Each type of object is counted during the corresponding part of the process. Cards in hand are counted after lands have been sacrificed, and creatures on the battlefield are counted after cards have been discarded. Thus, a land creature sacrificed to the first part of the spell would not be counted when determining how many creatures are on the battlefield for the last part."
         }
       ],
-      "text": "Each player chooses a number of lands he or she controls equal to the number of lands controlled by the player who controls the fewest, then sacrifices the rest. Players discard cards and sacrifice creatures the same way.",
+      "text": "Each player chooses a number of lands they control equal to the number of lands controlled by the player who controls the fewest, then sacrifices the rest. Players discard cards and sacrifice creatures the same way.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -2049,7 +2049,7 @@
       "rulings": [
         {
           "date": "2016-06-08",
-          "text": "If the targeted creature is an illegal target when Second Thoughts tries to resolve, the entire spell is countered. You won't draw a card."
+          "text": "If the targeted creature is an illegal target when Second Thoughts tries to resolve, the entire spell doesn't resolve. You won't draw a card."
         }
       ],
       "text": "Exile target attacking creature.\nDraw a card.",
@@ -2143,13 +2143,14 @@
         "EMA",
         "W17",
         "CMA",
-        "IMA"
+        "IMA",
+        "DOM"
       ],
       "rarity": "Uncommon",
       "subtypes": [
         "Angel"
       ],
-      "text": "Flying (This creature can't be blocked except by creatures with flying or reach.)\nVigilance (Attacking doesn't cause this creature to tap.)",
+      "text": "Flying, vigilance",
       "toughness": "4",
       "type": "Creature — Angel",
       "types": [
@@ -2444,11 +2445,11 @@
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2017-11-17",
-          "text": "The amount of life gained is equal to the power of the target creature as it last existed on the battlefield."
+          "date": "2018-03-16",
+          "text": "The amount of life gained is equal to the power of the targeted creature as it last existed on the battlefield."
         },
         {
-          "date": "2017-11-17",
+          "date": "2018-03-16",
           "text": "If the creature's power is negative, its controller doesn't lose or gain life."
         }
       ],
@@ -3054,7 +3055,7 @@
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2016-06-08",
+          "date": "2018-03-16",
           "text": "You draw three cards and put two cards back all while Brainstorm is resolving. Nothing can happen between the two, and no player may choose to take actions."
         }
       ],
@@ -3375,7 +3376,7 @@
           "text": "If another effect causes Daze to cost more, you must pay that additional cost even if you pay its alternative cost."
         }
       ],
-      "text": "You may return an Island you control to its owner's hand rather than pay Daze's mana cost.\nCounter target spell unless its controller pays {1}.",
+      "text": "You may return an Island you control to its owner's hand rather than pay this spell's mana cost.\nCounter target spell unless its controller pays {1}.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -3516,7 +3517,7 @@
           "text": "The exiled cards are exiled face up. You'll see them before you choose how many cards to draw."
         }
       ],
-      "text": "Each player shuffles his or her hand and graveyard into his or her library. You exile the top ten cards of your library. Then each player draws up to seven cards.",
+      "text": "Each player shuffles their hand and graveyard into their library. You exile the top ten cards of your library. Then each player draws up to seven cards.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -3580,7 +3581,7 @@
         "EMA"
       ],
       "rarity": "Common",
-      "text": "Target player puts the top three cards of his or her library into his or her graveyard.\nFlashback {1}{U} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "text": "Target player puts the top three cards of their library into their graveyard.\nFlashback {1}{U} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
       "type": "Instant",
       "types": [
         "Instant"
@@ -3729,7 +3730,7 @@
           "text": "If another effect causes Force of Will to cost more, you must pay that additional cost even if you pay its alternative cost."
         }
       ],
-      "text": "You may pay 1 life and exile a blue card from your hand rather than pay Force of Will's mana cost.\nCounter target spell.",
+      "text": "You may pay 1 life and exile a blue card from your hand rather than pay this spell's mana cost.\nCounter target spell.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -4282,7 +4283,7 @@
         },
         {
           "format": "Modern",
-          "legality": "Banned"
+          "legality": "Legal"
         },
         {
           "format": "Vintage",
@@ -4311,12 +4312,12 @@
       "rarity": "Mythic Rare",
       "rulings": [
         {
-          "date": "2016-06-08",
+          "date": "2018-03-16",
           "text": "You draw three cards and put two cards back all while Jace's second ability is resolving. Nothing can happen between the two, and no player may choose to take actions."
         },
         {
-          "date": "2016-06-08",
-          "text": "If the targeted player for Jace's last ability has no cards in hand, that player shuffles nothing into his or her library, and that player's library will remain empty. That player won't lose the game until he or she tries to draw from the empty library."
+          "date": "2018-03-16",
+          "text": "If the targeted player for Jace's last ability has no cards in hand, that player shuffles nothing into their library, and that player's library will remain empty. That player won't lose the game until they try to draw from the empty library."
         }
       ],
       "subtypes": [
@@ -4325,7 +4326,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "+2: Look at the top card of target player's library. You may put that card on the bottom of that player's library.\n0: Draw three cards, then put two cards from your hand on top of your library in any order.\n−1: Return target creature to its owner's hand.\n−12: Exile all cards from target player's library, then that player shuffles his or her hand into his or her library.",
+      "text": "+2: Look at the top card of target player's library. You may put that card on the bottom of that player's library.\n0: Draw three cards, then put two cards from your hand on top of your library in any order.\n−1: Return target creature to its owner's hand.\n−12: Exile all cards from target player's library, then that player shuffles their hand into their library.",
       "type": "Legendary Planeswalker — Jace",
       "types": [
         "Planeswalker"
@@ -4624,6 +4625,12 @@
         "A25"
       ],
       "rarity": "Uncommon",
+      "rulings": [
+        {
+          "date": "2018-03-16",
+          "text": "You can't do anything in between drawing a card and discarding a card, including casting or cycling the card you drew."
+        }
+      ],
       "subtypes": [
         "Merfolk",
         "Rogue"
@@ -4774,11 +4781,11 @@
         },
         {
           "date": "2008-08-01",
-          "text": "When a retrace card you cast from your graveyard resolves or is countered, it's put back into your graveyard. You may use the retrace ability to cast it again."
+          "text": "When a retrace card you cast from your graveyard resolves, fails to resolve, or is countered, it's put back into your graveyard. You may use the retrace ability to cast it again."
         },
         {
           "date": "2008-08-01",
-          "text": "If the active player casts a spell that has retrace, that player may cast that card again after it resolves, before another player can remove the card from the graveyard. The active player has priority after the spell resolves, so he or she can immediately cast a new spell. Since casting a card with retrace from the graveyard moves that card onto the stack, no one else would have the chance to affect it while it's still in the graveyard."
+          "text": "If the active player casts a spell that has retrace, that player may cast that card again after it resolves, before another player can remove the card from the graveyard. The active player has priority after the spell resolves, so they can immediately cast a new spell. Since casting a card with retrace from the graveyard moves that card onto the stack, no one else would have the chance to affect it while it's still in the graveyard."
         }
       ],
       "text": "Target player draws a card.\nRetrace (You may cast this card from your graveyard by discarding a land card in addition to paying its other costs.)",
@@ -5095,7 +5102,7 @@
         "Human",
         "Wizard"
       ],
-      "text": "{T}: Prodigal Sorcerer deals 1 damage to target creature or player.",
+      "text": "{T}: Prodigal Sorcerer deals 1 damage to any target.",
       "toughness": "1",
       "type": "Creature — Human Wizard",
       "types": [
@@ -5157,7 +5164,7 @@
         "EMA"
       ],
       "rarity": "Uncommon",
-      "text": "Search target player's library for up to three cards with flashback and put them into that player's graveyard. Then the player shuffles his or her library.",
+      "text": "Search target player's library for up to three cards with flashback and put them into that player's graveyard. Then the player shuffles their library.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -5362,7 +5369,7 @@
         "Bird",
         "Soldier"
       ],
-      "text": "Flying\nIslandcycling {2} ({2}, Discard this card: Search your library for an Island card, reveal it, and put it into your hand. Then shuffle your library.)",
+      "text": "Flying\nIslandcycling {2} ({2}, Discard this card: Search your library for an Island card, reveal it, put it into your hand, then shuffle your library.)",
       "toughness": "4",
       "type": "Creature — Bird Soldier",
       "types": [
@@ -5938,7 +5945,7 @@
       "rulings": [
         {
           "date": "2016-06-08",
-          "text": "If the targeted creature is an illegal target when Annihilate tries to resolve, the entire spell is countered. You won't draw a card."
+          "text": "If the targeted creature is an illegal target when Annihilate tries to resolve, the entire spell doesn't resolve. You won't draw a card."
         }
       ],
       "text": "Destroy target nonblack creature. It can't be regenerated.\nDraw a card.",
@@ -6012,7 +6019,7 @@
         "Elf",
         "Druid"
       ],
-      "text": "{T}, Pay 1 life: Add {G} to your mana pool.",
+      "text": "{T}, Pay 1 life: Add {G}.",
       "toughness": "2",
       "type": "Creature — Elf Druid",
       "types": [
@@ -6231,10 +6238,10 @@
       "rulings": [
         {
           "date": "2016-06-08",
-          "text": "You name the card as Cabal Therapy resolves, not as you cast it. Then the targeted player reveals his or her hand and discards if appropriate. No player may choose to take actions between you naming the card and the targeted player revealing and discarding."
+          "text": "You name the card as Cabal Therapy resolves, not as you cast it. Then the targeted player reveals their hand and discards if appropriate. No player may choose to take actions between you naming the card and the targeted player revealing and discarding."
         }
       ],
-      "text": "Choose a nonland card name. Target player reveals his or her hand and discards all cards with that name.\nFlashback—Sacrifice a creature. (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "text": "Choose a nonland card name. Target player reveals their hand and discards all cards with that name.\nFlashback—Sacrifice a creature. (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -6467,7 +6474,7 @@
         "IMA"
       ],
       "rarity": "Common",
-      "text": "Target opponent reveals his or her hand. You choose a noncreature, nonland card from it. That player discards that card.",
+      "text": "Target opponent reveals their hand. You choose a noncreature, nonland card from it. That player discards that card.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -7201,7 +7208,7 @@
           "text": "The copy will have the same target as the original spell unless you choose a new one. You don't have to change this target if you don't want to or can't choose a new legal target (perhaps because there are no other nonblack creatures on the battlefield)."
         }
       ],
-      "text": "Morbid — When you cast Malicious Affliction, if a creature died this turn, you may copy Malicious Affliction and may choose a new target for the copy.\nDestroy target nonblack creature.",
+      "text": "Morbid — When you cast this spell, if a creature died this turn, you may copy Malicious Affliction and may choose a new target for the copy.\nDestroy target nonblack creature.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -8081,7 +8088,7 @@
           "text": "All creatures on the battlefield when Toxic Deluge resolves are affected. Ones that enter the battlefield or become creatures later in the turn are not."
         }
       ],
-      "text": "As an additional cost to cast Toxic Deluge, pay X life.\nAll creatures get -X/-X until end of turn.",
+      "text": "As an additional cost to cast this spell, pay X life.\nAll creatures get -X/-X until end of turn.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -8247,7 +8254,7 @@
         "Zombie",
         "Mutant"
       ],
-      "text": "{B}: Regenerate Twisted Abomination.\nSwampcycling {2} ({2}, Discard this card: Search your library for a Swamp card, reveal it, and put it into your hand. Then shuffle your library.)",
+      "text": "{B}: Regenerate Twisted Abomination.\nSwampcycling {2} ({2}, Discard this card: Search your library for a Swamp card, reveal it, put it into your hand, then shuffle your library.)",
       "toughness": "3",
       "type": "Creature — Zombie Mutant",
       "types": [
@@ -8470,7 +8477,7 @@
         },
         {
           "date": "2016-06-08",
-          "text": "If one of the targeted creature cards is an illegal target (for instance, because it has left your graveyard before Victimize resolves), you'll still sacrifice a creature and put the other card onto the battlefield. If both are illegal targets, Victimize will be countered. You won't sacrifice a creature."
+          "text": "If one of the targeted creature cards is an illegal target (for instance, because it has left your graveyard before Victimize resolves), you'll still sacrifice a creature and put the other card onto the battlefield. If both are illegal targets, Victimize won't resolve. You won't sacrifice a creature."
         },
         {
           "date": "2016-06-08",
@@ -9045,7 +9052,7 @@
           "text": "Burning Vengeance's triggered ability will resolve before the spell you cast from your graveyard."
         }
       ],
-      "text": "Whenever you cast a spell from your graveyard, Burning Vengeance deals 2 damage to target creature or player.",
+      "text": "Whenever you cast a spell from your graveyard, Burning Vengeance deals 2 damage to any target.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -9112,7 +9119,7 @@
           "text": "The targeted creature can't be regenerated and is exiled if it would die no matter why it would die this turn. It doesn't have to be destroyed because of the damage Carbonize deals to it."
         }
       ],
-      "text": "Carbonize deals 3 damage to target creature or player. That creature can't be regenerated this turn. If the creature would die this turn, exile it instead.",
+      "text": "Carbonize deals 3 damage to any target. If it's a creature, it can't be regenerated this turn, and if it would die this turn, exile it instead.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -9199,10 +9206,10 @@
         },
         {
           "date": "2016-06-08",
-          "text": "If the targeted creature or player is an illegal target when Chain Lightning tries to resolve, the spell is countered. It can't be copied."
+          "text": "If the targeted permanent or player is an illegal target when Chain Lightning tries to resolve, the spell doesn't resolve. It can't be copied."
         }
       ],
-      "text": "Chain Lightning deals 3 damage to target creature or player. Then that player or that creature's controller may pay {R}{R}. If the player does, he or she may copy this spell and may choose a new target for that copy.",
+      "text": "Chain Lightning deals 3 damage to any target. Then that player or that permanent's controller may pay {R}{R}. If the player does, they may copy this spell and may choose a new target for that copy.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -9723,7 +9730,7 @@
         "DDS"
       ],
       "rarity": "Common",
-      "text": "Firebolt deals 2 damage to target creature or player.\nFlashback {4}{R} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "text": "Firebolt deals 2 damage to any target.\nFlashback {4}{R} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -9799,14 +9806,14 @@
         },
         {
           "date": "2008-08-01",
-          "text": "When a retrace card you cast from your graveyard resolves or is countered, it's put back into your graveyard. You may use the retrace ability to cast it again."
+          "text": "When a retrace card you cast from your graveyard resolves, fails to resolve, or is countered, it's put back into your graveyard. You may use the retrace ability to cast it again."
         },
         {
           "date": "2008-08-01",
-          "text": "If the active player casts a spell that has retrace, that player may cast that card again after it resolves, before another player can remove the card from the graveyard. The active player has priority after the spell resolves, so he or she can immediately cast a new spell. Since casting a card with retrace from the graveyard moves that card onto the stack, no one else would have the chance to affect it while it's still in the graveyard."
+          "text": "If the active player casts a spell that has retrace, that player may cast that card again after it resolves, before another player can remove the card from the graveyard. The active player has priority after the spell resolves, so they can immediately cast a new spell. Since casting a card with retrace from the graveyard moves that card onto the stack, no one else would have the chance to affect it while it's still in the graveyard."
         }
       ],
-      "text": "Flame Jab deals 1 damage to target creature or player.\nRetrace (You may cast this card from your graveyard by discarding a land card in addition to paying its other costs.)",
+      "text": "Flame Jab deals 1 damage to any target.\nRetrace (You may cast this card from your graveyard by discarding a land card in addition to paying its other costs.)",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -9943,7 +9950,7 @@
         "Human",
         "Nomad"
       ],
-      "text": "Echo {2}{R} (At the beginning of your upkeep, if this came under your control since the beginning of your last upkeep, sacrifice it unless you pay its echo cost.)\nWhen Ghitu Slinger enters the battlefield, it deals 2 damage to target creature or player.",
+      "text": "Echo {2}{R} (At the beginning of your upkeep, if this came under your control since the beginning of your last upkeep, sacrifice it unless you pay its echo cost.)\nWhen Ghitu Slinger enters the battlefield, it deals 2 damage to any target.",
       "toughness": "2",
       "type": "Creature — Human Nomad",
       "types": [
@@ -10015,7 +10022,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "At the beginning of your upkeep, Honden of Infinite Rage deals damage to target creature or player equal to the number of Shrines you control.",
+      "text": "At the beginning of your upkeep, Honden of Infinite Rage deals damage to any target equal to the number of Shrines you control.",
       "type": "Legendary Enchantment — Shrine",
       "types": [
         "Enchantment"
@@ -10082,7 +10089,7 @@
         "Human",
         "Barbarian"
       ],
-      "text": "Haste\nEcho {2}{R}{R} (At the beginning of your upkeep, if this came under your control since the beginning of your last upkeep, sacrifice it unless you pay its echo cost.)\nWhen Keldon Champion enters the battlefield, it deals 3 damage to target player.",
+      "text": "Haste\nEcho {2}{R}{R} (At the beginning of your upkeep, if this came under your control since the beginning of your last upkeep, sacrifice it unless you pay its echo cost.)\nWhen Keldon Champion enters the battlefield, it deals 3 damage to target player or planeswalker.",
       "toughness": "2",
       "type": "Creature — Human Barbarian",
       "types": [
@@ -10153,7 +10160,7 @@
         "Human",
         "Warrior"
       ],
-      "text": "Vanishing 2 (This creature enters the battlefield with two time counters on it. At the beginning of your upkeep, remove a time counter from it. When the last is removed, sacrifice it.)\nWhen Keldon Marauders enters the battlefield or leaves the battlefield, it deals 1 damage to target player.",
+      "text": "Vanishing 2 (This creature enters the battlefield with two time counters on it. At the beginning of your upkeep, remove a time counter from it. When the last is removed, sacrifice it.)\nWhen Keldon Marauders enters the battlefield or leaves the battlefield, it deals 1 damage to target player or planeswalker.",
       "toughness": "3",
       "type": "Creature — Human Warrior",
       "types": [
@@ -10309,7 +10316,7 @@
       "subtypes": [
         "Goblin"
       ],
-      "text": "Sacrifice Mogg Fanatic: Mogg Fanatic deals 1 damage to target creature or player.",
+      "text": "Sacrifice Mogg Fanatic: It deals 1 damage to any target.",
       "toughness": "1",
       "type": "Creature — Goblin",
       "types": [
@@ -10657,14 +10664,14 @@
         },
         {
           "date": "2016-06-08",
-          "text": "You divide the damage as you cast Pyrokinesis, not as it resolves. If any of the targets become illegal, damage is dealt to the other targets as originally assigned. If all targets are illegal, Pyrokinesis is countered."
+          "text": "You divide the damage as you cast Pyrokinesis, not as it resolves. If any of the targets become illegal, damage is dealt to the other targets as originally assigned. If all targets are illegal, Pyrokinesis doesn't resolve."
         },
         {
           "date": "2016-06-08",
           "text": "If another effect causes Pyrokinesis to cost more, you must pay that additional cost even if you pay its alternative cost."
         }
       ],
-      "text": "You may exile a red card from your hand rather than pay Pyrokinesis's mana cost.\nPyrokinesis deals 4 damage divided as you choose among any number of target creatures.",
+      "text": "You may exile a red card from your hand rather than pay this spell's mana cost.\nPyrokinesis deals 4 damage divided as you choose among any number of target creatures.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -10930,23 +10937,20 @@
         "EVG",
         "M10",
         "DD3_EVG",
-        "EMA"
+        "EMA",
+        "DOM"
       ],
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2016-06-08",
+          "date": "2018-04-27",
           "text": "You can sacrifice any Goblin you control to activate Siege-Gang Commander's activated ability, not just the ones its triggered ability puts onto the battlefield. You can even sacrifice Siege-Gang Commander itself."
-        },
-        {
-          "date": "2016-06-08",
-          "text": "If you sacrifice an attacking or blocking Goblin during the declare blockers step, it won't deal combat damage. If you wait until the combat damage step, but that Goblin has been dealt lethal damage, it'll be destroyed before you get a chance to sacrifice it."
         }
       ],
       "subtypes": [
         "Goblin"
       ],
-      "text": "When Siege-Gang Commander enters the battlefield, create three 1/1 red Goblin creature tokens.\n{1}{R}, Sacrifice a Goblin: Siege-Gang Commander deals 2 damage to target creature or player.",
+      "text": "When Siege-Gang Commander enters the battlefield, create three 1/1 red Goblin creature tokens.\n{1}{R}, Sacrifice a Goblin: Siege-Gang Commander deals 2 damage to any target.",
       "toughness": "2",
       "type": "Creature — Goblin",
       "types": [
@@ -11286,7 +11290,7 @@
       "rulings": [
         {
           "date": "2016-06-08",
-          "text": "If the target of Undying Rage when it's cast as a spell is an illegal target when Undying Rage tries to resolve, Undying Rage will be countered and put into its owner's graveyard. It won't return to its owner's hand."
+          "text": "If the target of Undying Rage when it's cast as a spell is an illegal target when Undying Rage tries to resolve, Undying Rage won't resolve and will be put into its owner's graveyard. It won't return to its owner's hand."
         }
       ],
       "subtypes": [
@@ -11596,7 +11600,7 @@
       "subtypes": [
         "Aura"
       ],
-      "text": "Enchant land\nWhen Abundant Growth enters the battlefield, draw a card.\nEnchanted land has \"{T}: Add one mana of any color to your mana pool.\"",
+      "text": "Enchant land\nWhen Abundant Growth enters the battlefield, draw a card.\nEnchanted land has \"{T}: Add one mana of any color.\"",
       "type": "Enchantment — Aura",
       "types": [
         "Enchantment"
@@ -12155,7 +12159,8 @@
       "power": "1",
       "printings": [
         "ONS",
-        "EMA"
+        "EMA",
+        "DDU"
       ],
       "rarity": "Common",
       "rulings": [
@@ -12469,20 +12474,21 @@
         "WTH",
         "TSB",
         "EMA",
-        "DDR"
+        "DDR",
+        "DOM"
       ],
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2016-06-08",
-          "text": "When you cast Gaea's Blessing, you can't choose it as one of its own targets. This is because you choose the targets when casting this spell, and spells are not put into your graveyard until after they resolve."
+          "date": "2018-04-27",
+          "text": "If Gaea's Blessing has no legal target cards in a graveyard, either because its targets became illegal or because you didn't choose any, the target player shuffles their library."
         },
         {
-          "date": "2016-06-08",
-          "text": "You must target a player as you cast Gaea's Blessing. You may target zero, one, two, or three cards in that player's graveyard."
+          "date": "2018-04-27",
+          "text": "If an effect puts multiple cards from your library into your graveyard at once, put all of those cards there before Gaea's Blessing shuffles your graveyard into your library."
         }
       ],
-      "text": "Target player shuffles up to three target cards from his or her graveyard into his or her library.\nDraw a card.\nWhen Gaea's Blessing is put into your graveyard from your library, shuffle your graveyard into your library.",
+      "text": "Target player shuffles up to three target cards from their graveyard into their library.\nDraw a card.\nWhen Gaea's Blessing is put into your graveyard from your library, shuffle your graveyard into your library.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -12551,7 +12557,7 @@
       "rulings": [
         {
           "date": "2011-06-01",
-          "text": "If this spell is countered, none of its effects occur. In particular, it will go to the graveyard rather than to its owner's library."
+          "text": "If this spell doesn't resolve, none of its effects occur. In particular, it will go to the graveyard rather than to its owner's library."
         },
         {
           "date": "2016-06-08",
@@ -12563,7 +12569,7 @@
         },
         {
           "date": "2016-06-08",
-          "text": "If you own Green Sun's Zenith, but an opponent casts it (due to Knowledge Pool's effect, for example), that opponent searches his or her library for an appropriate creature card, then shuffles that library. That opponent then shuffles Green Sun's Zenith into your library. You won't shuffle any library in this case."
+          "text": "If you own Green Sun's Zenith, but an opponent casts it (due to Knowledge Pool's effect, for example), that opponent searches their library for an appropriate creature card, then shuffles that library. That opponent then shuffles Green Sun's Zenith into your library. You won't shuffle any library in this case."
         }
       ],
       "text": "Search your library for a green creature card with converted mana cost X or less, put it onto the battlefield, then shuffle your library. Shuffle Green Sun's Zenith into its owner's library.",
@@ -12724,7 +12730,7 @@
         "Elf",
         "Druid"
       ],
-      "text": "Tap three untapped Elves you control: Add {G}{G}{G} to your mana pool.",
+      "text": "Tap three untapped Elves you control: Add {G}{G}{G}.",
       "toughness": "1",
       "type": "Creature — Elf Druid",
       "types": [
@@ -12947,7 +12953,7 @@
           "text": "If an effect says that an opponent can't gain life, you can't have that player gain life to pay Invigorate's alternative cost. If an effect instead replaces life gain, such as that of Sulfuric Vortex, you may choose to pay the cost even though the cost's action is replaced with nothing."
         }
       ],
-      "text": "If you control a Forest, rather than pay Invigorate's mana cost, you may have an opponent gain 3 life.\nTarget creature gets +4/+4 until end of turn.",
+      "text": "If you control a Forest, rather than pay this spell's mana cost, you may have an opponent gain 3 life.\nTarget creature gets +4/+4 until end of turn.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -13030,14 +13036,15 @@
         "C14",
         "DD3_EVG",
         "EMA",
-        "CMA"
+        "CMA",
+        "DOM"
       ],
       "rarity": "Common",
       "subtypes": [
         "Elf",
         "Druid"
       ],
-      "text": "{T}: Add {G} to your mana pool.",
+      "text": "{T}: Add {G}.",
       "toughness": "1",
       "type": "Creature — Elf Druid",
       "types": [
@@ -13193,7 +13200,7 @@
           "text": "Players can respond to this spell only after it's been cast and all its costs have been paid. No one can try to destroy the creature you sacrificed to stop you from casting this spell or to make you sacrifice a different one."
         }
       ],
-      "text": "As an additional cost to cast Natural Order, sacrifice a green creature.\nSearch your library for a green creature card and put it onto the battlefield. Then shuffle your library.",
+      "text": "As an additional cost to cast this spell, sacrifice a green creature.\nSearch your library for a green creature card and put it onto the battlefield. Then shuffle your library.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -13263,7 +13270,7 @@
       "rulings": [
         {
           "date": "2017-11-17",
-          "text": "If the target artifact or enchantment is an illegal target when Nature's Claim tries to resolve, the entire spell is countered. No one gains any life."
+          "text": "If the target artifact or enchantment is an illegal target when Nature's Claim tries to resolve, the entire spell doesn't resolve. No one gains any life."
         }
       ],
       "text": "Destroy target artifact or enchantment. Its controller gains 4 life.",
@@ -13407,8 +13414,8 @@
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2016-06-08",
-          "text": "If the target of Rancor when it's cast as a spell is an illegal target when Rancor tries to resolve, Rancor will be countered and put into its owner's graveyard. It won't return to its owner's hand."
+          "date": "2018-03-16",
+          "text": "If the creature this Aura would enchant is an illegal target by the time Rancor tries to resolve, the Aura spell doesn't resolve. It won't enter the battlefield, so it won't be put into a graveyard from the battlefield and its ability won't trigger."
         }
       ],
       "subtypes": [
@@ -13477,7 +13484,8 @@
       "power": "5",
       "printings": [
         "EVE",
-        "EMA"
+        "EMA",
+        "DDU"
       ],
       "rarity": "Rare",
       "rulings": [
@@ -14179,7 +14187,7 @@
         "Bear",
         "Druid"
       ],
-      "text": "{T}: Add {G} to your mana pool.\nThreshold — Werebear gets +3/+3 as long as seven or more cards are in your graveyard.",
+      "text": "{T}: Add {G}.\nThreshold — Werebear gets +3/+3 as long as seven or more cards are in your graveyard.",
       "toughness": "1",
       "type": "Creature — Human Bear Druid",
       "types": [
@@ -14592,7 +14600,7 @@
         },
         {
           "format": "Modern",
-          "legality": "Banned"
+          "legality": "Legal"
         },
         {
           "format": "Shards of Alara Block",
@@ -14891,7 +14899,7 @@
           "text": "Extract from Darkness doesn't target a creature card. You choose which card you're putting onto the battlefield as it resolves. You can choose any creature card in a graveyard at that time, including one just put into a graveyard by Extract from Darkness. If there are no creature cards in graveyards at that time, Extract from Darkness simply finishes resolving."
         }
       ],
-      "text": "Each player puts the top two cards of his or her library into his or her graveyard. Then put a creature card from a graveyard onto the battlefield under your control.",
+      "text": "Each player puts the top two cards of their library into their graveyard. Then you put a creature card from a graveyard onto the battlefield under your control.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -15156,7 +15164,7 @@
           "legality": "Legal"
         }
       ],
-      "manaCost": "{5}{U}{R}{G}",
+      "manaCost": "{5}{G}{U}{R}",
       "mciNumber": "204",
       "multiverseid": 413746,
       "name": "Maelstrom Wanderer",
@@ -15699,7 +15707,7 @@
           "text": "The target player is chosen as you announce Void, but the number isn't chosen until it's resolving. No player may choose to take actions between you choosing a number and the rest of Void's effects."
         }
       ],
-      "text": "Choose a number. Destroy all artifacts and creatures with converted mana cost equal to that number. Then target player reveals his or her hand and discards all nonland cards with converted mana cost equal to the number.",
+      "text": "Choose a number. Destroy all artifacts and creatures with converted mana cost equal to that number. Then target player reveals their hand and discards all nonland cards with converted mana cost equal to the number.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -15930,11 +15938,11 @@
         },
         {
           "date": "2008-08-01",
-          "text": "When a retrace card you cast from your graveyard resolves or is countered, it's put back into your graveyard. You may use the retrace ability to cast it again."
+          "text": "When a retrace card you cast from your graveyard resolves, fails to resolve, or is countered, it's put back into your graveyard. You may use the retrace ability to cast it again."
         },
         {
           "date": "2008-08-01",
-          "text": "If the active player casts a spell that has retrace, that player may cast that card again after it resolves, before another player can remove the card from the graveyard. The active player has priority after the spell resolves, so he or she can immediately cast a new spell. Since casting a card with retrace from the graveyard moves that card onto the stack, no one else would have the chance to affect it while it's still in the graveyard."
+          "text": "If the active player casts a spell that has retrace, that player may cast that card again after it resolves, before another player can remove the card from the graveyard. The active player has priority after the spell resolves, so they can immediately cast a new spell. Since casting a card with retrace from the graveyard moves that card onto the stack, no one else would have the chance to affect it while it's still in the graveyard."
         }
       ],
       "text": "Create a 5/5 blue and red Elemental creature token with flying.\nRetrace (You may cast this card from your graveyard by discarding a land card in addition to paying its other costs.)",
@@ -16011,14 +16019,14 @@
         },
         {
           "date": "2016-06-08",
-          "text": "If the target of any of Deathrite Shaman's three abilities is an illegal target when that ability tries to resolve, it will be countered and none of its effects will happen. You won't add mana to your mana pool, no opponent will lose life, or you won't gain life, as appropriate."
+          "text": "If the target of any of Deathrite Shaman's three abilities is an illegal target when that ability tries to resolve, it won't resolve and none of its effects will happen. You won't add mana to your mana pool, no opponent will lose life, or you won't gain life, as appropriate."
         }
       ],
       "subtypes": [
         "Elf",
         "Shaman"
       ],
-      "text": "{T}: Exile target land card from a graveyard. Add one mana of any color to your mana pool.\n{B}, {T}: Exile target instant or sorcery card from a graveyard. Each opponent loses 2 life.\n{G}, {T}: Exile target creature card from a graveyard. You gain 2 life.",
+      "text": "{T}: Exile target land card from a graveyard. Add one mana of any color.\n{B}, {T}: Exile target instant or sorcery card from a graveyard. Each opponent loses 2 life.\n{G}, {T}: Exile target creature card from a graveyard. You gain 2 life.",
       "toughness": "2",
       "type": "Creature — Elf Shaman",
       "types": [
@@ -16229,7 +16237,7 @@
         "EMA"
       ],
       "rarity": "Uncommon",
-      "text": "Sacrifice a creature: Add {C}{C} to your mana pool.",
+      "text": "Sacrifice a creature: Add {C}{C}.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -16299,7 +16307,7 @@
           "text": "If you imprinted a multicolored card, you choose one of that card's colors each time Chrome Mox's ability resolves."
         }
       ],
-      "text": "Imprint — When Chrome Mox enters the battlefield, you may exile a nonartifact, nonland card from your hand.\n{T}: Add one mana of any of the exiled card's colors to your mana pool.",
+      "text": "Imprint — When Chrome Mox enters the battlefield, you may exile a nonartifact, nonland card from your hand.\n{T}: Add one mana of any of the exiled card's colors.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -16513,7 +16521,7 @@
           "text": "If you reveal no land cards, Goblin Charbelcher deals damage equal to the number of cards revealed, and then you may order your library as you like."
         }
       ],
-      "text": "{3}, {T}: Reveal cards from the top of your library until you reveal a land card. Goblin Charbelcher deals damage equal to the number of nonland cards revealed this way to target creature or player. If the revealed land card was a Mountain, Goblin Charbelcher deals double that damage instead. Put the revealed cards on the bottom of your library in any order.",
+      "text": "{3}, {T}: Reveal cards from the top of your library until you reveal a land card. Goblin Charbelcher deals damage equal to the number of nonland cards revealed this way to any target. If the revealed land card was a Mountain, Goblin Charbelcher deals double that damage instead. Put the revealed cards on the bottom of your library in any order.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -16674,13 +16682,14 @@
         "DDF",
         "ME4",
         "M15",
-        "EMA"
+        "EMA",
+        "DOM"
       ],
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2016-06-08",
-          "text": "If, during your declare attackers step, Juggernaut is tapped, is affected by a spell or ability that says it can't attack, or you haven't controlled it continuously since the beginning of your turn, then it doesn't attack. If there's a cost associated with having Juggernaut attack, you aren't forced to pay that cost, so it doesn't have to attack in that case either."
+          "date": "2018-04-27",
+          "text": "If Juggernaut can't attack for any reason (such as being tapped or having come under that player's control that turn), then it doesn't attack. If there's a cost associated with having it attack, its controller isn't forced to pay that cost, so it doesn't have to attack in that case either."
         }
       ],
       "subtypes": [
@@ -16748,7 +16757,7 @@
           "text": "No player may choose to take actions between determining the result of the flip and damage being dealt if you lost the flip."
         }
       ],
-      "text": "At the beginning of your upkeep, flip a coin. If you lose the flip, Mana Crypt deals 3 damage to you.\n{T}: Add {C}{C} to your mana pool.",
+      "text": "At the beginning of your upkeep, flip a coin. If you lose the flip, Mana Crypt deals 3 damage to you.\n{T}: Add {C}{C}.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -16813,7 +16822,7 @@
       "subtypes": [
         "Construct"
       ],
-      "text": "{T}, Put the top card of your library into your graveyard: Add {C} to your mana pool.",
+      "text": "{T}, Put the top card of your library into your graveyard: Add {C}.",
       "toughness": "1",
       "type": "Artifact Creature — Construct",
       "types": [
@@ -17090,7 +17099,7 @@
         "E02"
       ],
       "rarity": "Uncommon",
-      "text": "{T}: Add {C} to your mana pool.\n{1}, {T}: Add one mana of any color to your mana pool.",
+      "text": "{T}: Add {C}.\n{1}, {T}: Add one mana of any color.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -17162,7 +17171,7 @@
           "text": "You can activate Relic of Progenitus's second ability even if no players have any cards in their graveyards. You'll still draw a card."
         }
       ],
-      "text": "{T}: Target player exiles a card from his or her graveyard.\n{1}, Exile Relic of Progenitus: Exile all cards from all graveyards. Draw a card.",
+      "text": "{T}: Target player exiles a card from their graveyard.\n{1}, Exile Relic of Progenitus: Exile all cards from all graveyards. Draw a card.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -17289,7 +17298,7 @@
       "subtypes": [
         "Gnome"
       ],
-      "text": "Echo {3} (At the beginning of your upkeep, if this came under your control since the beginning of your last upkeep, sacrifice it unless you pay its echo cost.)\nSacrifice Ticking Gnomes: Ticking Gnomes deals 1 damage to target creature or player.",
+      "text": "Echo {3} (At the beginning of your upkeep, if this came under your control since the beginning of your last upkeep, sacrifice it unless you pay its echo cost.)\nSacrifice Ticking Gnomes: It deals 1 damage to any target.",
       "toughness": "3",
       "type": "Artifact Creature — Gnome",
       "types": [
@@ -17419,7 +17428,7 @@
         "C17"
       ],
       "rarity": "Uncommon",
-      "text": "Worn Powerstone enters the battlefield tapped.\n{T}: Add {C}{C} to your mana pool.",
+      "text": "Worn Powerstone enters the battlefield tapped.\n{T}: Add {C}{C}.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -17482,7 +17491,7 @@
         "C17"
       ],
       "rarity": "Common",
-      "text": "Bloodfell Caves enters the battlefield tapped.\nWhen Bloodfell Caves enters the battlefield, you gain 1 life.\n{T}: Add {B} or {R} to your mana pool.",
+      "text": "Bloodfell Caves enters the battlefield tapped.\nWhen Bloodfell Caves enters the battlefield, you gain 1 life.\n{T}: Add {B} or {R}.",
       "type": "Land",
       "types": [
         "Land"
@@ -17545,7 +17554,7 @@
         "C17"
       ],
       "rarity": "Common",
-      "text": "Blossoming Sands enters the battlefield tapped.\nWhen Blossoming Sands enters the battlefield, you gain 1 life.\n{T}: Add {G} or {W} to your mana pool.",
+      "text": "Blossoming Sands enters the battlefield tapped.\nWhen Blossoming Sands enters the battlefield, you gain 1 life.\n{T}: Add {G} or {W}.",
       "type": "Land",
       "types": [
         "Land"
@@ -17610,7 +17619,7 @@
         "C17"
       ],
       "rarity": "Common",
-      "text": "Dismal Backwater enters the battlefield tapped.\nWhen Dismal Backwater enters the battlefield, you gain 1 life.\n{T}: Add {U} or {B} to your mana pool.",
+      "text": "Dismal Backwater enters the battlefield tapped.\nWhen Dismal Backwater enters the battlefield, you gain 1 life.\n{T}: Add {U} or {B}.",
       "type": "Land",
       "types": [
         "Land"
@@ -17675,7 +17684,7 @@
         "CMA"
       ],
       "rarity": "Common",
-      "text": "Jungle Hollow enters the battlefield tapped.\nWhen Jungle Hollow enters the battlefield, you gain 1 life.\n{T}: Add {B} or {G} to your mana pool.",
+      "text": "Jungle Hollow enters the battlefield tapped.\nWhen Jungle Hollow enters the battlefield, you gain 1 life.\n{T}: Add {B} or {G}.",
       "type": "Land",
       "types": [
         "Land"
@@ -17732,7 +17741,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "{T}: Add {W} to your mana pool.\n{T}: Return target legendary creature to its owner's hand.",
+      "text": "{T}: Add {W}.\n{T}: Return target legendary creature to its owner's hand.",
       "type": "Legendary Land",
       "types": [
         "Land"
@@ -17859,7 +17868,7 @@
         },
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         },
         {
           "date": "2009-10-01",
@@ -17874,7 +17883,7 @@
           "text": "If you turn Mishra's Factory into a creature but haven't controlled it continuously since your most recent turn began, you won't be able to activate its first or last ability."
         }
       ],
-      "text": "{T}: Add {C} to your mana pool.\n{1}: Mishra's Factory becomes a 2/2 Assembly-Worker artifact creature until end of turn. It's still a land.\n{T}: Target Assembly-Worker creature gets +1/+1 until end of turn.",
+      "text": "{T}: Add {C}.\n{1}: Mishra's Factory becomes a 2/2 Assembly-Worker artifact creature until end of turn. It's still a land.\n{T}: Target Assembly-Worker creature gets +1/+1 until end of turn.",
       "type": "Land",
       "types": [
         "Land"
@@ -17938,7 +17947,7 @@
         "DDS"
       ],
       "rarity": "Common",
-      "text": "Rugged Highlands enters the battlefield tapped.\nWhen Rugged Highlands enters the battlefield, you gain 1 life.\n{T}: Add {R} or {G} to your mana pool.",
+      "text": "Rugged Highlands enters the battlefield tapped.\nWhen Rugged Highlands enters the battlefield, you gain 1 life.\n{T}: Add {R} or {G}.",
       "type": "Land",
       "types": [
         "Land"
@@ -18002,7 +18011,7 @@
         "C17"
       ],
       "rarity": "Common",
-      "text": "Scoured Barrens enters the battlefield tapped.\nWhen Scoured Barrens enters the battlefield, you gain 1 life.\n{T}: Add {W} or {B} to your mana pool.",
+      "text": "Scoured Barrens enters the battlefield tapped.\nWhen Scoured Barrens enters the battlefield, you gain 1 life.\n{T}: Add {W} or {B}.",
       "type": "Land",
       "types": [
         "Land"
@@ -18065,10 +18074,11 @@
         "EMA",
         "C16",
         "DDS",
-        "C17"
+        "C17",
+        "DDU"
       ],
       "rarity": "Common",
-      "text": "Swiftwater Cliffs enters the battlefield tapped.\nWhen Swiftwater Cliffs enters the battlefield, you gain 1 life.\n{T}: Add {U} or {R} to your mana pool.",
+      "text": "Swiftwater Cliffs enters the battlefield tapped.\nWhen Swiftwater Cliffs enters the battlefield, you gain 1 life.\n{T}: Add {U} or {R}.",
       "type": "Land",
       "types": [
         "Land"
@@ -18132,7 +18142,7 @@
         "C16"
       ],
       "rarity": "Common",
-      "text": "Thornwood Falls enters the battlefield tapped.\nWhen Thornwood Falls enters the battlefield, you gain 1 life.\n{T}: Add {G} or {U} to your mana pool.",
+      "text": "Thornwood Falls enters the battlefield tapped.\nWhen Thornwood Falls enters the battlefield, you gain 1 life.\n{T}: Add {G} or {U}.",
       "type": "Land",
       "types": [
         "Land"
@@ -18195,7 +18205,7 @@
         "EMA"
       ],
       "rarity": "Common",
-      "text": "Tranquil Cove enters the battlefield tapped.\nWhen Tranquil Cove enters the battlefield, you gain 1 life.\n{T}: Add {W} or {U} to your mana pool.",
+      "text": "Tranquil Cove enters the battlefield tapped.\nWhen Tranquil Cove enters the battlefield, you gain 1 life.\n{T}: Add {W} or {U}.",
       "type": "Land",
       "types": [
         "Land"
@@ -18253,7 +18263,7 @@
         "EMA"
       ],
       "rarity": "Rare",
-      "text": "{T}: Add {C} to your mana pool.\n{T}, Sacrifice Wasteland: Destroy target nonbasic land.",
+      "text": "{T}: Add {C}.\n{T}, Sacrifice Wasteland: Destroy target nonbasic land.",
       "type": "Land",
       "types": [
         "Land"
@@ -18317,7 +18327,7 @@
         "C17"
       ],
       "rarity": "Common",
-      "text": "Wind-Scarred Crag enters the battlefield tapped.\nWhen Wind-Scarred Crag enters the battlefield, you gain 1 life.\n{T}: Add {R} or {W} to your mana pool.",
+      "text": "Wind-Scarred Crag enters the battlefield tapped.\nWhen Wind-Scarred Crag enters the battlefield, you gain 1 life.\n{T}: Add {R} or {W}.",
       "type": "Land",
       "types": [
         "Land"

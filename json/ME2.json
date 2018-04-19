@@ -117,7 +117,7 @@
       "rulings": [
         {
           "date": "2008-10-01",
-          "text": "If Angel of Fury is removed from the graveyard after the ability triggers but before it resolves, it will remain in its zone when its owner shuffles his or her library. Similarly, if a replacement effect has it move to a different zone instead of being put into the graveyard, the ability won't trigger at all."
+          "text": "If Angel of Fury is removed from the graveyard after the ability triggers but before it resolves, it will remain in its zone when its owner shuffles their library. Similarly, if a replacement effect has it move to a different zone instead of being put into the graveyard, the ability won't trigger at all."
         },
         {
           "date": "2008-10-01",
@@ -507,7 +507,7 @@
         "Cleric",
         "Soldier"
       ],
-      "text": "{1}{W}: Prevent the next 1 damage that would be dealt to target creature or player this turn.",
+      "text": "{1}{W}: Prevent the next 1 damage that would be dealt to any target this turn.",
       "toughness": "2",
       "type": "Creature — Human Cleric Soldier",
       "types": [
@@ -932,7 +932,7 @@
         "Human",
         "Soldier"
       ],
-      "text": "Icatian Javelineers enters the battlefield with a javelin counter on it.\n{T}, Remove a javelin counter from Icatian Javelineers: Icatian Javelineers deals 1 damage to target creature or player.",
+      "text": "Icatian Javelineers enters the battlefield with a javelin counter on it.\n{T}, Remove a javelin counter from Icatian Javelineers: Icatian Javelineers deals 1 damage to any target.",
       "toughness": "1",
       "type": "Creature — Human Soldier",
       "types": [
@@ -1164,7 +1164,7 @@
       "rulings": [
         {
           "date": "2008-10-01",
-          "text": "The player who controlled Ivory Gargoyle when it was put into a graveyard will skip his or her next draw step even if Ivory Gargoyle is returned to the battlefield under a different player's control (because it's owned by someone else) or isn't returned to the battlefield at all (because it left the graveyard before the end of the turn, for example)."
+          "text": "The player who controlled Ivory Gargoyle when it was put into a graveyard will skip their next draw step even if Ivory Gargoyle is returned to the battlefield under a different player's control (because it's owned by someone else) or isn't returned to the battlefield at all (because it left the graveyard before the end of the turn, for example)."
         },
         {
           "date": "2008-10-01",
@@ -2013,7 +2013,7 @@
         "ME2"
       ],
       "rarity": "Rare",
-      "text": "You may exile a white card from your hand rather than pay Scars of the Veteran's mana cost.\nPrevent the next 7 damage that would be dealt to target creature or player this turn. At the beginning of the next end step, put a +0/+1 counter on that creature for each 1 damage prevented this way.",
+      "text": "You may exile a white card from your hand rather than pay this spell's mana cost.\nPrevent the next 7 damage that would be dealt to any target this turn. If it's a creature, put a +0/+1 counter on it for each 1 damage prevented this way at the beginning of the next end step.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -2246,11 +2246,11 @@
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2017-11-17",
-          "text": "The amount of life gained is equal to the power of the target creature as it last existed on the battlefield."
+          "date": "2018-03-16",
+          "text": "The amount of life gained is equal to the power of the targeted creature as it last existed on the battlefield."
         },
         {
-          "date": "2017-11-17",
+          "date": "2018-03-16",
           "text": "If the creature's power is negative, its controller doesn't lose or gain life."
         }
       ],
@@ -2412,7 +2412,7 @@
       "rulings": [
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         },
         {
           "date": "2008-10-01",
@@ -2545,7 +2545,7 @@
       "rarity": "Common",
       "rulings": [
         {
-          "date": "2016-06-08",
+          "date": "2018-03-16",
           "text": "You draw three cards and put two cards back all while Brainstorm is resolving. Nothing can happen between the two, and no player may choose to take actions."
         }
       ],
@@ -2787,10 +2787,6 @@
           "text": "This is a replacement effect."
         },
         {
-          "date": "2008-04-01",
-          "text": "A \"creature card\" is any card with the type creature, even if it has other types such as artifact, enchantment, or land. Older cards of type summon are also creature cards."
-        },
-        {
           "date": "2008-10-01",
           "text": "If a creature returned to the battlefield with Dreams of the Dead would leave the battlefield for any reason, it's exiled instead — unless the spell or ability that's causing the creature to leave the battlefield is actually trying to exile it! In that case, it succeeds at exiling it. If it later returns the creature card to the battlefield (as Oblivion Ring or Flickerwisp might, for example), the creature card will return to the battlefield as a new object with no relation to its previous existence."
         },
@@ -2799,7 +2795,7 @@
           "text": "If a permanent has multiple instances of cumulative upkeep, each triggers separately. However, the age counters are not connected to any particular ability; each cumulative upkeep ability will count the total number of age counters on the permanent at the time that ability resolves."
         }
       ],
-      "text": "{1}{U}: Return target white or black creature card from your graveyard to the battlefield. That creature gains \"Cumulative upkeep {2}.\" If the creature would leave the battlefield, exile it instead of putting it anywhere else. (At the beginning of its controller's upkeep, that player puts an age counter on it, then sacrifices it unless he or she pays its upkeep cost for each age counter on it.)",
+      "text": "{1}{U}: Return target white or black creature card from your graveyard to the battlefield. That creature gains \"Cumulative upkeep {2}.\" If the creature would leave the battlefield, exile it instead of putting it anywhere else. (At the beginning of its controller's upkeep, that player puts an age counter on it, then sacrifices it unless they pay its upkeep cost for each age counter on it.)",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -2957,7 +2953,7 @@
         "ME2"
       ],
       "rarity": "Uncommon",
-      "text": "Iceberg enters the battlefield with X ice counters on it.\n{3}: Put an ice counter on Iceberg.\nRemove an ice counter from Iceberg: Add {C} to your mana pool.",
+      "text": "Iceberg enters the battlefield with X ice counters on it.\n{3}: Put an ice counter on Iceberg.\nRemove an ice counter from Iceberg: Add {C}.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -3593,7 +3589,7 @@
           "text": "This does not cause a player to lose if they have less than 3 cards in their library. It allows you to look at and reorder or shuffle whatever remaining cards there might be."
         }
       ],
-      "text": "Look at the top three cards of target player's library, then put them back in any order. You may have that player shuffle his or her library.\nDraw a card at the beginning of the next turn's upkeep.",
+      "text": "Look at the top three cards of target player's library, then put them back in any order. You may have that player shuffle their library.\nDraw a card at the beginning of the next turn's upkeep.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -3813,7 +3809,7 @@
       "rulings": [
         {
           "date": "2008-10-01",
-          "text": "When the ability resolves, if one of the lands has become an illegal target (because it's no longer on the battlefield, for example), you return the other one to your hand. If both of the lands have become illegal targets, the ability is countered. This has no effect on Sea Drake."
+          "text": "When the ability resolves, if one of the lands has become an illegal target (because it's no longer on the battlefield, for example), you return the other one to your hand. If both of the lands have become illegal targets, the ability doesn't resolve. This has no effect on Sea Drake."
         }
       ],
       "subtypes": [
@@ -4176,7 +4172,7 @@
           "text": "If your library has no cards in it, you can't activate the last ability."
         }
       ],
-      "text": "Cumulative upkeep—Exile the top card of your library. (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)\nWhen a player doesn't pay Thought Lash's cumulative upkeep, that player exiles all cards from his or her library.\nExile the top card of your library: Prevent the next 1 damage that would be dealt to you this turn.",
+      "text": "Cumulative upkeep—Exile the top card of your library. (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)\nWhen a player doesn't pay Thought Lash's cumulative upkeep, that player exiles all cards from their library.\nExile the top card of your library: Prevent the next 1 damage that would be dealt to you this turn.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -4502,7 +4498,7 @@
         "Human",
         "Wizard"
       ],
-      "text": "{T}: Zuran Spellcaster deals 1 damage to target creature or player.",
+      "text": "{T}: Zuran Spellcaster deals 1 damage to any target.",
       "toughness": "1",
       "type": "Creature — Human Wizard",
       "types": [
@@ -4930,16 +4926,12 @@
         {
           "date": "2008-04-01",
           "text": "If the creature card put onto the battlefield has protection from black (or anything that prevents this from legally being attached), this won't be able to attach to it. Then this will go to the graveyard as a state-based action, causing the creature to be sacrificed."
-        },
-        {
-          "date": "2008-04-01",
-          "text": "A \"creature card\" is any card with the type creature, even if it has other types such as artifact, enchantment, or land. Older cards of type summon are also creature cards."
         }
       ],
       "subtypes": [
         "Aura"
       ],
-      "text": "Enchant creature card in a graveyard\nWhen Dance of the Dead enters the battlefield, if it's on the battlefield, it loses \"enchant creature card in a graveyard\" and gains \"enchant creature put onto the battlefield with Dance of the Dead.\" Put enchanted creature card onto the battlefield tapped under your control and attach Dance of the Dead to it. When Dance of the Dead leaves the battlefield, that creature's controller sacrifices it.\nEnchanted creature gets +1/+1 and doesn't untap during its controller's untap step.\nAt the beginning of the upkeep of enchanted creature's controller, that player may pay {1}{B}. If he or she does, untap that creature.",
+      "text": "Enchant creature card in a graveyard\nWhen Dance of the Dead enters the battlefield, if it's on the battlefield, it loses \"enchant creature card in a graveyard\" and gains \"enchant creature put onto the battlefield with Dance of the Dead.\" Put enchanted creature card onto the battlefield tapped under your control and attach Dance of the Dead to it. When Dance of the Dead leaves the battlefield, that creature's controller sacrifices it.\nEnchanted creature gets +1/+1 and doesn't untap during its controller's untap step.\nAt the beginning of the upkeep of enchanted creature's controller, that player may pay {1}{B}. If the player does, untap that creature.",
       "type": "Enchantment — Aura",
       "types": [
         "Enchantment"
@@ -5897,7 +5889,7 @@
       "rulings": [
         {
           "date": "2005-08-01",
-          "text": "You do not get a card if the target becomes illegal and Krovikan Fetish is countered upon resolution. This is because it never successfully enters the battlefield."
+          "text": "You do not get a card if the target becomes illegal and Krovikan Fetish doesn't resolve. This is because it never successfully enters the battlefield."
         },
         {
           "date": "2005-08-01",
@@ -5961,7 +5953,7 @@
         "Horror",
         "Spirit"
       ],
-      "text": "At the beginning of the end step, if Krovikan Horror is in your graveyard with a creature card directly above it, you may return Krovikan Horror to your hand.\n{1}, Sacrifice a creature: Krovikan Horror deals 1 damage to target creature or player.",
+      "text": "At the beginning of the end step, if Krovikan Horror is in your graveyard with a creature card directly above it, you may return Krovikan Horror to your hand.\n{1}, Sacrifice a creature: Krovikan Horror deals 1 damage to any target.",
       "toughness": "2",
       "type": "Creature — Horror Spirit",
       "types": [
@@ -6022,7 +6014,7 @@
         },
         {
           "date": "2008-08-01",
-          "text": "Whoever controls Krovikan Vampire when the ability triggers will return the applicable cards to the battlefield under his or her control. It doesn't matter who controlled it at the time the damage was dealt."
+          "text": "Whoever controls Krovikan Vampire when the ability triggers will return the applicable cards to the battlefield under their control. It doesn't matter who controlled it at the time the damage was dealt."
         },
         {
           "date": "2008-08-01",
@@ -6212,10 +6204,10 @@
         },
         {
           "date": "2008-10-01",
-          "text": "You don't need to show the opponent what order you put the cards on top of his or her library."
+          "text": "You don't need to show the opponent what order you put the cards on top of their library."
         }
       ],
-      "text": "Put up to three target cards from an opponent's graveyard on top of his or her library in any order.",
+      "text": "Put up to three target cards from an opponent's graveyard on top of their library in any order.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -6474,7 +6466,7 @@
           "text": "Players can only respond once this spell has been cast and all its costs have been paid. No one can try to destroy the creature you sacrificed to prevent you from casting this spell."
         }
       ],
-      "text": "As an additional cost to cast Ritual of the Machine, sacrifice a creature.\nGain control of target nonartifact, nonblack creature.",
+      "text": "As an additional cost to cast this spell, sacrifice a creature.\nGain control of target nonartifact, nonblack creature.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -6523,13 +6515,7 @@
         "ME2"
       ],
       "rarity": "Common",
-      "rulings": [
-        {
-          "date": "2008-04-01",
-          "text": "A \"creature card\" is any card with the type creature, even if it has other types such as artifact, enchantment, or land. Older cards of type summon are also creature cards."
-        }
-      ],
-      "text": "Add {B} to your mana pool for each creature card in your graveyard.",
+      "text": "Add {B} for each creature card in your graveyard.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -6581,13 +6567,9 @@
         {
           "date": "2004-10-04",
           "text": "You exile exactly one creature. You can't exile more than one in an attempt to get a larger effect."
-        },
-        {
-          "date": "2008-04-01",
-          "text": "A \"creature card\" is any card with the type creature, even if it has other types such as artifact, enchantment, or land. Older cards of type summon are also creature cards."
         }
       ],
-      "text": "As an additional cost to cast Soul Exchange, exile a creature you control.\nReturn target creature card from your graveyard to the battlefield. Put a +2/+2 counter on that creature if the exiled creature was a Thrull.",
+      "text": "As an additional cost to cast this spell, exile a creature you control.\nReturn target creature card from your graveyard to the battlefield. Put a +2/+2 counter on that creature if the exiled creature was a Thrull.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -7239,7 +7221,7 @@
           "text": "Say you're the owner of both a permanent and an Aura that's attached to it. If both the permanent and the Aura are destroyed at the same time (by Akroma's Vengeance, for example), you decide the order they're put into your graveyard. If just the enchanted permanent is destroyed, it's put into your graveyard first. Then, after state-based actions are checked, the Aura (which is no longer attached to anything) is put into your graveyard on top of it."
         }
       ],
-      "text": "Death Spark deals 1 damage to target creature or player.\nAt the beginning of your upkeep, if Death Spark is in your graveyard with a creature card directly above it, you may pay {1}. If you do, return Death Spark to your hand.",
+      "text": "Death Spark deals 1 damage to any target.\nAt the beginning of your upkeep, if Death Spark is in your graveyard with a creature card directly above it, you may pay {1}. If you do, return Death Spark to your hand.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -7648,7 +7630,7 @@
         "Human",
         "Advisor"
       ],
-      "text": "When Imperial Recruiter enters the battlefield, search your library for a creature card with power 2 or less, reveal it, and put it into your hand. Then shuffle your library.",
+      "text": "When Imperial Recruiter enters the battlefield, search your library for a creature card with power 2 or less, reveal it, put it into your hand, then shuffle your library.",
       "toughness": "1",
       "type": "Creature — Human Advisor",
       "types": [
@@ -7723,7 +7705,7 @@
           "text": "Regeneration abilities that would affect that creature can still be activated; they just won't do anything. The creature can't be regenerated for any reason, even if an effect other than Incinerate would deal lethal damage to it or otherwise destroy it."
         }
       ],
-      "text": "Incinerate deals 3 damage to target creature or player. A creature dealt damage this way can't be regenerated this turn.",
+      "text": "Incinerate deals 3 damage to any target. A creature dealt damage this way can't be regenerated this turn.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -7895,7 +7877,7 @@
           "text": "A creature dealt damage by Lava Burst may be regenerated."
         }
       ],
-      "text": "Lava Burst deals X damage to target creature or player. If Lava Burst would deal damage to a creature, that damage can't be prevented or dealt instead to another creature or player.",
+      "text": "Lava Burst deals X damage to any target. If Lava Burst would deal damage to a creature, that damage can't be prevented or dealt instead to another permanent or player.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -7958,7 +7940,7 @@
           "text": "The number of targets must be at least 1 and at most X + 1. You divide the damage as you cast Meteor Shower, not as it resolves. Each target must be assigned at least 1 damage."
         }
       ],
-      "text": "Meteor Shower deals X plus 1 damage divided as you choose among any number of target creatures and/or players.",
+      "text": "Meteor Shower deals X plus 1 damage divided as you choose among any number of targets.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -8010,10 +7992,10 @@
       "rulings": [
         {
           "date": "2008-10-01",
-          "text": "First the player chooses all the tapped creatures he or she would like to untap this way. Then the entire payment is made at once, then all of those creatures untap at the same time. If the entire payment can't be paid (because the player chose too many creatures, for example), none of it is paid and none of those creatures untap."
+          "text": "First the player chooses all the tapped creatures they would like to untap this way. Then the entire payment is made at once, then all of those creatures untap at the same time. If the entire payment can't be paid (because the player chose too many creatures, for example), none of it is paid and none of those creatures untap."
         }
       ],
-      "text": "Creatures without flying don't untap during their controllers' untap steps.\nAt the beginning of each player's upkeep, that player may choose any number of tapped creatures without flying he or she controls and pay {2} for each creature chosen this way. If the player does, untap those creatures.",
+      "text": "Creatures without flying don't untap during their controllers' untap steps.\nAt the beginning of each player's upkeep, that player may choose any number of tapped creatures without flying they control and pay {2} for each creature chosen this way. If the player does, untap those creatures.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -8119,7 +8101,7 @@
         "Orc",
         "Warrior"
       ],
-      "text": "{T}: Orcish Cannoneers deals 2 damage to target creature or player and 3 damage to you.",
+      "text": "{T}: Orcish Cannoneers deals 2 damage to any target and 3 damage to you.",
       "toughness": "3",
       "type": "Creature — Orc Warrior",
       "types": [
@@ -8286,7 +8268,7 @@
       "rulings": [
         {
           "date": "2008-10-01",
-          "text": "This ability changes the targeted land's land types. It doesn't affect its name, its supertypes (such as whether or not it's legendary, snow, or basic), or its other types (if it's also a creature, for example). The ability will cause the land to lose all of its printed abilities and gain the ability \"{T}: Add {B} to your mana pool.\""
+          "text": "This ability changes the targeted land's land types. It doesn't affect its name, its supertypes (such as whether or not it's legendary, snow, or basic), or its other types (if it's also a creature, for example). The ability will cause the land to lose all of its printed abilities and gain the ability \"{T}: Add {B}.\""
         }
       ],
       "subtypes": [
@@ -8350,7 +8332,7 @@
       "subtypes": [
         "Orc"
       ],
-      "text": "{T}, Sacrifice a Forest: Add three mana in any combination of {R} and/or {G} to your mana pool.",
+      "text": "{T}, Sacrifice a Forest: Add three mana in any combination of {R} and/or {G}.",
       "toughness": "1",
       "type": "Creature — Orc",
       "types": [
@@ -8525,7 +8507,7 @@
           "text": "If a turn has multiple combat phases, this spell can be cast during any of them as long as it's before the beginning of that phase's Declare Blockers Step."
         }
       ],
-      "text": "Cast Panic only during combat before blockers are declared.\nTarget creature can't block this turn.\nDraw a card at the beginning of the next turn's upkeep.",
+      "text": "Cast this spell only during combat before blockers are declared.\nTarget creature can't block this turn.\nDraw a card at the beginning of the next turn's upkeep.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -8639,14 +8621,14 @@
         },
         {
           "date": "2016-06-08",
-          "text": "You divide the damage as you cast Pyrokinesis, not as it resolves. If any of the targets become illegal, damage is dealt to the other targets as originally assigned. If all targets are illegal, Pyrokinesis is countered."
+          "text": "You divide the damage as you cast Pyrokinesis, not as it resolves. If any of the targets become illegal, damage is dealt to the other targets as originally assigned. If all targets are illegal, Pyrokinesis doesn't resolve."
         },
         {
           "date": "2016-06-08",
           "text": "If another effect causes Pyrokinesis to cost more, you must pay that additional cost even if you pay its alternative cost."
         }
       ],
-      "text": "You may exile a red card from your hand rather than pay Pyrokinesis's mana cost.\nPyrokinesis deals 4 damage divided as you choose among any number of target creatures.",
+      "text": "You may exile a red card from your hand rather than pay this spell's mana cost.\nPyrokinesis deals 4 damage divided as you choose among any number of target creatures.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -9047,7 +9029,7 @@
         "ME2"
       ],
       "rarity": "Rare",
-      "text": "You may exile a green card from your hand rather than pay Bounty of the Hunt's mana cost.\nDistribute three +1/+1 counters among one, two, or three target creatures. For each +1/+1 counter you put on a creature this way, remove a +1/+1 counter from that creature at the beginning of the next cleanup step.",
+      "text": "You may exile a green card from your hand rather than pay this spell's mana cost.\nDistribute three +1/+1 counters among one, two, or three target creatures. For each +1/+1 counter you put on a creature this way, remove a +1/+1 counter from that creature at the beginning of the next cleanup step.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -9329,7 +9311,7 @@
         "Elf",
         "Spirit"
       ],
-      "text": "Exile Elvish Spirit Guide from your hand: Add {G} to your mana pool.",
+      "text": "Exile Elvish Spirit Guide from your hand: Add {G}.",
       "toughness": "2",
       "type": "Creature — Elf Spirit",
       "types": [
@@ -10079,7 +10061,7 @@
           "text": "Nature's Wrath cares about who puts the permanent onto the battlefield, not under whose control the permanent enters the battlefield under."
         }
       ],
-      "text": "At the beginning of your upkeep, sacrifice Nature's Wrath unless you pay {G}.\nWhenever a player puts an Island or blue permanent onto the battlefield, he or she sacrifices an Island or blue permanent.\nWhenever a player puts a Swamp or black permanent onto the battlefield, he or she sacrifices a Swamp or black permanent.",
+      "text": "At the beginning of your upkeep, sacrifice Nature's Wrath unless you pay {G}.\nWhenever a player puts an Island or blue permanent onto the battlefield, that player sacrifices an Island or blue permanent.\nWhenever a player puts a Swamp or black permanent onto the battlefield, that player sacrifices a Swamp or black permanent.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -10126,10 +10108,6 @@
       ],
       "rarity": "Uncommon",
       "rulings": [
-        {
-          "date": "2008-04-01",
-          "text": "A \"creature card\" is any card with the type creature, even if it has other types such as artifact, enchantment, or land. Older cards of type summon are also creature cards."
-        },
         {
           "date": "2008-10-01",
           "text": "The two creature cards are exiled as a cost. No one can respond to this. If no graveyard has two creature cards in it, the cost can't be paid."
@@ -10442,7 +10420,7 @@
         "ME2"
       ],
       "rarity": "Rare",
-      "text": "Target player chooses three cards from his or her hand and puts them on top of his or her library in any order.",
+      "text": "Target player chooses three cards from their hand and puts them on top of their library in any order.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -10615,7 +10593,7 @@
         },
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         }
       ],
       "subtypes": [
@@ -10728,7 +10706,7 @@
         "Plant",
         "Wall"
       ],
-      "text": "Defender (This creature can't attack.)\nSacrifice Tinder Wall: Add {R}{R} to your mana pool.\n{R}, Sacrifice Tinder Wall: Tinder Wall deals 2 damage to target creature it's blocking.",
+      "text": "Defender (This creature can't attack.)\nSacrifice Tinder Wall: Add {R}{R}.\n{R}, Sacrifice Tinder Wall: It deals 2 damage to target creature it's blocking.",
       "toughness": "3",
       "type": "Creature — Plant Wall",
       "types": [
@@ -10883,19 +10861,15 @@
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2008-04-01",
-          "text": "If this creature is attacking a planeswalker, assigning its damage as though it weren't blocked means the damage is assigned to the planeswalker, not to the defending player."
-        },
-        {
-          "date": "2008-04-01",
-          "text": "When assigning combat damage, you choose whether you want to assign all damage to blocking creatures, or if you want to assign all of it to the defending player or planeswalker. You can't split the damage assignment between them."
-        },
-        {
-          "date": "2008-04-01",
+          "date": "2018-04-27",
           "text": "You can decide to assign damage to the defending player or planeswalker even if the blocking creature has protection from green or damage preventing effects on it."
         },
         {
-          "date": "2008-04-01",
+          "date": "2018-04-27",
+          "text": "When assigning combat damage, you choose whether you want to assign all damage to blocking creatures, or if you want to assign all of it to the player or planeswalker this creature is attacking. You can't split the damage assignment between them."
+        },
+        {
+          "date": "2018-04-27",
           "text": "If blocked by a creature with banding, the defending player decides whether or not the damage is assigned \"as though it weren't blocked\"."
         }
       ],
@@ -11285,7 +11259,7 @@
           "text": "Fumarole can't be cast unless you can target both a creature and a land. If there's a permanent on the battlefield that's both a creature and a land, it can be both targets."
         }
       ],
-      "text": "As an additional cost to cast Fumarole, pay 3 life.\nDestroy target creature and target land.",
+      "text": "As an additional cost to cast this spell, pay 3 life.\nDestroy target creature and target land.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -11346,7 +11320,7 @@
         },
         {
           "date": "2004-10-04",
-          "text": "If the targeted creature leaves the battlefield (or otherwise becomes an illegal target) before the ability resolves, the ability will be countered. Giant Trap Door Spider will remain on the battlefield."
+          "text": "If the targeted creature leaves the battlefield (or otherwise becomes an illegal target) before the ability resolves, the ability won't resolve. Giant Trap Door Spider will remain on the battlefield."
         }
       ],
       "subtypes": [
@@ -11655,7 +11629,7 @@
       "supertypes": [
         "World"
       ],
-      "text": "Whenever a player taps a snow land for mana, that player adds one mana to his or her mana pool of any type that land produced. That land doesn't untap during its controller's next untap step.",
+      "text": "Whenever a player taps a snow land for mana, that player adds one mana of any type that land produced. That land doesn't untap during its controller's next untap step.",
       "type": "World Enchantment",
       "types": [
         "Enchantment"
@@ -11744,7 +11718,7 @@
       ],
       "rarity": "Common",
       "reserved": true,
-      "text": "{1}, {T}, Sacrifice Aeolipile: Aeolipile deals 2 damage to target creature or player.",
+      "text": "{1}, {T}, Sacrifice Aeolipile: It deals 2 damage to any target.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -11791,10 +11765,10 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "If the player has less than 3 cards in his or her library, look at as many as he or she has, put one back, and exile the others."
+          "text": "If the player has less than 3 cards in their library, look at as many as they have, put one back, and exile the others."
         }
       ],
-      "text": "{3}, {T}: Target player looks at the top three cards of his or her library, puts one of them back on top of his or her library, then exiles the rest.",
+      "text": "{3}, {T}: Target player looks at the top three cards of their library, puts one of them back on top of their library, then exiles the rest.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -11839,7 +11813,7 @@
         "ME2"
       ],
       "rarity": "Common",
-      "text": "{1}, {T}, Sacrifice Barbed Sextant: Add one mana of any color to your mana pool. Draw a card at the beginning of the next turn's upkeep.",
+      "text": "{1}, {T}, Sacrifice Barbed Sextant: Add one mana of any color. Draw a card at the beginning of the next turn's upkeep.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -12167,7 +12141,7 @@
           "text": "If an effect like that of Leyline of the Void prevents cards from being put into your opponent's graveyard, the process described in the first sentence of Helm of Obedience's effect will never stop. Your opponent's entire library will be exiled, even if X is 1."
         }
       ],
-      "text": "{X}, {T}: Target opponent puts cards from the top of his or her library into his or her graveyard until a creature card or X cards are put into that graveyard this way, whichever comes first. If a creature card is put into that graveyard this way, sacrifice Helm of Obedience and put that card onto the battlefield under your control. X can't be 0.",
+      "text": "{X}, {T}: Target opponent puts cards from the top of their library into their graveyard until a creature card or X cards are put into that graveyard this way, whichever comes first. If a creature card is put into that graveyard this way, sacrifice Helm of Obedience and put that card onto the battlefield under your control. X can't be 0.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -12210,7 +12184,7 @@
       ],
       "rarity": "Rare",
       "reserved": true,
-      "text": "Jester's Mask enters the battlefield tapped.\n{1}, {T}, Sacrifice Jester's Mask: Target opponent puts the cards from his or her hand on top of his or her library. Search that player's library for that many cards. That player puts those cards into his or her hand, then shuffles his or her library.",
+      "text": "Jester's Mask enters the battlefield tapped.\n{1}, {T}, Sacrifice Jester's Mask: Target opponent puts the cards from their hand on top of their library. Search that player's library for that many cards. That player puts those cards into their hand, then shuffles their library.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -12262,7 +12236,7 @@
           "text": "Charge counters are indistinguishable from one another. If some other spell or ability (such as Power Conduit's ability) puts a charge counter on Jeweled Amulet, activating Jeweled Amulet's second ability will still check the type of mana last noted by its first ability. If there is no type of mana noted by its first ability (because it hasn't been activated by that point), the second ability will produce no mana."
         }
       ],
-      "text": "{1}, {T}: Put a charge counter on Jeweled Amulet. Note the type of mana spent to pay this activation cost. Activate this ability only if there are no charge counters on Jeweled Amulet.\n{T}, Remove a charge counter from Jeweled Amulet: Add one mana of Jeweled Amulet's last noted type to your mana pool.",
+      "text": "{1}, {T}: Put a charge counter on Jeweled Amulet. Note the type of mana spent to pay this activation cost. Activate this ability only if there are no charge counters on Jeweled Amulet.\n{T}, Remove a charge counter from Jeweled Amulet: Add one mana of Jeweled Amulet's last noted type.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -12311,7 +12285,7 @@
           "text": "\"Up to four\" means zero, one, two, three, or four. If you choose zero targets, you still choose a player. That player will draw a card at the beginning of the next turn's upkeep."
         }
       ],
-      "text": "{1}, {T}, Sacrifice Lodestone Bauble: Put up to four target basic land cards from a player's graveyard on top of his or her library in any order. That player draws a card at the beginning of the next turn's upkeep.",
+      "text": "{1}, {T}, Sacrifice Lodestone Bauble: Put up to four target basic land cards from a player's graveyard on top of their library in any order. That player draws a card at the beginning of the next turn's upkeep.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -12359,7 +12333,7 @@
           "text": "No player may choose to take actions between determining the result of the flip and damage being dealt if you lost the flip."
         }
       ],
-      "text": "At the beginning of your upkeep, flip a coin. If you lose the flip, Mana Crypt deals 3 damage to you.\n{T}: Add {C}{C} to your mana pool.",
+      "text": "At the beginning of your upkeep, flip a coin. If you lose the flip, Mana Crypt deals 3 damage to you.\n{T}: Add {C}{C}.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -12405,7 +12379,7 @@
       "rulings": [
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         },
         {
           "date": "2008-10-01",
@@ -12607,7 +12581,7 @@
         "ME2"
       ],
       "rarity": "Uncommon",
-      "text": "{1}, {T}, Sacrifice a creature: Skull Catapult deals 2 damage to target creature or player.",
+      "text": "{1}, {T}, Sacrifice a creature: Skull Catapult deals 2 damage to any target.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -12916,7 +12890,7 @@
         "Swamp",
         "Mountain"
       ],
-      "text": "({T}: Add {B} or {R} to your mana pool.)",
+      "text": "({T}: Add {B} or {R}.)",
       "type": "Land — Swamp Mountain",
       "types": [
         "Land"
@@ -12971,7 +12945,7 @@
           "text": "This card produces two different types of mana. If an effect that adds one mana to your mana pool of the same type as the mana produced by this card, you choose which of the two types it produces."
         }
       ],
-      "text": "If Balduvian Trading Post would enter the battlefield, sacrifice an untapped Mountain instead. If you do, put Balduvian Trading Post onto the battlefield. If you don't, put it into its owner's graveyard.\n{T}: Add {C}{R} to your mana pool.\n{1}, {T}: Balduvian Trading Post deals 1 damage to target attacking creature.",
+      "text": "If Balduvian Trading Post would enter the battlefield, sacrifice an untapped Mountain instead. If you do, put Balduvian Trading Post onto the battlefield. If you don't, put it into its owner's graveyard.\n{T}: Add {C}{R}.\n{1}, {T}: Balduvian Trading Post deals 1 damage to target attacking creature.",
       "type": "Land",
       "types": [
         "Land"
@@ -13014,7 +12988,7 @@
         "ME2"
       ],
       "rarity": "Uncommon",
-      "text": "Dwarven Ruins enters the battlefield tapped.\n{T}: Add {R} to your mana pool.\n{T}, Sacrifice Dwarven Ruins: Add {R}{R} to your mana pool.",
+      "text": "Dwarven Ruins enters the battlefield tapped.\n{T}: Add {R}.\n{T}, Sacrifice Dwarven Ruins: Add {R}{R}.",
       "type": "Land",
       "types": [
         "Land"
@@ -13058,7 +13032,7 @@
         "PD3"
       ],
       "rarity": "Uncommon",
-      "text": "Ebon Stronghold enters the battlefield tapped.\n{T}: Add {B} to your mana pool.\n{T}, Sacrifice Ebon Stronghold: Add {B}{B} to your mana pool.",
+      "text": "Ebon Stronghold enters the battlefield tapped.\n{T}: Add {B}.\n{T}, Sacrifice Ebon Stronghold: Add {B}{B}.",
       "type": "Land",
       "types": [
         "Land"
@@ -13151,7 +13125,7 @@
         "CMA"
       ],
       "rarity": "Uncommon",
-      "text": "Havenwood Battleground enters the battlefield tapped.\n{T}: Add {G} to your mana pool.\n{T}, Sacrifice Havenwood Battleground: Add {G}{G} to your mana pool.",
+      "text": "Havenwood Battleground enters the battlefield tapped.\n{T}: Add {G}.\n{T}, Sacrifice Havenwood Battleground: Add {G}{G}.",
       "type": "Land",
       "types": [
         "Land"
@@ -13202,7 +13176,7 @@
           "text": "You have to sacrifice a forest before this card is put onto the battlefield, and no matter how it is put onto the battlefield."
         }
       ],
-      "text": "If Heart of Yavimaya would enter the battlefield, sacrifice a Forest instead. If you do, put Heart of Yavimaya onto the battlefield. If you don't, put it into its owner's graveyard.\n{T}: Add {G} to your mana pool.\n{T}: Target creature gets +1/+1 until end of turn.",
+      "text": "If Heart of Yavimaya would enter the battlefield, sacrifice a Forest instead. If you do, put Heart of Yavimaya onto the battlefield. If you don't, put it into its owner's graveyard.\n{T}: Add {G}.\n{T}: Target creature gets +1/+1 until end of turn.",
       "type": "Land",
       "types": [
         "Land"
@@ -13322,7 +13296,7 @@
           "text": "You have to sacrifice a plains before this card is put onto the battlefield. You have to do this no matter how it is put onto the battlefield."
         }
       ],
-      "text": "If Kjeldoran Outpost would enter the battlefield, sacrifice a Plains instead. If you do, put Kjeldoran Outpost onto the battlefield. If you don't, put it into its owner's graveyard.\n{T}: Add {W} to your mana pool.\n{1}{W}, {T}: Create a 1/1 white Soldier creature token.",
+      "text": "If Kjeldoran Outpost would enter the battlefield, sacrifice a Plains instead. If you do, put Kjeldoran Outpost onto the battlefield. If you don't, put it into its owner's graveyard.\n{T}: Add {W}.\n{1}{W}, {T}: Create a 1/1 white Soldier creature token.",
       "type": "Land",
       "types": [
         "Land"
@@ -13364,7 +13338,7 @@
         "ME2"
       ],
       "rarity": "Uncommon",
-      "text": "Ruins of Trokair enters the battlefield tapped.\n{T}: Add {W} to your mana pool.\n{T}, Sacrifice Ruins of Trokair: Add {W}{W} to your mana pool.",
+      "text": "Ruins of Trokair enters the battlefield tapped.\n{T}: Add {W}.\n{T}, Sacrifice Ruins of Trokair: Add {W}{W}.",
       "type": "Land",
       "types": [
         "Land"
@@ -13426,7 +13400,7 @@
         "Forest",
         "Plains"
       ],
-      "text": "({T}: Add {G} or {W} to your mana pool.)",
+      "text": "({T}: Add {G} or {W}.)",
       "type": "Land — Forest Plains",
       "types": [
         "Land"
@@ -13477,7 +13451,7 @@
           "text": "This card produces two different types of mana. If an effect that adds one mana to your mana pool of the same type as the mana produced by this card, you choose which of the two types it produces."
         }
       ],
-      "text": "If Soldevi Excavations would enter the battlefield, sacrifice an untapped Island instead. If you do, put Soldevi Excavations onto the battlefield. If you don't, put it into its owner's graveyard.\n{T}: Add {C}{U} to your mana pool.\n{1}, {T}: Scry 1. (Look at the top card of your library. You may put that card on the bottom of your library.)",
+      "text": "If Soldevi Excavations would enter the battlefield, sacrifice an untapped Island instead. If you do, put Soldevi Excavations onto the battlefield. If you don't, put it into its owner's graveyard.\n{T}: Add {C}{U}.\n{1}, {T}: Scry 1. (Look at the top card of your library. You may put that card on the bottom of your library.)",
       "type": "Land",
       "types": [
         "Land"
@@ -13520,7 +13494,7 @@
         "ME2"
       ],
       "rarity": "Uncommon",
-      "text": "Svyelunite Temple enters the battlefield tapped.\n{T}: Add {U} to your mana pool.\n{T}, Sacrifice Svyelunite Temple: Add {U}{U} to your mana pool.",
+      "text": "Svyelunite Temple enters the battlefield tapped.\n{T}: Add {U}.\n{T}, Sacrifice Svyelunite Temple: Add {U}{U}.",
       "type": "Land",
       "types": [
         "Land"
@@ -13582,7 +13556,7 @@
         "Mountain",
         "Forest"
       ],
-      "text": "({T}: Add {R} or {G} to your mana pool.)",
+      "text": "({T}: Add {R} or {G}.)",
       "type": "Land — Mountain Forest",
       "types": [
         "Land"
@@ -13644,7 +13618,7 @@
         "Plains",
         "Island"
       ],
-      "text": "({T}: Add {W} or {U} to your mana pool.)",
+      "text": "({T}: Add {W} or {U}.)",
       "type": "Land — Plains Island",
       "types": [
         "Land"
@@ -13706,7 +13680,7 @@
         "Island",
         "Swamp"
       ],
-      "text": "({T}: Add {U} or {B} to your mana pool.)",
+      "text": "({T}: Add {U} or {B}.)",
       "type": "Land — Island Swamp",
       "types": [
         "Land"

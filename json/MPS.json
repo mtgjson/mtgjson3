@@ -64,7 +64,7 @@
       "rulings": [
         {
           "date": "2016-09-20",
-          "text": "First the player whose turn it is chooses permanents he or she controls, then each other player in turn order does the same. Each player will know the choices made by players who chose before them. All of the unchosen nonland permanents are then sacrificed simultaneously."
+          "text": "First the player whose turn it is chooses permanents they control, then each other player in turn order does the same. Each player will know the choices made by players who chose before them. All of the unchosen nonland permanents are then sacrificed simultaneously."
         },
         {
           "date": "2016-09-20",
@@ -86,7 +86,7 @@
       "subtypes": [
         "Construct"
       ],
-      "text": "Vigilance\nWhen Cataclysmic Gearhulk enters the battlefield, each player chooses an artifact, a creature, an enchantment, and a planeswalker from among the nonland permanents he or she controls, then sacrifices the rest.",
+      "text": "Vigilance\nWhen Cataclysmic Gearhulk enters the battlefield, each player chooses an artifact, a creature, an enchantment, and a planeswalker from among the nonland permanents they control, then sacrifices the rest.",
       "toughness": "5",
       "type": "Artifact Creature — Construct",
       "types": [
@@ -152,7 +152,7 @@
         },
         {
           "date": "2016-09-20",
-          "text": "If you cast a card \"without paying its mana cost,\" you can't pay any alternative costs, such as emerge costs. You can, however, pay additional costs. If the card has any mandatory additional costs, such as that of Incendiary Sabotage, you must pay those to cast the card."
+          "text": "If you cast a card \"without paying its mana cost,\" you can't choose to cast it for any alternative costs, such as emerge costs. You can, however, pay additional costs. If the card has any mandatory additional costs, such as that of Incendiary Sabotage, you must pay those to cast the card."
         },
         {
           "date": "2016-09-20",
@@ -549,7 +549,7 @@
           "text": "Lands you control won't lose any other abilities they had. They also won't gain or lose any land types."
         }
       ],
-      "text": "Lands you control have \"{T}: Add one mana of any color to your mana pool.\"\n{T}: Add one mana of any color to your mana pool.",
+      "text": "Lands you control have \"{T}: Add one mana of any color.\"\n{T}: Add one mana of any color.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -607,7 +607,7 @@
           "text": "If you imprinted a multicolored card, you choose one of that card's colors each time Chrome Mox's ability resolves."
         }
       ],
-      "text": "Imprint — When Chrome Mox enters the battlefield, you may exile a nonartifact, nonland card from your hand.\n{T}: Add one mana of any of the exiled card's colors to your mana pool.",
+      "text": "Imprint — When Chrome Mox enters the battlefield, you may exile a nonartifact, nonland card from your hand.\n{T}: Add one mana of any of the exiled card's colors.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -763,7 +763,7 @@
         "MPS"
       ],
       "rarity": "Special",
-      "text": "As Gauntlet of Power enters the battlefield, choose a color.\nCreatures of the chosen color get +1/+1.\nWhenever a basic land is tapped for mana of the chosen color, its controller adds one mana of that color to his or her mana pool (in addition to the mana the land produces).",
+      "text": "As Gauntlet of Power enters the battlefield, choose a color.\nCreatures of the chosen color get +1/+1.\nWhenever a basic land is tapped for mana of the chosen color, its controller adds an additional one mana of that color.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -930,7 +930,7 @@
         "MPS"
       ],
       "rarity": "Special",
-      "text": "{T}, Sacrifice Lotus Petal: Add one mana of any color to your mana pool.",
+      "text": "{T}, Sacrifice Lotus Petal: Add one mana of any color.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -979,7 +979,7 @@
           "text": "No player may choose to take actions between determining the result of the flip and damage being dealt if you lost the flip."
         }
       ],
-      "text": "At the beginning of your upkeep, flip a coin. If you lose the flip, Mana Crypt deals 3 damage to you.\n{T}: Add {C}{C} to your mana pool.",
+      "text": "At the beginning of your upkeep, flip a coin. If you lose the flip, Mana Crypt deals 3 damage to you.\n{T}: Add {C}{C}.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -1026,7 +1026,7 @@
         "MPS"
       ],
       "rarity": "Special",
-      "text": "Mana Vault doesn't untap during your untap step.\nAt the beginning of your upkeep, you may pay {4}. If you do, untap Mana Vault.\nAt the beginning of your draw step, if Mana Vault is tapped, it deals 1 damage to you.\n{T}: Add {C}{C}{C} to your mana pool.",
+      "text": "Mana Vault doesn't untap during your untap step.\nAt the beginning of your upkeep, you may pay {4}. If you do, untap Mana Vault.\nAt the beginning of your draw step, if Mana Vault is tapped, it deals 1 damage to you.\n{T}: Add {C}{C}{C}.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -1125,7 +1125,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "Metalcraft — {T}: Add one mana of any color to your mana pool. Activate this ability only if you control three or more artifacts.",
+      "text": "Metalcraft — {T}: Add one mana of any color. Activate this ability only if you control three or more artifacts.",
       "type": "Legendary Artifact",
       "types": [
         "Artifact"
@@ -1431,7 +1431,7 @@
         "C17"
       ],
       "rarity": "Special",
-      "text": "{T}: Add {C}{C} to your mana pool.",
+      "text": "{T}: Add {C}{C}.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -1480,7 +1480,8 @@
         "C14",
         "C15",
         "MPS",
-        "C16"
+        "C16",
+        "DDU"
       ],
       "rarity": "Special",
       "subtypes": [
@@ -1702,13 +1703,13 @@
       "rulings": [
         {
           "date": "2013-06-07",
-          "text": "The triggered ability has one target: the creature or player to be dealt 2 damage. If that creature or player is an illegal target when the ability tries to resolve, it will be countered and none of its effects will happen. You won't draw a card."
+          "text": "The triggered ability has one target: the permanent or player to be dealt 2 damage. If that permanent or player is an illegal target when the ability tries to resolve, it won't resolve and none of its effects will happen. You won't draw a card."
         }
       ],
       "subtypes": [
         "Equipment"
       ],
-      "text": "Equipped creature gets +2/+2 and has protection from red and from blue.\nWhenever equipped creature deals combat damage to a player, Sword of Fire and Ice deals 2 damage to target creature or player and you draw a card.\nEquip {2}",
+      "text": "Equipped creature gets +2/+2 and has protection from red and from blue.\nWhenever equipped creature deals combat damage to a player, Sword of Fire and Ice deals 2 damage to any target and you draw a card.\nEquip {2}",
       "type": "Artifact — Equipment",
       "types": [
         "Artifact"
@@ -1759,7 +1760,7 @@
       "rulings": [
         {
           "date": "2013-06-07",
-          "text": "You may put the triggered ability with no targets. However, If you choose a target creature in your graveyard, and that card is an illegal target when the ability tries to resolve, it will be countered and none of its effects will happen. You won't gain 3 life."
+          "text": "You may put the triggered ability with no targets. However, If you choose a target creature in your graveyard, and that card is an illegal target when the ability tries to resolve, it won't resolve and none of its effects will happen. You won't gain 3 life."
         }
       ],
       "subtypes": [
@@ -1878,10 +1879,10 @@
         },
         {
           "date": "2009-10-01",
-          "text": "If the chosen player has four or fewer cards in his or her hand as Black Vise's ability resolves, the ability just won't do anything that turn."
+          "text": "If the chosen player has four or fewer cards in their hand as Black Vise's ability resolves, the ability just won't do anything that turn."
         }
       ],
-      "text": "As Black Vise enters the battlefield, choose an opponent.\nAt the beginning of the chosen player's upkeep, Black Vise deals X damage to that player, where X is the number of cards in his or her hand minus 4.",
+      "text": "As Black Vise enters the battlefield, choose an opponent.\nAt the beginning of the chosen player's upkeep, Black Vise deals X damage to that player, where X is the number of cards in their hand minus 4.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -1931,20 +1932,20 @@
       "rarity": "Special",
       "rulings": [
         {
-          "date": "2004-12-01",
-          "text": "A mana cost of {X}{X} means that you pay twice X. If you want X to be 3, you pay 6 mana to cast Chalice of the Void."
+          "date": "2018-03-16",
+          "text": "A mana cost of {X}{X} means that you pay twice X. If you want X to be 3, you pay {6} to cast Chalice of the Void."
         },
         {
-          "date": "2004-12-01",
-          "text": "The number of counters on Chalice of the Void matters only at the time the spell is cast. Changing the number of charge counters on Chalice of the Void after a spell has been cast won't change whether the ability counters the spell. If the Chalice had the correct number of counters when the spell was cast, its ability will trigger. If the Chalice had too many or too few counters when the spell was cast, the Chalice's ability won't trigger."
+          "date": "2018-03-16",
+          "text": "The number of counters on Chalice of the Void matters only at the time the spell is cast. Changing the number of charge counters on Chalice of the Void after a spell has been cast won't change whether the ability counters the spell."
         },
         {
-          "date": "2004-12-01",
-          "text": "If there are zero charge counters on Chalice of the Void, it counters each spell with a converted mana cost of 0."
+          "date": "2018-03-16",
+          "text": "If there are zero charge counters on Chalice of the Void, it counters each spell with a converted mana cost of 0. This includes face-down creature spells cast with morph's alternative cost."
         },
         {
-          "date": "2004-12-01",
-          "text": "Chalice of the Void has to be on the battlefield at the end of casting a spell for the ability to trigger. If you sacrifice Chalice of the Void as a cost to cast a spell, its ability can't trigger."
+          "date": "2018-03-16",
+          "text": "Chalice of the Void has to be on the battlefield at the end of casting a spell for the ability to trigger. If you sacrifice Chalice of the Void as a cost to cast a spell, its ability can't trigger. However, if it leaves the battlefield once its ability has triggered, that ability will still counter the spell."
         }
       ],
       "text": "Chalice of the Void enters the battlefield with X charge counters on it.\nWhenever a player casts a spell with converted mana cost equal to the number of charge counters on Chalice of the Void, counter that spell.",
@@ -2188,12 +2189,8 @@
       "rarity": "Special",
       "rulings": [
         {
-          "date": "2004-10-04",
-          "text": "All creatures on the battlefield (including yours) are subject to the restriction based on the number of cards in your hand."
-        },
-        {
-          "date": "2004-10-04",
-          "text": "It only checks the cards in your hand when declaring attackers. Once they are declared, changes to your hand size or to the power of the creatures will not remove creatures from the attack."
+          "date": "2018-03-16",
+          "text": "Ensnaring Bridge's effect checks the number of cards in your hand only while a player (including you) is declaring attackers. Once a creature has legally attacked, changing its power or the number of cards in your hand won't remove it from combat."
         }
       ],
       "text": "Creatures with power greater than the number of cards in your hand can't attack.",
@@ -2242,7 +2239,7 @@
         "MPS"
       ],
       "rarity": "Special",
-      "text": "Imprint — When Extraplanar Lens enters the battlefield, you may exile target land you control.\nWhenever a land with the same name as the exiled card is tapped for mana, its controller adds one mana to his or her mana pool of any type that land produced.",
+      "text": "Imprint — When Extraplanar Lens enters the battlefield, you may exile target land you control.\nWhenever a land with the same name as the exiled card is tapped for mana, its controller adds one mana of any type that land produced.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -2296,7 +2293,7 @@
           "text": "The effect repeats as many times as it takes to meet the end condition."
         }
       ],
-      "text": "{3}, {T}: Target player puts the top two cards of his or her library into his or her graveyard. If both cards share a color, repeat this process.",
+      "text": "{3}, {T}: Target player puts the top two cards of their library into their graveyard. If both cards share a color, repeat this process.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -2580,7 +2577,7 @@
       "rulings": [
         {
           "date": "2005-06-01",
-          "text": "Pithing Needle affects cards regardless of what zone they're in. This includes cards in hand, cards in the graveyard, and exiled cards. For example, a player can't cycle Eternal Dragon or return an Eternal Dragon from his or her graveyard to hand if Pithing Needle naming Eternal Dragon is on the battlefield."
+          "text": "Pithing Needle affects cards regardless of what zone they're in. This includes cards in hand, cards in the graveyard, and exiled cards. For example, a player can't cycle Eternal Dragon or return an Eternal Dragon from their graveyard to hand if Pithing Needle naming Eternal Dragon is on the battlefield."
         },
         {
           "date": "2005-06-01",
@@ -2723,7 +2720,7 @@
         },
         {
           "date": "2009-10-01",
-          "text": "No game effect can cause you to lose the game or cause any opponent to win the game while you control Platinum Angel. It doesn't matter whether you have 0 or less life, you're forced to draw a card while your library is empty, you have ten or more poison counters, you're dealt combat damage by Phage the Untouchable, your opponent has Mortal Combat with twenty or more creature cards in his or her graveyard, or so on. You keep playing."
+          "text": "No game effect can cause you to lose the game or cause any opponent to win the game while you control Platinum Angel. It doesn't matter whether you have 0 or less life, you're forced to draw a card while your library is empty, you have ten or more poison counters, you're dealt combat damage by Phage the Untouchable, your opponent has Mortal Combat with twenty or more creature cards in their graveyard, or so on. You keep playing."
         },
         {
           "date": "2009-10-01",
@@ -2888,20 +2885,20 @@
       "rarity": "Special",
       "rulings": [
         {
-          "date": "2004-12-01",
-          "text": "Sundering Titan's two abilities aren't targeted. When one of the abilities resolves, the Titan's controller must choose one land for each basic land type (Plains, Island, Swamp, Mountain, and Forest)."
+          "date": "2018-03-16",
+          "text": "Sundering Titan's ability isn't targeted. When it resolves, Sundering Titan's controller must choose one land for each basic land type (Plains, Island, Swamp, Mountain, and Forest), and then they are destroyed simultaneously."
         },
         {
-          "date": "2004-12-01",
+          "date": "2018-03-16",
+          "text": "Players can't take actions in between the time you choose the lands and the time you destroy them. Notably, they can't activate mana abilities of those lands."
+        },
+        {
+          "date": "2018-03-16",
           "text": "If one of the basic land types isn't present, it isn't chosen. If the only land of a certain type is one you control, you must choose it."
         },
         {
-          "date": "2004-12-01",
+          "date": "2018-03-16",
           "text": "If a land has more than one basic land type, it can be chosen more than once."
-        },
-        {
-          "date": "2004-12-01",
-          "text": "All the chosen lands are destroyed simultaneously."
         }
       ],
       "subtypes": [
@@ -2959,13 +2956,13 @@
       "rulings": [
         {
           "date": "2011-01-01",
-          "text": "If there are fewer than ten cards in that player's library, that player puts all the cards from his or her library into his or her graveyard."
+          "text": "If there are fewer than ten cards in that player's library, that player puts all the cards from their library into their graveyard."
         }
       ],
       "subtypes": [
         "Equipment"
       ],
-      "text": "Equipped creature gets +2/+2 and has protection from green and from blue.\nWhenever equipped creature deals combat damage to a player, you create a 2/2 green Wolf creature token and that player puts the top ten cards of his or her library into his or her graveyard.\nEquip {2}",
+      "text": "Equipped creature gets +2/+2 and has protection from green and from blue.\nWhenever equipped creature deals combat damage to a player, you create a 2/2 green Wolf creature token and that player puts the top ten cards of their library into their graveyard.\nEquip {2}",
       "type": "Artifact — Equipment",
       "types": [
         "Artifact"
@@ -3020,7 +3017,7 @@
       "subtypes": [
         "Equipment"
       ],
-      "text": "Equipped creature gets +2/+2 and has protection from red and from white.\nWhenever equipped creature deals combat damage to a player, Sword of War and Peace deals damage to that player equal to the number of cards in his or her hand and you gain 1 life for each card in your hand.\nEquip {2}",
+      "text": "Equipped creature gets +2/+2 and has protection from red and from white.\nWhenever equipped creature deals combat damage to a player, Sword of War and Peace deals damage to that player equal to the number of cards in their hand and you gain 1 life for each card in your hand.\nEquip {2}",
       "type": "Artifact — Equipment",
       "types": [
         "Artifact"

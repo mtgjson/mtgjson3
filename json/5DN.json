@@ -607,7 +607,7 @@
         },
         {
           "date": "2007-07-15",
-          "text": "If a Beacon is countered, it's put into its owner's graveyard, not shuffled into the library."
+          "text": "If a Beacon is countered or doesn't resolve, it's put into its owner's graveyard, not shuffled into the library."
         }
       ],
       "text": "Double target player's life total. Shuffle Beacon of Immortality into its owner's library.",
@@ -706,7 +706,7 @@
       "subtypes": [
         "Bringer"
       ],
-      "text": "You may pay {W}{U}{B}{R}{G} rather than pay Bringer of the White Dawn's mana cost.\nTrample\nAt the beginning of your upkeep, you may return target artifact card from your graveyard to the battlefield.",
+      "text": "You may pay {W}{U}{B}{R}{G} rather than pay this spell's mana cost.\nTrample\nAt the beginning of your upkeep, you may return target artifact card from your graveyard to the battlefield.",
       "toughness": "5",
       "type": "Creature — Bringer",
       "types": [
@@ -988,7 +988,7 @@
         "Elephant",
         "Cleric"
       ],
-      "text": "{T}: Prevent the next 2 damage that would be dealt to target creature or player this turn.",
+      "text": "{T}: Prevent the next 2 damage that would be dealt to any target this turn.",
       "toughness": "3",
       "type": "Creature — Elephant Cleric",
       "types": [
@@ -1367,7 +1367,7 @@
         "5DN"
       ],
       "rarity": "Rare",
-      "text": "Each player returns all artifact cards from his or her graveyard to the battlefield.",
+      "text": "Each player returns all artifact cards from their graveyard to the battlefield.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -2017,7 +2017,7 @@
         "5DN"
       ],
       "rarity": "Rare",
-      "text": "Search target opponent's library for an artifact card and put that card onto the battlefield under your control. Then that player shuffles his or her library.",
+      "text": "Search target opponent's library for an artifact card and put that card onto the battlefield under your control. Then that player shuffles their library.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -2292,7 +2292,7 @@
       "rulings": [
         {
           "date": "2007-07-15",
-          "text": "If a Beacon is countered, it's put into its owner's graveyard, not shuffled into the library."
+          "text": "If a Beacon is countered or doesn't resolve, it's put into its owner's graveyard, not shuffled into the library."
         }
       ],
       "text": "Target player takes an extra turn after this one. Shuffle Beacon of Tomorrows into its owner's library.",
@@ -2490,7 +2490,7 @@
       "subtypes": [
         "Bringer"
       ],
-      "text": "You may pay {W}{U}{B}{R}{G} rather than pay Bringer of the Blue Dawn's mana cost.\nTrample\nAt the beginning of your upkeep, you may draw two cards.",
+      "text": "You may pay {W}{U}{B}{R}{G} rather than pay this spell's mana cost.\nTrample\nAt the beginning of your upkeep, you may draw two cards.",
       "toughness": "5",
       "type": "Creature — Bringer",
       "types": [
@@ -2976,7 +2976,7 @@
           "text": "If your Fold into Aether counters a spell you control, you get to put a creature card from your hand onto the battlefield."
         }
       ],
-      "text": "Counter target spell. If that spell is countered this way, its controller may put a creature card from his or her hand onto the battlefield.",
+      "text": "Counter target spell. If that spell is countered this way, its controller may put a creature card from their hand onto the battlefield.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -3726,7 +3726,8 @@
         "5DN",
         "DDF",
         "SOM",
-        "C16"
+        "C16",
+        "DDU"
       ],
       "rarity": "Common",
       "rulings": [
@@ -3932,7 +3933,7 @@
       "rulings": [
         {
           "date": "2007-07-15",
-          "text": "If a Beacon is countered, it's put into its owner's graveyard, not shuffled into the library."
+          "text": "If a Beacon is countered or doesn't resolve, it's put into its owner's graveyard, not shuffled into the library."
         }
       ],
       "text": "Put target artifact or creature card from a graveyard onto the battlefield under your control. Shuffle Beacon of Unrest into its owner's library.",
@@ -4132,7 +4133,7 @@
       "subtypes": [
         "Bringer"
       ],
-      "text": "You may pay {W}{U}{B}{R}{G} rather than pay Bringer of the Black Dawn's mana cost.\nTrample\nAt the beginning of your upkeep, you may pay 2 life. If you do, search your library for a card, then shuffle your library and put that card on top of it.",
+      "text": "You may pay {W}{U}{B}{R}{G} rather than pay this spell's mana cost.\nTrample\nAt the beginning of your upkeep, you may pay 2 life. If you do, search your library for a card, then shuffle your library and put that card on top of it.",
       "toughness": "5",
       "type": "Creature — Bringer",
       "types": [
@@ -4708,10 +4709,10 @@
       "rulings": [
         {
           "date": "2004-12-01",
-          "text": "The creatures have the triggered ability, so each creature's controller chooses one of his or her opponents to target."
+          "text": "The creatures have the triggered ability, so each creature's controller chooses one of their opponents to target."
         }
       ],
-      "text": "Each creature has \"When this creature dies, choose target opponent. That player puts this card from its owner's graveyard onto the battlefield under his or her control at the beginning of the next end step.\"",
+      "text": "Each creature has \"When this creature dies, choose target opponent. That player puts this card from its owner's graveyard onto the battlefield under their control at the beginning of the next end step.\"",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -5555,12 +5556,8 @@
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2004-12-01",
-          "text": "Yes, you're allowed to have a deck consisting of sixty Relentless Rats and nothing else."
-        },
-        {
-          "date": "2004-12-01",
-          "text": "Relentless Rats's last ability overrides the normal limit of four of an individual card in a Constructed deck."
+          "date": "2018-03-16",
+          "text": "The second ability of Relentless Rats lets you ignore the \"four-of\" rule. It doesn't let you ignore format legality. For example, during a Masters 25 Limited event, you can't add Relentless Rats from your personal collection."
         }
       ],
       "subtypes": [
@@ -5656,7 +5653,7 @@
         "5DN"
       ],
       "rarity": "Uncommon",
-      "text": "Target opponent reveals his or her hand. You choose an artifact card from it. That player discards that card.",
+      "text": "Target opponent reveals their hand. You choose an artifact card from it. That player discards that card.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -5744,7 +5741,7 @@
         "5DN"
       ],
       "rarity": "Common",
-      "text": "As an additional cost to cast Vicious Betrayal, sacrifice any number of creatures.\nTarget creature gets +2/+2 until end of turn for each creature sacrificed this way.",
+      "text": "As an additional cost to cast this spell, sacrifice any number of creatures.\nTarget creature gets +2/+2 until end of turn for each creature sacrificed this way.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -5838,10 +5835,10 @@
       "rulings": [
         {
           "date": "2007-07-15",
-          "text": "If a Beacon is countered, it's put into its owner's graveyard, not shuffled into the library."
+          "text": "If a Beacon is countered or doesn't resolve, it's put into its owner's graveyard, not shuffled into the library."
         }
       ],
-      "text": "Beacon of Destruction deals 5 damage to target creature or player. Shuffle Beacon of Destruction into its owner's library.",
+      "text": "Beacon of Destruction deals 5 damage to any target. Shuffle Beacon of Destruction into its owner's library.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -5937,7 +5934,7 @@
       "subtypes": [
         "Bringer"
       ],
-      "text": "You may pay {W}{U}{B}{R}{G} rather than pay Bringer of the Red Dawn's mana cost.\nTrample\nAt the beginning of your upkeep, you may untap target creature and gain control of it until end of turn. That creature gains haste until end of turn.",
+      "text": "You may pay {W}{U}{B}{R}{G} rather than pay this spell's mana cost.\nTrample\nAt the beginning of your upkeep, you may untap target creature and gain control of it until end of turn. That creature gains haste until end of turn.",
       "toughness": "5",
       "type": "Creature — Bringer",
       "types": [
@@ -6121,7 +6118,7 @@
         "5DN"
       ],
       "rarity": "Uncommon",
-      "text": "Feedback Bolt deals damage to target player equal to the number of artifacts you control.",
+      "text": "Feedback Bolt deals damage to target player or planeswalker equal to the number of artifacts you control.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -6503,7 +6500,7 @@
         "5DN"
       ],
       "rarity": "Rare",
-      "text": "{1}{R}, Remove a +1/+1 counter or a charge counter from a permanent you control: Ion Storm deals 2 damage to target creature or player.",
+      "text": "{1}{R}, Remove a +1/+1 counter or a charge counter from a permanent you control: Ion Storm deals 2 damage to any target.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -6996,10 +6993,10 @@
         },
         {
           "date": "2013-09-15",
-          "text": "Scry appears on some spells and abilities with one or more targets. If all of the spell or ability's targets are illegal when it tries to resolve, it will be countered and none of its effects will happen. You won't scry."
+          "text": "Scry appears on some spells and abilities with one or more targets. If all of the spell or ability's targets are illegal when it tries to resolve, it won't resolve and none of its effects will happen. You won't scry."
         }
       ],
-      "text": "Magma Jet deals 2 damage to target creature or player. Scry 2.",
+      "text": "Magma Jet deals 2 damage to any target. Scry 2.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -7091,7 +7088,7 @@
       "rulings": [
         {
           "date": "2004-12-01",
-          "text": "Magnetic Theft can cause an Equipment one player controls to be attached to a creature another player controls. The controller of the Equipment can pay the equip cost to move the Equipment to a creature he or she controls (but only any time that player could cast a sorcery)."
+          "text": "Magnetic Theft can cause an Equipment one player controls to be attached to a creature another player controls. The controller of the Equipment can pay the equip cost to move the Equipment to a creature they control (but only any time that player could cast a sorcery)."
         }
       ],
       "text": "Attach target Equipment to target creature. (Control of the Equipment doesn't change.)",
@@ -7184,7 +7181,7 @@
         "CNS"
       ],
       "rarity": "Common",
-      "text": "Add {R} to your mana pool for each tapped land your opponents control.",
+      "text": "Add {R} for each tapped land your opponents control.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -7400,7 +7397,7 @@
           "text": "The creation of the copy and then the casting of the copy are both optional."
         }
       ],
-      "text": "Target opponent reveals his or her hand. You may copy an instant or sorcery card in it. If you do, you may cast the copy without paying its mana cost.",
+      "text": "Target opponent reveals their hand. You may copy an instant or sorcery card in it. If you do, you may cast the copy without paying its mana cost.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -7584,7 +7581,7 @@
       "subtypes": [
         "Elemental"
       ],
-      "text": "Trample, haste (If this creature would assign enough damage to its blockers to destroy them, you may have it assign the rest of its damage to defending player or planeswalker. This creature can attack and {T} as soon as it comes under your control.)\nAt the beginning of the end step, sacrifice Spark Elemental.",
+      "text": "Trample, haste (If this creature would assign enough damage to its blockers to destroy them, you may have it assign the rest of its damage to the player or planeswalker it's attacking. This creature can attack and {T} as soon as it comes under your control.)\nAt the beginning of the end step, sacrifice Spark Elemental.",
       "toughness": "1",
       "type": "Creature — Elemental",
       "types": [
@@ -7681,7 +7678,7 @@
         "Human",
         "Shaman"
       ],
-      "text": "Haste\n{T}: Vulshok Sorcerer deals 1 damage to target creature or player.",
+      "text": "Haste\n{T}: Vulshok Sorcerer deals 1 damage to any target.",
       "toughness": "1",
       "type": "Creature — Human Shaman",
       "types": [
@@ -7877,7 +7874,7 @@
       "rulings": [
         {
           "date": "2007-07-15",
-          "text": "If a Beacon is countered, it's put into its owner's graveyard, not shuffled into the library."
+          "text": "If a Beacon is countered or doesn't resolve, it's put into its owner's graveyard, not shuffled into the library."
         }
       ],
       "text": "Create a 1/1 green Insect creature token for each Forest you control. Shuffle Beacon of Creation into its owner's library.",
@@ -7976,7 +7973,7 @@
       "subtypes": [
         "Bringer"
       ],
-      "text": "You may pay {W}{U}{B}{R}{G} rather than pay Bringer of the Green Dawn's mana cost.\nTrample\nAt the beginning of your upkeep, you may create a 3/3 green Beast creature token.",
+      "text": "You may pay {W}{U}{B}{R}{G} rather than pay this spell's mana cost.\nTrample\nAt the beginning of your upkeep, you may create a 3/3 green Beast creature token.",
       "toughness": "5",
       "type": "Creature — Bringer",
       "types": [
@@ -8070,7 +8067,7 @@
         "5DN"
       ],
       "rarity": "Uncommon",
-      "text": "Add {W}{U}{B}{R}{G} to your mana pool.",
+      "text": "Add {W}{U}{B}{R}{G}.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -8172,7 +8169,7 @@
       "subtypes": [
         "Aura"
       ],
-      "text": "Enchant land\nWhenever enchanted land is tapped for mana, its controller adds two mana in any combination of colors to his or her mana pool (in addition to the mana the land produces).",
+      "text": "Enchant land\nWhenever enchanted land is tapped for mana, its controller adds an additional two mana in any combination of colors.",
       "type": "Enchantment — Aura",
       "types": [
         "Enchantment"
@@ -8556,7 +8553,7 @@
         "Elf",
         "Druid"
       ],
-      "text": "Lands you control have \"{T}: Add one mana of any color to your mana pool.\"",
+      "text": "Lands you control have \"{T}: Add one mana of any color.\"",
       "toughness": "1",
       "type": "Creature — Elf Druid",
       "types": [
@@ -8855,7 +8852,7 @@
       "rulings": [
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         },
         {
           "date": "2013-06-07",
@@ -8957,7 +8954,7 @@
         "Human",
         "Druid"
       ],
-      "text": "{T}: Add to your mana pool one mana of any color that a land an opponent controls could produce.",
+      "text": "{T}: Add one mana of any color that a land an opponent controls could produce.",
       "toughness": "1",
       "type": "Creature — Human Druid",
       "types": [
@@ -9329,19 +9326,15 @@
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2008-04-01",
-          "text": "If this creature is attacking a planeswalker, assigning its damage as though it weren't blocked means the damage is assigned to the planeswalker, not to the defending player."
-        },
-        {
-          "date": "2008-04-01",
-          "text": "When assigning combat damage, you choose whether you want to assign all damage to blocking creatures, or if you want to assign all of it to the defending player or planeswalker. You can't split the damage assignment between them."
-        },
-        {
-          "date": "2008-04-01",
+          "date": "2018-04-27",
           "text": "You can decide to assign damage to the defending player or planeswalker even if the blocking creature has protection from green or damage preventing effects on it."
         },
         {
-          "date": "2008-04-01",
+          "date": "2018-04-27",
+          "text": "When assigning combat damage, you choose whether you want to assign all damage to blocking creatures, or if you want to assign all of it to the player or planeswalker this creature is attacking. You can't split the damage assignment between them."
+        },
+        {
+          "date": "2018-04-27",
           "text": "If blocked by a creature with banding, the defending player decides whether or not the damage is assigned \"as though it weren't blocked\"."
         }
       ],
@@ -9634,7 +9627,7 @@
         "Warrior",
         "Scout"
       ],
-      "text": "{2}{G}, Sacrifice Viridian Scout: Viridian Scout deals 2 damage to target creature with flying.",
+      "text": "{2}{G}, Sacrifice Viridian Scout: It deals 2 damage to target creature with flying.",
       "toughness": "2",
       "type": "Creature — Elf Warrior Scout",
       "types": [
@@ -10262,7 +10255,7 @@
         "5DN"
       ],
       "rarity": "Uncommon",
-      "text": "{T}, Sacrifice a creature: Blasting Station deals 1 damage to target creature or player.\nWhenever a creature enters the battlefield, you may untap Blasting Station.",
+      "text": "{T}, Sacrifice a creature: Blasting Station deals 1 damage to any target.\nWhenever a creature enters the battlefield, you may untap Blasting Station.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -10352,7 +10345,7 @@
         },
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         }
       ],
       "text": "{X}{1}: Chimeric Coils becomes an X/X Construct artifact creature. Sacrifice it at the beginning of the next end step.",
@@ -10616,7 +10609,7 @@
       "subtypes": [
         "Golem"
       ],
-      "text": "Sacrifice Composite Golem: Add {W}{U}{B}{R}{G} to your mana pool.",
+      "text": "Sacrifice Composite Golem: Add {W}{U}{B}{R}{G}.",
       "toughness": "4",
       "type": "Artifact Creature — Golem",
       "types": [
@@ -11082,7 +11075,7 @@
           "text": "Any restrictions on the mana in your mana pool aren't copied. For example, if you have {C}{W}{W}{B} with no restrictions on it in your mana pool and {U}{U}{U} that can be used only to cast artifact spells, you'll end up with {C}{C}{W}{W}{W}{W}{B}{B}, {U}{U}{U} that can be used only to cast artifact spells, and {U}{U}{U} that can be used for anything."
         }
       ],
-      "text": "{3}, {T}: Double the amount of each type of mana in your mana pool.",
+      "text": "{3}, {T}: Double the amount of each type of unspent mana you have.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -11340,7 +11333,7 @@
       "rulings": [
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         }
       ],
       "subtypes": [
@@ -11825,7 +11818,7 @@
         "5DN"
       ],
       "rarity": "Uncommon",
-      "text": "{2}: Put a charge counter on Gemstone Array.\nRemove a charge counter from Gemstone Array: Add one mana of any color to your mana pool.",
+      "text": "{2}: Put a charge counter on Gemstone Array.\nRemove a charge counter from Gemstone Array: Add one mana of any color.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -11914,7 +11907,7 @@
           "text": "You can activate Goblin Cannon's ability multiple times in response to the first activation. Goblin Cannon will be sacrificed the first time the ability resolves, but each activation still deals damage when it resolves."
         }
       ],
-      "text": "{2}: Goblin Cannon deals 1 damage to target creature or player. Sacrifice Goblin Cannon.",
+      "text": "{2}: Goblin Cannon deals 1 damage to any target. Sacrifice Goblin Cannon.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -12099,7 +12092,7 @@
         "5DN"
       ],
       "rarity": "Uncommon",
-      "text": "{T}, Sacrifice an artifact: Target player puts the top three cards of his or her library into his or her graveyard.\nWhenever an artifact enters the battlefield, you may untap Grinding Station.",
+      "text": "{T}, Sacrifice an artifact: Target player puts the top three cards of their library into their graveyard.\nWhenever an artifact enters the battlefield, you may untap Grinding Station.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -12185,7 +12178,7 @@
       "rulings": [
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         },
         {
           "date": "2017-11-17",
@@ -12196,7 +12189,7 @@
           "text": "Activating the last ability of Guardian Idol while it's already a creature will override any effects that set its power or toughness to a specific value. Effects that modify power or toughness without setting them to a specific value will continue to apply."
         }
       ],
-      "text": "Guardian Idol enters the battlefield tapped.\n{T}: Add {C} to your mana pool.\n{2}: Guardian Idol becomes a 2/2 Golem artifact creature until end of turn.",
+      "text": "Guardian Idol enters the battlefield tapped.\n{T}: Add {C}.\n{2}: Guardian Idol becomes a 2/2 Golem artifact creature until end of turn.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -12284,7 +12277,7 @@
       "subtypes": [
         "Equipment"
       ],
-      "text": "Equipped creature gets +0/+2 and has \"{T}: Prevent the next 1 damage that would be dealt to target creature or player this turn.\"\n{W}{W}: Attach Healer's Headdress to target creature you control.\nEquip {1} ({1}: Attach to target creature you control. Equip only as a sorcery.)",
+      "text": "Equipped creature gets +0/+2 and has \"{T}: Prevent the next 1 damage that would be dealt to any target this turn.\"\n{W}{W}: Attach Healer's Headdress to target creature you control.\nEquip {1} ({1}: Attach to target creature you control. Equip only as a sorcery.)",
       "type": "Artifact — Equipment",
       "types": [
         "Artifact"
@@ -12366,7 +12359,7 @@
         "5DN"
       ],
       "rarity": "Common",
-      "text": "Sunburst (This enters the battlefield with a charge counter on it for each color of mana spent to cast it.)\n{2}, Sacrifice Heliophial: Heliophial deals damage equal to the number of charge counters on it to target creature or player.",
+      "text": "Sunburst (This enters the battlefield with a charge counter on it for each color of mana spent to cast it.)\n{2}, Sacrifice Heliophial: Heliophial deals damage equal to the number of charge counters on it to any target.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -12722,7 +12715,7 @@
         "5DN"
       ],
       "rarity": "Uncommon",
-      "text": "Sacrifice an artifact: Add {C}{C} to your mana pool.",
+      "text": "Sacrifice an artifact: Add {C}{C}.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -12819,7 +12812,7 @@
           "text": "When playing with the top card of your library revealed, if an effect tells you to draw several cards, reveal each one before you draw it."
         }
       ],
-      "text": "Players play with the top card of their libraries revealed.\n{T}, Sacrifice Lantern of Insight: Target player shuffles his or her library.",
+      "text": "Players play with the top card of their libraries revealed.\n{T}, Sacrifice Lantern of Insight: Target player shuffles their library.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -13207,7 +13200,7 @@
       "subtypes": [
         "Myr"
       ],
-      "text": "At the beginning of your upkeep, if Myr Servitor is on the battlefield, each player returns all cards named Myr Servitor from his or her graveyard to the battlefield.",
+      "text": "At the beginning of your upkeep, if Myr Servitor is on the battlefield, each player returns all cards named Myr Servitor from their graveyard to the battlefield.",
       "toughness": "1",
       "type": "Artifact Creature — Myr",
       "types": [
@@ -13468,7 +13461,7 @@
       "subtypes": [
         "Equipment"
       ],
-      "text": "Equipped creature has \"{T}: Add one mana of any color to your mana pool.\"\nEquip {1}",
+      "text": "Equipped creature has \"{T}: Add one mana of any color.\"\nEquip {1}",
       "type": "Artifact — Equipment",
       "types": [
         "Artifact"
@@ -13551,7 +13544,7 @@
         "HOP"
       ],
       "rarity": "Common",
-      "text": "Sunburst (This enters the battlefield with a charge counter on it for each color of mana spent to cast it.)\nRemove a charge counter from Pentad Prism: Add one mana of any color to your mana pool.",
+      "text": "Sunburst (This enters the battlefield with a charge counter on it for each color of mana spent to cast it.)\nRemove a charge counter from Pentad Prism: Add one mana of any color.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -13633,7 +13626,7 @@
         "5DN"
       ],
       "rarity": "Rare",
-      "text": "If a player would draw a card, that player skips that draw instead.\nAt the beginning of each end step, each player sacrifices a permanent unless he or she discards a card.",
+      "text": "If a player would draw a card, that player skips that draw instead.\nAt the beginning of each end step, each player sacrifices a permanent unless they discard a card.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -14256,7 +14249,7 @@
           "text": "Skullcage doesn't check hand size when it triggers, only when it resolves."
         }
       ],
-      "text": "At the beginning of each opponent's upkeep, Skullcage deals 2 damage to that player unless he or she has exactly three or exactly four cards in hand.",
+      "text": "At the beginning of each opponent's upkeep, Skullcage deals 2 damage to that player unless they have exactly three or exactly four cards in hand.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -15343,7 +15336,7 @@
       "rulings": [
         {
           "date": "2004-12-01",
-          "text": "The controller of Vedalken Orrery can cast nonland artifact, creature, enchantment, and sorcery cards any time he or she could cast an instant. This includes on other players' turns and during the upkeep step, draw step, combat phase, and end step."
+          "text": "The controller of Vedalken Orrery can cast nonland artifact, creature, enchantment, and sorcery cards any time they could cast an instant. This includes on other players' turns and during the upkeep step, draw step, combat phase, and end step."
         },
         {
           "date": "2010-06-15",

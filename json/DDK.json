@@ -227,8 +227,8 @@
       "rarity": "Common",
       "rulings": [
         {
-          "date": "2009-10-01",
-          "text": "Whether an opponent has 10 or less life is checked only as the ability resolves."
+          "date": "2018-03-16",
+          "text": "Whether an opponent has 10 or less life is checked only as Vampire Lacerator's ability resolves."
         }
       ],
       "subtypes": [
@@ -492,11 +492,17 @@
         "A25"
       ],
       "rarity": "Common",
+      "rulings": [
+        {
+          "date": "2018-03-16",
+          "text": "If Mesmeric Fiend leaves the battlefield before its first ability has resolved, its second ability will trigger and do nothing. Then its first ability will resolve and exile a nonland card from the target opponent's hand indefinitely."
+        }
+      ],
       "subtypes": [
         "Nightmare",
         "Horror"
       ],
-      "text": "When Mesmeric Fiend enters the battlefield, target opponent reveals his or her hand and you choose a nonland card from it. Exile that card.\nWhen Mesmeric Fiend leaves the battlefield, return the exiled card to its owner's hand.",
+      "text": "When Mesmeric Fiend enters the battlefield, target opponent reveals their hand and you choose a nonland card from it. Exile that card.\nWhen Mesmeric Fiend leaves the battlefield, return the exiled card to its owner's hand.",
       "toughness": "1",
       "type": "Creature — Nightmare Horror",
       "types": [
@@ -773,8 +779,16 @@
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2011-09-22",
+          "date": "2018-03-16",
           "text": "If Fiend Hunter leaves the battlefield before its first ability has resolved, its second ability will trigger and do nothing. Then its first ability will resolve and exile the targeted creature indefinitely."
+        },
+        {
+          "date": "2018-03-16",
+          "text": "Once the exiled permanent returns, it's considered a new object with no relation to the object that it was. Auras attached to the exiled permanent will be put into their owners' graveyards. Equipment attached to the exiled permanent will become unattached and remain on the battlefield. Any counters on the exiled permanent will cease to exist."
+        },
+        {
+          "date": "2018-03-16",
+          "text": "If a token is exiled this way, it won't return to the battlefield."
         }
       ],
       "subtypes": [
@@ -1119,7 +1133,7 @@
       "subtypes": [
         "Spirit"
       ],
-      "text": "When Revenant Patriarch enters the battlefield, if {W} was spent to cast it, target player skips his or her next combat phase.\nRevenant Patriarch can't block.",
+      "text": "When Revenant Patriarch enters the battlefield, if {W} was spent to cast it, target player skips their next combat phase.\nRevenant Patriarch can't block.",
       "toughness": "3",
       "type": "Creature — Spirit",
       "types": [
@@ -1292,7 +1306,7 @@
       "rulings": [
         {
           "date": "2010-03-01",
-          "text": "When the triggered ability resolves, first the player whose turn it is (if that player is an opponent) chooses which creature he or she will sacrifice, then each other opponent in turn order does the same, then all chosen creatures are sacrificed at the same time."
+          "text": "When the triggered ability resolves, first the player whose turn it is (if that player is an opponent) chooses which creature they will sacrifice, then each other opponent in turn order does the same, then all chosen creatures are sacrificed at the same time."
         },
         {
           "date": "2010-03-01",
@@ -1371,7 +1385,7 @@
         "DDK"
       ],
       "rarity": "Common",
-      "text": "Kicker {2}{B} (You may pay an additional {2}{B} as you cast this spell.)\nTarget creature gets +3/+0 until end of turn. If Vampire's Bite was kicked, that creature gains lifelink until end of turn. (Damage dealt by the creature also causes its controller to gain that much life.)",
+      "text": "Kicker {2}{B} (You may pay an additional {2}{B} as you cast this spell.)\nTarget creature gets +3/+0 until end of turn. If this spell was kicked, that creature gains lifelink until end of turn. (Damage dealt by the creature also causes its controller to gain that much life.)",
       "type": "Instant",
       "types": [
         "Instant"
@@ -1486,7 +1500,7 @@
       "rulings": [
         {
           "date": "2011-09-22",
-          "text": "If the creature is an illegal target when Sorin's Thirst tries to resolve, Sorin's Thirst will be countered and none of its effects will happen. You won't gain life."
+          "text": "If the creature is an illegal target when Sorin's Thirst tries to resolve, Sorin's Thirst won't resolve and none of its effects will happen. You won't gain life."
         }
       ],
       "text": "Sorin's Thirst deals 2 damage to target creature and you gain 2 life.",
@@ -1560,7 +1574,7 @@
         },
         {
           "date": "2010-03-01",
-          "text": "If the targeted creature is an illegal target by the time Urge to Feed resolves, the entire spell is countered. You can't tap any Vampires."
+          "text": "If the targeted creature is an illegal target by the time Urge to Feed resolves, the entire spell doesn't resolve. You can't tap any Vampires."
         }
       ],
       "text": "Target creature gets -3/-3 until end of turn. You may tap any number of untapped Vampire creatures you control. If you do, put a +1/+1 counter on each of those Vampires.",
@@ -2184,7 +2198,7 @@
           "text": "You can choose not to find a basic land card, even if there is one in your library."
         }
       ],
-      "text": "Target player loses 4 life and you gain 4 life.\nBasic landcycling {1}{B} ({1}{B}, Discard this card: Search your library for a basic land card, reveal it, and put it into your hand. Then shuffle your library.)",
+      "text": "Target player loses 4 life and you gain 4 life.\nBasic landcycling {1}{B} ({1}{B}, Discard this card: Search your library for a basic land card, reveal it, put it into your hand, then shuffle your library.)",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -2245,7 +2259,7 @@
         "C15"
       ],
       "rarity": "Rare",
-      "text": "Death Grasp deals X damage to target creature or player. You gain X life.",
+      "text": "Death Grasp deals X damage to any target. You gain X life.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -2280,6 +2294,10 @@
         },
         {
           "format": "Innistrad Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
           "legality": "Legal"
         },
         {
@@ -2396,7 +2414,7 @@
         "E02"
       ],
       "rarity": "Uncommon",
-      "text": "{T}: Add {C} to your mana pool.\n{T}: Add {W} or {B} to your mana pool. Activate this ability only if you control a Swamp.",
+      "text": "{T}: Add {C}.\n{T}: Add {W} or {B}. Activate this ability only if you control a Swamp.",
       "type": "Land",
       "types": [
         "Land"
@@ -2680,7 +2698,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -2980,7 +2999,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -3280,7 +3300,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -3562,7 +3583,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -3841,7 +3863,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -4120,7 +4143,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -4276,7 +4300,7 @@
         "Goblin",
         "Shaman"
       ],
-      "text": "When Goblin Arsonist dies, you may have it deal 1 damage to target creature or player.",
+      "text": "When Goblin Arsonist dies, you may have it deal 1 damage to any target.",
       "toughness": "1",
       "type": "Creature — Goblin Shaman",
       "types": [
@@ -4342,7 +4366,7 @@
       "subtypes": [
         "Spirit"
       ],
-      "text": "{R}, Sacrifice a creature: Scorched Rusalka deals 1 damage to target player.",
+      "text": "{R}, Sacrifice a creature: Scorched Rusalka deals 1 damage to target player or planeswalker.",
       "toughness": "1",
       "type": "Creature — Spirit",
       "types": [
@@ -4634,7 +4658,7 @@
         "Human",
         "Shaman"
       ],
-      "text": "{T}: Vithian Stinger deals 1 damage to target creature or player.\nUnearth {1}{R} ({1}{R}: Return this card from your graveyard to the battlefield. It gains haste. Exile it at the beginning of the next end step or if it would leave the battlefield. Unearth only as a sorcery.)",
+      "text": "{T}: Vithian Stinger deals 1 damage to any target.\nUnearth {1}{R} ({1}{R}: Return this card from your graveyard to the battlefield. It gains haste. Exile it at the beginning of the next end step or if it would leave the battlefield. Unearth only as a sorcery.)",
       "toughness": "1",
       "type": "Creature — Human Shaman",
       "types": [
@@ -4777,7 +4801,7 @@
       "subtypes": [
         "Elemental"
       ],
-      "text": "When Coal Stoker enters the battlefield, if you cast it from your hand, add {R}{R}{R} to your mana pool.",
+      "text": "When Coal Stoker enters the battlefield, if you cast it from your hand, add {R}{R}{R}.",
       "toughness": "3",
       "type": "Creature — Elemental",
       "types": [
@@ -4849,7 +4873,7 @@
       "subtypes": [
         "Spirit"
       ],
-      "text": "At the beginning of each opponent's upkeep, if that player has two or fewer cards in hand, Lavaborn Muse deals 3 damage to him or her.",
+      "text": "At the beginning of each opponent's upkeep, if that player has two or fewer cards in hand, Lavaborn Muse deals 3 damage to that player.",
       "toughness": "3",
       "type": "Creature — Spirit",
       "types": [
@@ -4992,21 +5016,13 @@
       "rulings": [
         {
           "date": "2017-03-14",
-          "text": "The damage dealt by Hellrider's triggered ability isn't combat damage and may be redirected to a planeswalker controlled by the defending player."
-        },
-        {
-          "date": "2017-03-14",
-          "text": "If a creature you control attacks a planeswalker, the defending player is the controller of that planeswalker."
-        },
-        {
-          "date": "2017-03-14",
-          "text": "In some multiplayer variants, creatures you control may attack multiple players and/or planeswalkers. For each attacking creature, Hellrider will deal damage to the corresponding defending player."
+          "text": "Creatures you control may attack multiple players and/or planeswalkers. For each attacking creature, Hellrider will deal damage to the corresponding player or planeswalker."
         }
       ],
       "subtypes": [
         "Devil"
       ],
-      "text": "Haste\nWhenever a creature you control attacks, Hellrider deals 1 damage to defending player.",
+      "text": "Haste\nWhenever a creature you control attacks, Hellrider deals 1 damage to the player or planeswalker it's attacking.",
       "toughness": "3",
       "type": "Creature — Devil",
       "types": [
@@ -5073,7 +5089,7 @@
         "Human",
         "Shaman"
       ],
-      "text": "{R}, {T}, Sacrifice a creature: Skirsdag Cultist deals 2 damage to target creature or player.",
+      "text": "{R}, {T}, Sacrifice a creature: Skirsdag Cultist deals 2 damage to any target.",
       "toughness": "2",
       "type": "Creature — Human Shaman",
       "types": [
@@ -5326,7 +5342,7 @@
       "subtypes": [
         "Devil"
       ],
-      "text": "When Gang of Devils dies, it deals 3 damage divided as you choose among one, two, or three target creatures and/or players.",
+      "text": "When Gang of Devils dies, it deals 3 damage divided as you choose among one, two, or three targets.",
       "toughness": "3",
       "type": "Creature — Devil",
       "types": [
@@ -5444,7 +5460,7 @@
         "DDK"
       ],
       "rarity": "Common",
-      "text": "Blazing Salvo deals 3 damage to target creature unless that creature's controller has Blazing Salvo deal 5 damage to him or her.",
+      "text": "Blazing Salvo deals 3 damage to target creature unless that creature's controller has Blazing Salvo deal 5 damage to them.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -5635,7 +5651,7 @@
         "DDK"
       ],
       "rarity": "Common",
-      "text": "Geistflame deals 1 damage to target creature or player.\nFlashback {3}{R} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "text": "Geistflame deals 1 damage to any target.\nFlashback {3}{R} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
       "type": "Instant",
       "types": [
         "Instant"
@@ -5967,7 +5983,7 @@
         "A25"
       ],
       "rarity": "Uncommon",
-      "text": "Any player may have Browbeat deal 5 damage to him or her. If no one does, target player draws three cards.",
+      "text": "Any player may have Browbeat deal 5 damage to them. If no one does, target player draws three cards.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -6023,7 +6039,7 @@
         "DDK"
       ],
       "rarity": "Rare",
-      "text": "Any player may have Breaking Point deal 6 damage to him or her. If no one does, destroy all creatures. Creatures destroyed this way can't be regenerated.",
+      "text": "Any player may have Breaking Point deal 6 damage to them. If no one does, destroy all creatures. Creatures destroyed this way can't be regenerated.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -6151,7 +6167,7 @@
           "text": "The targeted player will discard two cards even if some or all of Blightning's damage is prevented or redirected."
         }
       ],
-      "text": "Blightning deals 3 damage to target player. That player discards two cards.",
+      "text": "Blightning deals 3 damage to target player or planeswalker. That player or that planeswalker's controller discards two cards.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -6232,7 +6248,7 @@
           "text": "If a cost includes more than one monocolored hybrid mana symbol, you can choose a different way to pay for each symbol. For example, you can pay for Flame Javelin by spending {R}{R}{R}, {2}{R}{R}, {4}{R}, or {6}."
         }
       ],
-      "text": "({2/R} can be paid with any two mana or with {R}. This card's converted mana cost is 6.)\nFlame Javelin deals 4 damage to target creature or player.",
+      "text": "({2/R} can be paid with any two mana or with {R}. This card's converted mana cost is 6.)\nFlame Javelin deals 4 damage to any target.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -6371,7 +6387,7 @@
         "DDK"
       ],
       "rarity": "Rare",
-      "text": "Devil's Play deals X damage to target creature or player.\nFlashback {X}{R}{R}{R} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "text": "Devil's Play deals X damage to any target.\nFlashback {X}{R}{R}{R} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -6432,7 +6448,7 @@
         "C17"
       ],
       "rarity": "Uncommon",
-      "text": "Akoum Refuge enters the battlefield tapped.\nWhen Akoum Refuge enters the battlefield, you gain 1 life.\n{T}: Add {B} or {R} to your mana pool.",
+      "text": "Akoum Refuge enters the battlefield tapped.\nWhen Akoum Refuge enters the battlefield, you gain 1 life.\n{T}: Add {B} or {R}.",
       "type": "Land",
       "types": [
         "Land"
@@ -6502,7 +6518,7 @@
           "text": "If this land enters the battlefield and you control no other lands, its ability will force you to return it to your hand."
         }
       ],
-      "text": "Rakdos Carnarium enters the battlefield tapped.\nWhen Rakdos Carnarium enters the battlefield, return a land you control to its owner's hand.\n{T}: Add {B}{R} to your mana pool.",
+      "text": "Rakdos Carnarium enters the battlefield tapped.\nWhen Rakdos Carnarium enters the battlefield, return a land you control to its owner's hand.\n{T}: Add {B}{R}.",
       "type": "Land",
       "types": [
         "Land"
@@ -6773,7 +6789,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -7057,7 +7075,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -7341,7 +7361,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -7638,7 +7660,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -7938,7 +7961,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -8238,7 +8262,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [

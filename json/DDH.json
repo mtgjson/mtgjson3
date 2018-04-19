@@ -103,7 +103,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "+1: Target permanent doesn't untap during its controller's next untap step.\n−2: Ajani Vengeant deals 3 damage to target creature or player and you gain 3 life.\n−7: Destroy all lands target player controls.",
+      "text": "+1: Target permanent doesn't untap during its controller's next untap step.\n−2: Ajani Vengeant deals 3 damage to any target and you gain 3 life.\n−7: Destroy all lands target player controls.",
       "type": "Legendary Planeswalker — Ajani",
       "types": [
         "Planeswalker"
@@ -1403,7 +1403,7 @@
       "subtypes": [
         "Elemental"
       ],
-      "text": "Whenever Spitemare is dealt damage, it deals that much damage to target creature or player.",
+      "text": "Whenever Spitemare is dealt damage, it deals that much damage to any target.",
       "toughness": "3",
       "type": "Creature — Elemental",
       "types": [
@@ -1641,19 +1641,15 @@
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2008-04-01",
-          "text": "If this creature is attacking a planeswalker, assigning its damage as though it weren't blocked means the damage is assigned to the planeswalker, not to the defending player."
-        },
-        {
-          "date": "2008-04-01",
-          "text": "When assigning combat damage, you choose whether you want to assign all damage to blocking creatures, or if you want to assign all of it to the defending player or planeswalker. You can't split the damage assignment between them."
-        },
-        {
-          "date": "2008-04-01",
+          "date": "2018-04-27",
           "text": "You can decide to assign damage to the defending player or planeswalker even if the blocking creature has protection from green or damage preventing effects on it."
         },
         {
-          "date": "2008-04-01",
+          "date": "2018-04-27",
+          "text": "When assigning combat damage, you choose whether you want to assign all damage to blocking creatures, or if you want to assign all of it to the player or planeswalker this creature is attacking. You can't split the damage assignment between them."
+        },
+        {
+          "date": "2018-04-27",
           "text": "If blocked by a creature with banding, the defending player decides whether or not the damage is assigned \"as though it weren't blocked\"."
         }
       ],
@@ -1999,10 +1995,10 @@
       "rulings": [
         {
           "date": "2017-11-17",
-          "text": "If the chosen target is illegal when Lightning Helix tries to resolve, it will be countered and none of its effects will happen. You won't gain 3 life."
+          "text": "If the chosen target is illegal when Lightning Helix tries to resolve, it won't resolve and none of its effects will happen. You won't gain 3 life."
         }
       ],
-      "text": "Lightning Helix deals 3 damage to target creature or player and you gain 3 life.",
+      "text": "Lightning Helix deals 3 damage to any target and you gain 3 life.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -2075,7 +2071,8 @@
         "MBS",
         "DDH",
         "CNS",
-        "IMA"
+        "IMA",
+        "DDU"
       ],
       "rarity": "Uncommon",
       "text": "Look at the top five cards of your library. You may reveal any number of creature cards from among them and put the revealed cards into your hand. Put the rest on the bottom of your library in any order.",
@@ -2330,7 +2327,7 @@
           "text": "Searing Meditation doesn't care how much life you gain. It triggers just once for each life-gaining event, whether it's 1 life from Firemane Angel or 15 life from Brightflame."
         }
       ],
-      "text": "Whenever you gain life, you may pay {2}. If you do, Searing Meditation deals 2 damage to target creature or player.",
+      "text": "Whenever you gain life, you may pay {2}. If you do, Searing Meditation deals 2 damage to any target.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -2610,7 +2607,7 @@
           "text": "You can choose not to find a basic land card, even if there is one in your library."
         }
       ],
-      "text": "Target player gains 8 life.\nBasic landcycling {1}{G} ({1}{G}, Discard this card: Search your library for a basic land card, reveal it, and put it into your hand. Then shuffle your library.)",
+      "text": "Target player gains 8 life.\nBasic landcycling {1}{G} ({1}{G}, Discard this card: Search your library for a basic land card, reveal it, put it into your hand, then shuffle your library.)",
       "type": "Instant",
       "types": [
         "Instant"
@@ -2756,6 +2753,10 @@
           "legality": "Legal"
         },
         {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Khans of Tarkir Block",
           "legality": "Legal"
         },
@@ -2891,7 +2892,7 @@
         "C17"
       ],
       "rarity": "Uncommon",
-      "text": "Graypelt Refuge enters the battlefield tapped.\nWhen Graypelt Refuge enters the battlefield, you gain 1 life.\n{T}: Add {G} or {W} to your mana pool.",
+      "text": "Graypelt Refuge enters the battlefield tapped.\nWhen Graypelt Refuge enters the battlefield, you gain 1 life.\n{T}: Add {G} or {W}.",
       "type": "Land",
       "types": [
         "Land"
@@ -2969,7 +2970,7 @@
         "E02"
       ],
       "rarity": "Uncommon",
-      "text": "Jungle Shrine enters the battlefield tapped.\n{T}: Add {R}, {G}, or {W} to your mana pool.",
+      "text": "Jungle Shrine enters the battlefield tapped.\n{T}: Add {R}, {G}, or {W}.",
       "type": "Land",
       "types": [
         "Land"
@@ -3046,7 +3047,7 @@
         "PCA"
       ],
       "rarity": "Uncommon",
-      "text": "Kazandu Refuge enters the battlefield tapped.\nWhen Kazandu Refuge enters the battlefield, you gain 1 life.\n{T}: Add {R} or {G} to your mana pool.",
+      "text": "Kazandu Refuge enters the battlefield tapped.\nWhen Kazandu Refuge enters the battlefield, you gain 1 life.\n{T}: Add {R} or {G}.",
       "type": "Land",
       "types": [
         "Land"
@@ -3119,7 +3120,7 @@
       "subtypes": [
         "Forest"
       ],
-      "text": "({T}: Add {G} to your mana pool.)\nSapseep Forest enters the battlefield tapped.\n{G}, {T}: You gain 1 life. Activate this ability only if you control two or more green permanents.",
+      "text": "({T}: Add {G}.)\nSapseep Forest enters the battlefield tapped.\n{G}, {T}: You gain 1 life. Activate this ability only if you control two or more green permanents.",
       "type": "Land — Forest",
       "types": [
         "Land"
@@ -3195,7 +3196,7 @@
         "PCA"
       ],
       "rarity": "Uncommon",
-      "text": "{T}: Add {C} to your mana pool.\n{2}{G}{W}, {T}: Create a 1/1 green Saproling creature token.",
+      "text": "{T}: Add {C}.\n{2}{G}{W}, {T}: Create a 1/1 green Saproling creature token.",
       "type": "Land",
       "types": [
         "Land"
@@ -3488,7 +3489,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -3793,7 +3796,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -4077,7 +4082,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -4382,7 +4388,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -4486,7 +4494,7 @@
         },
         {
           "date": "2012-07-01",
-          "text": "For the third ability, if the player is an illegal target when the ability tries to resolve, the ability is countered and none of its effects will happen. No damage will be dealt, no cards will be discarded, and no permanents will be sacrificed."
+          "text": "For the third ability, if the player is an illegal target when the ability tries to resolve, the ability doesn't resolve and none of its effects will happen. No damage will be dealt, no cards will be discarded, and no permanents will be sacrificed."
         }
       ],
       "subtypes": [
@@ -4495,7 +4503,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "+3: Destroy target noncreature permanent.\n−2: Gain control of target creature.\n−9: Nicol Bolas, Planeswalker deals 7 damage to target player. That player discards seven cards, then sacrifices seven permanents.",
+      "text": "+3: Destroy target noncreature permanent.\n−2: Gain control of target creature.\n−9: Nicol Bolas, Planeswalker deals 7 damage to target player or planeswalker. That player or that planeswalker's controller discards seven cards, then sacrifices seven permanents.",
       "type": "Legendary Planeswalker — Bolas",
       "types": [
         "Planeswalker"
@@ -4922,7 +4930,7 @@
       "subtypes": [
         "Frog"
       ],
-      "text": "Sacrifice Morgue Toad: Add {U}{R} to your mana pool.",
+      "text": "Sacrifice Morgue Toad: Add {U}{R}.",
       "toughness": "2",
       "type": "Creature — Frog",
       "types": [
@@ -5002,7 +5010,7 @@
       "rulings": [
         {
           "date": "2009-10-01",
-          "text": "Hellfire Mongrel's triggered ability has an \"intervening 'if' clause.\" That means (1) the ability won't trigger at all unless the opponent whose turn it is has two or fewer cards in hand as his or her upkeep starts, and (2) the ability will do nothing if that player has three or more cards in hand by the time it resolves."
+          "text": "Hellfire Mongrel's triggered ability has an \"intervening 'if' clause.\" That means (1) the ability won't trigger at all unless the opponent whose turn it is has two or fewer cards in hand as their upkeep starts, and (2) the ability will do nothing if that player has three or more cards in hand by the time it resolves."
         },
         {
           "date": "2009-10-01",
@@ -5013,7 +5021,7 @@
         "Elemental",
         "Hound"
       ],
-      "text": "At the beginning of each opponent's upkeep, if that player has two or fewer cards in hand, Hellfire Mongrel deals 2 damage to him or her.",
+      "text": "At the beginning of each opponent's upkeep, if that player has two or fewer cards in hand, Hellfire Mongrel deals 2 damage to that player.",
       "toughness": "2",
       "type": "Creature — Elemental Hound",
       "types": [
@@ -5177,7 +5185,7 @@
       "subtypes": [
         "Weird"
       ],
-      "text": "When Steamcore Weird enters the battlefield, if {R} was spent to cast Steamcore Weird, it deals 2 damage to target creature or player.",
+      "text": "When Steamcore Weird enters the battlefield, if {R} was spent to cast Steamcore Weird, it deals 2 damage to any target.",
       "toughness": "3",
       "type": "Creature — Weird",
       "types": [
@@ -5731,7 +5739,7 @@
       "subtypes": [
         "Zombie"
       ],
-      "text": "Fear (This creature can't be blocked except by artifact creatures and/or black creatures.)\nIslandcycling {2}, swampcycling {2} ({2}, Discard this card: Search your library for an Island or Swamp card, reveal it, and put it into your hand. Then shuffle your library.)",
+      "text": "Fear (This creature can't be blocked except by artifact creatures and/or black creatures.)\nIslandcycling {2}, swampcycling {2} ({2}, Discard this card: Search your library for an Island or Swamp card, reveal it, put it into your hand, then shuffle your library.)",
       "toughness": "4",
       "type": "Creature — Zombie",
       "types": [
@@ -5834,7 +5842,7 @@
       "subtypes": [
         "Elemental"
       ],
-      "text": "Haste\nSwampcycling {2}, mountaincycling {2} ({2}, Discard this card: Search your library for a Swamp or Mountain card, reveal it, and put it into your hand. Then shuffle your library.)",
+      "text": "Haste\nSwampcycling {2}, mountaincycling {2} ({2}, Discard this card: Search your library for a Swamp or Mountain card, reveal it, put it into your hand, then shuffle your library.)",
       "toughness": "1",
       "type": "Creature — Elemental",
       "types": [
@@ -6064,7 +6072,7 @@
         "E01"
       ],
       "rarity": "Common",
-      "text": "{T}: Add {U}, {B}, or {R} to your mana pool.",
+      "text": "{T}: Add {U}, {B}, or {R}.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -6385,29 +6393,14 @@
         "9ED",
         "10E",
         "ME4",
-        "DDH"
+        "DDH",
+        "DOM"
       ],
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2004-10-04",
-          "text": "Tapping a card with an effect like this will never pay the cost of an ability. For example, tapping a land with this card will not put mana into a player's pool."
-        },
-        {
-          "date": "2004-10-04",
-          "text": "Icy Manipulator can't be used to stop someone from using an ability of the permanent you plan to tap. It can be used to make a player use the ability now or to not use it."
-        },
-        {
-          "date": "2004-10-04",
-          "text": "The ability can target a tapped card, but tapping a tapped card does nothing useful. And it will not trigger \"if the card becomes tapped\" effects."
-        },
-        {
-          "date": "2004-10-04",
-          "text": "If you want to stop someone from attacking with a creature by using this card, you must do so before attackers are declared. You can't wait until after attackers are declared and then try to use it to make a creature stop attacking. Note that your opponent can't start declaring attackers without letting you use the Icy Manipulator."
-        },
-        {
-          "date": "2004-10-04",
-          "text": "Tapping an attacking creature which did not tap to attack does not remove the creature from the attack or cause the creature to stop dealing damage."
+          "date": "2018-04-27",
+          "text": "Once a player announces that they're casting a spell or activating an ability, no player may take other actions until the spell or ability has been paid for. Notably, other players can't try to tap that player's permanents to stop them from paying {T} or to stop them from producing enough mana."
         }
       ],
       "text": "{1}, {T}: Tap target artifact, creature, or land.",
@@ -6556,7 +6549,7 @@
         "DDH"
       ],
       "rarity": "Common",
-      "text": "Kicker {1}{R} (You may pay an additional {1}{R} as you cast this spell.)\nDestroy target nonblack creature. It can't be regenerated. If Agonizing Demise was kicked, it deals damage equal to that creature's power to the creature's controller.",
+      "text": "Kicker {1}{R} (You may pay an additional {1}{R} as you cast this spell.)\nDestroy target nonblack creature. It can't be regenerated. If this spell was kicked, Agonizing Demise deals damage equal to that creature's power to the creature's controller.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -6825,7 +6818,7 @@
         },
         {
           "date": "2017-03-14",
-          "text": "All of the actions for Cruel Ultimatum are performed sequentially, in the order listed. Earlier actions may affect how you perform later actions. For example, if the opponent sacrifices a creature that he or she controls but you own, it will end up in your graveyard. When Cruel Ultimatum lets you return a creature card from your graveyard to your hand, you can choose that one."
+          "text": "All of the actions for Cruel Ultimatum are performed sequentially, in the order listed. Earlier actions may affect how you perform later actions. For example, if the opponent sacrifices a creature that they control but you own, it will end up in your graveyard. When Cruel Ultimatum lets you return a creature card from your graveyard to your hand, you can choose that one."
         },
         {
           "date": "2017-03-14",
@@ -7377,7 +7370,7 @@
         "DDH"
       ],
       "rarity": "Uncommon",
-      "text": "Target player reveals two cards at random from his or her hand, then discards each nonland card revealed this way.",
+      "text": "Target player reveals two cards at random from their hand, then discards each nonland card revealed this way.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -7456,7 +7449,7 @@
         "E02"
       ],
       "rarity": "Uncommon",
-      "text": "Crumbling Necropolis enters the battlefield tapped.\n{T}: Add {U}, {B}, or {R} to your mana pool.",
+      "text": "Crumbling Necropolis enters the battlefield tapped.\n{T}: Add {U}, {B}, or {R}.",
       "type": "Land",
       "types": [
         "Land"
@@ -7530,7 +7523,7 @@
         "CMA"
       ],
       "rarity": "Common",
-      "text": "Rupture Spire enters the battlefield tapped.\nWhen Rupture Spire enters the battlefield, sacrifice it unless you pay {1}.\n{T}: Add one mana of any color to your mana pool.",
+      "text": "Rupture Spire enters the battlefield tapped.\nWhen Rupture Spire enters the battlefield, sacrifice it unless you pay {1}.\n{T}: Add one mana of any color.",
       "type": "Land",
       "types": [
         "Land"
@@ -7910,7 +7903,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -8216,7 +8210,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -8499,7 +8494,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -8804,7 +8801,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [

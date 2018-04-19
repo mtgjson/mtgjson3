@@ -7,8 +7,14 @@
   "border": "black",
   "type": "expansion",
   "booster": [
-    "uncommon",
-    "uncommon",
+    [
+      "rare",
+      "uncommon"
+    ],
+    [
+      "rare",
+      "uncommon"
+    ],
     "common",
     "common",
     "common",
@@ -52,7 +58,7 @@
       ],
       "rarity": "Rare",
       "reserved": true,
-      "text": "{1}, {T}, Sacrifice Aeolipile: Aeolipile deals 2 damage to target creature or player.",
+      "text": "{1}, {T}, Sacrifice Aeolipile: It deals 2 damage to any target.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -90,7 +96,7 @@
       ],
       "rarity": "Rare",
       "reserved": true,
-      "text": "{1}, {T}, Sacrifice Balm of Restoration: Choose one —\n• You gain 2 life.\n• Prevent the next 2 damage that would be dealt to target creature or player this turn.",
+      "text": "{1}, {T}, Sacrifice Balm of Restoration: Choose one —\n• You gain 2 life.\n• Prevent the next 2 damage that would be dealt to any target this turn.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -357,7 +363,7 @@
       ],
       "rarity": "Rare",
       "reserved": true,
-      "text": "{1}, {T}, Sacrifice Implements of Sacrifice: Add two mana of any one color to your mana pool.",
+      "text": "{1}, {T}, Sacrifice Implements of Sacrifice: Add two mana of any one color.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -731,7 +737,7 @@
       "subtypes": [
         "Thrull"
       ],
-      "text": "{T}, Sacrifice Basal Thrull: Add {B}{B} to your mana pool.",
+      "text": "{T}, Sacrifice Basal Thrull: Add {B}{B}.",
       "toughness": "2",
       "type": "Creature — Thrull",
       "types": [
@@ -784,7 +790,7 @@
       "subtypes": [
         "Thrull"
       ],
-      "text": "{T}, Sacrifice Basal Thrull: Add {B}{B} to your mana pool.",
+      "text": "{T}, Sacrifice Basal Thrull: Add {B}{B}.",
       "toughness": "2",
       "type": "Creature — Thrull",
       "types": [
@@ -837,7 +843,7 @@
       "subtypes": [
         "Thrull"
       ],
-      "text": "{T}, Sacrifice Basal Thrull: Add {B}{B} to your mana pool.",
+      "text": "{T}, Sacrifice Basal Thrull: Add {B}{B}.",
       "toughness": "2",
       "type": "Creature — Thrull",
       "types": [
@@ -890,7 +896,7 @@
       "subtypes": [
         "Thrull"
       ],
-      "text": "{T}, Sacrifice Basal Thrull: Add {B}{B} to your mana pool.",
+      "text": "{T}, Sacrifice Basal Thrull: Add {B}{B}.",
       "toughness": "2",
       "type": "Creature — Thrull",
       "types": [
@@ -1311,7 +1317,7 @@
       "subtypes": [
         "Cleric"
       ],
-      "text": "{1}: Add {B} to your mana pool. If this ability has been activated four or more times this turn, sacrifice Initiates of the Ebon Hand at the beginning of the next end step.",
+      "text": "{1}: Add {B}. If this ability has been activated four or more times this turn, sacrifice Initiates of the Ebon Hand at the beginning of the next end step.",
       "toughness": "1",
       "type": "Creature — Cleric",
       "types": [
@@ -1369,7 +1375,7 @@
       "subtypes": [
         "Cleric"
       ],
-      "text": "{1}: Add {B} to your mana pool. If this ability has been activated four or more times this turn, sacrifice Initiates of the Ebon Hand at the beginning of the next end step.",
+      "text": "{1}: Add {B}. If this ability has been activated four or more times this turn, sacrifice Initiates of the Ebon Hand at the beginning of the next end step.",
       "toughness": "1",
       "type": "Creature — Cleric",
       "types": [
@@ -1427,7 +1433,7 @@
       "subtypes": [
         "Cleric"
       ],
-      "text": "{1}: Add {B} to your mana pool. If this ability has been activated four or more times this turn, sacrifice Initiates of the Ebon Hand at the beginning of the next end step.",
+      "text": "{1}: Add {B}. If this ability has been activated four or more times this turn, sacrifice Initiates of the Ebon Hand at the beginning of the next end step.",
       "toughness": "1",
       "type": "Creature — Cleric",
       "types": [
@@ -2005,13 +2011,9 @@
         {
           "date": "2004-10-04",
           "text": "You exile exactly one creature. You can't exile more than one in an attempt to get a larger effect."
-        },
-        {
-          "date": "2008-04-01",
-          "text": "A \"creature card\" is any card with the type creature, even if it has other types such as artifact, enchantment, or land. Older cards of type summon are also creature cards."
         }
       ],
-      "text": "As an additional cost to cast Soul Exchange, exile a creature you control.\nReturn target creature card from your graveyard to the battlefield. Put a +2/+2 counter on that creature if the exiled creature was a Thrull.",
+      "text": "As an additional cost to cast this spell, exile a creature you control.\nReturn target creature card from your graveyard to the battlefield. Put a +2/+2 counter on that creature if the exiled creature was a Thrull.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -2232,7 +2234,7 @@
           "text": "Only checks the type of the land as it is put onto the battlefield. If the land gets changed after it enters the battlefield (even by a continuous effect), the Chant causes no additional effect."
         }
       ],
-      "text": "At the beginning of your upkeep, sacrifice Tourach's Chant unless you pay {B}.\nWhenever a player puts a Forest onto the battlefield, Tourach's Chant deals 3 damage to that player unless he or she puts a -1/-1 counter on a creature he or she controls.",
+      "text": "At the beginning of your upkeep, sacrifice Tourach's Chant unless you pay {B}.\nWhenever a player puts a Forest onto the battlefield, Tourach's Chant deals 3 damage to that player unless they put a -1/-1 counter on a creature they control.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -2381,7 +2383,7 @@
           "text": "The effect applies even if the Island in question entered the battlefield after High Tide resolved."
         }
       ],
-      "text": "Until end of turn, whenever a player taps an Island for mana, that player adds {U} to his or her mana pool (in addition to the mana the land produces).",
+      "text": "Until end of turn, whenever a player taps an Island for mana, that player adds an additional {U}.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -2440,7 +2442,7 @@
           "text": "The effect applies even if the Island in question entered the battlefield after High Tide resolved."
         }
       ],
-      "text": "Until end of turn, whenever a player taps an Island for mana, that player adds {U} to his or her mana pool (in addition to the mana the land produces).",
+      "text": "Until end of turn, whenever a player taps an Island for mana, that player adds an additional {U}.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -2499,7 +2501,7 @@
           "text": "The effect applies even if the Island in question entered the battlefield after High Tide resolved."
         }
       ],
-      "text": "Until end of turn, whenever a player taps an Island for mana, that player adds {U} to his or her mana pool (in addition to the mana the land produces).",
+      "text": "Until end of turn, whenever a player taps an Island for mana, that player adds an additional {U}.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -3040,7 +3042,7 @@
       "subtypes": [
         "Aura"
       ],
-      "text": "Enchant creature\nMerseine enters the battlefield with three net counters on it.\nEnchanted creature doesn't untap during its controller's untap step if Merseine has a net counter on it.\nPay enchanted creature's mana cost: Remove a net counter from Merseine. Any player may activate this ability, but only if he or she controls the enchanted creature.",
+      "text": "Enchant creature\nMerseine enters the battlefield with three net counters on it.\nEnchanted creature doesn't untap during its controller's untap step if Merseine has a net counter on it.\nPay enchanted creature's mana cost: Remove a net counter from Merseine. Only the controller of the enchanted creature may activate this ability.",
       "type": "Enchantment — Aura",
       "types": [
         "Enchantment"
@@ -3099,7 +3101,7 @@
       "subtypes": [
         "Aura"
       ],
-      "text": "Enchant creature\nMerseine enters the battlefield with three net counters on it.\nEnchanted creature doesn't untap during its controller's untap step if Merseine has a net counter on it.\nPay enchanted creature's mana cost: Remove a net counter from Merseine. Any player may activate this ability, but only if he or she controls the enchanted creature.",
+      "text": "Enchant creature\nMerseine enters the battlefield with three net counters on it.\nEnchanted creature doesn't untap during its controller's untap step if Merseine has a net counter on it.\nPay enchanted creature's mana cost: Remove a net counter from Merseine. Only the controller of the enchanted creature may activate this ability.",
       "type": "Enchantment — Aura",
       "types": [
         "Enchantment"
@@ -3158,7 +3160,7 @@
       "subtypes": [
         "Aura"
       ],
-      "text": "Enchant creature\nMerseine enters the battlefield with three net counters on it.\nEnchanted creature doesn't untap during its controller's untap step if Merseine has a net counter on it.\nPay enchanted creature's mana cost: Remove a net counter from Merseine. Any player may activate this ability, but only if he or she controls the enchanted creature.",
+      "text": "Enchant creature\nMerseine enters the battlefield with three net counters on it.\nEnchanted creature doesn't untap during its controller's untap step if Merseine has a net counter on it.\nPay enchanted creature's mana cost: Remove a net counter from Merseine. Only the controller of the enchanted creature may activate this ability.",
       "type": "Enchantment — Aura",
       "types": [
         "Enchantment"
@@ -3217,7 +3219,7 @@
       "subtypes": [
         "Aura"
       ],
-      "text": "Enchant creature\nMerseine enters the battlefield with three net counters on it.\nEnchanted creature doesn't untap during its controller's untap step if Merseine has a net counter on it.\nPay enchanted creature's mana cost: Remove a net counter from Merseine. Any player may activate this ability, but only if he or she controls the enchanted creature.",
+      "text": "Enchant creature\nMerseine enters the battlefield with three net counters on it.\nEnchanted creature doesn't untap during its controller's untap step if Merseine has a net counter on it.\nPay enchanted creature's mana cost: Remove a net counter from Merseine. Only the controller of the enchanted creature may activate this ability.",
       "type": "Enchantment — Aura",
       "types": [
         "Enchantment"
@@ -3449,7 +3451,7 @@
           "text": "First Strike is granted to your creatures currently blocking non-Flyers when this effect resolves."
         }
       ],
-      "text": "{U}{U}: For each attacking creature without flying, its controller may pay {1}. If he or she doesn't, creatures you control blocking that creature gain first strike until end of turn.",
+      "text": "{U}{U}: For each attacking creature without flying, its controller may pay {1}. If that player doesn't, creatures you control blocking that creature gain first strike until end of turn.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -3508,7 +3510,7 @@
           "text": "First Strike is granted to your creatures currently blocking non-Flyers when this effect resolves."
         }
       ],
-      "text": "{U}{U}: For each attacking creature without flying, its controller may pay {1}. If he or she doesn't, creatures you control blocking that creature gain first strike until end of turn.",
+      "text": "{U}{U}: For each attacking creature without flying, its controller may pay {1}. If that player doesn't, creatures you control blocking that creature gain first strike until end of turn.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -3567,7 +3569,7 @@
           "text": "First Strike is granted to your creatures currently blocking non-Flyers when this effect resolves."
         }
       ],
-      "text": "{U}{U}: For each attacking creature without flying, its controller may pay {1}. If he or she doesn't, creatures you control blocking that creature gain first strike until end of turn.",
+      "text": "{U}{U}: For each attacking creature without flying, its controller may pay {1}. If that player doesn't, creatures you control blocking that creature gain first strike until end of turn.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -3619,7 +3621,7 @@
           "text": "As soon as the number of counters on this card changes, so does the power of blue creatures."
         }
       ],
-      "text": "Cast Tidal Influence only if no permanents named Tidal Influence are on the battlefield.\nTidal Influence enters the battlefield with a tide counter on it.\nAt the beginning of your upkeep, put a tide counter on Tidal Influence.\nAs long as there is exactly one tide counter on Tidal Influence, all blue creatures get -2/-0.\nAs long as there are exactly three tide counters on Tidal Influence, all blue creatures get +2/+0.\nWhenever there are four or more tide counters on Tidal Influence, remove all tide counters from it.",
+      "text": "Cast this spell only if no permanents named Tidal Influence are on the battlefield.\nTidal Influence enters the battlefield with a tide counter on it.\nAt the beginning of your upkeep, put a tide counter on Tidal Influence.\nAs long as there is exactly one tide counter on Tidal Influence, all blue creatures get -2/-0.\nAs long as there are exactly three tide counters on Tidal Influence, all blue creatures get +2/+0.\nWhenever there are four or more tide counters on Tidal Influence, remove all tide counters from it.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -4826,10 +4828,6 @@
       "rarity": "Common",
       "rulings": [
         {
-          "date": "2008-04-01",
-          "text": "A \"creature card\" is any card with the type creature, even if it has other types such as artifact, enchantment, or land. Older cards of type summon are also creature cards."
-        },
-        {
           "date": "2008-10-01",
           "text": "The two creature cards are exiled as a cost. No one can respond to this. If no graveyard has two creature cards in it, the cost can't be paid."
         }
@@ -4884,10 +4882,6 @@
       "rarity": "Common",
       "rulings": [
         {
-          "date": "2008-04-01",
-          "text": "A \"creature card\" is any card with the type creature, even if it has other types such as artifact, enchantment, or land. Older cards of type summon are also creature cards."
-        },
-        {
           "date": "2008-10-01",
           "text": "The two creature cards are exiled as a cost. No one can respond to this. If no graveyard has two creature cards in it, the cost can't be paid."
         }
@@ -4941,10 +4935,6 @@
       ],
       "rarity": "Common",
       "rulings": [
-        {
-          "date": "2008-04-01",
-          "text": "A \"creature card\" is any card with the type creature, even if it has other types such as artifact, enchantment, or land. Older cards of type summon are also creature cards."
-        },
         {
           "date": "2008-10-01",
           "text": "The two creature cards are exiled as a cost. No one can respond to this. If no graveyard has two creature cards in it, the cost can't be paid."
@@ -5530,7 +5520,7 @@
           "text": "Only checks the type of the land as it is put onto the battlefield. If the land gets changed after it enters the battlefield (even by a continuous effect), the Chant causes no additional effect."
         }
       ],
-      "text": "At the beginning of your upkeep, sacrifice Thelon's Chant unless you pay {G}.\nWhenever a player puts a Swamp onto the battlefield, Thelon's Chant deals 3 damage to that player unless he or she puts a -1/-1 counter on a creature he or she controls.",
+      "text": "At the beginning of your upkeep, sacrifice Thelon's Chant unless you pay {G}.\nWhenever a player puts a Swamp onto the battlefield, Thelon's Chant deals 3 damage to that player unless the player puts a -1/-1 counter on a creature they control.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -5574,7 +5564,7 @@
       ],
       "rarity": "Rare",
       "reserved": true,
-      "text": "Blue creatures don't untap during their controllers' untap steps.\nAt the beginning of each player's upkeep, that player may choose any number of tapped blue creatures he or she controls and pay {U} for each creature chosen this way. If the player does, untap those creatures.",
+      "text": "Blue creatures don't untap during their controllers' untap steps.\nAt the beginning of each player's upkeep, that player may choose any number of tapped blue creatures they control and pay {U} for each creature chosen this way. If the player does, untap those creatures.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -5638,7 +5628,7 @@
         },
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         }
       ],
       "subtypes": [
@@ -5751,7 +5741,7 @@
       "subtypes": [
         "Fungus"
       ],
-      "text": "At the beginning of your upkeep, put a spore counter on Thorn Thallid.\nRemove three spore counters from Thorn Thallid: Thorn Thallid deals 1 damage to target creature or player.",
+      "text": "At the beginning of your upkeep, put a spore counter on Thorn Thallid.\nRemove three spore counters from Thorn Thallid: Thorn Thallid deals 1 damage to any target.",
       "toughness": "2",
       "type": "Creature — Fungus",
       "types": [
@@ -5804,7 +5794,7 @@
       "subtypes": [
         "Fungus"
       ],
-      "text": "At the beginning of your upkeep, put a spore counter on Thorn Thallid.\nRemove three spore counters from Thorn Thallid: Thorn Thallid deals 1 damage to target creature or player.",
+      "text": "At the beginning of your upkeep, put a spore counter on Thorn Thallid.\nRemove three spore counters from Thorn Thallid: Thorn Thallid deals 1 damage to any target.",
       "toughness": "2",
       "type": "Creature — Fungus",
       "types": [
@@ -5857,7 +5847,7 @@
       "subtypes": [
         "Fungus"
       ],
-      "text": "At the beginning of your upkeep, put a spore counter on Thorn Thallid.\nRemove three spore counters from Thorn Thallid: Thorn Thallid deals 1 damage to target creature or player.",
+      "text": "At the beginning of your upkeep, put a spore counter on Thorn Thallid.\nRemove three spore counters from Thorn Thallid: Thorn Thallid deals 1 damage to any target.",
       "toughness": "2",
       "type": "Creature — Fungus",
       "types": [
@@ -5910,7 +5900,7 @@
       "subtypes": [
         "Fungus"
       ],
-      "text": "At the beginning of your upkeep, put a spore counter on Thorn Thallid.\nRemove three spore counters from Thorn Thallid: Thorn Thallid deals 1 damage to target creature or player.",
+      "text": "At the beginning of your upkeep, put a spore counter on Thorn Thallid.\nRemove three spore counters from Thorn Thallid: Thorn Thallid deals 1 damage to any target.",
       "toughness": "2",
       "type": "Creature — Fungus",
       "types": [
@@ -6501,7 +6491,7 @@
         },
         {
           "date": "2007-09-16",
-          "text": "Can also regenerate itself. If it sacrifices itself in an attempt to regenerate itself, the ability will be countered for having an illegal target."
+          "text": "Can also regenerate itself. If it sacrifices itself in an attempt to regenerate itself, the ability won't resolve for having an illegal target."
         }
       ],
       "subtypes": [
@@ -6564,7 +6554,7 @@
         },
         {
           "date": "2007-09-16",
-          "text": "Can also regenerate itself. If it sacrifices itself in an attempt to regenerate itself, the ability will be countered for having an illegal target."
+          "text": "Can also regenerate itself. If it sacrifices itself in an attempt to regenerate itself, the ability won't resolve for having an illegal target."
         }
       ],
       "subtypes": [
@@ -6627,7 +6617,7 @@
         },
         {
           "date": "2007-09-16",
-          "text": "Can also regenerate itself. If it sacrifices itself in an attempt to regenerate itself, the ability will be countered for having an illegal target."
+          "text": "Can also regenerate itself. If it sacrifices itself in an attempt to regenerate itself, the ability won't resolve for having an illegal target."
         }
       ],
       "subtypes": [
@@ -6752,7 +6742,7 @@
           "text": "The Goblin you sacrifice to cast Goblin Grenade doesn't have to be a creature. For example, you could sacrifice Boggart Shenanigans (a tribal enchantment with the subtype Goblin)."
         }
       ],
-      "text": "As an additional cost to cast Goblin Grenade, sacrifice a Goblin.\nGoblin Grenade deals 5 damage to target creature or player.",
+      "text": "As an additional cost to cast this spell, sacrifice a Goblin.\nGoblin Grenade deals 5 damage to any target.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -6820,7 +6810,7 @@
           "text": "The Goblin you sacrifice to cast Goblin Grenade doesn't have to be a creature. For example, you could sacrifice Boggart Shenanigans (a tribal enchantment with the subtype Goblin)."
         }
       ],
-      "text": "As an additional cost to cast Goblin Grenade, sacrifice a Goblin.\nGoblin Grenade deals 5 damage to target creature or player.",
+      "text": "As an additional cost to cast this spell, sacrifice a Goblin.\nGoblin Grenade deals 5 damage to any target.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -6888,7 +6878,7 @@
           "text": "The Goblin you sacrifice to cast Goblin Grenade doesn't have to be a creature. For example, you could sacrifice Boggart Shenanigans (a tribal enchantment with the subtype Goblin)."
         }
       ],
-      "text": "As an additional cost to cast Goblin Grenade, sacrifice a Goblin.\nGoblin Grenade deals 5 damage to target creature or player.",
+      "text": "As an additional cost to cast this spell, sacrifice a Goblin.\nGoblin Grenade deals 5 damage to any target.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -7788,7 +7778,7 @@
           "text": "A player can choose zero or one Plains if they want."
         }
       ],
-      "text": "Raiding Party can't be the target of white spells or abilities from white sources.\nSacrifice an Orc: Each player may tap any number of untapped white creatures he or she controls. For each creature tapped this way, that player chooses up to two Plains. Then destroy all Plains that weren't chosen this way by any player.",
+      "text": "Raiding Party can't be the target of white spells or abilities from white sources.\nSacrifice an Orc: Each player may tap any number of untapped white creatures they control. For each creature tapped this way, that player chooses up to two Plains. Then destroy all Plains that weren't chosen this way by any player.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -7838,7 +7828,7 @@
         "Cleric",
         "Soldier"
       ],
-      "text": "{1}{W}: Prevent the next 1 damage that would be dealt to target creature or player this turn.",
+      "text": "{1}{W}: Prevent the next 1 damage that would be dealt to any target this turn.",
       "toughness": "2",
       "type": "Creature — Human Cleric Soldier",
       "types": [
@@ -7894,7 +7884,7 @@
         "Cleric",
         "Soldier"
       ],
-      "text": "{1}{W}: Prevent the next 1 damage that would be dealt to target creature or player this turn.",
+      "text": "{1}{W}: Prevent the next 1 damage that would be dealt to any target this turn.",
       "toughness": "2",
       "type": "Creature — Human Cleric Soldier",
       "types": [
@@ -7950,7 +7940,7 @@
         "Cleric",
         "Soldier"
       ],
-      "text": "{1}{W}: Prevent the next 1 damage that would be dealt to target creature or player this turn.",
+      "text": "{1}{W}: Prevent the next 1 damage that would be dealt to any target this turn.",
       "toughness": "2",
       "type": "Creature — Human Cleric Soldier",
       "types": [
@@ -8006,7 +7996,7 @@
         "Cleric",
         "Soldier"
       ],
-      "text": "{1}{W}: Prevent the next 1 damage that would be dealt to target creature or player this turn.",
+      "text": "{1}{W}: Prevent the next 1 damage that would be dealt to any target this turn.",
       "toughness": "2",
       "type": "Creature — Human Cleric Soldier",
       "types": [
@@ -8342,7 +8332,7 @@
         "Human",
         "Cleric"
       ],
-      "text": "{1}: Add {W} to your mana pool. If this ability has been activated four or more times this turn, sacrifice Farrelite Priest at the beginning of the next end step.",
+      "text": "{1}: Add {W}. If this ability has been activated four or more times this turn, sacrifice Farrelite Priest at the beginning of the next end step.",
       "toughness": "3",
       "type": "Creature — Human Cleric",
       "types": [
@@ -8795,7 +8785,7 @@
         "Human",
         "Soldier"
       ],
-      "text": "Icatian Javelineers enters the battlefield with a javelin counter on it.\n{T}, Remove a javelin counter from Icatian Javelineers: Icatian Javelineers deals 1 damage to target creature or player.",
+      "text": "Icatian Javelineers enters the battlefield with a javelin counter on it.\n{T}, Remove a javelin counter from Icatian Javelineers: Icatian Javelineers deals 1 damage to any target.",
       "toughness": "1",
       "type": "Creature — Human Soldier",
       "types": [
@@ -8859,7 +8849,7 @@
         "Human",
         "Soldier"
       ],
-      "text": "Icatian Javelineers enters the battlefield with a javelin counter on it.\n{T}, Remove a javelin counter from Icatian Javelineers: Icatian Javelineers deals 1 damage to target creature or player.",
+      "text": "Icatian Javelineers enters the battlefield with a javelin counter on it.\n{T}, Remove a javelin counter from Icatian Javelineers: Icatian Javelineers deals 1 damage to any target.",
       "toughness": "1",
       "type": "Creature — Human Soldier",
       "types": [
@@ -8923,7 +8913,7 @@
         "Human",
         "Soldier"
       ],
-      "text": "Icatian Javelineers enters the battlefield with a javelin counter on it.\n{T}, Remove a javelin counter from Icatian Javelineers: Icatian Javelineers deals 1 damage to target creature or player.",
+      "text": "Icatian Javelineers enters the battlefield with a javelin counter on it.\n{T}, Remove a javelin counter from Icatian Javelineers: Icatian Javelineers deals 1 damage to any target.",
       "toughness": "1",
       "type": "Creature — Human Soldier",
       "types": [
@@ -9815,7 +9805,7 @@
           "text": "Whether or not it is tapped is checked at the beginning of upkeep. If it is not tapped, the ability does not trigger. It also checks during resolution and you only get a counter if it is still tapped then."
         }
       ],
-      "text": "Bottomless Vault enters the battlefield tapped.\nYou may choose not to untap Bottomless Vault during your untap step.\nAt the beginning of your upkeep, if Bottomless Vault is tapped, put a storage counter on it.\n{T}, Remove any number of storage counters from Bottomless Vault: Add {B} to your mana pool for each storage counter removed this way.",
+      "text": "Bottomless Vault enters the battlefield tapped.\nYou may choose not to untap Bottomless Vault during your untap step.\nAt the beginning of your upkeep, if Bottomless Vault is tapped, put a storage counter on it.\n{T}, Remove any number of storage counters from Bottomless Vault: Add {B} for each storage counter removed this way.",
       "type": "Land",
       "types": [
         "Land"
@@ -9876,7 +9866,7 @@
           "text": "Whether or not it is tapped is checked at the beginning of upkeep. If it is not tapped, the ability does not trigger. It also checks during resolution and you only get a counter if it is still tapped then."
         }
       ],
-      "text": "Dwarven Hold enters the battlefield tapped.\nYou may choose not to untap Dwarven Hold during your untap step.\nAt the beginning of your upkeep, if Dwarven Hold is tapped, put a storage counter on it.\n{T}, Remove any number of storage counters from Dwarven Hold: Add {R} to your mana pool for each storage counter removed this way.",
+      "text": "Dwarven Hold enters the battlefield tapped.\nYou may choose not to untap Dwarven Hold during your untap step.\nAt the beginning of your upkeep, if Dwarven Hold is tapped, put a storage counter on it.\n{T}, Remove any number of storage counters from Dwarven Hold: Add {R} for each storage counter removed this way.",
       "type": "Land",
       "types": [
         "Land"
@@ -9918,7 +9908,7 @@
         "ME2"
       ],
       "rarity": "Uncommon",
-      "text": "Dwarven Ruins enters the battlefield tapped.\n{T}: Add {R} to your mana pool.\n{T}, Sacrifice Dwarven Ruins: Add {R}{R} to your mana pool.",
+      "text": "Dwarven Ruins enters the battlefield tapped.\n{T}: Add {R}.\n{T}, Sacrifice Dwarven Ruins: Add {R}{R}.",
       "type": "Land",
       "types": [
         "Land"
@@ -9961,7 +9951,7 @@
         "PD3"
       ],
       "rarity": "Uncommon",
-      "text": "Ebon Stronghold enters the battlefield tapped.\n{T}: Add {B} to your mana pool.\n{T}, Sacrifice Ebon Stronghold: Add {B}{B} to your mana pool.",
+      "text": "Ebon Stronghold enters the battlefield tapped.\n{T}: Add {B}.\n{T}, Sacrifice Ebon Stronghold: Add {B}{B}.",
       "type": "Land",
       "types": [
         "Land"
@@ -10005,7 +9995,7 @@
         "CMA"
       ],
       "rarity": "Uncommon",
-      "text": "Havenwood Battleground enters the battlefield tapped.\n{T}: Add {G} to your mana pool.\n{T}, Sacrifice Havenwood Battleground: Add {G}{G} to your mana pool.",
+      "text": "Havenwood Battleground enters the battlefield tapped.\n{T}: Add {G}.\n{T}, Sacrifice Havenwood Battleground: Add {G}{G}.",
       "type": "Land",
       "types": [
         "Land"
@@ -10066,7 +10056,7 @@
           "text": "Whether or not it is tapped is checked at the beginning of upkeep. If it is not tapped, the ability does not trigger. It also checks during resolution and you only get a counter if it is still tapped then."
         }
       ],
-      "text": "Hollow Trees enters the battlefield tapped.\nYou may choose not to untap Hollow Trees during your untap step.\nAt the beginning of your upkeep, if Hollow Trees is tapped, put a storage counter on it.\n{T}, Remove any number of storage counters from Hollow Trees: Add {G} to your mana pool for each storage counter removed this way.",
+      "text": "Hollow Trees enters the battlefield tapped.\nYou may choose not to untap Hollow Trees during your untap step.\nAt the beginning of your upkeep, if Hollow Trees is tapped, put a storage counter on it.\n{T}, Remove any number of storage counters from Hollow Trees: Add {G} for each storage counter removed this way.",
       "type": "Land",
       "types": [
         "Land"
@@ -10127,7 +10117,7 @@
           "text": "Whether or not it is tapped is checked at the beginning of upkeep. If it is not tapped, the ability does not trigger. It also checks during resolution and you only get a counter if it is still tapped then."
         }
       ],
-      "text": "Icatian Store enters the battlefield tapped.\nYou may choose not to untap Icatian Store during your untap step.\nAt the beginning of your upkeep, if Icatian Store is tapped, put a storage counter on it.\n{T}, Remove any number of storage counters from Icatian Store: Add {W} to your mana pool for each storage counter removed this way.",
+      "text": "Icatian Store enters the battlefield tapped.\nYou may choose not to untap Icatian Store during your untap step.\nAt the beginning of your upkeep, if Icatian Store is tapped, put a storage counter on it.\n{T}, Remove any number of storage counters from Icatian Store: Add {W} for each storage counter removed this way.",
       "type": "Land",
       "types": [
         "Land"
@@ -10176,7 +10166,7 @@
         },
         {
           "date": "2007-09-16",
-          "text": "If control of Rainbow Vale has somehow changed before the \"at end of turn\" ability resolves, the player who activated the mana ability (not the current controller of Rainbow Vale) chooses one of his or her opponents to gain control of it."
+          "text": "If control of Rainbow Vale has somehow changed before the \"at end of turn\" ability resolves, the player who activated the mana ability (not the current controller of Rainbow Vale) chooses one of their opponents to gain control of it."
         },
         {
           "date": "2007-09-16",
@@ -10191,7 +10181,7 @@
           "text": "The opponent is chosen when the \"at end of turn\" triggered ability resolves."
         }
       ],
-      "text": "{T}: Add one mana of any color to your mana pool. An opponent gains control of Rainbow Vale at the beginning of the next end step.",
+      "text": "{T}: Add one mana of any color. An opponent gains control of Rainbow Vale at the beginning of the next end step.",
       "type": "Land",
       "types": [
         "Land"
@@ -10232,7 +10222,7 @@
         "ME2"
       ],
       "rarity": "Uncommon",
-      "text": "Ruins of Trokair enters the battlefield tapped.\n{T}: Add {W} to your mana pool.\n{T}, Sacrifice Ruins of Trokair: Add {W}{W} to your mana pool.",
+      "text": "Ruins of Trokair enters the battlefield tapped.\n{T}: Add {W}.\n{T}, Sacrifice Ruins of Trokair: Add {W}{W}.",
       "type": "Land",
       "types": [
         "Land"
@@ -10293,7 +10283,7 @@
           "text": "Whether or not it is tapped is checked at the beginning of upkeep. If it is not tapped, the ability does not trigger. It also checks during resolution and you only get a counter if it is still tapped then."
         }
       ],
-      "text": "Sand Silos enters the battlefield tapped.\nYou may choose not to untap Sand Silos during your untap step.\nAt the beginning of your upkeep, if Sand Silos is tapped, put a storage counter on it.\n{T}, Remove any number of storage counters from Sand Silos: Add {U} to your mana pool for each storage counter removed this way.",
+      "text": "Sand Silos enters the battlefield tapped.\nYou may choose not to untap Sand Silos during your untap step.\nAt the beginning of your upkeep, if Sand Silos is tapped, put a storage counter on it.\n{T}, Remove any number of storage counters from Sand Silos: Add {U} for each storage counter removed this way.",
       "type": "Land",
       "types": [
         "Land"
@@ -10335,7 +10325,7 @@
         "ME2"
       ],
       "rarity": "Uncommon",
-      "text": "Svyelunite Temple enters the battlefield tapped.\n{T}: Add {U} to your mana pool.\n{T}, Sacrifice Svyelunite Temple: Add {U}{U} to your mana pool.",
+      "text": "Svyelunite Temple enters the battlefield tapped.\n{T}: Add {U}.\n{T}, Sacrifice Svyelunite Temple: Add {U}{U}.",
       "type": "Land",
       "types": [
         "Land"

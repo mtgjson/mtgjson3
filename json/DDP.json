@@ -538,11 +538,11 @@
       "rulings": [
         {
           "date": "2010-06-15",
-          "text": "If the targeted creature's owner has one or more cards in his or her library, that creature is put into that library directly under the top card."
+          "text": "If the targeted creature's owner has one or more cards in their library, that creature is put into that library directly under the top card."
         },
         {
           "date": "2010-06-15",
-          "text": "If the targeted creature's owner has no cards left in his or her library, that creature is put into that library as the only card there."
+          "text": "If the targeted creature's owner has no cards left in their library, that creature is put into that library as the only card there."
         },
         {
           "date": "2010-06-15",
@@ -554,7 +554,7 @@
         },
         {
           "date": "2010-06-15",
-          "text": "If the targeted creature is an illegal target by the time Oust resolves, the spell is countered. No one gains life."
+          "text": "If the targeted creature is an illegal target by the time Oust resolves, the spell doesn't resolve. No one gains life."
         }
       ],
       "text": "Put target creature into its owner's library second from the top. Its controller gains 3 life.",
@@ -628,11 +628,11 @@
         },
         {
           "date": "2010-06-15",
-          "text": "If you target one creature and that target is illegal as Repel the Darkness resolves, the spell is countered. You don't draw a card."
+          "text": "If you target one creature and that target is illegal as Repel the Darkness resolves, the spell doesn't resolve. You don't draw a card."
         },
         {
           "date": "2010-06-15",
-          "text": "If you target two creatures and they're both illegal as Repel the Darkness resolves, the spell is countered; you don't draw a card. If just one is illegal, the spell does resolve; the remaining legal target becomes tapped (if it's untapped at that time) and you draw a card."
+          "text": "If you target two creatures and they're both illegal as Repel the Darkness resolves, the spell doesn't resolve; you don't draw a card. If just one is illegal, the spell does resolve; the remaining legal target becomes tapped (if it's untapped at that time) and you draw a card."
         }
       ],
       "text": "Tap up to two target creatures.\nDraw a card.",
@@ -709,7 +709,7 @@
         },
         {
           "date": "2015-08-25",
-          "text": "If the non-awaken part of the spell doesn't require a target and you cast the spell for its awaken cost, then the spell will be countered if the target land you control becomes illegal before the spell resolves (such as due to being destroyed in response to the spell being cast)."
+          "text": "If the non-awaken part of the spell doesn't require a target and you cast the spell for its awaken cost, then the spell won't resolve if the target land you control becomes illegal before the spell resolves (such as due to being destroyed in response to the spell being cast)."
         },
         {
           "date": "2015-08-25",
@@ -1254,7 +1254,7 @@
           "text": "Because the \"search\" requires you to find a card with certain characteristics, you don't have to find the card if you don't want to."
         }
       ],
-      "text": "As an additional cost to cast Harrow, sacrifice a land.\nSearch your library for up to two basic land cards and put them onto the battlefield. Then shuffle your library.",
+      "text": "As an additional cost to cast this spell, sacrifice a land.\nSearch your library for up to two basic land cards and put them onto the battlefield. Then shuffle your library.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -1529,14 +1529,14 @@
       "rulings": [
         {
           "date": "2017-03-14",
-          "text": "Primal Command's modes are performed in the order listed. If you put a noncreature permanent on top of its owner's library and have that player shuffle his or her graveyard into his or her library, that card is shuffled away."
+          "text": "Primal Command's modes are performed in the order listed. If you put a noncreature permanent on top of its owner's library and have that player shuffle their graveyard into their library, that card is shuffled away."
         },
         {
           "date": "2017-03-14",
           "text": "Primal Command won't be put into your graveyard until after it's finished resolving, which means it won't be shuffled into your library as part of its own effect if you target yourself with its third mode."
         }
       ],
-      "text": "Choose two —\n• Target player gains 7 life.\n• Put target noncreature permanent on top of its owner's library.\n• Target player shuffles his or her graveyard into his or her library.\n• Search your library for a creature card, reveal it, put it into your hand, then shuffle your library.",
+      "text": "Choose two —\n• Target player gains 7 life.\n• Put target noncreature permanent on top of its owner's library.\n• Target player shuffles their graveyard into their library.\n• Search your library for a creature card, reveal it, put it into your hand, then shuffle your library.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -2005,7 +2005,8 @@
       "printings": [
         "ROE",
         "DDP",
-        "A25"
+        "A25",
+        "DDU"
       ],
       "rarity": "Common",
       "subtypes": [
@@ -2326,6 +2327,10 @@
           "legality": "Legal"
         },
         {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Khans of Tarkir Block",
           "legality": "Legal"
         },
@@ -2446,7 +2451,7 @@
         "C17"
       ],
       "rarity": "Uncommon",
-      "text": "Graypelt Refuge enters the battlefield tapped.\nWhen Graypelt Refuge enters the battlefield, you gain 1 life.\n{T}: Add {G} or {W} to your mana pool.",
+      "text": "Graypelt Refuge enters the battlefield tapped.\nWhen Graypelt Refuge enters the battlefield, you gain 1 life.\n{T}: Add {G} or {W}.",
       "type": "Land",
       "types": [
         "Land"
@@ -2513,7 +2518,7 @@
           "text": "When a land becomes a creature, that doesn't count as having a creature enter the battlefield. The permanent was already on the battlefield; it only changed its types. Abilities that trigger whenever a creature enters the battlefield won't trigger."
         }
       ],
-      "text": "Stirring Wildwood enters the battlefield tapped.\n{T}: Add {G} or {W} to your mana pool.\n{1}{G}{W}: Until end of turn, Stirring Wildwood becomes a 3/4 green and white Elemental creature with reach. It's still a land.",
+      "text": "Stirring Wildwood enters the battlefield tapped.\n{T}: Add {G} or {W}.\n{1}{G}{W}: Until end of turn, Stirring Wildwood becomes a 3/4 green and white Elemental creature with reach. It's still a land.",
       "type": "Land",
       "types": [
         "Land"
@@ -2568,7 +2573,7 @@
         "DDP"
       ],
       "rarity": "Common",
-      "text": "Turntimber Grove enters the battlefield tapped.\nWhen Turntimber Grove enters the battlefield, target creature gets +1/+1 until end of turn.\n{T}: Add {G} to your mana pool.",
+      "text": "Turntimber Grove enters the battlefield tapped.\nWhen Turntimber Grove enters the battlefield, target creature gets +1/+1 until end of turn.\n{T}: Add {G}.",
       "type": "Land",
       "types": [
         "Land"
@@ -2834,7 +2839,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -3113,7 +3119,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -3392,7 +3399,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -3673,7 +3681,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -3954,7 +3964,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -4235,7 +4247,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -4317,7 +4331,7 @@
       "subtypes": [
         "Eldrazi"
       ],
-      "text": "When you cast Oblivion Sower, target opponent exiles the top four cards of his or her library, then you may put any number of land cards that player owns from exile onto the battlefield under your control.",
+      "text": "When you cast this spell, target opponent exiles the top four cards of their library, then you may put any number of land cards that player owns from exile onto the battlefield under your control.",
       "toughness": "8",
       "type": "Creature — Eldrazi",
       "types": [
@@ -4380,21 +4394,17 @@
       "rulings": [
         {
           "date": "2010-06-15",
-          "text": "Annihilator abilities trigger and resolve during the declare attackers step. The defending player chooses and sacrifices the required number of permanents before he or she declares blockers. Any creatures sacrificed this way won't be able to block."
+          "text": "Annihilator abilities trigger and resolve during the declare attackers step. The defending player chooses and sacrifices the required number of permanents before they declare blockers. Any creatures sacrificed this way won't be able to block."
         },
         {
           "date": "2010-06-15",
           "text": "If a creature with annihilator is attacking a planeswalker, and the defending player chooses to sacrifice that planeswalker, the attacking creature continues to attack. It may be blocked. If it isn't blocked, it simply won't deal combat damage to anything."
-        },
-        {
-          "date": "2010-06-15",
-          "text": "In a Two-Headed Giant game, the controller of an attacking creature with annihilator chooses which of the defending players is affected by the ability. Only that player sacrifices permanents. The choice is made as the ability resolves; once a player is chosen, it's too late for anyone to respond."
         }
       ],
       "subtypes": [
         "Eldrazi"
       ],
-      "text": "When you cast Artisan of Kozilek, you may return target creature card from your graveyard to the battlefield.\nAnnihilator 2 (Whenever this creature attacks, defending player sacrifices two permanents.)",
+      "text": "When you cast this spell, you may return target creature card from your graveyard to the battlefield.\nAnnihilator 2 (Whenever this creature attacks, defending player sacrifices two permanents.)",
       "toughness": "9",
       "type": "Creature — Eldrazi",
       "types": [
@@ -4453,15 +4463,11 @@
       "rulings": [
         {
           "date": "2010-06-15",
-          "text": "Annihilator abilities trigger and resolve during the declare attackers step. The defending player chooses and sacrifices the required number of permanents before he or she declares blockers. Any creatures sacrificed this way won't be able to block."
+          "text": "Annihilator abilities trigger and resolve during the declare attackers step. The defending player chooses and sacrifices the required number of permanents before they declare blockers. Any creatures sacrificed this way won't be able to block."
         },
         {
           "date": "2010-06-15",
           "text": "If a creature with annihilator is attacking a planeswalker, and the defending player chooses to sacrifice that planeswalker, the attacking creature continues to attack. It may be blocked. If it isn't blocked, it simply won't deal combat damage to anything."
-        },
-        {
-          "date": "2010-06-15",
-          "text": "In a Two-Headed Giant game, the controller of an attacking creature with annihilator chooses which of the defending players is affected by the ability. Only that player sacrifices permanents. The choice is made as the ability resolves; once a player is chosen, it's too late for anyone to respond."
         },
         {
           "date": "2010-06-15",
@@ -4551,15 +4557,11 @@
       "rulings": [
         {
           "date": "2010-06-15",
-          "text": "Annihilator abilities trigger and resolve during the declare attackers step. The defending player chooses and sacrifices the required number of permanents before he or she declares blockers. Any creatures sacrificed this way won't be able to block."
+          "text": "Annihilator abilities trigger and resolve during the declare attackers step. The defending player chooses and sacrifices the required number of permanents before they declare blockers. Any creatures sacrificed this way won't be able to block."
         },
         {
           "date": "2010-06-15",
           "text": "If a creature with annihilator is attacking a planeswalker, and the defending player chooses to sacrifice that planeswalker, the attacking creature continues to attack. It may be blocked. If it isn't blocked, it simply won't deal combat damage to anything."
-        },
-        {
-          "date": "2010-06-15",
-          "text": "In a Two-Headed Giant game, the controller of an attacking creature with annihilator chooses which of the defending players is affected by the ability. Only that player sacrifices permanents. The choice is made as the ability resolves; once a player is chosen, it's too late for anyone to respond."
         },
         {
           "date": "2010-06-15",
@@ -4785,7 +4787,7 @@
       "rulings": [
         {
           "date": "2010-03-01",
-          "text": "When the triggered ability resolves, first the player whose turn it is (if that player is an opponent) chooses which creature he or she will sacrifice, then each other opponent in turn order does the same, then all chosen creatures are sacrificed at the same time."
+          "text": "When the triggered ability resolves, first the player whose turn it is (if that player is an opponent) chooses which creature they will sacrifice, then each other opponent in turn order does the same, then all chosen creatures are sacrificed at the same time."
         },
         {
           "date": "2010-03-01",
@@ -4992,7 +4994,7 @@
         "DDP"
       ],
       "rarity": "Uncommon",
-      "text": "Destroy target nonblack creature. Create two 0/1 colorless Eldrazi Spawn creature tokens. They have \"Sacrifice this creature: Add {C} to your mana pool.\"",
+      "text": "Destroy target nonblack creature. Create two 0/1 colorless Eldrazi Spawn creature tokens. They have \"Sacrifice this creature: Add {C}.\"",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -5080,14 +5082,14 @@
         },
         {
           "date": "2015-08-25",
-          "text": "If the player has no cards in his or her library when the ingest ability resolves, nothing happens. That player won't lose the game (until he or she has to draw a card from an empty library)."
+          "text": "If the player has no cards in their library when the ingest ability resolves, nothing happens. That player won't lose the game (until they have to draw a card from an empty library)."
         }
       ],
       "subtypes": [
         "Eldrazi",
         "Drone"
       ],
-      "text": "Devoid (This card has no color.)\nIngest (Whenever this creature deals combat damage to a player, that player exiles the top card of his or her library.)\nWhen Dominator Drone enters the battlefield, if you control another colorless creature, each opponent loses 2 life.",
+      "text": "Devoid (This card has no color.)\nIngest (Whenever this creature deals combat damage to a player, that player exiles the top card of their library.)\nWhen Dominator Drone enters the battlefield, if you control another colorless creature, each opponent loses 2 life.",
       "toughness": "2",
       "type": "Creature — Eldrazi Drone",
       "types": [
@@ -5212,7 +5214,7 @@
         "DDP"
       ],
       "rarity": "Common",
-      "text": "As an additional cost to cast Induce Despair, reveal a creature card from your hand.\nTarget creature gets -X/-X until end of turn, where X is the revealed card's converted mana cost.",
+      "text": "As an additional cost to cast this spell, reveal a creature card from your hand.\nTarget creature gets -X/-X until end of turn, where X is the revealed card's converted mana cost.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -5272,7 +5274,7 @@
         "DDP"
       ],
       "rarity": "Uncommon",
-      "text": "Kicker {3} (You may pay an additional {3} as you cast this spell.)\nCreatures target player controls get -1/-1 until end of turn. If Marsh Casualties was kicked, those creatures get -2/-2 until end of turn instead.",
+      "text": "Kicker {3} (You may pay an additional {3} as you cast this spell.)\nCreatures target player controls get -1/-1 until end of turn. If this spell was kicked, those creatures get -2/-2 until end of turn instead.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -5347,7 +5349,7 @@
         "Vampire",
         "Shaman"
       ],
-      "text": "Whenever Pawn of Ulamog or another nontoken creature you control dies, you may create a 0/1 colorless Eldrazi Spawn creature token. It has \"Sacrifice this creature: Add {C} to your mana pool.\"",
+      "text": "Whenever Pawn of Ulamog or another nontoken creature you control dies, you may create a 0/1 colorless Eldrazi Spawn creature token. It has \"Sacrifice this creature: Add {C}.\"",
       "toughness": "2",
       "type": "Creature — Vampire Shaman",
       "types": [
@@ -5414,7 +5416,7 @@
       "rulings": [
         {
           "date": "2013-09-15",
-          "text": "The loss of life is part of the spell's effect. It's not an additional cost. If Read the Bones is countered, you won't lose life."
+          "text": "The loss of life is part of the spell's effect. It's not an additional cost. If Read the Bones doesn't resolve, you won't lose life."
         },
         {
           "date": "2013-09-15",
@@ -5430,7 +5432,7 @@
         },
         {
           "date": "2013-09-15",
-          "text": "Scry appears on some spells and abilities with one or more targets. If all of the spell or ability's targets are illegal when it tries to resolve, it will be countered and none of its effects will happen. You won't scry."
+          "text": "Scry appears on some spells and abilities with one or more targets. If all of the spell or ability's targets are illegal when it tries to resolve, it won't resolve and none of its effects will happen. You won't scry."
         }
       ],
       "text": "Scry 2, then draw two cards. You lose 2 life. (To scry 2, look at the top two cards of your library, then put any number of them on the bottom of your library and the rest on top in any order.)",
@@ -5652,7 +5654,7 @@
         "Eldrazi",
         "Drone"
       ],
-      "text": "When Emrakul's Hatcher enters the battlefield, create three 0/1 colorless Eldrazi Spawn creature tokens. They have \"Sacrifice this creature: Add {C} to your mana pool.\"",
+      "text": "When Emrakul's Hatcher enters the battlefield, create three 0/1 colorless Eldrazi Spawn creature tokens. They have \"Sacrifice this creature: Add {C}.\"",
       "toughness": "3",
       "type": "Creature — Eldrazi Drone",
       "types": [
@@ -5719,7 +5721,7 @@
           "text": "You divide the damage as you cast Forked Bolt, not as it resolves. Each target must be assigned at least 1 damage. (In other words, as you cast Forked Bolt, you choose whether to have it deal 2 damage to a single target, or deal 1 damage to each of two targets.)"
         }
       ],
-      "text": "Forked Bolt deals 2 damage divided as you choose among one or two target creatures and/or players.",
+      "text": "Forked Bolt deals 2 damage divided as you choose among one or two targets.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -5845,13 +5847,13 @@
       "rulings": [
         {
           "date": "2010-06-15",
-          "text": "You may sacrifice Magmaw to pay its own activation cost. If you do, Magmaw will still deal 1 damage to the targeted creature or player (unless, for some reason, you targeted Magmaw itself, in which case the ability will be countered for having no legal targets)."
+          "text": "You may sacrifice Magmaw to pay its own activation cost. If you do, Magmaw will still deal 1 damage to the targeted permanent or player (unless, for some reason, you targeted Magmaw itself, in which case the ability won't resolve for having no legal targets)."
         }
       ],
       "subtypes": [
         "Elemental"
       ],
-      "text": "{1}, Sacrifice a nonland permanent: Magmaw deals 1 damage to target creature or player.",
+      "text": "{1}, Sacrifice a nonland permanent: Magmaw deals 1 damage to any target.",
       "toughness": "4",
       "type": "Creature — Elemental",
       "types": [
@@ -6065,7 +6067,7 @@
         "IMA"
       ],
       "rarity": "Uncommon",
-      "text": "{T}: Add {C} to your mana pool.\n{1}, {T}, Sacrifice Mind Stone: Draw a card.",
+      "text": "{T}: Add {C}.\n{1}, {T}, Sacrifice Mind Stone: Draw a card.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -6192,7 +6194,7 @@
         "C17"
       ],
       "rarity": "Uncommon",
-      "text": "Akoum Refuge enters the battlefield tapped.\nWhen Akoum Refuge enters the battlefield, you gain 1 life.\n{T}: Add {B} or {R} to your mana pool.",
+      "text": "Akoum Refuge enters the battlefield tapped.\nWhen Akoum Refuge enters the battlefield, you gain 1 life.\n{T}: Add {B} or {R}.",
       "type": "Land",
       "types": [
         "Land"
@@ -6252,7 +6254,7 @@
           "text": "The mana generated by the last ability can't be spent to activate abilities of Eldrazi sources that aren't on the battlefield."
         }
       ],
-      "text": "{T}: Add {C} to your mana pool.\n{T}: Add {C}{C} to your mana pool. Spend this mana only to cast colorless Eldrazi spells or activate abilities of colorless Eldrazi.",
+      "text": "{T}: Add {C}.\n{T}: Add {C}{C}. Spend this mana only to cast colorless Eldrazi spells or activate abilities of colorless Eldrazi.",
       "type": "Land",
       "types": [
         "Land"
@@ -6576,7 +6578,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -6858,7 +6861,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -7140,7 +7144,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -7424,7 +7429,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -7708,7 +7715,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -7992,7 +8001,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [

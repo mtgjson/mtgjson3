@@ -487,18 +487,6 @@
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2004-10-04",
-          "text": "The two X's in the mana cost mean that you pay 2 mana (above the {2}{W}{W} base cost) for each token you want to create."
-        },
-        {
-          "date": "2004-10-04",
-          "text": "When you cycle this card, the last ability triggers. When that ability resolves, you choose a value of X and pay it during resolution."
-        },
-        {
-          "date": "2004-10-04",
-          "text": "You can cast this with X=0."
-        },
-        {
           "date": "2008-10-01",
           "text": "Cycling is an activated ability. Effects that interact with activated abilities (such as Stifle or Rings of Brighthearth) will interact with cycling. Effects that interact with spells (such as Remove Soul or Faerie Tauntings) will not."
         },
@@ -508,7 +496,11 @@
         },
         {
           "date": "2008-10-01",
-          "text": "The cycling ability and the triggered ability are separate. If the triggered ability is countered (with Stifle, for example, or if all its targets have become illegal), the cycling ability will still resolve and you'll draw a card."
+          "text": "The cycling ability and the triggered ability are separate. If the triggered ability doesn't resolve (due to being countered with Stifle, for example, or if all its targets have become illegal), the cycling ability will still resolve and you'll draw a card."
+        },
+        {
+          "date": "2018-03-16",
+          "text": "A mana cost of {X}{X} means that you pay twice X. If you want X to be 3, you pay {8}{W}{W} to cast Decree of Justice."
         }
       ],
       "text": "Create X 4/4 white Angel creature tokens with flying.\nCycling {2}{W} ({2}{W}, Discard this card: Draw a card.)\nWhen you cycle Decree of Justice, you may pay {X}. If you do, create X 1/1 white Soldier creature tokens.",
@@ -639,7 +631,7 @@
         },
         {
           "date": "2008-10-01",
-          "text": "The cycling ability and the triggered ability are separate. If the triggered ability is countered (with Stifle, for example, or if all its targets have become illegal), the cycling ability will still resolve and you'll draw a card."
+          "text": "The cycling ability and the triggered ability are separate. If the triggered ability doesn't resolve (due to being countered with Stifle, for example, or if all its targets have become illegal), the cycling ability will still resolve and you'll draw a card."
         }
       ],
       "subtypes": [
@@ -965,7 +957,7 @@
         "Human",
         "Soldier"
       ],
-      "text": "Icatian Javelineers enters the battlefield with a javelin counter on it.\n{T}, Remove a javelin counter from Icatian Javelineers: Icatian Javelineers deals 1 damage to target creature or player.",
+      "text": "Icatian Javelineers enters the battlefield with a javelin counter on it.\n{T}, Remove a javelin counter from Icatian Javelineers: Icatian Javelineers deals 1 damage to any target.",
       "toughness": "1",
       "type": "Creature — Human Soldier",
       "types": [
@@ -1449,7 +1441,7 @@
         "Cleric",
         "Soldier"
       ],
-      "text": "Vigilance\nPlainscycling {2} ({2}, Discard this card: Search your library for a Plains card, reveal it, and put it into your hand. Then shuffle your library.)",
+      "text": "Vigilance\nPlainscycling {2} ({2}, Discard this card: Search your library for a Plains card, reveal it, put it into your hand, then shuffle your library.)",
       "toughness": "6",
       "type": "Creature — Human Cleric Soldier",
       "types": [
@@ -1983,7 +1975,7 @@
           "text": "Cycling is an activated ability. Effects that interact with activated abilities (such as Stifle or Rings of Brighthearth) will interact with cycling. Effects that interact with spells (such as Remove Soul or Faerie Tauntings) will not."
         }
       ],
-      "text": "Secluded Steppe enters the battlefield tapped.\n{T}: Add {W} to your mana pool.\nCycling {W} ({W}, Discard this card: Draw a card.)",
+      "text": "Secluded Steppe enters the battlefield tapped.\n{T}: Add {W}.\nCycling {W} ({W}, Discard this card: Draw a card.)",
       "type": "Land",
       "types": [
         "Land"
@@ -2254,7 +2246,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -2539,7 +2532,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -2824,7 +2818,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -3109,7 +3104,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -3273,8 +3269,8 @@
       "rarity": "Common",
       "rulings": [
         {
-          "date": "2004-10-04",
-          "text": "The count does not include the card that is currently resolving. The card does not go to the graveyard until after it is done resolving."
+          "date": "2018-03-16",
+          "text": "Because Accumulated Knowledge is still on the stack as you perform its instructions, it isn't in your graveyard and won't add to the number of cards drawn."
         }
       ],
       "text": "Draw a card, then draw cards equal to the number of cards named Accumulated Knowledge in all graveyards.",
@@ -3566,7 +3562,7 @@
         },
         {
           "date": "2013-09-15",
-          "text": "Scry appears on some spells and abilities with one or more targets. If all of the spell or ability's targets are illegal when it tries to resolve, it will be countered and none of its effects will happen. You won't scry."
+          "text": "Scry appears on some spells and abilities with one or more targets. If all of the spell or ability's targets are illegal when it tries to resolve, it won't resolve and none of its effects will happen. You won't scry."
         }
       ],
       "subtypes": [
@@ -3774,7 +3770,7 @@
       "rulings": [
         {
           "date": "2013-09-15",
-          "text": "The effect making the land an Island doesn't have a duration and will last indefinitely. The land retains any land types and abilities it already had. An Island has the ability \"{T}: Add {U} to your mana pool.\""
+          "text": "The effect making the land an Island doesn't have a duration and will last indefinitely. The land retains any land types and abilities it already had. An Island has the ability \"{T}: Add {U}.\""
         },
         {
           "date": "2013-09-15",
@@ -4354,7 +4350,7 @@
         },
         {
           "date": "2013-09-15",
-          "text": "If neither creature is a legal target when Time to Feed tries to resolve, the spell will be countered and none of its effects will happen."
+          "text": "If neither creature is a legal target when Time to Feed tries to resolve, the spell won't resolve and none of its effects will happen."
         },
         {
           "date": "2013-09-15",
@@ -4571,11 +4567,11 @@
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2009-05-01",
+          "date": "2018-03-16",
           "text": "If a spell or ability causes you to draw multiple cards, Lorescale Coatl's ability triggers that many times."
         },
         {
-          "date": "2009-05-01",
+          "date": "2018-03-16",
           "text": "If a spell or ability causes you to put cards in your hand without specifically using the word \"draw,\" Lorescale Coatl's ability won't trigger."
         }
       ],
@@ -4722,7 +4718,7 @@
           "text": "Your precombat main phase is the main phase that happens immediately after your draw step, not any other main phase."
         }
       ],
-      "text": "Counter target spell. At the beginning of your next precombat main phase, add X mana in any combination of colors to your mana pool, where X is that spell's converted mana cost.",
+      "text": "Counter target spell. At the beginning of your next precombat main phase, add X mana in any combination of colors, where X is that spell's converted mana cost.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -4907,6 +4903,10 @@
           "legality": "Legal"
         },
         {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Khans of Tarkir Block",
           "legality": "Legal"
         },
@@ -5022,7 +5022,7 @@
         "C17"
       ],
       "rarity": "Uncommon",
-      "text": "{T}: Add {C}{C} to your mana pool. Activate this ability only if you control five or more lands.",
+      "text": "{T}: Add {C}{C}. Activate this ability only if you control five or more lands.",
       "type": "Land",
       "types": [
         "Land"
@@ -5287,7 +5287,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -5565,7 +5567,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -5843,7 +5847,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -6124,7 +6130,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -6405,7 +6413,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -6686,7 +6696,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [

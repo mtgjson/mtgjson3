@@ -206,7 +206,7 @@
           "text": "Each permanent not chosen by a player will be sacrificed. If a permanent has none of the listed types (for example, a Planeswalker with no other types), it can't be chosen."
         }
       ],
-      "text": "Each player chooses from among the permanents he or she controls an artifact, a creature, an enchantment, and a land, then sacrifices the rest.",
+      "text": "Each player chooses from among the permanents they control an artifact, a creature, an enchantment, and a land, then sacrifices the rest.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -617,7 +617,7 @@
           "text": "You can put lands onto the battlefield using effects, you just can't play lands from your hand as an action."
         }
       ],
-      "text": "When Limited Resources enters the battlefield, each player chooses five lands he or she controls and sacrifices the rest.\nPlayers can't play lands as long as ten or more lands are on the battlefield.",
+      "text": "When Limited Resources enters the battlefield, each player chooses five lands they control and sacrifices the rest.\nPlayers can't play lands as long as ten or more lands are on the battlefield.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -675,7 +675,7 @@
         },
         {
           "date": "2008-08-01",
-          "text": "Shuffling the library is part of the optional effect. The player only shuffles if he or she chose to search."
+          "text": "Shuffling the library is part of the optional effect. The player only shuffles if they chose to search."
         },
         {
           "date": "2009-10-01",
@@ -683,10 +683,10 @@
         },
         {
           "date": "2009-10-01",
-          "text": "The targeted player controlling more lands than the current player is a part of the targeting requirement. A player can't be targeted by this ability unless it's true, and the ability will be countered on resolution if it's no longer true at that time."
+          "text": "The targeted player controlling more lands than the current player is a part of the targeting requirement. A player can't be targeted by this ability unless it's true, and the ability doesn't resolve if it's no longer true at that time."
         }
       ],
-      "text": "At the beginning of each player's upkeep, that player chooses target player who controls more lands than he or she does and is his or her opponent. The first player may search his or her library for a basic land card, put that card onto the battlefield, then shuffle his or her library.",
+      "text": "At the beginning of each player's upkeep, that player chooses target player who controls more lands than they do and is their opponent. The first player may search their library for a basic land card, put that card onto the battlefield, then shuffle their library.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -1605,7 +1605,7 @@
         "EXO"
       ],
       "rarity": "Common",
-      "text": "As an additional cost to cast Aether Tide, discard X creature cards.\nReturn X target creatures to their owners' hands.",
+      "text": "As an additional cost to cast this spell, discard X creature cards.\nReturn X target creatures to their owners' hands.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -1718,18 +1718,6 @@
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2007-02-01",
-          "text": "You draw one card each time the enchanted creature damages the opponent. This is not one card per point of damage."
-        },
-        {
-          "date": "2007-02-01",
-          "text": "If put on your opponent's creature, you do not draw a card when that creature damages you. The creature has to damage your opponent in order to have this work."
-        },
-        {
-          "date": "2007-02-01",
-          "text": "Drawing a card is optional."
-        },
-        {
           "date": "2011-09-22",
           "text": "\"You\" refers to the controller of Curiosity, which may be different from the controller of the enchanted creature. \"An opponent\" refers to an opponent of Curiosity's controller."
         },
@@ -1740,6 +1728,14 @@
         {
           "date": "2011-09-22",
           "text": "Curiosity doesn't trigger if the enchanted creature deals damage to a planeswalker controlled by an opponent."
+        },
+        {
+          "date": "2018-03-16",
+          "text": "You draw one card each time the enchanted creature deals damage to an opponent, no matter how much damage it deals or whether it was dealt in combat."
+        },
+        {
+          "date": "2018-03-16",
+          "text": "If this Aura enchants an opponent's creature, you won't draw a card when that creature damages you. The creature has to deal damage to one of your opponents for the ability to trigger."
         }
       ],
       "subtypes": [
@@ -1805,7 +1801,7 @@
         },
         {
           "date": "2013-04-15",
-          "text": "If a spell that can target enchantments but not creatures (such as Clear) is cast targeting the Licid after it has become an enchantment, but the Licid's controller pays the cost, the Licid will no longer be an enchantment. This will result in the spell being countered on resolution for having no legal targets."
+          "text": "If a spell that can target enchantments but not creatures (such as Clear) is cast targeting the Licid after it has become an enchantment, but the Licid's controller pays the cost, the Licid will no longer be an enchantment. This will result in the spell failing to resolve for having no legal targets."
         }
       ],
       "subtypes": [
@@ -2056,7 +2052,7 @@
           "text": "You can activate mana abilities during the resolution if you decide to pay mana."
         }
       ],
-      "text": "For each creature, its controller sacrifices a permanent unless he or she pays {1}.",
+      "text": "For each creature, its controller sacrifices a permanent unless they pay {1}.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -2284,7 +2280,7 @@
           "text": "The person who cast the spell chooses which of their lands is affected."
         }
       ],
-      "text": "Whenever a player casts a spell, that player returns a land he or she controls to its owner's hand.",
+      "text": "Whenever a player casts a spell, that player returns a land they control to its owner's hand.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -2346,6 +2342,12 @@
         "A25"
       ],
       "rarity": "Common",
+      "rulings": [
+        {
+          "date": "2018-03-16",
+          "text": "You can't do anything in between drawing a card and discarding a card, including casting or cycling the card you drew."
+        }
+      ],
       "subtypes": [
         "Merfolk",
         "Rogue"
@@ -2517,10 +2519,10 @@
         },
         {
           "date": "2009-10-01",
-          "text": "The targeted player having more cards in his or her hand than the current player is a part of the targeting requirement. A player can't be targeted by this ability unless it's true, and the ability will be countered on resolution if it's no longer true at that time."
+          "text": "The targeted player having more cards in their hand than the current player is a part of the targeting requirement. A player can't be targeted by this ability unless it's true, and the ability doesn't resolve if it's no longer true at that time."
         }
       ],
-      "text": "At the beginning of each player's upkeep, that player chooses target player who has more cards in hand than he or she does and is his or her opponent. The first player may discard his or her hand and draw three cards.",
+      "text": "At the beginning of each player's upkeep, that player chooses target player who has more cards in hand than they do and is their opponent. The first player may discard their hand and draw three cards.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -3253,7 +3255,7 @@
           "text": "Players can only respond once this spell has been cast and all its costs have been paid. No one can try to destroy the creature you sacrificed to prevent you from casting this spell."
         }
       ],
-      "text": "As an additional cost to cast Culling the Weak, sacrifice a creature.\nAdd {B}{B}{B}{B} to your mana pool.",
+      "text": "As an additional cost to cast this spell, sacrifice a creature.\nAdd {B}{B}{B}{B}.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -3755,7 +3757,7 @@
           "text": "The life payment is part of the cost to cast Hatred, so it is lost if this spell is countered."
         }
       ],
-      "text": "As an additional cost to cast Hatred, pay X life.\nTarget creature gets +X/+0 until end of turn.",
+      "text": "As an additional cost to cast this spell, pay X life.\nTarget creature gets +X/+0 until end of turn.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -3817,7 +3819,7 @@
         "Human",
         "Wizard"
       ],
-      "text": "{B}, {T}: Choose target opponent who had at least two fewer creature cards in his or her graveyard than you did as you activated this ability. Destroy target nonblack creature he or she controls.",
+      "text": "{B}, {T}: Choose target opponent who had at least two fewer creature cards in their graveyard than you did as you activated this ability. Destroy target nonblack creature that player controls.",
       "toughness": "2",
       "type": "Creature — Human Wizard",
       "types": [
@@ -3993,7 +3995,7 @@
           "text": "This spell is cast during the End step. Since you discard down to 7 cards in the cleanup step, this card is used before the discard."
         }
       ],
-      "text": "Cast Necrologia only during your end step.\nAs an additional cost to cast Necrologia, pay X life.\nDraw X cards.",
+      "text": "Cast this spell only during your end step.\nAs an additional cost to cast this spell, pay X life.\nDraw X cards.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -4048,10 +4050,10 @@
         },
         {
           "date": "2009-10-01",
-          "text": "The targeted player's graveyard having fewer creature cards in it than the current player's is a part of the targeting requirement. A player can't be targeted by this ability unless it's true, and the ability will be countered on resolution if it's no longer true at that time."
+          "text": "The targeted player's graveyard having fewer creature cards in it than the current player's is a part of the targeting requirement. A player can't be targeted by this ability unless it's true, and the ability doesn't resolve if it's no longer true at that time."
         }
       ],
-      "text": "At the beginning of each player's upkeep, that player chooses target player whose graveyard has fewer creature cards in it than his or her graveyard does and is his or her opponent. The first player may return a creature card from his or her graveyard to his or her hand.",
+      "text": "At the beginning of each player's upkeep, that player chooses target player whose graveyard has fewer creature cards in it than their graveyard does and is their opponent. The first player may return a creature card from their graveyard to their hand.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -4539,7 +4541,7 @@
         "EXO"
       ],
       "rarity": "Rare",
-      "text": "Pay 5 life: Destroy Volrath's Dungeon. Any player may activate this ability but only during his or her turn.\nDiscard a card: Target player puts a card from his or her hand on top of his or her library. Activate this ability only any time you could cast a sorcery.",
+      "text": "Pay 5 life: Destroy Volrath's Dungeon. Any player may activate this ability but only during their turn.\nDiscard a card: Target player puts a card from their hand on top of their library. Activate this ability only any time you could cast a sorcery.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -4931,7 +4933,7 @@
         "Human",
         "Wizard"
       ],
-      "text": "{R}, {T}: Choose target opponent who had more life than you did as you activated this ability. Keeper of the Flame deals 2 damage to him or her.",
+      "text": "{R}, {T}: Choose target opponent who had more life than you did as you activated this ability. Keeper of the Flame deals 2 damage to that player.",
       "toughness": "2",
       "type": "Creature — Human Wizard",
       "types": [
@@ -4992,7 +4994,7 @@
         "Human",
         "Wizard"
       ],
-      "text": "{T}, Discard a card at random: Mage il-Vec deals 1 damage to target creature or player.",
+      "text": "{T}, Discard a card at random: Mage il-Vec deals 1 damage to any target.",
       "toughness": "2",
       "type": "Creature — Human Wizard",
       "types": [
@@ -5227,10 +5229,10 @@
         },
         {
           "date": "2009-10-01",
-          "text": "The targeted player having more life than the current player is a part of the targeting requirement. A player can't be targeted by this ability unless it's true, and the ability will be countered on resolution if it's no longer true at that time."
+          "text": "The targeted player having more life than the current player is a part of the targeting requirement. A player can't be targeted by this ability unless it's true, and the ability doesn't resolve if it's no longer true at that time."
         }
       ],
-      "text": "At the beginning of each player's upkeep, that player chooses target player who has more life than he or she does and is his or her opponent. The first player may have Oath of Mages deal 1 damage to the second player.",
+      "text": "At the beginning of each player's upkeep, that player chooses target player who has more life than they do and is their opponent. The first player may have Oath of Mages deal 1 damage to the second player.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -5284,7 +5286,7 @@
         "Ogre",
         "Shaman"
       ],
-      "text": "{2}, Discard a card at random: Ogre Shaman deals 2 damage to target creature or player.",
+      "text": "{2}, Discard a card at random: Ogre Shaman deals 2 damage to any target.",
       "toughness": "3",
       "type": "Creature — Ogre Shaman",
       "types": [
@@ -5415,7 +5417,7 @@
           "text": "If player A controls Pandemonium when a creature enters the battlefield under player B's control, player A controls the triggered ability even though player B chooses the target and chooses whether to have the creature deal damage, which could be important if multiple abilities controlled by multiple players trigger."
         }
       ],
-      "text": "Whenever a creature enters the battlefield, that creature's controller may have it deal damage equal to its power to target creature or player of his or her choice.",
+      "text": "Whenever a creature enters the battlefield, that creature's controller may have it deal damage equal to its power to any target of their choice.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -5471,7 +5473,7 @@
       "subtypes": [
         "Aura"
       ],
-      "text": "Enchant creature\nAt the beginning of the upkeep of enchanted creature's controller, that player reveals the top card of his or her library. If that card is a land card, destroy that creature. Otherwise, it gets +3/+3 until end of turn.",
+      "text": "Enchant creature\nAt the beginning of the upkeep of enchanted creature's controller, that player reveals the top card of their library. If that card is a land card, destroy that creature. Otherwise, it gets +3/+3 until end of turn.",
       "type": "Enchantment — Aura",
       "types": [
         "Enchantment"
@@ -5876,7 +5878,7 @@
         "10E"
       ],
       "rarity": "Rare",
-      "text": "Discard a land card: Seismic Assault deals 2 damage to target creature or player.",
+      "text": "Discard a land card: Seismic Assault deals 2 damage to any target.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -5982,7 +5984,7 @@
           "text": "You pick the target before you know which card is going to be discarded."
         }
       ],
-      "text": "As an additional cost to cast Sonic Burst, discard a card at random.\nSonic Burst deals 4 damage to target creature or player.",
+      "text": "As an additional cost to cast this spell, discard a card at random.\nSonic Burst deals 4 damage to any target.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -6273,7 +6275,7 @@
       "subtypes": [
         "Boar"
       ],
-      "text": "Whenever Crashing Boars attacks, defending player chooses an untapped creature he or she controls. That creature blocks Crashing Boars this turn if able.",
+      "text": "Whenever Crashing Boars attacks, defending player chooses an untapped creature they control. That creature blocks Crashing Boars this turn if able.",
       "toughness": "4",
       "type": "Creature — Boar",
       "types": [
@@ -6688,10 +6690,10 @@
         },
         {
           "date": "2009-10-01",
-          "text": "The targeted player controlling more creatures than the current player is a part of the targeting requirement. A player can't be targeted by this ability unless it's true, and the ability will be countered on resolution if it's no longer true at that time."
+          "text": "The targeted player controlling more creatures than the current player is a part of the targeting requirement. A player can't be targeted by this ability unless it's true, and the ability doesn't resolve if it's no longer true at that time."
         }
       ],
-      "text": "At the beginning of each player's upkeep, that player chooses target player who controls more creatures than he or she does and is his or her opponent. The first player may reveal cards from the top of his or her library until he or she reveals a creature card. If he or she does, that player puts that card onto the battlefield and all other cards revealed this way into his or her graveyard.",
+      "text": "At the beginning of each player's upkeep, that player chooses target player who controls more creatures than they do and is their opponent. The first player may reveal cards from the top of their library until they reveal a creature card. If the first player does, that player puts that card onto the battlefield and all other cards revealed this way into their graveyard.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -8114,7 +8116,7 @@
         },
         {
           "date": "2013-04-15",
-          "text": "If a spell that can target enchantments but not creatures (such as Clear) is cast targeting the Licid after it has become an enchantment, but the Licid's controller pays the cost, the Licid will no longer be an enchantment. This will result in the spell being countered on resolution for having no legal targets."
+          "text": "If a spell that can target enchantments but not creatures (such as Clear) is cast targeting the Licid after it has become an enchantment, but the Licid's controller pays the cost, the Licid will no longer be an enchantment. This will result in the spell failing to resolve for having no legal targets."
         },
         {
           "date": "2013-09-20",
@@ -8171,7 +8173,7 @@
       "subtypes": [
         "Horse"
       ],
-      "text": "Workhorse enters the battlefield with four +1/+1 counters on it.\nRemove a +1/+1 counter from Workhorse: Add {C} to your mana pool.",
+      "text": "Workhorse enters the battlefield with four +1/+1 counters on it.\nRemove a +1/+1 counter from Workhorse: Add {C}.",
       "toughness": "0",
       "type": "Artifact Creature — Horse",
       "types": [
@@ -8226,7 +8228,7 @@
           "text": "City of Traitors does not trigger on itself being played."
         }
       ],
-      "text": "When you play another land, sacrifice City of Traitors.\n{T}: Add {C}{C} to your mana pool.",
+      "text": "When you play another land, sacrifice City of Traitors.\n{T}: Add {C}{C}.",
       "type": "Land",
       "types": [
         "Land"

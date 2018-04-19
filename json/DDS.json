@@ -168,7 +168,7 @@
       "rulings": [
         {
           "date": "2007-07-15",
-          "text": "If a Beacon is countered, it's put into its owner's graveyard, not shuffled into the library."
+          "text": "If a Beacon is countered or doesn't resolve, it's put into its owner's graveyard, not shuffled into the library."
         }
       ],
       "text": "Target player takes an extra turn after this one. Shuffle Beacon of Tomorrows into its owner's library.",
@@ -1084,7 +1084,7 @@
         },
         {
           "date": "2013-06-07",
-          "text": "If all of the spell's targets are illegal when the spell tries to resolve, it will be countered and none of its effects will happen."
+          "text": "If all of the spell's targets are illegal when the spell tries to resolve, it won't resolve and none of its effects will happen."
         },
         {
           "date": "2013-06-07",
@@ -1094,7 +1094,7 @@
       "subtypes": [
         "Arcane"
       ],
-      "text": "Add {R}{R}{R} to your mana pool.\nSplice onto Arcane {1}{R} (As you cast an Arcane spell, you may reveal this card from your hand and pay its splice cost. If you do, add this card's effects to that spell.)",
+      "text": "Add {R}{R}{R}.\nSplice onto Arcane {1}{R} (As you cast an Arcane spell, you may reveal this card from your hand and pay its splice cost. If you do, add this card's effects to that spell.)",
       "type": "Instant — Arcane",
       "types": [
         "Instant"
@@ -1256,7 +1256,7 @@
           "text": "You may choose new targets for any of the copies. You can choose differently for each copy."
         }
       ],
-      "text": "Grapeshot deals 1 damage to target creature or player.\nStorm (When you cast this spell, copy it for each spell cast before it this turn. You may choose new targets for the copies.)",
+      "text": "Grapeshot deals 1 damage to any target.\nStorm (When you cast this spell, copy it for each spell cast before it this turn. You may choose new targets for the copies.)",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -1360,7 +1360,7 @@
           "text": "A creature cast using suspend will enter the battlefield with haste. It will have haste until another player gains control of it (or, in some rare cases, gains control of the creature spell itself)."
         }
       ],
-      "text": "Rift Bolt deals 3 damage to target creature or player.\nSuspend 1—{R} (Rather than cast this card from your hand, you may pay {R} and exile it with a time counter on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)",
+      "text": "Rift Bolt deals 3 damage to any target.\nSuspend 1—{R} (Rather than cast this card from your hand, you may pay {R} and exile it with a time counter on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -1525,7 +1525,7 @@
       "rulings": [
         {
           "date": "2015-02-25",
-          "text": "If the target instant or sorcery card becomes an illegal target before Volcanic Vision resolves, the spell will be countered and none of its effects will happen. No damage will be dealt and Volcanic Vision won't be exiled."
+          "text": "If the target instant or sorcery card becomes an illegal target before Volcanic Vision resolves, the spell won't resolve and none of its effects will happen. No damage will be dealt and Volcanic Vision won't be exiled."
         },
         {
           "date": "2015-02-25",
@@ -2116,10 +2116,11 @@
         "EMA",
         "C16",
         "DDS",
-        "C17"
+        "C17",
+        "DDU"
       ],
       "rarity": "Common",
-      "text": "Swiftwater Cliffs enters the battlefield tapped.\nWhen Swiftwater Cliffs enters the battlefield, you gain 1 life.\n{T}: Add {U} or {R} to your mana pool.",
+      "text": "Swiftwater Cliffs enters the battlefield tapped.\nWhen Swiftwater Cliffs enters the battlefield, you gain 1 life.\n{T}: Add {U} or {R}.",
       "type": "Land",
       "types": [
         "Land"
@@ -2384,7 +2385,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -2662,7 +2665,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -2940,7 +2945,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -3239,7 +3246,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -3541,7 +3550,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -3843,7 +3854,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -3997,10 +4010,10 @@
       "rulings": [
         {
           "date": "2007-07-15",
-          "text": "If a Beacon is countered, it's put into its owner's graveyard, not shuffled into the library."
+          "text": "If a Beacon is countered or doesn't resolve, it's put into its owner's graveyard, not shuffled into the library."
         }
       ],
-      "text": "Beacon of Destruction deals 5 damage to target creature or player. Shuffle Beacon of Destruction into its owner's library.",
+      "text": "Beacon of Destruction deals 5 damage to any target. Shuffle Beacon of Destruction into its owner's library.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -4146,7 +4159,7 @@
         "DDS"
       ],
       "rarity": "Common",
-      "text": "Firebolt deals 2 damage to target creature or player.\nFlashback {4}{R} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "text": "Firebolt deals 2 damage to any target.\nFlashback {4}{R} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -4289,7 +4302,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "Haste (This creature can attack and {T} as soon as it comes under your control.)\n{T}: Kamahl, Pit Fighter deals 3 damage to target creature or player.",
+      "text": "Haste (This creature can attack and {T} as soon as it comes under your control.)\n{T}: Kamahl, Pit Fighter deals 3 damage to any target.",
       "toughness": "1",
       "type": "Legendary Creature — Human Barbarian",
       "types": [
@@ -5151,14 +5164,15 @@
       "printings": [
         "EVE",
         "DPA",
-        "DDS"
+        "DDS",
+        "DDU"
       ],
       "rarity": "Rare",
       "subtypes": [
         "Elf",
         "Warrior"
       ],
-      "text": "Trample\nCast Talara's Battalion only if you've cast another green spell this turn.",
+      "text": "Cast this spell only if you've cast another green spell this turn.\nTrample",
       "toughness": "3",
       "type": "Creature — Elf Warrior",
       "types": [
@@ -5235,7 +5249,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "Whenever Radha, Heir to Keld attacks, you may add {R}{R} to your mana pool.\n{T}: Add {G} to your mana pool.",
+      "text": "Whenever Radha, Heir to Keld attacks, you may add {R}{R}.\n{T}: Add {G}.",
       "toughness": "2",
       "type": "Legendary Creature — Elf Warrior",
       "types": [
@@ -5378,7 +5392,7 @@
         "Human",
         "Shaman"
       ],
-      "text": "When Burning-Tree Emissary enters the battlefield, add {R}{G} to your mana pool.",
+      "text": "When Burning-Tree Emissary enters the battlefield, add {R}{G}.",
       "toughness": "2",
       "type": "Creature — Human Shaman",
       "types": [
@@ -5650,7 +5664,7 @@
         "DDS"
       ],
       "rarity": "Common",
-      "text": "Rugged Highlands enters the battlefield tapped.\nWhen Rugged Highlands enters the battlefield, you gain 1 life.\n{T}: Add {R} or {G} to your mana pool.",
+      "text": "Rugged Highlands enters the battlefield tapped.\nWhen Rugged Highlands enters the battlefield, you gain 1 life.\n{T}: Add {R} or {G}.",
       "type": "Land",
       "types": [
         "Land"
@@ -5936,7 +5950,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -6238,7 +6254,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -6540,7 +6558,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -6824,7 +6844,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -7105,7 +7127,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -7386,7 +7410,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [

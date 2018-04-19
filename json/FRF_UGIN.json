@@ -129,7 +129,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "+2: Ugin, the Spirit Dragon deals 3 damage to target creature or player.\n−X: Exile each permanent with converted mana cost X or less that's one or more colors.\n−10: You gain 7 life, draw seven cards, then put up to seven permanent cards from your hand onto the battlefield.",
+      "text": "+2: Ugin, the Spirit Dragon deals 3 damage to any target.\n−X: Exile each permanent with converted mana cost X or less that's one or more colors.\n−10: You gain 7 life, draw seven cards, then put up to seven permanent cards from your hand onto the battlefield.",
       "type": "Legendary Planeswalker — Ugin",
       "types": [
         "Planeswalker"
@@ -828,7 +828,7 @@
         },
         {
           "date": "2014-11-24",
-          "text": "A card's owner is public information at all times. If the two cards you exile are owned by different players (perhaps because you gained control of a Jeskai Infiltrator owned by your opponent), which card is which is no longer hidden from your opponent. That player will know which face-down creature he or she owns."
+          "text": "A card's owner is public information at all times. If the two cards you exile are owned by different players (perhaps because you gained control of a Jeskai Infiltrator owned by your opponent), which card is which is no longer hidden from your opponent. That player will know which face-down creature they own."
         },
         {
           "date": "2014-11-24",
@@ -1052,7 +1052,7 @@
           "text": "Some older Magic sets feature double-faced cards, which have a Magic card face on each side rather than a Magic card face on one side and a Magic card back on the other. The rules for double-faced cards are changing slightly to account for the possibility that they are manifested. If a double-faced card is manifested, it will be put onto the battlefield face down. While face down, it can't transform. If the front face of the card is a creature card, you can turn it face up by paying its mana cost. If you do, its front face will be up. A double-faced permanent on the battlefield still can't be turned face down."
         }
       ],
-      "text": "Exile target creature. Its controller manifests the top card of his or her library. (That player puts the top card of his or her library onto the battlefield face down as a 2/2 creature. If it's a creature card, it can be turned face up any time for its mana cost.)",
+      "text": "Exile target creature. Its controller manifests the top card of their library. (That player puts the top card of their library onto the battlefield face down as a 2/2 creature. If it's a creature card, it can be turned face up any time for its mana cost.)",
       "type": "Instant",
       "types": [
         "Instant"
@@ -1162,10 +1162,6 @@
       "rulings": [
         {
           "date": "2014-09-20",
-          "text": "If a face-down Mystic of the Hidden Way is blocked and then turned face up, it stays blocked."
-        },
-        {
-          "date": "2014-09-20",
           "text": "Morph lets you cast a card face down by paying {3}, and lets you turn the face-down permanent face up any time you have priority by paying its morph cost."
         },
         {
@@ -1199,6 +1195,10 @@
         {
           "date": "2014-09-20",
           "text": "If a face-down permanent leaves the battlefield, you must reveal it. You must also reveal all face-down spells and permanents you control if you leave the game or if the game ends."
+        },
+        {
+          "date": "2018-03-16",
+          "text": "If a face-down Mystic of the Hidden Way is blocked and then turned face up, it stays blocked."
         }
       ],
       "subtypes": [
@@ -2162,10 +2162,10 @@
         },
         {
           "date": "2014-09-20",
-          "text": "If some of the creatures are illegal targets as Arc Lightning tries to resolve, the original division of damage still applies but no damage is dealt to the illegal targets. If all targets are illegal, Arc Lightning is countered."
+          "text": "If some of the creatures are illegal targets as Arc Lightning tries to resolve, the original division of damage still applies but no damage is dealt to the illegal targets. If all targets are illegal, Arc Lightning doesn't resolve."
         }
       ],
-      "text": "Arc Lightning deals 3 damage divided as you choose among one, two, or three target creatures and/or players.",
+      "text": "Arc Lightning deals 3 damage divided as you choose among one, two, or three targets.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -3191,7 +3191,7 @@
       "subtypes": [
         "Golem"
       ],
-      "text": "Cast Hewed Stone Retainers only if you've cast another spell this turn.",
+      "text": "Cast this spell only if you've cast another spell this turn.",
       "toughness": "4",
       "type": "Artifact Creature — Golem",
       "types": [
@@ -3409,7 +3409,7 @@
           "text": "If Altar of the Brood enters the battlefield under your control at the same time as other permanents, its ability will trigger for each of those permanents."
         }
       ],
-      "text": "Whenever another permanent enters the battlefield under your control, each opponent puts the top card of his or her library into his or her graveyard.",
+      "text": "Whenever another permanent enters the battlefield under your control, each opponent puts the top card of their library into their graveyard.",
       "type": "Artifact",
       "types": [
         "Artifact"

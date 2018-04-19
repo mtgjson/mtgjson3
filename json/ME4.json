@@ -351,7 +351,7 @@
           "text": "Each type of object is counted during the corresponding part of the process. Cards in hand are counted after lands have been sacrificed, and creatures on the battlefield are counted after cards have been discarded. Thus, a land creature sacrificed to the first part of the spell would not be counted when determining how many creatures are on the battlefield for the last part."
         }
       ],
-      "text": "Each player chooses a number of lands he or she controls equal to the number of lands controlled by the player who controls the fewest, then sacrifices the rest. Players discard cards and sacrifice creatures the same way.",
+      "text": "Each player chooses a number of lands they control equal to the number of lands controlled by the player who controls the fewest, then sacrifices the rest. Players discard cards and sacrifice creatures the same way.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -410,7 +410,7 @@
           "text": "If a turn has multiple combat phases, this spell can be cast during any of them as long as it's before the beginning of that phase's Declare Blockers Step."
         }
       ],
-      "text": "Cast Blaze of Glory only during combat before blockers are declared.\nTarget creature defending player controls can block any number of creatures this turn. It blocks each attacking creature this turn if able.",
+      "text": "Cast this spell only during combat before blockers are declared.\nTarget creature defending player controls can block any number of creatures this turn. It blocks each attacking creature this turn if able.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -745,7 +745,7 @@
         "ME4"
       ],
       "rarity": "Rare",
-      "text": "Cast Harsh Justice only during the declare attackers step and only if you've been attacked this step.\nThis turn, whenever an attacking creature deals combat damage to you, it deals that much damage to its controller.",
+      "text": "Cast this spell only during the declare attackers step and only if you've been attacked this step.\nThis turn, whenever an attacking creature deals combat damage to you, it deals that much damage to its controller.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -818,7 +818,7 @@
         "DD3_DVD"
       ],
       "rarity": "Common",
-      "text": "Choose one —\n• Target player gains 3 life.\n• Prevent the next 3 damage that would be dealt to target creature or player this turn.",
+      "text": "Choose one —\n• Target player gains 3 life.\n• Prevent the next 3 damage that would be dealt to any target this turn.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -927,7 +927,7 @@
         "ME4"
       ],
       "rarity": "Common",
-      "text": "Cast Just Fate only during the declare attackers step and only if you've been attacked this step.\nDestroy target attacking creature.",
+      "text": "Cast this spell only during the declare attackers step and only if you've been attacked this step.\nDestroy target attacking creature.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -1269,7 +1269,7 @@
         "Avatar",
         "Incarnation"
       ],
-      "text": "{0}: The next 1 damage that would be dealt to Personal Incarnation this turn is dealt to its owner instead. Only Personal Incarnation's owner may activate this ability.\nWhen Personal Incarnation dies, its owner loses half his or her life, rounded up.",
+      "text": "{0}: The next 1 damage that would be dealt to Personal Incarnation this turn is dealt to its owner instead. Only Personal Incarnation's owner may activate this ability.\nWhen Personal Incarnation dies, its owner loses half their life, rounded up.",
       "toughness": "6",
       "type": "Creature — Avatar Incarnation",
       "types": [
@@ -1471,13 +1471,14 @@
         "EMA",
         "W17",
         "CMA",
-        "IMA"
+        "IMA",
+        "DOM"
       ],
       "rarity": "Uncommon",
       "subtypes": [
         "Angel"
       ],
-      "text": "Flying (This creature can't be blocked except by creatures with flying or reach.)\nVigilance (Attacking doesn't cause this creature to tap.)",
+      "text": "Flying, vigilance",
       "toughness": "4",
       "type": "Creature — Angel",
       "types": [
@@ -1770,11 +1771,11 @@
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2017-11-17",
-          "text": "The amount of life gained is equal to the power of the target creature as it last existed on the battlefield."
+          "date": "2018-03-16",
+          "text": "The amount of life gained is equal to the power of the targeted creature as it last existed on the battlefield."
         },
         {
-          "date": "2017-11-17",
+          "date": "2018-03-16",
           "text": "If the creature's power is negative, its controller doesn't lose or gain life."
         }
       ],
@@ -2271,7 +2272,7 @@
         },
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         }
       ],
       "subtypes": [
@@ -2761,7 +2762,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "This card forces the target player to draw mana from lands if they are untapped, but that player can choose how to draw the mana if a land he or she controls has multiple mana abilities, or mana abilities with choices."
+          "text": "This card forces the target player to draw mana from lands if they are untapped, but that player can choose how to draw the mana if a land they control has multiple mana abilities, or mana abilities with choices."
         },
         {
           "date": "2004-10-04",
@@ -2776,7 +2777,7 @@
           "text": "A mana ability is an ability that (1) isn't a loyalty ability, (2) doesn't target, and (3) could put mana into a player's mana pool when it resolves."
         }
       ],
-      "text": "Target player activates a mana ability of each land he or she controls. Then put all mana from that player's mana pool into yours.",
+      "text": "Target player activates a mana ability of each land they control. Then that player loses all unspent mana and you add the mana lost this way.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -3471,7 +3472,7 @@
         "Human",
         "Wizard"
       ],
-      "text": "{T}: Prodigal Sorcerer deals 1 damage to target creature or player.",
+      "text": "{T}: Prodigal Sorcerer deals 1 damage to any target.",
       "toughness": "1",
       "type": "Creature — Human Wizard",
       "types": [
@@ -3748,7 +3749,7 @@
         "Wizard",
         "Artificer"
       ],
-      "text": "{T}: Add {C}{C} to your mana pool. Spend this mana only to activate abilities of artifacts.",
+      "text": "{T}: Add {C}{C}. Spend this mana only to activate abilities of artifacts.",
       "toughness": "1",
       "type": "Creature — Human Wizard Artificer",
       "types": [
@@ -4405,7 +4406,7 @@
         "A25"
       ],
       "rarity": "Common",
-      "text": "Add {B}{B}{B} to your mana pool.",
+      "text": "Add {B}{B}{B}.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -6044,15 +6045,15 @@
         },
         {
           "date": "2011-01-01",
-          "text": "Word of Command can't be used to force a player to play a card that isn't in his or her hand."
+          "text": "Word of Command can't be used to force a player to play a card that isn't in their hand."
         },
         {
           "date": "2011-01-01",
-          "text": "You control the player while this spell is resolving, which means you get to see anything he or she can see. If that player is required to search his or her library as part of playing the card or as part of its resolution if it's cast as a spell, then you can see the cards in that player's library as well."
+          "text": "You control the player while this spell is resolving, which means you get to see anything they can see. If that player is required to search their library as part of playing the card or as part of its resolution if it's cast as a spell, then you can see the cards in that player's library as well."
         },
         {
           "date": "2011-01-01",
-          "text": "Your opponent can't counter the Word of Command after letting you look at his or her hand, but they can attempt to counter the spell you force them to cast."
+          "text": "Your opponent can't counter the Word of Command after letting you look at their hand, but they can attempt to counter the spell you force them to cast."
         },
         {
           "date": "2011-01-01",
@@ -6083,7 +6084,7 @@
           "text": "Controlling a player doesn't allow you to look at that player's sideboard. If an effect instructs that player to choose a card from outside the game, you can't have that player choose any card."
         }
       ],
-      "text": "Look at target opponent's hand and choose a card from it. You control that player until Word of Command finishes resolving. The player plays that card if able. While doing so, the player can activate mana abilities only if they're from lands he or she controls and only if mana they produce is spent to activate other mana abilities of lands he or she controls and/or play that card. If the chosen card is cast as a spell, you control the player while that spell is resolving.",
+      "text": "Look at target opponent's hand and choose a card from it. You control that player until Word of Command finishes resolving. The player plays that card if able. While doing so, the player can activate mana abilities only if they're from lands that player controls and only if mana they produce is spent to activate other mana abilities of lands the player controls and/or to play that card. If the chosen card is cast as a spell, you control the player while that spell is resolving.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -6137,7 +6138,7 @@
         },
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         }
       ],
       "subtypes": [
@@ -6783,7 +6784,7 @@
           "text": "You can target more than X creatures. However, if the number of legal targets at the time Fireball resolves is greater than X, none of them will be dealt any damage."
         }
       ],
-      "text": "Fireball deals X damage divided evenly, rounded down, among any number of target creatures and/or players.\nFireball costs {1} more to cast for each target beyond the first.",
+      "text": "This spell costs {1} more to cast for each target beyond the first.\nFireball deals X damage divided evenly, rounded down, among any number of targets.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -7103,7 +7104,7 @@
       "subtypes": [
         "Goblin"
       ],
-      "text": "Sacrifice Goblin Firestarter: Goblin Firestarter deals 1 damage to target creature or player. Activate this ability only during your turn, before attackers are declared.",
+      "text": "Sacrifice Goblin Firestarter: It deals 1 damage to any target. Activate this ability only during your turn, before attackers are declared.",
       "toughness": "1",
       "type": "Creature — Goblin",
       "types": [
@@ -7319,7 +7320,7 @@
           "text": "If a turn has multiple combat phases, this spell can be cast during any of them as long as it's before the beginning of that phase's Declare Blockers Step."
         }
       ],
-      "text": "Cast Gorilla War Cry only during combat before blockers are declared.\nAll creatures gain menace until end of turn. (They can't be blocked except by two or more creatures.)\nDraw a card at the beginning of the next turn's upkeep.",
+      "text": "Cast this spell only during combat before blockers are declared.\nAll creatures gain menace until end of turn. (They can't be blocked except by two or more creatures.)\nDraw a card at the beginning of the next turn's upkeep.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -7583,7 +7584,7 @@
       "subtypes": [
         "Orc"
       ],
-      "text": "{T}, Sacrifice an artifact: Orcish Mechanics deals 2 damage to target creature or player.",
+      "text": "{T}, Sacrifice an artifact: Orcish Mechanics deals 2 damage to any target.",
       "toughness": "1",
       "type": "Creature — Orc",
       "types": [
@@ -7639,7 +7640,7 @@
           "text": "Primitive Justice can't target the same artifact more than once."
         }
       ],
-      "text": "As an additional cost to cast Primitive Justice, you may pay {1}{R} and/or {1}{G} any number of times.\nDestroy target artifact. For each additional {1}{R} you paid, destroy another target artifact. For each additional {1}{G} you paid, destroy another target artifact, and you gain 1 life.",
+      "text": "As an additional cost to cast this spell, you may pay {1}{R} and/or {1}{G} any number of times.\nDestroy target artifact. For each additional {1}{R} you paid, destroy another target artifact. For each additional {1}{G} you paid, destroy another target artifact, and you gain 1 life.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -8212,7 +8213,7 @@
       ],
       "rarity": "Rare",
       "reserved": true,
-      "text": "Each player discards his or her hand, then draws seven cards.",
+      "text": "Each player discards their hand, then draws seven cards.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -8404,7 +8405,7 @@
         "ME4"
       ],
       "rarity": "Uncommon",
-      "text": "Bee Sting deals 2 damage to target creature or player.",
+      "text": "Bee Sting deals 2 damage to any target.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -8463,7 +8464,7 @@
           "text": "Once your life total is 0, you can't pay any more life, even if you've somehow not lost the game yet."
         }
       ],
-      "text": "Until end of turn, any time you could activate a mana ability, you may pay 1 life. If you do, add {C} to your mana pool.",
+      "text": "Until end of turn, any time you could activate a mana ability, you may pay 1 life. If you do, add {C}.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -8665,19 +8666,15 @@
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2008-04-01",
-          "text": "If this creature is attacking a planeswalker, assigning its damage as though it weren't blocked means the damage is assigned to the planeswalker, not to the defending player."
-        },
-        {
-          "date": "2008-04-01",
-          "text": "When assigning combat damage, you choose whether you want to assign all damage to blocking creatures, or if you want to assign all of it to the defending player or planeswalker. You can't split the damage assignment between them."
-        },
-        {
-          "date": "2008-04-01",
+          "date": "2018-04-27",
           "text": "You can decide to assign damage to the defending player or planeswalker even if the blocking creature has protection from green or damage preventing effects on it."
         },
         {
-          "date": "2008-04-01",
+          "date": "2018-04-27",
+          "text": "When assigning combat damage, you choose whether you want to assign all damage to blocking creatures, or if you want to assign all of it to the player or planeswalker this creature is attacking. You can't split the damage assignment between them."
+        },
+        {
+          "date": "2018-04-27",
           "text": "If blocked by a creature with banding, the defending player decides whether or not the damage is assigned \"as though it weren't blocked\"."
         }
       ],
@@ -8988,7 +8985,7 @@
       "subtypes": [
         "Elemental"
       ],
-      "text": "Trample (This creature can deal excess combat damage to defending player or planeswalker while attacking.)\nAt the beginning of your upkeep, Force of Nature deals 8 damage to you unless you pay {G}{G}{G}{G}.",
+      "text": "Trample (This creature can deal excess combat damage to the player or planeswalker it's attacking.)\nAt the beginning of your upkeep, Force of Nature deals 8 damage to you unless you pay {G}{G}{G}{G}.",
       "toughness": "8",
       "type": "Creature — Elemental",
       "types": [
@@ -9324,7 +9321,7 @@
       "subtypes": [
         "Aura"
       ],
-      "text": "Enchant land\nWhen enchanted land becomes tapped, destroy it. That land's controller attaches Kudzu to a land of his or her choice.",
+      "text": "Enchant land\nWhen enchanted land becomes tapped, destroy it. That land's controller attaches Kudzu to a land of their choice.",
       "type": "Enchantment — Aura",
       "types": [
         "Enchantment"
@@ -9430,7 +9427,7 @@
       "rulings": [
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         }
       ],
       "text": "All Forests are 1/1 creatures that are still lands.",
@@ -9900,7 +9897,7 @@
       "rulings": [
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         }
       ],
       "text": "Each noncreature artifact loses all abilities and becomes an artifact creature with power and toughness each equal to its converted mana cost. If Titania's Song leaves the battlefield, this effect continues until end of turn.",
@@ -10210,15 +10207,17 @@
       "printings": [
         "ALL",
         "ATH",
-        "ME4"
+        "ME4",
+        "DOM"
       ],
       "rarity": "Common",
       "subtypes": [
-        "Bird"
+        "Bird",
+        "Construct"
       ],
       "text": "Flying\nAesthir Glider can't block.",
       "toughness": "1",
-      "type": "Artifact Creature — Bird",
+      "type": "Artifact Creature — Bird Construct",
       "types": [
         "Artifact",
         "Creature"
@@ -10338,7 +10337,7 @@
         "ME4"
       ],
       "rarity": "Common",
-      "text": "{2}, {T}: Prevent the next 1 damage that would be dealt to target creature or player this turn.",
+      "text": "{2}, {T}: Prevent the next 1 damage that would be dealt to any target this turn.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -10426,7 +10425,7 @@
         "EMA"
       ],
       "rarity": "Rare",
-      "text": "Sacrifice a creature: Add {C}{C} to your mana pool.",
+      "text": "Sacrifice a creature: Add {C}{C}.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -10478,7 +10477,7 @@
           "text": "It can be untapped as often as you can pay for it."
         }
       ],
-      "text": "Basalt Monolith doesn't untap during your untap step.\n{T}: Add {C}{C}{C} to your mana pool.\n{3}: Untap Basalt Monolith.",
+      "text": "Basalt Monolith doesn't untap during your untap step.\n{T}: Add {C}{C}{C}.\n{3}: Untap Basalt Monolith.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -11031,7 +11030,7 @@
       "subtypes": [
         "Golem"
       ],
-      "text": "Trample (This creature can deal excess combat damage to defending player or planeswalker while attacking.)\nColossus of Sardia doesn't untap during your untap step.\n{9}: Untap Colossus of Sardia. Activate this ability only during your upkeep.",
+      "text": "Trample (This creature can deal excess combat damage to the player or planeswalker it's attacking.)\nColossus of Sardia doesn't untap during your untap step.\n{9}: Untap Colossus of Sardia. Activate this ability only during your upkeep.",
       "toughness": "9",
       "type": "Artifact Creature — Golem",
       "types": [
@@ -11456,7 +11455,7 @@
           "text": "Dual lands which have Mountain as one of their types produce an extra red mana when tapped for either color."
         }
       ],
-      "text": "Red creatures get +1/+1.\nWhenever a Mountain is tapped for mana, its controller adds {R} to his or her mana pool (in addition to the mana the land produces).",
+      "text": "Red creatures get +1/+1.\nWhenever a Mountain is tapped for mana, its controller adds an additional {R}.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -11693,7 +11692,7 @@
           "text": "Produces mana of the last type used to put a counter on itself, not via any other charge counters."
         }
       ],
-      "text": "{X}, {T}: Put a charge counter on Ice Cauldron and exile a nonland card from your hand. You may cast that card for as long as it remains exiled. Note the type and amount of mana spent to pay this activation cost. Activate this ability only if there are no charge counters on Ice Cauldron.\n{T}, Remove a charge counter from Ice Cauldron: Add Ice Cauldron's last noted type and amount of mana to your mana pool. Spend this mana only to cast the last card exiled with Ice Cauldron.",
+      "text": "{X}, {T}: Put a charge counter on Ice Cauldron and exile a nonland card from your hand. You may cast that card for as long as it remains exiled. Note the type and amount of mana spent to pay this activation cost. Activate this ability only if there are no charge counters on Ice Cauldron.\n{T}, Remove a charge counter from Ice Cauldron: Add Ice Cauldron's last noted type and amount of mana. Spend this mana only to cast the last card exiled with Ice Cauldron.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -11751,29 +11750,14 @@
         "9ED",
         "10E",
         "ME4",
-        "DDH"
+        "DDH",
+        "DOM"
       ],
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2004-10-04",
-          "text": "Tapping a card with an effect like this will never pay the cost of an ability. For example, tapping a land with this card will not put mana into a player's pool."
-        },
-        {
-          "date": "2004-10-04",
-          "text": "Icy Manipulator can't be used to stop someone from using an ability of the permanent you plan to tap. It can be used to make a player use the ability now or to not use it."
-        },
-        {
-          "date": "2004-10-04",
-          "text": "The ability can target a tapped card, but tapping a tapped card does nothing useful. And it will not trigger \"if the card becomes tapped\" effects."
-        },
-        {
-          "date": "2004-10-04",
-          "text": "If you want to stop someone from attacking with a creature by using this card, you must do so before attackers are declared. You can't wait until after attackers are declared and then try to use it to make a creature stop attacking. Note that your opponent can't start declaring attackers without letting you use the Icy Manipulator."
-        },
-        {
-          "date": "2004-10-04",
-          "text": "Tapping an attacking creature which did not tap to attack does not remove the creature from the attack or cause the creature to stop dealing damage."
+          "date": "2018-04-27",
+          "text": "Once a player announces that they're casting a spell or activating an ability, no player may take other actions until the spell or ability has been paid for. Notably, other players can't try to tap that player's permanents to stop them from paying {T} or to stop them from producing enough mana."
         }
       ],
       "text": "{1}, {T}: Tap target artifact, creature, or land.",
@@ -11880,13 +11864,14 @@
         "DDF",
         "ME4",
         "M15",
-        "EMA"
+        "EMA",
+        "DOM"
       ],
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2016-06-08",
-          "text": "If, during your declare attackers step, Juggernaut is tapped, is affected by a spell or ability that says it can't attack, or you haven't controlled it continuously since the beginning of your turn, then it doesn't attack. If there's a cost associated with having Juggernaut attack, you aren't forced to pay that cost, so it doesn't have to attack in that case either."
+          "date": "2018-04-27",
+          "text": "If Juggernaut can't attack for any reason (such as being tapped or having come under that player's control that turn), then it doesn't attack. If there's a cost associated with having it attack, its controller isn't forced to pay that cost, so it doesn't have to attack in that case either."
         }
       ],
       "subtypes": [
@@ -11949,7 +11934,7 @@
         },
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         }
       ],
       "text": "All Swamps are 1/1 black creatures that are still lands.",
@@ -12189,7 +12174,7 @@
         "MPS"
       ],
       "rarity": "Rare",
-      "text": "Mana Vault doesn't untap during your untap step.\nAt the beginning of your upkeep, you may pay {4}. If you do, untap Mana Vault.\nAt the beginning of your draw step, if Mana Vault is tapped, it deals 1 damage to you.\n{T}: Add {C}{C}{C} to your mana pool.",
+      "text": "Mana Vault doesn't untap during your untap step.\nAt the beginning of your upkeep, you may pay {4}. If you do, untap Mana Vault.\nAt the beginning of your draw step, if Mana Vault is tapped, it deals 1 damage to you.\n{T}: Add {C}{C}{C}.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -12592,16 +12577,16 @@
       "rarity": "Common",
       "rulings": [
         {
-          "date": "2012-07-01",
-          "text": "In zones other than the battlefield, Primal Clay is 0/0."
+          "date": "2018-03-16",
+          "text": "In zones other than the battlefield, this creature card is 0/0."
         },
         {
-          "date": "2012-07-01",
-          "text": "If another permanent enters the battlefield as a copy of Primal Clay, the controller of that permanent will get to make a new choice. The copy won't necessarily have the same power, toughness, and abilities as the original."
+          "date": "2018-03-16",
+          "text": "If another permanent enters the battlefield as a copy of this creature, the controller of that permanent will get to make a new choice. The copy won't necessarily have the same power, toughness, and abilities as the original."
         },
         {
-          "date": "2012-07-01",
-          "text": "If a creature that's already on the battlefield becomes a copy of Primal Clay, it copies the power, toughness, and abilities that were chosen for Primal Clay when it entered the battlefield."
+          "date": "2018-03-16",
+          "text": "If a creature that's already on the battlefield becomes a copy of this creature, it copies the power, toughness, and abilities that were chosen for this creature as it entered the battlefield."
         }
       ],
       "subtypes": [
@@ -12657,13 +12642,9 @@
         {
           "date": "2004-10-04",
           "text": "Can be used any number of times during the turn before it leaves the battlefield."
-        },
-        {
-          "date": "2004-10-04",
-          "text": "Can choose a different creature or player for each use."
         }
       ],
-      "text": "{2}: Prevent the next 1 damage that would be dealt to target creature or player this turn. Return Rakalite to its owner's hand at the beginning of the next end step.",
+      "text": "{2}: Prevent the next 1 damage that would be dealt to any target this turn. Return Rakalite to its owner's hand at the beginning of the next end step.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -12864,7 +12845,7 @@
         "C17"
       ],
       "rarity": "Rare",
-      "text": "{T}: Add {C}{C} to your mana pool.",
+      "text": "{T}: Add {C}{C}.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -13242,10 +13223,6 @@
         {
           "date": "2004-10-04",
           "text": "You can use the sacrifice ability even if it is tapped."
-        },
-        {
-          "date": "2008-04-01",
-          "text": "A \"creature card\" is any card with the type creature, even if it has other types such as artifact, enchantment, or land. Older cards of type summon are also creature cards."
         }
       ],
       "text": "{3}, {T}: Put a hatchling counter on Triassic Egg.\nSacrifice Triassic Egg: Choose one —\n• You may put a creature card from your hand onto the battlefield. Activate this ability only if two or more hatchling counters are on Triassic Egg.\n• Return target creature card from your graveyard to the battlefield. Activate this ability only if two or more hatchling counters are on Triassic Egg.",
@@ -13553,7 +13530,7 @@
         "Swamp",
         "Mountain"
       ],
-      "text": "({T}: Add {B} or {R} to your mana pool.)",
+      "text": "({T}: Add {B} or {R}.)",
       "type": "Land — Swamp Mountain",
       "types": [
         "Land"
@@ -13615,7 +13592,7 @@
         "Swamp",
         "Forest"
       ],
-      "text": "({T}: Add {B} or {G} to your mana pool.)",
+      "text": "({T}: Add {B} or {G}.)",
       "type": "Land — Swamp Forest",
       "types": [
         "Land"
@@ -13678,7 +13655,7 @@
           "text": "On the other hand, you can tap City of Brass, put its triggered ability on the stack, and then respond to that ability by casting an instant or activating an ability using that mana. In that case, the instant spell or activated ability will resolve first."
         }
       ],
-      "text": "Whenever City of Brass becomes tapped, it deals 1 damage to you.\n{T}: Add one mana of any color to your mana pool.",
+      "text": "Whenever City of Brass becomes tapped, it deals 1 damage to you.\n{T}: Add one mana of any color.",
       "type": "Land",
       "types": [
         "Land"
@@ -13716,7 +13693,7 @@
       ],
       "rarity": "Uncommon",
       "reserved": true,
-      "text": "{T}: Add {C} to your mana pool.\n{T}: Regenerate target Elephant.",
+      "text": "{T}: Add {C}.\n{T}: Regenerate target Elephant.",
       "type": "Land",
       "types": [
         "Land"
@@ -13761,7 +13738,7 @@
           "text": "You may tap multiples of these in response to each other because the requirement for 7 cards is checked only at the time the ability is announced and not again when it resolves."
         }
       ],
-      "text": "{T}: Add {C} to your mana pool.\n{T}: Draw a card. Activate this ability only if you have exactly seven cards in hand.",
+      "text": "{T}: Add {C}.\n{T}: Draw a card. Activate this ability only if you have exactly seven cards in hand.",
       "type": "Land",
       "types": [
         "Land"
@@ -13873,7 +13850,7 @@
           "text": "This mana may be used on additional costs to cast the spell, such as Kicker."
         }
       ],
-      "text": "{T}: Add {C}{C}{C} to your mana pool. Spend this mana only to cast artifact spells.",
+      "text": "{T}: Add {C}{C}{C}. Spend this mana only to cast artifact spells.",
       "type": "Land",
       "types": [
         "Land"
@@ -13973,7 +13950,7 @@
         "Mountain",
         "Plains"
       ],
-      "text": "({T}: Add {R} or {W} to your mana pool.)",
+      "text": "({T}: Add {R} or {W}.)",
       "type": "Land — Mountain Plains",
       "types": [
         "Land"
@@ -14035,7 +14012,7 @@
         "Forest",
         "Plains"
       ],
-      "text": "({T}: Add {G} or {W} to your mana pool.)",
+      "text": "({T}: Add {G} or {W}.)",
       "type": "Land — Forest Plains",
       "types": [
         "Land"
@@ -14097,7 +14074,7 @@
         "Plains",
         "Swamp"
       ],
-      "text": "({T}: Add {W} or {B} to your mana pool.)",
+      "text": "({T}: Add {W} or {B}.)",
       "type": "Land — Plains Swamp",
       "types": [
         "Land"
@@ -14140,7 +14117,7 @@
         "EXP"
       ],
       "rarity": "Rare",
-      "text": "{T}: Add {C} to your mana pool.\n{T}, Sacrifice Strip Mine: Destroy target land.",
+      "text": "{T}: Add {C}.\n{T}, Sacrifice Strip Mine: Destroy target land.",
       "type": "Land",
       "types": [
         "Land"
@@ -14202,7 +14179,7 @@
         "Mountain",
         "Forest"
       ],
-      "text": "({T}: Add {R} or {G} to your mana pool.)",
+      "text": "({T}: Add {R} or {G}.)",
       "type": "Land — Mountain Forest",
       "types": [
         "Land"
@@ -14264,7 +14241,7 @@
         "Forest",
         "Island"
       ],
-      "text": "({T}: Add {G} or {U} to your mana pool.)",
+      "text": "({T}: Add {G} or {U}.)",
       "type": "Land — Forest Island",
       "types": [
         "Land"
@@ -14326,7 +14303,7 @@
         "Plains",
         "Island"
       ],
-      "text": "({T}: Add {W} or {U} to your mana pool.)",
+      "text": "({T}: Add {W} or {U}.)",
       "type": "Land — Plains Island",
       "types": [
         "Land"
@@ -14388,7 +14365,7 @@
         "Island",
         "Swamp"
       ],
-      "text": "({T}: Add {U} or {B} to your mana pool.)",
+      "text": "({T}: Add {U} or {B}.)",
       "type": "Land — Island Swamp",
       "types": [
         "Land"
@@ -14443,7 +14420,7 @@
         "Urza’s",
         "Mine"
       ],
-      "text": "{T}: Add {C} to your mana pool. If you control an Urza's Power-Plant and an Urza's Tower, add {C}{C} to your mana pool instead.",
+      "text": "{T}: Add {C}. If you control an Urza's Power-Plant and an Urza's Tower, add {C}{C} instead.",
       "type": "Land — Urza’s Mine",
       "types": [
         "Land"
@@ -14503,7 +14480,7 @@
         "Urza’s",
         "Mine"
       ],
-      "text": "{T}: Add {C} to your mana pool. If you control an Urza's Power-Plant and an Urza's Tower, add {C}{C} to your mana pool instead.",
+      "text": "{T}: Add {C}. If you control an Urza's Power-Plant and an Urza's Tower, add {C}{C} instead.",
       "type": "Land — Urza’s Mine",
       "types": [
         "Land"
@@ -14563,7 +14540,7 @@
         "Urza’s",
         "Mine"
       ],
-      "text": "{T}: Add {C} to your mana pool. If you control an Urza's Power-Plant and an Urza's Tower, add {C}{C} to your mana pool instead.",
+      "text": "{T}: Add {C}. If you control an Urza's Power-Plant and an Urza's Tower, add {C}{C} instead.",
       "type": "Land — Urza’s Mine",
       "types": [
         "Land"
@@ -14623,7 +14600,7 @@
         "Urza’s",
         "Mine"
       ],
-      "text": "{T}: Add {C} to your mana pool. If you control an Urza's Power-Plant and an Urza's Tower, add {C}{C} to your mana pool instead.",
+      "text": "{T}: Add {C}. If you control an Urza's Power-Plant and an Urza's Tower, add {C}{C} instead.",
       "type": "Land — Urza’s Mine",
       "types": [
         "Land"
@@ -14683,7 +14660,7 @@
         "Urza’s",
         "Power-Plant"
       ],
-      "text": "{T}: Add {C} to your mana pool. If you control an Urza's Mine and an Urza's Tower, add {C}{C} to your mana pool instead.",
+      "text": "{T}: Add {C}. If you control an Urza's Mine and an Urza's Tower, add {C}{C} instead.",
       "type": "Land — Urza’s Power-Plant",
       "types": [
         "Land"
@@ -14743,7 +14720,7 @@
         "Urza’s",
         "Power-Plant"
       ],
-      "text": "{T}: Add {C} to your mana pool. If you control an Urza's Mine and an Urza's Tower, add {C}{C} to your mana pool instead.",
+      "text": "{T}: Add {C}. If you control an Urza's Mine and an Urza's Tower, add {C}{C} instead.",
       "type": "Land — Urza’s Power-Plant",
       "types": [
         "Land"
@@ -14803,7 +14780,7 @@
         "Urza’s",
         "Power-Plant"
       ],
-      "text": "{T}: Add {C} to your mana pool. If you control an Urza's Mine and an Urza's Tower, add {C}{C} to your mana pool instead.",
+      "text": "{T}: Add {C}. If you control an Urza's Mine and an Urza's Tower, add {C}{C} instead.",
       "type": "Land — Urza’s Power-Plant",
       "types": [
         "Land"
@@ -14863,7 +14840,7 @@
         "Urza’s",
         "Power-Plant"
       ],
-      "text": "{T}: Add {C} to your mana pool. If you control an Urza's Mine and an Urza's Tower, add {C}{C} to your mana pool instead.",
+      "text": "{T}: Add {C}. If you control an Urza's Mine and an Urza's Tower, add {C}{C} instead.",
       "type": "Land — Urza’s Power-Plant",
       "types": [
         "Land"
@@ -14917,7 +14894,7 @@
         "Urza’s",
         "Tower"
       ],
-      "text": "{T}: Add {C} to your mana pool. If you control an Urza's Mine and an Urza's Power-Plant, add {C}{C}{C} to your mana pool instead.",
+      "text": "{T}: Add {C}. If you control an Urza's Mine and an Urza's Power-Plant, add {C}{C}{C} instead.",
       "type": "Land — Urza’s Tower",
       "types": [
         "Land"
@@ -14971,7 +14948,7 @@
         "Urza’s",
         "Tower"
       ],
-      "text": "{T}: Add {C} to your mana pool. If you control an Urza's Mine and an Urza's Power-Plant, add {C}{C}{C} to your mana pool instead.",
+      "text": "{T}: Add {C}. If you control an Urza's Mine and an Urza's Power-Plant, add {C}{C}{C} instead.",
       "type": "Land — Urza’s Tower",
       "types": [
         "Land"
@@ -15025,7 +15002,7 @@
         "Urza’s",
         "Tower"
       ],
-      "text": "{T}: Add {C} to your mana pool. If you control an Urza's Mine and an Urza's Power-Plant, add {C}{C}{C} to your mana pool instead.",
+      "text": "{T}: Add {C}. If you control an Urza's Mine and an Urza's Power-Plant, add {C}{C}{C} instead.",
       "type": "Land — Urza’s Tower",
       "types": [
         "Land"
@@ -15079,7 +15056,7 @@
         "Urza’s",
         "Tower"
       ],
-      "text": "{T}: Add {C} to your mana pool. If you control an Urza's Mine and an Urza's Power-Plant, add {C}{C}{C} to your mana pool instead.",
+      "text": "{T}: Add {C}. If you control an Urza's Mine and an Urza's Power-Plant, add {C}{C}{C} instead.",
       "type": "Land — Urza’s Tower",
       "types": [
         "Land"
@@ -15145,7 +15122,7 @@
         "Island",
         "Mountain"
       ],
-      "text": "({T}: Add {U} or {R} to your mana pool.)",
+      "text": "({T}: Add {U} or {R}.)",
       "type": "Land — Island Mountain",
       "types": [
         "Land"

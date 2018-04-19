@@ -454,6 +454,12 @@
         "A25"
       ],
       "rarity": "Rare",
+      "rulings": [
+        {
+          "date": "2018-03-16",
+          "text": "Loyal Sentry and the creature it blocks are destroyed before combat damage is dealt. The blocked creature is destroyed even if Loyal Sentry leaves the battlefield before its triggered ability resolves."
+        }
+      ],
       "subtypes": [
         "Human",
         "Soldier"
@@ -1935,7 +1941,7 @@
       "subtypes": [
         "Angel"
       ],
-      "text": "Flash; convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nFlying\nWhen Angel of Salvation enters the battlefield, prevent the next 5 damage that would be dealt this turn to any number of target creatures and/or players, divided as you choose.",
+      "text": "Flash; convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nFlying\nWhen Angel of Salvation enters the battlefield, prevent the next 5 damage that would be dealt this turn to any number of targets, divided as you choose.",
       "toughness": "5",
       "type": "Creature — Angel",
       "types": [
@@ -2124,11 +2130,11 @@
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2017-11-17",
-          "text": "The amount of life gained is equal to the power of the target creature as it last existed on the battlefield."
+          "date": "2018-03-16",
+          "text": "The amount of life gained is equal to the power of the targeted creature as it last existed on the battlefield."
         },
         {
-          "date": "2017-11-17",
+          "date": "2018-03-16",
           "text": "If the creature's power is negative, its controller doesn't lose or gain life."
         }
       ],
@@ -2729,7 +2735,7 @@
         "DDF"
       ],
       "rarity": "Uncommon",
-      "text": "You may discard a Plains card rather than pay Abolish's mana cost.\nDestroy target artifact or enchantment.",
+      "text": "You may discard a Plains card rather than pay this spell's mana cost.\nDestroy target artifact or enchantment.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -2960,7 +2966,7 @@
         "DDF"
       ],
       "rarity": "Uncommon",
-      "text": "{T}: Add {C} to your mana pool.\n{W}, {T}: Target Soldier creature gets +1/+1 until end of turn.",
+      "text": "{T}: Add {C}.\n{W}, {T}: Target Soldier creature gets +1/+1 until end of turn.",
       "type": "Land",
       "types": [
         "Land"
@@ -3036,7 +3042,7 @@
         "C17"
       ],
       "rarity": "Common",
-      "text": "Kabira Crossroads enters the battlefield tapped.\nWhen Kabira Crossroads enters the battlefield, you gain 2 life.\n{T}: Add {W} to your mana pool.",
+      "text": "Kabira Crossroads enters the battlefield tapped.\nWhen Kabira Crossroads enters the battlefield, you gain 2 life.\n{T}: Add {W}.",
       "type": "Land",
       "types": [
         "Land"
@@ -3111,7 +3117,7 @@
         "DDF"
       ],
       "rarity": "Rare",
-      "text": "As Rustic Clachan enters the battlefield, you may reveal a Kithkin card from your hand. If you don't, Rustic Clachan enters the battlefield tapped.\n{T}: Add {W} to your mana pool.\nReinforce 1—{1}{W} ({1}{W}, Discard this card: Put a +1/+1 counter on target creature.)",
+      "text": "As Rustic Clachan enters the battlefield, you may reveal a Kithkin card from your hand. If you don't, Rustic Clachan enters the battlefield tapped.\n{T}: Add {W}.\nReinforce 1—{1}{W} ({1}{W}, Discard this card: Put a +1/+1 counter on target creature.)",
       "type": "Land",
       "types": [
         "Land"
@@ -3462,7 +3468,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -3827,7 +3834,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -4192,7 +4200,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -4557,7 +4566,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -4671,7 +4681,7 @@
         },
         {
           "date": "2009-10-01",
-          "text": "A noncreature permanent that turns into a creature is subject to the \"summoning sickness\" rule: It can only attack, and its {T} abilities can only be activated, if its controller has continuously controlled that permanent since the beginning of his or her most recent turn."
+          "text": "A noncreature permanent that turns into a creature is subject to the \"summoning sickness\" rule: It can only attack, and its {T} abilities can only be activated, if its controller has continuously controlled that permanent since the beginning of their most recent turn."
         },
         {
           "date": "2009-10-01",
@@ -5024,7 +5034,7 @@
       "subtypes": [
         "Myr"
       ],
-      "text": "{T}: Add {U} to your mana pool.",
+      "text": "{T}: Add {U}.",
       "toughness": "1",
       "type": "Artifact Creature — Myr",
       "types": [
@@ -5187,8 +5197,8 @@
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2006-09-25",
-          "text": "The ability looks for creatures with the Assembly-Worker subtype, not permanents named Assembly-Worker."
+          "date": "2018-03-16",
+          "text": "Assembly-Worker's ability can target any creature with the Assembly-Worker subtype, not only creatures named Assembly-Worker."
         }
       ],
       "subtypes": [
@@ -5270,7 +5280,7 @@
       "rulings": [
         {
           "date": "2008-04-01",
-          "text": "If Serrated Biskelion leaves the battlefield before its ability resolves, you'll still put a -1/-1 counter on the targeted creature. If the target leaves the battlefield or otherwise becomes an illegal target before the ability resolves, the ability is countered and you won't put a -1/-1 counter on Serrated Biskelion."
+          "text": "If Serrated Biskelion leaves the battlefield before its ability resolves, you'll still put a -1/-1 counter on the targeted creature. If the target leaves the battlefield or otherwise becomes an illegal target before the ability resolves, the ability doesn't resolve and you won't put a -1/-1 counter on Serrated Biskelion."
         }
       ],
       "subtypes": [
@@ -5557,7 +5567,8 @@
         "5DN",
         "DDF",
         "SOM",
-        "C16"
+        "C16",
+        "DDU"
       ],
       "rarity": "Common",
       "rulings": [
@@ -5817,13 +5828,14 @@
         "DDF",
         "ME4",
         "M15",
-        "EMA"
+        "EMA",
+        "DOM"
       ],
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2016-06-08",
-          "text": "If, during your declare attackers step, Juggernaut is tapped, is affected by a spell or ability that says it can't attack, or you haven't controlled it continuously since the beginning of your turn, then it doesn't attack. If there's a cost associated with having Juggernaut attack, you aren't forced to pay that cost, so it doesn't have to attack in that case either."
+          "date": "2018-04-27",
+          "text": "If Juggernaut can't attack for any reason (such as being tapped or having come under that player's control that turn), then it doesn't attack. If there's a cost associated with having it attack, its controller isn't forced to pay that cost, so it doesn't have to attack in that case either."
         }
       ],
       "subtypes": [
@@ -5991,7 +6003,8 @@
         "CON",
         "DDF",
         "MMA",
-        "MM2"
+        "MM2",
+        "DDU"
       ],
       "rarity": "Common",
       "subtypes": [
@@ -6077,7 +6090,7 @@
       "subtypes": [
         "Hydra"
       ],
-      "text": "Clockwork Hydra enters the battlefield with four +1/+1 counters on it.\nWhenever Clockwork Hydra attacks or blocks, remove a +1/+1 counter from it. If you do, Clockwork Hydra deals 1 damage to target creature or player.\n{T}: Put a +1/+1 counter on Clockwork Hydra.",
+      "text": "Clockwork Hydra enters the battlefield with four +1/+1 counters on it.\nWhenever Clockwork Hydra attacks or blocks, remove a +1/+1 counter from it. If you do, Clockwork Hydra deals 1 damage to any target.\n{T}: Put a +1/+1 counter on Clockwork Hydra.",
       "toughness": "0",
       "type": "Artifact Creature — Hydra",
       "types": [
@@ -6250,7 +6263,7 @@
       "subtypes": [
         "Construct"
       ],
-      "text": "Triskelion enters the battlefield with three +1/+1 counters on it.\nRemove a +1/+1 counter from Triskelion: Triskelion deals 1 damage to target creature or player.",
+      "text": "Triskelion enters the battlefield with three +1/+1 counters on it.\nRemove a +1/+1 counter from Triskelion: It deals 1 damage to any target.",
       "toughness": "1",
       "type": "Artifact Creature — Construct",
       "types": [
@@ -6515,7 +6528,7 @@
           "text": "If Everflowing Chalice has no charge counters on it, you can still activate its last ability. That ability is still a mana ability, even though it produces no mana as it resolves."
         }
       ],
-      "text": "Multikicker {2} (You may pay an additional {2} any number of times as you cast this spell.)\nEverflowing Chalice enters the battlefield with a charge counter on it for each time it was kicked.\n{T}: Add {C} to your mana pool for each charge counter on Everflowing Chalice.",
+      "text": "Multikicker {2} (You may pay an additional {2} any number of times as you cast this spell.)\nEverflowing Chalice enters the battlefield with a charge counter on it for each time it was kicked.\n{T}: Add {C} for each charge counter on Everflowing Chalice.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -6682,7 +6695,7 @@
         },
         {
           "date": "2011-09-22",
-          "text": "If you gain control of another player's Elixir of Immortality and activate it, the Elixir of Immortality will be shuffled into its owner's library and the cards in your graveyard will be shuffled into your library. You are considered to have shuffled each affected library (even if, as a shortcut, each player physically shuffles his or her own library)."
+          "text": "If you gain control of another player's Elixir of Immortality and activate it, the Elixir of Immortality will be shuffled into its owner's library and the cards in your graveyard will be shuffled into your library. You are considered to have shuffled each affected library (even if, as a shortcut, each player physically shuffles their own library)."
         }
       ],
       "text": "{2}, {T}: You gain 5 life. Shuffle Elixir of Immortality and your graveyard into their owner's library.",
@@ -7091,7 +7104,7 @@
         "IMA"
       ],
       "rarity": "Common",
-      "text": "Sacrifice Moonglove Extract: It deals 2 damage to target creature or player.",
+      "text": "Sacrifice Moonglove Extract: It deals 2 damage to any target.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -7331,7 +7344,7 @@
         "DDF"
       ],
       "rarity": "Uncommon",
-      "text": "You may discard an Island card and another card rather than pay Foil's mana cost.\nCounter target spell.",
+      "text": "You may discard an Island card and another card rather than pay this spell's mana cost.\nCounter target spell.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -7486,7 +7499,8 @@
         "M15",
         "C14",
         "MM2",
-        "C16"
+        "C16",
+        "DDU"
       ],
       "rarity": "Common",
       "rulings": [
@@ -7495,7 +7509,7 @@
           "text": "Although Darksteel Citadel is an artifact, it can't be cast as a spell. Playing it follows the normal rules for playing a land."
         }
       ],
-      "text": "Indestructible\n{T}: Add {C} to your mana pool.",
+      "text": "Indestructible\n{T}: Add {C}.",
       "type": "Artifact Land",
       "types": [
         "Artifact",
@@ -7572,7 +7586,7 @@
         },
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         },
         {
           "date": "2009-10-01",
@@ -7587,7 +7601,7 @@
           "text": "If you turn Mishra's Factory into a creature but haven't controlled it continuously since your most recent turn began, you won't be able to activate its first or last ability."
         }
       ],
-      "text": "{T}: Add {C} to your mana pool.\n{1}: Mishra's Factory becomes a 2/2 Assembly-Worker artifact creature until end of turn. It's still a land.\n{T}: Target Assembly-Worker creature gets +1/+1 until end of turn.",
+      "text": "{T}: Add {C}.\n{1}: Mishra's Factory becomes a 2/2 Assembly-Worker artifact creature until end of turn. It's still a land.\n{T}: Target Assembly-Worker creature gets +1/+1 until end of turn.",
       "type": "Land",
       "types": [
         "Land"
@@ -7662,10 +7676,11 @@
         "MRD",
         "HOP",
         "DDF",
-        "C16"
+        "C16",
+        "DDU"
       ],
       "rarity": "Common",
-      "text": "(Seat of the Synod isn't a spell.)\n{T}: Add {U} to your mana pool.",
+      "text": "(Seat of the Synod isn't a spell.)\n{T}: Add {U}.",
       "type": "Artifact Land",
       "types": [
         "Artifact",
@@ -7747,14 +7762,14 @@
       "rulings": [
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         },
         {
           "date": "2009-10-01",
           "text": "Activating the ability that turns it into a creature while it's already a creature will override any effects that set its power and/or toughness to a specific number. However, any effect that raises or lowers power and/or toughness (such as the effect created by Giant Growth, Glorious Anthem, or a +1/+1 counter) will continue to apply."
         }
       ],
-      "text": "{T}: Add {C} to your mana pool.\n{6}: Stalking Stones becomes a 3/3 Elemental artifact creature that's still a land. (This effect lasts indefinitely.)",
+      "text": "{T}: Add {C}.\n{6}: Stalking Stones becomes a 3/3 Elemental artifact creature that's still a land. (This effect lasts indefinitely.)",
       "type": "Land",
       "types": [
         "Land"
@@ -8104,7 +8119,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -8468,7 +8485,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -8832,7 +8851,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -9196,7 +9217,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [

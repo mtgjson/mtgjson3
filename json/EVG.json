@@ -55,7 +55,7 @@
       "rulings": [
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         }
       ],
       "subtypes": [
@@ -139,7 +139,7 @@
         "Elf",
         "Warrior"
       ],
-      "text": "You may exile two green cards from your hand rather than pay Allosaurus Rider's mana cost.\nAllosaurus Rider's power and toughness are each equal to 1 plus the number of lands you control.",
+      "text": "You may exile two green cards from your hand rather than pay this spell's mana cost.\nAllosaurus Rider's power and toughness are each equal to 1 plus the number of lands you control.",
       "toughness": "1+*",
       "type": "Creature — Elf Warrior",
       "types": [
@@ -265,7 +265,7 @@
         "Elf",
         "Druid"
       ],
-      "text": "When Elvish Harbinger enters the battlefield, you may search your library for an Elf card, reveal it, then shuffle your library and put that card on top of it.\n{T}: Add one mana of any color to your mana pool.",
+      "text": "When Elvish Harbinger enters the battlefield, you may search your library for an Elf card, reveal it, then shuffle your library and put that card on top of it.\n{T}: Add one mana of any color.",
       "toughness": "2",
       "type": "Creature — Elf Druid",
       "types": [
@@ -392,7 +392,7 @@
         },
         {
           "date": "2008-10-01",
-          "text": "The cycling ability and the triggered ability are separate. If the triggered ability is countered (with Stifle, for example, or if all its targets have become illegal), the cycling ability will still resolve and you'll draw a card."
+          "text": "The cycling ability and the triggered ability are separate. If the triggered ability doesn't resolve (due to being countered with Stifle, for example, or if all its targets have become illegal), the cycling ability will still resolve and you'll draw a card."
         },
         {
           "date": "2008-10-01",
@@ -595,14 +595,15 @@
         "C14",
         "DD3_EVG",
         "EMA",
-        "CMA"
+        "CMA",
+        "DOM"
       ],
       "rarity": "Common",
       "subtypes": [
         "Elf",
         "Druid"
       ],
-      "text": "{T}: Add {G} to your mana pool.",
+      "text": "{T}: Add {G}.",
       "toughness": "1",
       "type": "Creature — Elf Druid",
       "types": [
@@ -787,7 +788,7 @@
       "subtypes": [
         "Elf"
       ],
-      "text": "Trample (This creature can deal excess combat damage to defending player or planeswalker while attacking.)\nWhen Sylvan Messenger enters the battlefield, reveal the top four cards of your library. Put all Elf cards revealed this way into your hand and the rest on the bottom of your library in any order.",
+      "text": "Trample (This creature can deal excess combat damage to the player or planeswalker it's attacking.)\nWhen Sylvan Messenger enters the battlefield, reveal the top four cards of your library. Put all Elf cards revealed this way into your hand and the rest on the bottom of your library in any order.",
       "toughness": "2",
       "type": "Creature — Elf",
       "types": [
@@ -1220,7 +1221,7 @@
         "Elf",
         "Warrior"
       ],
-      "text": "As an additional cost to cast Wren's Run Vanquisher, reveal an Elf card from your hand or pay {3}.\nDeathtouch (Any amount of damage this deals to a creature is enough to destroy it.)",
+      "text": "As an additional cost to cast this spell, reveal an Elf card from your hand or pay {3}.\nDeathtouch (Any amount of damage this deals to a creature is enough to destroy it.)",
       "toughness": "3",
       "type": "Creature — Elf Warrior",
       "types": [
@@ -1545,7 +1546,7 @@
         "IMA"
       ],
       "rarity": "Common",
-      "text": "Sacrifice Moonglove Extract: It deals 2 damage to target creature or player.",
+      "text": "Sacrifice Moonglove Extract: It deals 2 damage to any target.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -1639,7 +1640,7 @@
         "DD3_EVG"
       ],
       "rarity": "Uncommon",
-      "text": "{T}: Add {C} to your mana pool.\n{G}, {T}: Untap target Elf.",
+      "text": "{T}: Add {C}.\n{G}, {T}: Untap target Elf.",
       "type": "Land",
       "types": [
         "Land"
@@ -1689,7 +1690,8 @@
         "C14",
         "DD3_EVG",
         "CMA",
-        "C17"
+        "C17",
+        "DDU"
       ],
       "rarity": "Common",
       "rulings": [
@@ -1698,7 +1700,7 @@
           "text": "Cycling is an activated ability. Effects that interact with activated abilities (such as Stifle or Rings of Brighthearth) will interact with cycling. Effects that interact with spells (such as Remove Soul or Faerie Tauntings) will not."
         }
       ],
-      "text": "Tranquil Thicket enters the battlefield tapped.\n{T}: Add {G} to your mana pool.\nCycling {G} ({G}, Discard this card: Draw a card.)",
+      "text": "Tranquil Thicket enters the battlefield tapped.\n{T}: Add {G}.\nCycling {G} ({G}, Discard this card: Draw a card.)",
       "type": "Land",
       "types": [
         "Land"
@@ -1948,7 +1950,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -2212,7 +2216,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -2476,7 +2482,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -2740,7 +2748,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -2808,23 +2818,20 @@
         "EVG",
         "M10",
         "DD3_EVG",
-        "EMA"
+        "EMA",
+        "DOM"
       ],
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2016-06-08",
+          "date": "2018-04-27",
           "text": "You can sacrifice any Goblin you control to activate Siege-Gang Commander's activated ability, not just the ones its triggered ability puts onto the battlefield. You can even sacrifice Siege-Gang Commander itself."
-        },
-        {
-          "date": "2016-06-08",
-          "text": "If you sacrifice an attacking or blocking Goblin during the declare blockers step, it won't deal combat damage. If you wait until the combat damage step, but that Goblin has been dealt lethal damage, it'll be destroyed before you get a chance to sacrifice it."
         }
       ],
       "subtypes": [
         "Goblin"
       ],
-      "text": "When Siege-Gang Commander enters the battlefield, create three 1/1 red Goblin creature tokens.\n{1}{R}, Sacrifice a Goblin: Siege-Gang Commander deals 2 damage to target creature or player.",
+      "text": "When Siege-Gang Commander enters the battlefield, create three 1/1 red Goblin creature tokens.\n{1}{R}, Sacrifice a Goblin: Siege-Gang Commander deals 2 damage to any target.",
       "toughness": "2",
       "type": "Creature — Goblin",
       "types": [
@@ -3000,7 +3007,7 @@
         "Goblin",
         "Shaman"
       ],
-      "text": "Sacrifice Emberwilde Augur: Emberwilde Augur deals 3 damage to target player. Activate this ability only during your upkeep.",
+      "text": "Sacrifice Emberwilde Augur: It deals 3 damage to target player or planeswalker. Activate this ability only during your upkeep.",
       "toughness": "1",
       "type": "Creature — Goblin Shaman",
       "types": [
@@ -3063,7 +3070,7 @@
         "Goblin",
         "Mutant"
       ],
-      "text": "{7}{R}: Flamewave Invoker deals 5 damage to target player.",
+      "text": "{7}{R}: Flamewave Invoker deals 5 damage to target player or planeswalker.",
       "toughness": "2",
       "type": "Creature — Goblin Mutant",
       "types": [
@@ -3130,7 +3137,7 @@
         },
         {
           "date": "2008-10-01",
-          "text": "The cycling ability and the triggered ability are separate. If the triggered ability is countered (with Stifle, for example, or if all its targets have become illegal), the cycling ability will still resolve and you'll draw a card."
+          "text": "The cycling ability and the triggered ability are separate. If the triggered ability doesn't resolve (due to being countered with Stifle, for example, or if all its targets have become illegal), the cycling ability will still resolve and you'll draw a card."
         },
         {
           "date": "2008-10-01",
@@ -3433,14 +3440,21 @@
         "EVG",
         "VMA",
         "DDN",
-        "DD3_EVG"
+        "DD3_EVG",
+        "DOM"
       ],
       "rarity": "Uncommon",
+      "rulings": [
+        {
+          "date": "2018-04-27",
+          "text": "Goblin Warchief's effect reduces only generic mana in the cost of Goblin spells you cast. For example, it doesn't reduce the cost of Skirk Prospector below {R}."
+        }
+      ],
       "subtypes": [
         "Goblin",
         "Warrior"
       ],
-      "text": "Goblin spells you cast cost {1} less to cast.\nGoblin creatures you control have haste.",
+      "text": "Goblin spells you cast cost {1} less to cast.\nGoblins you control have haste.",
       "toughness": "2",
       "type": "Creature — Goblin Warrior",
       "types": [
@@ -3581,7 +3595,7 @@
       "subtypes": [
         "Goblin"
       ],
-      "text": "Sacrifice Mogg Fanatic: Mogg Fanatic deals 1 damage to target creature or player.",
+      "text": "Sacrifice Mogg Fanatic: It deals 1 damage to any target.",
       "toughness": "1",
       "type": "Creature — Goblin",
       "types": [
@@ -3706,7 +3720,7 @@
         "Goblin",
         "Warrior"
       ],
-      "text": "When Mudbutton Torchrunner dies, it deals 3 damage to target creature or player.",
+      "text": "When Mudbutton Torchrunner dies, it deals 3 damage to any target.",
       "toughness": "1",
       "type": "Creature — Goblin Warrior",
       "types": [
@@ -4006,13 +4020,14 @@
         "EVG",
         "DDG",
         "VMA",
-        "DD3_EVG"
+        "DD3_EVG",
+        "DOM"
       ],
       "rarity": "Common",
       "subtypes": [
         "Goblin"
       ],
-      "text": "Sacrifice a Goblin: Add {R} to your mana pool.",
+      "text": "Sacrifice a Goblin: Add {R}.",
       "toughness": "1",
       "type": "Creature — Goblin",
       "types": [
@@ -4139,7 +4154,7 @@
         "Goblin",
         "Shaman"
       ],
-      "text": "{T}, Sacrifice a Goblin: Tar Pitcher deals 2 damage to target creature or player.",
+      "text": "{T}, Sacrifice a Goblin: Tar Pitcher deals 2 damage to any target.",
       "toughness": "2",
       "type": "Creature — Goblin Shaman",
       "types": [
@@ -4197,7 +4212,7 @@
       "subtypes": [
         "Goblin"
       ],
-      "text": "Whenever another Goblin you control is put into a graveyard from the battlefield, you may have Boggart Shenanigans deal 1 damage to target player.",
+      "text": "Whenever another Goblin you control is put into a graveyard from the battlefield, you may have Boggart Shenanigans deal 1 damage to target player or planeswalker.",
       "type": "Tribal Enchantment — Goblin",
       "types": [
         "Tribal",
@@ -4317,7 +4332,7 @@
       "subtypes": [
         "Goblin"
       ],
-      "text": "Tarfire deals 2 damage to target creature or player.",
+      "text": "Tarfire deals 2 damage to any target.",
       "type": "Tribal Instant — Goblin",
       "types": [
         "Tribal",
@@ -4377,7 +4392,7 @@
           "text": "Cycling is an activated ability. Effects that interact with activated abilities (such as Stifle or Rings of Brighthearth) will interact with cycling. Effects that interact with spells (such as Remove Soul or Faerie Tauntings) will not."
         }
       ],
-      "text": "Forgotten Cave enters the battlefield tapped.\n{T}: Add {R} to your mana pool.\nCycling {R} ({R}, Discard this card: Draw a card.)",
+      "text": "Forgotten Cave enters the battlefield tapped.\n{T}: Add {R}.\nCycling {R} ({R}, Discard this card: Draw a card.)",
       "type": "Land",
       "types": [
         "Land"
@@ -4422,7 +4437,7 @@
         "DD3_EVG"
       ],
       "rarity": "Uncommon",
-      "text": "{T}: Add {C} to your mana pool.\n{1}{R}, {T}: Target Goblin creature gets +2/+0 until end of turn.",
+      "text": "{T}: Add {C}.\n{1}{R}, {T}: Target Goblin creature gets +2/+0 until end of turn.",
       "type": "Land",
       "types": [
         "Land"
@@ -4675,7 +4690,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -4942,7 +4959,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -5209,7 +5228,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -5476,7 +5497,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [

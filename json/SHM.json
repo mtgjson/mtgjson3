@@ -470,7 +470,7 @@
         "Kithkin",
         "Cleric"
       ],
-      "text": "{T}: Prevent the next 1 damage that would be dealt to target creature or player this turn.\nPut a -1/-1 counter on Barrenton Medic: Untap Barrenton Medic.",
+      "text": "{T}: Prevent the next 1 damage that would be dealt to any target this turn.\nPut a -1/-1 counter on Barrenton Medic: Untap Barrenton Medic.",
       "toughness": "4",
       "type": "Creature — Kithkin Cleric",
       "types": [
@@ -1224,7 +1224,7 @@
       "rulings": [
         {
           "date": "2013-09-15",
-          "text": "If the creature is an illegal target when Last Breath tries to resolve, it will be countered and none of its effects will happen. Its controller won't gain 4 life."
+          "text": "If the creature is an illegal target when Last Breath tries to resolve, it won't resolve and none of its effects will happen. Its controller won't gain 4 life."
         }
       ],
       "text": "Exile target creature with power 2 or less. Its controller gains 4 life.",
@@ -2803,7 +2803,7 @@
         },
         {
           "date": "2013-06-07",
-          "text": "If multiple creatures with persist are put into the graveyard at the same time (due to combat damage or a spell that destroys all creatures, for example), the active player (the player whose turn it is) puts all of his or her persist triggers on the stack in any order, then each other player in turn order does the same. The last trigger put on the stack is the first one that resolves. That means that in a two-player game, the nonactive player's persist creatures will return to the battlefield first, then the active player's persist creatures do the same. The creatures return to the battlefield one at a time."
+          "text": "If multiple creatures with persist are put into the graveyard at the same time (due to combat damage or a spell that destroys all creatures, for example), the active player (the player whose turn it is) puts all of their persist triggers on the stack in any order, then each other player in turn order does the same. The last trigger put on the stack is the first one that resolves. That means that in a two-player game, the nonactive player's persist creatures will return to the battlefield first, then the active player's persist creatures do the same. The creatures return to the battlefield one at a time."
         },
         {
           "date": "2013-06-07",
@@ -3688,7 +3688,7 @@
           "text": "If the targeted spell can't be countered (it's Vexing Shusher, for example), that spell will remain on the stack. Counterbore will continue to resolve. You still get to search for and exile all other cards with that name."
         }
       ],
-      "text": "Counter target spell. Search its controller's graveyard, hand, and library for all cards with the same name as that spell and exile them. Then that player shuffles his or her library.",
+      "text": "Counter target spell. Search its controller's graveyard, hand, and library for all cards with the same name as that spell and exile them. Then that player shuffles their library.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -4003,7 +4003,7 @@
         "Merfolk",
         "Wizard"
       ],
-      "text": "Whenever a player casts a blue spell, you may pay {1}. If you do, target player puts the top two cards of his or her library into his or her graveyard.",
+      "text": "Whenever a player casts a blue spell, you may pay {1}. If you do, target player puts the top two cards of their library into their graveyard.",
       "toughness": "1",
       "type": "Creature — Merfolk Wizard",
       "types": [
@@ -4658,7 +4658,7 @@
         "Faerie",
         "Rogue"
       ],
-      "text": "Flying\n{1}{U}, {Q}: Target opponent exiles the top card of his or her library. Until end of turn, you may play that card. ({Q} is the untap symbol.)",
+      "text": "Flying\n{1}{U}, {Q}: Target opponent exiles the top card of their library. Until end of turn, you may play that card. ({Q} is the untap symbol.)",
       "toughness": "4",
       "type": "Creature — Faerie Rogue",
       "types": [
@@ -4782,7 +4782,7 @@
         },
         {
           "date": "2008-05-01",
-          "text": "If either one of the target creatures becomes an illegal target (because it left the battlefield or for any other reason), the counter doesn't move. If both targets become illegal, the ability is countered."
+          "text": "If either one of the target creatures becomes an illegal target (because it left the battlefield or for any other reason), the counter doesn't move. If both targets become illegal, the ability doesn't resolve."
         }
       ],
       "subtypes": [
@@ -5251,7 +5251,7 @@
         },
         {
           "date": "2008-05-01",
-          "text": "If either one of the targets becomes illegal (because it leaves the battlefield or for any other reason) by the time the ability resolves, the exchange won't happen. If both targets become illegal, the ability is countered."
+          "text": "If either one of the targets becomes illegal (because it leaves the battlefield or for any other reason) by the time the ability resolves, the exchange won't happen. If both targets become illegal, the ability doesn't resolve."
         }
       ],
       "text": "At the beginning of your upkeep, you may exchange control of target nonland permanent you control and target nonland permanent an opponent controls with an equal or lesser converted mana cost.",
@@ -5509,7 +5509,7 @@
         },
         {
           "date": "2013-06-07",
-          "text": "If multiple creatures with persist are put into the graveyard at the same time (due to combat damage or a spell that destroys all creatures, for example), the active player (the player whose turn it is) puts all of his or her persist triggers on the stack in any order, then each other player in turn order does the same. The last trigger put on the stack is the first one that resolves. That means that in a two-player game, the nonactive player's persist creatures will return to the battlefield first, then the active player's persist creatures do the same. The creatures return to the battlefield one at a time."
+          "text": "If multiple creatures with persist are put into the graveyard at the same time (due to combat damage or a spell that destroys all creatures, for example), the active player (the player whose turn it is) puts all of their persist triggers on the stack in any order, then each other player in turn order does the same. The last trigger put on the stack is the first one that resolves. That means that in a two-player game, the nonactive player's persist creatures will return to the battlefield first, then the active player's persist creatures do the same. The creatures return to the battlefield one at a time."
         },
         {
           "date": "2013-06-07",
@@ -6945,7 +6945,7 @@
           "text": "Corrupt counts any land you control with the subtype Swamp, not just ones named Swamp."
         }
       ],
-      "text": "Corrupt deals damage to target creature or player equal to the number of Swamps you control. You gain life equal to the damage dealt this way.",
+      "text": "Corrupt deals damage to any target equal to the number of Swamps you control. You gain life equal to the damage dealt this way.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -7593,7 +7593,7 @@
         "Demon",
         "Hound"
       ],
-      "text": "At the beginning of your upkeep, if you have no cards in hand, each opponent loses 2 life.\nAt the beginning of each opponent's upkeep, if that player has no cards in hand, he or she loses 2 life.",
+      "text": "At the beginning of your upkeep, if you have no cards in hand, each opponent loses 2 life.\nAt the beginning of each opponent's upkeep, if that player has no cards in hand, they lose 2 life.",
       "toughness": "6",
       "type": "Creature — Demon Hound",
       "types": [
@@ -8123,7 +8123,7 @@
       "rulings": [
         {
           "date": "2008-05-01",
-          "text": "In a game of N players, the process ends when all N players in sequence (starting with you) choose not to pay life. It doesn't end the first time a player chooses not to pay life. If a player chooses not to pay life but the process continues, that player may pay life the next time the process gets around to him or her."
+          "text": "In a game of N players, the process ends when all N players in sequence (starting with you) choose not to pay life. It doesn't end the first time a player chooses not to pay life. If a player chooses not to pay life but the process continues, that player may pay life the next time the process gets around to them."
         },
         {
           "date": "2008-05-01",
@@ -8131,7 +8131,7 @@
         },
         {
           "date": "2008-05-01",
-          "text": "If a player chooses to spend life, his or her life total goes down immediately. This will affect how much life that player can spend the next time the process gets around to him or her. If a player chooses to pay life three different times during this process, for example, that counts as three separate instances of losing life, not as one."
+          "text": "If a player chooses to spend life, their life total goes down immediately. This will affect how much life that player can spend the next time the process gets around to them. If a player chooses to pay life three different times during this process, for example, that counts as three separate instances of losing life, not as one."
         },
         {
           "date": "2008-05-01",
@@ -8142,7 +8142,7 @@
           "text": "In a Two-Headed Giant game, each player on a team gets a chance to pay life. The team's life total is adjusted in between."
         }
       ],
-      "text": "Starting with you, each player may pay any amount of life. Repeat this process until no one pays life. Each player creates a 1/1 black Rat creature token for each 1 life he or she paid this way.",
+      "text": "Starting with you, each player may pay any amount of life. Repeat this process until no one pays life. Each player creates a 1/1 black Rat creature token for each 1 life they paid this way.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -8365,7 +8365,7 @@
         },
         {
           "date": "2013-06-07",
-          "text": "If multiple creatures with persist are put into the graveyard at the same time (due to combat damage or a spell that destroys all creatures, for example), the active player (the player whose turn it is) puts all of his or her persist triggers on the stack in any order, then each other player in turn order does the same. The last trigger put on the stack is the first one that resolves. That means that in a two-player game, the nonactive player's persist creatures will return to the battlefield first, then the active player's persist creatures do the same. The creatures return to the battlefield one at a time."
+          "text": "If multiple creatures with persist are put into the graveyard at the same time (due to combat damage or a spell that destroys all creatures, for example), the active player (the player whose turn it is) puts all of their persist triggers on the stack in any order, then each other player in turn order does the same. The last trigger put on the stack is the first one that resolves. That means that in a two-player game, the nonactive player's persist creatures will return to the battlefield first, then the active player's persist creatures do the same. The creatures return to the battlefield one at a time."
         },
         {
           "date": "2013-06-07",
@@ -8485,7 +8485,7 @@
           "text": "Players can only respond once this spell has been cast and all its costs have been paid. No one can try to destroy the creature you sacrificed to prevent you from casting this spell."
         }
       ],
-      "text": "As an additional cost to cast Rite of Consumption, sacrifice a creature.\nRite of Consumption deals damage equal to the sacrificed creature's power to target player. You gain life equal to the damage dealt this way.",
+      "text": "As an additional cost to cast this spell, sacrifice a creature.\nRite of Consumption deals damage equal to the sacrificed creature's power to target player or planeswalker. You gain life equal to the damage dealt this way.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -8795,7 +8795,7 @@
         "SHM"
       ],
       "rarity": "Common",
-      "text": "Choose one —\n• Target player discards two cards.\n• Target player reveals his or her hand. You choose a card from it. That player discards that card.",
+      "text": "Choose one —\n• Target player discards two cards.\n• Target player reveals their hand. You choose a card from it. That player discards that card.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -9011,7 +9011,7 @@
         },
         {
           "date": "2008-05-01",
-          "text": "Wound Reflection's ability checks only whether life was lost. It doesn't care whether life was also gained. For example, if an opponent lost 4 life and gained 6 life during the turn, that player will have a higher life total than he or she started the turn with — but Wound Reflection's ability will still cause that player to lose 4 life."
+          "text": "Wound Reflection's ability checks only whether life was lost. It doesn't care whether life was also gained. For example, if an opponent lost 4 life and gained 6 life during the turn, that player will have a higher life total than they started the turn with — but Wound Reflection's ability will still cause that player to lose 4 life."
         },
         {
           "date": "2008-05-01",
@@ -9026,7 +9026,7 @@
           "text": "Multiple Wound Reflections are cumulative. They'll both trigger at the same time. One will resolve first. When the second one resolves, it will see the same life loss that the first Wound Reflection saw, as well as the life loss caused by the first Wound Reflection. For example, if an opponent lost 3 life during the turn, the first Wound Reflection will cause that opponent to lose 3 more life, then the second Wound Reflection will cause that opponent to lose 6 life."
         }
       ],
-      "text": "At the beginning of each end step, each opponent loses life equal to the life he or she lost this turn. (Damage causes loss of life.)",
+      "text": "At the beginning of each end step, each opponent loses life equal to the life they lost this turn. (Damage causes loss of life.)",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -9543,7 +9543,7 @@
         "SHM"
       ],
       "rarity": "Common",
-      "text": "Burn Trail deals 3 damage to target creature or player.\nConspire (As you cast this spell, you may tap two untapped creatures you control that share a color with it. When you do, copy it and you may choose a new target for the copy.)",
+      "text": "Burn Trail deals 3 damage to any target.\nConspire (As you cast this spell, you may tap two untapped creatures you control that share a color with it. When you do, copy it and you may choose a new target for the copy.)",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -9661,7 +9661,7 @@
         "Giant",
         "Shaman"
       ],
-      "text": "When Cragganwick Cremator enters the battlefield, discard a card at random. If you discard a creature card this way, Cragganwick Cremator deals damage equal to that card's power to target player.",
+      "text": "When Cragganwick Cremator enters the battlefield, discard a card at random. If you discard a creature card this way, Cragganwick Cremator deals damage equal to that card's power to target player or planeswalker.",
       "toughness": "4",
       "type": "Creature — Giant Shaman",
       "types": [
@@ -10221,7 +10221,7 @@
           "text": "If a cost includes more than one monocolored hybrid mana symbol, you can choose a different way to pay for each symbol. For example, you can pay for Flame Javelin by spending {R}{R}{R}, {2}{R}{R}, {4}{R}, or {6}."
         }
       ],
-      "text": "({2/R} can be paid with any two mana or with {R}. This card's converted mana cost is 6.)\nFlame Javelin deals 4 damage to target creature or player.",
+      "text": "({2/R} can be paid with any two mana or with {R}. This card's converted mana cost is 6.)\nFlame Javelin deals 4 damage to any target.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -10343,7 +10343,7 @@
         },
         {
           "date": "2013-06-07",
-          "text": "If multiple creatures with persist are put into the graveyard at the same time (due to combat damage or a spell that destroys all creatures, for example), the active player (the player whose turn it is) puts all of his or her persist triggers on the stack in any order, then each other player in turn order does the same. The last trigger put on the stack is the first one that resolves. That means that in a two-player game, the nonactive player's persist creatures will return to the battlefield first, then the active player's persist creatures do the same. The creatures return to the battlefield one at a time."
+          "text": "If multiple creatures with persist are put into the graveyard at the same time (due to combat damage or a spell that destroys all creatures, for example), the active player (the player whose turn it is) puts all of their persist triggers on the stack in any order, then each other player in turn order does the same. The last trigger put on the stack is the first one that resolves. That means that in a two-player game, the nonactive player's persist creatures will return to the battlefield first, then the active player's persist creatures do the same. The creatures return to the battlefield one at a time."
         },
         {
           "date": "2013-06-07",
@@ -10354,7 +10354,7 @@
         "Giant",
         "Warrior"
       ],
-      "text": "When Furystoke Giant enters the battlefield, other creatures you control gain \"{T}: This creature deals 2 damage to target creature or player\" until end of turn.\nPersist (When this creature dies, if it had no -1/-1 counters on it, return it to the battlefield under its owner's control with a -1/-1 counter on it.)",
+      "text": "When Furystoke Giant enters the battlefield, other creatures you control gain \"{T}: This creature deals 2 damage to any target\" until end of turn.\nPersist (When this creature dies, if it had no -1/-1 counters on it, return it to the battlefield under its owner's control with a -1/-1 counter on it.)",
       "toughness": "3",
       "type": "Creature — Giant Warrior",
       "types": [
@@ -10790,7 +10790,7 @@
           "text": "If you control any Mountains as you cast Jaws of Stone, the number of targets must be at least one and at most X. You divide the damage among the targets as you cast Jaws of Stone. Each target must be assigned at least 1 damage."
         }
       ],
-      "text": "Jaws of Stone deals X damage divided as you choose among any number of target creatures and/or players, where X is the number of Mountains you control as you cast Jaws of Stone.",
+      "text": "Jaws of Stone deals X damage divided as you choose among any number of targets, where X is the number of Mountains you control as you cast this spell.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -10901,7 +10901,7 @@
         },
         {
           "date": "2008-05-01",
-          "text": "Knollspine Dragon's ability checks only whether damage was dealt. It doesn't care whether the player's life total also changed for other reasons (such as if the player paid life or gained life). For example, if an opponent was dealt 4 damage and gained 6 life during the turn, that player will have a higher life total than he or she started the turn with — but Knollspine Dragon's ability will let you discard your hand and draw four cards."
+          "text": "Knollspine Dragon's ability checks only whether damage was dealt. It doesn't care whether the player's life total also changed for other reasons (such as if the player paid life or gained life). For example, if an opponent was dealt 4 damage and gained 6 life during the turn, that player will have a higher life total than they started the turn with — but Knollspine Dragon's ability will let you discard your hand and draw four cards."
         }
       ],
       "subtypes": [
@@ -11007,7 +11007,7 @@
         "SHM"
       ],
       "rarity": "Rare",
-      "text": "{X}, Discard a card with converted mana cost X: Knollspine Invocation deals X damage to target creature or player.",
+      "text": "{X}, Discard a card with converted mana cost X: Knollspine Invocation deals X damage to any target.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -11215,7 +11215,7 @@
       "subtypes": [
         "Aura"
       ],
-      "text": "Enchant creature\nEnchanted creature has \"{T}: This creature deals 1 damage to target creature or player.\"",
+      "text": "Enchant creature\nEnchanted creature has \"{T}: This creature deals 1 damage to any target.\"",
       "type": "Enchantment — Aura",
       "types": [
         "Enchantment"
@@ -11856,7 +11856,7 @@
       "rulings": [
         {
           "date": "2015-06-22",
-          "text": "Smash to Smithereens targets only the artifact, not any player. If that artifact becomes an illegal target by the time Smash to Smithereens tries to resolve, Smash to Smithereens will be countered and none of its effects will happen. No damage will be dealt."
+          "text": "Smash to Smithereens targets only the artifact, not any player. If that artifact becomes an illegal target by the time Smash to Smithereens tries to resolve, Smash to Smithereens won't resolve and none of its effects will happen. No damage will be dealt."
         }
       ],
       "text": "Destroy target artifact. Smash to Smithereens deals 3 damage to that artifact's controller.",
@@ -11966,10 +11966,6 @@
         {
           "date": "2008-05-01",
           "text": "As Wild Swing resolves, there is no time to react between the time a permanent is chosen at random and the time it's destroyed. If you want to put a regeneration shield on one of those permanents, or sacrifice it for some effect, or anything else, you must do so before Wild Swing resolves (and before you know which one of the permanents will be chosen at random)."
-        },
-        {
-          "date": "2013-07-01",
-          "text": "If one of the targets has indestructible, it can be chosen at random but nothing will happen to it if it is."
         }
       ],
       "text": "Choose three target nonenchantment permanents. Destroy one of them at random.",
@@ -12187,7 +12183,7 @@
         "Elf",
         "Druid"
       ],
-      "text": "{T}: Add {G} to your mana pool.\nPut a -1/-1 counter on Devoted Druid: Untap Devoted Druid.",
+      "text": "{T}: Add {G}.\nPut a -1/-1 counter on Devoted Druid: Untap Devoted Druid.",
       "toughness": "2",
       "type": "Creature — Elf Druid",
       "types": [
@@ -14916,7 +14912,7 @@
         },
         {
           "date": "2013-06-07",
-          "text": "If multiple creatures with persist are put into the graveyard at the same time (due to combat damage or a spell that destroys all creatures, for example), the active player (the player whose turn it is) puts all of his or her persist triggers on the stack in any order, then each other player in turn order does the same. The last trigger put on the stack is the first one that resolves. That means that in a two-player game, the nonactive player's persist creatures will return to the battlefield first, then the active player's persist creatures do the same. The creatures return to the battlefield one at a time."
+          "text": "If multiple creatures with persist are put into the graveyard at the same time (due to combat damage or a spell that destroys all creatures, for example), the active player (the player whose turn it is) puts all of their persist triggers on the stack in any order, then each other player in turn order does the same. The last trigger put on the stack is the first one that resolves. That means that in a two-player game, the nonactive player's persist creatures will return to the battlefield first, then the active player's persist creatures do the same. The creatures return to the battlefield one at a time."
         },
         {
           "date": "2013-06-07",
@@ -16271,7 +16267,7 @@
         },
         {
           "date": "2008-05-01",
-          "text": "If you choose to target a creature spell, Repel Intruders has a target. If that target becomes illegal by the time Repel Intruders resolves, the entire spell will be countered. You won't get any tokens."
+          "text": "If you choose to target a creature spell, Repel Intruders has a target. If that target becomes illegal by the time Repel Intruders resolves, the entire spell won't resolve. You won't get any tokens."
         },
         {
           "date": "2016-06-08",
@@ -16734,11 +16730,11 @@
         },
         {
           "date": "2008-05-01",
-          "text": "If a spell is causing damage to be dealt, that spell will always identify the source of the damage. In most cases, the source is the spell itself. For example, Burn Trail says \"Burn Trail deals 3 damage to target creature or player.\""
+          "text": "If a spell is causing damage to be dealt, that spell will always identify the source of the damage. In most cases, the source is the spell itself. For example, Burn Trail says \"Burn Trail deals 3 damage to any target.\""
         },
         {
           "date": "2008-05-01",
-          "text": "If an ability is causing damage to be dealt, that ability will always identify the source of the damage. The ability itself is never the source. However, the source of the ability is often the source of the damage. For example, Knollspine Invocation's ability says \"Knollspine Invocation deals X damage to target creature or player.\""
+          "text": "If an ability is causing damage to be dealt, that ability will always identify the source of the damage. The ability itself is never the source. However, the source of the ability is often the source of the damage. For example, Knollspine Invocation's ability says \"Knollspine Invocation deals X damage to any target.\""
         },
         {
           "date": "2008-05-01",
@@ -17283,7 +17279,7 @@
         "SHM"
       ],
       "rarity": "Rare",
-      "text": "Return all permanents to their owners' hands. Each player chooses up to seven cards in his or her hand, then shuffles the rest into his or her library. Empty all mana pools.",
+      "text": "Return all permanents to their owners' hands. Each player chooses up to seven cards in their hand, then shuffles the rest into their library. Each player loses all unspent mana.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -17837,7 +17833,7 @@
         },
         {
           "date": "2008-05-01",
-          "text": "If either one of the targets becomes illegal (because it leaves the battlefield or for any other reason) by the time Fate Transfer resolves, the counters don't move. If both targets become illegal, Fate Transfer is countered."
+          "text": "If either one of the targets becomes illegal (because it leaves the battlefield or for any other reason) by the time Fate Transfer resolves, the counters don't move. If both targets become illegal, Fate Transfer doesn't resolve."
         }
       ],
       "text": "Move all counters from target creature onto another target creature.",
@@ -17946,7 +17942,7 @@
         "Spirit",
         "Avatar"
       ],
-      "text": "Ghastlord of Fugue can't be blocked.\nWhenever Ghastlord of Fugue deals combat damage to a player, that player reveals his or her hand. You choose a card from it. That player exiles that card.",
+      "text": "Ghastlord of Fugue can't be blocked.\nWhenever Ghastlord of Fugue deals combat damage to a player, that player reveals their hand. You choose a card from it. That player exiles that card.",
       "toughness": "4",
       "type": "Creature — Spirit Avatar",
       "types": [
@@ -18187,7 +18183,7 @@
         },
         {
           "date": "2013-06-07",
-          "text": "If multiple creatures with persist are put into the graveyard at the same time (due to combat damage or a spell that destroys all creatures, for example), the active player (the player whose turn it is) puts all of his or her persist triggers on the stack in any order, then each other player in turn order does the same. The last trigger put on the stack is the first one that resolves. That means that in a two-player game, the nonactive player's persist creatures will return to the battlefield first, then the active player's persist creatures do the same. The creatures return to the battlefield one at a time."
+          "text": "If multiple creatures with persist are put into the graveyard at the same time (due to combat damage or a spell that destroys all creatures, for example), the active player (the player whose turn it is) puts all of their persist triggers on the stack in any order, then each other player in turn order does the same. The last trigger put on the stack is the first one that resolves. That means that in a two-player game, the nonactive player's persist creatures will return to the battlefield first, then the active player's persist creatures do the same. The creatures return to the battlefield one at a time."
         },
         {
           "date": "2013-06-07",
@@ -18877,7 +18873,7 @@
         "SHM"
       ],
       "rarity": "Common",
-      "text": "Target player puts the top four cards of his or her library into his or her graveyard.\nConspire (As you cast this spell, you may tap two untapped creatures you control that share a color with it. When you do, copy it and you may choose a new target for the copy.)",
+      "text": "Target player puts the top four cards of their library into their graveyard.\nConspire (As you cast this spell, you may tap two untapped creatures you control that share a color with it. When you do, copy it and you may choose a new target for the copy.)",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -19118,7 +19114,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "Flying\n{X}{U/B}: Choose a color. Target opponent exiles the top X cards of his or her library. For each card of the chosen color exiled this way, create a 1/1 blue and black Faerie Rogue creature token with flying.",
+      "text": "Flying\n{X}{U/B}: Choose a color. Target opponent exiles the top X cards of their library. For each card of the chosen color exiled this way, create a 1/1 blue and black Faerie Rogue creature token with flying.",
       "toughness": "5",
       "type": "Legendary Creature — Faerie Wizard",
       "types": [
@@ -19340,7 +19336,7 @@
           "text": "If this spell is copied, the copy will not have had any colors of mana paid for it, no matter what colors were spent on the original spell."
         }
       ],
-      "text": "If {U} was spent to cast River's Grasp, return up to one target creature to its owner's hand. If {B} was spent to cast River's Grasp, target player reveals his or her hand, you choose a nonland card from it, then that player discards that card. (Do both if {U}{B} was spent.)",
+      "text": "If {U} was spent to cast River's Grasp, return up to one target creature to its owner's hand. If {B} was spent to cast River's Grasp, target player reveals their hand, you choose a nonland card from it, then that player discards that card. (Do both if {U}{B} was spent.)",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -19447,7 +19443,7 @@
           "text": "If you don't control any creatures, you can't cast Scarscale Ritual."
         }
       ],
-      "text": "As an additional cost to cast Scarscale Ritual, put a -1/-1 counter on a creature you control.\nDraw two cards.",
+      "text": "As an additional cost to cast this spell, put a -1/-1 counter on a creature you control.\nDraw two cards.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -19552,7 +19548,7 @@
       "rulings": [
         {
           "date": "2008-05-01",
-          "text": "As the end step begins, Sygg's ability checks whether a player who is currently your opponent, or a player who was your opponent at the time he or she left the game, has lost 3 or more life over the course of the turn. If so, the ability will trigger. If not, it won't."
+          "text": "As the end step begins, Sygg's ability checks whether a player who is currently your opponent, or a player who was your opponent at the time they left the game, has lost 3 or more life over the course of the turn. If so, the ability will trigger. If not, it won't."
         },
         {
           "date": "2008-05-01",
@@ -19560,7 +19556,7 @@
         },
         {
           "date": "2008-05-01",
-          "text": "Sygg's ability checks only whether life was lost. It doesn't care whether life was also gained. For example, if an opponent lost 4 life and gained 6 life during the turn, that player will have a higher life total than he or she started the turn with — but Sygg's ability will trigger anyway."
+          "text": "Sygg's ability checks only whether life was lost. It doesn't care whether life was also gained. For example, if an opponent lost 4 life and gained 6 life during the turn, that player will have a higher life total than they started the turn with — but Sygg's ability will trigger anyway."
         },
         {
           "date": "2008-05-01",
@@ -20357,7 +20353,7 @@
         "Spirit",
         "Avatar"
       ],
-      "text": "Flying, haste\nWhen you cast Demigod of Revenge, return all cards named Demigod of Revenge from your graveyard to the battlefield.",
+      "text": "When you cast this spell, return all cards named Demigod of Revenge from your graveyard to the battlefield.\nFlying, haste",
       "toughness": "4",
       "type": "Creature — Spirit Avatar",
       "types": [
@@ -20466,7 +20462,7 @@
         },
         {
           "date": "2008-05-01",
-          "text": "If the targeted opponent becomes an illegal target, the entire spell is countered. You won't get a token."
+          "text": "If the targeted opponent becomes an illegal target, the entire spell doesn't resolve. You won't get a token."
         }
       ],
       "text": "Create a 5/5 black and red Elemental creature token. Target opponent sacrifices a creature for each black creature you control, then sacrifices a land for each red creature you control.",
@@ -21265,7 +21261,7 @@
         "Elemental",
         "Shaman"
       ],
-      "text": "{1}: Add {B} or {R} to your mana pool. Activate this ability no more than three times each turn.",
+      "text": "{1}: Add {B} or {R}. Activate this ability no more than three times each turn.",
       "toughness": "1",
       "type": "Creature — Elemental Shaman",
       "types": [
@@ -21396,7 +21392,7 @@
         },
         {
           "date": "2013-06-07",
-          "text": "If multiple creatures with persist are put into the graveyard at the same time (due to combat damage or a spell that destroys all creatures, for example), the active player (the player whose turn it is) puts all of his or her persist triggers on the stack in any order, then each other player in turn order does the same. The last trigger put on the stack is the first one that resolves. That means that in a two-player game, the nonactive player's persist creatures will return to the battlefield first, then the active player's persist creatures do the same. The creatures return to the battlefield one at a time."
+          "text": "If multiple creatures with persist are put into the graveyard at the same time (due to combat damage or a spell that destroys all creatures, for example), the active player (the player whose turn it is) puts all of their persist triggers on the stack in any order, then each other player in turn order does the same. The last trigger put on the stack is the first one that resolves. That means that in a two-player game, the nonactive player's persist creatures will return to the battlefield first, then the active player's persist creatures do the same. The creatures return to the battlefield one at a time."
         },
         {
           "date": "2013-06-07",
@@ -21407,7 +21403,7 @@
         "Goblin",
         "Assassin"
       ],
-      "text": "When Murderous Redcap enters the battlefield, it deals damage equal to its power to target creature or player.\nPersist (When this creature dies, if it had no -1/-1 counters on it, return it to the battlefield under its owner's control with a -1/-1 counter on it.)",
+      "text": "When Murderous Redcap enters the battlefield, it deals damage equal to its power to any target.\nPersist (When this creature dies, if it had no -1/-1 counters on it, return it to the battlefield under its owner's control with a -1/-1 counter on it.)",
       "toughness": "2",
       "type": "Creature — Goblin Assassin",
       "types": [
@@ -22264,7 +22260,7 @@
       "rulings": [
         {
           "date": "2008-05-01",
-          "text": "If you use conspire to copy Traitor's Roar, but you don't change its target, the copy will resolve just fine but the original will be countered on resolution. That's because the copy will resolve first, and as part of its resolution, it will tap the targeted creature. Then, when the original Traitor's Roar tries to resolve, it will have an illegal target (since it must target an untapped creature)."
+          "text": "If you use conspire to copy Traitor's Roar, but you don't change its target, the copy will resolve just fine but the original doesn't resolve. That's because the copy will resolve first, and as part of its resolution, it will tap the targeted creature. Then, when the original Traitor's Roar tries to resolve, it will have an illegal target (since it must target an untapped creature)."
         }
       ],
       "text": "Tap target untapped creature. It deals damage equal to its power to its controller.\nConspire (As you cast this spell, you may tap two untapped creatures you control that share a color with it. When you do, copy it and you may choose a new target for the copy.)",
@@ -22368,7 +22364,7 @@
         "SHM"
       ],
       "rarity": "Rare",
-      "text": "Target player discards his or her hand unless he or she pays 7 life.",
+      "text": "Target player discards their hand unless they pay 7 life.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -23470,7 +23466,7 @@
         "MMA"
       ],
       "rarity": "Common",
-      "text": "Add two mana in any combination of colors to your mana pool.\nDraw a card.",
+      "text": "Add two mana in any combination of colors.\nDraw a card.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -23575,7 +23571,7 @@
       "subtypes": [
         "Elemental"
       ],
-      "text": "Morselhoarder enters the battlefield with two -1/-1 counters on it.\nRemove a -1/-1 counter from Morselhoarder: Add one mana of any color to your mana pool.",
+      "text": "Morselhoarder enters the battlefield with two -1/-1 counters on it.\nRemove a -1/-1 counter from Morselhoarder: Add one mana of any color.",
       "toughness": "4",
       "type": "Creature — Elemental",
       "types": [
@@ -23811,7 +23807,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "{T}: Add {C}{C}{C}{C} to your mana pool. Spend this mana only on costs that contain {X}.",
+      "text": "{T}: Add {C}{C}{C}{C}. Spend this mana only on costs that contain {X}.",
       "toughness": "4",
       "type": "Legendary Creature — Giant Shaman",
       "types": [
@@ -24045,7 +24041,7 @@
         },
         {
           "date": "2013-06-07",
-          "text": "If multiple creatures with persist are put into the graveyard at the same time (due to combat damage or a spell that destroys all creatures, for example), the active player (the player whose turn it is) puts all of his or her persist triggers on the stack in any order, then each other player in turn order does the same. The last trigger put on the stack is the first one that resolves. That means that in a two-player game, the nonactive player's persist creatures will return to the battlefield first, then the active player's persist creatures do the same. The creatures return to the battlefield one at a time."
+          "text": "If multiple creatures with persist are put into the graveyard at the same time (due to combat damage or a spell that destroys all creatures, for example), the active player (the player whose turn it is) puts all of their persist triggers on the stack in any order, then each other player in turn order does the same. The last trigger put on the stack is the first one that resolves. That means that in a two-player game, the nonactive player's persist creatures will return to the battlefield first, then the active player's persist creatures do the same. The creatures return to the battlefield one at a time."
         },
         {
           "date": "2013-06-07",
@@ -24597,14 +24593,14 @@
       "rulings": [
         {
           "date": "2009-10-01",
-          "text": "The second ability is a mana ability. It doesn't target a player and it doesn't use the stack. If the player who adds {G}{G}{G} to his or her mana pool can't spend all of it before the phase ends, the remaining mana will leave his or her mana pool at the end of the current step (or phase)."
+          "text": "The second ability is a mana ability. It doesn't target a player and it doesn't use the stack. If the player who adds {G}{G}{G} to their mana pool can't spend all of it before the phase ends, the remaining mana will leave their mana pool at the end of the current step (or phase)."
         }
       ],
       "subtypes": [
         "Giant",
         "Shaman"
       ],
-      "text": "{T}, Sacrifice a Mountain: Valleymaker deals 3 damage to target creature.\n{T}, Sacrifice a Forest: Choose a player. That player adds {G}{G}{G} to his or her mana pool.",
+      "text": "{T}, Sacrifice a Mountain: Valleymaker deals 3 damage to target creature.\n{T}, Sacrifice a Forest: Choose a player. That player adds {G}{G}{G}.",
       "toughness": "5",
       "type": "Creature — Giant Shaman",
       "types": [
@@ -24712,17 +24708,13 @@
         {
           "date": "2008-05-01",
           "text": "After Vexing Shusher's ability resolves, any spells or abilities that would counter the targeted spell will still resolve. They just won't counter that spell."
-        },
-        {
-          "date": "2008-05-01",
-          "text": "Vexing Shusher's ability won't prevent the targeted spell from being countered by the game rules (for example, if all its targets are illegal)."
         }
       ],
       "subtypes": [
         "Goblin",
         "Shaman"
       ],
-      "text": "Vexing Shusher can't be countered.\n{R/G}: Target spell can't be countered by spells or abilities.",
+      "text": "This spell can't be countered.\n{R/G}: Target spell can't be countered.",
       "toughness": "2",
       "type": "Creature — Goblin Shaman",
       "types": [
@@ -25421,7 +25413,7 @@
         },
         {
           "date": "2013-06-07",
-          "text": "If multiple creatures with persist are put into the graveyard at the same time (due to combat damage or a spell that destroys all creatures, for example), the active player (the player whose turn it is) puts all of his or her persist triggers on the stack in any order, then each other player in turn order does the same. The last trigger put on the stack is the first one that resolves. That means that in a two-player game, the nonactive player's persist creatures will return to the battlefield first, then the active player's persist creatures do the same. The creatures return to the battlefield one at a time."
+          "text": "If multiple creatures with persist are put into the graveyard at the same time (due to combat damage or a spell that destroys all creatures, for example), the active player (the player whose turn it is) puts all of their persist triggers on the stack in any order, then each other player in turn order does the same. The last trigger put on the stack is the first one that resolves. That means that in a two-player game, the nonactive player's persist creatures will return to the battlefield first, then the active player's persist creatures do the same. The creatures return to the battlefield one at a time."
         },
         {
           "date": "2013-06-07",
@@ -25559,7 +25551,7 @@
         },
         {
           "date": "2013-06-07",
-          "text": "If multiple creatures with persist are put into the graveyard at the same time (due to combat damage or a spell that destroys all creatures, for example), the active player (the player whose turn it is) puts all of his or her persist triggers on the stack in any order, then each other player in turn order does the same. The last trigger put on the stack is the first one that resolves. That means that in a two-player game, the nonactive player's persist creatures will return to the battlefield first, then the active player's persist creatures do the same. The creatures return to the battlefield one at a time."
+          "text": "If multiple creatures with persist are put into the graveyard at the same time (due to combat damage or a spell that destroys all creatures, for example), the active player (the player whose turn it is) puts all of their persist triggers on the stack in any order, then each other player in turn order does the same. The last trigger put on the stack is the first one that resolves. That means that in a two-player game, the nonactive player's persist creatures will return to the battlefield first, then the active player's persist creatures do the same. The creatures return to the battlefield one at a time."
         },
         {
           "date": "2013-06-07",
@@ -26679,7 +26671,7 @@
         },
         {
           "date": "2013-06-07",
-          "text": "If multiple creatures with persist are put into the graveyard at the same time (due to combat damage or a spell that destroys all creatures, for example), the active player (the player whose turn it is) puts all of his or her persist triggers on the stack in any order, then each other player in turn order does the same. The last trigger put on the stack is the first one that resolves. That means that in a two-player game, the nonactive player's persist creatures will return to the battlefield first, then the active player's persist creatures do the same. The creatures return to the battlefield one at a time."
+          "text": "If multiple creatures with persist are put into the graveyard at the same time (due to combat damage or a spell that destroys all creatures, for example), the active player (the player whose turn it is) puts all of their persist triggers on the stack in any order, then each other player in turn order does the same. The last trigger put on the stack is the first one that resolves. That means that in a two-player game, the nonactive player's persist creatures will return to the battlefield first, then the active player's persist creatures do the same. The creatures return to the battlefield one at a time."
         },
         {
           "date": "2013-06-07",
@@ -27670,7 +27662,7 @@
         },
         {
           "date": "2013-06-07",
-          "text": "If multiple creatures with persist are put into the graveyard at the same time (due to combat damage or a spell that destroys all creatures, for example), the active player (the player whose turn it is) puts all of his or her persist triggers on the stack in any order, then each other player in turn order does the same. The last trigger put on the stack is the first one that resolves. That means that in a two-player game, the nonactive player's persist creatures will return to the battlefield first, then the active player's persist creatures do the same. The creatures return to the battlefield one at a time."
+          "text": "If multiple creatures with persist are put into the graveyard at the same time (due to combat damage or a spell that destroys all creatures, for example), the active player (the player whose turn it is) puts all of their persist triggers on the stack in any order, then each other player in turn order does the same. The last trigger put on the stack is the first one that resolves. That means that in a two-player game, the nonactive player's persist creatures will return to the battlefield first, then the active player's persist creatures do the same. The creatures return to the battlefield one at a time."
         },
         {
           "date": "2013-06-07",
@@ -28733,7 +28725,7 @@
       "subtypes": [
         "Scarecrow"
       ],
-      "text": "Flying\n{2}, {Q}: Add one mana of any color to your mana pool. ({Q} is the untap symbol.)",
+      "text": "Flying\n{2}, {Q}: Add one mana of any color. ({Q} is the untap symbol.)",
       "toughness": "1",
       "type": "Artifact Creature — Scarecrow",
       "types": [
@@ -28851,7 +28843,7 @@
         },
         {
           "date": "2013-06-07",
-          "text": "If multiple creatures with persist are put into the graveyard at the same time (due to combat damage or a spell that destroys all creatures, for example), the active player (the player whose turn it is) puts all of his or her persist triggers on the stack in any order, then each other player in turn order does the same. The last trigger put on the stack is the first one that resolves. That means that in a two-player game, the nonactive player's persist creatures will return to the battlefield first, then the active player's persist creatures do the same. The creatures return to the battlefield one at a time."
+          "text": "If multiple creatures with persist are put into the graveyard at the same time (due to combat damage or a spell that destroys all creatures, for example), the active player (the player whose turn it is) puts all of their persist triggers on the stack in any order, then each other player in turn order does the same. The last trigger put on the stack is the first one that resolves. That means that in a two-player game, the nonactive player's persist creatures will return to the battlefield first, then the active player's persist creatures do the same. The creatures return to the battlefield one at a time."
         },
         {
           "date": "2013-06-07",
@@ -29318,7 +29310,7 @@
       "subtypes": [
         "Scarecrow"
       ],
-      "text": "{T}: Add one mana of any color to your mana pool.\n{T}: Target creature becomes the color or colors of your choice until end of turn.",
+      "text": "{T}: Add one mana of any color.\n{T}: Target creature becomes the color or colors of your choice until end of turn.",
       "toughness": "2",
       "type": "Artifact Creature — Scarecrow",
       "types": [
@@ -30063,7 +30055,7 @@
         },
         {
           "date": "2013-06-07",
-          "text": "If multiple creatures with persist are put into the graveyard at the same time (due to combat damage or a spell that destroys all creatures, for example), the active player (the player whose turn it is) puts all of his or her persist triggers on the stack in any order, then each other player in turn order does the same. The last trigger put on the stack is the first one that resolves. That means that in a two-player game, the nonactive player's persist creatures will return to the battlefield first, then the active player's persist creatures do the same. The creatures return to the battlefield one at a time."
+          "text": "If multiple creatures with persist are put into the graveyard at the same time (due to combat damage or a spell that destroys all creatures, for example), the active player (the player whose turn it is) puts all of their persist triggers on the stack in any order, then each other player in turn order does the same. The last trigger put on the stack is the first one that resolves. That means that in a two-player game, the nonactive player's persist creatures will return to the battlefield first, then the active player's persist creatures do the same. The creatures return to the battlefield one at a time."
         },
         {
           "date": "2013-06-07",
@@ -30172,7 +30164,7 @@
         "EXP"
       ],
       "rarity": "Rare",
-      "text": "{T}: Add {C} to your mana pool.\n{R/G}, {T}: Add {R}{R}, {R}{G}, or {G}{G} to your mana pool.",
+      "text": "{T}: Add {C}.\n{R/G}, {T}: Add {R}{R}, {R}{G}, or {G}{G}.",
       "type": "Land",
       "types": [
         "Land"
@@ -30281,7 +30273,7 @@
           "text": "{B/R}, {T}\" is the same as saying \"{B}, {T} or {R}, {T}."
         }
       ],
-      "text": "{T}: Add {C} to your mana pool.\n{B/R}, {T}: Add {B}{B}, {B}{R}, or {R}{R} to your mana pool.",
+      "text": "{T}: Add {C}.\n{B/R}, {T}: Add {B}{B}, {B}{R}, or {R}{R}.",
       "type": "Land",
       "types": [
         "Land"
@@ -30380,7 +30372,7 @@
       "subtypes": [
         "Swamp"
       ],
-      "text": "({T}: Add {B} to your mana pool.)\nLeechridden Swamp enters the battlefield tapped.\n{B}, {T}: Each opponent loses 1 life. Activate this ability only if you control two or more black permanents.",
+      "text": "({T}: Add {B}.)\nLeechridden Swamp enters the battlefield tapped.\n{B}, {T}: Each opponent loses 1 life. Activate this ability only if you control two or more black permanents.",
       "type": "Land — Swamp",
       "types": [
         "Land"
@@ -30477,7 +30469,7 @@
       "subtypes": [
         "Mountain"
       ],
-      "text": "({T}: Add {R} to your mana pool.)\nMadblind Mountain enters the battlefield tapped.\n{R}, {T}: Shuffle your library. Activate this ability only if you control two or more red permanents.",
+      "text": "({T}: Add {R}.)\nMadblind Mountain enters the battlefield tapped.\n{R}, {T}: Shuffle your library. Activate this ability only if you control two or more red permanents.",
       "type": "Land — Mountain",
       "types": [
         "Land"
@@ -30574,7 +30566,7 @@
       "subtypes": [
         "Plains"
       ],
-      "text": "({T}: Add {W} to your mana pool.)\nMistveil Plains enters the battlefield tapped.\n{W}, {T}: Put target card from your graveyard on the bottom of your library. Activate this ability only if you control two or more white permanents.",
+      "text": "({T}: Add {W}.)\nMistveil Plains enters the battlefield tapped.\n{W}, {T}: Put target card from your graveyard on the bottom of your library. Activate this ability only if you control two or more white permanents.",
       "type": "Land — Plains",
       "types": [
         "Land"
@@ -30671,7 +30663,7 @@
       "subtypes": [
         "Island"
       ],
-      "text": "({T}: Add {U} to your mana pool.)\nMoonring Island enters the battlefield tapped.\n{U}, {T}: Look at the top card of target player's library. Activate this ability only if you control two or more blue permanents.",
+      "text": "({T}: Add {U}.)\nMoonring Island enters the battlefield tapped.\n{U}, {T}: Look at the top card of target player's library. Activate this ability only if you control two or more blue permanents.",
       "type": "Land — Island",
       "types": [
         "Land"
@@ -30768,7 +30760,7 @@
         "EXP"
       ],
       "rarity": "Rare",
-      "text": "{T}: Add {C} to your mana pool.\n{W/U}, {T}: Add {W}{W}, {W}{U}, or {U}{U} to your mana pool.",
+      "text": "{T}: Add {C}.\n{W/U}, {T}: Add {W}{W}, {W}{U}, or {U}{U}.",
       "type": "Land",
       "types": [
         "Land"
@@ -30881,7 +30873,7 @@
         },
         {
           "date": "2008-05-01",
-          "text": "Reflecting Pool checks the effects of all mana-producing abilities of lands you control, but it doesn't check their costs. For example, Vivid Crag says \"{T}, Remove a charge counter from Vivid Crag: Add one mana of any color to your mana pool.\" If you control Vivid Crag and Reflecting Pool, you can tap Reflecting Pool for any color of mana. It doesn't matter whether Vivid Crag has a charge counter on it, and it doesn't matter whether it's untapped."
+          "text": "Reflecting Pool checks the effects of all mana-producing abilities of lands you control, but it doesn't check their costs. For example, Vivid Crag says \"{T}, Remove a charge counter from Vivid Crag: Add one mana of any color.\" If you control Vivid Crag and Reflecting Pool, you can tap Reflecting Pool for any color of mana. It doesn't matter whether Vivid Crag has a charge counter on it, and it doesn't matter whether it's untapped."
         },
         {
           "date": "2008-05-01",
@@ -30892,7 +30884,7 @@
           "text": "Multiple Reflecting Pools won't help each other produce mana. If you control a Reflecting Pool, and all other lands you control either lack mana abilities or are other Reflecting Pools, you may still activate Reflecting Pool's ability — it just won't produce any mana."
         }
       ],
-      "text": "{T}: Add to your mana pool one mana of any type that a land you control could produce.",
+      "text": "{T}: Add one mana of any type that a land you control could produce.",
       "type": "Land",
       "types": [
         "Land"
@@ -30990,7 +30982,7 @@
       "subtypes": [
         "Forest"
       ],
-      "text": "({T}: Add {G} to your mana pool.)\nSapseep Forest enters the battlefield tapped.\n{G}, {T}: You gain 1 life. Activate this ability only if you control two or more green permanents.",
+      "text": "({T}: Add {G}.)\nSapseep Forest enters the battlefield tapped.\n{G}, {T}: You gain 1 life. Activate this ability only if you control two or more green permanents.",
       "type": "Land — Forest",
       "types": [
         "Land"
@@ -31087,7 +31079,7 @@
         "EXP"
       ],
       "rarity": "Rare",
-      "text": "{T}: Add {C} to your mana pool.\n{U/B}, {T}: Add {U}{U}, {U}{B}, or {B}{B} to your mana pool.",
+      "text": "{T}: Add {C}.\n{U/B}, {T}: Add {U}{U}, {U}{B}, or {B}{B}.",
       "type": "Land",
       "types": [
         "Land"
@@ -31184,7 +31176,7 @@
         "EXP"
       ],
       "rarity": "Rare",
-      "text": "{T}: Add {C} to your mana pool.\n{G/W}, {T}: Add {G}{G}, {G}{W}, or {W}{W} to your mana pool.",
+      "text": "{T}: Add {C}.\n{G/W}, {T}: Add {G}{G}, {G}{W}, or {W}{W}.",
       "type": "Land",
       "types": [
         "Land"
@@ -31197,6 +31189,21 @@
         "W"
       ],
       "foreignNames": [
+        {
+          "language": "Chinese Traditional",
+          "name": "Plains",
+          "multiverseid": 177706
+        },
+        {
+          "language": "Chinese Traditional",
+          "name": "Plains",
+          "multiverseid": 177707
+        },
+        {
+          "language": "Chinese Traditional",
+          "name": "Plains",
+          "multiverseid": 177708
+        },
         {
           "language": "Chinese Traditional",
           "name": "Plains",
@@ -31263,6 +31270,11 @@
           "multiverseid": 177781
         },
         {
+          "language": "German",
+          "name": "Ebene",
+          "multiverseid": 177804
+        },
+        {
           "language": "Spanish",
           "name": "Llanura",
           "multiverseid": 177826
@@ -31301,26 +31313,6 @@
           "language": "Chinese Simplified",
           "name": "平原",
           "multiverseid": 177852
-        },
-        {
-          "language": "Italian",
-          "name": "Pianura",
-          "multiverseid": 177897
-        },
-        {
-          "language": "Italian",
-          "name": "Pianura",
-          "multiverseid": 177898
-        },
-        {
-          "language": "Italian",
-          "name": "Pianura",
-          "multiverseid": 177899
-        },
-        {
-          "language": "Italian",
-          "name": "Pianura",
-          "multiverseid": 177900
         }
       ],
       "id": "990f966a33438fc840fb83a96dd1d6588dc3692e",
@@ -31560,7 +31552,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -31587,6 +31580,21 @@
         "W"
       ],
       "foreignNames": [
+        {
+          "language": "Chinese Traditional",
+          "name": "Plains",
+          "multiverseid": 177706
+        },
+        {
+          "language": "Chinese Traditional",
+          "name": "Plains",
+          "multiverseid": 177707
+        },
+        {
+          "language": "Chinese Traditional",
+          "name": "Plains",
+          "multiverseid": 177708
+        },
         {
           "language": "Chinese Traditional",
           "name": "Plains",
@@ -31653,6 +31661,11 @@
           "multiverseid": 177781
         },
         {
+          "language": "German",
+          "name": "Ebene",
+          "multiverseid": 177804
+        },
+        {
           "language": "Spanish",
           "name": "Llanura",
           "multiverseid": 177826
@@ -31691,26 +31704,6 @@
           "language": "Chinese Simplified",
           "name": "平原",
           "multiverseid": 177852
-        },
-        {
-          "language": "Italian",
-          "name": "Pianura",
-          "multiverseid": 177897
-        },
-        {
-          "language": "Italian",
-          "name": "Pianura",
-          "multiverseid": 177898
-        },
-        {
-          "language": "Italian",
-          "name": "Pianura",
-          "multiverseid": 177899
-        },
-        {
-          "language": "Italian",
-          "name": "Pianura",
-          "multiverseid": 177900
         }
       ],
       "id": "6f683dfbe1ae72e3c88040003808c455d87b13d2",
@@ -31950,7 +31943,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -31977,6 +31971,21 @@
         "W"
       ],
       "foreignNames": [
+        {
+          "language": "Chinese Traditional",
+          "name": "Plains",
+          "multiverseid": 177706
+        },
+        {
+          "language": "Chinese Traditional",
+          "name": "Plains",
+          "multiverseid": 177707
+        },
+        {
+          "language": "Chinese Traditional",
+          "name": "Plains",
+          "multiverseid": 177708
+        },
         {
           "language": "Chinese Traditional",
           "name": "Plains",
@@ -32043,6 +32052,11 @@
           "multiverseid": 177781
         },
         {
+          "language": "German",
+          "name": "Ebene",
+          "multiverseid": 177804
+        },
+        {
           "language": "Spanish",
           "name": "Llanura",
           "multiverseid": 177826
@@ -32081,26 +32095,6 @@
           "language": "Chinese Simplified",
           "name": "平原",
           "multiverseid": 177852
-        },
-        {
-          "language": "Italian",
-          "name": "Pianura",
-          "multiverseid": 177897
-        },
-        {
-          "language": "Italian",
-          "name": "Pianura",
-          "multiverseid": 177898
-        },
-        {
-          "language": "Italian",
-          "name": "Pianura",
-          "multiverseid": 177899
-        },
-        {
-          "language": "Italian",
-          "name": "Pianura",
-          "multiverseid": 177900
         }
       ],
       "id": "7d46399747d518e7ce773dcd18d3e5ff9a03d2e6",
@@ -32340,7 +32334,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -32367,6 +32362,21 @@
         "W"
       ],
       "foreignNames": [
+        {
+          "language": "Chinese Traditional",
+          "name": "Plains",
+          "multiverseid": 177706
+        },
+        {
+          "language": "Chinese Traditional",
+          "name": "Plains",
+          "multiverseid": 177707
+        },
+        {
+          "language": "Chinese Traditional",
+          "name": "Plains",
+          "multiverseid": 177708
+        },
         {
           "language": "Chinese Traditional",
           "name": "Plains",
@@ -32433,6 +32443,11 @@
           "multiverseid": 177781
         },
         {
+          "language": "German",
+          "name": "Ebene",
+          "multiverseid": 177804
+        },
+        {
           "language": "Spanish",
           "name": "Llanura",
           "multiverseid": 177826
@@ -32471,26 +32486,6 @@
           "language": "Chinese Simplified",
           "name": "平原",
           "multiverseid": 177852
-        },
-        {
-          "language": "Italian",
-          "name": "Pianura",
-          "multiverseid": 177897
-        },
-        {
-          "language": "Italian",
-          "name": "Pianura",
-          "multiverseid": 177898
-        },
-        {
-          "language": "Italian",
-          "name": "Pianura",
-          "multiverseid": 177899
-        },
-        {
-          "language": "Italian",
-          "name": "Pianura",
-          "multiverseid": 177900
         }
       ],
       "id": "78f852bae2850c6981c2cbc3b83dff916776e588",
@@ -32730,7 +32725,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -33119,7 +33115,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -33508,7 +33506,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -33897,7 +33897,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -34286,7 +34288,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -34679,7 +34683,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -35072,7 +35077,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -35465,7 +35471,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -35858,7 +35865,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -35885,6 +35893,26 @@
         "R"
       ],
       "foreignNames": [
+        {
+          "language": "Chinese Traditional",
+          "name": "Mountain",
+          "multiverseid": 177718
+        },
+        {
+          "language": "Chinese Traditional",
+          "name": "Mountain",
+          "multiverseid": 177719
+        },
+        {
+          "language": "Chinese Traditional",
+          "name": "Mountain",
+          "multiverseid": 177720
+        },
+        {
+          "language": "Chinese Traditional",
+          "name": "Mountain",
+          "multiverseid": 177721
+        },
         {
           "language": "Russian",
           "name": "Гора",
@@ -35928,22 +35956,27 @@
         {
           "language": "Japanese",
           "name": "山",
-          "multiverseid": 177790
-        },
-        {
-          "language": "Japanese",
-          "name": "山",
           "multiverseid": 177791
         },
         {
-          "language": "Japanese",
-          "name": "山",
-          "multiverseid": 177792
+          "language": "German",
+          "name": "Gebirge",
+          "multiverseid": 177814
         },
         {
-          "language": "Japanese",
-          "name": "山",
-          "multiverseid": 177793
+          "language": "German",
+          "name": "Gebirge",
+          "multiverseid": 177815
+        },
+        {
+          "language": "German",
+          "name": "Gebirge",
+          "multiverseid": 177816
+        },
+        {
+          "language": "German",
+          "name": "Gebirge",
+          "multiverseid": 177817
         },
         {
           "language": "Spanish",
@@ -35984,31 +36017,6 @@
           "language": "Chinese Simplified",
           "name": "山脉",
           "multiverseid": 177864
-        },
-        {
-          "language": "French",
-          "name": "Montagne",
-          "multiverseid": 177885
-        },
-        {
-          "language": "Italian",
-          "name": "Montagna",
-          "multiverseid": 177909
-        },
-        {
-          "language": "Italian",
-          "name": "Montagna",
-          "multiverseid": 177910
-        },
-        {
-          "language": "Italian",
-          "name": "Montagna",
-          "multiverseid": 177911
-        },
-        {
-          "language": "Italian",
-          "name": "Montagna",
-          "multiverseid": 177912
         }
       ],
       "id": "4d78cf86fcdfb36611059b7926854dbf81746fa3",
@@ -36253,7 +36261,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -36280,6 +36290,26 @@
         "R"
       ],
       "foreignNames": [
+        {
+          "language": "Chinese Traditional",
+          "name": "Mountain",
+          "multiverseid": 177718
+        },
+        {
+          "language": "Chinese Traditional",
+          "name": "Mountain",
+          "multiverseid": 177719
+        },
+        {
+          "language": "Chinese Traditional",
+          "name": "Mountain",
+          "multiverseid": 177720
+        },
+        {
+          "language": "Chinese Traditional",
+          "name": "Mountain",
+          "multiverseid": 177721
+        },
         {
           "language": "Russian",
           "name": "Гора",
@@ -36323,22 +36353,27 @@
         {
           "language": "Japanese",
           "name": "山",
-          "multiverseid": 177790
-        },
-        {
-          "language": "Japanese",
-          "name": "山",
           "multiverseid": 177791
         },
         {
-          "language": "Japanese",
-          "name": "山",
-          "multiverseid": 177792
+          "language": "German",
+          "name": "Gebirge",
+          "multiverseid": 177814
         },
         {
-          "language": "Japanese",
-          "name": "山",
-          "multiverseid": 177793
+          "language": "German",
+          "name": "Gebirge",
+          "multiverseid": 177815
+        },
+        {
+          "language": "German",
+          "name": "Gebirge",
+          "multiverseid": 177816
+        },
+        {
+          "language": "German",
+          "name": "Gebirge",
+          "multiverseid": 177817
         },
         {
           "language": "Spanish",
@@ -36379,31 +36414,6 @@
           "language": "Chinese Simplified",
           "name": "山脉",
           "multiverseid": 177864
-        },
-        {
-          "language": "French",
-          "name": "Montagne",
-          "multiverseid": 177885
-        },
-        {
-          "language": "Italian",
-          "name": "Montagna",
-          "multiverseid": 177909
-        },
-        {
-          "language": "Italian",
-          "name": "Montagna",
-          "multiverseid": 177910
-        },
-        {
-          "language": "Italian",
-          "name": "Montagna",
-          "multiverseid": 177911
-        },
-        {
-          "language": "Italian",
-          "name": "Montagna",
-          "multiverseid": 177912
         }
       ],
       "id": "6b018920d607b1f7a324da1c53f990940650f6e4",
@@ -36648,7 +36658,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -36675,6 +36687,26 @@
         "R"
       ],
       "foreignNames": [
+        {
+          "language": "Chinese Traditional",
+          "name": "Mountain",
+          "multiverseid": 177718
+        },
+        {
+          "language": "Chinese Traditional",
+          "name": "Mountain",
+          "multiverseid": 177719
+        },
+        {
+          "language": "Chinese Traditional",
+          "name": "Mountain",
+          "multiverseid": 177720
+        },
+        {
+          "language": "Chinese Traditional",
+          "name": "Mountain",
+          "multiverseid": 177721
+        },
         {
           "language": "Russian",
           "name": "Гора",
@@ -36718,22 +36750,27 @@
         {
           "language": "Japanese",
           "name": "山",
-          "multiverseid": 177790
-        },
-        {
-          "language": "Japanese",
-          "name": "山",
           "multiverseid": 177791
         },
         {
-          "language": "Japanese",
-          "name": "山",
-          "multiverseid": 177792
+          "language": "German",
+          "name": "Gebirge",
+          "multiverseid": 177814
         },
         {
-          "language": "Japanese",
-          "name": "山",
-          "multiverseid": 177793
+          "language": "German",
+          "name": "Gebirge",
+          "multiverseid": 177815
+        },
+        {
+          "language": "German",
+          "name": "Gebirge",
+          "multiverseid": 177816
+        },
+        {
+          "language": "German",
+          "name": "Gebirge",
+          "multiverseid": 177817
         },
         {
           "language": "Spanish",
@@ -36774,31 +36811,6 @@
           "language": "Chinese Simplified",
           "name": "山脉",
           "multiverseid": 177864
-        },
-        {
-          "language": "French",
-          "name": "Montagne",
-          "multiverseid": 177885
-        },
-        {
-          "language": "Italian",
-          "name": "Montagna",
-          "multiverseid": 177909
-        },
-        {
-          "language": "Italian",
-          "name": "Montagna",
-          "multiverseid": 177910
-        },
-        {
-          "language": "Italian",
-          "name": "Montagna",
-          "multiverseid": 177911
-        },
-        {
-          "language": "Italian",
-          "name": "Montagna",
-          "multiverseid": 177912
         }
       ],
       "id": "9554fbe44972fd759fabe164cc9955593e499496",
@@ -37043,7 +37055,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -37070,6 +37084,26 @@
         "R"
       ],
       "foreignNames": [
+        {
+          "language": "Chinese Traditional",
+          "name": "Mountain",
+          "multiverseid": 177718
+        },
+        {
+          "language": "Chinese Traditional",
+          "name": "Mountain",
+          "multiverseid": 177719
+        },
+        {
+          "language": "Chinese Traditional",
+          "name": "Mountain",
+          "multiverseid": 177720
+        },
+        {
+          "language": "Chinese Traditional",
+          "name": "Mountain",
+          "multiverseid": 177721
+        },
         {
           "language": "Russian",
           "name": "Гора",
@@ -37113,22 +37147,27 @@
         {
           "language": "Japanese",
           "name": "山",
-          "multiverseid": 177790
-        },
-        {
-          "language": "Japanese",
-          "name": "山",
           "multiverseid": 177791
         },
         {
-          "language": "Japanese",
-          "name": "山",
-          "multiverseid": 177792
+          "language": "German",
+          "name": "Gebirge",
+          "multiverseid": 177814
         },
         {
-          "language": "Japanese",
-          "name": "山",
-          "multiverseid": 177793
+          "language": "German",
+          "name": "Gebirge",
+          "multiverseid": 177815
+        },
+        {
+          "language": "German",
+          "name": "Gebirge",
+          "multiverseid": 177816
+        },
+        {
+          "language": "German",
+          "name": "Gebirge",
+          "multiverseid": 177817
         },
         {
           "language": "Spanish",
@@ -37169,31 +37208,6 @@
           "language": "Chinese Simplified",
           "name": "山脉",
           "multiverseid": 177864
-        },
-        {
-          "language": "French",
-          "name": "Montagne",
-          "multiverseid": 177885
-        },
-        {
-          "language": "Italian",
-          "name": "Montagna",
-          "multiverseid": 177909
-        },
-        {
-          "language": "Italian",
-          "name": "Montagna",
-          "multiverseid": 177910
-        },
-        {
-          "language": "Italian",
-          "name": "Montagna",
-          "multiverseid": 177911
-        },
-        {
-          "language": "Italian",
-          "name": "Montagna",
-          "multiverseid": 177912
         }
       ],
       "id": "1a564751633bd916a853e8ad917b3ec95622d064",
@@ -37438,7 +37452,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -37830,7 +37846,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -38222,7 +38240,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -38614,7 +38634,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -39006,7 +39028,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [

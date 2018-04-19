@@ -159,7 +159,7 @@
       ],
       "rarity": "Rare",
       "reserved": true,
-      "text": "Remove Amulet of Quoz from your deck before playing if you're not playing for ante.\n{T}, Sacrifice Amulet of Quoz: Target opponent may ante the top card of his or her library. If he or she doesn't, you flip a coin. If you win the flip, that player loses the game. If you lose the flip, you lose the game. Activate this ability only during your upkeep.",
+      "text": "Remove Amulet of Quoz from your deck before playing if you're not playing for ante.\n{T}, Sacrifice Amulet of Quoz: Target opponent may ante the top card of their library. If they don't, you flip a coin. If you win the flip, that player loses the game. If you lose the flip, you lose the game. Activate this ability only during your upkeep.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -297,7 +297,7 @@
           "text": "If a turn has multiple combat phases, the ability can only be activated before the beginning of the declare attackers step of the first combat phase in that turn."
         }
       ],
-      "text": "{3}, {T}: Choose target non-Wall creature the active player has controlled continuously since the beginning of the turn. That player may pay {X}, where X is that creature's converted mana cost. If he or she doesn't, the creature attacks this turn if able, and at the beginning of the next end step, destroy it if it didn't attack this turn. Activate this ability only before attackers are declared.",
+      "text": "{3}, {T}: Choose target non-Wall creature the active player has controlled continuously since the beginning of the turn. That player may pay {X}, where X is that creature's converted mana cost. If they don't pay, the creature attacks this turn if able, and at the beginning of the next end step, destroy it if it didn't attack this turn. Activate this ability only before attackers are declared.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -341,7 +341,7 @@
         "ME2"
       ],
       "rarity": "Common",
-      "text": "{1}, {T}, Sacrifice Barbed Sextant: Add one mana of any color to your mana pool. Draw a card at the beginning of the next turn's upkeep.",
+      "text": "{1}, {T}, Sacrifice Barbed Sextant: Add one mana of any color. Draw a card at the beginning of the next turn's upkeep.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -691,7 +691,7 @@
         "ICE"
       ],
       "rarity": "Rare",
-      "text": "Sacrifice Goblin Lyre: Flip a coin. If you win the flip, Goblin Lyre deals damage to target opponent equal to the number of creatures you control. If you lose the flip, Goblin Lyre deals damage to you equal to the number of creatures that opponent controls.",
+      "text": "Sacrifice Goblin Lyre: Flip a coin. If you win the flip, Goblin Lyre deals damage to target opponent or planeswalker equal to the number of creatures you control. If you lose the flip, Goblin Lyre deals damage to you equal to the number of creatures that opponent or that planeswalker's controller controls.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -831,7 +831,7 @@
           "text": "Produces mana of the last type used to put a counter on itself, not via any other charge counters."
         }
       ],
-      "text": "{X}, {T}: Put a charge counter on Ice Cauldron and exile a nonland card from your hand. You may cast that card for as long as it remains exiled. Note the type and amount of mana spent to pay this activation cost. Activate this ability only if there are no charge counters on Ice Cauldron.\n{T}, Remove a charge counter from Ice Cauldron: Add Ice Cauldron's last noted type and amount of mana to your mana pool. Spend this mana only to cast the last card exiled with Ice Cauldron.",
+      "text": "{X}, {T}: Put a charge counter on Ice Cauldron and exile a nonland card from your hand. You may cast that card for as long as it remains exiled. Note the type and amount of mana spent to pay this activation cost. Activate this ability only if there are no charge counters on Ice Cauldron.\n{T}, Remove a charge counter from Ice Cauldron: Add Ice Cauldron's last noted type and amount of mana. Spend this mana only to cast the last card exiled with Ice Cauldron.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -889,29 +889,14 @@
         "9ED",
         "10E",
         "ME4",
-        "DDH"
+        "DDH",
+        "DOM"
       ],
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2004-10-04",
-          "text": "Tapping a card with an effect like this will never pay the cost of an ability. For example, tapping a land with this card will not put mana into a player's pool."
-        },
-        {
-          "date": "2004-10-04",
-          "text": "Icy Manipulator can't be used to stop someone from using an ability of the permanent you plan to tap. It can be used to make a player use the ability now or to not use it."
-        },
-        {
-          "date": "2004-10-04",
-          "text": "The ability can target a tapped card, but tapping a tapped card does nothing useful. And it will not trigger \"if the card becomes tapped\" effects."
-        },
-        {
-          "date": "2004-10-04",
-          "text": "If you want to stop someone from attacking with a creature by using this card, you must do so before attackers are declared. You can't wait until after attackers are declared and then try to use it to make a creature stop attacking. Note that your opponent can't start declaring attackers without letting you use the Icy Manipulator."
-        },
-        {
-          "date": "2004-10-04",
-          "text": "Tapping an attacking creature which did not tap to attack does not remove the creature from the attack or cause the creature to stop dealing damage."
+          "date": "2018-04-27",
+          "text": "Once a player announces that they're casting a spell or activating an ability, no player may take other actions until the spell or ability has been paid for. Notably, other players can't try to tap that player's permanents to stop them from paying {T} or to stop them from producing enough mana."
         }
       ],
       "text": "{1}, {T}: Tap target artifact, creature, or land.",
@@ -1009,7 +994,7 @@
           "text": "If the player has less than 3 cards in their library, just exile all the cards that are there."
         }
       ],
-      "text": "{2}, {T}, Sacrifice Jester's Cap: Search target player's library for three cards and exile them. Then that player shuffles his or her library.",
+      "text": "{2}, {T}, Sacrifice Jester's Cap: Search target player's library for three cards and exile them. Then that player shuffles their library.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -1051,7 +1036,7 @@
       ],
       "rarity": "Rare",
       "reserved": true,
-      "text": "Jester's Mask enters the battlefield tapped.\n{1}, {T}, Sacrifice Jester's Mask: Target opponent puts the cards from his or her hand on top of his or her library. Search that player's library for that many cards. That player puts those cards into his or her hand, then shuffles his or her library.",
+      "text": "Jester's Mask enters the battlefield tapped.\n{1}, {T}, Sacrifice Jester's Mask: Target opponent puts the cards from their hand on top of their library. Search that player's library for that many cards. That player puts those cards into their hand, then shuffles their library.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -1102,7 +1087,7 @@
           "text": "Charge counters are indistinguishable from one another. If some other spell or ability (such as Power Conduit's ability) puts a charge counter on Jeweled Amulet, activating Jeweled Amulet's second ability will still check the type of mana last noted by its first ability. If there is no type of mana noted by its first ability (because it hasn't been activated by that point), the second ability will produce no mana."
         }
       ],
-      "text": "{1}, {T}: Put a charge counter on Jeweled Amulet. Note the type of mana spent to pay this activation cost. Activate this ability only if there are no charge counters on Jeweled Amulet.\n{T}, Remove a charge counter from Jeweled Amulet: Add one mana of Jeweled Amulet's last noted type to your mana pool.",
+      "text": "{1}, {T}: Put a charge counter on Jeweled Amulet. Note the type of mana spent to pay this activation cost. Activate this ability only if there are no charge counters on Jeweled Amulet.\n{T}, Remove a charge counter from Jeweled Amulet: Add one mana of Jeweled Amulet's last noted type.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -1542,7 +1527,7 @@
         "ME2"
       ],
       "rarity": "Uncommon",
-      "text": "{1}, {T}, Sacrifice a creature: Skull Catapult deals 2 damage to target creature or player.",
+      "text": "{1}, {T}, Sacrifice a creature: Skull Catapult deals 2 damage to any target.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -1925,7 +1910,7 @@
           "text": "The target player names a card on resolution."
         }
       ],
-      "text": "{3}, {T}: Target player chooses a card name, then reveals the top card of his or her library. If that card has the chosen name, the player puts it into his or her hand. Otherwise, the player puts it into his or her graveyard and Vexing Arcanix deals 2 damage to him or her.",
+      "text": "{3}, {T}: Target player chooses a card name, then reveals the top card of their library. If that card has the chosen name, that player puts it into their hand. Otherwise, they put it into their graveyard and Vexing Arcanix deals 2 damage to them.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -2456,7 +2441,7 @@
           "text": "Players can only respond once this spell has been cast and all its costs have been paid. No one can try to destroy the creature you sacrificed to prevent you from casting this spell."
         }
       ],
-      "text": "As an additional cost to cast Burnt Offering, sacrifice a creature.\nAdd X mana in any combination of {B} and/or {R} to your mana pool, where X is the sacrificed creature's converted mana cost.",
+      "text": "As an additional cost to cast this spell, sacrifice a creature.\nAdd X mana in any combination of {B} and/or {R}, where X is the sacrificed creature's converted mana cost.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -2576,16 +2561,12 @@
         {
           "date": "2008-04-01",
           "text": "If the creature card put onto the battlefield has protection from black (or anything that prevents this from legally being attached), this won't be able to attach to it. Then this will go to the graveyard as a state-based action, causing the creature to be sacrificed."
-        },
-        {
-          "date": "2008-04-01",
-          "text": "A \"creature card\" is any card with the type creature, even if it has other types such as artifact, enchantment, or land. Older cards of type summon are also creature cards."
         }
       ],
       "subtypes": [
         "Aura"
       ],
-      "text": "Enchant creature card in a graveyard\nWhen Dance of the Dead enters the battlefield, if it's on the battlefield, it loses \"enchant creature card in a graveyard\" and gains \"enchant creature put onto the battlefield with Dance of the Dead.\" Put enchanted creature card onto the battlefield tapped under your control and attach Dance of the Dead to it. When Dance of the Dead leaves the battlefield, that creature's controller sacrifices it.\nEnchanted creature gets +1/+1 and doesn't untap during its controller's untap step.\nAt the beginning of the upkeep of enchanted creature's controller, that player may pay {1}{B}. If he or she does, untap that creature.",
+      "text": "Enchant creature card in a graveyard\nWhen Dance of the Dead enters the battlefield, if it's on the battlefield, it loses \"enchant creature card in a graveyard\" and gains \"enchant creature put onto the battlefield with Dance of the Dead.\" Put enchanted creature card onto the battlefield tapped under your control and attach Dance of the Dead to it. When Dance of the Dead leaves the battlefield, that creature's controller sacrifices it.\nEnchanted creature gets +1/+1 and doesn't untap during its controller's untap step.\nAt the beginning of the upkeep of enchanted creature's controller, that player may pay {1}{B}. If the player does, untap that creature.",
       "type": "Enchantment — Aura",
       "types": [
         "Enchantment"
@@ -2747,7 +2728,7 @@
         "A25"
       ],
       "rarity": "Common",
-      "text": "Add {B}{B}{B} to your mana pool.",
+      "text": "Add {B}{B}{B}.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -3328,7 +3309,7 @@
           "text": "You choose whether to sacrifice creatures or not on resolution. If not, then you sacrifice Hecatomb. You can choose to not sacrifice creatures if you no longer control this card on resolution."
         }
       ],
-      "text": "When Hecatomb enters the battlefield, sacrifice Hecatomb unless you sacrifice four creatures.\nTap an untapped Swamp you control: Hecatomb deals 1 damage to target creature or player.",
+      "text": "When Hecatomb enters the battlefield, sacrifice Hecatomb unless you sacrifice four creatures.\nTap an untapped Swamp you control: Hecatomb deals 1 damage to any target.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -3660,7 +3641,7 @@
       "subtypes": [
         "Demon"
       ],
-      "text": "At the beginning of your upkeep, sacrifice two Swamps. If you can't, tap Infernal Denizen, and an opponent may gain control of a creature you control of his or her choice for as long as Infernal Denizen remains on the battlefield.\n{T}: Gain control of target creature for as long as Infernal Denizen remains on the battlefield.",
+      "text": "At the beginning of your upkeep, sacrifice two Swamps. If you can't, tap Infernal Denizen, and an opponent may gain control of a creature you control of their choice for as long as Infernal Denizen remains on the battlefield.\n{T}: Gain control of target creature for as long as Infernal Denizen remains on the battlefield.",
       "toughness": "7",
       "type": "Creature — Demon",
       "types": [
@@ -3890,7 +3871,7 @@
       "rulings": [
         {
           "date": "2005-08-01",
-          "text": "You do not get a card if the target becomes illegal and Krovikan Fetish is countered upon resolution. This is because it never successfully enters the battlefield."
+          "text": "You do not get a card if the target becomes illegal and Krovikan Fetish doesn't resolve. This is because it never successfully enters the battlefield."
         },
         {
           "date": "2005-08-01",
@@ -3959,7 +3940,7 @@
         },
         {
           "date": "2008-08-01",
-          "text": "Whoever controls Krovikan Vampire when the ability triggers will return the applicable cards to the battlefield under his or her control. It doesn't matter who controlled it at the time the damage was dealt."
+          "text": "Whoever controls Krovikan Vampire when the ability triggers will return the applicable cards to the battlefield under their control. It doesn't matter who controlled it at the time the damage was dealt."
         },
         {
           "date": "2008-08-01",
@@ -4226,7 +4207,7 @@
         "ICE"
       ],
       "rarity": "Uncommon",
-      "text": "At the beginning of your upkeep, for each player, Lim-Dûl's Hex deals 1 damage to that player unless he or she pays {B} or {3}.",
+      "text": "At the beginning of your upkeep, for each player, Lim-Dûl's Hex deals 1 damage to that player unless they pay {B} or {3}.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -4385,7 +4366,7 @@
       "subtypes": [
         "Aura"
       ],
-      "text": "Enchant creature\nAt the beginning of the upkeep of enchanted creature's controller, that player may pay {3}. If he or she doesn't, Mind Whip deals 2 damage to that player and you tap that creature.",
+      "text": "Enchant creature\nAt the beginning of the upkeep of enchanted creature's controller, that player may pay {3}. If they don't, Mind Whip deals 2 damage to that player and you tap that creature.",
       "type": "Enchantment — Aura",
       "types": [
         "Enchantment"
@@ -4900,7 +4881,7 @@
           "text": "The number you need to lose, discard, or sacrifice isn't calculated until it's time to perform that part of the effect. For example, if your opponent casts Pox and you discard Dodecapod as part of Pox's discard effect, Dodecapod will be put onto the battlefield instead of into your graveyard. Then, when determining how many creatures you need to sacrifice, the Dodecapod is taken into account."
         }
       ],
-      "text": "Each player loses a third of his or her life, then discards a third of the cards in his or her hand, then sacrifices a third of the creatures he or she controls, then sacrifices a third of the lands he or she controls. Round up each time.",
+      "text": "Each player loses a third of their life, then discards a third of the cards in their hand, then sacrifices a third of the creatures they control, then sacrifices a third of the lands they control. Round up each time.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -4998,13 +4979,7 @@
         "ME2"
       ],
       "rarity": "Common",
-      "rulings": [
-        {
-          "date": "2008-04-01",
-          "text": "A \"creature card\" is any card with the type creature, even if it has other types such as artifact, enchantment, or land. Older cards of type summon are also creature cards."
-        }
-      ],
-      "text": "Add {B} to your mana pool for each creature card in your graveyard.",
+      "text": "Add {B} for each creature card in your graveyard.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -5063,7 +5038,7 @@
           "text": "Will give 1 life for each black mana used, but not more life than the amount of unprevented damage that is dealt."
         }
       ],
-      "text": "Spend only black and/or red mana on X.\nSoul Burn deals X damage to target creature or player. You gain life equal to the damage dealt, but not more than the amount of {B} spent on X, the player's life total before Soul Burn dealt damage, or the creature's toughness.",
+      "text": "Spend only black and/or red mana on X.\nSoul Burn deals X damage to any target. You gain life equal to the damage dealt, but not more than the amount of {B} spent on X, the player's life total before the damage was dealt, the planeswalker's loyalty before the damage was dealt, or the creature's toughness.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -5165,13 +5140,9 @@
         {
           "date": "2004-10-04",
           "text": "The text \"for each artifact or creature\" means the sum of cards which are either creature and/or artifact. Artifact creatures are not double counted."
-        },
-        {
-          "date": "2008-04-01",
-          "text": "A \"creature card\" is any card with the type creature, even if it has other types such as artifact, enchantment, or land. Older cards of type summon are also creature cards."
         }
       ],
-      "text": "For each artifact or creature card in target opponent's graveyard, add {C} to your mana pool and you gain 1 life.",
+      "text": "For each artifact or creature card in target opponent's graveyard, add {C} and you gain 1 life.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -5221,15 +5192,11 @@
       "reserved": true,
       "rulings": [
         {
-          "date": "2008-04-01",
-          "text": "A \"creature card\" is any card with the type creature, even if it has other types such as artifact, enchantment, or land. Older cards of type summon are also creature cards."
-        },
-        {
           "date": "2008-08-01",
           "text": "X is set as you cast the spell to be exactly the number of appropriate cards in an opponent's graveyard. You can't choose a higher or lower value for X."
         }
       ],
-      "text": "X is the number of artifact and/or creature cards in an opponent's graveyard as you cast Spoils of War.\nDistribute X +1/+1 counters among any number of target creatures.",
+      "text": "X is the number of artifact and/or creature cards in an opponent's graveyard as you cast this spell.\nDistribute X +1/+1 counters among any number of target creatures.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -5275,7 +5242,7 @@
         "ICE"
       ],
       "rarity": "Uncommon",
-      "text": "Destroy all Plains. For each land destroyed this way, Stench of Evil deals 1 damage to that land's controller unless he or she pays {2}.",
+      "text": "Destroy all Plains. For each land destroyed this way, Stench of Evil deals 1 damage to that land's controller unless they pay {2}.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -5379,7 +5346,7 @@
         "5ED"
       ],
       "rarity": "Common",
-      "text": "Touch of Death deals 1 damage to target player. You gain 1 life.\nDraw a card at the beginning of the next turn's upkeep.",
+      "text": "Touch of Death deals 1 damage to target player or planeswalker. You gain 1 life.\nDraw a card at the beginning of the next turn's upkeep.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -5539,7 +5506,7 @@
       "rulings": [
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         },
         {
           "date": "2008-10-01",
@@ -5625,7 +5592,7 @@
         "Cleric",
         "Shaman"
       ],
-      "text": "{T}: Change the text of target white enchantment you control that doesn't have cumulative upkeep by replacing all instances of one color word with another. (For example, you may change \"black creatures can't attack\" to \"blue creatures can't attack.\") That enchantment gains \"Cumulative upkeep {1}.\" (At the beginning of its controller's upkeep, that player puts an age counter on it, then sacrifices it unless he or she pays its upkeep cost for each age counter on it.)",
+      "text": "{T}: Change the text of target white enchantment you control that doesn't have cumulative upkeep by replacing all instances of one color word with another. (For example, you may change \"black creatures can't attack\" to \"blue creatures can't attack.\") That enchantment gains \"Cumulative upkeep {1}.\" (At the beginning of its controller's upkeep, that player puts an age counter on it, then sacrifices it unless they pay its upkeep cost for each age counter on it.)",
       "toughness": "1",
       "type": "Creature — Human Cleric Shaman",
       "types": [
@@ -5745,7 +5712,7 @@
       "rarity": "Common",
       "rulings": [
         {
-          "date": "2016-06-08",
+          "date": "2018-03-16",
           "text": "You draw three cards and put two cards back all while Brainstorm is resolving. Nothing can happen between the two, and no player may choose to take actions."
         }
       ],
@@ -6082,10 +6049,6 @@
           "text": "This is a replacement effect."
         },
         {
-          "date": "2008-04-01",
-          "text": "A \"creature card\" is any card with the type creature, even if it has other types such as artifact, enchantment, or land. Older cards of type summon are also creature cards."
-        },
-        {
           "date": "2008-10-01",
           "text": "If a creature returned to the battlefield with Dreams of the Dead would leave the battlefield for any reason, it's exiled instead — unless the spell or ability that's causing the creature to leave the battlefield is actually trying to exile it! In that case, it succeeds at exiling it. If it later returns the creature card to the battlefield (as Oblivion Ring or Flickerwisp might, for example), the creature card will return to the battlefield as a new object with no relation to its previous existence."
         },
@@ -6094,7 +6057,7 @@
           "text": "If a permanent has multiple instances of cumulative upkeep, each triggers separately. However, the age counters are not connected to any particular ability; each cumulative upkeep ability will count the total number of age counters on the permanent at the time that ability resolves."
         }
       ],
-      "text": "{1}{U}: Return target white or black creature card from your graveyard to the battlefield. That creature gains \"Cumulative upkeep {2}.\" If the creature would leave the battlefield, exile it instead of putting it anywhere else. (At the beginning of its controller's upkeep, that player puts an age counter on it, then sacrifices it unless he or she pays its upkeep cost for each age counter on it.)",
+      "text": "{1}{U}: Return target white or black creature card from your graveyard to the battlefield. That creature gains \"Cumulative upkeep {2}.\" If the creature would leave the battlefield, exile it instead of putting it anywhere else. (At the beginning of its controller's upkeep, that player puts an age counter on it, then sacrifices it unless they pay its upkeep cost for each age counter on it.)",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -6461,7 +6424,7 @@
         "ME2"
       ],
       "rarity": "Uncommon",
-      "text": "Iceberg enters the battlefield with X ice counters on it.\n{3}: Put an ice counter on Iceberg.\nRemove an ice counter from Iceberg: Add {C} to your mana pool.",
+      "text": "Iceberg enters the battlefield with X ice counters on it.\n{3}: Put an ice counter on Iceberg.\nRemove an ice counter from Iceberg: Add {C}.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -7257,7 +7220,7 @@
       "rulings": [
         {
           "date": "2007-09-16",
-          "text": "First the opponent chooses whether or not to pay {4}. Then, if he or she doesn't pay, you choose whether or not to draw a card."
+          "text": "First the opponent chooses whether or not to pay {4}. Then, if they don't pay, you choose whether or not to draw a card."
         },
         {
           "date": "2008-04-01",
@@ -7438,7 +7401,7 @@
           "text": "This does not cause a player to lose if they have less than 3 cards in their library. It allows you to look at and reorder or shuffle whatever remaining cards there might be."
         }
       ],
-      "text": "Look at the top three cards of target player's library, then put them back in any order. You may have that player shuffle his or her library.\nDraw a card at the beginning of the next turn's upkeep.",
+      "text": "Look at the top three cards of target player's library, then put them back in any order. You may have that player shuffle their library.\nDraw a card at the beginning of the next turn's upkeep.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -7526,7 +7489,7 @@
           "text": "Only lands that actually have mana abilities will get tapped. This includes basic lands and lands with mana abilities printed on them, as well as lands which have been granted a mana ability by some effect."
         }
       ],
-      "text": "Counter target spell unless its controller pays {X}. If he or she doesn't, that player taps all lands with mana abilities he or she controls and empties his or her mana pool.",
+      "text": "Counter target spell unless its controller pays {X}. If that player doesn't, they tap all lands with mana abilities they control and lose all unspent mana.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -7643,7 +7606,7 @@
         "ICE"
       ],
       "rarity": "Common",
-      "text": "Target player puts the top card of his or her library into his or her graveyard.\nDraw a card at the beginning of the next turn's upkeep.",
+      "text": "Target player puts the top card of their library into their graveyard.\nDraw a card at the beginning of the next turn's upkeep.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -8135,7 +8098,7 @@
           "text": "This mana is in addition to any mana the Island itself produces, and is blue regardless of what type of mana the Island produces."
         }
       ],
-      "text": "Cumulative upkeep {U} (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)\nWhenever an Island is tapped for mana, its controller may add {U} to his or her mana pool (in addition to the mana the land produces). If that Island is snow, its controller may add {U}{U} to his or her mana pool instead. Spend this mana only to pay cumulative upkeep costs.",
+      "text": "Cumulative upkeep {U} (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)\nWhenever an Island is tapped for mana, its controller may add an additional {U}. If that Island is snow, its controller may add an additional {U}{U} instead. Spend this mana only to pay cumulative upkeep costs.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -8195,7 +8158,7 @@
         "Wizard",
         "Artificer"
       ],
-      "text": "{T}: Add {C}{C} to your mana pool. Spend this mana only to activate abilities of artifacts.",
+      "text": "{T}: Add {C}{C}. Spend this mana only to activate abilities of artifacts.",
       "toughness": "1",
       "type": "Creature — Human Wizard Artificer",
       "types": [
@@ -8250,7 +8213,7 @@
           "text": "A \"creature spell\" is any spell with the type Creature, even if it has other types such as Artifact or Enchantment. Older cards of type Summon are also Creature spells."
         }
       ],
-      "text": "Whenever an opponent casts a creature spell, Soul Barrier deals 2 damage to that player unless he or she pays {2}.",
+      "text": "Whenever an opponent casts a creature spell, Soul Barrier deals 2 damage to that player unless they pay {2}.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -8464,7 +8427,7 @@
           "text": "If a turn has multiple combat phases, this spell can be cast during any of them as long as it's before the beginning of that phase's Declare Blockers Step."
         }
       ],
-      "text": "Cast Winter's Chill only during combat before blockers are declared.\nX can't be greater than the number of snow lands you control.\nChoose X target attacking creatures. For each of those creatures, its controller may pay {1} or {2}. If that player doesn't, destroy that creature at end of combat. If that player pays only {1}, prevent all combat damage that would be dealt to and dealt by that creature this combat.",
+      "text": "Cast this spell only during combat before blockers are declared.\nX can't be greater than the number of snow lands you control.\nChoose X target attacking creatures. For each of those creatures, its controller may pay {1} or {2}. If that player doesn't, destroy that creature at end of combat. If that player pays only {1}, prevent all combat damage that would be dealt to and dealt by that creature this combat.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -8636,7 +8599,7 @@
           "text": "When using Dredge with this, you have two choices. You can immediately replace the draw with Dredge, or you can apply Zur's Weirding's replacement. If the latter, you first resolve Zur's Weirding's ability, then if you're going to draw the card, decide whether or not to replace that draw with Dredge."
         }
       ],
-      "text": "Players play with their hands revealed.\nIf a player would draw a card, he or she reveals it instead. Then any other player may pay 2 life. If a player does, put that card into its owner's graveyard. Otherwise, that player draws a card.",
+      "text": "Players play with their hands revealed.\nIf a player would draw a card, they reveal it instead. Then any other player may pay 2 life. If a player does, put that card into its owner's graveyard. Otherwise, that player draws a card.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -8744,7 +8707,7 @@
         "Human",
         "Wizard"
       ],
-      "text": "{T}: Zuran Spellcaster deals 1 damage to target creature or player.",
+      "text": "{T}: Zuran Spellcaster deals 1 damage to any target.",
       "toughness": "1",
       "type": "Creature — Human Wizard",
       "types": [
@@ -8908,7 +8871,7 @@
       ],
       "rarity": "Rare",
       "reserved": true,
-      "text": "Cast Blizzard only if you control a snow land.\nCumulative upkeep {2} (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)\nCreatures with flying don't untap during their controllers' untap steps.",
+      "text": "Cast this spell only if you control a snow land.\nCumulative upkeep {2} (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)\nCreatures with flying don't untap during their controllers' untap steps.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -9575,7 +9538,7 @@
         "Human",
         "Cleric"
       ],
-      "text": "{T}, Sacrifice a red or white creature: Freyalise Supplicant deals damage to target creature or player equal to half the sacrificed creature's power, rounded down.",
+      "text": "{T}, Sacrifice a red or white creature: Freyalise Supplicant deals damage to any target equal to half the sacrificed creature's power, rounded down.",
       "toughness": "1",
       "type": "Creature — Human Cleric",
       "types": [
@@ -9788,7 +9751,7 @@
         "Elf",
         "Druid"
       ],
-      "text": "{T}: Add {G}{G} to your mana pool.",
+      "text": "{T}: Add {G}{G}.",
       "toughness": "1",
       "type": "Creature — Elf Druid",
       "types": [
@@ -9845,7 +9808,7 @@
         "Elf",
         "Druid"
       ],
-      "text": "{T}: Add {G} to your mana pool.",
+      "text": "{T}: Add {G}.",
       "toughness": "1",
       "type": "Creature — Elf Druid",
       "types": [
@@ -10088,7 +10051,7 @@
       "subtypes": [
         "Aura"
       ],
-      "text": "Enchant land you control\nEnchanted land has \"{T}: Prevent the next 1 damage that would be dealt to target creature or player this turn.\"",
+      "text": "Enchant land you control\nEnchanted land has \"{T}: Prevent the next 1 damage that would be dealt to any target this turn.\"",
       "type": "Enchantment — Aura",
       "types": [
         "Enchantment"
@@ -10326,12 +10289,6 @@
         "CMD"
       ],
       "rarity": "Rare",
-      "rulings": [
-        {
-          "date": "2008-04-01",
-          "text": "A \"creature card\" is any card with the type creature, even if it has other types such as artifact, enchantment, or land. Older cards of type summon are also creature cards."
-        }
-      ],
       "subtypes": [
         "Lhurgoyf"
       ],
@@ -11140,7 +11097,7 @@
         "ME2"
       ],
       "rarity": "Rare",
-      "text": "Target player chooses three cards from his or her hand and puts them on top of his or her library in any order.",
+      "text": "Target player chooses three cards from their hand and puts them on top of their library in any order.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -11343,7 +11300,7 @@
         "Plant",
         "Wall"
       ],
-      "text": "Defender (This creature can't attack.)\nSacrifice Tinder Wall: Add {R}{R} to your mana pool.\n{R}, Sacrifice Tinder Wall: Tinder Wall deals 2 damage to target creature it's blocking.",
+      "text": "Defender (This creature can't attack.)\nSacrifice Tinder Wall: Add {R}{R}.\n{R}, Sacrifice Tinder Wall: It deals 2 damage to target creature it's blocking.",
       "toughness": "3",
       "type": "Creature — Plant Wall",
       "types": [
@@ -11720,7 +11677,7 @@
       "subtypes": [
         "Aura"
       ],
-      "text": "Enchant land\nWhenever enchanted land is tapped for mana, its controller adds {G} to his or her mana pool (in addition to the mana the land produces).",
+      "text": "Enchant land\nWhenever enchanted land is tapped for mana, its controller adds an additional {G}.",
       "type": "Enchantment — Aura",
       "types": [
         "Enchantment"
@@ -12470,7 +12427,7 @@
           "text": "In Two-Headed Giant, triggers only once per upkeep, not once for each player."
         }
       ],
-      "text": "At the beginning of each upkeep, count the number of permanents. If the number is odd, until end of turn, red creatures get +1/+1 and whenever a player taps a Mountain for mana, that player adds {R} to his or her mana pool (in addition to the mana the land produces). If the number is even, until end of turn, red creatures get -1/-1 and if a player taps a Mountain for mana, that Mountain produces colorless mana instead of any other type.",
+      "text": "At the beginning of each upkeep, count the number of permanents. If the number is odd, until end of turn, red creatures get +1/+1 and whenever a player taps a Mountain for mana, that player adds an additional {R}. If the number is even, until end of turn, red creatures get -1/-1 and if a player taps a Mountain for mana, that Mountain produces colorless mana instead of any other type.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -12795,7 +12752,7 @@
         "5ED"
       ],
       "rarity": "Common",
-      "text": "Flare deals 1 damage to target creature or player.\nDraw a card at the beginning of the next turn's upkeep.",
+      "text": "Flare deals 1 damage to any target.\nDraw a card at the beginning of the next turn's upkeep.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -13313,7 +13270,7 @@
           "text": "Regeneration abilities that would affect that creature can still be activated; they just won't do anything. The creature can't be regenerated for any reason, even if an effect other than Incinerate would deal lethal damage to it or otherwise destroy it."
         }
       ],
-      "text": "Incinerate deals 3 damage to target creature or player. A creature dealt damage this way can't be regenerated this turn.",
+      "text": "Incinerate deals 3 damage to any target. A creature dealt damage this way can't be regenerated this turn.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -13477,7 +13434,7 @@
         },
         {
           "date": "2004-10-04",
-          "text": "If this leaves the battlefield before its activated ability resolves, it will still deal damage to the targeted creature. On the other hand, if the targeted creature leaves the battlefield before the ability resolves, the ability will be countered and no damage will be dealt."
+          "text": "If this leaves the battlefield before its activated ability resolves, it will still deal damage to the targeted creature. On the other hand, if the targeted creature leaves the battlefield before the ability resolves, the ability won't resolve and no damage will be dealt."
         }
       ],
       "subtypes": [
@@ -13543,7 +13500,7 @@
           "text": "A creature dealt damage by Lava Burst may be regenerated."
         }
       ],
-      "text": "Lava Burst deals X damage to target creature or player. If Lava Burst would deal damage to a creature, that damage can't be prevented or dealt instead to another creature or player.",
+      "text": "Lava Burst deals X damage to any target. If Lava Burst would deal damage to a creature, that damage can't be prevented or dealt instead to another permanent or player.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -13656,7 +13613,7 @@
           "text": "If a turn has multiple combat phases, this spell can be cast during any of them as long as it's before the beginning of that phase's Declare Blockers Step."
         }
       ],
-      "text": "Cast Melee only during your turn and only during combat before blockers are declared.\nYou choose which creatures block this combat and how those creatures block.\nWhenever a creature attacks and isn't blocked this combat, untap it and remove it from combat.",
+      "text": "Cast this spell only during your turn and only during combat before blockers are declared.\nYou choose which creatures block this combat and how those creatures block.\nWhenever a creature attacks and isn't blocked this combat, untap it and remove it from combat.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -13765,7 +13722,7 @@
           "text": "The number of targets must be at least 1 and at most X + 1. You divide the damage as you cast Meteor Shower, not as it resolves. Each target must be assigned at least 1 damage."
         }
       ],
-      "text": "Meteor Shower deals X plus 1 damage divided as you choose among any number of target creatures and/or players.",
+      "text": "Meteor Shower deals X plus 1 damage divided as you choose among any number of targets.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -13871,10 +13828,10 @@
       "rulings": [
         {
           "date": "2008-10-01",
-          "text": "First the player chooses all the tapped creatures he or she would like to untap this way. Then the entire payment is made at once, then all of those creatures untap at the same time. If the entire payment can't be paid (because the player chose too many creatures, for example), none of it is paid and none of those creatures untap."
+          "text": "First the player chooses all the tapped creatures they would like to untap this way. Then the entire payment is made at once, then all of those creatures untap at the same time. If the entire payment can't be paid (because the player chose too many creatures, for example), none of it is paid and none of those creatures untap."
         }
       ],
-      "text": "Creatures without flying don't untap during their controllers' untap steps.\nAt the beginning of each player's upkeep, that player may choose any number of tapped creatures without flying he or she controls and pay {2} for each creature chosen this way. If the player does, untap those creatures.",
+      "text": "Creatures without flying don't untap during their controllers' untap steps.\nAt the beginning of each player's upkeep, that player may choose any number of tapped creatures without flying they control and pay {2} for each creature chosen this way. If the player does, untap those creatures.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -13928,7 +13885,7 @@
         "Orc",
         "Warrior"
       ],
-      "text": "{T}: Orcish Cannoneers deals 2 damage to target creature or player and 3 damage to you.",
+      "text": "{T}: Orcish Cannoneers deals 2 damage to any target and 3 damage to you.",
       "toughness": "3",
       "type": "Creature — Orc Warrior",
       "types": [
@@ -14035,7 +13992,7 @@
       "rulings": [
         {
           "date": "2008-10-01",
-          "text": "This ability changes the targeted land's land types. It doesn't affect its name, its supertypes (such as whether or not it's legendary, snow, or basic), or its other types (if it's also a creature, for example). The ability will cause the land to lose all of its printed abilities and gain the ability \"{T}: Add {B} to your mana pool.\""
+          "text": "This ability changes the targeted land's land types. It doesn't affect its name, its supertypes (such as whether or not it's legendary, snow, or basic), or its other types (if it's also a creature, for example). The ability will cause the land to lose all of its printed abilities and gain the ability \"{T}: Add {B}.\""
         }
       ],
       "subtypes": [
@@ -14220,7 +14177,7 @@
       "subtypes": [
         "Orc"
       ],
-      "text": "{T}, Sacrifice a Forest: Add three mana in any combination of {R} and/or {G} to your mana pool.",
+      "text": "{T}, Sacrifice a Forest: Add three mana in any combination of {R} and/or {G}.",
       "toughness": "1",
       "type": "Creature — Orc",
       "types": [
@@ -14343,7 +14300,7 @@
           "text": "If a turn has multiple combat phases, this spell can be cast during any of them as long as it's before the beginning of that phase's Declare Blockers Step."
         }
       ],
-      "text": "Cast Panic only during combat before blockers are declared.\nTarget creature can't block this turn.\nDraw a card at the beginning of the next turn's upkeep.",
+      "text": "Cast this spell only during combat before blockers are declared.\nTarget creature can't block this turn.\nDraw a card at the beginning of the next turn's upkeep.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -14553,6 +14510,10 @@
         },
         {
           "format": "Ice Age Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
           "legality": "Legal"
         },
         {
@@ -15128,7 +15089,7 @@
       "subtypes": [
         "Unicorn"
       ],
-      "text": "{T}: Add {U} or {C}{U} to your mana pool. Spend this mana only to pay cumulative upkeep costs.",
+      "text": "{T}: Add {U} or {C}{U}. Spend this mana only to pay cumulative upkeep costs.",
       "toughness": "2",
       "type": "Creature — Unicorn",
       "types": [
@@ -16094,7 +16055,7 @@
         "ICE"
       ],
       "rarity": "Uncommon",
-      "text": "Cumulative upkeep {2} (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)\nAt the beginning of each player's upkeep, Cold Snap deals damage to that player equal to the number of snow lands he or she controls.",
+      "text": "Cumulative upkeep {2} (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)\nAt the beginning of each player's upkeep, Cold Snap deals damage to that player equal to the number of snow lands they control.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -16441,7 +16402,7 @@
         "Elf",
         "Cleric"
       ],
-      "text": "{T}: Prevent the next 1 damage that would be dealt to target creature or player this turn. If that creature is green, prevent the next 2 damage instead.",
+      "text": "{T}: Prevent the next 1 damage that would be dealt to any target this turn. If it's a green creature, prevent the next 2 damage instead.",
       "toughness": "2",
       "type": "Creature — Elf Cleric",
       "types": [
@@ -16522,10 +16483,6 @@
         {
           "date": "2006-09-25",
           "text": "If, after the last ability triggers, the creature card is removed from your graveyard in response, it won't be returned to your hand."
-        },
-        {
-          "date": "2008-04-01",
-          "text": "A \"creature card\" is any card with the type creature, even if it has other types such as artifact, enchantment, or land. Older cards of type summon are also creature cards."
         }
       ],
       "text": "Play with your hand revealed.\nIf you would draw a card, reveal the top card of your library instead. If it's a creature card, put it into your graveyard. Otherwise, draw a card.\nWhenever a creature is put into your graveyard from the battlefield, return it to your hand.",
@@ -16909,7 +16866,7 @@
           "text": "You draw a card at the beginning of the next turn's upkeep after Heal resolves, regardless of whether 1 damage was actually prevented."
         }
       ],
-      "text": "Prevent the next 1 damage that would be dealt to target creature or player this turn.\nDraw a card at the beginning of the next turn's upkeep.",
+      "text": "Prevent the next 1 damage that would be dealt to any target this turn.\nDraw a card at the beginning of the next turn's upkeep.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -18350,11 +18307,11 @@
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2017-11-17",
-          "text": "The amount of life gained is equal to the power of the target creature as it last existed on the battlefield."
+          "date": "2018-03-16",
+          "text": "The amount of life gained is equal to the power of the targeted creature as it last existed on the battlefield."
         },
         {
-          "date": "2017-11-17",
+          "date": "2018-03-16",
           "text": "If the creature's power is negative, its controller doesn't lose or gain life."
         }
       ],
@@ -18510,10 +18467,6 @@
           "text": "Because the \"search\" requires you to find a card with certain characteristics, you don't have to find the card if you don't want to."
         },
         {
-          "date": "2008-04-01",
-          "text": "A \"creature card\" is any card with the type creature, even if it has other types such as artifact, enchantment, or land. Older cards of type summon are also creature cards."
-        },
-        {
           "date": "2013-04-15",
           "text": "You must sacrifice exactly one creature to cast this spell; you cannot cast it without sacrificing a creature, and you cannot sacrifice additional creatures."
         },
@@ -18522,7 +18475,7 @@
           "text": "Players can only respond once this spell has been cast and all its costs have been paid. No one can try to destroy the creature you sacrificed to prevent you from casting this spell."
         }
       ],
-      "text": "As an additional cost to cast Altar of Bone, sacrifice a creature.\nSearch your library for a creature card, reveal that card, and put it into your hand. Then shuffle your library.",
+      "text": "As an additional cost to cast this spell, sacrifice a creature.\nSearch your library for a creature card, reveal that card, and put it into your hand. Then shuffle your library.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -18903,14 +18856,14 @@
         },
         {
           "date": "2017-03-14",
-          "text": "If some (but not all) of the targets become illegal, the original division of damage still applies, but no damage is dealt to illegal targets. If all targets become illegal, including the target opponent for the life-gaining effect, Fiery Justice is countered. If each target for the damage-dealing effect becomes illegal while the target for the life-gaining effect remains legal, that player gains 5 life even though no damage is dealt."
+          "text": "If some (but not all) of the targets become illegal, the original division of damage still applies, but no damage is dealt to illegal targets. If all targets become illegal, including the target opponent for the life-gaining effect, Fiery Justice doesn't resolve. If each target for the damage-dealing effect becomes illegal while the target for the life-gaining effect remains legal, that player gains 5 life even though no damage is dealt."
         },
         {
           "date": "2017-03-14",
-          "text": "The target opponent for the life-gaining effect may also be a target for the damage-dealing effect. If this happens and the damage brings that player's life total to 0 or less, the life-gaining effect will raise his or her life total above 0 again before the player would lose the game."
+          "text": "The target opponent for the life-gaining effect may also be a target for the damage-dealing effect. If this happens and the damage brings that player's life total to 0 or less, the life-gaining effect will raise their life total above 0 again before the player would lose the game."
         }
       ],
-      "text": "Fiery Justice deals 5 damage divided as you choose among any number of target creatures and/or players. Target opponent gains 5 life.",
+      "text": "Fiery Justice deals 5 damage divided as you choose among any number of targets. Target opponent gains 5 life.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -18969,7 +18922,7 @@
           "text": "You divide the damage as you cast the spell. You can't redistribute the damage if any of the target creatures becomes illegal before the spell resolves."
         }
       ],
-      "text": "As an additional cost to cast Fire Covenant, pay X life.\nFire Covenant deals X damage divided as you choose among any number of target creatures.",
+      "text": "As an additional cost to cast this spell, pay X life.\nFire Covenant deals X damage divided as you choose among any number of target creatures.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -19018,7 +18971,7 @@
         "ICE"
       ],
       "rarity": "Rare",
-      "text": "Green creatures can't attack unless their controller sacrifices a land for each green creature he or she controls that's attacking. (This cost is paid as attackers are declared.)",
+      "text": "Green creatures can't attack unless their controller sacrifices a land for each green creature they control that's attacking. (This cost is paid as attackers are declared.)",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -19074,7 +19027,7 @@
           "text": "Fumarole can't be cast unless you can target both a creature and a land. If there's a permanent on the battlefield that's both a creature and a land, it can be both targets."
         }
       ],
-      "text": "As an additional cost to cast Fumarole, pay 3 life.\nDestroy target creature and target land.",
+      "text": "As an additional cost to cast this spell, pay 3 life.\nDestroy target creature and target land.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -19201,7 +19154,7 @@
         },
         {
           "date": "2004-10-04",
-          "text": "If the targeted creature leaves the battlefield (or otherwise becomes an illegal target) before the ability resolves, the ability will be countered. Giant Trap Door Spider will remain on the battlefield."
+          "text": "If the targeted creature leaves the battlefield (or otherwise becomes an illegal target) before the ability resolves, the ability won't resolve. Giant Trap Door Spider will remain on the battlefield."
         }
       ],
       "subtypes": [
@@ -19307,12 +19260,6 @@
         "MED"
       ],
       "rarity": "Uncommon",
-      "rulings": [
-        {
-          "date": "2008-04-01",
-          "text": "A \"creature card\" is any card with the type creature, even if it has other types such as artifact, enchantment, or land. Older cards of type summon are also creature cards."
-        }
-      ],
       "text": "Put target creature card from a graveyard onto the battlefield under your control.",
       "type": "Sorcery",
       "types": [
@@ -19613,7 +19560,7 @@
         "ICE"
       ],
       "rarity": "Rare",
-      "text": "Black creatures can't attack unless their controller sacrifices a land for each black creature he or she controls that's attacking. (This cost is paid as attackers are declared.)",
+      "text": "Black creatures can't attack unless their controller sacrifices a land for each black creature they control that's attacking. (This cost is paid as attackers are declared.)",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -19854,7 +19801,7 @@
           "text": "Since the discard is a cost, it can't be used with Library of Leng."
         }
       ],
-      "text": "{2}, Discard a card at random: Stormbind deals 2 damage to target creature or player.",
+      "text": "{2}, Discard a card at random: Stormbind deals 2 damage to any target.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -20231,7 +20178,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -20494,7 +20442,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -20757,7 +20706,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -21019,7 +20969,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -21281,7 +21233,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -21543,7 +21497,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -21679,7 +21635,7 @@
         "10E"
       ],
       "rarity": "Rare",
-      "text": "{T}: Add {C} to your mana pool.\n{T}: Add {W} or {U} to your mana pool. Adarkar Wastes deals 1 damage to you.",
+      "text": "{T}: Add {C}.\n{T}: Add {W} or {U}. Adarkar Wastes deals 1 damage to you.",
       "type": "Land",
       "types": [
         "Land"
@@ -21732,7 +21688,7 @@
         "10E"
       ],
       "rarity": "Rare",
-      "text": "{T}: Add {C} to your mana pool.\n{T}: Add {G} or {W} to your mana pool. Brushland deals 1 damage to you.",
+      "text": "{T}: Add {C}.\n{T}: Add {G} or {W}. Brushland deals 1 damage to you.",
       "type": "Land",
       "types": [
         "Land"
@@ -21940,7 +21896,7 @@
         "C16"
       ],
       "rarity": "Rare",
-      "text": "{T}: Add {C} to your mana pool.\n{T}: Add {R} or {G} to your mana pool. Karplusan Forest deals 1 damage to you.",
+      "text": "{T}: Add {C}.\n{T}: Add {R} or {G}. Karplusan Forest deals 1 damage to you.",
       "type": "Land",
       "types": [
         "Land"
@@ -21984,7 +21940,7 @@
       ],
       "rarity": "Rare",
       "reserved": true,
-      "text": "Land Cap doesn't untap during your untap step if it has a depletion counter on it.\nAt the beginning of your upkeep, remove a depletion counter from Land Cap.\n{T}: Add {W} or {U} to your mana pool. Put a depletion counter on Land Cap.",
+      "text": "Land Cap doesn't untap during your untap step if it has a depletion counter on it.\nAt the beginning of your upkeep, remove a depletion counter from Land Cap.\n{T}: Add {W} or {U}. Put a depletion counter on Land Cap.",
       "type": "Land",
       "types": [
         "Land"
@@ -22028,7 +21984,7 @@
       ],
       "rarity": "Rare",
       "reserved": true,
-      "text": "Lava Tubes doesn't untap during your untap step if it has a depletion counter on it.\nAt the beginning of your upkeep, remove a depletion counter from Lava Tubes.\n{T}: Add {B} or {R} to your mana pool. Put a depletion counter on Lava Tubes.",
+      "text": "Lava Tubes doesn't untap during your untap step if it has a depletion counter on it.\nAt the beginning of your upkeep, remove a depletion counter from Lava Tubes.\n{T}: Add {B} or {R}. Put a depletion counter on Lava Tubes.",
       "type": "Land",
       "types": [
         "Land"
@@ -22072,7 +22028,7 @@
       ],
       "rarity": "Rare",
       "reserved": true,
-      "text": "River Delta doesn't untap during your untap step if it has a depletion counter on it.\nAt the beginning of your upkeep, remove a depletion counter from River Delta.\n{T}: Add {U} or {B} to your mana pool. Put a depletion counter on River Delta.",
+      "text": "River Delta doesn't untap during your untap step if it has a depletion counter on it.\nAt the beginning of your upkeep, remove a depletion counter from River Delta.\n{T}: Add {U} or {B}. Put a depletion counter on River Delta.",
       "type": "Land",
       "types": [
         "Land"
@@ -22125,7 +22081,7 @@
         "10E"
       ],
       "rarity": "Rare",
-      "text": "{T}: Add {C} to your mana pool.\n{T}: Add {B} or {R} to your mana pool. Sulfurous Springs deals 1 damage to you.",
+      "text": "{T}: Add {C}.\n{T}: Add {B} or {R}. Sulfurous Springs deals 1 damage to you.",
       "type": "Land",
       "types": [
         "Land"
@@ -22169,7 +22125,7 @@
       ],
       "rarity": "Rare",
       "reserved": true,
-      "text": "Timberline Ridge doesn't untap during your untap step if it has a depletion counter on it.\nAt the beginning of your upkeep, remove a depletion counter from Timberline Ridge.\n{T}: Add {R} or {G} to your mana pool. Put a depletion counter on Timberline Ridge.",
+      "text": "Timberline Ridge doesn't untap during your untap step if it has a depletion counter on it.\nAt the beginning of your upkeep, remove a depletion counter from Timberline Ridge.\n{T}: Add {R} or {G}. Put a depletion counter on Timberline Ridge.",
       "type": "Land",
       "types": [
         "Land"
@@ -22223,7 +22179,7 @@
         "C16"
       ],
       "rarity": "Rare",
-      "text": "{T}: Add {C} to your mana pool.\n{T}: Add {U} or {B} to your mana pool. Underground River deals 1 damage to you.",
+      "text": "{T}: Add {C}.\n{T}: Add {U} or {B}. Underground River deals 1 damage to you.",
       "type": "Land",
       "types": [
         "Land"
@@ -22267,7 +22223,7 @@
       ],
       "rarity": "Rare",
       "reserved": true,
-      "text": "Veldt doesn't untap during your untap step if it has a depletion counter on it.\nAt the beginning of your upkeep, remove a depletion counter from Veldt.\n{T}: Add {G} or {W} to your mana pool. Put a depletion counter on Veldt.",
+      "text": "Veldt doesn't untap during your untap step if it has a depletion counter on it.\nAt the beginning of your upkeep, remove a depletion counter from Veldt.\n{T}: Add {G} or {W}. Put a depletion counter on Veldt.",
       "type": "Land",
       "types": [
         "Land"
@@ -22520,7 +22476,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -22785,7 +22743,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -23050,7 +23010,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -23381,7 +23343,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -23640,7 +23604,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -23899,7 +23865,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -24231,7 +24199,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -24491,7 +24460,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -24751,7 +24721,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [

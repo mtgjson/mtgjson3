@@ -7,8 +7,14 @@
   "border": "black",
   "type": "expansion",
   "booster": [
-    "uncommon",
-    "uncommon",
+    [
+      "rare",
+      "uncommon"
+    ],
+    [
+      "rare",
+      "uncommon"
+    ],
     "common",
     "common",
     "common",
@@ -105,7 +111,7 @@
         "9ED"
       ],
       "rarity": "Rare",
-      "text": "{8}, {T}: Aladdin's Ring deals 4 damage to target creature or player.",
+      "text": "{8}, {T}: Aladdin's Ring deals 4 damage to any target.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -706,7 +712,7 @@
         "Human",
         "Wizard"
       ],
-      "text": "{T}: Cuombajj Witches deals 1 damage to target creature or player and 1 damage to target creature or player of an opponent's choice.",
+      "text": "{T}: Cuombajj Witches deals 1 damage to any target and 1 damage to any target of an opponent's choice.",
       "toughness": "3",
       "type": "Creature — Human Wizard",
       "types": [
@@ -804,6 +810,12 @@
         "A25"
       ],
       "rarity": "Common",
+      "rulings": [
+        {
+          "date": "2018-03-16",
+          "text": "A creature \"comes under your control\" if it enters the battlefield under your control or if you gain control of it while it's already on the battlefield."
+        }
+      ],
       "subtypes": [
         "Human",
         "Warrior"
@@ -859,6 +871,12 @@
         "A25"
       ],
       "rarity": "Common",
+      "rulings": [
+        {
+          "date": "2018-03-16",
+          "text": "A creature \"comes under your control\" if it enters the battlefield under your control or if you gain control of it while it's already on the battlefield."
+        }
+      ],
       "subtypes": [
         "Human",
         "Warrior"
@@ -2586,7 +2604,7 @@
           "text": "Players can only respond once this spell has been cast and all its costs have been paid. No one can try to destroy the creature you sacrificed to prevent you from casting this spell."
         }
       ],
-      "text": "As an additional cost to cast Metamorphosis, sacrifice a creature.\nAdd X mana of any one color to your mana pool, where X is one plus the sacrificed creature's converted mana cost. Spend this mana only to cast creature spells.",
+      "text": "As an additional cost to cast this spell, sacrifice a creature.\nAdd X mana of any one color, where X is 1 plus the sacrificed creature's converted mana cost. Spend this mana only to cast creature spells.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -2650,7 +2668,7 @@
       "subtypes": [
         "Snake"
       ],
-      "text": "Whenever Nafs Asp deals damage to a player, that player loses 1 life at the beginning of his or her next draw step unless he or she pays {1} before that draw step.",
+      "text": "Whenever Nafs Asp deals damage to a player, that player loses 1 life at the beginning of their next draw step unless they pay {1} before that draw step.",
       "toughness": "1",
       "type": "Creature — Snake",
       "types": [
@@ -2718,7 +2736,7 @@
       "subtypes": [
         "Snake"
       ],
-      "text": "Whenever Nafs Asp deals damage to a player, that player loses 1 life at the beginning of his or her next draw step unless he or she pays {1} before that draw step.",
+      "text": "Whenever Nafs Asp deals damage to a player, that player loses 1 life at the beginning of their next draw step unless they pay {1} before that draw step.",
       "toughness": "1",
       "type": "Creature — Snake",
       "types": [
@@ -3427,7 +3445,7 @@
         "4ED"
       ],
       "rarity": "Uncommon",
-      "text": "Blue creatures don't untap during their controllers' untap steps.\nAt the beginning of each player's upkeep, that player may choose any number of tapped blue creatures he or she controls and pay {4} for each creature chosen this way. If the player does, untap those creatures.",
+      "text": "Blue creatures don't untap during their controllers' untap steps.\nAt the beginning of each player's upkeep, that player may choose any number of tapped blue creatures they control and pay {4} for each creature chosen this way. If the player does, untap those creatures.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -4374,10 +4392,10 @@
         },
         {
           "date": "2007-07-15",
-          "text": "At the end of a subgame, each player puts all cards he or she owns that are in the subgame into his or her library in the main game, then shuffles them. This includes cards in the subgame's Exile zone."
+          "text": "At the end of a subgame, each player puts all cards they own that are in the subgame into their library in the main game, then shuffles them. This includes cards in the subgame's Exile zone."
         }
       ],
-      "text": "Players play a MAGIC subgame, using their libraries as their decks. Each player who doesn't win the subgame loses half his or her life, rounded up.",
+      "text": "Players play a Magic subgame, using their libraries as their decks. Each player who doesn't win the subgame loses half their life, rounded up.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -4769,7 +4787,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -4884,7 +4904,7 @@
           "text": "On the other hand, you can tap City of Brass, put its triggered ability on the stack, and then respond to that ability by casting an instant or activating an ability using that mana. In that case, the instant spell or activated ability will resolve first."
         }
       ],
-      "text": "Whenever City of Brass becomes tapped, it deals 1 damage to you.\n{T}: Add one mana of any color to your mana pool.",
+      "text": "Whenever City of Brass becomes tapped, it deals 1 damage to you.\n{T}: Add one mana of any color.",
       "type": "Land",
       "types": [
         "Land"
@@ -4943,7 +4963,7 @@
       "subtypes": [
         "Desert"
       ],
-      "text": "{T}: Add {C} to your mana pool.\n{T}: Desert deals 1 damage to target attacking creature. Activate this ability only during the end of combat step.",
+      "text": "{T}: Add {C}.\n{T}: Desert deals 1 damage to target attacking creature. Activate this ability only during the end of combat step.",
       "type": "Land — Desert",
       "types": [
         "Land"
@@ -5017,7 +5037,7 @@
       ],
       "rarity": "Rare",
       "reserved": true,
-      "text": "{T}: Add {C} to your mana pool.\n{T}: Regenerate target Elephant.",
+      "text": "{T}: Add {C}.\n{T}: Regenerate target Elephant.",
       "type": "Land",
       "types": [
         "Land"
@@ -5113,7 +5133,7 @@
           "text": "You may tap multiples of these in response to each other because the requirement for 7 cards is checked only at the time the ability is announced and not again when it resolves."
         }
       ],
-      "text": "{T}: Add {C} to your mana pool.\n{T}: Draw a card. Activate this ability only if you have exactly seven cards in hand.",
+      "text": "{T}: Add {C}.\n{T}: Draw a card. Activate this ability only if you have exactly seven cards in hand.",
       "type": "Land",
       "types": [
         "Land"

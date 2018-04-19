@@ -693,6 +693,12 @@
         "A25"
       ],
       "rarity": "Uncommon",
+      "rulings": [
+        {
+          "date": "2018-03-16",
+          "text": "You can't do anything in between drawing a card and discarding a card, including casting or cycling the card you drew."
+        }
+      ],
       "subtypes": [
         "Merfolk",
         "Rogue"
@@ -1058,7 +1064,7 @@
           "text": "You choose the spell to target on announcement, but you pick the new target for that spell on resolution."
         }
       ],
-      "text": "You may exile a blue card from your hand rather than pay Misdirection's mana cost.\nChange the target of target spell with a single target.",
+      "text": "You may exile a blue card from your hand rather than pay this spell's mana cost.\nChange the target of target spell with a single target.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -1119,7 +1125,7 @@
       "subtypes": [
         "Merfolk"
       ],
-      "text": "{T}: Rootwater Hunter deals 1 damage to target creature or player.",
+      "text": "{T}: Rootwater Hunter deals 1 damage to any target.",
       "toughness": "1",
       "type": "Creature — Merfolk",
       "types": [
@@ -1775,7 +1781,7 @@
         "DDT"
       ],
       "rarity": "Uncommon",
-      "text": "{T}: Add {C} to your mana pool.\n{5}{U}, {T}, Sacrifice Blighted Cataract: Draw two cards.",
+      "text": "{T}: Add {C}.\n{5}{U}, {T}, Sacrifice Blighted Cataract: Draw two cards.",
       "type": "Land",
       "types": [
         "Land"
@@ -1837,7 +1843,7 @@
           "text": "Cycling is an activated ability. Effects that interact with activated abilities (such as Stifle or Rings of Brighthearth) will interact with cycling. Effects that interact with spells (such as Remove Soul or Faerie Tauntings) will not."
         }
       ],
-      "text": "Lonely Sandbar enters the battlefield tapped.\n{T}: Add {U} to your mana pool.\nCycling {U} ({U}, Discard this card: Draw a card.)",
+      "text": "Lonely Sandbar enters the battlefield tapped.\n{T}: Add {U}.\nCycling {U} ({U}, Discard this card: Draw a card.)",
       "type": "Land",
       "types": [
         "Land"
@@ -2107,7 +2113,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -2391,7 +2399,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -2675,7 +2685,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -2959,7 +2971,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -3376,7 +3390,7 @@
       "subtypes": [
         "Goblin"
       ],
-      "text": "{1}, Sacrifice Ember Hauler: Ember Hauler deals 2 damage to target creature or player.",
+      "text": "{1}, Sacrifice Ember Hauler: Ember Hauler deals 2 damage to any target.",
       "toughness": "2",
       "type": "Creature — Goblin",
       "types": [
@@ -3517,7 +3531,7 @@
         },
         {
           "date": "2008-10-01",
-          "text": "The cycling ability and the triggered ability are separate. If the triggered ability is countered (with Stifle, for example, or if all its targets have become illegal), the cycling ability will still resolve and you'll draw a card."
+          "text": "The cycling ability and the triggered ability are separate. If the triggered ability doesn't resolve (due to being countered with Stifle, for example, or if all its targets have become illegal), the cycling ability will still resolve and you'll draw a card."
         },
         {
           "date": "2008-10-01",
@@ -3592,7 +3606,7 @@
           "text": "Ghostfire is colorless in all zones. Its damage comes from a colorless source."
         }
       ],
-      "text": "Ghostfire is colorless.\nGhostfire deals 3 damage to target creature or player.",
+      "text": "Ghostfire is colorless.\nGhostfire deals 3 damage to any target.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -3945,7 +3959,7 @@
           "text": "The Goblin you sacrifice to cast Goblin Grenade doesn't have to be a creature. For example, you could sacrifice Boggart Shenanigans (a tribal enchantment with the subtype Goblin)."
         }
       ],
-      "text": "As an additional cost to cast Goblin Grenade, sacrifice a Goblin.\nGoblin Grenade deals 5 damage to target creature or player.",
+      "text": "As an additional cost to cast this spell, sacrifice a Goblin.\nGoblin Grenade deals 5 damage to any target.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -4096,7 +4110,7 @@
         "Goblin",
         "Warrior"
       ],
-      "text": "{1}{R}, Sacrifice a land: Put a +1/+1 counter on Goblin Razerunners.\nAt the beginning of your end step, you may have Goblin Razerunners deal damage equal to the number of +1/+1 counters on it to target player.",
+      "text": "{1}{R}, Sacrifice a land: Put a +1/+1 counter on Goblin Razerunners.\nAt the beginning of your end step, you may have Goblin Razerunners deal damage equal to the number of +1/+1 counters on it to target player or planeswalker.",
       "toughness": "4",
       "type": "Creature — Goblin Warrior",
       "types": [
@@ -4648,7 +4662,7 @@
       "subtypes": [
         "Goblin"
       ],
-      "text": "Tarfire deals 2 damage to target creature or player.",
+      "text": "Tarfire deals 2 damage to any target.",
       "type": "Tribal Instant — Goblin",
       "types": [
         "Tribal",
@@ -4702,7 +4716,7 @@
       "rulings": [
         {
           "date": "2010-08-15",
-          "text": "Brittle Effigy is exiled as a cost to activate its ability, not as part of its effect. If the targeted creature is an illegal target by the time the ability would resolve, the ability is countered, but Brittle Effigy remains exiled."
+          "text": "Brittle Effigy is exiled as a cost to activate its ability, not as part of its effect. If the targeted creature is an illegal target by the time the ability would resolve, the ability doesn't resolve, but Brittle Effigy remains exiled."
         }
       ],
       "text": "{4}, {T}, Exile Brittle Effigy: Exile target creature.",
@@ -4769,7 +4783,7 @@
           "text": "If you reveal no land cards, Goblin Charbelcher deals damage equal to the number of cards revealed, and then you may order your library as you like."
         }
       ],
-      "text": "{3}, {T}: Reveal cards from the top of your library until you reveal a land card. Goblin Charbelcher deals damage equal to the number of nonland cards revealed this way to target creature or player. If the revealed land card was a Mountain, Goblin Charbelcher deals double that damage instead. Put the revealed cards on the bottom of your library in any order.",
+      "text": "{3}, {T}: Reveal cards from the top of your library until you reveal a land card. Goblin Charbelcher deals damage equal to the number of nonland cards revealed this way to any target. If the revealed land card was a Mountain, Goblin Charbelcher deals double that damage instead. Put the revealed cards on the bottom of your library in any order.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -4825,7 +4839,7 @@
         "DDT"
       ],
       "rarity": "Uncommon",
-      "text": "{T}: Add {C} to your mana pool.\n{4}{R}, {T}, Sacrifice Blighted Gorge: Blighted Gorge deals 2 damage to target creature or player.",
+      "text": "{T}: Add {C}.\n{4}{R}, {T}, Sacrifice Blighted Gorge: It deals 2 damage to any target.",
       "type": "Land",
       "types": [
         "Land"
@@ -4891,7 +4905,7 @@
           "text": "Cycling is an activated ability. Effects that interact with activated abilities (such as Stifle or Rings of Brighthearth) will interact with cycling. Effects that interact with spells (such as Remove Soul or Faerie Tauntings) will not."
         }
       ],
-      "text": "Forgotten Cave enters the battlefield tapped.\n{T}: Add {R} to your mana pool.\nCycling {R} ({R}, Discard this card: Draw a card.)",
+      "text": "Forgotten Cave enters the battlefield tapped.\n{T}: Add {R}.\nCycling {R} ({R}, Discard this card: Draw a card.)",
       "type": "Land",
       "types": [
         "Land"
@@ -5167,7 +5181,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -5457,7 +5473,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -5747,7 +5765,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -6037,7 +6057,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [

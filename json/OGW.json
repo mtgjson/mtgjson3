@@ -383,7 +383,7 @@
       "subtypes": [
         "Eldrazi"
       ],
-      "text": "Untap Endbringer during each other player's untap step.\n{T}: Endbringer deals 1 damage to target creature or player.\n{C}, {T}: Target creature can't attack or block this turn.\n{C}{C}, {T}: Draw a card.",
+      "text": "Untap Endbringer during each other player's untap step.\n{T}: Endbringer deals 1 damage to any target.\n{C}, {T}: Target creature can't attack or block this turn.\n{C}{C}, {T}: Draw a card.",
       "toughness": "5",
       "type": "Creature — Eldrazi",
       "types": [
@@ -507,7 +507,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "When you cast Kozilek, the Great Distortion, if you have fewer than seven cards in hand, draw cards equal to the difference.\nMenace\nDiscard a card with converted mana cost X: Counter target spell with converted mana cost X.",
+      "text": "When you cast this spell, if you have fewer than seven cards in hand, draw cards equal to the difference.\nMenace\nDiscard a card with converted mana cost X: Counter target spell with converted mana cost X.",
       "toughness": "12",
       "type": "Legendary Creature — Eldrazi",
       "types": [
@@ -1037,7 +1037,7 @@
       "subtypes": [
         "Eldrazi"
       ],
-      "text": "({C} represents colorless mana.)\nWhen Thought-Knot Seer enters the battlefield, target opponent reveals his or her hand. You choose a nonland card from it and exile that card.\nWhen Thought-Knot Seer leaves the battlefield, target opponent draws a card.",
+      "text": "({C} represents colorless mana.)\nWhen Thought-Knot Seer enters the battlefield, target opponent reveals their hand. You choose a nonland card from it and exile that card.\nWhen Thought-Knot Seer leaves the battlefield, target opponent draws a card.",
       "toughness": "4",
       "type": "Creature — Eldrazi",
       "types": [
@@ -1250,7 +1250,7 @@
         "Eldrazi",
         "Drone"
       ],
-      "text": "Vigilance\n{T}: Add {C} to your mana pool. ({C} represents colorless mana.)",
+      "text": "Vigilance\n{T}: Add {C}. ({C} represents colorless mana.)",
       "toughness": "3",
       "type": "Creature — Eldrazi Drone",
       "types": [
@@ -1348,7 +1348,7 @@
         "OGW"
       ],
       "rarity": "Uncommon",
-      "text": "({C} represents colorless mana.)\nChoose one —\n• Exile target creature with power or toughness 1 or less.\n• Counter target sorcery spell.\n• Create a 1/1 colorless Eldrazi Scion creature token. It has \"Sacrifice this creature: Add {C} to your mana pool.\"",
+      "text": "({C} represents colorless mana.)\nChoose one —\n• Exile target creature with power or toughness 1 or less.\n• Counter target sorcery spell.\n• Create a 1/1 colorless Eldrazi Scion creature token. It has \"Sacrifice this creature: Add {C}.\"",
       "type": "Instant",
       "types": [
         "Instant"
@@ -4566,7 +4566,7 @@
           "text": "You get the Eldrazi Scion even if the controller of the spell pays {1}."
         }
       ],
-      "text": "Devoid (This card has no color.)\nCounter target spell unless its controller pays {1}. You create a 1/1 colorless Eldrazi Scion creature token. It has \"Sacrifice this creature: Add {C} to your mana pool.\" ({C} represents colorless mana.)",
+      "text": "Devoid (This card has no color.)\nCounter target spell unless its controller pays {1}. You create a 1/1 colorless Eldrazi Scion creature token. It has \"Sacrifice this creature: Add {C}.\" ({C} represents colorless mana.)",
       "type": "Instant",
       "types": [
         "Instant"
@@ -4788,7 +4788,7 @@
         "Eldrazi",
         "Drone"
       ],
-      "text": "Devoid (This card has no color.)\n{T}: Add {C} to your mana pool. Spend this mana only to cast a colorless spell, activate an ability of a colorless permanent, or pay a cost that contains {C}. ({C} represents colorless mana.)",
+      "text": "Devoid (This card has no color.)\n{T}: Add {C}. Spend this mana only to cast a colorless spell, activate an ability of a colorless permanent, or pay a cost that contains {C}. ({C} represents colorless mana.)",
       "toughness": "3",
       "type": "Creature — Eldrazi Drone",
       "types": [
@@ -5011,7 +5011,7 @@
       "subtypes": [
         "Eldrazi"
       ],
-      "text": "Devoid (This card has no color.)\nFlash\nFlying\n{1}{C}: Target opponent exiles the top card of his or her library. If it's a land card, you may return Dimensional Infiltrator to its owner's hand. ({C} represents colorless mana.)",
+      "text": "Devoid (This card has no color.)\nFlash\nFlying\n{1}{C}: Target opponent exiles the top card of their library. If it's a land card, you may return Dimensional Infiltrator to its owner's hand. ({C} represents colorless mana.)",
       "toughness": "1",
       "type": "Creature — Eldrazi",
       "types": [
@@ -5446,7 +5446,7 @@
         "Eldrazi",
         "Drone"
       ],
-      "text": "Devoid (This card has no color.)\nFlying\nWhenever you cast a colorless spell, target opponent exiles the top card of his or her library.",
+      "text": "Devoid (This card has no color.)\nFlying\nWhenever you cast a colorless spell, target opponent exiles the top card of their library.",
       "toughness": "4",
       "type": "Creature — Eldrazi Drone",
       "types": [
@@ -6730,6 +6730,10 @@
           "legality": "Legal"
         },
         {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Kaladesh Block",
           "legality": "Legal"
         },
@@ -7035,7 +7039,7 @@
           "text": "Casting a spell for its surge cost doesn't change its mana cost or its converted mana cost."
         }
       ],
-      "text": "Surge {U}{U} (You may cast this spell for its surge cost if you or a teammate has cast another spell this turn.)\nOverwhelming Denial can't be countered by spells or abilities.\nCounter target spell.",
+      "text": "Surge {U}{U} (You may cast this spell for its surge cost if you or a teammate has cast another spell this turn.)\nThis spell can't be countered.\nCounter target spell.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -7248,16 +7252,12 @@
         {
           "date": "2016-01-22",
           "text": "A spell that can't be countered can still be targeted by spells or abilities that would counter it. The part of their effect that would counter the spell won't do anything, but any other effects those spells or abilities may have will still happen, if applicable."
-        },
-        {
-          "date": "2016-01-22",
-          "text": "There's no functional difference between \"can't be countered\" and \"can't be countered by spells or abilities,\" but the latter is used for classes of spells that might require a target. Spells with targets can still be countered by the game rules if all of their targets become illegal before they resolve."
         }
       ],
       "subtypes": [
         "Sphinx"
       ],
-      "text": "Sphinx of the Final Word can't be countered.\nFlying, hexproof\nInstant and sorcery spells you control can't be countered by spells or abilities.",
+      "text": "This spell can't be countered.\nFlying, hexproof\nInstant and sorcery spells you control can't be countered.",
       "toughness": "5",
       "type": "Creature — Sphinx",
       "types": [
@@ -7705,7 +7705,7 @@
       "subtypes": [
         "Eldrazi"
       ],
-      "text": "Devoid (This card has no color.)\nWhen you cast Bearer of Silence, you may pay {1}{C}. If you do, target opponent sacrifices a creature. ({C} represents colorless mana.)\nFlying\nBearer of Silence can't block.",
+      "text": "Devoid (This card has no color.)\nWhen you cast this spell, you may pay {1}{C}. If you do, target opponent sacrifices a creature. ({C} represents colorless mana.)\nFlying\nBearer of Silence can't block.",
       "toughness": "1",
       "type": "Creature — Eldrazi",
       "types": [
@@ -8487,7 +8487,7 @@
         "Eldrazi",
         "Drone"
       ],
-      "text": "Devoid (This card has no color.)\nPay 1 life: Add {C} to your mana pool. Activate this ability only once each turn. ({C} represents colorless mana.)",
+      "text": "Devoid (This card has no color.)\nPay 1 life: Add {C}. Activate this ability only once each turn. ({C} represents colorless mana.)",
       "toughness": "5",
       "type": "Creature — Eldrazi Drone",
       "types": [
@@ -8806,7 +8806,7 @@
       "subtypes": [
         "Eldrazi"
       ],
-      "text": "Devoid (This card has no color.)\nWhenever another nontoken creature you control dies, create a 1/1 colorless Eldrazi Scion creature token. It has \"Sacrifice this creature: Add {C} to your mana pool.\" ({C} represents colorless mana.)",
+      "text": "Devoid (This card has no color.)\nWhenever another nontoken creature you control dies, create a 1/1 colorless Eldrazi Scion creature token. It has \"Sacrifice this creature: Add {C}.\" ({C} represents colorless mana.)",
       "toughness": "3",
       "type": "Creature — Eldrazi",
       "types": [
@@ -9329,10 +9329,10 @@
       "rulings": [
         {
           "date": "2016-01-22",
-          "text": "If that player has only one card in hand, that card will be exiled. If the player has no cards in hand, no cards will be exiled, but he or she will still lose 2 life."
+          "text": "If that player has only one card in hand, that card will be exiled. If the player has no cards in hand, no cards will be exiled, but they will still lose 2 life."
         }
       ],
-      "text": "Devoid (This card has no color.)\nTarget opponent exiles two cards from his or her hand and loses 2 life.",
+      "text": "Devoid (This card has no color.)\nTarget opponent exiles two cards from their hand and loses 2 life.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -10138,7 +10138,7 @@
       "rulings": [
         {
           "date": "2016-01-22",
-          "text": "The player can't choose to discard two cards unless he or she has at least two cards in hand. Similarly, that player can't choose to sacrifice a creature or planeswalker unless he or she controls one. This means that if the target opponent doesn't have two cards in hand and doesn't control a creature or planeswalker, that player will lose 5 life and then lose 5 life again."
+          "text": "The player can't choose to discard two cards unless they have at least two cards in hand. Similarly, that player can't choose to sacrifice a creature or planeswalker unless they control one. This means that if the target opponent doesn't have two cards in hand and doesn't control a creature or planeswalker, that player will lose 5 life and then lose 5 life again."
         },
         {
           "date": "2016-01-22",
@@ -10710,7 +10710,7 @@
           "text": "A \"land creature\" is a permanent that's both a land and a creature."
         }
       ],
-      "text": "Devoid (This card has no color.)\nChoose one —\n• Exile target land creature.\n• Consuming Sinkhole deals 4 damage to target player.",
+      "text": "Devoid (This card has no color.)\nChoose one —\n• Exile target land creature.\n• Consuming Sinkhole deals 4 damage to target player or planeswalker.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -10933,7 +10933,7 @@
       "subtypes": [
         "Eldrazi"
       ],
-      "text": "Devoid (This card has no color.)\nWhen you cast Eldrazi Obligator, you may pay {1}{C}. If you do, gain control of target creature until end of turn, untap that creature, and it gains haste until end of turn. ({C} represents colorless mana.)\nHaste",
+      "text": "Devoid (This card has no color.)\nWhen you cast this spell, you may pay {1}{C}. If you do, gain control of target creature until end of turn, untap that creature, and it gains haste until end of turn. ({C} represents colorless mana.)\nHaste",
       "toughness": "1",
       "type": "Creature — Eldrazi",
       "types": [
@@ -11369,7 +11369,7 @@
         "OGW"
       ],
       "rarity": "Common",
-      "text": "Devoid (This card has no color.)\nReality Hemorrhage deals 2 damage to target creature or player.",
+      "text": "Devoid (This card has no color.)\nReality Hemorrhage deals 2 damage to any target.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -11954,7 +11954,7 @@
       "subtypes": [
         "Hellion"
       ],
-      "text": "Trample\nWhen Cinder Hellion enters the battlefield, it deals 2 damage to target opponent.",
+      "text": "Trample\nWhen Cinder Hellion enters the battlefield, it deals 2 damage to target opponent or planeswalker.",
       "toughness": "4",
       "type": "Creature — Hellion",
       "types": [
@@ -12065,7 +12065,7 @@
           "text": "Once you announce that you're casting Devour in Flames, it's too late for anyone to interrupt you by trying to remove the land you're returning."
         }
       ],
-      "text": "As an additional cost to cast Devour in Flames, return a land you control to its owner's hand.\nDevour in Flames deals 5 damage to target creature or planeswalker.",
+      "text": "As an additional cost to cast this spell, return a land you control to its owner's hand.\nDevour in Flames deals 5 damage to target creature or planeswalker.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -12394,10 +12394,6 @@
       "rulings": [
         {
           "date": "2016-01-22",
-          "text": "If one of the targets is a player, you can redirect the damage dealt by Fall of the Titans to a planeswalker that player controls. However, Fall of the Titans can't be used to deal damage to both a player and a planeswalker he or she controls (unless a separate redirection effect applies)."
-        },
-        {
-          "date": "2016-01-22",
           "text": "Fall of the Titan's converted mana cost is based on its mana cost of {X}{X}{R}, even if you're casting it for its surge cost. For example, if you cast Fall of the Titans for its surge cost and choose 4 for X, its converted mana cost will be 9."
         },
         {
@@ -12417,7 +12413,7 @@
           "text": "Casting a spell for its surge cost doesn't change its mana cost or its converted mana cost."
         }
       ],
-      "text": "Surge {X}{R} (You may cast this spell for its surge cost if you or a teammate has cast another spell this turn.)\nFall of the Titans deals X damage to each of up to two target creatures and/or players.",
+      "text": "Surge {X}{R} (You may cast this spell for its surge cost if you or a teammate has cast another spell this turn.)\nFall of the Titans deals X damage to each of up to two targets.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -13034,7 +13030,7 @@
         },
         {
           "date": "2016-01-22",
-          "text": "As Press into Service resolves, if at least one of its targets is still legal, it will resolve, affecting only targets that are still legal at that time. If none of its targets are still legal at that time, it will be countered and none of its effects will happen."
+          "text": "As Press into Service resolves, if at least one of its targets is still legal, it will resolve, affecting only targets that are still legal at that time. If none of its targets are still legal at that time, it won't resolve and none of its effects will happen."
         },
         {
           "date": "2016-01-22",
@@ -13159,7 +13155,7 @@
           "text": "The ability can trigger only once each turn. The ability will resolve before the second spell resolves. It doesn't matter if the first spell you cast that turn has resolved, was countered, or is still on the stack."
         }
       ],
-      "text": "Whenever you cast your second spell each turn, Pyromancer's Assault deals 2 damage to target creature or player.",
+      "text": "Whenever you cast your second spell each turn, Pyromancer's Assault deals 2 damage to any target.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -13394,7 +13390,7 @@
       "rulings": [
         {
           "date": "2016-01-22",
-          "text": "If Sparkmage's Gambit has two targets, and one of them is illegal as Sparkmage's Gambit resolves, only the remaining legal target will be affected. The illegal target won't be dealt damage and will be able to block that turn. If both targets are illegal as Sparkmage's Gambit tries to resolve, it will be countered and none of its effects will happen."
+          "text": "If Sparkmage's Gambit has two targets, and one of them is illegal as Sparkmage's Gambit resolves, only the remaining legal target will be affected. The illegal target won't be dealt damage and will be able to block that turn. If both targets are illegal as Sparkmage's Gambit tries to resolve, it won't resolve and none of its effects will happen."
         },
         {
           "date": "2016-01-22",
@@ -13505,7 +13501,7 @@
         "OGW"
       ],
       "rarity": "Uncommon",
-      "text": "Tears of Valakut can't be countered by spells or abilities.\nTears of Valakut deals 5 damage to target creature with flying.",
+      "text": "This spell can't be countered.\nTears of Valakut deals 5 damage to target creature with flying.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -13631,7 +13627,7 @@
       "subtypes": [
         "Dragon"
       ],
-      "text": "Surge {3}{R}{R} (You may cast this spell for its surge cost if you or a teammate has cast another spell this turn.)\nFlying\nWhen Tyrant of Valakut enters the battlefield, if its surge cost was paid, it deals 3 damage to target creature or player.",
+      "text": "Surge {3}{R}{R} (You may cast this spell for its surge cost if you or a teammate has cast another spell this turn.)\nFlying\nWhen Tyrant of Valakut enters the battlefield, if its surge cost was paid, it deals 3 damage to any target.",
       "toughness": "4",
       "type": "Creature — Dragon",
       "types": [
@@ -13748,7 +13744,7 @@
         "Archer",
         "Ally"
       ],
-      "text": "First strike\nCohort — {T}, Tap an untapped Ally you control: Zada's Commando deals 1 damage to target opponent.",
+      "text": "First strike\nCohort — {T}, Tap an untapped Ally you control: Zada's Commando deals 1 damage to target opponent or planeswalker.",
       "toughness": "1",
       "type": "Creature — Goblin Archer Ally",
       "types": [
@@ -13854,7 +13850,7 @@
         "Eldrazi",
         "Drone"
       ],
-      "text": "Devoid (This card has no color.)\nWhen Birthing Hulk enters the battlefield, create two 1/1 colorless Eldrazi Scion creature tokens. They have \"Sacrifice this creature: Add {C} to your mana pool.\" ({C} represents colorless mana.)\n{1}{C}: Regenerate Birthing Hulk.",
+      "text": "Devoid (This card has no color.)\nWhen Birthing Hulk enters the battlefield, create two 1/1 colorless Eldrazi Scion creature tokens. They have \"Sacrifice this creature: Add {C}.\" ({C} represents colorless mana.)\n{1}{C}: Regenerate Birthing Hulk.",
       "toughness": "4",
       "type": "Creature — Eldrazi Drone",
       "types": [
@@ -14060,7 +14056,7 @@
         "Eldrazi",
         "Drone"
       ],
-      "text": "Devoid (This card has no color.)\nWhen Scion Summoner enters the battlefield, create a 1/1 colorless Eldrazi Scion creature token. It has \"Sacrifice this creature: Add {C} to your mana pool.\" ({C} represents colorless mana.)",
+      "text": "Devoid (This card has no color.)\nWhen Scion Summoner enters the battlefield, create a 1/1 colorless Eldrazi Scion creature token. It has \"Sacrifice this creature: Add {C}.\" ({C} represents colorless mana.)",
       "toughness": "2",
       "type": "Creature — Eldrazi Drone",
       "types": [
@@ -14282,7 +14278,7 @@
       "subtypes": [
         "Eldrazi"
       ],
-      "text": "Devoid (This card has no color.)\nFlash\nWhen you cast Vile Redeemer, you may pay {C}. If you do, create a 1/1 colorless Eldrazi Scion creature token for each nontoken creature that died under your control this turn. Those tokens have \"Sacrifice this creature: Add {C} to your mana pool.\"",
+      "text": "Devoid (This card has no color.)\nFlash\nWhen you cast this spell, you may pay {C}. If you do, create a 1/1 colorless Eldrazi Scion creature token for each nontoken creature that died under your control this turn. Those tokens have \"Sacrifice this creature: Add {C}.\"",
       "toughness": "3",
       "type": "Creature — Eldrazi",
       "types": [
@@ -14393,7 +14389,7 @@
       "subtypes": [
         "Eldrazi"
       ],
-      "text": "Devoid (This card has no color.)\nWhen you cast World Breaker, exile target artifact, enchantment, or land.\nReach\n{2}{C}, Sacrifice a land: Return World Breaker from your graveyard to your hand. ({C} represents colorless mana.)",
+      "text": "Devoid (This card has no color.)\nWhen you cast this spell, exile target artifact, enchantment, or land.\nReach\n{2}{C}, Sacrifice a land: Return World Breaker from your graveyard to your hand. ({C} represents colorless mana.)",
       "toughness": "7",
       "type": "Creature — Eldrazi",
       "types": [
@@ -15058,7 +15054,8 @@
       "power": "6",
       "printings": [
         "pMEI",
-        "OGW"
+        "OGW",
+        "DDU"
       ],
       "rarity": "Rare",
       "rulings": [
@@ -15868,7 +15865,8 @@
       "originalText": "Support 2. (Put a +1/+1 counter on each of up to two target creatures.)\nChoose up to one target creature an opponent controls. Each creature you control with a +1/+1 counter on it deals damage equal to its power to that creature.",
       "originalType": "Sorcery",
       "printings": [
-        "OGW"
+        "OGW",
+        "DDU"
       ],
       "rarity": "Uncommon",
       "rulings": [
@@ -15878,7 +15876,7 @@
         },
         {
           "date": "2016-01-22",
-          "text": "As Nissa's Judgment resolves, if at least one of its targets is still legal, it will resolve, affecting only targets that are still legal at that time. If none of its targets are still legal at that time, it will be countered and none of its effects will happen."
+          "text": "As Nissa's Judgment resolves, if at least one of its targets is still legal, it will resolve, affecting only targets that are still legal at that time. If none of its targets are still legal at that time, it won't resolve and none of its effects will happen."
         },
         {
           "date": "2016-01-22",
@@ -16463,7 +16461,8 @@
       "originalType": "Creature — Elf Druid Ally",
       "power": "2",
       "printings": [
-        "OGW"
+        "OGW",
+        "DDU"
       ],
       "rarity": "Rare",
       "rulings": [
@@ -16819,7 +16818,7 @@
           "text": "The last ability will resolve before the creature spell that caused it to trigger."
         }
       ],
-      "text": "Whenever you tap a land for mana, add one mana to your mana pool of any type that land produced. (The types of mana are white, blue, black, red, green, and colorless.)\nWhenever you cast a creature spell, draw a card.",
+      "text": "Whenever you tap a land for mana, add one mana of any type that land produced. (The types of mana are white, blue, black, red, green, and colorless.)\nWhenever you cast a creature spell, draw a card.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -17032,7 +17031,7 @@
         "Eldrazi",
         "Drone"
       ],
-      "text": "Devoid (This card has no color.)\nMindmelter can't be blocked.\n{3}{C}: Target opponent exiles a card from his or her hand. Activate this ability only any time you could cast a sorcery. ({C} represents colorless mana.)",
+      "text": "Devoid (This card has no color.)\nMindmelter can't be blocked.\n{3}{C}: Target opponent exiles a card from their hand. Activate this ability only any time you could cast a sorcery. ({C} represents colorless mana.)",
       "toughness": "2",
       "type": "Creature — Eldrazi Drone",
       "types": [
@@ -18772,7 +18771,7 @@
       "subtypes": [
         "Construct"
       ],
-      "text": "{T}: Add {C} to your mana pool. ({C} represents colorless mana.)",
+      "text": "{T}: Add {C}. ({C} represents colorless mana.)",
       "toughness": "1",
       "type": "Artifact Creature — Construct",
       "types": [
@@ -18872,7 +18871,7 @@
         "OGW"
       ],
       "rarity": "Common",
-      "text": "{T}: Add {C} to your mana pool. ({C} represents colorless mana.)\n{2}, {T}: Scry 1. (Look at the top card of your library. You may put that card on the bottom of your library.)",
+      "text": "{T}: Add {C}. ({C} represents colorless mana.)\n{2}, {T}: Scry 1. (Look at the top card of your library. You may put that card on the bottom of your library.)",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -19058,6 +19057,10 @@
           "legality": "Legal"
         },
         {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -19179,6 +19182,10 @@
           "legality": "Legal"
         },
         {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -19209,7 +19216,7 @@
         "RIX"
       ],
       "rarity": "Uncommon",
-      "text": "Cinder Barrens enters the battlefield tapped.\n{T}: Add {B} or {R} to your mana pool.",
+      "text": "Cinder Barrens enters the battlefield tapped.\n{T}: Add {B} or {R}.",
       "type": "Land",
       "types": [
         "Land"
@@ -19312,7 +19319,7 @@
           "text": "The mana produced by the last ability can't be spent on a colorless spell unless that spell specifically has the devoid ability."
         }
       ],
-      "text": "{T}: Add {C} to your mana pool. ({C} represents colorless mana.)\n{T}, Pay 1 life: Add one mana of any color to your mana pool. Spend this mana only to cast a spell with devoid.",
+      "text": "{T}: Add {C}. ({C} represents colorless mana.)\n{T}, Pay 1 life: Add one mana of any color. Spend this mana only to cast a spell with devoid.",
       "type": "Land",
       "types": [
         "Land"
@@ -19408,7 +19415,7 @@
         "OGW"
       ],
       "rarity": "Common",
-      "text": "Crumbling Vestige enters the battlefield tapped.\nWhen Crumbling Vestige enters the battlefield, add one mana of any color to your mana pool.\n{T}: Add {C} to your mana pool. ({C} represents colorless mana.)",
+      "text": "Crumbling Vestige enters the battlefield tapped.\nWhen Crumbling Vestige enters the battlefield, add one mana of any color.\n{T}: Add {C}. ({C} represents colorless mana.)",
       "type": "Land",
       "types": [
         "Land"
@@ -19526,7 +19533,7 @@
           "text": "An ability that turns a land into a creature also sets that creature's power and toughness. If the land was already a creature (for example, if it was the target of a spell with awaken), this will overwrite the previous effect that set its power and toughness. Effects that modify its power or toughness will continue to apply no matter when they started to take effect. The same is true for counters that change its power or toughness (such as +1/+1 counters) and effects that switch its power and toughness. For example, if Hissing Quagmire has been made a 0/0 creature with three +1/+1 counters on it, activating its last ability will turn it into a 5/5 creature that's still a land."
         }
       ],
-      "text": "Hissing Quagmire enters the battlefield tapped.\n{T}: Add {B} or {G} to your mana pool.\n{1}{B}{G}: Hissing Quagmire becomes a 2/2 black and green Elemental creature with deathtouch until end of turn. It's still a land.",
+      "text": "Hissing Quagmire enters the battlefield tapped.\n{T}: Add {B} or {G}.\n{1}{B}{G}: Hissing Quagmire becomes a 2/2 black and green Elemental creature with deathtouch until end of turn. It's still a land.",
       "type": "Land",
       "types": [
         "Land"
@@ -19629,7 +19636,7 @@
           "text": "To activate the last ability, you may tap any untapped creature you control, including one you haven't controlled continuously since the beginning of your most recent turn. (Note that tapping the creature doesn't use {T} [the tap symbol].)"
         }
       ],
-      "text": "{T}: Add {C} to your mana pool. ({C} represents colorless mana.)\n{T}, Tap an untapped creature you control: Add one mana of any color to your mana pool.",
+      "text": "{T}: Add {C}. ({C} represents colorless mana.)\n{T}, Tap an untapped creature you control: Add one mana of any color.",
       "type": "Land",
       "types": [
         "Land"
@@ -19736,10 +19743,11 @@
       "originalType": "Land",
       "printings": [
         "OGW",
-        "AKH"
+        "AKH",
+        "DOM"
       ],
       "rarity": "Uncommon",
-      "text": "Meandering River enters the battlefield tapped.\n{T}: Add {W} or {U} to your mana pool.",
+      "text": "Meandering River enters the battlefield tapped.\n{T}: Add {W} or {U}.",
       "type": "Land",
       "types": [
         "Land"
@@ -19881,7 +19889,7 @@
           "text": "Any enters-the-battlefield abilities of the copied creature will trigger when the token enters the battlefield. Any \"as [this permanent] enters the battlefield\" or \"[this permanent] enters the battlefield with\" abilities of the copied creature will also work."
         }
       ],
-      "text": "Mirrorpool enters the battlefield tapped.\n{T}: Add {C} to your mana pool.\n{2}{C}, {T}, Sacrifice Mirrorpool: Copy target instant or sorcery spell you control. You may choose new targets for the copy.\n{4}{C}, {T}, Sacrifice Mirrorpool: Create a token that's a copy of target creature you control.",
+      "text": "Mirrorpool enters the battlefield tapped.\n{T}: Add {C}.\n{2}{C}, {T}, Sacrifice Mirrorpool: Copy target instant or sorcery spell you control. You may choose new targets for the copy.\n{4}{C}, {T}, Sacrifice Mirrorpool: Create a token that's a copy of target creature you control.",
       "type": "Land",
       "types": [
         "Land"
@@ -19999,7 +20007,7 @@
           "text": "An ability that turns a land into a creature also sets that creature's power and toughness. If the land was already a creature (for example, if it was the target of a spell with awaken), this will overwrite the previous effect that set its power and toughness. Effects that modify its power or toughness will continue to apply no matter when they started to take effect. The same is true for counters that change its power or toughness (such as +1/+1 counters) and effects that switch its power and toughness. For example, if Needle Spires has been made a 0/0 creature with three +1/+1 counters on it, activating its last ability will turn it into a 5/4 creature that's still a land."
         }
       ],
-      "text": "Needle Spires enters the battlefield tapped.\n{T}: Add {R} or {W} to your mana pool.\n{2}{R}{W}: Needle Spires becomes a 2/1 red and white Elemental creature with double strike until end of turn. It's still a land.",
+      "text": "Needle Spires enters the battlefield tapped.\n{T}: Add {R} or {W}.\n{2}{R}{W}: Needle Spires becomes a 2/1 red and white Elemental creature with double strike until end of turn. It's still a land.",
       "type": "Land",
       "types": [
         "Land"
@@ -20101,7 +20109,7 @@
           "text": "The target of the last ability didn't necessarily have to be a colorless creature as it entered the battlefield, provided it entered the battlefield during that turn. However, it does have to be a colorless creature to be a legal target of the ability."
         }
       ],
-      "text": "Ruins of Oran-Rief enters the battlefield tapped.\n{T}: Add {C} to your mana pool. ({C} represents colorless mana.)\n{T}: Put a +1/+1 counter on target colorless creature that entered the battlefield this turn.",
+      "text": "Ruins of Oran-Rief enters the battlefield tapped.\n{T}: Add {C}. ({C} represents colorless mana.)\n{T}: Put a +1/+1 counter on target colorless creature that entered the battlefield this turn.",
       "type": "Land",
       "types": [
         "Land"
@@ -20204,7 +20212,7 @@
           "text": "It doesn't matter how many cards are in your hand as the last ability resolves. For example, if you have no cards in hand and control two Sea Gate Wreckages, you can activate the last ability of each of them. You'll draw a card as each ability resolves."
         }
       ],
-      "text": "{T}: Add {C} to your mana pool. ({C} represents colorless mana.)\n{2}{C}, {T}: Draw a card. Activate this ability only if you have no cards in hand.",
+      "text": "{T}: Add {C}. ({C} represents colorless mana.)\n{2}{C}, {T}: Draw a card. Activate this ability only if you have no cards in hand.",
       "type": "Land",
       "types": [
         "Land"
@@ -20319,7 +20327,7 @@
         "AKH"
       ],
       "rarity": "Uncommon",
-      "text": "Submerged Boneyard enters the battlefield tapped.\n{T}: Add {U} or {B} to your mana pool.",
+      "text": "Submerged Boneyard enters the battlefield tapped.\n{T}: Add {U} or {B}.",
       "type": "Land",
       "types": [
         "Land"
@@ -20426,10 +20434,11 @@
       "originalType": "Land",
       "printings": [
         "OGW",
-        "AKH"
+        "AKH",
+        "DOM"
       ],
       "rarity": "Uncommon",
-      "text": "Timber Gorge enters the battlefield tapped.\n{T}: Add {R} or {G} to your mana pool.",
+      "text": "Timber Gorge enters the battlefield tapped.\n{T}: Add {R} or {G}.",
       "type": "Land",
       "types": [
         "Land"
@@ -20545,7 +20554,7 @@
         "C17"
       ],
       "rarity": "Uncommon",
-      "text": "Tranquil Expanse enters the battlefield tapped.\n{T}: Add {G} or {W} to your mana pool.",
+      "text": "Tranquil Expanse enters the battlefield tapped.\n{T}: Add {G} or {W}.",
       "type": "Land",
       "types": [
         "Land"
@@ -20656,7 +20665,7 @@
         "XLN"
       ],
       "rarity": "Common",
-      "text": "{T}: Add {C} to your mana pool.\n{1}, {T}: Add one mana of any color to your mana pool.",
+      "text": "{T}: Add {C}.\n{1}, {T}: Add one mana of any color.",
       "type": "Land",
       "types": [
         "Land"
@@ -20782,7 +20791,7 @@
           "text": "An ability that turns a land into a creature also sets that creature's power and toughness. If the land was already a creature (for example, if it was the target of a spell with awaken), this will overwrite the previous effect that set its power and toughness. Effects that modify its power or toughness will continue to apply no matter when they started to take effect. The same is true for counters that change its power or toughness (such as +1/+1 counters) and effects that switch its power and toughness. For example, if Wandering Fumarole has been made a 0/0 creature with three +1/+1 counters on it, activating its last ability will turn it into a 4/7 creature that's still a land."
         }
       ],
-      "text": "Wandering Fumarole enters the battlefield tapped.\n{T}: Add {U} or {R} to your mana pool.\n{2}{U}{R}: Until end of turn, Wandering Fumarole becomes a 1/4 blue and red Elemental creature with \"{0}: Switch this creature's power and toughness until end of turn.\" It's still a land.",
+      "text": "Wandering Fumarole enters the battlefield tapped.\n{T}: Add {U} or {R}.\n{2}{U}{R}: Until end of turn, Wandering Fumarole becomes a 1/4 blue and red Elemental creature with \"{0}: Switch this creature's power and toughness until end of turn.\" It's still a land.",
       "type": "Land",
       "types": [
         "Land"
@@ -20977,7 +20986,7 @@
       "supertypes": [
         "Basic"
       ],
-      "text": "{T}: Add {C} to your mana pool.",
+      "text": "{T}: Add {C}.",
       "type": "Basic Land",
       "types": [
         "Land"
@@ -21178,7 +21187,7 @@
       "supertypes": [
         "Basic"
       ],
-      "text": "{T}: Add {C} to your mana pool.",
+      "text": "{T}: Add {C}.",
       "type": "Basic Land",
       "types": [
         "Land"
@@ -21379,7 +21388,7 @@
       "supertypes": [
         "Basic"
       ],
-      "text": "{T}: Add {C} to your mana pool.",
+      "text": "{T}: Add {C}.",
       "type": "Basic Land",
       "types": [
         "Land"
@@ -21580,7 +21589,7 @@
       "supertypes": [
         "Basic"
       ],
-      "text": "{T}: Add {C} to your mana pool.",
+      "text": "{T}: Add {C}.",
       "type": "Basic Land",
       "types": [
         "Land"

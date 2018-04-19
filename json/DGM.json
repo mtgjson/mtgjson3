@@ -740,11 +740,7 @@
         },
         {
           "date": "2013-04-15",
-          "text": "If a source an opponent controls would deal noncombat damage to you, you may choose to have Riot Control prevent that damage before that opponent may choose to redirect that damage to a planeswalker you control."
-        },
-        {
-          "date": "2013-04-15",
-          "text": "Riot Control doesn't prevent combat damage that would be dealt to planeswalkers you control by creatures attacking them. It also doesn't prevent damage that would be dealt to creatures you control."
+          "text": "Riot Control doesn't prevent combat damage that would be dealt to planeswalkers you control. It also doesn't prevent damage that would be dealt to creatures you control."
         }
       ],
       "text": "You gain 1 life for each creature your opponents control. Prevent all damage that would be dealt to you this turn.",
@@ -1469,7 +1465,7 @@
         },
         {
           "date": "2013-04-15",
-          "text": "If the spell with cipher is countered, none of its effects will happen, including cipher. The card will go to its owner's graveyard and won't be encoded on a creature."
+          "text": "If the spell with cipher doesn't resolve, none of its effects will happen, including cipher. The card will go to its owner's graveyard and won't be encoded on a creature."
         },
         {
           "date": "2013-04-15",
@@ -2167,7 +2163,7 @@
         },
         {
           "date": "2013-04-15",
-          "text": "If the spell with cipher is countered, none of its effects will happen, including cipher. The card will go to its owner's graveyard and won't be encoded on a creature."
+          "text": "If the spell with cipher doesn't resolve, none of its effects will happen, including cipher. The card will go to its owner's graveyard and won't be encoded on a creature."
         },
         {
           "date": "2013-04-15",
@@ -3024,7 +3020,7 @@
         "Human",
         "Rogue"
       ],
-      "text": "Defender\n{3}{B}, {T}: Target opponent loses 2 life, then reveals a card at random from his or her hand.",
+      "text": "Defender\n{3}{B}, {T}: Target opponent loses 2 life, then reveals a card at random from their hand.",
       "toughness": "3",
       "type": "Creature — Human Rogue",
       "types": [
@@ -4050,7 +4046,7 @@
         },
         {
           "date": "2013-04-15",
-          "text": "If you cast a spell without paying its mana cost, you can't pay any alternative costs, such as overload costs. You can pay additional costs, such as kicker costs. If the spell has any mandatory additional costs, you must pay those."
+          "text": "If you cast a spell without paying its mana cost, you can't choose to cast it for any alternative costs, such as overload costs. You can pay additional costs, such as kicker costs. If the spell has any mandatory additional costs, you must pay those."
         },
         {
           "date": "2013-04-15",
@@ -4061,7 +4057,7 @@
           "text": "Instant and sorcery cards with miracle allow a player to cast a card immediately upon drawing it. If a player casts a spell this way, the spell is cast from that player's hand. Possibility Storm will trigger."
         }
       ],
-      "text": "Whenever a player casts a spell from his or her hand, that player exiles it, then exiles cards from the top of his or her library until he or she exiles a card that shares a card type with it. That player may cast that card without paying its mana cost. Then he or she puts all cards exiled with Possibility Storm on the bottom of his or her library in a random order.",
+      "text": "Whenever a player casts a spell from their hand, that player exiles it, then exiles cards from the top of their library until they exile a card that shares a card type with it. That player may cast that card without paying its mana cost. Then they put all cards exiled with Possibility Storm on the bottom of their library in a random order.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -4175,7 +4171,7 @@
           "text": "If one of Punish the Enemy's targets is illegal when it tries to resolve, it will still deal damage to the remaining legal target."
         }
       ],
-      "text": "Punish the Enemy deals 3 damage to target player and 3 damage to target creature.",
+      "text": "Punish the Enemy deals 3 damage to target player or planeswalker and 3 damage to target creature.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -5807,7 +5803,7 @@
       "subtypes": [
         "Insect"
       ],
-      "text": "Flash\nSkylasher can't be countered.\nReach, protection from blue",
+      "text": "Flash\nThis spell can't be countered.\nReach, protection from blue",
       "toughness": "2",
       "type": "Creature — Insect",
       "types": [
@@ -6490,7 +6486,7 @@
       "rulings": [
         {
           "date": "2013-04-15",
-          "text": "You choose the target creature or player as part of casting the spell. If that creature or player is an illegal target when Blast of Genius tries to resolve, it will be countered and none of its effects will happen. You won't draw or discard any cards."
+          "text": "You choose the target as part of casting the spell. If that permanent or player is an illegal target when Blast of Genius tries to resolve, it won't resolve and none of its effects will happen. You won't draw or discard any cards."
         },
         {
           "date": "2013-04-15",
@@ -6501,7 +6497,7 @@
           "text": "If you discard a card with {X} in its mana cost, the value of X is zero."
         }
       ],
-      "text": "Choose target creature or player. Draw three cards, then discard a card. Blast of Genius deals damage equal to the discarded card's converted mana cost to that creature or player.",
+      "text": "Choose any target. Draw three cards, then discard a card. Blast of Genius deals damage equal to the discarded card's converted mana cost to that permanent or player.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -6612,7 +6608,7 @@
       "rulings": [
         {
           "date": "2013-04-15",
-          "text": "Blaze Commando's ability triggers each time an instant or sorcery spell you control deals damage (or, put another way, the number of times the word \"deals\" appears in its instructions), no matter how much damage is dealt or how many players or permanents are dealt damage. For example, if you cast Punish the Enemy and it \"deals 3 damage to target player and 3 damage to target creature,\" Blaze Commando's ability will trigger once and you'll get two Soldier tokens."
+          "text": "Blaze Commando's ability triggers each time an instant or sorcery spell you control deals damage (or, put another way, the number of times the word \"deals\" appears in its instructions), no matter how much damage is dealt or how many players or permanents are dealt damage. For example, if you cast Punish the Enemy and it \"deals 3 damage to target player or planeswalker and 3 damage to target creature,\" Blaze Commando's ability will trigger once and you'll get two Soldier tokens."
         },
         {
           "date": "2013-04-15",
@@ -6858,7 +6854,7 @@
         },
         {
           "date": "2013-04-15",
-          "text": "If you choose two targets for Boros Battleshaper's ability, and only one of those targets is legal when the ability tries to resolve, only the legal target will be affected. If all targets are illegal when the ability tries to resolve, it will be countered and none of its effects will happen."
+          "text": "If you choose two targets for Boros Battleshaper's ability, and only one of those targets is legal when the ability tries to resolve, only the legal target will be affected. If all targets are illegal when the ability tries to resolve, it won't resolve and none of its effects will happen."
         },
         {
           "date": "2013-04-15",
@@ -8853,7 +8849,7 @@
         "Pilot",
         "Wizard"
       ],
-      "text": "Flying\n{T}: Goblin Test Pilot deals 2 damage to target creature or player chosen at random.",
+      "text": "Flying\n{T}: Goblin Test Pilot deals 2 damage to any target chosen at random.",
       "toughness": "2",
       "type": "Creature — Goblin Pilot Wizard",
       "types": [
@@ -10205,7 +10201,7 @@
       "rulings": [
         {
           "date": "2013-04-15",
-          "text": "If the player has fewer than four land cards in his or her library, all cards from that library will be revealed and put into that player's graveyard."
+          "text": "If the player has fewer than four land cards in their library, all cards from that library will be revealed and put into that player's graveyard."
         }
       ],
       "subtypes": [
@@ -10214,7 +10210,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "Flying\nWhenever Mirko Vosk, Mind Drinker deals combat damage to a player, that player reveals cards from the top of his or her library until he or she reveals four land cards, then puts those cards into his or her graveyard.",
+      "text": "Flying\nWhenever Mirko Vosk, Mind Drinker deals combat damage to a player, that player reveals cards from the top of their library until they reveal four land cards, then puts those cards into their graveyard.",
       "toughness": "4",
       "type": "Legendary Creature — Vampire",
       "types": [
@@ -10329,10 +10325,10 @@
         },
         {
           "date": "2013-04-15",
-          "text": "If the creature card is an illegal target when Morgue Burst tried to resolve (most likely because it was exiled in response), it won't be returned to your hand and no damage will be dealt to the target creature or player."
+          "text": "If the creature card is an illegal target when Morgue Burst tried to resolve (most likely because it was exiled in response), it won't be returned to your hand and no damage will be dealt to the target."
         }
       ],
-      "text": "Return target creature card from your graveyard to your hand. Morgue Burst deals damage to target creature or player equal to the power of the card returned this way.",
+      "text": "Return target creature card from your graveyard to your hand. Morgue Burst deals damage to any target equal to the power of the card returned this way.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -10560,15 +10556,23 @@
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2013-04-15",
-          "text": "If you and an opponent each control a Notion Thief, the replacement effects generated by their abilities will essentially cancel each other out. If the opponent would draw a card other than the first of his or her draw step, that draw will be skipped and you'll draw a card. The opponent's Notion Thief will then cause that draw to be skipped and the opponent will draw a card instead. Neither replacement effect can apply to this event again, so your opponent draws a card."
+          "date": "2018-03-16",
+          "text": "If an opponent is instructed to draw a card then discard a card, and Notion Thief causes you to draw a card instead, that opponent still discards a card. The same is true of any other actions that opponent is instructed to do."
+        },
+        {
+          "date": "2018-03-16",
+          "text": "If two or more players each control a Notion Thief and a player would draw a card other than the first one in their draw step, that player chooses one of the applicable Notion Thief effects to apply. Then the player whose Notion Thief's effect was chosen repeats this process among the remaining Notion Thief effects, and so on, until there are no more possible such effects to apply. Each effect can be applied to the card draw only once this way."
+        },
+        {
+          "date": "2018-03-16",
+          "text": "The above procedure means that if each player in a two-player game controls a Notion Thief and one would draw a card, it really will be that player who draws a card."
         }
       ],
       "subtypes": [
         "Human",
         "Rogue"
       ],
-      "text": "Flash\nIf an opponent would draw a card except the first one he or she draws in each of his or her draw steps, instead that player skips that draw and you draw a card.",
+      "text": "Flash\nIf an opponent would draw a card except the first one they draw in each of their draw steps, instead that player skips that draw and you draw a card.",
       "toughness": "1",
       "type": "Creature — Human Rogue",
       "types": [
@@ -10800,7 +10804,7 @@
           "text": "If you target yourself, you'll put the top two cards of your library into your graveyard before drawing cards."
         }
       ],
-      "text": "Target player puts the top two cards of his or her library into his or her graveyard. Draw two cards.",
+      "text": "Target player puts the top two cards of their library into their graveyard. Draw two cards.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -10918,7 +10922,7 @@
           "text": "Your precombat main phase is the main phase that happens immediately after your draw step, not any other main phase."
         }
       ],
-      "text": "Counter target spell. At the beginning of your next precombat main phase, add X mana in any combination of colors to your mana pool, where X is that spell's converted mana cost.",
+      "text": "Counter target spell. At the beginning of your next precombat main phase, add X mana in any combination of colors, where X is that spell's converted mana cost.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -11301,7 +11305,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "+1: Tap target permanent, then untap another target permanent.\n−2: Ral Zarek deals 3 damage to target creature or player.\n−7: Flip five coins. Take an extra turn after this one for each coin that comes up heads.",
+      "text": "+1: Tap target permanent, then untap another target permanent.\n−2: Ral Zarek deals 3 damage to any target.\n−7: Flip five coins. Take an extra turn after this one for each coin that comes up heads.",
       "type": "Legendary Planeswalker — Ral",
       "types": [
         "Planeswalker"
@@ -11409,7 +11413,7 @@
       "rulings": [
         {
           "date": "2013-04-15",
-          "text": "Once Reap Intellect begins to resolve, no player can cast spells or activate abilities until it has completely resolved. For example, the opponent can't cast any cards that would be exiled after his or her hand is revealed."
+          "text": "Once Reap Intellect begins to resolve, no player can cast spells or activate abilities until it has completely resolved. For example, the opponent can't cast any cards that would be exiled after their hand is revealed."
         },
         {
           "date": "2013-04-15",
@@ -11420,7 +11424,7 @@
           "text": "If you don't exile any cards from the player's hand, you don't search that player's library."
         }
       ],
-      "text": "Target opponent reveals his or her hand. You choose up to X nonland cards from it and exile them. For each card exiled this way, search that player's graveyard, hand, and library for any number of cards with the same name as that card and exile them. Then that player shuffles his or her library.",
+      "text": "Target opponent reveals their hand. You choose up to X nonland cards from it and exile them. For each card exiled this way, search that player's graveyard, hand, and library for any number of cards with the same name as that card and exile them. Then that player shuffles their library.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -11539,11 +11543,11 @@
         },
         {
           "date": "2013-04-15",
-          "text": "The affected player can still activate abilities, including abilities of cards in his or her hand (such as bloodrush abilities), and the player can still play lands."
+          "text": "The affected player can still activate abilities, including abilities of cards in their hand (such as bloodrush abilities), and the player can still play lands."
         },
         {
           "date": "2013-04-15",
-          "text": "If the spell is an illegal target when Render Silent tries to resolve (because it's been countered by another spell, for example), Render Silent will be countered and none of its effects will happen."
+          "text": "If the spell is an illegal target when Render Silent tries to resolve (because it's been countered by another spell, for example), Render Silent won't resolve and none of its effects will happen."
         },
         {
           "date": "2013-04-15",
@@ -11903,12 +11907,16 @@
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2013-04-15",
-          "text": "Ruric Thar's ability triggers whenever any player casts a noncreature spell, including you."
+          "date": "2018-03-16",
+          "text": "Ruric Thar's triggered ability triggers whenever any player casts a noncreature spell, including you."
         },
         {
-          "date": "2013-04-15",
-          "text": "Ruric Thar will deal 6 damage to the player before the noncreature spell resolves."
+          "date": "2018-03-16",
+          "text": "Ruric Thar's triggered ability resolves before the spell that causes it to trigger. The ability will resolve even if that spell is countered."
+        },
+        {
+          "date": "2018-03-16",
+          "text": "If Ruric Thar can't attack for any reason (such as being tapped or having come under that player's control that turn), then it doesn't attack. If there's a cost associated with having a creature attack, the player isn't forced to pay that cost, so Ruric Thar doesn't have to attack in that case either."
         }
       ],
       "subtypes": [
@@ -12150,7 +12158,7 @@
         },
         {
           "date": "2013-04-15",
-          "text": "If Scab-Clan Giant leaves the battlefield before its ability resolves, no fight will happen and neither creature will deal damage. Also, if the target creature is an illegal target when the ability tries to resolve, it will be countered and no fight will happen."
+          "text": "If Scab-Clan Giant leaves the battlefield before its ability resolves, no fight will happen and neither creature will deal damage. Also, if the target creature is an illegal target when the ability tries to resolve, it won't resolve and no fight will happen."
         },
         {
           "date": "2013-04-15",
@@ -12276,7 +12284,7 @@
         },
         {
           "date": "2013-04-15",
-          "text": "If another player gains control of a creature you control after Showstopper resolves, and then later that turn that creature dies, the creature's controller when it died controls the triggered ability. That player chooses a creature that one of his or her opponents controls as a target."
+          "text": "If another player gains control of a creature you control after Showstopper resolves, and then later that turn that creature dies, the creature's controller when it died controls the triggered ability. That player chooses a creature that one of their opponents controls as a target."
         }
       ],
       "text": "Until end of turn, creatures you control gain \"When this creature dies, it deals 2 damage to target creature an opponent controls.\"",
@@ -12399,7 +12407,7 @@
         "Human",
         "Cleric"
       ],
-      "text": "When Sin Collector enters the battlefield, target opponent reveals his or her hand. You choose an instant or sorcery card from it and exile that card.",
+      "text": "When Sin Collector enters the battlefield, target opponent reveals their hand. You choose an instant or sorcery card from it and exile that card.",
       "toughness": "1",
       "type": "Creature — Human Cleric",
       "types": [
@@ -12511,7 +12519,7 @@
       "subtypes": [
         "Demon"
       ],
-      "text": "At the beginning of each end step, each player discards his or her hand.",
+      "text": "At the beginning of each end step, each player discards their hand.",
       "toughness": "4",
       "type": "Creature — Demon",
       "types": [
@@ -13973,10 +13981,10 @@
       "rulings": [
         {
           "date": "2013-04-15",
-          "text": "If the target creature or player is an illegal target when Warleader's Helix tries to resolve, it will be countered and none of its effects will happen. You won't gain 4 life."
+          "text": "If the target permanent or player is an illegal target when Warleader's Helix tries to resolve, it won't resolve and none of its effects will happen. You won't gain 4 life."
         }
       ],
-      "text": "Warleader's Helix deals 4 damage to target creature or player and you gain 4 life.",
+      "text": "Warleader's Helix deals 4 damage to any target and you gain 4 life.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -14316,7 +14324,7 @@
       "subtypes": [
         "Beast"
       ],
-      "text": "Whenever a player taps a land for mana, that player adds one mana to his or her mana pool of any type that land produced.",
+      "text": "Whenever a player taps a land for mana, that player adds one mana of any type that land produced.",
       "toughness": "5",
       "type": "Creature — Beast",
       "types": [
@@ -14445,7 +14453,7 @@
         "Human",
         "Druid"
       ],
-      "text": "{T}: Add {G} to your mana pool.\nWhenever you tap Zhur-Taa Druid for mana, it deals 1 damage to each opponent.",
+      "text": "{T}: Add {G}.\nWhenever you tap Zhur-Taa Druid for mana, it deals 1 damage to each opponent.",
       "toughness": "1",
       "type": "Creature — Human Druid",
       "types": [
@@ -14574,7 +14582,7 @@
         },
         {
           "date": "2013-04-15",
-          "text": "When resolving a fused split spell with multiple targets, treat it as you would any spell with multiple targets. If all targets are illegal when the spell tries to resolve, the spell is countered and none of its effects happen. If at least one target is still legal at that time, the spell resolves, but an illegal target can't perform any actions or have any actions performed on it."
+          "text": "When resolving a fused split spell with multiple targets, treat it as you would any spell with multiple targets. If all targets are illegal when the spell tries to resolve, the spell doesn't resolve and none of its effects happen. If at least one target is still legal at that time, the spell resolves, but an illegal target can't perform any actions or have any actions performed on it."
         },
         {
           "date": "2013-04-15",
@@ -14732,7 +14740,7 @@
         },
         {
           "date": "2013-04-15",
-          "text": "When resolving a fused split spell with multiple targets, treat it as you would any spell with multiple targets. If all targets are illegal when the spell tries to resolve, the spell is countered and none of its effects happen. If at least one target is still legal at that time, the spell resolves, but an illegal target can't perform any actions or have any actions performed on it."
+          "text": "When resolving a fused split spell with multiple targets, treat it as you would any spell with multiple targets. If all targets are illegal when the spell tries to resolve, the spell doesn't resolve and none of its effects happen. If at least one target is still legal at that time, the spell resolves, but an illegal target can't perform any actions or have any actions performed on it."
         },
         {
           "date": "2013-04-15",
@@ -14882,7 +14890,7 @@
         },
         {
           "date": "2013-04-15",
-          "text": "When resolving a fused split spell with multiple targets, treat it as you would any spell with multiple targets. If all targets are illegal when the spell tries to resolve, the spell is countered and none of its effects happen. If at least one target is still legal at that time, the spell resolves, but an illegal target can't perform any actions or have any actions performed on it."
+          "text": "When resolving a fused split spell with multiple targets, treat it as you would any spell with multiple targets. If all targets are illegal when the spell tries to resolve, the spell doesn't resolve and none of its effects happen. If at least one target is still legal at that time, the spell resolves, but an illegal target can't perform any actions or have any actions performed on it."
         },
         {
           "date": "2013-04-15",
@@ -15040,7 +15048,7 @@
         },
         {
           "date": "2013-04-15",
-          "text": "When resolving a fused split spell with multiple targets, treat it as you would any spell with multiple targets. If all targets are illegal when the spell tries to resolve, the spell is countered and none of its effects happen. If at least one target is still legal at that time, the spell resolves, but an illegal target can't perform any actions or have any actions performed on it."
+          "text": "When resolving a fused split spell with multiple targets, treat it as you would any spell with multiple targets. If all targets are illegal when the spell tries to resolve, the spell doesn't resolve and none of its effects happen. If at least one target is still legal at that time, the spell resolves, but an illegal target can't perform any actions or have any actions performed on it."
         },
         {
           "date": "2013-04-15",
@@ -15200,7 +15208,7 @@
         },
         {
           "date": "2013-04-15",
-          "text": "When resolving a fused split spell with multiple targets, treat it as you would any spell with multiple targets. If all targets are illegal when the spell tries to resolve, the spell is countered and none of its effects happen. If at least one target is still legal at that time, the spell resolves, but an illegal target can't perform any actions or have any actions performed on it."
+          "text": "When resolving a fused split spell with multiple targets, treat it as you would any spell with multiple targets. If all targets are illegal when the spell tries to resolve, the spell doesn't resolve and none of its effects happen. If at least one target is still legal at that time, the spell resolves, but an illegal target can't perform any actions or have any actions performed on it."
         },
         {
           "date": "2013-04-15",
@@ -15356,7 +15364,7 @@
         },
         {
           "date": "2013-04-15",
-          "text": "When resolving a fused split spell with multiple targets, treat it as you would any spell with multiple targets. If all targets are illegal when the spell tries to resolve, the spell is countered and none of its effects happen. If at least one target is still legal at that time, the spell resolves, but an illegal target can't perform any actions or have any actions performed on it."
+          "text": "When resolving a fused split spell with multiple targets, treat it as you would any spell with multiple targets. If all targets are illegal when the spell tries to resolve, the spell doesn't resolve and none of its effects happen. If at least one target is still legal at that time, the spell resolves, but an illegal target can't perform any actions or have any actions performed on it."
         },
         {
           "date": "2013-04-15",
@@ -15509,7 +15517,7 @@
         },
         {
           "date": "2013-04-15",
-          "text": "When resolving a fused split spell with multiple targets, treat it as you would any spell with multiple targets. If all targets are illegal when the spell tries to resolve, the spell is countered and none of its effects happen. If at least one target is still legal at that time, the spell resolves, but an illegal target can't perform any actions or have any actions performed on it."
+          "text": "When resolving a fused split spell with multiple targets, treat it as you would any spell with multiple targets. If all targets are illegal when the spell tries to resolve, the spell doesn't resolve and none of its effects happen. If at least one target is still legal at that time, the spell resolves, but an illegal target can't perform any actions or have any actions performed on it."
         },
         {
           "date": "2013-04-15",
@@ -15536,7 +15544,7 @@
           "text": "If you cast a split card with fuse from your hand without paying its mana cost, you can choose to use its fuse ability and cast both halves without paying their mana costs."
         }
       ],
-      "text": "Target player puts the top eight cards of his or her library into his or her graveyard.\nFuse (You may cast one or both halves of this card from your hand.)",
+      "text": "Target player puts the top eight cards of their library into their graveyard.\nFuse (You may cast one or both halves of this card from your hand.)",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -15666,7 +15674,7 @@
         },
         {
           "date": "2013-04-15",
-          "text": "When resolving a fused split spell with multiple targets, treat it as you would any spell with multiple targets. If all targets are illegal when the spell tries to resolve, the spell is countered and none of its effects happen. If at least one target is still legal at that time, the spell resolves, but an illegal target can't perform any actions or have any actions performed on it."
+          "text": "When resolving a fused split spell with multiple targets, treat it as you would any spell with multiple targets. If all targets are illegal when the spell tries to resolve, the spell doesn't resolve and none of its effects happen. If at least one target is still legal at that time, the spell resolves, but an illegal target can't perform any actions or have any actions performed on it."
         },
         {
           "date": "2013-04-15",
@@ -15826,7 +15834,7 @@
         },
         {
           "date": "2013-04-15",
-          "text": "When resolving a fused split spell with multiple targets, treat it as you would any spell with multiple targets. If all targets are illegal when the spell tries to resolve, the spell is countered and none of its effects happen. If at least one target is still legal at that time, the spell resolves, but an illegal target can't perform any actions or have any actions performed on it."
+          "text": "When resolving a fused split spell with multiple targets, treat it as you would any spell with multiple targets. If all targets are illegal when the spell tries to resolve, the spell doesn't resolve and none of its effects happen. If at least one target is still legal at that time, the spell resolves, but an illegal target can't perform any actions or have any actions performed on it."
         },
         {
           "date": "2013-04-15",
@@ -15966,7 +15974,7 @@
       "rulings": [
         {
           "date": "2013-04-15",
-          "text": "To resolve Release, the active player chooses a permanent he or she controls for each of the listed types, then each other player in turn order does the same, then all the chosen permanents are sacrificed simultaneously."
+          "text": "To resolve Release, the active player chooses a permanent they control for each of the listed types, then each other player in turn order does the same, then all the chosen permanents are sacrificed simultaneously."
         },
         {
           "date": "2013-04-15",
@@ -15990,7 +15998,7 @@
         },
         {
           "date": "2013-04-15",
-          "text": "When resolving a fused split spell with multiple targets, treat it as you would any spell with multiple targets. If all targets are illegal when the spell tries to resolve, the spell is countered and none of its effects happen. If at least one target is still legal at that time, the spell resolves, but an illegal target can't perform any actions or have any actions performed on it."
+          "text": "When resolving a fused split spell with multiple targets, treat it as you would any spell with multiple targets. If all targets are illegal when the spell tries to resolve, the spell doesn't resolve and none of its effects happen. If at least one target is still legal at that time, the spell resolves, but an illegal target can't perform any actions or have any actions performed on it."
         },
         {
           "date": "2013-04-15",
@@ -16140,7 +16148,7 @@
         },
         {
           "date": "2013-04-15",
-          "text": "When resolving a fused split spell with multiple targets, treat it as you would any spell with multiple targets. If all targets are illegal when the spell tries to resolve, the spell is countered and none of its effects happen. If at least one target is still legal at that time, the spell resolves, but an illegal target can't perform any actions or have any actions performed on it."
+          "text": "When resolving a fused split spell with multiple targets, treat it as you would any spell with multiple targets. If all targets are illegal when the spell tries to resolve, the spell doesn't resolve and none of its effects happen. If at least one target is still legal at that time, the spell resolves, but an illegal target can't perform any actions or have any actions performed on it."
         },
         {
           "date": "2013-04-15",
@@ -16290,7 +16298,7 @@
         },
         {
           "date": "2013-04-15",
-          "text": "When resolving a fused split spell with multiple targets, treat it as you would any spell with multiple targets. If all targets are illegal when the spell tries to resolve, the spell is countered and none of its effects happen. If at least one target is still legal at that time, the spell resolves, but an illegal target can't perform any actions or have any actions performed on it."
+          "text": "When resolving a fused split spell with multiple targets, treat it as you would any spell with multiple targets. If all targets are illegal when the spell tries to resolve, the spell doesn't resolve and none of its effects happen. If at least one target is still legal at that time, the spell resolves, but an illegal target can't perform any actions or have any actions performed on it."
         },
         {
           "date": "2013-04-15",
@@ -16440,7 +16448,7 @@
         },
         {
           "date": "2013-04-15",
-          "text": "When resolving a fused split spell with multiple targets, treat it as you would any spell with multiple targets. If all targets are illegal when the spell tries to resolve, the spell is countered and none of its effects happen. If at least one target is still legal at that time, the spell resolves, but an illegal target can't perform any actions or have any actions performed on it."
+          "text": "When resolving a fused split spell with multiple targets, treat it as you would any spell with multiple targets. If all targets are illegal when the spell tries to resolve, the spell doesn't resolve and none of its effects happen. If at least one target is still legal at that time, the spell resolves, but an illegal target can't perform any actions or have any actions performed on it."
         },
         {
           "date": "2013-04-15",
@@ -16594,7 +16602,7 @@
         },
         {
           "date": "2013-04-15",
-          "text": "When resolving a fused split spell with multiple targets, treat it as you would any spell with multiple targets. If all targets are illegal when the spell tries to resolve, the spell is countered and none of its effects happen. If at least one target is still legal at that time, the spell resolves, but an illegal target can't perform any actions or have any actions performed on it."
+          "text": "When resolving a fused split spell with multiple targets, treat it as you would any spell with multiple targets. If all targets are illegal when the spell tries to resolve, the spell doesn't resolve and none of its effects happen. If at least one target is still legal at that time, the spell resolves, but an illegal target can't perform any actions or have any actions performed on it."
         },
         {
           "date": "2013-04-15",
@@ -16758,7 +16766,7 @@
         },
         {
           "date": "2013-04-15",
-          "text": "When resolving a fused split spell with multiple targets, treat it as you would any spell with multiple targets. If all targets are illegal when the spell tries to resolve, the spell is countered and none of its effects happen. If at least one target is still legal at that time, the spell resolves, but an illegal target can't perform any actions or have any actions performed on it."
+          "text": "When resolving a fused split spell with multiple targets, treat it as you would any spell with multiple targets. If all targets are illegal when the spell tries to resolve, the spell doesn't resolve and none of its effects happen. If at least one target is still legal at that time, the spell resolves, but an illegal target can't perform any actions or have any actions performed on it."
         },
         {
           "date": "2013-04-15",
@@ -16898,7 +16906,7 @@
       "rulings": [
         {
           "date": "2013-04-15",
-          "text": "As Blood is resolving, if only one of the targets is legal, Blood will still resolve but will have no effect: If the first target is illegal, it can't deal damage to anything. If the second target creature or player is illegal, it can't be dealt damage."
+          "text": "As Blood is resolving, if only one of the targets is legal, Blood will still resolve but will have no effect: If the first target is illegal, it can't deal damage to anything. If the second target is illegal, it can't be dealt damage."
         },
         {
           "date": "2013-04-15",
@@ -16922,7 +16930,7 @@
         },
         {
           "date": "2013-04-15",
-          "text": "When resolving a fused split spell with multiple targets, treat it as you would any spell with multiple targets. If all targets are illegal when the spell tries to resolve, the spell is countered and none of its effects happen. If at least one target is still legal at that time, the spell resolves, but an illegal target can't perform any actions or have any actions performed on it."
+          "text": "When resolving a fused split spell with multiple targets, treat it as you would any spell with multiple targets. If all targets are illegal when the spell tries to resolve, the spell doesn't resolve and none of its effects happen. If at least one target is still legal at that time, the spell resolves, but an illegal target can't perform any actions or have any actions performed on it."
         },
         {
           "date": "2013-04-15",
@@ -16949,7 +16957,7 @@
           "text": "If you cast a split card with fuse from your hand without paying its mana cost, you can choose to use its fuse ability and cast both halves without paying their mana costs."
         }
       ],
-      "text": "Target creature you control deals damage equal to its power to target creature or player.\nFuse (You may cast one or both halves of this card from your hand.)",
+      "text": "Target creature you control deals damage equal to its power to any target.\nFuse (You may cast one or both halves of this card from your hand.)",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -17076,7 +17084,7 @@
         },
         {
           "date": "2013-04-15",
-          "text": "When resolving a fused split spell with multiple targets, treat it as you would any spell with multiple targets. If all targets are illegal when the spell tries to resolve, the spell is countered and none of its effects happen. If at least one target is still legal at that time, the spell resolves, but an illegal target can't perform any actions or have any actions performed on it."
+          "text": "When resolving a fused split spell with multiple targets, treat it as you would any spell with multiple targets. If all targets are illegal when the spell tries to resolve, the spell doesn't resolve and none of its effects happen. If at least one target is still legal at that time, the spell resolves, but an illegal target can't perform any actions or have any actions performed on it."
         },
         {
           "date": "2013-04-15",
@@ -17234,7 +17242,7 @@
         },
         {
           "date": "2013-04-15",
-          "text": "When resolving a fused split spell with multiple targets, treat it as you would any spell with multiple targets. If all targets are illegal when the spell tries to resolve, the spell is countered and none of its effects happen. If at least one target is still legal at that time, the spell resolves, but an illegal target can't perform any actions or have any actions performed on it."
+          "text": "When resolving a fused split spell with multiple targets, treat it as you would any spell with multiple targets. If all targets are illegal when the spell tries to resolve, the spell doesn't resolve and none of its effects happen. If at least one target is still legal at that time, the spell resolves, but an illegal target can't perform any actions or have any actions performed on it."
         },
         {
           "date": "2013-04-15",
@@ -17384,7 +17392,7 @@
         },
         {
           "date": "2013-04-15",
-          "text": "When resolving a fused split spell with multiple targets, treat it as you would any spell with multiple targets. If all targets are illegal when the spell tries to resolve, the spell is countered and none of its effects happen. If at least one target is still legal at that time, the spell resolves, but an illegal target can't perform any actions or have any actions performed on it."
+          "text": "When resolving a fused split spell with multiple targets, treat it as you would any spell with multiple targets. If all targets are illegal when the spell tries to resolve, the spell doesn't resolve and none of its effects happen. If at least one target is still legal at that time, the spell resolves, but an illegal target can't perform any actions or have any actions performed on it."
         },
         {
           "date": "2013-04-15",
@@ -17534,7 +17542,7 @@
         },
         {
           "date": "2013-04-15",
-          "text": "When resolving a fused split spell with multiple targets, treat it as you would any spell with multiple targets. If all targets are illegal when the spell tries to resolve, the spell is countered and none of its effects happen. If at least one target is still legal at that time, the spell resolves, but an illegal target can't perform any actions or have any actions performed on it."
+          "text": "When resolving a fused split spell with multiple targets, treat it as you would any spell with multiple targets. If all targets are illegal when the spell tries to resolve, the spell doesn't resolve and none of its effects happen. If at least one target is still legal at that time, the spell resolves, but an illegal target can't perform any actions or have any actions performed on it."
         },
         {
           "date": "2013-04-15",
@@ -17684,7 +17692,7 @@
         },
         {
           "date": "2013-04-15",
-          "text": "When resolving a fused split spell with multiple targets, treat it as you would any spell with multiple targets. If all targets are illegal when the spell tries to resolve, the spell is countered and none of its effects happen. If at least one target is still legal at that time, the spell resolves, but an illegal target can't perform any actions or have any actions performed on it."
+          "text": "When resolving a fused split spell with multiple targets, treat it as you would any spell with multiple targets. If all targets are illegal when the spell tries to resolve, the spell doesn't resolve and none of its effects happen. If at least one target is still legal at that time, the spell resolves, but an illegal target can't perform any actions or have any actions performed on it."
         },
         {
           "date": "2013-04-15",
@@ -17834,7 +17842,7 @@
         },
         {
           "date": "2013-04-15",
-          "text": "When resolving a fused split spell with multiple targets, treat it as you would any spell with multiple targets. If all targets are illegal when the spell tries to resolve, the spell is countered and none of its effects happen. If at least one target is still legal at that time, the spell resolves, but an illegal target can't perform any actions or have any actions performed on it."
+          "text": "When resolving a fused split spell with multiple targets, treat it as you would any spell with multiple targets. If all targets are illegal when the spell tries to resolve, the spell doesn't resolve and none of its effects happen. If at least one target is still legal at that time, the spell resolves, but an illegal target can't perform any actions or have any actions performed on it."
         },
         {
           "date": "2013-04-15",
@@ -17986,7 +17994,7 @@
         },
         {
           "date": "2013-04-15",
-          "text": "When resolving a fused split spell with multiple targets, treat it as you would any spell with multiple targets. If all targets are illegal when the spell tries to resolve, the spell is countered and none of its effects happen. If at least one target is still legal at that time, the spell resolves, but an illegal target can't perform any actions or have any actions performed on it."
+          "text": "When resolving a fused split spell with multiple targets, treat it as you would any spell with multiple targets. If all targets are illegal when the spell tries to resolve, the spell doesn't resolve and none of its effects happen. If at least one target is still legal at that time, the spell resolves, but an illegal target can't perform any actions or have any actions performed on it."
         },
         {
           "date": "2013-04-15",
@@ -18150,7 +18158,7 @@
         },
         {
           "date": "2013-04-15",
-          "text": "When resolving a fused split spell with multiple targets, treat it as you would any spell with multiple targets. If all targets are illegal when the spell tries to resolve, the spell is countered and none of its effects happen. If at least one target is still legal at that time, the spell resolves, but an illegal target can't perform any actions or have any actions performed on it."
+          "text": "When resolving a fused split spell with multiple targets, treat it as you would any spell with multiple targets. If all targets are illegal when the spell tries to resolve, the spell doesn't resolve and none of its effects happen. If at least one target is still legal at that time, the spell resolves, but an illegal target can't perform any actions or have any actions performed on it."
         },
         {
           "date": "2013-04-15",
@@ -18288,7 +18296,7 @@
       "rulings": [
         {
           "date": "2013-04-15",
-          "text": "If you cast Toil // Trouble as a fused split card and choose to target the same player twice, the two drawn cards are counted when determining how much damage is dealt. The player can't do anything between the effects of Toil and Trouble to have fewer cards in his or her hand."
+          "text": "If you cast Toil // Trouble as a fused split card and choose to target the same player twice, the two drawn cards are counted when determining how much damage is dealt. The player can't do anything between the effects of Toil and Trouble to have fewer cards in their hand."
         },
         {
           "date": "2013-04-15",
@@ -18304,7 +18312,7 @@
         },
         {
           "date": "2013-04-15",
-          "text": "When resolving a fused split spell with multiple targets, treat it as you would any spell with multiple targets. If all targets are illegal when the spell tries to resolve, the spell is countered and none of its effects happen. If at least one target is still legal at that time, the spell resolves, but an illegal target can't perform any actions or have any actions performed on it."
+          "text": "When resolving a fused split spell with multiple targets, treat it as you would any spell with multiple targets. If all targets are illegal when the spell tries to resolve, the spell doesn't resolve and none of its effects happen. If at least one target is still legal at that time, the spell resolves, but an illegal target can't perform any actions or have any actions performed on it."
         },
         {
           "date": "2013-04-15",
@@ -18442,7 +18450,7 @@
       "rulings": [
         {
           "date": "2013-04-15",
-          "text": "If you cast Toil // Trouble as a fused split card and choose to target the same player twice, the two drawn cards are counted when determining how much damage is dealt. The player can't do anything between the effects of Toil and Trouble to have fewer cards in his or her hand."
+          "text": "If you cast Toil // Trouble as a fused split card and choose to target the same player twice, the two drawn cards are counted when determining how much damage is dealt. The player can't do anything between the effects of Toil and Trouble to have fewer cards in their hand."
         },
         {
           "date": "2013-04-15",
@@ -18458,7 +18466,7 @@
         },
         {
           "date": "2013-04-15",
-          "text": "When resolving a fused split spell with multiple targets, treat it as you would any spell with multiple targets. If all targets are illegal when the spell tries to resolve, the spell is countered and none of its effects happen. If at least one target is still legal at that time, the spell resolves, but an illegal target can't perform any actions or have any actions performed on it."
+          "text": "When resolving a fused split spell with multiple targets, treat it as you would any spell with multiple targets. If all targets are illegal when the spell tries to resolve, the spell doesn't resolve and none of its effects happen. If at least one target is still legal at that time, the spell resolves, but an illegal target can't perform any actions or have any actions performed on it."
         },
         {
           "date": "2013-04-15",
@@ -18628,7 +18636,7 @@
         },
         {
           "date": "2013-04-15",
-          "text": "When resolving a fused split spell with multiple targets, treat it as you would any spell with multiple targets. If all targets are illegal when the spell tries to resolve, the spell is countered and none of its effects happen. If at least one target is still legal at that time, the spell resolves, but an illegal target can't perform any actions or have any actions performed on it."
+          "text": "When resolving a fused split spell with multiple targets, treat it as you would any spell with multiple targets. If all targets are illegal when the spell tries to resolve, the spell doesn't resolve and none of its effects happen. If at least one target is still legal at that time, the spell resolves, but an illegal target can't perform any actions or have any actions performed on it."
         },
         {
           "date": "2013-04-15",
@@ -18778,7 +18786,7 @@
         },
         {
           "date": "2013-04-15",
-          "text": "When resolving a fused split spell with multiple targets, treat it as you would any spell with multiple targets. If all targets are illegal when the spell tries to resolve, the spell is countered and none of its effects happen. If at least one target is still legal at that time, the spell resolves, but an illegal target can't perform any actions or have any actions performed on it."
+          "text": "When resolving a fused split spell with multiple targets, treat it as you would any spell with multiple targets. If all targets are illegal when the spell tries to resolve, the spell doesn't resolve and none of its effects happen. If at least one target is still legal at that time, the spell resolves, but an illegal target can't perform any actions or have any actions performed on it."
         },
         {
           "date": "2013-04-15",
@@ -18805,7 +18813,7 @@
           "text": "If you cast a split card with fuse from your hand without paying its mana cost, you can choose to use its fuse ability and cast both halves without paying their mana costs."
         }
       ],
-      "text": "Burn deals 2 damage to target creature or player.\nFuse (You may cast one or both halves of this card from your hand.)",
+      "text": "Burn deals 2 damage to any target.\nFuse (You may cast one or both halves of this card from your hand.)",
       "type": "Instant",
       "types": [
         "Instant"
@@ -18928,7 +18936,7 @@
         },
         {
           "date": "2013-04-15",
-          "text": "When resolving a fused split spell with multiple targets, treat it as you would any spell with multiple targets. If all targets are illegal when the spell tries to resolve, the spell is countered and none of its effects happen. If at least one target is still legal at that time, the spell resolves, but an illegal target can't perform any actions or have any actions performed on it."
+          "text": "When resolving a fused split spell with multiple targets, treat it as you would any spell with multiple targets. If all targets are illegal when the spell tries to resolve, the spell doesn't resolve and none of its effects happen. If at least one target is still legal at that time, the spell resolves, but an illegal target can't perform any actions or have any actions performed on it."
         },
         {
           "date": "2013-04-15",
@@ -19078,7 +19086,7 @@
         },
         {
           "date": "2013-04-15",
-          "text": "When resolving a fused split spell with multiple targets, treat it as you would any spell with multiple targets. If all targets are illegal when the spell tries to resolve, the spell is countered and none of its effects happen. If at least one target is still legal at that time, the spell resolves, but an illegal target can't perform any actions or have any actions performed on it."
+          "text": "When resolving a fused split spell with multiple targets, treat it as you would any spell with multiple targets. If all targets are illegal when the spell tries to resolve, the spell doesn't resolve and none of its effects happen. If at least one target is still legal at that time, the spell resolves, but an illegal target can't perform any actions or have any actions performed on it."
         },
         {
           "date": "2013-04-15",
@@ -19207,7 +19215,7 @@
         "DGM"
       ],
       "rarity": "Common",
-      "text": "{T}: Add {W} or {U} to your mana pool.\n{W}{U}, {T}, Sacrifice Azorius Cluestone: Draw a card.",
+      "text": "{T}: Add {W} or {U}.\n{W}{U}, {T}, Sacrifice Azorius Cluestone: Draw a card.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -19311,7 +19319,7 @@
         "C15"
       ],
       "rarity": "Common",
-      "text": "{T}: Add {R} or {W} to your mana pool.\n{R}{W}, {T}, Sacrifice Boros Cluestone: Draw a card.",
+      "text": "{T}: Add {R} or {W}.\n{R}{W}, {T}, Sacrifice Boros Cluestone: Draw a card.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -19414,7 +19422,7 @@
         "DGM"
       ],
       "rarity": "Common",
-      "text": "{T}: Add {U} or {B} to your mana pool.\n{U}{B}, {T}, Sacrifice Dimir Cluestone: Draw a card.",
+      "text": "{T}: Add {U} or {B}.\n{U}{B}, {T}, Sacrifice Dimir Cluestone: Draw a card.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -19517,7 +19525,7 @@
         "DGM"
       ],
       "rarity": "Common",
-      "text": "{T}: Add {B} or {G} to your mana pool.\n{B}{G}, {T}, Sacrifice Golgari Cluestone: Draw a card.",
+      "text": "{T}: Add {B} or {G}.\n{B}{G}, {T}, Sacrifice Golgari Cluestone: Draw a card.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -19620,7 +19628,7 @@
         "DGM"
       ],
       "rarity": "Common",
-      "text": "{T}: Add {R} or {G} to your mana pool.\n{R}{G}, {T}, Sacrifice Gruul Cluestone: Draw a card.",
+      "text": "{T}: Add {R} or {G}.\n{R}{G}, {T}, Sacrifice Gruul Cluestone: Draw a card.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -19723,7 +19731,7 @@
         "DGM"
       ],
       "rarity": "Common",
-      "text": "{T}: Add {U} or {R} to your mana pool.\n{U}{R}, {T}, Sacrifice Izzet Cluestone: Draw a card.",
+      "text": "{T}: Add {U} or {R}.\n{U}{R}, {T}, Sacrifice Izzet Cluestone: Draw a card.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -19827,7 +19835,7 @@
         "C15"
       ],
       "rarity": "Common",
-      "text": "{T}: Add {W} or {B} to your mana pool.\n{W}{B}, {T}, Sacrifice Orzhov Cluestone: Draw a card.",
+      "text": "{T}: Add {W} or {B}.\n{W}{B}, {T}, Sacrifice Orzhov Cluestone: Draw a card.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -19930,7 +19938,7 @@
         "DGM"
       ],
       "rarity": "Common",
-      "text": "{T}: Add {B} or {R} to your mana pool.\n{B}{R}, {T}, Sacrifice Rakdos Cluestone: Draw a card.",
+      "text": "{T}: Add {B} or {R}.\n{B}{R}, {T}, Sacrifice Rakdos Cluestone: Draw a card.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -20033,7 +20041,7 @@
         "DGM"
       ],
       "rarity": "Common",
-      "text": "{T}: Add {G} or {W} to your mana pool.\n{G}{W}, {T}, Sacrifice Selesnya Cluestone: Draw a card.",
+      "text": "{T}: Add {G} or {W}.\n{G}{W}, {T}, Sacrifice Selesnya Cluestone: Draw a card.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -20136,7 +20144,7 @@
         "DGM"
       ],
       "rarity": "Common",
-      "text": "{T}: Add {G} or {U} to your mana pool.\n{G}{U}, {T}, Sacrifice Simic Cluestone: Draw a card.",
+      "text": "{T}: Add {G} or {U}.\n{G}{U}, {T}, Sacrifice Simic Cluestone: Draw a card.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -20255,7 +20263,7 @@
       "subtypes": [
         "Gate"
       ],
-      "text": "Azorius Guildgate enters the battlefield tapped.\n{T}: Add {W} or {U} to your mana pool.",
+      "text": "Azorius Guildgate enters the battlefield tapped.\n{T}: Add {W} or {U}.",
       "type": "Land — Gate",
       "types": [
         "Land"
@@ -20376,7 +20384,7 @@
       "subtypes": [
         "Gate"
       ],
-      "text": "Boros Guildgate enters the battlefield tapped.\n{T}: Add {R} or {W} to your mana pool.",
+      "text": "Boros Guildgate enters the battlefield tapped.\n{T}: Add {R} or {W}.",
       "type": "Land — Gate",
       "types": [
         "Land"
@@ -20494,7 +20502,7 @@
       "subtypes": [
         "Gate"
       ],
-      "text": "Dimir Guildgate enters the battlefield tapped.\n{T}: Add {U} or {B} to your mana pool.",
+      "text": "Dimir Guildgate enters the battlefield tapped.\n{T}: Add {U} or {B}.",
       "type": "Land — Gate",
       "types": [
         "Land"
@@ -20615,7 +20623,7 @@
       "subtypes": [
         "Gate"
       ],
-      "text": "Golgari Guildgate enters the battlefield tapped.\n{T}: Add {B} or {G} to your mana pool.",
+      "text": "Golgari Guildgate enters the battlefield tapped.\n{T}: Add {B} or {G}.",
       "type": "Land — Gate",
       "types": [
         "Land"
@@ -20733,7 +20741,7 @@
       "subtypes": [
         "Gate"
       ],
-      "text": "Gruul Guildgate enters the battlefield tapped.\n{T}: Add {R} or {G} to your mana pool.",
+      "text": "Gruul Guildgate enters the battlefield tapped.\n{T}: Add {R} or {G}.",
       "type": "Land — Gate",
       "types": [
         "Land"
@@ -20852,7 +20860,7 @@
       "subtypes": [
         "Gate"
       ],
-      "text": "Izzet Guildgate enters the battlefield tapped.\n{T}: Add {U} or {R} to your mana pool.",
+      "text": "Izzet Guildgate enters the battlefield tapped.\n{T}: Add {U} or {R}.",
       "type": "Land — Gate",
       "types": [
         "Land"
@@ -20968,7 +20976,7 @@
           "text": "Controlling multiple Gates with the same name has no effect on your ability to win the game with Maze's End. The excess Gates are simply ignored."
         }
       ],
-      "text": "Maze's End enters the battlefield tapped.\n{T}: Add {C} to your mana pool.\n{3}, {T}, Return Maze's End to its owner's hand: Search your library for a Gate card, put it onto the battlefield, then shuffle your library. If you control ten or more Gates with different names, you win the game.",
+      "text": "Maze's End enters the battlefield tapped.\n{T}: Add {C}.\n{3}, {T}, Return Maze's End to its owner's hand: Search your library for a Gate card, put it onto the battlefield, then shuffle your library. If you control ten or more Gates with different names, you win the game.",
       "type": "Land",
       "types": [
         "Land"
@@ -21087,7 +21095,7 @@
       "subtypes": [
         "Gate"
       ],
-      "text": "Orzhov Guildgate enters the battlefield tapped.\n{T}: Add {W} or {B} to your mana pool.",
+      "text": "Orzhov Guildgate enters the battlefield tapped.\n{T}: Add {W} or {B}.",
       "type": "Land — Gate",
       "types": [
         "Land"
@@ -21206,7 +21214,7 @@
       "subtypes": [
         "Gate"
       ],
-      "text": "Rakdos Guildgate enters the battlefield tapped.\n{T}: Add {B} or {R} to your mana pool.",
+      "text": "Rakdos Guildgate enters the battlefield tapped.\n{T}: Add {B} or {R}.",
       "type": "Land — Gate",
       "types": [
         "Land"
@@ -21326,7 +21334,7 @@
       "subtypes": [
         "Gate"
       ],
-      "text": "Selesnya Guildgate enters the battlefield tapped.\n{T}: Add {G} or {W} to your mana pool.",
+      "text": "Selesnya Guildgate enters the battlefield tapped.\n{T}: Add {G} or {W}.",
       "type": "Land — Gate",
       "types": [
         "Land"
@@ -21446,7 +21454,7 @@
       "subtypes": [
         "Gate"
       ],
-      "text": "Simic Guildgate enters the battlefield tapped.\n{T}: Add {G} or {U} to your mana pool.",
+      "text": "Simic Guildgate enters the battlefield tapped.\n{T}: Add {G} or {U}.",
       "type": "Land — Gate",
       "types": [
         "Land"

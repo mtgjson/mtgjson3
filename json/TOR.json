@@ -346,7 +346,7 @@
         "TOR"
       ],
       "rarity": "Uncommon",
-      "text": "If any source would deal 1 or more damage to a creature or player this turn, it deals 2 damage to that creature or player instead.\nDraw a card.",
+      "text": "If any source would deal 1 or more damage to a permanent or player this turn, it deals 2 damage to that permanent or player instead.\nDraw a card.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -572,7 +572,7 @@
         "TOR"
       ],
       "rarity": "Uncommon",
-      "text": "{W}, Discard a card: Prevent the next 3 damage that would be dealt to target creature or player this turn.\n{W}, Sacrifice Hypochondria: Prevent the next 3 damage that would be dealt to target creature or player this turn.",
+      "text": "{W}, Discard a card: Prevent the next 3 damage that would be dealt to any target this turn.\n{W}, Sacrifice Hypochondria: Prevent the next 3 damage that would be dealt to any target this turn.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -736,7 +736,7 @@
         "Monk",
         "Cleric"
       ],
-      "text": "Vigilance\n{T}: Prevent the next 1 damage that would be dealt to target creature or player this turn.",
+      "text": "Vigilance\n{T}: Prevent the next 1 damage that would be dealt to any target this turn.",
       "toughness": "1",
       "type": "Creature — Human Monk Cleric",
       "types": [
@@ -1311,7 +1311,7 @@
         "Human",
         "Cleric"
       ],
-      "text": "{T}: Each player loses 1 life for each Swamp he or she controls.",
+      "text": "{T}: Each player loses 1 life for each Swamp they control.",
       "toughness": "2",
       "type": "Creature — Human Cleric",
       "types": [
@@ -1707,7 +1707,7 @@
         "TOR"
       ],
       "rarity": "Rare",
-      "text": "As an additional cost to cast Vengeful Dreams, discard X cards.\nExile X target attacking creatures.",
+      "text": "As an additional cost to cast this spell, discard X cards.\nExile X target attacking creatures.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -1899,7 +1899,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "{3}: Target player puts the top three cards of his or her library into his or her graveyard.",
+      "text": "{3}: Target player puts the top three cards of their library into their graveyard.",
       "toughness": "3",
       "type": "Legendary Creature — Merfolk Wizard",
       "types": [
@@ -4017,7 +4017,7 @@
         "TOR"
       ],
       "rarity": "Rare",
-      "text": "As an additional cost to cast Turbulent Dreams, discard X cards.\nReturn X target nonland permanents to their owners' hands.",
+      "text": "As an additional cost to cast this spell, discard X cards.\nReturn X target nonland permanents to their owners' hands.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -4173,7 +4173,7 @@
         "V16"
       ],
       "rarity": "Common",
-      "text": "Add {B}{B}{B} to your mana pool.\nThreshold — Add {B}{B}{B}{B}{B} to your mana pool instead if seven or more cards are in your graveyard.",
+      "text": "Add {B}{B}{B}.\nThreshold — Add {B}{B}{B}{B}{B} instead if seven or more cards are in your graveyard.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -4413,7 +4413,7 @@
       "subtypes": [
         "Rat"
       ],
-      "text": "Whenever Carrion Rats attacks or blocks, any player may exile a card from his or her graveyard. If a player does, Carrion Rats assigns no combat damage this turn.",
+      "text": "Whenever Carrion Rats attacks or blocks, any player may exile a card from their graveyard. If a player does, Carrion Rats assigns no combat damage this turn.",
       "toughness": "1",
       "type": "Creature — Rat",
       "types": [
@@ -4494,7 +4494,7 @@
         "Zombie",
         "Wurm"
       ],
-      "text": "Whenever Carrion Wurm attacks or blocks, any player may exile three cards from his or her graveyard. If a player does, Carrion Wurm assigns no combat damage this turn.",
+      "text": "Whenever Carrion Wurm attacks or blocks, any player may exile three cards from their graveyard. If a player does, Carrion Wurm assigns no combat damage this turn.",
       "toughness": "5",
       "type": "Creature — Zombie Wurm",
       "types": [
@@ -5401,7 +5401,7 @@
         "TOR"
       ],
       "rarity": "Rare",
-      "text": "As an additional cost to cast Insidious Dreams, discard X cards.\nSearch your library for X cards. Then shuffle your library and put those cards on top of it in any order.",
+      "text": "As an additional cost to cast this spell, discard X cards.\nSearch your library for X cards. Then shuffle your library and put those cards on top of it in any order.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -5480,6 +5480,12 @@
         "A25"
       ],
       "rarity": "Rare",
+      "rulings": [
+        {
+          "date": "2018-03-16",
+          "text": "As Laquatus's Champion's second ability resolves, the player who gains 6 life is the player who was the target of the first ability (or, if that ability is still on the stack, the player who is its target)."
+        }
+      ],
       "subtypes": [
         "Nightmare",
         "Horror"
@@ -5637,11 +5643,17 @@
         "A25"
       ],
       "rarity": "Common",
+      "rulings": [
+        {
+          "date": "2018-03-16",
+          "text": "If Mesmeric Fiend leaves the battlefield before its first ability has resolved, its second ability will trigger and do nothing. Then its first ability will resolve and exile a nonland card from the target opponent's hand indefinitely."
+        }
+      ],
       "subtypes": [
         "Nightmare",
         "Horror"
       ],
-      "text": "When Mesmeric Fiend enters the battlefield, target opponent reveals his or her hand and you choose a nonland card from it. Exile that card.\nWhen Mesmeric Fiend leaves the battlefield, return the exiled card to its owner's hand.",
+      "text": "When Mesmeric Fiend enters the battlefield, target opponent reveals their hand and you choose a nonland card from it. Exile that card.\nWhen Mesmeric Fiend leaves the battlefield, return the exiled card to its owner's hand.",
       "toughness": "1",
       "type": "Creature — Nightmare Horror",
       "types": [
@@ -6452,7 +6464,7 @@
         "TOR"
       ],
       "rarity": "Common",
-      "text": "As an additional cost to cast Restless Dreams, discard X cards.\nReturn X target creature cards from your graveyard to your hand.",
+      "text": "As an additional cost to cast this spell, discard X cards.\nReturn X target creature cards from your graveyard to your hand.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -6813,7 +6825,7 @@
         "PD3"
       ],
       "rarity": "Uncommon",
-      "text": "As an additional cost to cast Sickening Dreams, discard X cards.\nSickening Dreams deals X damage to each creature and each player.",
+      "text": "As an additional cost to cast this spell, discard X cards.\nSickening Dreams deals X damage to each creature and each player.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -7201,7 +7213,7 @@
         "TOR"
       ],
       "rarity": "Common",
-      "text": "As an additional cost to cast Waste Away, discard a card.\nTarget creature gets -5/-5 until end of turn.",
+      "text": "As an additional cost to cast this spell, discard a card.\nTarget creature gets -5/-5 until end of turn.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -7607,7 +7619,7 @@
       "subtypes": [
         "Aura"
       ],
-      "text": "Enchant creature\nEnchanted creature gets +1/+0.\nSacrifice Crackling Club: Crackling Club deals 1 damage to target creature.",
+      "text": "Enchant creature\nEnchanted creature gets +1/+0.\nSacrifice Crackling Club: It deals 1 damage to target creature.",
       "type": "Enchantment — Aura",
       "types": [
         "Enchantment"
@@ -7763,7 +7775,7 @@
         "TOR"
       ],
       "rarity": "Rare",
-      "text": "As an additional cost to cast Devastating Dreams, discard X cards at random.\nEach player sacrifices X lands. Devastating Dreams deals X damage to each creature.",
+      "text": "As an additional cost to cast this spell, discard X cards at random.\nEach player sacrifices X lands. Devastating Dreams deals X damage to each creature.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -7970,7 +7982,7 @@
           "text": "If you discard a card with madness while resolving a spell or ability, it moves immediately to exile. Continue resolving that spell or ability—the card is not in your graveyard at this time. Its madness trigger will be placed onto the stack once that spell or ability has completely resolved."
         }
       ],
-      "text": "Fiery Temper deals 3 damage to target creature or player.\nMadness {R} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)",
+      "text": "Fiery Temper deals 3 damage to any target.\nMadness {R} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)",
       "type": "Instant",
       "types": [
         "Instant"
@@ -8044,7 +8056,7 @@
         "TOR"
       ],
       "rarity": "Uncommon",
-      "text": "Flaming Gambit deals X damage to target player. That player may choose a creature he or she controls and have Flaming Gambit deal that damage to it instead.\nFlashback {X}{R}{R} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "text": "Flaming Gambit deals X damage to target player or planeswalker. That player or that planeswalker's controller may choose a creature they control and have Flaming Gambit deal that damage to it instead.\nFlashback {X}{R}{R} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
       "type": "Instant",
       "types": [
         "Instant"
@@ -8212,7 +8224,7 @@
         "Human",
         "Wizard"
       ],
-      "text": "{R}, {T}, Exile two cards from your graveyard: Grim Lavamancer deals 2 damage to target creature or player.",
+      "text": "{R}, {T}, Exile two cards from your graveyard: Grim Lavamancer deals 2 damage to any target.",
       "toughness": "1",
       "type": "Creature — Human Wizard",
       "types": [
@@ -8449,7 +8461,7 @@
         "Ox",
         "Beast"
       ],
-      "text": "When Longhorn Firebeast enters the battlefield, any opponent may have it deal 5 damage to him or her. If a player does, sacrifice Longhorn Firebeast.",
+      "text": "When Longhorn Firebeast enters the battlefield, any opponent may have it deal 5 damage to them. If a player does, sacrifice Longhorn Firebeast.",
       "toughness": "2",
       "type": "Creature — Elemental Ox Beast",
       "types": [
@@ -8525,7 +8537,7 @@
         "TOR"
       ],
       "rarity": "Rare",
-      "text": "The next instant or sorcery spell you cast this turn can't be countered by spells or abilities.\nDraw a card.",
+      "text": "The next instant or sorcery spell you cast this turn can't be countered.\nDraw a card.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -8605,7 +8617,7 @@
         "Human",
         "Barbarian"
       ],
-      "text": "Threshold — As long as seven or more cards are in your graveyard, Pardic Arsonist has \"When Pardic Arsonist enters the battlefield, it deals 3 damage to target creature or player.\"",
+      "text": "Threshold — As long as seven or more cards are in your graveyard, Pardic Arsonist has \"When Pardic Arsonist enters the battlefield, it deals 3 damage to any target.\"",
       "toughness": "3",
       "type": "Creature — Human Barbarian",
       "types": [
@@ -9165,7 +9177,7 @@
         "TOR"
       ],
       "rarity": "Uncommon",
-      "text": "{1}{R}, Discard a card at random: Pyromania deals 1 damage to target creature or player.\n{1}{R}, Sacrifice Pyromania: Pyromania deals 1 damage to target creature or player.",
+      "text": "{1}{R}, Discard a card at random: Pyromania deals 1 damage to any target.\n{1}{R}, Sacrifice Pyromania: It deals 1 damage to any target.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -9314,7 +9326,7 @@
         "TOR"
       ],
       "rarity": "Rare",
-      "text": "Target player discards two cards at random unless that player has Skullscorch deal 4 damage to him or her.",
+      "text": "Target player discards two cards at random unless that player has Skullscorch deal 4 damage to them.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -9388,7 +9400,7 @@
         "TOR"
       ],
       "rarity": "Common",
-      "text": "As an additional cost to cast Sonic Seizure, discard a card at random.\nSonic Seizure deals 3 damage to target creature or player.",
+      "text": "As an additional cost to cast this spell, discard a card at random.\nSonic Seizure deals 3 damage to any target.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -9543,7 +9555,7 @@
           "text": "You can't choose zero targets. You must choose at least one target."
         }
       ],
-      "text": "Violent Eruption deals 4 damage divided as you choose among any number of target creatures and/or players.\nMadness {1}{R}{R} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)",
+      "text": "Violent Eruption deals 4 damage divided as you choose among any number of targets.\nMadness {1}{R}{R} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)",
       "type": "Instant",
       "types": [
         "Instant"
@@ -10114,7 +10126,7 @@
         "TOR"
       ],
       "rarity": "Uncommon",
-      "text": "Target player shuffles up to four target cards from his or her graveyard into his or her library.",
+      "text": "Target player shuffles up to four target cards from their graveyard into their library.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -10978,7 +10990,7 @@
         "VMA"
       ],
       "rarity": "Rare",
-      "text": "As an additional cost to cast Nostalgic Dreams, discard X cards.\nReturn X target cards from your graveyard to your hand. Exile Nostalgic Dreams.",
+      "text": "As an additional cost to cast this spell, discard X cards.\nReturn X target cards from your graveyard to your hand. Exile Nostalgic Dreams.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -11288,7 +11300,7 @@
         "HOP"
       ],
       "rarity": "Uncommon",
-      "text": "{2}, {T}: Add {B} to your mana pool for each Swamp you control.",
+      "text": "{2}, {T}: Add {B} for each Swamp you control.",
       "type": "Land",
       "types": [
         "Land"
@@ -11362,7 +11374,7 @@
         "E02"
       ],
       "rarity": "Uncommon",
-      "text": "{T}: Add {C} to your mana pool.\n{T}: Add {W} or {B} to your mana pool. Activate this ability only if you control a Swamp.",
+      "text": "{T}: Add {C}.\n{T}: Add {W} or {B}. Activate this ability only if you control a Swamp.",
       "type": "Land",
       "types": [
         "Land"
@@ -11435,7 +11447,7 @@
         "PCA"
       ],
       "rarity": "Uncommon",
-      "text": "{T}: Add {C} to your mana pool.\n{T}: Add {U} or {B} to your mana pool. Activate this ability only if you control a Swamp.",
+      "text": "{T}: Add {C}.\n{T}: Add {U} or {B}. Activate this ability only if you control a Swamp.",
       "type": "Land",
       "types": [
         "Land"
@@ -11506,7 +11518,7 @@
         "TOR"
       ],
       "rarity": "Uncommon",
-      "text": "{T}: Add {C} to your mana pool.\n{T}: Add {B} or {R} to your mana pool. Activate this ability only if you control a Swamp.",
+      "text": "{T}: Add {C}.\n{T}: Add {B} or {R}. Activate this ability only if you control a Swamp.",
       "type": "Land",
       "types": [
         "Land"
@@ -11580,7 +11592,7 @@
         "CMA"
       ],
       "rarity": "Uncommon",
-      "text": "{T}: Add {C} to your mana pool.\n{T}: Add {B} or {G} to your mana pool. Activate this ability only if you control a Swamp.",
+      "text": "{T}: Add {C}.\n{T}: Add {B} or {G}. Activate this ability only if you control a Swamp.",
       "type": "Land",
       "types": [
         "Land"

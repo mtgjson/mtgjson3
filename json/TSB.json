@@ -134,6 +134,12 @@
         "A25"
       ],
       "rarity": "Special",
+      "rulings": [
+        {
+          "date": "2018-03-16",
+          "text": "The \"legend rule\" cares about legendary permanents with the exact same English name. You can control Akroma, Angel of Wrath and Akroma, Angel of Fury at the same time."
+        }
+      ],
       "subtypes": [
         "Angel"
       ],
@@ -894,10 +900,6 @@
         {
           "date": "2006-09-25",
           "text": "If, after the last ability triggers, the creature card is removed from your graveyard in response, it won't be returned to your hand."
-        },
-        {
-          "date": "2008-04-01",
-          "text": "A \"creature card\" is any card with the type creature, even if it has other types such as artifact, enchantment, or land. Older cards of type summon are also creature cards."
         }
       ],
       "text": "Play with your hand revealed.\nIf you would draw a card, reveal the top card of your library instead. If it's a creature card, put it into your graveyard. Otherwise, draw a card.\nWhenever a creature is put into your graveyard from the battlefield, return it to your hand.",
@@ -1118,7 +1120,7 @@
         "TSB"
       ],
       "rarity": "Special",
-      "text": "The next time a source of your choice would deal damage to target creature or player this turn, prevent that damage. If damage from a red source is prevented this way, Honorable Passage deals that much damage to the source's controller.",
+      "text": "The next time a source of your choice would deal damage to any target this turn, prevent that damage. If damage from a red source is prevented this way, Honorable Passage deals that much damage to the source's controller.",
       "timeshifted": true,
       "type": "Instant",
       "types": [
@@ -1222,7 +1224,7 @@
         "Human",
         "Soldier"
       ],
-      "text": "Icatian Javelineers enters the battlefield with a javelin counter on it.\n{T}, Remove a javelin counter from Icatian Javelineers: Icatian Javelineers deals 1 damage to target creature or player.",
+      "text": "Icatian Javelineers enters the battlefield with a javelin counter on it.\n{T}, Remove a javelin counter from Icatian Javelineers: Icatian Javelineers deals 1 damage to any target.",
       "timeshifted": true,
       "toughness": "1",
       "type": "Creature — Human Soldier",
@@ -1949,7 +1951,7 @@
         "Human",
         "Cleric"
       ],
-      "text": "{T}: Witch Hunter deals 1 damage to target player.\n{1}{W}{W}, {T}: Return target creature an opponent controls to its owner's hand.",
+      "text": "{T}: Witch Hunter deals 1 damage to target player or planeswalker.\n{1}{W}{W}, {T}: Return target creature an opponent controls to its owner's hand.",
       "timeshifted": true,
       "toughness": "1",
       "type": "Creature — Human Cleric",
@@ -3150,7 +3152,7 @@
         "Human",
         "Pirate"
       ],
-      "text": "Pirate Ship can't attack unless defending player controls an Island.\n{T}: Pirate Ship deals 1 damage to target creature or player.\nWhen you control no Islands, sacrifice Pirate Ship.",
+      "text": "Pirate Ship can't attack unless defending player controls an Island.\n{T}: Pirate Ship deals 1 damage to any target.\nWhen you control no Islands, sacrifice Pirate Ship.",
       "timeshifted": true,
       "toughness": "3",
       "type": "Creature — Human Pirate",
@@ -3266,7 +3268,7 @@
         "Human",
         "Wizard"
       ],
-      "text": "{T}: Prodigal Sorcerer deals 1 damage to target creature or player.",
+      "text": "{T}: Prodigal Sorcerer deals 1 damage to any target.",
       "timeshifted": true,
       "toughness": "1",
       "type": "Creature — Human Wizard",
@@ -3367,7 +3369,7 @@
         "TSB"
       ],
       "rarity": "Special",
-      "text": "Psionic Blast deals 4 damage to target creature or player and 2 damage to you.",
+      "text": "Psionic Blast deals 4 damage to any target and 2 damage to you.",
       "timeshifted": true,
       "type": "Instant",
       "types": [
@@ -4041,6 +4043,18 @@
         {
           "date": "2013-04-15",
           "text": "If a spell with split second is on the stack, you can still respond by turning this creature face up and targeting that spell with the trigger. This is because split second only stops players from casting spells or activating abilities, while turning a creature face up is a special action."
+        },
+        {
+          "date": "2018-03-16",
+          "text": "You don't choose the new target for the spell until Willbender's triggered ability resolves. You must change the target if possible. However, you can't change the target to an illegal target. If there are no legal targets to choose from, the target isn't changed. It doesn't matter if the original target of that spell has somehow become illegal itself."
+        },
+        {
+          "date": "2018-03-16",
+          "text": "If a spell or ability targets multiple things, you can't target it with Willbender's triggered ability, even if all but one of those targets have become illegal."
+        },
+        {
+          "date": "2018-03-16",
+          "text": "If a spell or ability targets the same player or object multiple times, you can't target it with Willbender's ability."
         }
       ],
       "subtypes": [
@@ -4163,7 +4177,7 @@
       "subtypes": [
         "Avatar"
       ],
-      "text": "If there are ten or more creature cards total in all graveyards, Avatar of Woe costs {6} less to cast.\nFear (This creature can't be blocked except by artifact creatures and/or black creatures.)\n{T}: Destroy target creature. It can't be regenerated.",
+      "text": "If there are ten or more creature cards total in all graveyards, this spell costs {6} less to cast.\nFear (This creature can't be blocked except by artifact creatures and/or black creatures.)\n{T}: Destroy target creature. It can't be regenerated.",
       "timeshifted": true,
       "toughness": "5",
       "type": "Creature — Avatar",
@@ -5133,7 +5147,7 @@
         "Human",
         "Wizard"
       ],
-      "text": "{U}, {T}: Put target creature you control on top of its owner's library.\n{R}, {T}: Shadow Guildmage deals 1 damage to target creature or player and 1 damage to you.",
+      "text": "{U}, {T}: Put target creature you control on top of its owner's library.\n{R}, {T}: Shadow Guildmage deals 1 damage to any target and 1 damage to you.",
       "timeshifted": true,
       "toughness": "1",
       "type": "Creature — Human Wizard",
@@ -5590,7 +5604,7 @@
         "Zombie",
         "Mutant"
       ],
-      "text": "{B}: Regenerate Twisted Abomination.\nSwampcycling {2} ({2}, Discard this card: Search your library for a Swamp card, reveal it, and put it into your hand. Then shuffle your library.)",
+      "text": "{B}: Regenerate Twisted Abomination.\nSwampcycling {2} ({2}, Discard this card: Search your library for a Swamp card, reveal it, put it into your hand, then shuffle your library.)",
       "timeshifted": true,
       "toughness": "3",
       "type": "Creature — Zombie Mutant",
@@ -6230,7 +6244,7 @@
         "A25"
       ],
       "rarity": "Special",
-      "text": "Any player may have Browbeat deal 5 damage to him or her. If no one does, target player draws three cards.",
+      "text": "Any player may have Browbeat deal 5 damage to them. If no one does, target player draws three cards.",
       "timeshifted": true,
       "type": "Sorcery",
       "types": [
@@ -6450,7 +6464,7 @@
           "text": "Disintegrated creatures do not go to the graveyard at all before being exiled. They do not trigger abilities which trigger due to a creature going to the graveyard."
         }
       ],
-      "text": "Disintegrate deals X damage to target creature or player. That creature can't be regenerated this turn. If the creature would die this turn, exile it instead.",
+      "text": "Disintegrate deals X damage to any target. If it's a creature, it can't be regenerated this turn, and if it would die this turn, exile it instead.",
       "timeshifted": true,
       "type": "Sorcery",
       "types": [
@@ -6939,7 +6953,7 @@
           "text": "If you discard a card with madness while resolving a spell or ability, it moves immediately to exile. Continue resolving that spell or ability—the card is not in your graveyard at this time. Its madness trigger will be placed onto the stack once that spell or ability has completely resolved."
         }
       ],
-      "text": "Fiery Temper deals 3 damage to target creature or player.\nMadness {R} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)",
+      "text": "Fiery Temper deals 3 damage to any target.\nMadness {R} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)",
       "timeshifted": true,
       "type": "Instant",
       "types": [
@@ -7051,7 +7065,7 @@
       "subtypes": [
         "Aura"
       ],
-      "text": "Enchant creature you control\nEnchanted creature has \"{T}: This creature deals 1 damage to target creature or player.\"\nSacrifice Fire Whip: Fire Whip deals 1 damage to target creature or player.",
+      "text": "Enchant creature you control\nEnchanted creature has \"{T}: This creature deals 1 damage to any target.\"\nSacrifice Fire Whip: Fire Whip deals 1 damage to any target.",
       "timeshifted": true,
       "type": "Enchantment — Aura",
       "types": [
@@ -7589,7 +7603,7 @@
           "text": "If player A controls Pandemonium when a creature enters the battlefield under player B's control, player A controls the triggered ability even though player B chooses the target and chooses whether to have the creature deal damage, which could be important if multiple abilities controlled by multiple players trigger."
         }
       ],
-      "text": "Whenever a creature enters the battlefield, that creature's controller may have it deal damage equal to its power to target creature or player of his or her choice.",
+      "text": "Whenever a creature enters the battlefield, that creature's controller may have it deal damage equal to its power to any target of their choice.",
       "timeshifted": true,
       "type": "Enchantment",
       "types": [
@@ -7812,7 +7826,7 @@
           "text": "A number of nonbasic lands have basic land types. Domain abilities don't count the number of lands you control — they count the number of basic land types among lands you control, even if that means checking the same land twice. For example, if you control a Tundra, an Overgrown Tomb, and a Madblind Mountain, you'll have a Plains, Island, Swamp, Mountain, and Forest among the lands you control. Your domain abilities will be maxed out."
         }
       ],
-      "text": "Domain — Tribal Flames deals X damage to target creature or player, where X is the number of basic land types among lands you control.",
+      "text": "Domain — Tribal Flames deals X damage to any target, where X is the number of basic land types among lands you control.",
       "timeshifted": true,
       "type": "Sorcery",
       "types": [
@@ -8546,20 +8560,21 @@
         "WTH",
         "TSB",
         "EMA",
-        "DDR"
+        "DDR",
+        "DOM"
       ],
       "rarity": "Special",
       "rulings": [
         {
-          "date": "2016-06-08",
-          "text": "When you cast Gaea's Blessing, you can't choose it as one of its own targets. This is because you choose the targets when casting this spell, and spells are not put into your graveyard until after they resolve."
+          "date": "2018-04-27",
+          "text": "If Gaea's Blessing has no legal target cards in a graveyard, either because its targets became illegal or because you didn't choose any, the target player shuffles their library."
         },
         {
-          "date": "2016-06-08",
-          "text": "You must target a player as you cast Gaea's Blessing. You may target zero, one, two, or three cards in that player's graveyard."
+          "date": "2018-04-27",
+          "text": "If an effect puts multiple cards from your library into your graveyard at once, put all of those cards there before Gaea's Blessing shuffles your graveyard into your library."
         }
       ],
-      "text": "Target player shuffles up to three target cards from his or her graveyard into his or her library.\nDraw a card.\nWhen Gaea's Blessing is put into your graveyard from your library, shuffle your graveyard into your library.",
+      "text": "Target player shuffles up to three target cards from their graveyard into their library.\nDraw a card.\nWhen Gaea's Blessing is put into your graveyard from your library, shuffle your graveyard into your library.",
       "timeshifted": true,
       "type": "Sorcery",
       "types": [
@@ -8668,7 +8683,7 @@
         },
         {
           "date": "2006-09-25",
-          "text": "The activated ability doesn't affect whether the land is basic or not. It overwrites any other land types. Being a Forest gives the affected land the ability \"{T}: Add {G} to your mana pool.\""
+          "text": "The activated ability doesn't affect whether the land is basic or not. It overwrites any other land types. Being a Forest gives the affected land the ability \"{T}: Add {G}.\""
         },
         {
           "date": "2006-10-15",
@@ -9007,7 +9022,7 @@
         },
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         }
       ],
       "subtypes": [
@@ -9242,7 +9257,7 @@
       "subtypes": [
         "Beast"
       ],
-      "text": "Scragnoth can't be countered.\nProtection from blue",
+      "text": "This spell can't be countered.\nProtection from blue",
       "timeshifted": true,
       "toughness": "4",
       "type": "Creature — Beast",
@@ -9679,7 +9694,7 @@
         "Elf",
         "Wizard"
       ],
-      "text": "Kicker {R} and/or {W} (You may pay an additional {R} and/or {W} as you cast this spell.)\nWhen Thornscape Battlemage enters the battlefield, if it was kicked with its {R} kicker, it deals 2 damage to target creature or player.\nWhen Thornscape Battlemage enters the battlefield, if it was kicked with its {W} kicker, destroy target artifact.",
+      "text": "Kicker {R} and/or {W} (You may pay an additional {R} and/or {W} as you cast this spell.)\nWhen Thornscape Battlemage enters the battlefield, if it was kicked with its {R} kicker, it deals 2 damage to any target.\nWhen Thornscape Battlemage enters the battlefield, if it was kicked with its {W} kicker, destroy target artifact.",
       "timeshifted": true,
       "toughness": "2",
       "type": "Creature — Elf Wizard",
@@ -9909,7 +9924,7 @@
         "Plant",
         "Wall"
       ],
-      "text": "Defender\nPut a -0/-1 counter on Wall of Roots: Add {G} to your mana pool. Activate this ability only once each turn.",
+      "text": "Defender\nPut a -0/-1 counter on Wall of Roots: Add {G}. Activate this ability only once each turn.",
       "timeshifted": true,
       "toughness": "5",
       "type": "Creature — Plant Wall",
@@ -10249,14 +10264,14 @@
         },
         {
           "date": "2017-03-14",
-          "text": "If some (but not all) of the targets become illegal, the original division of damage still applies, but no damage is dealt to illegal targets. If all targets become illegal, including the target opponent for the life-gaining effect, Fiery Justice is countered. If each target for the damage-dealing effect becomes illegal while the target for the life-gaining effect remains legal, that player gains 5 life even though no damage is dealt."
+          "text": "If some (but not all) of the targets become illegal, the original division of damage still applies, but no damage is dealt to illegal targets. If all targets become illegal, including the target opponent for the life-gaining effect, Fiery Justice doesn't resolve. If each target for the damage-dealing effect becomes illegal while the target for the life-gaining effect remains legal, that player gains 5 life even though no damage is dealt."
         },
         {
           "date": "2017-03-14",
-          "text": "The target opponent for the life-gaining effect may also be a target for the damage-dealing effect. If this happens and the damage brings that player's life total to 0 or less, the life-gaining effect will raise his or her life total above 0 again before the player would lose the game."
+          "text": "The target opponent for the life-gaining effect may also be a target for the damage-dealing effect. If this happens and the damage brings that player's life total to 0 or less, the life-gaining effect will raise their life total above 0 again before the player would lose the game."
         }
       ],
-      "text": "Fiery Justice deals 5 damage divided as you choose among any number of target creatures and/or players. Target opponent gains 5 life.",
+      "text": "Fiery Justice deals 5 damage divided as you choose among any number of targets. Target opponent gains 5 life.",
       "timeshifted": true,
       "type": "Sorcery",
       "types": [
@@ -10451,7 +10466,7 @@
           "legality": "Legal"
         }
       ],
-      "manaCost": "{1}{R}{W}{U}",
+      "manaCost": "{1}{U}{R}{W}",
       "mciNumber": "94",
       "multiverseid": 109746,
       "name": "Lightning Angel",
@@ -10930,7 +10945,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "Flying\nAt the beginning of your upkeep, sacrifice Nicol Bolas unless you pay {U}{B}{R}.\nWhenever Nicol Bolas deals damage to an opponent, that player discards his or her hand.",
+      "text": "Flying\nAt the beginning of your upkeep, sacrifice Nicol Bolas unless you pay {U}{B}{R}.\nWhenever Nicol Bolas deals damage to an opponent, that player discards their hand.",
       "timeshifted": true,
       "toughness": "7",
       "type": "Legendary Creature — Elder Dragon",
@@ -11386,7 +11401,7 @@
           "text": "Since the discard is a cost, it can't be used with Library of Leng."
         }
       ],
-      "text": "{2}, Discard a card at random: Stormbind deals 2 damage to target creature or player.",
+      "text": "{2}, Discard a card at random: Stormbind deals 2 damage to any target.",
       "timeshifted": true,
       "type": "Enchantment",
       "types": [
@@ -11722,7 +11737,7 @@
           "text": "The target player is chosen as you announce Void, but the number isn't chosen until it's resolving. No player may choose to take actions between you choosing a number and the rest of Void's effects."
         }
       ],
-      "text": "Choose a number. Destroy all artifacts and creatures with converted mana cost equal to that number. Then target player reveals his or her hand and discards all nonland cards with converted mana cost equal to the number.",
+      "text": "Choose a number. Destroy all artifacts and creatures with converted mana cost equal to that number. Then target player reveals their hand and discards all nonland cards with converted mana cost equal to the number.",
       "timeshifted": true,
       "type": "Sorcery",
       "types": [
@@ -11827,7 +11842,7 @@
         "HOP"
       ],
       "rarity": "Special",
-      "text": "Assault deals 2 damage to target creature or player.",
+      "text": "Assault deals 2 damage to any target.",
       "timeshifted": true,
       "type": "Sorcery",
       "types": [
@@ -12325,7 +12340,7 @@
           "text": "The exiled card is played using the normal rules for timing and priority for its card type, as well as any other applicable restrictions. You'll have to pay its mana cost. The only thing that's different is you're casting it from the Exile zone."
         }
       ],
-      "text": "{2}, {T}, Sacrifice Grinning Totem: Search target opponent's library for a card and exile it. Then that player shuffles his or her library. Until the beginning of your next upkeep, you may play that card. At the beginning of your next upkeep, if you haven't played it, put it into its owner's graveyard.",
+      "text": "{2}, {T}, Sacrifice Grinning Totem: Search target opponent's library for a card and exile it. Then that player shuffles their library. Until the beginning of your next upkeep, you may play that card. At the beginning of your next upkeep, if you haven't played it, put it into its owner's graveyard.",
       "timeshifted": true,
       "type": "Artifact",
       "types": [
@@ -12654,7 +12669,7 @@
           "text": "You choose one opposing player as this card enters the battlefield and it only affects that one player. This choice is not changed even if this card changes controllers. It becomes useless but stays on the battlefield if the chosen player leaves the game."
         }
       ],
-      "text": "As The Rack enters the battlefield, choose an opponent.\nAt the beginning of the chosen player's upkeep, The Rack deals X damage to that player, where X is 3 minus the number of cards in his or her hand.",
+      "text": "As The Rack enters the battlefield, choose an opponent.\nAt the beginning of the chosen player's upkeep, The Rack deals X damage to that player, where X is 3 minus the number of cards in their hand.",
       "timeshifted": true,
       "type": "Artifact",
       "types": [
@@ -13040,10 +13055,10 @@
         },
         {
           "date": "2006-09-25",
-          "text": "If either target is illegal at the time the ability resolves (whether because it has left the battlefield, because it has gained Shroud or Protection, or for any other reason), the ability taps the remaining target, but no damage is dealt. If both targets are illegal, the ability is countered."
+          "text": "If either target is illegal at the time the ability resolves (whether because it has left the battlefield, because it has gained Shroud or Protection, or for any other reason), the ability taps the remaining target, but no damage is dealt. If both targets are illegal, the ability doesn't resolve."
         }
       ],
-      "text": "{3}, {T}: Tap target creature you control and target creature of an opponent's choice he or she controls. Those creatures fight each other. (Each deals damage equal to its power to the other.)",
+      "text": "{3}, {T}: Tap target creature you control and target creature of an opponent's choice they control. Those creatures fight each other. (Each deals damage equal to its power to the other.)",
       "timeshifted": true,
       "type": "Land",
       "types": [
@@ -13146,7 +13161,7 @@
       "subtypes": [
         "Desert"
       ],
-      "text": "{T}: Add {C} to your mana pool.\n{T}: Desert deals 1 damage to target attacking creature. Activate this ability only during the end of combat step.",
+      "text": "{T}: Add {C}.\n{T}: Desert deals 1 damage to target attacking creature. Activate this ability only during the end of combat step.",
       "timeshifted": true,
       "type": "Land — Desert",
       "types": [
@@ -13249,7 +13264,7 @@
           "text": "If the last mining counter is removed from Gemstone Mine in some way other than activating its ability (such as Chisei, Heart of Oceans), Gemstone Mine won't be sacrificed but its ability can't be activated."
         }
       ],
-      "text": "Gemstone Mine enters the battlefield with three mining counters on it.\n{T}, Remove a mining counter from Gemstone Mine: Add one mana of any color to your mana pool. If there are no mining counters on Gemstone Mine, sacrifice it.",
+      "text": "Gemstone Mine enters the battlefield with three mining counters on it.\n{T}, Remove a mining counter from Gemstone Mine: Add one mana of any color. If there are no mining counters on Gemstone Mine, sacrifice it.",
       "timeshifted": true,
       "type": "Land",
       "types": [
@@ -13353,7 +13368,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "{T}: Add {G} to your mana pool.\n{T}: Target 1/1 creature gets +1/+2 until end of turn.",
+      "text": "{T}: Add {G}.\n{T}: Target 1/1 creature gets +1/+2 until end of turn.",
       "timeshifted": true,
       "type": "Legendary Land",
       "types": [

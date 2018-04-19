@@ -83,7 +83,7 @@
         },
         {
           "date": "2011-01-25",
-          "text": "If multiple creatures enter the battlefield at the same time, the ability triggers once for each of them. You may choose a different target player for each time it triggers."
+          "text": "If multiple creatures enter the battlefield at the same time, the ability triggers once for each of them. You may choose a different target player or planeswalker for each time it triggers."
         },
         {
           "date": "2011-01-25",
@@ -93,7 +93,7 @@
       "subtypes": [
         "Goblin"
       ],
-      "text": "When another creature enters the battlefield, sacrifice Mogg Bombers and it deals 3 damage to target player.",
+      "text": "When another creature enters the battlefield, sacrifice Mogg Bombers and it deals 3 damage to target player or planeswalker.",
       "toughness": "4",
       "type": "Creature — Goblin",
       "types": [
@@ -154,24 +154,24 @@
       "rarity": "Common",
       "rulings": [
         {
-          "date": "2017-03-14",
-          "text": "Mogg Flunkies can be declared as an attacker only if another creature is declared as an attacker at the same time. Similarly, Mogg Flunkies can be declared as a blocker only if another creature is declared as a blocker at the same time."
+          "date": "2018-03-16",
+          "text": "If you control more than one Mogg Flunkies, they can attack or block together, even if no other creatures attack or block."
         },
         {
-          "date": "2017-03-14",
-          "text": "Two or more Mogg Flunkies can attack or block together."
+          "date": "2018-03-16",
+          "text": "Although Mogg Flunkies can't attack alone, other attacking creatures don't have to attack the same player or planeswalker. For example, Mogg Flunkies could attack an opponent and another creature could attack a planeswalker that opponent controls. Similarly, other blocking creatures don't have to block the same creature that Mogg Flunkies blocks."
         },
         {
-          "date": "2017-03-14",
-          "text": "Although Mogg Flunkies can't attack alone, other attacking creature(s) don't have to attack the same player or planeswalker. For example, Mogg Flunkies could attack an opponent and another creature could attack a planeswalker that opponent controls."
+          "date": "2018-03-16",
+          "text": "Once Mogg Flunkies has attacked or blocked, it will remain in combat even if you no longer control another attacking or blocking creature."
         },
         {
-          "date": "2017-03-14",
+          "date": "2018-03-16",
           "text": "If an effect says that Mogg Flunkies attacks or blocks if able and you control another creature able to attack or block, you must attack or block with Mogg Flunkies and that creature."
         },
         {
-          "date": "2017-03-14",
-          "text": "In a Two-Headed Giant game (or in another format using the shared team turns option), Mogg Flunkies can attack or block with a creature controlled by your teammate, even if no other creatures you control are attacking or blocking. In any other multiplayer variant, it ignores each other player's blocking creatures."
+          "date": "2018-03-16",
+          "text": "In a Two-Headed Giant game, Mogg Flunkies can attack or block with a creature controlled by your teammate, even if no other creatures you control are attacking or blocking."
         }
       ],
       "subtypes": [
@@ -231,7 +231,7 @@
           "text": "Creatures are counted on resolution."
         }
       ],
-      "text": "Mob Justice deals damage to target player equal to the number of creatures you control.",
+      "text": "Mob Justice deals damage to target player or planeswalker equal to the number of creatures you control.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -528,7 +528,7 @@
       "subtypes": [
         "Sliver"
       ],
-      "text": "All Slivers have \"{2}, Sacrifice this permanent: This permanent deals 2 damage to target creature or player.\"",
+      "text": "All Slivers have \"{2}, Sacrifice this permanent: This permanent deals 2 damage to any target.\"",
       "toughness": "2",
       "type": "Creature — Sliver",
       "types": [
@@ -688,7 +688,7 @@
           "text": "You draw the card when Bandage resolves, not when the damage is actually prevented."
         }
       ],
-      "text": "Prevent the next 1 damage that would be dealt to target creature or player this turn.\nDraw a card.",
+      "text": "Prevent the next 1 damage that would be dealt to any target this turn.\nDraw a card.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -943,7 +943,7 @@
         },
         {
           "date": "2013-04-15",
-          "text": "If a spell that can target enchantments but not creatures (such as Clear) is cast targeting the Licid after it has become an enchantment, but the Licid's controller pays the cost, the Licid will no longer be an enchantment. This will result in the spell being countered on resolution for having no legal targets."
+          "text": "If a spell that can target enchantments but not creatures (such as Clear) is cast targeting the Licid after it has become an enchantment, but the Licid's controller pays the cost, the Licid will no longer be an enchantment. This will result in the spell failing to resolve for having no legal targets."
         }
       ],
       "subtypes": [
@@ -1062,7 +1062,7 @@
       "subtypes": [
         "Goblin"
       ],
-      "text": "Whenever Mogg Maniac is dealt damage, it deals that much damage to target opponent.",
+      "text": "Whenever Mogg Maniac is dealt damage, it deals that much damage to target opponent or planeswalker.",
       "toughness": "1",
       "type": "Creature — Goblin",
       "types": [
@@ -1272,12 +1272,8 @@
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2004-10-04",
-          "text": "All creatures on the battlefield (including yours) are subject to the restriction based on the number of cards in your hand."
-        },
-        {
-          "date": "2004-10-04",
-          "text": "It only checks the cards in your hand when declaring attackers. Once they are declared, changes to your hand size or to the power of the creatures will not remove creatures from the attack."
+          "date": "2018-03-16",
+          "text": "Ensnaring Bridge's effect checks the number of cards in your hand only while a player (including you) is declaring attackers. Once a creature has legally attacked, changing its power or the number of cards in your hand won't remove it from combat."
         }
       ],
       "text": "Creatures with power greater than the number of cards in your hand can't attack.",
@@ -1501,7 +1497,7 @@
         },
         {
           "date": "2013-04-15",
-          "text": "If a spell that can target enchantments but not creatures (such as Clear) is cast targeting the Licid after it has become an enchantment, but the Licid's controller pays the cost, the Licid will no longer be an enchantment. This will result in the spell being countered on resolution for having no legal targets."
+          "text": "If a spell that can target enchantments but not creatures (such as Clear) is cast targeting the Licid after it has become an enchantment, but the Licid's controller pays the cost, the Licid will no longer be an enchantment. This will result in the spell failing to resolve for having no legal targets."
         }
       ],
       "subtypes": [
@@ -1562,7 +1558,7 @@
         },
         {
           "date": "2013-04-15",
-          "text": "If a spell that can target enchantments but not creatures (such as Clear) is cast targeting the Licid after it has become an enchantment, but the Licid's controller pays the cost, the Licid will no longer be an enchantment. This will result in the spell being countered on resolution for having no legal targets."
+          "text": "If a spell that can target enchantments but not creatures (such as Clear) is cast targeting the Licid after it has become an enchantment, but the Licid's controller pays the cost, the Licid will no longer be an enchantment. This will result in the spell failing to resolve for having no legal targets."
         }
       ],
       "subtypes": [
@@ -1968,7 +1964,7 @@
           "text": "Players can only respond once this spell has been cast and all its costs have been paid. No one can try to destroy the creature you sacrificed to prevent you from casting this spell."
         }
       ],
-      "text": "As an additional cost to cast Scapegoat, sacrifice a creature.\nReturn any number of target creatures you control to their owner's hand.",
+      "text": "As an additional cost to cast this spell, sacrifice a creature.\nReturn any number of target creatures you control to their owner's hand.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -2214,7 +2210,7 @@
         "AER"
       ],
       "rarity": "Common",
-      "text": "Shock deals 2 damage to target creature or player.",
+      "text": "Shock deals 2 damage to any target.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -2419,7 +2415,7 @@
         "TPR"
       ],
       "rarity": "Uncommon",
-      "text": "Buyback {3} (You may pay an additional {3} as you cast this spell. If you do, put this card into your hand as it resolves.)\nFanning the Flames deals X damage to target creature or player.",
+      "text": "Buyback {3} (You may pay an additional {3} as you cast this spell. If you do, put this card into your hand as it resolves.)\nFanning the Flames deals X damage to any target.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -2471,7 +2467,7 @@
         "10E"
       ],
       "rarity": "Uncommon",
-      "text": "Creatures you control have trample. (If a creature you control would assign enough damage to its blockers to destroy them, you may have it assign the rest of its damage to defending player or planeswalker.)",
+      "text": "Creatures you control have trample. (If a creature you control would assign enough damage to its blockers to destroy them, you may have it assign the rest of its damage to the player or planeswalker it's attacking.)",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -2524,7 +2520,7 @@
         "TPR"
       ],
       "rarity": "Uncommon",
-      "text": "Flame Wave deals 4 damage to target player and each creature he or she controls.",
+      "text": "Flame Wave deals 4 damage to target player or planeswalker and each creature that player or that planeswalker's controller controls.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -2613,7 +2609,7 @@
           "text": "Players can only respond once this spell has been cast and all its costs have been paid. No one can try to destroy the creature you sacrificed to prevent you from casting this spell."
         }
       ],
-      "text": "As an additional cost to cast Fling, sacrifice a creature.\nFling deals damage equal to the sacrificed creature's power to target creature or player.",
+      "text": "As an additional cost to cast this spell, sacrifice a creature.\nFling deals damage equal to the sacrificed creature's power to any target.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -2845,7 +2841,7 @@
       "subtypes": [
         "Phoenix"
       ],
-      "text": "Flying (This creature can't be blocked except by creatures with flying or reach.)\nSacrifice Shard Phoenix: Shard Phoenix deals 2 damage to each creature without flying.\n{R}{R}{R}: Return Shard Phoenix from your graveyard to your hand. Activate this ability only during your upkeep.",
+      "text": "Flying (This creature can't be blocked except by creatures with flying or reach.)\nSacrifice Shard Phoenix: It deals 2 damage to each creature without flying.\n{R}{R}{R}: Return Shard Phoenix from your graveyard to your hand. Activate this ability only during your upkeep.",
       "toughness": "2",
       "type": "Creature — Phoenix",
       "types": [
@@ -3076,7 +3072,7 @@
         },
         {
           "date": "2013-04-15",
-          "text": "If a spell that can target enchantments but not creatures (such as Clear) is cast targeting the Licid after it has become an enchantment, but the Licid's controller pays the cost, the Licid will no longer be an enchantment. This will result in the spell being countered on resolution for having no legal targets."
+          "text": "If a spell that can target enchantments but not creatures (such as Clear) is cast targeting the Licid after it has become an enchantment, but the Licid's controller pays the cost, the Licid will no longer be an enchantment. This will result in the spell failing to resolve for having no legal targets."
         }
       ],
       "subtypes": [
@@ -3478,7 +3474,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "This can be used on damage to a creature or player."
+          "text": "This can be used on damage to a creature, player, or planeswalker."
         },
         {
           "date": "2004-10-04",
@@ -4142,7 +4138,7 @@
           "text": "Players can only respond once this spell has been cast and all its costs have been paid. No one can try to destroy the creature you sacrificed to prevent you from casting this spell."
         }
       ],
-      "text": "As an additional cost to cast Mask of the Mimic, sacrifice a creature.\nSearch your library for a card with the same name as target nontoken creature and put that card onto the battlefield. Then shuffle your library.",
+      "text": "As an additional cost to cast this spell, sacrifice a creature.\nSearch your library for a card with the same name as target nontoken creature and put that card onto the battlefield. Then shuffle your library.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -4575,7 +4571,7 @@
           "text": "If you don't discard a land card, Mox Diamond never enters the battlefield. It won't trigger abilities that look for something entering the battlefield, and you won't get the opportunity to tap it for mana."
         }
       ],
-      "text": "If Mox Diamond would enter the battlefield, you may discard a land card instead. If you do, put Mox Diamond onto the battlefield. If you don't, put it into its owner's graveyard.\n{T}: Add one mana of any color to your mana pool.",
+      "text": "If Mox Diamond would enter the battlefield, you may discard a land card instead. If you do, put Mox Diamond onto the battlefield. If you don't, put it into its owner's graveyard.\n{T}: Add one mana of any color.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -4892,7 +4888,7 @@
       "subtypes": [
         "Aura"
       ],
-      "text": "Enchant land (Target a land as you cast this. This card enters the battlefield attached to that land.)\nWhenever enchanted land is tapped for mana, its controller adds {G}{G} to his or her mana pool (in addition to the mana the land produces).",
+      "text": "Enchant land\nWhenever enchanted land is tapped for mana, its controller adds an additional {G}{G}.",
       "type": "Enchantment — Aura",
       "types": [
         "Enchantment"
@@ -4947,7 +4943,7 @@
         },
         {
           "date": "2009-10-01",
-          "text": "The creature does enter the battlefield, so any other abilities that trigger on it entering the battlefield trigger. This follows the normal rules for timing triggered abilities: first, the current player puts his or her abilities on the stack in any order, then each other player in turn order does the same. Portcullis' own ability is included in this, so it could result in the creature being exiled after some abilities have resolved, but before others."
+          "text": "The creature does enter the battlefield, so any other abilities that trigger on it entering the battlefield trigger. This follows the normal rules for timing triggered abilities: first, the current player puts their abilities on the stack in any order, then each other player in turn order does the same. Portcullis' own ability is included in this, so it could result in the creature being exiled after some abilities have resolved, but before others."
         },
         {
           "date": "2009-10-01",
@@ -6101,7 +6097,7 @@
         "Druid",
         "Warrior"
       ],
-      "text": "{T}: Add {G} to your mana pool.",
+      "text": "{T}: Add {G}.",
       "toughness": "3",
       "type": "Creature — Elf Druid Warrior",
       "types": [
@@ -7069,7 +7065,7 @@
         },
         {
           "date": "2013-04-15",
-          "text": "If a spell that can target enchantments but not creatures (such as Clear) is cast targeting the Licid after it has become an enchantment, but the Licid's controller pays the cost, the Licid will no longer be an enchantment. This will result in the spell being countered on resolution for having no legal targets."
+          "text": "If a spell that can target enchantments but not creatures (such as Clear) is cast targeting the Licid after it has become an enchantment, but the Licid's controller pays the cost, the Licid will no longer be an enchantment. This will result in the spell failing to resolve for having no legal targets."
         }
       ],
       "subtypes": [
@@ -7410,7 +7406,7 @@
         },
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         }
       ],
       "text": "Buyback {3} (You may pay an additional {3} as you cast this spell. If you do, put this card into your hand as it resolves.)\nTarget land becomes a 2/2 creature that's still a land. (This effect lasts indefinitely.)",
@@ -7638,7 +7634,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "{T}: Add {C} to your mana pool.\n{1}{B}, {T}: Put target creature card from your graveyard on top of your library.",
+      "text": "{T}: Add {C}.\n{1}{B}, {T}: Put target creature card from your graveyard on top of your library.",
       "type": "Legendary Land",
       "types": [
         "Land"
@@ -7925,7 +7921,7 @@
       "subtypes": [
         "Wall"
       ],
-      "text": "Defender (This creature can't attack.)\nWhenever Wall of Souls is dealt combat damage, it deals that much damage to target opponent.",
+      "text": "Defender (This creature can't attack.)\nWhenever Wall of Souls is dealt combat damage, it deals that much damage to target opponent or planeswalker.",
       "toughness": "4",
       "type": "Creature — Wall",
       "types": [

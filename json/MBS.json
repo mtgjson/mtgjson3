@@ -672,7 +672,7 @@
         },
         {
           "date": "2011-06-01",
-          "text": "You can cast this with zero targets. If you do, you'll get to draw a card. However, if you cast this with at least one target and all of those targets become illegal (because another effect has removed them from the graveyard, perhaps), the spell will be countered and you won't get to draw a card."
+          "text": "You can cast this with zero targets. If you do, you'll get to draw a card. However, if you cast this with at least one target and all of those targets become illegal (because another effect has removed them from the graveyard, perhaps), the spell won't resolve and you won't get to draw a card."
         }
       ],
       "text": "Put any number of target artifact cards from your graveyard on top of your library.\nDraw a card.",
@@ -2114,7 +2114,7 @@
       "rulings": [
         {
           "date": "2011-06-01",
-          "text": "If this spell is countered, none of its effects occur. In particular, it will go to the graveyard rather than to its owner's library."
+          "text": "If this spell doesn't resolve, none of its effects occur. In particular, it will go to the graveyard rather than to its owner's library."
         }
       ],
       "text": "Create X 2/2 white Cat creature tokens. Shuffle White Sun's Zenith into its owner's library.",
@@ -2224,11 +2224,11 @@
       "rulings": [
         {
           "date": "2011-06-01",
-          "text": "If this spell is countered, none of its effects occur. In particular, it will go to the graveyard rather than to its owner's library."
+          "text": "If this spell doesn't resolve, none of its effects occur. In particular, it will go to the graveyard rather than to its owner's library."
         },
         {
-          "date": "2011-06-01",
-          "text": "You follow the instructions in order. You won't be able to draw the same Blue Sun's Zenith that you cast."
+          "date": "2018-03-16",
+          "text": "Because you follow the spell's instructions in order, you won't be able to draw the same Blue Sun's Zenith that you cast."
         }
       ],
       "text": "Target player draws X cards. Shuffle Blue Sun's Zenith into its owner's library.",
@@ -2573,7 +2573,7 @@
         },
         {
           "date": "2011-06-01",
-          "text": "If the creature is an illegal target when the ability tries to resolve, it will be countered. Cryptoplasm won't become a copy of that creature; it remains whatever it was before."
+          "text": "If the creature is an illegal target when the ability tries to resolve, it won't resolve. Cryptoplasm won't become a copy of that creature; it remains whatever it was before."
         },
         {
           "date": "2011-06-01",
@@ -2805,7 +2805,7 @@
         },
         {
           "date": "2011-06-01",
-          "text": "If the spell is an illegal target when Fuel for the Cause tries to resolve, it will be countered. You won't proliferate."
+          "text": "If the spell is an illegal target when Fuel for the Cause tries to resolve, it won't resolve. You won't proliferate."
         }
       ],
       "text": "Counter target spell, then proliferate. (You choose any number of permanents and/or players with counters on them, then give each another counter of a kind already there.)",
@@ -3768,7 +3768,8 @@
       "power": "2",
       "printings": [
         "pMGD",
-        "MBS"
+        "MBS",
+        "DDU"
       ],
       "rarity": "Uncommon",
       "rulings": [
@@ -3781,7 +3782,7 @@
         "Human",
         "Wizard"
       ],
-      "text": "When Treasure Mage enters the battlefield, you may search your library for an artifact card with converted mana cost 6 or greater, reveal that card, and put it into your hand. If you do, shuffle your library.",
+      "text": "When Treasure Mage enters the battlefield, you may search your library for an artifact card with converted mana cost 6 or greater, reveal it, put it into your hand, then shuffle your library.",
       "toughness": "2",
       "type": "Creature — Human Wizard",
       "types": [
@@ -3993,7 +3994,7 @@
       "rulings": [
         {
           "date": "2011-06-01",
-          "text": "If the creature is an illegal target when the ability tries to resolve, it will be countered. None of its effects happen."
+          "text": "If the creature is an illegal target when the ability tries to resolve, it won't resolve. None of its effects happen."
         }
       ],
       "subtypes": [
@@ -4223,7 +4224,7 @@
           "text": "Players can only respond once this spell has been cast and all its costs have been paid. No one can try to destroy the creature you sacrificed to prevent you from casting this spell."
         }
       ],
-      "text": "As an additional cost to cast Vivisection, sacrifice a creature.\nDraw three cards.",
+      "text": "As an additional cost to cast this spell, sacrifice a creature.\nDraw three cards.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -4328,7 +4329,7 @@
       "rulings": [
         {
           "date": "2011-06-01",
-          "text": "If this spell is countered, none of its effects occur. In particular, it will go to the graveyard rather than to its owner's library."
+          "text": "If this spell doesn't resolve, none of its effects occur. In particular, it will go to the graveyard rather than to its owner's library."
         }
       ],
       "text": "Put X -1/-1 counters on each creature. Shuffle Black Sun's Zenith into its owner's library.",
@@ -4749,7 +4750,7 @@
       "rulings": [
         {
           "date": "2011-06-01",
-          "text": "If the targeted creature is also an artifact when Go for the Throat tries to resolve, it will be countered."
+          "text": "If the targeted creature is also an artifact when Go for the Throat tries to resolve, it won't resolve."
         }
       ],
       "text": "Destroy target nonartifact creature.",
@@ -4954,10 +4955,10 @@
       "rulings": [
         {
           "date": "2011-06-01",
-          "text": "If the player has no cards in his or her hand or no cards in his or her library, the other effect still happens."
+          "text": "If the player has no cards in their hand or no cards in their library, the other effect still happens."
         }
       ],
-      "text": "Target player discards a card, then puts the top card of his or her library into his or her graveyard.",
+      "text": "Target player discards a card, then puts the top card of their library into their graveyard.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -6166,7 +6167,7 @@
       "rulings": [
         {
           "date": "2011-06-01",
-          "text": "If the creature is an illegal target when Spread the Sickness tries to resolve, the spell is countered. You won't proliferate."
+          "text": "If the creature is an illegal target when Spread the Sickness tries to resolve, the spell doesn't resolve. You won't proliferate."
         },
         {
           "date": "2013-07-01",
@@ -6384,7 +6385,7 @@
         "Goblin",
         "Shaman"
       ],
-      "text": "When Blisterstick Shaman enters the battlefield, it deals 1 damage to target creature or player.",
+      "text": "When Blisterstick Shaman enters the battlefield, it deals 1 damage to any target.",
       "toughness": "1",
       "type": "Creature — Goblin Shaman",
       "types": [
@@ -6488,7 +6489,7 @@
       "rulings": [
         {
           "date": "2011-06-01",
-          "text": "If the creature is an illegal target when Burn the Impure resolves, the spell will be countered and none of its effects will happen, even if that creature has infect."
+          "text": "If the creature is an illegal target when Burn the Impure resolves, the spell won't resolve and none of its effects will happen, even if that creature has infect."
         }
       ],
       "text": "Burn the Impure deals 3 damage to target creature. If that creature has infect, Burn the Impure deals 3 damage to that creature's controller.",
@@ -6598,14 +6599,14 @@
         },
         {
           "date": "2011-06-01",
-          "text": "If the player is an illegal target when Concussive Bolt resolves, the spell will be countered. None of its effects will happen, even if you control three or more artifacts."
+          "text": "If the player is an illegal target when Concussive Bolt resolves, the spell won't resolve. None of its effects will happen, even if you control three or more artifacts."
         },
         {
           "date": "2011-06-01",
           "text": "If you controlled three or more artifacts as Concussive Bolt resolved, the targeted player won't be able to block with any creatures this turn. That is, the set of affected creatures isn't locked in as the spell resolves."
         }
       ],
-      "text": "Concussive Bolt deals 4 damage to target player.\nMetalcraft — If you control three or more artifacts, creatures that player controls can't block this turn.",
+      "text": "Concussive Bolt deals 4 damage to target player or planeswalker.\nMetalcraft — If you control three or more artifacts, creatures controlled by that player or by that planeswalker's controller can't block this turn.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -6708,7 +6709,7 @@
       "rulings": [
         {
           "date": "2011-06-01",
-          "text": "If the targeted artifact is also a creature when Crush tries to resolve, it will be countered."
+          "text": "If the targeted artifact is also a creature when Crush tries to resolve, it won't resolve."
         }
       ],
       "text": "Destroy target noncreature artifact.",
@@ -7599,7 +7600,7 @@
       "subtypes": [
         "Elemental"
       ],
-      "text": "When Kuldotha Flamefiend enters the battlefield, you may sacrifice an artifact. If you do, Kuldotha Flamefiend deals 4 damage divided as you choose among any number of target creatures and/or players.",
+      "text": "When Kuldotha Flamefiend enters the battlefield, you may sacrifice an artifact. If you do, Kuldotha Flamefiend deals 4 damage divided as you choose among any number of targets.",
       "toughness": "4",
       "type": "Creature — Elemental",
       "types": [
@@ -8121,10 +8122,10 @@
       "rulings": [
         {
           "date": "2011-06-01",
-          "text": "If this spell is countered, none of its effects occur. In particular, it will go to the graveyard rather than to its owner's library."
+          "text": "If this spell doesn't resolve, none of its effects occur. In particular, it will go to the graveyard rather than to its owner's library."
         }
       ],
-      "text": "Red Sun's Zenith deals X damage to target creature or player. If a creature dealt damage this way would die this turn, exile it instead. Shuffle Red Sun's Zenith into its owner's library.",
+      "text": "Red Sun's Zenith deals X damage to any target. If a creature dealt damage this way would die this turn, exile it instead. Shuffle Red Sun's Zenith into its owner's library.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -8861,7 +8862,7 @@
       "rulings": [
         {
           "date": "2011-06-01",
-          "text": "If this spell is countered, none of its effects occur. In particular, it will go to the graveyard rather than to its owner's library."
+          "text": "If this spell doesn't resolve, none of its effects occur. In particular, it will go to the graveyard rather than to its owner's library."
         },
         {
           "date": "2016-06-08",
@@ -8873,7 +8874,7 @@
         },
         {
           "date": "2016-06-08",
-          "text": "If you own Green Sun's Zenith, but an opponent casts it (due to Knowledge Pool's effect, for example), that opponent searches his or her library for an appropriate creature card, then shuffles that library. That opponent then shuffles Green Sun's Zenith into your library. You won't shuffle any library in this case."
+          "text": "If you own Green Sun's Zenith, but an opponent casts it (due to Knowledge Pool's effect, for example), that opponent searches their library for an appropriate creature card, then shuffles that library. That opponent then shuffles Green Sun's Zenith into your library. You won't shuffle any library in this case."
         }
       ],
       "text": "Search your library for a green creature card with converted mana cost X or less, put it onto the battlefield, then shuffle your library. Shuffle Green Sun's Zenith into its owner's library.",
@@ -8975,7 +8976,8 @@
         "MBS",
         "DDH",
         "CNS",
-        "IMA"
+        "IMA",
+        "DDU"
       ],
       "rarity": "Uncommon",
       "text": "Look at the top five cards of your library. You may reveal any number of creature cards from among them and put the revealed cards into your hand. Put the rest on the bottom of your library in any order.",
@@ -9419,7 +9421,7 @@
       "rulings": [
         {
           "date": "2011-06-01",
-          "text": "If the creature is an illegal target when Pistus Strike tries to resolve, the spell is countered. No player gets a poison counter."
+          "text": "If the creature is an illegal target when Pistus Strike tries to resolve, the spell doesn't resolve. No player gets a poison counter."
         },
         {
           "date": "2013-07-01",
@@ -10079,7 +10081,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "Thrun, the Last Troll can't be countered.\nHexproof (This creature can't be the target of spells or abilities your opponents control.)\n{1}{G}: Regenerate Thrun.",
+      "text": "This spell can't be countered.\nHexproof (This creature can't be the target of spells or abilities your opponents control.)\n{1}{G}: Regenerate Thrun, the Last Troll.",
       "toughness": "4",
       "type": "Legendary Creature — Troll Shaman",
       "types": [
@@ -11371,7 +11373,8 @@
       "originalText": "Darksteel Plate is indestructible.\nEquipped creature is indestructible.\nEquip {2}",
       "originalType": "Artifact — Equipment",
       "printings": [
-        "MBS"
+        "MBS",
+        "DDU"
       ],
       "rarity": "Rare",
       "subtypes": [
@@ -11471,7 +11474,7 @@
         "MBS"
       ],
       "rarity": "Rare",
-      "text": "{4}, {T}: Target opponent loses 2 life, gets a poison counter, then puts the top six cards of his or her library into his or her graveyard.",
+      "text": "{4}, {T}: Target opponent loses 2 life, gets a poison counter, then puts the top six cards of their library into their graveyard.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -11969,7 +11972,8 @@
       "printings": [
         "MBS",
         "C14",
-        "C16"
+        "C16",
+        "DDU"
       ],
       "rarity": "Common",
       "rulings": [
@@ -12078,7 +12082,7 @@
         },
         {
           "date": "2011-06-01",
-          "text": "The spell a player casts from his or her hand won't resolve if it's exiled, even if that spell can't be countered by spells or abilities."
+          "text": "The spell a player casts from their hand won't resolve if it's exiled, even if that spell can't be countered by spells or abilities."
         },
         {
           "date": "2011-06-01",
@@ -12110,10 +12114,10 @@
         },
         {
           "date": "2011-06-01",
-          "text": "If multiple Knowledge Pools are on the battlefield, keep track of which cards are exiled by each of them. Whenever a player casts a spell from his or her hand: -- If all Knowledge Pools are controlled by the same player, that player chooses the order in which the triggered abilities are put onto the stack. The last one put onto the stack will be the first to resolve. -- If multiple players each control one or more Knowledge Pools, the active player put his or her triggered abilities on the stack in any order, then each other player in turn order does the same. The last ability put onto the stack this way will be the first to resolve. -- The first triggered ability to resolve will exile the original spell, then the player who cast that spell may cast one of the nonland cards exiled by the Knowledge Pool that generated that triggered ability. The abilities of other Knowledge Pools will do nothing when they resolve, as the original spell will already have been exiled."
+          "text": "If multiple Knowledge Pools are on the battlefield, keep track of which cards are exiled by each of them. Whenever a player casts a spell from their hand: -- If all Knowledge Pools are controlled by the same player, that player chooses the order in which the triggered abilities are put onto the stack. The last one put onto the stack will be the first to resolve. -- If multiple players each control one or more Knowledge Pools, the active player put their triggered abilities on the stack in any order, then each other player in turn order does the same. The last ability put onto the stack this way will be the first to resolve. -- The first triggered ability to resolve will exile the original spell, then the player who cast that spell may cast one of the nonland cards exiled by the Knowledge Pool that generated that triggered ability. The abilities of other Knowledge Pools will do nothing when they resolve, as the original spell will already have been exiled."
         }
       ],
-      "text": "Imprint — When Knowledge Pool enters the battlefield, each player exiles the top three cards of his or her library.\nWhenever a player casts a spell from his or her hand, that player exiles it. If the player does, he or she may cast another nonland card exiled with Knowledge Pool without paying that card's mana cost.",
+      "text": "Imprint — When Knowledge Pool enters the battlefield, each player exiles the top three cards of their library.\nWhenever a player casts a spell from their hand, that player exiles it. If the player does, they may cast another nonland card exiled with Knowledge Pool without paying that card's mana cost.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -12521,13 +12525,13 @@
       "rulings": [
         {
           "date": "2011-06-01",
-          "text": "If you sacrifice the equipped creature to deal 1 damage to a target creature or player, the damage is dealt by the creature as it last existed on the battlefield."
+          "text": "If you sacrifice the equipped creature to deal 1 damage to a target permanent or player, the damage is dealt by the creature as it last existed on the battlefield."
         }
       ],
       "subtypes": [
         "Equipment"
       ],
-      "text": "Living weapon (When this Equipment enters the battlefield, create a 0/0 black Germ creature token, then attach this to it.)\nEquipped creature gets +0/+1 and has \"Sacrifice this creature: This creature deals 1 damage to target creature or player.\"\nEquip {2}",
+      "text": "Living weapon (When this Equipment enters the battlefield, create a 0/0 black Germ creature token, then attach this to it.)\nEquipped creature gets +0/+1 and has \"Sacrifice this creature: This creature deals 1 damage to any target.\"\nEquip {2}",
       "type": "Artifact — Equipment",
       "types": [
         "Artifact"
@@ -12620,7 +12624,8 @@
       "power": "1",
       "printings": [
         "MBS",
-        "C14"
+        "C14",
+        "DDU"
       ],
       "rarity": "Common",
       "subtypes": [
@@ -13559,7 +13564,7 @@
       "subtypes": [
         "Myr"
       ],
-      "text": "Infect (This creature deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)\n{T}: Add {C} to your mana pool.",
+      "text": "Infect (This creature deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)\n{T}: Add {C}.",
       "toughness": "1",
       "type": "Artifact Creature — Myr",
       "types": [
@@ -14076,7 +14081,7 @@
         "MBS"
       ],
       "rarity": "Common",
-      "text": "Shriekhorn enters the battlefield with three charge counters on it.\n{T}, Remove a charge counter from Shriekhorn: Target player puts the top two cards of his or her library into his or her graveyard.",
+      "text": "Shriekhorn enters the battlefield with three charge counters on it.\n{T}, Remove a charge counter from Shriekhorn: Target player puts the top two cards of their library into their graveyard.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -14470,7 +14475,7 @@
         "MM2"
       ],
       "rarity": "Uncommon",
-      "text": "Sphere of the Suns enters the battlefield tapped and with three charge counters on it.\n{T}, Remove a charge counter from Sphere of the Suns: Add one mana of any color to your mana pool.",
+      "text": "Sphere of the Suns enters the battlefield tapped and with three charge counters on it.\n{T}, Remove a charge counter from Sphere of the Suns: Add one mana of any color.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -15070,7 +15075,8 @@
       "power": "5",
       "printings": [
         "pLPA",
-        "MBS"
+        "MBS",
+        "DDU"
       ],
       "rarity": "Rare",
       "rulings": [
@@ -15490,7 +15496,7 @@
           "text": "In some multiplayer formats, creatures controlled by different players may deal combat damage to you simultaneously. If this happens, you control each triggered ability and can put them on the stack in any order. The last ability to resolve will determine who ends up controlling Contested War Zone."
         }
       ],
-      "text": "Whenever a creature deals combat damage to you, that creature's controller gains control of Contested War Zone.\n{T}: Add {C} to your mana pool.\n{1}, {T}: Attacking creatures get +1/+0 until end of turn.",
+      "text": "Whenever a creature deals combat damage to you, that creature's controller gains control of Contested War Zone.\n{T}: Add {C}.\n{1}, {T}: Attacking creatures get +1/+0 until end of turn.",
       "type": "Land",
       "types": [
         "Land"
@@ -15592,7 +15598,7 @@
           "text": "If you've controlled Inkmoth Nexus continuously since your most recent turn began and it becomes a creature, it can attack or be tapped for mana."
         }
       ],
-      "text": "{T}: Add {C} to your mana pool.\n{1}: Inkmoth Nexus becomes a 1/1 Blinkmoth artifact creature with flying and infect until end of turn. It's still a land. (It deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)",
+      "text": "{T}: Add {C}.\n{1}: Inkmoth Nexus becomes a 1/1 Blinkmoth artifact creature with flying and infect until end of turn. It's still a land. (It deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)",
       "type": "Land",
       "types": [
         "Land"
@@ -15934,7 +15940,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -16287,7 +16294,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -16639,7 +16647,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -16991,7 +17001,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -17347,7 +17359,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -17703,7 +17716,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -18061,7 +18075,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -18419,7 +18435,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -18774,7 +18792,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -19129,7 +19149,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [

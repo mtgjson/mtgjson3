@@ -249,7 +249,7 @@
       "subtypes": [
         "Trap"
       ],
-      "text": "If four or more creatures are attacking, you may pay {1}{W} rather than pay Arrow Volley Trap's mana cost.\nArrow Volley Trap deals 5 damage divided as you choose among any number of target attacking creatures.",
+      "text": "If four or more creatures are attacking, you may pay {1}{W} rather than pay this spell's mana cost.\nArrow Volley Trap deals 5 damage divided as you choose among any number of target attacking creatures.",
       "type": "Instant — Trap",
       "types": [
         "Instant"
@@ -352,7 +352,7 @@
           "text": "If a creature doesn't have first strike, granting it first strike after combat damage has been dealt in the first combat damage step won't prevent it from dealing combat damage. It will still assign and deal its combat damage in the second combat damage step."
         }
       ],
-      "text": "Kicker {3}{W} (You may pay an additional {3}{W} as you cast this spell.)\nCreatures you control get +1/+1 until end of turn. If Bold Defense was kicked, instead creatures you control get +2/+2 and gain first strike until end of turn.",
+      "text": "Kicker {3}{W} (You may pay an additional {3}{W} as you cast this spell.)\nCreatures you control get +1/+1 until end of turn. If this spell was kicked, instead creatures you control get +2/+2 and gain first strike until end of turn.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -870,7 +870,7 @@
         "ZEN"
       ],
       "rarity": "Rare",
-      "text": "Kicker {6} (You may pay an additional {6} as you cast this spell.)\nCreate six 1/1 white Kor Soldier creature tokens. If Conqueror's Pledge was kicked, create twelve of those tokens instead.",
+      "text": "Kicker {6} (You may pay an additional {6} as you cast this spell.)\nCreate six 1/1 white Kor Soldier creature tokens. If this spell was kicked, create twelve of those tokens instead.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -2245,7 +2245,7 @@
         },
         {
           "date": "2009-10-01",
-          "text": "If either target is illegal by the time the ability resolves, the ability won't do anything. If both targets are illegal, the ability is countered."
+          "text": "If either target is illegal by the time the ability resolves, the ability won't do anything. If both targets are illegal, the ability doesn't resolve."
         }
       ],
       "subtypes": [
@@ -2660,24 +2660,20 @@
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2009-10-01",
-          "text": "Luminarch Ascension's first ability has an \"intervening 'if' clause.\" It checks whether you've lost life during the turn both as it would trigger and as it resolves."
+          "date": "2018-03-16",
+          "text": "Luminarch Ascension's first ability doesn't trigger if you have lost life before an opponent's end step begins. If it does trigger but you lose life before it resolves, it does nothing and you won't put a quest counter on Luminarch Ascension."
         },
         {
-          "date": "2009-10-01",
-          "text": "Life lost during the end step after Luminarch Ascension's first ability resolves has no bearing on it."
+          "date": "2018-03-16",
+          "text": "Luminarch Ascension's first ability cares only whether you lost life this turn, even if Luminarch Ascension wasn't on the battlefield when that happened. It doesn't care how much you lost, whether you also gained life, or even whether you gained more life than you lost."
         },
         {
-          "date": "2009-10-01",
-          "text": "Luminarch Ascension's first ability checks only whether life was lost. It doesn't care whether life was also gained. For example, if you lost 4 life and gained 6 life during the turn, you'll have a higher life total than you started the turn with — but Luminarch Ascension's first ability won't trigger."
+          "date": "2018-03-16",
+          "text": "You can activate Luminarch Ascension's last ability during the end step in which it receives its fourth quest counter."
         },
         {
-          "date": "2009-10-01",
-          "text": "Luminarch Ascension's second ability checks how many quest counters are on it only at the time you activate the ability. Once activated, the ability will resolve as normal even if quest counters are removed from Luminarch Ascension."
-        },
-        {
-          "date": "2009-10-01",
-          "text": "In a Two-Headed Giant game, Luminarch Ascension's first ability will trigger twice at the beginning of the opposing team's end step if you didn't lose life that turn. If both abilities resolve, it will get two quest counters. (It doesn't matter whether your teammate lost life or not.)"
+          "date": "2018-03-16",
+          "text": "In a Two-Headed Giant game, Luminarch Ascension's first ability will trigger twice at the beginning of the opposing team's end step if you didn't lose life that turn. It doesn't matter whether your teammate lost life or not."
         }
       ],
       "text": "At the beginning of each opponent's end step, if you didn't lose life this turn, you may put a quest counter on Luminarch Ascension. (Damage causes loss of life.)\n{1}{W}: Create a 4/4 white Angel creature token with flying. Activate this ability only if Luminarch Ascension has four or more quest counters on it.",
@@ -3077,7 +3073,7 @@
       "subtypes": [
         "Spirit"
       ],
-      "text": "Flying\n{T}: Prevent the next 1 damage that would be dealt to target player this turn.",
+      "text": "Flying\n{T}: Prevent the next 1 damage that would be dealt to target player or planeswalker this turn.",
       "toughness": "2",
       "type": "Creature — Spirit",
       "types": [
@@ -3397,7 +3393,7 @@
       "subtypes": [
         "Trap"
       ],
-      "text": "If exactly one creature is attacking, you may pay {W} rather than pay Pitfall Trap's mana cost.\nDestroy target attacking creature without flying.",
+      "text": "If exactly one creature is attacking, you may pay {W} rather than pay this spell's mana cost.\nDestroy target attacking creature without flying.",
       "type": "Instant — Trap",
       "types": [
         "Instant"
@@ -3697,7 +3693,7 @@
         "ZEN"
       ],
       "rarity": "Common",
-      "text": "Prevent the next 3 damage that would be dealt to target creature or player this turn.",
+      "text": "Prevent the next 3 damage that would be dealt to any target this turn.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -4330,29 +4326,29 @@
         },
         {
           "date": "2009-10-01",
-          "text": "Archive Trap checks only whether an opponent searched his or her library. It doesn't matter whether that player found a card during the search."
+          "text": "Archive Trap checks only whether an opponent searched their library. It doesn't matter whether that player found a card during the search."
         },
         {
           "date": "2009-10-01",
-          "text": "A spell or ability causes a player to search his or her library only if it specifically contains the word \"search\" in its text. For example, if a spell or ability lets a player look at the top four cards of his or her library and do something with one of those cards, that's not a search."
+          "text": "A spell or ability causes a player to search their library only if it specifically contains the word \"search\" in its text. For example, if a spell or ability lets a player look at the top four cards of their library and do something with one of those cards, that's not a search."
         },
         {
           "date": "2009-10-01",
-          "text": "If a search effect is affected by Aven Mindcensor's ability (which causes a player to search the top four cards of his or her library instead), that still counts as searching that library."
+          "text": "If a search effect is affected by Aven Mindcensor's ability (which causes a player to search the top four cards of their library instead), that still counts as searching that library."
         },
         {
           "date": "2009-10-01",
-          "text": "The opponent you target doesn't have to be the opponent who searched his or her library."
+          "text": "The opponent you target doesn't have to be the opponent who searched their library."
         },
         {
           "date": "2009-10-01",
-          "text": "If the targeted opponent has fewer than thirteen cards in his or her library, that player puts his or her entire library into his or her graveyard."
+          "text": "If the targeted opponent has fewer than thirteen cards in their library, that player puts their entire library into their graveyard."
         }
       ],
       "subtypes": [
         "Trap"
       ],
-      "text": "If an opponent searched his or her library this turn, you may pay {0} rather than pay Archive Trap's mana cost.\nTarget opponent puts the top thirteen cards of his or her library into his or her graveyard.",
+      "text": "If an opponent searched their library this turn, you may pay {0} rather than pay this spell's mana cost.\nTarget opponent puts the top thirteen cards of their library into their graveyard.",
       "type": "Instant — Trap",
       "types": [
         "Instant"
@@ -4800,22 +4796,22 @@
       "rulings": [
         {
           "date": "2009-10-01",
-          "text": "Cosi's Trickster's ability triggers when an opponent shuffles his or her library because that player was instructed to do so by a spell or ability that specifically contains the word \"shuffle\" in its text or (in the case of a keyword ability) in its rules."
+          "text": "Cosi's Trickster's ability triggers when an opponent shuffles their library because that player was instructed to do so by a spell or ability that specifically contains the word \"shuffle\" in its text or (in the case of a keyword ability) in its rules."
         },
         {
           "date": "2009-10-01",
-          "text": "The cascade ability doesn't cause a player to shuffle his or her library, even if that player revealed his or her entire library. The revealed cards are put on the bottom of their owner's library in a random order, but they're not \"shuffled.\""
+          "text": "The cascade ability doesn't cause a player to shuffle their library, even if that player revealed their entire library. The revealed cards are put on the bottom of their owner's library in a random order, but they're not \"shuffled.\""
         },
         {
           "date": "2009-10-01",
-          "text": "If an opponent's library is empty or has just a single card in it when a spell or ability instructs that player to shuffle his or her library, Cosi's Trickster's ability will still trigger."
+          "text": "If an opponent's library is empty or has just a single card in it when a spell or ability instructs that player to shuffle their library, Cosi's Trickster's ability will still trigger."
         }
       ],
       "subtypes": [
         "Merfolk",
         "Wizard"
       ],
-      "text": "Whenever an opponent shuffles his or her library, you may put a +1/+1 counter on Cosi's Trickster.",
+      "text": "Whenever an opponent shuffles their library, you may put a +1/+1 counter on Cosi's Trickster.",
       "toughness": "1",
       "type": "Creature — Merfolk Wizard",
       "types": [
@@ -4919,7 +4915,7 @@
         },
         {
           "date": "2009-10-01",
-          "text": "If Gomazoa isn't blocking a creature at the time its ability resolves, only Gomazoa is put on top of its owner's library, and only that player shuffles his or her library."
+          "text": "If Gomazoa isn't blocking a creature at the time its ability resolves, only Gomazoa is put on top of its owner's library, and only that player shuffles their library."
         }
       ],
       "subtypes": [
@@ -5034,7 +5030,7 @@
       "subtypes": [
         "Crab"
       ],
-      "text": "Landfall — Whenever a land enters the battlefield under your control, target player puts the top three cards of his or her library into his or her graveyard.",
+      "text": "Landfall — Whenever a land enters the battlefield under your control, target player puts the top three cards of their library into their graveyard.",
       "toughness": "2",
       "type": "Creature — Crab",
       "types": [
@@ -5135,10 +5131,10 @@
       "rulings": [
         {
           "date": "2009-10-01",
-          "text": "If the targeted permanent is an illegal target by the time Into the Roil resolves, the entire spell is countered. You don't draw a card."
+          "text": "If the targeted permanent is an illegal target by the time Into the Roil resolves, the entire spell doesn't resolve. You don't draw a card."
         }
       ],
-      "text": "Kicker {1}{U} (You may pay an additional {1}{U} as you cast this spell.)\nReturn target nonland permanent to its owner's hand. If Into the Roil was kicked, draw a card.",
+      "text": "Kicker {1}{U} (You may pay an additional {1}{U} as you cast this spell.)\nReturn target nonland permanent to its owner's hand. If this spell was kicked, draw a card.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -5452,7 +5448,7 @@
       "subtypes": [
         "Trap"
       ],
-      "text": "If three or more creatures are attacking, you may pay {U} rather than pay Lethargy Trap's mana cost.\nAttacking creatures get -3/-0 until end of turn.",
+      "text": "If three or more creatures are attacking, you may pay {U} rather than pay this spell's mana cost.\nAttacking creatures get -3/-0 until end of turn.",
       "type": "Instant — Trap",
       "types": [
         "Instant"
@@ -5766,7 +5762,7 @@
       "rulings": [
         {
           "date": "2009-10-01",
-          "text": "A spell or ability counters a spell only if it specifically contains the word \"counter\" in its text. If a spell or ability you control causes all the targets of a spell to become illegal, that spell is countered by the game rules, not the spell or ability you control. For example, if you control Lullmage Mentor and cast Doom Blade to destroy a creature targeted by Giant Growth, you do not get a Merfolk token when the game rules counter Giant Growth."
+          "text": "A spell or ability counters a spell only if it specifically contains the word \"counter\" in its text. If a spell or ability you control causes all the targets of a spell to become illegal, that spell doesn't resolve but is not countered."
         },
         {
           "date": "2009-10-01",
@@ -6108,7 +6104,7 @@
       "subtypes": [
         "Trap"
       ],
-      "text": "If an opponent cast three or more spells this turn, you may pay {0} rather than pay Mindbreak Trap's mana cost.\nExile any number of target spells.",
+      "text": "If an opponent cast three or more spells this turn, you may pay {0} rather than pay this spell's mana cost.\nExile any number of target spells.",
       "type": "Instant — Trap",
       "types": [
         "Instant"
@@ -6313,7 +6309,7 @@
         "ZEN"
       ],
       "rarity": "Uncommon",
-      "text": "Whenever a card is put into your graveyard from anywhere, you may put a quest counter on Quest for Ancient Secrets.\nRemove five quest counters from Quest for Ancient Secrets and sacrifice it: Target player shuffles his or her graveyard into his or her library.",
+      "text": "Whenever a card is put into your graveyard from anywhere, you may put a quest counter on Quest for Ancient Secrets.\nRemove five quest counters from Quest for Ancient Secrets and sacrifice it: Target player shuffles their graveyard into their library.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -6518,7 +6514,7 @@
       "rulings": [
         {
           "date": "2009-10-01",
-          "text": "If the targeted creature is an illegal target by the time Rite of Replication resolves, the entire spell is countered. You won't get any tokens."
+          "text": "If the targeted creature is an illegal target by the time Rite of Replication resolves, the entire spell doesn't resolve. You won't get any tokens."
         },
         {
           "date": "2009-10-01",
@@ -6529,7 +6525,7 @@
           "text": "The tokens see each other enter the battlefield. If they have a triggered ability that triggers when a creature enters the battlefield, they'll all trigger for one another."
         }
       ],
-      "text": "Kicker {5} (You may pay an additional {5} as you cast this spell.)\nCreate a token that's a copy of target creature. If Rite of Replication was kicked, create five of those tokens instead.",
+      "text": "Kicker {5} (You may pay an additional {5} as you cast this spell.)\nCreate a token that's a copy of target creature. If this spell was kicked, create five of those tokens instead.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -7587,7 +7583,7 @@
       "rulings": [
         {
           "date": "2009-10-01",
-          "text": "If the targeted spell is an illegal target by the time Summoner's Bane resolves, the entire spell is countered. You won't get a creature token."
+          "text": "If the targeted spell is an illegal target by the time Summoner's Bane resolves, the entire spell doesn't resolve. You won't get a creature token."
         },
         {
           "date": "2009-10-01",
@@ -7792,7 +7788,7 @@
         "ZEN"
       ],
       "rarity": "Common",
-      "text": "Target player reveals his or her hand and discards all Trap cards.",
+      "text": "Target player reveals their hand and discards all Trap cards.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -8213,7 +8209,7 @@
       "subtypes": [
         "Trap"
       ],
-      "text": "If an opponent had two or more creatures enter the battlefield under his or her control this turn, you may pay {U} rather than pay Whiplash Trap's mana cost.\nReturn two target creatures to their owners' hands.",
+      "text": "If an opponent had two or more creatures enter the battlefield under their control this turn, you may pay {U} rather than pay this spell's mana cost.\nReturn two target creatures to their owners' hands.",
       "type": "Instant — Trap",
       "types": [
         "Instant"
@@ -8424,7 +8420,7 @@
         },
         {
           "date": "2009-10-01",
-          "text": "If the number of Allies you control as the ability resolves is greater than the number of cards in the targeted player's hand, that player reveals his or her entire hand. You choose one of the cards revealed this way and that player discards it."
+          "text": "If the number of Allies you control as the ability resolves is greater than the number of cards in the targeted player's hand, that player reveals their entire hand. You choose one of the cards revealed this way and that player discards it."
         }
       ],
       "subtypes": [
@@ -8432,7 +8428,7 @@
         "Rogue",
         "Ally"
       ],
-      "text": "Whenever Bala Ged Thief or another Ally enters the battlefield under your control, target player reveals a number of cards from his or her hand equal to the number of Allies you control. You choose one of them. That player discards that card.",
+      "text": "Whenever Bala Ged Thief or another Ally enters the battlefield under your control, target player reveals a number of cards from their hand equal to the number of Allies you control. You choose one of them. That player discards that card.",
       "toughness": "2",
       "type": "Creature — Human Rogue Ally",
       "types": [
@@ -8640,7 +8636,7 @@
           "text": "You can tap a creature that hasn't been under your control since your most recent turn began to pay the kicker cost."
         }
       ],
-      "text": "Kicker—Tap an untapped Vampire you control. (You may tap a Vampire you control in addition to any other costs as you cast this spell.)\nTarget opponent loses half his or her life, rounded up. If Blood Tribute was kicked, you gain life equal to the life lost this way.",
+      "text": "Kicker—Tap an untapped Vampire you control. (You may tap a Vampire you control in addition to any other costs as you cast this spell.)\nTarget opponent loses half their life, rounded up. If this spell was kicked, you gain life equal to the life lost this way.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -8748,7 +8744,7 @@
         },
         {
           "date": "2009-10-01",
-          "text": "Bloodchief Ascension's first ability checks only whether life was lost. It doesn't care whether life was also gained. For example, if an opponent lost 4 life and gained 6 life during the turn, that player will have a higher life total than he or she started the turn with — but Bloodchief Ascension's first ability will still trigger."
+          "text": "Bloodchief Ascension's first ability checks only whether life was lost. It doesn't care whether life was also gained. For example, if an opponent lost 4 life and gained 6 life during the turn, that player will have a higher life total than they started the turn with — but Bloodchief Ascension's first ability will still trigger."
         },
         {
           "date": "2009-10-01",
@@ -9164,7 +9160,7 @@
       "rulings": [
         {
           "date": "2009-10-01",
-          "text": "If the targeted land is an illegal target by the time Desecrated Earth resolves, the entire spell is countered. No one discards a card."
+          "text": "If the targeted land is an illegal target by the time Desecrated Earth resolves, the entire spell doesn't resolve. No one discards a card."
         }
       ],
       "text": "Destroy target land. Its controller discards a card.",
@@ -9365,10 +9361,10 @@
         },
         {
           "date": "2009-10-01",
-          "text": "If the targeted creature is an illegal target by the time Feast of Blood resolves, the entire spell is countered. You don't gain life."
+          "text": "If the targeted creature is an illegal target by the time Feast of Blood resolves, the entire spell doesn't resolve. You don't gain life."
         }
       ],
-      "text": "Cast Feast of Blood only if you control two or more Vampires.\nDestroy target creature. You gain 4 life.",
+      "text": "Cast this spell only if you control two or more Vampires.\nDestroy target creature. You gain 4 life.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -10405,7 +10401,7 @@
       "rulings": [
         {
           "date": "2009-10-01",
-          "text": "If the targeted creature is an illegal target by the time Hideous End resolves, the entire spell is countered. No one loses life."
+          "text": "If the targeted creature is an illegal target by the time Hideous End resolves, the entire spell doesn't resolve. No one loses life."
         }
       ],
       "text": "Destroy target nonblack creature. Its controller loses 2 life.",
@@ -10719,7 +10715,7 @@
         "DDP"
       ],
       "rarity": "Uncommon",
-      "text": "Kicker {3} (You may pay an additional {3} as you cast this spell.)\nCreatures target player controls get -1/-1 until end of turn. If Marsh Casualties was kicked, those creatures get -2/-2 until end of turn instead.",
+      "text": "Kicker {3} (You may pay an additional {3} as you cast this spell.)\nCreatures target player controls get -1/-1 until end of turn. If this spell was kicked, those creatures get -2/-2 until end of turn instead.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -11140,13 +11136,13 @@
         },
         {
           "date": "2009-10-01",
-          "text": "Needlebite Trap's alternative cost condition checks only whether life was gained. It doesn't care whether life was also lost. For example, if an opponent gained 4 life and lost 6 life during the turn, that player will have a lower life total than he or she started the turn with — but you can still cast Needlebite Trap by paying {B}."
+          "text": "Needlebite Trap's alternative cost condition checks only whether life was gained. It doesn't care whether life was also lost. For example, if an opponent gained 4 life and lost 6 life during the turn, that player will have a lower life total than they started the turn with — but you can still cast Needlebite Trap by paying {B}."
         }
       ],
       "subtypes": [
         "Trap"
       ],
-      "text": "If an opponent gained life this turn, you may pay {B} rather than pay Needlebite Trap's mana cost.\nTarget player loses 5 life and you gain 5 life.",
+      "text": "If an opponent gained life this turn, you may pay {B} rather than pay this spell's mana cost.\nTarget player loses 5 life and you gain 5 life.",
       "type": "Instant — Trap",
       "types": [
         "Instant"
@@ -11576,7 +11572,7 @@
       "subtypes": [
         "Trap"
       ],
-      "text": "If an opponent had three or more cards put into his or her graveyard from anywhere this turn, you may pay {0} rather than pay Ravenous Trap's mana cost.\nExile all cards from target player's graveyard.",
+      "text": "If an opponent had three or more cards put into their graveyard from anywhere this turn, you may pay {0} rather than pay this spell's mana cost.\nExile all cards from target player's graveyard.",
       "type": "Instant — Trap",
       "types": [
         "Instant"
@@ -11669,7 +11665,7 @@
         "ZEN"
       ],
       "rarity": "Rare",
-      "text": "Kicker {7} (You may pay an additional {7} as you cast this spell.)\nSearch target player's library for up to three cards, exile them, then that player shuffles his or her library. If Sadistic Sacrament was kicked, instead search that player's library for up to fifteen cards, exile them, then that player shuffles his or her library.",
+      "text": "Kicker {7} (You may pay an additional {7} as you cast this spell.)\nSearch target player's library for up to three cards, exile them, then that player shuffles their library. If this spell was kicked, instead search that player's library for up to fifteen cards, exile them, then that player shuffles their library.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -11767,7 +11763,7 @@
       "rulings": [
         {
           "date": "2009-10-01",
-          "text": "If the targeted creature or player is an illegal target by the time Sorin's first ability resolves, the entire ability is countered. You won't gain life."
+          "text": "If the targeted permanent or player is an illegal target by the time Sorin's first ability resolves, the entire ability doesn't resolve. You won't gain life."
         },
         {
           "date": "2009-10-01",
@@ -11787,15 +11783,15 @@
         },
         {
           "date": "2009-10-01",
-          "text": "While controlling another player, you make all choices and decisions that player is allowed to make or is told to make during that turn. For example: -- You choose which lands the other player plays. -- You choose which spells the other player casts, and make all decisions as those spells are cast and as they resolve. For example, you choose the value of X for that player's Earthquake, the target for that player's Lightning Bolt, what mana that player spends to cast Day of Judgment, and what card that player gets with Diabolic Tutor. -- You choose which activated abilities the other player activates, and make all decisions as those abilities are activated and as they resolve. For example, you can have your opponent sacrifice his or her creatures to his or her Vampire Aristocrat or have your opponent's Caller of Gales give one of your creatures flying. -- You make all decisions for the other player's triggered abilities, including what they target and any decisions made when they resolve. -- You choose which creatures controlled by the other player attack, who or what they attack, and how they assign their combat damage. -- You make any choices and decisions that player would make for any other reason. For example, you could cast Fact or Fiction, choose that player to divide the revealed cards into piles, and thus divide those cards into piles yourself."
+          "text": "While controlling another player, you make all choices and decisions that player is allowed to make or is told to make during that turn. For example: -- You choose which lands the other player plays. -- You choose which spells the other player casts, and make all decisions as those spells are cast and as they resolve. For example, you choose the value of X for that player's Earthquake, the target for that player's Lightning Bolt, what mana that player spends to cast Day of Judgment, and what card that player gets with Diabolic Tutor. -- You choose which activated abilities the other player activates, and make all decisions as those abilities are activated and as they resolve. For example, you can have your opponent sacrifice their creatures to their Vampire Aristocrat or have your opponent's Caller of Gales give one of your creatures flying. -- You make all decisions for the other player's triggered abilities, including what they target and any decisions made when they resolve. -- You choose which creatures controlled by the other player attack, who or what they attack, and how they assign their combat damage. -- You make any choices and decisions that player would make for any other reason. For example, you could cast Fact or Fiction, choose that player to divide the revealed cards into piles, and thus divide those cards into piles yourself."
         },
         {
           "date": "2009-10-01",
-          "text": "You can't make the affected player concede. That player may choose to concede at any time, even while you're controlling his or her turn."
+          "text": "You can't make the affected player concede. That player may choose to concede at any time, even while you're controlling their turn."
         },
         {
           "date": "2009-10-01",
-          "text": "You can't make any illegal decisions or illegal choices — you can't do anything that player couldn't do. You can't make choices or decisions for that player that aren't called for by the game rules or by any cards, permanents, spells, abilities, and so on. If an effect causes another player to make decisions that the affected player would normally make (such as Master Warcraft does), that effect takes precedence. (In other words, if the affected player wouldn't make a decision, you wouldn't make that decision on his or her behalf.) You also can't make any choices or decisions for the player that would be called for by the tournament rules (such as whether to take an intentional draw or whether to call a judge)."
+          "text": "You can't make any illegal decisions or illegal choices — you can't do anything that player couldn't do. You can't make choices or decisions for that player that aren't called for by the game rules or by any cards, permanents, spells, abilities, and so on. If an effect causes another player to make decisions that the affected player would normally make (such as Master Warcraft does), that effect takes precedence. (In other words, if the affected player wouldn't make a decision, you wouldn't make that decision on their behalf.) You also can't make any choices or decisions for the player that would be called for by the tournament rules (such as whether to take an intentional draw or whether to call a judge)."
         },
         {
           "date": "2009-10-01",
@@ -11807,7 +11803,7 @@
         },
         {
           "date": "2009-10-01",
-          "text": "If the player affected by Sorin's third ability skips his or her next turn, the ability will wait. You'll control the next turn the affected player actually takes."
+          "text": "If the player affected by Sorin's third ability skips their next turn, the ability will wait. You'll control the next turn the affected player actually takes."
         },
         {
           "date": "2009-10-01",
@@ -11836,7 +11832,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "+2: Sorin Markov deals 2 damage to target creature or player and you gain 2 life.\n−3: Target opponent's life total becomes 10.\n−7: You control target player during that player's next turn.",
+      "text": "+2: Sorin Markov deals 2 damage to any target and you gain 2 life.\n−3: Target opponent's life total becomes 10.\n−7: You control target player during that player's next turn.",
       "type": "Legendary Planeswalker — Sorin",
       "types": [
         "Planeswalker"
@@ -12267,8 +12263,8 @@
       "rarity": "Common",
       "rulings": [
         {
-          "date": "2009-10-01",
-          "text": "Whether an opponent has 10 or less life is checked only as the ability resolves."
+          "date": "2018-03-16",
+          "text": "Whether an opponent has 10 or less life is checked only as Vampire Lacerator's ability resolves."
         }
       ],
       "subtypes": [
@@ -12479,7 +12475,7 @@
         "DDK"
       ],
       "rarity": "Common",
-      "text": "Kicker {2}{B} (You may pay an additional {2}{B} as you cast this spell.)\nTarget creature gets +3/+0 until end of turn. If Vampire's Bite was kicked, that creature gains lifelink until end of turn. (Damage dealt by the creature also causes its controller to gain that much life.)",
+      "text": "Kicker {2}{B} (You may pay an additional {2}{B} as you cast this spell.)\nTarget creature gets +3/+0 until end of turn. If this spell was kicked, that creature gains lifelink until end of turn. (Damage dealt by the creature also causes its controller to gain that much life.)",
       "type": "Instant",
       "types": [
         "Instant"
@@ -12689,7 +12685,7 @@
         "MM2"
       ],
       "rarity": "Common",
-      "text": "Kicker {4} (You may pay an additional {4} as you cast this spell.)\nBurst Lightning deals 2 damage to target creature or player. If Burst Lightning was kicked, it deals 4 damage to that creature or player instead.",
+      "text": "Kicker {4} (You may pay an additional {4} as you cast this spell.)\nBurst Lightning deals 2 damage to any target. If this spell was kicked, it deals 4 damage to that permanent or player instead.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -12794,7 +12790,7 @@
         },
         {
           "date": "2009-10-01",
-          "text": "If the creature targeted by the first ability is an illegal target by the time it resolves, the entire ability is countered. You won't discard a card."
+          "text": "If the creature targeted by the first ability is an illegal target by the time it resolves, the entire ability doesn't resolve. You won't discard a card."
         },
         {
           "date": "2009-10-01",
@@ -12815,7 +12811,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "+1: Discard a card. If a red card is discarded this way, Chandra Ablaze deals 4 damage to target creature or player.\n−2: Each player discards his or her hand, then draws three cards.\n−7: Cast any number of red instant and/or sorcery cards from your graveyard without paying their mana costs.",
+      "text": "+1: Discard a card. If a red card is discarded this way, Chandra Ablaze deals 4 damage to any target.\n−2: Each player discards their hand, then draws three cards.\n−7: Cast any number of red instant and/or sorcery cards from your graveyard without paying their mana costs.",
       "type": "Legendary Planeswalker — Chandra",
       "types": [
         "Planeswalker"
@@ -13041,7 +13037,7 @@
       "rulings": [
         {
           "date": "2009-10-01",
-          "text": "You target a creature or player when the ability triggers. You decide whether or not to pay {2}{R} as the ability resolves."
+          "text": "You target a permanent or player when the ability triggers. You decide whether or not to pay {2}{R} as the ability resolves."
         },
         {
           "date": "2009-10-01",
@@ -13049,14 +13045,14 @@
         },
         {
           "date": "2009-10-01",
-          "text": "If you pay {2}{R}, the creature that entered the battlefield deals damage equal to its current power to the targeted creature or player. If it's no longer on the battlefield, its last known existence on the battlefield is checked to determine its power."
+          "text": "If you pay {2}{R}, the creature that entered the battlefield deals damage equal to its current power to the targeted permanent or player. If it's no longer on the battlefield, its last known existence on the battlefield is checked to determine its power."
         },
         {
           "date": "2009-10-01",
           "text": "Electropotence is the source of the ability, but the creature is the source of the damage. The ability couldn't target a creature with protection from red, for example. It could target a creature with protection from creatures, but all the damage would be prevented. Since damage is dealt by the creature, lifelink, deathtouch, and wither are taken into account, even if the creature has left the battlefield by the time it deals damage."
         }
       ],
-      "text": "Whenever a creature enters the battlefield under your control, you may pay {2}{R}. If you do, that creature deals damage equal to its power to target creature or player.",
+      "text": "Whenever a creature enters the battlefield under your control, you may pay {2}{R}. If you do, that creature deals damage equal to its power to any target.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -13155,7 +13151,7 @@
           "text": "If Elemental Appeal was kicked, it creates a 7/1 token with trample and haste that gets +7/+0 until end of turn. It doesn't create a 14/1 token. This matters in case something copies that token (the copy will be just 7/1), or in case Elemental Appeal is somehow cast during an end step (in which case the +7/+0 lasts just for that turn)."
         }
       ],
-      "text": "Kicker {5} (You may pay an additional {5} as you cast this spell.)\nCreate a 7/1 red Elemental creature token with trample and haste. Exile it at the beginning of the next end step. If Elemental Appeal was kicked, that creature gets +7/+0 until end of turn.",
+      "text": "Kicker {5} (You may pay an additional {5} as you cast this spell.)\nCreate a 7/1 red Elemental creature token with trample and haste. Exile it at the beginning of the next end step. If this spell was kicked, that creature gets +7/+0 until end of turn.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -13472,7 +13468,7 @@
         "Goblin",
         "Scout"
       ],
-      "text": "Haste\nWhenever Goblin Guide attacks, defending player reveals the top card of his or her library. If it's a land card, that player puts it into his or her hand.",
+      "text": "Haste\nWhenever Goblin Guide attacks, defending player reveals the top card of their library. If it's a land card, that player puts it into their hand.",
       "toughness": "2",
       "type": "Creature — Goblin Scout",
       "types": [
@@ -13876,7 +13872,7 @@
       "rulings": [
         {
           "date": "2009-10-01",
-          "text": "Hellfire Mongrel's triggered ability has an \"intervening 'if' clause.\" That means (1) the ability won't trigger at all unless the opponent whose turn it is has two or fewer cards in hand as his or her upkeep starts, and (2) the ability will do nothing if that player has three or more cards in hand by the time it resolves."
+          "text": "Hellfire Mongrel's triggered ability has an \"intervening 'if' clause.\" That means (1) the ability won't trigger at all unless the opponent whose turn it is has two or fewer cards in hand as their upkeep starts, and (2) the ability will do nothing if that player has three or more cards in hand by the time it resolves."
         },
         {
           "date": "2009-10-01",
@@ -13887,7 +13883,7 @@
         "Elemental",
         "Hound"
       ],
-      "text": "At the beginning of each opponent's upkeep, if that player has two or fewer cards in hand, Hellfire Mongrel deals 2 damage to him or her.",
+      "text": "At the beginning of each opponent's upkeep, if that player has two or fewer cards in hand, Hellfire Mongrel deals 2 damage to that player.",
       "toughness": "2",
       "type": "Creature — Elemental Hound",
       "types": [
@@ -14243,7 +14239,7 @@
       "subtypes": [
         "Trap"
       ],
-      "text": "If you've been dealt damage by two or more creatures this turn, you may pay {R} rather than pay Inferno Trap's mana cost.\nInferno Trap deals 4 damage to target creature.",
+      "text": "If you've been dealt damage by two or more creatures this turn, you may pay {R} rather than pay this spell's mana cost.\nInferno Trap deals 4 damage to target creature.",
       "type": "Instant — Trap",
       "types": [
         "Instant"
@@ -14470,13 +14466,13 @@
         },
         {
           "date": "2009-10-01",
-          "text": "If both targeted lands are illegal targets by the time Lavaball Trap resolves, the entire spell is countered. No creatures are dealt damage."
+          "text": "If both targeted lands are illegal targets by the time Lavaball Trap resolves, the entire spell doesn't resolve. No creatures are dealt damage."
         }
       ],
       "subtypes": [
         "Trap"
       ],
-      "text": "If an opponent had two or more lands enter the battlefield under his or her control this turn, you may pay {3}{R}{R} rather than pay Lavaball Trap's mana cost.\nDestroy two target lands. Lavaball Trap deals 4 damage to each creature.",
+      "text": "If an opponent had two or more lands enter the battlefield under their control this turn, you may pay {3}{R}{R} rather than pay this spell's mana cost.\nDestroy two target lands. Lavaball Trap deals 4 damage to each creature.",
       "type": "Instant — Trap",
       "types": [
         "Instant"
@@ -14570,7 +14566,7 @@
         "ZEN"
       ],
       "rarity": "Common",
-      "text": "As an additional cost to cast Magma Rift, sacrifice a land.\nMagma Rift deals 5 damage to target creature.",
+      "text": "As an additional cost to cast this spell, sacrifice a land.\nMagma Rift deals 5 damage to target creature.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -14994,7 +14990,7 @@
         },
         {
           "date": "2009-10-01",
-          "text": "A land with a blaze counter on it is an illegal target for this ability. You may activate the ability targeting a land, then activate the ability in response to itself targeting the same land. Although the first ability to resolve will put a blaze counter on that land, the second ability to resolve will be countered."
+          "text": "A land with a blaze counter on it is an illegal target for this ability. You may activate the ability targeting a land, then activate the ability in response to itself targeting the same land. Although the first ability to resolve will put a blaze counter on that land, the second ability to resolve won't resolve."
         },
         {
           "date": "2009-10-01",
@@ -15228,7 +15224,7 @@
           "text": "If Punishing Fire has left your graveyard by the time its triggered ability resolves, you may still pay {R}, but you won't return it to your hand. This is true even if Punishing Fire has left your graveyard and returned to it by the time its triggered ability resolves."
         }
       ],
-      "text": "Punishing Fire deals 2 damage to target creature or player.\nWhenever an opponent gains life, you may pay {R}. If you do, return Punishing Fire from your graveyard to your hand.",
+      "text": "Punishing Fire deals 2 damage to any target.\nWhenever an opponent gains life, you may pay {R}. If you do, return Punishing Fire from your graveyard to your hand.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -15472,11 +15468,11 @@
         },
         {
           "date": "2009-10-01",
-          "text": "If a spell causes damage to be dealt, that spell will always identify the source of the damage. In most cases, the source is the spell itself. For example, Lightning Bolt says \"Lightning Bolt deals 3 damage to target creature or player.\""
+          "text": "If a spell causes damage to be dealt, that spell will always identify the source of the damage. In most cases, the source is the spell itself. For example, Lightning Bolt says \"Lightning Bolt deals 3 damage to any target.\""
         },
         {
           "date": "2009-10-01",
-          "text": "If an ability causes damage to be dealt, that ability will always identify the source of the damage. The ability itself is never the source. However, the source of the ability is often the source of the damage. For example, Prodigal Pyromancer's ability says \"Prodigal Pyromancer deals 1 damage to target creature or player.\""
+          "text": "If an ability causes damage to be dealt, that ability will always identify the source of the damage. The ability itself is never the source. However, the source of the ability is often the source of the damage. For example, Prodigal Pyromancer's ability says \"Prodigal Pyromancer deals 1 damage to any target.\""
         },
         {
           "date": "2009-10-01",
@@ -15492,15 +15488,11 @@
         },
         {
           "date": "2009-10-01",
-          "text": "The second ability affects all sources you control that would deal damage to a creature or player at any point in the rest of the turn."
+          "text": "The second ability affects all sources you control that would deal damage to a permanent or player at any point in the rest of the turn."
         },
         {
           "date": "2009-10-01",
-          "text": "If multiple effects modify how damage will be dealt, the player who would be dealt damage or the controller of the creature that would be dealt damage chooses the order to apply the effects. For example, Mending Hands says, \"Prevent the next 4 damage that would be dealt to target creature or player this turn.\" Suppose a spell controlled by a player who has activated Quest for Pure Fire's second ability would deal 5 damage to a player who has cast Mending Hands targeting him or herself. The player who would be dealt damage can either (a) prevent 4 damage first and then let Quest for Pure Fire's effect double the remaining 1 damage, taking 2 damage, or (b) double the damage to 10 and then prevent 4 damage, taking 6 damage."
-        },
-        {
-          "date": "2009-10-01",
-          "text": "Combat damage that a source you control would deal to a planeswalker is not doubled. However, if a source you control would deal noncombat damage to that player, and that player chooses to apply Quest for Pure Fire's replacement effect before applying the planeswalker redirection effect, the damage will be doubled before you choose whether to deal it to a planeswalker that player controls. (If your opponents always apply the planeswalker redirection effect first, Quest for Pure Fire's effect will never double damage that a source you control would deal to a planeswalker.)"
+          "text": "If multiple effects modify how damage will be dealt, the player who would be dealt damage or the controller of the creature that would be dealt damage chooses the order to apply the effects. For example, Mending Hands says, \"Prevent the next 4 damage that would be dealt to any target.\" Suppose a spell controlled by a player who has activated Quest for Pure Fire's second ability would deal 5 damage to a player who has cast Mending Hands targeting themselves. The player who would be dealt damage can either (a) prevent 4 damage first and then let Quest for Pure Fire's effect double the remaining 1 damage, taking 2 damage, or (b) double the damage to 10 and then prevent 4 damage, taking 6 damage."
         },
         {
           "date": "2009-10-01",
@@ -15511,7 +15503,7 @@
           "text": "If you activate the second ability of more than one Quest for Pure Flame in the same turn, the effects are cumulative. Two such effects will cause damage from sources you control to be multiplied by four; three such effects will cause damage from sources you control to be multiplied by eight."
         }
       ],
-      "text": "Whenever a source you control deals damage to an opponent, you may put a quest counter on Quest for Pure Flame.\nRemove four quest counters from Quest for Pure Flame and sacrifice it: If any source you control would deal damage to a creature or player this turn, it deals double that damage to that creature or player instead.",
+      "text": "Whenever a source you control deals damage to an opponent, you may put a quest counter on Quest for Pure Flame.\nRemove four quest counters from Quest for Pure Flame and sacrifice it: If any source you control would deal damage to a permanent or player this turn, it deals double that damage to that permanent or player instead.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -15735,7 +15727,7 @@
       "subtypes": [
         "Trap"
       ],
-      "text": "If an opponent drew three or more cards this turn, you may pay {R} rather than pay Runeflare Trap's mana cost.\nRuneflare Trap deals damage to target player equal to the number of cards in that player's hand.",
+      "text": "If an opponent drew three or more cards this turn, you may pay {R} rather than pay this spell's mana cost.\nRuneflare Trap deals damage to target player equal to the number of cards in that player's hand.",
       "type": "Instant — Trap",
       "types": [
         "Instant"
@@ -16123,7 +16115,7 @@
         "DDI"
       ],
       "rarity": "Common",
-      "text": "Spire Barrage deals damage to target creature or player equal to the number of Mountains you control.",
+      "text": "Spire Barrage deals damage to any target equal to the number of Mountains you control.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -16448,10 +16440,10 @@
         },
         {
           "date": "2009-10-01",
-          "text": "If Unstable Footing is kicked and the targeted player is an illegal target by the time it resolves, the entire spell is countered. Damage can still be prevented."
+          "text": "If Unstable Footing is kicked and the targeted player is an illegal target by the time it resolves, the entire spell doesn't resolve. Damage can still be prevented."
         }
       ],
-      "text": "Kicker {3}{R} (You may pay an additional {3}{R} as you cast this spell.)\nDamage can't be prevented this turn. If Unstable Footing was kicked, it deals 5 damage to target player.",
+      "text": "Kicker {3}{R} (You may pay an additional {3}{R} as you cast this spell.)\nDamage can't be prevented this turn. If this spell was kicked, it deals 5 damage to target player or planeswalker.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -16776,7 +16768,7 @@
       "subtypes": [
         "Trap"
       ],
-      "text": "If an opponent had an artifact enter the battlefield under his or her control this turn, you may pay {1}{G} rather than pay Baloth Cage Trap's mana cost.\nCreate a 4/4 green Beast creature token.",
+      "text": "If an opponent had an artifact enter the battlefield under their control this turn, you may pay {1}{G} rather than pay this spell's mana cost.\nCreate a 4/4 green Beast creature token.",
       "type": "Instant — Trap",
       "types": [
         "Instant"
@@ -17207,7 +17199,7 @@
       "subtypes": [
         "Trap"
       ],
-      "text": "If a noncreature permanent under your control was destroyed this turn by a spell or ability an opponent controlled, you may pay {G} rather than pay Cobra Trap's mana cost.\nCreate four 1/1 green Snake creature tokens.",
+      "text": "If a noncreature permanent under your control was destroyed this turn by a spell or ability an opponent controlled, you may pay {G} rather than pay this spell's mana cost.\nCreate four 1/1 green Snake creature tokens.",
       "type": "Instant — Trap",
       "types": [
         "Instant"
@@ -17404,7 +17396,7 @@
       "rulings": [
         {
           "date": "2009-10-01",
-          "text": "If the creature targeted by the Gigantiform spell is an illegal target by the time Gigantiform resolves, the spell is countered. It won't enter the battlefield, so you won't get to search your library for another Gigantiform."
+          "text": "If the creature targeted by the Gigantiform spell is an illegal target by the time Gigantiform resolves, the spell doesn't resolve. It won't enter the battlefield, so you won't get to search your library for another Gigantiform."
         },
         {
           "date": "2009-10-01",
@@ -17635,7 +17627,7 @@
         "Elf",
         "Druid"
       ],
-      "text": "{T}: Add {G}{G} to your mana pool.",
+      "text": "{T}: Add {G}{G}.",
       "toughness": "1",
       "type": "Creature — Elf Druid",
       "types": [
@@ -17760,7 +17752,7 @@
           "text": "Because the \"search\" requires you to find a card with certain characteristics, you don't have to find the card if you don't want to."
         }
       ],
-      "text": "As an additional cost to cast Harrow, sacrifice a land.\nSearch your library for up to two basic land cards and put them onto the battlefield. Then shuffle your library.",
+      "text": "As an additional cost to cast this spell, sacrifice a land.\nSearch your library for up to two basic land cards and put them onto the battlefield. Then shuffle your library.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -18087,7 +18079,7 @@
       "subtypes": [
         "Snake"
       ],
-      "text": "Landfall — Whenever a land enters the battlefield under your control, you may add one mana of any color to your mana pool.",
+      "text": "Landfall — Whenever a land enters the battlefield under your control, you may add one mana of any color.",
       "toughness": "1",
       "type": "Creature — Snake",
       "types": [
@@ -18840,7 +18832,7 @@
         },
         {
           "date": "2009-10-01",
-          "text": "If the targeted creature leaves the battlefield (or otherwise becomes an illegal target) before the ability resolves, the ability is countered. The enchanted creature isn't dealt damage."
+          "text": "If the targeted creature leaves the battlefield (or otherwise becomes an illegal target) before the ability resolves, the ability doesn't resolve. The enchanted creature isn't dealt damage."
         },
         {
           "date": "2009-10-01",
@@ -19801,7 +19793,7 @@
       "subtypes": [
         "Trap"
       ],
-      "text": "If a creature spell you cast this turn was countered by a spell or ability an opponent controlled, you may pay {0} rather than pay Summoning Trap's mana cost.\nLook at the top seven cards of your library. You may put a creature card from among them onto the battlefield. Put the rest on the bottom of your library in any order.",
+      "text": "If a creature spell you cast this turn was countered by a spell or ability an opponent controlled, you may pay {0} rather than pay this spell's mana cost.\nLook at the top seven cards of your library. You may put a creature card from among them onto the battlefield. Put the rest on the bottom of your library in any order.",
       "type": "Instant — Trap",
       "types": [
         "Instant"
@@ -20122,7 +20114,7 @@
       "subtypes": [
         "Beast"
       ],
-      "text": "Terra Stomper can't be countered.\nTrample (This creature can deal excess combat damage to defending player or planeswalker while attacking.)",
+      "text": "This spell can't be countered.\nTrample  (This creature can deal excess combat damage to the player or planeswalker it's attacking.)",
       "toughness": "8",
       "type": "Creature — Beast",
       "types": [
@@ -20786,7 +20778,7 @@
           "text": "This is not the same as hexproof. If, for example, you target one of your opponent's creatures, your opponents won't be able to target their own creature with spells or abilities."
         }
       ],
-      "text": "Kicker {G} (You may pay an additional {G} as you cast this spell.)\nTarget creature can't be the target of spells or abilities your opponents control this turn. If Vines of Vastwood was kicked, that creature gets +4/+4 until end of turn.",
+      "text": "Kicker {G} (You may pay an additional {G} as you cast this spell.)\nTarget creature can't be the target of spells or abilities your opponents control this turn. If this spell was kicked, that creature gets +4/+4 until end of turn.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -21206,17 +21198,17 @@
       "rulings": [
         {
           "date": "2009-10-01",
-          "text": "If a Blazing Torch controlled by one player somehow winds up equipping a creature a different player controls, the damage ability can't be activated by either player. Only the creature's controller may activate the ability — but since that player can't sacrifice Blazing Torch (a permanent he or she doesn't control), the ability's cost can't be paid."
+          "text": "If a Blazing Torch controlled by one player somehow winds up equipping a creature a different player controls, the damage ability can't be activated by either player. Only the creature's controller may activate the ability — but since that player can't sacrifice Blazing Torch (a permanent they don't control), the ability's cost can't be paid."
         },
         {
           "date": "2009-10-01",
-          "text": "The source of the damage is Blazing Torch, not the equipped creature. However, the equipped creature's ability is what targets the creature or player. If Blazing Torch is equipped to a red creature, for example, the ability couldn't target a creature with protection from red. It could target a creature with protection from artifacts, but all the damage would be prevented."
+          "text": "The source of the damage is Blazing Torch, not the equipped creature. However, the equipped creature's ability is what targets the permanent or player. If Blazing Torch is equipped to a red creature, for example, the ability couldn't target a creature with protection from red. It could target a creature with protection from artifacts, but all the damage would be prevented."
         }
       ],
       "subtypes": [
         "Equipment"
       ],
-      "text": "Equipped creature can't be blocked by Vampires or Zombies.\nEquipped creature has \"{T}, Sacrifice Blazing Torch: Blazing Torch deals 2 damage to target creature or player.\"\nEquip {1} ({1}: Attach to target creature you control. Equip only as a sorcery.)",
+      "text": "Equipped creature can't be blocked by Vampires or Zombies.\nEquipped creature has \"{T}, Sacrifice Blazing Torch: Blazing Torch deals 2 damage to any target.\"\nEquip {1} ({1}: Attach to target creature you control. Equip only as a sorcery.)",
       "type": "Artifact — Equipment",
       "types": [
         "Artifact"
@@ -22009,7 +22001,7 @@
           "text": "If you don't control any lands by the time Khalni Gem's triggered ability resolves, nothing happens. If you control just one, you'll have to return it to its owner's hand. Khalni Gem isn't affected in either case."
         }
       ],
-      "text": "When Khalni Gem enters the battlefield, return two lands you control to their owner's hand.\n{T}: Add two mana of any one color to your mana pool.",
+      "text": "When Khalni Gem enters the battlefield, return two lands you control to their owner's hand.\n{T}: Add two mana of any one color.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -22476,7 +22468,7 @@
         "C17"
       ],
       "rarity": "Uncommon",
-      "text": "Akoum Refuge enters the battlefield tapped.\nWhen Akoum Refuge enters the battlefield, you gain 1 life.\n{T}: Add {B} or {R} to your mana pool.",
+      "text": "Akoum Refuge enters the battlefield tapped.\nWhen Akoum Refuge enters the battlefield, you gain 1 life.\n{T}: Add {B} or {R}.",
       "type": "Land",
       "types": [
         "Land"
@@ -22654,7 +22646,7 @@
         "C14"
       ],
       "rarity": "Rare",
-      "text": "Crypt of Agadeem enters the battlefield tapped.\n{T}: Add {B} to your mana pool.\n{2}, {T}: Add {B} to your mana pool for each black creature card in your graveyard.",
+      "text": "Crypt of Agadeem enters the battlefield tapped.\n{T}: Add {B}.\n{2}, {T}: Add {B} for each black creature card in your graveyard.",
       "type": "Land",
       "types": [
         "Land"
@@ -22750,7 +22742,7 @@
           "text": "Emeria, the Sky Ruin's triggered ability has an \"intervening 'if' clause.\" That means (1) the ability won't trigger at all unless you control seven or more Plains as your upkeep starts, and (2) the ability will do nothing if you control fewer than seven Plains by the time it resolves."
         }
       ],
-      "text": "Emeria, the Sky Ruin enters the battlefield tapped.\nAt the beginning of your upkeep, if you control seven or more Plains, you may return target creature card from your graveyard to the battlefield.\n{T}: Add {W} to your mana pool.",
+      "text": "Emeria, the Sky Ruin enters the battlefield tapped.\nAt the beginning of your upkeep, if you control seven or more Plains, you may return target creature card from your graveyard to the battlefield.\n{T}: Add {W}.",
       "type": "Land",
       "types": [
         "Land"
@@ -22846,7 +22838,7 @@
         "C17"
       ],
       "rarity": "Uncommon",
-      "text": "Graypelt Refuge enters the battlefield tapped.\nWhen Graypelt Refuge enters the battlefield, you gain 1 life.\n{T}: Add {G} or {W} to your mana pool.",
+      "text": "Graypelt Refuge enters the battlefield tapped.\nWhen Graypelt Refuge enters the battlefield, you gain 1 life.\n{T}: Add {G} or {W}.",
       "type": "Land",
       "types": [
         "Land"
@@ -22941,7 +22933,7 @@
         "C17"
       ],
       "rarity": "Uncommon",
-      "text": "Jwar Isle Refuge enters the battlefield tapped.\nWhen Jwar Isle Refuge enters the battlefield, you gain 1 life.\n{T}: Add {U} or {B} to your mana pool.",
+      "text": "Jwar Isle Refuge enters the battlefield tapped.\nWhen Jwar Isle Refuge enters the battlefield, you gain 1 life.\n{T}: Add {U} or {B}.",
       "type": "Land",
       "types": [
         "Land"
@@ -23032,7 +23024,7 @@
         "C17"
       ],
       "rarity": "Common",
-      "text": "Kabira Crossroads enters the battlefield tapped.\nWhen Kabira Crossroads enters the battlefield, you gain 2 life.\n{T}: Add {W} to your mana pool.",
+      "text": "Kabira Crossroads enters the battlefield tapped.\nWhen Kabira Crossroads enters the battlefield, you gain 2 life.\n{T}: Add {W}.",
       "type": "Land",
       "types": [
         "Land"
@@ -23129,7 +23121,7 @@
         "PCA"
       ],
       "rarity": "Uncommon",
-      "text": "Kazandu Refuge enters the battlefield tapped.\nWhen Kazandu Refuge enters the battlefield, you gain 1 life.\n{T}: Add {R} or {G} to your mana pool.",
+      "text": "Kazandu Refuge enters the battlefield tapped.\nWhen Kazandu Refuge enters the battlefield, you gain 1 life.\n{T}: Add {R} or {G}.",
       "type": "Land",
       "types": [
         "Land"
@@ -23240,7 +23232,7 @@
           "text": "If you take an extra turn in a Two-Headed Giant game, you entire team takes the extra turn."
         }
       ],
-      "text": "Magosi, the Waterveil enters the battlefield tapped.\n{T}: Add {U} to your mana pool.\n{U}, {T}: Put an eon counter on Magosi, the Waterveil. Skip your next turn.\n{T}, Remove an eon counter from Magosi, the Waterveil and return it to its owner's hand: Take an extra turn after this one.",
+      "text": "Magosi, the Waterveil enters the battlefield tapped.\n{T}: Add {U}.\n{U}, {T}: Put an eon counter on Magosi, the Waterveil. Skip your next turn.\n{T}, Remove an eon counter from Magosi, the Waterveil and return it to its owner's hand: Take an extra turn after this one.",
       "type": "Land",
       "types": [
         "Land"
@@ -23505,7 +23497,8 @@
         "ZEN",
         "C14",
         "C15",
-        "CMA"
+        "CMA",
+        "DDU"
       ],
       "rarity": "Rare",
       "rulings": [
@@ -23518,7 +23511,7 @@
           "text": "Oran-Rief's second ability affects all permanents that are green creatures that entered the battlefield this turn, not just the ones you control."
         }
       ],
-      "text": "Oran-Rief, the Vastwood enters the battlefield tapped.\n{T}: Add {G} to your mana pool.\n{T}: Put a +1/+1 counter on each green creature that entered the battlefield this turn.",
+      "text": "Oran-Rief, the Vastwood enters the battlefield tapped.\n{T}: Add {G}.\n{T}: Put a +1/+1 counter on each green creature that entered the battlefield this turn.",
       "type": "Land",
       "types": [
         "Land"
@@ -23607,7 +23600,7 @@
         "ZEN"
       ],
       "rarity": "Common",
-      "text": "Piranha Marsh enters the battlefield tapped.\nWhen Piranha Marsh enters the battlefield, target player loses 1 life.\n{T}: Add {B} to your mana pool.",
+      "text": "Piranha Marsh enters the battlefield tapped.\nWhen Piranha Marsh enters the battlefield, target player loses 1 life.\n{T}: Add {B}.",
       "type": "Land",
       "types": [
         "Land"
@@ -23788,7 +23781,7 @@
         "CMA"
       ],
       "rarity": "Uncommon",
-      "text": "Sejiri Refuge enters the battlefield tapped.\nWhen Sejiri Refuge enters the battlefield, you gain 1 life.\n{T}: Add {W} or {U} to your mana pool.",
+      "text": "Sejiri Refuge enters the battlefield tapped.\nWhen Sejiri Refuge enters the battlefield, you gain 1 life.\n{T}: Add {W} or {U}.",
       "type": "Land",
       "types": [
         "Land"
@@ -23878,7 +23871,7 @@
         "DDI"
       ],
       "rarity": "Common",
-      "text": "Soaring Seacliff enters the battlefield tapped.\nWhen Soaring Seacliff enters the battlefield, target creature gains flying until end of turn.\n{T}: Add {U} to your mana pool.",
+      "text": "Soaring Seacliff enters the battlefield tapped.\nWhen Soaring Seacliff enters the battlefield, target creature gains flying until end of turn.\n{T}: Add {U}.",
       "type": "Land",
       "types": [
         "Land"
@@ -23969,7 +23962,7 @@
         "PD2"
       ],
       "rarity": "Common",
-      "text": "Teetering Peaks enters the battlefield tapped.\nWhen Teetering Peaks enters the battlefield, target creature gets +2/+0 until end of turn.\n{T}: Add {R} to your mana pool.",
+      "text": "Teetering Peaks enters the battlefield tapped.\nWhen Teetering Peaks enters the battlefield, target creature gets +2/+0 until end of turn.\n{T}: Add {R}.",
       "type": "Land",
       "types": [
         "Land"
@@ -24059,7 +24052,7 @@
         "DDP"
       ],
       "rarity": "Common",
-      "text": "Turntimber Grove enters the battlefield tapped.\nWhen Turntimber Grove enters the battlefield, target creature gets +1/+1 until end of turn.\n{T}: Add {G} to your mana pool.",
+      "text": "Turntimber Grove enters the battlefield tapped.\nWhen Turntimber Grove enters the battlefield, target creature gets +1/+1 until end of turn.\n{T}: Add {G}.",
       "type": "Land",
       "types": [
         "Land"
@@ -24164,10 +24157,10 @@
         },
         {
           "date": "2009-10-01",
-          "text": "You target a creature or player when the ability triggers. You decide whether to have Valakut deal damage to that creature or player as the ability resolves."
+          "text": "You target a permanent or player when the ability triggers. You decide whether to have Valakut deal damage to that permanent or player as the ability resolves."
         }
       ],
-      "text": "Valakut, the Molten Pinnacle enters the battlefield tapped.\nWhenever a Mountain enters the battlefield under your control, if you control at least five other Mountains, you may have Valakut, the Molten Pinnacle deal 3 damage to target creature or player.\n{T}: Add {R} to your mana pool.",
+      "text": "Valakut, the Molten Pinnacle enters the battlefield tapped.\nWhenever a Mountain enters the battlefield under your control, if you control at least five other Mountains, you may have Valakut, the Molten Pinnacle deal 3 damage to any target.\n{T}: Add {R}.",
       "type": "Land",
       "types": [
         "Land"
@@ -24268,6 +24261,11 @@
         "W"
       ],
       "foreignNames": [
+        {
+          "language": "Russian",
+          "name": "Равнина",
+          "multiverseid": 203507
+        },
         {
           "language": "German",
           "name": "Ebene",
@@ -24387,11 +24385,6 @@
           "language": "Italian",
           "name": "Pianura",
           "multiverseid": 207114
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Planície",
-          "multiverseid": 207154
         }
       ],
       "id": "d5e691be3d7c89e8037d7b9f4b8a987c01f8cd14",
@@ -24576,9 +24569,12 @@
         "LRW",
         "SHM",
         "ALA",
+        "DDC",
         "M10",
         "HOP",
+        "ME3",
         "ZEN",
+        "H09",
         "DDE",
         "ROE",
         "ARC",
@@ -24616,13 +24612,20 @@
         "DDP",
         "BFZ",
         "C15",
+        "DDQ",
         "SOI",
         "KLD",
+        "C16",
+        "PCA",
         "AKH",
+        "CMA",
         "E01",
         "HOU",
+        "C17",
         "XLN",
-        "RIX"
+        "UST",
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -24653,6 +24656,11 @@
         "W"
       ],
       "foreignNames": [
+        {
+          "language": "Russian",
+          "name": "Равнина",
+          "multiverseid": 203507
+        },
         {
           "language": "German",
           "name": "Ebene",
@@ -24772,11 +24780,6 @@
           "language": "Italian",
           "name": "Pianura",
           "multiverseid": 207114
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Planície",
-          "multiverseid": 207154
         }
       ],
       "id": "b8817cd3498e9ee53c8fab422f7cb9267e2c838d",
@@ -24961,9 +24964,12 @@
         "LRW",
         "SHM",
         "ALA",
+        "DDC",
         "M10",
         "HOP",
+        "ME3",
         "ZEN",
+        "H09",
         "DDE",
         "ROE",
         "ARC",
@@ -25001,13 +25007,20 @@
         "DDP",
         "BFZ",
         "C15",
+        "DDQ",
         "SOI",
         "KLD",
+        "C16",
+        "PCA",
         "AKH",
+        "CMA",
         "E01",
         "HOU",
+        "C17",
         "XLN",
-        "RIX"
+        "UST",
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -25038,6 +25051,11 @@
         "W"
       ],
       "foreignNames": [
+        {
+          "language": "Russian",
+          "name": "Равнина",
+          "multiverseid": 203507
+        },
         {
           "language": "German",
           "name": "Ebene",
@@ -25157,11 +25175,6 @@
           "language": "Italian",
           "name": "Pianura",
           "multiverseid": 207114
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Planície",
-          "multiverseid": 207154
         }
       ],
       "id": "944cf3d3d4e3c403e4bb54602abae40f1fcfa032",
@@ -25346,9 +25359,12 @@
         "LRW",
         "SHM",
         "ALA",
+        "DDC",
         "M10",
         "HOP",
+        "ME3",
         "ZEN",
+        "H09",
         "DDE",
         "ROE",
         "ARC",
@@ -25386,13 +25402,20 @@
         "DDP",
         "BFZ",
         "C15",
+        "DDQ",
         "SOI",
         "KLD",
+        "C16",
+        "PCA",
         "AKH",
+        "CMA",
         "E01",
         "HOU",
+        "C17",
         "XLN",
-        "RIX"
+        "UST",
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -25423,6 +25446,11 @@
         "W"
       ],
       "foreignNames": [
+        {
+          "language": "Russian",
+          "name": "Равнина",
+          "multiverseid": 203507
+        },
         {
           "language": "German",
           "name": "Ebene",
@@ -25542,11 +25570,6 @@
           "language": "Italian",
           "name": "Pianura",
           "multiverseid": 207114
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Planície",
-          "multiverseid": 207154
         }
       ],
       "id": "38d8e0a0e3be5df611cfc669821d693edc20bd2a",
@@ -25731,9 +25754,12 @@
         "LRW",
         "SHM",
         "ALA",
+        "DDC",
         "M10",
         "HOP",
+        "ME3",
         "ZEN",
+        "H09",
         "DDE",
         "ROE",
         "ARC",
@@ -25771,13 +25797,20 @@
         "DDP",
         "BFZ",
         "C15",
+        "DDQ",
         "SOI",
         "KLD",
+        "C16",
+        "PCA",
         "AKH",
+        "CMA",
         "E01",
         "HOU",
+        "C17",
         "XLN",
-        "RIX"
+        "UST",
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -25808,6 +25841,11 @@
         "W"
       ],
       "foreignNames": [
+        {
+          "language": "Russian",
+          "name": "Равнина",
+          "multiverseid": 203507
+        },
         {
           "language": "German",
           "name": "Ebene",
@@ -25927,11 +25965,6 @@
           "language": "Italian",
           "name": "Pianura",
           "multiverseid": 207114
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Planície",
-          "multiverseid": 207154
         }
       ],
       "id": "3ced679eac13a8cb1833a9eab40f84d93f4e5c86",
@@ -26116,9 +26149,12 @@
         "LRW",
         "SHM",
         "ALA",
+        "DDC",
         "M10",
         "HOP",
+        "ME3",
         "ZEN",
+        "H09",
         "DDE",
         "ROE",
         "ARC",
@@ -26156,13 +26192,20 @@
         "DDP",
         "BFZ",
         "C15",
+        "DDQ",
         "SOI",
         "KLD",
+        "C16",
+        "PCA",
         "AKH",
+        "CMA",
         "E01",
         "HOU",
+        "C17",
         "XLN",
-        "RIX"
+        "UST",
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -26193,6 +26236,11 @@
         "W"
       ],
       "foreignNames": [
+        {
+          "language": "Russian",
+          "name": "Равнина",
+          "multiverseid": 203507
+        },
         {
           "language": "German",
           "name": "Ebene",
@@ -26312,11 +26360,6 @@
           "language": "Italian",
           "name": "Pianura",
           "multiverseid": 207114
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Planície",
-          "multiverseid": 207154
         }
       ],
       "id": "8bae8fa581b207449f6071e153b2b5c25aafc25d",
@@ -26501,9 +26544,12 @@
         "LRW",
         "SHM",
         "ALA",
+        "DDC",
         "M10",
         "HOP",
+        "ME3",
         "ZEN",
+        "H09",
         "DDE",
         "ROE",
         "ARC",
@@ -26541,13 +26587,20 @@
         "DDP",
         "BFZ",
         "C15",
+        "DDQ",
         "SOI",
         "KLD",
+        "C16",
+        "PCA",
         "AKH",
+        "CMA",
         "E01",
         "HOU",
+        "C17",
         "XLN",
-        "RIX"
+        "UST",
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -26578,6 +26631,11 @@
         "W"
       ],
       "foreignNames": [
+        {
+          "language": "Russian",
+          "name": "Равнина",
+          "multiverseid": 203507
+        },
         {
           "language": "German",
           "name": "Ebene",
@@ -26697,11 +26755,6 @@
           "language": "Italian",
           "name": "Pianura",
           "multiverseid": 207114
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Planície",
-          "multiverseid": 207154
         }
       ],
       "id": "22c8f5784d001d6df432bb09acf95c8c06645276",
@@ -26886,9 +26939,12 @@
         "LRW",
         "SHM",
         "ALA",
+        "DDC",
         "M10",
         "HOP",
+        "ME3",
         "ZEN",
+        "H09",
         "DDE",
         "ROE",
         "ARC",
@@ -26926,13 +26982,20 @@
         "DDP",
         "BFZ",
         "C15",
+        "DDQ",
         "SOI",
         "KLD",
+        "C16",
+        "PCA",
         "AKH",
+        "CMA",
         "E01",
         "HOU",
+        "C17",
         "XLN",
-        "RIX"
+        "UST",
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -26963,6 +27026,11 @@
         "W"
       ],
       "foreignNames": [
+        {
+          "language": "Russian",
+          "name": "Равнина",
+          "multiverseid": 203507
+        },
         {
           "language": "German",
           "name": "Ebene",
@@ -27082,11 +27150,6 @@
           "language": "Italian",
           "name": "Pianura",
           "multiverseid": 207114
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Planície",
-          "multiverseid": 207154
         }
       ],
       "id": "7945a611e6efa885e77eae0443e1593aaff7756a",
@@ -27271,9 +27334,12 @@
         "LRW",
         "SHM",
         "ALA",
+        "DDC",
         "M10",
         "HOP",
+        "ME3",
         "ZEN",
+        "H09",
         "DDE",
         "ROE",
         "ARC",
@@ -27311,13 +27377,20 @@
         "DDP",
         "BFZ",
         "C15",
+        "DDQ",
         "SOI",
         "KLD",
+        "C16",
+        "PCA",
         "AKH",
+        "CMA",
         "E01",
         "HOU",
+        "C17",
         "XLN",
-        "RIX"
+        "UST",
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -27658,7 +27731,9 @@
         "DD2",
         "M10",
         "HOP",
+        "ME3",
         "ZEN",
+        "H09",
         "DDE",
         "ROE",
         "DPA",
@@ -27697,11 +27772,20 @@
         "DDQ",
         "SOI",
         "KLD",
+        "C16",
+        "PCA",
+        "DDS",
         "AKH",
+        "CMA",
         "E01",
         "HOU",
+        "C17",
         "XLN",
-        "RIX"
+        "DDT",
+        "UST",
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -28042,7 +28126,9 @@
         "DD2",
         "M10",
         "HOP",
+        "ME3",
         "ZEN",
+        "H09",
         "DDE",
         "ROE",
         "DPA",
@@ -28081,11 +28167,20 @@
         "DDQ",
         "SOI",
         "KLD",
+        "C16",
+        "PCA",
+        "DDS",
         "AKH",
+        "CMA",
         "E01",
         "HOU",
+        "C17",
         "XLN",
-        "RIX"
+        "DDT",
+        "UST",
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -28426,7 +28521,9 @@
         "DD2",
         "M10",
         "HOP",
+        "ME3",
         "ZEN",
+        "H09",
         "DDE",
         "ROE",
         "DPA",
@@ -28465,11 +28562,20 @@
         "DDQ",
         "SOI",
         "KLD",
+        "C16",
+        "PCA",
+        "DDS",
         "AKH",
+        "CMA",
         "E01",
         "HOU",
+        "C17",
         "XLN",
-        "RIX"
+        "DDT",
+        "UST",
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -28810,7 +28916,9 @@
         "DD2",
         "M10",
         "HOP",
+        "ME3",
         "ZEN",
+        "H09",
         "DDE",
         "ROE",
         "DPA",
@@ -28849,11 +28957,20 @@
         "DDQ",
         "SOI",
         "KLD",
+        "C16",
+        "PCA",
+        "DDS",
         "AKH",
+        "CMA",
         "E01",
         "HOU",
+        "C17",
         "XLN",
-        "RIX"
+        "DDT",
+        "UST",
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -29194,7 +29311,9 @@
         "DD2",
         "M10",
         "HOP",
+        "ME3",
         "ZEN",
+        "H09",
         "DDE",
         "ROE",
         "DPA",
@@ -29233,11 +29352,20 @@
         "DDQ",
         "SOI",
         "KLD",
+        "C16",
+        "PCA",
+        "DDS",
         "AKH",
+        "CMA",
         "E01",
         "HOU",
+        "C17",
         "XLN",
-        "RIX"
+        "DDT",
+        "UST",
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -29578,7 +29706,9 @@
         "DD2",
         "M10",
         "HOP",
+        "ME3",
         "ZEN",
+        "H09",
         "DDE",
         "ROE",
         "DPA",
@@ -29617,11 +29747,20 @@
         "DDQ",
         "SOI",
         "KLD",
+        "C16",
+        "PCA",
+        "DDS",
         "AKH",
+        "CMA",
         "E01",
         "HOU",
+        "C17",
         "XLN",
-        "RIX"
+        "DDT",
+        "UST",
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -29962,7 +30101,9 @@
         "DD2",
         "M10",
         "HOP",
+        "ME3",
         "ZEN",
+        "H09",
         "DDE",
         "ROE",
         "DPA",
@@ -30001,11 +30142,20 @@
         "DDQ",
         "SOI",
         "KLD",
+        "C16",
+        "PCA",
+        "DDS",
         "AKH",
+        "CMA",
         "E01",
         "HOU",
+        "C17",
         "XLN",
-        "RIX"
+        "DDT",
+        "UST",
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -30346,7 +30496,9 @@
         "DD2",
         "M10",
         "HOP",
+        "ME3",
         "ZEN",
+        "H09",
         "DDE",
         "ROE",
         "DPA",
@@ -30385,11 +30537,20 @@
         "DDQ",
         "SOI",
         "KLD",
+        "C16",
+        "PCA",
+        "DDS",
         "AKH",
+        "CMA",
         "E01",
         "HOU",
+        "C17",
         "XLN",
-        "RIX"
+        "DDT",
+        "UST",
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -30503,47 +30664,47 @@
         {
           "language": "Italian",
           "name": "Palude",
-          "multiverseid": 207123
-        },
-        {
-          "language": "Italian",
-          "name": "Palude",
-          "multiverseid": 207124
-        },
-        {
-          "language": "Italian",
-          "name": "Palude",
-          "multiverseid": 207125
-        },
-        {
-          "language": "Italian",
-          "name": "Palude",
-          "multiverseid": 207126
-        },
-        {
-          "language": "Italian",
-          "name": "Palude",
           "multiverseid": 207127
         },
         {
-          "language": "Italian",
-          "name": "Palude",
-          "multiverseid": 207128
+          "language": "Japanese",
+          "name": "沼",
+          "multiverseid": 207203
         },
         {
-          "language": "Italian",
-          "name": "Palude",
-          "multiverseid": 207129
+          "language": "Japanese",
+          "name": "沼",
+          "multiverseid": 207204
         },
         {
-          "language": "Italian",
-          "name": "Palude",
-          "multiverseid": 207130
+          "language": "Japanese",
+          "name": "沼",
+          "multiverseid": 207205
         },
         {
           "language": "Japanese",
           "name": "沼",
           "multiverseid": 207206
+        },
+        {
+          "language": "Japanese",
+          "name": "沼",
+          "multiverseid": 207207
+        },
+        {
+          "language": "Japanese",
+          "name": "沼",
+          "multiverseid": 207208
+        },
+        {
+          "language": "Japanese",
+          "name": "沼",
+          "multiverseid": 207209
+        },
+        {
+          "language": "Japanese",
+          "name": "沼",
+          "multiverseid": 207210
         }
       ],
       "id": "4cc653c83ce038c5feab7b363af12169ec00878b",
@@ -30729,10 +30890,13 @@
         "LRW",
         "SHM",
         "ALA",
+        "DDC",
         "M10",
         "HOP",
+        "ME3",
         "ZEN",
         "DDD",
+        "H09",
         "DDE",
         "ROE",
         "DPA",
@@ -30745,9 +30909,11 @@
         "M12",
         "DDH",
         "ISD",
+        "PD3",
         "AVR",
         "PC2",
         "M13",
+        "DDJ",
         "RTR",
         "DDK",
         "M14",
@@ -30768,13 +30934,21 @@
         "DDP",
         "BFZ",
         "C15",
+        "DDQ",
         "SOI",
+        "DDR",
         "KLD",
+        "C16",
+        "PCA",
         "AKH",
+        "CMA",
         "E01",
         "HOU",
+        "C17",
         "XLN",
-        "RIX"
+        "UST",
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -30888,47 +31062,47 @@
         {
           "language": "Italian",
           "name": "Palude",
-          "multiverseid": 207123
-        },
-        {
-          "language": "Italian",
-          "name": "Palude",
-          "multiverseid": 207124
-        },
-        {
-          "language": "Italian",
-          "name": "Palude",
-          "multiverseid": 207125
-        },
-        {
-          "language": "Italian",
-          "name": "Palude",
-          "multiverseid": 207126
-        },
-        {
-          "language": "Italian",
-          "name": "Palude",
           "multiverseid": 207127
         },
         {
-          "language": "Italian",
-          "name": "Palude",
-          "multiverseid": 207128
+          "language": "Japanese",
+          "name": "沼",
+          "multiverseid": 207203
         },
         {
-          "language": "Italian",
-          "name": "Palude",
-          "multiverseid": 207129
+          "language": "Japanese",
+          "name": "沼",
+          "multiverseid": 207204
         },
         {
-          "language": "Italian",
-          "name": "Palude",
-          "multiverseid": 207130
+          "language": "Japanese",
+          "name": "沼",
+          "multiverseid": 207205
         },
         {
           "language": "Japanese",
           "name": "沼",
           "multiverseid": 207206
+        },
+        {
+          "language": "Japanese",
+          "name": "沼",
+          "multiverseid": 207207
+        },
+        {
+          "language": "Japanese",
+          "name": "沼",
+          "multiverseid": 207208
+        },
+        {
+          "language": "Japanese",
+          "name": "沼",
+          "multiverseid": 207209
+        },
+        {
+          "language": "Japanese",
+          "name": "沼",
+          "multiverseid": 207210
         }
       ],
       "id": "2c68d217eb4fe0548b5317b6679ae3e30f299471",
@@ -31114,10 +31288,13 @@
         "LRW",
         "SHM",
         "ALA",
+        "DDC",
         "M10",
         "HOP",
+        "ME3",
         "ZEN",
         "DDD",
+        "H09",
         "DDE",
         "ROE",
         "DPA",
@@ -31130,9 +31307,11 @@
         "M12",
         "DDH",
         "ISD",
+        "PD3",
         "AVR",
         "PC2",
         "M13",
+        "DDJ",
         "RTR",
         "DDK",
         "M14",
@@ -31153,13 +31332,21 @@
         "DDP",
         "BFZ",
         "C15",
+        "DDQ",
         "SOI",
+        "DDR",
         "KLD",
+        "C16",
+        "PCA",
         "AKH",
+        "CMA",
         "E01",
         "HOU",
+        "C17",
         "XLN",
-        "RIX"
+        "UST",
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -31273,47 +31460,47 @@
         {
           "language": "Italian",
           "name": "Palude",
-          "multiverseid": 207123
-        },
-        {
-          "language": "Italian",
-          "name": "Palude",
-          "multiverseid": 207124
-        },
-        {
-          "language": "Italian",
-          "name": "Palude",
-          "multiverseid": 207125
-        },
-        {
-          "language": "Italian",
-          "name": "Palude",
-          "multiverseid": 207126
-        },
-        {
-          "language": "Italian",
-          "name": "Palude",
           "multiverseid": 207127
         },
         {
-          "language": "Italian",
-          "name": "Palude",
-          "multiverseid": 207128
+          "language": "Japanese",
+          "name": "沼",
+          "multiverseid": 207203
         },
         {
-          "language": "Italian",
-          "name": "Palude",
-          "multiverseid": 207129
+          "language": "Japanese",
+          "name": "沼",
+          "multiverseid": 207204
         },
         {
-          "language": "Italian",
-          "name": "Palude",
-          "multiverseid": 207130
+          "language": "Japanese",
+          "name": "沼",
+          "multiverseid": 207205
         },
         {
           "language": "Japanese",
           "name": "沼",
           "multiverseid": 207206
+        },
+        {
+          "language": "Japanese",
+          "name": "沼",
+          "multiverseid": 207207
+        },
+        {
+          "language": "Japanese",
+          "name": "沼",
+          "multiverseid": 207208
+        },
+        {
+          "language": "Japanese",
+          "name": "沼",
+          "multiverseid": 207209
+        },
+        {
+          "language": "Japanese",
+          "name": "沼",
+          "multiverseid": 207210
         }
       ],
       "id": "9227aa07c34490f7a487fb9d79e1b4cf925e27d0",
@@ -31499,10 +31686,13 @@
         "LRW",
         "SHM",
         "ALA",
+        "DDC",
         "M10",
         "HOP",
+        "ME3",
         "ZEN",
         "DDD",
+        "H09",
         "DDE",
         "ROE",
         "DPA",
@@ -31515,9 +31705,11 @@
         "M12",
         "DDH",
         "ISD",
+        "PD3",
         "AVR",
         "PC2",
         "M13",
+        "DDJ",
         "RTR",
         "DDK",
         "M14",
@@ -31538,13 +31730,21 @@
         "DDP",
         "BFZ",
         "C15",
+        "DDQ",
         "SOI",
+        "DDR",
         "KLD",
+        "C16",
+        "PCA",
         "AKH",
+        "CMA",
         "E01",
         "HOU",
+        "C17",
         "XLN",
-        "RIX"
+        "UST",
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -31658,47 +31858,47 @@
         {
           "language": "Italian",
           "name": "Palude",
-          "multiverseid": 207123
-        },
-        {
-          "language": "Italian",
-          "name": "Palude",
-          "multiverseid": 207124
-        },
-        {
-          "language": "Italian",
-          "name": "Palude",
-          "multiverseid": 207125
-        },
-        {
-          "language": "Italian",
-          "name": "Palude",
-          "multiverseid": 207126
-        },
-        {
-          "language": "Italian",
-          "name": "Palude",
           "multiverseid": 207127
         },
         {
-          "language": "Italian",
-          "name": "Palude",
-          "multiverseid": 207128
+          "language": "Japanese",
+          "name": "沼",
+          "multiverseid": 207203
         },
         {
-          "language": "Italian",
-          "name": "Palude",
-          "multiverseid": 207129
+          "language": "Japanese",
+          "name": "沼",
+          "multiverseid": 207204
         },
         {
-          "language": "Italian",
-          "name": "Palude",
-          "multiverseid": 207130
+          "language": "Japanese",
+          "name": "沼",
+          "multiverseid": 207205
         },
         {
           "language": "Japanese",
           "name": "沼",
           "multiverseid": 207206
+        },
+        {
+          "language": "Japanese",
+          "name": "沼",
+          "multiverseid": 207207
+        },
+        {
+          "language": "Japanese",
+          "name": "沼",
+          "multiverseid": 207208
+        },
+        {
+          "language": "Japanese",
+          "name": "沼",
+          "multiverseid": 207209
+        },
+        {
+          "language": "Japanese",
+          "name": "沼",
+          "multiverseid": 207210
         }
       ],
       "id": "2cda2755de6dcad939b6ecf8742c0bc83a3f88d1",
@@ -31884,10 +32084,13 @@
         "LRW",
         "SHM",
         "ALA",
+        "DDC",
         "M10",
         "HOP",
+        "ME3",
         "ZEN",
         "DDD",
+        "H09",
         "DDE",
         "ROE",
         "DPA",
@@ -31900,9 +32103,11 @@
         "M12",
         "DDH",
         "ISD",
+        "PD3",
         "AVR",
         "PC2",
         "M13",
+        "DDJ",
         "RTR",
         "DDK",
         "M14",
@@ -31923,13 +32128,21 @@
         "DDP",
         "BFZ",
         "C15",
+        "DDQ",
         "SOI",
+        "DDR",
         "KLD",
+        "C16",
+        "PCA",
         "AKH",
+        "CMA",
         "E01",
         "HOU",
+        "C17",
         "XLN",
-        "RIX"
+        "UST",
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -32043,47 +32256,47 @@
         {
           "language": "Italian",
           "name": "Palude",
-          "multiverseid": 207123
-        },
-        {
-          "language": "Italian",
-          "name": "Palude",
-          "multiverseid": 207124
-        },
-        {
-          "language": "Italian",
-          "name": "Palude",
-          "multiverseid": 207125
-        },
-        {
-          "language": "Italian",
-          "name": "Palude",
-          "multiverseid": 207126
-        },
-        {
-          "language": "Italian",
-          "name": "Palude",
           "multiverseid": 207127
         },
         {
-          "language": "Italian",
-          "name": "Palude",
-          "multiverseid": 207128
+          "language": "Japanese",
+          "name": "沼",
+          "multiverseid": 207203
         },
         {
-          "language": "Italian",
-          "name": "Palude",
-          "multiverseid": 207129
+          "language": "Japanese",
+          "name": "沼",
+          "multiverseid": 207204
         },
         {
-          "language": "Italian",
-          "name": "Palude",
-          "multiverseid": 207130
+          "language": "Japanese",
+          "name": "沼",
+          "multiverseid": 207205
         },
         {
           "language": "Japanese",
           "name": "沼",
           "multiverseid": 207206
+        },
+        {
+          "language": "Japanese",
+          "name": "沼",
+          "multiverseid": 207207
+        },
+        {
+          "language": "Japanese",
+          "name": "沼",
+          "multiverseid": 207208
+        },
+        {
+          "language": "Japanese",
+          "name": "沼",
+          "multiverseid": 207209
+        },
+        {
+          "language": "Japanese",
+          "name": "沼",
+          "multiverseid": 207210
         }
       ],
       "id": "392388bd3570b4f3350c5eba67243537804582e1",
@@ -32269,10 +32482,13 @@
         "LRW",
         "SHM",
         "ALA",
+        "DDC",
         "M10",
         "HOP",
+        "ME3",
         "ZEN",
         "DDD",
+        "H09",
         "DDE",
         "ROE",
         "DPA",
@@ -32285,9 +32501,11 @@
         "M12",
         "DDH",
         "ISD",
+        "PD3",
         "AVR",
         "PC2",
         "M13",
+        "DDJ",
         "RTR",
         "DDK",
         "M14",
@@ -32308,13 +32526,21 @@
         "DDP",
         "BFZ",
         "C15",
+        "DDQ",
         "SOI",
+        "DDR",
         "KLD",
+        "C16",
+        "PCA",
         "AKH",
+        "CMA",
         "E01",
         "HOU",
+        "C17",
         "XLN",
-        "RIX"
+        "UST",
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -32428,47 +32654,47 @@
         {
           "language": "Italian",
           "name": "Palude",
-          "multiverseid": 207123
-        },
-        {
-          "language": "Italian",
-          "name": "Palude",
-          "multiverseid": 207124
-        },
-        {
-          "language": "Italian",
-          "name": "Palude",
-          "multiverseid": 207125
-        },
-        {
-          "language": "Italian",
-          "name": "Palude",
-          "multiverseid": 207126
-        },
-        {
-          "language": "Italian",
-          "name": "Palude",
           "multiverseid": 207127
         },
         {
-          "language": "Italian",
-          "name": "Palude",
-          "multiverseid": 207128
+          "language": "Japanese",
+          "name": "沼",
+          "multiverseid": 207203
         },
         {
-          "language": "Italian",
-          "name": "Palude",
-          "multiverseid": 207129
+          "language": "Japanese",
+          "name": "沼",
+          "multiverseid": 207204
         },
         {
-          "language": "Italian",
-          "name": "Palude",
-          "multiverseid": 207130
+          "language": "Japanese",
+          "name": "沼",
+          "multiverseid": 207205
         },
         {
           "language": "Japanese",
           "name": "沼",
           "multiverseid": 207206
+        },
+        {
+          "language": "Japanese",
+          "name": "沼",
+          "multiverseid": 207207
+        },
+        {
+          "language": "Japanese",
+          "name": "沼",
+          "multiverseid": 207208
+        },
+        {
+          "language": "Japanese",
+          "name": "沼",
+          "multiverseid": 207209
+        },
+        {
+          "language": "Japanese",
+          "name": "沼",
+          "multiverseid": 207210
         }
       ],
       "id": "118b1c56e7989d0c4bba0767f8889dfa69be4d5e",
@@ -32654,10 +32880,13 @@
         "LRW",
         "SHM",
         "ALA",
+        "DDC",
         "M10",
         "HOP",
+        "ME3",
         "ZEN",
         "DDD",
+        "H09",
         "DDE",
         "ROE",
         "DPA",
@@ -32670,9 +32899,11 @@
         "M12",
         "DDH",
         "ISD",
+        "PD3",
         "AVR",
         "PC2",
         "M13",
+        "DDJ",
         "RTR",
         "DDK",
         "M14",
@@ -32693,13 +32924,21 @@
         "DDP",
         "BFZ",
         "C15",
+        "DDQ",
         "SOI",
+        "DDR",
         "KLD",
+        "C16",
+        "PCA",
         "AKH",
+        "CMA",
         "E01",
         "HOU",
+        "C17",
         "XLN",
-        "RIX"
+        "UST",
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -32813,47 +33052,47 @@
         {
           "language": "Italian",
           "name": "Palude",
-          "multiverseid": 207123
-        },
-        {
-          "language": "Italian",
-          "name": "Palude",
-          "multiverseid": 207124
-        },
-        {
-          "language": "Italian",
-          "name": "Palude",
-          "multiverseid": 207125
-        },
-        {
-          "language": "Italian",
-          "name": "Palude",
-          "multiverseid": 207126
-        },
-        {
-          "language": "Italian",
-          "name": "Palude",
           "multiverseid": 207127
         },
         {
-          "language": "Italian",
-          "name": "Palude",
-          "multiverseid": 207128
+          "language": "Japanese",
+          "name": "沼",
+          "multiverseid": 207203
         },
         {
-          "language": "Italian",
-          "name": "Palude",
-          "multiverseid": 207129
+          "language": "Japanese",
+          "name": "沼",
+          "multiverseid": 207204
         },
         {
-          "language": "Italian",
-          "name": "Palude",
-          "multiverseid": 207130
+          "language": "Japanese",
+          "name": "沼",
+          "multiverseid": 207205
         },
         {
           "language": "Japanese",
           "name": "沼",
           "multiverseid": 207206
+        },
+        {
+          "language": "Japanese",
+          "name": "沼",
+          "multiverseid": 207207
+        },
+        {
+          "language": "Japanese",
+          "name": "沼",
+          "multiverseid": 207208
+        },
+        {
+          "language": "Japanese",
+          "name": "沼",
+          "multiverseid": 207209
+        },
+        {
+          "language": "Japanese",
+          "name": "沼",
+          "multiverseid": 207210
         }
       ],
       "id": "08e87de72c78cb8e236f3cc47cb7e61185dd1853",
@@ -33039,10 +33278,13 @@
         "LRW",
         "SHM",
         "ALA",
+        "DDC",
         "M10",
         "HOP",
+        "ME3",
         "ZEN",
         "DDD",
+        "H09",
         "DDE",
         "ROE",
         "DPA",
@@ -33055,9 +33297,11 @@
         "M12",
         "DDH",
         "ISD",
+        "PD3",
         "AVR",
         "PC2",
         "M13",
+        "DDJ",
         "RTR",
         "DDK",
         "M14",
@@ -33078,13 +33322,21 @@
         "DDP",
         "BFZ",
         "C15",
+        "DDQ",
         "SOI",
+        "DDR",
         "KLD",
+        "C16",
+        "PCA",
         "AKH",
+        "CMA",
         "E01",
         "HOU",
+        "C17",
         "XLN",
-        "RIX"
+        "UST",
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -33198,47 +33450,47 @@
         {
           "language": "Italian",
           "name": "Palude",
-          "multiverseid": 207123
-        },
-        {
-          "language": "Italian",
-          "name": "Palude",
-          "multiverseid": 207124
-        },
-        {
-          "language": "Italian",
-          "name": "Palude",
-          "multiverseid": 207125
-        },
-        {
-          "language": "Italian",
-          "name": "Palude",
-          "multiverseid": 207126
-        },
-        {
-          "language": "Italian",
-          "name": "Palude",
           "multiverseid": 207127
         },
         {
-          "language": "Italian",
-          "name": "Palude",
-          "multiverseid": 207128
+          "language": "Japanese",
+          "name": "沼",
+          "multiverseid": 207203
         },
         {
-          "language": "Italian",
-          "name": "Palude",
-          "multiverseid": 207129
+          "language": "Japanese",
+          "name": "沼",
+          "multiverseid": 207204
         },
         {
-          "language": "Italian",
-          "name": "Palude",
-          "multiverseid": 207130
+          "language": "Japanese",
+          "name": "沼",
+          "multiverseid": 207205
         },
         {
           "language": "Japanese",
           "name": "沼",
           "multiverseid": 207206
+        },
+        {
+          "language": "Japanese",
+          "name": "沼",
+          "multiverseid": 207207
+        },
+        {
+          "language": "Japanese",
+          "name": "沼",
+          "multiverseid": 207208
+        },
+        {
+          "language": "Japanese",
+          "name": "沼",
+          "multiverseid": 207209
+        },
+        {
+          "language": "Japanese",
+          "name": "沼",
+          "multiverseid": 207210
         }
       ],
       "id": "50bdfd0bfe18437f866625f92c942d884ee97131",
@@ -33424,10 +33676,13 @@
         "LRW",
         "SHM",
         "ALA",
+        "DDC",
         "M10",
         "HOP",
+        "ME3",
         "ZEN",
         "DDD",
+        "H09",
         "DDE",
         "ROE",
         "DPA",
@@ -33440,9 +33695,11 @@
         "M12",
         "DDH",
         "ISD",
+        "PD3",
         "AVR",
         "PC2",
         "M13",
+        "DDJ",
         "RTR",
         "DDK",
         "M14",
@@ -33463,13 +33720,21 @@
         "DDP",
         "BFZ",
         "C15",
+        "DDQ",
         "SOI",
+        "DDR",
         "KLD",
+        "C16",
+        "PCA",
         "AKH",
+        "CMA",
         "E01",
         "HOU",
+        "C17",
         "XLN",
-        "RIX"
+        "UST",
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -33814,13 +34079,16 @@
         "DD2",
         "M10",
         "HOP",
+        "ME3",
         "ZEN",
+        "H09",
         "DDE",
         "ROE",
         "DPA",
         "ARC",
         "M11",
         "SOM",
+        "PD2",
         "MBS",
         "DDG",
         "NPH",
@@ -33830,7 +34098,9 @@
         "ISD",
         "DDI",
         "AVR",
+        "PC2",
         "M13",
+        "DDJ",
         "RTR",
         "DDK",
         "M14",
@@ -33849,13 +34119,23 @@
         "ORI",
         "DDP",
         "BFZ",
+        "C15",
         "SOI",
         "KLD",
+        "C16",
+        "PCA",
+        "DDS",
         "AKH",
+        "CMA",
         "E01",
         "HOU",
+        "C17",
         "XLN",
-        "RIX"
+        "DDT",
+        "UST",
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -34200,13 +34480,16 @@
         "DD2",
         "M10",
         "HOP",
+        "ME3",
         "ZEN",
+        "H09",
         "DDE",
         "ROE",
         "DPA",
         "ARC",
         "M11",
         "SOM",
+        "PD2",
         "MBS",
         "DDG",
         "NPH",
@@ -34216,7 +34499,9 @@
         "ISD",
         "DDI",
         "AVR",
+        "PC2",
         "M13",
+        "DDJ",
         "RTR",
         "DDK",
         "M14",
@@ -34235,13 +34520,23 @@
         "ORI",
         "DDP",
         "BFZ",
+        "C15",
         "SOI",
         "KLD",
+        "C16",
+        "PCA",
+        "DDS",
         "AKH",
+        "CMA",
         "E01",
         "HOU",
+        "C17",
         "XLN",
-        "RIX"
+        "DDT",
+        "UST",
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -34586,13 +34881,16 @@
         "DD2",
         "M10",
         "HOP",
+        "ME3",
         "ZEN",
+        "H09",
         "DDE",
         "ROE",
         "DPA",
         "ARC",
         "M11",
         "SOM",
+        "PD2",
         "MBS",
         "DDG",
         "NPH",
@@ -34602,7 +34900,9 @@
         "ISD",
         "DDI",
         "AVR",
+        "PC2",
         "M13",
+        "DDJ",
         "RTR",
         "DDK",
         "M14",
@@ -34621,13 +34921,23 @@
         "ORI",
         "DDP",
         "BFZ",
+        "C15",
         "SOI",
         "KLD",
+        "C16",
+        "PCA",
+        "DDS",
         "AKH",
+        "CMA",
         "E01",
         "HOU",
+        "C17",
         "XLN",
-        "RIX"
+        "DDT",
+        "UST",
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -34972,13 +35282,16 @@
         "DD2",
         "M10",
         "HOP",
+        "ME3",
         "ZEN",
+        "H09",
         "DDE",
         "ROE",
         "DPA",
         "ARC",
         "M11",
         "SOM",
+        "PD2",
         "MBS",
         "DDG",
         "NPH",
@@ -34988,7 +35301,9 @@
         "ISD",
         "DDI",
         "AVR",
+        "PC2",
         "M13",
+        "DDJ",
         "RTR",
         "DDK",
         "M14",
@@ -35007,13 +35322,23 @@
         "ORI",
         "DDP",
         "BFZ",
+        "C15",
         "SOI",
         "KLD",
+        "C16",
+        "PCA",
+        "DDS",
         "AKH",
+        "CMA",
         "E01",
         "HOU",
+        "C17",
         "XLN",
-        "RIX"
+        "DDT",
+        "UST",
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -35358,13 +35683,16 @@
         "DD2",
         "M10",
         "HOP",
+        "ME3",
         "ZEN",
+        "H09",
         "DDE",
         "ROE",
         "DPA",
         "ARC",
         "M11",
         "SOM",
+        "PD2",
         "MBS",
         "DDG",
         "NPH",
@@ -35374,7 +35702,9 @@
         "ISD",
         "DDI",
         "AVR",
+        "PC2",
         "M13",
+        "DDJ",
         "RTR",
         "DDK",
         "M14",
@@ -35393,13 +35723,23 @@
         "ORI",
         "DDP",
         "BFZ",
+        "C15",
         "SOI",
         "KLD",
+        "C16",
+        "PCA",
+        "DDS",
         "AKH",
+        "CMA",
         "E01",
         "HOU",
+        "C17",
         "XLN",
-        "RIX"
+        "DDT",
+        "UST",
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -35744,13 +36084,16 @@
         "DD2",
         "M10",
         "HOP",
+        "ME3",
         "ZEN",
+        "H09",
         "DDE",
         "ROE",
         "DPA",
         "ARC",
         "M11",
         "SOM",
+        "PD2",
         "MBS",
         "DDG",
         "NPH",
@@ -35760,7 +36103,9 @@
         "ISD",
         "DDI",
         "AVR",
+        "PC2",
         "M13",
+        "DDJ",
         "RTR",
         "DDK",
         "M14",
@@ -35779,13 +36124,23 @@
         "ORI",
         "DDP",
         "BFZ",
+        "C15",
         "SOI",
         "KLD",
+        "C16",
+        "PCA",
+        "DDS",
         "AKH",
+        "CMA",
         "E01",
         "HOU",
+        "C17",
         "XLN",
-        "RIX"
+        "DDT",
+        "UST",
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -36130,13 +36485,16 @@
         "DD2",
         "M10",
         "HOP",
+        "ME3",
         "ZEN",
+        "H09",
         "DDE",
         "ROE",
         "DPA",
         "ARC",
         "M11",
         "SOM",
+        "PD2",
         "MBS",
         "DDG",
         "NPH",
@@ -36146,7 +36504,9 @@
         "ISD",
         "DDI",
         "AVR",
+        "PC2",
         "M13",
+        "DDJ",
         "RTR",
         "DDK",
         "M14",
@@ -36165,13 +36525,23 @@
         "ORI",
         "DDP",
         "BFZ",
+        "C15",
         "SOI",
         "KLD",
+        "C16",
+        "PCA",
+        "DDS",
         "AKH",
+        "CMA",
         "E01",
         "HOU",
+        "C17",
         "XLN",
-        "RIX"
+        "DDT",
+        "UST",
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -36516,13 +36886,16 @@
         "DD2",
         "M10",
         "HOP",
+        "ME3",
         "ZEN",
+        "H09",
         "DDE",
         "ROE",
         "DPA",
         "ARC",
         "M11",
         "SOM",
+        "PD2",
         "MBS",
         "DDG",
         "NPH",
@@ -36532,7 +36905,9 @@
         "ISD",
         "DDI",
         "AVR",
+        "PC2",
         "M13",
+        "DDJ",
         "RTR",
         "DDK",
         "M14",
@@ -36551,13 +36926,23 @@
         "ORI",
         "DDP",
         "BFZ",
+        "C15",
         "SOI",
         "KLD",
+        "C16",
+        "PCA",
+        "DDS",
         "AKH",
+        "CMA",
         "E01",
         "HOU",
+        "C17",
         "XLN",
-        "RIX"
+        "DDT",
+        "UST",
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -36671,42 +37056,42 @@
         {
           "language": "Italian",
           "name": "Foresta",
-          "multiverseid": 207139
-        },
-        {
-          "language": "Italian",
-          "name": "Foresta",
-          "multiverseid": 207140
-        },
-        {
-          "language": "Italian",
-          "name": "Foresta",
-          "multiverseid": 207141
-        },
-        {
-          "language": "Italian",
-          "name": "Foresta",
           "multiverseid": 207142
         },
         {
-          "language": "Italian",
-          "name": "Foresta",
-          "multiverseid": 207143
+          "language": "Japanese",
+          "name": "森",
+          "multiverseid": 207219
         },
         {
-          "language": "Italian",
-          "name": "Foresta",
-          "multiverseid": 207144
+          "language": "Japanese",
+          "name": "森",
+          "multiverseid": 207220
         },
         {
-          "language": "Italian",
-          "name": "Foresta",
-          "multiverseid": 207145
+          "language": "Japanese",
+          "name": "森",
+          "multiverseid": 207221
         },
         {
-          "language": "Italian",
-          "name": "Foresta",
-          "multiverseid": 207146
+          "language": "Japanese",
+          "name": "森",
+          "multiverseid": 207222
+        },
+        {
+          "language": "Japanese",
+          "name": "森",
+          "multiverseid": 207223
+        },
+        {
+          "language": "Japanese",
+          "name": "森",
+          "multiverseid": 207224
+        },
+        {
+          "language": "Japanese",
+          "name": "森",
+          "multiverseid": 207225
         },
         {
           "language": "Japanese",
@@ -36900,8 +37285,10 @@
         "ALA",
         "M10",
         "HOP",
+        "ME3",
         "ZEN",
         "DDD",
+        "H09",
         "DDE",
         "ROE",
         "DPA",
@@ -36918,6 +37305,7 @@
         "AVR",
         "PC2",
         "M13",
+        "DDJ",
         "RTR",
         "M14",
         "DDL",
@@ -36936,13 +37324,23 @@
         "ORI",
         "DDP",
         "BFZ",
+        "C15",
         "SOI",
+        "DDR",
         "KLD",
+        "C16",
+        "PCA",
+        "DDS",
         "AKH",
+        "CMA",
         "E01",
         "HOU",
+        "C17",
         "XLN",
-        "RIX"
+        "UST",
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -37056,42 +37454,42 @@
         {
           "language": "Italian",
           "name": "Foresta",
-          "multiverseid": 207139
-        },
-        {
-          "language": "Italian",
-          "name": "Foresta",
-          "multiverseid": 207140
-        },
-        {
-          "language": "Italian",
-          "name": "Foresta",
-          "multiverseid": 207141
-        },
-        {
-          "language": "Italian",
-          "name": "Foresta",
           "multiverseid": 207142
         },
         {
-          "language": "Italian",
-          "name": "Foresta",
-          "multiverseid": 207143
+          "language": "Japanese",
+          "name": "森",
+          "multiverseid": 207219
         },
         {
-          "language": "Italian",
-          "name": "Foresta",
-          "multiverseid": 207144
+          "language": "Japanese",
+          "name": "森",
+          "multiverseid": 207220
         },
         {
-          "language": "Italian",
-          "name": "Foresta",
-          "multiverseid": 207145
+          "language": "Japanese",
+          "name": "森",
+          "multiverseid": 207221
         },
         {
-          "language": "Italian",
-          "name": "Foresta",
-          "multiverseid": 207146
+          "language": "Japanese",
+          "name": "森",
+          "multiverseid": 207222
+        },
+        {
+          "language": "Japanese",
+          "name": "森",
+          "multiverseid": 207223
+        },
+        {
+          "language": "Japanese",
+          "name": "森",
+          "multiverseid": 207224
+        },
+        {
+          "language": "Japanese",
+          "name": "森",
+          "multiverseid": 207225
         },
         {
           "language": "Japanese",
@@ -37285,8 +37683,10 @@
         "ALA",
         "M10",
         "HOP",
+        "ME3",
         "ZEN",
         "DDD",
+        "H09",
         "DDE",
         "ROE",
         "DPA",
@@ -37303,6 +37703,7 @@
         "AVR",
         "PC2",
         "M13",
+        "DDJ",
         "RTR",
         "M14",
         "DDL",
@@ -37321,13 +37722,23 @@
         "ORI",
         "DDP",
         "BFZ",
+        "C15",
         "SOI",
+        "DDR",
         "KLD",
+        "C16",
+        "PCA",
+        "DDS",
         "AKH",
+        "CMA",
         "E01",
         "HOU",
+        "C17",
         "XLN",
-        "RIX"
+        "UST",
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -37441,42 +37852,42 @@
         {
           "language": "Italian",
           "name": "Foresta",
-          "multiverseid": 207139
-        },
-        {
-          "language": "Italian",
-          "name": "Foresta",
-          "multiverseid": 207140
-        },
-        {
-          "language": "Italian",
-          "name": "Foresta",
-          "multiverseid": 207141
-        },
-        {
-          "language": "Italian",
-          "name": "Foresta",
           "multiverseid": 207142
         },
         {
-          "language": "Italian",
-          "name": "Foresta",
-          "multiverseid": 207143
+          "language": "Japanese",
+          "name": "森",
+          "multiverseid": 207219
         },
         {
-          "language": "Italian",
-          "name": "Foresta",
-          "multiverseid": 207144
+          "language": "Japanese",
+          "name": "森",
+          "multiverseid": 207220
         },
         {
-          "language": "Italian",
-          "name": "Foresta",
-          "multiverseid": 207145
+          "language": "Japanese",
+          "name": "森",
+          "multiverseid": 207221
         },
         {
-          "language": "Italian",
-          "name": "Foresta",
-          "multiverseid": 207146
+          "language": "Japanese",
+          "name": "森",
+          "multiverseid": 207222
+        },
+        {
+          "language": "Japanese",
+          "name": "森",
+          "multiverseid": 207223
+        },
+        {
+          "language": "Japanese",
+          "name": "森",
+          "multiverseid": 207224
+        },
+        {
+          "language": "Japanese",
+          "name": "森",
+          "multiverseid": 207225
         },
         {
           "language": "Japanese",
@@ -37670,8 +38081,10 @@
         "ALA",
         "M10",
         "HOP",
+        "ME3",
         "ZEN",
         "DDD",
+        "H09",
         "DDE",
         "ROE",
         "DPA",
@@ -37688,6 +38101,7 @@
         "AVR",
         "PC2",
         "M13",
+        "DDJ",
         "RTR",
         "M14",
         "DDL",
@@ -37706,13 +38120,23 @@
         "ORI",
         "DDP",
         "BFZ",
+        "C15",
         "SOI",
+        "DDR",
         "KLD",
+        "C16",
+        "PCA",
+        "DDS",
         "AKH",
+        "CMA",
         "E01",
         "HOU",
+        "C17",
         "XLN",
-        "RIX"
+        "UST",
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -37826,42 +38250,42 @@
         {
           "language": "Italian",
           "name": "Foresta",
-          "multiverseid": 207139
-        },
-        {
-          "language": "Italian",
-          "name": "Foresta",
-          "multiverseid": 207140
-        },
-        {
-          "language": "Italian",
-          "name": "Foresta",
-          "multiverseid": 207141
-        },
-        {
-          "language": "Italian",
-          "name": "Foresta",
           "multiverseid": 207142
         },
         {
-          "language": "Italian",
-          "name": "Foresta",
-          "multiverseid": 207143
+          "language": "Japanese",
+          "name": "森",
+          "multiverseid": 207219
         },
         {
-          "language": "Italian",
-          "name": "Foresta",
-          "multiverseid": 207144
+          "language": "Japanese",
+          "name": "森",
+          "multiverseid": 207220
         },
         {
-          "language": "Italian",
-          "name": "Foresta",
-          "multiverseid": 207145
+          "language": "Japanese",
+          "name": "森",
+          "multiverseid": 207221
         },
         {
-          "language": "Italian",
-          "name": "Foresta",
-          "multiverseid": 207146
+          "language": "Japanese",
+          "name": "森",
+          "multiverseid": 207222
+        },
+        {
+          "language": "Japanese",
+          "name": "森",
+          "multiverseid": 207223
+        },
+        {
+          "language": "Japanese",
+          "name": "森",
+          "multiverseid": 207224
+        },
+        {
+          "language": "Japanese",
+          "name": "森",
+          "multiverseid": 207225
         },
         {
           "language": "Japanese",
@@ -38055,8 +38479,10 @@
         "ALA",
         "M10",
         "HOP",
+        "ME3",
         "ZEN",
         "DDD",
+        "H09",
         "DDE",
         "ROE",
         "DPA",
@@ -38073,6 +38499,7 @@
         "AVR",
         "PC2",
         "M13",
+        "DDJ",
         "RTR",
         "M14",
         "DDL",
@@ -38091,13 +38518,23 @@
         "ORI",
         "DDP",
         "BFZ",
+        "C15",
         "SOI",
+        "DDR",
         "KLD",
+        "C16",
+        "PCA",
+        "DDS",
         "AKH",
+        "CMA",
         "E01",
         "HOU",
+        "C17",
         "XLN",
-        "RIX"
+        "UST",
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -38211,42 +38648,42 @@
         {
           "language": "Italian",
           "name": "Foresta",
-          "multiverseid": 207139
-        },
-        {
-          "language": "Italian",
-          "name": "Foresta",
-          "multiverseid": 207140
-        },
-        {
-          "language": "Italian",
-          "name": "Foresta",
-          "multiverseid": 207141
-        },
-        {
-          "language": "Italian",
-          "name": "Foresta",
           "multiverseid": 207142
         },
         {
-          "language": "Italian",
-          "name": "Foresta",
-          "multiverseid": 207143
+          "language": "Japanese",
+          "name": "森",
+          "multiverseid": 207219
         },
         {
-          "language": "Italian",
-          "name": "Foresta",
-          "multiverseid": 207144
+          "language": "Japanese",
+          "name": "森",
+          "multiverseid": 207220
         },
         {
-          "language": "Italian",
-          "name": "Foresta",
-          "multiverseid": 207145
+          "language": "Japanese",
+          "name": "森",
+          "multiverseid": 207221
         },
         {
-          "language": "Italian",
-          "name": "Foresta",
-          "multiverseid": 207146
+          "language": "Japanese",
+          "name": "森",
+          "multiverseid": 207222
+        },
+        {
+          "language": "Japanese",
+          "name": "森",
+          "multiverseid": 207223
+        },
+        {
+          "language": "Japanese",
+          "name": "森",
+          "multiverseid": 207224
+        },
+        {
+          "language": "Japanese",
+          "name": "森",
+          "multiverseid": 207225
         },
         {
           "language": "Japanese",
@@ -38440,8 +38877,10 @@
         "ALA",
         "M10",
         "HOP",
+        "ME3",
         "ZEN",
         "DDD",
+        "H09",
         "DDE",
         "ROE",
         "DPA",
@@ -38458,6 +38897,7 @@
         "AVR",
         "PC2",
         "M13",
+        "DDJ",
         "RTR",
         "M14",
         "DDL",
@@ -38476,13 +38916,23 @@
         "ORI",
         "DDP",
         "BFZ",
+        "C15",
         "SOI",
+        "DDR",
         "KLD",
+        "C16",
+        "PCA",
+        "DDS",
         "AKH",
+        "CMA",
         "E01",
         "HOU",
+        "C17",
         "XLN",
-        "RIX"
+        "UST",
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -38596,42 +39046,42 @@
         {
           "language": "Italian",
           "name": "Foresta",
-          "multiverseid": 207139
-        },
-        {
-          "language": "Italian",
-          "name": "Foresta",
-          "multiverseid": 207140
-        },
-        {
-          "language": "Italian",
-          "name": "Foresta",
-          "multiverseid": 207141
-        },
-        {
-          "language": "Italian",
-          "name": "Foresta",
           "multiverseid": 207142
         },
         {
-          "language": "Italian",
-          "name": "Foresta",
-          "multiverseid": 207143
+          "language": "Japanese",
+          "name": "森",
+          "multiverseid": 207219
         },
         {
-          "language": "Italian",
-          "name": "Foresta",
-          "multiverseid": 207144
+          "language": "Japanese",
+          "name": "森",
+          "multiverseid": 207220
         },
         {
-          "language": "Italian",
-          "name": "Foresta",
-          "multiverseid": 207145
+          "language": "Japanese",
+          "name": "森",
+          "multiverseid": 207221
         },
         {
-          "language": "Italian",
-          "name": "Foresta",
-          "multiverseid": 207146
+          "language": "Japanese",
+          "name": "森",
+          "multiverseid": 207222
+        },
+        {
+          "language": "Japanese",
+          "name": "森",
+          "multiverseid": 207223
+        },
+        {
+          "language": "Japanese",
+          "name": "森",
+          "multiverseid": 207224
+        },
+        {
+          "language": "Japanese",
+          "name": "森",
+          "multiverseid": 207225
         },
         {
           "language": "Japanese",
@@ -38825,8 +39275,10 @@
         "ALA",
         "M10",
         "HOP",
+        "ME3",
         "ZEN",
         "DDD",
+        "H09",
         "DDE",
         "ROE",
         "DPA",
@@ -38843,6 +39295,7 @@
         "AVR",
         "PC2",
         "M13",
+        "DDJ",
         "RTR",
         "M14",
         "DDL",
@@ -38861,13 +39314,23 @@
         "ORI",
         "DDP",
         "BFZ",
+        "C15",
         "SOI",
+        "DDR",
         "KLD",
+        "C16",
+        "PCA",
+        "DDS",
         "AKH",
+        "CMA",
         "E01",
         "HOU",
+        "C17",
         "XLN",
-        "RIX"
+        "UST",
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -38981,42 +39444,42 @@
         {
           "language": "Italian",
           "name": "Foresta",
-          "multiverseid": 207139
-        },
-        {
-          "language": "Italian",
-          "name": "Foresta",
-          "multiverseid": 207140
-        },
-        {
-          "language": "Italian",
-          "name": "Foresta",
-          "multiverseid": 207141
-        },
-        {
-          "language": "Italian",
-          "name": "Foresta",
           "multiverseid": 207142
         },
         {
-          "language": "Italian",
-          "name": "Foresta",
-          "multiverseid": 207143
+          "language": "Japanese",
+          "name": "森",
+          "multiverseid": 207219
         },
         {
-          "language": "Italian",
-          "name": "Foresta",
-          "multiverseid": 207144
+          "language": "Japanese",
+          "name": "森",
+          "multiverseid": 207220
         },
         {
-          "language": "Italian",
-          "name": "Foresta",
-          "multiverseid": 207145
+          "language": "Japanese",
+          "name": "森",
+          "multiverseid": 207221
         },
         {
-          "language": "Italian",
-          "name": "Foresta",
-          "multiverseid": 207146
+          "language": "Japanese",
+          "name": "森",
+          "multiverseid": 207222
+        },
+        {
+          "language": "Japanese",
+          "name": "森",
+          "multiverseid": 207223
+        },
+        {
+          "language": "Japanese",
+          "name": "森",
+          "multiverseid": 207224
+        },
+        {
+          "language": "Japanese",
+          "name": "森",
+          "multiverseid": 207225
         },
         {
           "language": "Japanese",
@@ -39210,8 +39673,10 @@
         "ALA",
         "M10",
         "HOP",
+        "ME3",
         "ZEN",
         "DDD",
+        "H09",
         "DDE",
         "ROE",
         "DPA",
@@ -39228,6 +39693,7 @@
         "AVR",
         "PC2",
         "M13",
+        "DDJ",
         "RTR",
         "M14",
         "DDL",
@@ -39246,13 +39712,23 @@
         "ORI",
         "DDP",
         "BFZ",
+        "C15",
         "SOI",
+        "DDR",
         "KLD",
+        "C16",
+        "PCA",
+        "DDS",
         "AKH",
+        "CMA",
         "E01",
         "HOU",
+        "C17",
         "XLN",
-        "RIX"
+        "UST",
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -39366,42 +39842,42 @@
         {
           "language": "Italian",
           "name": "Foresta",
-          "multiverseid": 207139
-        },
-        {
-          "language": "Italian",
-          "name": "Foresta",
-          "multiverseid": 207140
-        },
-        {
-          "language": "Italian",
-          "name": "Foresta",
-          "multiverseid": 207141
-        },
-        {
-          "language": "Italian",
-          "name": "Foresta",
           "multiverseid": 207142
         },
         {
-          "language": "Italian",
-          "name": "Foresta",
-          "multiverseid": 207143
+          "language": "Japanese",
+          "name": "森",
+          "multiverseid": 207219
         },
         {
-          "language": "Italian",
-          "name": "Foresta",
-          "multiverseid": 207144
+          "language": "Japanese",
+          "name": "森",
+          "multiverseid": 207220
         },
         {
-          "language": "Italian",
-          "name": "Foresta",
-          "multiverseid": 207145
+          "language": "Japanese",
+          "name": "森",
+          "multiverseid": 207221
         },
         {
-          "language": "Italian",
-          "name": "Foresta",
-          "multiverseid": 207146
+          "language": "Japanese",
+          "name": "森",
+          "multiverseid": 207222
+        },
+        {
+          "language": "Japanese",
+          "name": "森",
+          "multiverseid": 207223
+        },
+        {
+          "language": "Japanese",
+          "name": "森",
+          "multiverseid": 207224
+        },
+        {
+          "language": "Japanese",
+          "name": "森",
+          "multiverseid": 207225
         },
         {
           "language": "Japanese",
@@ -39595,8 +40071,10 @@
         "ALA",
         "M10",
         "HOP",
+        "ME3",
         "ZEN",
         "DDD",
+        "H09",
         "DDE",
         "ROE",
         "DPA",
@@ -39613,6 +40091,7 @@
         "AVR",
         "PC2",
         "M13",
+        "DDJ",
         "RTR",
         "M14",
         "DDL",
@@ -39631,13 +40110,23 @@
         "ORI",
         "DDP",
         "BFZ",
+        "C15",
         "SOI",
+        "DDR",
         "KLD",
+        "C16",
+        "PCA",
+        "DDS",
         "AKH",
+        "CMA",
         "E01",
         "HOU",
+        "C17",
         "XLN",
-        "RIX"
+        "UST",
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [

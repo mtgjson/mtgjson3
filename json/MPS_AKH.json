@@ -136,7 +136,7 @@
       "rulings": [
         {
           "date": "2017-04-18",
-          "text": "Each search works exactly the same as normal except that the opponent doing the searching sees only the top four cards of that library. He or she can't look at the other cards in that library at all. Cards not in the top four cards of the library can't be found in the search, even if they're identifiable in some manner."
+          "text": "Each search works exactly the same as normal except that the opponent doing the searching sees only the top four cards of that library. They can't look at the other cards in that library at all. Cards not in the top four cards of the library can't be found in the search, even if they're identifiable in some manner."
         },
         {
           "date": "2017-04-18",
@@ -767,7 +767,7 @@
         },
         {
           "date": "2017-11-17",
-          "text": "Look at both chosen modes to determine how many targets Cryptic Command has, if any. If it has at least one target, and all its targets are illegal when it tries to resolve, then it will be countered and none of its effects will happen. For example, if you choose the second and fourth modes, and the permanent is an illegal target when Cryptic Command tries to resolve, you won't draw a card."
+          "text": "Look at both chosen modes to determine how many targets Cryptic Command has, if any. If it has at least one target, and all its targets are illegal when it tries to resolve, then it won't resolve and none of its effects will happen. For example, if you choose the second and fourth modes, and the permanent is an illegal target when Cryptic Command tries to resolve, you won't draw a card."
         }
       ],
       "text": "Choose two —\n• Counter target spell.\n• Return target permanent to its owner's hand.\n• Tap all creatures your opponents control.\n• Draw a card.",
@@ -827,7 +827,7 @@
           "text": "If another effect causes Daze to cost more, you must pay that additional cost even if you pay its alternative cost."
         }
       ],
-      "text": "You may return an Island you control to its owner's hand rather than pay Daze's mana cost.\nCounter target spell unless its controller pays {1}.",
+      "text": "You may return an Island you control to its owner's hand rather than pay this spell's mana cost.\nCounter target spell unless its controller pays {1}.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -933,7 +933,7 @@
           "text": "If another effect causes Force of Will to cost more, you must pay that additional cost even if you pay its alternative cost."
         }
       ],
-      "text": "You may pay 1 life and exile a blue card from your hand rather than pay Force of Will's mana cost.\nCounter target spell.",
+      "text": "You may pay 1 life and exile a blue card from your hand rather than pay this spell's mana cost.\nCounter target spell.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -1416,7 +1416,7 @@
         "A25"
       ],
       "rarity": "Special",
-      "text": "Add {B}{B}{B} to your mana pool.",
+      "text": "Add {B}{B}{B}.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -1478,7 +1478,7 @@
           "text": "Players can only respond once this spell has been cast and all its costs have been paid. No one can try to destroy the creature you sacrificed to prevent you from casting this spell."
         }
       ],
-      "text": "As an additional cost to cast Diabolic Intent, sacrifice a creature.\nSearch your library for a card and put that card into your hand. Then shuffle your library.",
+      "text": "As an additional cost to cast this spell, sacrifice a creature.\nSearch your library for a card and put that card into your hand. Then shuffle your library.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -1714,10 +1714,10 @@
         },
         {
           "date": "2016-06-08",
-          "text": "If the targeted creature or player is an illegal target when Chain Lightning tries to resolve, the spell is countered. It can't be copied."
+          "text": "If the targeted permanent or player is an illegal target when Chain Lightning tries to resolve, the spell doesn't resolve. It can't be copied."
         }
       ],
-      "text": "Chain Lightning deals 3 damage to target creature or player. Then that player or that creature's controller may pay {R}{R}. If the player does, he or she may copy this spell and may choose a new target for that copy.",
+      "text": "Chain Lightning deals 3 damage to any target. Then that player or that permanent's controller may pay {R}{R}. If the player does, they may copy this spell and may choose a new target for that copy.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -1924,7 +1924,7 @@
       "rulings": [
         {
           "date": "2009-05-01",
-          "text": "Maelstrom Pulse has only one target. If that permanent is an illegal target as Maelstrom Pulse tries to resolve, it will be countered and none of its effects will happen. Nothing will be destroyed."
+          "text": "Maelstrom Pulse has only one target. If that permanent is an illegal target as Maelstrom Pulse tries to resolve, it won't resolve and none of its effects will happen. Nothing will be destroyed."
         },
         {
           "date": "2009-05-01",
@@ -2461,7 +2461,7 @@
       "subtypes": [
         "Avatar"
       ],
-      "text": "If there are ten or more creature cards total in all graveyards, Avatar of Woe costs {6} less to cast.\nFear (This creature can't be blocked except by artifact creatures and/or black creatures.)\n{T}: Destroy target creature. It can't be regenerated.",
+      "text": "If there are ten or more creature cards total in all graveyards, this spell costs {6} less to cast.\nFear (This creature can't be blocked except by artifact creatures and/or black creatures.)\n{T}: Destroy target creature. It can't be regenerated.",
       "toughness": "5",
       "type": "Creature — Avatar",
       "types": [
@@ -2681,15 +2681,11 @@
       "rarity": "Special",
       "rulings": [
         {
-          "date": "2004-10-04",
-          "text": "You lose the life during resolution."
-        },
-        {
-          "date": "2008-04-01",
+          "date": "2018-03-16",
           "text": "If your graveyard and library combined contain five or more cards, you must choose five cards from among them. You can't choose to find fewer than that."
         },
         {
-          "date": "2008-04-01",
+          "date": "2018-03-16",
           "text": "If your graveyard and library combined contain fewer than five cards, all of those cards will wind up in your library."
         }
       ],
@@ -2867,14 +2863,14 @@
       "rulings": [
         {
           "date": "2013-09-15",
-          "text": "The loss of life is part of the spell's effect. It's not an additional cost. If Thoughtseize is countered, you won't lose life."
+          "text": "The loss of life is part of the spell's effect. It's not an additional cost. If Thoughtseize doesn't resolve, you won't lose life."
         },
         {
           "date": "2014-02-01",
           "text": "If you target yourself with this spell, you must reveal your entire hand to the other players just as any other player would."
         }
       ],
-      "text": "Target player reveals his or her hand. You choose a nonland card from it. That player discards that card. You lose 2 life.",
+      "text": "Target player reveals their hand. You choose a nonland card from it. That player discards that card. You lose 2 life.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -2930,20 +2926,20 @@
       "rarity": "Special",
       "rulings": [
         {
-          "date": "2017-03-14",
-          "text": "Nonbasic lands will lose any other land types and abilities they had. They will gain the land type Mountain and gain the ability \"{T}: Add {R} to your mana pool.\""
-        },
-        {
-          "date": "2017-03-14",
-          "text": "Blood Moon's effect doesn't affect names or supertypes. It won't turn any land into a basic land or remove the legendary supertype from a legendary land, and the lands won't be named \"Mountain.\""
-        },
-        {
-          "date": "2017-03-14",
-          "text": "If a nonbasic land has an ability that triggers \"when\" it enters the battlefield, it will lose that ability before it triggers."
-        },
-        {
           "date": "2017-09-29",
           "text": "If a nonbasic land has an ability that causes it to enter the battlefield tapped, it will lose that ability before it applies. The same is also true of any other abilities that modify how a land enters the battlefield or apply \"as\" a land enters the battlefield, such as the first ability of Cavern of Souls. This is a change from previous rulings."
+        },
+        {
+          "date": "2018-03-16",
+          "text": "Nonbasic lands will lose any other land types and abilities they had. They will gain the land type Mountain and gain the ability \"{T}: Add {R}.\""
+        },
+        {
+          "date": "2018-03-16",
+          "text": "This effect doesn't affect names or supertypes. It won't turn any land into a basic land or remove the legendary supertype from a legendary land, and the lands won't be named \"Mountain.\""
+        },
+        {
+          "date": "2018-03-16",
+          "text": "If a nonbasic land has an ability that triggers \"when\" it enters the battlefield, it will lose that ability before it triggers."
         }
       ],
       "text": "Nonbasic lands are Mountains.",
@@ -3124,7 +3120,7 @@
         },
         {
           "date": "2013-06-07",
-          "text": "If all of the spell's targets are illegal when the spell tries to resolve, it will be countered and none of its effects will happen."
+          "text": "If all of the spell's targets are illegal when the spell tries to resolve, it won't resolve and none of its effects will happen."
         }
       ],
       "subtypes": [

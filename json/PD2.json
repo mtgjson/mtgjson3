@@ -69,7 +69,7 @@
         "Human",
         "Wizard"
       ],
-      "text": "{R}, {T}, Exile two cards from your graveyard: Grim Lavamancer deals 2 damage to target creature or player.",
+      "text": "{R}, {T}, Exile two cards from your graveyard: Grim Lavamancer deals 2 damage to any target.",
       "toughness": "1",
       "type": "Creature — Human Wizard",
       "types": [
@@ -197,7 +197,7 @@
       "subtypes": [
         "Goblin"
       ],
-      "text": "Sacrifice Mogg Fanatic: Mogg Fanatic deals 1 damage to target creature or player.",
+      "text": "Sacrifice Mogg Fanatic: It deals 1 damage to any target.",
       "toughness": "1",
       "type": "Creature — Goblin",
       "types": [
@@ -256,7 +256,7 @@
       "subtypes": [
         "Elemental"
       ],
-      "text": "Trample, haste (If this creature would assign enough damage to its blockers to destroy them, you may have it assign the rest of its damage to defending player or planeswalker. This creature can attack and {T} as soon as it comes under your control.)\nAt the beginning of the end step, sacrifice Spark Elemental.",
+      "text": "Trample, haste (If this creature would assign enough damage to its blockers to destroy them, you may have it assign the rest of its damage to the player or planeswalker it's attacking. This creature can attack and {T} as soon as it comes under your control.)\nAt the beginning of the end step, sacrifice Spark Elemental.",
       "toughness": "1",
       "type": "Creature — Elemental",
       "types": [
@@ -458,7 +458,7 @@
         "Human",
         "Warrior"
       ],
-      "text": "Vanishing 2 (This creature enters the battlefield with two time counters on it. At the beginning of your upkeep, remove a time counter from it. When the last is removed, sacrifice it.)\nWhen Keldon Marauders enters the battlefield or leaves the battlefield, it deals 1 damage to target player.",
+      "text": "Vanishing 2 (This creature enters the battlefield with two time counters on it. At the beginning of your upkeep, remove a time counter from it. When the last is removed, sacrifice it.)\nWhen Keldon Marauders enters the battlefield or leaves the battlefield, it deals 1 damage to target player or planeswalker.",
       "toughness": "3",
       "type": "Creature — Human Warrior",
       "types": [
@@ -520,24 +520,24 @@
       "rarity": "Common",
       "rulings": [
         {
-          "date": "2017-03-14",
-          "text": "Mogg Flunkies can be declared as an attacker only if another creature is declared as an attacker at the same time. Similarly, Mogg Flunkies can be declared as a blocker only if another creature is declared as a blocker at the same time."
+          "date": "2018-03-16",
+          "text": "If you control more than one Mogg Flunkies, they can attack or block together, even if no other creatures attack or block."
         },
         {
-          "date": "2017-03-14",
-          "text": "Two or more Mogg Flunkies can attack or block together."
+          "date": "2018-03-16",
+          "text": "Although Mogg Flunkies can't attack alone, other attacking creatures don't have to attack the same player or planeswalker. For example, Mogg Flunkies could attack an opponent and another creature could attack a planeswalker that opponent controls. Similarly, other blocking creatures don't have to block the same creature that Mogg Flunkies blocks."
         },
         {
-          "date": "2017-03-14",
-          "text": "Although Mogg Flunkies can't attack alone, other attacking creature(s) don't have to attack the same player or planeswalker. For example, Mogg Flunkies could attack an opponent and another creature could attack a planeswalker that opponent controls."
+          "date": "2018-03-16",
+          "text": "Once Mogg Flunkies has attacked or blocked, it will remain in combat even if you no longer control another attacking or blocking creature."
         },
         {
-          "date": "2017-03-14",
+          "date": "2018-03-16",
           "text": "If an effect says that Mogg Flunkies attacks or blocks if able and you control another creature able to attack or block, you must attack or block with Mogg Flunkies and that creature."
         },
         {
-          "date": "2017-03-14",
-          "text": "In a Two-Headed Giant game (or in another format using the shared team turns option), Mogg Flunkies can attack or block with a creature controlled by your teammate, even if no other creatures you control are attacking or blocking. In any other multiplayer variant, it ignores each other player's blocking creatures."
+          "date": "2018-03-16",
+          "text": "In a Two-Headed Giant game, Mogg Flunkies can attack or block with a creature controlled by your teammate, even if no other creatures you control are attacking or blocking."
         }
       ],
       "subtypes": [
@@ -603,7 +603,7 @@
         "Elemental",
         "Shaman"
       ],
-      "text": "{T}: Cinder Pyromancer deals 1 damage to target player.\nWhenever you cast a red spell, you may untap Cinder Pyromancer.",
+      "text": "{T}: Cinder Pyromancer deals 1 damage to target player or planeswalker.\nWhenever you cast a red spell, you may untap Cinder Pyromancer.",
       "toughness": "1",
       "type": "Creature — Elemental Shaman",
       "types": [
@@ -665,7 +665,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "{R}, {T}, Discard a card: Destroy target blue permanent.\n{1}{R}, {T}, Discard a card: Jaya Ballard, Task Mage deals 3 damage to target creature or player. A creature dealt damage this way can't be regenerated this turn.\n{5}{R}{R}, {T}, Discard a card: Jaya Ballard deals 6 damage to each creature and each player.",
+      "text": "{R}, {T}, Discard a card: Destroy target blue permanent.\n{1}{R}, {T}, Discard a card: Jaya Ballard, Task Mage deals 3 damage to any target. A creature dealt damage this way can't be regenerated this turn.\n{5}{R}{R}, {T}, Discard a card: Jaya Ballard deals 6 damage to each creature and each player.",
       "toughness": "2",
       "type": "Legendary Creature — Human Spellshaper",
       "types": [
@@ -725,7 +725,7 @@
         "Human",
         "Shaman"
       ],
-      "text": "Haste\n{T}: Vulshok Sorcerer deals 1 damage to target creature or player.",
+      "text": "Haste\n{T}: Vulshok Sorcerer deals 1 damage to any target.",
       "toughness": "1",
       "type": "Creature — Human Shaman",
       "types": [
@@ -791,7 +791,7 @@
       "subtypes": [
         "Elemental"
       ],
-      "text": "Trample (This creature can deal excess combat damage to defending player or planeswalker while attacking.)\nHaste (This creature can attack and {T} as soon as it comes under your control.)\nAt the beginning of the end step, sacrifice Ball Lightning.",
+      "text": "Trample (This creature can deal excess combat damage to the player or planeswalker it's attacking.)\nHaste (This creature can attack and {T} as soon as it comes under your control.)\nAt the beginning of the end step, sacrifice Ball Lightning.",
       "toughness": "1",
       "type": "Creature — Elemental",
       "types": [
@@ -909,7 +909,7 @@
         "Human",
         "Barbarian"
       ],
-      "text": "Haste\nEcho {2}{R}{R} (At the beginning of your upkeep, if this came under your control since the beginning of your last upkeep, sacrifice it unless you pay its echo cost.)\nWhen Keldon Champion enters the battlefield, it deals 3 damage to target player.",
+      "text": "Haste\nEcho {2}{R}{R} (At the beginning of your upkeep, if this came under your control since the beginning of your last upkeep, sacrifice it unless you pay its echo cost.)\nWhen Keldon Champion enters the battlefield, it deals 3 damage to target player or planeswalker.",
       "toughness": "2",
       "type": "Creature — Human Barbarian",
       "types": [
@@ -967,11 +967,11 @@
         },
         {
           "date": "2010-08-15",
-          "text": "If a red instant or sorcery spell you control causes damage to be dealt, that spell will always identify the source of the damage. In most cases, the source is the spell itself. For example, Lightning Bolt says \"Lightning Bolt deals 3 damage to target creature or player.\" Such a spell is affected by Fire Servant's ability. If the source of the damage is something else (for example, if the spell is Soul's Fire, which says \"Target creature you control on the battlefield deals damage equal to its power to target creature or player\"), it isn't affected by Fire Servant's ability."
+          "text": "If a red instant or sorcery spell you control causes damage to be dealt, that spell will always identify the source of the damage. In most cases, the source is the spell itself. For example, Lightning Bolt says \"Lightning Bolt deals 3 damage to any target.\" Such a spell is affected by Fire Servant's ability. If the source of the damage is something else (for example, if the spell is Soul's Fire, which says \"Target creature you control on the battlefield deals damage equal to its power to any target\"), it isn't affected by Fire Servant's ability."
         },
         {
           "date": "2010-08-15",
-          "text": "If multiple effects modify how damage will be dealt, the player who would be dealt damage or the controller of the permanent that would be dealt damage chooses the order to apply the effects. For example, Mending Hands says, \"Prevent the next 4 damage that would be dealt to target creature or player this turn\" and Lava Axe is a red sorcery that says \"Lava Axe deals 5 damage to target player.\" Suppose a Lava Axe controlled by a player who controls Fire Servant would deal 5 damage to a player who has cast Mending Hands targeting him or herself. The player who would be dealt damage can either (a) prevent 4 damage first and then let Fire Servant's effect double the remaining 1 damage, taking 2 damage, or (b) double the damage to 10 and then prevent 4 damage, taking 6 damage."
+          "text": "If multiple effects modify how damage will be dealt, the player who would be dealt damage or the controller of the permanent that would be dealt damage chooses the order to apply the effects. For example, Mending Hands says, \"Prevent the next 4 damage that would be dealt to any target this turn\" and Lava Axe is a red sorcery that says \"Lava Axe deals 5 damage to target player or planeswalker.\" Suppose a Lava Axe controlled by a player who controls Fire Servant would deal 5 damage to a player who has cast Mending Hands targeting themselves. The player who would be dealt damage can either (a) prevent 4 damage first and then let Fire Servant's effect double the remaining 1 damage, taking 2 damage, or (b) double the damage to 10 and then prevent 4 damage, taking 6 damage."
         },
         {
           "date": "2010-08-15",
@@ -1061,10 +1061,10 @@
         },
         {
           "date": "2016-06-08",
-          "text": "If the targeted creature or player is an illegal target when Chain Lightning tries to resolve, the spell is countered. It can't be copied."
+          "text": "If the targeted permanent or player is an illegal target when Chain Lightning tries to resolve, the spell doesn't resolve. It can't be copied."
         }
       ],
-      "text": "Chain Lightning deals 3 damage to target creature or player. Then that player or that creature's controller may pay {R}{R}. If the player does, he or she may copy this spell and may choose a new target for that copy.",
+      "text": "Chain Lightning deals 3 damage to any target. Then that player or that permanent's controller may pay {R}{R}. If the player does, they may copy this spell and may choose a new target for that copy.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -1128,7 +1128,7 @@
         "A25"
       ],
       "rarity": "Common",
-      "text": "Lightning Bolt deals 3 damage to target creature or player.",
+      "text": "Lightning Bolt deals 3 damage to any target.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -1237,7 +1237,7 @@
         "AVR"
       ],
       "rarity": "Common",
-      "text": "Choose one —\n• Thunderbolt deals 3 damage to target player.\n• Thunderbolt deals 4 damage to target creature with flying.",
+      "text": "Choose one —\n• Thunderbolt deals 3 damage to target player or planeswalker.\n• Thunderbolt deals 4 damage to target creature with flying.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -1380,7 +1380,7 @@
         "A25"
       ],
       "rarity": "Uncommon",
-      "text": "Any player may have Browbeat deal 5 damage to him or her. If no one does, target player draws three cards.",
+      "text": "Any player may have Browbeat deal 5 damage to them. If no one does, target player draws three cards.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -1440,10 +1440,10 @@
         },
         {
           "date": "2005-02-01",
-          "text": "The replacement effect applies only to the target player, not to a creature or player the damage might be redirected to."
+          "text": "The replacement effect applies only to the target player, not to a permanent or player the damage might be redirected to."
         }
       ],
-      "text": "Flames of the Blood Hand deals 4 damage to target player. The damage can't be prevented. If that player would gain life this turn, that player gains no life instead.",
+      "text": "Flames of the Blood Hand deals 4 damage to target player or planeswalker. The damage can't be prevented. If that player would gain life this turn, that player gains no life instead.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -1498,7 +1498,7 @@
         "PD2"
       ],
       "rarity": "Rare",
-      "text": "Hammer of Bogardan deals 3 damage to target creature or player.\n{2}{R}{R}{R}: Return Hammer of Bogardan from your graveyard to your hand. Activate this ability only during your upkeep.",
+      "text": "Hammer of Bogardan deals 3 damage to any target.\n{2}{R}{R}{R}: Return Hammer of Bogardan from your graveyard to your hand. Activate this ability only during your upkeep.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -1662,7 +1662,7 @@
         "DD3_JVC"
       ],
       "rarity": "Common",
-      "text": "You may sacrifice two Mountains rather than pay Fireblast's mana cost.\nFireblast deals 4 damage to target creature or player.",
+      "text": "You may sacrifice two Mountains rather than pay this spell's mana cost.\nFireblast deals 4 damage to any target.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -1756,7 +1756,7 @@
           "text": "You can target more than X creatures. However, if the number of legal targets at the time Fireball resolves is greater than X, none of them will be dealt any damage."
         }
       ],
-      "text": "Fireball deals X damage divided evenly, rounded down, among any number of target creatures and/or players.\nFireball costs {1} more to cast for each target beyond the first.",
+      "text": "This spell costs {1} more to cast for each target beyond the first.\nFireball deals X damage divided evenly, rounded down, among any number of targets.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -1800,7 +1800,7 @@
         "PD2"
       ],
       "rarity": "Uncommon",
-      "text": "{T}: Add {R} to your mana pool. Barbarian Ring deals 1 damage to you.\nThreshold — {R}, {T}, Sacrifice Barbarian Ring: Barbarian Ring deals 2 damage to target creature or player. Activate this ability only if seven or more cards are in your graveyard.",
+      "text": "{T}: Add {R}. Barbarian Ring deals 1 damage to you.\nThreshold — {R}, {T}, Sacrifice Barbarian Ring: It deals 2 damage to any target. Activate this ability only if seven or more cards are in your graveyard.",
       "type": "Land",
       "types": [
         "Land"
@@ -1853,14 +1853,14 @@
       "rulings": [
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         },
         {
           "date": "2009-10-01",
           "text": "Activating the ability that turns it into a creature while it's already a creature will override any effects that set its power and/or toughness to a specific number. However, any effect that raises or lowers power and/or toughness (such as the effect created by Giant Growth, Glorious Anthem, or a +1/+1 counter) will continue to apply."
         }
       ],
-      "text": "Ghitu Encampment enters the battlefield tapped.\n{T}: Add {R} to your mana pool.\n{1}{R}: Ghitu Encampment becomes a 2/1 red Warrior creature with first strike until end of turn. It's still a land. (It deals combat damage before creatures without first strike.)",
+      "text": "Ghitu Encampment enters the battlefield tapped.\n{T}: Add {R}.\n{1}{R}: Ghitu Encampment becomes a 2/1 red Warrior creature with first strike until end of turn. It's still a land. (It deals combat damage before creatures without first strike.)",
       "type": "Land",
       "types": [
         "Land"
@@ -1909,7 +1909,7 @@
         "PD2"
       ],
       "rarity": "Common",
-      "text": "Teetering Peaks enters the battlefield tapped.\nWhen Teetering Peaks enters the battlefield, target creature gets +2/+0 until end of turn.\n{T}: Add {R} to your mana pool.",
+      "text": "Teetering Peaks enters the battlefield tapped.\nWhen Teetering Peaks enters the battlefield, target creature gets +2/+0 until end of turn.\n{T}: Add {R}.",
       "type": "Land",
       "types": [
         "Land"
@@ -2163,7 +2163,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -2431,7 +2433,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -2699,7 +2703,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -2967,7 +2973,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [

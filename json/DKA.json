@@ -813,7 +813,7 @@
       "rulings": [
         {
           "date": "2011-01-22",
-          "text": "Faith's Shield targets a permanent regardless of how much life you have. If that permanent is an illegal target when Faith's Shield tries to resolve, Faith's Shield will be countered and none of its effects will happen. Neither you nor any of your permanents will gain protection from a color."
+          "text": "Faith's Shield targets a permanent regardless of how much life you have. If that permanent is an illegal target when Faith's Shield tries to resolve, Faith's Shield won't resolve and none of its effects will happen. Neither you nor any of your permanents will gain protection from a color."
         },
         {
           "date": "2011-01-22",
@@ -2845,16 +2845,12 @@
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2011-01-22",
-          "text": "The ability affects each spell that's not a creature spell, including your own."
+          "date": "2018-03-16",
+          "text": "Thalia's ability affects each spell that's not a creature spell, including your own."
         },
         {
-          "date": "2011-01-22",
-          "text": "The ability affects the total cost of each noncreature spell, but it doesn't change that spell's mana cost or converted mana cost."
-        },
-        {
-          "date": "2011-01-22",
-          "text": "When determining a spell's total cost, effects that increase the cost are applied before effects that reduce the cost."
+          "date": "2018-03-16",
+          "text": "To determine the total cost of a spell, start with the mana cost or alternative cost you're paying, add any cost increases, then apply any cost reductions. The converted mana cost of the spell remains unchanged, no matter what the total cost to cast it was."
         }
       ],
       "subtypes": [
@@ -3308,7 +3304,7 @@
       "rulings": [
         {
           "date": "2011-01-22",
-          "text": "In order to activate the ability, you must be able to target a creature with power less than or equal to the number of creatures you control. The comparison is made again when the ability resolves. If the power is greater than the number of creatures you control at that time, the target is illegal and the ability is countered."
+          "text": "In order to activate the ability, you must be able to target a creature with power less than or equal to the number of creatures you control. The comparison is made again when the ability resolves. If the power is greater than the number of creatures you control at that time, the target is illegal and the ability doesn't resolve."
         },
         {
           "date": "2011-01-22",
@@ -3428,7 +3424,7 @@
       "rulings": [
         {
           "date": "2011-01-22",
-          "text": "If the creature spell is an illegal target (because it's left the stack, for example) when Bone to Ash tries to resolve, Bone to Ash will be countered and none of its effects will happen. You won't draw a card."
+          "text": "If the creature spell is an illegal target (because it's left the stack, for example) when Bone to Ash tries to resolve, Bone to Ash won't resolve and none of its effects will happen. You won't draw a card."
         },
         {
           "date": "2011-01-22",
@@ -3764,7 +3760,7 @@
         "DKA"
       ],
       "rarity": "Uncommon",
-      "text": "Each player puts the top five cards of his or her library into his or her graveyard.\nFlashback {7}{U} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "text": "Each player puts the top five cards of their library into their graveyard.\nFlashback {7}{U} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -3988,7 +3984,7 @@
       "rulings": [
         {
           "date": "2011-01-22",
-          "text": "When the triggered ability resolves, it creates a copy of that spell for each other player. The active player creates his or her copy and may choose new targets first (if that player isn't the enchanted player), then each other player (except the enchanted player) creates his or her copy and may choose new targets in turn order. The last player who creates his or her copy controls the copy that will resolve first."
+          "text": "When the triggered ability resolves, it creates a copy of that spell for each other player. The active player creates their copy and may choose new targets first (if that player isn't the enchanted player), then each other player (except the enchanted player) creates their copy and may choose new targets in turn order. The last player who creates their copy controls the copy that will resolve first."
         },
         {
           "date": "2011-01-22",
@@ -4015,7 +4011,7 @@
         "Aura",
         "Curse"
       ],
-      "text": "Enchant player\nWhenever enchanted player casts an instant or sorcery spell, each other player may copy that spell and may choose new targets for the copy he or she controls.",
+      "text": "Enchant player\nWhenever enchanted player casts an instant or sorcery spell, each other player may copy that spell and may choose new targets for the copy they control.",
       "type": "Enchantment — Aura Curse",
       "types": [
         "Enchantment"
@@ -4127,7 +4123,8 @@
         "M14",
         "BNG",
         "M15",
-        "CN2"
+        "CN2",
+        "DOM"
       ],
       "rarity": "Common",
       "text": "Draw two cards.",
@@ -4362,7 +4359,7 @@
         "Zombie",
         "Horror"
       ],
-      "text": "When Geralf's Mindcrusher enters the battlefield, target player puts the top five cards of his or her library into his or her graveyard.\nUndying (When this creature dies, if it had no +1/+1 counters on it, return it to the battlefield under its owner's control with a +1/+1 counter on it.)",
+      "text": "When Geralf's Mindcrusher enters the battlefield, target player puts the top five cards of their library into their graveyard.\nUndying (When this creature dies, if it had no +1/+1 counters on it, return it to the battlefield under its owner's control with a +1/+1 counter on it.)",
       "toughness": "5",
       "type": "Creature — Zombie Horror",
       "types": [
@@ -4713,7 +4710,7 @@
         "Zombie",
         "Warrior"
       ],
-      "text": "As an additional cost to cast Headless Skaab, exile a creature card from your graveyard.\nHeadless Skaab enters the battlefield tapped.",
+      "text": "As an additional cost to cast this spell, exile a creature card from your graveyard.\nHeadless Skaab enters the battlefield tapped.",
       "toughness": "6",
       "type": "Creature — Zombie Warrior",
       "types": [
@@ -4823,7 +4820,7 @@
           "text": "Regardless of which zone Increasing Confusion is cast from, it puts cards from the top of target player's library into that player's graveyard."
         }
       ],
-      "text": "Target player puts the top X cards of his or her library into his or her graveyard. If Increasing Confusion was cast from a graveyard, that player puts twice that many cards into his or her graveyard instead.\nFlashback {X}{U} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "text": "Target player puts the top X cards of their library into their graveyard. If Increasing Confusion was cast from a graveyard, that player puts twice that many cards into their graveyard instead.\nFlashback {X}{U} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -5275,7 +5272,7 @@
       "subtypes": [
         "Zombie"
       ],
-      "text": "As an additional cost to cast Relentless Skaabs, exile a creature card from your graveyard.\nUndying (When this creature dies, if it had no +1/+1 counters on it, return it to the battlefield under its owner's control with a +1/+1 counter on it.)",
+      "text": "As an additional cost to cast this spell, exile a creature card from your graveyard.\nUndying (When this creature dies, if it had no +1/+1 counters on it, return it to the battlefield under its owner's control with a +1/+1 counter on it.)",
       "toughness": "4",
       "type": "Creature — Zombie",
       "types": [
@@ -5718,7 +5715,7 @@
       "subtypes": [
         "Spirit"
       ],
-      "text": "Flying\nWhenever Shriekgeist deals combat damage to a player, that player puts the top two cards of his or her library into his or her graveyard.",
+      "text": "Flying\nWhenever Shriekgeist deals combat damage to a player, that player puts the top two cards of their library into their graveyard.",
       "toughness": "1",
       "type": "Creature — Spirit",
       "types": [
@@ -5830,7 +5827,7 @@
       "rulings": [
         {
           "date": "2011-01-22",
-          "text": "You choose the target for Soul Seizer's triggered ability when that ability triggers and goes on the stack. You choose whether or not to transform it when that ability resolves. If the creature is an illegal target by that time, the ability is countered and none of its effects happen. You can't have Soul Seizer transform."
+          "text": "You choose the target for Soul Seizer's triggered ability when that ability triggers and goes on the stack. You choose whether or not to transform it when that ability resolves. If the creature is an illegal target by that time, the ability doesn't resolve and none of its effects happen. You can't have Soul Seizer transform."
         },
         {
           "date": "2011-01-22",
@@ -6176,14 +6173,14 @@
       "rulings": [
         {
           "date": "2011-01-22",
-          "text": "If the target player is an illegal target when Thought Scour tries to resolve, it will be countered and none of its effects will happen. You won't draw a card."
+          "text": "If the target player is an illegal target when Thought Scour tries to resolve, it won't resolve and none of its effects will happen. You won't draw a card."
         },
         {
           "date": "2011-01-22",
           "text": "Follow the instructions in the order listed on the card: if you target yourself, you'll put the top two cards of your library into your graveyard and then draw a card."
         }
       ],
-      "text": "Target player puts the top two cards of his or her library into his or her graveyard.\nDraw a card.",
+      "text": "Target player puts the top two cards of their library into their graveyard.\nDraw a card.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -6872,7 +6869,7 @@
         "Aura",
         "Curse"
       ],
-      "text": "Enchant player\nAt the beginning of enchanted player's upkeep, Curse of Thirst deals damage to that player equal to the number of Curses attached to him or her.",
+      "text": "Enchant player\nAt the beginning of enchanted player's upkeep, Curse of Thirst deals damage to that player equal to the number of Curses attached to them.",
       "type": "Enchantment — Aura Curse",
       "types": [
         "Enchantment"
@@ -7094,7 +7091,7 @@
         },
         {
           "date": "2011-01-22",
-          "text": "If the target creature isn't on the battlefield or is otherwise an illegal target when Death's Caress tries to resolve, Death's Caress is countered and none of its effects will happen. You won't gain any life."
+          "text": "If the target creature isn't on the battlefield or is otherwise an illegal target when Death's Caress tries to resolve, Death's Caress doesn't resolve and none of its effects will happen. You won't gain any life."
         },
         {
           "date": "2013-07-01",
@@ -7462,7 +7459,7 @@
         "Vampire",
         "Wizard"
       ],
-      "text": "Flying\nWhenever Fiend of the Shadows deals combat damage to a player, that player exiles a card from his or her hand. You may play that card for as long as it remains exiled.\nSacrifice a Human: Regenerate Fiend of the Shadows.",
+      "text": "Flying\nWhenever Fiend of the Shadows deals combat damage to a player, that player exiles a card from their hand. You may play that card for as long as it remains exiled.\nSacrifice a Human: Regenerate Fiend of the Shadows.",
       "toughness": "3",
       "type": "Creature — Vampire Wizard",
       "types": [
@@ -7812,11 +7809,11 @@
         },
         {
           "date": "2011-01-22",
-          "text": "If you cast Gravepurge with at least one target and all of those targets become illegal, the spell will be countered and you won't get to draw a card."
+          "text": "If you cast Gravepurge with at least one target and all of those targets become illegal, the spell won't resolve and you won't get to draw a card."
         },
         {
           "date": "2015-02-25",
-          "text": "You can cast Gravepurge with no targets. If you do, you'll just draw a card. However, if you cast it with at least one target and all of those targets become illegal, the spell will be countered and you won't draw a card."
+          "text": "You can cast Gravepurge with no targets. If you do, you'll just draw a card. However, if you cast it with at least one target and all of those targets become illegal, the spell won't resolve and you won't draw a card."
         }
       ],
       "text": "Put any number of target creature cards from your graveyard on top of your library.\nDraw a card.",
@@ -7922,7 +7919,7 @@
         "DKA"
       ],
       "rarity": "Common",
-      "text": "Target player discards two cards.\nMorbid — If a creature died this turn, instead that player reveals his or her hand, you choose two cards from it, then that player discards those cards.",
+      "text": "Target player discards two cards.\nMorbid — If a creature died this turn, instead that player reveals their hand, you choose two cards from it, then that player discards those cards.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -8379,119 +8376,6 @@
       "colors": [
         "Black"
       ],
-      "flavor": "\"The price is paid. The power is mine!\"",
-      "foreignNames": [
-        {
-          "language": "Chinese Simplified",
-          "name": "贪婪大恶魔",
-          "multiverseid": 335916
-        },
-        {
-          "language": "Korean",
-          "name": "탐욕의 대악마",
-          "multiverseid": 336087
-        },
-        {
-          "language": "Chinese Traditional",
-          "name": "貪婪大惡魔",
-          "multiverseid": 336258
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Arquidemônio da Ganância",
-          "multiverseid": 336429
-        },
-        {
-          "language": "French",
-          "name": "Archidémon d'avidité",
-          "multiverseid": 336600
-        },
-        {
-          "language": "Russian",
-          "name": "Архидемон Алчности",
-          "multiverseid": 336771
-        },
-        {
-          "language": "German",
-          "name": "Erzdämon der Gier",
-          "multiverseid": 336942
-        },
-        {
-          "language": "Spanish",
-          "name": "Archidemonio de la avaricia",
-          "multiverseid": 337113
-        },
-        {
-          "language": "Italian",
-          "name": "Arcidemone dell'Ingordigia",
-          "multiverseid": 337284
-        },
-        {
-          "language": "Japanese",
-          "name": "強欲の大悪魔",
-          "multiverseid": 337455
-        }
-      ],
-      "id": "34372d5252b1316ae3b1b0e4cd995add2d261f89",
-      "imageName": "archdemon of greed",
-      "layout": "double-faced",
-      "legalities": [
-        {
-          "format": "Commander",
-          "legality": "Legal"
-        },
-        {
-          "format": "Innistrad Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Vintage",
-          "legality": "Legal"
-        }
-      ],
-      "mciNumber": "71b",
-      "multiverseid": 227405,
-      "name": "Archdemon of Greed",
-      "names": [
-        "Archdemon of Greed",
-        "Ravenous Demon"
-      ],
-      "number": "71a",
-      "originalText": "Flying, trample\nAt the beginning of your upkeep, sacrifice a Human. If you can't, tap Archdemon of Greed and it deals 9 damage to you.",
-      "originalType": "Creature — Demon",
-      "power": "9",
-      "printings": [
-        "pPRE",
-        "DKA"
-      ],
-      "rarity": "Rare",
-      "subtypes": [
-        "Demon"
-      ],
-      "text": "Flying, trample\nAt the beginning of your upkeep, sacrifice a Human. If you can't, tap Archdemon of Greed and it deals 9 damage to you.",
-      "toughness": "9",
-      "type": "Creature — Demon",
-      "types": [
-        "Creature"
-      ]
-    },
-    {
-      "artist": "Igor Kieryluk",
-      "cmc": 5,
-      "colorIdentity": [
-        "B"
-      ],
-      "colors": [
-        "Black"
-      ],
       "flavor": "His twisted words entice the weak.",
       "foreignNames": [
         {
@@ -8575,10 +8459,10 @@
       "multiverseid": 227417,
       "name": "Ravenous Demon",
       "names": [
-        "Archdemon of Greed",
-        "Ravenous Demon"
+        "Ravenous Demon",
+        "Archdemon of Greed"
       ],
-      "number": "71b",
+      "number": "71a",
       "originalText": "Sacrifice a Human: Transform Ravenous Demon. Activate this ability only any time you could cast a sorcery.",
       "originalType": "Creature — Demon",
       "power": "4",
@@ -8598,6 +8482,119 @@
       ],
       "text": "Sacrifice a Human: Transform Ravenous Demon. Activate this ability only any time you could cast a sorcery.",
       "toughness": "4",
+      "type": "Creature — Demon",
+      "types": [
+        "Creature"
+      ]
+    },
+    {
+      "artist": "Igor Kieryluk",
+      "cmc": 5,
+      "colorIdentity": [
+        "B"
+      ],
+      "colors": [
+        "Black"
+      ],
+      "flavor": "\"The price is paid. The power is mine!\"",
+      "foreignNames": [
+        {
+          "language": "Chinese Simplified",
+          "name": "贪婪大恶魔",
+          "multiverseid": 335916
+        },
+        {
+          "language": "Korean",
+          "name": "탐욕의 대악마",
+          "multiverseid": 336087
+        },
+        {
+          "language": "Chinese Traditional",
+          "name": "貪婪大惡魔",
+          "multiverseid": 336258
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Arquidemônio da Ganância",
+          "multiverseid": 336429
+        },
+        {
+          "language": "French",
+          "name": "Archidémon d'avidité",
+          "multiverseid": 336600
+        },
+        {
+          "language": "Russian",
+          "name": "Архидемон Алчности",
+          "multiverseid": 336771
+        },
+        {
+          "language": "German",
+          "name": "Erzdämon der Gier",
+          "multiverseid": 336942
+        },
+        {
+          "language": "Spanish",
+          "name": "Archidemonio de la avaricia",
+          "multiverseid": 337113
+        },
+        {
+          "language": "Italian",
+          "name": "Arcidemone dell'Ingordigia",
+          "multiverseid": 337284
+        },
+        {
+          "language": "Japanese",
+          "name": "強欲の大悪魔",
+          "multiverseid": 337455
+        }
+      ],
+      "id": "34372d5252b1316ae3b1b0e4cd995add2d261f89",
+      "imageName": "archdemon of greed",
+      "layout": "double-faced",
+      "legalities": [
+        {
+          "format": "Commander",
+          "legality": "Legal"
+        },
+        {
+          "format": "Innistrad Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Legacy",
+          "legality": "Legal"
+        },
+        {
+          "format": "Modern",
+          "legality": "Legal"
+        },
+        {
+          "format": "Vintage",
+          "legality": "Legal"
+        }
+      ],
+      "mciNumber": "71b",
+      "multiverseid": 227405,
+      "name": "Archdemon of Greed",
+      "names": [
+        "Ravenous Demon",
+        "Archdemon of Greed"
+      ],
+      "number": "71b",
+      "originalText": "Flying, trample\nAt the beginning of your upkeep, sacrifice a Human. If you can't, tap Archdemon of Greed and it deals 9 damage to you.",
+      "originalType": "Creature — Demon",
+      "power": "9",
+      "printings": [
+        "pPRE",
+        "DKA"
+      ],
+      "rarity": "Rare",
+      "subtypes": [
+        "Demon"
+      ],
+      "text": "Flying, trample\nAt the beginning of your upkeep, sacrifice a Human. If you can't, tap Archdemon of Greed and it deals 9 damage to you.",
+      "toughness": "9",
       "type": "Creature — Demon",
       "types": [
         "Creature"
@@ -10304,11 +10301,7 @@
         },
         {
           "date": "2011-01-22",
-          "text": "If multiple effects modify how damage will be dealt to the enchanted player, that player chooses the order to apply the effects. For example, Mending Hands says, \"Prevent the next 4 damage that would be dealt to target creature or player this turn.\" Suppose a spell would deal 5 damage to enchanted player and that player has cast Mending Hands targeting him or herself. The enchanted player can either (a) prevent 4 damage first and then let Curse of Bloodletting's effect double the remaining 1 damage, taking 2 damage, or (b) double the damage to 10 and then prevent 4 damage, taking 6 damage."
-        },
-        {
-          "date": "2011-01-22",
-          "text": "If the enchanted player controls a planeswalker and noncombat damage is being dealt to the player from a source controlled by an opponent, the enchanted player will choose whether to apply Curse of Bloodletting or the planeswalker redirection effect first. If the player chooses to apply the planeswalker redirection effect first, and the opponent chooses to redirect the damage to the planeswalker, then Curse of Bloodletting won't double the damage."
+          "text": "If multiple effects modify how damage will be dealt to the enchanted player, that player chooses the order to apply the effects. For example, Mending Hands says, \"Prevent the next 4 damage that would be dealt to any target this turn.\" Suppose a spell would deal 5 damage to enchanted player and that player has cast Mending Hands targeting themselves. The enchanted player can either (a) prevent 4 damage first and then let Curse of Bloodletting's effect double the remaining 1 damage, taking 2 damage, or (b) double the damage to 10 and then prevent 4 damage, taking 6 damage."
         }
       ],
       "subtypes": [
@@ -10654,7 +10647,7 @@
         "DKA"
       ],
       "rarity": "Common",
-      "text": "Fires of Undeath deals 2 damage to target creature or player.\nFlashback {5}{B} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "text": "Fires of Undeath deals 2 damage to any target.\nFlashback {5}{B} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
       "type": "Instant",
       "types": [
         "Instant"
@@ -10765,7 +10758,7 @@
         },
         {
           "date": "2011-01-22",
-          "text": "The creature that entered the battlefield from your graveyard deals damage equal to its current power (including any +1/+1 counters it entered the battlefield with) to the target creature or player. If it's no longer on the battlefield when the ability resolves, its last known existence on the battlefield is checked to determine its power."
+          "text": "The creature that entered the battlefield from your graveyard deals damage equal to its current power (including any +1/+1 counters it entered the battlefield with) to the target permanent or player. If it's no longer on the battlefield when the ability resolves, its last known existence on the battlefield is checked to determine its power."
         },
         {
           "date": "2011-01-22",
@@ -10783,7 +10776,7 @@
       "subtypes": [
         "Devil"
       ],
-      "text": "Undying (When this creature dies, if it had no +1/+1 counters on it, return it to the battlefield under its owner's control with a +1/+1 counter on it.)\nWhenever Flayer of the Hatebound or another creature enters the battlefield from your graveyard, that creature deals damage equal to its power to target creature or player.",
+      "text": "Undying (When this creature dies, if it had no +1/+1 counters on it, return it to the battlefield under its owner's control with a +1/+1 counter on it.)\nWhenever Flayer of the Hatebound or another creature enters the battlefield from your graveyard, that creature deals damage equal to its power to any target.",
       "toughness": "2",
       "type": "Creature — Devil",
       "types": [
@@ -10926,7 +10919,7 @@
           "text": "Players can only respond once this spell has been cast and all its costs have been paid. No one can try to destroy the creature you sacrificed to prevent you from casting this spell."
         }
       ],
-      "text": "As an additional cost to cast Fling, sacrifice a creature.\nFling deals damage equal to the sacrificed creature's power to target creature or player.",
+      "text": "As an additional cost to cast this spell, sacrifice a creature.\nFling deals damage equal to the sacrificed creature's power to any target.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -11272,135 +11265,15 @@
       "rulings": [
         {
           "date": "2017-03-14",
-          "text": "The damage dealt by Hellrider's triggered ability isn't combat damage and may be redirected to a planeswalker controlled by the defending player."
-        },
-        {
-          "date": "2017-03-14",
-          "text": "If a creature you control attacks a planeswalker, the defending player is the controller of that planeswalker."
-        },
-        {
-          "date": "2017-03-14",
-          "text": "In some multiplayer variants, creatures you control may attack multiple players and/or planeswalkers. For each attacking creature, Hellrider will deal damage to the corresponding defending player."
+          "text": "Creatures you control may attack multiple players and/or planeswalkers. For each attacking creature, Hellrider will deal damage to the corresponding player or planeswalker."
         }
       ],
       "subtypes": [
         "Devil"
       ],
-      "text": "Haste\nWhenever a creature you control attacks, Hellrider deals 1 damage to defending player.",
+      "text": "Haste\nWhenever a creature you control attacks, Hellrider deals 1 damage to the player or planeswalker it's attacking.",
       "toughness": "3",
       "type": "Creature — Devil",
-      "types": [
-        "Creature"
-      ]
-    },
-    {
-      "artist": "Steven Belledin",
-      "cmc": 2,
-      "colorIdentity": [
-        "R"
-      ],
-      "colors": [
-        "Red"
-      ],
-      "flavor": ". . . but the monster within was a tireless hunter.",
-      "foreignNames": [
-        {
-          "language": "Chinese Simplified",
-          "name": "内陆祸害",
-          "multiverseid": 335962
-        },
-        {
-          "language": "Korean",
-          "name": "내륙지의 재앙",
-          "multiverseid": 336133
-        },
-        {
-          "language": "Chinese Traditional",
-          "name": "內陸禍害",
-          "multiverseid": 336304
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Flagelo do Interior",
-          "multiverseid": 336475
-        },
-        {
-          "language": "French",
-          "name": "Fléau de l'arrière-pays",
-          "multiverseid": 336646
-        },
-        {
-          "language": "Russian",
-          "name": "Бич Глубинки",
-          "multiverseid": 336817
-        },
-        {
-          "language": "German",
-          "name": "Geißel des Hinterlands",
-          "multiverseid": 336988
-        },
-        {
-          "language": "Spanish",
-          "name": "Azote del interior",
-          "multiverseid": 337159
-        },
-        {
-          "language": "Italian",
-          "name": "Flagello dell'Entroterra",
-          "multiverseid": 337330
-        },
-        {
-          "language": "Japanese",
-          "name": "内陸の災い魔",
-          "multiverseid": 337501
-        }
-      ],
-      "id": "4d593d8f93541280d228f29c403a7bec8927daf7",
-      "imageName": "hinterland scourge",
-      "layout": "double-faced",
-      "legalities": [
-        {
-          "format": "Commander",
-          "legality": "Legal"
-        },
-        {
-          "format": "Innistrad Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Vintage",
-          "legality": "Legal"
-        }
-      ],
-      "mciNumber": "94b",
-      "multiverseid": 247122,
-      "name": "Hinterland Scourge",
-      "names": [
-        "Hinterland Scourge",
-        "Hinterland Hermit"
-      ],
-      "number": "94a",
-      "originalText": "Hinterland Scourge must be blocked if able.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform Hinterland Scourge.",
-      "originalType": "Creature — Werewolf",
-      "power": "3",
-      "printings": [
-        "DKA"
-      ],
-      "rarity": "Common",
-      "subtypes": [
-        "Werewolf"
-      ],
-      "text": "Hinterland Scourge must be blocked if able.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform Hinterland Scourge.",
-      "toughness": "2",
-      "type": "Creature — Werewolf",
       "types": [
         "Creature"
       ]
@@ -11497,10 +11370,10 @@
       "multiverseid": 247125,
       "name": "Hinterland Hermit",
       "names": [
-        "Hinterland Scourge",
-        "Hinterland Hermit"
+        "Hinterland Hermit",
+        "Hinterland Scourge"
       ],
-      "number": "94b",
+      "number": "94a",
       "originalText": "At the beginning of each upkeep, if no spells were cast last turn, transform Hinterland Hermit.",
       "originalType": "Creature — Human Werewolf",
       "power": "2",
@@ -11525,6 +11398,118 @@
       "text": "At the beginning of each upkeep, if no spells were cast last turn, transform Hinterland Hermit.",
       "toughness": "1",
       "type": "Creature — Human Werewolf",
+      "types": [
+        "Creature"
+      ]
+    },
+    {
+      "artist": "Steven Belledin",
+      "cmc": 2,
+      "colorIdentity": [
+        "R"
+      ],
+      "colors": [
+        "Red"
+      ],
+      "flavor": ". . . but the monster within was a tireless hunter.",
+      "foreignNames": [
+        {
+          "language": "Chinese Simplified",
+          "name": "内陆祸害",
+          "multiverseid": 335962
+        },
+        {
+          "language": "Korean",
+          "name": "내륙지의 재앙",
+          "multiverseid": 336133
+        },
+        {
+          "language": "Chinese Traditional",
+          "name": "內陸禍害",
+          "multiverseid": 336304
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Flagelo do Interior",
+          "multiverseid": 336475
+        },
+        {
+          "language": "French",
+          "name": "Fléau de l'arrière-pays",
+          "multiverseid": 336646
+        },
+        {
+          "language": "Russian",
+          "name": "Бич Глубинки",
+          "multiverseid": 336817
+        },
+        {
+          "language": "German",
+          "name": "Geißel des Hinterlands",
+          "multiverseid": 336988
+        },
+        {
+          "language": "Spanish",
+          "name": "Azote del interior",
+          "multiverseid": 337159
+        },
+        {
+          "language": "Italian",
+          "name": "Flagello dell'Entroterra",
+          "multiverseid": 337330
+        },
+        {
+          "language": "Japanese",
+          "name": "内陸の災い魔",
+          "multiverseid": 337501
+        }
+      ],
+      "id": "4d593d8f93541280d228f29c403a7bec8927daf7",
+      "imageName": "hinterland scourge",
+      "layout": "double-faced",
+      "legalities": [
+        {
+          "format": "Commander",
+          "legality": "Legal"
+        },
+        {
+          "format": "Innistrad Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Legacy",
+          "legality": "Legal"
+        },
+        {
+          "format": "Modern",
+          "legality": "Legal"
+        },
+        {
+          "format": "Vintage",
+          "legality": "Legal"
+        }
+      ],
+      "mciNumber": "94b",
+      "multiverseid": 247122,
+      "name": "Hinterland Scourge",
+      "names": [
+        "Hinterland Hermit",
+        "Hinterland Scourge"
+      ],
+      "number": "94b",
+      "originalText": "Hinterland Scourge must be blocked if able.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform Hinterland Scourge.",
+      "originalType": "Creature — Werewolf",
+      "power": "3",
+      "printings": [
+        "DKA"
+      ],
+      "rarity": "Common",
+      "subtypes": [
+        "Werewolf"
+      ],
+      "text": "Hinterland Scourge must be blocked if able.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform Hinterland Scourge.",
+      "toughness": "2",
+      "type": "Creature — Werewolf",
       "types": [
         "Creature"
       ]
@@ -11907,118 +11892,6 @@
       "colors": [
         "Red"
       ],
-      "foreignNames": [
-        {
-          "language": "Chinese Simplified",
-          "name": "托瓦拉法师猎手",
-          "multiverseid": 335978
-        },
-        {
-          "language": "Korean",
-          "name": "토볼라르의 마법사냥꾼",
-          "multiverseid": 336149
-        },
-        {
-          "language": "Chinese Traditional",
-          "name": "托瓦拉法師獵手",
-          "multiverseid": 336320
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Caçador de Magos de Tovolar",
-          "multiverseid": 336491
-        },
-        {
-          "language": "French",
-          "name": "Chassemage de Tovolar",
-          "multiverseid": 336662
-        },
-        {
-          "language": "Russian",
-          "name": "Товоларова Охотница на Магов",
-          "multiverseid": 336833
-        },
-        {
-          "language": "German",
-          "name": "Tovolars Zauberjägerin",
-          "multiverseid": 337004
-        },
-        {
-          "language": "Spanish",
-          "name": "Cazamagos de Tovolar",
-          "multiverseid": 337175
-        },
-        {
-          "language": "Italian",
-          "name": "Cacciamaghi di Tovolar",
-          "multiverseid": 337346
-        },
-        {
-          "language": "Japanese",
-          "name": "トヴォラーの魔道士狩り",
-          "multiverseid": 337517
-        }
-      ],
-      "id": "440e736bd92582a892c27a6992adde5acbda70d3",
-      "imageName": "tovolar's magehunter",
-      "layout": "double-faced",
-      "legalities": [
-        {
-          "format": "Commander",
-          "legality": "Legal"
-        },
-        {
-          "format": "Innistrad Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Vintage",
-          "legality": "Legal"
-        }
-      ],
-      "mciNumber": "98b",
-      "multiverseid": 253429,
-      "name": "Tovolar's Magehunter",
-      "names": [
-        "Tovolar's Magehunter",
-        "Mondronen Shaman"
-      ],
-      "number": "98a",
-      "originalText": "Whenever an opponent casts a spell, Tovolar's Magehunter deals 2 damage to that player.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform Tovolar's Magehunter.",
-      "originalType": "Creature — Werewolf",
-      "power": "5",
-      "printings": [
-        "pLPA",
-        "DKA"
-      ],
-      "rarity": "Rare",
-      "subtypes": [
-        "Werewolf"
-      ],
-      "text": "Whenever an opponent casts a spell, Tovolar's Magehunter deals 2 damage to that player.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform Tovolar's Magehunter.",
-      "toughness": "5",
-      "type": "Creature — Werewolf",
-      "types": [
-        "Creature"
-      ]
-    },
-    {
-      "artist": "Mike Sass",
-      "cmc": 4,
-      "colorIdentity": [
-        "R"
-      ],
-      "colors": [
-        "Red"
-      ],
       "flavor": "\"Tovolar, my master. Gather the howlpack, for the Hunter's Moon is nigh and Thraben's walls grow weak.\"",
       "foreignNames": [
         {
@@ -12102,10 +11975,10 @@
       "multiverseid": 253433,
       "name": "Mondronen Shaman",
       "names": [
-        "Tovolar's Magehunter",
-        "Mondronen Shaman"
+        "Mondronen Shaman",
+        "Tovolar's Magehunter"
       ],
-      "number": "98b",
+      "number": "98a",
       "originalText": "At the beginning of each upkeep, if no spells were cast last turn, transform Mondronen Shaman.",
       "originalType": "Creature — Human Werewolf Shaman",
       "power": "3",
@@ -12132,6 +12005,118 @@
       "text": "At the beginning of each upkeep, if no spells were cast last turn, transform Mondronen Shaman.",
       "toughness": "2",
       "type": "Creature — Human Shaman Werewolf",
+      "types": [
+        "Creature"
+      ]
+    },
+    {
+      "artist": "Mike Sass",
+      "cmc": 4,
+      "colorIdentity": [
+        "R"
+      ],
+      "colors": [
+        "Red"
+      ],
+      "foreignNames": [
+        {
+          "language": "Chinese Simplified",
+          "name": "托瓦拉法师猎手",
+          "multiverseid": 335978
+        },
+        {
+          "language": "Korean",
+          "name": "토볼라르의 마법사냥꾼",
+          "multiverseid": 336149
+        },
+        {
+          "language": "Chinese Traditional",
+          "name": "托瓦拉法師獵手",
+          "multiverseid": 336320
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Caçador de Magos de Tovolar",
+          "multiverseid": 336491
+        },
+        {
+          "language": "French",
+          "name": "Chassemage de Tovolar",
+          "multiverseid": 336662
+        },
+        {
+          "language": "Russian",
+          "name": "Товоларова Охотница на Магов",
+          "multiverseid": 336833
+        },
+        {
+          "language": "German",
+          "name": "Tovolars Zauberjägerin",
+          "multiverseid": 337004
+        },
+        {
+          "language": "Spanish",
+          "name": "Cazamagos de Tovolar",
+          "multiverseid": 337175
+        },
+        {
+          "language": "Italian",
+          "name": "Cacciamaghi di Tovolar",
+          "multiverseid": 337346
+        },
+        {
+          "language": "Japanese",
+          "name": "トヴォラーの魔道士狩り",
+          "multiverseid": 337517
+        }
+      ],
+      "id": "440e736bd92582a892c27a6992adde5acbda70d3",
+      "imageName": "tovolar's magehunter",
+      "layout": "double-faced",
+      "legalities": [
+        {
+          "format": "Commander",
+          "legality": "Legal"
+        },
+        {
+          "format": "Innistrad Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Legacy",
+          "legality": "Legal"
+        },
+        {
+          "format": "Modern",
+          "legality": "Legal"
+        },
+        {
+          "format": "Vintage",
+          "legality": "Legal"
+        }
+      ],
+      "mciNumber": "98b",
+      "multiverseid": 253429,
+      "name": "Tovolar's Magehunter",
+      "names": [
+        "Mondronen Shaman",
+        "Tovolar's Magehunter"
+      ],
+      "number": "98b",
+      "originalText": "Whenever an opponent casts a spell, Tovolar's Magehunter deals 2 damage to that player.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform Tovolar's Magehunter.",
+      "originalType": "Creature — Werewolf",
+      "power": "5",
+      "printings": [
+        "pLPA",
+        "DKA"
+      ],
+      "rarity": "Rare",
+      "subtypes": [
+        "Werewolf"
+      ],
+      "text": "Whenever an opponent casts a spell, Tovolar's Magehunter deals 2 damage to that player.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform Tovolar's Magehunter.",
+      "toughness": "5",
+      "type": "Creature — Werewolf",
       "types": [
         "Creature"
       ]
@@ -12672,7 +12657,7 @@
       "rulings": [
         {
           "date": "2011-01-22",
-          "text": "If the targeted land is an illegal target when Scorch the Fields tries to resolve, it will be countered and none of its effects will happen. No damage will be dealt to any Human."
+          "text": "If the targeted land is an illegal target when Scorch the Fields tries to resolve, it won't resolve and none of its effects will happen. No damage will be dealt to any Human."
         },
         {
           "date": "2011-01-22",
@@ -14013,7 +13998,7 @@
         "Zombie",
         "Treefolk"
       ],
-      "text": "Ghoultree costs {1} less to cast for each creature card in your graveyard.",
+      "text": "This spell costs {1} less to cast for each creature card in your graveyard.",
       "toughness": "10",
       "type": "Creature — Zombie Treefolk",
       "types": [
@@ -14676,117 +14661,6 @@
       "colors": [
         "Green"
       ],
-      "foreignNames": [
-        {
-          "language": "Chinese Simplified",
-          "name": "银白狼人",
-          "multiverseid": 335922
-        },
-        {
-          "language": "Korean",
-          "name": "은빛가죽 늑대인간",
-          "multiverseid": 336093
-        },
-        {
-          "language": "Chinese Traditional",
-          "name": "銀白狼人",
-          "multiverseid": 336264
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Lobisomem da Pele Prateada",
-          "multiverseid": 336435
-        },
-        {
-          "language": "French",
-          "name": "Loup-garou à fourrure d'argent",
-          "multiverseid": 336606
-        },
-        {
-          "language": "Russian",
-          "name": "Седошкурый Вервольф",
-          "multiverseid": 336777
-        },
-        {
-          "language": "German",
-          "name": "Silberpelz-Werwolf",
-          "multiverseid": 336948
-        },
-        {
-          "language": "Spanish",
-          "name": "Licántropo lomo plateado",
-          "multiverseid": 337119
-        },
-        {
-          "language": "Italian",
-          "name": "Lupa Mannara Argentea",
-          "multiverseid": 337290
-        },
-        {
-          "language": "Japanese",
-          "name": "銀皮の狼男",
-          "multiverseid": 337461
-        }
-      ],
-      "id": "4de3a9cfed69d280781a7145c0bdc9379cc9a5fd",
-      "imageName": "silverpelt werewolf",
-      "layout": "double-faced",
-      "legalities": [
-        {
-          "format": "Commander",
-          "legality": "Legal"
-        },
-        {
-          "format": "Innistrad Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Vintage",
-          "legality": "Legal"
-        }
-      ],
-      "mciNumber": "122b",
-      "multiverseid": 242509,
-      "name": "Silverpelt Werewolf",
-      "names": [
-        "Silverpelt Werewolf",
-        "Lambholt Elder"
-      ],
-      "number": "122a",
-      "originalText": "Whenever Silverpelt Werewolf deals combat damage to a player, draw a card.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform Silverpelt Werewolf.",
-      "originalType": "Creature — Werewolf",
-      "power": "4",
-      "printings": [
-        "DKA"
-      ],
-      "rarity": "Uncommon",
-      "subtypes": [
-        "Werewolf"
-      ],
-      "text": "Whenever Silverpelt Werewolf deals combat damage to a player, draw a card.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform Silverpelt Werewolf.",
-      "toughness": "5",
-      "type": "Creature — Werewolf",
-      "types": [
-        "Creature"
-      ]
-    },
-    {
-      "artist": "Matt Stewart",
-      "cmc": 3,
-      "colorIdentity": [
-        "G"
-      ],
-      "colors": [
-        "Green"
-      ],
       "flavor": "\"Be wary of the seemingly gentle souls. The weak here were slaughtered long ago.\"\n—Rem Karolus, Blade of the Inquisitors",
       "foreignNames": [
         {
@@ -14870,10 +14744,10 @@
       "multiverseid": 242537,
       "name": "Lambholt Elder",
       "names": [
-        "Silverpelt Werewolf",
-        "Lambholt Elder"
+        "Lambholt Elder",
+        "Silverpelt Werewolf"
       ],
-      "number": "122b",
+      "number": "122a",
       "originalText": "At the beginning of each upkeep, if no spells were cast last turn, transform Lambholt Elder.",
       "originalType": "Creature — Human Werewolf",
       "power": "1",
@@ -14894,6 +14768,117 @@
       "text": "At the beginning of each upkeep, if no spells were cast last turn, transform Lambholt Elder.",
       "toughness": "2",
       "type": "Creature — Human Werewolf",
+      "types": [
+        "Creature"
+      ]
+    },
+    {
+      "artist": "Matt Stewart",
+      "cmc": 3,
+      "colorIdentity": [
+        "G"
+      ],
+      "colors": [
+        "Green"
+      ],
+      "foreignNames": [
+        {
+          "language": "Chinese Simplified",
+          "name": "银白狼人",
+          "multiverseid": 335922
+        },
+        {
+          "language": "Korean",
+          "name": "은빛가죽 늑대인간",
+          "multiverseid": 336093
+        },
+        {
+          "language": "Chinese Traditional",
+          "name": "銀白狼人",
+          "multiverseid": 336264
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Lobisomem da Pele Prateada",
+          "multiverseid": 336435
+        },
+        {
+          "language": "French",
+          "name": "Loup-garou à fourrure d'argent",
+          "multiverseid": 336606
+        },
+        {
+          "language": "Russian",
+          "name": "Седошкурый Вервольф",
+          "multiverseid": 336777
+        },
+        {
+          "language": "German",
+          "name": "Silberpelz-Werwolf",
+          "multiverseid": 336948
+        },
+        {
+          "language": "Spanish",
+          "name": "Licántropo lomo plateado",
+          "multiverseid": 337119
+        },
+        {
+          "language": "Italian",
+          "name": "Lupa Mannara Argentea",
+          "multiverseid": 337290
+        },
+        {
+          "language": "Japanese",
+          "name": "銀皮の狼男",
+          "multiverseid": 337461
+        }
+      ],
+      "id": "4de3a9cfed69d280781a7145c0bdc9379cc9a5fd",
+      "imageName": "silverpelt werewolf",
+      "layout": "double-faced",
+      "legalities": [
+        {
+          "format": "Commander",
+          "legality": "Legal"
+        },
+        {
+          "format": "Innistrad Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Legacy",
+          "legality": "Legal"
+        },
+        {
+          "format": "Modern",
+          "legality": "Legal"
+        },
+        {
+          "format": "Vintage",
+          "legality": "Legal"
+        }
+      ],
+      "mciNumber": "122b",
+      "multiverseid": 242509,
+      "name": "Silverpelt Werewolf",
+      "names": [
+        "Lambholt Elder",
+        "Silverpelt Werewolf"
+      ],
+      "number": "122b",
+      "originalText": "Whenever Silverpelt Werewolf deals combat damage to a player, draw a card.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform Silverpelt Werewolf.",
+      "originalType": "Creature — Werewolf",
+      "power": "4",
+      "printings": [
+        "DKA"
+      ],
+      "rarity": "Uncommon",
+      "subtypes": [
+        "Werewolf"
+      ],
+      "text": "Whenever Silverpelt Werewolf deals combat damage to a player, draw a card.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform Silverpelt Werewolf.",
+      "toughness": "5",
+      "type": "Creature — Werewolf",
       "types": [
         "Creature"
       ]
@@ -15134,118 +15119,6 @@
       "colors": [
         "Green"
       ],
-      "flavor": "\". . . and I will bring the fury of the wild back to my village.\"",
-      "foreignNames": [
-        {
-          "language": "Chinese Simplified",
-          "name": "月疤狼人",
-          "multiverseid": 335983
-        },
-        {
-          "language": "Korean",
-          "name": "달흉터 늑대인간",
-          "multiverseid": 336154
-        },
-        {
-          "language": "Chinese Traditional",
-          "name": "月疤狼人",
-          "multiverseid": 336325
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Lobisomem da Cicatriz Lunar",
-          "multiverseid": 336496
-        },
-        {
-          "language": "French",
-          "name": "Loup-garou marqué par la lune",
-          "multiverseid": 336667
-        },
-        {
-          "language": "Russian",
-          "name": "Вервольф с Лунным Шрамом",
-          "multiverseid": 336838
-        },
-        {
-          "language": "German",
-          "name": "Mondnarben-Werwolf",
-          "multiverseid": 337009
-        },
-        {
-          "language": "Spanish",
-          "name": "Licántropo marca lunar",
-          "multiverseid": 337180
-        },
-        {
-          "language": "Italian",
-          "name": "Mannara Sfregiata dalla Luna",
-          "multiverseid": 337351
-        },
-        {
-          "language": "Japanese",
-          "name": "月傷の狼男",
-          "multiverseid": 337522
-        }
-      ],
-      "id": "9361e1954e909ec3a419de4759e06313c559557c",
-      "imageName": "moonscarred werewolf",
-      "layout": "double-faced",
-      "legalities": [
-        {
-          "format": "Commander",
-          "legality": "Legal"
-        },
-        {
-          "format": "Innistrad Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Vintage",
-          "legality": "Legal"
-        }
-      ],
-      "mciNumber": "125b",
-      "multiverseid": 262659,
-      "name": "Moonscarred Werewolf",
-      "names": [
-        "Moonscarred Werewolf",
-        "Scorned Villager"
-      ],
-      "number": "125a",
-      "originalText": "Vigilance\n{T}: Add {G}{G} to your mana pool.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform Moonscarred Werewolf.",
-      "originalType": "Creature — Werewolf",
-      "power": "2",
-      "printings": [
-        "DKA"
-      ],
-      "rarity": "Common",
-      "subtypes": [
-        "Werewolf"
-      ],
-      "text": "Vigilance\n{T}: Add {G}{G} to your mana pool.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform Moonscarred Werewolf.",
-      "toughness": "2",
-      "type": "Creature — Werewolf",
-      "types": [
-        "Creature"
-      ]
-    },
-    {
-      "artist": "Cynthia Sheppard",
-      "cmc": 2,
-      "colorIdentity": [
-        "G"
-      ],
-      "colors": [
-        "Green"
-      ],
       "flavor": "\"My village's fear drove me into the wild . . .\"",
       "foreignNames": [
         {
@@ -15329,10 +15202,10 @@
       "multiverseid": 262694,
       "name": "Scorned Villager",
       "names": [
-        "Moonscarred Werewolf",
-        "Scorned Villager"
+        "Scorned Villager",
+        "Moonscarred Werewolf"
       ],
-      "number": "125b",
+      "number": "125a",
       "originalText": "{T}: Add {G} to your mana pool.\nAt the beginning of each upkeep, if no spells were cast last turn, transform Scorned Villager.",
       "originalType": "Creature — Human Werewolf",
       "power": "1",
@@ -15350,9 +15223,121 @@
         "Human",
         "Werewolf"
       ],
-      "text": "{T}: Add {G} to your mana pool.\nAt the beginning of each upkeep, if no spells were cast last turn, transform Scorned Villager.",
+      "text": "{T}: Add {G}.\nAt the beginning of each upkeep, if no spells were cast last turn, transform Scorned Villager.",
       "toughness": "1",
       "type": "Creature — Human Werewolf",
+      "types": [
+        "Creature"
+      ]
+    },
+    {
+      "artist": "Cynthia Sheppard",
+      "cmc": 2,
+      "colorIdentity": [
+        "G"
+      ],
+      "colors": [
+        "Green"
+      ],
+      "flavor": "\". . . and I will bring the fury of the wild back to my village.\"",
+      "foreignNames": [
+        {
+          "language": "Chinese Simplified",
+          "name": "月疤狼人",
+          "multiverseid": 335983
+        },
+        {
+          "language": "Korean",
+          "name": "달흉터 늑대인간",
+          "multiverseid": 336154
+        },
+        {
+          "language": "Chinese Traditional",
+          "name": "月疤狼人",
+          "multiverseid": 336325
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Lobisomem da Cicatriz Lunar",
+          "multiverseid": 336496
+        },
+        {
+          "language": "French",
+          "name": "Loup-garou marqué par la lune",
+          "multiverseid": 336667
+        },
+        {
+          "language": "Russian",
+          "name": "Вервольф с Лунным Шрамом",
+          "multiverseid": 336838
+        },
+        {
+          "language": "German",
+          "name": "Mondnarben-Werwolf",
+          "multiverseid": 337009
+        },
+        {
+          "language": "Spanish",
+          "name": "Licántropo marca lunar",
+          "multiverseid": 337180
+        },
+        {
+          "language": "Italian",
+          "name": "Mannara Sfregiata dalla Luna",
+          "multiverseid": 337351
+        },
+        {
+          "language": "Japanese",
+          "name": "月傷の狼男",
+          "multiverseid": 337522
+        }
+      ],
+      "id": "9361e1954e909ec3a419de4759e06313c559557c",
+      "imageName": "moonscarred werewolf",
+      "layout": "double-faced",
+      "legalities": [
+        {
+          "format": "Commander",
+          "legality": "Legal"
+        },
+        {
+          "format": "Innistrad Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Legacy",
+          "legality": "Legal"
+        },
+        {
+          "format": "Modern",
+          "legality": "Legal"
+        },
+        {
+          "format": "Vintage",
+          "legality": "Legal"
+        }
+      ],
+      "mciNumber": "125b",
+      "multiverseid": 262659,
+      "name": "Moonscarred Werewolf",
+      "names": [
+        "Scorned Villager",
+        "Moonscarred Werewolf"
+      ],
+      "number": "125b",
+      "originalText": "Vigilance\n{T}: Add {G}{G} to your mana pool.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform Moonscarred Werewolf.",
+      "originalType": "Creature — Werewolf",
+      "power": "2",
+      "printings": [
+        "DKA"
+      ],
+      "rarity": "Common",
+      "subtypes": [
+        "Werewolf"
+      ],
+      "text": "Vigilance\n{T}: Add {G}{G}.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform Moonscarred Werewolf.",
+      "toughness": "2",
+      "type": "Creature — Werewolf",
       "types": [
         "Creature"
       ]
@@ -17100,120 +17085,6 @@
       "foreignNames": [
         {
           "language": "Chinese Simplified",
-          "name": "堕者噬兽",
-          "multiverseid": 336017
-        },
-        {
-          "language": "Korean",
-          "name": "산지의 유린자",
-          "multiverseid": 336188
-        },
-        {
-          "language": "Chinese Traditional",
-          "name": "墮者噬獸",
-          "multiverseid": 336359
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Devastador da Derrubada",
-          "multiverseid": 336530
-        },
-        {
-          "language": "French",
-          "name": "Ravageur de la lande",
-          "multiverseid": 336701
-        },
-        {
-          "language": "Russian",
-          "name": "Опустошитель Каменистых Холмов",
-          "multiverseid": 336872
-        },
-        {
-          "language": "German",
-          "name": "Verwüster vom Kahlenberg",
-          "multiverseid": 337043
-        },
-        {
-          "language": "Spanish",
-          "name": "Devastador de las colinas",
-          "multiverseid": 337214
-        },
-        {
-          "language": "Italian",
-          "name": "Devastatore delle Colline",
-          "multiverseid": 337385
-        },
-        {
-          "language": "Japanese",
-          "name": "高原の荒廃者",
-          "multiverseid": 337556
-        }
-      ],
-      "id": "c3694289be7028742c659477692ae1d2ff08286b",
-      "imageName": "ravager of the fells",
-      "layout": "double-faced",
-      "legalities": [
-        {
-          "format": "Commander",
-          "legality": "Legal"
-        },
-        {
-          "format": "Innistrad Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Vintage",
-          "legality": "Legal"
-        }
-      ],
-      "mciNumber": "140b",
-      "multiverseid": 262699,
-      "name": "Ravager of the Fells",
-      "names": [
-        "Ravager of the Fells",
-        "Huntmaster of the Fells"
-      ],
-      "number": "140a",
-      "originalText": "Trample\nWhenever this creature transforms into Ravager of the Fells, it deals 2 damage to target opponent and 2 damage to up to one target creature that player controls.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform Ravager of the Fells.",
-      "originalType": "Creature — Werewolf",
-      "power": "4",
-      "printings": [
-        "DKA",
-        "V17"
-      ],
-      "rarity": "Mythic Rare",
-      "subtypes": [
-        "Werewolf"
-      ],
-      "text": "Trample\nWhenever this creature transforms into Ravager of the Fells, it deals 2 damage to target opponent and 2 damage to up to one target creature that player controls.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform Ravager of the Fells.",
-      "toughness": "4",
-      "type": "Creature — Werewolf",
-      "types": [
-        "Creature"
-      ]
-    },
-    {
-      "artist": "Chris Rahn",
-      "cmc": 4,
-      "colorIdentity": [
-        "R",
-        "G"
-      ],
-      "colors": [
-        "Red",
-        "Green"
-      ],
-      "foreignNames": [
-        {
-          "language": "Chinese Simplified",
           "name": "堕者猎师",
           "multiverseid": 336066
         },
@@ -17293,10 +17164,10 @@
       "multiverseid": 262875,
       "name": "Huntmaster of the Fells",
       "names": [
-        "Ravager of the Fells",
-        "Huntmaster of the Fells"
+        "Huntmaster of the Fells",
+        "Ravager of the Fells"
       ],
-      "number": "140b",
+      "number": "140a",
       "originalText": "Whenever this creature enters the battlefield or transforms into Huntmaster of the Fells, put a 2/2 green Wolf creature token onto the battlefield and you gain 2 life.\nAt the beginning of each upkeep, if no spells were cast last turn, transform Huntmaster of the Fells.",
       "originalType": "Creature — Human Werewolf",
       "power": "2",
@@ -17318,6 +17189,120 @@
       "text": "Whenever this creature enters the battlefield or transforms into Huntmaster of the Fells, create a 2/2 green Wolf creature token and you gain 2 life.\nAt the beginning of each upkeep, if no spells were cast last turn, transform Huntmaster of the Fells.",
       "toughness": "2",
       "type": "Creature — Human Werewolf",
+      "types": [
+        "Creature"
+      ]
+    },
+    {
+      "artist": "Chris Rahn",
+      "cmc": 4,
+      "colorIdentity": [
+        "R",
+        "G"
+      ],
+      "colors": [
+        "Red",
+        "Green"
+      ],
+      "foreignNames": [
+        {
+          "language": "Chinese Simplified",
+          "name": "堕者噬兽",
+          "multiverseid": 336017
+        },
+        {
+          "language": "Korean",
+          "name": "산지의 유린자",
+          "multiverseid": 336188
+        },
+        {
+          "language": "Chinese Traditional",
+          "name": "墮者噬獸",
+          "multiverseid": 336359
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Devastador da Derrubada",
+          "multiverseid": 336530
+        },
+        {
+          "language": "French",
+          "name": "Ravageur de la lande",
+          "multiverseid": 336701
+        },
+        {
+          "language": "Russian",
+          "name": "Опустошитель Каменистых Холмов",
+          "multiverseid": 336872
+        },
+        {
+          "language": "German",
+          "name": "Verwüster vom Kahlenberg",
+          "multiverseid": 337043
+        },
+        {
+          "language": "Spanish",
+          "name": "Devastador de las colinas",
+          "multiverseid": 337214
+        },
+        {
+          "language": "Italian",
+          "name": "Devastatore delle Colline",
+          "multiverseid": 337385
+        },
+        {
+          "language": "Japanese",
+          "name": "高原の荒廃者",
+          "multiverseid": 337556
+        }
+      ],
+      "id": "c3694289be7028742c659477692ae1d2ff08286b",
+      "imageName": "ravager of the fells",
+      "layout": "double-faced",
+      "legalities": [
+        {
+          "format": "Commander",
+          "legality": "Legal"
+        },
+        {
+          "format": "Innistrad Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Legacy",
+          "legality": "Legal"
+        },
+        {
+          "format": "Modern",
+          "legality": "Legal"
+        },
+        {
+          "format": "Vintage",
+          "legality": "Legal"
+        }
+      ],
+      "mciNumber": "140b",
+      "multiverseid": 262699,
+      "name": "Ravager of the Fells",
+      "names": [
+        "Huntmaster of the Fells",
+        "Ravager of the Fells"
+      ],
+      "number": "140b",
+      "originalText": "Trample\nWhenever this creature transforms into Ravager of the Fells, it deals 2 damage to target opponent and 2 damage to up to one target creature that player controls.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform Ravager of the Fells.",
+      "originalType": "Creature — Werewolf",
+      "power": "4",
+      "printings": [
+        "DKA",
+        "V17"
+      ],
+      "rarity": "Mythic Rare",
+      "subtypes": [
+        "Werewolf"
+      ],
+      "text": "Trample\nWhenever this creature transforms into Ravager of the Fells, it deals 2 damage to target opponent or planeswalker and 2 damage to up to one target creature that player or that planeswalker's controller controls.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform Ravager of the Fells.",
+      "toughness": "4",
+      "type": "Creature — Werewolf",
       "types": [
         "Creature"
       ]
@@ -17797,7 +17782,7 @@
           "text": "You can spend mana produced by Altar of the Lost to cast any spell with flashback that you cast from a graveyard. You don't have to be using flashback to cast that spell, however, as long as something else is allowing you to cast that spell."
         }
       ],
-      "text": "Altar of the Lost enters the battlefield tapped.\n{T}: Add two mana in any combination of colors to your mana pool. Spend this mana only to cast spells with flashback from a graveyard.",
+      "text": "Altar of the Lost enters the battlefield tapped.\n{T}: Add two mana in any combination of colors. Spend this mana only to cast spells with flashback from a graveyard.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -17912,107 +17897,6 @@
     {
       "artist": "Ryan Yee",
       "cmc": 3,
-      "flavor": "The bitter taste of life's only certainty.",
-      "foreignNames": [
-        {
-          "language": "Chinese Simplified",
-          "name": "死亡圣杯",
-          "multiverseid": 335909
-        },
-        {
-          "language": "Korean",
-          "name": "죽음의 성배",
-          "multiverseid": 336080
-        },
-        {
-          "language": "Chinese Traditional",
-          "name": "死亡聖杯",
-          "multiverseid": 336251
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Cálice da Morte",
-          "multiverseid": 336422
-        },
-        {
-          "language": "French",
-          "name": "Calice de la mort",
-          "multiverseid": 336593
-        },
-        {
-          "language": "Russian",
-          "name": "Чаша Смерти",
-          "multiverseid": 336764
-        },
-        {
-          "language": "German",
-          "name": "Kelch des Todes",
-          "multiverseid": 336935
-        },
-        {
-          "language": "Spanish",
-          "name": "Cáliz de la muerte",
-          "multiverseid": 337106
-        },
-        {
-          "language": "Italian",
-          "name": "Calice della Morte",
-          "multiverseid": 337277
-        },
-        {
-          "language": "Japanese",
-          "name": "死の杯",
-          "multiverseid": 337448
-        }
-      ],
-      "id": "fbd1ec5de3079786ef8b502e8b288b6280ffd619",
-      "imageName": "chalice of death",
-      "layout": "double-faced",
-      "legalities": [
-        {
-          "format": "Commander",
-          "legality": "Legal"
-        },
-        {
-          "format": "Innistrad Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Vintage",
-          "legality": "Legal"
-        }
-      ],
-      "mciNumber": "146b",
-      "multiverseid": 226721,
-      "name": "Chalice of Death",
-      "names": [
-        "Chalice of Death",
-        "Chalice of Life"
-      ],
-      "number": "146a",
-      "originalText": "{T}: Target player loses 5 life.",
-      "originalType": "Artifact",
-      "printings": [
-        "DKA"
-      ],
-      "rarity": "Uncommon",
-      "text": "{T}: Target player loses 5 life.",
-      "type": "Artifact",
-      "types": [
-        "Artifact"
-      ]
-    },
-    {
-      "artist": "Ryan Yee",
-      "cmc": 3,
       "flavor": "The sweet taste of hope's promise.",
       "foreignNames": [
         {
@@ -18096,10 +17980,10 @@
       "multiverseid": 226735,
       "name": "Chalice of Life",
       "names": [
-        "Chalice of Death",
-        "Chalice of Life"
+        "Chalice of Life",
+        "Chalice of Death"
       ],
-      "number": "146b",
+      "number": "146a",
       "originalText": "{T}: You gain 1 life. Then if you have at least 10 life more than your starting life total, transform Chalice of Life.",
       "originalType": "Artifact",
       "printings": [
@@ -18122,6 +18006,241 @@
       ],
       "text": "{T}: You gain 1 life. Then if you have at least 10 life more than your starting life total, transform Chalice of Life.",
       "type": "Artifact",
+      "types": [
+        "Artifact"
+      ]
+    },
+    {
+      "artist": "Ryan Yee",
+      "cmc": 3,
+      "flavor": "The bitter taste of life's only certainty.",
+      "foreignNames": [
+        {
+          "language": "Chinese Simplified",
+          "name": "死亡圣杯",
+          "multiverseid": 335909
+        },
+        {
+          "language": "Korean",
+          "name": "죽음의 성배",
+          "multiverseid": 336080
+        },
+        {
+          "language": "Chinese Traditional",
+          "name": "死亡聖杯",
+          "multiverseid": 336251
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Cálice da Morte",
+          "multiverseid": 336422
+        },
+        {
+          "language": "French",
+          "name": "Calice de la mort",
+          "multiverseid": 336593
+        },
+        {
+          "language": "Russian",
+          "name": "Чаша Смерти",
+          "multiverseid": 336764
+        },
+        {
+          "language": "German",
+          "name": "Kelch des Todes",
+          "multiverseid": 336935
+        },
+        {
+          "language": "Spanish",
+          "name": "Cáliz de la muerte",
+          "multiverseid": 337106
+        },
+        {
+          "language": "Italian",
+          "name": "Calice della Morte",
+          "multiverseid": 337277
+        },
+        {
+          "language": "Japanese",
+          "name": "死の杯",
+          "multiverseid": 337448
+        }
+      ],
+      "id": "fbd1ec5de3079786ef8b502e8b288b6280ffd619",
+      "imageName": "chalice of death",
+      "layout": "double-faced",
+      "legalities": [
+        {
+          "format": "Commander",
+          "legality": "Legal"
+        },
+        {
+          "format": "Innistrad Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Legacy",
+          "legality": "Legal"
+        },
+        {
+          "format": "Modern",
+          "legality": "Legal"
+        },
+        {
+          "format": "Vintage",
+          "legality": "Legal"
+        }
+      ],
+      "mciNumber": "146b",
+      "multiverseid": 226721,
+      "name": "Chalice of Death",
+      "names": [
+        "Chalice of Life",
+        "Chalice of Death"
+      ],
+      "number": "146b",
+      "originalText": "{T}: Target player loses 5 life.",
+      "originalType": "Artifact",
+      "printings": [
+        "DKA"
+      ],
+      "rarity": "Uncommon",
+      "text": "{T}: Target player loses 5 life.",
+      "type": "Artifact",
+      "types": [
+        "Artifact"
+      ]
+    },
+    {
+      "artist": "Eric Deschamps",
+      "cmc": 7,
+      "colorIdentity": [
+        "B"
+      ],
+      "flavor": "Those who grasp its hilt soon hear the demon's call.",
+      "foreignNames": [
+        {
+          "language": "Chinese Simplified",
+          "name": "镇魔刃埃布斯",
+          "multiverseid": 335946
+        },
+        {
+          "language": "Korean",
+          "name": "구속의 검 엘브러스",
+          "multiverseid": 336117
+        },
+        {
+          "language": "Chinese Traditional",
+          "name": "鎮魔刃埃布斯",
+          "multiverseid": 336288
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Elbrus, a Lâmina da União",
+          "multiverseid": 336459
+        },
+        {
+          "language": "French",
+          "name": "Elbrus, la Lame d'emprisonnement",
+          "multiverseid": 336630
+        },
+        {
+          "language": "Russian",
+          "name": "Элбрус, Связующий Клинок",
+          "multiverseid": 336801
+        },
+        {
+          "language": "German",
+          "name": "Elbrus, die bindende Klinge",
+          "multiverseid": 336972
+        },
+        {
+          "language": "Spanish",
+          "name": "Elbrus, la espada vinculante",
+          "multiverseid": 337143
+        },
+        {
+          "language": "Italian",
+          "name": "Elbrus, la Lama Vincolante",
+          "multiverseid": 337314
+        },
+        {
+          "language": "Japanese",
+          "name": "束縛の刃、エルブラス",
+          "multiverseid": 337485
+        }
+      ],
+      "id": "27639229ab0b3803c7574b6fa5d019dbacd993ea",
+      "imageName": "elbrus, the binding blade",
+      "layout": "double-faced",
+      "legalities": [
+        {
+          "format": "Commander",
+          "legality": "Legal"
+        },
+        {
+          "format": "Innistrad Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Legacy",
+          "legality": "Legal"
+        },
+        {
+          "format": "Modern",
+          "legality": "Legal"
+        },
+        {
+          "format": "Vintage",
+          "legality": "Legal"
+        }
+      ],
+      "manaCost": "{7}",
+      "mciNumber": "147a",
+      "multiverseid": 244740,
+      "name": "Elbrus, the Binding Blade",
+      "names": [
+        "Elbrus, the Binding Blade",
+        "Withengar Unbound"
+      ],
+      "number": "147a",
+      "originalText": "Equipped creature gets +1/+0.\nWhen equipped creature deals combat damage to a player, unattach Elbrus, the Binding Blade, then transform it.\nEquip {1}",
+      "originalType": "Legendary Artifact — Equipment",
+      "printings": [
+        "DKA",
+        "V17"
+      ],
+      "rarity": "Mythic Rare",
+      "rulings": [
+        {
+          "date": "2011-01-22",
+          "text": "The \"legend rule\" checks only for permanents with exactly the same name. Elbrus, the Binding Blade and Withengar Unbound can be on the battlefield at the same time without either going to its owner's graveyard."
+        },
+        {
+          "date": "2011-01-22",
+          "text": "Elbrus will transform even if you are unable to unattach it (most likely because the equipped creature died)."
+        },
+        {
+          "date": "2011-01-22",
+          "text": "Withengar's triggered ability will trigger no matter how a player loses the game: due to a state-based action (as a result of having a life total of 0 or less, trying to draw a card from an empty library, or having ten poison counters), a spell or ability that says that player loses the game, a concession, or a game loss awarded by a judge."
+        },
+        {
+          "date": "2011-01-22",
+          "text": "In a multiplayer game using the limited range of influence option (such as a Grand Melee game), if a spell or ability says that you win the game, it instead causes all of your opponents within your range of influence to lose the game. This is another way by which Withengar's ability can trigger."
+        },
+        {
+          "date": "2016-07-13",
+          "text": "For more information on double-faced cards, see the Shadows over Innistrad mechanics article (http://magic.wizards.com/en/articles/archive/feature/shadows-over-innistrad-mechanics)."
+        }
+      ],
+      "subtypes": [
+        "Equipment"
+      ],
+      "supertypes": [
+        "Legendary"
+      ],
+      "text": "Equipped creature gets +1/+0.\nWhen equipped creature deals combat damage to a player, unattach Elbrus, the Binding Blade, then transform it.\nEquip {1}",
+      "type": "Legendary Artifact — Equipment",
       "types": [
         "Artifact"
       ]
@@ -18217,10 +18336,10 @@
       "multiverseid": 244738,
       "name": "Withengar Unbound",
       "names": [
-        "Withengar Unbound",
-        "Elbrus, the Binding Blade"
+        "Elbrus, the Binding Blade",
+        "Withengar Unbound"
       ],
-      "number": "147a",
+      "number": "147b",
       "originalText": "Flying, intimidate, trample\nWhenever a player loses the game, put thirteen +1/+1 counters on Withengar Unbound.",
       "originalType": "Legendary Creature — Demon",
       "power": "13",
@@ -18240,140 +18359,6 @@
       "type": "Legendary Creature — Demon",
       "types": [
         "Creature"
-      ]
-    },
-    {
-      "artist": "Eric Deschamps",
-      "cmc": 7,
-      "colorIdentity": [
-        "B"
-      ],
-      "flavor": "Those who grasp its hilt soon hear the demon's call.",
-      "foreignNames": [
-        {
-          "language": "Chinese Simplified",
-          "name": "镇魔刃埃布斯",
-          "multiverseid": 335946
-        },
-        {
-          "language": "Korean",
-          "name": "구속의 검 엘브러스",
-          "multiverseid": 336117
-        },
-        {
-          "language": "Chinese Traditional",
-          "name": "鎮魔刃埃布斯",
-          "multiverseid": 336288
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Elbrus, a Lâmina da União",
-          "multiverseid": 336459
-        },
-        {
-          "language": "French",
-          "name": "Elbrus, la Lame d'emprisonnement",
-          "multiverseid": 336630
-        },
-        {
-          "language": "Russian",
-          "name": "Элбрус, Связующий Клинок",
-          "multiverseid": 336801
-        },
-        {
-          "language": "German",
-          "name": "Elbrus, die bindende Klinge",
-          "multiverseid": 336972
-        },
-        {
-          "language": "Spanish",
-          "name": "Elbrus, la espada vinculante",
-          "multiverseid": 337143
-        },
-        {
-          "language": "Italian",
-          "name": "Elbrus, la Lama Vincolante",
-          "multiverseid": 337314
-        },
-        {
-          "language": "Japanese",
-          "name": "束縛の刃、エルブラス",
-          "multiverseid": 337485
-        }
-      ],
-      "id": "27639229ab0b3803c7574b6fa5d019dbacd993ea",
-      "imageName": "elbrus, the binding blade",
-      "layout": "double-faced",
-      "legalities": [
-        {
-          "format": "Commander",
-          "legality": "Legal"
-        },
-        {
-          "format": "Innistrad Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Vintage",
-          "legality": "Legal"
-        }
-      ],
-      "manaCost": "{7}",
-      "mciNumber": "147a",
-      "multiverseid": 244740,
-      "name": "Elbrus, the Binding Blade",
-      "names": [
-        "Withengar Unbound",
-        "Elbrus, the Binding Blade"
-      ],
-      "number": "147b",
-      "originalText": "Equipped creature gets +1/+0.\nWhen equipped creature deals combat damage to a player, unattach Elbrus, the Binding Blade, then transform it.\nEquip {1}",
-      "originalType": "Legendary Artifact — Equipment",
-      "printings": [
-        "DKA",
-        "V17"
-      ],
-      "rarity": "Mythic Rare",
-      "rulings": [
-        {
-          "date": "2011-01-22",
-          "text": "The \"legend rule\" checks only for permanents with exactly the same name. Elbrus, the Binding Blade and Withengar Unbound can be on the battlefield at the same time without either going to its owner's graveyard."
-        },
-        {
-          "date": "2011-01-22",
-          "text": "Elbrus will transform even if you are unable to unattach it (most likely because the equipped creature died)."
-        },
-        {
-          "date": "2011-01-22",
-          "text": "Withengar's triggered ability will trigger no matter how a player loses the game: due to a state-based action (as a result of having a life total of 0 or less, trying to draw a card from an empty library, or having ten poison counters), a spell or ability that says that player loses the game, a concession, or a game loss awarded by a judge."
-        },
-        {
-          "date": "2011-01-22",
-          "text": "In a multiplayer game using the limited range of influence option (such as a Grand Melee game), if a spell or ability says that you win the game, it instead causes all of your opponents within your range of influence to lose the game. This is another way by which Withengar's ability can trigger."
-        },
-        {
-          "date": "2016-07-13",
-          "text": "For more information on double-faced cards, see the Shadows over Innistrad mechanics article (http://magic.wizards.com/en/articles/archive/feature/shadows-over-innistrad-mechanics)."
-        }
-      ],
-      "subtypes": [
-        "Equipment"
-      ],
-      "supertypes": [
-        "Legendary"
-      ],
-      "text": "Equipped creature gets +1/+0.\nWhen equipped creature deals combat damage to a player, unattach Elbrus, the Binding Blade, then transform it.\nEquip {1}",
-      "type": "Legendary Artifact — Equipment",
-      "types": [
-        "Artifact"
       ]
     },
     {
@@ -18987,7 +18972,7 @@
           "text": "Warden of the Wall still has the ability to tap for mana when it's not your turn."
         }
       ],
-      "text": "Warden of the Wall enters the battlefield tapped.\n{T}: Add {C} to your mana pool.\nAs long as it's not your turn, Warden of the Wall is a 2/3 Gargoyle artifact creature with flying.",
+      "text": "Warden of the Wall enters the battlefield tapped.\n{T}: Add {C}.\nAs long as it's not your turn, Warden of the Wall is a 2/3 Gargoyle artifact creature with flying.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -19102,7 +19087,7 @@
       "subtypes": [
         "Equipment"
       ],
-      "text": "Equipped creature has \"{T}: This creature deals 1 damage to target creature or player\" and \"{T}: This creature deals 3 damage to target Werewolf creature.\"\nEquip {5}",
+      "text": "Equipped creature has \"{T}: This creature deals 1 damage to any target\" and \"{T}: This creature deals 3 damage to target Werewolf creature.\"\nEquip {5}",
       "type": "Artifact — Equipment",
       "types": [
         "Artifact"
@@ -19182,6 +19167,10 @@
         },
         {
           "format": "Innistrad Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
           "legality": "Legal"
         },
         {
@@ -19348,7 +19337,7 @@
         "CMA"
       ],
       "rarity": "Rare",
-      "text": "{T}: Add {C} to your mana pool.\n{2}{B}{G}, {T}, Sacrifice a creature: Draw a card.",
+      "text": "{T}: Add {C}.\n{2}{B}{G}, {T}, Sacrifice a creature: Draw a card.",
       "type": "Land",
       "types": [
         "Land"
@@ -19450,15 +19439,19 @@
       "rarity": "Common",
       "rulings": [
         {
-          "date": "2011-01-22",
+          "date": "2018-03-16",
           "text": "The creature card returned to your hand is chosen at random as the ability resolves. If any player responds to the ability, that player won't yet know what card will be returned."
         },
         {
-          "date": "2011-01-22",
-          "text": "Because the ability doesn't target any creature card, any creature card put into the graveyard in response to that ability may be returned to your hand."
+          "date": "2018-03-16",
+          "text": "Because Haunted Fengraf's ability doesn't target any creature card, any creature card put into the graveyard in response to that ability may be returned to your hand."
+        },
+        {
+          "date": "2018-03-16",
+          "text": "All players get to see which card you return to your hand."
         }
       ],
-      "text": "{T}: Add {C} to your mana pool.\n{3}, {T}, Sacrifice Haunted Fengraf: Return a creature card at random from your graveyard to your hand.",
+      "text": "{T}: Add {C}.\n{3}, {T}, Sacrifice Haunted Fengraf: Return a creature card at random from your graveyard to your hand.",
       "type": "Land",
       "types": [
         "Land"
@@ -19570,7 +19563,7 @@
           "text": "Multiple instances of deathtouch or lifelink on the same creature are redundant."
         }
       ],
-      "text": "{T}: Add {C} to your mana pool.\n{2}{W}{B}, {T}: Creatures you control gain deathtouch and lifelink until end of turn.",
+      "text": "{T}: Add {C}.\n{2}{W}{B}, {T}: Creatures you control gain deathtouch and lifelink until end of turn.",
       "type": "Land",
       "types": [
         "Land"

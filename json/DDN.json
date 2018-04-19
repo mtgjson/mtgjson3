@@ -160,6 +160,12 @@
         "A25"
       ],
       "rarity": "Uncommon",
+      "rulings": [
+        {
+          "date": "2018-03-16",
+          "text": "Frenzied Goblin's ability has only one target. You can't pay {R} multiple times to stop multiple creatures from blocking."
+        }
+      ],
       "subtypes": [
         "Goblin",
         "Berserker"
@@ -683,14 +689,21 @@
         "EVG",
         "VMA",
         "DDN",
-        "DD3_EVG"
+        "DD3_EVG",
+        "DOM"
       ],
       "rarity": "Uncommon",
+      "rulings": [
+        {
+          "date": "2018-04-27",
+          "text": "Goblin Warchief's effect reduces only generic mana in the cost of Goblin spells you cast. For example, it doesn't reduce the cost of Skirk Prospector below {R}."
+        }
+      ],
       "subtypes": [
         "Goblin",
         "Warrior"
       ],
-      "text": "Goblin spells you cast cost {1} less to cast.\nGoblin creatures you control have haste.",
+      "text": "Goblin spells you cast cost {1} less to cast.\nGoblins you control have haste.",
       "toughness": "2",
       "type": "Creature — Goblin Warrior",
       "types": [
@@ -994,7 +1007,7 @@
         "Human",
         "Archer"
       ],
-      "text": "Raid — When Mardu Heart-Piercer enters the battlefield, if you attacked with a creature this turn, Mardu Heart-Piercer deals 2 damage to target creature or player.",
+      "text": "Raid — When Mardu Heart-Piercer enters the battlefield, if you attacked with a creature this turn, Mardu Heart-Piercer deals 2 damage to any target.",
       "toughness": "3",
       "type": "Creature — Human Archer",
       "types": [
@@ -1493,7 +1506,7 @@
           "text": "Players can only respond once this spell has been cast and all its costs have been paid. No one can try to destroy the creature you sacrificed to prevent you from casting this spell."
         }
       ],
-      "text": "As an additional cost to cast Reckless Abandon, sacrifice a creature.\nReckless Abandon deals 4 damage to target creature or player.",
+      "text": "As an additional cost to cast this spell, sacrifice a creature.\nReckless Abandon deals 4 damage to any target.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -1578,7 +1591,7 @@
         "AER"
       ],
       "rarity": "Common",
-      "text": "Shock deals 2 damage to target creature or player.",
+      "text": "Shock deals 2 damage to any target.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -1661,10 +1674,10 @@
         },
         {
           "date": "2017-03-14",
-          "text": "You can cast Bone Splinters targeting the creature you intend to sacrifice for its cost. This is because targets are chosen before costs are paid. Bone Splinters will be countered as it tries to resolve in this case."
+          "text": "You can cast Bone Splinters targeting the creature you intend to sacrifice for its cost. This is because targets are chosen before costs are paid. Bone Splinters won't resolve as it tries to resolve in this case."
         }
       ],
-      "text": "As an additional cost to cast Bone Splinters, sacrifice a creature.\nDestroy target creature.",
+      "text": "As an additional cost to cast this spell, sacrifice a creature.\nDestroy target creature.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -1726,7 +1739,7 @@
         "PCA"
       ],
       "rarity": "Uncommon",
-      "text": "Arc Trail deals 2 damage to target creature or player and 1 damage to another target creature or player.",
+      "text": "Arc Trail deals 2 damage to any target and 1 damage to another target.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -1785,7 +1798,7 @@
         "TPR"
       ],
       "rarity": "Uncommon",
-      "text": "Sacrifice a creature: Goblin Bombardment deals 1 damage to target creature or player.",
+      "text": "Sacrifice a creature: Goblin Bombardment deals 1 damage to any target.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -2050,7 +2063,7 @@
         "DDN"
       ],
       "rarity": "Common",
-      "text": "Orcish Cannonade deals 2 damage to target creature or player and 3 damage to you.\nDraw a card.",
+      "text": "Orcish Cannonade deals 2 damage to any target and 3 damage to you.\nDraw a card.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -2135,7 +2148,7 @@
           "text": "You can choose not to find a basic land card, even if there is one in your library."
         }
       ],
-      "text": "Fiery Fall deals 5 damage to target creature.\nBasic landcycling {1}{R} ({1}{R}, Discard this card: Search your library for a basic land card, reveal it, and put it into your hand. Then shuffle your library.)",
+      "text": "Fiery Fall deals 5 damage to target creature.\nBasic landcycling {1}{R} ({1}{R}, Discard this card: Search your library for a basic land card, reveal it, put it into your hand, then shuffle your library.)",
       "type": "Instant",
       "types": [
         "Instant"
@@ -2216,7 +2229,7 @@
           "text": "You can't exile a card from your hand to pay for itself. At the time you would pay costs, that card is on the stack, not in your hand."
         }
       ],
-      "text": "You may exile two red cards from your hand rather than pay Fury of the Horde's mana cost.\nUntap all creatures that attacked this turn. After this main phase, there is an additional combat phase followed by an additional main phase.",
+      "text": "You may exile two red cards from your hand rather than pay this spell's mana cost.\nUntap all creatures that attacked this turn. After this main phase, there is an additional combat phase followed by an additional main phase.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -2286,13 +2299,9 @@
         {
           "date": "2009-02-01",
           "text": "Banefire can be targeted by spells that try to counter it (such as Countersquall) regardless of what the value of X is. If X is 5 or more, those spells will still resolve, but the part of their effect that would counter Banefire won't do anything. Any other effects those spells have will work as normal."
-        },
-        {
-          "date": "2009-02-01",
-          "text": "Banefire's ability won't prevent it from being countered by the game rules if its target has become an illegal target."
         }
       ],
-      "text": "Banefire deals X damage to target creature or player.\nIf X is 5 or more, Banefire can't be countered by spells or abilities and the damage can't be prevented.",
+      "text": "Banefire deals X damage to any target.\nIf X is 5 or more, this spell can't be countered and the damage can't be prevented.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -2327,6 +2336,10 @@
         },
         {
           "format": "Innistrad Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
           "legality": "Legal"
         },
         {
@@ -2449,14 +2462,14 @@
       "rulings": [
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         },
         {
           "date": "2009-10-01",
           "text": "Activating the ability that turns it into a creature while it's already a creature will override any effects that set its power and/or toughness to a specific number. However, any effect that raises or lowers power and/or toughness (such as the effect created by Giant Growth, Glorious Anthem, or a +1/+1 counter) will continue to apply."
         }
       ],
-      "text": "Ghitu Encampment enters the battlefield tapped.\n{T}: Add {R} to your mana pool.\n{1}{R}: Ghitu Encampment becomes a 2/1 red Warrior creature with first strike until end of turn. It's still a land. (It deals combat damage before creatures without first strike.)",
+      "text": "Ghitu Encampment enters the battlefield tapped.\n{T}: Add {R}.\n{1}{R}: Ghitu Encampment becomes a 2/1 red Warrior creature with first strike until end of turn. It's still a land. (It deals combat damage before creatures without first strike.)",
       "type": "Land",
       "types": [
         "Land"
@@ -2516,7 +2529,7 @@
         "C17"
       ],
       "rarity": "Uncommon",
-      "text": "Nomad Outpost enters the battlefield tapped.\n{T}: Add {R}, {W}, or {B} to your mana pool.",
+      "text": "Nomad Outpost enters the battlefield tapped.\n{T}: Add {R}, {W}, or {B}.",
       "type": "Land",
       "types": [
         "Land"
@@ -2792,7 +2805,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -3082,7 +3097,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -3372,7 +3389,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -3657,7 +3676,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -3940,7 +3960,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -4222,7 +4243,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -4504,7 +4526,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -4957,6 +4980,18 @@
         {
           "date": "2013-04-15",
           "text": "If a spell with split second is on the stack, you can still respond by turning this creature face up and targeting that spell with the trigger. This is because split second only stops players from casting spells or activating abilities, while turning a creature face up is a special action."
+        },
+        {
+          "date": "2018-03-16",
+          "text": "You don't choose the new target for the spell until Willbender's triggered ability resolves. You must change the target if possible. However, you can't change the target to an illegal target. If there are no legal targets to choose from, the target isn't changed. It doesn't matter if the original target of that spell has somehow become illegal itself."
+        },
+        {
+          "date": "2018-03-16",
+          "text": "If a spell or ability targets multiple things, you can't target it with Willbender's triggered ability, even if all but one of those targets have become illegal."
+        },
+        {
+          "date": "2018-03-16",
+          "text": "If a spell or ability targets the same player or object multiple times, you can't target it with Willbender's ability."
         }
       ],
       "subtypes": [
@@ -5030,7 +5065,7 @@
         "Human",
         "Wizard"
       ],
-      "text": "When Sparkmage Apprentice enters the battlefield, it deals 1 damage to target creature or player.",
+      "text": "When Sparkmage Apprentice enters the battlefield, it deals 1 damage to any target.",
       "toughness": "1",
       "type": "Creature — Human Wizard",
       "types": [
@@ -5592,7 +5627,7 @@
           "legality": "Legal"
         }
       ],
-      "manaCost": "{1}{R}{W}{U}",
+      "manaCost": "{1}{U}{R}{W}",
       "mciNumber": "56",
       "multiverseid": 386342,
       "name": "Lightning Angel",
@@ -5927,11 +5962,11 @@
       "rulings": [
         {
           "date": "2010-06-15",
-          "text": "If the targeted creature is an illegal target by the time Fleeting Distraction resolves, the spell is countered. You won't draw a card."
+          "text": "If the targeted creature is an illegal target by the time Fleeting Distraction resolves, the spell doesn't resolve. You won't draw a card."
         },
         {
           "date": "2012-05-01",
-          "text": "If the targeted creature is an illegal target when Fleeting Distraction tries to resolve, it will be countered and none of its effects will happen. You won't draw a card."
+          "text": "If the targeted creature is an illegal target when Fleeting Distraction tries to resolve, it won't resolve and none of its effects will happen. You won't draw a card."
         }
       ],
       "text": "Target creature gets -1/-0 until end of turn.\nDraw a card.",
@@ -6266,10 +6301,10 @@
       "rulings": [
         {
           "date": "2017-11-17",
-          "text": "If the chosen target is illegal when Lightning Helix tries to resolve, it will be countered and none of its effects will happen. You won't gain 3 life."
+          "text": "If the chosen target is illegal when Lightning Helix tries to resolve, it won't resolve and none of its effects will happen. You won't gain 3 life."
         }
       ],
-      "text": "Lightning Helix deals 3 damage to target creature or player and you gain 3 life.",
+      "text": "Lightning Helix deals 3 damage to any target and you gain 3 life.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -6423,7 +6458,7 @@
       "subtypes": [
         "Trap"
       ],
-      "text": "If you've been dealt damage by two or more creatures this turn, you may pay {R} rather than pay Inferno Trap's mana cost.\nInferno Trap deals 4 damage to target creature.",
+      "text": "If you've been dealt damage by two or more creatures this turn, you may pay {R} rather than pay this spell's mana cost.\nInferno Trap deals 4 damage to target creature.",
       "type": "Instant — Trap",
       "types": [
         "Instant"
@@ -6575,7 +6610,7 @@
           "text": "You can choose not to find a basic land card, even if there is one in your library."
         }
       ],
-      "text": "Counter target spell.\nBasic landcycling {1}{U} ({1}{U}, Discard this card: Search your library for a basic land card, reveal it, and put it into your hand. Then shuffle your library.)",
+      "text": "Counter target spell.\nBasic landcycling {1}{U} ({1}{U}, Discard this card: Search your library for a basic land card, reveal it, put it into your hand, then shuffle your library.)",
       "type": "Instant",
       "types": [
         "Instant"
@@ -6660,7 +6695,7 @@
       "subtypes": [
         "Trap"
       ],
-      "text": "If an opponent had two or more creatures enter the battlefield under his or her control this turn, you may pay {U} rather than pay Whiplash Trap's mana cost.\nReturn two target creatures to their owners' hands.",
+      "text": "If an opponent had two or more creatures enter the battlefield under their control this turn, you may pay {U} rather than pay this spell's mana cost.\nReturn two target creatures to their owners' hands.",
       "type": "Instant — Trap",
       "types": [
         "Instant"
@@ -6740,7 +6775,7 @@
       "subtypes": [
         "Trap"
       ],
-      "text": "If four or more creatures are attacking, you may pay {1}{W} rather than pay Arrow Volley Trap's mana cost.\nArrow Volley Trap deals 5 damage divided as you choose among any number of target attacking creatures.",
+      "text": "If four or more creatures are attacking, you may pay {1}{W} rather than pay this spell's mana cost.\nArrow Volley Trap deals 5 damage divided as you choose among any number of target attacking creatures.",
       "type": "Instant — Trap",
       "types": [
         "Instant"
@@ -6863,7 +6898,7 @@
         "C17"
       ],
       "rarity": "Uncommon",
-      "text": "Mystic Monastery enters the battlefield tapped.\n{T}: Add {U}, {R}, or {W} to your mana pool.",
+      "text": "Mystic Monastery enters the battlefield tapped.\n{T}: Add {U}, {R}, or {W}.",
       "type": "Land",
       "types": [
         "Land"
@@ -7199,7 +7234,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -7477,7 +7514,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -7755,7 +7794,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -8044,7 +8085,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -8329,7 +8372,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -8614,7 +8658,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -8899,7 +8944,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [

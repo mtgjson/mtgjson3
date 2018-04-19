@@ -612,7 +612,7 @@
           "text": "If a turn has multiple combat phases, this spell can be cast during any of them as long as it's after the beginning of that phase's Declare Blockers Step."
         }
       ],
-      "text": "Cast Curtain of Light only during combat after blockers are declared.\nTarget unblocked attacking creature becomes blocked. (This spell works on creatures that can't be blocked.)\nDraw a card.",
+      "text": "Cast this spell only during combat after blockers are declared.\nTarget unblocked attacking creature becomes blocked. (This spell works on creatures that can't be blocked.)\nDraw a card.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -2346,8 +2346,8 @@
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2005-06-01",
-          "text": "Promise of Bunrei must be sacrificed in order to get tokens. If multiple creatures are put into a graveyard at the same time, only the first triggered ability to resolve causes Promise of Bunrei to be sacrificed and therefore put tokens onto the battlefield."
+          "date": "2018-03-16",
+          "text": "Promise of Bunrei's ability will trigger multiple times if multiple creatures die at once, but it will only be sacrificed once. You'll get only four Spirit tokens."
         }
       ],
       "text": "When a creature you control dies, sacrifice Promise of Bunrei. If you do, create four 1/1 colorless Spirit creature tokens.",
@@ -2952,7 +2952,7 @@
         },
         {
           "date": "2013-06-07",
-          "text": "If all of the spell's targets are illegal when the spell tries to resolve, it will be countered and none of its effects will happen."
+          "text": "If all of the spell's targets are illegal when the spell tries to resolve, it won't resolve and none of its effects will happen."
         }
       ],
       "subtypes": [
@@ -3153,7 +3153,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "Flying\nWhenever you cast a Spirit or Arcane spell, you may have target player put the top X cards of his or her library into his or her graveyard, where X is that spell's converted mana cost.",
+      "text": "Flying\nWhenever you cast a Spirit or Arcane spell, you may have target player put the top X cards of their library into their graveyard, where X is that spell's converted mana cost.",
       "toughness": "4",
       "type": "Legendary Creature — Kirin Spirit",
       "types": [
@@ -3649,7 +3649,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "Whenever an opponent casts his or her first spell each turn, counter that spell.",
+      "text": "Whenever an opponent casts their first spell each turn, counter that spell.",
       "type": "Legendary Enchantment",
       "types": [
         "Enchantment"
@@ -3737,7 +3737,7 @@
         "SOK"
       ],
       "rarity": "Rare",
-      "text": "Search target opponent's library for an artifact, creature, enchantment, or land card. Put that card onto the battlefield under your control. Then that player shuffles his or her library.\nEpic (For the rest of the game, you can't cast spells. At the beginning of each of your upkeeps, copy this spell except for its epic ability. You may choose a new target for the copy.)",
+      "text": "Search target opponent's library for an artifact, creature, enchantment, or land card. Put that card onto the battlefield under your control. Then that player shuffles their library.\nEpic (For the rest of the game, you can't cast spells. At the beginning of each of your upkeeps, copy this spell except for its epic ability. You may choose a new target for the copy.)",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -3855,7 +3855,7 @@
         },
         {
           "date": "2013-06-07",
-          "text": "If all of the spell's targets are illegal when the spell tries to resolve, it will be countered and none of its effects will happen."
+          "text": "If all of the spell's targets are illegal when the spell tries to resolve, it won't resolve and none of its effects will happen."
         },
         {
           "date": "2013-06-07",
@@ -3959,6 +3959,12 @@
         "A25"
       ],
       "rarity": "Common",
+      "rulings": [
+        {
+          "date": "2018-03-16",
+          "text": "Only the player who controls Freed from the Real can activate its abilities. This might not be the controller of the enchanted creature."
+        }
+      ],
       "subtypes": [
         "Aura"
       ],
@@ -5770,7 +5776,7 @@
         },
         {
           "date": "2013-06-07",
-          "text": "If all of the spell's targets are illegal when the spell tries to resolve, it will be countered and none of its effects will happen."
+          "text": "If all of the spell's targets are illegal when the spell tries to resolve, it won't resolve and none of its effects will happen."
         }
       ],
       "subtypes": [
@@ -7346,7 +7352,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "Flying\nWhenever you cast a Spirit or Arcane spell, target player reveals his or her hand and discards all cards with that spell's converted mana cost.",
+      "text": "Flying\nWhenever you cast a Spirit or Arcane spell, target player reveals their hand and discards all cards with that spell's converted mana cost.",
       "toughness": "3",
       "type": "Legendary Creature — Kirin Spirit",
       "types": [
@@ -8502,7 +8508,7 @@
         "SOK"
       ],
       "rarity": "Rare",
-      "text": "Search target player's library for X cards, where X is the number of cards in your hand, and exile them. Then that player shuffles his or her library.\nEpic (For the rest of the game, you can't cast spells. At the beginning of each of your upkeeps, copy this spell except for its epic ability. You may choose a new target for the copy.)",
+      "text": "Search target player's library for X cards, where X is the number of cards in your hand, and exile them. Then that player shuffles their library.\nEpic (For the rest of the game, you can't cast spells. At the beginning of each of your upkeeps, copy this spell except for its epic ability. You may choose a new target for the copy.)",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -8686,7 +8692,7 @@
         },
         {
           "date": "2005-06-01",
-          "text": "A player may bid more life than he or she has."
+          "text": "A player may bid more life than they have."
         }
       ],
       "text": "Each player may bid life. You start the bidding with a bid of any number. In turn order, each player may top the high bid. The bidding ends if the high bid stands. The high bidder loses life equal to the high bid and draws four cards.",
@@ -9642,7 +9648,7 @@
         "Zubera",
         "Spirit"
       ],
-      "text": "When Burning-Eye Zubera dies, if 4 or more damage was dealt to it this turn, Burning-Eye Zubera deals 3 damage to target creature or player.",
+      "text": "When Burning-Eye Zubera dies, if 4 or more damage was dealt to it this turn, Burning-Eye Zubera deals 3 damage to any target.",
       "toughness": "3",
       "type": "Creature — Zubera Spirit",
       "types": [
@@ -10007,7 +10013,7 @@
       "subtypes": [
         "Spirit"
       ],
-      "text": "{2}{R}, {T}: Ghost-Lit Raider deals 2 damage to target creature.\nChannel — {3}{R}, Discard Ghost-Lit Raider: Ghost-Lit Raider deals 4 damage to target creature.",
+      "text": "{2}{R}, {T}: Ghost-Lit Raider deals 2 damage to target creature.\nChannel — {3}{R}, Discard Ghost-Lit Raider: It deals 4 damage to target creature.",
       "toughness": "1",
       "type": "Creature — Spirit",
       "types": [
@@ -10680,7 +10686,7 @@
         "SOK"
       ],
       "rarity": "Common",
-      "text": "Add {R} to your mana pool for each card in your hand.",
+      "text": "Add {R} for each card in your hand.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -10783,7 +10789,7 @@
         },
         {
           "date": "2013-06-07",
-          "text": "If all of the spell's targets are illegal when the spell tries to resolve, it will be countered and none of its effects will happen."
+          "text": "If all of the spell's targets are illegal when the spell tries to resolve, it won't resolve and none of its effects will happen."
         }
       ],
       "subtypes": [
@@ -11163,7 +11169,7 @@
         "SOK"
       ],
       "rarity": "Rare",
-      "text": "Exile the top card of your library. Exile the top card of your library. Exile the top card of your library. If the last card exiled isn't a land, repeat this process. Create a 1/1 red Warrior creature token for each nonland card exiled this way.",
+      "text": "Exile the top card of your library. Exile the top card of your library. Exile the top card of your library. If the last card exiled isn't a land card, repeat this process. Create a 1/1 red Warrior creature token for each nonland card exiled this way.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -11743,7 +11749,7 @@
       "subtypes": [
         "Arcane"
       ],
-      "text": "Spiraling Embers deals damage to target creature or player equal to the number of cards in your hand.",
+      "text": "Spiraling Embers deals damage to any target equal to the number of cards in your hand.",
       "type": "Sorcery — Arcane",
       "types": [
         "Sorcery"
@@ -12018,7 +12024,7 @@
           "text": "If you have no cards in your library, Undying Flames does nothing."
         }
       ],
-      "text": "Exile cards from the top of your library until you exile a nonland card. Undying Flames deals damage to target creature or player equal to that card's converted mana cost.\nEpic (For the rest of the game, you can't cast spells. At the beginning of each of your upkeeps, copy this spell except for its epic ability. You may choose a new target for the copy.)",
+      "text": "Exile cards from the top of your library until you exile a nonland card. Undying Flames deals damage to any target equal to that card's converted mana cost.\nEpic (For the rest of the game, you can't cast spells. At the beginning of each of your upkeeps, copy this spell except for its epic ability. You may choose a new target for the copy.)",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -14635,7 +14641,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "Whenever a land you control is tapped for mana, for each other land you control with the same name, add one mana to your mana pool of any type that land produced.",
+      "text": "Whenever a land you control is tapped for mana, add an additional one mana of any type that land produced for each other land you control with the same name as it.",
       "type": "Legendary Enchantment",
       "types": [
         "Enchantment"
@@ -15446,7 +15452,7 @@
           "text": "The choice of which permanent to return or whether to pay life is made as the triggered ability resolves."
         }
       ],
-      "text": "At the beginning of each player's upkeep, that player returns a permanent he or she controls to its owner's hand unless he or she pays 2 life.",
+      "text": "At the beginning of each player's upkeep, that player returns a permanent they control to its owner's hand unless they pay 2 life.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -15529,7 +15535,7 @@
         "SOK"
       ],
       "rarity": "Uncommon",
-      "text": "At the beginning of each opponent's upkeep, if that player has seven or more cards in hand, Ebony Owl Netsuke deals 4 damage to him or her.",
+      "text": "At the beginning of each opponent's upkeep, if that player has seven or more cards in hand, Ebony Owl Netsuke deals 4 damage to that player.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -15881,7 +15887,7 @@
       "rulings": [
         {
           "date": "2005-06-01",
-          "text": "Pithing Needle affects cards regardless of what zone they're in. This includes cards in hand, cards in the graveyard, and exiled cards. For example, a player can't cycle Eternal Dragon or return an Eternal Dragon from his or her graveyard to hand if Pithing Needle naming Eternal Dragon is on the battlefield."
+          "text": "Pithing Needle affects cards regardless of what zone they're in. This includes cards in hand, cards in the graveyard, and exiled cards. For example, a player can't cycle Eternal Dragon or return an Eternal Dragon from their graveyard to hand if Pithing Needle naming Eternal Dragon is on the battlefield."
         },
         {
           "date": "2005-06-01",
@@ -16234,7 +16240,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "{T}: Add {C} to your mana pool.\n{2}, {T}: Each player draws a card.",
+      "text": "{T}: Add {C}.\n{2}, {T}: Each player draws a card.",
       "type": "Legendary Land",
       "types": [
         "Land"
@@ -16318,7 +16324,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "{T}: Add {C} to your mana pool.\n{3}, {T}, Sacrifice a creature: You gain life equal to the sacrificed creature's toughness.",
+      "text": "{T}: Add {C}.\n{3}, {T}, Sacrifice a creature: You gain life equal to the sacrificed creature's toughness.",
       "type": "Legendary Land",
       "types": [
         "Land"
@@ -16406,7 +16412,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "{T}: Add {U} to your mana pool.\n{1}: Return Oboro, Palace in the Clouds to its owner's hand.",
+      "text": "{T}: Add {U}.\n{1}: Return Oboro, Palace in the Clouds to its owner's hand.",
       "type": "Legendary Land",
       "types": [
         "Land"
@@ -16499,7 +16505,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "{T}: Add {B} to your mana pool. Tomb of Urami deals 1 damage to you if you don't control an Ogre.\n{2}{B}{B}, {T}, Sacrifice all lands you control: Create a legendary 5/5 black Demon Spirit creature token with flying named Urami.",
+      "text": "{T}: Add {B}. Tomb of Urami deals 1 damage to you if you don't control an Ogre.\n{2}{B}{B}, {T}, Sacrifice all lands you control: Create a legendary 5/5 black Demon Spirit creature token with flying named Urami.",
       "type": "Legendary Land",
       "types": [
         "Land"

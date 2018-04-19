@@ -283,7 +283,7 @@
         "Zombie",
         "Mutant"
       ],
-      "text": "{B}: Regenerate Twisted Abomination.\nSwampcycling {2} ({2}, Discard this card: Search your library for a Swamp card, reveal it, and put it into your hand. Then shuffle your library.)",
+      "text": "{B}: Regenerate Twisted Abomination.\nSwampcycling {2} ({2}, Discard this card: Search your library for a Swamp card, reveal it, put it into your hand, then shuffle your library.)",
       "toughness": "3",
       "type": "Creature — Zombie Mutant",
       "types": [
@@ -350,7 +350,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "Flying\nWhenever Crosis, the Purger deals combat damage to a player, you may pay {2}{B}. If you do, choose a color, then that player reveals his or her hand and discards all cards of that color.",
+      "text": "Flying\nWhenever Crosis, the Purger deals combat damage to a player, you may pay {2}{B}. If you do, choose a color, then that player reveals their hand and discards all cards of that color.",
       "toughness": "6",
       "type": "Legendary Creature — Dragon",
       "types": [
@@ -423,7 +423,7 @@
       "subtypes": [
         "Avatar"
       ],
-      "text": "If there are ten or more creature cards total in all graveyards, Avatar of Woe costs {6} less to cast.\nFear (This creature can't be blocked except by artifact creatures and/or black creatures.)\n{T}: Destroy target creature. It can't be regenerated.",
+      "text": "If there are ten or more creature cards total in all graveyards, this spell costs {6} less to cast.\nFear (This creature can't be blocked except by artifact creatures and/or black creatures.)\n{T}: Destroy target creature. It can't be regenerated.",
       "toughness": "5",
       "type": "Creature — Avatar",
       "types": [
@@ -554,21 +554,18 @@
         "PD3",
         "TPR",
         "C15",
-        "CMA"
+        "CMA",
+        "DOM"
       ],
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2004-10-04",
-          "text": "Verdant Force's controller gets the tokens. That is the controller at the beginning of upkeep."
-        },
-        {
-          "date": "2005-08-01",
-          "text": "Once created, the tokens are independent of Verdant Force. If Verdant Force changes controllers, the new controller will put tokens onto the battlefield, but existing tokens will stay where they are."
-        },
-        {
           "date": "2006-05-01",
           "text": "In Two-Headed Giant, triggers only once per upkeep, not once for each player."
+        },
+        {
+          "date": "2018-04-27",
+          "text": "Verdant Force's ability triggers at the beginning of each upkeep, not just each of your upkeeps."
         }
       ],
       "subtypes": [
@@ -819,10 +816,10 @@
       "rulings": [
         {
           "date": "2016-06-08",
-          "text": "You name the card as Cabal Therapy resolves, not as you cast it. Then the targeted player reveals his or her hand and discards if appropriate. No player may choose to take actions between you naming the card and the targeted player revealing and discarding."
+          "text": "You name the card as Cabal Therapy resolves, not as you cast it. Then the targeted player reveals their hand and discards if appropriate. No player may choose to take actions between you naming the card and the targeted player revealing and discarding."
         }
       ],
-      "text": "Choose a nonland card name. Target player reveals his or her hand and discards all cards with that name.\nFlashback—Sacrifice a creature. (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "text": "Choose a nonland card name. Target player reveals their hand and discards all cards with that name.\nFlashback—Sacrifice a creature. (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -902,7 +899,7 @@
         "IMA"
       ],
       "rarity": "Common",
-      "text": "Target opponent reveals his or her hand. You choose a noncreature, nonland card from it. That player discards that card.",
+      "text": "Target opponent reveals their hand. You choose a noncreature, nonland card from it. That player discards that card.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -1143,7 +1140,7 @@
         "PD3"
       ],
       "rarity": "Common",
-      "text": "Each player puts a creature card from his or her graveyard onto the battlefield.",
+      "text": "Each player puts a creature card from their graveyard onto the battlefield.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -1192,7 +1189,7 @@
         "PD3"
       ],
       "rarity": "Uncommon",
-      "text": "As an additional cost to cast Sickening Dreams, discard X cards.\nSickening Dreams deals X damage to each creature and each player.",
+      "text": "As an additional cost to cast this spell, discard X cards.\nSickening Dreams deals X damage to each creature and each player.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -1356,7 +1353,7 @@
         "PD3"
       ],
       "rarity": "Common",
-      "text": "Discard any number of cards. Target player reveals his or her hand, then you choose a nonland card from it for each card discarded this way. That player discards those cards.",
+      "text": "Discard any number of cards. Target player reveals their hand, then you choose a nonland card from it for each card discarded this way. That player discards those cards.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -1511,7 +1508,7 @@
         "CMA"
       ],
       "rarity": "Uncommon",
-      "text": "{T}: Add {C} to your mana pool.\n{T}, Sacrifice Crystal Vein: Add {C}{C} to your mana pool.",
+      "text": "{T}: Add {C}.\n{T}, Sacrifice Crystal Vein: Add {C}{C}.",
       "type": "Land",
       "types": [
         "Land"
@@ -1555,7 +1552,7 @@
         "PD3"
       ],
       "rarity": "Uncommon",
-      "text": "Ebon Stronghold enters the battlefield tapped.\n{T}: Add {B} to your mana pool.\n{T}, Sacrifice Ebon Stronghold: Add {B}{B} to your mana pool.",
+      "text": "Ebon Stronghold enters the battlefield tapped.\n{T}: Add {B}.\n{T}, Sacrifice Ebon Stronghold: Add {B}{B}.",
       "type": "Land",
       "types": [
         "Land"
@@ -1613,7 +1610,7 @@
           "text": "Cycling is an activated ability. Effects that interact with activated abilities (such as Stifle or Rings of Brighthearth) will interact with cycling. Effects that interact with spells (such as Remove Soul or Faerie Tauntings) will not."
         }
       ],
-      "text": "Polluted Mire enters the battlefield tapped.\n{T}: Add {B} to your mana pool.\nCycling {2} ({2}, Discard this card: Draw a card.)",
+      "text": "Polluted Mire enters the battlefield tapped.\n{T}: Add {B}.\nCycling {2} ({2}, Discard this card: Draw a card.)",
       "type": "Land",
       "types": [
         "Land"
@@ -1865,7 +1862,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -2131,7 +2129,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -2397,7 +2396,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -2663,7 +2663,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [

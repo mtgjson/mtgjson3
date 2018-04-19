@@ -130,17 +130,13 @@
         },
         {
           "date": "2017-11-17",
-          "text": "You can't deal damage with Bogardan Hellkite's triggered ability to both a player and a planeswalker that player controls. You also can't deal damage to more than one planeswalker controlled by the same player. If you choose to redirect the damage being dealt to a player to a planeswalker, you must redirect all the damage to a single planeswalker."
-        },
-        {
-          "date": "2017-11-17",
           "text": "If some of the creatures or players are illegal targets as Bogardan Hellkite's triggered ability tries to resolve, the original division of damage still applies and the damage that would have been dealt to the illegal targets is lost. It won't be dealt instead to a legal target."
         }
       ],
       "subtypes": [
         "Dragon"
       ],
-      "text": "Flash\nFlying\nWhen Bogardan Hellkite enters the battlefield, it deals 5 damage divided as you choose among any number of target creatures and/or players.",
+      "text": "Flash\nFlying\nWhen Bogardan Hellkite enters the battlefield, it deals 5 damage divided as you choose among any number of targets.",
       "toughness": "5",
       "type": "Creature — Dragon",
       "types": [
@@ -478,7 +474,7 @@
           "text": "Unless some effect explicitly says otherwise, a creature that can't attack you can still attack a planeswalker you control."
         }
       ],
-      "text": "At the beginning of your upkeep, Form of the Dragon deals 5 damage to target creature or player.\nAt the beginning of each end step, your life total becomes 5.\nCreatures without flying can't attack you.",
+      "text": "At the beginning of your upkeep, Form of the Dragon deals 5 damage to any target.\nAt the beginning of each end step, your life total becomes 5.\nCreatures without flying can't attack you.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -679,7 +675,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "Flying\nAt the beginning of your upkeep, sacrifice Nicol Bolas unless you pay {U}{B}{R}.\nWhenever Nicol Bolas deals damage to an opponent, that player discards his or her hand.",
+      "text": "Flying\nAt the beginning of your upkeep, sacrifice Nicol Bolas unless you pay {U}{B}{R}.\nWhenever Nicol Bolas deals damage to an opponent, that player discards their hand.",
       "toughness": "7",
       "type": "Legendary Creature — Elder Dragon",
       "types": [
@@ -741,6 +737,16 @@
         "A25"
       ],
       "rarity": "Rare",
+      "rulings": [
+        {
+          "date": "2018-03-16",
+          "text": "If a spell or ability causes you to draw multiple cards, Niv-Mizzet's ability triggers that many times."
+        },
+        {
+          "date": "2018-03-16",
+          "text": "If dealing 1 damage to a permanent or player causes you to draw a card, perhaps because Niv-Mizzet is enchanted by Curiosity, you'll continue this loop until the loop is interrupted, perhaps by a player losing the game."
+        }
+      ],
       "subtypes": [
         "Dragon",
         "Wizard"
@@ -748,7 +754,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "Flying\nWhenever you draw a card, Niv-Mizzet, the Firemind deals 1 damage to target creature or player.\n{T}: Draw a card.",
+      "text": "Flying\nWhenever you draw a card, Niv-Mizzet, the Firemind deals 1 damage to any target.\n{T}: Draw a card.",
       "toughness": "4",
       "type": "Legendary Creature — Dragon Wizard",
       "types": [
