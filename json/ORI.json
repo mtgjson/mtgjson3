@@ -462,10 +462,6 @@
         {
           "date": "2015-06-22",
           "text": "If you control an untapped Archangel of Tithes, your opponents can choose to not attack with a creature that must attack if able. The same is true with respect to an attacking Archangel of Tithes and a creature that must block if able."
-        },
-        {
-          "date": "2015-06-22",
-          "text": "In a Two-Headed Giant game, if one player controls Archangel of Tithes, creatures can't attack that player's team or a planeswalker that player controls unless their controller pays {1} for each of those creatures he or she controls. Creatures can attack planeswalkers controlled by that player's teammate without having to pay this cost."
         }
       ],
       "subtypes": [
@@ -2491,7 +2487,7 @@
       "rulings": [
         {
           "date": "2015-06-22",
-          "text": "You must target a creature to cast Knightly Valor. If that creature is an illegal target when Knightly Valor tries to resolve, it will be countered and won't enter the battlefield. You won't get the Knight token."
+          "text": "You must target a creature to cast Knightly Valor. If that creature is an illegal target when Knightly Valor tries to resolve, it won't resolve and won't enter the battlefield. You won't get the Knight token."
         }
       ],
       "subtypes": [
@@ -2768,7 +2764,7 @@
       "rulings": [
         {
           "date": "2015-06-22",
-          "text": "Gideon's first ability causes a creature to attack him if able. If, during its controller's declare attackers step, that creature is tapped, is affected by a spell or ability that says it can't attack, or hasn't been under its controller's control continuously since that player's turn began, then that creature doesn't attack. If there's a cost associated with having that creature attack, its controller isn't forced to pay that cost. If he or she doesn't, the creature doesn't have to attack."
+          "text": "Gideon's first ability causes a creature to attack him if able. If, during its controller's declare attackers step, that creature is tapped, is affected by a spell or ability that says it can't attack, or hasn't been under its controller's control continuously since that player's turn began, then that creature doesn't attack. If there's a cost associated with having that creature attack, its controller isn't forced to pay that cost. If they don't, the creature doesn't have to attack."
         },
         {
           "date": "2015-06-22",
@@ -3956,7 +3952,7 @@
         },
         {
           "date": "2015-06-22",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         }
       ],
       "text": "At the beginning of your upkeep, you may return target enchantment card from your graveyard to the battlefield.\nAs long as you control five or more enchantments, each other non-Aura enchantment you control is a creature in addition to its other types and has base power and base toughness each equal to its converted mana cost.",
@@ -4523,7 +4519,7 @@
           "text": "If a permanent has more than one of the affected types, it can count for any of them. For example, you could choose an artifact creature as the artifact you're sparing, another creature as the creature, and an enchantment creature as the enchantment. Similarly, you could choose an enchantment creature as both the creature and the enchantment that you're sparing, even if the player controls another creature and/or another enchantment."
         }
       ],
-      "text": "For each player, you choose from among the permanents that player controls an artifact, a creature, an enchantment, and a planeswalker. Then each player sacrifices all other nonland permanents he or she controls.",
+      "text": "For each player, you choose from among the permanents that player controls an artifact, a creature, an enchantment, and a planeswalker. Then each player sacrifices all other nonland permanents they control.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -4624,6 +4620,12 @@
         "A25"
       ],
       "rarity": "Uncommon",
+      "rulings": [
+        {
+          "date": "2018-03-16",
+          "text": "Valor in Akros's ability affects only creatures you control at the time the ability resolves, including the creature that caused it to trigger. Creatures you begin to control later in the turn won't get +1/+1."
+        }
+      ],
       "text": "Whenever a creature enters the battlefield under your control, creatures you control get +1/+1 until end of turn.",
       "type": "Enchantment",
       "types": [
@@ -5102,7 +5104,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "Flying\nAs Alhammarret, High Arbiter enters the battlefield, each opponent reveals his or her hand. You choose the name of a nonland card revealed this way.\nYour opponents can't cast spells with the chosen name (as long as this creature is on the battlefield).",
+      "text": "Flying\nAs Alhammarret, High Arbiter enters the battlefield, each opponent reveals their hand. You choose the name of a nonland card revealed this way.\nYour opponents can't cast spells with the chosen name (as long as this creature is on the battlefield).",
       "toughness": "5",
       "type": "Legendary Creature — Sphinx",
       "types": [
@@ -5299,7 +5301,8 @@
       "originalText": "Draw two cards. If you control no artifacts, discard a card.",
       "originalType": "Instant",
       "printings": [
-        "ORI"
+        "ORI",
+        "DDU"
       ],
       "rarity": "Common",
       "rulings": [
@@ -5521,7 +5524,7 @@
       "rulings": [
         {
           "date": "2011-01-22",
-          "text": "If the creature spell is an illegal target (because it's left the stack, for example) when Bone to Ash tries to resolve, Bone to Ash will be countered and none of its effects will happen. You won't draw a card."
+          "text": "If the creature spell is an illegal target (because it's left the stack, for example) when Bone to Ash tries to resolve, Bone to Ash won't resolve and none of its effects will happen. You won't draw a card."
         },
         {
           "date": "2011-01-22",
@@ -5989,7 +5992,7 @@
           "text": "If any abilities trigger while players are shuffling cards into their library or drawing seven cards, those abilities cease to exist when the turn ends. They won't be put on the stack."
         }
       ],
-      "text": "Each player shuffles his or her hand and graveyard into his or her library, then draws seven cards. If it's your turn, end the turn. (Exile all spells and abilities on the stack, including this card. Discard down to your maximum hand size. Damage wears off, and \"this turn\" and \"until end of turn\" effects end.)",
+      "text": "Each player shuffles their hand and graveyard into their library, then draws seven cards. If it's your turn, end the turn. (Exile all spells and abilities on the stack, including this card. Discard down to your maximum hand size. Damage wears off, and \"this turn\" and \"until end of turn\" effects end.)",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -6538,7 +6541,7 @@
           "text": "The number of cards put into the graveyard is based on the number of lands you control when Dreadwaters resolves."
         }
       ],
-      "text": "Target player puts the top X cards of his or her library into his or her graveyard, where X is the number of lands you control.",
+      "text": "Target player puts the top X cards of their library into their graveyard, where X is the number of lands you control.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -7161,7 +7164,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "+1: Up to one target creature gets -2/-0 until your next turn.\n−3: You may cast target instant or sorcery card from your graveyard this turn. If that card would be put into your graveyard this turn, exile it instead.\n−9: You get an emblem with \"Whenever you cast a spell, target opponent puts the top five cards of his or her library into his or her graveyard.\"",
+      "text": "+1: Up to one target creature gets -2/-0 until your next turn.\n−3: You may cast target instant or sorcery card from your graveyard this turn. If that card would be put into your graveyard this turn, exile it instead.\n−9: You get an emblem with \"Whenever you cast a spell, target opponent puts the top five cards of their library into their graveyard.\"",
       "type": "Legendary Planeswalker — Jace",
       "types": [
         "Planeswalker"
@@ -7720,6 +7723,10 @@
         },
         {
           "format": "Commander",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
           "legality": "Legal"
         },
         {
@@ -8817,7 +8824,7 @@
         "Zombie",
         "Giant"
       ],
-      "text": "As an additional cost to cast Skaab Goliath, exile two creature cards from your graveyard.\nTrample (This creature can deal excess combat damage to defending player or planeswalker while attacking.)",
+      "text": "As an additional cost to cast this spell, exile two creature cards from your graveyard.\nTrample (This creature can deal excess combat damage to the player or planeswalker it's attacking.)",
       "toughness": "9",
       "type": "Creature — Zombie Giant",
       "types": [
@@ -9044,7 +9051,7 @@
           "text": "The process will keep repeating as long as both cards share a color and neither is a land card."
         }
       ],
-      "text": "Whenever you draw a card, target opponent puts the top two cards of his or her library into his or her graveyard. If they're both nonland cards that share a color, repeat this process.\n{5}{U}: Draw a card, then discard a card.",
+      "text": "Whenever you draw a card, target opponent puts the top two cards of their library into their graveyard. If they're both nonland cards that share a color, repeat this process.\n{5}{U}: Draw a card, then discard a card.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -9281,7 +9288,7 @@
           "text": "Check to see if there are two or more instant and/or sorcery cards in your graveyard as the spell resolves to determine whether the spell mastery ability applies. The spell itself won't count because it's still on the stack as you make this check."
         }
       ],
-      "text": "Target opponent reveals the top seven cards of his or her library. You may cast an instant or sorcery card from among them without paying its mana cost. Then that player puts the rest into his or her graveyard.\nSpell mastery — If there are two or more instant and/or sorcery cards in your graveyard, you may cast up to two revealed instant and/or sorcery cards instead of one.",
+      "text": "Target opponent reveals the top seven cards of their library. You may cast an instant or sorcery card from among them without paying its mana cost. Then that player puts the rest into their graveyard.\nSpell mastery — If there are two or more instant and/or sorcery cards in your graveyard, you may cast up to two revealed instant and/or sorcery cards instead of one.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -9840,7 +9847,8 @@
       "originalType": "Creature — Human Rogue Artificer",
       "power": "2",
       "printings": [
-        "ORI"
+        "ORI",
+        "DDU"
       ],
       "rarity": "Uncommon",
       "rulings": [
@@ -10529,7 +10537,7 @@
         },
         {
           "date": "2015-06-22",
-          "text": "Whether the spell mastery applies or not, Dark Dabbling targets only one creature. If that creature becomes an illegal target by the time Dark Dabbling tries to resolve, Dark Dabbling will be countered and none of its effects will happen. No creature will regenerate and you won't draw a card."
+          "text": "Whether the spell mastery applies or not, Dark Dabbling targets only one creature. If that creature becomes an illegal target by the time Dark Dabbling tries to resolve, Dark Dabbling won't resolve and none of its effects will happen. No creature will regenerate and you won't draw a card."
         },
         {
           "date": "2015-06-22",
@@ -10642,7 +10650,7 @@
           "text": "Check to see if there are two or more instant and/or sorcery cards in your graveyard as the spell resolves to determine whether the spell mastery ability applies. The spell itself won't count because it's still on the stack as you make this check."
         }
       ],
-      "text": "Search your library for a card and put that card into your hand. Then shuffle your library.\nSpell mastery — If there are two or more instant and/or sorcery cards in your graveyard, add {B}{B}{B} to your mana pool.",
+      "text": "Search your library for a card and put that card into your hand. Then shuffle your library.\nSpell mastery — If there are two or more instant and/or sorcery cards in your graveyard, add {B}{B}{B}.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -10855,7 +10863,7 @@
         },
         {
           "date": "2015-06-22",
-          "text": "If the ability is countered (either for having its target become illegal or because a spell or ability counters it), the mode chosen for that instance of the ability still counts as being chosen."
+          "text": "If the ability doesn't resolve (either for having its target become illegal or because a spell or ability counters it), the mode chosen for that instance of the ability still counts as being chosen."
         },
         {
           "date": "2015-06-22",
@@ -10874,7 +10882,7 @@
           "text": "Yes, if the fourth mode is the only one remaining, you must choose it. You read the whole contract, right?"
         }
       ],
-      "text": "At the beginning of your upkeep, choose one that hasn't been chosen —\n• Demonic Pact deals 4 damage to target creature or player and you gain 4 life.\n• Target opponent discards two cards.\n• Draw two cards.\n• You lose the game.",
+      "text": "At the beginning of your upkeep, choose one that hasn't been chosen —\n• Demonic Pact deals 4 damage to any target and you gain 4 life.\n• Target opponent discards two cards.\n• Draw two cards.\n• You lose the game.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -11092,7 +11100,7 @@
         },
         {
           "date": "2015-06-22",
-          "text": "In a multiplayer game, the last ability won't trigger when a player with a creature card in his or her graveyard leaves the game."
+          "text": "In a multiplayer game, the last ability won't trigger when a player with a creature card in their graveyard leaves the game."
         }
       ],
       "subtypes": [
@@ -11753,7 +11761,7 @@
         "Elf",
         "Druid"
       ],
-      "text": "{T}, Pay 1 life: Add {G} to your mana pool. Spend this mana only to cast an Elf creature spell.\n{T}: Target attacking Elf you control gains deathtouch until end of turn. (Any amount of damage it deals to a creature is enough to destroy it.)",
+      "text": "{T}, Pay 1 life: Add {G}. Spend this mana only to cast an Elf creature spell.\n{T}: Target attacking Elf you control gains deathtouch until end of turn. (Any amount of damage it deals to a creature is enough to destroy it.)",
       "toughness": "1",
       "type": "Creature — Elf Druid",
       "types": [
@@ -12074,7 +12082,7 @@
         "ORI"
       ],
       "rarity": "Rare",
-      "text": "Choose a creature card name. Search target opponent's graveyard, hand, and library for any number of cards with that name and exile them. Then that player shuffles his or her library.",
+      "text": "Choose a creature card name. Search target opponent's graveyard, hand, and library for any number of cards with that name and exile them. Then that player shuffles their library.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -13131,10 +13139,10 @@
       "rulings": [
         {
           "date": "2015-06-22",
-          "text": "If you don't choose a nonland card for the player to discard, that player chooses which two cards he or she will discard."
+          "text": "If you don't choose a nonland card for the player to discard, that player chooses which two cards they will discard."
         }
       ],
-      "text": "Target opponent reveals his or her hand. You may choose a nonland card from it. If you do, that player discards that card. If you don't, that player discards two cards.",
+      "text": "Target opponent reveals their hand. You may choose a nonland card from it. If you do, that player discards that card. If you don't, that player discards two cards.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -13458,7 +13466,7 @@
       "rulings": [
         {
           "date": "2013-09-15",
-          "text": "The loss of life is part of the spell's effect. It's not an additional cost. If Read the Bones is countered, you won't lose life."
+          "text": "The loss of life is part of the spell's effect. It's not an additional cost. If Read the Bones doesn't resolve, you won't lose life."
         },
         {
           "date": "2013-09-15",
@@ -13474,7 +13482,7 @@
         },
         {
           "date": "2013-09-15",
-          "text": "Scry appears on some spells and abilities with one or more targets. If all of the spell or ability's targets are illegal when it tries to resolve, it will be countered and none of its effects will happen. You won't scry."
+          "text": "Scry appears on some spells and abilities with one or more targets. If all of the spell or ability's targets are illegal when it tries to resolve, it won't resolve and none of its effects will happen. You won't scry."
         }
       ],
       "text": "Scry 2, then draw two cards. You lose 2 life. (To scry 2, look at the top two cards of your library, then put any number of them on the bottom of your library and the rest on top in any order.)",
@@ -13688,7 +13696,7 @@
         "Zombie",
         "Centaur"
       ],
-      "text": "When Returned Centaur enters the battlefield, target player puts the top four cards of his or her library into his or her graveyard.",
+      "text": "When Returned Centaur enters the battlefield, target player puts the top four cards of their library into their graveyard.",
       "toughness": "4",
       "type": "Creature — Zombie Centaur",
       "types": [
@@ -14362,7 +14370,7 @@
           "text": "Players can only respond once this spell has been cast and all its costs have been paid. No one can try to destroy the creature you sacrifice to stop you from casting this spell."
         }
       ],
-      "text": "As an additional cost to cast Tormented Thoughts, sacrifice a creature.\nTarget player discards a number of cards equal to the sacrificed creature's power.",
+      "text": "As an additional cost to cast this spell, sacrifice a creature.\nTarget player discards a number of cards equal to the sacrificed creature's power.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -15749,7 +15757,7 @@
       "subtypes": [
         "Aura"
       ],
-      "text": "Enchant creature\nEnchanted creature gets +3/+2 and has trample. (It can deal excess combat damage to defending player or planeswalker while attacking.)\nAt the beginning of each upkeep, if a player cast two or more spells last turn, sacrifice Call of the Full Moon.",
+      "text": "Enchant creature\nEnchanted creature gets +3/+2 and has trample. (It can deal excess combat damage to the player or planeswalker it's attacking.)\nAt the beginning of each upkeep, if a player cast two or more spells last turn, sacrifice Call of the Full Moon.",
       "type": "Enchantment — Aura",
       "types": [
         "Enchantment"
@@ -15916,7 +15924,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "Whenever you cast a red spell, untap Chandra, Fire of Kaladesh.\n{T}: Chandra, Fire of Kaladesh deals 1 damage to target player. If Chandra has dealt 3 or more damage this turn, exile her, then return her to the battlefield transformed under her owner's control.",
+      "text": "Whenever you cast a red spell, untap Chandra, Fire of Kaladesh.\n{T}: Chandra, Fire of Kaladesh deals 1 damage to target player or planeswalker. If Chandra has dealt 3 or more damage this turn, exile her, then return her to the battlefield transformed under her owner's control.",
       "toughness": "2",
       "type": "Legendary Creature — Human Shaman",
       "types": [
@@ -16041,7 +16049,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "+1: Chandra, Roaring Flame deals 2 damage to target player.\n−2: Chandra, Roaring Flame deals 2 damage to target creature.\n−7: Chandra, Roaring Flame deals 6 damage to each opponent. Each player dealt damage this way gets an emblem with \"At the beginning of your upkeep, this emblem deals 3 damage to you.\"",
+      "text": "+1: Chandra, Roaring Flame deals 2 damage to target player or planeswalker.\n−2: Chandra, Roaring Flame deals 2 damage to target creature.\n−7: Chandra, Roaring Flame deals 6 damage to each opponent. Each player dealt damage this way gets an emblem with \"At the beginning of your upkeep, this emblem deals 3 damage to you.\"",
       "type": "Legendary Planeswalker — Chandra",
       "types": [
         "Planeswalker"
@@ -16149,7 +16157,7 @@
           "text": "Chandra's Fury targets only the player, not any creature. Chandra's Fury will deal 1 damage to a creature with hexproof, for example."
         }
       ],
-      "text": "Chandra's Fury deals 4 damage to target player and 1 damage to each creature that player controls.",
+      "text": "Chandra's Fury deals 4 damage to target player or planeswalker and 1 damage to each creature that player or that planeswalker's controller controls.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -16261,7 +16269,7 @@
         },
         {
           "date": "2015-06-22",
-          "text": "If the creature becomes an illegal target by the time Chandra's Ignition tries to resolve (perhaps because another player controls it or it's left the battlefield), Chandra's Ignition will be countered and none of its effects will happen. No damage will be dealt."
+          "text": "If the creature becomes an illegal target by the time Chandra's Ignition tries to resolve (perhaps because another player controls it or it's left the battlefield), Chandra's Ignition won't resolve and none of its effects will happen. No damage will be dealt."
         }
       ],
       "text": "Target creature you control deals damage equal to its power to each other creature and each opponent.",
@@ -16743,7 +16751,7 @@
       "subtypes": [
         "Hellion"
       ],
-      "text": "Trample (This creature can deal excess combat damage to defending player or planeswalker while attacking.)\nIf another red source you control would deal damage to a permanent or player, it deals that much damage plus 1 to that permanent or player instead.",
+      "text": "Trample (This creature can deal excess combat damage to the player or planeswalker it's attacking.)\nIf another red source you control would deal damage to a permanent or player, it deals that much damage plus 1 to that permanent or player instead.",
       "toughness": "5",
       "type": "Creature — Hellion",
       "types": [
@@ -16848,11 +16856,11 @@
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2015-06-22",
+          "date": "2018-03-16",
           "text": "Once Enthralling Victor's ability resolves and you gain control of a creature, raising its power above 2 won't cause you to lose control of it. Similarly, it doesn't matter if Enthralling Victor leaves the battlefield or you lose control of Enthralling Victor. You'll keep control of the creature that was the target of the ability until the end of the turn."
         },
         {
-          "date": "2015-06-22",
+          "date": "2018-03-16",
           "text": "Enthralling Victor's ability can target a creature that's already untapped. You'll still gain control of it and it will gain haste."
         }
       ],
@@ -16972,7 +16980,7 @@
           "text": "Check to see if there are two or more instant and/or sorcery cards in your graveyard as the spell resolves to determine whether the spell mastery ability applies. The spell itself won't count because it's still on the stack as you make this check."
         }
       ],
-      "text": "Exquisite Firecraft deals 4 damage to target creature or player.\nSpell mastery — If there are two or more instant and/or sorcery cards in your graveyard, Exquisite Firecraft can't be countered by spells or abilities.",
+      "text": "Exquisite Firecraft deals 4 damage to any target.\nSpell mastery — If there are two or more instant and/or sorcery cards in your graveyard, this spell can't be countered.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -17089,7 +17097,7 @@
           "text": "Players can only respond once this spell has been cast and all its costs have been paid. No one can try to destroy the creature you sacrificed to prevent you from casting this spell."
         }
       ],
-      "text": "As an additional cost to cast Fiery Conclusion, sacrifice a creature.\nFiery Conclusion deals 5 damage to target creature.",
+      "text": "As an additional cost to cast this spell, sacrifice a creature.\nFiery Conclusion deals 5 damage to target creature.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -17552,7 +17560,7 @@
           "text": "You may tap any two untapped artifacts you control, including artifact creatures that haven't been under your control continuously since the beginning of your most recent turn."
         }
       ],
-      "text": "Tap two untapped artifacts you control: Ghirapur Aether Grid deals 1 damage to target creature or player.",
+      "text": "Tap two untapped artifacts you control: Ghirapur Aether Grid deals 1 damage to any target.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -17650,7 +17658,8 @@
       "originalType": "Creature — Human Artificer",
       "power": "2",
       "printings": [
-        "ORI"
+        "ORI",
+        "DDU"
       ],
       "rarity": "Common",
       "subtypes": [
@@ -18003,7 +18012,7 @@
       "rulings": [
         {
           "date": "2015-06-22",
-          "text": "If, during its controller's declare attackers step, the enchanted creature is tapped or is affected by a spell or ability that says it can't attack, then that creature doesn't attack. If there's a cost associated with having that creature attack, its controller isn't forced to pay that cost. If he or she doesn't, the creature doesn't have to attack."
+          "text": "If, during its controller's declare attackers step, the enchanted creature is tapped or is affected by a spell or ability that says it can't attack, then that creature doesn't attack. If there's a cost associated with having that creature attack, its controller isn't forced to pay that cost. If they don't, the creature doesn't have to attack."
         }
       ],
       "subtypes": [
@@ -18109,7 +18118,7 @@
         "ORI"
       ],
       "rarity": "Common",
-      "text": "Lightning Javelin deals 3 damage to target creature or player. Scry 1. (Look at the top card of your library. You may put that card on the bottom of your library.)",
+      "text": "Lightning Javelin deals 3 damage to any target. Scry 1. (Look at the top card of your library. You may put that card on the bottom of your library.)",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -18213,7 +18222,7 @@
       "rulings": [
         {
           "date": "2015-06-22",
-          "text": "If, during its controller's declare attackers step, Mage-Ring Bully is tapped or is affected by a spell or ability that says it can't attack, then Mage-Ring Bully doesn't attack. If there's a cost associated with having it attack, its controller isn't forced to pay that cost. If he or she doesn't, Mage-Ring Bully doesn't have to attack."
+          "text": "If, during its controller's declare attackers step, Mage-Ring Bully is tapped or is affected by a spell or ability that says it can't attack, then Mage-Ring Bully doesn't attack. If there's a cost associated with having it attack, its controller isn't forced to pay that cost. If they don't, Mage-Ring Bully doesn't have to attack."
         },
         {
           "date": "2015-06-22",
@@ -18339,7 +18348,7 @@
           "text": "You must discard exactly one land card to cast Magmatic Insight. You can't cast it without discarding a land card, and you can't discard additional cards."
         }
       ],
-      "text": "As an additional cost to cast Magmatic Insight, discard a land card.\nDraw two cards.",
+      "text": "As an additional cost to cast this spell, discard a land card.\nDraw two cards.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -18439,7 +18448,7 @@
         "ORI"
       ],
       "rarity": "Rare",
-      "text": "{R}, Discard a land card: Molten Vortex deals 2 damage to target creature or player.",
+      "text": "{R}, Discard a land card: Molten Vortex deals 2 damage to any target.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -18538,7 +18547,8 @@
       "printings": [
         "pMEI",
         "pPRE",
-        "ORI"
+        "ORI",
+        "DDU"
       ],
       "rarity": "Rare",
       "subtypes": [
@@ -18548,7 +18558,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "When Pia and Kiran Nalaar enters the battlefield, create two 1/1 colorless Thopter artifact creature tokens with flying.\n{2}{R}, Sacrifice an artifact: Pia and Kiran Nalaar deals 2 damage to target creature or player.",
+      "text": "When Pia and Kiran Nalaar enters the battlefield, create two 1/1 colorless Thopter artifact creature tokens with flying.\n{2}{R}, Sacrifice an artifact: Pia and Kiran Nalaar deals 2 damage to any target.",
       "toughness": "2",
       "type": "Legendary Creature — Human Artificer",
       "types": [
@@ -18761,7 +18771,7 @@
         },
         {
           "date": "2015-06-22",
-          "text": "If the creature becomes an illegal target by the time Ravaging Blaze tries to resolve, Ravaging Blaze will be countered and none of its effects will happen. No damage will be dealt to the creature or its controller."
+          "text": "If the creature becomes an illegal target by the time Ravaging Blaze tries to resolve, Ravaging Blaze won't resolve and none of its effects will happen. No damage will be dealt to the creature or its controller."
         },
         {
           "date": "2015-06-22",
@@ -19214,7 +19224,7 @@
       "rulings": [
         {
           "date": "2015-06-22",
-          "text": "Smash to Smithereens targets only the artifact, not any player. If that artifact becomes an illegal target by the time Smash to Smithereens tries to resolve, Smash to Smithereens will be countered and none of its effects will happen. No damage will be dealt."
+          "text": "Smash to Smithereens targets only the artifact, not any player. If that artifact becomes an illegal target by the time Smash to Smithereens tries to resolve, Smash to Smithereens won't resolve and none of its effects will happen. No damage will be dealt."
         }
       ],
       "text": "Destroy target artifact. Smash to Smithereens deals 3 damage to that artifact's controller.",
@@ -19547,7 +19557,7 @@
         },
         {
           "date": "2013-09-15",
-          "text": "Scry appears on some spells and abilities with one or more targets. If all of the spell or ability's targets are illegal when it tries to resolve, it will be countered and none of its effects will happen. You won't scry."
+          "text": "Scry appears on some spells and abilities with one or more targets. If all of the spell or ability's targets are illegal when it tries to resolve, it won't resolve and none of its effects will happen. You won't scry."
         }
       ],
       "text": "Target creature gets +3/+1 until end of turn. Scry 1. (Look at the top card of your library. You may put that card on the bottom of your library.)",
@@ -19654,7 +19664,7 @@
       "subtypes": [
         "Elemental"
       ],
-      "text": "{2}{R}: Volcanic Rambler deals 1 damage to target player.",
+      "text": "{2}{R}: Volcanic Rambler deals 1 damage to target player or planeswalker.",
       "toughness": "4",
       "type": "Creature — Elemental",
       "types": [
@@ -19762,7 +19772,7 @@
         },
         {
           "date": "2015-06-22",
-          "text": "If some (but not all) of the targets become illegal before Aerial Volley tries to resolve, the original division of damage still applies, but no damage is dealt to illegal targets. If all targets become illegal, Aerial Volley will be countered."
+          "text": "If some (but not all) of the targets become illegal before Aerial Volley tries to resolve, the original division of damage still applies, but no damage is dealt to illegal targets. If all targets become illegal, Aerial Volley won't resolve."
         }
       ],
       "text": "Aerial Volley deals 3 damage divided as you choose among one, two, or three target creatures with flying.",
@@ -20193,7 +20203,8 @@
       "printings": [
         "pMEI",
         "pPRE",
-        "ORI"
+        "ORI",
+        "DDU"
       ],
       "rarity": "Rare",
       "rulings": [
@@ -20308,7 +20319,8 @@
       "originalType": "Creature — Elf Warrior",
       "power": "2",
       "printings": [
-        "ORI"
+        "ORI",
+        "DDU"
       ],
       "rarity": "Uncommon",
       "subtypes": [
@@ -20776,7 +20788,7 @@
       "subtypes": [
         "Elemental"
       ],
-      "text": "Gaea's Revenge can't be countered.\nHaste\nGaea's Revenge can't be the target of nongreen spells or abilities from nongreen sources.",
+      "text": "This spell can't be countered.\nHaste\nGaea's Revenge can't be the target of nongreen spells or abilities from nongreen sources.",
       "toughness": "5",
       "type": "Creature — Elemental",
       "types": [
@@ -20992,14 +21004,14 @@
         },
         {
           "date": "2015-06-22",
-          "text": "If a player is required to draw more cards than his or her library contains, that player loses the game. If all players lose the game this way, the game is a draw."
+          "text": "If a player is required to draw more cards than their library contains, that player loses the game. If all players lose the game this way, the game is a draw."
         },
         {
           "date": "2015-06-22",
           "text": "As The Great Aurora resolves, first you choose any number of land cards in your hand to put onto the battlefield, and then each other player in turn order does the same. The lands enter the battlefield simultaneously."
         }
       ],
-      "text": "Each player shuffles all cards from his or her hand and all permanents he or she owns into his or her library, then draws that many cards. Each player may put any number of land cards from his or her hand onto the battlefield. Exile The Great Aurora.",
+      "text": "Each player shuffles all cards from their hand and all permanents they own into their library, then draws that many cards. Each player may put any number of land cards from their hand onto the battlefield. Exile The Great Aurora.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -21344,7 +21356,7 @@
         "Human",
         "Druid"
       ],
-      "text": "Renown 1 (When this creature deals combat damage to a player, if it isn't renowned, put a +1/+1 counter on it and it becomes renowned.)\nAs long as Honored Hierarch is renowned, it has vigilance and \"{T}: Add one mana of any color to your mana pool.\"",
+      "text": "Renown 1 (When this creature deals combat damage to a player, if it isn't renowned, put a +1/+1 counter on it and it becomes renowned.)\nAs long as Honored Hierarch is renowned, it has vigilance and \"{T}: Add one mana of any color.\"",
       "toughness": "1",
       "type": "Creature — Human Druid",
       "types": [
@@ -21452,7 +21464,7 @@
         },
         {
           "date": "2015-06-22",
-          "text": "Joraga Invocation doesn't force any specific creature to block any specific attacking creature. The defending player still chooses how creatures he or she controls block."
+          "text": "Joraga Invocation doesn't force any specific creature to block any specific attacking creature. The defending player still chooses how creatures they control block."
         }
       ],
       "text": "Each creature you control gets +3/+3 until end of turn and must be blocked this turn if able.",
@@ -21559,14 +21571,15 @@
       "printings": [
         "LRW",
         "ARC",
-        "ORI"
+        "ORI",
+        "DDU"
       ],
       "rarity": "Common",
       "subtypes": [
         "Elf",
         "Druid"
       ],
-      "text": "{T}: Add {G} to your mana pool.",
+      "text": "{T}: Add {G}.",
       "toughness": "1",
       "type": "Creature — Elf Druid",
       "types": [
@@ -21669,7 +21682,8 @@
       "power": "2",
       "printings": [
         "FUT",
-        "ORI"
+        "ORI",
+        "DDU"
       ],
       "rarity": "Common",
       "subtypes": [
@@ -22025,126 +22039,6 @@
       "foreignNames": [
         {
           "language": "Chinese Simplified",
-          "name": "物灵智者妮莎",
-          "multiverseid": 398709
-        },
-        {
-          "language": "Chinese Traditional",
-          "name": "物靈智者妮莎",
-          "multiverseid": 398986
-        },
-        {
-          "language": "German",
-          "name": "Nissa, die weise Animistin",
-          "multiverseid": 399263
-        },
-        {
-          "language": "French",
-          "name": "Nissa, sage animiste",
-          "multiverseid": 399540
-        },
-        {
-          "language": "Italian",
-          "name": "Nissa, Saggia Animista",
-          "multiverseid": 399817
-        },
-        {
-          "language": "Japanese",
-          "name": "精霊信者の賢人、ニッサ",
-          "multiverseid": 400094
-        },
-        {
-          "language": "Korean",
-          "name": "현명한 정령숭배자 니사",
-          "multiverseid": 400371
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Nissa, Sábia Animista",
-          "multiverseid": 400648
-        },
-        {
-          "language": "Russian",
-          "name": "Нисса, Премудрый Анимист",
-          "multiverseid": 400925
-        },
-        {
-          "language": "Spanish",
-          "name": "Nissa, animista sabia",
-          "multiverseid": 401202
-        }
-      ],
-      "id": "e8b7cc901afb032ab1f8113c946ebdb63da6e4ab",
-      "imageName": "nissa, sage animist",
-      "layout": "double-faced",
-      "legalities": [
-        {
-          "format": "Commander",
-          "legality": "Legal"
-        },
-        {
-          "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Vintage",
-          "legality": "Legal"
-        }
-      ],
-      "loyalty": 3,
-      "mciNumber": "189b",
-      "multiverseid": 398432,
-      "name": "Nissa, Sage Animist",
-      "names": [
-        "Nissa, Sage Animist",
-        "Nissa, Vastwood Seer"
-      ],
-      "number": "189a",
-      "originalText": "+1: Reveal the top card of your library. If it's a land card, put it onto the battlefield. Otherwise, put it into your hand.−2: Put a legendary 4/4 green Elemental creature token named Ashaya, the Awoken World onto the battlefield.−7: Untap up to six target lands. They become 6/6 Elemental creatures. They're still lands.",
-      "originalType": "Planeswalker — Nissa",
-      "printings": [
-        "ORI",
-        "V17"
-      ],
-      "rarity": "Mythic Rare",
-      "rulings": [
-        {
-          "date": "2015-06-22",
-          "text": "You can activate Nissa, Sage Animist's second ability even if you already control an Ashaya, the Awoken World. Just after the second token is created, you'll choose one to remain on the battlefield. The other will be put into your graveyard and subsequently cease to exist."
-        },
-        {
-          "date": "2015-06-22",
-          "text": "If a land becomes a creature but hasn't continuously been under its controller's control since that player's most recent turn began, it won't be able to attack and its abilities with {T} in the cost (including mana abilities) won't be able to be activated. In other words, look at how long the permanent itself has been under your control, not how long it's been a creature."
-        }
-      ],
-      "subtypes": [
-        "Nissa"
-      ],
-      "supertypes": [
-        "Legendary"
-      ],
-      "text": "+1: Reveal the top card of your library. If it's a land card, put it onto the battlefield. Otherwise, put it into your hand.\n−2: Create a legendary 4/4 green Elemental creature token named Ashaya, the Awoken World.\n−7: Untap up to six target lands. They become 6/6 Elemental creatures. They're still lands.",
-      "type": "Legendary Planeswalker — Nissa",
-      "types": [
-        "Planeswalker"
-      ]
-    },
-    {
-      "artist": "Wesley Burt",
-      "cmc": 3,
-      "colorIdentity": [
-        "G"
-      ],
-      "colors": [
-        "Green"
-      ],
-      "foreignNames": [
-        {
-          "language": "Chinese Simplified",
           "name": "广林预言师妮莎",
           "multiverseid": 398715
         },
@@ -22220,10 +22114,10 @@
       "multiverseid": 398438,
       "name": "Nissa, Vastwood Seer",
       "names": [
-        "Nissa, Sage Animist",
-        "Nissa, Vastwood Seer"
+        "Nissa, Vastwood Seer",
+        "Nissa, Sage Animist"
       ],
-      "number": "189b",
+      "number": "189a",
       "originalText": "When Nissa, Vastwood Seer enters the battlefield, you may search your library for a basic Forest card, reveal it, put it into your hand, then shuffle your library.Whenever a land enters the battlefield under your control, if you control seven or more lands, exile Nissa, then return her to the battlefield transformed under her owner's control.",
       "originalType": "Legendary Creature — Elf Scout",
       "power": "2",
@@ -22295,6 +22189,126 @@
       "type": "Legendary Creature — Elf Scout",
       "types": [
         "Creature"
+      ]
+    },
+    {
+      "artist": "Wesley Burt",
+      "cmc": 3,
+      "colorIdentity": [
+        "G"
+      ],
+      "colors": [
+        "Green"
+      ],
+      "foreignNames": [
+        {
+          "language": "Chinese Simplified",
+          "name": "物灵智者妮莎",
+          "multiverseid": 398709
+        },
+        {
+          "language": "Chinese Traditional",
+          "name": "物靈智者妮莎",
+          "multiverseid": 398986
+        },
+        {
+          "language": "German",
+          "name": "Nissa, die weise Animistin",
+          "multiverseid": 399263
+        },
+        {
+          "language": "French",
+          "name": "Nissa, sage animiste",
+          "multiverseid": 399540
+        },
+        {
+          "language": "Italian",
+          "name": "Nissa, Saggia Animista",
+          "multiverseid": 399817
+        },
+        {
+          "language": "Japanese",
+          "name": "精霊信者の賢人、ニッサ",
+          "multiverseid": 400094
+        },
+        {
+          "language": "Korean",
+          "name": "현명한 정령숭배자 니사",
+          "multiverseid": 400371
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Nissa, Sábia Animista",
+          "multiverseid": 400648
+        },
+        {
+          "language": "Russian",
+          "name": "Нисса, Премудрый Анимист",
+          "multiverseid": 400925
+        },
+        {
+          "language": "Spanish",
+          "name": "Nissa, animista sabia",
+          "multiverseid": 401202
+        }
+      ],
+      "id": "e8b7cc901afb032ab1f8113c946ebdb63da6e4ab",
+      "imageName": "nissa, sage animist",
+      "layout": "double-faced",
+      "legalities": [
+        {
+          "format": "Commander",
+          "legality": "Legal"
+        },
+        {
+          "format": "Legacy",
+          "legality": "Legal"
+        },
+        {
+          "format": "Modern",
+          "legality": "Legal"
+        },
+        {
+          "format": "Vintage",
+          "legality": "Legal"
+        }
+      ],
+      "loyalty": 3,
+      "mciNumber": "189b",
+      "multiverseid": 398432,
+      "name": "Nissa, Sage Animist",
+      "names": [
+        "Nissa, Vastwood Seer",
+        "Nissa, Sage Animist"
+      ],
+      "number": "189b",
+      "originalText": "+1: Reveal the top card of your library. If it's a land card, put it onto the battlefield. Otherwise, put it into your hand.−2: Put a legendary 4/4 green Elemental creature token named Ashaya, the Awoken World onto the battlefield.−7: Untap up to six target lands. They become 6/6 Elemental creatures. They're still lands.",
+      "originalType": "Planeswalker — Nissa",
+      "printings": [
+        "ORI",
+        "V17"
+      ],
+      "rarity": "Mythic Rare",
+      "rulings": [
+        {
+          "date": "2015-06-22",
+          "text": "You can activate Nissa, Sage Animist's second ability even if you already control an Ashaya, the Awoken World. Just after the second token is created, you'll choose one to remain on the battlefield. The other will be put into your graveyard and subsequently cease to exist."
+        },
+        {
+          "date": "2015-06-22",
+          "text": "If a land becomes a creature but hasn't continuously been under its controller's control since that player's most recent turn began, it won't be able to attack and its abilities with {T} in the cost (including mana abilities) won't be able to be activated. In other words, look at how long the permanent itself has been under your control, not how long it's been a creature."
+        }
+      ],
+      "subtypes": [
+        "Nissa"
+      ],
+      "supertypes": [
+        "Legendary"
+      ],
+      "text": "+1: Reveal the top card of your library. If it's a land card, put it onto the battlefield. Otherwise, put it into your hand.\n−2: Create a legendary 4/4 green Elemental creature token named Ashaya, the Awoken World.\n−7: Untap up to six target lands. They become 6/6 Elemental creatures. They're still lands.",
+      "type": "Legendary Planeswalker — Nissa",
+      "types": [
+        "Planeswalker"
       ]
     },
     {
@@ -23087,7 +23101,7 @@
         "Rhino",
         "Soldier"
       ],
-      "text": "Trample (This creature can deal excess combat damage to defending player or planeswalker while attacking.)\nRenown 2 (When this creature deals combat damage to a player, if it isn't renowned, put two +1/+1 counters on it and it becomes renowned.)",
+      "text": "Trample (This creature can deal excess combat damage to the player or planeswalker it's attacking.)\nRenown 2 (When this creature deals combat damage to a player, if it isn't renowned, put two +1/+1 counters on it and it becomes renowned.)",
       "toughness": "4",
       "type": "Creature — Rhino Soldier",
       "types": [
@@ -23302,7 +23316,7 @@
       "subtypes": [
         "Wolf"
       ],
-      "text": "Whenever a creature you control becomes blocked, it gets +1/+1 until end of turn.\n{1}{G}: Target creature you control gains trample until end of turn. (It can deal excess combat damage to defending player or planeswalker while attacking.)",
+      "text": "Whenever a creature you control becomes blocked, it gets +1/+1 until end of turn.\n{1}{G}: Target creature you control gains trample until end of turn. (It can deal excess combat damage to the player or planeswalker it's attacking.)",
       "toughness": "2",
       "type": "Creature — Wolf",
       "types": [
@@ -23413,7 +23427,7 @@
       "subtypes": [
         "Elf"
       ],
-      "text": "Trample (This creature can deal excess combat damage to defending player or planeswalker while attacking.)\nWhen Sylvan Messenger enters the battlefield, reveal the top four cards of your library. Put all Elf cards revealed this way into your hand and the rest on the bottom of your library in any order.",
+      "text": "Trample (This creature can deal excess combat damage to the player or planeswalker it's attacking.)\nWhen Sylvan Messenger enters the battlefield, reveal the top four cards of your library. Put all Elf cards revealed this way into your hand and the rest on the bottom of your library in any order.",
       "toughness": "2",
       "type": "Creature — Elf",
       "types": [
@@ -23517,6 +23531,12 @@
         "A25"
       ],
       "rarity": "Common",
+      "rulings": [
+        {
+          "date": "2018-03-16",
+          "text": "Because damage remains marked on a creature until it's removed as the turn ends, nonlethal damage dealt to Timberpack Wolf may become lethal if other Timberpack Wolves leave the battlefield during that turn."
+        }
+      ],
       "subtypes": [
         "Wolf"
       ],
@@ -24618,7 +24638,7 @@
         "Elemental",
         "Hound"
       ],
-      "text": "{1}, Sacrifice another creature: Blazing Hellhound deals 1 damage to target creature or player.",
+      "text": "{1}, Sacrifice another creature: Blazing Hellhound deals 1 damage to any target.",
       "toughness": "3",
       "type": "Creature — Elemental Hound",
       "types": [
@@ -25283,7 +25303,8 @@
       "originalType": "Creature — Human Artificer",
       "power": "2",
       "printings": [
-        "ORI"
+        "ORI",
+        "DDU"
       ],
       "rarity": "Uncommon",
       "rulings": [
@@ -26184,7 +26205,7 @@
       "subtypes": [
         "Equipment"
       ],
-      "text": "Equipped creature gets +2/+2 and has trample. (It can deal excess combat damage to defending player or planeswalker while attacking.)\nEquip {4} ({4}: Attach to target creature you control. Equip only as a sorcery.)",
+      "text": "Equipped creature gets +2/+2 and has trample. (It can deal excess combat damage to the player or planeswalker it's attacking.)\nEquip {4} ({4}: Attach to target creature you control. Equip only as a sorcery.)",
       "type": "Artifact — Equipment",
       "types": [
         "Artifact"
@@ -27131,7 +27152,7 @@
         "ORI"
       ],
       "rarity": "Uncommon",
-      "text": "When Meteorite enters the battlefield, it deals 2 damage to target creature or player.\n{T}: Add one mana of any color to your mana pool.",
+      "text": "When Meteorite enters the battlefield, it deals 2 damage to any target.\n{T}: Add one mana of any color.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -27226,14 +27247,6 @@
       ],
       "rarity": "Rare",
       "rulings": [
-        {
-          "date": "2015-06-22",
-          "text": "As long as you have hexproof, your opponents can't target you with spells that deal damage or abilities that cause their sources to deal damage, even if they intend to redirect the damage to a planeswalker you control."
-        },
-        {
-          "date": "2015-06-22",
-          "text": "Orbs of Warding won't prevent damage dealt by creatures to a planeswalker you control. However, if a creature controlled by an opponent would deal noncombat damage to you, you can apply Orbs of Warding's effect to prevent 1 of that damage before your opponent chooses whether to redirect that damage to a planeswalker you control."
-        },
         {
           "date": "2015-06-22",
           "text": "The damage prevention effects of multiple Orbs of Warding are cumulative."
@@ -27475,7 +27488,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "{T}: Add {R} to your mana pool. When that mana is spent to cast a red instant or sorcery spell, copy that spell and you may choose new targets for the copy.",
+      "text": "{T}: Add {R}. When that mana is spent to cast a red instant or sorcery spell, copy that spell and you may choose new targets for the copy.",
       "type": "Legendary Artifact",
       "types": [
         "Artifact"
@@ -27573,7 +27586,7 @@
       "rulings": [
         {
           "date": "2015-06-22",
-          "text": "If, during its controller's declare attackers step, Ramroller is tapped or is affected by a spell or ability that says it can't attack, then Ramroller doesn't attack. If there's a cost associated with having it attack, its controller isn't forced to pay that cost. If he or she doesn't, Ramroller doesn't have to attack."
+          "text": "If, during its controller's declare attackers step, Ramroller is tapped or is affected by a spell or ability that says it can't attack, then Ramroller doesn't attack. If there's a cost associated with having it attack, its controller isn't forced to pay that cost. If they don't, Ramroller doesn't have to attack."
         }
       ],
       "subtypes": [
@@ -28007,7 +28020,7 @@
       "subtypes": [
         "Equipment"
       ],
-      "text": "Equipped creature gets +2/+0.\nWhenever equipped creature attacks, you may sacrifice Throwing Knife. If you do, Throwing Knife deals 2 damage to target creature or player.\nEquip {2} ({2}: Attach to target creature you control. Equip only as a sorcery.)",
+      "text": "Equipped creature gets +2/+0.\nWhenever equipped creature attacks, you may sacrifice Throwing Knife. If you do, Throwing Knife deals 2 damage to any target.\nEquip {2} ({2}: Attach to target creature you control. Equip only as a sorcery.)",
       "type": "Artifact — Equipment",
       "types": [
         "Artifact"
@@ -28312,7 +28325,7 @@
           "text": "Like most lands, each land in this cycle is colorless. The damage dealt to you is dealt by a colorless source."
         }
       ],
-      "text": "{T}: Add {C} to your mana pool.\n{T}: Add {R} or {W} to your mana pool. Battlefield Forge deals 1 damage to you.",
+      "text": "{T}: Add {C}.\n{T}: Add {R} or {W}. Battlefield Forge deals 1 damage to you.",
       "type": "Land",
       "types": [
         "Land"
@@ -28428,7 +28441,7 @@
           "text": "Like most lands, each land in this cycle is colorless. The damage dealt to you is dealt by a colorless source."
         }
       ],
-      "text": "{T}: Add {C} to your mana pool.\n{T}: Add {W} or {B} to your mana pool. Caves of Koilos deals 1 damage to you.",
+      "text": "{T}: Add {C}.\n{T}: Add {W} or {B}. Caves of Koilos deals 1 damage to you.",
       "type": "Land",
       "types": [
         "Land"
@@ -28508,6 +28521,10 @@
         },
         {
           "format": "Innistrad Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
           "legality": "Legal"
         },
         {
@@ -28660,10 +28677,11 @@
       "originalText": "{T}: Add {1} to your mana pool.{5}, {T}, Sacrifice Foundry of the Consuls: Put two 1/1 colorless Thopter artifact creature tokens with flying onto the battlefield.",
       "originalType": "Land",
       "printings": [
-        "ORI"
+        "ORI",
+        "DDU"
       ],
       "rarity": "Uncommon",
-      "text": "{T}: Add {C} to your mana pool.\n{5}, {T}, Sacrifice Foundry of the Consuls: Create two 1/1 colorless Thopter artifact creature tokens with flying.",
+      "text": "{T}: Add {C}.\n{5}, {T}, Sacrifice Foundry of the Consuls: Create two 1/1 colorless Thopter artifact creature tokens with flying.",
       "type": "Land",
       "types": [
         "Land"
@@ -28777,7 +28795,7 @@
           "text": "Like most lands, each land in this cycle is colorless. The damage dealt to you is dealt by a colorless source."
         }
       ],
-      "text": "{T}: Add {C} to your mana pool.\n{T}: Add {B} or {G} to your mana pool. Llanowar Wastes deals 1 damage to you.",
+      "text": "{T}: Add {C}.\n{T}: Add {B} or {G}. Llanowar Wastes deals 1 damage to you.",
       "type": "Land",
       "types": [
         "Land"
@@ -28869,7 +28887,7 @@
         "ORI"
       ],
       "rarity": "Uncommon",
-      "text": "{T}: Add {C} to your mana pool.\n{1}, {T}: Put a storage counter on Mage-Ring Network.\n{T}, Remove any number of storage counters from Mage-Ring Network: Add {C} to your mana pool for each storage counter removed this way.",
+      "text": "{T}: Add {C}.\n{1}, {T}: Put a storage counter on Mage-Ring Network.\n{T}, Remove any number of storage counters from Mage-Ring Network: Add {C} for each storage counter removed this way.",
       "type": "Land",
       "types": [
         "Land"
@@ -28977,7 +28995,7 @@
           "text": "Activating the second ability of Rogue's Passage after a creature has become blocked won't cause it to become unblocked."
         }
       ],
-      "text": "{T}: Add {C} to your mana pool.\n{4}, {T}: Target creature can't be blocked this turn.",
+      "text": "{T}: Add {C}.\n{4}, {T}: Target creature can't be blocked this turn.",
       "type": "Land",
       "types": [
         "Land"
@@ -29078,7 +29096,8 @@
         "9ED",
         "10E",
         "M15",
-        "ORI"
+        "ORI",
+        "DDU"
       ],
       "rarity": "Rare",
       "rulings": [
@@ -29091,7 +29110,7 @@
           "text": "Like most lands, each land in this cycle is colorless. The damage dealt to you is dealt by a colorless source."
         }
       ],
-      "text": "{T}: Add {C} to your mana pool.\n{T}: Add {U} or {R} to your mana pool. Shivan Reef deals 1 damage to you.",
+      "text": "{T}: Add {C}.\n{T}: Add {U} or {R}. Shivan Reef deals 1 damage to you.",
       "type": "Land",
       "types": [
         "Land"
@@ -29205,7 +29224,7 @@
           "text": "Like most lands, each land in this cycle is colorless. The damage dealt to you is dealt by a colorless source."
         }
       ],
-      "text": "{T}: Add {C} to your mana pool.\n{T}: Add {G} or {U} to your mana pool. Yavimaya Coast deals 1 damage to you.",
+      "text": "{T}: Add {C}.\n{T}: Add {G} or {U}. Yavimaya Coast deals 1 damage to you.",
       "type": "Land",
       "types": [
         "Land"
@@ -29581,7 +29600,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -29971,7 +29991,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -30361,7 +30382,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -30751,7 +30773,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -30778,11 +30801,6 @@
         "U"
       ],
       "foreignNames": [
-        {
-          "language": "Chinese Simplified",
-          "name": "海岛",
-          "multiverseid": 398708
-        },
         {
           "language": "Chinese Traditional",
           "name": "海島",
@@ -30902,6 +30920,11 @@
           "language": "Korean",
           "name": "섬",
           "multiverseid": 400603
+        },
+        {
+          "language": "Spanish",
+          "name": "Isla",
+          "multiverseid": 401201
         }
       ],
       "id": "7eefc851f0bdd916c89df027edd6642c4f08bc31",
@@ -31140,7 +31163,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -31167,11 +31192,6 @@
         "U"
       ],
       "foreignNames": [
-        {
-          "language": "Chinese Simplified",
-          "name": "海岛",
-          "multiverseid": 398708
-        },
         {
           "language": "Chinese Traditional",
           "name": "海島",
@@ -31291,6 +31311,11 @@
           "language": "Korean",
           "name": "섬",
           "multiverseid": 400603
+        },
+        {
+          "language": "Spanish",
+          "name": "Isla",
+          "multiverseid": 401201
         }
       ],
       "id": "cb600224bf473b138e4d3356637146618c6debfb",
@@ -31529,7 +31554,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -31556,11 +31583,6 @@
         "U"
       ],
       "foreignNames": [
-        {
-          "language": "Chinese Simplified",
-          "name": "海岛",
-          "multiverseid": 398708
-        },
         {
           "language": "Chinese Traditional",
           "name": "海島",
@@ -31680,6 +31702,11 @@
           "language": "Korean",
           "name": "섬",
           "multiverseid": 400603
+        },
+        {
+          "language": "Spanish",
+          "name": "Isla",
+          "multiverseid": 401201
         }
       ],
       "id": "837ca338a1c179c5f038d484621788a34b68b642",
@@ -31918,7 +31945,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -31945,11 +31974,6 @@
         "U"
       ],
       "foreignNames": [
-        {
-          "language": "Chinese Simplified",
-          "name": "海岛",
-          "multiverseid": 398708
-        },
         {
           "language": "Chinese Traditional",
           "name": "海島",
@@ -32069,6 +32093,11 @@
           "language": "Korean",
           "name": "섬",
           "multiverseid": 400603
+        },
+        {
+          "language": "Spanish",
+          "name": "Isla",
+          "multiverseid": 401201
         }
       ],
       "id": "c3069e089a8e84bf0bd815f0f7cc39c0e0a257ae",
@@ -32307,7 +32336,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -32334,6 +32365,11 @@
         "B"
       ],
       "foreignNames": [
+        {
+          "language": "Chinese Simplified",
+          "name": "沼泽",
+          "multiverseid": 398749
+        },
         {
           "language": "Chinese Traditional",
           "name": "沼澤",
@@ -32435,29 +32471,24 @@
           "multiverseid": 400339
         },
         {
-          "language": "Korean",
-          "name": "늪",
-          "multiverseid": 400411
+          "language": "Spanish",
+          "name": "Pantano",
+          "multiverseid": 401242
         },
         {
-          "language": "Korean",
-          "name": "늪",
-          "multiverseid": 400446
+          "language": "Spanish",
+          "name": "Pantano",
+          "multiverseid": 401277
         },
         {
-          "language": "Korean",
-          "name": "늪",
-          "multiverseid": 400494
+          "language": "Spanish",
+          "name": "Pantano",
+          "multiverseid": 401325
         },
         {
-          "language": "Korean",
-          "name": "늪",
-          "multiverseid": 400616
-        },
-        {
-          "language": "Russian",
-          "name": "Болото",
-          "multiverseid": 400965
+          "language": "Spanish",
+          "name": "Pantano",
+          "multiverseid": 401447
         }
       ],
       "id": "e0658c82fbcab7877d7f4165cbb76c7903d46409",
@@ -32700,7 +32731,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -32727,6 +32759,11 @@
         "B"
       ],
       "foreignNames": [
+        {
+          "language": "Chinese Simplified",
+          "name": "沼泽",
+          "multiverseid": 398749
+        },
         {
           "language": "Chinese Traditional",
           "name": "沼澤",
@@ -32828,29 +32865,24 @@
           "multiverseid": 400339
         },
         {
-          "language": "Korean",
-          "name": "늪",
-          "multiverseid": 400411
+          "language": "Spanish",
+          "name": "Pantano",
+          "multiverseid": 401242
         },
         {
-          "language": "Korean",
-          "name": "늪",
-          "multiverseid": 400446
+          "language": "Spanish",
+          "name": "Pantano",
+          "multiverseid": 401277
         },
         {
-          "language": "Korean",
-          "name": "늪",
-          "multiverseid": 400494
+          "language": "Spanish",
+          "name": "Pantano",
+          "multiverseid": 401325
         },
         {
-          "language": "Korean",
-          "name": "늪",
-          "multiverseid": 400616
-        },
-        {
-          "language": "Russian",
-          "name": "Болото",
-          "multiverseid": 400965
+          "language": "Spanish",
+          "name": "Pantano",
+          "multiverseid": 401447
         }
       ],
       "id": "c34dd39a56566c9fd36b3d11156686b86c5264f8",
@@ -33093,7 +33125,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -33120,6 +33153,11 @@
         "B"
       ],
       "foreignNames": [
+        {
+          "language": "Chinese Simplified",
+          "name": "沼泽",
+          "multiverseid": 398749
+        },
         {
           "language": "Chinese Traditional",
           "name": "沼澤",
@@ -33221,29 +33259,24 @@
           "multiverseid": 400339
         },
         {
-          "language": "Korean",
-          "name": "늪",
-          "multiverseid": 400411
+          "language": "Spanish",
+          "name": "Pantano",
+          "multiverseid": 401242
         },
         {
-          "language": "Korean",
-          "name": "늪",
-          "multiverseid": 400446
+          "language": "Spanish",
+          "name": "Pantano",
+          "multiverseid": 401277
         },
         {
-          "language": "Korean",
-          "name": "늪",
-          "multiverseid": 400494
+          "language": "Spanish",
+          "name": "Pantano",
+          "multiverseid": 401325
         },
         {
-          "language": "Korean",
-          "name": "늪",
-          "multiverseid": 400616
-        },
-        {
-          "language": "Russian",
-          "name": "Болото",
-          "multiverseid": 400965
+          "language": "Spanish",
+          "name": "Pantano",
+          "multiverseid": 401447
         }
       ],
       "id": "33e87ba3707f1e16800288791ef408d898df0cf1",
@@ -33486,7 +33519,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -33513,6 +33547,11 @@
         "B"
       ],
       "foreignNames": [
+        {
+          "language": "Chinese Simplified",
+          "name": "沼泽",
+          "multiverseid": 398749
+        },
         {
           "language": "Chinese Traditional",
           "name": "沼澤",
@@ -33614,29 +33653,24 @@
           "multiverseid": 400339
         },
         {
-          "language": "Korean",
-          "name": "늪",
-          "multiverseid": 400411
+          "language": "Spanish",
+          "name": "Pantano",
+          "multiverseid": 401242
         },
         {
-          "language": "Korean",
-          "name": "늪",
-          "multiverseid": 400446
+          "language": "Spanish",
+          "name": "Pantano",
+          "multiverseid": 401277
         },
         {
-          "language": "Korean",
-          "name": "늪",
-          "multiverseid": 400494
+          "language": "Spanish",
+          "name": "Pantano",
+          "multiverseid": 401325
         },
         {
-          "language": "Korean",
-          "name": "늪",
-          "multiverseid": 400616
-        },
-        {
-          "language": "Russian",
-          "name": "Болото",
-          "multiverseid": 400965
+          "language": "Spanish",
+          "name": "Pantano",
+          "multiverseid": 401447
         }
       ],
       "id": "56a0b6e4ec0158edea4e3ced48516a8a287c40f1",
@@ -33879,7 +33913,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -34012,24 +34047,24 @@
           "multiverseid": 400351
         },
         {
-          "language": "Korean",
-          "name": "산",
-          "multiverseid": 400364
+          "language": "Spanish",
+          "name": "Montaña",
+          "multiverseid": 401182
         },
         {
-          "language": "Korean",
-          "name": "산",
-          "multiverseid": 400429
+          "language": "Spanish",
+          "name": "Montaña",
+          "multiverseid": 401195
         },
         {
-          "language": "Korean",
-          "name": "산",
-          "multiverseid": 400449
+          "language": "Spanish",
+          "name": "Montaña",
+          "multiverseid": 401260
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Montanha",
-          "multiverseid": 400628
+          "language": "Spanish",
+          "name": "Montaña",
+          "multiverseid": 401280
         }
       ],
       "id": "e070357264f7559ebbe2f080bf9dd5138e9ec6ff",
@@ -34274,7 +34309,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -34407,24 +34444,24 @@
           "multiverseid": 400351
         },
         {
-          "language": "Korean",
-          "name": "산",
-          "multiverseid": 400364
+          "language": "Spanish",
+          "name": "Montaña",
+          "multiverseid": 401182
         },
         {
-          "language": "Korean",
-          "name": "산",
-          "multiverseid": 400429
+          "language": "Spanish",
+          "name": "Montaña",
+          "multiverseid": 401195
         },
         {
-          "language": "Korean",
-          "name": "산",
-          "multiverseid": 400449
+          "language": "Spanish",
+          "name": "Montaña",
+          "multiverseid": 401260
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Montanha",
-          "multiverseid": 400628
+          "language": "Spanish",
+          "name": "Montaña",
+          "multiverseid": 401280
         }
       ],
       "id": "46768ba25029cb3d29d1228d323b3c90cada9660",
@@ -34669,7 +34706,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -34802,24 +34841,24 @@
           "multiverseid": 400351
         },
         {
-          "language": "Korean",
-          "name": "산",
-          "multiverseid": 400364
+          "language": "Spanish",
+          "name": "Montaña",
+          "multiverseid": 401182
         },
         {
-          "language": "Korean",
-          "name": "산",
-          "multiverseid": 400429
+          "language": "Spanish",
+          "name": "Montaña",
+          "multiverseid": 401195
         },
         {
-          "language": "Korean",
-          "name": "산",
-          "multiverseid": 400449
+          "language": "Spanish",
+          "name": "Montaña",
+          "multiverseid": 401260
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Montanha",
-          "multiverseid": 400628
+          "language": "Spanish",
+          "name": "Montaña",
+          "multiverseid": 401280
         }
       ],
       "id": "c7f325a5424dea2eb419fcafe2bea24deedde298",
@@ -35064,7 +35103,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -35197,24 +35238,24 @@
           "multiverseid": 400351
         },
         {
-          "language": "Korean",
-          "name": "산",
-          "multiverseid": 400364
+          "language": "Spanish",
+          "name": "Montaña",
+          "multiverseid": 401182
         },
         {
-          "language": "Korean",
-          "name": "산",
-          "multiverseid": 400429
+          "language": "Spanish",
+          "name": "Montaña",
+          "multiverseid": 401195
         },
         {
-          "language": "Korean",
-          "name": "산",
-          "multiverseid": 400449
+          "language": "Spanish",
+          "name": "Montaña",
+          "multiverseid": 401260
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Montanha",
-          "multiverseid": 400628
+          "language": "Spanish",
+          "name": "Montaña",
+          "multiverseid": 401280
         }
       ],
       "id": "0b0f3a56a21bb1974c17120a630139d6a73888f9",
@@ -35459,7 +35500,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -35486,6 +35529,11 @@
         "G"
       ],
       "foreignNames": [
+        {
+          "language": "Chinese Simplified",
+          "name": "树林",
+          "multiverseid": 398698
+        },
         {
           "language": "Chinese Traditional",
           "name": "樹林",
@@ -35587,29 +35635,24 @@
           "multiverseid": 400279
         },
         {
-          "language": "Korean",
-          "name": "숲",
-          "multiverseid": 400360
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 401191
         },
         {
-          "language": "Korean",
-          "name": "숲",
-          "multiverseid": 400393
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 401224
         },
         {
-          "language": "Korean",
-          "name": "숲",
-          "multiverseid": 400509
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 401340
         },
         {
-          "language": "Korean",
-          "name": "숲",
-          "multiverseid": 400556
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Floresta",
-          "multiverseid": 400637
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 401387
         }
       ],
       "id": "3f8c62afa29220918df5d32117357f64d6042030",
@@ -35851,7 +35894,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -35878,6 +35923,11 @@
         "G"
       ],
       "foreignNames": [
+        {
+          "language": "Chinese Simplified",
+          "name": "树林",
+          "multiverseid": 398698
+        },
         {
           "language": "Chinese Traditional",
           "name": "樹林",
@@ -35979,29 +36029,24 @@
           "multiverseid": 400279
         },
         {
-          "language": "Korean",
-          "name": "숲",
-          "multiverseid": 400360
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 401191
         },
         {
-          "language": "Korean",
-          "name": "숲",
-          "multiverseid": 400393
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 401224
         },
         {
-          "language": "Korean",
-          "name": "숲",
-          "multiverseid": 400509
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 401340
         },
         {
-          "language": "Korean",
-          "name": "숲",
-          "multiverseid": 400556
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Floresta",
-          "multiverseid": 400637
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 401387
         }
       ],
       "id": "aa72ec9fef27f544320ed84b8fa4cc9e6d834ec0",
@@ -36243,7 +36288,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -36270,6 +36317,11 @@
         "G"
       ],
       "foreignNames": [
+        {
+          "language": "Chinese Simplified",
+          "name": "树林",
+          "multiverseid": 398698
+        },
         {
           "language": "Chinese Traditional",
           "name": "樹林",
@@ -36371,29 +36423,24 @@
           "multiverseid": 400279
         },
         {
-          "language": "Korean",
-          "name": "숲",
-          "multiverseid": 400360
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 401191
         },
         {
-          "language": "Korean",
-          "name": "숲",
-          "multiverseid": 400393
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 401224
         },
         {
-          "language": "Korean",
-          "name": "숲",
-          "multiverseid": 400509
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 401340
         },
         {
-          "language": "Korean",
-          "name": "숲",
-          "multiverseid": 400556
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Floresta",
-          "multiverseid": 400637
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 401387
         }
       ],
       "id": "7c18c9495a5bc915fdfa7f8cc155545ac84922ef",
@@ -36635,7 +36682,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -36662,6 +36711,11 @@
         "G"
       ],
       "foreignNames": [
+        {
+          "language": "Chinese Simplified",
+          "name": "树林",
+          "multiverseid": 398698
+        },
         {
           "language": "Chinese Traditional",
           "name": "樹林",
@@ -36763,29 +36817,24 @@
           "multiverseid": 400279
         },
         {
-          "language": "Korean",
-          "name": "숲",
-          "multiverseid": 400360
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 401191
         },
         {
-          "language": "Korean",
-          "name": "숲",
-          "multiverseid": 400393
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 401224
         },
         {
-          "language": "Korean",
-          "name": "숲",
-          "multiverseid": 400509
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 401340
         },
         {
-          "language": "Korean",
-          "name": "숲",
-          "multiverseid": 400556
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Floresta",
-          "multiverseid": 400637
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 401387
         }
       ],
       "id": "1dc6054b454815aefaa6f4ecb2ae2c58810bcced",
@@ -37027,7 +37076,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -37238,6 +37289,10 @@
       "legalities": [
         {
           "format": "Commander",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
           "legality": "Legal"
         },
         {
@@ -37535,14 +37590,15 @@
         "EMA",
         "W17",
         "CMA",
-        "IMA"
+        "IMA",
+        "DOM"
       ],
       "rarity": "Uncommon",
       "starter": true,
       "subtypes": [
         "Angel"
       ],
-      "text": "Flying (This creature can't be blocked except by creatures with flying or reach.)\nVigilance (Attacking doesn't cause this creature to tap.)",
+      "text": "Flying, vigilance",
       "toughness": "4",
       "type": "Creature — Angel",
       "types": [
@@ -38735,6 +38791,10 @@
           "legality": "Legal"
         },
         {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -39010,7 +39070,7 @@
       "subtypes": [
         "Beast"
       ],
-      "text": "Terra Stomper can't be countered.\nTrample (This creature can deal excess combat damage to defending player or planeswalker while attacking.)",
+      "text": "This spell can't be countered.\nTrample  (This creature can deal excess combat damage to the player or planeswalker it's attacking.)",
       "toughness": "8",
       "type": "Creature — Beast",
       "types": [

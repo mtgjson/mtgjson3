@@ -1007,7 +1007,7 @@
           "text": "You draw the card when Bandage resolves, not when the damage is actually prevented."
         }
       ],
-      "text": "Prevent the next 1 damage that would be dealt to target creature or player this turn.\nDraw a card.",
+      "text": "Prevent the next 1 damage that would be dealt to any target this turn.\nDraw a card.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -1119,7 +1119,7 @@
         },
         {
           "date": "2007-07-15",
-          "text": "If a Beacon is countered, it's put into its owner's graveyard, not shuffled into the library."
+          "text": "If a Beacon is countered or doesn't resolve, it's put into its owner's graveyard, not shuffled into the library."
         }
       ],
       "text": "Double target player's life total. Shuffle Beacon of Immortality into its owner's library.",
@@ -2948,6 +2948,12 @@
         "A25"
       ],
       "rarity": "Rare",
+      "rulings": [
+        {
+          "date": "2018-03-16",
+          "text": "Loyal Sentry and the creature it blocks are destroyed before combat damage is dealt. The blocked creature is destroyed even if Loyal Sentry leaves the battlefield before its triggered ability resolves."
+        }
+      ],
       "subtypes": [
         "Human",
         "Soldier"
@@ -4172,7 +4178,7 @@
         "Human",
         "Cleric"
       ],
-      "text": "{T}: Prevent the next 1 damage that would be dealt to target creature or player this turn.",
+      "text": "{T}: Prevent the next 1 damage that would be dealt to any target this turn.",
       "toughness": "1",
       "type": "Creature — Human Cleric",
       "types": [
@@ -4299,13 +4305,14 @@
         "EMA",
         "W17",
         "CMA",
-        "IMA"
+        "IMA",
+        "DOM"
       ],
       "rarity": "Rare",
       "subtypes": [
         "Angel"
       ],
-      "text": "Flying (This creature can't be blocked except by creatures with flying or reach.)\nVigilance (Attacking doesn't cause this creature to tap.)",
+      "text": "Flying, vigilance",
       "toughness": "4",
       "type": "Creature — Angel",
       "types": [
@@ -4967,10 +4974,6 @@
       ],
       "rarity": "Uncommon",
       "rulings": [
-        {
-          "date": "2004-10-04",
-          "text": "Damage that is redirected is not dealt to the original creature or player, but it is dealt to the new creature or player."
-        },
         {
           "date": "2004-10-04",
           "text": "You only gain the life when the triggered ability resolves. If you are reduced to zero life before the ability resolves, you will lose before gaining the life."
@@ -6599,7 +6602,7 @@
       "subtypes": [
         "Spirit"
       ],
-      "text": "Flying\nCreatures can't attack you unless their controller pays {2} for each creature he or she controls that's attacking you.",
+      "text": "Flying\nCreatures can't attack you unless their controller pays {2} for each creature they control that's attacking you.",
       "toughness": "3",
       "type": "Creature — Spirit",
       "types": [
@@ -7174,7 +7177,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "{3}: Target player puts the top three cards of his or her library into his or her graveyard.",
+      "text": "{3}: Target player puts the top three cards of their library into their graveyard.",
       "toughness": "3",
       "type": "Legendary Creature — Merfolk Wizard",
       "types": [
@@ -7621,7 +7624,7 @@
         "Soldier",
         "Wizard"
       ],
-      "text": "Flying (This creature can't be blocked except by creatures with flying or reach.)\n{1}{U}: Target player reveals the top card of his or her library.",
+      "text": "Flying (This creature can't be blocked except by creatures with flying or reach.)\n{1}{U}: Target player reveals the top card of their library.",
       "toughness": "3",
       "type": "Creature — Bird Soldier Wizard",
       "types": [
@@ -9072,7 +9075,7 @@
       "subtypes": [
         "Spirit"
       ],
-      "text": "At the beginning of each player's upkeep, that player puts the top X cards of his or her library into his or her graveyard, where X is the number of cards in his or her hand.",
+      "text": "At the beginning of each player's upkeep, that player puts the top X cards of their library into their graveyard, where X is the number of cards in their hand.",
       "toughness": "2",
       "type": "Creature — Spirit",
       "types": [
@@ -9712,7 +9715,7 @@
           "text": "It only returns artifacts which are on the battlefield."
         }
       ],
-      "text": "Return all artifacts target player owns to his or her hand.",
+      "text": "Return all artifacts target player owns to their hand.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -10052,7 +10055,7 @@
         },
         {
           "date": "2009-10-01",
-          "text": "A noncreature permanent that turns into a creature is subject to the \"summoning sickness\" rule: It can only attack, and its {T} abilities can only be activated, if its controller has continuously controlled that permanent since the beginning of his or her most recent turn."
+          "text": "A noncreature permanent that turns into a creature is subject to the \"summoning sickness\" rule: It can only attack, and its {T} abilities can only be activated, if its controller has continuously controlled that permanent since the beginning of their most recent turn."
         }
       ],
       "text": "Each noncreature artifact is an artifact creature with power and toughness each equal to its converted mana cost. (Equipment that's a creature can't equip a creature.)",
@@ -10164,6 +10167,12 @@
         "A25"
       ],
       "rarity": "Common",
+      "rulings": [
+        {
+          "date": "2018-03-16",
+          "text": "You can't do anything in between drawing a card and discarding a card, including casting or cycling the card you drew."
+        }
+      ],
       "subtypes": [
         "Merfolk",
         "Rogue"
@@ -10960,7 +10969,7 @@
           "text": "This card won't be put into your graveyard until after it's finished resolving, which means it won't be shuffled into your library as part of its own effect."
         }
       ],
-      "text": "Target player shuffles his or her graveyard into his or her library.",
+      "text": "Target player shuffles their graveyard into their library.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -11625,7 +11634,7 @@
       "subtypes": [
         "Beast"
       ],
-      "text": "Flying (This creature can't be blocked except by creatures with flying or reach.)\nWhenever Scalpelexis deals combat damage to a player, that player exiles the top four cards of his or her library. If two or more of those cards have the same name, repeat this process.",
+      "text": "Flying (This creature can't be blocked except by creatures with flying or reach.)\nWhenever Scalpelexis deals combat damage to a player, that player exiles the top four cards of their library. If two or more of those cards have the same name, repeat this process.",
       "toughness": "5",
       "type": "Creature — Beast",
       "types": [
@@ -12378,7 +12387,7 @@
         "PCA"
       ],
       "rarity": "Rare",
-      "text": "At the beginning of each player's upkeep, that player returns a creature he or she controls to its owner's hand.",
+      "text": "At the beginning of each player's upkeep, that player returns a creature they control to its owner's hand.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -12913,7 +12922,7 @@
           "text": "If any triggered abilities do trigger during this process, they're put onto the stack during the cleanup step. If this happens, players will have a chance to cast spells and activate abilities, then there will be another cleanup step before the turn finally ends."
         }
       ],
-      "text": "End the turn. (Exile all spells and abilities on the stack, including this card. The player whose turn it is discards down to his or her maximum hand size. Damage wears off, and \"this turn\" and \"until end of turn\" effects end.)",
+      "text": "End the turn. (Exile all spells and abilities on the stack, including this card. The player whose turn it is discards down to their maximum hand size. Damage wears off, and \"this turn\" and \"until end of turn\" effects end.)",
       "type": "Instant",
       "types": [
         "Instant"
@@ -13129,7 +13138,7 @@
           "text": "The player can put the cards in their graveyard in any order they choose."
         }
       ],
-      "text": "Target player puts the top half of his or her library, rounded down, into his or her graveyard.",
+      "text": "Target player puts the top half of their library, rounded down, into their graveyard.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -13373,7 +13382,7 @@
       "rulings": [
         {
           "date": "2010-03-01",
-          "text": "If the targeted permanent is an illegal target by the time Twitch resolves, the entire spell is countered. You don't draw a card."
+          "text": "If the targeted permanent is an illegal target by the time Twitch resolves, the entire spell doesn't resolve. You don't draw a card."
         }
       ],
       "text": "You may tap or untap target artifact, creature, or land.\nDraw a card.",
@@ -14250,7 +14259,7 @@
       "rulings": [
         {
           "date": "2007-07-15",
-          "text": "If a Beacon is countered, it's put into its owner's graveyard, not shuffled into the library."
+          "text": "If a Beacon is countered or doesn't resolve, it's put into its owner's graveyard, not shuffled into the library."
         }
       ],
       "text": "Put target artifact or creature card from a graveyard onto the battlefield under your control. Shuffle Beacon of Unrest into its owner's library.",
@@ -14485,10 +14494,10 @@
         },
         {
           "date": "2009-10-01",
-          "text": "If the targeted creature or player is an illegal target by the time Consume Spirit would resolve, the entire spell is countered. You won't gain any life."
+          "text": "If the targeted permanent or player is an illegal target by the time Consume Spirit would resolve, the entire spell doesn't resolve. You won't gain any life."
         }
       ],
-      "text": "Spend only black mana on X.\nConsume Spirit deals X damage to target creature or player and you gain X life.",
+      "text": "Spend only black mana on X.\nConsume Spirit deals X damage to any target and you gain X life.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -15021,7 +15030,7 @@
           "text": "If you target yourself with this spell, you must reveal your entire hand to the other players just as any other player would."
         }
       ],
-      "text": "Target player reveals his or her hand. You choose a nonland card from it. That player discards that card.",
+      "text": "Target player reveals their hand. You choose a nonland card from it. That player discards that card.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -15563,10 +15572,10 @@
       "rulings": [
         {
           "date": "2012-07-01",
-          "text": "If the target creature or player is an illegal target when Essence Drain tries to resolve, it will be countered and none of its effects will happen. You won't gain 3 life."
+          "text": "If the target permanent or player is an illegal target when Essence Drain tries to resolve, it won't resolve and none of its effects will happen. You won't gain 3 life."
         }
       ],
-      "text": "Essence Drain deals 3 damage to target creature or player and you gain 3 life.",
+      "text": "Essence Drain deals 3 damage to any target and you gain 3 life.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -16353,7 +16362,7 @@
         "10E"
       ],
       "rarity": "Rare",
-      "text": "Target opponent puts the cards from his or her hand on top of his or her library. Search that player's library for that many cards. The player puts those cards into his or her hand, then shuffles his or her library.",
+      "text": "Target opponent puts the cards from their hand on top of their library. Search that player's library for that many cards. The player puts those cards into their hand, then shuffles their library.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -19035,6 +19044,10 @@
           "legality": "Legal"
         },
         {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -19166,12 +19179,8 @@
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2004-12-01",
-          "text": "Yes, you're allowed to have a deck consisting of sixty Relentless Rats and nothing else."
-        },
-        {
-          "date": "2004-12-01",
-          "text": "Relentless Rats's last ability overrides the normal limit of four of an individual card in a Constructed deck."
+          "date": "2018-03-16",
+          "text": "The second ability of Relentless Rats lets you ignore the \"four-of\" rule. It doesn't let you ignore format legality. For example, during a Masters 25 Limited event, you can't add Relentless Rats from your personal collection."
         }
       ],
       "subtypes": [
@@ -19294,7 +19303,7 @@
         },
         {
           "date": "2004-10-04",
-          "text": "If the creature is no longer tapped when the Assassin's ability resolves, then the ability is countered."
+          "text": "If the creature is no longer tapped when the Assassin's ability resolves, then the ability doesn't resolve."
         }
       ],
       "subtypes": [
@@ -20088,7 +20097,7 @@
         "CNS"
       ],
       "rarity": "Uncommon",
-      "text": "Each player loses 1 life for each creature he or she controls.",
+      "text": "Each player loses 1 life for each creature they control.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -20423,7 +20432,7 @@
           "text": "In a multi-player game, it affects all opponents."
         }
       ],
-      "text": "Whenever an opponent draws a card, Underworld Dreams deals 1 damage to him or her.",
+      "text": "Whenever an opponent draws a card, Underworld Dreams deals 1 damage to that player.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -20849,7 +20858,7 @@
       "subtypes": [
         "Aura"
       ],
-      "text": "Enchant creature (Target a creature as you cast this. This card enters the battlefield attached to that creature.)\nEnchanted creature gets +2/+2 and has \"{T}: This creature deals 1 damage to target creature or player.\"",
+      "text": "Enchant creature (Target a creature as you cast this. This card enters the battlefield attached to that creature.)\nEnchanted creature gets +2/+2 and has \"{T}: This creature deals 1 damage to any target.\"",
       "type": "Enchantment — Aura",
       "types": [
         "Enchantment"
@@ -20953,10 +20962,10 @@
       "rulings": [
         {
           "date": "2007-07-15",
-          "text": "If a Beacon is countered, it's put into its owner's graveyard, not shuffled into the library."
+          "text": "If a Beacon is countered or doesn't resolve, it's put into its owner's graveyard, not shuffled into the library."
         }
       ],
-      "text": "Beacon of Destruction deals 5 damage to target creature or player. Shuffle Beacon of Destruction into its owner's library.",
+      "text": "Beacon of Destruction deals 5 damage to any target. Shuffle Beacon of Destruction into its owner's library.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -21059,7 +21068,7 @@
         "DPA"
       ],
       "rarity": "Uncommon",
-      "text": "Blaze deals X damage to target creature or player.",
+      "text": "Blaze deals X damage to any target.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -21506,7 +21515,7 @@
           "text": "If one or two of Cone of Flame's targets are illegal when it resolves, you can't change how much damage will be dealt to the remaining legal targets."
         }
       ],
-      "text": "Cone of Flame deals 1 damage to target creature or player, 2 damage to another target creature or player, and 3 damage to a third target creature or player.",
+      "text": "Cone of Flame deals 1 damage to any target, 2 damage to another target, and 3 damage to a third target.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -22387,7 +22396,7 @@
         "Goblin",
         "Mutant"
       ],
-      "text": "{7}{R}: Flamewave Invoker deals 5 damage to target player.",
+      "text": "{7}{R}: Flamewave Invoker deals 5 damage to target player or planeswalker.",
       "toughness": "2",
       "type": "Creature — Goblin Mutant",
       "types": [
@@ -22612,10 +22621,10 @@
         },
         {
           "date": "2005-08-01",
-          "text": "If multiple effects modify how damage will be dealt, the player who would be dealt damage or the controller of the creature that would be dealt damage chooses the order to apply the effects. For example, Mending Hands says, \"Prevent the next 4 damage that would be dealt to target creature or player this turn.\" Suppose a spell would deal 5 damage to a player who has cast Mending Hands targeting himself or herself. That player can either (a) prevent 4 damage first and then let Furnace of Rath double the remaining 1 damage, taking 2 damage, or (b) double the damage to 10 and then prevent 4 damage, taking 6 damage."
+          "text": "If multiple effects modify how damage will be dealt, the player who would be dealt damage or the controller of the creature that would be dealt damage chooses the order to apply the effects. For example, Mending Hands says, \"Prevent the next 4 damage that would be dealt to any target this turn.\" Suppose a spell would deal 5 damage to a player who has cast Mending Hands targeting themselves. That player can either (a) prevent 4 damage first and then let Furnace of Rath double the remaining 1 damage, taking 2 damage, or (b) double the damage to 10 and then prevent 4 damage, taking 6 damage."
         }
       ],
-      "text": "If a source would deal damage to a creature or player, it deals double that damage to that creature or player instead.",
+      "text": "If a source would deal damage to a permanent or player, it deals double that damage to that permanent or player instead.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -23381,7 +23390,7 @@
           "text": "Discarding as a cost to cast a spell will not trigger the ability. Only discarding as an effect will trigger the ability."
         }
       ],
-      "text": "Guerrilla Tactics deals 2 damage to target creature or player.\nWhen a spell or ability an opponent controls causes you to discard Guerrilla Tactics, Guerrilla Tactics deals 4 damage to target creature or player.",
+      "text": "Guerrilla Tactics deals 2 damage to any target.\nWhen a spell or ability an opponent controls causes you to discard Guerrilla Tactics, Guerrilla Tactics deals 4 damage to any target.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -23615,7 +23624,7 @@
           "text": "Regeneration abilities that would affect that creature can still be activated; they just won't do anything. The creature can't be regenerated for any reason, even if an effect other than Incinerate would deal lethal damage to it or otherwise destroy it."
         }
       ],
-      "text": "Incinerate deals 3 damage to target creature or player. A creature dealt damage this way can't be regenerated this turn.",
+      "text": "Incinerate deals 3 damage to any target. A creature dealt damage this way can't be regenerated this turn.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -23733,7 +23742,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "Haste (This creature can attack and {T} as soon as it comes under your control.)\n{T}: Kamahl, Pit Fighter deals 3 damage to target creature or player.",
+      "text": "Haste (This creature can attack and {T} as soon as it comes under your control.)\n{T}: Kamahl, Pit Fighter deals 3 damage to any target.",
       "toughness": "1",
       "type": "Legendary Creature — Human Barbarian",
       "types": [
@@ -23848,7 +23857,7 @@
         "M15"
       ],
       "rarity": "Common",
-      "text": "Lava Axe deals 5 damage to target player.",
+      "text": "Lava Axe deals 5 damage to target player or planeswalker.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -23959,7 +23968,7 @@
       "subtypes": [
         "Spirit"
       ],
-      "text": "At the beginning of each opponent's upkeep, if that player has two or fewer cards in hand, Lavaborn Muse deals 3 damage to him or her.",
+      "text": "At the beginning of each opponent's upkeep, if that player has two or fewer cards in hand, Lavaborn Muse deals 3 damage to that player.",
       "toughness": "3",
       "type": "Creature — Spirit",
       "types": [
@@ -24318,7 +24327,7 @@
       "subtypes": [
         "Goblin"
       ],
-      "text": "Sacrifice Mogg Fanatic: Mogg Fanatic deals 1 damage to target creature or player.",
+      "text": "Sacrifice Mogg Fanatic: It deals 1 damage to any target.",
       "toughness": "1",
       "type": "Creature — Goblin",
       "types": [
@@ -24432,14 +24441,14 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "You do not take the 3 points of damage if the ability is countered because the target is illegal."
+          "text": "You do not take the 3 points of damage if the ability doesn't resolve because the target is illegal."
         }
       ],
       "subtypes": [
         "Orc",
         "Warrior"
       ],
-      "text": "{T}: Orcish Artillery deals 2 damage to target creature or player and 3 damage to you.",
+      "text": "{T}: Orcish Artillery deals 2 damage to any target and 3 damage to you.",
       "toughness": "3",
       "type": "Creature — Orc Warrior",
       "types": [
@@ -24555,7 +24564,7 @@
         "Human",
         "Wizard"
       ],
-      "text": "{T}: Prodigal Pyromancer deals 1 damage to target creature or player.",
+      "text": "{T}: Prodigal Pyromancer deals 1 damage to any target.",
       "toughness": "1",
       "type": "Creature — Human Wizard",
       "types": [
@@ -25333,7 +25342,7 @@
         "10E"
       ],
       "rarity": "Rare",
-      "text": "Discard a land card: Seismic Assault deals 2 damage to target creature or player.",
+      "text": "Discard a land card: Seismic Assault deals 2 damage to any target.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -25664,7 +25673,7 @@
       "subtypes": [
         "Dragon"
       ],
-      "text": "Flying (This creature can't be blocked except by creatures with flying or reach.)\n{1}{R}: Shivan Hellkite deals 1 damage to target creature or player.",
+      "text": "Flying (This creature can't be blocked except by creatures with flying or reach.)\n{1}{R}: Shivan Hellkite deals 1 damage to any target.",
       "toughness": "5",
       "type": "Creature — Dragon",
       "types": [
@@ -25789,7 +25798,7 @@
         "AER"
       ],
       "rarity": "Common",
-      "text": "Shock deals 2 damage to target creature or player.",
+      "text": "Shock deals 2 damage to any target.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -26032,23 +26041,20 @@
         "EVG",
         "M10",
         "DD3_EVG",
-        "EMA"
+        "EMA",
+        "DOM"
       ],
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2016-06-08",
+          "date": "2018-04-27",
           "text": "You can sacrifice any Goblin you control to activate Siege-Gang Commander's activated ability, not just the ones its triggered ability puts onto the battlefield. You can even sacrifice Siege-Gang Commander itself."
-        },
-        {
-          "date": "2016-06-08",
-          "text": "If you sacrifice an attacking or blocking Goblin during the declare blockers step, it won't deal combat damage. If you wait until the combat damage step, but that Goblin has been dealt lethal damage, it'll be destroyed before you get a chance to sacrifice it."
         }
       ],
       "subtypes": [
         "Goblin"
       ],
-      "text": "When Siege-Gang Commander enters the battlefield, create three 1/1 red Goblin creature tokens.\n{1}{R}, Sacrifice a Goblin: Siege-Gang Commander deals 2 damage to target creature or player.",
+      "text": "When Siege-Gang Commander enters the battlefield, create three 1/1 red Goblin creature tokens.\n{1}{R}, Sacrifice a Goblin: Siege-Gang Commander deals 2 damage to any target.",
       "toughness": "2",
       "type": "Creature — Goblin",
       "types": [
@@ -26253,7 +26259,7 @@
         "10E"
       ],
       "rarity": "Rare",
-      "text": "As an additional cost to cast Soulblast, sacrifice all creatures you control.\nSoulblast deals damage to target creature or player equal to the total power of the sacrificed creatures.",
+      "text": "As an additional cost to cast this spell, sacrifice all creatures you control.\nSoulblast deals damage to any target equal to the total power of the sacrificed creatures.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -26358,7 +26364,7 @@
       "subtypes": [
         "Elemental"
       ],
-      "text": "Trample, haste (If this creature would assign enough damage to its blockers to destroy them, you may have it assign the rest of its damage to defending player or planeswalker. This creature can attack and {T} as soon as it comes under your control.)\nAt the beginning of the end step, sacrifice Spark Elemental.",
+      "text": "Trample, haste (If this creature would assign enough damage to its blockers to destroy them, you may have it assign the rest of its damage to the player or planeswalker it's attacking. This creature can attack and {T} as soon as it comes under your control.)\nAt the beginning of the end step, sacrifice Spark Elemental.",
       "toughness": "1",
       "type": "Creature — Elemental",
       "types": [
@@ -27553,18 +27559,18 @@
       "rulings": [
         {
           "date": "2006-10-15",
-          "text": "Anything that triggers during the resolution of this will wait to be put on the stack until everything is put onto the battlefield and resolution is complete. The player whose turn it is will put all of his or her triggered abilities on the stack in any order, then each other player in turn order will do the same. (The last ability put on the stack will be the first one that resolves.)"
+          "text": "Anything that triggers during the resolution of this will wait to be put on the stack until everything is put onto the battlefield and resolution is complete. The player whose turn it is will put all of their triggered abilities on the stack in any order, then each other player in turn order will do the same. (The last ability put on the stack will be the first one that resolves.)"
         },
         {
           "date": "2009-10-01",
-          "text": "Taking it slowly, here's what happens when Warp World resolves: 1) Each player counts the number of permanents he or she owns. 2) Each player shuffles those permanents into his or her library. 3) Each player reveals cards from the top of his or her library equal to the number that player counted. 4) Each player puts all artifact, land, and creature cards revealed this way onto the battlefield. All of these cards enter the battlefield at the same time. 5) Each player puts all enchantment cards revealed this way onto the battlefield. An Aura put onto the battlefield this way can enchant an artifact, land, or creature that was already put onto the battlefield, but can't enchant an enchantment that's being put onto the battlefield at the same time as it. If multiple players have Auras to put onto the battlefield, the player whose turn it is announces what his or her Auras will enchant, then each other player in turn order does the same, then all enchantments (both Auras and non-Auras) enter the battlefield at the same time. 6) Each player puts all of his or her other revealed cards (instants, sorceries, planeswalkers, and Auras that can't enchant anything) on the bottom of his or her library in any order."
+          "text": "Taking it slowly, here's what happens when Warp World resolves: 1) Each player counts the number of permanents they own. 2) Each player shuffles those permanents into their library. 3) Each player reveals cards from the top of their library equal to the number that player counted. 4) Each player puts all artifact, land, and creature cards revealed this way onto the battlefield. All of these cards enter the battlefield at the same time. 5) Each player puts all enchantment cards revealed this way onto the battlefield. An Aura put onto the battlefield this way can enchant an artifact, land, or creature that was already put onto the battlefield, but can't enchant an enchantment that's being put onto the battlefield at the same time as it. If multiple players have Auras to put onto the battlefield, the player whose turn it is announces what their Auras will enchant, then each other player in turn order does the same, then all enchantments (both Auras and non-Auras) enter the battlefield at the same time. 6) Each player puts all of their other revealed cards (instants, sorceries, planeswalkers, and Auras that can't enchant anything) on the bottom of their library in any order."
         },
         {
           "date": "2009-10-01",
           "text": "Tokens are permanents but not cards. They'll count toward the number of permanents shuffled into your library, so you'll get a card back for each token you owned. But the tokens themselves should be ignored while you're revealing *cards* from your library. In practice, you shouldn't actually shuffle them into your library since they'll cease to exist as soon as Warp World finishes resolving. Note that a token's owner is the player under whose control it first entered the battlefield."
         }
       ],
-      "text": "Each player shuffles all permanents he or she owns into his or her library, then reveals that many cards from the top of his or her library. Each player puts all artifact, creature, and land cards revealed this way onto the battlefield, then does the same for enchantment cards, then puts all cards revealed this way that weren't put onto the battlefield on the bottom of his or her library.",
+      "text": "Each player shuffles all permanents they own into their library, then reveals that many cards from the top of their library. Each player puts all artifact, creature, and land cards revealed this way onto the battlefield, then does the same for enchantment cards, then puts all cards revealed this way that weren't put onto the battlefield on the bottom of their library.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -27759,6 +27765,10 @@
           "legality": "Legal"
         },
         {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -27787,7 +27797,7 @@
       "rulings": [
         {
           "date": "2018-01-19",
-          "text": "If the target creature is an illegal target by the time Aggressive Urge tries to resolve, the spell is countered. You won't draw a card."
+          "text": "If the target creature is an illegal target by the time Aggressive Urge tries to resolve, the spell doesn't resolve. You won't draw a card."
         }
       ],
       "text": "Target creature gets +1/+1 until end of turn.\nDraw a card.",
@@ -27900,7 +27910,7 @@
       "subtypes": [
         "Avatar"
       ],
-      "text": "If an opponent controls at least four more creatures than you, Avatar of Might costs {6} less to cast.\nTrample (This creature can deal excess combat damage to defending player or planeswalker while attacking.)",
+      "text": "If an opponent controls at least four more creatures than you, this spell costs {6} less to cast.\nTrample (This creature can deal excess combat damage to the player or planeswalker it's attacking.)",
       "toughness": "8",
       "type": "Creature — Avatar",
       "types": [
@@ -28020,7 +28030,7 @@
       "subtypes": [
         "Bird"
       ],
-      "text": "Flying\n{T}: Add one mana of any color to your mana pool.",
+      "text": "Flying\n{T}: Add one mana of any color.",
       "toughness": "1",
       "type": "Creature — Bird",
       "types": [
@@ -29971,7 +29981,7 @@
       "subtypes": [
         "Beast"
       ],
-      "text": "When Hunted Wumpus enters the battlefield, each other player may put a creature card from his or her hand onto the battlefield.",
+      "text": "When Hunted Wumpus enters the battlefield, each other player may put a creature card from their hand onto the battlefield.",
       "toughness": "6",
       "type": "Creature — Beast",
       "types": [
@@ -30204,7 +30214,7 @@
         "Elf",
         "Druid"
       ],
-      "text": "Lands you control have \"{T}: Add one mana of any color to your mana pool.\"",
+      "text": "Lands you control have \"{T}: Add one mana of any color.\"",
       "toughness": "1",
       "type": "Creature — Elf Druid",
       "types": [
@@ -30536,14 +30546,15 @@
         "C14",
         "DD3_EVG",
         "EMA",
-        "CMA"
+        "CMA",
+        "DOM"
       ],
       "rarity": "Common",
       "subtypes": [
         "Elf",
         "Druid"
       ],
-      "text": "{T}: Add {G} to your mana pool.",
+      "text": "{T}: Add {G}.",
       "toughness": "1",
       "type": "Creature — Elf Druid",
       "types": [
@@ -31004,7 +31015,7 @@
         "Human",
         "Wizard"
       ],
-      "text": "{2}: Target red or white creature gains trample until end of turn. (If the creature would assign enough damage to its blockers to destroy them, you may have it assign the rest of its damage to defending player or planeswalker.)",
+      "text": "{2}: Target red or white creature gains trample until end of turn. (If the creature would assign enough damage to its blockers to destroy them, you may have it assign the rest of its damage to the player or planeswalker it's attacking.)",
       "toughness": "1",
       "type": "Creature — Human Wizard",
       "types": [
@@ -31225,7 +31236,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "Trample (This creature can deal excess combat damage to defending player or planeswalker while attacking.)\nMolimo, Maro-Sorcerer's power and toughness are each equal to the number of lands you control.",
+      "text": "Trample (This creature can deal excess combat damage to the player or planeswalker it's attacking.)\nMolimo, Maro-Sorcerer's power and toughness are each equal to the number of lands you control.",
       "toughness": "*",
       "type": "Legendary Creature — Elemental",
       "types": [
@@ -31407,6 +31418,10 @@
           "legality": "Legal"
         },
         {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Khans of Tarkir Block",
           "legality": "Legal"
         },
@@ -31464,7 +31479,8 @@
         "M15",
         "KTK",
         "DTK",
-        "RIX"
+        "RIX",
+        "DDU"
       ],
       "rarity": "Common",
       "text": "Destroy target artifact or enchantment.",
@@ -31577,7 +31593,7 @@
       "subtypes": [
         "Aura"
       ],
-      "text": "Enchant land (Target a land as you cast this. This card enters the battlefield attached to that land.)\nWhenever enchanted land is tapped for mana, its controller adds {G}{G} to his or her mana pool (in addition to the mana the land produces).",
+      "text": "Enchant land\nWhenever enchanted land is tapped for mana, its controller adds an additional {G}{G}.",
       "type": "Enchantment — Aura",
       "types": [
         "Enchantment"
@@ -31907,7 +31923,7 @@
         "10E"
       ],
       "rarity": "Uncommon",
-      "text": "Creatures you control have trample. (If a creature you control would assign enough damage to its blockers to destroy them, you may have it assign the rest of its damage to defending player or planeswalker.)",
+      "text": "Creatures you control have trample. (If a creature you control would assign enough damage to its blockers to destroy them, you may have it assign the rest of its damage to the player or planeswalker it's attacking.)",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -32479,19 +32495,15 @@
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2008-04-01",
-          "text": "If this creature is attacking a planeswalker, assigning its damage as though it weren't blocked means the damage is assigned to the planeswalker, not to the defending player."
-        },
-        {
-          "date": "2008-04-01",
-          "text": "When assigning combat damage, you choose whether you want to assign all damage to blocking creatures, or if you want to assign all of it to the defending player or planeswalker. You can't split the damage assignment between them."
-        },
-        {
-          "date": "2008-04-01",
+          "date": "2018-04-27",
           "text": "You can decide to assign damage to the defending player or planeswalker even if the blocking creature has protection from green or damage preventing effects on it."
         },
         {
-          "date": "2008-04-01",
+          "date": "2018-04-27",
+          "text": "When assigning combat damage, you choose whether you want to assign all damage to blocking creatures, or if you want to assign all of it to the player or planeswalker this creature is attacking. You can't split the damage assignment between them."
+        },
+        {
+          "date": "2018-04-27",
           "text": "If blocked by a creature with banding, the defending player decides whether or not the damage is assigned \"as though it weren't blocked\"."
         }
       ],
@@ -33500,7 +33512,7 @@
         "Antelope",
         "Beast"
       ],
-      "text": "Trample (This creature can deal excess combat damage to defending player or planeswalker while attacking.)\nAt the beginning of your upkeep, return a green creature you control to its owner's hand.",
+      "text": "Trample (This creature can deal excess combat damage to the player or planeswalker it's attacking.)\nAt the beginning of your upkeep, return a green creature you control to its owner's hand.",
       "toughness": "4",
       "type": "Creature — Antelope Beast",
       "types": [
@@ -34138,7 +34150,7 @@
           "text": "Players can keep mana in their pool indefinitely while this is on the battlefield, but once it leaves the battlefield, they have until the end of the current step (or phase) to use the mana before it disappears."
         }
       ],
-      "text": "Mana pools don't empty as steps and phases end.",
+      "text": "Players don't lose unspent mana as steps and phases end.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -34243,21 +34255,18 @@
         "PD3",
         "TPR",
         "C15",
-        "CMA"
+        "CMA",
+        "DOM"
       ],
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2004-10-04",
-          "text": "Verdant Force's controller gets the tokens. That is the controller at the beginning of upkeep."
-        },
-        {
-          "date": "2005-08-01",
-          "text": "Once created, the tokens are independent of Verdant Force. If Verdant Force changes controllers, the new controller will put tokens onto the battlefield, but existing tokens will stay where they are."
-        },
-        {
           "date": "2006-05-01",
           "text": "In Two-Headed Giant, triggers only once per upkeep, not once for each player."
+        },
+        {
+          "date": "2018-04-27",
+          "text": "Verdant Force's ability triggers at the beginning of each upkeep, not just each of your upkeeps."
         }
       ],
       "subtypes": [
@@ -34364,7 +34373,8 @@
         "MRD",
         "9ED",
         "10E",
-        "C15"
+        "C15",
+        "DDU"
       ],
       "rarity": "Uncommon",
       "subtypes": [
@@ -34908,7 +34918,7 @@
       "rulings": [
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         },
         {
           "date": "2009-10-01",
@@ -35008,7 +35018,7 @@
         "10E"
       ],
       "rarity": "Uncommon",
-      "text": "{1}, {T}, Sacrifice Chromatic Star: Add one mana of any color to your mana pool.\nWhen Chromatic Star is put into a graveyard from the battlefield, draw a card.",
+      "text": "{1}, {T}, Sacrifice Chromatic Star: Add one mana of any color.\nWhen Chromatic Star is put into a graveyard from the battlefield, draw a card.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -35331,7 +35341,7 @@
       "subtypes": [
         "Golem"
       ],
-      "text": "Trample (This creature can deal excess combat damage to defending player or planeswalker while attacking.)\nColossus of Sardia doesn't untap during your untap step.\n{9}: Untap Colossus of Sardia. Activate this ability only during your upkeep.",
+      "text": "Trample (This creature can deal excess combat damage to the player or planeswalker it's attacking.)\nColossus of Sardia doesn't untap during your untap step.\n{9}: Untap Colossus of Sardia. Activate this ability only during your upkeep.",
       "toughness": "9",
       "type": "Artifact Creature — Golem",
       "types": [
@@ -35438,7 +35448,7 @@
       "subtypes": [
         "Golem"
       ],
-      "text": "Sacrifice Composite Golem: Add {W}{U}{B}{R}{G} to your mana pool.",
+      "text": "Sacrifice Composite Golem: Add {W}{U}{B}{R}{G}.",
       "toughness": "4",
       "type": "Artifact Creature — Golem",
       "types": [
@@ -35769,7 +35779,7 @@
           "text": "Any restrictions on the mana in your mana pool aren't copied. For example, if you have {C}{W}{W}{B} with no restrictions on it in your mana pool and {U}{U}{U} that can be used only to cast artifact spells, you'll end up with {C}{C}{W}{W}{W}{W}{B}{B}, {U}{U}{U} that can be used only to cast artifact spells, and {U}{U}{U} that can be used for anything."
         }
       ],
-      "text": "{3}, {T}: Double the amount of each type of mana in your mana pool.",
+      "text": "{3}, {T}: Double the amount of each type of unspent mana you have.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -36298,29 +36308,14 @@
         "9ED",
         "10E",
         "ME4",
-        "DDH"
+        "DDH",
+        "DOM"
       ],
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2004-10-04",
-          "text": "Tapping a card with an effect like this will never pay the cost of an ability. For example, tapping a land with this card will not put mana into a player's pool."
-        },
-        {
-          "date": "2004-10-04",
-          "text": "Icy Manipulator can't be used to stop someone from using an ability of the permanent you plan to tap. It can be used to make a player use the ability now or to not use it."
-        },
-        {
-          "date": "2004-10-04",
-          "text": "The ability can target a tapped card, but tapping a tapped card does nothing useful. And it will not trigger \"if the card becomes tapped\" effects."
-        },
-        {
-          "date": "2004-10-04",
-          "text": "If you want to stop someone from attacking with a creature by using this card, you must do so before attackers are declared. You can't wait until after attackers are declared and then try to use it to make a creature stop attacking. Note that your opponent can't start declaring attackers without letting you use the Icy Manipulator."
-        },
-        {
-          "date": "2004-10-04",
-          "text": "Tapping an attacking creature which did not tap to attack does not remove the creature from the attack or cause the creature to stop dealing damage."
+          "date": "2018-04-27",
+          "text": "Once a player announces that they're casting a spell or activating an ability, no player may take other actions until the spell or ability has been paid for. Notably, other players can't try to tap that player's permanents to stop them from paying {T} or to stop them from producing enough mana."
         }
       ],
       "text": "{1}, {T}: Tap target artifact, creature, or land.",
@@ -36531,13 +36526,14 @@
         "DDF",
         "ME4",
         "M15",
-        "EMA"
+        "EMA",
+        "DOM"
       ],
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2016-06-08",
-          "text": "If, during your declare attackers step, Juggernaut is tapped, is affected by a spell or ability that says it can't attack, or you haven't controlled it continuously since the beginning of your turn, then it doesn't attack. If there's a cost associated with having Juggernaut attack, you aren't forced to pay that cost, so it doesn't have to attack in that case either."
+          "date": "2018-04-27",
+          "text": "If Juggernaut can't attack for any reason (such as being tapped or having come under that player's control that turn), then it doesn't attack. If there's a cost associated with having it attack, its controller isn't forced to pay that cost, so it doesn't have to attack in that case either."
         }
       ],
       "subtypes": [
@@ -37170,7 +37166,7 @@
           "text": "Since you are putting more than one card in the graveyard at one time, the affected player can choose the order the 2 cards go in."
         }
       ],
-      "text": "{2}, {T}: Target player puts the top two cards of his or her library into his or her graveyard.",
+      "text": "{2}, {T}: Target player puts the top two cards of their library into their graveyard.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -37271,7 +37267,7 @@
         "IMA"
       ],
       "rarity": "Uncommon",
-      "text": "{T}: Add {C} to your mana pool.\n{1}, {T}, Sacrifice Mind Stone: Draw a card.",
+      "text": "{T}: Add {C}.\n{1}, {T}, Sacrifice Mind Stone: Draw a card.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -37589,7 +37585,7 @@
       "rulings": [
         {
           "date": "2005-06-01",
-          "text": "Pithing Needle affects cards regardless of what zone they're in. This includes cards in hand, cards in the graveyard, and exiled cards. For example, a player can't cycle Eternal Dragon or return an Eternal Dragon from his or her graveyard to hand if Pithing Needle naming Eternal Dragon is on the battlefield."
+          "text": "Pithing Needle affects cards regardless of what zone they're in. This includes cards in hand, cards in the graveyard, and exiled cards. For example, a player can't cycle Eternal Dragon or return an Eternal Dragon from their graveyard to hand if Pithing Needle naming Eternal Dragon is on the battlefield."
         },
         {
           "date": "2005-06-01",
@@ -37719,7 +37715,7 @@
         },
         {
           "date": "2009-10-01",
-          "text": "No game effect can cause you to lose the game or cause any opponent to win the game while you control Platinum Angel. It doesn't matter whether you have 0 or less life, you're forced to draw a card while your library is empty, you have ten or more poison counters, you're dealt combat damage by Phage the Untouchable, your opponent has Mortal Combat with twenty or more creature cards in his or her graveyard, or so on. You keep playing."
+          "text": "No game effect can cause you to lose the game or cause any opponent to win the game while you control Platinum Angel. It doesn't matter whether you have 0 or less life, you're forced to draw a card while your library is empty, you have ten or more poison counters, you're dealt combat damage by Phage the Untouchable, your opponent has Mortal Combat with twenty or more creature cards in their graveyard, or so on. You keep playing."
         },
         {
           "date": "2009-10-01",
@@ -37941,7 +37937,7 @@
         "M14"
       ],
       "rarity": "Uncommon",
-      "text": "{3}, {T}: Rod of Ruin deals 1 damage to target creature or player.",
+      "text": "{3}, {T}: Rod of Ruin deals 1 damage to any target.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -38588,7 +38584,7 @@
         "10E"
       ],
       "rarity": "Rare",
-      "text": "{T}: Add {C} to your mana pool.\n{T}: Add {W} or {U} to your mana pool. Adarkar Wastes deals 1 damage to you.",
+      "text": "{T}: Add {C}.\n{T}: Add {W} or {U}. Adarkar Wastes deals 1 damage to you.",
       "type": "Land",
       "types": [
         "Land"
@@ -38697,7 +38693,7 @@
           "text": "Like most lands, each land in this cycle is colorless. The damage dealt to you is dealt by a colorless source."
         }
       ],
-      "text": "{T}: Add {C} to your mana pool.\n{T}: Add {R} or {W} to your mana pool. Battlefield Forge deals 1 damage to you.",
+      "text": "{T}: Add {C}.\n{T}: Add {R} or {W}. Battlefield Forge deals 1 damage to you.",
       "type": "Land",
       "types": [
         "Land"
@@ -38798,7 +38794,7 @@
         "10E"
       ],
       "rarity": "Rare",
-      "text": "{T}: Add {C} to your mana pool.\n{T}: Add {G} or {W} to your mana pool. Brushland deals 1 damage to you.",
+      "text": "{T}: Add {C}.\n{T}: Add {G} or {W}. Brushland deals 1 damage to you.",
       "type": "Land",
       "types": [
         "Land"
@@ -38909,7 +38905,7 @@
           "text": "Like most lands, each land in this cycle is colorless. The damage dealt to you is dealt by a colorless source."
         }
       ],
-      "text": "{T}: Add {C} to your mana pool.\n{T}: Add {W} or {B} to your mana pool. Caves of Koilos deals 1 damage to you.",
+      "text": "{T}: Add {C}.\n{T}: Add {W} or {B}. Caves of Koilos deals 1 damage to you.",
       "type": "Land",
       "types": [
         "Land"
@@ -39010,14 +39006,14 @@
       "rulings": [
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         },
         {
           "date": "2009-10-01",
           "text": "Activating the ability that turns it into a creature while it's already a creature will override any effects that set its power and/or toughness to a specific number. However, any effect that raises or lowers power and/or toughness (such as the effect created by Giant Growth, Glorious Anthem, or a +1/+1 counter) will continue to apply."
         }
       ],
-      "text": "Faerie Conclave enters the battlefield tapped.\n{T}: Add {U} to your mana pool.\n{1}{U}: Faerie Conclave becomes a 2/1 blue Faerie creature with flying until end of turn. It's still a land.",
+      "text": "Faerie Conclave enters the battlefield tapped.\n{T}: Add {U}.\n{1}{U}: Faerie Conclave becomes a 2/1 blue Faerie creature with flying until end of turn. It's still a land.",
       "type": "Land",
       "types": [
         "Land"
@@ -39115,14 +39111,14 @@
       "rulings": [
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         },
         {
           "date": "2009-10-01",
           "text": "Activating the ability that turns it into a creature while it's already a creature will override any effects that set its power and/or toughness to a specific number. However, any effect that raises or lowers power and/or toughness (such as the effect created by Giant Growth, Glorious Anthem, or a +1/+1 counter) will continue to apply."
         }
       ],
-      "text": "Forbidding Watchtower enters the battlefield tapped.\n{T}: Add {W} to your mana pool.\n{1}{W}: Forbidding Watchtower becomes a 1/5 white Soldier creature until end of turn. It's still a land.",
+      "text": "Forbidding Watchtower enters the battlefield tapped.\n{T}: Add {W}.\n{1}{W}: Forbidding Watchtower becomes a 1/5 white Soldier creature until end of turn. It's still a land.",
       "type": "Land",
       "types": [
         "Land"
@@ -39222,14 +39218,14 @@
       "rulings": [
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         },
         {
           "date": "2009-10-01",
           "text": "Activating the ability that turns it into a creature while it's already a creature will override any effects that set its power and/or toughness to a specific number. However, any effect that raises or lowers power and/or toughness (such as the effect created by Giant Growth, Glorious Anthem, or a +1/+1 counter) will continue to apply."
         }
       ],
-      "text": "Ghitu Encampment enters the battlefield tapped.\n{T}: Add {R} to your mana pool.\n{1}{R}: Ghitu Encampment becomes a 2/1 red Warrior creature with first strike until end of turn. It's still a land. (It deals combat damage before creatures without first strike.)",
+      "text": "Ghitu Encampment enters the battlefield tapped.\n{T}: Add {R}.\n{1}{R}: Ghitu Encampment becomes a 2/1 red Warrior creature with first strike until end of turn. It's still a land. (It deals combat damage before creatures without first strike.)",
       "type": "Land",
       "types": [
         "Land"
@@ -39331,7 +39327,7 @@
         "C16"
       ],
       "rarity": "Rare",
-      "text": "{T}: Add {C} to your mana pool.\n{T}: Add {R} or {G} to your mana pool. Karplusan Forest deals 1 damage to you.",
+      "text": "{T}: Add {C}.\n{T}: Add {R} or {G}. Karplusan Forest deals 1 damage to you.",
       "type": "Land",
       "types": [
         "Land"
@@ -39440,7 +39436,7 @@
           "text": "Like most lands, each land in this cycle is colorless. The damage dealt to you is dealt by a colorless source."
         }
       ],
-      "text": "{T}: Add {C} to your mana pool.\n{T}: Add {B} or {G} to your mana pool. Llanowar Wastes deals 1 damage to you.",
+      "text": "{T}: Add {C}.\n{T}: Add {B} or {G}. Llanowar Wastes deals 1 damage to you.",
       "type": "Land",
       "types": [
         "Land"
@@ -39540,7 +39536,7 @@
         "A25"
       ],
       "rarity": "Uncommon",
-      "text": "{T}: Add {C} to your mana pool.\n{T}, Sacrifice Quicksand: Target attacking creature without flying gets -1/-2 until end of turn.",
+      "text": "{T}: Add {C}.\n{T}, Sacrifice Quicksand: Target attacking creature without flying gets -1/-2 until end of turn.",
       "type": "Land",
       "types": [
         "Land"
@@ -39636,7 +39632,8 @@
         "9ED",
         "10E",
         "M15",
-        "ORI"
+        "ORI",
+        "DDU"
       ],
       "rarity": "Rare",
       "rulings": [
@@ -39649,7 +39646,7 @@
           "text": "Like most lands, each land in this cycle is colorless. The damage dealt to you is dealt by a colorless source."
         }
       ],
-      "text": "{T}: Add {C} to your mana pool.\n{T}: Add {U} or {R} to your mana pool. Shivan Reef deals 1 damage to you.",
+      "text": "{T}: Add {C}.\n{T}: Add {U} or {R}. Shivan Reef deals 1 damage to you.",
       "type": "Land",
       "types": [
         "Land"
@@ -39747,14 +39744,14 @@
       "rulings": [
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         },
         {
           "date": "2009-10-01",
           "text": "Activating the ability that turns it into a creature while it's already a creature will override any effects that set its power and/or toughness to a specific number. However, any effect that raises or lowers power and/or toughness (such as the effect created by Giant Growth, Glorious Anthem, or a +1/+1 counter) will continue to apply."
         }
       ],
-      "text": "Spawning Pool enters the battlefield tapped.\n{T}: Add {B} to your mana pool.\n{1}{B}: Spawning Pool becomes a 1/1 black Skeleton creature with \"{B}: Regenerate this creature\" until end of turn. It's still a land. (If it regenerates, the next time it would be destroyed this turn, it isn't. Instead tap it, remove all damage from it, and remove it from combat.)",
+      "text": "Spawning Pool enters the battlefield tapped.\n{T}: Add {B}.\n{1}{B}: Spawning Pool becomes a 1/1 black Skeleton creature with \"{B}: Regenerate this creature\" until end of turn. It's still a land. (If it regenerates, the next time it would be destroyed this turn, it isn't. Instead tap it, remove all damage from it, and remove it from combat.)",
       "type": "Land",
       "types": [
         "Land"
@@ -39855,7 +39852,7 @@
         "10E"
       ],
       "rarity": "Rare",
-      "text": "{T}: Add {C} to your mana pool.\n{T}: Add {B} or {R} to your mana pool. Sulfurous Springs deals 1 damage to you.",
+      "text": "{T}: Add {C}.\n{T}: Add {B} or {R}. Sulfurous Springs deals 1 damage to you.",
       "type": "Land",
       "types": [
         "Land"
@@ -40064,20 +40061,21 @@
         "DDD",
         "DDG",
         "DD3_GVL",
-        "DDR"
+        "DDR",
+        "DDU"
       ],
       "rarity": "Uncommon",
       "rulings": [
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         },
         {
           "date": "2009-10-01",
           "text": "Activating the ability that turns it into a creature while it's already a creature will override any effects that set its power and/or toughness to a specific number. However, any effect that raises or lowers power and/or toughness (such as the effect created by Giant Growth, Glorious Anthem, or a +1/+1 counter) will continue to apply."
         }
       ],
-      "text": "Treetop Village enters the battlefield tapped.\n{T}: Add {G} to your mana pool.\n{1}{G}: Treetop Village becomes a 3/3 green Ape creature with trample until end of turn. It's still a land. (If it would assign enough damage to its blockers to destroy them, you may have it assign the rest of its damage to defending player or planeswalker.)",
+      "text": "Treetop Village enters the battlefield tapped.\n{T}: Add {G}.\n{1}{G}: Treetop Village becomes a 3/3 green Ape creature with trample until end of turn. It's still a land. (If it would assign enough damage to its blockers to destroy them, you may have it assign the rest of its damage to the player or planeswalker it's attacking.)",
       "type": "Land",
       "types": [
         "Land"
@@ -40179,7 +40177,7 @@
         "C16"
       ],
       "rarity": "Rare",
-      "text": "{T}: Add {C} to your mana pool.\n{T}: Add {U} or {B} to your mana pool. Underground River deals 1 damage to you.",
+      "text": "{T}: Add {C}.\n{T}: Add {U} or {B}. Underground River deals 1 damage to you.",
       "type": "Land",
       "types": [
         "Land"
@@ -40288,7 +40286,7 @@
           "text": "Like most lands, each land in this cycle is colorless. The damage dealt to you is dealt by a colorless source."
         }
       ],
-      "text": "{T}: Add {C} to your mana pool.\n{T}: Add {G} or {U} to your mana pool. Yavimaya Coast deals 1 damage to you.",
+      "text": "{T}: Add {C}.\n{T}: Add {G} or {U}. Yavimaya Coast deals 1 damage to you.",
       "type": "Land",
       "types": [
         "Land"
@@ -40301,11 +40299,6 @@
         "W"
       ],
       "foreignNames": [
-        {
-          "language": "Chinese Simplified",
-          "name": "平原",
-          "multiverseid": 147870
-        },
         {
           "language": "Japanese",
           "name": "平地",
@@ -40367,24 +40360,29 @@
           "multiverseid": 149020
         },
         {
+          "language": "Russian",
+          "name": "Равнина",
+          "multiverseid": 149531
+        },
+        {
+          "language": "Russian",
+          "name": "Равнина",
+          "multiverseid": 149532
+        },
+        {
+          "language": "Russian",
+          "name": "Равнина",
+          "multiverseid": 149533
+        },
+        {
+          "language": "Russian",
+          "name": "Равнина",
+          "multiverseid": 149534
+        },
+        {
           "language": "Portuguese (Brazil)",
           "name": "Planície",
           "multiverseid": 149914
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Planície",
-          "multiverseid": 149915
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Planície",
-          "multiverseid": 149916
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Planície",
-          "multiverseid": 149917
         },
         {
           "language": "French",
@@ -40664,7 +40662,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -40691,11 +40690,6 @@
         "W"
       ],
       "foreignNames": [
-        {
-          "language": "Chinese Simplified",
-          "name": "平原",
-          "multiverseid": 147870
-        },
         {
           "language": "Japanese",
           "name": "平地",
@@ -40757,24 +40751,29 @@
           "multiverseid": 149020
         },
         {
+          "language": "Russian",
+          "name": "Равнина",
+          "multiverseid": 149531
+        },
+        {
+          "language": "Russian",
+          "name": "Равнина",
+          "multiverseid": 149532
+        },
+        {
+          "language": "Russian",
+          "name": "Равнина",
+          "multiverseid": 149533
+        },
+        {
+          "language": "Russian",
+          "name": "Равнина",
+          "multiverseid": 149534
+        },
+        {
           "language": "Portuguese (Brazil)",
           "name": "Planície",
           "multiverseid": 149914
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Planície",
-          "multiverseid": 149915
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Planície",
-          "multiverseid": 149916
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Planície",
-          "multiverseid": 149917
         },
         {
           "language": "French",
@@ -41054,7 +41053,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -41081,11 +41081,6 @@
         "W"
       ],
       "foreignNames": [
-        {
-          "language": "Chinese Simplified",
-          "name": "平原",
-          "multiverseid": 147870
-        },
         {
           "language": "Japanese",
           "name": "平地",
@@ -41147,24 +41142,29 @@
           "multiverseid": 149020
         },
         {
+          "language": "Russian",
+          "name": "Равнина",
+          "multiverseid": 149531
+        },
+        {
+          "language": "Russian",
+          "name": "Равнина",
+          "multiverseid": 149532
+        },
+        {
+          "language": "Russian",
+          "name": "Равнина",
+          "multiverseid": 149533
+        },
+        {
+          "language": "Russian",
+          "name": "Равнина",
+          "multiverseid": 149534
+        },
+        {
           "language": "Portuguese (Brazil)",
           "name": "Planície",
           "multiverseid": 149914
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Planície",
-          "multiverseid": 149915
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Planície",
-          "multiverseid": 149916
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Planície",
-          "multiverseid": 149917
         },
         {
           "language": "French",
@@ -41444,7 +41444,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -41471,11 +41472,6 @@
         "W"
       ],
       "foreignNames": [
-        {
-          "language": "Chinese Simplified",
-          "name": "平原",
-          "multiverseid": 147870
-        },
         {
           "language": "Japanese",
           "name": "平地",
@@ -41537,24 +41533,29 @@
           "multiverseid": 149020
         },
         {
+          "language": "Russian",
+          "name": "Равнина",
+          "multiverseid": 149531
+        },
+        {
+          "language": "Russian",
+          "name": "Равнина",
+          "multiverseid": 149532
+        },
+        {
+          "language": "Russian",
+          "name": "Равнина",
+          "multiverseid": 149533
+        },
+        {
+          "language": "Russian",
+          "name": "Равнина",
+          "multiverseid": 149534
+        },
+        {
           "language": "Portuguese (Brazil)",
           "name": "Planície",
           "multiverseid": 149914
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Planície",
-          "multiverseid": 149915
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Planície",
-          "multiverseid": 149916
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Planície",
-          "multiverseid": 149917
         },
         {
           "language": "French",
@@ -41834,7 +41835,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -41861,11 +41863,6 @@
         "U"
       ],
       "foreignNames": [
-        {
-          "language": "Chinese Simplified",
-          "name": "海岛",
-          "multiverseid": 147791
-        },
         {
           "language": "Japanese",
           "name": "島",
@@ -41927,19 +41924,24 @@
           "multiverseid": 148940
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Ilha",
-          "multiverseid": 149918
+          "language": "Russian",
+          "name": "Остров",
+          "multiverseid": 149535
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Ilha",
-          "multiverseid": 149919
+          "language": "Russian",
+          "name": "Остров",
+          "multiverseid": 149536
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Ilha",
-          "multiverseid": 149920
+          "language": "Russian",
+          "name": "Остров",
+          "multiverseid": 149537
+        },
+        {
+          "language": "Russian",
+          "name": "Остров",
+          "multiverseid": 149538
         },
         {
           "language": "Portuguese (Brazil)",
@@ -42223,7 +42225,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -42250,11 +42254,6 @@
         "U"
       ],
       "foreignNames": [
-        {
-          "language": "Chinese Simplified",
-          "name": "海岛",
-          "multiverseid": 147791
-        },
         {
           "language": "Japanese",
           "name": "島",
@@ -42316,19 +42315,24 @@
           "multiverseid": 148940
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Ilha",
-          "multiverseid": 149918
+          "language": "Russian",
+          "name": "Остров",
+          "multiverseid": 149535
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Ilha",
-          "multiverseid": 149919
+          "language": "Russian",
+          "name": "Остров",
+          "multiverseid": 149536
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Ilha",
-          "multiverseid": 149920
+          "language": "Russian",
+          "name": "Остров",
+          "multiverseid": 149537
+        },
+        {
+          "language": "Russian",
+          "name": "Остров",
+          "multiverseid": 149538
         },
         {
           "language": "Portuguese (Brazil)",
@@ -42612,7 +42616,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -42639,11 +42645,6 @@
         "U"
       ],
       "foreignNames": [
-        {
-          "language": "Chinese Simplified",
-          "name": "海岛",
-          "multiverseid": 147791
-        },
         {
           "language": "Japanese",
           "name": "島",
@@ -42705,19 +42706,24 @@
           "multiverseid": 148940
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Ilha",
-          "multiverseid": 149918
+          "language": "Russian",
+          "name": "Остров",
+          "multiverseid": 149535
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Ilha",
-          "multiverseid": 149919
+          "language": "Russian",
+          "name": "Остров",
+          "multiverseid": 149536
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Ilha",
-          "multiverseid": 149920
+          "language": "Russian",
+          "name": "Остров",
+          "multiverseid": 149537
+        },
+        {
+          "language": "Russian",
+          "name": "Остров",
+          "multiverseid": 149538
         },
         {
           "language": "Portuguese (Brazil)",
@@ -43001,7 +43007,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -43028,11 +43036,6 @@
         "U"
       ],
       "foreignNames": [
-        {
-          "language": "Chinese Simplified",
-          "name": "海岛",
-          "multiverseid": 147791
-        },
         {
           "language": "Japanese",
           "name": "島",
@@ -43094,19 +43097,24 @@
           "multiverseid": 148940
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Ilha",
-          "multiverseid": 149918
+          "language": "Russian",
+          "name": "Остров",
+          "multiverseid": 149535
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Ilha",
-          "multiverseid": 149919
+          "language": "Russian",
+          "name": "Остров",
+          "multiverseid": 149536
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Ilha",
-          "multiverseid": 149920
+          "language": "Russian",
+          "name": "Остров",
+          "multiverseid": 149537
+        },
+        {
+          "language": "Russian",
+          "name": "Остров",
+          "multiverseid": 149538
         },
         {
           "language": "Portuguese (Brazil)",
@@ -43390,7 +43398,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -43417,26 +43427,6 @@
         "B"
       ],
       "foreignNames": [
-        {
-          "language": "Chinese Simplified",
-          "name": "沼泽",
-          "multiverseid": 147962
-        },
-        {
-          "language": "Chinese Simplified",
-          "name": "沼泽",
-          "multiverseid": 147963
-        },
-        {
-          "language": "Chinese Simplified",
-          "name": "沼泽",
-          "multiverseid": 147964
-        },
-        {
-          "language": "Chinese Simplified",
-          "name": "沼泽",
-          "multiverseid": 147965
-        },
         {
           "language": "Japanese",
           "name": "沼",
@@ -43500,7 +43490,27 @@
         {
           "language": "Russian",
           "name": "Болото",
+          "multiverseid": 149539
+        },
+        {
+          "language": "Russian",
+          "name": "Болото",
           "multiverseid": 149540
+        },
+        {
+          "language": "Russian",
+          "name": "Болото",
+          "multiverseid": 149541
+        },
+        {
+          "language": "Russian",
+          "name": "Болото",
+          "multiverseid": 149542
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Pântano",
+          "multiverseid": 149923
         },
         {
           "language": "French",
@@ -43783,7 +43793,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -43810,26 +43821,6 @@
         "B"
       ],
       "foreignNames": [
-        {
-          "language": "Chinese Simplified",
-          "name": "沼泽",
-          "multiverseid": 147962
-        },
-        {
-          "language": "Chinese Simplified",
-          "name": "沼泽",
-          "multiverseid": 147963
-        },
-        {
-          "language": "Chinese Simplified",
-          "name": "沼泽",
-          "multiverseid": 147964
-        },
-        {
-          "language": "Chinese Simplified",
-          "name": "沼泽",
-          "multiverseid": 147965
-        },
         {
           "language": "Japanese",
           "name": "沼",
@@ -43893,7 +43884,27 @@
         {
           "language": "Russian",
           "name": "Болото",
+          "multiverseid": 149539
+        },
+        {
+          "language": "Russian",
+          "name": "Болото",
           "multiverseid": 149540
+        },
+        {
+          "language": "Russian",
+          "name": "Болото",
+          "multiverseid": 149541
+        },
+        {
+          "language": "Russian",
+          "name": "Болото",
+          "multiverseid": 149542
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Pântano",
+          "multiverseid": 149923
         },
         {
           "language": "French",
@@ -44176,7 +44187,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -44203,26 +44215,6 @@
         "B"
       ],
       "foreignNames": [
-        {
-          "language": "Chinese Simplified",
-          "name": "沼泽",
-          "multiverseid": 147962
-        },
-        {
-          "language": "Chinese Simplified",
-          "name": "沼泽",
-          "multiverseid": 147963
-        },
-        {
-          "language": "Chinese Simplified",
-          "name": "沼泽",
-          "multiverseid": 147964
-        },
-        {
-          "language": "Chinese Simplified",
-          "name": "沼泽",
-          "multiverseid": 147965
-        },
         {
           "language": "Japanese",
           "name": "沼",
@@ -44286,7 +44278,27 @@
         {
           "language": "Russian",
           "name": "Болото",
+          "multiverseid": 149539
+        },
+        {
+          "language": "Russian",
+          "name": "Болото",
           "multiverseid": 149540
+        },
+        {
+          "language": "Russian",
+          "name": "Болото",
+          "multiverseid": 149541
+        },
+        {
+          "language": "Russian",
+          "name": "Болото",
+          "multiverseid": 149542
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Pântano",
+          "multiverseid": 149923
         },
         {
           "language": "French",
@@ -44569,7 +44581,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -44596,26 +44609,6 @@
         "B"
       ],
       "foreignNames": [
-        {
-          "language": "Chinese Simplified",
-          "name": "沼泽",
-          "multiverseid": 147962
-        },
-        {
-          "language": "Chinese Simplified",
-          "name": "沼泽",
-          "multiverseid": 147963
-        },
-        {
-          "language": "Chinese Simplified",
-          "name": "沼泽",
-          "multiverseid": 147964
-        },
-        {
-          "language": "Chinese Simplified",
-          "name": "沼泽",
-          "multiverseid": 147965
-        },
         {
           "language": "Japanese",
           "name": "沼",
@@ -44679,7 +44672,27 @@
         {
           "language": "Russian",
           "name": "Болото",
+          "multiverseid": 149539
+        },
+        {
+          "language": "Russian",
+          "name": "Болото",
           "multiverseid": 149540
+        },
+        {
+          "language": "Russian",
+          "name": "Болото",
+          "multiverseid": 149541
+        },
+        {
+          "language": "Russian",
+          "name": "Болото",
+          "multiverseid": 149542
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Pântano",
+          "multiverseid": 149923
         },
         {
           "language": "French",
@@ -44962,7 +44975,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -44989,11 +45003,6 @@
         "R"
       ],
       "foreignNames": [
-        {
-          "language": "Chinese Simplified",
-          "name": "山脉",
-          "multiverseid": 147841
-        },
         {
           "language": "Japanese",
           "name": "山",
@@ -45055,24 +45064,29 @@
           "multiverseid": 148991
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Montanha",
-          "multiverseid": 149926
+          "language": "Russian",
+          "name": "Гора",
+          "multiverseid": 149543
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Montanha",
-          "multiverseid": 149927
+          "language": "Russian",
+          "name": "Гора",
+          "multiverseid": 149544
+        },
+        {
+          "language": "Russian",
+          "name": "Гора",
+          "multiverseid": 149545
+        },
+        {
+          "language": "Russian",
+          "name": "Гора",
+          "multiverseid": 149546
         },
         {
           "language": "Portuguese (Brazil)",
           "name": "Montanha",
           "multiverseid": 149928
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Montanha",
-          "multiverseid": 149929
         },
         {
           "language": "French",
@@ -45357,7 +45371,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -45384,11 +45400,6 @@
         "R"
       ],
       "foreignNames": [
-        {
-          "language": "Chinese Simplified",
-          "name": "山脉",
-          "multiverseid": 147841
-        },
         {
           "language": "Japanese",
           "name": "山",
@@ -45450,24 +45461,29 @@
           "multiverseid": 148991
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Montanha",
-          "multiverseid": 149926
+          "language": "Russian",
+          "name": "Гора",
+          "multiverseid": 149543
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Montanha",
-          "multiverseid": 149927
+          "language": "Russian",
+          "name": "Гора",
+          "multiverseid": 149544
+        },
+        {
+          "language": "Russian",
+          "name": "Гора",
+          "multiverseid": 149545
+        },
+        {
+          "language": "Russian",
+          "name": "Гора",
+          "multiverseid": 149546
         },
         {
           "language": "Portuguese (Brazil)",
           "name": "Montanha",
           "multiverseid": 149928
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Montanha",
-          "multiverseid": 149929
         },
         {
           "language": "French",
@@ -45752,7 +45768,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -45779,11 +45797,6 @@
         "R"
       ],
       "foreignNames": [
-        {
-          "language": "Chinese Simplified",
-          "name": "山脉",
-          "multiverseid": 147841
-        },
         {
           "language": "Japanese",
           "name": "山",
@@ -45845,24 +45858,29 @@
           "multiverseid": 148991
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Montanha",
-          "multiverseid": 149926
+          "language": "Russian",
+          "name": "Гора",
+          "multiverseid": 149543
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Montanha",
-          "multiverseid": 149927
+          "language": "Russian",
+          "name": "Гора",
+          "multiverseid": 149544
+        },
+        {
+          "language": "Russian",
+          "name": "Гора",
+          "multiverseid": 149545
+        },
+        {
+          "language": "Russian",
+          "name": "Гора",
+          "multiverseid": 149546
         },
         {
           "language": "Portuguese (Brazil)",
           "name": "Montanha",
           "multiverseid": 149928
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Montanha",
-          "multiverseid": 149929
         },
         {
           "language": "French",
@@ -46147,7 +46165,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -46174,11 +46194,6 @@
         "R"
       ],
       "foreignNames": [
-        {
-          "language": "Chinese Simplified",
-          "name": "山脉",
-          "multiverseid": 147841
-        },
         {
           "language": "Japanese",
           "name": "山",
@@ -46240,24 +46255,29 @@
           "multiverseid": 148991
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Montanha",
-          "multiverseid": 149926
+          "language": "Russian",
+          "name": "Гора",
+          "multiverseid": 149543
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Montanha",
-          "multiverseid": 149927
+          "language": "Russian",
+          "name": "Гора",
+          "multiverseid": 149544
+        },
+        {
+          "language": "Russian",
+          "name": "Гора",
+          "multiverseid": 149545
+        },
+        {
+          "language": "Russian",
+          "name": "Гора",
+          "multiverseid": 149546
         },
         {
           "language": "Portuguese (Brazil)",
           "name": "Montanha",
           "multiverseid": 149928
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Montanha",
-          "multiverseid": 149929
         },
         {
           "language": "French",
@@ -46542,7 +46562,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -46934,7 +46956,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -47326,7 +47350,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -47718,7 +47744,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -48110,7 +48138,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [

@@ -982,13 +982,13 @@
       "rulings": [
         {
           "date": "2017-11-17",
-          "text": "If the target creature or player would be dealt damage by multiple sources at once, that player or that creature's controller chooses one of those sources at the time damage would be dealt, and 1 of that damage from that source is prevented."
+          "text": "If the target would be dealt damage by multiple sources at once, that player or that permanent's controller chooses one of those sources at the time damage would be dealt, and 1 of that damage from that source is prevented."
         }
       ],
       "subtypes": [
         "Spirit"
       ],
-      "text": "Defender (This creature can't attack.)\n{T}: Prevent the next 1 damage that would be dealt to target creature or player this turn.",
+      "text": "Defender (This creature can't attack.)\n{T}: Prevent the next 1 damage that would be dealt to any target this turn.",
       "toughness": "4",
       "type": "Creature — Spirit",
       "types": [
@@ -1574,7 +1574,7 @@
       "rulings": [
         {
           "date": "2010-06-15",
-          "text": "If a spell with rebound that you cast from your hand is countered for any reason (due to a spell like Cancel, or because all of its targets are illegal), the spell doesn't resolve and rebound has no effect. The spell is simply put into your graveyard. You won't get to cast it again next turn."
+          "text": "If a spell with rebound that you cast from your hand doesn't resolve for any reason (due being countered by a spell like Cancel, or because all of its targets are illegal), rebound has no effect. The spell is simply put into your graveyard. You won't get to cast it again next turn."
         },
         {
           "date": "2010-06-15",
@@ -1602,7 +1602,7 @@
         },
         {
           "date": "2010-06-15",
-          "text": "If you cast a card from exile this way, it will go to your graveyard when it resolves or is countered. It won't go back to exile."
+          "text": "If you cast a card from exile this way, it will go to your graveyard when it resolves, fails to resolve, or is countered. It won't go back to exile."
         },
         {
           "date": "2010-06-15",
@@ -1761,7 +1761,7 @@
         },
         {
           "date": "2015-02-25",
-          "text": "If a spell with rebound that you cast from your hand is countered for any reason (either because of another spell or ability or because all its targets are illegal as it tries to resolve), that spell won't resolve and none of its effects will happen, including rebound. The spell will be put into its owner's graveyard and you won't get to cast it again on your next turn."
+          "text": "If a spell with rebound that you cast from your hand doesn't resolve for any reason (either because another spell or ability counters it or because all its targets are illegal as it tries to resolve), none of its effects will happen, including rebound. The spell will be put into its owner's graveyard and you won't get to cast it again on your next turn."
         },
         {
           "date": "2015-02-25",
@@ -1785,7 +1785,7 @@
         },
         {
           "date": "2015-02-25",
-          "text": "If you cast a card from exile this way, it will go to its owner's graveyard when it resolves or is countered. It won't go back to exile."
+          "text": "If you cast a card from exile this way, it will go to its owner's graveyard when it resolves, fails to resolve, or is countered. It won't go back to exile."
         },
         {
           "date": "2017-11-17",
@@ -1929,7 +1929,7 @@
       "rulings": [
         {
           "date": "2017-11-17",
-          "text": "If the creature is an illegal target when Guided Strike tries to resolve, it will be countered and none of its effects will happen. You won't draw a card."
+          "text": "If the creature is an illegal target when Guided Strike tries to resolve, it won't resolve and none of its effects will happen. You won't draw a card."
         }
       ],
       "text": "Target creature gets +1/+0 and gains first strike until end of turn.\nDraw a card.",
@@ -2496,13 +2496,14 @@
         "EMA",
         "W17",
         "CMA",
-        "IMA"
+        "IMA",
+        "DOM"
       ],
       "rarity": "Uncommon",
       "subtypes": [
         "Angel"
       ],
-      "text": "Flying (This creature can't be blocked except by creatures with flying or reach.)\nVigilance (Attacking doesn't cause this creature to tap.)",
+      "text": "Flying, vigilance",
       "toughness": "4",
       "type": "Creature — Angel",
       "types": [
@@ -2799,7 +2800,7 @@
       "rulings": [
         {
           "date": "2010-06-15",
-          "text": "If a spell with rebound that you cast from your hand is countered for any reason (due to a spell like Cancel, or because all of its targets are illegal), the spell doesn't resolve and rebound has no effect. The spell is simply put into your graveyard. You won't get to cast it again next turn."
+          "text": "If a spell with rebound that you cast from your hand doesn't resolve for any reason (due being countered by a spell like Cancel, or because all of its targets are illegal), rebound has no effect. The spell is simply put into your graveyard. You won't get to cast it again next turn."
         },
         {
           "date": "2010-06-15",
@@ -2827,7 +2828,7 @@
         },
         {
           "date": "2010-06-15",
-          "text": "If you cast a card from exile this way, it will go to your graveyard when it resolves or is countered. It won't go back to exile."
+          "text": "If you cast a card from exile this way, it will go to your graveyard when it resolves, fails to resolve, or is countered. It won't go back to exile."
         },
         {
           "date": "2010-06-15",
@@ -2994,11 +2995,11 @@
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2017-11-17",
-          "text": "The amount of life gained is equal to the power of the target creature as it last existed on the battlefield."
+          "date": "2018-03-16",
+          "text": "The amount of life gained is equal to the power of the targeted creature as it last existed on the battlefield."
         },
         {
-          "date": "2017-11-17",
+          "date": "2018-03-16",
           "text": "If the creature's power is negative, its controller doesn't lose or gain life."
         }
       ],
@@ -3242,11 +3243,11 @@
         },
         {
           "date": "2017-11-17",
-          "text": "If all of the permanents targeted by Yosei's ability become illegal targets, nothing becomes tapped, but the target player still skips his or her untap step."
+          "text": "If all of the permanents targeted by Yosei's ability become illegal targets, nothing becomes tapped, but the target player still skips their untap step."
         },
         {
           "date": "2017-11-17",
-          "text": "If the player becomes an illegal target, the target permanents are tapped, but the player doesn't skip his or her untap step."
+          "text": "If the player becomes an illegal target, the target permanents are tapped, but the player doesn't skip their untap step."
         },
         {
           "date": "2017-11-17",
@@ -3254,7 +3255,7 @@
         },
         {
           "date": "2017-11-17",
-          "text": "If more than one effect instructs a player to skip his or her next untap step, such as if Yosei dies more than once in a turn, that player skips that many untap steps. This is different from effects that state that something doesn't untap during an untap step."
+          "text": "If more than one effect instructs a player to skip their next untap step, such as if Yosei dies more than once in a turn, that player skips that many untap steps. This is different from effects that state that something doesn't untap during an untap step."
         }
       ],
       "subtypes": [
@@ -3264,7 +3265,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "Flying\nWhen Yosei, the Morning Star dies, target player skips his or her next untap step. Tap up to five target permanents that player controls.",
+      "text": "Flying\nWhen Yosei, the Morning Star dies, target player skips their next untap step. Tap up to five target permanents that player controls.",
       "toughness": "5",
       "type": "Legendary Creature — Dragon Spirit",
       "types": [
@@ -3592,7 +3593,7 @@
       "rulings": [
         {
           "date": "2017-11-17",
-          "text": "If the creature is an illegal target when Bewilder tries to resolve, it will be countered and none of its effects will happen. You won't draw a card."
+          "text": "If the creature is an illegal target when Bewilder tries to resolve, it won't resolve and none of its effects will happen. You won't draw a card."
         }
       ],
       "text": "Target creature gets -3/-0 until end of turn.\nDraw a card.",
@@ -3985,7 +3986,7 @@
         },
         {
           "date": "2017-11-17",
-          "text": "Look at both chosen modes to determine how many targets Cryptic Command has, if any. If it has at least one target, and all its targets are illegal when it tries to resolve, then it will be countered and none of its effects will happen. For example, if you choose the second and fourth modes, and the permanent is an illegal target when Cryptic Command tries to resolve, you won't draw a card."
+          "text": "Look at both chosen modes to determine how many targets Cryptic Command has, if any. If it has at least one target, and all its targets are illegal when it tries to resolve, then it won't resolve and none of its effects will happen. For example, if you choose the second and fourth modes, and the permanent is an illegal target when Cryptic Command tries to resolve, you won't draw a card."
         }
       ],
       "text": "Choose two —\n• Counter target spell.\n• Return target permanent to its owner's hand.\n• Tap all creatures your opponents control.\n• Draw a card.",
@@ -4219,7 +4220,7 @@
         },
         {
           "date": "2013-09-15",
-          "text": "Scry appears on some spells and abilities with one or more targets. If all of the spell or ability's targets are illegal when it tries to resolve, it will be countered and none of its effects will happen. You won't scry."
+          "text": "Scry appears on some spells and abilities with one or more targets. If all of the spell or ability's targets are illegal when it tries to resolve, it won't resolve and none of its effects will happen. You won't scry."
         }
       ],
       "text": "Counter target spell. Scry 1. (Look at the top card of your library. You may put that card on the bottom of your library.)",
@@ -4289,7 +4290,7 @@
       "rulings": [
         {
           "date": "2010-06-15",
-          "text": "If a spell with rebound that you cast from your hand is countered for any reason (due to a spell like Cancel, or because all of its targets are illegal), the spell doesn't resolve and rebound has no effect. The spell is simply put into your graveyard. You won't get to cast it again next turn."
+          "text": "If a spell with rebound that you cast from your hand doesn't resolve for any reason (due being countered by a spell like Cancel, or because all of its targets are illegal), rebound has no effect. The spell is simply put into your graveyard. You won't get to cast it again next turn."
         },
         {
           "date": "2010-06-15",
@@ -4317,7 +4318,7 @@
         },
         {
           "date": "2010-06-15",
-          "text": "If you cast a card from exile this way, it will go to your graveyard when it resolves or is countered. It won't go back to exile."
+          "text": "If you cast a card from exile this way, it will go to your graveyard when it resolves, fails to resolve, or is countered. It won't go back to exile."
         },
         {
           "date": "2010-06-15",
@@ -4399,7 +4400,7 @@
       "subtypes": [
         "Homunculus"
       ],
-      "text": "Defender\n{2}{U}, {T}: Target player puts the top X cards of his or her library into his or her graveyard, where X is the number of creatures with defender you control.",
+      "text": "Defender\n{2}{U}, {T}: Target player puts the top X cards of their library into their graveyard, where X is the number of creatures with defender you control.",
       "toughness": "4",
       "type": "Creature — Homunculus",
       "types": [
@@ -4857,7 +4858,7 @@
         "Angel",
         "Illusion"
       ],
-      "text": "Flying\nCast Illusory Angel only if you've cast another spell this turn.",
+      "text": "Cast this spell only if you've cast another spell this turn.\nFlying",
       "toughness": "4",
       "type": "Creature — Angel Illusion",
       "types": [
@@ -4928,17 +4929,17 @@
         },
         {
           "date": "2017-11-17",
-          "text": "If Jace's Phantasm is dealt lethal damage at the same time as an opponent's creature, and that creature will become that opponent's tenth card in his or her graveyard, Jace's Phantasm will be destroyed before it gets +4/+4. This is because all creatures that have been dealt lethal damage are destroyed at the same time."
+          "text": "If Jace's Phantasm is dealt lethal damage at the same time as an opponent's creature, and that creature will become that opponent's tenth card in their graveyard, Jace's Phantasm will be destroyed before it gets +4/+4. This is because all creatures that have been dealt lethal damage are destroyed at the same time."
         },
         {
           "date": "2017-11-17",
-          "text": "In a multiplayer game, a single opponent must have ten or more cards in his or her graveyard for the bonus to apply, although this opponent may change over the course of the game. You don't have to pick a single opponent; the ability will monitor each opponent's graveyard."
+          "text": "In a multiplayer game, a single opponent must have ten or more cards in their graveyard for the bonus to apply, although this opponent may change over the course of the game. You don't have to pick a single opponent; the ability will monitor each opponent's graveyard."
         }
       ],
       "subtypes": [
         "Illusion"
       ],
-      "text": "Flying\nJace's Phantasm gets +4/+4 as long as an opponent has ten or more cards in his or her graveyard.",
+      "text": "Flying\nJace's Phantasm gets +4/+4 as long as an opponent has ten or more cards in their graveyard.",
       "toughness": "1",
       "type": "Creature — Illusion",
       "types": [
@@ -5089,7 +5090,7 @@
       "rulings": [
         {
           "date": "2017-11-17",
-          "text": "If a player has more cards in his or her hand than his or her maximum hand size during the cleanup step of that player's turn, that player discards until he or she has that many cards. A player's maximum hand size isn't checked at any time other than his or her own cleanup step."
+          "text": "If a player has more cards in their hand than their maximum hand size during the cleanup step of that player's turn, that player discards until they have that many cards. A player's maximum hand size isn't checked at any time other than their own cleanup step."
         },
         {
           "date": "2017-11-17",
@@ -5097,7 +5098,7 @@
         },
         {
           "date": "2017-11-17",
-          "text": "Unless another spell or ability is affecting your opponent's maximum hand size, Jin-Gitaxias's ability will result in your opponent having a maximum hand size of zero. He or she will discard each card from his or her hand during his or her cleanup step."
+          "text": "Unless another spell or ability is affecting your opponent's maximum hand size, Jin-Gitaxias's ability will result in your opponent having a maximum hand size of zero. They will discard each card from their hand during their cleanup step."
         }
       ],
       "subtypes": [
@@ -5336,14 +5337,14 @@
         },
         {
           "date": "2017-11-17",
-          "text": "If the target spell is an illegal target when Mana Drain tries to resolve, it will be countered and none of its effects will happen. You won't get any mana."
+          "text": "If the target spell is an illegal target when Mana Drain tries to resolve, it won't resolve and none of its effects will happen. You won't get any mana."
         },
         {
           "date": "2017-11-17",
           "text": "Mana Drain's delayed triggered ability will usually trigger at the beginning of your precombat main phase. However, if you cast Mana Drain during your precombat main phase or during your combat phase, its delayed triggered ability will trigger at the beginning of that turn's postcombat main phase."
         }
       ],
-      "text": "Counter target spell. At the beginning of your next main phase, add an amount of {C} to your mana pool equal to that spell's converted mana cost.",
+      "text": "Counter target spell. At the beginning of your next main phase, add an amount of {C} equal to that spell's converted mana cost.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -5566,7 +5567,7 @@
         },
         {
           "date": "2015-02-25",
-          "text": "If a spell with rebound that you cast from your hand is countered for any reason (either because of another spell or ability or because all its targets are illegal as it tries to resolve), that spell won't resolve and none of its effects will happen, including rebound. The spell will be put into its owner's graveyard and you won't get to cast it again on your next turn."
+          "text": "If a spell with rebound that you cast from your hand doesn't resolve for any reason (either because another spell or ability counters it or because all its targets are illegal as it tries to resolve), none of its effects will happen, including rebound. The spell will be put into its owner's graveyard and you won't get to cast it again on your next turn."
         },
         {
           "date": "2015-02-25",
@@ -5590,7 +5591,7 @@
         },
         {
           "date": "2015-02-25",
-          "text": "If you cast a card from exile this way, it will go to its owner's graveyard when it resolves or is countered. It won't go back to exile."
+          "text": "If you cast a card from exile this way, it will go to its owner's graveyard when it resolves, fails to resolve, or is countered. It won't go back to exile."
         },
         {
           "date": "2017-11-17",
@@ -5891,7 +5892,7 @@
       "subtypes": [
         "Spirit"
       ],
-      "text": "Flying\nWhenever Shriekgeist deals combat damage to a player, that player puts the top two cards of his or her library into his or her graveyard.",
+      "text": "Flying\nWhenever Shriekgeist deals combat damage to a player, that player puts the top two cards of their library into their graveyard.",
       "toughness": "1",
       "type": "Creature — Spirit",
       "types": [
@@ -6120,7 +6121,7 @@
         },
         {
           "date": "2017-11-17",
-          "text": "Teferi's last ability means that in order for an opponent to cast a spell, it must be that opponent's turn, during a main phase, and the stack must be empty. This is true even if the player doesn't have a sorcery he or she is able to cast, or if a rule or effect allows a sorcery to be cast at another time."
+          "text": "Teferi's last ability means that in order for an opponent to cast a spell, it must be that opponent's turn, during a main phase, and the stack must be empty. This is true even if the player doesn't have a sorcery they are able to cast, or if a rule or effect allows a sorcery to be cast at another time."
         },
         {
           "date": "2017-11-17",
@@ -6138,7 +6139,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "Flash (You may cast this spell any time you could cast an instant.)\nCreature cards you own that aren't on the battlefield have flash.\nEach opponent can cast spells only any time he or she could cast a sorcery.",
+      "text": "Flash (You may cast this spell any time you could cast an instant.)\nCreature cards you own that aren't on the battlefield have flash.\nEach opponent can cast spells only any time they could cast a sorcery.",
       "toughness": "4",
       "type": "Legendary Creature — Human Wizard",
       "types": [
@@ -6208,14 +6209,14 @@
       "rulings": [
         {
           "date": "2011-01-22",
-          "text": "If the target player is an illegal target when Thought Scour tries to resolve, it will be countered and none of its effects will happen. You won't draw a card."
+          "text": "If the target player is an illegal target when Thought Scour tries to resolve, it won't resolve and none of its effects will happen. You won't draw a card."
         },
         {
           "date": "2011-01-22",
           "text": "Follow the instructions in the order listed on the card: if you target yourself, you'll put the top two cards of your library into your graveyard and then draw a card."
         }
       ],
-      "text": "Target player puts the top two cards of his or her library into his or her graveyard.\nDraw a card.",
+      "text": "Target player puts the top two cards of their library into their graveyard.\nDraw a card.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -6280,7 +6281,7 @@
         "IMA"
       ],
       "rarity": "Uncommon",
-      "text": "Each player discards his or her hand, then draws cards equal to the greatest number of cards a player discarded this way.",
+      "text": "Each player discards their hand, then draws cards equal to the greatest number of cards a player discarded this way.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -6350,11 +6351,11 @@
       "rulings": [
         {
           "date": "2017-11-17",
-          "text": "No game effect can cause you to win the game or cause any opponent to lose the game while you control Abyssal Persecutor. It doesn't matter whether an opponent has 0 or less life, an opponent is forced to draw a card while his or her library is empty, an opponent has ten or more poison counters, an opponent is dealt combat damage by Phage the Untouchable, you control Felidar Sovereign and have 40 or more life, or so on. You keep playing."
+          "text": "No game effect can cause you to win the game or cause any opponent to lose the game while you control Abyssal Persecutor. It doesn't matter whether an opponent has 0 or less life, an opponent is forced to draw a card while their library is empty, an opponent has ten or more poison counters, an opponent is dealt combat damage by Phage the Untouchable, you control Felidar Sovereign and have 40 or more life, or so on. You keep playing."
         },
         {
           "date": "2017-11-17",
-          "text": "Other circumstances can still cause an opponent to lose the game, however. An opponent will lose a game if he or she concedes, if that player is penalized with a Game Loss or a Match Loss during a sanctioned tournament due to a DCI rules infraction, or if that player's Magic Online® game clock runs out of time."
+          "text": "Other circumstances can still cause an opponent to lose the game, however. An opponent will lose a game if they concede, if that player is penalized with a Game Loss or a Match Loss during a sanctioned tournament due to a DCI rules infraction, or if that player's Magic Online® game clock runs out of time."
         },
         {
           "date": "2017-11-17",
@@ -6370,7 +6371,7 @@
         },
         {
           "date": "2017-11-17",
-          "text": "Even though your opponents can't lose the game, a player can't pay an amount of life that's greater than his or her life total. If a player's life total is 0 or less, that player can't pay life at all, with one exception: a player may always pay 0 life."
+          "text": "Even though your opponents can't lose the game, a player can't pay an amount of life that's greater than their life total. If a player's life total is 0 or less, that player can't pay life at all, with one exception: a player may always pay 0 life."
         }
       ],
       "subtypes": [
@@ -6522,14 +6523,14 @@
       "rulings": [
         {
           "date": "2017-11-17",
-          "text": "If the target player has no land cards in his or her library, all cards from that library will be revealed and put into his or her graveyard."
+          "text": "If the target player has no land cards in their library, all cards from that library will be revealed and put into their graveyard."
         }
       ],
       "subtypes": [
         "Vampire",
         "Rogue"
       ],
-      "text": "Flying\nWhen Balustrade Spy enters the battlefield, target player reveals cards from the top of his or her library until he or she reveals a land card, then puts those cards into his or her graveyard.",
+      "text": "Flying\nWhen Balustrade Spy enters the battlefield, target player reveals cards from the top of their library until they reveal a land card, then puts those cards into their graveyard.",
       "toughness": "3",
       "type": "Creature — Vampire Rogue",
       "types": [
@@ -7152,7 +7153,7 @@
         "IMA"
       ],
       "rarity": "Common",
-      "text": "Target opponent reveals his or her hand. You choose a noncreature, nonland card from it. That player discards that card.",
+      "text": "Target opponent reveals their hand. You choose a noncreature, nonland card from it. That player discards that card.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -7379,7 +7380,7 @@
           "text": "If you don't reveal a Dragon card from your hand, you must control a Dragon as you are finished casting the spell to get the bonus. For example, if you lose control of your only Dragon while casting the spell (because, for example, you sacrificed it to activate a mana ability), you won't get the bonus."
         }
       ],
-      "text": "As an additional cost to cast Foul-Tongue Invocation, you may reveal a Dragon card from your hand.\nTarget player sacrifices a creature. If you revealed a Dragon card or controlled a Dragon as you cast Foul-Tongue Invocation, you gain 4 life.",
+      "text": "As an additional cost to cast this spell, you may reveal a Dragon card from your hand.\nTarget player sacrifices a creature. If you revealed a Dragon card or controlled a Dragon as you cast this spell, you gain 4 life.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -7449,14 +7450,14 @@
       "rulings": [
         {
           "date": "2017-11-17",
-          "text": "Use the creature's power the last time it was on the battlefield to determine how many cards its controller puts into his or her graveyard."
+          "text": "Use the creature's power the last time it was on the battlefield to determine how many cards its controller puts into their graveyard."
         },
         {
           "date": "2017-11-17",
-          "text": "If the creature is an illegal target when Grisly Spectacle tries to resolve, it will be countered and none of its effects will happen. The creature's controller won't put any cards into his or her graveyard."
+          "text": "If the creature is an illegal target when Grisly Spectacle tries to resolve, it won't resolve and none of its effects will happen. The creature's controller won't put any cards into their graveyard."
         }
       ],
-      "text": "Destroy target nonartifact creature. Its controller puts a number of cards equal to that creature's power from the top of his or her library into his or her graveyard.",
+      "text": "Destroy target nonartifact creature. Its controller puts a number of cards equal to that creature's power from the top of their library into their graveyard.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -7588,7 +7589,7 @@
       "rulings": [
         {
           "date": "2017-11-17",
-          "text": "The opponent chooses whether he or she sacrifices a creature, pays 3 life, or allows you to draw a card. That player can't make an impossible choice, such as sacrificing a creature while he or she controls no creatures."
+          "text": "The opponent chooses whether they sacrifice a creature, pays 3 life, or allows you to draw a card. That player can't make an impossible choice, such as sacrificing a creature while they control no creatures."
         },
         {
           "date": "2017-11-17",
@@ -8678,7 +8679,7 @@
         },
         {
           "date": "2017-11-17",
-          "text": "In a Two-Headed Giant game, the last ability will trigger twice at the beginning of the opposing team's upkeep, once for each player on that team. Each player sacrifices only a creature he or she controls."
+          "text": "In a Two-Headed Giant game, the last ability will trigger twice at the beginning of the opposing team's upkeep, once for each player on that team. Each player sacrifices only a creature they control."
         }
       ],
       "subtypes": [
@@ -8840,14 +8841,14 @@
       "rulings": [
         {
           "date": "2013-09-15",
-          "text": "The loss of life is part of the spell's effect. It's not an additional cost. If Thoughtseize is countered, you won't lose life."
+          "text": "The loss of life is part of the spell's effect. It's not an additional cost. If Thoughtseize doesn't resolve, you won't lose life."
         },
         {
           "date": "2014-02-01",
           "text": "If you target yourself with this spell, you must reveal your entire hand to the other players just as any other player would."
         }
       ],
-      "text": "Target player reveals his or her hand. You choose a nonland card from it. That player discards that card. You lose 2 life.",
+      "text": "Target player reveals their hand. You choose a nonland card from it. That player discards that card. You lose 2 life.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -9000,7 +9001,7 @@
       "rulings": [
         {
           "date": "2017-11-17",
-          "text": "The loss of life isn't a cost. If the target creature is an illegal target when Ulcerate tries to resolve, it will be countered and none of its effects will happen. You won't lose any life."
+          "text": "The loss of life isn't a cost. If the target creature is an illegal target when Ulcerate tries to resolve, it won't resolve and none of its effects will happen. You won't lose any life."
         }
       ],
       "text": "Target creature gets -3/-3 until end of turn. You lose 3 life.",
@@ -9070,7 +9071,7 @@
       "rulings": [
         {
           "date": "2010-06-15",
-          "text": "If a spell with rebound that you cast from your hand is countered for any reason (due to a spell like Cancel, or because all of its targets are illegal), the spell doesn't resolve and rebound has no effect. The spell is simply put into your graveyard. You won't get to cast it again next turn."
+          "text": "If a spell with rebound that you cast from your hand doesn't resolve for any reason (due being countered by a spell like Cancel, or because all of its targets are illegal), rebound has no effect. The spell is simply put into your graveyard. You won't get to cast it again next turn."
         },
         {
           "date": "2010-06-15",
@@ -9098,7 +9099,7 @@
         },
         {
           "date": "2010-06-15",
-          "text": "If you cast a card from exile this way, it will go to your graveyard when it resolves or is countered. It won't go back to exile."
+          "text": "If you cast a card from exile this way, it will go to your graveyard when it resolves, fails to resolve, or is countered. It won't go back to exile."
         }
       ],
       "text": "Target creature gets +2/+0 and gains deathtouch until end of turn.\nRebound (If you cast this spell from your hand, exile it as it resolves. At the beginning of your next upkeep, you may cast this card from exile without paying its mana cost.)",
@@ -9255,7 +9256,7 @@
           "text": "You can discard either one artifact card or two cards which may or may not be artifacts. If you really want to, you can discard two artifact cards."
         }
       ],
-      "text": "Target player discards two cards unless he or she discards an artifact card.",
+      "text": "Target player discards two cards unless they discard an artifact card.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -9485,17 +9486,13 @@
         },
         {
           "date": "2017-11-17",
-          "text": "You can't deal damage with Bogardan Hellkite's triggered ability to both a player and a planeswalker that player controls. You also can't deal damage to more than one planeswalker controlled by the same player. If you choose to redirect the damage being dealt to a player to a planeswalker, you must redirect all the damage to a single planeswalker."
-        },
-        {
-          "date": "2017-11-17",
           "text": "If some of the creatures or players are illegal targets as Bogardan Hellkite's triggered ability tries to resolve, the original division of damage still applies and the damage that would have been dealt to the illegal targets is lost. It won't be dealt instead to a legal target."
         }
       ],
       "subtypes": [
         "Dragon"
       ],
-      "text": "Flash\nFlying\nWhen Bogardan Hellkite enters the battlefield, it deals 5 damage divided as you choose among any number of target creatures and/or players.",
+      "text": "Flash\nFlying\nWhen Bogardan Hellkite enters the battlefield, it deals 5 damage divided as you choose among any number of targets.",
       "toughness": "5",
       "type": "Creature — Dragon",
       "types": [
@@ -9852,7 +9849,7 @@
       "rulings": [
         {
           "date": "2015-02-25",
-          "text": "Draconic Roar targets only the creature, not its controller. If that creature becomes an illegal target before Draconic Roar resolves, the spell is countered and none of its effects will occur. No damage is dealt."
+          "text": "Draconic Roar targets only the creature, not its controller. If that creature becomes an illegal target before Draconic Roar resolves, the spell doesn't resolve and none of its effects will occur. No damage is dealt."
         },
         {
           "date": "2015-02-25",
@@ -9867,7 +9864,7 @@
           "text": "If you don't reveal a Dragon card from your hand, you must control a Dragon as you are finished casting the spell to get the bonus. For example, if you lose control of your only Dragon while casting the spell (because, for example, you sacrificed it to activate a mana ability), you won't get the bonus."
         }
       ],
-      "text": "As an additional cost to cast Draconic Roar, you may reveal a Dragon card from your hand.\nDraconic Roar deals 3 damage to target creature. If you revealed a Dragon card or controlled a Dragon as you cast Draconic Roar, Draconic Roar deals 3 damage to that creature's controller.",
+      "text": "As an additional cost to cast this spell, you may reveal a Dragon card from your hand.\nDraconic Roar deals 3 damage to target creature. If you revealed a Dragon card or controlled a Dragon as you cast this spell, Draconic Roar deals 3 damage to that creature's controller.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -10013,7 +10010,7 @@
           "text": "The two abilities aren't mutually exclusive. If a Dragon with flying (which is most of them) enters the battlefield under your control, both abilities will trigger."
         }
       ],
-      "text": "Whenever a creature with flying enters the battlefield under your control, it gains haste until end of turn.\nWhenever a Dragon enters the battlefield under your control, it deals X damage to target creature or player, where X is the number of Dragons you control.",
+      "text": "Whenever a creature with flying enters the battlefield under your control, it gains haste until end of turn.\nWhenever a Dragon enters the battlefield under your control, it deals X damage to any target, where X is the number of Dragons you control.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -10280,7 +10277,7 @@
           "text": "You can target more than X creatures. However, if the number of legal targets at the time Fireball resolves is greater than X, none of them will be dealt any damage."
         }
       ],
-      "text": "Fireball deals X damage divided evenly, rounded down, among any number of target creatures and/or players.\nFireball costs {1} more to cast for each target beyond the first.",
+      "text": "This spell costs {1} more to cast for each target beyond the first.\nFireball deals X damage divided evenly, rounded down, among any number of targets.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -11080,15 +11077,15 @@
           "text": "If a nonbasic land has an ability that causes it to enter the battlefield tapped, it will lose that ability before it applies. The same is also true of any other abilities that modify how a land enters the battlefield or apply \"as\" a land enters the battlefield, such as the first ability of Cavern of Souls. This is a change from previous rulings."
         },
         {
-          "date": "2017-11-17",
-          "text": "Nonbasic lands lose any other land types and abilities they had. They gain the land type Mountain and gain the ability \"{T}: Add {R} to your mana pool.\""
+          "date": "2018-03-16",
+          "text": "Nonbasic lands will lose any other land types and abilities they had. They will gain the land type Mountain and gain the ability \"{T}: Add {R}.\""
         },
         {
-          "date": "2017-11-17",
-          "text": "Magus of the Moon's effect doesn't affect names or supertypes. It won't turn any land into a basic land or remove the legendary supertype from a legendary land, and the lands won't be named Mountain."
+          "date": "2018-03-16",
+          "text": "This effect doesn't affect names or supertypes. It won't turn any land into a basic land or remove the legendary supertype from a legendary land, and the lands won't be named \"Mountain.\""
         },
         {
-          "date": "2017-11-17",
+          "date": "2018-03-16",
           "text": "If a nonbasic land has an ability that triggers \"when\" it enters the battlefield, it will lose that ability before it triggers."
         }
       ],
@@ -11336,7 +11333,7 @@
           "text": "A creature dealt damage by Pillar of Flame will be exiled no matter why the creature would die that turn. It could have its toughness reduced to 0 or less or be destroyed by another spell or ability."
         }
       ],
-      "text": "Pillar of Flame deals 2 damage to target creature or player. If a creature dealt damage this way would die this turn, exile it instead.",
+      "text": "Pillar of Flame deals 2 damage to any target. If a creature dealt damage this way would die this turn, exile it instead.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -11416,7 +11413,7 @@
         "Human",
         "Wizard"
       ],
-      "text": "{T}: Prodigal Pyromancer deals 1 damage to target creature or player.",
+      "text": "{T}: Prodigal Pyromancer deals 1 damage to any target.",
       "toughness": "1",
       "type": "Creature — Human Wizard",
       "types": [
@@ -11526,7 +11523,7 @@
           "text": "A creature cast using suspend will enter the battlefield with haste. It will have haste until another player gains control of it (or, in some rare cases, gains control of the creature spell itself)."
         }
       ],
-      "text": "Rift Bolt deals 3 damage to target creature or player.\nSuspend 1—{R} (Rather than cast this card from your hand, you may pay {R} and exile it with a time counter on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)",
+      "text": "Rift Bolt deals 3 damage to any target.\nSuspend 1—{R} (Rather than cast this card from your hand, you may pay {R} and exile it with a time counter on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -11679,7 +11676,7 @@
       "subtypes": [
         "Dragon"
       ],
-      "text": "Flying\nWhenever Scourge of Valkas or another Dragon enters the battlefield under your control, it deals X damage to target creature or player, where X is the number of Dragons you control.\n{R}: Scourge of Valkas gets +1/+0 until end of turn.",
+      "text": "Flying\nWhenever Scourge of Valkas or another Dragon enters the battlefield under your control, it deals X damage to any target, where X is the number of Dragons you control.\n{R}: Scourge of Valkas gets +1/+0 until end of turn.",
       "toughness": "4",
       "type": "Creature — Dragon",
       "types": [
@@ -11837,7 +11834,7 @@
       "rulings": [
         {
           "date": "2010-06-15",
-          "text": "If a spell with rebound that you cast from your hand is countered for any reason (due to a spell like Cancel, or because all of its targets are illegal), the spell doesn't resolve and rebound has no effect. The spell is simply put into your graveyard. You won't get to cast it again next turn."
+          "text": "If a spell with rebound that you cast from your hand doesn't resolve for any reason (due being countered by a spell like Cancel, or because all of its targets are illegal), rebound has no effect. The spell is simply put into your graveyard. You won't get to cast it again next turn."
         },
         {
           "date": "2010-06-15",
@@ -11865,10 +11862,10 @@
         },
         {
           "date": "2010-06-15",
-          "text": "If you cast a card from exile this way, it will go to your graveyard when it resolves or is countered. It won't go back to exile."
+          "text": "If you cast a card from exile this way, it will go to your graveyard when it resolves, fails to resolve, or is countered. It won't go back to exile."
         }
       ],
-      "text": "Staggershock deals 2 damage to target creature or player.\nRebound (If you cast this spell from your hand, exile it as it resolves. At the beginning of your next upkeep, you may cast this card from exile without paying its mana cost.)",
+      "text": "Staggershock deals 2 damage to any target.\nRebound (If you cast this spell from your hand, exile it as it resolves. At the beginning of your next upkeep, you may cast this card from exile without paying its mana cost.)",
       "type": "Instant",
       "types": [
         "Instant"
@@ -11935,7 +11932,7 @@
       "rulings": [
         {
           "date": "2010-06-15",
-          "text": "If a spell with rebound that you cast from your hand is countered for any reason (due to a spell like Cancel, or because all of its targets are illegal), the spell doesn't resolve and rebound has no effect. The spell is simply put into your graveyard. You won't get to cast it again next turn."
+          "text": "If a spell with rebound that you cast from your hand doesn't resolve for any reason (due being countered by a spell like Cancel, or because all of its targets are illegal), rebound has no effect. The spell is simply put into your graveyard. You won't get to cast it again next turn."
         },
         {
           "date": "2010-06-15",
@@ -11963,7 +11960,7 @@
         },
         {
           "date": "2010-06-15",
-          "text": "If you cast a card from exile this way, it will go to your graveyard when it resolves or is countered. It won't go back to exile."
+          "text": "If you cast a card from exile this way, it will go to your graveyard when it resolves, fails to resolve, or is countered. It won't go back to exile."
         },
         {
           "date": "2010-06-15",
@@ -12152,7 +12149,7 @@
           "text": "Because discarding a card is an additional cost, you can't cast Tormenting Voice if you have no other cards in hand."
         }
       ],
-      "text": "As an additional cost to cast Tormenting Voice, discard a card.\nDraw two cards.",
+      "text": "As an additional cost to cast this spell, discard a card.\nDraw two cards.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -12394,7 +12391,7 @@
       "subtypes": [
         "Elemental"
       ],
-      "text": "Defender\n{1}{R}, {T}: Vent Sentinel deals damage to target player equal to the number of creatures with defender you control.",
+      "text": "Defender\n{1}{R}, {T}: Vent Sentinel deals damage to target player or planeswalker equal to the number of creatures with defender you control.",
       "toughness": "4",
       "type": "Creature — Elemental",
       "types": [
@@ -12467,7 +12464,7 @@
         },
         {
           "date": "2017-11-17",
-          "text": "If the creature with flying is an illegal target when Aerial Predation tries to resolve, it will be countered and none of its effects will happen. You won't gain 2 life."
+          "text": "If the creature with flying is an illegal target when Aerial Predation tries to resolve, it won't resolve and none of its effects will happen. You won't gain 2 life."
         }
       ],
       "text": "Destroy target creature with flying. You gain 2 life.",
@@ -12686,7 +12683,7 @@
           "text": "Once your life total is 0, you can't pay any more life, even if you've somehow not lost the game yet."
         }
       ],
-      "text": "Until end of turn, any time you could activate a mana ability, you may pay 1 life. If you do, add {C} to your mana pool.",
+      "text": "Until end of turn, any time you could activate a mana ability, you may pay 1 life. If you do, add {C}.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -13025,7 +13022,7 @@
       "subtypes": [
         "Wurm"
       ],
-      "text": "Trample (This creature can deal excess combat damage to defending player or planeswalker while attacking.)",
+      "text": "Trample (This creature can deal excess combat damage to the player or planeswalker it's attacking.)",
       "toughness": "7",
       "type": "Creature — Wurm",
       "types": [
@@ -13093,7 +13090,7 @@
           "text": "If the creature attacks, the defending player must assign at least one blocker to it during the declare blockers step if that player controls any creatures that could block it. Other creatures that player controls can block other attackers or not block at all."
         }
       ],
-      "text": "Target creature gets +7/+7 and gains trample until end of turn. It must be blocked this turn if able. (If a creature with trample would assign enough damage to its blockers to destroy them, you may have it assign the rest of its damage to defending player or planeswalker.)",
+      "text": "Target creature gets +7/+7 and gains trample until end of turn. It must be blocked this turn if able. (If a creature with trample would assign enough damage to its blockers to destroy them, you may have it assign the rest of its damage to the player or planeswalker it's attacking.)",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -13185,7 +13182,7 @@
         "Plant",
         "Hydra"
       ],
-      "text": "When you cast Genesis Hydra, reveal the top X cards of your library. You may put a nonland permanent card with converted mana cost X or less from among them onto the battlefield. Then shuffle the rest into your library.\nGenesis Hydra enters the battlefield with X +1/+1 counters on it.",
+      "text": "When you cast this spell, reveal the top X cards of your library. You may put a nonland permanent card with converted mana cost X or less from among them onto the battlefield. Then shuffle the rest into your library.\nGenesis Hydra enters the battlefield with X +1/+1 counters on it.",
       "toughness": "0",
       "type": "Creature — Plant Hydra",
       "types": [
@@ -13458,6 +13455,10 @@
       "legalities": [
         {
           "format": "Commander",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
           "legality": "Legal"
         },
         {
@@ -13969,7 +13970,8 @@
         "MBS",
         "DDH",
         "CNS",
-        "IMA"
+        "IMA",
+        "DDU"
       ],
       "rarity": "Common",
       "text": "Look at the top five cards of your library. You may reveal any number of creature cards from among them and put the revealed cards into your hand. Put the rest on the bottom of your library in any order.",
@@ -14056,7 +14058,7 @@
       "subtypes": [
         "Snake"
       ],
-      "text": "Landfall — Whenever a land enters the battlefield under your control, you may add one mana of any color to your mana pool.",
+      "text": "Landfall — Whenever a land enters the battlefield under your control, you may add one mana of any color.",
       "toughness": "1",
       "type": "Creature — Snake",
       "types": [
@@ -14341,7 +14343,7 @@
       "rulings": [
         {
           "date": "2017-11-17",
-          "text": "If the target artifact or enchantment is an illegal target when Nature's Claim tries to resolve, the entire spell is countered. No one gains any life."
+          "text": "If the target artifact or enchantment is an illegal target when Nature's Claim tries to resolve, the entire spell doesn't resolve. No one gains any life."
         }
       ],
       "text": "Destroy target artifact or enchantment. Its controller gains 4 life.",
@@ -14567,7 +14569,7 @@
       "subtypes": [
         "Wall"
       ],
-      "text": "Defender\n{T}: Add {G} to your mana pool for each creature with defender you control.",
+      "text": "Defender\n{T}: Add {G} for each creature with defender you control.",
       "toughness": "4",
       "type": "Creature — Wall",
       "types": [
@@ -14719,7 +14721,7 @@
       "rulings": [
         {
           "date": "2010-06-15",
-          "text": "If a spell with rebound that you cast from your hand is countered for any reason (due to a spell like Cancel, or because all of its targets are illegal), the spell doesn't resolve and rebound has no effect. The spell is simply put into your graveyard. You won't get to cast it again next turn."
+          "text": "If a spell with rebound that you cast from your hand doesn't resolve for any reason (due being countered by a spell like Cancel, or because all of its targets are illegal), rebound has no effect. The spell is simply put into your graveyard. You won't get to cast it again next turn."
         },
         {
           "date": "2010-06-15",
@@ -14747,7 +14749,7 @@
         },
         {
           "date": "2010-06-15",
-          "text": "If you cast a card from exile this way, it will go to your graveyard when it resolves or is countered. It won't go back to exile."
+          "text": "If you cast a card from exile this way, it will go to your graveyard when it resolves, fails to resolve, or is countered. It won't go back to exile."
         }
       ],
       "text": "Target creature gets +2/+2 until end of turn.\nRebound (If you cast this spell from your hand, exile it as it resolves. At the beginning of your next upkeep, you may cast this card from exile without paying its mana cost.)",
@@ -15336,7 +15338,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "Trample\nWhenever you tap a land for mana, add one mana to your mana pool of any type that land produced.\nWhenever an opponent taps a land for mana, that land doesn't untap during its controller's next untap step.",
+      "text": "Trample\nWhenever you tap a land for mana, add one mana of any type that land produced.\nWhenever an opponent taps a land for mana, that land doesn't untap during its controller's next untap step.",
       "toughness": "6",
       "type": "Legendary Creature — Praetor",
       "types": [
@@ -15420,7 +15422,7 @@
         "Plant",
         "Wall"
       ],
-      "text": "Defender\nPut a -0/-1 counter on Wall of Roots: Add {G} to your mana pool. Activate this ability only once each turn.",
+      "text": "Defender\nPut a -0/-1 counter on Wall of Roots: Add {G}. Activate this ability only once each turn.",
       "toughness": "5",
       "type": "Creature — Plant Wall",
       "types": [
@@ -15718,7 +15720,7 @@
       "supertypes": [
         "Snow"
       ],
-      "text": "Flying\nWhenever Blizzard Specter deals combat damage to a player, choose one —\n• That player returns a permanent he or she controls to its owner's hand.\n• That player discards a card.",
+      "text": "Flying\nWhenever Blizzard Specter deals combat damage to a player, choose one —\n• That player returns a permanent they control to its owner's hand.\n• That player discards a card.",
       "toughness": "3",
       "type": "Snow Creature — Specter",
       "types": [
@@ -16043,10 +16045,10 @@
         },
         {
           "date": "2017-11-17",
-          "text": "If all chosen targets are illegal as Electrolyze tries to resolve, it will be countered and none of its effects will happen. No damage will be dealt and you won't draw a card."
+          "text": "If all chosen targets are illegal as Electrolyze tries to resolve, it won't resolve and none of its effects will happen. No damage will be dealt and you won't draw a card."
         }
       ],
-      "text": "Electrolyze deals 2 damage divided as you choose among one or two target creatures and/or players.\nDraw a card.",
+      "text": "Electrolyze deals 2 damage divided as you choose among one or two targets.\nDraw a card.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -16191,7 +16193,7 @@
         "IMA"
       ],
       "rarity": "Rare",
-      "text": "Target player puts the top ten cards of his or her library into his or her graveyard.",
+      "text": "Target player puts the top ten cards of their library into their graveyard.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -16513,10 +16515,10 @@
       "rulings": [
         {
           "date": "2017-11-17",
-          "text": "If the chosen target is illegal when Lightning Helix tries to resolve, it will be countered and none of its effects will happen. You won't gain 3 life."
+          "text": "If the chosen target is illegal when Lightning Helix tries to resolve, it won't resolve and none of its effects will happen. You won't gain 3 life."
         }
       ],
-      "text": "Lightning Helix deals 3 damage to target creature or player and you gain 3 life.",
+      "text": "Lightning Helix deals 3 damage to any target and you gain 3 life.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -16594,7 +16596,7 @@
         },
         {
           "date": "2017-11-17",
-          "text": "After you discard your hand and the number of creatures each opponent must sacrifice has been determined, each opponent in turn order, starting with the player whose turn it is if that player is your opponent, chooses which creatures he or she will sacrifice, then all the chosen creatures are all sacrificed at the same time."
+          "text": "After you discard your hand and the number of creatures each opponent must sacrifice has been determined, each opponent in turn order, starting with the player whose turn it is if that player is your opponent, chooses which creatures they will sacrifice, then all the chosen creatures are all sacrificed at the same time."
         }
       ],
       "subtypes": [
@@ -16698,7 +16700,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "{T}: Add {C}{C}{C}{C} to your mana pool. Spend this mana only on costs that contain {X}.",
+      "text": "{T}: Add {C}{C}{C}{C}. Spend this mana only on costs that contain {X}.",
       "toughness": "4",
       "type": "Legendary Creature — Giant Shaman",
       "types": [
@@ -16983,7 +16985,7 @@
         "IMA"
       ],
       "rarity": "Rare",
-      "text": "Supreme Verdict can't be countered.\nDestroy all creatures.",
+      "text": "This spell can't be countered.\nDestroy all creatures.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -17394,7 +17396,7 @@
       "rulings": [
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         },
         {
           "date": "2017-11-17",
@@ -17405,7 +17407,7 @@
           "text": "Activating the last ability of Guardian Idol while it's already a creature will override any effects that set its power or toughness to a specific value. Effects that modify power or toughness without setting them to a specific value will continue to apply."
         }
       ],
-      "text": "Guardian Idol enters the battlefield tapped.\n{T}: Add {C} to your mana pool.\n{2}: Guardian Idol becomes a 2/2 Golem artifact creature until end of turn.",
+      "text": "Guardian Idol enters the battlefield tapped.\n{T}: Add {C}.\n{2}: Guardian Idol becomes a 2/2 Golem artifact creature until end of turn.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -17486,7 +17488,7 @@
           "text": "Activating the last ability of a Monument while it's already a creature will override any effects that set its power or toughness to a specific value. Effects that modify power or toughness without directly setting them to a specific value will continue to apply."
         }
       ],
-      "text": "{T}: Add {B} or {R} to your mana pool.\n{4}{B}{R}: Kolaghan Monument becomes a 4/4 black and red Dragon artifact creature with flying until end of turn.",
+      "text": "{T}: Add {B} or {R}.\n{4}{B}{R}: Kolaghan Monument becomes a 4/4 black and red Dragon artifact creature with flying until end of turn.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -17545,7 +17547,7 @@
       "subtypes": [
         "Construct"
       ],
-      "text": "{T}: Add {C} to your mana pool.",
+      "text": "{T}: Add {C}.",
       "toughness": "1",
       "type": "Artifact Creature — Construct",
       "types": [
@@ -17613,7 +17615,7 @@
         "IMA"
       ],
       "rarity": "Common",
-      "text": "{T}: Add {C} to your mana pool.\n{1}, {T}, Sacrifice Mind Stone: Draw a card.",
+      "text": "{T}: Add {C}.\n{1}, {T}, Sacrifice Mind Stone: Draw a card.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -17678,7 +17680,7 @@
           "text": "Damage dealt to an opponent usually causes that opponent to lose life. An opponent paying life also causes loss of life."
         }
       ],
-      "text": "Whenever an opponent loses life, that player puts that many cards from the top of his or her library into his or her graveyard. (Damage dealt by sources without infect causes loss of life.)",
+      "text": "Whenever an opponent loses life, that player puts that many cards from the top of their library into their graveyard. (Damage dealt by sources without infect causes loss of life.)",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -17799,7 +17801,7 @@
         "IMA"
       ],
       "rarity": "Common",
-      "text": "Sacrifice Moonglove Extract: It deals 2 damage to target creature or player.",
+      "text": "Sacrifice Moonglove Extract: It deals 2 damage to any target.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -17923,7 +17925,7 @@
       "subtypes": [
         "Myr"
       ],
-      "text": "{T}: Add {C}{C} to your mana pool.",
+      "text": "{T}: Add {C}{C}.",
       "toughness": "2",
       "type": "Artifact Creature — Myr",
       "types": [
@@ -17993,7 +17995,7 @@
           "text": "Pristine Talisman has a mana ability. Its ability doesn't use the stack and can't be responded to."
         }
       ],
-      "text": "{T}: Add {C} to your mana pool. You gain 1 life.",
+      "text": "{T}: Add {C}. You gain 1 life.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -18192,7 +18194,7 @@
           "text": "The cards in your hand are exiled for the rest of the game; they aren't shuffled back into your library if you take another mulligan. Cards exiled are always face up unless the effect that exiled them says they aren't. Be sure to return those cards to your deck for your next game."
         }
       ],
-      "text": "{T}: Add {C} to your mana pool.\nAny time you could mulligan and Serum Powder is in your hand, you may exile all the cards from your hand, then draw that many cards. (You can do this in addition to taking mulligans.)",
+      "text": "{T}: Add {C}.\nAny time you could mulligan and Serum Powder is in your hand, you may exile all the cards from your hand, then draw that many cards. (You can do this in addition to taking mulligans.)",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -18262,7 +18264,7 @@
           "text": "The colors of mana are white, blue, black, red, and green. Colorless is a type but not a color."
         }
       ],
-      "text": "Star Compass enters the battlefield tapped.\n{T}: Add to your mana pool one mana of any color that a basic land you control could produce.",
+      "text": "Star Compass enters the battlefield tapped.\n{T}: Add one mana of any color that a basic land you control could produce.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -18320,7 +18322,7 @@
         "IMA"
       ],
       "rarity": "Uncommon",
-      "text": "{T}: Add {C}{C}{C} to your mana pool.",
+      "text": "{T}: Add {C}{C}{C}.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -18385,17 +18387,13 @@
         },
         {
           "date": "2017-11-17",
-          "text": "If the equipped creature is attacking a planeswalker in any game except a Two-Headed Giant game, the controller of the planeswalker is the defending player."
-        },
-        {
-          "date": "2017-11-17",
-          "text": "If the equipped creature is attacking in a Two-Headed Giant game, the controller of the attacking creature chooses one of the two defending players, even if the creature is attacking a planeswalker."
+          "text": "If the equipped creature is attacking a planeswalker, the controller of the planeswalker is the defending player."
         }
       ],
       "subtypes": [
         "Equipment"
       ],
-      "text": "Whenever equipped creature attacks, defending player reveals cards from the top of his or her library until he or she reveals a land card. The creature gets +1/+0 until end of turn for each card revealed this way. That player puts the revealed cards into his or her graveyard.\nEquip {2}",
+      "text": "Whenever equipped creature attacks, defending player reveals cards from the top of their library until they reveal a land card. The creature gets +1/+0 until end of turn for each card revealed this way. That player puts the revealed cards into their graveyard.\nEquip {2}",
       "type": "Artifact — Equipment",
       "types": [
         "Artifact"
@@ -18468,7 +18466,7 @@
           "text": "If this land enters the battlefield and you control no other lands, its ability will force you to return it to your hand."
         }
       ],
-      "text": "Azorius Chancery enters the battlefield tapped.\nWhen Azorius Chancery enters the battlefield, return a land you control to its owner's hand.\n{T}: Add {W}{U} to your mana pool.",
+      "text": "Azorius Chancery enters the battlefield tapped.\nWhen Azorius Chancery enters the battlefield, return a land you control to its owner's hand.\n{T}: Add {W}{U}.",
       "type": "Land",
       "types": [
         "Land"
@@ -18543,7 +18541,7 @@
           "text": "If this land enters the battlefield and you control no other lands, its ability will force you to return it to your hand."
         }
       ],
-      "text": "Boros Garrison enters the battlefield tapped.\nWhen Boros Garrison enters the battlefield, return a land you control to its owner's hand.\n{T}: Add {R}{W} to your mana pool.",
+      "text": "Boros Garrison enters the battlefield tapped.\nWhen Boros Garrison enters the battlefield, return a land you control to its owner's hand.\n{T}: Add {R}{W}.",
       "type": "Land",
       "types": [
         "Land"
@@ -18616,7 +18614,7 @@
           "text": "If this land enters the battlefield and you control no other lands, its ability will force you to return it to your hand."
         }
       ],
-      "text": "Dimir Aqueduct enters the battlefield tapped.\nWhen Dimir Aqueduct enters the battlefield, return a land you control to its owner's hand.\n{T}: Add {U}{B} to your mana pool.",
+      "text": "Dimir Aqueduct enters the battlefield tapped.\nWhen Dimir Aqueduct enters the battlefield, return a land you control to its owner's hand.\n{T}: Add {U}{B}.",
       "type": "Land",
       "types": [
         "Land"
@@ -18656,6 +18654,10 @@
         },
         {
           "format": "Innistrad Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
           "legality": "Legal"
         },
         {
@@ -18792,7 +18794,7 @@
           "text": "If this land enters the battlefield and you control no other lands, its ability will force you to return it to your hand."
         }
       ],
-      "text": "Golgari Rot Farm enters the battlefield tapped.\nWhen Golgari Rot Farm enters the battlefield, return a land you control to its owner's hand.\n{T}: Add {B}{G} to your mana pool.",
+      "text": "Golgari Rot Farm enters the battlefield tapped.\nWhen Golgari Rot Farm enters the battlefield, return a land you control to its owner's hand.\n{T}: Add {B}{G}.",
       "type": "Land",
       "types": [
         "Land"
@@ -18866,7 +18868,7 @@
           "text": "{B/R}, {T}\" is the same as saying \"{B}, {T} or {R}, {T}."
         }
       ],
-      "text": "{T}: Add {C} to your mana pool.\n{B/R}, {T}: Add {B}{B}, {B}{R}, or {R}{R} to your mana pool.",
+      "text": "{T}: Add {C}.\n{B/R}, {T}: Add {B}{B}, {B}{R}, or {R}{R}.",
       "type": "Land",
       "types": [
         "Land"
@@ -18929,7 +18931,7 @@
         "IMA"
       ],
       "rarity": "Rare",
-      "text": "{T}: Add {C} to your mana pool.\n{T}: Add {R} or {G} to your mana pool. Each opponent gains 1 life.",
+      "text": "{T}: Add {C}.\n{T}: Add {R} or {G}. Each opponent gains 1 life.",
       "type": "Land",
       "types": [
         "Land"
@@ -19002,7 +19004,7 @@
           "text": "If this land enters the battlefield and you control no other lands, its ability will force you to return it to your hand."
         }
       ],
-      "text": "Gruul Turf enters the battlefield tapped.\nWhen Gruul Turf enters the battlefield, return a land you control to its owner's hand.\n{T}: Add {R}{G} to your mana pool.",
+      "text": "Gruul Turf enters the battlefield tapped.\nWhen Gruul Turf enters the battlefield, return a land you control to its owner's hand.\n{T}: Add {R}{G}.",
       "type": "Land",
       "types": [
         "Land"
@@ -19065,7 +19067,7 @@
         "IMA"
       ],
       "rarity": "Rare",
-      "text": "{T}, Pay 1 life: Add {G} or {W} to your mana pool.\n{1}, {T}, Sacrifice Horizon Canopy: Draw a card.",
+      "text": "{T}, Pay 1 life: Add {G} or {W}.\n{1}, {T}, Sacrifice Horizon Canopy: Draw a card.",
       "type": "Land",
       "types": [
         "Land"
@@ -19139,7 +19141,7 @@
           "text": "If this land enters the battlefield and you control no other lands, its ability will force you to return it to your hand."
         }
       ],
-      "text": "Izzet Boilerworks enters the battlefield tapped.\nWhen Izzet Boilerworks enters the battlefield, return a land you control to its owner's hand.\n{T}: Add {U}{R} to your mana pool.",
+      "text": "Izzet Boilerworks enters the battlefield tapped.\nWhen Izzet Boilerworks enters the battlefield, return a land you control to its owner's hand.\n{T}: Add {U}{R}.",
       "type": "Land",
       "types": [
         "Land"
@@ -19207,7 +19209,7 @@
           "text": "Nimbus Maze's last two abilities check the subtypes of lands you control, not their names. You can activate the appropriate abilities as long as you control a land with the corresponding subtype, Plains or Island. Most nonbasic lands don't have basic land types, even if they produce colored mana. For example, Nimbus Maze itself is neither a Plains nor an Island, while Hallowed Fountain is both."
         }
       ],
-      "text": "{T}: Add {C} to your mana pool.\n{T}: Add {W} to your mana pool. Activate this ability only if you control an Island.\n{T}: Add {U} to your mana pool. Activate this ability only if you control a Plains.",
+      "text": "{T}: Add {C}.\n{T}: Add {W}. Activate this ability only if you control an Island.\n{T}: Add {U}. Activate this ability only if you control a Plains.",
       "type": "Land",
       "types": [
         "Land"
@@ -19281,7 +19283,7 @@
           "text": "If this land enters the battlefield and you control no other lands, its ability will force you to return it to your hand."
         }
       ],
-      "text": "Orzhov Basilica enters the battlefield tapped.\nWhen Orzhov Basilica enters the battlefield, return a land you control to its owner's hand.\n{T}: Add {W}{B} to your mana pool.",
+      "text": "Orzhov Basilica enters the battlefield tapped.\nWhen Orzhov Basilica enters the battlefield, return a land you control to its owner's hand.\n{T}: Add {W}{B}.",
       "type": "Land",
       "types": [
         "Land"
@@ -19335,7 +19337,7 @@
         "IMA"
       ],
       "rarity": "Common",
-      "text": "When Radiant Fountain enters the battlefield, you gain 2 life.\n{T}: Add {C} to your mana pool.",
+      "text": "When Radiant Fountain enters the battlefield, you gain 2 life.\n{T}: Add {C}.",
       "type": "Land",
       "types": [
         "Land"
@@ -19410,7 +19412,7 @@
           "text": "If this land enters the battlefield and you control no other lands, its ability will force you to return it to your hand."
         }
       ],
-      "text": "Rakdos Carnarium enters the battlefield tapped.\nWhen Rakdos Carnarium enters the battlefield, return a land you control to its owner's hand.\n{T}: Add {B}{R} to your mana pool.",
+      "text": "Rakdos Carnarium enters the battlefield tapped.\nWhen Rakdos Carnarium enters the battlefield, return a land you control to its owner's hand.\n{T}: Add {B}{R}.",
       "type": "Land",
       "types": [
         "Land"
@@ -19482,7 +19484,7 @@
           "text": "River of Tears produces {B} only after you've played a land, not after you've put a land onto the battlefield (such as with Evolving Wilds)."
         }
       ],
-      "text": "{T}: Add {U} to your mana pool. If you played a land this turn, add {B} to your mana pool instead.",
+      "text": "{T}: Add {U}. If you played a land this turn, add {B} instead.",
       "type": "Land",
       "types": [
         "Land"
@@ -19558,7 +19560,7 @@
           "text": "If this land enters the battlefield and you control no other lands, its ability will force you to return it to your hand."
         }
       ],
-      "text": "Selesnya Sanctuary enters the battlefield tapped.\nWhen Selesnya Sanctuary enters the battlefield, return a land you control to its owner's hand.\n{T}: Add {G}{W} to your mana pool.",
+      "text": "Selesnya Sanctuary enters the battlefield tapped.\nWhen Selesnya Sanctuary enters the battlefield, return a land you control to its owner's hand.\n{T}: Add {G}{W}.",
       "type": "Land",
       "types": [
         "Land"
@@ -19626,7 +19628,7 @@
         "IMA"
       ],
       "rarity": "Common",
-      "text": "{T}: Add {C} to your mana pool.\n{1}, {T}: Add one mana of any color to your mana pool.",
+      "text": "{T}: Add {C}.\n{1}, {T}: Add one mana of any color.",
       "type": "Land",
       "types": [
         "Land"
@@ -19697,7 +19699,7 @@
           "text": "If this land enters the battlefield and you control no other lands, its ability will force you to return it to your hand."
         }
       ],
-      "text": "Simic Growth Chamber enters the battlefield tapped.\nWhen Simic Growth Chamber enters the battlefield, return a land you control to its owner's hand.\n{T}: Add {G}{U} to your mana pool.",
+      "text": "Simic Growth Chamber enters the battlefield tapped.\nWhen Simic Growth Chamber enters the battlefield, return a land you control to its owner's hand.\n{T}: Add {G}{U}.",
       "type": "Land",
       "types": [
         "Land"

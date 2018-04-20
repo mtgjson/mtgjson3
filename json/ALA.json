@@ -2483,7 +2483,7 @@
         },
         {
           "date": "2008-10-01",
-          "text": "The cycling ability and the triggered ability are separate. If the triggered ability is countered (with Stifle, for example, or if all its targets have become illegal), the cycling ability will still resolve and you'll draw a card."
+          "text": "The cycling ability and the triggered ability are separate. If the triggered ability doesn't resolve (due to being countered with Stifle, for example, or if all its targets have become illegal), the cycling ability will still resolve and you'll draw a card."
         },
         {
           "date": "2008-10-01",
@@ -3256,7 +3256,7 @@
         "Druid",
         "Wizard"
       ],
-      "text": "At the beginning of your end step, if you control a creature with power 5 or greater, you may gain 2 life.\n{T}: Add {C} to your mana pool.",
+      "text": "At the beginning of your end step, if you control a creature with power 5 or greater, you may gain 2 life.\n{T}: Add {C}.",
       "toughness": "1",
       "type": "Creature — Human Druid Wizard",
       "types": [
@@ -3565,7 +3565,7 @@
         },
         {
           "date": "2008-10-01",
-          "text": "If the targeted creature becomes an illegal target before Call to Heel resolves, Call to Heel is countered. No one draws a card."
+          "text": "If the targeted creature becomes an illegal target before Call to Heel resolves, Call to Heel doesn't resolve. No one draws a card."
         }
       ],
       "text": "Return target creature to its owner's hand. Its controller draws a card.",
@@ -3805,7 +3805,7 @@
         "Human",
         "Wizard"
       ],
-      "text": "{T}: Target player puts the top card of his or her library into his or her graveyard.",
+      "text": "{T}: Target player puts the top card of their library into their graveyard.",
       "toughness": "1",
       "type": "Creature — Human Wizard",
       "types": [
@@ -4217,7 +4217,7 @@
           "text": "The targeted opponent has two options: Let you have the three revealed cards or let you have five unknown cards. Note that if the opponent goes with the first option, you put cards into your hand rather than draw them (in case something like Hoofprints of the Stag cares about that), but if the opponent goes with the second option, you actually draw cards."
         }
       ],
-      "text": "Reveal the top three cards of your library. Target opponent may choose to put those cards into your hand. If he or she doesn't, put those cards into your graveyard and draw five cards.",
+      "text": "Reveal the top three cards of your library. Target opponent may choose to put those cards into your hand. If they don't, put those cards into your graveyard and draw five cards.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -4648,7 +4648,8 @@
       "printings": [
         "ALA",
         "MMA",
-        "C16"
+        "C16",
+        "DDU"
       ],
       "rarity": "Common",
       "rulings": [
@@ -5583,7 +5584,7 @@
         "CMD"
       ],
       "rarity": "Rare",
-      "text": "Whenever an opponent casts a spell, that player puts the top two cards of his or her library into his or her graveyard.",
+      "text": "Whenever an opponent casts a spell, that player puts the top two cards of their library into their graveyard.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -6036,7 +6037,7 @@
         },
         {
           "date": "2008-10-01",
-          "text": "The cycling ability and the triggered ability are separate. If the triggered ability is countered (with Stifle, for example, or if all its targets have become illegal), the cycling ability will still resolve and you'll draw a card."
+          "text": "The cycling ability and the triggered ability are separate. If the triggered ability doesn't resolve (due to being countered with Stifle, for example, or if all its targets have become illegal), the cycling ability will still resolve and you'll draw a card."
         },
         {
           "date": "2008-10-01",
@@ -6720,7 +6721,7 @@
         },
         {
           "date": "2009-10-01",
-          "text": "A noncreature permanent that turns into a creature is subject to the \"summoning sickness\" rule: It can only attack, and its {T} abilities can only be activated, if its controller has continuously controlled that permanent since the beginning of his or her most recent turn."
+          "text": "A noncreature permanent that turns into a creature is subject to the \"summoning sickness\" rule: It can only attack, and its {T} abilities can only be activated, if its controller has continuously controlled that permanent since the beginning of their most recent turn."
         },
         {
           "date": "2009-10-01",
@@ -7478,10 +7479,10 @@
         },
         {
           "date": "2017-03-14",
-          "text": "You can cast Bone Splinters targeting the creature you intend to sacrifice for its cost. This is because targets are chosen before costs are paid. Bone Splinters will be countered as it tries to resolve in this case."
+          "text": "You can cast Bone Splinters targeting the creature you intend to sacrifice for its cost. This is because targets are chosen before costs are paid. Bone Splinters won't resolve as it tries to resolve in this case."
         }
       ],
-      "text": "As an additional cost to cast Bone Splinters, sacrifice a creature.\nDestroy target creature.",
+      "text": "As an additional cost to cast this spell, sacrifice a creature.\nDestroy target creature.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -8804,10 +8805,6 @@
         {
           "date": "2008-10-01",
           "text": "Similarly, if the third ability resolves but you don't lose the game for some reason (because you control Platinum Angel, perhaps), it will immediately trigger again if your graveyard is still empty. Immortal Coil + Platinum Angel + an empty graveyard is an involuntary infinite loop. Unless a player disrupts it, the game will end in a draw."
-        },
-        {
-          "date": "2008-10-01",
-          "text": "Suppose you control Immortal Coil and a planeswalker, and a source controlled by an opponent would deal noncombat damage to you. Both Immortal Coil and the planeswalker have effects that could affect that damage. You choose one to apply. -- If you apply Immortal Coil's effect, the damage is prevented. The planeswalker replacement effect is no longer applicable. -- If you apply the planeswalker replacement effect, your opponent then chooses whether he or she wants to redirect the damage to your planeswalker. If your opponent does, then that many loyalty counters are removed from the planeswalker, and Immortal Coil's effect is no longer applicable. If your opponent doesn't, then Immortal Coil's effect applies and the damage is prevented."
         }
       ],
       "text": "{T}, Exile two cards from your graveyard: Draw a card.\nIf damage would be dealt to you, prevent that damage. Exile a card from your graveyard for each 1 damage prevented this way.\nWhen there are no cards in your graveyard, you lose the game.",
@@ -9235,7 +9232,7 @@
         },
         {
           "date": "2008-10-01",
-          "text": "The cycling ability and the triggered ability are separate. If the triggered ability is countered (with Stifle, for example, or if all its targets have become illegal), the cycling ability will still resolve and you'll draw a card."
+          "text": "The cycling ability and the triggered ability are separate. If the triggered ability doesn't resolve (due to being countered with Stifle, for example, or if all its targets have become illegal), the cycling ability will still resolve and you'll draw a card."
         },
         {
           "date": "2008-10-01",
@@ -9353,7 +9350,7 @@
       "subtypes": [
         "Golem"
       ],
-      "text": "You may sacrifice three artifacts rather than pay Salvage Titan's mana cost.\nExile three artifact cards from your graveyard: Return Salvage Titan from your graveyard to your hand.",
+      "text": "You may sacrifice three artifacts rather than pay this spell's mana cost.\nExile three artifact cards from your graveyard: Return Salvage Titan from your graveyard to your hand.",
       "toughness": "4",
       "type": "Artifact Creature — Golem",
       "types": [
@@ -9552,7 +9549,7 @@
       "rulings": [
         {
           "date": "2008-10-01",
-          "text": "If the targeted card is removed from the graveyard before Shadowfeed resolves, Shadowfeed is countered. You won't gain 3 life."
+          "text": "If the targeted card is removed from the graveyard before Shadowfeed resolves, Shadowfeed doesn't resolve. You won't gain 3 life."
         }
       ],
       "text": "Exile target card from a graveyard. You gain 3 life.",
@@ -10098,7 +10095,7 @@
       "rulings": [
         {
           "date": "2008-10-01",
-          "text": "When the first ability resolves, if the targeted creature is no longer on the battlefield, the ability is countered for having no legal targets. No damage is dealt."
+          "text": "When the first ability resolves, if the targeted creature is no longer on the battlefield, the ability doesn't resolve for having no legal targets. No damage is dealt."
         },
         {
           "date": "2008-10-01",
@@ -10347,7 +10344,7 @@
       "subtypes": [
         "Elemental"
       ],
-      "text": "Sacrifice Bloodpyre Elemental: Bloodpyre Elemental deals 4 damage to target creature. Activate this ability only any time you could cast a sorcery.",
+      "text": "Sacrifice Bloodpyre Elemental: It deals 4 damage to target creature. Activate this ability only any time you could cast a sorcery.",
       "toughness": "1",
       "type": "Creature — Elemental",
       "types": [
@@ -10995,7 +10992,7 @@
         "Druid",
         "Shaman"
       ],
-      "text": "At the beginning of your end step, if you control a creature with power 5 or greater, you may have Exuberant Firestoker deal 2 damage to target player.\n{T}: Add {C} to your mana pool.",
+      "text": "At the beginning of your end step, if you control a creature with power 5 or greater, you may have Exuberant Firestoker deal 2 damage to target player or planeswalker.\n{T}: Add {C}.",
       "toughness": "1",
       "type": "Creature — Human Druid Shaman",
       "types": [
@@ -11102,7 +11099,7 @@
       "subtypes": [
         "Dragon"
       ],
-      "text": "Flying\nWhenever Flameblast Dragon attacks, you may pay {X}{R}. If you do, Flameblast Dragon deals X damage to target creature or player.",
+      "text": "Flying\nWhenever Flameblast Dragon attacks, you may pay {X}{R}. If you do, Flameblast Dragon deals X damage to any target.",
       "toughness": "5",
       "type": "Creature — Dragon",
       "types": [
@@ -11528,7 +11525,7 @@
       "subtypes": [
         "Lizard"
       ],
-      "text": "Whenever another creature dies, you may have Hissing Iguanar deal 1 damage to target player.",
+      "text": "Whenever another creature dies, you may have Hissing Iguanar deal 1 damage to target player or planeswalker.",
       "toughness": "1",
       "type": "Creature — Lizard",
       "types": [
@@ -12166,14 +12163,14 @@
         },
         {
           "date": "2008-10-01",
-          "text": "The cycling ability and the triggered ability are separate. If the triggered ability is countered (with Stifle, for example, or if all its targets have become illegal), the cycling ability will still resolve and you'll draw a card."
+          "text": "The cycling ability and the triggered ability are separate. If the triggered ability doesn't resolve (due to being countered with Stifle, for example, or if all its targets have become illegal), the cycling ability will still resolve and you'll draw a card."
         },
         {
           "date": "2008-10-01",
           "text": "You can cycle this card even if there are no targets for the triggered ability. That's because the cycling ability itself has no targets."
         }
       ],
-      "text": "Resounding Thunder deals 3 damage to target creature or player.\nCycling {5}{B}{R}{G} ({5}{B}{R}{G}, Discard this card: Draw a card.)\nWhen you cycle Resounding Thunder, it deals 6 damage to target creature or player.",
+      "text": "Resounding Thunder deals 3 damage to any target.\nCycling {5}{B}{R}{G} ({5}{B}{R}{G}, Discard this card: Draw a card.)\nWhen you cycle Resounding Thunder, it deals 6 damage to any target.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -12603,12 +12600,8 @@
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2008-10-01",
-          "text": "Each time a creature is put into a graveyard from the battlefield, check whether Skeletonize had dealt damage to it during that turn. If so, Skeletonize's delayed triggered ability will trigger."
-        },
-        {
-          "date": "2008-10-01",
-          "text": "You get the token, regardless of who controlled the creature or whose graveyard it was put into."
+          "date": "2018-03-16",
+          "text": "You get the token created by Skeletonize's delayed triggered ability regardless of who controlled the creature."
         }
       ],
       "text": "Skeletonize deals 3 damage to target creature. When a creature dealt damage this way dies this turn, create a 1/1 black Skeleton creature token with \"{B}: Regenerate this creature.\"",
@@ -12708,10 +12701,10 @@
       "rulings": [
         {
           "date": "2008-10-01",
-          "text": "If either target has become illegal by the time Soul's Fire resolves, the spell will still resolve but have no effect. If the first target is illegal, it can't perform any actions, so it can't deal damage. If the second target is illegal, there's nothing for the first target to deal damage to. If both targets have become illegal, the spell will be countered."
+          "text": "If either target has become illegal by the time Soul's Fire resolves, the spell will still resolve but have no effect. If the first target is illegal, it can't perform any actions, so it can't deal damage. If the second target is illegal, there's nothing for the first target to deal damage to. If both targets have become illegal, the spell won't resolve."
         }
       ],
-      "text": "Target creature you control on the battlefield deals damage equal to its power to target creature or player.",
+      "text": "Target creature you control deals damage equal to its power to any target.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -13278,7 +13271,7 @@
         "Human",
         "Shaman"
       ],
-      "text": "{T}: Vithian Stinger deals 1 damage to target creature or player.\nUnearth {1}{R} ({1}{R}: Return this card from your graveyard to the battlefield. It gains haste. Exile it at the beginning of the next end step or if it would leave the battlefield. Unearth only as a sorcery.)",
+      "text": "{T}: Vithian Stinger deals 1 damage to any target.\nUnearth {1}{R} ({1}{R}: Return this card from your graveyard to the battlefield. It gains haste. Exile it at the beginning of the next end step or if it would leave the battlefield. Unearth only as a sorcery.)",
       "toughness": "1",
       "type": "Creature — Human Shaman",
       "types": [
@@ -13480,7 +13473,7 @@
           "text": "The ability checks that creature's power only once: when that creature enters the battlefield. The trigger checks a creature's initial power upon being put on the battlefield, so it will take into account counters that it enters the battlefield with and static abilities that may give it a continuous power boost once it's on the battlefield (such as the one on Glorious Anthem). After the creature is already on the battlefield, boosting its power with a spell (such as Giant Growth), activated ability, or triggered ability won't allow this ability to trigger; it's too late by then. Once the ability triggers, it will resolve no matter what the creature's power may become while the ability is on the stack."
         }
       ],
-      "text": "Whenever a creature with power 5 or greater enters the battlefield under your control, you may have Where Ancients Tread deal 5 damage to target creature or player.",
+      "text": "Whenever a creature with power 5 or greater enters the battlefield under your control, you may have Where Ancients Tread deal 5 damage to any target.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -14119,7 +14112,7 @@
         "Elf",
         "Druid"
       ],
-      "text": "{T}: Add {R}, {G}, or {W} to your mana pool.",
+      "text": "{T}: Add {R}, {G}, or {W}.",
       "toughness": "1",
       "type": "Creature — Elf Druid",
       "types": [
@@ -14227,7 +14220,7 @@
         "Druid",
         "Warrior"
       ],
-      "text": "At the beginning of your end step, if you control a creature with power 5 or greater, you may draw a card.\n{T}: Add {C} to your mana pool.",
+      "text": "At the beginning of your end step, if you control a creature with power 5 or greater, you may draw a card.\n{T}: Add {C}.",
       "toughness": "2",
       "type": "Creature — Human Druid Warrior",
       "types": [
@@ -14852,7 +14845,7 @@
         "Elf",
         "Druid"
       ],
-      "text": "Whenever a player taps a Mountain, Forest, or Plains for mana, that player adds one mana to his or her mana pool of any type that land produced.",
+      "text": "Whenever a player taps a Mountain, Forest, or Plains for mana, that player adds one mana of any type that land produced.",
       "toughness": "3",
       "type": "Creature — Elf Druid",
       "types": [
@@ -15468,6 +15461,10 @@
           "legality": "Legal"
         },
         {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Khans of Tarkir Block",
           "legality": "Legal"
         },
@@ -15525,7 +15522,8 @@
         "M15",
         "KTK",
         "DTK",
-        "RIX"
+        "RIX",
+        "DDU"
       ],
       "rarity": "Common",
       "text": "Destroy target artifact or enchantment.",
@@ -15836,7 +15834,7 @@
         },
         {
           "date": "2008-10-01",
-          "text": "The cycling ability and the triggered ability are separate. If the triggered ability is countered (with Stifle, for example, or if all its targets have become illegal), the cycling ability will still resolve and you'll draw a card."
+          "text": "The cycling ability and the triggered ability are separate. If the triggered ability doesn't resolve (due to being countered with Stifle, for example, or if all its targets have become illegal), the cycling ability will still resolve and you'll draw a card."
         },
         {
           "date": "2008-10-01",
@@ -16082,7 +16080,7 @@
         "Elf",
         "Druid"
       ],
-      "text": "{T}: Reveal any number of creature cards with power 5 or greater from your hand. Add {G} to your mana pool for each card revealed this way.",
+      "text": "{T}: Reveal any number of creature cards with power 5 or greater from your hand. Add {G} for each card revealed this way.",
       "toughness": "2",
       "type": "Creature — Elf Druid",
       "types": [
@@ -16938,7 +16936,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "+1: Target permanent doesn't untap during its controller's next untap step.\n−2: Ajani Vengeant deals 3 damage to target creature or player and you gain 3 life.\n−7: Destroy all lands target player controls.",
+      "text": "+1: Target permanent doesn't untap during its controller's next untap step.\n−2: Ajani Vengeant deals 3 damage to any target and you gain 3 life.\n−7: Destroy all lands target player controls.",
       "type": "Legendary Planeswalker — Ajani",
       "types": [
         "Planeswalker"
@@ -17155,7 +17153,7 @@
           "text": "The targeted player will discard two cards even if some or all of Blightning's damage is prevented or redirected."
         }
       ],
-      "text": "Blightning deals 3 damage to target player. That player discards two cards.",
+      "text": "Blightning deals 3 damage to target player or planeswalker. That player or that planeswalker's controller discards two cards.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -18055,7 +18053,7 @@
         },
         {
           "date": "2017-03-14",
-          "text": "All of the actions for Cruel Ultimatum are performed sequentially, in the order listed. Earlier actions may affect how you perform later actions. For example, if the opponent sacrifices a creature that he or she controls but you own, it will end up in your graveyard. When Cruel Ultimatum lets you return a creature card from your graveyard to your hand, you can choose that one."
+          "text": "All of the actions for Cruel Ultimatum are performed sequentially, in the order listed. Earlier actions may affect how you perform later actions. For example, if the opponent sacrifices a creature that they control but you own, it will end up in your graveyard. When Cruel Ultimatum lets you return a creature card from your graveyard to your hand, you can choose that one."
         },
         {
           "date": "2017-03-14",
@@ -18263,12 +18261,6 @@
         "ALA"
       ],
       "rarity": "Mythic Rare",
-      "rulings": [
-        {
-          "date": "2008-10-01",
-          "text": "Suppose you control Empyrial Archangel and a planeswalker, and a source controlled by an opponent would deal noncombat damage to you. Both Empyrial Archangel and the planeswalker have effects that change (or could change) what that damage would be dealt to. You choose one to apply. -- If you apply Empyrial Archangel's effect, the damage is redirected to it. The planeswalker replacement effect is no longer applicable. -- If you apply the planeswalker replacement effect, your opponent then chooses whether he or she wants to redirect the damage to your planeswalker. If your opponent does, that many loyalty counters are removed from the it. If your opponent doesn't, then Empyrial Archangel's effect applies and the damage is redirected to it."
-        }
-      ],
       "subtypes": [
         "Angel"
       ],
@@ -19894,7 +19886,7 @@
       "rulings": [
         {
           "date": "2008-10-01",
-          "text": "If the targeted card is removed from the graveyard before the ability resolves, the ability is countered. You won't get a Saproling token."
+          "text": "If the targeted card is removed from the graveyard before the ability resolves, the ability doesn't resolve. You won't get a Saproling token."
         }
       ],
       "text": "{2}: Exile target creature card from a graveyard. Create a 1/1 green Saproling creature token.",
@@ -20226,11 +20218,15 @@
         },
         {
           "date": "2008-10-01",
-          "text": "For you to cast Qasali Ambusher as described in its second ability, a creature has to be attacking *you*. If creatures are attacking only planeswalkers, you won't be able to cast Qasali Ambusher this way. If you're playing a Two-Headed Giant game and a creature is attacking your team, you will be able to cast Qasali Ambusher this way."
+          "text": "For you to cast Qasali Ambusher as described in its second ability, a creature has to be attacking *you*. If creatures are attacking only planeswalkers, you won't be able to cast Qasali Ambusher this way."
         },
         {
           "date": "2008-10-01",
           "text": "Qasali Ambusher's second ability is looking for lands with the subtypes Forest and Plains. Those lands don't need to be named Forest and Plains. It's okay if both subtypes are from the same land (such as Savannah or Temple Garden)."
+        },
+        {
+          "date": "2018-04-27",
+          "text": "If you're playing a Two-Headed Giant game and a creature is attacking your teammate, you won't be able to cast Qasali Ambusher this way."
         }
       ],
       "subtypes": [
@@ -21485,7 +21481,7 @@
       "rulings": [
         {
           "date": "2008-10-01",
-          "text": "If the targeted creature becomes an illegal target by the time Sigil Blessing resolves, the entire spell will be countered. Your other creatures won't get +1/+1."
+          "text": "If the targeted creature becomes an illegal target by the time Sigil Blessing resolves, the entire spell won't resolve. Your other creatures won't get +1/+1."
         }
       ],
       "text": "Until end of turn, target creature you control gets +3/+3 and other creatures you control get +1/+1.",
@@ -21808,7 +21804,7 @@
         "Druid",
         "Knight"
       ],
-      "text": "Vigilance\n{T}: Add {G} to your mana pool.",
+      "text": "Vigilance\n{T}: Add {G}.",
       "toughness": "2",
       "type": "Creature — Human Druid Knight",
       "types": [
@@ -21912,7 +21908,7 @@
       "rulings": [
         {
           "date": "2017-03-14",
-          "text": "If multiple Stoic Angels are on the battlefield, their effects are redundant. Each player will still be able to untap no more than one creature during his or her untap step."
+          "text": "If multiple Stoic Angels are on the battlefield, their effects are redundant. Each player will still be able to untap no more than one creature during their untap step."
         },
         {
           "date": "2017-03-14",
@@ -22030,7 +22026,7 @@
         },
         {
           "date": "2008-10-01",
-          "text": "If you cast Swerve on a spell that targets a spell on the stack (like Cancel does, for example), you can't change that spell's target to itself. You can, however, change that spell's target to Swerve. If you do, that spell will be countered when it tries to resolve because Swerve will have left the stack by then."
+          "text": "If you cast Swerve on a spell that targets a spell on the stack (like Cancel does, for example), you can't change that spell's target to itself. You can, however, change that spell's target to Swerve. If you do, that spell won't resolve when it tries to resolve because Swerve will have left the stack by then."
         },
         {
           "date": "2008-10-01",
@@ -22146,7 +22142,7 @@
         "Human",
         "Rogue"
       ],
-      "text": "{U}{B}, {T}: Target player loses 1 life and reveals his or her hand.",
+      "text": "{U}{B}, {T}: Target player loses 1 life and reveals their hand.",
       "toughness": "1",
       "type": "Artifact Creature — Human Rogue",
       "types": [
@@ -22256,7 +22252,7 @@
       "subtypes": [
         "Zombie"
       ],
-      "text": "When Tidehollow Sculler enters the battlefield, target opponent reveals his or her hand and you choose a nonland card from it. Exile that card.\nWhen Tidehollow Sculler leaves the battlefield, return the exiled card to its owner's hand.",
+      "text": "When Tidehollow Sculler enters the battlefield, target opponent reveals their hand and you choose a nonland card from it. Exile that card.\nWhen Tidehollow Sculler leaves the battlefield, return the exiled card to its owner's hand.",
       "toughness": "2",
       "type": "Artifact Creature — Zombie",
       "types": [
@@ -23162,7 +23158,7 @@
         },
         {
           "date": "2008-10-01",
-          "text": "If all the players remaining in a game would lose simultaneously but one of them controls Lich's Mirror, that player does what Lich's Mirror says instead of losing, and everyone else loses. As a result, the controller of Lich's Mirror wins the game because all of his or her opponents have lost. (If Lich's Mirror weren't in the picture, then the game would be a draw.)"
+          "text": "If all the players remaining in a game would lose simultaneously but one of them controls Lich's Mirror, that player does what Lich's Mirror says instead of losing, and everyone else loses. As a result, the controller of Lich's Mirror wins the game because all of their opponents have lost. (If Lich's Mirror weren't in the picture, then the game would be a draw.)"
         },
         {
           "date": "2008-10-01",
@@ -23182,7 +23178,7 @@
         },
         {
           "date": "2010-06-15",
-          "text": "In a Two-Headed Giant game, if your team would lose the game and you control Lich's Mirror, your team won't lose. Instead, you'll do what Lich's Mirror says and your teammate won't do anything. This is true even if the reason your team would lose is because your teammate tried to draw a card with an empty library or was affected by an ability that said he or she lost the game. Your life total (which is the same as your team's life total) becomes 20. Your team's life total is adjusted by the amount of life you gain or lose as a result of this, which basically means your team's life total becomes 20."
+          "text": "In a Two-Headed Giant game, if your team would lose the game and you control Lich's Mirror, your team won't lose. Instead, you'll do what Lich's Mirror says and your teammate won't do anything. This is true even if the reason your team would lose is because your teammate tried to draw a card with an empty library or was affected by an ability that said they lost the game. Your life total (which is the same as your team's life total) becomes 20. Your team's life total is adjusted by the amount of life you gain or lose as a result of this, which basically means your team's life total becomes 20."
         }
       ],
       "text": "If you would lose the game, instead shuffle your hand, your graveyard, and all permanents you own into your library, then draw seven cards and your life total becomes 20.",
@@ -23380,7 +23376,7 @@
         "ALA"
       ],
       "rarity": "Common",
-      "text": "{T}: Add {G}, {W}, or {U} to your mana pool.",
+      "text": "{T}: Add {G}, {W}, or {U}.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -23475,7 +23471,7 @@
         "C13"
       ],
       "rarity": "Common",
-      "text": "{T}: Add {W}, {U}, or {B} to your mana pool.",
+      "text": "{T}: Add {W}, {U}, or {B}.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -23571,7 +23567,7 @@
         "E01"
       ],
       "rarity": "Common",
-      "text": "{T}: Add {U}, {B}, or {R} to your mana pool.",
+      "text": "{T}: Add {U}, {B}, or {R}.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -23665,7 +23661,7 @@
         "C13"
       ],
       "rarity": "Common",
-      "text": "{T}: Add {B}, {R}, or {G} to your mana pool.",
+      "text": "{T}: Add {B}, {R}, or {G}.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -23758,7 +23754,7 @@
         "ALA"
       ],
       "rarity": "Common",
-      "text": "{T}: Add {R}, {G}, or {W} to your mana pool.",
+      "text": "{T}: Add {R}, {G}, or {W}.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -23851,21 +23847,21 @@
       "rulings": [
         {
           "date": "2008-10-01",
-          "text": "That player loses half his or her life after combat damage has been subtracted from the player's life total. The amount of life the player loses is determined as the triggered ability resolves."
+          "text": "That player loses half their life after combat damage has been subtracted from the player's life total. The amount of life the player loses is determined as the triggered ability resolves."
         },
         {
           "date": "2008-10-01",
-          "text": "If multiple Quietus Spikes trigger at the same time, that player loses half his or her life when the first ability resolves, then loses half of the remainder when the next ability resolves, and so on. The player does not lose the same amount each time."
+          "text": "If multiple Quietus Spikes trigger at the same time, that player loses half their life when the first ability resolves, then loses half of the remainder when the next ability resolves, and so on. The player does not lose the same amount each time."
         },
         {
           "date": "2010-06-15",
-          "text": "In a Two-Headed Giant game, if a creature equipped with Quietus Spike would assign combat damage to the defending team, its damage is assigned to only one of the defending players. After combat damage is dealt, Quietus Spike looks at that player's life total (which is the same as the team's life total) when determining how much life the team will lose, which basically means the team's life total is halved. Here's an example of the math: The team has 19 life, so the player has 19 life. Quietus Spike causes the team to lose 10 life (19 divided by 2, rounded up). The team's life total becomes 9 (19 minus 10)."
+          "text": "In a Two-Headed Giant game, after combat damage is dealt, Quietus Spike looks at that player's life total (which is the same as the team's life total) when determining how much life the team will lose, which basically means the team's life total is halved. Here's an example of the math: The team has 19 life, so the player has 19 life. Quietus Spike causes the team to lose 10 life (19 divided by 2, rounded up). The team's life total becomes 9 (19 minus 10)."
         }
       ],
       "subtypes": [
         "Equipment"
       ],
-      "text": "Equipped creature has deathtouch.\nWhenever equipped creature deals combat damage to a player, that player loses half his or her life, rounded up.\nEquip {3}",
+      "text": "Equipped creature has deathtouch.\nWhenever equipped creature deals combat damage to a player, that player loses half their life, rounded up.\nEquip {3}",
       "type": "Artifact — Equipment",
       "types": [
         "Artifact"
@@ -23967,7 +23963,7 @@
           "text": "You can activate Relic of Progenitus's second ability even if no players have any cards in their graveyards. You'll still draw a card."
         }
       ],
-      "text": "{T}: Target player exiles a card from his or her graveyard.\n{1}, Exile Relic of Progenitus: Exile all cards from all graveyards. Draw a card.",
+      "text": "{T}: Target player exiles a card from their graveyard.\n{1}, Exile Relic of Progenitus: Exile all cards from all graveyards. Draw a card.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -24163,7 +24159,7 @@
         "C17"
       ],
       "rarity": "Uncommon",
-      "text": "Arcane Sanctum enters the battlefield tapped.\n{T}: Add {W}, {U}, or {B} to your mana pool.",
+      "text": "Arcane Sanctum enters the battlefield tapped.\n{T}: Add {W}, {U}, or {B}.",
       "type": "Land",
       "types": [
         "Land"
@@ -24252,7 +24248,7 @@
         "CMA"
       ],
       "rarity": "Common",
-      "text": "{T}: Add {C} to your mana pool.\n{1}, {T}, Sacrifice Bant Panorama: Search your library for a basic Forest, Plains, or Island card and put it onto the battlefield tapped. Then shuffle your library.",
+      "text": "{T}: Add {C}.\n{1}, {T}, Sacrifice Bant Panorama: Search your library for a basic Forest, Plains, or Island card and put it onto the battlefield tapped. Then shuffle your library.",
       "type": "Land",
       "types": [
         "Land"
@@ -24351,7 +24347,7 @@
         "E02"
       ],
       "rarity": "Uncommon",
-      "text": "Crumbling Necropolis enters the battlefield tapped.\n{T}: Add {U}, {B}, or {R} to your mana pool.",
+      "text": "Crumbling Necropolis enters the battlefield tapped.\n{T}: Add {U}, {B}, or {R}.",
       "type": "Land",
       "types": [
         "Land"
@@ -24439,7 +24435,7 @@
         "C13"
       ],
       "rarity": "Common",
-      "text": "{T}: Add {C} to your mana pool.\n{1}, {T}, Sacrifice Esper Panorama: Search your library for a basic Plains, Island, or Swamp card and put it onto the battlefield tapped. Then shuffle your library.",
+      "text": "{T}: Add {C}.\n{1}, {T}, Sacrifice Esper Panorama: Search your library for a basic Plains, Island, or Swamp card and put it onto the battlefield tapped. Then shuffle your library.",
       "type": "Land",
       "types": [
         "Land"
@@ -24529,7 +24525,7 @@
         "C17"
       ],
       "rarity": "Common",
-      "text": "{T}: Add {C} to your mana pool.\n{1}, {T}, Sacrifice Grixis Panorama: Search your library for a basic Island, Swamp, or Mountain card and put it onto the battlefield tapped. Then shuffle your library.",
+      "text": "{T}: Add {C}.\n{1}, {T}, Sacrifice Grixis Panorama: Search your library for a basic Island, Swamp, or Mountain card and put it onto the battlefield tapped. Then shuffle your library.",
       "type": "Land",
       "types": [
         "Land"
@@ -24617,7 +24613,7 @@
         "C13"
       ],
       "rarity": "Common",
-      "text": "{T}: Add {C} to your mana pool.\n{1}, {T}, Sacrifice Jund Panorama: Search your library for a basic Swamp, Mountain, or Forest card and put it onto the battlefield tapped. Then shuffle your library.",
+      "text": "{T}: Add {C}.\n{1}, {T}, Sacrifice Jund Panorama: Search your library for a basic Swamp, Mountain, or Forest card and put it onto the battlefield tapped. Then shuffle your library.",
       "type": "Land",
       "types": [
         "Land"
@@ -24715,7 +24711,7 @@
         "E02"
       ],
       "rarity": "Uncommon",
-      "text": "Jungle Shrine enters the battlefield tapped.\n{T}: Add {R}, {G}, or {W} to your mana pool.",
+      "text": "Jungle Shrine enters the battlefield tapped.\n{T}: Add {R}, {G}, or {W}.",
       "type": "Land",
       "types": [
         "Land"
@@ -24803,7 +24799,7 @@
         "C13"
       ],
       "rarity": "Common",
-      "text": "{T}: Add {C} to your mana pool.\n{1}, {T}, Sacrifice Naya Panorama: Search your library for a basic Mountain, Forest, or Plains card and put it onto the battlefield tapped. Then shuffle your library.",
+      "text": "{T}: Add {C}.\n{1}, {T}, Sacrifice Naya Panorama: Search your library for a basic Mountain, Forest, or Plains card and put it onto the battlefield tapped. Then shuffle your library.",
       "type": "Land",
       "types": [
         "Land"
@@ -24900,7 +24896,7 @@
         "C17"
       ],
       "rarity": "Uncommon",
-      "text": "Savage Lands enters the battlefield tapped.\n{T}: Add {B}, {R}, or {G} to your mana pool.",
+      "text": "Savage Lands enters the battlefield tapped.\n{T}: Add {B}, {R}, or {G}.",
       "type": "Land",
       "types": [
         "Land"
@@ -24997,7 +24993,7 @@
         "C17"
       ],
       "rarity": "Uncommon",
-      "text": "Seaside Citadel enters the battlefield tapped.\n{T}: Add {G}, {W}, or {U} to your mana pool.",
+      "text": "Seaside Citadel enters the battlefield tapped.\n{T}: Add {G}, {W}, or {U}.",
       "type": "Land",
       "types": [
         "Land"
@@ -25373,7 +25369,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -25763,7 +25760,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -26153,7 +26151,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -26543,7 +26542,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -26593,7 +26593,22 @@
         {
           "language": "Chinese Simplified",
           "name": "海岛",
+          "multiverseid": 187452
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "海岛",
           "multiverseid": 187453
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "海岛",
+          "multiverseid": 187454
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "海岛",
+          "multiverseid": 187455
         },
         {
           "language": "German",
@@ -26616,24 +26631,24 @@
           "multiverseid": 187704
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Ilha",
-          "multiverseid": 188199
+          "language": "Spanish",
+          "name": "Isla",
+          "multiverseid": 187950
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Ilha",
-          "multiverseid": 188200
+          "language": "Spanish",
+          "name": "Isla",
+          "multiverseid": 187951
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Ilha",
-          "multiverseid": 188201
+          "language": "Spanish",
+          "name": "Isla",
+          "multiverseid": 187952
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Ilha",
-          "multiverseid": 188202
+          "language": "Spanish",
+          "name": "Isla",
+          "multiverseid": 187953
         },
         {
           "language": "Italian",
@@ -26679,21 +26694,6 @@
           "language": "Russian",
           "name": "Остров",
           "multiverseid": 188946
-        },
-        {
-          "language": "Russian",
-          "name": "Остров",
-          "multiverseid": 188947
-        },
-        {
-          "language": "Russian",
-          "name": "Остров",
-          "multiverseid": 188948
-        },
-        {
-          "language": "Russian",
-          "name": "Остров",
-          "multiverseid": 188949
         }
       ],
       "id": "8105bea312202bb15e620414e68326fb620d91fa",
@@ -26932,7 +26932,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -26982,7 +26984,22 @@
         {
           "language": "Chinese Simplified",
           "name": "海岛",
+          "multiverseid": 187452
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "海岛",
           "multiverseid": 187453
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "海岛",
+          "multiverseid": 187454
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "海岛",
+          "multiverseid": 187455
         },
         {
           "language": "German",
@@ -27005,24 +27022,24 @@
           "multiverseid": 187704
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Ilha",
-          "multiverseid": 188199
+          "language": "Spanish",
+          "name": "Isla",
+          "multiverseid": 187950
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Ilha",
-          "multiverseid": 188200
+          "language": "Spanish",
+          "name": "Isla",
+          "multiverseid": 187951
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Ilha",
-          "multiverseid": 188201
+          "language": "Spanish",
+          "name": "Isla",
+          "multiverseid": 187952
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Ilha",
-          "multiverseid": 188202
+          "language": "Spanish",
+          "name": "Isla",
+          "multiverseid": 187953
         },
         {
           "language": "Italian",
@@ -27068,21 +27085,6 @@
           "language": "Russian",
           "name": "Остров",
           "multiverseid": 188946
-        },
-        {
-          "language": "Russian",
-          "name": "Остров",
-          "multiverseid": 188947
-        },
-        {
-          "language": "Russian",
-          "name": "Остров",
-          "multiverseid": 188948
-        },
-        {
-          "language": "Russian",
-          "name": "Остров",
-          "multiverseid": 188949
         }
       ],
       "id": "7efbd7c6e42d7ecde13b242e9d84faa7d4ea30c2",
@@ -27321,7 +27323,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -27371,7 +27375,22 @@
         {
           "language": "Chinese Simplified",
           "name": "海岛",
+          "multiverseid": 187452
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "海岛",
           "multiverseid": 187453
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "海岛",
+          "multiverseid": 187454
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "海岛",
+          "multiverseid": 187455
         },
         {
           "language": "German",
@@ -27394,24 +27413,24 @@
           "multiverseid": 187704
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Ilha",
-          "multiverseid": 188199
+          "language": "Spanish",
+          "name": "Isla",
+          "multiverseid": 187950
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Ilha",
-          "multiverseid": 188200
+          "language": "Spanish",
+          "name": "Isla",
+          "multiverseid": 187951
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Ilha",
-          "multiverseid": 188201
+          "language": "Spanish",
+          "name": "Isla",
+          "multiverseid": 187952
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Ilha",
-          "multiverseid": 188202
+          "language": "Spanish",
+          "name": "Isla",
+          "multiverseid": 187953
         },
         {
           "language": "Italian",
@@ -27457,21 +27476,6 @@
           "language": "Russian",
           "name": "Остров",
           "multiverseid": 188946
-        },
-        {
-          "language": "Russian",
-          "name": "Остров",
-          "multiverseid": 188947
-        },
-        {
-          "language": "Russian",
-          "name": "Остров",
-          "multiverseid": 188948
-        },
-        {
-          "language": "Russian",
-          "name": "Остров",
-          "multiverseid": 188949
         }
       ],
       "id": "a45b6844bbf1add9165876e7de6ffbf208e38800",
@@ -27710,7 +27714,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -27760,7 +27766,22 @@
         {
           "language": "Chinese Simplified",
           "name": "海岛",
+          "multiverseid": 187452
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "海岛",
           "multiverseid": 187453
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "海岛",
+          "multiverseid": 187454
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "海岛",
+          "multiverseid": 187455
         },
         {
           "language": "German",
@@ -27783,24 +27804,24 @@
           "multiverseid": 187704
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Ilha",
-          "multiverseid": 188199
+          "language": "Spanish",
+          "name": "Isla",
+          "multiverseid": 187950
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Ilha",
-          "multiverseid": 188200
+          "language": "Spanish",
+          "name": "Isla",
+          "multiverseid": 187951
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Ilha",
-          "multiverseid": 188201
+          "language": "Spanish",
+          "name": "Isla",
+          "multiverseid": 187952
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Ilha",
-          "multiverseid": 188202
+          "language": "Spanish",
+          "name": "Isla",
+          "multiverseid": 187953
         },
         {
           "language": "Italian",
@@ -27846,21 +27867,6 @@
           "language": "Russian",
           "name": "Остров",
           "multiverseid": 188946
-        },
-        {
-          "language": "Russian",
-          "name": "Остров",
-          "multiverseid": 188947
-        },
-        {
-          "language": "Russian",
-          "name": "Остров",
-          "multiverseid": 188948
-        },
-        {
-          "language": "Russian",
-          "name": "Остров",
-          "multiverseid": 188949
         }
       ],
       "id": "5199daa70d3246649b72b7ca916281e89f635e2b",
@@ -28099,7 +28105,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -28187,9 +28195,24 @@
           "multiverseid": 187708
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Pântano",
-          "multiverseid": 188203
+          "language": "Spanish",
+          "name": "Pantano",
+          "multiverseid": 187954
+        },
+        {
+          "language": "Spanish",
+          "name": "Pantano",
+          "multiverseid": 187955
+        },
+        {
+          "language": "Spanish",
+          "name": "Pantano",
+          "multiverseid": 187956
+        },
+        {
+          "language": "Spanish",
+          "name": "Pantano",
+          "multiverseid": 187957
         },
         {
           "language": "Italian",
@@ -28234,22 +28257,7 @@
         {
           "language": "Russian",
           "name": "Болото",
-          "multiverseid": 188950
-        },
-        {
-          "language": "Russian",
-          "name": "Болото",
           "multiverseid": 188951
-        },
-        {
-          "language": "Russian",
-          "name": "Болото",
-          "multiverseid": 188952
-        },
-        {
-          "language": "Russian",
-          "name": "Болото",
-          "multiverseid": 188953
         }
       ],
       "id": "67ecebdfeab68f735fadb0cf5b3bb9fc39b08fc7",
@@ -28492,7 +28500,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -28580,9 +28589,24 @@
           "multiverseid": 187708
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Pântano",
-          "multiverseid": 188203
+          "language": "Spanish",
+          "name": "Pantano",
+          "multiverseid": 187954
+        },
+        {
+          "language": "Spanish",
+          "name": "Pantano",
+          "multiverseid": 187955
+        },
+        {
+          "language": "Spanish",
+          "name": "Pantano",
+          "multiverseid": 187956
+        },
+        {
+          "language": "Spanish",
+          "name": "Pantano",
+          "multiverseid": 187957
         },
         {
           "language": "Italian",
@@ -28627,22 +28651,7 @@
         {
           "language": "Russian",
           "name": "Болото",
-          "multiverseid": 188950
-        },
-        {
-          "language": "Russian",
-          "name": "Болото",
           "multiverseid": 188951
-        },
-        {
-          "language": "Russian",
-          "name": "Болото",
-          "multiverseid": 188952
-        },
-        {
-          "language": "Russian",
-          "name": "Болото",
-          "multiverseid": 188953
         }
       ],
       "id": "b63d7435935d7e2ba8ae79912e857a86e9904736",
@@ -28885,7 +28894,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -28973,9 +28983,24 @@
           "multiverseid": 187708
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Pântano",
-          "multiverseid": 188203
+          "language": "Spanish",
+          "name": "Pantano",
+          "multiverseid": 187954
+        },
+        {
+          "language": "Spanish",
+          "name": "Pantano",
+          "multiverseid": 187955
+        },
+        {
+          "language": "Spanish",
+          "name": "Pantano",
+          "multiverseid": 187956
+        },
+        {
+          "language": "Spanish",
+          "name": "Pantano",
+          "multiverseid": 187957
         },
         {
           "language": "Italian",
@@ -29020,22 +29045,7 @@
         {
           "language": "Russian",
           "name": "Болото",
-          "multiverseid": 188950
-        },
-        {
-          "language": "Russian",
-          "name": "Болото",
           "multiverseid": 188951
-        },
-        {
-          "language": "Russian",
-          "name": "Болото",
-          "multiverseid": 188952
-        },
-        {
-          "language": "Russian",
-          "name": "Болото",
-          "multiverseid": 188953
         }
       ],
       "id": "4b0c8a7db735a20101afb36d5d5420ea75698d42",
@@ -29278,7 +29288,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -29366,9 +29377,24 @@
           "multiverseid": 187708
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Pântano",
-          "multiverseid": 188203
+          "language": "Spanish",
+          "name": "Pantano",
+          "multiverseid": 187954
+        },
+        {
+          "language": "Spanish",
+          "name": "Pantano",
+          "multiverseid": 187955
+        },
+        {
+          "language": "Spanish",
+          "name": "Pantano",
+          "multiverseid": 187956
+        },
+        {
+          "language": "Spanish",
+          "name": "Pantano",
+          "multiverseid": 187957
         },
         {
           "language": "Italian",
@@ -29413,22 +29439,7 @@
         {
           "language": "Russian",
           "name": "Болото",
-          "multiverseid": 188950
-        },
-        {
-          "language": "Russian",
-          "name": "Болото",
           "multiverseid": 188951
-        },
-        {
-          "language": "Russian",
-          "name": "Болото",
-          "multiverseid": 188952
-        },
-        {
-          "language": "Russian",
-          "name": "Болото",
-          "multiverseid": 188953
         }
       ],
       "id": "a93886020d4a972a003bdc567a833984b7efea1d",
@@ -29671,7 +29682,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -30066,7 +30078,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -30461,7 +30475,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -30856,7 +30872,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -31251,7 +31269,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -31301,7 +31321,22 @@
         {
           "language": "Chinese Simplified",
           "name": "树林",
+          "multiverseid": 187464
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "树林",
+          "multiverseid": 187465
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "树林",
           "multiverseid": 187466
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "树林",
+          "multiverseid": 187467
         },
         {
           "language": "German",
@@ -31324,24 +31359,24 @@
           "multiverseid": 187716
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Floresta",
-          "multiverseid": 188211
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 187962
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Floresta",
-          "multiverseid": 188212
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 187963
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Floresta",
-          "multiverseid": 188213
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 187964
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Floresta",
-          "multiverseid": 188214
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 187965
         },
         {
           "language": "Italian",
@@ -31382,21 +31417,6 @@
           "language": "French",
           "name": "Forêt",
           "multiverseid": 188712
-        },
-        {
-          "language": "Russian",
-          "name": "Лес",
-          "multiverseid": 188958
-        },
-        {
-          "language": "Russian",
-          "name": "Лес",
-          "multiverseid": 188959
-        },
-        {
-          "language": "Russian",
-          "name": "Лес",
-          "multiverseid": 188960
         },
         {
           "language": "Russian",
@@ -31643,7 +31663,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -31693,7 +31715,22 @@
         {
           "language": "Chinese Simplified",
           "name": "树林",
+          "multiverseid": 187464
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "树林",
+          "multiverseid": 187465
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "树林",
           "multiverseid": 187466
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "树林",
+          "multiverseid": 187467
         },
         {
           "language": "German",
@@ -31716,24 +31753,24 @@
           "multiverseid": 187716
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Floresta",
-          "multiverseid": 188211
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 187962
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Floresta",
-          "multiverseid": 188212
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 187963
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Floresta",
-          "multiverseid": 188213
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 187964
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Floresta",
-          "multiverseid": 188214
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 187965
         },
         {
           "language": "Italian",
@@ -31774,21 +31811,6 @@
           "language": "French",
           "name": "Forêt",
           "multiverseid": 188712
-        },
-        {
-          "language": "Russian",
-          "name": "Лес",
-          "multiverseid": 188958
-        },
-        {
-          "language": "Russian",
-          "name": "Лес",
-          "multiverseid": 188959
-        },
-        {
-          "language": "Russian",
-          "name": "Лес",
-          "multiverseid": 188960
         },
         {
           "language": "Russian",
@@ -32035,7 +32057,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -32085,7 +32109,22 @@
         {
           "language": "Chinese Simplified",
           "name": "树林",
+          "multiverseid": 187464
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "树林",
+          "multiverseid": 187465
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "树林",
           "multiverseid": 187466
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "树林",
+          "multiverseid": 187467
         },
         {
           "language": "German",
@@ -32108,24 +32147,24 @@
           "multiverseid": 187716
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Floresta",
-          "multiverseid": 188211
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 187962
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Floresta",
-          "multiverseid": 188212
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 187963
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Floresta",
-          "multiverseid": 188213
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 187964
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Floresta",
-          "multiverseid": 188214
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 187965
         },
         {
           "language": "Italian",
@@ -32166,21 +32205,6 @@
           "language": "French",
           "name": "Forêt",
           "multiverseid": 188712
-        },
-        {
-          "language": "Russian",
-          "name": "Лес",
-          "multiverseid": 188958
-        },
-        {
-          "language": "Russian",
-          "name": "Лес",
-          "multiverseid": 188959
-        },
-        {
-          "language": "Russian",
-          "name": "Лес",
-          "multiverseid": 188960
         },
         {
           "language": "Russian",
@@ -32427,7 +32451,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -32477,7 +32503,22 @@
         {
           "language": "Chinese Simplified",
           "name": "树林",
+          "multiverseid": 187464
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "树林",
+          "multiverseid": 187465
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "树林",
           "multiverseid": 187466
+        },
+        {
+          "language": "Chinese Simplified",
+          "name": "树林",
+          "multiverseid": 187467
         },
         {
           "language": "German",
@@ -32500,24 +32541,24 @@
           "multiverseid": 187716
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Floresta",
-          "multiverseid": 188211
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 187962
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Floresta",
-          "multiverseid": 188212
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 187963
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Floresta",
-          "multiverseid": 188213
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 187964
         },
         {
-          "language": "Portuguese (Brazil)",
-          "name": "Floresta",
-          "multiverseid": 188214
+          "language": "Spanish",
+          "name": "Bosque",
+          "multiverseid": 187965
         },
         {
           "language": "Italian",
@@ -32558,21 +32599,6 @@
           "language": "French",
           "name": "Forêt",
           "multiverseid": 188712
-        },
-        {
-          "language": "Russian",
-          "name": "Лес",
-          "multiverseid": 188958
-        },
-        {
-          "language": "Russian",
-          "name": "Лес",
-          "multiverseid": 188959
-        },
-        {
-          "language": "Russian",
-          "name": "Лес",
-          "multiverseid": 188960
         },
         {
           "language": "Russian",
@@ -32819,7 +32845,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [

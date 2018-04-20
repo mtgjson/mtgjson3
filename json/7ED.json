@@ -1542,7 +1542,7 @@
         "DD3_DVD"
       ],
       "rarity": "Common",
-      "text": "Choose one —\n• Target player gains 3 life.\n• Prevent the next 3 damage that would be dealt to target creature or player this turn.",
+      "text": "Choose one —\n• Target player gains 3 life.\n• Prevent the next 3 damage that would be dealt to any target this turn.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -1850,7 +1850,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "The power of the creature is checked on activation and on resolution. If the targeted creature's power is not 4 or greater on resolution, the ability is countered."
+          "text": "The power of the creature is checked on activation and on resolution. If the targeted creature's power is not 4 or greater on resolution, the ability doesn't resolve."
         }
       ],
       "subtypes": [
@@ -2235,7 +2235,7 @@
         "Human",
         "Cleric"
       ],
-      "text": "{T}: Prevent the next 4 damage that would be dealt to target creature or player this turn.",
+      "text": "{T}: Prevent the next 4 damage that would be dealt to any target this turn.",
       "toughness": "4",
       "type": "Creature — Human Cleric",
       "types": [
@@ -3104,7 +3104,7 @@
         "Human",
         "Cleric"
       ],
-      "text": "{T}: Prevent the next 1 damage that would be dealt to target creature or player this turn.",
+      "text": "{T}: Prevent the next 1 damage that would be dealt to any target this turn.",
       "toughness": "1",
       "type": "Creature — Human Cleric",
       "types": [
@@ -3438,13 +3438,14 @@
         "EMA",
         "W17",
         "CMA",
-        "IMA"
+        "IMA",
+        "DOM"
       ],
       "rarity": "Rare",
       "subtypes": [
         "Angel"
       ],
-      "text": "Flying (This creature can't be blocked except by creatures with flying or reach.)\nVigilance (Attacking doesn't cause this creature to tap.)",
+      "text": "Flying, vigilance",
       "toughness": "4",
       "type": "Creature — Angel",
       "types": [
@@ -3807,10 +3808,6 @@
       ],
       "rarity": "Uncommon",
       "rulings": [
-        {
-          "date": "2004-10-04",
-          "text": "Damage that is redirected is not dealt to the original creature or player, but it is dealt to the new creature or player."
-        },
         {
           "date": "2004-10-04",
           "text": "You only gain the life when the triggered ability resolves. If you are reduced to zero life before the ability resolves, you will lose before gaining the life."
@@ -5017,7 +5014,7 @@
         "9ED"
       ],
       "rarity": "Uncommon",
-      "text": "Target opponent reveals his or her hand. You draw a card for each Mountain and red card in it.",
+      "text": "Target opponent reveals their hand. You draw a card for each Mountain and red card in it.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -6850,7 +6847,7 @@
           "text": "The person who cast the spell chooses which of their lands is affected."
         }
       ],
-      "text": "Whenever a player casts a spell, that player returns a land he or she controls to its owner's hand.",
+      "text": "Whenever a player casts a spell, that player returns a land they control to its owner's hand.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -6933,7 +6930,7 @@
           "text": "It even taps lands that do not produce mana."
         }
       ],
-      "text": "Tap all lands target player controls and empty his or her mana pool.",
+      "text": "Tap all lands target player controls and that player loses all unspent mana.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -7004,7 +7001,7 @@
       "subtypes": [
         "Beast"
       ],
-      "text": "Flying\n{T}: Mawcor deals 1 damage to target creature or player.",
+      "text": "Flying\n{T}: Mawcor deals 1 damage to any target.",
       "toughness": "3",
       "type": "Creature — Beast",
       "types": [
@@ -7162,6 +7159,12 @@
         "A25"
       ],
       "rarity": "Uncommon",
+      "rulings": [
+        {
+          "date": "2018-03-16",
+          "text": "You can't do anything in between drawing a card and discarding a card, including casting or cycling the card you drew."
+        }
+      ],
       "subtypes": [
         "Merfolk",
         "Rogue"
@@ -7566,7 +7569,7 @@
         "Human",
         "Wizard"
       ],
-      "text": "{T}: Prodigal Sorcerer deals 1 damage to target creature or player.",
+      "text": "{T}: Prodigal Sorcerer deals 1 damage to any target.",
       "toughness": "1",
       "type": "Creature — Human Wizard",
       "types": [
@@ -9672,7 +9675,7 @@
       "subtypes": [
         "Thrull"
       ],
-      "text": "Sacrifice Blood Pet: Add {B} to your mana pool.",
+      "text": "Sacrifice Blood Pet: Add {B}.",
       "toughness": "1",
       "type": "Creature — Thrull",
       "types": [
@@ -9941,7 +9944,7 @@
           "text": "Corrupt counts any land you control with the subtype Swamp, not just ones named Swamp."
         }
       ],
-      "text": "Corrupt deals damage to target creature or player equal to the number of Swamps you control. You gain life equal to the damage dealt this way.",
+      "text": "Corrupt deals damage to any target equal to the number of Swamps you control. You gain life equal to the damage dealt this way.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -10497,7 +10500,7 @@
         "IMA"
       ],
       "rarity": "Common",
-      "text": "Target opponent reveals his or her hand. You choose a noncreature, nonland card from it. That player discards that card.",
+      "text": "Target opponent reveals their hand. You choose a noncreature, nonland card from it. That player discards that card.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -11924,7 +11927,7 @@
           "text": "This spell is cast during the End step. Since you discard down to 7 cards in the cleanup step, this card is used before the discard."
         }
       ],
-      "text": "Cast Necrologia only during your end step.\nAs an additional cost to cast Necrologia, pay X life.\nDraw X cards.",
+      "text": "Cast this spell only during your end step.\nAs an additional cost to cast this spell, pay X life.\nDraw X cards.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -12239,13 +12242,7 @@
         "7ED"
       ],
       "rarity": "Common",
-      "rulings": [
-        {
-          "date": "2008-04-01",
-          "text": "A \"creature card\" is any card with the type creature, even if it has other types such as artifact, enchantment, or land. Older cards of type summon are also creature cards."
-        }
-      ],
-      "text": "Target opponent reveals his or her hand. You choose a creature card from it. That player discards that card.",
+      "text": "Target opponent reveals their hand. You choose a creature card from it. That player discards that card.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -12323,7 +12320,7 @@
           "text": "The color is chosen on resolution."
         }
       ],
-      "text": "Choose a color. Target player reveals his or her hand and discards all cards of that color.",
+      "text": "Choose a color. Target player reveals their hand and discards all cards of that color.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -12471,7 +12468,7 @@
         "Human",
         "Minion"
       ],
-      "text": "{B}{B}{B}, {T}: Target opponent reveals his or her hand and discards a creature card at random. Activate this ability only during your turn.",
+      "text": "{B}{B}{B}, {T}: Target opponent reveals their hand and discards a creature card at random. Activate this ability only during your turn.",
       "toughness": "1",
       "type": "Creature — Human Minion",
       "types": [
@@ -12567,10 +12564,6 @@
         {
           "date": "2004-10-04",
           "text": "The creature being brought back is chosen on announcement and not on resolution of the spell because it is targeted."
-        },
-        {
-          "date": "2008-04-01",
-          "text": "A \"creature card\" is any card with the type creature, even if it has other types such as artifact, enchantment, or land. Older cards of type summon are also creature cards."
         }
       ],
       "text": "Return target creature card from your graveyard to your hand.",
@@ -13956,7 +13949,7 @@
         "DPA"
       ],
       "rarity": "Uncommon",
-      "text": "Blaze deals X damage to target creature or player.",
+      "text": "Blaze deals X damage to any target.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -14032,7 +14025,7 @@
         "Cyclops",
         "Giant"
       ],
-      "text": "{T}, Sacrifice a creature: Bloodshot Cyclops deals damage equal to the sacrificed creature's power to target creature or player.",
+      "text": "{T}, Sacrifice a creature: Bloodshot Cyclops deals damage equal to the sacrificed creature's power to any target.",
       "toughness": "4",
       "type": "Creature — Cyclops Giant",
       "types": [
@@ -14563,7 +14556,8 @@
         "6ED",
         "S99",
         "7ED",
-        "M13"
+        "M13",
+        "DOM"
       ],
       "rarity": "Uncommon",
       "subtypes": [
@@ -14640,7 +14634,7 @@
         "Human",
         "Nomad"
       ],
-      "text": "{T}, Sacrifice Ghitu Fire-Eater: Ghitu Fire-Eater deals damage equal to its power to target creature or player.",
+      "text": "{T}, Sacrifice Ghitu Fire-Eater: It deals damage equal to its power to any target.",
       "toughness": "2",
       "type": "Creature — Human Nomad",
       "types": [
@@ -15646,7 +15640,7 @@
           "text": "If a spell is countered, it still counts as having been cast."
         }
       ],
-      "text": "At the beginning of each player's end step, if that player didn't cast a spell this turn, Impatience deals 2 damage to him or her.",
+      "text": "At the beginning of each player's end step, if that player didn't cast a spell this turn, Impatience deals 2 damage to that player.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -15800,7 +15794,7 @@
         "M15"
       ],
       "rarity": "Common",
-      "text": "Lava Axe deals 5 damage to target player.",
+      "text": "Lava Axe deals 5 damage to target player or planeswalker.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -15873,7 +15867,7 @@
         "TPR"
       ],
       "rarity": "Common",
-      "text": "Lightning Blast deals 4 damage to target creature or player.",
+      "text": "Lightning Blast deals 4 damage to any target.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -16027,7 +16021,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "Always affects the player and targets one of his or her opponents."
+          "text": "Always affects the player and targets one of their opponents."
         },
         {
           "date": "2004-10-04",
@@ -16275,14 +16269,14 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "You do not take the 3 points of damage if the ability is countered because the target is illegal."
+          "text": "You do not take the 3 points of damage if the ability doesn't resolve because the target is illegal."
         }
       ],
       "subtypes": [
         "Orc",
         "Warrior"
       ],
-      "text": "{T}: Orcish Artillery deals 2 damage to target creature or player and 3 damage to you.",
+      "text": "{T}: Orcish Artillery deals 2 damage to any target and 3 damage to you.",
       "toughness": "3",
       "type": "Creature — Orc Warrior",
       "types": [
@@ -16672,14 +16666,10 @@
         },
         {
           "date": "2014-11-24",
-          "text": "You can't deal damage to both a player and a planeswalker that player controls using Pyrotechnics. You also can't deal damage to more than one planeswalker controlled by the same player. If you choose to redirect the damage being dealt to a player to a planeswalker, you must redirect all the damage to a single planeswalker."
-        },
-        {
-          "date": "2014-11-24",
           "text": "If an effect creates a copy of Pyrotechnics, the number of targets and division of damage can't be changed. The effect that creates the copy may allow you to change the targets, however."
         }
       ],
-      "text": "Pyrotechnics deals 4 damage divided as you choose among any number of target creatures and/or players.",
+      "text": "Pyrotechnics deals 4 damage divided as you choose among any number of targets.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -16840,7 +16830,7 @@
         "Human",
         "Wizard"
       ],
-      "text": "{1}{R}: Reckless Embermage deals 1 damage to target creature or player and 1 damage to itself.",
+      "text": "{1}{R}: Reckless Embermage deals 1 damage to any target and 1 damage to itself.",
       "toughness": "2",
       "type": "Creature — Human Wizard",
       "types": [
@@ -17163,7 +17153,7 @@
         "10E"
       ],
       "rarity": "Rare",
-      "text": "Discard a land card: Seismic Assault deals 2 damage to target creature or player.",
+      "text": "Discard a land card: Seismic Assault deals 2 damage to any target.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -17205,6 +17195,10 @@
         },
         {
           "format": "Ice Age Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
           "legality": "Legal"
         },
         {
@@ -17463,7 +17457,7 @@
         "AER"
       ],
       "rarity": "Common",
-      "text": "Shock deals 2 damage to target creature or player.",
+      "text": "Shock deals 2 damage to any target.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -18011,7 +18005,7 @@
         "9ED"
       ],
       "rarity": "Common",
-      "text": "Volcanic Hammer deals 3 damage to target creature or player.",
+      "text": "Volcanic Hammer deals 3 damage to any target.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -18410,7 +18404,7 @@
       "subtypes": [
         "Bird"
       ],
-      "text": "Flying\n{T}: Add one mana of any color to your mana pool.",
+      "text": "Flying\n{T}: Add one mana of any color.",
       "toughness": "1",
       "type": "Creature — Bird",
       "types": [
@@ -18880,7 +18874,7 @@
         "9ED"
       ],
       "rarity": "Rare",
-      "text": "Target player untaps all basic lands he or she controls.",
+      "text": "Target player untaps all basic lands they control.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -19614,7 +19608,7 @@
         "Elf",
         "Druid"
       ],
-      "text": "{T}: Add {G}{G} to your mana pool.",
+      "text": "{T}: Add {G}{G}.",
       "toughness": "1",
       "type": "Creature — Elf Druid",
       "types": [
@@ -20239,14 +20233,15 @@
         "C14",
         "DD3_EVG",
         "EMA",
-        "CMA"
+        "CMA",
+        "DOM"
       ],
       "rarity": "Common",
       "subtypes": [
         "Elf",
         "Druid"
       ],
-      "text": "{T}: Add {G} to your mana pool.",
+      "text": "{T}: Add {G}.",
       "toughness": "1",
       "type": "Creature — Elf Druid",
       "types": [
@@ -20324,19 +20319,15 @@
       "rarity": "Common",
       "rulings": [
         {
-          "date": "2008-04-01",
-          "text": "If this creature is attacking a planeswalker, assigning its damage as though it weren't blocked means the damage is assigned to the planeswalker, not to the defending player."
-        },
-        {
-          "date": "2008-04-01",
-          "text": "When assigning combat damage, you choose whether you want to assign all damage to blocking creatures, or if you want to assign all of it to the defending player or planeswalker. You can't split the damage assignment between them."
-        },
-        {
-          "date": "2008-04-01",
+          "date": "2018-04-27",
           "text": "You can decide to assign damage to the defending player or planeswalker even if the blocking creature has protection from green or damage preventing effects on it."
         },
         {
-          "date": "2008-04-01",
+          "date": "2018-04-27",
+          "text": "When assigning combat damage, you choose whether you want to assign all damage to blocking creatures, or if you want to assign all of it to the player or planeswalker this creature is attacking. You can't split the damage assignment between them."
+        },
+        {
+          "date": "2018-04-27",
           "text": "If blocked by a creature with banding, the defending player decides whether or not the damage is assigned \"as though it weren't blocked\"."
         }
       ],
@@ -20745,7 +20736,7 @@
         "7ED"
       ],
       "rarity": "Rare",
-      "text": "Each player draws a card for each creature card in his or her graveyard.",
+      "text": "Each player draws a card for each creature card in their graveyard.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -20814,7 +20805,7 @@
       "rulings": [
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         }
       ],
       "text": "All lands are 2/2 creatures that are still lands.",
@@ -20883,19 +20874,15 @@
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2008-04-01",
-          "text": "If this creature is attacking a planeswalker, assigning its damage as though it weren't blocked means the damage is assigned to the planeswalker, not to the defending player."
-        },
-        {
-          "date": "2008-04-01",
-          "text": "When assigning combat damage, you choose whether you want to assign all damage to blocking creatures, or if you want to assign all of it to the defending player or planeswalker. You can't split the damage assignment between them."
-        },
-        {
-          "date": "2008-04-01",
+          "date": "2018-04-27",
           "text": "You can decide to assign damage to the defending player or planeswalker even if the blocking creature has protection from green or damage preventing effects on it."
         },
         {
-          "date": "2008-04-01",
+          "date": "2018-04-27",
+          "text": "When assigning combat damage, you choose whether you want to assign all damage to blocking creatures, or if you want to assign all of it to the player or planeswalker this creature is attacking. You can't split the damage assignment between them."
+        },
+        {
+          "date": "2018-04-27",
           "text": "If blocked by a creature with banding, the defending player decides whether or not the damage is assigned \"as though it weren't blocked\"."
         }
       ],
@@ -21830,24 +21817,21 @@
         "UDS",
         "S99",
         "7ED",
-        "8ED"
+        "8ED",
+        "DOM"
       ],
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2008-04-01",
-          "text": "If this creature is attacking a planeswalker, assigning its damage as though it weren't blocked means the damage is assigned to the planeswalker, not to the defending player."
-        },
-        {
-          "date": "2008-04-01",
-          "text": "When assigning combat damage, you choose whether you want to assign all damage to blocking creatures, or if you want to assign all of it to the defending player or planeswalker. You can't split the damage assignment between them."
-        },
-        {
-          "date": "2008-04-01",
+          "date": "2018-04-27",
           "text": "You can decide to assign damage to the defending player or planeswalker even if the blocking creature has protection from green or damage preventing effects on it."
         },
         {
-          "date": "2008-04-01",
+          "date": "2018-04-27",
+          "text": "When assigning combat damage, you choose whether you want to assign all damage to blocking creatures, or if you want to assign all of it to the player or planeswalker this creature is attacking. You can't split the damage assignment between them."
+        },
+        {
+          "date": "2018-04-27",
           "text": "If blocked by a creature with banding, the defending player decides whether or not the damage is assigned \"as though it weren't blocked\"."
         }
       ],
@@ -22472,7 +22456,7 @@
           "text": "This is a triggered mana ability. It does not go on the stack."
         }
       ],
-      "text": "Whenever a Forest is tapped for mana, its controller adds {G} to his or her mana pool (in addition to the mana the land produces).",
+      "text": "Whenever a Forest is tapped for mana, its controller adds an additional {G}.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -22557,7 +22541,7 @@
       "subtypes": [
         "Aura"
       ],
-      "text": "Enchant land\nWhenever enchanted land is tapped for mana, its controller adds {G} to his or her mana pool (in addition to the mana the land produces).",
+      "text": "Enchant land\nWhenever enchanted land is tapped for mana, its controller adds an additional {G}.",
       "type": "Enchantment — Aura",
       "types": [
         "Enchantment"
@@ -22872,7 +22856,7 @@
         "9ED"
       ],
       "rarity": "Rare",
-      "text": "{8}, {T}: Aladdin's Ring deals 4 damage to target creature or player.",
+      "text": "{8}, {T}: Aladdin's Ring deals 4 damage to any target.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -23069,7 +23053,7 @@
         "C14"
       ],
       "rarity": "Uncommon",
-      "text": "Charcoal Diamond enters the battlefield tapped.\n{T}: Add {B} to your mana pool.",
+      "text": "Charcoal Diamond enters the battlefield tapped.\n{T}: Add {B}.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -23436,12 +23420,8 @@
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2004-10-04",
-          "text": "All creatures on the battlefield (including yours) are subject to the restriction based on the number of cards in your hand."
-        },
-        {
-          "date": "2004-10-04",
-          "text": "It only checks the cards in your hand when declaring attackers. Once they are declared, changes to your hand size or to the power of the creatures will not remove creatures from the attack."
+          "date": "2018-03-16",
+          "text": "Ensnaring Bridge's effect checks the number of cards in your hand only while a player (including you) is declaring attackers. Once a creature has legally attacked, changing its power or the number of cards in your hand won't remove it from combat."
         }
       ],
       "text": "Creatures with power greater than the number of cards in your hand can't attack.",
@@ -23571,7 +23551,7 @@
         "C14"
       ],
       "rarity": "Uncommon",
-      "text": "Fire Diamond enters the battlefield tapped.\n{T}: Add {R} to your mana pool.",
+      "text": "Fire Diamond enters the battlefield tapped.\n{T}: Add {R}.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -24252,7 +24232,7 @@
         "DD3_DVD"
       ],
       "rarity": "Uncommon",
-      "text": "Marble Diamond enters the battlefield tapped.\n{T}: Add {W} to your mana pool.",
+      "text": "Marble Diamond enters the battlefield tapped.\n{T}: Add {W}.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -24399,7 +24379,7 @@
           "text": "Since you are putting more than one card in the graveyard at one time, the affected player can choose the order the 2 cards go in."
         }
       ],
-      "text": "{2}, {T}: Target player puts the top two cards of his or her library into his or her graveyard.",
+      "text": "{2}, {T}: Target player puts the top two cards of their library into their graveyard.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -24464,7 +24444,7 @@
         "CMA"
       ],
       "rarity": "Uncommon",
-      "text": "Moss Diamond enters the battlefield tapped.\n{T}: Add {G} to your mana pool.",
+      "text": "Moss Diamond enters the battlefield tapped.\n{T}: Add {G}.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -24826,7 +24806,7 @@
         "M14"
       ],
       "rarity": "Uncommon",
-      "text": "{3}, {T}: Rod of Ruin deals 1 damage to target creature or player.",
+      "text": "{3}, {T}: Rod of Ruin deals 1 damage to any target.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -24886,7 +24866,7 @@
         "7ED"
       ],
       "rarity": "Uncommon",
-      "text": "{T}: Add {C}{C} to your mana pool.",
+      "text": "{T}: Add {C}{C}.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -24950,7 +24930,7 @@
         "C14"
       ],
       "rarity": "Uncommon",
-      "text": "Sky Diamond enters the battlefield tapped.\n{T}: Add {U} to your mana pool.",
+      "text": "Sky Diamond enters the battlefield tapped.\n{T}: Add {U}.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -25235,7 +25215,7 @@
           "text": "Having multiples of these on the battlefield means you can play an additional land for each one."
         }
       ],
-      "text": "Each player may play an additional land during each of his or her turns.\nWhenever a land is tapped for mana, return it to its owner's hand.",
+      "text": "Each player may play an additional land during each of their turns.\nWhenever a land is tapped for mana, return it to its owner's hand.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -25311,7 +25291,7 @@
           "text": "If you have more than one of these, each effect triggers separately."
         }
       ],
-      "text": "At the beginning of each player's draw step, that player puts the cards in his or her hand on the bottom of his or her library in any order, then draws that many cards.",
+      "text": "At the beginning of each player's draw step, that player puts the cards in their hand on the bottom of their library in any order, then draws that many cards.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -25589,7 +25569,7 @@
         "10E"
       ],
       "rarity": "Rare",
-      "text": "{T}: Add {C} to your mana pool.\n{T}: Add {W} or {U} to your mana pool. Adarkar Wastes deals 1 damage to you.",
+      "text": "{T}: Add {C}.\n{T}: Add {W} or {U}. Adarkar Wastes deals 1 damage to you.",
       "type": "Land",
       "types": [
         "Land"
@@ -25660,7 +25640,7 @@
         "10E"
       ],
       "rarity": "Rare",
-      "text": "{T}: Add {C} to your mana pool.\n{T}: Add {G} or {W} to your mana pool. Brushland deals 1 damage to you.",
+      "text": "{T}: Add {C}.\n{T}: Add {G} or {W}. Brushland deals 1 damage to you.",
       "type": "Land",
       "types": [
         "Land"
@@ -25740,7 +25720,7 @@
           "text": "On the other hand, you can tap City of Brass, put its triggered ability on the stack, and then respond to that ability by casting an instant or activating an ability using that mana. In that case, the instant spell or activated ability will resolve first."
         }
       ],
-      "text": "Whenever City of Brass becomes tapped, it deals 1 damage to you.\n{T}: Add one mana of any color to your mana pool.",
+      "text": "Whenever City of Brass becomes tapped, it deals 1 damage to you.\n{T}: Add one mana of any color.",
       "type": "Land",
       "types": [
         "Land"
@@ -26053,7 +26033,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -26380,7 +26362,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -26707,7 +26691,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -27034,7 +27020,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -27358,7 +27346,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -27682,7 +27672,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -28006,7 +27998,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -28330,7 +28324,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -28416,7 +28412,7 @@
         "C16"
       ],
       "rarity": "Rare",
-      "text": "{T}: Add {C} to your mana pool.\n{T}: Add {R} or {G} to your mana pool. Karplusan Forest deals 1 damage to you.",
+      "text": "{T}: Add {C}.\n{T}: Add {R} or {G}. Karplusan Forest deals 1 damage to you.",
       "type": "Land",
       "types": [
         "Land"
@@ -28732,7 +28728,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -29062,7 +29060,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -29392,7 +29392,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -29722,7 +29724,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -30047,7 +30051,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -30372,7 +30377,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -30697,7 +30703,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -31022,7 +31029,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -31107,7 +31115,7 @@
         "10E"
       ],
       "rarity": "Rare",
-      "text": "{T}: Add {C} to your mana pool.\n{T}: Add {B} or {R} to your mana pool. Sulfurous Springs deals 1 damage to you.",
+      "text": "{T}: Add {C}.\n{T}: Add {B} or {R}. Sulfurous Springs deals 1 damage to you.",
       "type": "Land",
       "types": [
         "Land"
@@ -31421,7 +31429,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -31749,7 +31758,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -32077,7 +32087,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -32405,7 +32416,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -32491,7 +32503,7 @@
         "C16"
       ],
       "rarity": "Rare",
-      "text": "{T}: Add {C} to your mana pool.\n{T}: Add {U} or {B} to your mana pool. Underground River deals 1 damage to you.",
+      "text": "{T}: Add {C}.\n{T}: Add {U} or {B}. Underground River deals 1 damage to you.",
       "type": "Land",
       "types": [
         "Land"

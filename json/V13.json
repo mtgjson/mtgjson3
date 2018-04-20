@@ -95,7 +95,7 @@
         "A25"
       ],
       "rarity": "Mythic Rare",
-      "text": "Add {B}{B}{B} to your mana pool.",
+      "text": "Add {B}{B}{B}.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -168,11 +168,11 @@
       "rarity": "Mythic Rare",
       "rulings": [
         {
-          "date": "2017-11-17",
-          "text": "The amount of life gained is equal to the power of the target creature as it last existed on the battlefield."
+          "date": "2018-03-16",
+          "text": "The amount of life gained is equal to the power of the targeted creature as it last existed on the battlefield."
         },
         {
-          "date": "2017-11-17",
+          "date": "2018-03-16",
           "text": "If the creature's power is negative, its controller doesn't lose or gain life."
         }
       ],
@@ -282,7 +282,7 @@
         "Elf",
         "Druid"
       ],
-      "text": "{T}: Add {G} to your mana pool.",
+      "text": "{T}: Add {G}.",
       "toughness": "1",
       "type": "Creature — Elf Druid",
       "types": [
@@ -453,7 +453,7 @@
         "IMA"
       ],
       "rarity": "Mythic Rare",
-      "text": "{T}: Add {C}{C}{C} to your mana pool.",
+      "text": "{T}: Add {C}{C}{C}.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -495,7 +495,7 @@
         "V13"
       ],
       "rarity": "Mythic Rare",
-      "text": "Fading 4 (This artifact enters the battlefield with four fade counters on it. At the beginning of your upkeep, remove a fade counter from it. If you can't, sacrifice it.)\nAt the beginning of each player's upkeep, that player taps an untapped artifact, creature, or land he or she controls for each fade counter on Tangle Wire.",
+      "text": "Fading 4 (This artifact enters the battlefield with four fade counters on it. At the beginning of your upkeep, remove a fade counter from it. If you can't, sacrifice it.)\nAt the beginning of each player's upkeep, that player taps an untapped artifact, creature, or land they control for each fade counter on Tangle Wire.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -715,10 +715,11 @@
       "printings": [
         "MRD",
         "M13",
-        "V13"
+        "V13",
+        "DOM"
       ],
       "rarity": "Mythic Rare",
-      "text": "{T}: Add three mana of any one color to your mana pool.",
+      "text": "{T}: Add three mana of any one color.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -842,7 +843,7 @@
         "V13"
       ],
       "rarity": "Mythic Rare",
-      "text": "Char deals 4 damage to target creature or player and 2 damage to you.",
+      "text": "Char deals 4 damage to any target and 2 damage to you.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -1046,7 +1047,7 @@
         },
         {
           "date": "2017-03-14",
-          "text": "All of the actions for Cruel Ultimatum are performed sequentially, in the order listed. Earlier actions may affect how you perform later actions. For example, if the opponent sacrifices a creature that he or she controls but you own, it will end up in your graveyard. When Cruel Ultimatum lets you return a creature card from your graveyard to your hand, you can choose that one."
+          "text": "All of the actions for Cruel Ultimatum are performed sequentially, in the order listed. Earlier actions may affect how you perform later actions. For example, if the opponent sacrifices a creature that they control but you own, it will end up in your graveyard. When Cruel Ultimatum lets you return a creature card from your graveyard to your hand, you can choose that one."
         },
         {
           "date": "2017-03-14",
@@ -1082,7 +1083,7 @@
         },
         {
           "format": "Modern",
-          "legality": "Banned"
+          "legality": "Legal"
         },
         {
           "format": "Vintage",
@@ -1111,12 +1112,12 @@
       "rarity": "Mythic Rare",
       "rulings": [
         {
-          "date": "2016-06-08",
+          "date": "2018-03-16",
           "text": "You draw three cards and put two cards back all while Jace's second ability is resolving. Nothing can happen between the two, and no player may choose to take actions."
         },
         {
-          "date": "2016-06-08",
-          "text": "If the targeted player for Jace's last ability has no cards in hand, that player shuffles nothing into his or her library, and that player's library will remain empty. That player won't lose the game until he or she tries to draw from the empty library."
+          "date": "2018-03-16",
+          "text": "If the targeted player for Jace's last ability has no cards in hand, that player shuffles nothing into their library, and that player's library will remain empty. That player won't lose the game until they try to draw from the empty library."
         }
       ],
       "subtypes": [
@@ -1125,7 +1126,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "+2: Look at the top card of target player's library. You may put that card on the bottom of that player's library.\n0: Draw three cards, then put two cards from your hand on top of your library in any order.\n−1: Return target creature to its owner's hand.\n−12: Exile all cards from target player's library, then that player shuffles his or her hand into his or her library.",
+      "text": "+2: Look at the top card of target player's library. You may put that card on the bottom of that player's library.\n0: Draw three cards, then put two cards from your hand on top of your library in any order.\n−1: Return target creature to its owner's hand.\n−12: Exile all cards from target player's library, then that player shuffles their hand into their library.",
       "type": "Legendary Planeswalker — Jace",
       "types": [
         "Planeswalker"
@@ -1182,7 +1183,7 @@
       "rulings": [
         {
           "date": "2011-06-01",
-          "text": "If this spell is countered, none of its effects occur. In particular, it will go to the graveyard rather than to its owner's library."
+          "text": "If this spell doesn't resolve, none of its effects occur. In particular, it will go to the graveyard rather than to its owner's library."
         },
         {
           "date": "2016-06-08",
@@ -1194,7 +1195,7 @@
         },
         {
           "date": "2016-06-08",
-          "text": "If you own Green Sun's Zenith, but an opponent casts it (due to Knowledge Pool's effect, for example), that opponent searches his or her library for an appropriate creature card, then shuffles that library. That opponent then shuffles Green Sun's Zenith into your library. You won't shuffle any library in this case."
+          "text": "If you own Green Sun's Zenith, but an opponent casts it (due to Knowledge Pool's effect, for example), that opponent searches their library for an appropriate creature card, then shuffles that library. That opponent then shuffles Green Sun's Zenith into your library. You won't shuffle any library in this case."
         }
       ],
       "text": "Search your library for a green creature card with converted mana cost X or less, put it onto the battlefield, then shuffle your library. Shuffle Green Sun's Zenith into its owner's library.",
@@ -1247,7 +1248,7 @@
         "V13"
       ],
       "rarity": "Mythic Rare",
-      "text": "{T}: Add {C} to your mana pool.\n{X}{R}{G}, {T}: Target creature gets +X/+0 and gains trample until end of turn.",
+      "text": "{T}: Add {C}.\n{X}{R}{G}, {T}: Target creature gets +X/+0 and gains trample until end of turn.",
       "type": "Land",
       "types": [
         "Land"

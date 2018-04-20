@@ -649,8 +649,12 @@
       "rarity": "Common",
       "rulings": [
         {
-          "date": "2004-10-04",
-          "text": "If the spell fails because the target is not there or isn't legal, the owner does not gain any life."
+          "date": "2018-03-16",
+          "text": "You are a creature's owner if the card representing it began the game in your deck, or if it's a token that entered the battlefield under your control. If Path of Peace targets a creature that you own but an opponent controls, you'll gain 4 life."
+        },
+        {
+          "date": "2018-03-16",
+          "text": "If the target creature is an illegal target by the time Path of Peace tries to resolve, the spell doesn't resolve. No player gains life."
         }
       ],
       "text": "Destroy target creature. Its owner gains 4 life.",
@@ -1110,7 +1114,7 @@
         "PTK"
       ],
       "rarity": "Uncommon",
-      "text": "Cast Rally the Troops only during the declare attackers step and only if you've been attacked this step.\nUntap all creatures you control.",
+      "text": "Cast this spell only during the declare attackers step and only if you've been attacked this step.\nUntap all creatures you control.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -1153,7 +1157,7 @@
         "PTK"
       ],
       "rarity": "Uncommon",
-      "text": "Cast Warrior's Stand only during the declare attackers step and only if you've been attacked this step.\nCreatures you control get +2/+2 until end of turn.",
+      "text": "Cast this spell only during the declare attackers step and only if you've been attacked this step.\nCreatures you control get +2/+2 until end of turn.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -1318,7 +1322,7 @@
       "rulings": [
         {
           "date": "2008-10-01",
-          "text": "If Angel of Fury is removed from the graveyard after the ability triggers but before it resolves, it will remain in its zone when its owner shuffles his or her library. Similarly, if a replacement effect has it move to a different zone instead of being put into the graveyard, the ability won't trigger at all."
+          "text": "If Angel of Fury is removed from the graveyard after the ability triggers but before it resolves, it will remain in its zone when its owner shuffles their library. Similarly, if a replacement effect has it move to a different zone instead of being put into the graveyard, the ability won't trigger at all."
         },
         {
           "date": "2008-10-01",
@@ -1526,7 +1530,7 @@
         "ME4"
       ],
       "rarity": "Rare",
-      "text": "Cast Just Fate only during the declare attackers step and only if you've been attacked this step.\nDestroy target attacking creature.",
+      "text": "Cast this spell only during the declare attackers step and only if you've been attacked this step.\nDestroy target attacking creature.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -2317,7 +2321,7 @@
         "Human",
         "Wizard"
       ],
-      "text": "{T}: Apprentice Sorcerer deals 1 damage to target creature or player. Activate this ability only during your turn, before attackers are declared.",
+      "text": "{T}: Apprentice Sorcerer deals 1 damage to any target. Activate this ability only during your turn, before attackers are declared.",
       "toughness": "1",
       "type": "Creature — Human Wizard",
       "types": [
@@ -2493,7 +2497,7 @@
         "S99"
       ],
       "rarity": "Uncommon",
-      "text": "Look at the top card of target player's library. You may put that card into his or her graveyard.",
+      "text": "Look at the top card of target player's library. You may put that card into their graveyard.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -2541,7 +2545,7 @@
       "rulings": [
         {
           "date": "2008-10-01",
-          "text": "When the ability resolves, if one of the lands has become an illegal target (because it's no longer on the battlefield, for example), you return the other one to your hand. If both of the lands have become illegal targets, the ability is countered. This has no effect on Sea Drake."
+          "text": "When the ability resolves, if one of the lands has become an illegal target (because it's no longer on the battlefield, for example), you return the other one to your hand. If both of the lands have become illegal targets, the ability doesn't resolve. This has no effect on Sea Drake."
         }
       ],
       "subtypes": [
@@ -2644,7 +2648,7 @@
         "PO2"
       ],
       "rarity": "Uncommon",
-      "text": "Cast Remove only during the declare attackers step and only if you've been attacked this step.\nReturn target attacking creature to its owner's hand.",
+      "text": "Cast this spell only during the declare attackers step and only if you've been attacked this step.\nReturn target attacking creature to its owner's hand.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -3065,10 +3069,10 @@
         },
         {
           "date": "2009-10-01",
-          "text": "No creatures or lands controlled by the player will untap during his or her next untap step. This includes those which entered the battlefield after Exhaustion resolved."
+          "text": "No creatures or lands controlled by the player will untap during their next untap step. This includes those which entered the battlefield after Exhaustion resolved."
         }
       ],
-      "text": "Creatures and lands target opponent controls don't untap during his or her next untap step.",
+      "text": "Creatures and lands target opponent controls don't untap during their next untap step.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -3648,10 +3652,6 @@
         {
           "date": "2004-10-04",
           "text": "The creature being brought back is chosen on announcement and not on resolution of the spell because it is targeted."
-        },
-        {
-          "date": "2008-04-01",
-          "text": "A \"creature card\" is any card with the type creature, even if it has other types such as artifact, enchantment, or land. Older cards of type summon are also creature cards."
         }
       ],
       "text": "Return target creature card from your graveyard to your hand.",
@@ -4181,7 +4181,7 @@
         "TPR"
       ],
       "rarity": "Uncommon",
-      "text": "Target opponent reveals his or her hand. You choose a card from it. That player discards that card.",
+      "text": "Target opponent reveals their hand. You choose a card from it. That player discards that card.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -4269,7 +4269,7 @@
         "PO2"
       ],
       "rarity": "Uncommon",
-      "text": "Kiss of Death deals 4 damage to target opponent. You gain 4 life.",
+      "text": "Kiss of Death deals 4 damage to target opponent or planeswalker. You gain 4 life.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -5339,7 +5339,7 @@
         "M15"
       ],
       "rarity": "Common",
-      "text": "Lava Axe deals 5 damage to target player.",
+      "text": "Lava Axe deals 5 damage to target player or planeswalker.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -5453,7 +5453,7 @@
         "9ED"
       ],
       "rarity": "Common",
-      "text": "Volcanic Hammer deals 3 damage to target creature or player.",
+      "text": "Volcanic Hammer deals 3 damage to any target.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -5500,7 +5500,7 @@
         "SCG"
       ],
       "rarity": "Common",
-      "text": "Goblin War Strike deals damage to target player equal to the number of Goblins you control.",
+      "text": "Goblin War Strike deals damage to target player or planeswalker equal to the number of Goblins you control.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -5717,7 +5717,7 @@
       "subtypes": [
         "Goblin"
       ],
-      "text": "Sacrifice Goblin Firestarter: Goblin Firestarter deals 1 damage to target creature or player. Activate this ability only during your turn, before attackers are declared.",
+      "text": "Sacrifice Goblin Firestarter: It deals 1 damage to any target. Activate this ability only during your turn, before attackers are declared.",
       "toughness": "1",
       "type": "Creature — Goblin",
       "types": [
@@ -5820,7 +5820,7 @@
         "DPA"
       ],
       "rarity": "Uncommon",
-      "text": "Blaze deals X damage to target creature or player.",
+      "text": "Blaze deals X damage to any target.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -5960,7 +5960,7 @@
         "PO2"
       ],
       "rarity": "Uncommon",
-      "text": "Target opponent chooses a creature he or she controls. Other creatures he or she controls can't block this turn.",
+      "text": "Target opponent chooses a creature they control. Other creatures they control can't block this turn.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -6517,19 +6517,15 @@
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2008-04-01",
-          "text": "If this creature is attacking a planeswalker, assigning its damage as though it weren't blocked means the damage is assigned to the planeswalker, not to the defending player."
-        },
-        {
-          "date": "2008-04-01",
-          "text": "When assigning combat damage, you choose whether you want to assign all damage to blocking creatures, or if you want to assign all of it to the defending player or planeswalker. You can't split the damage assignment between them."
-        },
-        {
-          "date": "2008-04-01",
+          "date": "2018-04-27",
           "text": "You can decide to assign damage to the defending player or planeswalker even if the blocking creature has protection from green or damage preventing effects on it."
         },
         {
-          "date": "2008-04-01",
+          "date": "2018-04-27",
+          "text": "When assigning combat damage, you choose whether you want to assign all damage to blocking creatures, or if you want to assign all of it to the player or planeswalker this creature is attacking. You can't split the damage assignment between them."
+        },
+        {
+          "date": "2018-04-27",
           "text": "If blocked by a creature with banding, the defending player decides whether or not the damage is assigned \"as though it weren't blocked\"."
         }
       ],
@@ -7393,7 +7389,7 @@
         "PO2"
       ],
       "rarity": "Uncommon",
-      "text": "Cast Deep Wood only during the declare attackers step and only if you've been attacked this step.\nPrevent all damage that would be dealt to you this turn by attacking creatures.",
+      "text": "Cast this spell only during the declare attackers step and only if you've been attacked this step.\nPrevent all damage that would be dealt to you this turn by attacking creatures.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -7480,7 +7476,7 @@
         "ME4"
       ],
       "rarity": "Uncommon",
-      "text": "Bee Sting deals 2 damage to target creature or player.",
+      "text": "Bee Sting deals 2 damage to any target.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -7684,19 +7680,15 @@
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2008-04-01",
-          "text": "If this creature is attacking a planeswalker, assigning its damage as though it weren't blocked means the damage is assigned to the planeswalker, not to the defending player."
-        },
-        {
-          "date": "2008-04-01",
-          "text": "When assigning combat damage, you choose whether you want to assign all damage to blocking creatures, or if you want to assign all of it to the defending player or planeswalker. You can't split the damage assignment between them."
-        },
-        {
-          "date": "2008-04-01",
+          "date": "2018-04-27",
           "text": "You can decide to assign damage to the defending player or planeswalker even if the blocking creature has protection from green or damage preventing effects on it."
         },
         {
-          "date": "2008-04-01",
+          "date": "2018-04-27",
+          "text": "When assigning combat damage, you choose whether you want to assign all damage to blocking creatures, or if you want to assign all of it to the player or planeswalker this creature is attacking. You can't split the damage assignment between them."
+        },
+        {
+          "date": "2018-04-27",
           "text": "If blocked by a creature with banding, the defending player decides whether or not the damage is assigned \"as though it weren't blocked\"."
         }
       ],
@@ -8118,7 +8110,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -8379,7 +8372,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -8640,7 +8634,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -8900,7 +8895,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -9160,7 +9157,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -9420,7 +9419,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -9684,7 +9685,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -9948,7 +9950,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -10212,7 +10215,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -10478,7 +10482,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -10744,7 +10750,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -11010,7 +11018,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -11273,7 +11283,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -11536,7 +11548,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -11799,7 +11813,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [

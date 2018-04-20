@@ -876,7 +876,7 @@
           "text": "You can choose not to find a basic land card, even if there is one in your library."
         }
       ],
-      "text": "Creatures you control get +1/+2 until end of turn. Untap those creatures.\nBasic landcycling {1}{W} ({1}{W}, Discard this card: Search your library for a basic land card, reveal it, and put it into your hand. Then shuffle your library.)",
+      "text": "Creatures you control get +1/+2 until end of turn. Untap those creatures.\nBasic landcycling {1}{W} ({1}{W}, Discard this card: Search your library for a basic land card, reveal it, put it into your hand, then shuffle your library.)",
       "type": "Instant",
       "types": [
         "Instant"
@@ -1639,14 +1639,14 @@
       "rulings": [
         {
           "date": "2017-03-14",
-          "text": "If the targeted creature becomes an illegal target by the time Path to Exile would resolve, the entire spell is countered. The creature's controller won't search for a basic land card."
+          "text": "If the targeted creature becomes an illegal target by the time Path to Exile would resolve, the entire spell doesn't resolve. The creature's controller won't search for a basic land card."
         },
         {
           "date": "2017-03-14",
-          "text": "The controller of the exiled creature isn't required to search his or her library for a basic land. If that player doesn't, the player won't shuffle his or her library."
+          "text": "The controller of the exiled creature isn't required to search their library for a basic land. If that player doesn't, the player won't shuffle their library."
         }
       ],
-      "text": "Exile target creature. Its controller may search his or her library for a basic land card, put that card onto the battlefield tapped, then shuffle his or her library.",
+      "text": "Exile target creature. Its controller may search their library for a basic land card, put that card onto the battlefield tapped, then shuffle their library.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -2869,7 +2869,8 @@
         "CON",
         "DDF",
         "MMA",
-        "MM2"
+        "MM2",
+        "DDU"
       ],
       "rarity": "Common",
       "subtypes": [
@@ -3707,10 +3708,10 @@
       "rulings": [
         {
           "date": "2009-02-01",
-          "text": "If there are no creature cards in the targeted opponent's library, that player will put his or her entire library into his or her graveyard."
+          "text": "If there are no creature cards in the targeted opponent's library, that player will put their entire library into their graveyard."
         }
       ],
-      "text": "Target opponent reveals cards from the top of his or her library until he or she reveals a creature card. That player puts all noncreature cards revealed this way into his or her graveyard, then you put the creature card onto the battlefield under your control.",
+      "text": "Target opponent reveals cards from the top of their library until they reveal a creature card. That player puts all noncreature cards revealed this way into their graveyard, then you put the creature card onto the battlefield under your control.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -3824,7 +3825,7 @@
           "text": "You can choose not to find a basic land card, even if there is one in your library."
         }
       ],
-      "text": "Counter target spell.\nBasic landcycling {1}{U} ({1}{U}, Discard this card: Search your library for a basic land card, reveal it, and put it into your hand. Then shuffle your library.)",
+      "text": "Counter target spell.\nBasic landcycling {1}{U} ({1}{U}, Discard this card: Search your library for a basic land card, reveal it, put it into your hand, then shuffle your library.)",
       "type": "Instant",
       "types": [
         "Instant"
@@ -4052,7 +4053,7 @@
         },
         {
           "date": "2009-02-01",
-          "text": "If View from Above is countered for any reason (for example, if its target has become illegal), none of its effects happen. It will be put into your graveyard as normal."
+          "text": "If View from Above doesn't resolve for any reason (for example, if its target has become illegal), none of its effects happen. It will be put into your graveyard as normal."
         }
       ],
       "text": "Target creature gains flying until end of turn. If you control a white permanent, return View from Above to its owner's hand.",
@@ -4286,7 +4287,7 @@
           "text": "You can choose not to find a basic land card, even if there is one in your library."
         }
       ],
-      "text": "Target player loses 4 life and you gain 4 life.\nBasic landcycling {1}{B} ({1}{B}, Discard this card: Search your library for a basic land card, reveal it, and put it into your hand. Then shuffle your library.)",
+      "text": "Target player loses 4 life and you gain 4 life.\nBasic landcycling {1}{B} ({1}{B}, Discard this card: Search your library for a basic land card, reveal it, put it into your hand, then shuffle your library.)",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -4715,7 +4716,7 @@
       "subtypes": [
         "Demon"
       ],
-      "text": "Flying\nWhenever another creature leaves the battlefield, you may have target player put the top two cards of his or her library into his or her graveyard.\nUnearth {2}{B} ({2}{B}: Return this card from your graveyard to the battlefield. It gains haste. Exile it at the beginning of the next end step or if it would leave the battlefield. Unearth only as a sorcery.)",
+      "text": "Flying\nWhenever another creature leaves the battlefield, you may have target player put the top two cards of their library into their graveyard.\nUnearth {2}{B} ({2}{B}: Return this card from your graveyard to the battlefield. It gains haste. Exile it at the beginning of the next end step or if it would leave the battlefield. Unearth only as a sorcery.)",
       "toughness": "5",
       "type": "Creature — Demon",
       "types": [
@@ -4818,7 +4819,7 @@
       "rulings": [
         {
           "date": "2009-02-01",
-          "text": "Fleshformer's ability has only one target: the creature. If that creature becomes an illegal target by the time Fleshformer's ability would resolve, the entire ability is countered. Fleshformer won't get +2/+2 and won't gain fear."
+          "text": "Fleshformer's ability has only one target: the creature. If that creature becomes an illegal target by the time Fleshformer's ability would resolve, the entire ability doesn't resolve. Fleshformer won't get +2/+2 and won't gain fear."
         },
         {
           "date": "2009-02-01",
@@ -6176,13 +6177,9 @@
         {
           "date": "2009-02-01",
           "text": "Banefire can be targeted by spells that try to counter it (such as Countersquall) regardless of what the value of X is. If X is 5 or more, those spells will still resolve, but the part of their effect that would counter Banefire won't do anything. Any other effects those spells have will work as normal."
-        },
-        {
-          "date": "2009-02-01",
-          "text": "Banefire's ability won't prevent it from being countered by the game rules if its target has become an illegal target."
         }
       ],
-      "text": "Banefire deals X damage to target creature or player.\nIf X is 5 or more, Banefire can't be countered by spells or abilities and the damage can't be prevented.",
+      "text": "Banefire deals X damage to any target.\nIf X is 5 or more, this spell can't be countered and the damage can't be prevented.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -6736,7 +6733,7 @@
           "text": "You can choose not to find a basic land card, even if there is one in your library."
         }
       ],
-      "text": "Fiery Fall deals 5 damage to target creature.\nBasic landcycling {1}{R} ({1}{R}, Discard this card: Search your library for a basic land card, reveal it, and put it into your hand. Then shuffle your library.)",
+      "text": "Fiery Fall deals 5 damage to target creature.\nBasic landcycling {1}{R} ({1}{R}, Discard this card: Search your library for a basic land card, reveal it, put it into your hand, then shuffle your library.)",
       "type": "Instant",
       "types": [
         "Instant"
@@ -6846,7 +6843,7 @@
         "Goblin",
         "Warrior"
       ],
-      "text": "{1}{R}, Sacrifice a land: Put a +1/+1 counter on Goblin Razerunners.\nAt the beginning of your end step, you may have Goblin Razerunners deal damage equal to the number of +1/+1 counters on it to target player.",
+      "text": "{1}{R}, Sacrifice a land: Put a +1/+1 counter on Goblin Razerunners.\nAt the beginning of your end step, you may have Goblin Razerunners deal damage equal to the number of +1/+1 counters on it to target player or planeswalker.",
       "toughness": "4",
       "type": "Creature — Goblin Warrior",
       "types": [
@@ -7472,10 +7469,10 @@
         },
         {
           "date": "2009-02-01",
-          "text": "Quenchable Fire's delayed triggered ability (and the special action of paying {U}) will affect the player who was targeted by the spell, even if the original 3 damage is prevented or redirected to a different creature or player."
+          "text": "Quenchable Fire's delayed triggered ability (and the special action of paying {U}) will affect the player who was targeted by the spell, even if the original 3 damage is prevented or redirected to a different permanent or player."
         }
       ],
-      "text": "Quenchable Fire deals 3 damage to target player. It deals an additional 3 damage to that player at the beginning of your next upkeep step unless he or she pays {U} before that step.",
+      "text": "Quenchable Fire deals 3 damage to target player or planeswalker. It deals an additional 3 damage to that player or planeswalker at the beginning of your next upkeep step unless that player or that planeswalker's controller pays {U} before that step.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -7893,7 +7890,7 @@
           "text": "Volcanic Fallout can be targeted by spells that try to counter it (such as Countersquall). Those spells will still resolve, but the part of their effect that would counter Volcanic Fallout won't do anything. Any other effects those spells have will work as normal."
         }
       ],
-      "text": "Volcanic Fallout can't be countered.\nVolcanic Fallout deals 2 damage to each creature and each player.",
+      "text": "This spell can't be countered.\nVolcanic Fallout deals 2 damage to each creature and each player.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -8001,7 +7998,7 @@
       "subtypes": [
         "Dragon"
       ],
-      "text": "Flying\nDevour 1 (As this enters the battlefield, you may sacrifice any number of creatures. This creature enters the battlefield with that many +1/+1 counters on it.)\nWhen Voracious Dragon enters the battlefield, it deals damage to target creature or player equal to twice the number of Goblins it devoured.",
+      "text": "Flying\nDevour 1 (As this enters the battlefield, you may sacrifice any number of creatures. This creature enters the battlefield with that many +1/+1 counters on it.)\nWhen Voracious Dragon enters the battlefield, it deals damage to any target equal to twice the number of Goblins it devoured.",
       "toughness": "4",
       "type": "Creature — Dragon",
       "types": [
@@ -9299,7 +9296,7 @@
         "Human",
         "Druid"
       ],
-      "text": "Exalted (Whenever a creature you control attacks alone, that creature gets +1/+1 until end of turn.)\n{T}: Add {G}, {W}, or {U} to your mana pool.",
+      "text": "Exalted (Whenever a creature you control attacks alone, that creature gets +1/+1 until end of turn.)\n{T}: Add {G}, {W}, or {U}.",
       "toughness": "1",
       "type": "Creature — Human Druid",
       "types": [
@@ -9813,7 +9810,7 @@
       "rulings": [
         {
           "date": "2009-02-01",
-          "text": "Soul's Majesty's only target is the creature. If that creature becomes an illegal target by the time Soul's Majesty would resolve, the entire spell is countered. You won't draw any cards."
+          "text": "Soul's Majesty's only target is the creature. If that creature becomes an illegal target by the time Soul's Majesty would resolve, the entire spell doesn't resolve. You won't draw any cards."
         }
       ],
       "text": "Draw cards equal to the power of target creature you control.",
@@ -10041,7 +10038,7 @@
           "text": "You can choose not to find a basic land card, even if there is one in your library."
         }
       ],
-      "text": "Target player gains 8 life.\nBasic landcycling {1}{G} ({1}{G}, Discard this card: Search your library for a basic land card, reveal it, and put it into your hand. Then shuffle your library.)",
+      "text": "Target player gains 8 life.\nBasic landcycling {1}{G} ({1}{G}, Discard this card: Search your library for a basic land card, reveal it, put it into your hand, then shuffle your library.)",
       "type": "Instant",
       "types": [
         "Instant"
@@ -10457,7 +10454,7 @@
       "subtypes": [
         "Hydra"
       ],
-      "text": "Apocalypse Hydra enters the battlefield with X +1/+1 counters on it. If X is 5 or more, it enters the battlefield with an additional X +1/+1 counters on it.\n{1}{R}, Remove a +1/+1 counter from Apocalypse Hydra: Apocalypse Hydra deals 1 damage to target creature or player.",
+      "text": "Apocalypse Hydra enters the battlefield with X +1/+1 counters on it. If X is 5 or more, it enters the battlefield with an additional X +1/+1 counters on it.\n{1}{R}, Remove a +1/+1 counter from Apocalypse Hydra: Apocalypse Hydra deals 1 damage to any target.",
       "toughness": "0",
       "type": "Creature — Hydra",
       "types": [
@@ -10903,11 +10900,11 @@
       "rarity": "Mythic Rare",
       "rulings": [
         {
-          "date": "2009-02-01",
+          "date": "2018-03-16",
           "text": "You don't have to find all five cards."
         },
         {
-          "date": "2009-02-01",
+          "date": "2018-03-16",
           "text": "You may find multicolored cards with Conflux. The white card you find, for example, can be any number of colors, as long as white is one of them. What colors it is won't impact what other cards you can find. For example, you may find a white-blue card as the white card and another white-blue card as the blue card."
         }
       ],
@@ -11337,10 +11334,10 @@
         },
         {
           "date": "2009-02-01",
-          "text": "Exploding Borders has only one target: the player. If that player becomes an illegal target by the time Exploding Borders would resolve, the entire spell is countered. You won't get to search for a basic land card."
+          "text": "Exploding Borders has only one target: the player. If that player becomes an illegal target by the time Exploding Borders would resolve, the entire spell doesn't resolve. You won't get to search for a basic land card."
         }
       ],
-      "text": "Domain — Search your library for a basic land card, put that card onto the battlefield tapped, then shuffle your library. Exploding Borders deals X damage to target player, where X is the number of basic land types among lands you control.",
+      "text": "Domain — Search your library for a basic land card, put that card onto the battlefield tapped, then shuffle your library. Exploding Borders deals X damage to target player or planeswalker, where X is the number of basic land types among lands you control.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -11989,7 +11986,7 @@
         "Human",
         "Cleric"
       ],
-      "text": "{T}: Prevent the next 1 damage that would be dealt to target creature or player this turn.\n{T}: Target creature can't be blocked this turn.",
+      "text": "{T}: Prevent the next 1 damage that would be dealt to any target this turn.\n{T}: Target creature can't be blocked this turn.",
       "toughness": "1",
       "type": "Creature — Human Cleric",
       "types": [
@@ -12216,7 +12213,7 @@
         "Elf",
         "Druid"
       ],
-      "text": "{1}, {T}: Add {R}{G}{W} to your mana pool.",
+      "text": "{1}, {T}: Add {R}{G}{W}.",
       "toughness": "2",
       "type": "Creature — Elf Druid",
       "types": [
@@ -12335,7 +12332,7 @@
         },
         {
           "date": "2009-02-01",
-          "text": "If you cast a card \"without paying its mana cost,\" you can't pay any alternative costs, such as evoke or the alternative cost provided by the morph ability. However, you can pay optional additional costs, such as conspire, and you must still pay mandatory additional costs, such as the one on Goldmeadow Stalwart."
+          "text": "If you cast a card \"without paying its mana cost,\" you can't choose to cast it for any alternative costs, such as evoke or the alternative cost provided by the morph ability. However, you can pay optional additional costs, such as conspire, and you must still pay mandatory additional costs, such as the one on Goldmeadow Stalwart."
         }
       ],
       "subtypes": [
@@ -12569,7 +12566,7 @@
         },
         {
           "date": "2017-11-17",
-          "text": "After you discard your hand and the number of creatures each opponent must sacrifice has been determined, each opponent in turn order, starting with the player whose turn it is if that player is your opponent, chooses which creatures he or she will sacrifice, then all the chosen creatures are all sacrificed at the same time."
+          "text": "After you discard your hand and the number of creatures each opponent must sacrifice has been determined, each opponent in turn order, starting with the player whose turn it is if that player is your opponent, chooses which creatures they will sacrifice, then all the chosen creatures are all sacrificed at the same time."
         }
       ],
       "subtypes": [
@@ -12911,7 +12908,7 @@
         },
         {
           "date": "2012-07-01",
-          "text": "For the third ability, if the player is an illegal target when the ability tries to resolve, the ability is countered and none of its effects will happen. No damage will be dealt, no cards will be discarded, and no permanents will be sacrificed."
+          "text": "For the third ability, if the player is an illegal target when the ability tries to resolve, the ability doesn't resolve and none of its effects will happen. No damage will be dealt, no cards will be discarded, and no permanents will be sacrificed."
         }
       ],
       "subtypes": [
@@ -12920,7 +12917,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "+3: Destroy target noncreature permanent.\n−2: Gain control of target creature.\n−9: Nicol Bolas, Planeswalker deals 7 damage to target player. That player discards seven cards, then sacrifices seven permanents.",
+      "text": "+3: Destroy target noncreature permanent.\n−2: Gain control of target creature.\n−9: Nicol Bolas, Planeswalker deals 7 damage to target player or planeswalker. That player or that planeswalker's controller discards seven cards, then sacrifices seven permanents.",
       "type": "Legendary Planeswalker — Bolas",
       "types": [
         "Planeswalker"
@@ -14682,7 +14679,7 @@
         "CON"
       ],
       "rarity": "Common",
-      "text": "When Kaleidostone enters the battlefield, draw a card.\n{5}, {T}, Sacrifice Kaleidostone: Add {W}{U}{B}{R}{G} to your mana pool.",
+      "text": "When Kaleidostone enters the battlefield, draw a card.\n{5}, {T}, Sacrifice Kaleidostone: Add {W}{U}{B}{R}{G}.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -14775,7 +14772,7 @@
         "CON"
       ],
       "rarity": "Common",
-      "text": "{1}, {T}: Add one mana of any color to your mana pool.",
+      "text": "{1}, {T}: Add one mana of any color.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -14975,7 +14972,7 @@
         "CON"
       ],
       "rarity": "Rare",
-      "text": "{1}{W}, {T}: You gain 5 life.\n{1}{U}, {T}: Draw a card, then discard a card.\n{1}{B}, {T}: Target creature gets -2/-2 until end of turn.\n{1}{R}, {T}: Obelisk of Alara deals 3 damage to target player.\n{1}{G}, {T}: Target creature gets +4/+4 until end of turn.",
+      "text": "{1}{W}, {T}: You gain 5 life.\n{1}{U}, {T}: Draw a card, then discard a card.\n{1}{B}, {T}: Target creature gets -2/-2 until end of turn.\n{1}{R}, {T}: Obelisk of Alara deals 3 damage to target player or planeswalker.\n{1}{G}, {T}: Target creature gets +4/+4 until end of turn.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -15074,7 +15071,7 @@
           "text": "Mana produced by Ancient Ziggurat can't be spent on activated abilities that put a creature card directly onto the battlefield, such as unearth or ninjutsu."
         }
       ],
-      "text": "{T}: Add one mana of any color to your mana pool. Spend this mana only to cast a creature spell.",
+      "text": "{T}: Add one mana of any color. Spend this mana only to cast a creature spell.",
       "type": "Land",
       "types": [
         "Land"
@@ -15173,7 +15170,7 @@
         },
         {
           "date": "2009-02-01",
-          "text": "Exotic Orchard checks the effects of all mana-producing abilities of lands your opponents control, but it doesn't check their costs. For example, Vivid Crag has the ability \"{T}, Remove a charge counter from Vivid Crag: Add one mana of any color to your mana pool.\" If an opponent controls Vivid Crag and you control Exotic Orchard, you can tap Exotic Orchard for any color of mana. It doesn't matter whether Vivid Crag has a charge counter on it, and it doesn't matter whether it's untapped."
+          "text": "Exotic Orchard checks the effects of all mana-producing abilities of lands your opponents control, but it doesn't check their costs. For example, Vivid Crag has the ability \"{T}, Remove a charge counter from Vivid Crag: Add one mana of any color.\" If an opponent controls Vivid Crag and you control Exotic Orchard, you can tap Exotic Orchard for any color of mana. It doesn't matter whether Vivid Crag has a charge counter on it, and it doesn't matter whether it's untapped."
         },
         {
           "date": "2009-02-01",
@@ -15188,7 +15185,7 @@
           "text": "Lands that produce mana based only on what other lands \"could produce\" won't help each other unless some other land allows one of them to actually produce some type of mana. For example, if you control an Exotic Orchard and your opponent controls an Exotic Orchard and a Reflecting Pool, none of those lands would produce mana if their mana abilities were activated. On the other hand, if you control a Forest and an Exotic Orchard, and your opponent controls an Exotic Orchard and a Reflecting Pool, then each of those lands can be tapped to produce {G}. Your opponent's Exotic Orchard can produce {G} because you control a Forest. Your Exotic Orchard and your opponent's Reflecting Pool can each produce {G} because your opponent's Exotic Orchard can produce {G}."
         }
       ],
-      "text": "{T}: Add to your mana pool one mana of any color that a land an opponent controls could produce.",
+      "text": "{T}: Add one mana of any color that a land an opponent controls could produce.",
       "type": "Land",
       "types": [
         "Land"
@@ -15286,7 +15283,7 @@
           "text": "If multiple effects modify your hand size, apply them in timestamp order. For example, if you put Null Profusion (an enchantment that says your maximum hand size is two) onto the battlefield and then put Reliquary Tower onto the battlefield, you'll have no maximum hand size. However, if those permanents enter the battlefield in the opposite order, your maximum hand size would be two."
         }
       ],
-      "text": "You have no maximum hand size.\n{T}: Add {C} to your mana pool.",
+      "text": "You have no maximum hand size.\n{T}: Add {C}.",
       "type": "Land",
       "types": [
         "Land"
@@ -15380,7 +15377,7 @@
         "CMA"
       ],
       "rarity": "Common",
-      "text": "Rupture Spire enters the battlefield tapped.\nWhen Rupture Spire enters the battlefield, sacrifice it unless you pay {1}.\n{T}: Add one mana of any color to your mana pool.",
+      "text": "Rupture Spire enters the battlefield tapped.\nWhen Rupture Spire enters the battlefield, sacrifice it unless you pay {1}.\n{T}: Add one mana of any color.",
       "type": "Land",
       "types": [
         "Land"
@@ -15477,7 +15474,7 @@
           "text": "The affected land loses its existing land types and any abilities printed on it. It becomes the chosen basic land type and now has the ability to tap to add one mana of the appropriate color to your mana pool. Unstable Frontier's ability doesn't change the affected land's name or whether it's legendary or basic."
         }
       ],
-      "text": "{T}: Add {C} to your mana pool.\n{T}: Target land you control becomes the basic land type of your choice until end of turn.",
+      "text": "{T}: Add {C}.\n{T}: Target land you control becomes the basic land type of your choice until end of turn.",
       "type": "Land",
       "types": [
         "Land"

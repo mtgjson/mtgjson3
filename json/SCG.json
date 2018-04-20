@@ -702,18 +702,6 @@
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2004-10-04",
-          "text": "The two X's in the mana cost mean that you pay 2 mana (above the {2}{W}{W} base cost) for each token you want to create."
-        },
-        {
-          "date": "2004-10-04",
-          "text": "When you cycle this card, the last ability triggers. When that ability resolves, you choose a value of X and pay it during resolution."
-        },
-        {
-          "date": "2004-10-04",
-          "text": "You can cast this with X=0."
-        },
-        {
           "date": "2008-10-01",
           "text": "Cycling is an activated ability. Effects that interact with activated abilities (such as Stifle or Rings of Brighthearth) will interact with cycling. Effects that interact with spells (such as Remove Soul or Faerie Tauntings) will not."
         },
@@ -723,7 +711,11 @@
         },
         {
           "date": "2008-10-01",
-          "text": "The cycling ability and the triggered ability are separate. If the triggered ability is countered (with Stifle, for example, or if all its targets have become illegal), the cycling ability will still resolve and you'll draw a card."
+          "text": "The cycling ability and the triggered ability are separate. If the triggered ability doesn't resolve (due to being countered with Stifle, for example, or if all its targets have become illegal), the cycling ability will still resolve and you'll draw a card."
+        },
+        {
+          "date": "2018-03-16",
+          "text": "A mana cost of {X}{X} means that you pay twice X. If you want X to be 3, you pay {8}{W}{W} to cast Decree of Justice."
         }
       ],
       "text": "Create X 4/4 white Angel creature tokens with flying.\nCycling {2}{W} ({2}{W}, Discard this card: Draw a card.)\nWhen you cycle Decree of Justice, you may pay {X}. If you do, create X 1/1 white Soldier creature tokens.",
@@ -814,7 +806,7 @@
           "text": "You can't pick a card that can't legally be returned to the battlefield. If there are no cards that can be legally returned, then you can't pick one."
         }
       ],
-      "text": "Exile all permanents. For as long as any of those cards remain exiled, at the beginning of each player's upkeep, that player returns one of the exiled cards he or she owns to the battlefield.",
+      "text": "Exile all permanents. For as long as any of those cards remain exiled, at the beginning of each player's upkeep, that player returns one of the exiled cards they own to the battlefield.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -1072,7 +1064,7 @@
         "Dragon",
         "Spirit"
       ],
-      "text": "Flying\n{3}{W}{W}: Return Eternal Dragon from your graveyard to your hand. Activate this ability only during your upkeep.\nPlainscycling {2} ({2}, Discard this card: Search your library for a Plains card, reveal it, and put it into your hand. Then shuffle your library.)",
+      "text": "Flying\n{3}{W}{W}: Return Eternal Dragon from your graveyard to your hand. Activate this ability only during your upkeep.\nPlainscycling {2} ({2}, Discard this card: Search your library for a Plains card, reveal it, put it into your hand, then shuffle your library.)",
       "toughness": "5",
       "type": "Creature — Dragon Spirit",
       "types": [
@@ -1566,8 +1558,12 @@
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2004-10-04",
-          "text": "If the targeted creature leaves the battlefield or stops being a creature before the damage would be dealt, then the damage is not redirected. For example, if you choose a 1/1 creature, then this card would take 3 damage, all 3 is directed to the 1/1 creature, which then dies. If this card would take an additional 3 damage later in the turn, the 1/1 creature is no longer on the battlefield so the damage is not redirected."
+          "date": "2018-03-16",
+          "text": "If the target creature leaves the battlefield or stops being a creature before damage would be dealt, that damage is not redirected. For example, if you choose a 1/1 creature, then Karona's Zealot would be dealt 3 damage, all 3 is dealt instead to the 1/1 creature, which then dies. If Karona's Zealot would be dealt 3 damage again later in the turn, the 1/1 creature is no longer on the battlefield, so the damage is not redirected."
+        },
+        {
+          "date": "2018-03-16",
+          "text": "If multiple replacement effects would modify how damage would be dealt, the player being dealt damage (or the controller of the permanent being dealt damage) chooses the order in which to apply those effects."
         }
       ],
       "subtypes": [
@@ -1659,7 +1655,7 @@
         "Cleric",
         "Soldier"
       ],
-      "text": "Vigilance\nPlainscycling {2} ({2}, Discard this card: Search your library for a Plains card, reveal it, and put it into your hand. Then shuffle your library.)",
+      "text": "Vigilance\nPlainscycling {2} ({2}, Discard this card: Search your library for a Plains card, reveal it, put it into your hand, then shuffle your library.)",
       "toughness": "6",
       "type": "Creature — Human Cleric Soldier",
       "types": [
@@ -2505,7 +2501,7 @@
           "text": "You may choose new targets for any of the copies. You can choose differently for each copy."
         }
       ],
-      "text": "Target player puts the top three cards of his or her library into his or her graveyard.\nStorm (When you cast this spell, copy it for each spell cast before it this turn. You may choose new targets for the copies.)",
+      "text": "Target player puts the top three cards of their library into their graveyard.\nStorm (When you cast this spell, copy it for each spell cast before it this turn. You may choose new targets for the copies.)",
       "type": "Instant",
       "types": [
         "Instant"
@@ -2765,7 +2761,7 @@
         },
         {
           "date": "2008-10-01",
-          "text": "The cycling ability and the triggered ability are separate. If the triggered ability is countered (with Stifle, for example, or if all its targets have become illegal), the cycling ability will still resolve and you'll draw a card."
+          "text": "The cycling ability and the triggered ability are separate. If the triggered ability doesn't resolve (due to being countered with Stifle, for example, or if all its targets have become illegal), the cycling ability will still resolve and you'll draw a card."
         },
         {
           "date": "2008-10-01",
@@ -3432,7 +3428,7 @@
         "SCG"
       ],
       "rarity": "Uncommon",
-      "text": "Put target permanent an opponent controls on top of its owner's library. That opponent may put an artifact, creature, enchantment, or land card from his or her hand onto the battlefield.",
+      "text": "Put target permanent an opponent controls on top of its owner's library. That opponent may put an artifact, creature, enchantment, or land card from their hand onto the battlefield.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -4026,7 +4022,7 @@
         "Wizard",
         "Mutant"
       ],
-      "text": "Whenever Raven Guild Master deals combat damage to a player, that player exiles the top ten cards of his or her library.\nMorph {2}{U}{U} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)",
+      "text": "Whenever Raven Guild Master deals combat damage to a player, that player exiles the top ten cards of their library.\nMorph {2}{U}{U} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)",
       "toughness": "1",
       "type": "Creature — Human Wizard Mutant",
       "types": [
@@ -4353,7 +4349,7 @@
         "Bird",
         "Soldier"
       ],
-      "text": "Flying\nIslandcycling {2} ({2}, Discard this card: Search your library for an Island card, reveal it, and put it into your hand. Then shuffle your library.)",
+      "text": "Flying\nIslandcycling {2} ({2}, Discard this card: Search your library for an Island card, reveal it, put it into your hand, then shuffle your library.)",
       "toughness": "4",
       "type": "Creature — Bird Soldier",
       "types": [
@@ -4864,7 +4860,7 @@
         "Zombie",
         "Wizard"
       ],
-      "text": "{X}{B}, {T}: Target player reveals X cards from his or her hand and you choose one of them. That player discards that card. Activate this ability only any time you could cast a sorcery.",
+      "text": "{X}{B}, {T}: Target player reveals X cards from their hand and you choose one of them. That player discards that card. Activate this ability only any time you could cast a sorcery.",
       "toughness": "1",
       "type": "Creature — Zombie Wizard",
       "types": [
@@ -4947,7 +4943,7 @@
       "rulings": [
         {
           "date": "2011-09-22",
-          "text": "If a player controls no creatures, or each creature he or she controls is a Zombie, that player does nothing when the first ability resolves."
+          "text": "If a player controls no creatures, or each creature they control is a Zombie, that player does nothing when the first ability resolves."
         },
         {
           "date": "2011-09-22",
@@ -5121,7 +5117,7 @@
         "SCG"
       ],
       "rarity": "Uncommon",
-      "text": "As an additional cost to cast Chill Haunting, exile X creature cards from your graveyard.\nTarget creature gets -X/-X until end of turn.",
+      "text": "As an additional cost to cast this spell, exile X creature cards from your graveyard.\nTarget creature gets -X/-X until end of turn.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -5363,6 +5359,12 @@
         "A25"
       ],
       "rarity": "Common",
+      "rulings": [
+        {
+          "date": "2018-03-16",
+          "text": "The last ability of Death's-Head Buzzard affects only creatures on the battlefield at the time it resolves. Creatures that enter the battlefield later in the turn won't get -1/-1."
+        }
+      ],
       "subtypes": [
         "Bird"
       ],
@@ -5455,7 +5457,7 @@
         },
         {
           "date": "2008-10-01",
-          "text": "The cycling ability and the triggered ability are separate. If the triggered ability is countered (with Stifle, for example, or if all its targets have become illegal), the cycling ability will still resolve and you'll draw a card."
+          "text": "The cycling ability and the triggered ability are separate. If the triggered ability doesn't resolve (due to being countered with Stifle, for example, or if all its targets have become illegal), the cycling ability will still resolve and you'll draw a card."
         }
       ],
       "text": "Destroy all creatures. They can't be regenerated. Draw a card for each creature destroyed this way.\nCycling {3}{B}{B} ({3}{B}{B}, Discard this card: Draw a card.)\nWhen you cycle Decree of Pain, all creatures get -2/-2 until end of turn.",
@@ -5699,7 +5701,7 @@
           "text": "Damage that is prevented does not count toward the total."
         }
       ],
-      "text": "Target player loses life equal to the damage already dealt to him or her this turn.",
+      "text": "Target player loses life equal to the damage already dealt to that player this turn.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -6203,7 +6205,7 @@
           "text": "Players can only respond once this spell has been cast and all its costs have been paid. No one can try to destroy the creature you sacrificed to prevent you from casting this spell."
         }
       ],
-      "text": "As an additional cost to cast Skulltap, sacrifice a creature.\nDraw two cards.",
+      "text": "As an additional cost to cast this spell, sacrifice a creature.\nDraw two cards.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -6509,7 +6511,7 @@
         "Zombie",
         "Mutant"
       ],
-      "text": "{B}: Regenerate Twisted Abomination.\nSwampcycling {2} ({2}, Discard this card: Search your library for a Swamp card, reveal it, and put it into your hand. Then shuffle your library.)",
+      "text": "{B}: Regenerate Twisted Abomination.\nSwampcycling {2} ({2}, Discard this card: Search your library for a Swamp card, reveal it, put it into your hand, then shuffle your library.)",
       "toughness": "3",
       "type": "Creature — Zombie Mutant",
       "types": [
@@ -7014,7 +7016,7 @@
       "subtypes": [
         "Beast"
       ],
-      "text": "Whenever a permanent is turned face up, Bonethorn Valesk deals 1 damage to target creature or player.",
+      "text": "Whenever a permanent is turned face up, Bonethorn Valesk deals 1 damage to any target.",
       "toughness": "2",
       "type": "Creature — Beast",
       "types": [
@@ -7096,7 +7098,7 @@
           "text": "The targeted creature can't be regenerated and is exiled if it would die no matter why it would die this turn. It doesn't have to be destroyed because of the damage Carbonize deals to it."
         }
       ],
-      "text": "Carbonize deals 3 damage to target creature or player. That creature can't be regenerated this turn. If the creature would die this turn, exile it instead.",
+      "text": "Carbonize deals 3 damage to any target. If it's a creature, it can't be regenerated this turn, and if it would die this turn, exile it instead.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -7200,7 +7202,7 @@
         "Cat",
         "Beast"
       ],
-      "text": "{R}: Chartooth Cougar gets +1/+0 until end of turn.\nMountaincycling {2} ({2}, Discard this card: Search your library for a Mountain card, reveal it, and put it into your hand. Then shuffle your library.)",
+      "text": "{R}: Chartooth Cougar gets +1/+0 until end of turn.\nMountaincycling {2} ({2}, Discard this card: Search your library for a Mountain card, reveal it, put it into your hand, then shuffle your library.)",
       "toughness": "4",
       "type": "Creature — Cat Beast",
       "types": [
@@ -7287,7 +7289,7 @@
         },
         {
           "date": "2008-10-01",
-          "text": "The cycling ability and the triggered ability are separate. If the triggered ability is countered (with Stifle, for example, or if all its targets have become illegal), the cycling ability will still resolve and you'll draw a card."
+          "text": "The cycling ability and the triggered ability are separate. If the triggered ability doesn't resolve (due to being countered with Stifle, for example, or if all its targets have become illegal), the cycling ability will still resolve and you'll draw a card."
         }
       ],
       "text": "Exile all artifacts, creatures, and lands from the battlefield, all cards from all graveyards, and all cards from all hands.\nCycling {5}{R}{R} ({5}{R}{R}, Discard this card: Draw a card.)\nWhen you cycle Decree of Annihilation, destroy all lands.",
@@ -7456,7 +7458,7 @@
         "Dragon",
         "Wizard"
       ],
-      "text": "Flying\nWhenever Dragon Mage deals combat damage to a player, each player discards his or her hand, then draws seven cards.",
+      "text": "Flying\nWhenever Dragon Mage deals combat damage to a player, each player discards their hand, then draws seven cards.",
       "toughness": "5",
       "type": "Creature — Dragon Wizard",
       "types": [
@@ -7884,7 +7886,7 @@
       "subtypes": [
         "Aura"
       ],
-      "text": "Enchant creature\nWhenever enchanted creature attacks, it deals 2 damage to target creature or player.",
+      "text": "Enchant creature\nWhenever enchanted creature attacks, it deals 2 damage to any target.",
       "type": "Enchantment — Aura",
       "types": [
         "Enchantment"
@@ -7978,7 +7980,7 @@
           "text": "Unless some effect explicitly says otherwise, a creature that can't attack you can still attack a planeswalker you control."
         }
       ],
-      "text": "At the beginning of your upkeep, Form of the Dragon deals 5 damage to target creature or player.\nAt the beginning of each end step, your life total becomes 5.\nCreatures without flying can't attack you.",
+      "text": "At the beginning of your upkeep, Form of the Dragon deals 5 damage to any target.\nAt the beginning of each end step, your life total becomes 5.\nCreatures without flying can't attack you.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -8227,7 +8229,7 @@
         "SCG"
       ],
       "rarity": "Common",
-      "text": "Goblin War Strike deals damage to target player equal to the number of Goblins you control.",
+      "text": "Goblin War Strike deals damage to target player or planeswalker equal to the number of Goblins you control.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -8305,14 +8307,21 @@
         "EVG",
         "VMA",
         "DDN",
-        "DD3_EVG"
+        "DD3_EVG",
+        "DOM"
       ],
       "rarity": "Uncommon",
+      "rulings": [
+        {
+          "date": "2018-04-27",
+          "text": "Goblin Warchief's effect reduces only generic mana in the cost of Goblin spells you cast. For example, it doesn't reduce the cost of Skirk Prospector below {R}."
+        }
+      ],
       "subtypes": [
         "Goblin",
         "Warrior"
       ],
-      "text": "Goblin spells you cast cost {1} less to cast.\nGoblin creatures you control have haste.",
+      "text": "Goblin spells you cast cost {1} less to cast.\nGoblins you control have haste.",
       "toughness": "2",
       "type": "Creature — Goblin Warrior",
       "types": [
@@ -8640,7 +8649,7 @@
       "subtypes": [
         "Goblin"
       ],
-      "text": "You can't cast Rock Jockey if you've played a land this turn.\nYou can't play lands if you've cast Rock Jockey this turn.",
+      "text": "You can't cast this spell if you've played a land this turn.\nYou can't play lands if you've cast Rock Jockey this turn.",
       "toughness": "3",
       "type": "Creature — Goblin",
       "types": [
@@ -8818,23 +8827,20 @@
         "EVG",
         "M10",
         "DD3_EVG",
-        "EMA"
+        "EMA",
+        "DOM"
       ],
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2016-06-08",
+          "date": "2018-04-27",
           "text": "You can sacrifice any Goblin you control to activate Siege-Gang Commander's activated ability, not just the ones its triggered ability puts onto the battlefield. You can even sacrifice Siege-Gang Commander itself."
-        },
-        {
-          "date": "2016-06-08",
-          "text": "If you sacrifice an attacking or blocking Goblin during the declare blockers step, it won't deal combat damage. If you wait until the combat damage step, but that Goblin has been dealt lethal damage, it'll be destroyed before you get a chance to sacrifice it."
         }
       ],
       "subtypes": [
         "Goblin"
       ],
-      "text": "When Siege-Gang Commander enters the battlefield, create three 1/1 red Goblin creature tokens.\n{1}{R}, Sacrifice a Goblin: Siege-Gang Commander deals 2 damage to target creature or player.",
+      "text": "When Siege-Gang Commander enters the battlefield, create three 1/1 red Goblin creature tokens.\n{1}{R}, Sacrifice a Goblin: Siege-Gang Commander deals 2 damage to any target.",
       "toughness": "2",
       "type": "Creature — Goblin",
       "types": [
@@ -8996,7 +9002,7 @@
           "text": "Cycling is an activated ability. Effects that interact with activated abilities (such as Stifle or Rings of Brighthearth) will interact with cycling. Effects that interact with spells (such as Remove Soul or Faerie Tauntings) will not."
         }
       ],
-      "text": "Spark Spray deals 1 damage to target creature or player.\nCycling {R} ({R}, Discard this card: Draw a card.)",
+      "text": "Spark Spray deals 1 damage to any target.\nCycling {R} ({R}, Discard this card: Draw a card.)",
       "type": "Instant",
       "types": [
         "Instant"
@@ -9149,7 +9155,7 @@
         "SCG"
       ],
       "rarity": "Common",
-      "text": "Torrent of Fire deals damage to target creature or player equal to the highest converted mana cost among permanents you control.",
+      "text": "Torrent of Fire deals damage to any target equal to the highest converted mana cost among permanents you control.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -9472,7 +9478,7 @@
       "rulings": [
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         }
       ],
       "subtypes": [
@@ -9813,7 +9819,7 @@
         },
         {
           "date": "2008-10-01",
-          "text": "The cycling ability and the triggered ability are separate. If the triggered ability is countered (with Stifle, for example, or if all its targets have become illegal), the cycling ability will still resolve and you'll draw a card."
+          "text": "The cycling ability and the triggered ability are separate. If the triggered ability doesn't resolve (due to being countered with Stifle, for example, or if all its targets have become illegal), the cycling ability will still resolve and you'll draw a card."
         },
         {
           "date": "2008-10-01",
@@ -9895,7 +9901,7 @@
         "SCG"
       ],
       "rarity": "Common",
-      "text": "Until end of turn, lands you control gain \"{T}: Add one mana of any color to your mana pool.\"",
+      "text": "Until end of turn, lands you control gain \"{T}: Add one mana of any color.\"",
       "type": "Instant",
       "types": [
         "Instant"
@@ -10049,7 +10055,8 @@
         "CMD",
         "CNS",
         "VMA",
-        "A25"
+        "A25",
+        "DDU"
       ],
       "rarity": "Uncommon",
       "rulings": [
@@ -10074,7 +10081,7 @@
         "Elf",
         "Mutant"
       ],
-      "text": "{T}: Add {G}{G}{G} to your mana pool.\nForestcycling {2} ({2}, Discard this card: Search your library for a Forest card, reveal it, and put it into your hand. Then shuffle your library.)",
+      "text": "{T}: Add {G}{G}{G}.\nForestcycling {2} ({2}, Discard this card: Search your library for a Forest card, reveal it, and put it into your hand, then shuffle your library.)",
       "toughness": "5",
       "type": "Creature — Elf Mutant",
       "types": [
@@ -10150,7 +10157,8 @@
         "SCG",
         "ARC",
         "CMD",
-        "A25"
+        "A25",
+        "DDU"
       ],
       "rarity": "Common",
       "subtypes": [
@@ -11180,7 +11188,7 @@
           "text": "Players can keep mana in their pool indefinitely while this is on the battlefield, but once it leaves the battlefield, they have until the end of the current step (or phase) to use the mana before it disappears."
         }
       ],
-      "text": "Mana pools don't empty as steps and phases end.",
+      "text": "Players don't lose unspent mana as steps and phases end.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -11278,7 +11286,7 @@
         "Elf",
         "Mutant"
       ],
-      "text": "Forestcycling {2} ({2}, Discard this card: Search your library for a Forest card, reveal it, and put it into your hand. Then shuffle your library.)",
+      "text": "Forestcycling {2} ({2}, Discard this card: Search your library for a Forest card, reveal it, put it into your hand, then shuffle your library.)",
       "toughness": "6",
       "type": "Creature — Elf Mutant",
       "types": [
@@ -12195,7 +12203,7 @@
         "C17"
       ],
       "rarity": "Uncommon",
-      "text": "{T}: Add {C}{C} to your mana pool. Activate this ability only if you control five or more lands.",
+      "text": "{T}: Add {C}{C}. Activate this ability only if you control five or more lands.",
       "type": "Land",
       "types": [
         "Land"

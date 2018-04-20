@@ -300,7 +300,7 @@
         },
         {
           "date": "2011-09-22",
-          "text": "The active player chooses war or peace first, followed by each other player in turn order. Each player will know what previous players chose when making his or her choice."
+          "text": "The active player chooses war or peace first, followed by each other player in turn order. Each player will know what previous players chose when making their choice."
         },
         {
           "date": "2011-09-22",
@@ -396,7 +396,7 @@
         },
         {
           "date": "2005-10-01",
-          "text": "Only one creature is targeted. If that creature leaves the battlefield or otherwise becomes an illegal target, the entire spell is countered. No other creatures are affected."
+          "text": "Only one creature is targeted. If that creature leaves the battlefield or otherwise becomes an illegal target, the entire spell doesn't resolve. No other creatures are affected."
         }
       ],
       "text": "Radiance — Choose a color. Target creature and each other creature that shares a color with it gain protection from the chosen color until end of turn.",
@@ -675,8 +675,16 @@
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2011-09-22",
+          "date": "2018-03-16",
           "text": "If Fiend Hunter leaves the battlefield before its first ability has resolved, its second ability will trigger and do nothing. Then its first ability will resolve and exile the targeted creature indefinitely."
+        },
+        {
+          "date": "2018-03-16",
+          "text": "Once the exiled permanent returns, it's considered a new object with no relation to the object that it was. Auras attached to the exiled permanent will be put into their owners' graveyards. Equipment attached to the exiled permanent will become unattached and remain on the battlefield. Any counters on the exiled permanent will cease to exist."
+        },
+        {
+          "date": "2018-03-16",
+          "text": "If a token is exiled this way, it won't return to the battlefield."
         }
       ],
       "subtypes": [
@@ -1186,7 +1194,7 @@
         "CMA"
       ],
       "rarity": "Common",
-      "text": "Kicker {R} (You may pay an additional {R} as you cast this spell.)\nDestroy target artifact or enchantment. If Orim's Thunder was kicked, it deals damage equal to that permanent's converted mana cost to target creature.",
+      "text": "Kicker {R} (You may pay an additional {R} as you cast this spell.)\nDestroy target artifact or enchantment. If this spell was kicked, it deals damage equal to that permanent's converted mana cost to target creature.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -1250,14 +1258,14 @@
       "rulings": [
         {
           "date": "2017-03-14",
-          "text": "If the targeted creature becomes an illegal target by the time Path to Exile would resolve, the entire spell is countered. The creature's controller won't search for a basic land card."
+          "text": "If the targeted creature becomes an illegal target by the time Path to Exile would resolve, the entire spell doesn't resolve. The creature's controller won't search for a basic land card."
         },
         {
           "date": "2017-03-14",
-          "text": "The controller of the exiled creature isn't required to search his or her library for a basic land. If that player doesn't, the player won't shuffle his or her library."
+          "text": "The controller of the exiled creature isn't required to search their library for a basic land. If that player doesn't, the player won't shuffle their library."
         }
       ],
-      "text": "Exile target creature. Its controller may search his or her library for a basic land card, put that card onto the battlefield tapped, then shuffle his or her library.",
+      "text": "Exile target creature. Its controller may search their library for a basic land card, put that card onto the battlefield tapped, then shuffle their library.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -1450,13 +1458,14 @@
         "EMA",
         "W17",
         "CMA",
-        "IMA"
+        "IMA",
+        "DOM"
       ],
       "rarity": "Uncommon",
       "subtypes": [
         "Angel"
       ],
-      "text": "Flying (This creature can't be blocked except by creatures with flying or reach.)\nVigilance (Attacking doesn't cause this creature to tap.)",
+      "text": "Flying, vigilance",
       "toughness": "4",
       "type": "Creature — Angel",
       "types": [
@@ -1681,14 +1690,14 @@
       "rulings": [
         {
           "date": "2013-10-17",
-          "text": "Your opponents decide in turn order whether or not they accept the offer, starting with the opponent on your left. Each opponent will know the decisions of previous opponents in turn order when making his or her decision."
+          "text": "Your opponents decide in turn order whether or not they accept the offer, starting with the opponent on your left. Each opponent will know the decisions of previous opponents in turn order when making their decision."
         },
         {
           "date": "2013-10-17",
           "text": "After each opponent has decided, the effect happens simultaneously for each one who accepted the offer. Then, the effect happens again for you a number of times equal to the number of opponents who accepted."
         }
       ],
-      "text": "Tempting offer — Put a +1/+1 counter on each creature you control. Each opponent may put a +1/+1 counter on each creature he or she controls. For each opponent who does, put a +1/+1 counter on each creature you control.",
+      "text": "Tempting offer — Put a +1/+1 counter on each creature you control. Each opponent may put a +1/+1 counter on each creature they control. For each opponent who does, put a +1/+1 counter on each creature you control.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -1909,7 +1918,7 @@
       "rulings": [
         {
           "date": "2007-09-16",
-          "text": "The controller of the countered spell doesn't choose how many cards to draw until the relevant ability resolves. The player may draw 0, 1, or 2 cards. He or she chooses the number before drawing any cards."
+          "text": "The controller of the countered spell doesn't choose how many cards to draw until the relevant ability resolves. The player may draw 0, 1, or 2 cards. They choose the number before drawing any cards."
         }
       ],
       "text": "Counter target spell. Its controller may draw up to two cards at the beginning of the next turn's upkeep.\nYou draw a card at the beginning of the next turn's upkeep.",
@@ -2035,11 +2044,11 @@
       "rulings": [
         {
           "date": "2011-06-01",
-          "text": "If this spell is countered, none of its effects occur. In particular, it will go to the graveyard rather than to its owner's library."
+          "text": "If this spell doesn't resolve, none of its effects occur. In particular, it will go to the graveyard rather than to its owner's library."
         },
         {
-          "date": "2011-06-01",
-          "text": "You follow the instructions in order. You won't be able to draw the same Blue Sun's Zenith that you cast."
+          "date": "2018-03-16",
+          "text": "Because you follow the spell's instructions in order, you won't be able to draw the same Blue Sun's Zenith that you cast."
         }
       ],
       "text": "Target player draws X cards. Shuffle Blue Sun's Zenith into its owner's library.",
@@ -2235,7 +2244,7 @@
         "Aura",
         "Curse"
       ],
-      "text": "Enchant player\nWhenever a player attacks enchanted player with one or more creatures, that attacking player may tap or untap target permanent of his or her choice.",
+      "text": "Enchant player\nWhenever a player attacks enchanted player with one or more creatures, that attacking player may tap or untap target permanent of their choice.",
       "type": "Enchantment — Aura Curse",
       "types": [
         "Enchantment"
@@ -2407,7 +2416,7 @@
         },
         {
           "date": "2013-10-17",
-          "text": "If one of the creatures is an illegal target when the ability resolves, the exchange won't happen. If both creatures are illegal targets, the ability will be countered."
+          "text": "If one of the creatures is an illegal target when the ability resolves, the exchange won't happen. If both creatures are illegal targets, the ability won't resolve."
         }
       ],
       "subtypes": [
@@ -2686,7 +2695,7 @@
       "subtypes": [
         "Faerie"
       ],
-      "text": "Flying\n{T}: Thornwind Faeries deals 1 damage to target creature or player.",
+      "text": "Flying\n{T}: Thornwind Faeries deals 1 damage to any target.",
       "toughness": "1",
       "type": "Creature — Faerie",
       "types": [
@@ -2869,7 +2878,7 @@
           "text": "Players can only respond once this spell has been cast and all its costs have been paid. No one can try to destroy the creature you sacrificed to prevent you from casting this spell."
         }
       ],
-      "text": "As an additional cost to cast Altar's Reap, sacrifice a creature.\nDraw two cards.",
+      "text": "As an additional cost to cast this spell, sacrifice a creature.\nDraw two cards.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -2978,7 +2987,7 @@
         },
         {
           "date": "2015-11-04",
-          "text": "You choose whether each token is attacking the player or a planeswalker he or she controls as the token is created."
+          "text": "You choose whether each token is attacking the player or a planeswalker they control as the token is created."
         },
         {
           "date": "2015-11-04",
@@ -2998,13 +3007,13 @@
         },
         {
           "date": "2015-11-04",
-          "text": "If myriad creates more than one token for any given player (due to an effect such as the one Doubling Season creates), you may choose separately for each token whether it's attacking the player or a planeswalker he or she controls."
+          "text": "If myriad creates more than one token for any given player (due to an effect such as the one Doubling Season creates), you may choose separately for each token whether it's attacking the player or a planeswalker they control."
         }
       ],
       "subtypes": [
         "Spirit"
       ],
-      "text": "Myriad (Whenever this creature attacks, for each opponent other than defending player, you may create a token that's a copy of this creature that's tapped and attacking that player or a planeswalker he or she controls. Exile the tokens at end of combat.)\nWhenever Banshee of the Dread Choir deals combat damage to a player, that player discards a card.",
+      "text": "Myriad (Whenever this creature attacks, for each opponent other than defending player, you may create a token that's a copy of this creature that's tapped and attacking that player or a planeswalker they control. Exile the tokens at end of combat.)\nWhenever Banshee of the Dread Choir deals combat damage to a player, that player discards a card.",
       "toughness": "4",
       "type": "Creature — Spirit",
       "types": [
@@ -3199,7 +3208,7 @@
       "rulings": [
         {
           "date": "2010-03-01",
-          "text": "When the triggered ability resolves, first the player whose turn it is (if that player is an opponent) chooses which creature he or she will sacrifice, then each other opponent in turn order does the same, then all chosen creatures are sacrificed at the same time."
+          "text": "When the triggered ability resolves, first the player whose turn it is (if that player is an opponent) chooses which creature they will sacrifice, then each other opponent in turn order does the same, then all chosen creatures are sacrificed at the same time."
         },
         {
           "date": "2010-03-01",
@@ -3584,7 +3593,7 @@
           "text": "If a creature card has an ability that replaces going to the graveyard with moving somewhere else \"instead,\" that card won't count toward the number of Zombies you get. Conversely, creature cards with a triggered ability that removes them from the graveyard when they're put there from anywhere (or your library) will count toward that number."
         }
       ],
-      "text": "Each player puts the top X cards of his or her library into his or her graveyard. For each creature card put into a graveyard this way, you create a tapped 2/2 black Zombie creature token.",
+      "text": "Each player puts the top X cards of their library into their graveyard. For each creature card put into a graveyard this way, you create a tapped 2/2 black Zombie creature token.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -3764,7 +3773,7 @@
       "subtypes": [
         "Demon"
       ],
-      "text": "Flying\nWhenever another creature leaves the battlefield, you may have target player put the top two cards of his or her library into his or her graveyard.\nUnearth {2}{B} ({2}{B}: Return this card from your graveyard to the battlefield. It gains haste. Exile it at the beginning of the next end step or if it would leave the battlefield. Unearth only as a sorcery.)",
+      "text": "Flying\nWhenever another creature leaves the battlefield, you may have target player put the top two cards of their library into their graveyard.\nUnearth {2}{B} ({2}{B}: Return this card from your graveyard to the battlefield. It gains haste. Exile it at the beginning of the next end step or if it would leave the battlefield. Unearth only as a sorcery.)",
       "toughness": "5",
       "type": "Creature — Demon",
       "types": [
@@ -4298,7 +4307,7 @@
         },
         {
           "date": "2017-03-14",
-          "text": "If the targeted creature is an illegal target by the time Sever the Bloodline resolves, it will be countered and none of its effects will happen. No creatures will be exiled."
+          "text": "If the targeted creature is an illegal target by the time Sever the Bloodline resolves, it won't resolve and none of its effects will happen. No creatures will be exiled."
         },
         {
           "date": "2017-03-14",
@@ -4605,7 +4614,7 @@
         },
         {
           "date": "2016-06-08",
-          "text": "If one of the targeted creature cards is an illegal target (for instance, because it has left your graveyard before Victimize resolves), you'll still sacrifice a creature and put the other card onto the battlefield. If both are illegal targets, Victimize will be countered. You won't sacrifice a creature."
+          "text": "If one of the targeted creature cards is an illegal target (for instance, because it has left your graveyard before Victimize resolves), you'll still sacrifice a creature and put the other card onto the battlefield. If both are illegal targets, Victimize won't resolve. You won't sacrifice a creature."
         },
         {
           "date": "2016-06-08",
@@ -4727,7 +4736,7 @@
         },
         {
           "date": "2015-11-04",
-          "text": "If all targets for the chosen modes become illegal before the Confluence resolves, the spell will be countered and none of its effects will happen. If at least one target is still legal, the spell will resolve but will have no effect on any illegal targets."
+          "text": "If all targets for the chosen modes become illegal before the Confluence resolves, the spell won't resolve and none of its effects will happen. If at least one target is still legal, the spell will resolve but will have no effect on any illegal targets."
         }
       ],
       "text": "Choose three. You may choose the same mode more than once.\n• Target player draws a card and loses 1 life.\n• Target creature gets -2/-2 until end of turn.\n• Return target creature card from your graveyard to your hand.",
@@ -4798,6 +4807,10 @@
         {
           "date": "2013-07-01",
           "text": "In a Commander game where this card is your commander, you may cast it face-down from the Command zone by paying {3} plus {2} for each time it has been cast from your command zone. The cost to turn it face-up is unaffected."
+        },
+        {
+          "date": "2018-03-16",
+          "text": "The \"legend rule\" cares about legendary permanents with the exact same English name. You can control Akroma, Angel of Fury and Akroma, Angel of Wrath at the same time."
         }
       ],
       "subtypes": [
@@ -4806,7 +4819,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "Akroma, Angel of Fury can't be countered.\nFlying, trample, protection from white and from blue\n{R}: Akroma, Angel of Fury gets +1/+0 until end of turn.\nMorph {3}{R}{R}{R} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)",
+      "text": "This spell can't be countered.\nFlying, trample, protection from white and from blue\n{R}: Akroma, Angel of Fury gets +1/+0 until end of turn.\nMorph {3}{R}{R}{R} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)",
       "toughness": "6",
       "type": "Legendary Creature — Angel",
       "types": [
@@ -4998,7 +5011,7 @@
         },
         {
           "date": "2005-10-01",
-          "text": "Only one creature is targeted. If that creature leaves the battlefield or otherwise becomes an illegal target, the entire spell is countered. No other creatures are affected."
+          "text": "Only one creature is targeted. If that creature leaves the battlefield or otherwise becomes an illegal target, the entire spell doesn't resolve. No other creatures are affected."
         }
       ],
       "text": "Radiance — Cleansing Beam deals 2 damage to target creature and each other creature that shares a color with it.",
@@ -5076,7 +5089,7 @@
           "text": "As long as any of its targets are legal at the time Comet Storm resolves, Comet Storm will deal X damage to each of those legal targets."
         }
       ],
-      "text": "Multikicker {1} (You may pay an additional {1} any number of times as you cast this spell.)\nChoose target creature or player, then choose another target creature or player for each time Comet Storm was kicked. Comet Storm deals X damage to each of them.",
+      "text": "Multikicker {1} (You may pay an additional {1} any number of times as you cast this spell.)\nChoose any target, then choose another target for each time this spell was kicked. Comet Storm deals X damage to each of them.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -5124,7 +5137,7 @@
       "rulings": [
         {
           "date": "2011-09-22",
-          "text": "If the player is an illegal target when Death by Dragons tries to resolve, it will be countered and none of its effects will happen. No player will put a Dragon token onto the battlefield."
+          "text": "If the player is an illegal target when Death by Dragons tries to resolve, it won't resolve and none of its effects will happen. No player will put a Dragon token onto the battlefield."
         },
         {
           "date": "2011-09-22",
@@ -5996,7 +6009,7 @@
         },
         {
           "date": "2015-11-04",
-          "text": "You choose whether each token is attacking the player or a planeswalker he or she controls as the token is created."
+          "text": "You choose whether each token is attacking the player or a planeswalker they control as the token is created."
         },
         {
           "date": "2015-11-04",
@@ -6016,13 +6029,13 @@
         },
         {
           "date": "2015-11-04",
-          "text": "If myriad creates more than one token for any given player (due to an effect such as the one Doubling Season creates), you may choose separately for each token whether it's attacking the player or a planeswalker he or she controls."
+          "text": "If myriad creates more than one token for any given player (due to an effect such as the one Doubling Season creates), you may choose separately for each token whether it's attacking the player or a planeswalker they control."
         }
       ],
       "subtypes": [
         "Beast"
       ],
-      "text": "Trample\nMyriad (Whenever this creature attacks, for each opponent other than defending player, you may create a token that's a copy of this creature that's tapped and attacking that player or a planeswalker he or she controls. Exile the tokens at end of combat.)",
+      "text": "Trample\nMyriad (Whenever this creature attacks, for each opponent other than defending player, you may create a token that's a copy of this creature that's tapped and attacking that player or a planeswalker they control. Exile the tokens at end of combat.)",
       "toughness": "6",
       "type": "Creature — Beast",
       "types": [
@@ -6500,7 +6513,8 @@
         "M12",
         "M13",
         "C14",
-        "CMA"
+        "CMA",
+        "DDU"
       ],
       "rarity": "Rare",
       "rulings": [
@@ -6517,7 +6531,7 @@
         "Elf",
         "Druid"
       ],
-      "text": "Other Elf creatures you control get +1/+1.\n{T}: Add {G} to your mana pool for each Elf you control.",
+      "text": "Other Elf creatures you control get +1/+1.\n{T}: Add {G} for each Elf you control.",
       "toughness": "2",
       "type": "Creature — Elf Druid",
       "types": [
@@ -6568,14 +6582,15 @@
         "M14",
         "M15",
         "C14",
-        "CMA"
+        "CMA",
+        "DDU"
       ],
       "rarity": "Common",
       "subtypes": [
         "Elf",
         "Druid"
       ],
-      "text": "{T}: Add {G} to your mana pool.",
+      "text": "{T}: Add {G}.",
       "toughness": "1",
       "type": "Creature — Elf Druid",
       "types": [
@@ -6895,7 +6910,8 @@
       "printings": [
         "SOM",
         "C14",
-        "CMA"
+        "CMA",
+        "DDU"
       ],
       "rarity": "Rare",
       "rulings": [
@@ -7088,7 +7104,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "+2: Create a 1/1 green Elf Druid creature token with \"{T}: Add {G} to your mana pool.\"\n−2: Destroy target artifact or enchantment.\n−6: Draw a card for each green creature you control.\nFreyalise, Llanowar's Fury can be your commander.",
+      "text": "+2: Create a 1/1 green Elf Druid creature token with \"{T}: Add {G}.\"\n−2: Destroy target artifact or enchantment.\n−6: Draw a card for each green creature you control.\nFreyalise, Llanowar's Fury can be your commander.",
       "type": "Legendary Planeswalker — Freyalise",
       "types": [
         "Planeswalker"
@@ -7144,7 +7160,7 @@
         "Elemental",
         "Beast"
       ],
-      "text": "When Grave Sifter enters the battlefield, each player chooses a creature type and returns any number of cards of that type from his or her graveyard to his or her hand.",
+      "text": "When Grave Sifter enters the battlefield, each player chooses a creature type and returns any number of cards of that type from their graveyard to their hand.",
       "toughness": "7",
       "type": "Creature — Elemental Beast",
       "types": [
@@ -7348,7 +7364,7 @@
           "text": "Because the \"search\" requires you to find a card with certain characteristics, you don't have to find the card if you don't want to."
         }
       ],
-      "text": "As an additional cost to cast Harrow, sacrifice a land.\nSearch your library for up to two basic land cards and put them onto the battlefield. Then shuffle your library.",
+      "text": "As an additional cost to cast this spell, sacrifice a land.\nSearch your library for up to two basic land cards and put them onto the battlefield. Then shuffle your library.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -8024,14 +8040,15 @@
         "C14",
         "DD3_EVG",
         "EMA",
-        "CMA"
+        "CMA",
+        "DOM"
       ],
       "rarity": "Common",
       "subtypes": [
         "Elf",
         "Druid"
       ],
-      "text": "{T}: Add {G} to your mana pool.",
+      "text": "{T}: Add {G}.",
       "toughness": "1",
       "type": "Creature — Elf Druid",
       "types": [
@@ -8773,7 +8790,7 @@
         "Elf",
         "Druid"
       ],
-      "text": "{T}: Add {G} to your mana pool for each Elf on the battlefield.",
+      "text": "{T}: Add {G} for each Elf on the battlefield.",
       "toughness": "1",
       "type": "Creature — Elf Druid",
       "types": [
@@ -8833,7 +8850,7 @@
           "text": "Because the \"search\" requires you to find a card with certain characteristics, you don't have to find the card if you don't want to."
         }
       ],
-      "text": "Kicker—Sacrifice a creature. (You may sacrifice a creature in addition to any other costs as you cast this spell.)\nSearch your library for a basic land card, put that card onto the battlefield, then shuffle your library. If Primal Growth was kicked, instead search your library for up to two basic land cards, put them onto the battlefield, then shuffle your library.",
+      "text": "Kicker—Sacrifice a creature. (You may sacrifice a creature in addition to any other costs as you cast this spell.)\nSearch your library for a basic land card, put that card onto the battlefield, then shuffle your library. If this spell was kicked, instead search your library for up to two basic land cards, put them onto the battlefield, then shuffle your library.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -9361,17 +9378,17 @@
       "rulings": [
         {
           "date": "2015-11-04",
-          "text": "Skullwinder's enters-the-battlefield ability targets only the card in your graveyard. If that card is an illegal target as the ability tries to resolve, the ability will be countered and none of its effects will happen. No cards will be returned to any player's hand."
+          "text": "Skullwinder's enters-the-battlefield ability targets only the card in your graveyard. If that card is an illegal target as the ability tries to resolve, the ability won't resolve and none of its effects will happen. No cards will be returned to any player's hand."
         },
         {
           "date": "2015-11-04",
-          "text": "You choose the opponent as the ability is resolving. You may choose an opponent with no cards in his or her graveyard."
+          "text": "You choose the opponent as the ability is resolving. You may choose an opponent with no cards in their graveyard."
         }
       ],
       "subtypes": [
         "Snake"
       ],
-      "text": "Deathtouch (Any amount of damage this deals to a creature is enough to destroy it.)\nWhen Skullwinder enters the battlefield, return target card from your graveyard to your hand, then choose an opponent. That player returns a card from his or her graveyard to his or her hand.",
+      "text": "Deathtouch (Any amount of damage this deals to a creature is enough to destroy it.)\nWhen Skullwinder enters the battlefield, return target card from your graveyard to your hand, then choose an opponent. That player returns a card from their graveyard to their hand.",
       "toughness": "3",
       "type": "Creature — Snake",
       "types": [
@@ -9420,7 +9437,7 @@
       "rulings": [
         {
           "date": "2014-11-07",
-          "text": "The enchanted permanent loses any card types, subtypes, and colors it previously had. It keeps any supertypes it had and its name remains unchanged. It gains \"{T}: Add {G} to your mana pool\" and loses all other abilities from its rules text. It will still have any abilities it gained from other effects."
+          "text": "The enchanted permanent loses any card types, subtypes, and colors it previously had. It keeps any supertypes it had and its name remains unchanged. It gains \"{T}: Add {G}\" and loses all other abilities from its rules text. It will still have any abilities it gained from other effects."
         },
         {
           "date": "2014-11-07",
@@ -9918,7 +9935,7 @@
         },
         {
           "date": "2014-11-07",
-          "text": "If you gain control of a creature with a lieutenant ability owned by another player, that ability will check to see if you control your commander and will apply if you do. It won't check whether its owner controls his or her commander."
+          "text": "If you gain control of a creature with a lieutenant ability owned by another player, that ability will check to see if you control your commander and will apply if you do. It won't check whether its owner controls their commander."
         },
         {
           "date": "2014-11-07",
@@ -10162,19 +10179,15 @@
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2008-04-01",
-          "text": "If this creature is attacking a planeswalker, assigning its damage as though it weren't blocked means the damage is assigned to the planeswalker, not to the defending player."
-        },
-        {
-          "date": "2008-04-01",
-          "text": "When assigning combat damage, you choose whether you want to assign all damage to blocking creatures, or if you want to assign all of it to the defending player or planeswalker. You can't split the damage assignment between them."
-        },
-        {
-          "date": "2008-04-01",
+          "date": "2018-04-27",
           "text": "You can decide to assign damage to the defending player or planeswalker even if the blocking creature has protection from green or damage preventing effects on it."
         },
         {
-          "date": "2008-04-01",
+          "date": "2018-04-27",
+          "text": "When assigning combat damage, you choose whether you want to assign all damage to blocking creatures, or if you want to assign all of it to the player or planeswalker this creature is attacking. You can't split the damage assignment between them."
+        },
+        {
+          "date": "2018-04-27",
           "text": "If blocked by a creature with banding, the defending player decides whether or not the damage is assigned \"as though it weren't blocked\"."
         }
       ],
@@ -10287,21 +10300,18 @@
         "PD3",
         "TPR",
         "C15",
-        "CMA"
+        "CMA",
+        "DOM"
       ],
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2004-10-04",
-          "text": "Verdant Force's controller gets the tokens. That is the controller at the beginning of upkeep."
-        },
-        {
-          "date": "2005-08-01",
-          "text": "Once created, the tokens are independent of Verdant Force. If Verdant Force changes controllers, the new controller will put tokens onto the battlefield, but existing tokens will stay where they are."
-        },
-        {
           "date": "2006-05-01",
           "text": "In Two-Headed Giant, triggers only once per upkeep, not once for each player."
+        },
+        {
+          "date": "2018-04-27",
+          "text": "Verdant Force's ability triggers at the beginning of each upkeep, not just each of your upkeeps."
         }
       ],
       "subtypes": [
@@ -10535,7 +10545,7 @@
         "CMA"
       ],
       "rarity": "Rare",
-      "text": "Each player sacrifices all artifacts, enchantments, and nonbasic lands he or she controls. For each land sacrificed this way, its controller may search his or her library for a basic land card and put it onto the battlefield tapped. Then each player who searched his or her library this way shuffles it.",
+      "text": "Each player sacrifices all artifacts, enchantments, and nonbasic lands they control. For each land sacrificed this way, its controller may search their library for a basic land card and put it onto the battlefield tapped. Then each player who searched their library this way shuffles it.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -11469,7 +11479,7 @@
           "legality": "Legal"
         }
       ],
-      "manaCost": "{1}{W}{B}{R}",
+      "manaCost": "{1}{R}{W}{B}",
       "mciNumber": "180",
       "multiverseid": 430399,
       "name": "Kaalia of the Vast",
@@ -11761,7 +11771,7 @@
         },
         {
           "date": "2017-11-17",
-          "text": "After you discard your hand and the number of creatures each opponent must sacrifice has been determined, each opponent in turn order, starting with the player whose turn it is if that player is your opponent, chooses which creatures he or she will sacrifice, then all the chosen creatures are all sacrificed at the same time."
+          "text": "After you discard your hand and the number of creatures each opponent must sacrifice has been determined, each opponent in turn order, starting with the player whose turn it is if that player is your opponent, chooses which creatures they will sacrifice, then all the chosen creatures are all sacrificed at the same time."
         }
       ],
       "subtypes": [
@@ -12035,7 +12045,7 @@
           "legality": "Legal"
         }
       ],
-      "manaCost": "{3}{W}{B}{R}",
+      "manaCost": "{3}{R}{W}{B}",
       "mciNumber": "188",
       "multiverseid": 430407,
       "name": "Oros, the Avenger",
@@ -12422,7 +12432,7 @@
           "legality": "Legal"
         }
       ],
-      "manaCost": "{4}{W}{B}{R}",
+      "manaCost": "{4}{R}{W}{B}",
       "mciNumber": "194",
       "multiverseid": 430413,
       "name": "Tariel, Reckoner of Souls",
@@ -12583,7 +12593,7 @@
       "rulings": [
         {
           "date": "2005-10-01",
-          "text": "The ability doesn't care why a card goes to your opponent's graveyard — only that it does. The ability triggers when a card is put into your opponent's graveyard from the stack (a spell resolves or is countered), from the battlefield (a permanent is destroyed or sacrificed), from the player's hand (a card is discarded), from the player's library (from a Millstone-like effect), or from any other zone."
+          "text": "The ability doesn't care why a card goes to your opponent's graveyard — only that it does. The ability triggers when a card is put into your opponent's graveyard from the stack (a spell resolves, fails to resolve, or is countered), from the battlefield (a permanent is destroyed or sacrificed), from the player's hand (a card is discarded), from the player's library (from a Millstone-like effect), or from any other zone."
         },
         {
           "date": "2005-10-01",
@@ -13008,7 +13018,7 @@
           "text": "If a turn has multiple combat phases, this spell can only be cast before the beginning of the Declare Attackers Step of the first combat phase in that turn."
         }
       ],
-      "text": "Cast Master Warcraft only before attackers are declared.\nYou choose which creatures attack this turn.\nYou choose which creatures block this turn and how those creatures block.",
+      "text": "Cast this spell only before attackers are declared.\nYou choose which creatures attack this turn.\nYou choose which creatures block this turn and how those creatures block.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -13444,7 +13454,7 @@
           "text": "Activating the ability that turns the Keyrune into a creature while it's already a creature will override any effects that set its power and/or toughness to another number, but effects that modify power and/or toughness without directly setting them will still apply."
         }
       ],
-      "text": "{T}: Add {W} or {U} to your mana pool.\n{W}{U}: Azorius Keyrune becomes a 2/2 white and blue Bird artifact creature with flying until end of turn.",
+      "text": "{T}: Add {W} or {U}.\n{W}{U}: Azorius Keyrune becomes a 2/2 white and blue Bird artifact creature with flying until end of turn.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -13496,7 +13506,7 @@
           "text": "It can be untapped as often as you can pay for it."
         }
       ],
-      "text": "Basalt Monolith doesn't untap during your untap step.\n{T}: Add {C}{C}{C} to your mana pool.\n{3}: Untap Basalt Monolith.",
+      "text": "Basalt Monolith doesn't untap during your untap step.\n{T}: Add {C}{C}{C}.\n{3}: Untap Basalt Monolith.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -13622,7 +13632,7 @@
         "C17"
       ],
       "rarity": "Common",
-      "text": "{1}, {T}: Add {R}{W} to your mana pool.",
+      "text": "{1}, {T}: Add {R}{W}.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -13677,7 +13687,7 @@
           "text": "In formats other than Commander, Commander's Sphere produces no mana."
         }
       ],
-      "text": "{T}: Add to your mana pool one mana of any color in your commander's color identity.\nSacrifice Commander's Sphere: Draw a card.",
+      "text": "{T}: Add one mana of any color in your commander's color identity.\nSacrifice Commander's Sphere: Draw a card.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -13779,7 +13789,7 @@
         "C17"
       ],
       "rarity": "Uncommon",
-      "text": "Indestructible\n{T}: Add one mana of any color to your mana pool.",
+      "text": "Indestructible\n{T}: Add one mana of any color.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -13962,7 +13972,7 @@
         "CMA"
       ],
       "rarity": "Common",
-      "text": "{1}, {T}: Add {B}{G} to your mana pool.",
+      "text": "{1}, {T}: Add {B}{G}.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -14009,7 +14019,7 @@
         "CMA"
       ],
       "rarity": "Uncommon",
-      "text": "Flash (You may cast this spell any time you could cast an instant.)\n{2}, Sacrifice Leonin Bladetrap: Leonin Bladetrap deals 2 damage to each attacking creature without flying.",
+      "text": "Flash (You may cast this spell any time you could cast an instant.)\n{2}, Sacrifice Leonin Bladetrap: It deals 2 damage to each attacking creature without flying.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -14166,7 +14176,7 @@
         "CMA"
       ],
       "rarity": "Uncommon",
-      "text": "Moss Diamond enters the battlefield tapped.\n{T}: Add {G} to your mana pool.",
+      "text": "Moss Diamond enters the battlefield tapped.\n{T}: Add {G}.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -14222,7 +14232,7 @@
         "C17"
       ],
       "rarity": "Common",
-      "text": "{1}, {T}: Add {W}{B} to your mana pool.",
+      "text": "{1}, {T}: Add {W}{B}.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -14388,7 +14398,7 @@
         "C17"
       ],
       "rarity": "Common",
-      "text": "{1}, {T}: Add {B}{R} to your mana pool.",
+      "text": "{1}, {T}: Add {B}{R}.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -14507,7 +14517,7 @@
         "CMA"
       ],
       "rarity": "Common",
-      "text": "{1}, {T}: Add {G}{W} to your mana pool.",
+      "text": "{1}, {T}: Add {G}{W}.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -14563,7 +14573,7 @@
         "CMA"
       ],
       "rarity": "Common",
-      "text": "{1}, {T}: Add {G}{U} to your mana pool.",
+      "text": "{1}, {T}: Add {G}{U}.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -14675,7 +14685,7 @@
         "C17"
       ],
       "rarity": "Uncommon",
-      "text": "{T}: Add {C}{C} to your mana pool.",
+      "text": "{T}: Add {C}{C}.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -14774,8 +14784,8 @@
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2011-09-22",
-          "text": "If an opponent gains control of a creature equipped by your Swiftfoot Boots, that creature can't be the target of spells and abilities you control."
+          "date": "2018-03-16",
+          "text": "If a creature enters the battlefield under your control and gains haste, but then loses it before attacking, it won't be able to attack that turn. This means that you can't use one Swiftfoot Boots to allow two new creatures to attack in the same turn."
         }
       ],
       "subtypes": [
@@ -14870,7 +14880,7 @@
         "CMA"
       ],
       "rarity": "Common",
-      "text": "You have no maximum hand size.\n{T}: Add {C} to your mana pool.",
+      "text": "You have no maximum hand size.\n{T}: Add {C}.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -15033,7 +15043,7 @@
         "C17"
       ],
       "rarity": "Uncommon",
-      "text": "Akoum Refuge enters the battlefield tapped.\nWhen Akoum Refuge enters the battlefield, you gain 1 life.\n{T}: Add {B} or {R} to your mana pool.",
+      "text": "Akoum Refuge enters the battlefield tapped.\nWhen Akoum Refuge enters the battlefield, you gain 1 life.\n{T}: Add {B} or {R}.",
       "type": "Land",
       "types": [
         "Land"
@@ -15094,7 +15104,7 @@
           "text": "If this land enters the battlefield and you control no other lands, its ability will force you to return it to your hand."
         }
       ],
-      "text": "Azorius Chancery enters the battlefield tapped.\nWhen Azorius Chancery enters the battlefield, return a land you control to its owner's hand.\n{T}: Add {W}{U} to your mana pool.",
+      "text": "Azorius Chancery enters the battlefield tapped.\nWhen Azorius Chancery enters the battlefield, return a land you control to its owner's hand.\n{T}: Add {W}{U}.",
       "type": "Land",
       "types": [
         "Land"
@@ -15160,7 +15170,7 @@
       "subtypes": [
         "Gate"
       ],
-      "text": "Azorius Guildgate enters the battlefield tapped.\n{T}: Add {W} or {U} to your mana pool.",
+      "text": "Azorius Guildgate enters the battlefield tapped.\n{T}: Add {W} or {U}.",
       "type": "Land — Gate",
       "types": [
         "Land"
@@ -15207,7 +15217,7 @@
         "CMA"
       ],
       "rarity": "Common",
-      "text": "{T}: Add {C} to your mana pool.\n{1}, {T}, Sacrifice Bant Panorama: Search your library for a basic Forest, Plains, or Island card and put it onto the battlefield tapped. Then shuffle your library.",
+      "text": "{T}: Add {C}.\n{1}, {T}, Sacrifice Bant Panorama: Search your library for a basic Forest, Plains, or Island card and put it onto the battlefield tapped. Then shuffle your library.",
       "type": "Land",
       "types": [
         "Land"
@@ -15266,7 +15276,7 @@
           "text": "Cycling is an activated ability. Effects that interact with activated abilities (such as Stifle or Rings of Brighthearth) will interact with cycling. Effects that interact with spells (such as Remove Soul or Faerie Tauntings) will not."
         }
       ],
-      "text": "Barren Moor enters the battlefield tapped.\n{T}: Add {B} to your mana pool.\nCycling {B} ({B}, Discard this card: Draw a card.)",
+      "text": "Barren Moor enters the battlefield tapped.\n{T}: Add {B}.\nCycling {B} ({B}, Discard this card: Draw a card.)",
       "type": "Land",
       "types": [
         "Land"
@@ -15318,7 +15328,7 @@
         "C17"
       ],
       "rarity": "Common",
-      "text": "Bojuka Bog enters the battlefield tapped.\nWhen Bojuka Bog enters the battlefield, exile all cards from target player's graveyard.\n{T}: Add {B} to your mana pool.",
+      "text": "Bojuka Bog enters the battlefield tapped.\nWhen Bojuka Bog enters the battlefield, exile all cards from target player's graveyard.\n{T}: Add {B}.",
       "type": "Land",
       "types": [
         "Land"
@@ -15381,7 +15391,7 @@
           "text": "If this land enters the battlefield and you control no other lands, its ability will force you to return it to your hand."
         }
       ],
-      "text": "Boros Garrison enters the battlefield tapped.\nWhen Boros Garrison enters the battlefield, return a land you control to its owner's hand.\n{T}: Add {R}{W} to your mana pool.",
+      "text": "Boros Garrison enters the battlefield tapped.\nWhen Boros Garrison enters the battlefield, return a land you control to its owner's hand.\n{T}: Add {R}{W}.",
       "type": "Land",
       "types": [
         "Land"
@@ -15439,7 +15449,7 @@
           "text": "In formats other than Commander, Command Tower's ability produces no mana."
         }
       ],
-      "text": "{T}: Add to your mana pool one mana of any color in your commander's color identity.",
+      "text": "{T}: Add one mana of any color in your commander's color identity.",
       "type": "Land",
       "types": [
         "Land"
@@ -15483,7 +15493,7 @@
         "CMA"
       ],
       "rarity": "Uncommon",
-      "text": "{T}: Add {C} to your mana pool.\n{T}, Sacrifice Crystal Vein: Add {C}{C} to your mana pool.",
+      "text": "{T}: Add {C}.\n{T}, Sacrifice Crystal Vein: Add {C}{C}.",
       "type": "Land",
       "types": [
         "Land"
@@ -15511,6 +15521,10 @@
         },
         {
           "format": "Innistrad Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
           "legality": "Legal"
         },
         {
@@ -15627,14 +15641,14 @@
       "rulings": [
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         },
         {
           "date": "2009-10-01",
           "text": "Activating the ability that turns it into a creature while it's already a creature will override any effects that set its power and/or toughness to a specific number. However, any effect that raises or lowers power and/or toughness (such as the effect created by Giant Growth, Glorious Anthem, or a +1/+1 counter) will continue to apply."
         }
       ],
-      "text": "Faerie Conclave enters the battlefield tapped.\n{T}: Add {U} to your mana pool.\n{1}{U}: Faerie Conclave becomes a 2/1 blue Faerie creature with flying until end of turn. It's still a land.",
+      "text": "Faerie Conclave enters the battlefield tapped.\n{T}: Add {U}.\n{1}{U}: Faerie Conclave becomes a 2/1 blue Faerie creature with flying until end of turn. It's still a land.",
       "type": "Land",
       "types": [
         "Land"
@@ -15693,7 +15707,7 @@
           "text": "Cycling is an activated ability. Effects that interact with activated abilities (such as Stifle or Rings of Brighthearth) will interact with cycling. Effects that interact with spells (such as Remove Soul or Faerie Tauntings) will not."
         }
       ],
-      "text": "Forgotten Cave enters the battlefield tapped.\n{T}: Add {R} to your mana pool.\nCycling {R} ({R}, Discard this card: Draw a card.)",
+      "text": "Forgotten Cave enters the battlefield tapped.\n{T}: Add {R}.\nCycling {R} ({R}, Discard this card: Draw a card.)",
       "type": "Land",
       "types": [
         "Land"
@@ -15736,7 +15750,7 @@
         "CMA"
       ],
       "rarity": "Rare",
-      "text": "{T}: Add {C} to your mana pool.\n{5}, {T}, Sacrifice Gargoyle Castle: Create a 3/4 colorless Gargoyle artifact creature token with flying.",
+      "text": "{T}: Add {C}.\n{5}, {T}, Sacrifice Gargoyle Castle: Create a 3/4 colorless Gargoyle artifact creature token with flying.",
       "type": "Land",
       "types": [
         "Land"
@@ -15793,18 +15807,18 @@
       "rulings": [
         {
           "date": "2006-05-01",
-          "text": "If you target Ghost Quarter with its own ability, the ability will be countered because its target is no longer on the battlefield. You won't get to search for a land card."
+          "text": "If you target Ghost Quarter with its own ability, the ability won't resolve because its target is no longer on the battlefield. You won't get to search for a land card."
         },
         {
           "date": "2011-09-22",
-          "text": "If the targeted land is an illegal target by the time Ghost Quarter's ability resolves, it will be countered and none of its effects will happen. The land's controller won't get to search for a basic land card."
+          "text": "If the targeted land is an illegal target by the time Ghost Quarter's ability resolves, it won't resolve and none of its effects will happen. The land's controller won't get to search for a basic land card."
         },
         {
           "date": "2013-07-01",
           "text": "The target land's controller gets to search for a basic land card even if that land wasn't destroyed by Ghost Quarter's ability. This may happen because the land has indestructible or because it was regenerated."
         }
       ],
-      "text": "{T}: Add {C} to your mana pool.\n{T}, Sacrifice Ghost Quarter: Destroy target land. Its controller may search his or her library for a basic land card, put it onto the battlefield, then shuffle his or her library.",
+      "text": "{T}: Add {C}.\n{T}, Sacrifice Ghost Quarter: Destroy target land. Its controller may search their library for a basic land card, put it onto the battlefield, then shuffle their library.",
       "type": "Land",
       "types": [
         "Land"
@@ -15872,7 +15886,7 @@
       "subtypes": [
         "Gate"
       ],
-      "text": "Golgari Guildgate enters the battlefield tapped.\n{T}: Add {B} or {G} to your mana pool.",
+      "text": "Golgari Guildgate enters the battlefield tapped.\n{T}: Add {B} or {G}.",
       "type": "Land — Gate",
       "types": [
         "Land"
@@ -15934,7 +15948,7 @@
           "text": "If this land enters the battlefield and you control no other lands, its ability will force you to return it to your hand."
         }
       ],
-      "text": "Golgari Rot Farm enters the battlefield tapped.\nWhen Golgari Rot Farm enters the battlefield, return a land you control to its owner's hand.\n{T}: Add {B}{G} to your mana pool.",
+      "text": "Golgari Rot Farm enters the battlefield tapped.\nWhen Golgari Rot Farm enters the battlefield, return a land you control to its owner's hand.\n{T}: Add {B}{G}.",
       "type": "Land",
       "types": [
         "Land"
@@ -15986,7 +16000,7 @@
         "CMA"
       ],
       "rarity": "Rare",
-      "text": "{T}: Add {C} to your mana pool.\n{2}{B}{G}, {T}, Sacrifice a creature: Draw a card.",
+      "text": "{T}: Add {C}.\n{2}{B}{G}, {T}, Sacrifice a creature: Draw a card.",
       "type": "Land",
       "types": [
         "Land"
@@ -16036,15 +16050,19 @@
       "rarity": "Common",
       "rulings": [
         {
-          "date": "2011-01-22",
+          "date": "2018-03-16",
           "text": "The creature card returned to your hand is chosen at random as the ability resolves. If any player responds to the ability, that player won't yet know what card will be returned."
         },
         {
-          "date": "2011-01-22",
-          "text": "Because the ability doesn't target any creature card, any creature card put into the graveyard in response to that ability may be returned to your hand."
+          "date": "2018-03-16",
+          "text": "Because Haunted Fengraf's ability doesn't target any creature card, any creature card put into the graveyard in response to that ability may be returned to your hand."
+        },
+        {
+          "date": "2018-03-16",
+          "text": "All players get to see which card you return to your hand."
         }
       ],
-      "text": "{T}: Add {C} to your mana pool.\n{3}, {T}, Sacrifice Haunted Fengraf: Return a creature card at random from your graveyard to your hand.",
+      "text": "{T}: Add {C}.\n{3}, {T}, Sacrifice Haunted Fengraf: Return a creature card at random from your graveyard to your hand.",
       "type": "Land",
       "types": [
         "Land"
@@ -16089,7 +16107,7 @@
         "CMA"
       ],
       "rarity": "Uncommon",
-      "text": "Havenwood Battleground enters the battlefield tapped.\n{T}: Add {G} to your mana pool.\n{T}, Sacrifice Havenwood Battleground: Add {G}{G} to your mana pool.",
+      "text": "Havenwood Battleground enters the battlefield tapped.\n{T}: Add {G}.\n{T}, Sacrifice Havenwood Battleground: Add {G}{G}.",
       "type": "Land",
       "types": [
         "Land"
@@ -16133,7 +16151,7 @@
         "CMA"
       ],
       "rarity": "Rare",
-      "text": "{T}: Add {C} to your mana pool.\n{T}, Sacrifice a creature: You gain 1 life.",
+      "text": "{T}: Add {C}.\n{T}, Sacrifice a creature: You gain 1 life.",
       "type": "Land",
       "types": [
         "Land"
@@ -16184,7 +16202,7 @@
           "text": "This has a triggered ability when it enters the battlefield, not a replacement effect, as previously worded."
         }
       ],
-      "text": "Jungle Basin enters the battlefield tapped.\nWhen Jungle Basin enters the battlefield, sacrifice it unless you return an untapped Forest you control to its owner's hand.\n{T}: Add {C}{G} to your mana pool.",
+      "text": "Jungle Basin enters the battlefield tapped.\nWhen Jungle Basin enters the battlefield, sacrifice it unless you return an untapped Forest you control to its owner's hand.\n{T}: Add {C}{G}.",
       "type": "Land",
       "types": [
         "Land"
@@ -16237,7 +16255,7 @@
         "CMA"
       ],
       "rarity": "Common",
-      "text": "Jungle Hollow enters the battlefield tapped.\nWhen Jungle Hollow enters the battlefield, you gain 1 life.\n{T}: Add {B} or {G} to your mana pool.",
+      "text": "Jungle Hollow enters the battlefield tapped.\nWhen Jungle Hollow enters the battlefield, you gain 1 life.\n{T}: Add {B} or {G}.",
       "type": "Land",
       "types": [
         "Land"
@@ -16288,7 +16306,7 @@
         "CMA"
       ],
       "rarity": "Uncommon",
-      "text": "{T}: Add {C} to your mana pool.\n{1}, {T}: Put a storage counter on Molten Slagheap.\n{1}, Remove X storage counters from Molten Slagheap: Add X mana in any combination of {B} and/or {R} to your mana pool.",
+      "text": "{T}: Add {C}.\n{1}, {T}: Put a storage counter on Molten Slagheap.\n{1}, Remove X storage counters from Molten Slagheap: Add X mana in any combination of {B} and/or {R}.",
       "type": "Land",
       "types": [
         "Land"
@@ -16330,11 +16348,11 @@
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2014-11-07",
-          "text": "You can choose to find one basic land card with the second activated ability and put it onto the battlefield tapped."
+          "date": "2018-03-16",
+          "text": "You can choose to find one basic land card with Myriad Landscape's last ability."
         }
       ],
-      "text": "Myriad Landscape enters the battlefield tapped.\n{T}: Add {C} to your mana pool.\n{2}, {T}, Sacrifice Myriad Landscape: Search your library for up to two basic land cards that share a land type, put them onto the battlefield tapped, then shuffle your library.",
+      "text": "Myriad Landscape enters the battlefield tapped.\n{T}: Add {C}.\n{2}, {T}, Sacrifice Myriad Landscape: Search your library for up to two basic land cards that share a land type, put them onto the battlefield tapped, then shuffle your library.",
       "type": "Land",
       "types": [
         "Land"
@@ -16391,7 +16409,7 @@
           "text": "In formats other than Commander, Opal Palace's last ability produces no mana."
         }
       ],
-      "text": "{T}: Add {C} to your mana pool.\n{1}, {T}: Add to your mana pool one mana of any color in your commander's color identity. If you spend this mana to cast your commander, it enters the battlefield with a number of additional +1/+1 counters on it equal to the number of times it's been cast from the command zone this game.",
+      "text": "{T}: Add {C}.\n{1}, {T}: Add one mana of any color in your commander's color identity. If you spend this mana to cast your commander, it enters the battlefield with a number of additional +1/+1 counters on it equal to the number of times it's been cast from the command zone this game.",
       "type": "Land",
       "types": [
         "Land"
@@ -16438,7 +16456,8 @@
         "ZEN",
         "C14",
         "C15",
-        "CMA"
+        "CMA",
+        "DDU"
       ],
       "rarity": "Rare",
       "rulings": [
@@ -16451,7 +16470,7 @@
           "text": "Oran-Rief's second ability affects all permanents that are green creatures that entered the battlefield this turn, not just the ones you control."
         }
       ],
-      "text": "Oran-Rief, the Vastwood enters the battlefield tapped.\n{T}: Add {G} to your mana pool.\n{T}: Put a +1/+1 counter on each green creature that entered the battlefield this turn.",
+      "text": "Oran-Rief, the Vastwood enters the battlefield tapped.\n{T}: Add {G}.\n{T}: Put a +1/+1 counter on each green creature that entered the battlefield this turn.",
       "type": "Land",
       "types": [
         "Land"
@@ -16513,7 +16532,7 @@
           "text": "If this land enters the battlefield and you control no other lands, its ability will force you to return it to your hand."
         }
       ],
-      "text": "Orzhov Basilica enters the battlefield tapped.\nWhen Orzhov Basilica enters the battlefield, return a land you control to its owner's hand.\n{T}: Add {W}{B} to your mana pool.",
+      "text": "Orzhov Basilica enters the battlefield tapped.\nWhen Orzhov Basilica enters the battlefield, return a land you control to its owner's hand.\n{T}: Add {W}{B}.",
       "type": "Land",
       "types": [
         "Land"
@@ -16571,7 +16590,7 @@
           "text": "Cycling is an activated ability. Effects that interact with activated abilities (such as Stifle or Rings of Brighthearth) will interact with cycling. Effects that interact with spells (such as Remove Soul or Faerie Tauntings) will not."
         }
       ],
-      "text": "Polluted Mire enters the battlefield tapped.\n{T}: Add {B} to your mana pool.\nCycling {2} ({2}, Discard this card: Draw a card.)",
+      "text": "Polluted Mire enters the battlefield tapped.\n{T}: Add {B}.\nCycling {2} ({2}, Discard this card: Draw a card.)",
       "type": "Land",
       "types": [
         "Land"
@@ -16634,7 +16653,7 @@
           "text": "If this land enters the battlefield and you control no other lands, its ability will force you to return it to your hand."
         }
       ],
-      "text": "Rakdos Carnarium enters the battlefield tapped.\nWhen Rakdos Carnarium enters the battlefield, return a land you control to its owner's hand.\n{T}: Add {B}{R} to your mana pool.",
+      "text": "Rakdos Carnarium enters the battlefield tapped.\nWhen Rakdos Carnarium enters the battlefield, return a land you control to its owner's hand.\n{T}: Add {B}{R}.",
       "type": "Land",
       "types": [
         "Land"
@@ -16686,7 +16705,7 @@
         "CMA"
       ],
       "rarity": "Common",
-      "text": "Rupture Spire enters the battlefield tapped.\nWhen Rupture Spire enters the battlefield, sacrifice it unless you pay {1}.\n{T}: Add one mana of any color to your mana pool.",
+      "text": "Rupture Spire enters the battlefield tapped.\nWhen Rupture Spire enters the battlefield, sacrifice it unless you pay {1}.\n{T}: Add one mana of any color.",
       "type": "Land",
       "types": [
         "Land"
@@ -16737,7 +16756,7 @@
         "C17"
       ],
       "rarity": "Uncommon",
-      "text": "{T}: Add {C} to your mana pool.\n{1}, {T}: Put a storage counter on Saltcrusted Steppe.\n{1}, Remove X storage counters from Saltcrusted Steppe: Add X mana in any combination of {G} and/or {W} to your mana pool.",
+      "text": "{T}: Add {C}.\n{1}, {T}: Put a storage counter on Saltcrusted Steppe.\n{1}, Remove X storage counters from Saltcrusted Steppe: Add X mana in any combination of {G} and/or {W}.",
       "type": "Land",
       "types": [
         "Land"
@@ -16792,7 +16811,7 @@
         "C17"
       ],
       "rarity": "Uncommon",
-      "text": "Seaside Citadel enters the battlefield tapped.\n{T}: Add {G}, {W}, or {U} to your mana pool.",
+      "text": "Seaside Citadel enters the battlefield tapped.\n{T}: Add {G}, {W}, or {U}.",
       "type": "Land",
       "types": [
         "Land"
@@ -16852,7 +16871,7 @@
           "text": "Cycling is an activated ability. Effects that interact with activated abilities (such as Stifle or Rings of Brighthearth) will interact with cycling. Effects that interact with spells (such as Remove Soul or Faerie Tauntings) will not."
         }
       ],
-      "text": "Secluded Steppe enters the battlefield tapped.\n{T}: Add {W} to your mana pool.\nCycling {W} ({W}, Discard this card: Draw a card.)",
+      "text": "Secluded Steppe enters the battlefield tapped.\n{T}: Add {W}.\nCycling {W} ({W}, Discard this card: Draw a card.)",
       "type": "Land",
       "types": [
         "Land"
@@ -16903,7 +16922,7 @@
         "CMA"
       ],
       "rarity": "Uncommon",
-      "text": "Sejiri Refuge enters the battlefield tapped.\nWhen Sejiri Refuge enters the battlefield, you gain 1 life.\n{T}: Add {W} or {U} to your mana pool.",
+      "text": "Sejiri Refuge enters the battlefield tapped.\nWhen Sejiri Refuge enters the battlefield, you gain 1 life.\n{T}: Add {W} or {U}.",
       "type": "Land",
       "types": [
         "Land"
@@ -16970,7 +16989,7 @@
       "subtypes": [
         "Gate"
       ],
-      "text": "Selesnya Guildgate enters the battlefield tapped.\n{T}: Add {G} or {W} to your mana pool.",
+      "text": "Selesnya Guildgate enters the battlefield tapped.\n{T}: Add {G} or {W}.",
       "type": "Land — Gate",
       "types": [
         "Land"
@@ -17034,7 +17053,7 @@
           "text": "If this land enters the battlefield and you control no other lands, its ability will force you to return it to your hand."
         }
       ],
-      "text": "Selesnya Sanctuary enters the battlefield tapped.\nWhen Selesnya Sanctuary enters the battlefield, return a land you control to its owner's hand.\n{T}: Add {G}{W} to your mana pool.",
+      "text": "Selesnya Sanctuary enters the battlefield tapped.\nWhen Selesnya Sanctuary enters the battlefield, return a land you control to its owner's hand.\n{T}: Add {G}{W}.",
       "type": "Land",
       "types": [
         "Land"
@@ -17101,7 +17120,7 @@
       "subtypes": [
         "Gate"
       ],
-      "text": "Simic Guildgate enters the battlefield tapped.\n{T}: Add {G} or {U} to your mana pool.",
+      "text": "Simic Guildgate enters the battlefield tapped.\n{T}: Add {G} or {U}.",
       "type": "Land — Gate",
       "types": [
         "Land"
@@ -17159,7 +17178,7 @@
           "text": "Cycling is an activated ability. Effects that interact with activated abilities (such as Stifle or Rings of Brighthearth) will interact with cycling. Effects that interact with spells (such as Remove Soul or Faerie Tauntings) will not."
         }
       ],
-      "text": "Slippery Karst enters the battlefield tapped.\n{T}: Add {G} to your mana pool.\nCycling {2} ({2}, Discard this card: Draw a card.)",
+      "text": "Slippery Karst enters the battlefield tapped.\n{T}: Add {G}.\nCycling {2} ({2}, Discard this card: Draw a card.)",
       "type": "Land",
       "types": [
         "Land"
@@ -17206,7 +17225,7 @@
         "CMA"
       ],
       "rarity": "Uncommon",
-      "text": "{T}: Add {C} to your mana pool.\n{T}: Add {B} or {G} to your mana pool. Activate this ability only if you control a Swamp.",
+      "text": "{T}: Add {C}.\n{T}: Add {B} or {G}. Activate this ability only if you control a Swamp.",
       "type": "Land",
       "types": [
         "Land"
@@ -17255,7 +17274,7 @@
         "C17"
       ],
       "rarity": "Uncommon",
-      "text": "{T}: Add {C}{C} to your mana pool. Activate this ability only if you control five or more lands.",
+      "text": "{T}: Add {C}{C}. Activate this ability only if you control five or more lands.",
       "type": "Land",
       "types": [
         "Land"
@@ -17368,7 +17387,8 @@
         "C14",
         "DD3_EVG",
         "CMA",
-        "C17"
+        "C17",
+        "DDU"
       ],
       "rarity": "Common",
       "rulings": [
@@ -17377,7 +17397,7 @@
           "text": "Cycling is an activated ability. Effects that interact with activated abilities (such as Stifle or Rings of Brighthearth) will interact with cycling. Effects that interact with spells (such as Remove Soul or Faerie Tauntings) will not."
         }
       ],
-      "text": "Tranquil Thicket enters the battlefield tapped.\n{T}: Add {G} to your mana pool.\nCycling {G} ({G}, Discard this card: Draw a card.)",
+      "text": "Tranquil Thicket enters the battlefield tapped.\n{T}: Add {G}.\nCycling {G} ({G}, Discard this card: Draw a card.)",
       "type": "Land",
       "types": [
         "Land"
@@ -17424,7 +17444,7 @@
         "CMA"
       ],
       "rarity": "Common",
-      "text": "Transguild Promenade enters the battlefield tapped.\nWhen Transguild Promenade enters the battlefield, sacrifice it unless you pay {1}.\n{T}: Add one mana of any color to your mana pool.",
+      "text": "Transguild Promenade enters the battlefield tapped.\nWhen Transguild Promenade enters the battlefield, sacrifice it unless you pay {1}.\n{T}: Add one mana of any color.",
       "type": "Land",
       "types": [
         "Land"
@@ -17478,7 +17498,7 @@
         "C17"
       ],
       "rarity": "Uncommon",
-      "text": "Vivid Grove enters the battlefield tapped with two charge counters on it.\n{T}: Add {G} to your mana pool.\n{T}, Remove a charge counter from Vivid Grove: Add one mana of any color to your mana pool.",
+      "text": "Vivid Grove enters the battlefield tapped with two charge counters on it.\n{T}: Add {G}.\n{T}, Remove a charge counter from Vivid Grove: Add one mana of any color.",
       "type": "Land",
       "types": [
         "Land"
@@ -17531,7 +17551,7 @@
         "C17"
       ],
       "rarity": "Uncommon",
-      "text": "Vivid Marsh enters the battlefield tapped with two charge counters on it.\n{T}: Add {B} to your mana pool.\n{T}, Remove a charge counter from Vivid Marsh: Add one mana of any color to your mana pool.",
+      "text": "Vivid Marsh enters the battlefield tapped with two charge counters on it.\n{T}: Add {B}.\n{T}, Remove a charge counter from Vivid Marsh: Add one mana of any color.",
       "type": "Land",
       "types": [
         "Land"
@@ -17583,7 +17603,7 @@
         "C17"
       ],
       "rarity": "Uncommon",
-      "text": "Vivid Meadow enters the battlefield tapped with two charge counters on it.\n{T}: Add {W} to your mana pool.\n{T}, Remove a charge counter from Vivid Meadow: Add one mana of any color to your mana pool.",
+      "text": "Vivid Meadow enters the battlefield tapped with two charge counters on it.\n{T}: Add {W}.\n{T}, Remove a charge counter from Vivid Meadow: Add one mana of any color.",
       "type": "Land",
       "types": [
         "Land"
@@ -17634,7 +17654,17 @@
         "A25"
       ],
       "rarity": "Uncommon",
-      "text": "{T}: Add {C} to your mana pool.\nMorph {2} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)",
+      "rulings": [
+        {
+          "date": "2018-03-16",
+          "text": "When Zoetic Cavern is turned face up, any Auras on it that can't legally enchant it will be put into their owners' graveyards. Any Equipment will become unattached and remain on the battlefield. Any counters on it will remain on it."
+        },
+        {
+          "date": "2018-03-16",
+          "text": "If Blood Moon is on the battlefield and a player controls a face-down Zoetic Cavern, it can't be turned face up since it won't have a morph cost."
+        }
+      ],
+      "text": "{T}: Add {C}.\nMorph {2} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)",
       "type": "Land",
       "types": [
         "Land"
@@ -17883,7 +17913,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -18150,7 +18181,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -18417,7 +18449,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -18684,7 +18717,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -18951,7 +18985,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -19218,7 +19253,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -19485,7 +19521,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -19752,7 +19789,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -20018,7 +20056,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -20280,7 +20320,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -20542,7 +20584,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -20804,7 +20848,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -21070,7 +21116,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -21340,7 +21387,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -21610,7 +21658,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -21880,7 +21929,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -22150,7 +22200,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -22420,7 +22471,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -22690,7 +22742,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -22960,7 +23013,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -23232,7 +23286,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -23500,7 +23556,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -23768,7 +23826,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -24036,7 +24096,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -24301,7 +24363,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -24574,7 +24638,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -24847,7 +24913,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -25120,7 +25188,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -25393,7 +25463,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -25666,7 +25738,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -25939,7 +26013,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -26212,7 +26288,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -26485,7 +26563,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -26758,7 +26838,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -27031,7 +27113,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -27304,7 +27388,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [

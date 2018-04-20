@@ -91,7 +91,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "You don't draw a card if this spell is countered. This can happen if the target is illegal on resolution."
+          "text": "You don't draw a card if this spell is countered or if the target is illegal on resolution."
         },
         {
           "date": "2004-10-04",
@@ -754,7 +754,7 @@
           "text": "This can't be used as a counterspell. It will have no effect on spells which were on the stack when it was cast, nor on those cast in response to it."
         }
       ],
-      "text": "Kicker {W} (You may pay an additional {W} as you cast this spell.)\nTarget player can't cast spells this turn.\nIf Orim's Chant was kicked, creatures can't attack this turn.",
+      "text": "Kicker {W} (You may pay an additional {W} as you cast this spell.)\nTarget player can't cast spells this turn. If this spell was kicked, creatures can't attack this turn.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -820,7 +820,7 @@
           "text": "If the opponent has no cards in hand, then no life is gained."
         }
       ],
-      "text": "{3}{W}: Target opponent reveals a card at random from his or her hand. You gain life equal to that card's converted mana cost.",
+      "text": "{3}{W}: Target opponent reveals a card at random from their hand. You gain life equal to that card's converted mana cost.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -885,7 +885,7 @@
           "text": "You can't choose zero targets. You must choose between 1 and 3 (or 6) targets."
         }
       ],
-      "text": "Kicker—Sacrifice a land. (You may sacrifice a land in addition to any other costs as you cast this spell.)\nPrevent the next 3 damage that would be dealt this turn to any number of target creatures and/or players, divided as you choose. If Pollen Remedy was kicked, prevent the next 6 damage this way instead.",
+      "text": "Kicker—Sacrifice a land. (You may sacrifice a land in addition to any other costs as you cast this spell.)\nPrevent the next 3 damage that would be dealt this turn to any number of targets, divided as you choose. If this spell was kicked, prevent the next 6 damage this way instead.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -1267,7 +1267,7 @@
           "text": "Putting the card onto the battlefield is optional. When the ability resolves, you can choose not to."
         }
       ],
-      "text": "Cast Surprise Deployment only during combat.\nYou may put a nonwhite creature card from your hand onto the battlefield. At the beginning of the next end step, return that creature to your hand. (Return it only if it's on the battlefield.)",
+      "text": "Cast this spell only during combat.\nYou may put a nonwhite creature card from your hand onto the battlefield. At the beginning of the next end step, return that creature to your hand. (Return it only if it's on the battlefield.)",
       "type": "Instant",
       "types": [
         "Instant"
@@ -1417,7 +1417,7 @@
           "text": "A number of nonbasic lands have basic land types. Domain abilities don't count the number of lands you control — they count the number of basic land types among lands you control, even if that means checking the same land twice. For example, if you control a Tundra, an Overgrown Tomb, and a Madblind Mountain, you'll have a Plains, Island, Swamp, Mountain, and Forest among the lands you control. Your domain abilities will be maxed out."
         }
       ],
-      "text": "Domain — Target player draws a card for each basic land type among lands he or she controls.",
+      "text": "Domain — Target player draws a card for each basic land type among lands they control.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -1544,7 +1544,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "Confound is countered on resolution if the targeted spell has been countered or does not still target one or more permanents that are still creatures and are still on the battlefield. Confound is different from other such spells in that it actually specifies that the spell must target a creature, not just be able to target a creature or that the spell has a certain number of targets."
+          "text": "Confound doesn't resolve if the targeted spell has been countered or does not still target one or more permanents that are still creatures and are still on the battlefield. Confound is different from other such spells in that it actually specifies that the spell must target a creature, not just be able to target a creature or that the spell has a certain number of targets."
         }
       ],
       "text": "Counter target spell that targets a creature.\nDraw a card.",
@@ -1950,7 +1950,7 @@
           "text": "If you have a land which counts as multiple land types, you can choose that land as each of those types. For example, a dual land could be chosen as two of your land types."
         }
       ],
-      "text": "Each player chooses a land he or she controls of each basic land type. Return those lands to their owners' hands.",
+      "text": "Each player chooses a land they control of each basic land type. Return those lands to their owners' hands.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -2023,7 +2023,7 @@
           "text": "When cast, the card goes to its owner's graveyard after it resolves."
         }
       ],
-      "text": "{3}{U}: Target opponent reveals a card at random from his or her hand. If it's an instant or sorcery card, exile it. You may cast it without paying its mana cost for as long as it remains exiled. (If it has X in its mana cost, X is 0.) At the beginning of the next end step, if you haven't cast it, return it to its owner's hand. Activate this ability only any time you could cast a sorcery.",
+      "text": "{3}{U}: Target opponent reveals a card at random from their hand. If it's an instant or sorcery card, exile it. You may cast it without paying its mana cost for as long as it remains exiled. (If it has X in its mana cost, X is 0.) At the beginning of the next end step, if you haven't cast it, return it to its owner's hand. Activate this ability only any time you could cast a sorcery.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -2092,7 +2092,7 @@
           "text": "You choose a second target only if you choose to pay the Kicker cost."
         }
       ],
-      "text": "Kicker—Sacrifice a land. (You may sacrifice a land in addition to any other costs as you cast this spell.)\nReturn target nonland permanent to its owner's hand. If Rushing River was kicked, return another target nonland permanent to its owner's hand.",
+      "text": "Kicker—Sacrifice a land. (You may sacrifice a land in addition to any other costs as you cast this spell.)\nReturn target nonland permanent to its owner's hand. If this spell was kicked, return another target nonland permanent to its owner's hand.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -2585,7 +2585,7 @@
         "PCA"
       ],
       "rarity": "Rare",
-      "text": "At the beginning of each player's upkeep, that player returns a creature he or she controls to its owner's hand.",
+      "text": "At the beginning of each player's upkeep, that player returns a creature they control to its owner's hand.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -2720,7 +2720,7 @@
           "text": "The player discards 2 cards or 3 cards, not 5 cards."
         }
       ],
-      "text": "Kicker—Sacrifice two lands. (You may sacrifice two lands in addition to any other costs as you cast this spell.)\nTarget player discards two cards. If Bog Down was kicked, that player discards three cards instead.",
+      "text": "Kicker—Sacrifice two lands. (You may sacrifice two lands in addition to any other costs as you cast this spell.)\nTarget player discards two cards. If this spell was kicked, that player discards three cards instead.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -2850,7 +2850,7 @@
           "text": "Players can only respond once this spell has been cast and all its costs have been paid. No one can try to destroy the creature you sacrificed to prevent you from casting this spell."
         }
       ],
-      "text": "As an additional cost to cast Death Bomb, sacrifice a creature.\nDestroy target nonblack creature. It can't be regenerated. Its controller loses 2 life.",
+      "text": "As an additional cost to cast this spell, sacrifice a creature.\nDestroy target nonblack creature. It can't be regenerated. Its controller loses 2 life.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -2924,7 +2924,7 @@
           "text": "Players can only respond once this spell has been cast and all its costs have been paid. No one can try to destroy the creature you sacrificed to prevent you from casting this spell."
         }
       ],
-      "text": "As an additional cost to cast Diabolic Intent, sacrifice a creature.\nSearch your library for a card and put that card into your hand. Then shuffle your library.",
+      "text": "As an additional cost to cast this spell, sacrifice a creature.\nSearch your library for a card and put that card into your hand. Then shuffle your library.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -3213,7 +3213,7 @@
       "subtypes": [
         "Frog"
       ],
-      "text": "Sacrifice Morgue Toad: Add {U}{R} to your mana pool.",
+      "text": "Sacrifice Morgue Toad: Add {U}{R}.",
       "toughness": "2",
       "type": "Creature — Frog",
       "types": [
@@ -3440,7 +3440,7 @@
         "PLS"
       ],
       "rarity": "Uncommon",
-      "text": "Each player reveals his or her hand and chooses one card of each color from it, then discards all other nonland cards.",
+      "text": "Each player reveals their hand, chooses one card of each color from it, then discards all other nonland cards.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -3634,7 +3634,7 @@
           "text": "If the opponent has no cards in hand, then X is zero."
         }
       ],
-      "text": "{3}{B}: Target opponent reveals a card at random from his or her hand. Target creature gets -X/-X until end of turn, where X is the revealed card's converted mana cost. Activate this ability only any time you could cast a sorcery.",
+      "text": "{3}{B}: Target opponent reveals a card at random from their hand. Target creature gets -X/-X until end of turn, where X is the revealed card's converted mana cost. Activate this ability only any time you could cast a sorcery.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -4100,7 +4100,7 @@
         "PLS"
       ],
       "rarity": "Rare",
-      "text": "{R}, Sacrifice a Zombie: Deadapult deals 2 damage to target creature or player.",
+      "text": "{R}, Sacrifice a Zombie: Deadapult deals 2 damage to any target.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -4248,7 +4248,7 @@
           "text": "If you attempt to halve a negative life total, you halve 0. This means that the life total stays the same. A life total of -10 would remain -10."
         }
       ],
-      "text": "Each player hides at least one item, then all players reveal them simultaneously. Each player loses life equal to the number of items he or she revealed. The player who revealed the fewest items then loses half his or her life, rounded up. If two or more players are tied for fewest, each loses half his or her life, rounded up.",
+      "text": "Each player hides at least one item, then all players reveal them simultaneously. Each player loses life equal to the number of items they revealed. The player who revealed the fewest items then loses half their life, rounded up. If two or more players are tied for fewest, each loses half their life, rounded up.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -4579,7 +4579,7 @@
           "text": "You choose a second target only if you choose to pay the Kicker cost."
         }
       ],
-      "text": "Kicker—Sacrifice two lands. (You may sacrifice two lands in addition to any other costs as you cast this spell.)\nMagma Burst deals 3 damage to target creature or player. If Magma Burst was kicked, it deals 3 damage to another target creature or player.",
+      "text": "Kicker—Sacrifice two lands. (You may sacrifice two lands in addition to any other costs as you cast this spell.)\nMagma Burst deals 3 damage to any target. If this spell was kicked, it deals 3 damage to another target.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -4846,7 +4846,7 @@
           "text": "If the opponent has no cards in hand, then no damage is dealt."
         }
       ],
-      "text": "{3}{R}: Target opponent reveals a card at random from his or her hand. Planeswalker's Fury deals damage equal to that card's converted mana cost to that player. Activate this ability only any time you could cast a sorcery.",
+      "text": "{3}{R}: Target opponent reveals a card at random from their hand. Planeswalker's Fury deals damage equal to that card's converted mana cost to that player. Activate this ability only any time you could cast a sorcery.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -5475,7 +5475,7 @@
           "text": "You pick a second target only if you choose to kick Falling Timber."
         }
       ],
-      "text": "Kicker—Sacrifice a land. (You may sacrifice a land in addition to any other costs as you cast this spell.)\nPrevent all combat damage target creature would deal this turn. If Falling Timber was kicked, prevent all combat damage another target creature would deal this turn.",
+      "text": "Kicker—Sacrifice a land. (You may sacrifice a land in addition to any other costs as you cast this spell.)\nPrevent all combat damage target creature would deal this turn. If this spell was kicked, prevent all combat damage another target creature would deal this turn.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -5781,7 +5781,7 @@
       "subtypes": [
         "Treefolk"
       ],
-      "text": "{2}{R}{W}: The next time damage would be dealt to Mirrorwood Treefolk this turn, that damage is dealt to target creature or player instead.",
+      "text": "{2}{R}{W}: The next time damage would be dealt to Mirrorwood Treefolk this turn, that damage is dealt to any target instead.",
       "toughness": "4",
       "type": "Creature — Treefolk",
       "types": [
@@ -5845,7 +5845,7 @@
       "subtypes": [
         "Aura"
       ],
-      "text": "Enchant creature\nEnchanted creature has \"{T}: Add one mana of any color to your mana pool.\"",
+      "text": "Enchant creature\nEnchanted creature has \"{T}: Add one mana of any color.\"",
       "type": "Enchantment — Aura",
       "types": [
         "Enchantment"
@@ -5978,7 +5978,7 @@
           "text": "If the opponent has no cards in hand, then X is zero."
         }
       ],
-      "text": "{3}{G}: Target opponent reveals a card at random from his or her hand. Target creature gets +X/+X until end of turn, where X is the revealed card's converted mana cost.",
+      "text": "{3}{G}: Target opponent reveals a card at random from their hand. Target creature gets +X/+X until end of turn, where X is the revealed card's converted mana cost.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -6049,7 +6049,7 @@
           "text": "Because the \"search\" requires you to find a card with certain characteristics, you don't have to find the card if you don't want to."
         }
       ],
-      "text": "Kicker—Sacrifice a creature. (You may sacrifice a creature in addition to any other costs as you cast this spell.)\nSearch your library for a basic land card, put that card onto the battlefield, then shuffle your library. If Primal Growth was kicked, instead search your library for up to two basic land cards, put them onto the battlefield, then shuffle your library.",
+      "text": "Kicker—Sacrifice a creature. (You may sacrifice a creature in addition to any other costs as you cast this spell.)\nSearch your library for a basic land card, put that card onto the battlefield, then shuffle your library. If this spell was kicked, instead search your library for up to two basic land cards, put them onto the battlefield, then shuffle your library.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -6268,7 +6268,7 @@
         "Druid",
         "Scout"
       ],
-      "text": "{T}: Add to your mana pool one mana of any color that a land an opponent controls could produce.",
+      "text": "{T}: Add one mana of any color that a land an opponent controls could produce.",
       "toughness": "1",
       "type": "Creature — Elf Druid Scout",
       "types": [
@@ -6562,7 +6562,7 @@
         "Elf",
         "Wizard"
       ],
-      "text": "Kicker {R} and/or {W} (You may pay an additional {R} and/or {W} as you cast this spell.)\nWhen Thornscape Battlemage enters the battlefield, if it was kicked with its {R} kicker, it deals 2 damage to target creature or player.\nWhen Thornscape Battlemage enters the battlefield, if it was kicked with its {W} kicker, destroy target artifact.",
+      "text": "Kicker {R} and/or {W} (You may pay an additional {R} and/or {W} as you cast this spell.)\nWhen Thornscape Battlemage enters the battlefield, if it was kicked with its {R} kicker, it deals 2 damage to any target.\nWhen Thornscape Battlemage enters the battlefield, if it was kicked with its {W} kicker, destroy target artifact.",
       "toughness": "2",
       "type": "Creature — Elf Wizard",
       "types": [
@@ -6988,7 +6988,7 @@
         "DDE"
       ],
       "rarity": "Uncommon",
-      "text": "Choose one —\n• Return target creature card from your graveyard to your hand.\n• Darigaaz's Charm deals 3 damage to target creature or player.\n• Target creature gets +3/+3 until end of turn.",
+      "text": "Choose one —\n• Return target creature card from your graveyard to your hand.\n• Darigaaz's Charm deals 3 damage to any target.\n• Target creature gets +3/+3 until end of turn.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -7397,7 +7397,7 @@
           "text": "Because the \"search\" requires you to find a card with certain characteristics, you don't have to find the card if you don't want to."
         }
       ],
-      "text": "Search your library for a creature card, reveal that card, and put it into your hand. Then shuffle your library.",
+      "text": "Search your library for a creature card, reveal that card, put it into your hand, then shuffle your library.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -7829,7 +7829,7 @@
         "PLS"
       ],
       "rarity": "Rare",
-      "text": "At the beginning of each player's end step, if no creatures attacked this turn, that player sacrifices a creature he or she controlled since the beginning of the turn.",
+      "text": "At the beginning of each player's end step, if no creatures attacked this turn, that player sacrifices a creature they controlled since the beginning of the turn.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -8215,7 +8215,7 @@
         },
         {
           "date": "2009-10-01",
-          "text": "A noncreature permanent that turns into a creature is subject to the \"summoning sickness\" rule: It can only attack, and its {T} abilities can only be activated, if its controller has continuously controlled that permanent since the beginning of his or her most recent turn."
+          "text": "A noncreature permanent that turns into a creature is subject to the \"summoning sickness\" rule: It can only attack, and its {T} abilities can only be activated, if its controller has continuously controlled that permanent since the beginning of their most recent turn."
         }
       ],
       "text": "When Natural Emergence enters the battlefield, return a red or green enchantment you control to its owner's hand.\nLands you control are 2/2 creatures with first strike. They're still lands.",
@@ -8288,7 +8288,7 @@
           "text": "If more than one card is drawn at a time, this triggers for each card drawn."
         }
       ],
-      "text": "Whenever a player draws a card, that player loses 2 life unless he or she pays {2}.",
+      "text": "Whenever a player draws a card, that player loses 2 life unless they pay {2}.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -8864,7 +8864,7 @@
       "subtypes": [
         "Kavu"
       ],
-      "text": "When Sparkcaster enters the battlefield, return a red or green creature you control to its owner's hand.\nWhen Sparkcaster enters the battlefield, it deals 1 damage to target player.",
+      "text": "When Sparkcaster enters the battlefield, return a red or green creature you control to its owner's hand.\nWhen Sparkcaster enters the battlefield, it deals 1 damage to target player or planeswalker.",
       "toughness": "3",
       "type": "Creature — Kavu",
       "types": [
@@ -9281,7 +9281,7 @@
         "CON"
       ],
       "rarity": "Uncommon",
-      "text": "{1}, {T}: Add one mana of any color to your mana pool.",
+      "text": "{1}, {T}: Add one mana of any color.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -9437,7 +9437,7 @@
           "text": "The colors of mana are white, blue, black, red, and green. Colorless is a type but not a color."
         }
       ],
-      "text": "Star Compass enters the battlefield tapped.\n{T}: Add to your mana pool one mana of any color that a basic land you control could produce.",
+      "text": "Star Compass enters the battlefield tapped.\n{T}: Add one mana of any color that a basic land you control could produce.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -9509,7 +9509,7 @@
       "subtypes": [
         "Beast"
       ],
-      "text": "Domain — Stratadon costs {1} less to cast for each basic land type among lands you control.\nTrample",
+      "text": "Domain — This spell costs {1} less to cast for each basic land type among lands you control.\nTrample",
       "toughness": "5",
       "type": "Artifact Creature — Beast",
       "types": [
@@ -9585,7 +9585,7 @@
       "subtypes": [
         "Lair"
       ],
-      "text": "When Crosis's Catacombs enters the battlefield, sacrifice it unless you return a non-Lair land you control to its owner's hand.\n{T}: Add {U}, {B}, or {R} to your mana pool.",
+      "text": "When Crosis's Catacombs enters the battlefield, sacrifice it unless you return a non-Lair land you control to its owner's hand.\n{T}: Add {U}, {B}, or {R}.",
       "type": "Land — Lair",
       "types": [
         "Land"
@@ -9655,7 +9655,7 @@
       "subtypes": [
         "Lair"
       ],
-      "text": "When Darigaaz's Caldera enters the battlefield, sacrifice it unless you return a non-Lair land you control to its owner's hand.\n{T}: Add {B}, {R}, or {G} to your mana pool.",
+      "text": "When Darigaaz's Caldera enters the battlefield, sacrifice it unless you return a non-Lair land you control to its owner's hand.\n{T}: Add {B}, {R}, or {G}.",
       "type": "Land — Lair",
       "types": [
         "Land"
@@ -9725,7 +9725,7 @@
       "subtypes": [
         "Lair"
       ],
-      "text": "When Dromar's Cavern enters the battlefield, sacrifice it unless you return a non-Lair land you control to its owner's hand.\n{T}: Add {W}, {U}, or {B} to your mana pool.",
+      "text": "When Dromar's Cavern enters the battlefield, sacrifice it unless you return a non-Lair land you control to its owner's hand.\n{T}: Add {W}, {U}, or {B}.",
       "type": "Land — Lair",
       "types": [
         "Land"
@@ -9783,7 +9783,7 @@
           "text": "You may choose to exile a card in your hand even if Forsaken City is already untapped."
         }
       ],
-      "text": "Forsaken City doesn't untap during your untap step.\nAt the beginning of your upkeep, you may exile a card from your hand. If you do, untap Forsaken City.\n{T}: Add one mana of any color to your mana pool.",
+      "text": "Forsaken City doesn't untap during your untap step.\nAt the beginning of your upkeep, you may exile a card from your hand. If you do, untap Forsaken City.\n{T}: Add one mana of any color.",
       "type": "Land",
       "types": [
         "Land"
@@ -9842,7 +9842,7 @@
           "text": "You can't choose \"colorless\". You have to choose one of the five colors."
         }
       ],
-      "text": "{T}: Choose a color of a permanent you control. Add one mana of that color to your mana pool.",
+      "text": "{T}: Choose a color of a permanent you control. Add one mana of that color.",
       "type": "Land",
       "types": [
         "Land"
@@ -9912,7 +9912,7 @@
       "subtypes": [
         "Lair"
       ],
-      "text": "When Rith's Grove enters the battlefield, sacrifice it unless you return a non-Lair land you control to its owner's hand.\n{T}: Add {R}, {G}, or {W} to your mana pool.",
+      "text": "When Rith's Grove enters the battlefield, sacrifice it unless you return a non-Lair land you control to its owner's hand.\n{T}: Add {R}, {G}, or {W}.",
       "type": "Land — Lair",
       "types": [
         "Land"
@@ -9970,7 +9970,7 @@
           "text": "Because the \"search\" requires you to find a card with certain characteristics, you don't have to find the card if you don't want to."
         }
       ],
-      "text": "{T}: Add {C} to your mana pool.\n{2}, {T}, Sacrifice Terminal Moraine: Search your library for a basic land card and put that card onto the battlefield tapped. Then shuffle your library.",
+      "text": "{T}: Add {C}.\n{2}, {T}, Sacrifice Terminal Moraine: Search your library for a basic land card and put that card onto the battlefield tapped. Then shuffle your library.",
       "type": "Land",
       "types": [
         "Land"
@@ -10040,7 +10040,7 @@
       "subtypes": [
         "Lair"
       ],
-      "text": "When Treva's Ruins enters the battlefield, sacrifice it unless you return a non-Lair land you control to its owner's hand.\n{T}: Add {G}, {W}, or {U} to your mana pool.",
+      "text": "When Treva's Ruins enters the battlefield, sacrifice it unless you return a non-Lair land you control to its owner's hand.\n{T}: Add {G}, {W}, or {U}.",
       "type": "Land — Lair",
       "types": [
         "Land"

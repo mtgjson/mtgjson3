@@ -116,6 +116,12 @@
         "A25"
       ],
       "rarity": "Rare",
+      "rulings": [
+        {
+          "date": "2018-03-16",
+          "text": "The \"legend rule\" cares about legendary permanents with the exact same English name. You can control Akroma, Angel of Wrath and Akroma, Angel of Fury at the same time."
+        }
+      ],
       "subtypes": [
         "Angel"
       ],
@@ -284,7 +290,7 @@
         "Bird",
         "Cleric"
       ],
-      "text": "Flying\n{T}: Prevent the next 2 damage that would be dealt to target creature or player this turn.",
+      "text": "Flying\n{T}: Prevent the next 2 damage that would be dealt to any target this turn.",
       "toughness": "2",
       "type": "Creature — Bird Cleric",
       "types": [
@@ -1221,7 +1227,7 @@
         },
         {
           "date": "2008-10-01",
-          "text": "The cycling ability and the triggered ability are separate. If the triggered ability is countered (with Stifle, for example, or if all its targets have become illegal), the cycling ability will still resolve and you'll draw a card."
+          "text": "The cycling ability and the triggered ability are separate. If the triggered ability doesn't resolve (due to being countered with Stifle, for example, or if all its targets have become illegal), the cycling ability will still resolve and you'll draw a card."
         }
       ],
       "subtypes": [
@@ -2451,7 +2457,7 @@
       "subtypes": [
         "Spirit"
       ],
-      "text": "Flying\nCreatures can't attack you unless their controller pays {2} for each creature he or she controls that's attacking you.",
+      "text": "Flying\nCreatures can't attack you unless their controller pays {2} for each creature they control that's attacking you.",
       "toughness": "3",
       "type": "Creature — Spirit",
       "types": [
@@ -3135,7 +3141,7 @@
       "subtypes": [
         "Spirit"
       ],
-      "text": "At the beginning of each player's upkeep, that player puts the top X cards of his or her library into his or her graveyard, where X is the number of cards in his or her hand.",
+      "text": "At the beginning of each player's upkeep, that player puts the top X cards of their library into their graveyard, where X is the number of cards in their hand.",
       "toughness": "2",
       "type": "Creature — Spirit",
       "types": [
@@ -3396,7 +3402,7 @@
         },
         {
           "date": "2008-10-01",
-          "text": "The cycling ability and the triggered ability are separate. If the triggered ability is countered (with Stifle, for example, or if all its targets have become illegal), the cycling ability will still resolve and you'll draw a card."
+          "text": "The cycling ability and the triggered ability are separate. If the triggered ability doesn't resolve (due to being countered with Stifle, for example, or if all its targets have become illegal), the cycling ability will still resolve and you'll draw a card."
         }
       ],
       "subtypes": [
@@ -5073,6 +5079,18 @@
         {
           "date": "2013-04-15",
           "text": "If a spell with split second is on the stack, you can still respond by turning this creature face up and targeting that spell with the trigger. This is because split second only stops players from casting spells or activating abilities, while turning a creature face up is a special action."
+        },
+        {
+          "date": "2018-03-16",
+          "text": "You don't choose the new target for the spell until Willbender's triggered ability resolves. You must change the target if possible. However, you can't change the target to an illegal target. If there are no legal targets to choose from, the target isn't changed. It doesn't matter if the original target of that spell has somehow become illegal itself."
+        },
+        {
+          "date": "2018-03-16",
+          "text": "If a spell or ability targets multiple things, you can't target it with Willbender's triggered ability, even if all but one of those targets have become illegal."
+        },
+        {
+          "date": "2018-03-16",
+          "text": "If a spell or ability targets the same player or object multiple times, you can't target it with Willbender's ability."
         }
       ],
       "subtypes": [
@@ -5336,7 +5354,7 @@
         "Human",
         "Cleric"
       ],
-      "text": "{B}, Pay 1 life: Add one mana of any color to your mana pool.",
+      "text": "{B}, Pay 1 life: Add one mana of any color.",
       "toughness": "1",
       "type": "Creature — Human Cleric",
       "types": [
@@ -6098,7 +6116,7 @@
         },
         {
           "date": "2008-10-01",
-          "text": "The cycling ability and the triggered ability are separate. If the triggered ability is countered (with Stifle, for example, or if all its targets have become illegal), the cycling ability will still resolve and you'll draw a card."
+          "text": "The cycling ability and the triggered ability are separate. If the triggered ability doesn't resolve (due to being countered with Stifle, for example, or if all its targets have become illegal), the cycling ability will still resolve and you'll draw a card."
         },
         {
           "date": "2008-10-01",
@@ -6530,7 +6548,7 @@
       "subtypes": [
         "Specter"
       ],
-      "text": "Flying\nWhenever Hollow Specter deals combat damage to a player, you may pay {X}. If you do, that player reveals X cards from his or her hand and you choose one of them. That player discards that card.",
+      "text": "Flying\nWhenever Hollow Specter deals combat damage to a player, you may pay {X}. If you do, that player reveals X cards from their hand and you choose one of them. That player discards that card.",
       "toughness": "2",
       "type": "Creature — Specter",
       "types": [
@@ -7996,7 +8014,7 @@
         "Goblin",
         "Mutant"
       ],
-      "text": "{7}{R}: Flamewave Invoker deals 5 damage to target player.",
+      "text": "{7}{R}: Flamewave Invoker deals 5 damage to target player or planeswalker.",
       "toughness": "2",
       "type": "Creature — Goblin Mutant",
       "types": [
@@ -8171,7 +8189,7 @@
         },
         {
           "date": "2008-10-01",
-          "text": "The cycling ability and the triggered ability are separate. If the triggered ability is countered (with Stifle, for example, or if all its targets have become illegal), the cycling ability will still resolve and you'll draw a card."
+          "text": "The cycling ability and the triggered ability are separate. If the triggered ability doesn't resolve (due to being countered with Stifle, for example, or if all its targets have become illegal), the cycling ability will still resolve and you'll draw a card."
         },
         {
           "date": "2008-10-01",
@@ -8355,7 +8373,7 @@
       "subtypes": [
         "Goblin"
       ],
-      "text": "{T}, Sacrifice a Forest: Add three mana in any combination of {R} and/or {G} to your mana pool.",
+      "text": "{T}, Sacrifice a Forest: Add three mana in any combination of {R} and/or {G}.",
       "toughness": "3",
       "type": "Creature — Goblin",
       "types": [
@@ -8435,7 +8453,7 @@
         "Goblin",
         "Mutant"
       ],
-      "text": "{T}: Goblin Dynamo deals 1 damage to target creature or player.\n{X}{R}, {T}, Sacrifice Goblin Dynamo: Goblin Dynamo deals X damage to target creature or player.",
+      "text": "{T}: Goblin Dynamo deals 1 damage to any target.\n{X}{R}, {T}, Sacrifice Goblin Dynamo: It deals X damage to any target.",
       "toughness": "4",
       "type": "Creature — Goblin Mutant",
       "types": [
@@ -9019,7 +9037,7 @@
       "subtypes": [
         "Dragon"
       ],
-      "text": "Amplify 3 (As this creature enters the battlefield, put three +1/+1 counters on it for each Dragon card you reveal in your hand.)\nFlying\n{T}: Kilnmouth Dragon deals damage equal to the number of +1/+1 counters on it to target creature or player.",
+      "text": "Amplify 3 (As this creature enters the battlefield, put three +1/+1 counters on it for each Dragon card you reveal in your hand.)\nFlying\n{T}: Kilnmouth Dragon deals damage equal to the number of +1/+1 counters on it to any target.",
       "toughness": "5",
       "type": "Creature — Dragon",
       "types": [
@@ -9111,7 +9129,7 @@
       "subtypes": [
         "Spirit"
       ],
-      "text": "At the beginning of each opponent's upkeep, if that player has two or fewer cards in hand, Lavaborn Muse deals 3 damage to him or her.",
+      "text": "At the beginning of each opponent's upkeep, if that player has two or fewer cards in hand, Lavaborn Muse deals 3 damage to that player.",
       "toughness": "3",
       "type": "Creature — Spirit",
       "types": [
@@ -9789,7 +9807,7 @@
       "subtypes": [
         "Goblin"
       ],
-      "text": "Morph {2}{R} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)\nWhen Skirk Marauder is turned face up, it deals 2 damage to target creature or player.",
+      "text": "Morph {2}{R} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)\nWhen Skirk Marauder is turned face up, it deals 2 damage to any target.",
       "toughness": "1",
       "type": "Creature — Goblin",
       "types": [
@@ -10960,7 +10978,7 @@
         },
         {
           "date": "2008-10-01",
-          "text": "The cycling ability and the triggered ability are separate. If the triggered ability is countered (with Stifle, for example, or if all its targets have become illegal), the cycling ability will still resolve and you'll draw a card."
+          "text": "The cycling ability and the triggered ability are separate. If the triggered ability doesn't resolve (due to being countered with Stifle, for example, or if all its targets have become illegal), the cycling ability will still resolve and you'll draw a card."
         },
         {
           "date": "2008-10-01",
@@ -11816,10 +11834,6 @@
           "text": "The first ability applies when this card is not on the battlefield. The second ability applies when this card is on the battlefield."
         },
         {
-          "date": "2008-04-01",
-          "text": "The addition of \"by spells or abilities\" to the second ability is so that tribal instant or sorcery spells that happen to be Slivers (such as Crib Swap) can be countered by the rules if all of their targets become illegal."
-        },
-        {
           "date": "2013-07-01",
           "text": "Abilities that Slivers grant, as well as power/toughness boosts, are cumulative. However, for some abilities, like flying, having more than one instance of the ability doesn't provide any additional benefit."
         },
@@ -11831,7 +11845,7 @@
       "subtypes": [
         "Sliver"
       ],
-      "text": "Root Sliver can't be countered.\nSliver spells can't be countered by spells or abilities.",
+      "text": "This spell can't be countered.\nSliver spells can't be countered.",
       "toughness": "2",
       "type": "Creature — Sliver",
       "types": [
@@ -12348,7 +12362,7 @@
       "subtypes": [
         "Insect"
       ],
-      "text": "Vexing Beetle can't be countered.\nVexing Beetle gets +3/+3 as long as no opponent controls a creature.",
+      "text": "This spell can't be countered.\nVexing Beetle gets +3/+3 as long as no opponent controls a creature.",
       "toughness": "3",
       "type": "Creature — Insect",
       "types": [
@@ -12429,7 +12443,7 @@
         "Elf",
         "Druid"
       ],
-      "text": "{T}: Add X mana of any one color to your mana pool, where X is the number of Elves on the battlefield.",
+      "text": "{T}: Add X mana of any one color, where X is the number of Elves on the battlefield.",
       "toughness": "2",
       "type": "Creature — Elf Druid",
       "types": [

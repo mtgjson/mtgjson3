@@ -478,7 +478,7 @@
         "Human",
         "Soldier"
       ],
-      "text": "{T}, Sacrifice Expendable Troops: Expendable Troops deals 2 damage to target attacking or blocking creature.",
+      "text": "{T}, Sacrifice Expendable Troops: It deals 2 damage to target attacking or blocking creature.",
       "toughness": "1",
       "type": "Creature — Human Soldier",
       "types": [
@@ -741,7 +741,7 @@
         "ULG"
       ],
       "rarity": "Uncommon",
-      "text": "Sacrifice a creature: The next time a source of your choice would deal damage to target creature or player this turn, prevent that damage.",
+      "text": "Sacrifice a creature: The next time a source of your choice would deal damage to any target this turn, prevent that damage.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -855,7 +855,7 @@
         },
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         }
       ],
       "text": "When you have 10 or less life, if Opal Avenger is an enchantment, Opal Avenger becomes a 3/5 Soldier creature.",
@@ -924,7 +924,7 @@
         },
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         }
       ],
       "text": "When an opponent casts a creature spell, if Opal Champion is an enchantment, Opal Champion becomes a 3/3 Knight creature with first strike.",
@@ -1365,7 +1365,8 @@
       "originalType": "Summon — Townsfolk",
       "power": "1",
       "printings": [
-        "ULG"
+        "ULG",
+        "DOM"
       ],
       "rarity": "Common",
       "subtypes": [
@@ -1901,7 +1902,7 @@
         },
         {
           "date": "2004-10-04",
-          "text": "If the spell's target leaves the battlefield before this spell resolves, Intervene will be countered since it no longer targets a spell that targets a creature."
+          "text": "If the spell's target leaves the battlefield before this spell resolves, Intervene won't resolve since it no longer targets a spell that targets a creature."
         }
       ],
       "text": "Counter target spell that targets a creature.",
@@ -2427,7 +2428,7 @@
       "subtypes": [
         "Aura"
       ],
-      "text": "Enchant creature\nAt the beginning of the upkeep of enchanted creature's controller, that player sacrifices that creature unless he or she pays {2}.\nWhen Slow Motion is put into a graveyard from the battlefield, return Slow Motion to its owner's hand.",
+      "text": "Enchant creature\nAt the beginning of the upkeep of enchanted creature's controller, that player sacrifices that creature unless they pay {2}.\nWhen Slow Motion is put into a graveyard from the battlefield, return Slow Motion to its owner's hand.",
       "type": "Enchantment — Aura",
       "types": [
         "Enchantment"
@@ -2540,7 +2541,7 @@
       "subtypes": [
         "Faerie"
       ],
-      "text": "Flying\n{T}: Thornwind Faeries deals 1 damage to target creature or player.",
+      "text": "Flying\n{T}: Thornwind Faeries deals 1 damage to any target.",
       "toughness": "1",
       "type": "Creature — Faerie",
       "types": [
@@ -2596,7 +2597,7 @@
           "text": "Because the \"search\" requires you to find a card with certain characteristics, you don't have to find the card if you don't want to."
         }
       ],
-      "text": "As an additional cost to cast Tinker, sacrifice an artifact.\nSearch your library for an artifact card and put that card onto the battlefield. Then shuffle your library.",
+      "text": "As an additional cost to cast this spell, sacrifice an artifact.\nSearch your library for an artifact card and put that card onto the battlefield. Then shuffle your library.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -2871,10 +2872,10 @@
         },
         {
           "date": "2010-06-15",
-          "text": "You must sacrifice Brink of Madness if possible, but the opponent discards his or her hand even if you can't sacrifice it for some reason (for example, if it were returned to its owner's hand before the ability resolved)."
+          "text": "You must sacrifice Brink of Madness if possible, but the opponent discards their hand even if you can't sacrifice it for some reason (for example, if it were returned to its owner's hand before the ability resolved)."
         }
       ],
-      "text": "At the beginning of your upkeep, if you have no cards in hand, sacrifice Brink of Madness and target opponent discards his or her hand.",
+      "text": "At the beginning of your upkeep, if you have no cards in hand, sacrifice Brink of Madness and target opponent discards their hand.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -3145,7 +3146,7 @@
       "rulings": [
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         }
       ],
       "text": "When a creature is put into an opponent's graveyard from the battlefield, if Lurking Skirge is an enchantment, Lurking Skirge becomes a 3/2 Imp creature with flying.",
@@ -3252,13 +3253,7 @@
         "7ED"
       ],
       "rarity": "Common",
-      "rulings": [
-        {
-          "date": "2008-04-01",
-          "text": "A \"creature card\" is any card with the type creature, even if it has other types such as artifact, enchantment, or land. Older cards of type summon are also creature cards."
-        }
-      ],
-      "text": "Target opponent reveals his or her hand. You choose a creature card from it. That player discards that card.",
+      "text": "Target opponent reveals their hand. You choose a creature card from it. That player discards that card.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -3586,12 +3581,6 @@
         "C15"
       ],
       "rarity": "Uncommon",
-      "rulings": [
-        {
-          "date": "2008-04-01",
-          "text": "A \"creature card\" is any card with the type creature, even if it has other types such as artifact, enchantment, or land. Older cards of type summon are also creature cards."
-        }
-      ],
       "text": "{1}{B}, Pay 2 life: Return target creature card from your graveyard to your hand.",
       "type": "Enchantment",
       "types": [
@@ -4083,10 +4072,6 @@
       "rarity": "Common",
       "rulings": [
         {
-          "date": "2008-04-01",
-          "text": "A \"creature card\" is any card with the type creature, even if it has other types such as artifact, enchantment, or land. Older cards of type summon are also creature cards."
-        },
-        {
           "date": "2008-10-01",
           "text": "Cycling is an activated ability. Effects that interact with activated abilities (such as Stifle or Rings of Brighthearth) will interact with cycling. Effects that interact with spells (such as Remove Soul or Faerie Tauntings) will not."
         }
@@ -4330,7 +4315,7 @@
         "Human",
         "Nomad"
       ],
-      "text": "{T}, Sacrifice Ghitu Fire-Eater: Ghitu Fire-Eater deals damage equal to its power to target creature or player.",
+      "text": "{T}, Sacrifice Ghitu Fire-Eater: It deals damage equal to its power to any target.",
       "toughness": "2",
       "type": "Creature — Human Nomad",
       "types": [
@@ -4385,7 +4370,7 @@
         "Human",
         "Nomad"
       ],
-      "text": "Echo {2}{R} (At the beginning of your upkeep, if this came under your control since the beginning of your last upkeep, sacrifice it unless you pay its echo cost.)\nWhen Ghitu Slinger enters the battlefield, it deals 2 damage to target creature or player.",
+      "text": "Echo {2}{R} (At the beginning of your upkeep, if this came under your control since the beginning of your last upkeep, sacrifice it unless you pay its echo cost.)\nWhen Ghitu Slinger enters the battlefield, it deals 2 damage to any target.",
       "toughness": "2",
       "type": "Creature — Human Nomad",
       "types": [
@@ -4493,7 +4478,7 @@
         "Goblin",
         "Shaman"
       ],
-      "text": "Whenever Goblin Medics becomes tapped, it deals 1 damage to target creature or player.",
+      "text": "Whenever Goblin Medics becomes tapped, it deals 1 damage to any target.",
       "toughness": "1",
       "type": "Creature — Goblin Shaman",
       "types": [
@@ -4542,7 +4527,8 @@
       "printings": [
         "pJGP",
         "ULG",
-        "C14"
+        "C14",
+        "DDU"
       ],
       "rarity": "Rare",
       "rulings": [
@@ -4728,7 +4714,7 @@
           "text": "It deals one damage for each creature sacrificed."
         }
       ],
-      "text": "Sacrifice any number of creatures. Last-Ditch Effort deals that much damage to target creature or player.",
+      "text": "Sacrifice any number of creatures. Last-Ditch Effort deals that much damage to any target.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -4795,7 +4781,7 @@
         "M15"
       ],
       "rarity": "Common",
-      "text": "Lava Axe deals 5 damage to target player.",
+      "text": "Lava Axe deals 5 damage to target player or planeswalker.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -4847,7 +4833,7 @@
       "subtypes": [
         "Hydra"
       ],
-      "text": "{1}{R}{R}: Put a +1/+1 counter on Molten Hydra.\n{T}, Remove all +1/+1 counters from Molten Hydra: Molten Hydra deals damage to target creature or player equal to the number of +1/+1 counters removed this way.",
+      "text": "{1}{R}{R}: Put a +1/+1 counter on Molten Hydra.\n{T}, Remove all +1/+1 counters from Molten Hydra: Molten Hydra deals damage to any target equal to the number of +1/+1 counters removed this way.",
       "toughness": "1",
       "type": "Creature — Hydra",
       "types": [
@@ -4906,7 +4892,7 @@
           "text": "You can choose to use the 2 damage mode on a blue creature if you want."
         }
       ],
-      "text": "Choose one —\n• Parch deals 2 damage to target creature or player.\n• Parch deals 4 damage to target blue creature.",
+      "text": "Choose one —\n• Parch deals 2 damage to any target.\n• Parch deals 4 damage to target blue creature.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -5019,7 +5005,7 @@
           "text": "You pick the target before you know which card is going to be discarded."
         }
       ],
-      "text": "{3}, Discard a card at random: Pyromancy deals damage to target creature or player equal to the converted mana cost of the discarded card.",
+      "text": "{3}, Discard a card at random: Pyromancy deals damage to any target equal to the converted mana cost of the discarded card.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -5127,7 +5113,7 @@
           "text": "This ability will only trigger if the player controls more lands at the beginning of upkeep. This condition is checked again at the start of resolution, and if not true, then nothing happens."
         }
       ],
-      "text": "At the beginning of each player's upkeep, if that player controls more lands than each other player, Rivalry deals 2 damage to him or her.",
+      "text": "At the beginning of each player's upkeep, if that player controls more lands than each other player, Rivalry deals 2 damage to them.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -5573,7 +5559,7 @@
         "DDR"
       ],
       "rarity": "Common",
-      "text": "As an additional cost to cast Crop Rotation, sacrifice a land.\nSearch your library for a land card and put that card onto the battlefield. Then shuffle your library.",
+      "text": "As an additional cost to cast this spell, sacrifice a land.\nSearch your library for a land card and put that card onto the battlefield. Then shuffle your library.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -5690,10 +5676,6 @@
         {
           "date": "2004-10-04",
           "text": "This triggered ability only triggers if your opponent controls 3 or more creatures at the beginning of upkeep. This condition is checked again on resolution."
-        },
-        {
-          "date": "2008-04-01",
-          "text": "A \"creature card\" is any card with the type creature, even if it has other types such as artifact, enchantment, or land. Older cards of type summon are also creature cards."
         },
         {
           "date": "2010-06-15",
@@ -5939,7 +5921,7 @@
         },
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         }
       ],
       "text": "When an opponent casts an instant spell, if Hidden Gibbons is an enchantment, Hidden Gibbons becomes a 4/4 Ape creature.",
@@ -6002,19 +5984,15 @@
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2008-04-01",
-          "text": "If this creature is attacking a planeswalker, assigning its damage as though it weren't blocked means the damage is assigned to the planeswalker, not to the defending player."
-        },
-        {
-          "date": "2008-04-01",
-          "text": "When assigning combat damage, you choose whether you want to assign all damage to blocking creatures, or if you want to assign all of it to the defending player or planeswalker. You can't split the damage assignment between them."
-        },
-        {
-          "date": "2008-04-01",
+          "date": "2018-04-27",
           "text": "You can decide to assign damage to the defending player or planeswalker even if the blocking creature has protection from green or damage preventing effects on it."
         },
         {
-          "date": "2008-04-01",
+          "date": "2018-04-27",
+          "text": "When assigning combat damage, you choose whether you want to assign all damage to blocking creatures, or if you want to assign all of it to the player or planeswalker this creature is attacking. You can't split the damage assignment between them."
+        },
+        {
+          "date": "2018-04-27",
           "text": "If blocked by a creature with banding, the defending player decides whether or not the damage is assigned \"as though it weren't blocked\"."
         }
       ],
@@ -6238,8 +6216,8 @@
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2004-10-04",
-          "text": "Will trigger when a spell is countered due to all of its targets being illegal."
+          "date": "2018-04-27",
+          "text": "A spell that doesn't resolve because its targets are illegal isn't countered, so this ability won't trigger. This is a change from previous rules."
         }
       ],
       "text": "Whenever a spell you've cast is countered, draw a card.",
@@ -6306,8 +6284,8 @@
       "rarity": "Common",
       "rulings": [
         {
-          "date": "2016-06-08",
-          "text": "If the target of Rancor when it's cast as a spell is an illegal target when Rancor tries to resolve, Rancor will be countered and put into its owner's graveyard. It won't return to its owner's hand."
+          "date": "2018-03-16",
+          "text": "If the creature this Aura would enchant is an illegal target by the time Rancor tries to resolve, the Aura spell doesn't resolve. It won't enter the battlefield, so it won't be put into a graveyard from the battlefield and its ability won't trigger."
         }
       ],
       "subtypes": [
@@ -6361,10 +6339,6 @@
       ],
       "rarity": "Common",
       "rulings": [
-        {
-          "date": "2008-04-01",
-          "text": "A \"creature card\" is any card with the type creature, even if it has other types such as artifact, enchantment, or land. Older cards of type summon are also creature cards."
-        },
         {
           "date": "2008-10-01",
           "text": "Cycling is an activated ability. Effects that interact with activated abilities (such as Stifle or Rings of Brighthearth) will interact with cycling. Effects that interact with spells (such as Remove Soul or Faerie Tauntings) will not."
@@ -6875,7 +6849,7 @@
       "subtypes": [
         "Wurm"
       ],
-      "text": "Trample (This creature can deal excess combat damage to defending player or planeswalker while attacking.)",
+      "text": "Trample (This creature can deal excess combat damage to the player or planeswalker it's attacking.)",
       "toughness": "4",
       "type": "Creature — Wurm",
       "types": [
@@ -7076,11 +7050,11 @@
       "rulings": [
         {
           "date": "2008-08-01",
-          "text": "A player affected by this card can sacrifice a permanent any time he or she could cast an instant. This is a special action that doesn't use the stack and can't be responded to."
+          "text": "A player affected by this card can sacrifice a permanent any time they could cast an instant. This is a special action that doesn't use the stack and can't be responded to."
         },
         {
           "date": "2008-08-01",
-          "text": "A player can only sacrifice a permanent to end this effect if he or she has more permanents than any other player, and he or she hasn't already sacrificed a permanent to end the effect this turn. The ability to sacrifice a creature is granted by the same effect that is being ended."
+          "text": "A player can only sacrifice a permanent to end this effect if they have more permanents than any other player, and they haven't already sacrificed a permanent to end the effect this turn. The ability to sacrifice a creature is granted by the same effect that is being ended."
         }
       ],
       "text": "A player who controls more permanents than each other player can't play lands or cast artifact, creature, or enchantment spells. That player may sacrifice a permanent for that player to ignore this effect until end of turn.",
@@ -7185,7 +7159,7 @@
       ],
       "rarity": "Rare",
       "reserved": true,
-      "text": "Grim Monolith doesn't untap during your untap step.\n{T}: Add {C}{C}{C} to your mana pool.\n{4}: Untap Grim Monolith.",
+      "text": "Grim Monolith doesn't untap during your untap step.\n{T}: Add {C}{C}{C}.\n{4}: Untap Grim Monolith.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -7227,7 +7201,7 @@
         "ULG"
       ],
       "rarity": "Rare",
-      "text": "At the beginning of each opponent's upkeep, Iron Maiden deals X damage to that player, where X is the number of cards in his or her hand minus 4.",
+      "text": "At the beginning of each opponent's upkeep, Iron Maiden deals X damage to that player, where X is the number of cards in their hand minus 4.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -7325,7 +7299,7 @@
           "text": "You can't look at the cards you exiled until they return to your hand."
         }
       ],
-      "text": "{T}, Sacrifice Memory Jar: Each player exiles all cards from his or her hand face down and draws seven cards. At the beginning of the next end step, each player discards his or her hand and returns to his or her hand each card he or she exiled this way.",
+      "text": "{T}, Sacrifice Memory Jar: Each player exiles all cards from their hand face down and draws seven cards. At the beginning of the next end step, each player discards their hand and returns to their hand each card they exiled this way.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -7381,10 +7355,6 @@
         {
           "date": "2007-05-01",
           "text": "Putting the card onto the battlefield is optional. When the ability resolves, you can choose not to."
-        },
-        {
-          "date": "2008-04-01",
-          "text": "A \"creature card\" is any card with the type creature, even if it has other types such as artifact, enchantment, or land. Older cards of type summon are also creature cards."
         },
         {
           "date": "2011-09-22",
@@ -7663,7 +7633,7 @@
       "subtypes": [
         "Gnome"
       ],
-      "text": "Echo {3} (At the beginning of your upkeep, if this came under your control since the beginning of your last upkeep, sacrifice it unless you pay its echo cost.)\nSacrifice Ticking Gnomes: Ticking Gnomes deals 1 damage to target creature or player.",
+      "text": "Echo {3} (At the beginning of your upkeep, if this came under your control since the beginning of your last upkeep, sacrifice it unless you pay its echo cost.)\nSacrifice Ticking Gnomes: It deals 1 damage to any target.",
       "toughness": "3",
       "type": "Artifact Creature — Gnome",
       "types": [
@@ -7755,7 +7725,7 @@
           "text": "The number of cards is counted during resolution."
         }
       ],
-      "text": "At the beginning of each opponent's upkeep, Wheel of Torture deals X damage to that player, where X is 3 minus the number of cards in his or her hand.",
+      "text": "At the beginning of each opponent's upkeep, Wheel of Torture deals X damage to that player, where X is 3 minus the number of cards in their hand.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -7809,14 +7779,14 @@
       "rulings": [
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         },
         {
           "date": "2009-10-01",
           "text": "Activating the ability that turns it into a creature while it's already a creature will override any effects that set its power and/or toughness to a specific number. However, any effect that raises or lowers power and/or toughness (such as the effect created by Giant Growth, Glorious Anthem, or a +1/+1 counter) will continue to apply."
         }
       ],
-      "text": "Faerie Conclave enters the battlefield tapped.\n{T}: Add {U} to your mana pool.\n{1}{U}: Faerie Conclave becomes a 2/1 blue Faerie creature with flying until end of turn. It's still a land.",
+      "text": "Faerie Conclave enters the battlefield tapped.\n{T}: Add {U}.\n{1}{U}: Faerie Conclave becomes a 2/1 blue Faerie creature with flying until end of turn. It's still a land.",
       "type": "Land",
       "types": [
         "Land"
@@ -7867,14 +7837,14 @@
       "rulings": [
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         },
         {
           "date": "2009-10-01",
           "text": "Activating the ability that turns it into a creature while it's already a creature will override any effects that set its power and/or toughness to a specific number. However, any effect that raises or lowers power and/or toughness (such as the effect created by Giant Growth, Glorious Anthem, or a +1/+1 counter) will continue to apply."
         }
       ],
-      "text": "Forbidding Watchtower enters the battlefield tapped.\n{T}: Add {W} to your mana pool.\n{1}{W}: Forbidding Watchtower becomes a 1/5 white Soldier creature until end of turn. It's still a land.",
+      "text": "Forbidding Watchtower enters the battlefield tapped.\n{T}: Add {W}.\n{1}{W}: Forbidding Watchtower becomes a 1/5 white Soldier creature until end of turn. It's still a land.",
       "type": "Land",
       "types": [
         "Land"
@@ -7927,14 +7897,14 @@
       "rulings": [
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         },
         {
           "date": "2009-10-01",
           "text": "Activating the ability that turns it into a creature while it's already a creature will override any effects that set its power and/or toughness to a specific number. However, any effect that raises or lowers power and/or toughness (such as the effect created by Giant Growth, Glorious Anthem, or a +1/+1 counter) will continue to apply."
         }
       ],
-      "text": "Ghitu Encampment enters the battlefield tapped.\n{T}: Add {R} to your mana pool.\n{1}{R}: Ghitu Encampment becomes a 2/1 red Warrior creature with first strike until end of turn. It's still a land. (It deals combat damage before creatures without first strike.)",
+      "text": "Ghitu Encampment enters the battlefield tapped.\n{T}: Add {R}.\n{1}{R}: Ghitu Encampment becomes a 2/1 red Warrior creature with first strike until end of turn. It's still a land. (It deals combat damage before creatures without first strike.)",
       "type": "Land",
       "types": [
         "Land"
@@ -7985,14 +7955,14 @@
       "rulings": [
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         },
         {
           "date": "2009-10-01",
           "text": "Activating the ability that turns it into a creature while it's already a creature will override any effects that set its power and/or toughness to a specific number. However, any effect that raises or lowers power and/or toughness (such as the effect created by Giant Growth, Glorious Anthem, or a +1/+1 counter) will continue to apply."
         }
       ],
-      "text": "Spawning Pool enters the battlefield tapped.\n{T}: Add {B} to your mana pool.\n{1}{B}: Spawning Pool becomes a 1/1 black Skeleton creature with \"{B}: Regenerate this creature\" until end of turn. It's still a land. (If it regenerates, the next time it would be destroyed this turn, it isn't. Instead tap it, remove all damage from it, and remove it from combat.)",
+      "text": "Spawning Pool enters the battlefield tapped.\n{T}: Add {B}.\n{1}{B}: Spawning Pool becomes a 1/1 black Skeleton creature with \"{B}: Regenerate this creature\" until end of turn. It's still a land. (If it regenerates, the next time it would be destroyed this turn, it isn't. Instead tap it, remove all damage from it, and remove it from combat.)",
       "type": "Land",
       "types": [
         "Land"
@@ -8043,20 +8013,21 @@
         "DDD",
         "DDG",
         "DD3_GVL",
-        "DDR"
+        "DDR",
+        "DDU"
       ],
       "rarity": "Uncommon",
       "rulings": [
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         },
         {
           "date": "2009-10-01",
           "text": "Activating the ability that turns it into a creature while it's already a creature will override any effects that set its power and/or toughness to a specific number. However, any effect that raises or lowers power and/or toughness (such as the effect created by Giant Growth, Glorious Anthem, or a +1/+1 counter) will continue to apply."
         }
       ],
-      "text": "Treetop Village enters the battlefield tapped.\n{T}: Add {G} to your mana pool.\n{1}{G}: Treetop Village becomes a 3/3 green Ape creature with trample until end of turn. It's still a land. (If it would assign enough damage to its blockers to destroy them, you may have it assign the rest of its damage to defending player or planeswalker.)",
+      "text": "Treetop Village enters the battlefield tapped.\n{T}: Add {G}.\n{1}{G}: Treetop Village becomes a 3/3 green Ape creature with trample until end of turn. It's still a land. (If it would assign enough damage to its blockers to destroy them, you may have it assign the rest of its damage to the player or planeswalker it's attacking.)",
       "type": "Land",
       "types": [
         "Land"

@@ -897,7 +897,7 @@
         "S99"
       ],
       "rarity": "Uncommon",
-      "text": "Target player skips all combat phases of his or her next turn.",
+      "text": "Target player skips all combat phases of their next turn.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -1103,6 +1103,12 @@
         "A25"
       ],
       "rarity": "Rare",
+      "rulings": [
+        {
+          "date": "2018-03-16",
+          "text": "Loyal Sentry and the creature it blocks are destroyed before combat damage is dealt. The blocked creature is destroyed even if Loyal Sentry leaves the battlefield before its triggered ability resolves."
+        }
+      ],
       "subtypes": [
         "Human",
         "Soldier"
@@ -1162,8 +1168,12 @@
       "rarity": "Common",
       "rulings": [
         {
-          "date": "2004-10-04",
-          "text": "If the spell fails because the target is not there or isn't legal, the owner does not gain any life."
+          "date": "2018-03-16",
+          "text": "You are a creature's owner if the card representing it began the game in your deck, or if it's a token that entered the battlefield under your control. If Path of Peace targets a creature that you own but an opponent controls, you'll gain 4 life."
+        },
+        {
+          "date": "2018-03-16",
+          "text": "If the target creature is an illegal target by the time Path of Peace tries to resolve, the spell doesn't resolve. No player gains life."
         }
       ],
       "text": "Destroy target creature. Its owner gains 4 life.",
@@ -2046,10 +2056,10 @@
         },
         {
           "date": "2009-10-01",
-          "text": "No creatures or lands controlled by the player will untap during his or her next untap step. This includes those which entered the battlefield after Exhaustion resolved."
+          "text": "No creatures or lands controlled by the player will untap during their next untap step. This includes those which entered the battlefield after Exhaustion resolved."
         }
       ],
-      "text": "Creatures and lands target opponent controls don't untap during his or her next untap step.",
+      "text": "Creatures and lands target opponent controls don't untap during their next untap step.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -2138,7 +2148,7 @@
         "S99"
       ],
       "rarity": "Uncommon",
-      "text": "Look at the top card of target player's library. You may put that card into his or her graveyard.",
+      "text": "Look at the top card of target player's library. You may put that card into their graveyard.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -3923,7 +3933,7 @@
         "TPR"
       ],
       "rarity": "Uncommon",
-      "text": "Target opponent reveals his or her hand. You choose a card from it. That player discards that card.",
+      "text": "Target opponent reveals their hand. You choose a card from it. That player discards that card.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -4826,10 +4836,6 @@
         {
           "date": "2004-10-04",
           "text": "The creature being brought back is chosen on announcement and not on resolution of the spell because it is targeted."
-        },
-        {
-          "date": "2008-04-01",
-          "text": "A \"creature card\" is any card with the type creature, even if it has other types such as artifact, enchantment, or land. Older cards of type summon are also creature cards."
         }
       ],
       "text": "Return target creature card from your graveyard to your hand.",
@@ -5278,7 +5284,7 @@
         "A25"
       ],
       "rarity": "Uncommon",
-      "text": "Cinder Storm deals 7 damage to target creature or player.",
+      "text": "Cinder Storm deals 7 damage to any target.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -5440,7 +5446,8 @@
         "6ED",
         "S99",
         "7ED",
-        "M13"
+        "M13",
+        "DOM"
       ],
       "rarity": "Uncommon",
       "subtypes": [
@@ -6235,7 +6242,7 @@
         "M15"
       ],
       "rarity": "Common",
-      "text": "Lava Axe deals 5 damage to target player.",
+      "text": "Lava Axe deals 5 damage to target player or planeswalker.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -6539,7 +6546,7 @@
         "S99"
       ],
       "rarity": "Common",
-      "text": "Scorching Spear deals 1 damage to target creature or player.",
+      "text": "Scorching Spear deals 1 damage to any target.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -6966,7 +6973,7 @@
         "9ED"
       ],
       "rarity": "Common",
-      "text": "Volcanic Hammer deals 3 damage to target creature or player.",
+      "text": "Volcanic Hammer deals 3 damage to any target.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -7352,19 +7359,15 @@
       "rarity": "Common",
       "rulings": [
         {
-          "date": "2008-04-01",
-          "text": "If this creature is attacking a planeswalker, assigning its damage as though it weren't blocked means the damage is assigned to the planeswalker, not to the defending player."
-        },
-        {
-          "date": "2008-04-01",
-          "text": "When assigning combat damage, you choose whether you want to assign all damage to blocking creatures, or if you want to assign all of it to the defending player or planeswalker. You can't split the damage assignment between them."
-        },
-        {
-          "date": "2008-04-01",
+          "date": "2018-04-27",
           "text": "You can decide to assign damage to the defending player or planeswalker even if the blocking creature has protection from green or damage preventing effects on it."
         },
         {
-          "date": "2008-04-01",
+          "date": "2018-04-27",
+          "text": "When assigning combat damage, you choose whether you want to assign all damage to blocking creatures, or if you want to assign all of it to the player or planeswalker this creature is attacking. You can't split the damage assignment between them."
+        },
+        {
+          "date": "2018-04-27",
           "text": "If blocked by a creature with banding, the defending player decides whether or not the damage is assigned \"as though it weren't blocked\"."
         }
       ],
@@ -7848,19 +7851,15 @@
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2008-04-01",
-          "text": "If this creature is attacking a planeswalker, assigning its damage as though it weren't blocked means the damage is assigned to the planeswalker, not to the defending player."
-        },
-        {
-          "date": "2008-04-01",
-          "text": "When assigning combat damage, you choose whether you want to assign all damage to blocking creatures, or if you want to assign all of it to the defending player or planeswalker. You can't split the damage assignment between them."
-        },
-        {
-          "date": "2008-04-01",
+          "date": "2018-04-27",
           "text": "You can decide to assign damage to the defending player or planeswalker even if the blocking creature has protection from green or damage preventing effects on it."
         },
         {
-          "date": "2008-04-01",
+          "date": "2018-04-27",
+          "text": "When assigning combat damage, you choose whether you want to assign all damage to blocking creatures, or if you want to assign all of it to the player or planeswalker this creature is attacking. You can't split the damage assignment between them."
+        },
+        {
+          "date": "2018-04-27",
           "text": "If blocked by a creature with banding, the defending player decides whether or not the damage is assigned \"as though it weren't blocked\"."
         }
       ],
@@ -8283,24 +8282,21 @@
         "UDS",
         "S99",
         "7ED",
-        "8ED"
+        "8ED",
+        "DOM"
       ],
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2008-04-01",
-          "text": "If this creature is attacking a planeswalker, assigning its damage as though it weren't blocked means the damage is assigned to the planeswalker, not to the defending player."
-        },
-        {
-          "date": "2008-04-01",
-          "text": "When assigning combat damage, you choose whether you want to assign all damage to blocking creatures, or if you want to assign all of it to the defending player or planeswalker. You can't split the damage assignment between them."
-        },
-        {
-          "date": "2008-04-01",
+          "date": "2018-04-27",
           "text": "You can decide to assign damage to the defending player or planeswalker even if the blocking creature has protection from green or damage preventing effects on it."
         },
         {
-          "date": "2008-04-01",
+          "date": "2018-04-27",
+          "text": "When assigning combat damage, you choose whether you want to assign all damage to blocking creatures, or if you want to assign all of it to the player or planeswalker this creature is attacking. You can't split the damage assignment between them."
+        },
+        {
+          "date": "2018-04-27",
           "text": "If blocked by a creature with banding, the defending player decides whether or not the damage is assigned \"as though it weren't blocked\"."
         }
       ],
@@ -8892,7 +8888,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -9155,7 +9152,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -9418,7 +9416,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -9681,7 +9680,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -9943,7 +9943,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -10205,7 +10207,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -10467,7 +10471,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -10729,7 +10735,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -10995,7 +11003,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -11261,7 +11270,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -11527,7 +11537,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -11793,7 +11804,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -12061,7 +12073,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -12329,7 +12343,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -12597,7 +12613,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -12865,7 +12883,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -13130,7 +13150,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -13395,7 +13417,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -13660,7 +13684,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -13925,7 +13951,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [

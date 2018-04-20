@@ -945,7 +945,7 @@
         "Dragon",
         "Spirit"
       ],
-      "text": "Flying\n{3}{W}{W}: Return Eternal Dragon from your graveyard to your hand. Activate this ability only during your upkeep.\nPlainscycling {2} ({2}, Discard this card: Search your library for a Plains card, reveal it, and put it into your hand. Then shuffle your library.)",
+      "text": "Flying\n{3}{W}{W}: Return Eternal Dragon from your graveyard to your hand. Activate this ability only during your upkeep.\nPlainscycling {2} ({2}, Discard this card: Search your library for a Plains card, reveal it, put it into your hand, then shuffle your library.)",
       "toughness": "5",
       "type": "Creature — Dragon Spirit",
       "types": [
@@ -1032,8 +1032,16 @@
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2011-09-22",
+          "date": "2018-03-16",
           "text": "If Fiend Hunter leaves the battlefield before its first ability has resolved, its second ability will trigger and do nothing. Then its first ability will resolve and exile the targeted creature indefinitely."
+        },
+        {
+          "date": "2018-03-16",
+          "text": "Once the exiled permanent returns, it's considered a new object with no relation to the object that it was. Auras attached to the exiled permanent will be put into their owners' graveyards. Equipment attached to the exiled permanent will become unattached and remain on the battlefield. Any counters on the exiled permanent will cease to exist."
+        },
+        {
+          "date": "2018-03-16",
+          "text": "If a token is exiled this way, it won't return to the battlefield."
         }
       ],
       "subtypes": [
@@ -1666,7 +1674,7 @@
       "rulings": [
         {
           "date": "2013-10-17",
-          "text": "Mystic Barrier affects only what players and planeswalkers each player may attack with creatures he or she controls. It doesn't affect what players may be targeted by spells or abilities or other interactions."
+          "text": "Mystic Barrier affects only what players and planeswalkers each player may attack with creatures they control. It doesn't affect what players may be targeted by spells or abilities or other interactions."
         },
         {
           "date": "2013-10-17",
@@ -1681,7 +1689,7 @@
           "text": "If two Mystic Barriers are on the battlefield with two different chosen directions, you may not attack a player or planeswalker unless that player or the controller of that planeswalker is the opponent seated nearest you in both directions. (This happens most often in two-player games.)"
         }
       ],
-      "text": "When Mystic Barrier enters the battlefield or at the beginning of your upkeep, choose left or right.\nEach player may attack only the opponent seated nearest him or her in the last chosen direction and planeswalkers controlled by that player.",
+      "text": "When Mystic Barrier enters the battlefield or at the beginning of your upkeep, choose left or right.\nEach player may attack only the nearest opponent in the last chosen direction and planeswalkers controlled by that player.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -1765,7 +1773,7 @@
       "rulings": [
         {
           "date": "2011-01-01",
-          "text": "If the artifact card in your graveyard is an illegal target by the time the ability resolves, the ability will be countered. You won't gain any life."
+          "text": "If the artifact card in your graveyard is an illegal target by the time the ability resolves, the ability won't resolve. You won't gain any life."
         },
         {
           "date": "2011-01-01",
@@ -2161,7 +2169,7 @@
       "rulings": [
         {
           "date": "2010-06-15",
-          "text": "If a spell with rebound that you cast from your hand is countered for any reason (due to a spell like Cancel, or because all of its targets are illegal), the spell doesn't resolve and rebound has no effect. The spell is simply put into your graveyard. You won't get to cast it again next turn."
+          "text": "If a spell with rebound that you cast from your hand doesn't resolve for any reason (due being countered by a spell like Cancel, or because all of its targets are illegal), rebound has no effect. The spell is simply put into your graveyard. You won't get to cast it again next turn."
         },
         {
           "date": "2010-06-15",
@@ -2189,7 +2197,7 @@
         },
         {
           "date": "2010-06-15",
-          "text": "If you cast a card from exile this way, it will go to your graveyard when it resolves or is countered. It won't go back to exile."
+          "text": "If you cast a card from exile this way, it will go to your graveyard when it resolves, fails to resolve, or is countered. It won't go back to exile."
         },
         {
           "date": "2010-06-15",
@@ -2270,14 +2278,14 @@
       "rulings": [
         {
           "date": "2013-10-17",
-          "text": "Your opponents decide in turn order whether or not they accept the offer, starting with the opponent on your left. Each opponent will know the decisions of previous opponents in turn order when making his or her decision."
+          "text": "Your opponents decide in turn order whether or not they accept the offer, starting with the opponent on your left. Each opponent will know the decisions of previous opponents in turn order when making their decision."
         },
         {
           "date": "2013-10-17",
           "text": "After each opponent has decided, the effect happens simultaneously for each one who accepted the offer. Then, the effect happens again for you a number of times equal to the number of opponents who accepted."
         }
       ],
-      "text": "Tempting offer — Put a +1/+1 counter on each creature you control. Each opponent may put a +1/+1 counter on each creature he or she controls. For each opponent who does, put a +1/+1 counter on each creature you control.",
+      "text": "Tempting offer — Put a +1/+1 counter on each creature you control. Each opponent may put a +1/+1 counter on each creature they control. For each opponent who does, put a +1/+1 counter on each creature you control.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -2627,7 +2635,7 @@
       "rulings": [
         {
           "date": "2007-09-16",
-          "text": "The controller of the countered spell doesn't choose how many cards to draw until the relevant ability resolves. The player may draw 0, 1, or 2 cards. He or she chooses the number before drawing any cards."
+          "text": "The controller of the countered spell doesn't choose how many cards to draw until the relevant ability resolves. The player may draw 0, 1, or 2 cards. They choose the number before drawing any cards."
         }
       ],
       "text": "Counter target spell. Its controller may draw up to two cards at the beginning of the next turn's upkeep.\nYou draw a card at the beginning of the next turn's upkeep.",
@@ -2997,11 +3005,11 @@
       "rulings": [
         {
           "date": "2011-06-01",
-          "text": "If this spell is countered, none of its effects occur. In particular, it will go to the graveyard rather than to its owner's library."
+          "text": "If this spell doesn't resolve, none of its effects occur. In particular, it will go to the graveyard rather than to its owner's library."
         },
         {
-          "date": "2011-06-01",
-          "text": "You follow the instructions in order. You won't be able to draw the same Blue Sun's Zenith that you cast."
+          "date": "2018-03-16",
+          "text": "Because you follow the spell's instructions in order, you won't be able to draw the same Blue Sun's Zenith that you cast."
         }
       ],
       "text": "Target player draws X cards. Shuffle Blue Sun's Zenith into its owner's library.",
@@ -3351,7 +3359,7 @@
         "Aura",
         "Curse"
       ],
-      "text": "Enchant player\nWhenever a player attacks enchanted player with one or more creatures, that attacking player may tap or untap target permanent of his or her choice.",
+      "text": "Enchant player\nWhenever a player attacks enchanted player with one or more creatures, that attacking player may tap or untap target permanent of their choice.",
       "type": "Enchantment — Aura Curse",
       "types": [
         "Enchantment"
@@ -3764,7 +3772,7 @@
         },
         {
           "date": "2013-10-17",
-          "text": "If one of the creatures is an illegal target when the ability resolves, the exchange won't happen. If both creatures are illegal targets, the ability will be countered."
+          "text": "If one of the creatures is an illegal target when the ability resolves, the exchange won't happen. If both creatures are illegal targets, the ability won't resolve."
         }
       ],
       "subtypes": [
@@ -4384,7 +4392,7 @@
           "text": "If there's a cost associated with having a creature attack, the player isn't forced to pay that cost, so it doesn't have to attack."
         }
       ],
-      "text": "Cast Illusionist's Gambit only during the declare blockers step on an opponent's turn.\nRemove all attacking creatures from combat and untap them. After this phase, there is an additional combat phase. Each of those creatures attacks that combat if able. They can't attack you or a planeswalker you control that combat.",
+      "text": "Cast this spell only during the declare blockers step on an opponent's turn.\nRemove all attacking creatures from combat and untap them. After this phase, there is an additional combat phase. Each of those creatures attacks that combat if able. They can't attack you or a planeswalker you control that combat.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -4465,14 +4473,14 @@
       "rulings": [
         {
           "date": "2011-09-22",
-          "text": "If this ability causes a player to draw more cards than are left in his or her library, that player loses the game as a state-based action. If this ability causes all players to do this, the game is a draw."
+          "text": "If this ability causes a player to draw more cards than are left in their library, that player loses the game as a state-based action. If this ability causes all players to do this, the game is a draw."
         }
       ],
       "subtypes": [
         "Vedalken",
         "Wizard"
       ],
-      "text": "{U}, {T}: Each player discards his or her hand, then draws cards equal to the greatest number of cards a player discarded this way.",
+      "text": "{U}, {T}: Each player discards their hand, then draws cards equal to the greatest number of cards a player discarded this way.",
       "toughness": "2",
       "type": "Creature — Vedalken Wizard",
       "types": [
@@ -4831,7 +4839,7 @@
           "text": "If the next player in the chosen direction controls no creatures, you won't gain control of anything."
         }
       ],
-      "text": "Choose left or right. Starting with you and proceeding in the chosen direction, each player chooses a creature controlled by the next player in that direction. Each player gains control of the creature he or she chose.",
+      "text": "Choose left or right. Starting with you and proceeding in the chosen direction, each player chooses a creature controlled by the next player in that direction. Each player gains control of the creature they chose.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -4935,7 +4943,7 @@
           "text": "Unless some effect explicitly says otherwise, a creature that can't attack you can still attack a planeswalker you control."
         }
       ],
-      "text": "Creatures can't attack you unless their controller pays {2} for each creature he or she controls that's attacking you.",
+      "text": "Creatures can't attack you unless their controller pays {2} for each creature they control that's attacking you.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -5530,7 +5538,7 @@
       "rulings": [
         {
           "date": "2013-10-17",
-          "text": "Your opponents decide in turn order whether or not they accept the offer, starting with the opponent on your left. Each opponent will know the decisions of previous opponents in turn order when making his or her decision."
+          "text": "Your opponents decide in turn order whether or not they accept the offer, starting with the opponent on your left. Each opponent will know the decisions of previous opponents in turn order when making their decision."
         },
         {
           "date": "2013-10-17",
@@ -5538,11 +5546,11 @@
         },
         {
           "date": "2013-10-17",
-          "text": "If the creature you control is an illegal target when Tempt with Reflections tries to resolve, it will be countered and none of its effects will happen. No copies will be created."
+          "text": "If the creature you control is an illegal target when Tempt with Reflections tries to resolve, it won't resolve and none of its effects will happen. No copies will be created."
         },
         {
           "date": "2013-10-17",
-          "text": "If the target creature has an enters-the-battlefield triggered ability, the abilities of all the copies will trigger as Tempt with Reflections resolves. All of those abilities will be put on the stack after Tempt with Reflections finishes resolving. Abilities controlled by the active player will be put on the stack first (in an order of his or her choice), followed by abilities controlled by each other player in turn order. The last ability to be put on the stack will resolve first, and so on."
+          "text": "If the target creature has an enters-the-battlefield triggered ability, the abilities of all the copies will trigger as Tempt with Reflections resolves. All of those abilities will be put on the stack after Tempt with Reflections finishes resolving. Abilities controlled by the active player will be put on the stack first (in an order of their choice), followed by abilities controlled by each other player in turn order. The last ability to be put on the stack will resolve first, and so on."
         },
         {
           "date": "2013-10-17",
@@ -5646,7 +5654,7 @@
       "subtypes": [
         "Faerie"
       ],
-      "text": "Flying\n{T}: Thornwind Faeries deals 1 damage to target creature or player.",
+      "text": "Flying\n{T}: Thornwind Faeries deals 1 damage to any target.",
       "toughness": "1",
       "type": "Creature — Faerie",
       "types": [
@@ -6225,7 +6233,7 @@
       "rulings": [
         {
           "date": "2016-06-08",
-          "text": "If the targeted creature is an illegal target when Annihilate tries to resolve, the entire spell is countered. You won't draw a card."
+          "text": "If the targeted creature is an illegal target when Annihilate tries to resolve, the entire spell doesn't resolve. You won't draw a card."
         }
       ],
       "text": "Destroy target nonblack creature. It can't be regenerated.\nDraw a card.",
@@ -6570,7 +6578,7 @@
         },
         {
           "date": "2008-10-01",
-          "text": "The cycling ability and the triggered ability are separate. If the triggered ability is countered (with Stifle, for example, or if all its targets have become illegal), the cycling ability will still resolve and you'll draw a card."
+          "text": "The cycling ability and the triggered ability are separate. If the triggered ability doesn't resolve (due to being countered with Stifle, for example, or if all its targets have become illegal), the cycling ability will still resolve and you'll draw a card."
         }
       ],
       "text": "Destroy all creatures. They can't be regenerated. Draw a card for each creature destroyed this way.\nCycling {3}{B}{B} ({3}{B}{B}, Discard this card: Draw a card.)\nWhen you cycle Decree of Pain, all creatures get -2/-2 until end of turn.",
@@ -6660,7 +6668,7 @@
         },
         {
           "date": "2008-10-01",
-          "text": "The cycling ability and the triggered ability are separate. If the triggered ability is countered (with Stifle, for example, or if all its targets have become illegal), the cycling ability will still resolve and you'll draw a card."
+          "text": "The cycling ability and the triggered ability are separate. If the triggered ability doesn't resolve (due to being countered with Stifle, for example, or if all its targets have become illegal), the cycling ability will still resolve and you'll draw a card."
         },
         {
           "date": "2008-10-01",
@@ -8015,12 +8023,6 @@
         "C15"
       ],
       "rarity": "Uncommon",
-      "rulings": [
-        {
-          "date": "2008-04-01",
-          "text": "A \"creature card\" is any card with the type creature, even if it has other types such as artifact, enchantment, or land. Older cards of type summon are also creature cards."
-        }
-      ],
       "text": "{1}{B}, Pay 2 life: Return target creature card from your graveyard to your hand.",
       "type": "Enchantment",
       "types": [
@@ -8627,7 +8629,7 @@
       "rulings": [
         {
           "date": "2013-10-17",
-          "text": "Your opponents decide in turn order whether or not they accept the offer, starting with the opponent on your left. Each opponent will know the decisions of previous opponents in turn order when making his or her decision."
+          "text": "Your opponents decide in turn order whether or not they accept the offer, starting with the opponent on your left. Each opponent will know the decisions of previous opponents in turn order when making their decision."
         },
         {
           "date": "2013-10-17",
@@ -8638,7 +8640,7 @@
           "text": "None of the creature cards in graveyards are targeted. The cards are chosen as Tempt with Immortality resolves."
         }
       ],
-      "text": "Tempting offer — Return a creature card from your graveyard to the battlefield. Each opponent may return a creature card from his or her graveyard to the battlefield. For each player who does, return a creature card from your graveyard to the battlefield.",
+      "text": "Tempting offer — Return a creature card from your graveyard to the battlefield. Each opponent may return a creature card from their graveyard to the battlefield. For each player who does, return a creature card from your graveyard to the battlefield.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -8724,7 +8726,7 @@
           "text": "All creatures on the battlefield when Toxic Deluge resolves are affected. Ones that enter the battlefield or become creatures later in the turn are not."
         }
       ],
-      "text": "As an additional cost to cast Toxic Deluge, pay X life.\nAll creatures get -X/-X until end of turn.",
+      "text": "As an additional cost to cast this spell, pay X life.\nAll creatures get -X/-X until end of turn.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -9169,7 +9171,7 @@
         "C13"
       ],
       "rarity": "Uncommon",
-      "text": "{1}{R}, Sacrifice a creature: Blood Rites deals 2 damage to target creature or player.",
+      "text": "{1}{R}, Sacrifice a creature: Blood Rites deals 2 damage to any target.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -9262,10 +9264,6 @@
         {
           "date": "2009-10-01",
           "text": "As the ability resolves, there is no time to react between the time a permanent is chosen at random and the time it's destroyed. If you want to put a regeneration shield on one of those permanents, or sacrifice it for some effect, or anything else, you must do so before the ability resolves (and before you know which one of the permanents will be chosen at random)."
-        },
-        {
-          "date": "2013-07-01",
-          "text": "If one of the targets has indestructible, it can be chosen at random but nothing will happen to it if it is."
         }
       ],
       "subtypes": [
@@ -9558,7 +9556,7 @@
         "Aura",
         "Curse"
       ],
-      "text": "Enchant player\nWhenever a player attacks enchanted player with one or more creatures, that attacking player may discard a card. If the player does, he or she draws a card.",
+      "text": "Enchant player\nWhenever a player attacks enchanted player with one or more creatures, that attacking player may discard a card. If the player does, they draw a card.",
       "type": "Enchantment — Aura Curse",
       "types": [
         "Enchantment"
@@ -9679,7 +9677,7 @@
           "text": "You can target more than X creatures. However, if the number of legal targets at the time Fireball resolves is greater than X, none of them will be dealt any damage."
         }
       ],
-      "text": "Fireball deals X damage divided evenly, rounded down, among any number of target creatures and/or players.\nFireball costs {1} more to cast for each target beyond the first.",
+      "text": "This spell costs {1} more to cast for each target beyond the first.\nFireball deals X damage divided evenly, rounded down, among any number of targets.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -9835,7 +9833,7 @@
         "C13"
       ],
       "rarity": "Rare",
-      "text": "Destroy all nonbasic lands. For each land destroyed this way, its controller may search his or her library for a basic land card and put it onto the battlefield. Then each player who searched his or her library this way shuffles it.",
+      "text": "Destroy all nonbasic lands. For each land destroyed this way, its controller may search their library for a basic land card and put it onto the battlefield. Then each player who searched their library this way shuffles it.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -9933,7 +9931,7 @@
           "text": "Sacrificing a Furnace Celebration will cause the abilities of other Furnace Celebrations to trigger, but not its own ability."
         }
       ],
-      "text": "Whenever you sacrifice another permanent, you may pay {2}. If you do, Furnace Celebration deals 2 damage to target creature or player.",
+      "text": "Whenever you sacrifice another permanent, you may pay {2}. If you do, Furnace Celebration deals 2 damage to any target.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -10012,7 +10010,7 @@
         "TPR"
       ],
       "rarity": "Uncommon",
-      "text": "Sacrifice a creature: Goblin Bombardment deals 1 damage to target creature or player.",
+      "text": "Sacrifice a creature: Goblin Bombardment deals 1 damage to any target.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -10091,7 +10089,7 @@
       "subtypes": [
         "Goblin"
       ],
-      "text": "Goblin Sharpshooter doesn't untap during your untap step.\nWhenever a creature dies, untap Goblin Sharpshooter.\n{T}: Goblin Sharpshooter deals 1 damage to target creature or player.",
+      "text": "Goblin Sharpshooter doesn't untap during your untap step.\nWhenever a creature dies, untap Goblin Sharpshooter.\n{T}: Goblin Sharpshooter deals 1 damage to any target.",
       "toughness": "1",
       "type": "Creature — Goblin",
       "types": [
@@ -10266,7 +10264,7 @@
         "C13"
       ],
       "rarity": "Rare",
-      "text": "Choose two —\n• Incendiary Command deals 4 damage to target player.\n• Incendiary Command deals 2 damage to each creature.\n• Destroy target nonbasic land.\n• Each player discards all the cards in his or her hand, then draws that many cards.",
+      "text": "Choose two —\n• Incendiary Command deals 4 damage to target player or planeswalker.\n• Incendiary Command deals 2 damage to each creature.\n• Destroy target nonbasic land.\n• Each player discards all the cards in their hand, then draws that many cards.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -10355,7 +10353,7 @@
       "subtypes": [
         "Giant"
       ],
-      "text": "{R}: Inferno Titan gets +1/+0 until end of turn.\nWhenever Inferno Titan enters the battlefield or attacks, it deals 3 damage divided as you choose among one, two, or three target creatures and/or players.",
+      "text": "{R}: Inferno Titan gets +1/+0 until end of turn.\nWhenever Inferno Titan enters the battlefield or attacks, it deals 3 damage divided as you choose among one, two, or three targets.",
       "toughness": "6",
       "type": "Creature — Giant",
       "types": [
@@ -10440,11 +10438,11 @@
       "rulings": [
         {
           "date": "2007-02-01",
-          "text": "If either target leaves the battlefield before the ability resolves, the ability taps the remaining target, but no damage is dealt. If both targets leave the battlefield, the ability is countered."
+          "text": "If either target leaves the battlefield before the ability resolves, the ability taps the remaining target, but no damage is dealt. If both targets leave the battlefield, the ability doesn't resolve."
         },
         {
           "date": "2007-02-01",
-          "text": "Magus of the Arena's controller always chooses his or her creature first."
+          "text": "Magus of the Arena's controller always chooses their creature first."
         },
         {
           "date": "2007-02-01",
@@ -10459,7 +10457,7 @@
         "Human",
         "Wizard"
       ],
-      "text": "{3}, {T}: Tap target creature you control and target creature of an opponent's choice he or she controls. Those creatures fight each other. (Each deals damage equal to its power to the other.)",
+      "text": "{3}, {T}: Tap target creature you control and target creature of an opponent's choice they control. Those creatures fight each other. (Each deals damage equal to its power to the other.)",
       "toughness": "5",
       "type": "Creature — Human Wizard",
       "types": [
@@ -10662,7 +10660,7 @@
           "text": "If the resolution of a triggered ability involves casting a spell, that spell can't be cast if a spell with split second is on the stack."
         }
       ],
-      "text": "Kicker {R} (You may pay an additional {R} as you cast this spell.)\nIf Molten Disaster was kicked, it has split second. (As long as this spell is on the stack, players can't cast spells or activate abilities that aren't mana abilities.)\nMolten Disaster deals X damage to each creature without flying and each player.",
+      "text": "Kicker {R} (You may pay an additional {R} as you cast this spell.)\nIf this spell was kicked, it has split second. (As long as this spell is on the stack, players can't cast spells or activate abilities that aren't mana abilities.)\nMolten Disaster deals X damage to each creature without flying and each player.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -10915,7 +10913,7 @@
         },
         {
           "date": "2008-10-01",
-          "text": "The cycling ability and the triggered ability are separate. If the triggered ability is countered (with Stifle, for example, or if all its targets have become illegal), the cycling ability will still resolve and you'll draw a card."
+          "text": "The cycling ability and the triggered ability are separate. If the triggered ability doesn't resolve (due to being countered with Stifle, for example, or if all its targets have become illegal), the cycling ability will still resolve and you'll draw a card."
         }
       ],
       "text": "Slice and Dice deals 4 damage to each creature.\nCycling {2}{R} ({2}{R}, Discard this card: Draw a card.)\nWhen you cycle Slice and Dice, you may have it deal 1 damage to each creature.",
@@ -11021,7 +11019,7 @@
         },
         {
           "date": "2008-04-01",
-          "text": "Whether evoke's sacrifice ability triggers when the creature enters the battlefield depends on whether the spell's controller chose to pay the evoke cost, not whether he or she actually paid it (if it was reduced or otherwise altered by another ability, for example)."
+          "text": "Whether evoke's sacrifice ability triggers when the creature enters the battlefield depends on whether the spell's controller chose to pay the evoke cost, not whether they actually paid it (if it was reduced or otherwise altered by another ability, for example)."
         },
         {
           "date": "2008-04-01",
@@ -11117,7 +11115,7 @@
       "subtypes": [
         "Avatar"
       ],
-      "text": "Haste\nWhenever another creature you control dies, it deals damage equal to its power to target player.",
+      "text": "Haste\nWhenever another creature you control dies, it deals damage equal to its power to target player or planeswalker.",
       "toughness": "5",
       "type": "Creature — Avatar",
       "types": [
@@ -11467,7 +11465,7 @@
       "rulings": [
         {
           "date": "2013-10-17",
-          "text": "Your opponents decide in turn order whether or not they accept the offer, starting with the opponent on your left. Each opponent will know the decisions of previous opponents in turn order when making his or her decision."
+          "text": "Your opponents decide in turn order whether or not they accept the offer, starting with the opponent on your left. Each opponent will know the decisions of previous opponents in turn order when making their decision."
         },
         {
           "date": "2013-10-17",
@@ -11720,7 +11718,7 @@
           "text": "The ability only applies to blocks declared after it resolves. It will not add costs to any blockers already announced."
         }
       ],
-      "text": "{X}{R}: This turn, creatures can't block unless their controller pays {X} for each blocking creature he or she controls.",
+      "text": "{X}{R}: This turn, creatures can't block unless their controller pays {X} for each blocking creature they control.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -11802,14 +11800,14 @@
       "rulings": [
         {
           "date": "2011-09-22",
-          "text": "The creature that entered the battlefield deals damage equal to its current power to the targeted creature or player. If it's no longer on the battlefield, its last known existence on the battlefield is checked to determine its power."
+          "text": "The creature that entered the battlefield deals damage equal to its current power to the targeted permanent or player. If it's no longer on the battlefield, its last known existence on the battlefield is checked to determine its power."
         },
         {
           "date": "2011-09-22",
           "text": "Warstorm Surge is the source of the ability, but the creature is the source of the damage. The ability couldn't target a creature with protection from red, for example. It could target a creature with protection from creatures, but all the damage would be prevented. Since damage is dealt by the creature, abilities like lifelink, deathtouch and infect are taken into account, even if the creature has left the battlefield by the time it deals damage."
         }
       ],
-      "text": "Whenever a creature enters the battlefield under your control, it deals damage equal to its power to target creature or player.",
+      "text": "Whenever a creature enters the battlefield under your control, it deals damage equal to its power to any target.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -11895,7 +11893,7 @@
           "text": "The ability checks that creature's power only once: when that creature enters the battlefield. The trigger checks a creature's initial power upon being put on the battlefield, so it will take into account counters that it enters the battlefield with and static abilities that may give it a continuous power boost once it's on the battlefield (such as the one on Glorious Anthem). After the creature is already on the battlefield, boosting its power with a spell (such as Giant Growth), activated ability, or triggered ability won't allow this ability to trigger; it's too late by then. Once the ability triggers, it will resolve no matter what the creature's power may become while the ability is on the stack."
         }
       ],
-      "text": "Whenever a creature with power 5 or greater enters the battlefield under your control, you may have Where Ancients Tread deal 5 damage to target creature or player.",
+      "text": "Whenever a creature with power 5 or greater enters the battlefield under your control, you may have Where Ancients Tread deal 5 damage to any target.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -11972,7 +11970,7 @@
           "text": "Widespread Panic's ability is put onto the stack after the library is shuffled."
         }
       ],
-      "text": "Whenever a spell or ability causes its controller to shuffle his or her library, that player puts a card from his or her hand on top of his or her library.",
+      "text": "Whenever a spell or ability causes its controller to shuffle their library, that player puts a card from their hand on top of their library.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -12638,7 +12636,7 @@
       "subtypes": [
         "Lizard"
       ],
-      "text": "At the beginning of each end step, each player gains control of all nontoken permanents he or she owns.",
+      "text": "At the beginning of each end step, each player gains control of all nontoken permanents they own.",
       "toughness": "4",
       "type": "Creature — Lizard",
       "types": [
@@ -13005,7 +13003,7 @@
         "Druid",
         "Warrior"
       ],
-      "text": "At the beginning of your end step, if you control a creature with power 5 or greater, you may draw a card.\n{T}: Add {C} to your mana pool.",
+      "text": "At the beginning of your end step, if you control a creature with power 5 or greater, you may draw a card.\n{T}: Add {C}.",
       "toughness": "2",
       "type": "Creature — Human Druid Warrior",
       "types": [
@@ -14087,7 +14085,8 @@
         "C13",
         "VMA",
         "DD3_GVL",
-        "A25"
+        "A25",
+        "DDU"
       ],
       "rarity": "Common",
       "rulings": [
@@ -14101,14 +14100,14 @@
         },
         {
           "date": "2008-10-01",
-          "text": "The cycling ability and the triggered ability are separate. If the triggered ability is countered (with Stifle, for example, or if all its targets have become illegal), the cycling ability will still resolve and you'll draw a card."
+          "text": "The cycling ability and the triggered ability are separate. If the triggered ability doesn't resolve (due to being countered with Stifle, for example, or if all its targets have become illegal), the cycling ability will still resolve and you'll draw a card."
         }
       ],
       "subtypes": [
         "Boar",
         "Beast"
       ],
-      "text": "Cycling {2}{G} ({2}{G}, Discard this card: Draw a card.)\nWhen you cycle Krosan Tusker, you may search your library for a basic land card, reveal that card, put it into your hand, then shuffle your library.",
+      "text": "Cycling {2}{G} ({2}{G}, Discard this card: Draw a card.)\nWhen you cycle Krosan Tusker, you may search your library for a basic land card, reveal that card, put it into your hand, then shuffle your library. (Do this before you draw.)",
       "toughness": "5",
       "type": "Creature — Boar Beast",
       "types": [
@@ -14358,7 +14357,7 @@
       "subtypes": [
         "Beast"
       ],
-      "text": "Trample\nWhen you cast Naya Soulbeast, each player reveals the top card of his or her library. Naya Soulbeast enters the battlefield with X +1/+1 counters on it, where X is the total converted mana cost of all cards revealed this way.",
+      "text": "When you cast this spell, each player reveals the top card of their library. Naya Soulbeast enters the battlefield with X +1/+1 counters on it, where X is the total converted mana cost of all cards revealed this way.\nTrample",
       "toughness": "0",
       "type": "Creature — Beast",
       "types": [
@@ -14433,10 +14432,6 @@
       ],
       "rarity": "Common",
       "rulings": [
-        {
-          "date": "2008-04-01",
-          "text": "A \"creature card\" is any card with the type creature, even if it has other types such as artifact, enchantment, or land. Older cards of type summon are also creature cards."
-        },
         {
           "date": "2008-10-01",
           "text": "The two creature cards are exiled as a cost. No one can respond to this. If no graveyard has two creature cards in it, the cost can't be paid."
@@ -15142,10 +15137,6 @@
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2008-04-01",
-          "text": "A \"creature card\" is any card with the type creature, even if it has other types such as artifact, enchantment, or land. Older cards of type summon are also creature cards."
-        },
-        {
           "date": "2009-10-01",
           "text": "All Reincarnation does when it resolves is set up a delayed triggered ability. If the targeted creature isn't put into a graveyard this turn, that ability never triggers. If the targeted creature is put into a graveyard this turn, that ability triggers and resolves like any other triggered ability."
         },
@@ -15505,7 +15496,7 @@
       "rulings": [
         {
           "date": "2017-09-29",
-          "text": "If the target artifact or enchantment is an illegal target by the time Slice in Twain resolves, the entire spell is countered. You won't draw a card. If, on the other hand, the target is a legal target but isn't destroyed (most likely because it has indestructible), you'll draw a card."
+          "text": "If the target artifact or enchantment is an illegal target by the time Slice in Twain resolves, the entire spell doesn't resolve. You won't draw a card. If, on the other hand, the target is a legal target but isn't destroyed (most likely because it has indestructible), you'll draw a card."
         }
       ],
       "text": "Destroy target artifact or enchantment.\nDraw a card.",
@@ -15831,14 +15822,14 @@
       "rulings": [
         {
           "date": "2013-10-17",
-          "text": "Your opponents decide in turn order whether or not they accept the offer, starting with the opponent on your left. Each opponent will know the decisions of previous opponents in turn order when making his or her decision."
+          "text": "Your opponents decide in turn order whether or not they accept the offer, starting with the opponent on your left. Each opponent will know the decisions of previous opponents in turn order when making their decision."
         },
         {
           "date": "2013-10-17",
           "text": "After each opponent has decided, the effect happens simultaneously for each one who accepted the offer. Then, the effect happens again for you a number of times equal to the number of opponents who accepted."
         }
       ],
-      "text": "Tempting offer — Search your library for a land card and put it onto the battlefield. Each opponent may search his or her library for a land card and put it onto the battlefield. For each opponent who searches a library this way, search your library for a land card and put it onto the battlefield. Then each player who searched a library this way shuffles it.",
+      "text": "Tempting offer — Search your library for a land card and put it onto the battlefield. Each opponent may search their library for a land card and put it onto the battlefield. For each opponent who searches a library this way, search your library for a land card and put it onto the battlefield. Then each player who searched a library this way shuffles it.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -15939,7 +15930,7 @@
         },
         {
           "date": "2008-04-01",
-          "text": "Whether evoke's sacrifice ability triggers when the creature enters the battlefield depends on whether the spell's controller chose to pay the evoke cost, not whether he or she actually paid it (if it was reduced or otherwise altered by another ability, for example)."
+          "text": "Whether evoke's sacrifice ability triggers when the creature enters the battlefield depends on whether the spell's controller chose to pay the evoke cost, not whether they actually paid it (if it was reduced or otherwise altered by another ability, for example)."
         },
         {
           "date": "2008-04-01",
@@ -16323,7 +16314,7 @@
           "text": "Planeswalkers with indestructible will still have loyalty counters removed from them as they are dealt damage. If planeswalker with indestructible has no loyalty counters, it will still be put into its owner's graveyard, as the rule that does this doesn't destroy the planeswalker."
         }
       ],
-      "text": "Choose one —\n• Boros Charm deals 4 damage to target player.\n• Permanents you control gain indestructible until end of turn.\n• Target creature gains double strike until end of turn.",
+      "text": "Choose one —\n• Boros Charm deals 4 damage to target player or planeswalker.\n• Permanents you control gain indestructible until end of turn.\n• Target creature gains double strike until end of turn.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -16594,7 +16585,7 @@
         },
         {
           "date": "2017-03-14",
-          "text": "All of the actions for Cruel Ultimatum are performed sequentially, in the order listed. Earlier actions may affect how you perform later actions. For example, if the opponent sacrifices a creature that he or she controls but you own, it will end up in your graveyard. When Cruel Ultimatum lets you return a creature card from your graveyard to your hand, you can choose that one."
+          "text": "All of the actions for Cruel Ultimatum are performed sequentially, in the order listed. Earlier actions may affect how you perform later actions. For example, if the opponent sacrifices a creature that they control but you own, it will end up in your graveyard. When Cruel Ultimatum lets you return a creature card from your graveyard to your hand, you can choose that one."
         },
         {
           "date": "2017-03-14",
@@ -16682,7 +16673,7 @@
         "C15"
       ],
       "rarity": "Rare",
-      "text": "Death Grasp deals X damage to target creature or player. You gain X life.",
+      "text": "Death Grasp deals X damage to any target. You gain X life.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -16778,7 +16769,7 @@
         "Zombie",
         "Beast"
       ],
-      "text": "Whenever another creature dies, you may put a +1/+1 counter on Deathbringer Thoctar.\nRemove a +1/+1 counter from Deathbringer Thoctar: Deathbringer Thoctar deals 1 damage to target creature or player.",
+      "text": "Whenever another creature dies, you may put a +1/+1 counter on Deathbringer Thoctar.\nRemove a +1/+1 counter from Deathbringer Thoctar: Deathbringer Thoctar deals 1 damage to any target.",
       "toughness": "3",
       "type": "Creature — Zombie Beast",
       "types": [
@@ -17143,14 +17134,14 @@
         },
         {
           "date": "2017-03-14",
-          "text": "If some (but not all) of the targets become illegal, the original division of damage still applies, but no damage is dealt to illegal targets. If all targets become illegal, including the target opponent for the life-gaining effect, Fiery Justice is countered. If each target for the damage-dealing effect becomes illegal while the target for the life-gaining effect remains legal, that player gains 5 life even though no damage is dealt."
+          "text": "If some (but not all) of the targets become illegal, the original division of damage still applies, but no damage is dealt to illegal targets. If all targets become illegal, including the target opponent for the life-gaining effect, Fiery Justice doesn't resolve. If each target for the damage-dealing effect becomes illegal while the target for the life-gaining effect remains legal, that player gains 5 life even though no damage is dealt."
         },
         {
           "date": "2017-03-14",
-          "text": "The target opponent for the life-gaining effect may also be a target for the damage-dealing effect. If this happens and the damage brings that player's life total to 0 or less, the life-gaining effect will raise his or her life total above 0 again before the player would lose the game."
+          "text": "The target opponent for the life-gaining effect may also be a target for the damage-dealing effect. If this happens and the damage brings that player's life total to 0 or less, the life-gaining effect will raise their life total above 0 again before the player would lose the game."
         }
       ],
-      "text": "Fiery Justice deals 5 damage divided as you choose among any number of target creatures and/or players. Target opponent gains 5 life.",
+      "text": "Fiery Justice deals 5 damage divided as you choose among any number of targets. Target opponent gains 5 life.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -17712,7 +17703,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "Flying\nWhen Jeleva, Nephalia's Scourge enters the battlefield, each player exiles the top X cards of his or her library, where X is the amount of mana spent to cast Jeleva.\nWhenever Jeleva attacks, you may cast an instant or sorcery card exiled with it without paying its mana cost.",
+      "text": "Flying\nWhen Jeleva, Nephalia's Scourge enters the battlefield, each player exiles the top X cards of their library, where X is the amount of mana spent to cast Jeleva.\nWhenever Jeleva attacks, you may cast an instant or sorcery card exiled with it without paying its mana cost.",
       "toughness": "3",
       "type": "Legendary Creature — Vampire Wizard",
       "types": [
@@ -18089,7 +18080,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "Marath, Will of the Wild enters the battlefield with a number of +1/+1 counters on it equal to the amount of mana spent to cast it.\n{X}, Remove X +1/+1 counters from Marath: Choose one —\n• Put X +1/+1 counters on target creature. X can't be 0.\n• Marath deals X damage to target creature or player. X can't be 0.\n• Create an X/X green Elemental creature token. X can't be 0.",
+      "text": "Marath, Will of the Wild enters the battlefield with a number of +1/+1 counters on it equal to the amount of mana spent to cast it.\n{X}, Remove X +1/+1 counters from Marath: Choose one —\n• Put X +1/+1 counters on target creature. X can't be 0.\n• Marath deals X damage to any target. X can't be 0.\n• Create an X/X green Elemental creature token. X can't be 0.",
       "toughness": "0",
       "type": "Legendary Creature — Elemental Beast",
       "types": [
@@ -18693,7 +18684,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "Flying\nWhen you cast Prossh, Skyraider of Kher, create X 0/1 red Kobold creature tokens named Kobolds of Kher Keep, where X is the amount of mana spent to cast Prossh.\nSacrifice another creature: Prossh gets +1/+0 until end of turn.",
+      "text": "When you cast this spell, create X 0/1 red Kobold creature tokens named Kobolds of Kher Keep, where X is the amount of mana spent to cast Prossh.\nFlying\nSacrifice another creature: Prossh, Skyraider of Kher gets +1/+0 until end of turn.",
       "toughness": "5",
       "type": "Legendary Creature — Dragon",
       "types": [
@@ -19798,7 +19789,7 @@
       "subtypes": [
         "Beast"
       ],
-      "text": "Spellbreaker Behemoth can't be countered.\nCreature spells you control with power 5 or greater can't be countered.",
+      "text": "This spell can't be countered.\nCreature spells you control with power 5 or greater can't be countered.",
       "toughness": "5",
       "type": "Creature — Beast",
       "types": [
@@ -19974,7 +19965,7 @@
           "text": "The sacrifice is mandatory. The last \"if you do\" only fails if for some reason you could not sacrifice."
         }
       ],
-      "text": "Cast Spinal Embrace only during combat.\nUntap target creature you don't control and gain control of it. It gains haste until end of turn. At the beginning of the next end step, sacrifice it. If you do, you gain life equal to its toughness.",
+      "text": "Cast this spell only during combat.\nUntap target creature you don't control and gain control of it. It gains haste until end of turn. At the beginning of the next end step, sacrifice it. If you do, you gain life equal to its toughness.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -20144,7 +20135,7 @@
       "rulings": [
         {
           "date": "2013-10-17",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         },
         {
           "date": "2013-10-17",
@@ -20558,7 +20549,7 @@
       "subtypes": [
         "Beast"
       ],
-      "text": "Mountaincycling {2}, forestcycling {2} ({2}, Discard this card: Search your library for a Mountain or Forest card, reveal it, and put it into your hand. Then shuffle your library.)",
+      "text": "Mountaincycling {2}, forestcycling {2} ({2}, Discard this card: Search your library for a Mountain or Forest card, reveal it, put it into your hand, then shuffle your library.)",
       "toughness": "3",
       "type": "Creature — Beast",
       "types": [
@@ -21655,7 +21646,7 @@
           "text": "Activating the ability that turns the Keyrune into a creature while it's already a creature will override any effects that set its power and/or toughness to another number, but effects that modify power and/or toughness without directly setting them will still apply."
         }
       ],
-      "text": "{T}: Add {W} or {U} to your mana pool.\n{W}{U}: Azorius Keyrune becomes a 2/2 white and blue Bird artifact creature with flying until end of turn.",
+      "text": "{T}: Add {W} or {U}.\n{W}{U}: Azorius Keyrune becomes a 2/2 white and blue Bird artifact creature with flying until end of turn.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -21734,7 +21725,7 @@
           "text": "It can be untapped as often as you can pay for it."
         }
       ],
-      "text": "Basalt Monolith doesn't untap during your untap step.\n{T}: Add {C}{C}{C} to your mana pool.\n{3}: Untap Basalt Monolith.",
+      "text": "Basalt Monolith doesn't untap during your untap step.\n{T}: Add {C}{C}{C}.\n{3}: Untap Basalt Monolith.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -22040,7 +22031,7 @@
         "C17"
       ],
       "rarity": "Uncommon",
-      "text": "Indestructible\n{T}: Add one mana of any color to your mana pool.",
+      "text": "Indestructible\n{T}: Add one mana of any color.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -22186,7 +22177,7 @@
       "rulings": [
         {
           "date": "2013-10-17",
-          "text": "The active player chooses a permanent first, followed by each other player in turn order. Each player will know what previous players have chosen when making his or her own choice. Then the doom counters are put on all the chosen permanents simultaneously."
+          "text": "The active player chooses a permanent first, followed by each other player in turn order. Each player will know what previous players have chosen when making their own choice. Then the doom counters are put on all the chosen permanents simultaneously."
         },
         {
           "date": "2013-10-17",
@@ -22344,7 +22335,7 @@
         "CMA"
       ],
       "rarity": "Uncommon",
-      "text": "Flash (You may cast this spell any time you could cast an instant.)\n{2}, Sacrifice Leonin Bladetrap: Leonin Bladetrap deals 2 damage to each attacking creature without flying.",
+      "text": "Flash (You may cast this spell any time you could cast an instant.)\n{2}, Sacrifice Leonin Bladetrap: It deals 2 damage to each attacking creature without flying.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -22530,7 +22521,8 @@
         "SOM",
         "C13",
         "C14",
-        "C16"
+        "C16",
+        "DDU"
       ],
       "rarity": "Rare",
       "rulings": [
@@ -22544,10 +22536,6 @@
         },
         {
           "date": "2011-01-01",
-          "text": "The defending player referred to by the last ability is the player attacked by Myr Battlesphere or the controller of the planeswalker attacked by Myr Battlesphere. For the purposes of this ability, that player remains the defending player even if Myr Battlesphere or that planeswalker is removed from combat before the ability resolves."
-        },
-        {
-          "date": "2011-01-01",
           "text": "As the last ability resolves, you can tap untapped Myr you control even if Myr Battlesphere is no longer on the battlefield by then. If that has happened, Myr Battlesphere won't be able to get the +X/+0 bonus, but it will still deal X damage to the defending player."
         }
       ],
@@ -22555,7 +22543,7 @@
         "Myr",
         "Construct"
       ],
-      "text": "When Myr Battlesphere enters the battlefield, create four 1/1 colorless Myr artifact creature tokens.\nWhenever Myr Battlesphere attacks, you may tap X untapped Myr you control. If you do, Myr Battlesphere gets +X/+0 until end of turn and deals X damage to defending player.",
+      "text": "When Myr Battlesphere enters the battlefield, create four 1/1 colorless Myr artifact creature tokens.\nWhenever Myr Battlesphere attacks, you may tap X untapped Myr you control. If you do, Myr Battlesphere gets +X/+0 until end of turn and deals X damage to the player or planeswalker it's attacking.",
       "toughness": "7",
       "type": "Artifact Creature — Myr Construct",
       "types": [
@@ -22723,7 +22711,7 @@
       "rarity": "Common",
       "rulings": [
         {
-          "date": "2011-01-01",
+          "date": "2018-03-16",
           "text": "You may activate Nihil Spellbomb's first ability targeting any player, even one whose graveyard has no cards in it."
         }
       ],
@@ -22807,7 +22795,7 @@
         "C13"
       ],
       "rarity": "Common",
-      "text": "{T}: Add {W}, {U}, or {B} to your mana pool.",
+      "text": "{T}: Add {W}, {U}, or {B}.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -22888,7 +22876,7 @@
         "E01"
       ],
       "rarity": "Common",
-      "text": "{T}: Add {U}, {B}, or {R} to your mana pool.",
+      "text": "{T}: Add {U}, {B}, or {R}.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -22967,7 +22955,7 @@
         "C13"
       ],
       "rarity": "Common",
-      "text": "{T}: Add {B}, {R}, or {G} to your mana pool.",
+      "text": "{T}: Add {B}, {R}, or {G}.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -23230,7 +23218,7 @@
           "text": "Pristine Talisman has a mana ability. Its ability doesn't use the stack and can't be responded to."
         }
       ],
-      "text": "{T}: Add {C} to your mana pool. You gain 1 life.",
+      "text": "{T}: Add {C}. You gain 1 life.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -23403,7 +23391,7 @@
         "CMA"
       ],
       "rarity": "Common",
-      "text": "{1}, {T}: Add {G}{W} to your mana pool.",
+      "text": "{1}, {T}: Add {G}{W}.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -23486,7 +23474,7 @@
         "CMA"
       ],
       "rarity": "Common",
-      "text": "{1}, {T}: Add {G}{U} to your mana pool.",
+      "text": "{1}, {T}: Add {G}{U}.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -23568,7 +23556,7 @@
         "C17"
       ],
       "rarity": "Uncommon",
-      "text": "{T}: Add {C}{C} to your mana pool.",
+      "text": "{T}: Add {C}{C}.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -23880,8 +23868,8 @@
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2011-09-22",
-          "text": "If an opponent gains control of a creature equipped by your Swiftfoot Boots, that creature can't be the target of spells and abilities you control."
+          "date": "2018-03-16",
+          "text": "If a creature enters the battlefield under your control and gains haste, but then loses it before attacking, it won't be able to attack that turn. This means that you can't use one Swiftfoot Boots to allow two new creatures to attack in the same turn."
         }
       ],
       "subtypes": [
@@ -24346,7 +24334,7 @@
       "subtypes": [
         "Construct"
       ],
-      "text": "At the beginning of each opponent's upkeep, Viseling deals X damage to that player, where X is the number of cards in his or her hand minus 4.",
+      "text": "At the beginning of each opponent's upkeep, Viseling deals X damage to that player, where X is the number of cards in their hand minus 4.",
       "toughness": "2",
       "type": "Artifact Creature — Construct",
       "types": [
@@ -24583,7 +24571,7 @@
         "C17"
       ],
       "rarity": "Uncommon",
-      "text": "Akoum Refuge enters the battlefield tapped.\nWhen Akoum Refuge enters the battlefield, you gain 1 life.\n{T}: Add {B} or {R} to your mana pool.",
+      "text": "Akoum Refuge enters the battlefield tapped.\nWhen Akoum Refuge enters the battlefield, you gain 1 life.\n{T}: Add {B} or {R}.",
       "type": "Land",
       "types": [
         "Land"
@@ -24664,7 +24652,7 @@
         "C17"
       ],
       "rarity": "Uncommon",
-      "text": "Arcane Sanctum enters the battlefield tapped.\n{T}: Add {W}, {U}, or {B} to your mana pool.",
+      "text": "Arcane Sanctum enters the battlefield tapped.\n{T}: Add {W}, {U}, or {B}.",
       "type": "Land",
       "types": [
         "Land"
@@ -24752,7 +24740,7 @@
           "text": "If this land enters the battlefield and you control no other lands, its ability will force you to return it to your hand."
         }
       ],
-      "text": "Azorius Chancery enters the battlefield tapped.\nWhen Azorius Chancery enters the battlefield, return a land you control to its owner's hand.\n{T}: Add {W}{U} to your mana pool.",
+      "text": "Azorius Chancery enters the battlefield tapped.\nWhen Azorius Chancery enters the battlefield, return a land you control to its owner's hand.\n{T}: Add {W}{U}.",
       "type": "Land",
       "types": [
         "Land"
@@ -24845,7 +24833,7 @@
       "subtypes": [
         "Gate"
       ],
-      "text": "Azorius Guildgate enters the battlefield tapped.\n{T}: Add {W} or {U} to your mana pool.",
+      "text": "Azorius Guildgate enters the battlefield tapped.\n{T}: Add {W} or {U}.",
       "type": "Land — Gate",
       "types": [
         "Land"
@@ -24919,7 +24907,7 @@
         "CMA"
       ],
       "rarity": "Common",
-      "text": "{T}: Add {C} to your mana pool.\n{1}, {T}, Sacrifice Bant Panorama: Search your library for a basic Forest, Plains, or Island card and put it onto the battlefield tapped. Then shuffle your library.",
+      "text": "{T}: Add {C}.\n{1}, {T}, Sacrifice Bant Panorama: Search your library for a basic Forest, Plains, or Island card and put it onto the battlefield tapped. Then shuffle your library.",
       "type": "Land",
       "types": [
         "Land"
@@ -25005,7 +24993,7 @@
           "text": "Cycling is an activated ability. Effects that interact with activated abilities (such as Stifle or Rings of Brighthearth) will interact with cycling. Effects that interact with spells (such as Remove Soul or Faerie Tauntings) will not."
         }
       ],
-      "text": "Barren Moor enters the battlefield tapped.\n{T}: Add {B} to your mana pool.\nCycling {B} ({B}, Discard this card: Draw a card.)",
+      "text": "Barren Moor enters the battlefield tapped.\n{T}: Add {B}.\nCycling {B} ({B}, Discard this card: Draw a card.)",
       "type": "Land",
       "types": [
         "Land"
@@ -25084,7 +25072,7 @@
         "C17"
       ],
       "rarity": "Common",
-      "text": "Bojuka Bog enters the battlefield tapped.\nWhen Bojuka Bog enters the battlefield, exile all cards from target player's graveyard.\n{T}: Add {B} to your mana pool.",
+      "text": "Bojuka Bog enters the battlefield tapped.\nWhen Bojuka Bog enters the battlefield, exile all cards from target player's graveyard.\n{T}: Add {B}.",
       "type": "Land",
       "types": [
         "Land"
@@ -25174,7 +25162,7 @@
           "text": "If this land enters the battlefield and you control no other lands, its ability will force you to return it to your hand."
         }
       ],
-      "text": "Boros Garrison enters the battlefield tapped.\nWhen Boros Garrison enters the battlefield, return a land you control to its owner's hand.\n{T}: Add {R}{W} to your mana pool.",
+      "text": "Boros Garrison enters the battlefield tapped.\nWhen Boros Garrison enters the battlefield, return a land you control to its owner's hand.\n{T}: Add {R}{W}.",
       "type": "Land",
       "types": [
         "Land"
@@ -25269,7 +25257,7 @@
       "subtypes": [
         "Gate"
       ],
-      "text": "Boros Guildgate enters the battlefield tapped.\n{T}: Add {R} or {W} to your mana pool.",
+      "text": "Boros Guildgate enters the battlefield tapped.\n{T}: Add {R} or {W}.",
       "type": "Land — Gate",
       "types": [
         "Land"
@@ -25354,7 +25342,7 @@
           "text": "In formats other than Commander, Command Tower's ability produces no mana."
         }
       ],
-      "text": "{T}: Add to your mana pool one mana of any color in your commander's color identity.",
+      "text": "{T}: Add one mana of any color in your commander's color identity.",
       "type": "Land",
       "types": [
         "Land"
@@ -25432,7 +25420,7 @@
           "text": "If either target is illegal when the ability resolves, it will do nothing."
         }
       ],
-      "text": "{T}: Add {C} to your mana pool.\n{R}{G}, {T}: Target Beast creature you control fights target creature an opponent controls. (Each deals damage equal to its power to the other.)",
+      "text": "{T}: Add {C}.\n{R}{G}, {T}: Target Beast creature you control fights target creature an opponent controls. (Each deals damage equal to its power to the other.)",
       "type": "Land",
       "types": [
         "Land"
@@ -25516,7 +25504,7 @@
         "E02"
       ],
       "rarity": "Uncommon",
-      "text": "Crumbling Necropolis enters the battlefield tapped.\n{T}: Add {U}, {B}, or {R} to your mana pool.",
+      "text": "Crumbling Necropolis enters the battlefield tapped.\n{T}: Add {U}, {B}, or {R}.",
       "type": "Land",
       "types": [
         "Land"
@@ -25608,7 +25596,7 @@
       "subtypes": [
         "Gate"
       ],
-      "text": "Dimir Guildgate enters the battlefield tapped.\n{T}: Add {U} or {B} to your mana pool.",
+      "text": "Dimir Guildgate enters the battlefield tapped.\n{T}: Add {U} or {B}.",
       "type": "Land — Gate",
       "types": [
         "Land"
@@ -25689,7 +25677,7 @@
           "text": "Cycling is an activated ability. Effects that interact with activated abilities (such as Stifle or Rings of Brighthearth) will interact with cycling. Effects that interact with spells (such as Remove Soul or Faerie Tauntings) will not."
         }
       ],
-      "text": "Drifting Meadow enters the battlefield tapped.\n{T}: Add {W} to your mana pool.\nCycling {2} ({2}, Discard this card: Draw a card.)",
+      "text": "Drifting Meadow enters the battlefield tapped.\n{T}: Add {W}.\nCycling {2} ({2}, Discard this card: Draw a card.)",
       "type": "Land",
       "types": [
         "Land"
@@ -25762,7 +25750,7 @@
         "C13"
       ],
       "rarity": "Common",
-      "text": "{T}: Add {C} to your mana pool.\n{1}, {T}, Sacrifice Esper Panorama: Search your library for a basic Plains, Island, or Swamp card and put it onto the battlefield tapped. Then shuffle your library.",
+      "text": "{T}: Add {C}.\n{1}, {T}, Sacrifice Esper Panorama: Search your library for a basic Plains, Island, or Swamp card and put it onto the battlefield tapped. Then shuffle your library.",
       "type": "Land",
       "types": [
         "Land"
@@ -25817,6 +25805,10 @@
         },
         {
           "format": "Innistrad Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
           "legality": "Legal"
         },
         {
@@ -25960,14 +25952,14 @@
       "rulings": [
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         },
         {
           "date": "2009-10-01",
           "text": "Activating the ability that turns it into a creature while it's already a creature will override any effects that set its power and/or toughness to a specific number. However, any effect that raises or lowers power and/or toughness (such as the effect created by Giant Growth, Glorious Anthem, or a +1/+1 counter) will continue to apply."
         }
       ],
-      "text": "Faerie Conclave enters the battlefield tapped.\n{T}: Add {U} to your mana pool.\n{1}{U}: Faerie Conclave becomes a 2/1 blue Faerie creature with flying until end of turn. It's still a land.",
+      "text": "Faerie Conclave enters the battlefield tapped.\n{T}: Add {U}.\n{1}{U}: Faerie Conclave becomes a 2/1 blue Faerie creature with flying until end of turn. It's still a land.",
       "type": "Land",
       "types": [
         "Land"
@@ -26053,7 +26045,7 @@
           "text": "Cycling is an activated ability. Effects that interact with activated abilities (such as Stifle or Rings of Brighthearth) will interact with cycling. Effects that interact with spells (such as Remove Soul or Faerie Tauntings) will not."
         }
       ],
-      "text": "Forgotten Cave enters the battlefield tapped.\n{T}: Add {R} to your mana pool.\nCycling {R} ({R}, Discard this card: Draw a card.)",
+      "text": "Forgotten Cave enters the battlefield tapped.\n{T}: Add {R}.\nCycling {R} ({R}, Discard this card: Draw a card.)",
       "type": "Land",
       "types": [
         "Land"
@@ -26148,7 +26140,7 @@
       "subtypes": [
         "Gate"
       ],
-      "text": "Golgari Guildgate enters the battlefield tapped.\n{T}: Add {B} or {G} to your mana pool.",
+      "text": "Golgari Guildgate enters the battlefield tapped.\n{T}: Add {B} or {G}.",
       "type": "Land — Gate",
       "types": [
         "Land"
@@ -26237,7 +26229,7 @@
           "text": "If this land enters the battlefield and you control no other lands, its ability will force you to return it to your hand."
         }
       ],
-      "text": "Golgari Rot Farm enters the battlefield tapped.\nWhen Golgari Rot Farm enters the battlefield, return a land you control to its owner's hand.\n{T}: Add {B}{G} to your mana pool.",
+      "text": "Golgari Rot Farm enters the battlefield tapped.\nWhen Golgari Rot Farm enters the battlefield, return a land you control to its owner's hand.\n{T}: Add {B}{G}.",
       "type": "Land",
       "types": [
         "Land"
@@ -26316,7 +26308,7 @@
         "CMA"
       ],
       "rarity": "Rare",
-      "text": "{T}: Add {C} to your mana pool.\n{2}{B}{G}, {T}, Sacrifice a creature: Draw a card.",
+      "text": "{T}: Add {C}.\n{2}{B}{G}, {T}, Sacrifice a creature: Draw a card.",
       "type": "Land",
       "types": [
         "Land"
@@ -26391,7 +26383,7 @@
         "C17"
       ],
       "rarity": "Common",
-      "text": "{T}: Add {C} to your mana pool.\n{1}, {T}, Sacrifice Grixis Panorama: Search your library for a basic Island, Swamp, or Mountain card and put it onto the battlefield tapped. Then shuffle your library.",
+      "text": "{T}: Add {C}.\n{1}, {T}, Sacrifice Grixis Panorama: Search your library for a basic Island, Swamp, or Mountain card and put it onto the battlefield tapped. Then shuffle your library.",
       "type": "Land",
       "types": [
         "Land"
@@ -26483,7 +26475,7 @@
       "subtypes": [
         "Gate"
       ],
-      "text": "Gruul Guildgate enters the battlefield tapped.\n{T}: Add {R} or {G} to your mana pool.",
+      "text": "Gruul Guildgate enters the battlefield tapped.\n{T}: Add {R} or {G}.",
       "type": "Land — Gate",
       "types": [
         "Land"
@@ -26552,14 +26544,14 @@
       "rulings": [
         {
           "date": "2011-09-22",
-          "text": "The owner of a card is the player who started the game with that card in his or her deck."
+          "text": "The owner of a card is the player who started the game with that card in their deck."
         },
         {
           "date": "2011-09-22",
           "text": "The owner of a token is the player under whose control the token was put onto the battlefield."
         }
       ],
-      "text": "{T}: Add {C} to your mana pool.\n{T}: Each player gains control of all creatures he or she owns.",
+      "text": "{T}: Add {C}.\n{T}: Each player gains control of all creatures they own.",
       "type": "Land",
       "types": [
         "Land"
@@ -26648,7 +26640,7 @@
           "text": "If this land enters the battlefield and you control no other lands, its ability will force you to return it to your hand."
         }
       ],
-      "text": "Izzet Boilerworks enters the battlefield tapped.\nWhen Izzet Boilerworks enters the battlefield, return a land you control to its owner's hand.\n{T}: Add {U}{R} to your mana pool.",
+      "text": "Izzet Boilerworks enters the battlefield tapped.\nWhen Izzet Boilerworks enters the battlefield, return a land you control to its owner's hand.\n{T}: Add {U}{R}.",
       "type": "Land",
       "types": [
         "Land"
@@ -26741,7 +26733,7 @@
       "subtypes": [
         "Gate"
       ],
-      "text": "Izzet Guildgate enters the battlefield tapped.\n{T}: Add {U} or {R} to your mana pool.",
+      "text": "Izzet Guildgate enters the battlefield tapped.\n{T}: Add {U} or {R}.",
       "type": "Land — Gate",
       "types": [
         "Land"
@@ -26814,7 +26806,7 @@
         "C13"
       ],
       "rarity": "Common",
-      "text": "{T}: Add {C} to your mana pool.\n{1}, {T}, Sacrifice Jund Panorama: Search your library for a basic Swamp, Mountain, or Forest card and put it onto the battlefield tapped. Then shuffle your library.",
+      "text": "{T}: Add {C}.\n{1}, {T}, Sacrifice Jund Panorama: Search your library for a basic Swamp, Mountain, or Forest card and put it onto the battlefield tapped. Then shuffle your library.",
       "type": "Land",
       "types": [
         "Land"
@@ -26897,7 +26889,7 @@
         "E02"
       ],
       "rarity": "Uncommon",
-      "text": "Jungle Shrine enters the battlefield tapped.\n{T}: Add {R}, {G}, or {W} to your mana pool.",
+      "text": "Jungle Shrine enters the battlefield tapped.\n{T}: Add {R}, {G}, or {W}.",
       "type": "Land",
       "types": [
         "Land"
@@ -26977,7 +26969,7 @@
         "C17"
       ],
       "rarity": "Uncommon",
-      "text": "Jwar Isle Refuge enters the battlefield tapped.\nWhen Jwar Isle Refuge enters the battlefield, you gain 1 life.\n{T}: Add {U} or {B} to your mana pool.",
+      "text": "Jwar Isle Refuge enters the battlefield tapped.\nWhen Jwar Isle Refuge enters the battlefield, you gain 1 life.\n{T}: Add {U} or {B}.",
       "type": "Land",
       "types": [
         "Land"
@@ -27059,7 +27051,7 @@
         "PCA"
       ],
       "rarity": "Uncommon",
-      "text": "Kazandu Refuge enters the battlefield tapped.\nWhen Kazandu Refuge enters the battlefield, you gain 1 life.\n{T}: Add {R} or {G} to your mana pool.",
+      "text": "Kazandu Refuge enters the battlefield tapped.\nWhen Kazandu Refuge enters the battlefield, you gain 1 life.\n{T}: Add {R} or {G}.",
       "type": "Land",
       "types": [
         "Land"
@@ -27138,7 +27130,7 @@
         "PCA"
       ],
       "rarity": "Common",
-      "text": "Khalni Garden enters the battlefield tapped.\nWhen Khalni Garden enters the battlefield, create a 0/1 green Plant creature token.\n{T}: Add {G} to your mana pool.",
+      "text": "Khalni Garden enters the battlefield tapped.\nWhen Khalni Garden enters the battlefield, create a 0/1 green Plant creature token.\n{T}: Add {G}.",
       "type": "Land",
       "types": [
         "Land"
@@ -27217,7 +27209,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "{T}: Add {C} to your mana pool.\n{1}{R}, {T}: Create a 0/1 red Kobold creature token named Kobolds of Kher Keep.",
+      "text": "{T}: Add {C}.\n{1}{R}, {T}: Create a 0/1 red Kobold creature token named Kobolds of Kher Keep.",
       "type": "Legendary Land",
       "types": [
         "Land"
@@ -27301,7 +27293,7 @@
           "text": "The +1/+1 counter won't affect Llanowar Reborn in any way unless another effect turns it into a creature."
         }
       ],
-      "text": "Llanowar Reborn enters the battlefield tapped.\n{T}: Add {G} to your mana pool.\nGraft 1 (This land enters the battlefield with a +1/+1 counter on it. Whenever a creature enters the battlefield, you may move a +1/+1 counter from this land onto it.)",
+      "text": "Llanowar Reborn enters the battlefield tapped.\n{T}: Add {G}.\nGraft 1 (This land enters the battlefield with a +1/+1 counter on it. Whenever a creature enters the battlefield, you may move a +1/+1 counter from this land onto it.)",
       "type": "Land",
       "types": [
         "Land"
@@ -27383,7 +27375,7 @@
           "text": "Cycling is an activated ability. Effects that interact with activated abilities (such as Stifle or Rings of Brighthearth) will interact with cycling. Effects that interact with spells (such as Remove Soul or Faerie Tauntings) will not."
         }
       ],
-      "text": "Lonely Sandbar enters the battlefield tapped.\n{T}: Add {U} to your mana pool.\nCycling {U} ({U}, Discard this card: Draw a card.)",
+      "text": "Lonely Sandbar enters the battlefield tapped.\n{T}: Add {U}.\nCycling {U} ({U}, Discard this card: Draw a card.)",
       "type": "Land",
       "types": [
         "Land"
@@ -27461,7 +27453,7 @@
         "CMA"
       ],
       "rarity": "Uncommon",
-      "text": "{T}: Add {C} to your mana pool.\n{1}, {T}: Put a storage counter on Molten Slagheap.\n{1}, Remove X storage counters from Molten Slagheap: Add X mana in any combination of {B} and/or {R} to your mana pool.",
+      "text": "{T}: Add {C}.\n{1}, {T}: Put a storage counter on Molten Slagheap.\n{1}, Remove X storage counters from Molten Slagheap: Add X mana in any combination of {B} and/or {R}.",
       "type": "Land",
       "types": [
         "Land"
@@ -27541,7 +27533,7 @@
         "C17"
       ],
       "rarity": "Rare",
-      "text": "Hideaway (This land enters the battlefield tapped. When it does, look at the top four cards of your library, exile one face down, then put the rest on the bottom of your library.)\n{T}: Add {G} to your mana pool.\n{G}, {T}: You may play the exiled card without paying its mana cost if creatures you control have total power 10 or greater.",
+      "text": "Hideaway (This land enters the battlefield tapped. When it does, look at the top four cards of your library, exile one face down, then put the rest on the bottom of your library.)\n{T}: Add {G}.\n{G}, {T}: You may play the exiled card without paying its mana cost if creatures you control have total power 10 or greater.",
       "type": "Land",
       "types": [
         "Land"
@@ -27614,7 +27606,7 @@
         "C13"
       ],
       "rarity": "Common",
-      "text": "{T}: Add {C} to your mana pool.\n{1}, {T}, Sacrifice Naya Panorama: Search your library for a basic Mountain, Forest, or Plains card and put it onto the battlefield tapped. Then shuffle your library.",
+      "text": "{T}: Add {C}.\n{1}, {T}, Sacrifice Naya Panorama: Search your library for a basic Mountain, Forest, or Plains card and put it onto the battlefield tapped. Then shuffle your library.",
       "type": "Land",
       "types": [
         "Land"
@@ -27692,7 +27684,7 @@
         "C15"
       ],
       "rarity": "Uncommon",
-      "text": "New Benalia enters the battlefield tapped.\nWhen New Benalia enters the battlefield, scry 1. (Look at the top card of your library. You may put that card on the bottom of your library.)\n{T}: Add {W} to your mana pool.",
+      "text": "New Benalia enters the battlefield tapped.\nWhen New Benalia enters the battlefield, scry 1. (Look at the top card of your library. You may put that card on the bottom of your library.)\n{T}: Add {W}.",
       "type": "Land",
       "types": [
         "Land"
@@ -27776,7 +27768,7 @@
           "text": "In formats other than Commander, Opal Palace's last ability produces no mana."
         }
       ],
-      "text": "{T}: Add {C} to your mana pool.\n{1}, {T}: Add to your mana pool one mana of any color in your commander's color identity. If you spend this mana to cast your commander, it enters the battlefield with a number of additional +1/+1 counters on it equal to the number of times it's been cast from the command zone this game.",
+      "text": "{T}: Add {C}.\n{1}, {T}: Add one mana of any color in your commander's color identity. If you spend this mana to cast your commander, it enters the battlefield with a number of additional +1/+1 counters on it equal to the number of times it's been cast from the command zone this game.",
       "type": "Land",
       "types": [
         "Land"
@@ -27865,7 +27857,7 @@
           "text": "If this land enters the battlefield and you control no other lands, its ability will force you to return it to your hand."
         }
       ],
-      "text": "Orzhov Basilica enters the battlefield tapped.\nWhen Orzhov Basilica enters the battlefield, return a land you control to its owner's hand.\n{T}: Add {W}{B} to your mana pool.",
+      "text": "Orzhov Basilica enters the battlefield tapped.\nWhen Orzhov Basilica enters the battlefield, return a land you control to its owner's hand.\n{T}: Add {W}{B}.",
       "type": "Land",
       "types": [
         "Land"
@@ -27959,7 +27951,7 @@
       "subtypes": [
         "Gate"
       ],
-      "text": "Orzhov Guildgate enters the battlefield tapped.\n{T}: Add {W} or {B} to your mana pool.",
+      "text": "Orzhov Guildgate enters the battlefield tapped.\n{T}: Add {W} or {B}.",
       "type": "Land — Gate",
       "types": [
         "Land"
@@ -28049,7 +28041,7 @@
           "text": "If this land enters the battlefield and you control no other lands, its ability will force you to return it to your hand."
         }
       ],
-      "text": "Rakdos Carnarium enters the battlefield tapped.\nWhen Rakdos Carnarium enters the battlefield, return a land you control to its owner's hand.\n{T}: Add {B}{R} to your mana pool.",
+      "text": "Rakdos Carnarium enters the battlefield tapped.\nWhen Rakdos Carnarium enters the battlefield, return a land you control to its owner's hand.\n{T}: Add {B}{R}.",
       "type": "Land",
       "types": [
         "Land"
@@ -28142,7 +28134,7 @@
       "subtypes": [
         "Gate"
       ],
-      "text": "Rakdos Guildgate enters the battlefield tapped.\n{T}: Add {B} or {R} to your mana pool.",
+      "text": "Rakdos Guildgate enters the battlefield tapped.\n{T}: Add {B} or {R}.",
       "type": "Land — Gate",
       "types": [
         "Land"
@@ -28221,7 +28213,7 @@
         "CMA"
       ],
       "rarity": "Common",
-      "text": "Rupture Spire enters the battlefield tapped.\nWhen Rupture Spire enters the battlefield, sacrifice it unless you pay {1}.\n{T}: Add one mana of any color to your mana pool.",
+      "text": "Rupture Spire enters the battlefield tapped.\nWhen Rupture Spire enters the battlefield, sacrifice it unless you pay {1}.\n{T}: Add one mana of any color.",
       "type": "Land",
       "types": [
         "Land"
@@ -28299,7 +28291,7 @@
         "C17"
       ],
       "rarity": "Uncommon",
-      "text": "{T}: Add {C} to your mana pool.\n{1}, {T}: Put a storage counter on Saltcrusted Steppe.\n{1}, Remove X storage counters from Saltcrusted Steppe: Add X mana in any combination of {G} and/or {W} to your mana pool.",
+      "text": "{T}: Add {C}.\n{1}, {T}: Put a storage counter on Saltcrusted Steppe.\n{1}, Remove X storage counters from Saltcrusted Steppe: Add X mana in any combination of {G} and/or {W}.",
       "type": "Land",
       "types": [
         "Land"
@@ -28381,7 +28373,7 @@
         "C17"
       ],
       "rarity": "Uncommon",
-      "text": "Savage Lands enters the battlefield tapped.\n{T}: Add {B}, {R}, or {G} to your mana pool.",
+      "text": "Savage Lands enters the battlefield tapped.\n{T}: Add {B}, {R}, or {G}.",
       "type": "Land",
       "types": [
         "Land"
@@ -28463,7 +28455,7 @@
         "C17"
       ],
       "rarity": "Uncommon",
-      "text": "Seaside Citadel enters the battlefield tapped.\n{T}: Add {G}, {W}, or {U} to your mana pool.",
+      "text": "Seaside Citadel enters the battlefield tapped.\n{T}: Add {G}, {W}, or {U}.",
       "type": "Land",
       "types": [
         "Land"
@@ -28550,7 +28542,7 @@
           "text": "Cycling is an activated ability. Effects that interact with activated abilities (such as Stifle or Rings of Brighthearth) will interact with cycling. Effects that interact with spells (such as Remove Soul or Faerie Tauntings) will not."
         }
       ],
-      "text": "Secluded Steppe enters the battlefield tapped.\n{T}: Add {W} to your mana pool.\nCycling {W} ({W}, Discard this card: Draw a card.)",
+      "text": "Secluded Steppe enters the battlefield tapped.\n{T}: Add {W}.\nCycling {W} ({W}, Discard this card: Draw a card.)",
       "type": "Land",
       "types": [
         "Land"
@@ -28628,7 +28620,7 @@
         "CMA"
       ],
       "rarity": "Uncommon",
-      "text": "Sejiri Refuge enters the battlefield tapped.\nWhen Sejiri Refuge enters the battlefield, you gain 1 life.\n{T}: Add {W} or {U} to your mana pool.",
+      "text": "Sejiri Refuge enters the battlefield tapped.\nWhen Sejiri Refuge enters the battlefield, you gain 1 life.\n{T}: Add {W} or {U}.",
       "type": "Land",
       "types": [
         "Land"
@@ -28722,7 +28714,7 @@
       "subtypes": [
         "Gate"
       ],
-      "text": "Selesnya Guildgate enters the battlefield tapped.\n{T}: Add {G} or {W} to your mana pool.",
+      "text": "Selesnya Guildgate enters the battlefield tapped.\n{T}: Add {G} or {W}.",
       "type": "Land — Gate",
       "types": [
         "Land"
@@ -28813,7 +28805,7 @@
           "text": "If this land enters the battlefield and you control no other lands, its ability will force you to return it to your hand."
         }
       ],
-      "text": "Selesnya Sanctuary enters the battlefield tapped.\nWhen Selesnya Sanctuary enters the battlefield, return a land you control to its owner's hand.\n{T}: Add {G}{W} to your mana pool.",
+      "text": "Selesnya Sanctuary enters the battlefield tapped.\nWhen Selesnya Sanctuary enters the battlefield, return a land you control to its owner's hand.\n{T}: Add {G}{W}.",
       "type": "Land",
       "types": [
         "Land"
@@ -28907,7 +28899,7 @@
       "subtypes": [
         "Gate"
       ],
-      "text": "Simic Guildgate enters the battlefield tapped.\n{T}: Add {G} or {U} to your mana pool.",
+      "text": "Simic Guildgate enters the battlefield tapped.\n{T}: Add {G} or {U}.",
       "type": "Land — Gate",
       "types": [
         "Land"
@@ -28992,7 +28984,7 @@
           "text": "Cycling is an activated ability. Effects that interact with activated abilities (such as Stifle or Rings of Brighthearth) will interact with cycling. Effects that interact with spells (such as Remove Soul or Faerie Tauntings) will not."
         }
       ],
-      "text": "Slippery Karst enters the battlefield tapped.\n{T}: Add {G} to your mana pool.\nCycling {2} ({2}, Discard this card: Draw a card.)",
+      "text": "Slippery Karst enters the battlefield tapped.\n{T}: Add {G}.\nCycling {2} ({2}, Discard this card: Draw a card.)",
       "type": "Land",
       "types": [
         "Land"
@@ -29073,7 +29065,7 @@
           "text": "Cycling is an activated ability. Effects that interact with activated abilities (such as Stifle or Rings of Brighthearth) will interact with cycling. Effects that interact with spells (such as Remove Soul or Faerie Tauntings) will not."
         }
       ],
-      "text": "Smoldering Crater enters the battlefield tapped.\n{T}: Add {R} to your mana pool.\nCycling {2} ({2}, Discard this card: Draw a card.)",
+      "text": "Smoldering Crater enters the battlefield tapped.\n{T}: Add {R}.\nCycling {2} ({2}, Discard this card: Draw a card.)",
       "type": "Land",
       "types": [
         "Land"
@@ -29159,7 +29151,7 @@
           "text": "You can sacrifice any Goats you control to activate the third ability, not just Goats created by Springjack Pasture."
         }
       ],
-      "text": "{T}: Add {C} to your mana pool.\n{4}, {T}: Create a 0/1 white Goat creature token.\n{T}, Sacrifice X Goats: Add X mana of any one color to your mana pool. You gain X life.",
+      "text": "{T}: Add {C}.\n{4}, {T}: Create a 0/1 white Goat creature token.\n{T}, Sacrifice X Goats: Add X mana of any one color. You gain X life.",
       "type": "Land",
       "types": [
         "Land"
@@ -29235,7 +29227,7 @@
         "C17"
       ],
       "rarity": "Uncommon",
-      "text": "{T}: Add {C}{C} to your mana pool. Activate this ability only if you control five or more lands.",
+      "text": "{T}: Add {C}{C}. Activate this ability only if you control five or more lands.",
       "type": "Land",
       "types": [
         "Land"
@@ -29402,7 +29394,8 @@
         "C14",
         "DD3_EVG",
         "CMA",
-        "C17"
+        "C17",
+        "DDU"
       ],
       "rarity": "Common",
       "rulings": [
@@ -29411,7 +29404,7 @@
           "text": "Cycling is an activated ability. Effects that interact with activated abilities (such as Stifle or Rings of Brighthearth) will interact with cycling. Effects that interact with spells (such as Remove Soul or Faerie Tauntings) will not."
         }
       ],
-      "text": "Tranquil Thicket enters the battlefield tapped.\n{T}: Add {G} to your mana pool.\nCycling {G} ({G}, Discard this card: Draw a card.)",
+      "text": "Tranquil Thicket enters the battlefield tapped.\n{T}: Add {G}.\nCycling {G} ({G}, Discard this card: Draw a card.)",
       "type": "Land",
       "types": [
         "Land"
@@ -29485,7 +29478,7 @@
         "CMA"
       ],
       "rarity": "Common",
-      "text": "Transguild Promenade enters the battlefield tapped.\nWhen Transguild Promenade enters the battlefield, sacrifice it unless you pay {1}.\n{T}: Add one mana of any color to your mana pool.",
+      "text": "Transguild Promenade enters the battlefield tapped.\nWhen Transguild Promenade enters the battlefield, sacrifice it unless you pay {1}.\n{T}: Add one mana of any color.",
       "type": "Land",
       "types": [
         "Land"
@@ -29568,7 +29561,7 @@
       "subtypes": [
         "Urza’s"
       ],
-      "text": "{T}: Add {C} to your mana pool.\n{7}, {T}: Create a 2/2 colorless Assembly-Worker artifact creature token.",
+      "text": "{T}: Add {C}.\n{7}, {T}: Create a 2/2 colorless Assembly-Worker artifact creature token.",
       "type": "Land — Urza’s",
       "types": [
         "Land"
@@ -29649,7 +29642,7 @@
         "PCA"
       ],
       "rarity": "Uncommon",
-      "text": "{T}: Add {C} to your mana pool.\n{2}{G}{W}, {T}: Create a 1/1 green Saproling creature token.",
+      "text": "{T}: Add {C}.\n{2}{G}{W}, {T}: Create a 1/1 green Saproling creature token.",
       "type": "Land",
       "types": [
         "Land"
@@ -29728,7 +29721,7 @@
         "C17"
       ],
       "rarity": "Uncommon",
-      "text": "Vivid Crag enters the battlefield tapped with two charge counters on it.\n{T}: Add {R} to your mana pool.\n{T}, Remove a charge counter from Vivid Crag: Add one mana of any color to your mana pool.",
+      "text": "Vivid Crag enters the battlefield tapped with two charge counters on it.\n{T}: Add {R}.\n{T}, Remove a charge counter from Vivid Crag: Add one mana of any color.",
       "type": "Land",
       "types": [
         "Land"
@@ -29810,7 +29803,7 @@
         "C17"
       ],
       "rarity": "Uncommon",
-      "text": "Vivid Creek enters the battlefield tapped with two charge counters on it.\n{T}: Add {U} to your mana pool.\n{T}, Remove a charge counter from Vivid Creek: Add one mana of any color to your mana pool.",
+      "text": "Vivid Creek enters the battlefield tapped with two charge counters on it.\n{T}: Add {U}.\n{T}, Remove a charge counter from Vivid Creek: Add one mana of any color.",
       "type": "Land",
       "types": [
         "Land"
@@ -29891,7 +29884,7 @@
         "C17"
       ],
       "rarity": "Uncommon",
-      "text": "Vivid Grove enters the battlefield tapped with two charge counters on it.\n{T}: Add {G} to your mana pool.\n{T}, Remove a charge counter from Vivid Grove: Add one mana of any color to your mana pool.",
+      "text": "Vivid Grove enters the battlefield tapped with two charge counters on it.\n{T}: Add {G}.\n{T}, Remove a charge counter from Vivid Grove: Add one mana of any color.",
       "type": "Land",
       "types": [
         "Land"
@@ -29971,7 +29964,7 @@
         "C17"
       ],
       "rarity": "Uncommon",
-      "text": "Vivid Marsh enters the battlefield tapped with two charge counters on it.\n{T}: Add {B} to your mana pool.\n{T}, Remove a charge counter from Vivid Marsh: Add one mana of any color to your mana pool.",
+      "text": "Vivid Marsh enters the battlefield tapped with two charge counters on it.\n{T}: Add {B}.\n{T}, Remove a charge counter from Vivid Marsh: Add one mana of any color.",
       "type": "Land",
       "types": [
         "Land"
@@ -30322,7 +30315,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -30687,7 +30681,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -31052,7 +31047,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -31417,7 +31413,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -31781,7 +31778,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -32145,7 +32144,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -32509,7 +32510,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -32873,7 +32876,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -33241,7 +33246,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -33609,7 +33615,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -33977,7 +33984,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -34345,7 +34353,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -34715,7 +34724,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -35085,7 +35096,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -35455,7 +35468,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -35825,7 +35840,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -36192,7 +36209,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -36559,7 +36578,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -36926,7 +36947,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -37293,7 +37316,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [

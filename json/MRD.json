@@ -1822,7 +1822,7 @@
         "MRD"
       ],
       "rarity": "Rare",
-      "text": "Each player returns to the battlefield all artifact, creature, enchantment, and land cards in his or her graveyard that were put there from the battlefield this turn.",
+      "text": "Each player returns to the battlefield all artifact, creature, enchantment, and land cards in their graveyard that were put there from the battlefield this turn.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -3794,7 +3794,7 @@
         },
         {
           "date": "2009-10-01",
-          "text": "A noncreature permanent that turns into a creature is subject to the \"summoning sickness\" rule: It can only attack, and its {T} abilities can only be activated, if its controller has continuously controlled that permanent since the beginning of his or her most recent turn."
+          "text": "A noncreature permanent that turns into a creature is subject to the \"summoning sickness\" rule: It can only attack, and its {T} abilities can only be activated, if its controller has continuously controlled that permanent since the beginning of their most recent turn."
         }
       ],
       "text": "Each noncreature artifact is an artifact creature with power and toughness each equal to its converted mana cost. (Equipment that's a creature can't equip a creature.)",
@@ -4464,7 +4464,7 @@
           "text": "Each Shared Fate tracks only the cards it exiled. If the Shared Fate which was responsible for a card being exiled leaves the battlefield, putting another Shared Fate onto the battlefield will not allow you to look at or play that card again."
         }
       ],
-      "text": "If a player would draw a card, that player exiles the top card of one of his or her opponents' libraries face down instead.\nEach player may look at and play cards he or she exiled with Shared Fate.",
+      "text": "If a player would draw a card, that player exiles the top card of one of their opponents' libraries face down instead.\nEach player may look at and play cards they exiled with Shared Fate.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -4733,7 +4733,7 @@
           "text": "This card won't be put into your graveyard until after it's finished resolving, which means it won't be shuffled into your library as part of its own effect."
         }
       ],
-      "text": "Choose one —\n• Each player shuffles his or her hand and graveyard into his or her library.\n• Each player draws seven cards.\nEntwine {2} (Choose both if you pay the entwine cost.)",
+      "text": "Choose one —\n• Each player shuffles their hand and graveyard into their library.\n• Each player draws seven cards.\nEntwine {2} (Choose both if you pay the entwine cost.)",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -5371,7 +5371,7 @@
       "subtypes": [
         "Imp"
       ],
-      "text": "Flying\nWhen Chimney Imp dies, target opponent puts a card from his or her hand on top of his or her library.",
+      "text": "Flying\nWhen Chimney Imp dies, target opponent puts a card from their hand on top of their library.",
       "toughness": "2",
       "type": "Creature — Imp",
       "types": [
@@ -5472,10 +5472,10 @@
         },
         {
           "date": "2009-10-01",
-          "text": "If the targeted creature or player is an illegal target by the time Consume Spirit would resolve, the entire spell is countered. You won't gain any life."
+          "text": "If the targeted permanent or player is an illegal target by the time Consume Spirit would resolve, the entire spell doesn't resolve. You won't gain any life."
         }
       ],
-      "text": "Spend only black mana on X.\nConsume Spirit deals X damage to target creature or player and you gain X life.",
+      "text": "Spend only black mana on X.\nConsume Spirit deals X damage to any target and you gain X life.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -7616,7 +7616,7 @@
           "text": "You can discard either one artifact card or two cards which may or may not be artifacts. If you really want to, you can discard two artifact cards."
         }
       ],
-      "text": "Target player discards two cards unless he or she discards an artifact card.",
+      "text": "Target player discards two cards unless they discard an artifact card.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -7704,7 +7704,7 @@
       "subtypes": [
         "Beast"
       ],
-      "text": "{R}, Exile the top ten cards of your library: Arc-Slogger deals 2 damage to target creature or player.",
+      "text": "{R}, Exile the top ten cards of your library: Arc-Slogger deals 2 damage to any target.",
       "toughness": "5",
       "type": "Creature — Beast",
       "types": [
@@ -8352,7 +8352,7 @@
         "MRD"
       ],
       "rarity": "Uncommon",
-      "text": "As an additional cost to cast Forge Armor, sacrifice an artifact.\nPut X +1/+1 counters on target creature, where X is the sacrificed artifact's converted mana cost.",
+      "text": "As an additional cost to cast this spell, sacrifice an artifact.\nPut X +1/+1 counters on target creature, where X is the sacrificed artifact's converted mana cost.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -8626,7 +8626,7 @@
           "text": "If you cast this with Entwine, you don't get priority in the middle of resolution. You can't steal something, do anything (like attack with it), and then sacrifice it."
         }
       ],
-      "text": "Choose one —\n• Until end of turn, you gain control of target creature and it gains haste.\n• Sacrifice a creature. Grab the Reins deals damage equal to that creature's power to target creature or player.\nEntwine {2}{R} (Choose both if you pay the entwine cost.)",
+      "text": "Choose one —\n• Until end of turn, you gain control of target creature and it gains haste.\n• Sacrifice a creature. Grab the Reins deals damage equal to that creature's power to any target.\nEntwine {2}{R} (Choose both if you pay the entwine cost.)",
       "type": "Instant",
       "types": [
         "Instant"
@@ -9412,7 +9412,7 @@
         "DDG"
       ],
       "rarity": "Common",
-      "text": "Add {R}{R}{R}{R}{R} to your mana pool.",
+      "text": "Add {R}{R}{R}{R}{R}.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -9470,6 +9470,10 @@
         },
         {
           "format": "Ice Age Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
           "legality": "Legal"
         },
         {
@@ -9622,7 +9626,8 @@
         "pFNM",
         "MRD",
         "MMA",
-        "M15"
+        "M15",
+        "DDU"
       ],
       "rarity": "Uncommon",
       "rulings": [
@@ -9635,7 +9640,7 @@
           "text": "Players can only respond once this spell has been cast and all its costs have been paid. No one can try to destroy the artifact you sacrificed to prevent you from casting this spell."
         }
       ],
-      "text": "As an additional cost to cast Shrapnel Blast, sacrifice an artifact.\nShrapnel Blast deals 5 damage to target creature or player.",
+      "text": "As an additional cost to cast this spell, sacrifice an artifact.\nShrapnel Blast deals 5 damage to any target.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -9813,11 +9818,17 @@
         "A25"
       ],
       "rarity": "Common",
+      "rulings": [
+        {
+          "date": "2018-03-16",
+          "text": "Spikeshot Goblin's power is determined as its ability resolves. If Spikeshot Goblin has left the battlefield, use its power as it last existed on the battlefield."
+        }
+      ],
       "subtypes": [
         "Goblin",
         "Shaman"
       ],
-      "text": "{R}, {T}: Spikeshot Goblin deals damage equal to its power to target creature or player.",
+      "text": "{R}, {T}: Spikeshot Goblin deals damage equal to its power to any target.",
       "toughness": "2",
       "type": "Creature — Goblin Shaman",
       "types": [
@@ -9903,7 +9914,7 @@
         "C16"
       ],
       "rarity": "Rare",
-      "text": "As an additional cost to cast Trash for Treasure, sacrifice an artifact.\nReturn target artifact card from your graveyard to the battlefield.",
+      "text": "As an additional cost to cast this spell, sacrifice an artifact.\nReturn target artifact card from your graveyard to the battlefield.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -10733,7 +10744,7 @@
         "MRD"
       ],
       "rarity": "Common",
-      "text": "Destroy target artifact. Add {G}{G}{G} to your mana pool.",
+      "text": "Destroy target artifact. Add {G}{G}{G}.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -10923,7 +10934,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "First strike\n{T}: Destroy target artifact if its converted mana cost is equal to the amount of mana in your mana pool.",
+      "text": "First strike\n{T}: Destroy target artifact if its converted mana cost is equal to the amount of unspent mana you have.",
       "toughness": "2",
       "type": "Legendary Creature — Elf",
       "types": [
@@ -12427,7 +12438,7 @@
         "MRD"
       ],
       "rarity": "Common",
-      "text": "Destroy target Equipment. Add {G} to your mana pool.",
+      "text": "Destroy target Equipment. Add {G}.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -12516,7 +12527,7 @@
         "Elf",
         "Druid"
       ],
-      "text": "{T}: Add an amount of {G} to your mana pool equal to Viridian Joiner's power.",
+      "text": "{T}: Add an amount of {G} equal to Viridian Joiner's power.",
       "toughness": "2",
       "type": "Creature — Elf Druid",
       "types": [
@@ -12602,7 +12613,8 @@
         "MRD",
         "9ED",
         "10E",
-        "C15"
+        "C15",
+        "DDU"
       ],
       "rarity": "Uncommon",
       "subtypes": [
@@ -12956,7 +12968,7 @@
           "text": "You put the counter on Altar of Shadows even if the creature regenerates."
         }
       ],
-      "text": "At the beginning of your precombat main phase, add {B} to your mana pool for each charge counter on Altar of Shadows.\n{7}, {T}: Destroy target creature. Then put a charge counter on Altar of Shadows.",
+      "text": "At the beginning of your precombat main phase, add {B} for each charge counter on Altar of Shadows.\n{7}, {T}: Destroy target creature. Then put a charge counter on Altar of Shadows.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -13131,7 +13143,7 @@
           "text": "The \"precombat main phase\" is the first main phase of the turn. All other main phases are \"postcombat main phases.\""
         }
       ],
-      "text": "At the beginning of each player's precombat main phase, if Blinkmoth Urn is untapped, that player adds {C} to his or her mana pool for each artifact he or she controls.",
+      "text": "At the beginning of each player's precombat main phase, if Blinkmoth Urn is untapped, that player adds {C} for each artifact they control.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -13303,7 +13315,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "Trample\n{3}{R}, Sacrifice an artifact: Bosh, Iron Golem deals damage equal to the sacrificed artifact's converted mana cost to target creature or player.",
+      "text": "Trample\n{3}{R}, Sacrifice an artifact: Bosh, Iron Golem deals damage equal to the sacrificed artifact's converted mana cost to any target.",
       "toughness": "7",
       "type": "Legendary Artifact Creature — Golem",
       "types": [
@@ -13500,7 +13512,7 @@
       "subtypes": [
         "Construct"
       ],
-      "text": "When Cathodion dies, add {C}{C}{C} to your mana pool.",
+      "text": "When Cathodion dies, add {C}{C}{C}.",
       "toughness": "3",
       "type": "Artifact Creature — Construct",
       "types": [
@@ -13584,20 +13596,20 @@
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2004-12-01",
-          "text": "A mana cost of {X}{X} means that you pay twice X. If you want X to be 3, you pay 6 mana to cast Chalice of the Void."
+          "date": "2018-03-16",
+          "text": "A mana cost of {X}{X} means that you pay twice X. If you want X to be 3, you pay {6} to cast Chalice of the Void."
         },
         {
-          "date": "2004-12-01",
-          "text": "The number of counters on Chalice of the Void matters only at the time the spell is cast. Changing the number of charge counters on Chalice of the Void after a spell has been cast won't change whether the ability counters the spell. If the Chalice had the correct number of counters when the spell was cast, its ability will trigger. If the Chalice had too many or too few counters when the spell was cast, the Chalice's ability won't trigger."
+          "date": "2018-03-16",
+          "text": "The number of counters on Chalice of the Void matters only at the time the spell is cast. Changing the number of charge counters on Chalice of the Void after a spell has been cast won't change whether the ability counters the spell."
         },
         {
-          "date": "2004-12-01",
-          "text": "If there are zero charge counters on Chalice of the Void, it counters each spell with a converted mana cost of 0."
+          "date": "2018-03-16",
+          "text": "If there are zero charge counters on Chalice of the Void, it counters each spell with a converted mana cost of 0. This includes face-down creature spells cast with morph's alternative cost."
         },
         {
-          "date": "2004-12-01",
-          "text": "Chalice of the Void has to be on the battlefield at the end of casting a spell for the ability to trigger. If you sacrifice Chalice of the Void as a cost to cast a spell, its ability can't trigger."
+          "date": "2018-03-16",
+          "text": "Chalice of the Void has to be on the battlefield at the end of casting a spell for the ability to trigger. If you sacrifice Chalice of the Void as a cost to cast a spell, its ability can't trigger. However, if it leaves the battlefield once its ability has triggered, that ability will still counter the spell."
         }
       ],
       "text": "Chalice of the Void enters the battlefield with X charge counters on it.\nWhenever a player casts a spell with converted mana cost equal to the number of charge counters on Chalice of the Void, counter that spell.",
@@ -13689,7 +13701,7 @@
           "text": "This is a mana ability, which means it can be activated as part of the process of casting a spell or activating another ability. If that happens you get the mana right away, but you don't get to look at the drawn card until you have finished casting that spell or activating that ability."
         }
       ],
-      "text": "{1}, {T}, Sacrifice Chromatic Sphere: Add one mana of any color to your mana pool. Draw a card.",
+      "text": "{1}, {T}, Sacrifice Chromatic Sphere: Add one mana of any color. Draw a card.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -13779,7 +13791,7 @@
           "text": "If you imprinted a multicolored card, you choose one of that card's colors each time Chrome Mox's ability resolves."
         }
       ],
-      "text": "Imprint — When Chrome Mox enters the battlefield, you may exile a nonartifact, nonland card from your hand.\n{T}: Add one mana of any of the exiled card's colors to your mana pool.",
+      "text": "Imprint — When Chrome Mox enters the battlefield, you may exile a nonartifact, nonland card from your hand.\n{T}: Add one mana of any of the exiled card's colors.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -14291,7 +14303,7 @@
       "subtypes": [
         "Myr"
       ],
-      "text": "{T}: Add {G} to your mana pool.",
+      "text": "{T}: Add {G}.",
       "toughness": "1",
       "type": "Artifact Creature — Myr",
       "types": [
@@ -14464,7 +14476,7 @@
         },
         {
           "date": "2004-12-01",
-          "text": "If the targeted permanent doesn't have the lowest converted mana cost when the ability resolves, the ability is countered and the permanent isn't destroyed."
+          "text": "If the targeted permanent doesn't have the lowest converted mana cost when the ability resolves, the ability doesn't resolve and the permanent isn't destroyed."
         },
         {
           "date": "2004-12-01",
@@ -15267,7 +15279,7 @@
         "MPS"
       ],
       "rarity": "Rare",
-      "text": "Imprint — When Extraplanar Lens enters the battlefield, you may exile target land you control.\nWhenever a land with the same name as the exiled card is tapped for mana, its controller adds one mana to his or her mana pool of any type that land produced.",
+      "text": "Imprint — When Extraplanar Lens enters the battlefield, you may exile target land you control.\nWhenever a land with the same name as the exiled card is tapped for mana, its controller adds one mana of any type that land produced.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -15689,7 +15701,7 @@
         "MRD"
       ],
       "rarity": "Rare",
-      "text": "At the beginning of each player's upkeep, that player reveals the top card of his or her library. If it's an artifact, creature, enchantment, or land card, the player may put it onto the battlefield.",
+      "text": "At the beginning of each player's upkeep, that player reveals the top card of their library. If it's an artifact, creature, enchantment, or land card, the player may put it onto the battlefield.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -15766,10 +15778,11 @@
       "printings": [
         "MRD",
         "M13",
-        "V13"
+        "V13",
+        "DOM"
       ],
       "rarity": "Rare",
-      "text": "{T}: Add three mana of any one color to your mana pool.",
+      "text": "{T}: Add three mana of any one color.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -15858,7 +15871,7 @@
           "text": "If you reveal no land cards, Goblin Charbelcher deals damage equal to the number of cards revealed, and then you may order your library as you like."
         }
       ],
-      "text": "{3}, {T}: Reveal cards from the top of your library until you reveal a land card. Goblin Charbelcher deals damage equal to the number of nonland cards revealed this way to target creature or player. If the revealed land card was a Mountain, Goblin Charbelcher deals double that damage instead. Put the revealed cards on the bottom of your library in any order.",
+      "text": "{3}, {T}: Reveal cards from the top of your library until you reveal a land card. Goblin Charbelcher deals damage equal to the number of nonland cards revealed this way to any target. If the revealed land card was a Mountain, Goblin Charbelcher deals double that damage instead. Put the revealed cards on the bottom of your library in any order.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -16202,7 +16215,7 @@
       "subtypes": [
         "Myr"
       ],
-      "text": "{T}: Add {W} to your mana pool.",
+      "text": "{T}: Add {W}.",
       "toughness": "1",
       "type": "Artifact Creature — Myr",
       "types": [
@@ -16371,7 +16384,7 @@
           "text": "You can pay either of the two costs (but not both at the same time) to activate the ability."
         }
       ],
-      "text": "{3}, {T} or {R}, {T}: Granite Shard deals 1 damage to target creature or player.",
+      "text": "{3}, {T} or {R}, {T}: Granite Shard deals 1 damage to any target.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -16730,29 +16743,14 @@
         "9ED",
         "10E",
         "ME4",
-        "DDH"
+        "DDH",
+        "DOM"
       ],
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2004-10-04",
-          "text": "Tapping a card with an effect like this will never pay the cost of an ability. For example, tapping a land with this card will not put mana into a player's pool."
-        },
-        {
-          "date": "2004-10-04",
-          "text": "Icy Manipulator can't be used to stop someone from using an ability of the permanent you plan to tap. It can be used to make a player use the ability now or to not use it."
-        },
-        {
-          "date": "2004-10-04",
-          "text": "The ability can target a tapped card, but tapping a tapped card does nothing useful. And it will not trigger \"if the card becomes tapped\" effects."
-        },
-        {
-          "date": "2004-10-04",
-          "text": "If you want to stop someone from attacking with a creature by using this card, you must do so before attackers are declared. You can't wait until after attackers are declared and then try to use it to make a creature stop attacking. Note that your opponent can't start declaring attackers without letting you use the Icy Manipulator."
-        },
-        {
-          "date": "2004-10-04",
-          "text": "Tapping an attacking creature which did not tap to attack does not remove the creature from the attack or cause the creature to stop dealing damage."
+          "date": "2018-04-27",
+          "text": "Once a player announces that they're casting a spell or activating an ability, no player may take other actions until the spell or ability has been paid for. Notably, other players can't try to tap that player's permanents to stop them from paying {T} or to stop them from producing enough mana."
         }
       ],
       "text": "{1}, {T}: Tap target artifact, creature, or land.",
@@ -16846,7 +16844,7 @@
       "subtypes": [
         "Myr"
       ],
-      "text": "{T}: Add {R} to your mana pool.",
+      "text": "{T}: Add {R}.",
       "toughness": "1",
       "type": "Artifact Creature — Myr",
       "types": [
@@ -17228,7 +17226,7 @@
       "subtypes": [
         "Myr"
       ],
-      "text": "{T}: Add {B} to your mana pool.",
+      "text": "{T}: Add {B}.",
       "toughness": "1",
       "type": "Artifact Creature — Myr",
       "types": [
@@ -17309,7 +17307,7 @@
         "CMA"
       ],
       "rarity": "Uncommon",
-      "text": "Flash (You may cast this spell any time you could cast an instant.)\n{2}, Sacrifice Leonin Bladetrap: Leonin Bladetrap deals 2 damage to each attacking creature without flying.",
+      "text": "Flash (You may cast this spell any time you could cast an instant.)\n{2}, Sacrifice Leonin Bladetrap: It deals 2 damage to each attacking creature without flying.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -17734,7 +17732,7 @@
       "rulings": [
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         }
       ],
       "text": "{G}, Sacrifice Lifespark Spellbomb: Until end of turn, target land becomes a 3/3 creature that's still a land.\n{1}, Sacrifice Lifespark Spellbomb: Draw a card.",
@@ -18345,7 +18343,7 @@
           "text": "If permanents become untapped during the untap step, Mesmeric Orb's ability will trigger that many times. However, since no player gets priority during the untap step, those abilities wait to be put on the stack until the upkeep starts. At that time, all the \"beginning of upkeep\" triggers will also trigger. Those abililties and Mesmeric Orb's triggers can be put on the stack in any order."
         }
       ],
-      "text": "Whenever a permanent becomes untapped, that permanent's controller puts the top card of his or her library into his or her graveyard.",
+      "text": "Whenever a permanent becomes untapped, that permanent's controller puts the top card of their library into their graveyard.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -18538,7 +18536,7 @@
         },
         {
           "date": "2004-12-01",
-          "text": "You choose which activated abilities the other player activates, and make all decisions as those abilities are activated and when they resolve. For example, you can have your opponent sacrifice his or her creatures to his or her Nantuko Husk or have your opponent's Timberwatch Elf give your blocking creature +X/+X."
+          "text": "You choose which activated abilities the other player activates, and make all decisions as those abilities are activated and when they resolve. For example, you can have your opponent sacrifice their creatures to their Nantuko Husk or have your opponent's Timberwatch Elf give your blocking creature +X/+X."
         },
         {
           "date": "2004-12-01",
@@ -20166,7 +20164,7 @@
           "text": "You can pay either of the two costs (but not both at the same time) to activate the ability."
         }
       ],
-      "text": "{3}, {T} or {W}, {T}: Prevent the next 2 damage that would be dealt to target creature or player this turn.",
+      "text": "{3}, {T} or {W}, {T}: Prevent the next 2 damage that would be dealt to any target this turn.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -20446,7 +20444,7 @@
         },
         {
           "date": "2009-10-01",
-          "text": "No game effect can cause you to lose the game or cause any opponent to win the game while you control Platinum Angel. It doesn't matter whether you have 0 or less life, you're forced to draw a card while your library is empty, you have ten or more poison counters, you're dealt combat damage by Phage the Untouchable, your opponent has Mortal Combat with twenty or more creature cards in his or her graveyard, or so on. You keep playing."
+          "text": "No game effect can cause you to lose the game or cause any opponent to win the game while you control Platinum Angel. It doesn't matter whether you have 0 or less life, you're forced to draw a card while your library is empty, you have ten or more poison counters, you're dealt combat damage by Phage the Untouchable, your opponent has Mortal Combat with twenty or more creature cards in their graveyard, or so on. You keep playing."
         },
         {
           "date": "2009-10-01",
@@ -20620,7 +20618,7 @@
         "MRD"
       ],
       "rarity": "Rare",
-      "text": "{2}{U}, {T}: Put target creature on the bottom of its owner's library. That creature's controller reveals cards from the top of his or her library until he or she reveals a creature card. The player puts that card onto the battlefield and the rest on the bottom of his or her library in any order. Activate this ability only any time you could cast a sorcery.",
+      "text": "{2}{U}, {T}: Put target creature on the bottom of its owner's library. That creature's controller reveals cards from the top of their library until they reveal a creature card. The player puts that card onto the battlefield and the rest on the bottom of their library in any order. Activate this ability only any time you could cast a sorcery.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -20701,10 +20699,10 @@
       "rulings": [
         {
           "date": "2009-02-01",
-          "text": "This ability will trigger even if the player's library is empty at the time he or she is supposed to shuffle it."
+          "text": "This ability will trigger even if the player's library is empty at the time they are supposed to shuffle it."
         }
       ],
-      "text": "Whenever a spell or ability causes a player to shuffle his or her library, Psychogenic Probe deals 2 damage to him or her.",
+      "text": "Whenever a spell or ability causes a player to shuffle their library, Psychogenic Probe deals 2 damage to that player.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -20783,10 +20781,11 @@
       "originalType": "Artifact",
       "printings": [
         "MRD",
-        "MMA"
+        "MMA",
+        "DDU"
       ],
       "rarity": "Common",
-      "text": "{R}, Sacrifice Pyrite Spellbomb: Pyrite Spellbomb deals 2 damage to target creature or player.\n{1}, Sacrifice Pyrite Spellbomb: Draw a card.",
+      "text": "{R}, Sacrifice Pyrite Spellbomb: It deals 2 damage to any target.\n{1}, Sacrifice Pyrite Spellbomb: Draw a card.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -20873,7 +20872,7 @@
           "text": "The timestamp of the land-type-changing ability is set when the triggered ability resolves (so each one has a different timestamp)."
         }
       ],
-      "text": "At the beginning of each player's upkeep, that player puts a flood counter on target non-Island land he or she controls of his or her choice. That land is an Island for as long as it has a flood counter on it.\nAt the beginning of each end step, if all lands on the battlefield are Islands, remove all flood counters from them.",
+      "text": "At the beginning of each player's upkeep, that player puts a flood counter on target non-Island land they control of their choice. That land is an Island for as long as it has a flood counter on it.\nAt the beginning of each end step, if all lands on the battlefield are Islands, remove all flood counters from them.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -21200,7 +21199,7 @@
         "MRD"
       ],
       "rarity": "Uncommon",
-      "text": "{T}: Target player exiles a card from his or her graveyard.\n{1}, Sacrifice Scrabbling Claws: Exile target card from a graveyard. Draw a card.",
+      "text": "{T}: Target player exiles a card from their graveyard.\n{1}, Sacrifice Scrabbling Claws: Exile target card from a graveyard. Draw a card.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -21566,7 +21565,7 @@
       "subtypes": [
         "Myr"
       ],
-      "text": "{T}: Add {U} to your mana pool.",
+      "text": "{T}: Add {U}.",
       "toughness": "1",
       "type": "Artifact Creature — Myr",
       "types": [
@@ -21821,7 +21820,7 @@
       "subtypes": [
         "Soldier"
       ],
-      "text": "{1}{W}, Sacrifice Soldier Replica: Soldier Replica deals 3 damage to target attacking or blocking creature.",
+      "text": "{1}{W}, Sacrifice Soldier Replica: It deals 3 damage to target attacking or blocking creature.",
       "toughness": "3",
       "type": "Artifact Creature — Soldier",
       "types": [
@@ -21904,7 +21903,8 @@
         "C14",
         "C15",
         "MPS",
-        "C16"
+        "C16",
+        "DDU"
       ],
       "rarity": "Rare",
       "subtypes": [
@@ -22635,7 +22635,7 @@
         "E01"
       ],
       "rarity": "Uncommon",
-      "text": "{T}: Add {C} to your mana pool.\n{T}: Add {U} or {B} to your mana pool. Talisman of Dominance deals 1 damage to you.",
+      "text": "{T}: Add {C}.\n{T}: Add {U} or {B}. Talisman of Dominance deals 1 damage to you.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -22716,7 +22716,7 @@
         "MRD"
       ],
       "rarity": "Uncommon",
-      "text": "{T}: Add {C} to your mana pool.\n{T}: Add {R} or {G} to your mana pool. Talisman of Impulse deals 1 damage to you.",
+      "text": "{T}: Add {C}.\n{T}: Add {R} or {G}. Talisman of Impulse deals 1 damage to you.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -22798,7 +22798,7 @@
         "E01"
       ],
       "rarity": "Uncommon",
-      "text": "{T}: Add {C} to your mana pool.\n{T}: Add {B} or {R} to your mana pool. Talisman of Indulgence deals 1 damage to you.",
+      "text": "{T}: Add {C}.\n{T}: Add {B} or {R}. Talisman of Indulgence deals 1 damage to you.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -22879,7 +22879,7 @@
         "MRD"
       ],
       "rarity": "Uncommon",
-      "text": "{T}: Add {C} to your mana pool.\n{T}: Add {W} or {U} to your mana pool. Talisman of Progress deals 1 damage to you.",
+      "text": "{T}: Add {C}.\n{T}: Add {W} or {U}. Talisman of Progress deals 1 damage to you.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -22960,7 +22960,7 @@
         "MRD"
       ],
       "rarity": "Uncommon",
-      "text": "{T}: Add {C} to your mana pool.\n{T}: Add {G} or {W} to your mana pool. Talisman of Unity deals 1 damage to you.",
+      "text": "{T}: Add {C}.\n{T}: Add {G} or {W}. Talisman of Unity deals 1 damage to you.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -23126,7 +23126,7 @@
           "text": "The player gets the mana whether they want it or not. If it isn't spent, it will disappear at the end of the current step (or phase)."
         }
       ],
-      "text": "Whenever a player casts a creature spell, that player adds {G} to his or her mana pool.",
+      "text": "Whenever a player casts a creature spell, that player adds {G}.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -23305,7 +23305,7 @@
           "text": "The second ability triggers only once per spell. If the spell shares both a color and a converted mana cost with the imprinted card, Thought Prison deals 2 damage, not 4."
         }
       ],
-      "text": "Imprint — When Thought Prison enters the battlefield, you may have target player reveal his or her hand. If you do, choose a nonland card from it and exile that card.\nWhenever a player casts a spell that shares a color or converted mana cost with the exiled card, Thought Prison deals 2 damage to that player.",
+      "text": "Imprint — When Thought Prison enters the battlefield, you may have target player reveal their hand. If you do, choose a nonland card from it and exile that card.\nWhenever a player casts a spell that shares a color or converted mana cost with the exiled card, Thought Prison deals 2 damage to that player.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -23385,7 +23385,7 @@
       "rulings": [
         {
           "date": "2004-12-01",
-          "text": "Each player must exile the top card of his or her library at the start of each upkeep step."
+          "text": "Each player must exile the top card of their library at the start of each upkeep step."
         },
         {
           "date": "2004-12-01",
@@ -23393,7 +23393,7 @@
         },
         {
           "date": "2004-12-01",
-          "text": "If a player fails to exile a card, he or she can't take the extra turn."
+          "text": "If a player fails to exile a card, they can't take the extra turn."
         },
         {
           "date": "2004-12-01",
@@ -23416,7 +23416,7 @@
           "text": "In Two-Headed Giant, triggers only once per upkeep, not once for each player."
         }
       ],
-      "text": "At the beginning of each upkeep, each player exiles the top card of his or her library. The player who exiled the card with the highest converted mana cost takes an extra turn after this one. If two or more players' cards are tied for highest cost, the tied players repeat this process until the tie is broken.",
+      "text": "At the beginning of each upkeep, each player exiles the top card of their library. The player who exiled the card with the highest converted mana cost takes an extra turn after this one. If two or more players' cards are tied for highest cost, the tied players repeat this process until the tie is broken.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -23893,7 +23893,7 @@
         "MRD"
       ],
       "rarity": "Rare",
-      "text": "{8}, {T}: Target player puts the top eight cards of his or her library into his or her graveyard.",
+      "text": "{8}, {T}: Target player puts the top eight cards of their library into their graveyard.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -23988,7 +23988,7 @@
       "subtypes": [
         "Construct"
       ],
-      "text": "Triskelion enters the battlefield with three +1/+1 counters on it.\nRemove a +1/+1 counter from Triskelion: Triskelion deals 1 damage to target creature or player.",
+      "text": "Triskelion enters the battlefield with three +1/+1 counters on it.\nRemove a +1/+1 counter from Triskelion: It deals 1 damage to any target.",
       "toughness": "1",
       "type": "Artifact Creature — Construct",
       "types": [
@@ -24070,7 +24070,7 @@
       "subtypes": [
         "Equipment"
       ],
-      "text": "Equipped creature has \"{T}: This creature deals 1 damage to target creature or player.\"\nEquip {3} ({3}: Attach to target creature you control. Equip only as a sorcery. This card enters the battlefield unattached and stays on the battlefield if the creature leaves.)",
+      "text": "Equipped creature has \"{T}: This creature deals 1 damage to any target.\"\nEquip {3} ({3}: Attach to target creature you control. Equip only as a sorcery. This card enters the battlefield unattached and stays on the battlefield if the creature leaves.)",
       "type": "Artifact — Equipment",
       "types": [
         "Artifact"
@@ -24732,7 +24732,7 @@
         "HOP"
       ],
       "rarity": "Common",
-      "text": "(Ancient Den isn't a spell.)\n{T}: Add {W} to your mana pool.",
+      "text": "(Ancient Den isn't a spell.)\n{T}: Add {W}.",
       "type": "Artifact Land",
       "types": [
         "Artifact",
@@ -24810,7 +24810,7 @@
         "MRD"
       ],
       "rarity": "Uncommon",
-      "text": "{T}: Add {C} to your mana pool.\n{2}, {T}: Tap target noncreature artifact.",
+      "text": "{T}: Add {C}.\n{2}, {T}: Tap target noncreature artifact.",
       "type": "Land",
       "types": [
         "Land"
@@ -24891,7 +24891,7 @@
       "subtypes": [
         "Locus"
       ],
-      "text": "Cloudpost enters the battlefield tapped.\n{T}: Add {C} to your mana pool for each Locus on the battlefield.",
+      "text": "Cloudpost enters the battlefield tapped.\n{T}: Add {C} for each Locus on the battlefield.",
       "type": "Land — Locus",
       "types": [
         "Land"
@@ -24969,7 +24969,7 @@
         "MMA"
       ],
       "rarity": "Rare",
-      "text": "At the beginning of the end step, if you control no artifacts, sacrifice Glimmervoid.\n{T}: Add one mana of any color to your mana pool.",
+      "text": "At the beginning of the end step, if you control no artifacts, sacrifice Glimmervoid.\n{T}: Add one mana of any color.",
       "type": "Land",
       "types": [
         "Land"
@@ -25048,10 +25048,11 @@
       "printings": [
         "MRD",
         "HOP",
-        "C14"
+        "C14",
+        "DDU"
       ],
       "rarity": "Common",
-      "text": "{T}: Add {R} to your mana pool.",
+      "text": "{T}: Add {R}.",
       "type": "Artifact Land",
       "types": [
         "Artifact",
@@ -25132,10 +25133,11 @@
         "MRD",
         "HOP",
         "DDF",
-        "C16"
+        "C16",
+        "DDU"
       ],
       "rarity": "Common",
-      "text": "(Seat of the Synod isn't a spell.)\n{T}: Add {U} to your mana pool.",
+      "text": "(Seat of the Synod isn't a spell.)\n{T}: Add {U}.",
       "type": "Artifact Land",
       "types": [
         "Artifact",
@@ -25222,14 +25224,14 @@
       "rulings": [
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         },
         {
           "date": "2009-10-01",
           "text": "Activating the ability that turns it into a creature while it's already a creature will override any effects that set its power and/or toughness to a specific number. However, any effect that raises or lowers power and/or toughness (such as the effect created by Giant Growth, Glorious Anthem, or a +1/+1 counter) will continue to apply."
         }
       ],
-      "text": "{T}: Add {C} to your mana pool.\n{6}: Stalking Stones becomes a 3/3 Elemental artifact creature that's still a land. (This effect lasts indefinitely.)",
+      "text": "{T}: Add {C}.\n{6}: Stalking Stones becomes a 3/3 Elemental artifact creature that's still a land. (This effect lasts indefinitely.)",
       "type": "Land",
       "types": [
         "Land"
@@ -25310,7 +25312,7 @@
         "HOP"
       ],
       "rarity": "Common",
-      "text": "(Tree of Tales isn't a spell.)\n{T}: Add {G} to your mana pool.",
+      "text": "(Tree of Tales isn't a spell.)\n{T}: Add {G}.",
       "type": "Artifact Land",
       "types": [
         "Artifact",
@@ -25392,7 +25394,7 @@
         "HOP"
       ],
       "rarity": "Common",
-      "text": "(Vault of Whispers isn't a spell.)\n{T}: Add {B} to your mana pool.",
+      "text": "(Vault of Whispers isn't a spell.)\n{T}: Add {B}.",
       "type": "Artifact Land",
       "types": [
         "Artifact",
@@ -25764,7 +25766,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -26149,7 +26152,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -26534,7 +26538,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -26919,7 +26924,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -27303,7 +27309,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -27687,7 +27695,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -28071,7 +28081,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -28455,7 +28467,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -28843,7 +28857,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -29231,7 +29246,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -29619,7 +29635,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -30007,7 +30024,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -30397,7 +30415,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -30787,7 +30807,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -31177,7 +31199,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -31567,7 +31591,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -31954,7 +31980,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -32341,7 +32369,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -32728,7 +32758,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -33115,7 +33147,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [

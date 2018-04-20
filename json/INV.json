@@ -978,10 +978,10 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "If the target is not legal on resolution, the spell is countered and you do not get to draw the two cards."
+          "text": "If the target is not legal on resolution, the spell doesn't resolve and you do not get to draw the two cards."
         }
       ],
-      "text": "Kicker {2}{U} (You may pay an additional {2}{U} as you cast this spell.)\nDestroy target artifact or enchantment.\nIf Dismantling Blow was kicked, draw two cards.",
+      "text": "Kicker {2}{U} (You may pay an additional {2}{U} as you cast this spell.)\nDestroy target artifact or enchantment. If this spell was kicked, draw two cards.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -1047,7 +1047,7 @@
           "text": "This is not preventing damage since it does not use the word \"prevent\". It is a replacement."
         }
       ],
-      "text": "If a source would deal 4 or more damage to a creature or player, that source deals 3 damage to that creature or player instead.",
+      "text": "If a source would deal 4 or more damage to a permanent or player, that source deals 3 damage to that permanent or player instead.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -1120,7 +1120,7 @@
           "text": "The effect is best understood if you read it as \"creatures not in the chosen pile can't attack.\""
         }
       ],
-      "text": "At the beginning of combat on each opponent's turn, separate all creatures that player controls into two piles. Only creatures in the pile of his or her choice can attack this turn.",
+      "text": "At the beginning of combat on each opponent's turn, separate all creatures that player controls into two piles. Only creatures in the pile of their choice can attack this turn.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -1185,7 +1185,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "You can activate the ability that grants shroud in response to this card being targeted by a spell or ability. If you do so, then (if this is the spell or abilities only target) the spell or ability will be countered since this card will now be an illegal target."
+          "text": "You can activate the ability that grants shroud in response to this card being targeted by a spell or ability. If you do so, then (if this is the spell or abilities only target) the spell or ability won't resolve since this card will now be an illegal target."
         }
       ],
       "subtypes": [
@@ -1262,7 +1262,7 @@
           "text": "You sacrifice all lands other than the chosen ones. Since you can only choose lands with basic land types, any non-basic lands that don't have a basic land type (even if they have some other land type, as in the case of Cloudpost) are necessarily going to be sacrificed."
         }
       ],
-      "text": "Each player chooses from the lands he or she controls a land of each basic land type, then sacrifices the rest.",
+      "text": "Each player chooses from the lands they control a land of each basic land type, then sacrifices the rest.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -1581,7 +1581,7 @@
         "INV"
       ],
       "rarity": "Common",
-      "text": "Kicker {1} (You may pay an additional {1} as you cast this spell.)\nPrevent the next 2 damage that would be dealt to target creature or player this turn. If Orim's Touch was kicked, prevent the next 4 damage that would be dealt to that creature or player this turn instead.",
+      "text": "Kicker {1} (You may pay an additional {1} as you cast this spell.)\nPrevent the next 2 damage that would be dealt to any target this turn. If this spell was kicked, prevent the next 4 damage that would be dealt to that permanent or player this turn instead.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -3321,7 +3321,7 @@
           "text": "Unless some effect explicitly says otherwise, a creature that can't attack you can still attack a planeswalker you control."
         }
       ],
-      "text": "Domain — Creatures can't attack you unless their controller pays {X} for each creature he or she controls that's attacking you, where X is the number of basic land types among lands you control.",
+      "text": "Domain — Creatures can't attack you unless their controller pays {X} for each creature they control that's attacking you, where X is the number of basic land types among lands you control.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -3814,6 +3814,12 @@
         "A25"
       ],
       "rarity": "Common",
+      "rulings": [
+        {
+          "date": "2018-03-16",
+          "text": "Exclude can target a creature spell that can't be countered. When Exclude resolves, that spell won't be countered, but you'll still draw a card."
+        }
+      ],
       "text": "Counter target creature spell.\nDraw a card.",
       "type": "Instant",
       "types": [
@@ -4356,7 +4362,8 @@
       "originalType": "Instant",
       "printings": [
         "INV",
-        "XLN"
+        "XLN",
+        "DOM"
       ],
       "rarity": "Common",
       "text": "Scry 1. (Look at the top card of your library. You may put that card on the bottom of your library.)\nDraw a card.",
@@ -4497,7 +4504,7 @@
         "INV"
       ],
       "rarity": "Common",
-      "text": "Kicker {1}{B} (You may pay an additional {1}{B} as you cast this spell.)\nDraw three cards, then discard two cards.\nIf Probe was kicked, target player discards two cards.",
+      "text": "Kicker {1}{B} (You may pay an additional {1}{B} as you cast this spell.)\nDraw three cards, then discard two cards. If this spell was kicked, target player discards two cards.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -4557,7 +4564,7 @@
         "DDM"
       ],
       "rarity": "Common",
-      "text": "Kicker {2} (You may pay an additional {2} as you cast this spell.)\nCounter target spell if its converted mana cost is 2 or less. If Prohibit was kicked, counter that spell if its converted mana cost is 4 or less instead.",
+      "text": "Kicker {2} (You may pay an additional {2} as you cast this spell.)\nCounter target spell if its converted mana cost is 2 or less. If this spell was kicked, counter that spell if its converted mana cost is 4 or less instead.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -4634,7 +4641,7 @@
           "text": "The converted mana cost of a split card is determined by the combined mana cost of its two halves."
         }
       ],
-      "text": "Whenever a player chooses one or more targets, each player reveals the top card of his or her library. The player who reveals the card with the highest converted mana cost may change the target or targets. If two or more cards are tied for highest cost, the target or targets remain unchanged. Changing targets this way doesn't trigger abilities of permanents named Psychic Battle.",
+      "text": "Whenever a player chooses one or more targets, each player reveals the top card of their library. The player who reveals the card with the highest converted mana cost may change the target or targets. If two or more cards are tied for highest cost, the target or targets remain unchanged. Changing targets this way doesn't trigger abilities of permanents named Psychic Battle.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -5303,7 +5310,7 @@
         },
         {
           "date": "2006-01-01",
-          "text": "If none of the targeted spell's targets is a land when Teferi's Response would resolve, Teferi's Response is countered on resolution due to having no legal targets."
+          "text": "If none of the targeted spell's targets is a land when Teferi's Response would resolve, Teferi's Response doesn't resolve due to having no legal targets."
         }
       ],
       "text": "Counter target spell or ability an opponent controls that targets a land you control. If a permanent's ability is countered this way, destroy that permanent.\nDraw two cards.",
@@ -6171,7 +6178,7 @@
         "VMA"
       ],
       "rarity": "Uncommon",
-      "text": "Choose a color. Target player reveals his or her hand and you choose a card of that color from it. That player discards that card.",
+      "text": "Choose a color. Target player reveals their hand and you choose a card of that color from it. That player discards that card.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -6232,7 +6239,7 @@
         "DDH"
       ],
       "rarity": "Common",
-      "text": "Kicker {1}{R} (You may pay an additional {1}{R} as you cast this spell.)\nDestroy target nonblack creature. It can't be regenerated. If Agonizing Demise was kicked, it deals damage equal to that creature's power to the creature's controller.",
+      "text": "Kicker {1}{R} (You may pay an additional {1}{R} as you cast this spell.)\nDestroy target nonblack creature. It can't be regenerated. If this spell was kicked, Agonizing Demise deals damage equal to that creature's power to the creature's controller.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -6363,7 +6370,7 @@
       "rulings": [
         {
           "date": "2016-06-08",
-          "text": "If the targeted creature is an illegal target when Annihilate tries to resolve, the entire spell is countered. You won't draw a card."
+          "text": "If the targeted creature is an illegal target when Annihilate tries to resolve, the entire spell doesn't resolve. You won't draw a card."
         }
       ],
       "text": "Destroy target nonblack creature. It can't be regenerated.\nDraw a card.",
@@ -6431,7 +6438,7 @@
         "Human",
         "Wizard"
       ],
-      "text": "{1}: Add {B} to your mana pool.",
+      "text": "{1}: Add {B}.",
       "toughness": "1",
       "type": "Creature — Human Wizard",
       "types": [
@@ -6513,7 +6520,7 @@
         },
         {
           "date": "2012-10-01",
-          "text": "If the target card is no longer in the graveyard when Cremate tries to resolve, it will be countered and none of its effects will happen. You won't draw a card."
+          "text": "If the target card is no longer in the graveyard when Cremate tries to resolve, it won't resolve and none of its effects will happen. You won't draw a card."
         }
       ],
       "text": "Exile target card from a graveyard.\nDraw a card.",
@@ -7356,7 +7363,7 @@
         "DDM"
       ],
       "rarity": "Common",
-      "text": "Kicker {4} (You may pay an additional {4} as you cast this spell.)\nTarget player discards a card. If Hypnotic Cloud was kicked, that player discards three cards instead.",
+      "text": "Kicker {4} (You may pay an additional {4} as you cast this spell.)\nTarget player discards a card. If this spell was kicked, that player discards three cards instead.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -8225,6 +8232,10 @@
           "legality": "Legal"
         },
         {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -8386,7 +8397,7 @@
           "text": "Will give 1 life for each black mana used, but not more life than the amount of unprevented damage that is dealt."
         }
       ],
-      "text": "Spend only black and/or red mana on X.\nSoul Burn deals X damage to target creature or player. You gain life equal to the damage dealt, but not more than the amount of {B} spent on X, the player's life total before Soul Burn dealt damage, or the creature's toughness.",
+      "text": "Spend only black and/or red mana on X.\nSoul Burn deals X damage to any target. You gain life equal to the damage dealt, but not more than the amount of {B} spent on X, the player's life total before the damage was dealt, the planeswalker's loyalty before the damage was dealt, or the creature's toughness.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -8699,7 +8710,7 @@
         "INV"
       ],
       "rarity": "Rare",
-      "text": "Choose a creature type. Target player reveals his or her hand and discards all creature cards of that type. Then destroy all creatures of that type that player controls. They can't be regenerated.",
+      "text": "Choose a creature type. Target player reveals their hand and discards all creature cards of that type. Then destroy all creatures of that type that player controls. They can't be regenerated.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -8770,7 +8781,7 @@
           "text": "For purposes of ordering any continuous effects of the creatures, the current player (not the controller of this spell) decides the ordering regardless of which player is putting the creatures onto the battlefield."
         }
       ],
-      "text": "You may cast Twilight's Call as though it had flash if you pay {2} more to cast it. (You may cast it any time you could cast an instant.)\nEach player returns all creature cards from his or her graveyard to the battlefield.",
+      "text": "You may cast Twilight's Call as though it had flash if you pay {2} more to cast it. (You may cast it any time you could cast an instant.)\nEach player returns all creature cards from their graveyard to the battlefield.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -9235,7 +9246,7 @@
         "INV"
       ],
       "rarity": "Rare",
-      "text": "Each player separates all nontoken lands he or she controls into two piles. For each player, one of his or her piles is chosen by one of his or her opponents of his or her choice. Destroy all lands in the chosen piles. Tap all lands in the other piles.",
+      "text": "Each player separates all nontoken lands they control into two piles. For each player, one of their piles is chosen by one of their opponents of their choice. Destroy all lands in the chosen piles. Tap all lands in the other piles.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -9298,7 +9309,7 @@
         "C15"
       ],
       "rarity": "Uncommon",
-      "text": "Kicker {2} (You may pay an additional {2} as you cast this spell.)\nBreath of Darigaaz deals 1 damage to each creature without flying and each player. If Breath of Darigaaz was kicked, it deals 4 damage to each creature without flying and each player instead.",
+      "text": "Kicker {2} (You may pay an additional {2} as you cast this spell.)\nBreath of Darigaaz deals 1 damage to each creature without flying and each player. If this spell was kicked, it deals 4 damage to each creature without flying and each player instead.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -9428,7 +9439,7 @@
           "text": "If a turn has multiple combat phases, this spell can be cast during any of them as long as it's after the beginning of that phase's Declare Blockers Step."
         }
       ],
-      "text": "Cast Chaotic Strike only during combat after blockers are declared.\nFlip a coin. If you win the flip, target creature gets +1/+1 until end of turn.\nDraw a card.",
+      "text": "Cast this spell only during combat after blockers are declared.\nFlip a coin. If you win the flip, target creature gets +1/+1 until end of turn.\nDraw a card.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -9501,7 +9512,7 @@
           "text": "A number of nonbasic lands have basic land types. Domain abilities don't count the number of lands you control — they count the number of basic land types among lands you control, even if that means checking the same land twice. For example, if you control a Tundra, an Overgrown Tomb, and a Madblind Mountain, you'll have a Plains, Island, Swamp, Mountain, and Forest among the lands you control. Your domain abilities will be maxed out."
         }
       ],
-      "text": "Domain — At the beginning of each player's upkeep, that player gains 1 life for each basic land type among lands he or she controls. Then Collapsing Borders deals 3 damage to him or her.",
+      "text": "Domain — At the beginning of each player's upkeep, that player gains 1 life for each basic land type among lands they control. Then Collapsing Borders deals 3 damage to that player.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -9711,7 +9722,7 @@
           "text": "The extra 2 mana to cast it as an instant does not count as part of the mana cost."
         }
       ],
-      "text": "You may cast Ghitu Fire as though it had flash if you pay {2} more to cast it. (You may cast it any time you could cast an instant.)\nGhitu Fire deals X damage to target creature or player.",
+      "text": "You may cast Ghitu Fire as though it had flash if you pay {2} more to cast it. (You may cast it any time you could cast an instant.)\nGhitu Fire deals X damage to any target.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -10541,7 +10552,7 @@
           "text": "Counterspells can be cast that target it, but when they resolve they simply don't counter it since it can't be countered."
         }
       ],
-      "text": "Obliterate can't be countered.\nDestroy all artifacts, creatures, and lands. They can't be regenerated.",
+      "text": "This spell can't be countered.\nDestroy all artifacts, creatures, and lands. They can't be regenerated.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -10600,7 +10611,7 @@
         "INV"
       ],
       "rarity": "Common",
-      "text": "Kicker {2} (You may pay an additional {2} as you cast this spell.)\nDestroy target artifact if its converted mana cost is 2 or less. If Overload was kicked, destroy that artifact if its converted mana cost is 5 or less instead.",
+      "text": "Kicker {2} (You may pay an additional {2} as you cast this spell.)\nDestroy target artifact if its converted mana cost is 2 or less. If this spell was kicked, destroy that artifact if its converted mana cost is 5 or less instead.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -10942,7 +10953,7 @@
           "text": "Only affects creatures you control when this spell resolves."
         }
       ],
-      "text": "Kicker {G} (You may pay an additional {G} as you cast this spell.)\nCreatures you control gain first strike until end of turn. If Savage Offensive was kicked, they get +1/+1 until end of turn.",
+      "text": "Kicker {G} (You may pay an additional {G} as you cast this spell.)\nCreatures you control gain first strike until end of turn. If this spell was kicked, they get +1/+1 until end of turn.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -11072,7 +11083,7 @@
         "INV"
       ],
       "rarity": "Common",
-      "text": "Kicker {R} (You may pay an additional {R} as you cast this spell.)\nScorching Lava deals 2 damage to target creature or player. If Scorching Lava was kicked, that creature can't be regenerated this turn and if it would die this turn, exile it instead.",
+      "text": "Kicker {R} (You may pay an additional {R} as you cast this spell.)\nScorching Lava deals 2 damage to any target. If this spell was kicked, that creature can't be regenerated this turn and if it would die this turn, exile it instead.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -11386,13 +11397,20 @@
       "originalType": "Creature — Elemental",
       "power": "5",
       "printings": [
-        "INV"
+        "INV",
+        "DOM"
       ],
       "rarity": "Rare",
+      "rulings": [
+        {
+          "date": "2018-04-27",
+          "text": "Skizzik's ability checks at each end step whether it was kicked while it was being cast. You don't have to pay its kicker cost each turn (and can't do so, even if you really want to kick it again)."
+        }
+      ],
       "subtypes": [
         "Elemental"
       ],
-      "text": "Kicker {R} (You may pay an additional {R} as you cast this spell.)\nTrample, haste\nAt the beginning of the end step, sacrifice Skizzik unless it was kicked.",
+      "text": "Kicker {R} (You may pay an additional {R} as you cast this spell.)\nTrample, haste\nAt the beginning of the end step, if Skizzik wasn't kicked, sacrifice it.",
       "toughness": "3",
       "type": "Creature — Elemental",
       "types": [
@@ -11878,7 +11896,7 @@
           "text": "A number of nonbasic lands have basic land types. Domain abilities don't count the number of lands you control — they count the number of basic land types among lands you control, even if that means checking the same land twice. For example, if you control a Tundra, an Overgrown Tomb, and a Madblind Mountain, you'll have a Plains, Island, Swamp, Mountain, and Forest among the lands you control. Your domain abilities will be maxed out."
         }
       ],
-      "text": "Domain — Tribal Flames deals X damage to target creature or player, where X is the number of basic land types among lands you control.",
+      "text": "Domain — Tribal Flames deals X damage to any target, where X is the number of basic land types among lands you control.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -12020,14 +12038,10 @@
         },
         {
           "date": "2004-10-04",
-          "text": "It can be countered by game rules, such as by having all its targets be illegal. Game rules are neither spells or abilities."
-        },
-        {
-          "date": "2004-10-04",
           "text": "Counterspells can be cast that target it, but when they resolve they simply don't counter it since it can't be countered."
         }
       ],
-      "text": "Kicker {8}{R} (You may pay an additional {8}{R} as you cast this spell.)\nUrza's Rage can't be countered by spells or abilities.\nUrza's Rage deals 3 damage to target creature or player. If Urza's Rage was kicked, instead it deals 10 damage to that creature or player and the damage can't be prevented.",
+      "text": "Kicker {8}{R} (You may pay an additional {8}{R} as you cast this spell.)\nThis spell can't be countered.\nUrza's Rage deals 3 damage to any target. If this spell was kicked, instead it deals 10 damage to that permanent or player and the damage can't be prevented.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -12153,7 +12167,7 @@
         "INV"
       ],
       "rarity": "Common",
-      "text": "Zap deals 1 damage to target creature or player.\nDraw a card.",
+      "text": "Zap deals 1 damage to any target.\nDraw a card.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -12194,6 +12208,10 @@
           "legality": "Legal"
         },
         {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -12222,7 +12240,7 @@
       "rulings": [
         {
           "date": "2018-01-19",
-          "text": "If the target creature is an illegal target by the time Aggressive Urge tries to resolve, the spell is countered. You won't draw a card."
+          "text": "If the target creature is an illegal target by the time Aggressive Urge tries to resolve, the spell doesn't resolve. You won't draw a card."
         }
       ],
       "text": "Target creature gets +1/+1 until end of turn.\nDraw a card.",
@@ -12365,7 +12383,7 @@
       "subtypes": [
         "Mongoose"
       ],
-      "text": "Blurred Mongoose can't be countered.\nShroud (This creature can't be the target of spells or abilities.)",
+      "text": "This spell can't be countered.\nShroud (This creature can't be the target of spells or abilities.)",
       "toughness": "1",
       "type": "Creature — Mongoose",
       "types": [
@@ -12425,7 +12443,7 @@
         "INV"
       ],
       "rarity": "Uncommon",
-      "text": "Kicker {2} (You may pay an additional {2} as you cast this spell.)\nCanopy Surge deals 1 damage to each creature with flying and each player. If Canopy Surge was kicked, it deals 4 damage to each creature with flying and each player instead.",
+      "text": "Kicker {2} (You may pay an additional {2} as you cast this spell.)\nCanopy Surge deals 1 damage to each creature with flying and each player. If this spell was kicked, it deals 4 damage to each creature with flying and each player instead.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -12642,7 +12660,7 @@
         "INV"
       ],
       "rarity": "Common",
-      "text": "Kicker {5} (You may pay an additional {5} as you cast this spell.)\nTarget creature gets +2/+2 until end of turn. If Explosive Growth was kicked, that creature gets +5/+5 until end of turn instead.",
+      "text": "Kicker {5} (You may pay an additional {5} as you cast this spell.)\nTarget creature gets +2/+2 until end of turn. If this spell was kicked, that creature gets +5/+5 until end of turn instead.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -12723,7 +12741,7 @@
       "subtypes": [
         "Aura"
       ],
-      "text": "Enchant land\nWhenever enchanted land is tapped for mana, its controller adds one mana of any color to his or her mana pool (in addition to the mana the land produces).",
+      "text": "Enchant land\nWhenever enchanted land is tapped for mana, its controller adds an additional one mana of any color.",
       "type": "Enchantment — Aura",
       "types": [
         "Enchantment"
@@ -12817,7 +12835,7 @@
           "text": "Because the \"search\" requires you to find a card with certain characteristics, you don't have to find the card if you don't want to."
         }
       ],
-      "text": "As an additional cost to cast Harrow, sacrifice a land.\nSearch your library for up to two basic land cards and put them onto the battlefield. Then shuffle your library.",
+      "text": "As an additional cost to cast this spell, sacrifice a land.\nSearch your library for up to two basic land cards and put them onto the battlefield. Then shuffle your library.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -12956,7 +12974,7 @@
       "subtypes": [
         "Kavu"
       ],
-      "text": "Kavu Chameleon can't be countered.\n{G}: Kavu Chameleon becomes the color of your choice until end of turn.",
+      "text": "This spell can't be countered.\n{G}: Kavu Chameleon becomes the color of your choice until end of turn.",
       "toughness": "4",
       "type": "Creature — Kavu",
       "types": [
@@ -13425,7 +13443,7 @@
         "Human",
         "Wizard"
       ],
-      "text": "{2}: Target red or white creature gains trample until end of turn. (If the creature would assign enough damage to its blockers to destroy them, you may have it assign the rest of its damage to defending player or planeswalker.)",
+      "text": "{2}: Target red or white creature gains trample until end of turn. (If the creature would assign enough damage to its blockers to destroy them, you may have it assign the rest of its damage to the player or planeswalker it's attacking.)",
       "toughness": "1",
       "type": "Creature — Human Wizard",
       "types": [
@@ -13500,7 +13518,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "Trample (This creature can deal excess combat damage to defending player or planeswalker while attacking.)\nMolimo, Maro-Sorcerer's power and toughness are each equal to the number of lands you control.",
+      "text": "Trample (This creature can deal excess combat damage to the player or planeswalker it's attacking.)\nMolimo, Maro-Sorcerer's power and toughness are each equal to the number of lands you control.",
       "toughness": "*",
       "type": "Legendary Creature — Elemental",
       "types": [
@@ -13567,7 +13585,7 @@
         "Elf",
         "Nomad"
       ],
-      "text": "{1}{G}: Add one mana of any color to your mana pool.",
+      "text": "{1}{G}: Add one mana of any color.",
       "toughness": "2",
       "type": "Creature — Elf Nomad",
       "types": [
@@ -13777,7 +13795,7 @@
         "Elf",
         "Druid"
       ],
-      "text": "As Quirion Elves enters the battlefield, choose a color.\n{T}: Add {G} to your mana pool.\n{T}: Add one mana of the chosen color to your mana pool.",
+      "text": "As Quirion Elves enters the battlefield, choose a color.\n{T}: Add {G}.\n{T}: Add one mana of the chosen color.",
       "toughness": "1",
       "type": "Creature — Elf Druid",
       "types": [
@@ -13853,7 +13871,7 @@
         "Elf",
         "Druid"
       ],
-      "text": "When Quirion Sentinel enters the battlefield, add one mana of any color to your mana pool.",
+      "text": "When Quirion Sentinel enters the battlefield, add one mana of any color.",
       "toughness": "1",
       "type": "Creature — Elf Druid",
       "types": [
@@ -14789,7 +14807,7 @@
         "Treefolk",
         "Cleric"
       ],
-      "text": "{2}{W}, {T}: Prevent the next 2 damage that would be dealt to target creature or player this turn.",
+      "text": "{2}{W}, {T}: Prevent the next 2 damage that would be dealt to any target this turn.",
       "toughness": "3",
       "type": "Creature — Treefolk Cleric",
       "types": [
@@ -14859,7 +14877,7 @@
       "subtypes": [
         "Plant"
       ],
-      "text": "{T}: Add one mana of any color to your mana pool.",
+      "text": "{T}: Add one mana of any color.",
       "toughness": "2",
       "type": "Creature — Plant",
       "types": [
@@ -15071,7 +15089,7 @@
         "INV"
       ],
       "rarity": "Common",
-      "text": "Kicker {W} (You may pay an additional {W} as you cast this spell.)\nTarget creature gains trample until end of turn. Whenever that creature deals combat damage this turn, if Vigorous Charge was kicked, you gain life equal to that damage.",
+      "text": "Kicker {W} (You may pay an additional {W} as you cast this spell.)\nTarget creature gains trample until end of turn. Whenever that creature deals combat damage this turn, if this spell was kicked, you gain life equal to that damage.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -15621,7 +15639,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "You can activate the ability that grants shroud in response to this card being targeted by a spell or ability. If you do so, then (if this is the spell or abilities only target) the spell or ability will be countered since this card will now be an illegal target."
+          "text": "You can activate the ability that grants shroud in response to this card being targeted by a spell or ability. If you do so, then (if this is the spell or abilities only target) the spell or ability won't resolve since this card will now be an illegal target."
         }
       ],
       "subtypes": [
@@ -15764,7 +15782,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "This spell is countered and you get no Saprolings if the enchantment is an illegal target on resolution."
+          "text": "This spell doesn't resolve and you get no Saprolings if the enchantment is an illegal target on resolution."
         }
       ],
       "text": "Destroy target enchantment. Create X 1/1 green Saproling creature tokens, where X is that enchantment's converted mana cost.",
@@ -15895,7 +15913,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "Being untapped is a targeting restriction. If the target is tapped before this spell resolves, then this spell is countered."
+          "text": "Being untapped is a targeting restriction. If the target is tapped before this spell resolves, then this spell doesn't resolve."
         }
       ],
       "text": "Tap target untapped creature. That creature deals damage equal to its power to its controller.",
@@ -16177,7 +16195,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "If the targeted creature card in the graveyard is removed before resolution, this spell will be countered since its only target will be invalid."
+          "text": "If the targeted creature card in the graveyard is removed before resolution, this spell won't resolve since its only target will be invalid."
         },
         {
           "date": "2004-10-04",
@@ -16188,7 +16206,7 @@
           "text": "You must have a creature in your graveyard to cast this spell since it requires a valid target."
         }
       ],
-      "text": "Cast Cauldron Dance only during combat.\nReturn target creature card from your graveyard to the battlefield. That creature gains haste. Return it to your hand at the beginning of the next end step.\nYou may put a creature card from your hand onto the battlefield. That creature gains haste. Its controller sacrifices it at the beginning of the next end step.",
+      "text": "Cast this spell only during combat.\nReturn target creature card from your graveyard to the battlefield. That creature gains haste. Return it to your hand at the beginning of the next end step.\nYou may put a creature card from your hand onto the battlefield. That creature gains haste. Its controller sacrifices it at the beginning of the next end step.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -16321,7 +16339,7 @@
       "subtypes": [
         "Shade"
       ],
-      "text": "{B}: Cinder Shade gets +1/+1 until end of turn.\n{R}, Sacrifice Cinder Shade: Cinder Shade deals damage equal to its power to target creature.",
+      "text": "{B}: Cinder Shade gets +1/+1 until end of turn.\n{R}, Sacrifice Cinder Shade: It deals damage equal to its power to target creature.",
       "toughness": "1",
       "type": "Creature — Shade",
       "types": [
@@ -16483,7 +16501,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "Flying\nWhenever Crosis, the Purger deals combat damage to a player, you may pay {2}{B}. If you do, choose a color, then that player reveals his or her hand and discards all cards of that color.",
+      "text": "Flying\nWhenever Crosis, the Purger deals combat damage to a player, you may pay {2}{B}. If you do, choose a color, then that player reveals their hand and discards all cards of that color.",
       "toughness": "6",
       "type": "Legendary Creature — Dragon",
       "types": [
@@ -16561,7 +16579,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "Flying\nWhenever Darigaaz, the Igniter deals combat damage to a player, you may pay {2}{R}. If you do, choose a color, then that player reveals his or her hand and Darigaaz deals damage to the player equal to the number of cards of that color revealed this way.",
+      "text": "Flying\nWhenever Darigaaz, the Igniter deals combat damage to a player, you may pay {2}{R}. If you do, choose a color, then that player reveals their hand and Darigaaz deals damage to the player equal to the number of cards of that color revealed this way.",
       "toughness": "6",
       "type": "Legendary Creature — Dragon",
       "types": [
@@ -16854,7 +16872,7 @@
         },
         {
           "date": "2013-01-24",
-          "text": "If the target land is an illegal target when Frenzied Tilling tries to resolve, the spell will be countered and none of its effects will happen. You won't search your library for a basic land card."
+          "text": "If the target land is an illegal target when Frenzied Tilling tries to resolve, the spell won't resolve and none of its effects will happen. You won't search your library for a basic land card."
         }
       ],
       "text": "Destroy target land. Search your library for a basic land card and put that card onto the battlefield tapped. Then shuffle your library.",
@@ -17205,7 +17223,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "Being \"without flying\" is a targeting restriction. The ability will be countered if the target gains flying before the ability resolves."
+          "text": "Being \"without flying\" is a targeting restriction. The ability won't resolve if the target gains flying before the ability resolves."
         }
       ],
       "subtypes": [
@@ -17439,7 +17457,7 @@
           "text": "The copies must be found if they are in publicly viewable zones. Finding copies while searching private zones is optional."
         }
       ],
-      "text": "Target player reveals his or her hand, then you choose a card other than a basic land card from it. Search that player's graveyard, hand, and library for all cards with the same name as the chosen card and exile them. Then that player shuffles his or her library.",
+      "text": "Target player reveals their hand, then you choose a card other than a basic land card from it. Search that player's graveyard, hand, and library for all cards with the same name as the chosen card and exile them. Then that player shuffles their library.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -17501,7 +17519,7 @@
         "INV"
       ],
       "rarity": "Rare",
-      "text": "{2}{R}{G}, Discard two cards at random: Meteor Storm deals 4 damage to target creature or player.",
+      "text": "{2}{R}{G}, Discard two cards at random: Meteor Storm deals 4 damage to any target.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -17715,7 +17733,7 @@
           "text": "This card's ability is a mana ability. There is no chance to respond to it in order to prevent the damage. If you want to prevent the damage, you need to use a prevention spell or ability prior to tapping the land for mana."
         }
       ],
-      "text": "Whenever a player taps a land for mana, that player adds one mana to his or her mana pool of any type that land produced, and Overabundance deals 1 damage to him or her.",
+      "text": "Whenever a player taps a land for mana, that player adds one mana of any type that land produced, and Overabundance deals 1 damage to the player.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -17842,7 +17860,7 @@
       "subtypes": [
         "Zombie"
       ],
-      "text": "At the beginning of your upkeep, if Pyre Zombie is in your graveyard, you may pay {1}{B}{B}. If you do, return Pyre Zombie to your hand.\n{1}{R}{R}, Sacrifice Pyre Zombie: Pyre Zombie deals 2 damage to target creature or player.",
+      "text": "At the beginning of your upkeep, if Pyre Zombie is in your graveyard, you may pay {1}{B}{B}. If you do, return Pyre Zombie to your hand.\n{1}{R}{R}, Sacrifice Pyre Zombie: It deals 2 damage to any target.",
       "toughness": "1",
       "type": "Creature — Zombie",
       "types": [
@@ -17973,7 +17991,7 @@
         "INV"
       ],
       "rarity": "Rare",
-      "text": "{1}, Pay 2 life: Reckless Assault deals 1 damage to target creature or player.",
+      "text": "{1}, Pay 2 life: Reckless Assault deals 1 damage to any target.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -18381,7 +18399,7 @@
         "Cleric",
         "Archer"
       ],
-      "text": "{T}: Prevent the next 1 damage that would be dealt to target creature or player this turn.\n{T}: Samite Archer deals 1 damage to target creature or player.",
+      "text": "{T}: Prevent the next 1 damage that would be dealt to any target this turn.\n{T}: Samite Archer deals 1 damage to any target.",
       "toughness": "1",
       "type": "Creature — Human Cleric Archer",
       "types": [
@@ -18776,7 +18794,7 @@
           "text": "If you cast this as normal during your main phase, it will enter the battlefield and you'll receive priority. If no abilities trigger because of this, you can activate its ability immediately, before any other player has a chance to remove it from the battlefield."
         }
       ],
-      "text": "At the beginning of your upkeep, target player loses 1 life.\nSacrifice Smoldering Tar: Smoldering Tar deals 4 damage to target creature. Activate this ability only any time you could cast a sorcery.",
+      "text": "At the beginning of your upkeep, target player loses 1 life.\nSacrifice Smoldering Tar: It deals 4 damage to target creature. Activate this ability only any time you could cast a sorcery.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -18844,7 +18862,7 @@
           "text": "The sacrifice is mandatory. The last \"if you do\" only fails if for some reason you could not sacrifice."
         }
       ],
-      "text": "Cast Spinal Embrace only during combat.\nUntap target creature you don't control and gain control of it. It gains haste until end of turn. At the beginning of the next end step, sacrifice it. If you do, you gain life equal to its toughness.",
+      "text": "Cast this spell only during combat.\nUntap target creature you don't control and gain control of it. It gains haste until end of turn. At the beginning of the next end step, sacrifice it. If you do, you gain life equal to its toughness.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -19612,7 +19630,7 @@
           "text": "The target player is chosen as you announce Void, but the number isn't chosen until it's resolving. No player may choose to take actions between you choosing a number and the rest of Void's effects."
         }
       ],
-      "text": "Choose a number. Destroy all artifacts and creatures with converted mana cost equal to that number. Then target player reveals his or her hand and discards all nonland cards with converted mana cost equal to the number.",
+      "text": "Choose a number. Destroy all artifacts and creatures with converted mana cost equal to that number. Then target player reveals their hand and discards all nonland cards with converted mana cost equal to the number.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -20411,7 +20429,7 @@
         "HOP"
       ],
       "rarity": "Uncommon",
-      "text": "Assault deals 2 damage to target creature or player.",
+      "text": "Assault deals 2 damage to any target.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -20769,7 +20787,7 @@
         "INV"
       ],
       "rarity": "Uncommon",
-      "text": "{T}: Add {B} or {R} to your mana pool.",
+      "text": "{T}: Add {B} or {R}.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -20838,7 +20856,7 @@
           "text": "This is a mana ability, which means it can be activated as part of the process of casting a spell or activating another ability. If that happens you get the mana right away, but you don't get to look at the drawn card until you have finished casting that spell or activating that ability."
         }
       ],
-      "text": "{1}, {T}, Sacrifice Chromatic Sphere: Add one mana of any color to your mana pool. Draw a card.",
+      "text": "{1}, {T}, Sacrifice Chromatic Sphere: Add one mana of any color. Draw a card.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -20901,7 +20919,7 @@
       "subtypes": [
         "Golem"
       ],
-      "text": "{1}, Sacrifice Crosis's Attendant: Add {U}{B}{R} to your mana pool.",
+      "text": "{1}, Sacrifice Crosis's Attendant: Add {U}{B}{R}.",
       "toughness": "3",
       "type": "Artifact Creature — Golem",
       "types": [
@@ -20966,7 +20984,7 @@
       "subtypes": [
         "Golem"
       ],
-      "text": "{1}, Sacrifice Darigaaz's Attendant: Add {B}{R}{G} to your mana pool.",
+      "text": "{1}, Sacrifice Darigaaz's Attendant: Add {B}{R}{G}.",
       "toughness": "3",
       "type": "Artifact Creature — Golem",
       "types": [
@@ -21026,7 +21044,7 @@
         "INV"
       ],
       "rarity": "Uncommon",
-      "text": "{T}: Add {U} or {B} to your mana pool.",
+      "text": "{T}: Add {U} or {B}.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -21089,7 +21107,7 @@
       "subtypes": [
         "Golem"
       ],
-      "text": "{1}, Sacrifice Dromar's Attendant: Add {W}{U}{B} to your mana pool.",
+      "text": "{1}, Sacrifice Dromar's Attendant: Add {W}{U}{B}.",
       "toughness": "3",
       "type": "Artifact Creature — Golem",
       "types": [
@@ -21203,7 +21221,7 @@
       "subtypes": [
         "Dragon"
       ],
-      "text": "Flying\n{T}: Add one mana of any color to your mana pool.",
+      "text": "Flying\n{T}: Add one mana of any color.",
       "toughness": "4",
       "type": "Artifact Creature — Dragon",
       "types": [
@@ -21259,7 +21277,7 @@
         "INV"
       ],
       "rarity": "Rare",
-      "text": "Sacrifice a creature: Add one mana of any color to your mana pool.",
+      "text": "Sacrifice a creature: Add one mana of any color.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -21313,7 +21331,7 @@
         "INV"
       ],
       "rarity": "Rare",
-      "text": "{T}, Pay 1 life: Add one mana of any color to your mana pool.",
+      "text": "{T}, Pay 1 life: Add one mana of any color.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -21504,7 +21522,7 @@
       "subtypes": [
         "Golem"
       ],
-      "text": "{1}, Sacrifice Rith's Attendant: Add {R}{G}{W} to your mana pool.",
+      "text": "{1}, Sacrifice Rith's Attendant: Add {R}{G}{W}.",
       "toughness": "3",
       "type": "Artifact Creature — Golem",
       "types": [
@@ -21564,7 +21582,7 @@
         "INV"
       ],
       "rarity": "Uncommon",
-      "text": "{T}: Add {W} or {U} to your mana pool.",
+      "text": "{T}: Add {W} or {U}.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -21741,7 +21759,7 @@
         "INV"
       ],
       "rarity": "Uncommon",
-      "text": "{T}: Add {G} or {W} to your mana pool.",
+      "text": "{T}: Add {G} or {W}.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -21804,7 +21822,7 @@
       "subtypes": [
         "Golem"
       ],
-      "text": "{1}, Sacrifice Treva's Attendant: Add {G}{W}{U} to your mana pool.",
+      "text": "{1}, Sacrifice Treva's Attendant: Add {G}{W}{U}.",
       "toughness": "3",
       "type": "Artifact Creature — Golem",
       "types": [
@@ -21864,7 +21882,7 @@
         "INV"
       ],
       "rarity": "Uncommon",
-      "text": "{T}: Add {R} or {G} to your mana pool.",
+      "text": "{T}: Add {R} or {G}.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -22038,7 +22056,7 @@
         "INV"
       ],
       "rarity": "Common",
-      "text": "Ancient Spring enters the battlefield tapped.\n{T}: Add {U} to your mana pool.\n{T}, Sacrifice Ancient Spring: Add {W}{B} to your mana pool.",
+      "text": "Ancient Spring enters the battlefield tapped.\n{T}: Add {U}.\n{T}, Sacrifice Ancient Spring: Add {W}{B}.",
       "type": "Land",
       "types": [
         "Land"
@@ -22090,7 +22108,7 @@
         "INV"
       ],
       "rarity": "Uncommon",
-      "text": "{T}: Add {C} to your mana pool.\n{T}, Sacrifice Archaeological Dig: Add one mana of any color to your mana pool.",
+      "text": "{T}: Add {C}.\n{T}, Sacrifice Archaeological Dig: Add one mana of any color.",
       "type": "Land",
       "types": [
         "Land"
@@ -22152,7 +22170,7 @@
         "8ED"
       ],
       "rarity": "Uncommon",
-      "text": "Coastal Tower enters the battlefield tapped.\n{T}: Add {W} or {U} to your mana pool.",
+      "text": "Coastal Tower enters the battlefield tapped.\n{T}: Add {W} or {U}.",
       "type": "Land",
       "types": [
         "Land"
@@ -22216,7 +22234,7 @@
         "C17"
       ],
       "rarity": "Uncommon",
-      "text": "Elfhame Palace enters the battlefield tapped.\n{T}: Add {G} or {W} to your mana pool.",
+      "text": "Elfhame Palace enters the battlefield tapped.\n{T}: Add {G} or {W}.",
       "type": "Land",
       "types": [
         "Land"
@@ -22273,7 +22291,7 @@
         "INV"
       ],
       "rarity": "Common",
-      "text": "Geothermal Crevice enters the battlefield tapped.\n{T}: Add {R} to your mana pool.\n{T}, Sacrifice Geothermal Crevice: Add {B}{G} to your mana pool.",
+      "text": "Geothermal Crevice enters the battlefield tapped.\n{T}: Add {R}.\n{T}, Sacrifice Geothermal Crevice: Add {B}{G}.",
       "type": "Land",
       "types": [
         "Land"
@@ -22330,7 +22348,7 @@
         "INV"
       ],
       "rarity": "Common",
-      "text": "Irrigation Ditch enters the battlefield tapped.\n{T}: Add {W} to your mana pool.\n{T}, Sacrifice Irrigation Ditch: Add {G}{U} to your mana pool.",
+      "text": "Irrigation Ditch enters the battlefield tapped.\n{T}: Add {W}.\n{T}, Sacrifice Irrigation Ditch: Add {G}{U}.",
       "type": "Land",
       "types": [
         "Land"
@@ -22389,7 +22407,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "{T}: Add {C} to your mana pool.\n{4}{R}, {T}, Sacrifice a creature: Keldon Necropolis deals 2 damage to target creature or player.",
+      "text": "{T}: Add {C}.\n{4}{R}, {T}, Sacrifice a creature: Keldon Necropolis deals 2 damage to any target.",
       "type": "Legendary Land",
       "types": [
         "Land"
@@ -22451,7 +22469,7 @@
         "8ED"
       ],
       "rarity": "Uncommon",
-      "text": "Salt Marsh enters the battlefield tapped.\n{T}: Add {U} or {B} to your mana pool.",
+      "text": "Salt Marsh enters the battlefield tapped.\n{T}: Add {U} or {B}.",
       "type": "Land",
       "types": [
         "Land"
@@ -22515,7 +22533,7 @@
         "DDE"
       ],
       "rarity": "Uncommon",
-      "text": "Shivan Oasis enters the battlefield tapped.\n{T}: Add {R} or {G} to your mana pool.",
+      "text": "Shivan Oasis enters the battlefield tapped.\n{T}: Add {R} or {G}.",
       "type": "Land",
       "types": [
         "Land"
@@ -22572,7 +22590,7 @@
         "INV"
       ],
       "rarity": "Common",
-      "text": "Sulfur Vent enters the battlefield tapped.\n{T}: Add {B} to your mana pool.\n{T}, Sacrifice Sulfur Vent: Add {U}{R} to your mana pool.",
+      "text": "Sulfur Vent enters the battlefield tapped.\n{T}: Add {B}.\n{T}, Sacrifice Sulfur Vent: Add {U}{R}.",
       "type": "Land",
       "types": [
         "Land"
@@ -22629,7 +22647,7 @@
         "INV"
       ],
       "rarity": "Common",
-      "text": "Tinder Farm enters the battlefield tapped.\n{T}: Add {G} to your mana pool.\n{T}, Sacrifice Tinder Farm: Add {R}{W} to your mana pool.",
+      "text": "Tinder Farm enters the battlefield tapped.\n{T}: Add {G}.\n{T}, Sacrifice Tinder Farm: Add {R}{W}.",
       "type": "Land",
       "types": [
         "Land"
@@ -22692,7 +22710,7 @@
         "C17"
       ],
       "rarity": "Uncommon",
-      "text": "Urborg Volcano enters the battlefield tapped.\n{T}: Add {B} or {R} to your mana pool.",
+      "text": "Urborg Volcano enters the battlefield tapped.\n{T}: Add {B} or {R}.",
       "type": "Land",
       "types": [
         "Land"
@@ -22983,7 +23001,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -23288,7 +23307,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -23593,7 +23613,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -23898,7 +23919,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -24202,7 +24224,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -24506,7 +24530,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -24810,7 +24836,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -25114,7 +25142,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -25422,7 +25452,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -25730,7 +25761,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -26038,7 +26070,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -26346,7 +26379,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -26656,7 +26690,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -26966,7 +27002,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -27276,7 +27314,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -27586,7 +27626,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -27893,7 +27935,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -28200,7 +28244,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -28507,7 +28553,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -28814,7 +28862,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [

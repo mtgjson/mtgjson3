@@ -7,8 +7,14 @@
   "border": "black",
   "type": "expansion",
   "booster": [
-    "uncommon",
-    "uncommon",
+    [
+      "rare",
+      "uncommon"
+    ],
+    [
+      "rare",
+      "uncommon"
+    ],
     "common",
     "common",
     "common",
@@ -53,7 +59,7 @@
         "ME4"
       ],
       "rarity": "Common",
-      "text": "{2}, {T}: Prevent the next 1 damage that would be dealt to target creature or player this turn.",
+      "text": "{2}, {T}: Prevent the next 1 damage that would be dealt to any target this turn.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -139,7 +145,7 @@
         "EMA"
       ],
       "rarity": "Uncommon",
-      "text": "Sacrifice a creature: Add {C}{C} to your mana pool.",
+      "text": "Sacrifice a creature: Add {C}{C}.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -340,14 +346,14 @@
         },
         {
           "date": "2004-10-04",
-          "text": "If the card being targeted by the Bronze Tablet is removed before Tablet takes effect, then the Tablet ability is countered and it remains tapped."
+          "text": "If the card being targeted by the Bronze Tablet is removed before Tablet takes effect, then the Tablet ability doesn't resolve and it remains tapped."
         },
         {
           "date": "2008-08-01",
           "text": "If the tablet is not still on the battlefield when the ability resolves, it is not exiled. The other player still has the choice to pay 10 life, and you still become the owner of their card if they choose not to do so."
         }
       ],
-      "text": "Remove Bronze Tablet from your deck before playing if you're not playing for ante.\nBronze Tablet enters the battlefield tapped.\n{4}, {T}: Exile Bronze Tablet and target nontoken permanent an opponent owns. That player may pay 10 life. If he or she does, put Bronze Tablet into its owner's graveyard. Otherwise, that player owns Bronze Tablet and you own the other exiled card.",
+      "text": "Remove Bronze Tablet from your deck before playing if you're not playing for ante.\nBronze Tablet enters the battlefield tapped.\n{4}, {T}: Exile Bronze Tablet and target nontoken permanent an opponent owns. That player may pay 10 life. If they do, put Bronze Tablet into its owner's graveyard. Otherwise, that player owns Bronze Tablet and you own the other exiled card.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -560,7 +566,7 @@
       "subtypes": [
         "Golem"
       ],
-      "text": "Trample (This creature can deal excess combat damage to defending player or planeswalker while attacking.)\nColossus of Sardia doesn't untap during your untap step.\n{9}: Untap Colossus of Sardia. Activate this ability only during your upkeep.",
+      "text": "Trample (This creature can deal excess combat damage to the player or planeswalker it's attacking.)\nColossus of Sardia doesn't untap during your untap step.\n{9}: Untap Colossus of Sardia. Activate this ability only during your upkeep.",
       "toughness": "9",
       "type": "Artifact Creature — Golem",
       "types": [
@@ -1036,7 +1042,7 @@
           "text": "Since you are putting more than one card in the graveyard at one time, the affected player can choose the order the 2 cards go in."
         }
       ],
-      "text": "{2}, {T}: Target player puts the top two cards of his or her library into his or her graveyard.",
+      "text": "{2}, {T}: Target player puts the top two cards of their library into their graveyard.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -1310,16 +1316,16 @@
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2012-07-01",
-          "text": "In zones other than the battlefield, Primal Clay is 0/0."
+          "date": "2018-03-16",
+          "text": "In zones other than the battlefield, this creature card is 0/0."
         },
         {
-          "date": "2012-07-01",
-          "text": "If another permanent enters the battlefield as a copy of Primal Clay, the controller of that permanent will get to make a new choice. The copy won't necessarily have the same power, toughness, and abilities as the original."
+          "date": "2018-03-16",
+          "text": "If another permanent enters the battlefield as a copy of this creature, the controller of that permanent will get to make a new choice. The copy won't necessarily have the same power, toughness, and abilities as the original."
         },
         {
-          "date": "2012-07-01",
-          "text": "If a creature that's already on the battlefield becomes a copy of Primal Clay, it copies the power, toughness, and abilities that were chosen for Primal Clay when it entered the battlefield."
+          "date": "2018-03-16",
+          "text": "If a creature that's already on the battlefield becomes a copy of this creature, it copies the power, toughness, and abilities that were chosen for this creature as it entered the battlefield."
         }
       ],
       "subtypes": [
@@ -1374,13 +1380,9 @@
         {
           "date": "2004-10-04",
           "text": "Can be used any number of times during the turn before it leaves the battlefield."
-        },
-        {
-          "date": "2004-10-04",
-          "text": "Can choose a different creature or player for each use."
         }
       ],
-      "text": "{2}: Prevent the next 1 damage that would be dealt to target creature or player this turn. Return Rakalite to its owner's hand at the beginning of the next end step.",
+      "text": "{2}: Prevent the next 1 damage that would be dealt to any target this turn. Return Rakalite to its owner's hand at the beginning of the next end step.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -1432,7 +1434,7 @@
           "text": "It is only destroyed at end of turn if the ability resolved. If the ability is countered, it is not sacrificed."
         }
       ],
-      "text": "{2}: Rocket Launcher deals 1 damage to target creature or player. Destroy Rocket Launcher at the beginning of the next end step. Activate this ability only if you've controlled Rocket Launcher continuously since the beginning of your most recent turn.",
+      "text": "{2}: Rocket Launcher deals 1 damage to any target. Destroy Rocket Launcher at the beginning of the next end step. Activate this ability only if you've controlled Rocket Launcher continuously since the beginning of your most recent turn.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -1576,7 +1578,7 @@
       "subtypes": [
         "Construct"
       ],
-      "text": "When Su-Chi dies, add {C}{C}{C}{C} to your mana pool.",
+      "text": "When Su-Chi dies, add {C}{C}{C}{C}.",
       "toughness": "4",
       "type": "Artifact Creature — Construct",
       "types": [
@@ -1875,7 +1877,7 @@
           "text": "You choose one opposing player as this card enters the battlefield and it only affects that one player. This choice is not changed even if this card changes controllers. It becomes useless but stays on the battlefield if the chosen player leaves the game."
         }
       ],
-      "text": "As The Rack enters the battlefield, choose an opponent.\nAt the beginning of the chosen player's upkeep, The Rack deals X damage to that player, where X is 3 minus the number of cards in his or her hand.",
+      "text": "As The Rack enters the battlefield, choose an opponent.\nAt the beginning of the chosen player's upkeep, The Rack deals X damage to that player, where X is 3 minus the number of cards in their hand.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -1938,7 +1940,7 @@
       "subtypes": [
         "Construct"
       ],
-      "text": "Triskelion enters the battlefield with three +1/+1 counters on it.\nRemove a +1/+1 counter from Triskelion: Triskelion deals 1 damage to target creature or player.",
+      "text": "Triskelion enters the battlefield with three +1/+1 counters on it.\nRemove a +1/+1 counter from Triskelion: It deals 1 damage to any target.",
       "toughness": "1",
       "type": "Artifact Creature — Construct",
       "types": [
@@ -2314,7 +2316,7 @@
         "ATQ"
       ],
       "rarity": "Common",
-      "text": "Put any number of target artifact cards from target player's graveyard on top of his or her library in any order.",
+      "text": "Put any number of target artifact cards from target player's graveyard on top of their library in any order.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -2518,7 +2520,7 @@
           "text": "It only returns artifacts which are on the battlefield."
         }
       ],
-      "text": "Return all artifacts target player owns to his or her hand.",
+      "text": "Return all artifacts target player owns to their hand.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -2699,7 +2701,7 @@
         "Human",
         "Cleric"
       ],
-      "text": "{T}, Sacrifice an artifact: Add an amount of {B} to your mana pool equal to the sacrificed artifact's converted mana cost.",
+      "text": "{T}, Sacrifice an artifact: Add an amount of {B} equal to the sacrificed artifact's converted mana cost.",
       "toughness": "2",
       "type": "Creature — Human Cleric",
       "types": [
@@ -2790,7 +2792,8 @@
       "power": "1",
       "printings": [
         "ATQ",
-        "8ED"
+        "8ED",
+        "DOM"
       ],
       "rarity": "Common",
       "subtypes": [
@@ -2921,7 +2924,7 @@
         },
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         }
       ],
       "subtypes": [
@@ -3351,7 +3354,7 @@
       "rulings": [
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         }
       ],
       "text": "Each noncreature artifact loses all abilities and becomes an artifact creature with power and toughness each equal to its converted mana cost. If Titania's Song leaves the battlefield, this effect continues until end of turn.",
@@ -3666,7 +3669,7 @@
       "subtypes": [
         "Orc"
       ],
-      "text": "{T}, Sacrifice an artifact: Orcish Mechanics deals 2 damage to target creature or player.",
+      "text": "{T}, Sacrifice an artifact: Orcish Mechanics deals 2 damage to any target.",
       "toughness": "1",
       "type": "Creature — Orc",
       "types": [
@@ -4117,7 +4120,7 @@
         },
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         },
         {
           "date": "2009-10-01",
@@ -4132,7 +4135,7 @@
           "text": "If you turn Mishra's Factory into a creature but haven't controlled it continuously since your most recent turn began, you won't be able to activate its first or last ability."
         }
       ],
-      "text": "{T}: Add {C} to your mana pool.\n{1}: Mishra's Factory becomes a 2/2 Assembly-Worker artifact creature until end of turn. It's still a land.\n{T}: Target Assembly-Worker creature gets +1/+1 until end of turn.",
+      "text": "{T}: Add {C}.\n{1}: Mishra's Factory becomes a 2/2 Assembly-Worker artifact creature until end of turn. It's still a land.\n{T}: Target Assembly-Worker creature gets +1/+1 until end of turn.",
       "type": "Land",
       "types": [
         "Land"
@@ -4184,7 +4187,7 @@
         },
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         },
         {
           "date": "2009-10-01",
@@ -4199,7 +4202,7 @@
           "text": "If you turn Mishra's Factory into a creature but haven't controlled it continuously since your most recent turn began, you won't be able to activate its first or last ability."
         }
       ],
-      "text": "{T}: Add {C} to your mana pool.\n{1}: Mishra's Factory becomes a 2/2 Assembly-Worker artifact creature until end of turn. It's still a land.\n{T}: Target Assembly-Worker creature gets +1/+1 until end of turn.",
+      "text": "{T}: Add {C}.\n{1}: Mishra's Factory becomes a 2/2 Assembly-Worker artifact creature until end of turn. It's still a land.\n{T}: Target Assembly-Worker creature gets +1/+1 until end of turn.",
       "type": "Land",
       "types": [
         "Land"
@@ -4251,7 +4254,7 @@
         },
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         },
         {
           "date": "2009-10-01",
@@ -4266,7 +4269,7 @@
           "text": "If you turn Mishra's Factory into a creature but haven't controlled it continuously since your most recent turn began, you won't be able to activate its first or last ability."
         }
       ],
-      "text": "{T}: Add {C} to your mana pool.\n{1}: Mishra's Factory becomes a 2/2 Assembly-Worker artifact creature until end of turn. It's still a land.\n{T}: Target Assembly-Worker creature gets +1/+1 until end of turn.",
+      "text": "{T}: Add {C}.\n{1}: Mishra's Factory becomes a 2/2 Assembly-Worker artifact creature until end of turn. It's still a land.\n{T}: Target Assembly-Worker creature gets +1/+1 until end of turn.",
       "type": "Land",
       "types": [
         "Land"
@@ -4318,7 +4321,7 @@
         },
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         },
         {
           "date": "2009-10-01",
@@ -4333,7 +4336,7 @@
           "text": "If you turn Mishra's Factory into a creature but haven't controlled it continuously since your most recent turn began, you won't be able to activate its first or last ability."
         }
       ],
-      "text": "{T}: Add {C} to your mana pool.\n{1}: Mishra's Factory becomes a 2/2 Assembly-Worker artifact creature until end of turn. It's still a land.\n{T}: Target Assembly-Worker creature gets +1/+1 until end of turn.",
+      "text": "{T}: Add {C}.\n{1}: Mishra's Factory becomes a 2/2 Assembly-Worker artifact creature until end of turn. It's still a land.\n{T}: Target Assembly-Worker creature gets +1/+1 until end of turn.",
       "type": "Land",
       "types": [
         "Land"
@@ -4395,7 +4398,7 @@
           "text": "This mana may be used on additional costs to cast the spell, such as Kicker."
         }
       ],
-      "text": "{T}: Add {C}{C}{C} to your mana pool. Spend this mana only to cast artifact spells.",
+      "text": "{T}: Add {C}{C}{C}. Spend this mana only to cast artifact spells.",
       "type": "Land",
       "types": [
         "Land"
@@ -4436,7 +4439,7 @@
         "EXP"
       ],
       "rarity": "Rare",
-      "text": "{T}: Add {C} to your mana pool.\n{T}, Sacrifice Strip Mine: Destroy target land.",
+      "text": "{T}: Add {C}.\n{T}, Sacrifice Strip Mine: Destroy target land.",
       "type": "Land",
       "types": [
         "Land"
@@ -4482,7 +4485,7 @@
         "EXP"
       ],
       "rarity": "Rare",
-      "text": "{T}: Add {C} to your mana pool.\n{T}, Sacrifice Strip Mine: Destroy target land.",
+      "text": "{T}: Add {C}.\n{T}, Sacrifice Strip Mine: Destroy target land.",
       "type": "Land",
       "types": [
         "Land"
@@ -4528,7 +4531,7 @@
         "EXP"
       ],
       "rarity": "Rare",
-      "text": "{T}: Add {C} to your mana pool.\n{T}, Sacrifice Strip Mine: Destroy target land.",
+      "text": "{T}: Add {C}.\n{T}, Sacrifice Strip Mine: Destroy target land.",
       "type": "Land",
       "types": [
         "Land"
@@ -4574,7 +4577,7 @@
         "EXP"
       ],
       "rarity": "Uncommon",
-      "text": "{T}: Add {C} to your mana pool.\n{T}, Sacrifice Strip Mine: Destroy target land.",
+      "text": "{T}: Add {C}.\n{T}, Sacrifice Strip Mine: Destroy target land.",
       "type": "Land",
       "types": [
         "Land"
@@ -4633,7 +4636,7 @@
         "Urza’s",
         "Mine"
       ],
-      "text": "{T}: Add {C} to your mana pool. If you control an Urza's Power-Plant and an Urza's Tower, add {C}{C} to your mana pool instead.",
+      "text": "{T}: Add {C}. If you control an Urza's Power-Plant and an Urza's Tower, add {C}{C} instead.",
       "type": "Land — Urza’s Mine",
       "types": [
         "Land"
@@ -4692,7 +4695,7 @@
         "Urza’s",
         "Mine"
       ],
-      "text": "{T}: Add {C} to your mana pool. If you control an Urza's Power-Plant and an Urza's Tower, add {C}{C} to your mana pool instead.",
+      "text": "{T}: Add {C}. If you control an Urza's Power-Plant and an Urza's Tower, add {C}{C} instead.",
       "type": "Land — Urza’s Mine",
       "types": [
         "Land"
@@ -4751,7 +4754,7 @@
         "Urza’s",
         "Mine"
       ],
-      "text": "{T}: Add {C} to your mana pool. If you control an Urza's Power-Plant and an Urza's Tower, add {C}{C} to your mana pool instead.",
+      "text": "{T}: Add {C}. If you control an Urza's Power-Plant and an Urza's Tower, add {C}{C} instead.",
       "type": "Land — Urza’s Mine",
       "types": [
         "Land"
@@ -4810,7 +4813,7 @@
         "Urza’s",
         "Mine"
       ],
-      "text": "{T}: Add {C} to your mana pool. If you control an Urza's Power-Plant and an Urza's Tower, add {C}{C} to your mana pool instead.",
+      "text": "{T}: Add {C}. If you control an Urza's Power-Plant and an Urza's Tower, add {C}{C} instead.",
       "type": "Land — Urza’s Mine",
       "types": [
         "Land"
@@ -4869,7 +4872,7 @@
         "Urza’s",
         "Power-Plant"
       ],
-      "text": "{T}: Add {C} to your mana pool. If you control an Urza's Mine and an Urza's Tower, add {C}{C} to your mana pool instead.",
+      "text": "{T}: Add {C}. If you control an Urza's Mine and an Urza's Tower, add {C}{C} instead.",
       "type": "Land — Urza’s Power-Plant",
       "types": [
         "Land"
@@ -4928,7 +4931,7 @@
         "Urza’s",
         "Power-Plant"
       ],
-      "text": "{T}: Add {C} to your mana pool. If you control an Urza's Mine and an Urza's Tower, add {C}{C} to your mana pool instead.",
+      "text": "{T}: Add {C}. If you control an Urza's Mine and an Urza's Tower, add {C}{C} instead.",
       "type": "Land — Urza’s Power-Plant",
       "types": [
         "Land"
@@ -4987,7 +4990,7 @@
         "Urza’s",
         "Power-Plant"
       ],
-      "text": "{T}: Add {C} to your mana pool. If you control an Urza's Mine and an Urza's Tower, add {C}{C} to your mana pool instead.",
+      "text": "{T}: Add {C}. If you control an Urza's Mine and an Urza's Tower, add {C}{C} instead.",
       "type": "Land — Urza’s Power-Plant",
       "types": [
         "Land"
@@ -5046,7 +5049,7 @@
         "Urza’s",
         "Power-Plant"
       ],
-      "text": "{T}: Add {C} to your mana pool. If you control an Urza's Mine and an Urza's Tower, add {C}{C} to your mana pool instead.",
+      "text": "{T}: Add {C}. If you control an Urza's Mine and an Urza's Tower, add {C}{C} instead.",
       "type": "Land — Urza’s Power-Plant",
       "types": [
         "Land"
@@ -5099,7 +5102,7 @@
         "Urza’s",
         "Tower"
       ],
-      "text": "{T}: Add {C} to your mana pool. If you control an Urza's Mine and an Urza's Power-Plant, add {C}{C}{C} to your mana pool instead.",
+      "text": "{T}: Add {C}. If you control an Urza's Mine and an Urza's Power-Plant, add {C}{C}{C} instead.",
       "type": "Land — Urza’s Tower",
       "types": [
         "Land"
@@ -5152,7 +5155,7 @@
         "Urza’s",
         "Tower"
       ],
-      "text": "{T}: Add {C} to your mana pool. If you control an Urza's Mine and an Urza's Power-Plant, add {C}{C}{C} to your mana pool instead.",
+      "text": "{T}: Add {C}. If you control an Urza's Mine and an Urza's Power-Plant, add {C}{C}{C} instead.",
       "type": "Land — Urza’s Tower",
       "types": [
         "Land"
@@ -5205,7 +5208,7 @@
         "Urza’s",
         "Tower"
       ],
-      "text": "{T}: Add {C} to your mana pool. If you control an Urza's Mine and an Urza's Power-Plant, add {C}{C}{C} to your mana pool instead.",
+      "text": "{T}: Add {C}. If you control an Urza's Mine and an Urza's Power-Plant, add {C}{C}{C} instead.",
       "type": "Land — Urza’s Tower",
       "types": [
         "Land"
@@ -5258,7 +5261,7 @@
         "Urza’s",
         "Tower"
       ],
-      "text": "{T}: Add {C} to your mana pool. If you control an Urza's Mine and an Urza's Power-Plant, add {C}{C}{C} to your mana pool instead.",
+      "text": "{T}: Add {C}. If you control an Urza's Mine and an Urza's Power-Plant, add {C}{C}{C} instead.",
       "type": "Land — Urza’s Tower",
       "types": [
         "Land"

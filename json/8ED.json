@@ -390,7 +390,7 @@
       "subtypes": [
         "Avatar"
       ],
-      "text": "If you have 3 or less life, Avatar of Hope costs {6} less to cast.\nFlying\nAvatar of Hope can block any number of creatures.",
+      "text": "If you have 3 or less life, this spell costs {6} less to cast.\nFlying\nAvatar of Hope can block any number of creatures.",
       "toughness": "9",
       "type": "Creature — Avatar",
       "types": [
@@ -744,7 +744,7 @@
       "subtypes": [
         "Angel"
       ],
-      "text": "Flying (This creature can't be blocked except by creatures with flying or reach.)\nWhenever Blinding Angel deals combat damage to a player, that player skips his or her next combat phase.",
+      "text": "Flying (This creature can't be blocked except by creatures with flying or reach.)\nWhenever Blinding Angel deals combat damage to a player, that player skips their next combat phase.",
       "toughness": "4",
       "type": "Creature — Angel",
       "types": [
@@ -2076,7 +2076,7 @@
         "DD3_DVD"
       ],
       "rarity": "Common",
-      "text": "Choose one —\n• Target player gains 3 life.\n• Prevent the next 3 damage that would be dealt to target creature or player this turn.",
+      "text": "Choose one —\n• Target player gains 3 life.\n• Prevent the next 3 damage that would be dealt to any target this turn.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -2424,7 +2424,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "The power of the creature is checked on activation and on resolution. If the targeted creature's power is not 4 or greater on resolution, the ability is countered."
+          "text": "The power of the creature is checked on activation and on resolution. If the targeted creature's power is not 4 or greater on resolution, the ability doesn't resolve."
         }
       ],
       "subtypes": [
@@ -2601,7 +2601,7 @@
           "text": "Amount of damage is determined when the ability resolves and not when it is placed on the stack."
         }
       ],
-      "text": "At the beginning of each player's upkeep, Karma deals damage to that player equal to the number of Swamps he or she controls.",
+      "text": "At the beginning of each player's upkeep, Karma deals damage to that player equal to the number of Swamps they control.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -2778,7 +2778,7 @@
         "Human",
         "Cleric"
       ],
-      "text": "{T}: Prevent the next 4 damage that would be dealt to target creature or player this turn.",
+      "text": "{T}: Prevent the next 4 damage that would be dealt to any target this turn.",
       "toughness": "4",
       "type": "Creature — Human Cleric",
       "types": [
@@ -3726,7 +3726,7 @@
         "Human",
         "Cleric"
       ],
-      "text": "{T}: Prevent the next 1 damage that would be dealt to target creature or player this turn.",
+      "text": "{T}: Prevent the next 1 damage that would be dealt to any target this turn.",
       "toughness": "1",
       "type": "Creature — Human Cleric",
       "types": [
@@ -4105,13 +4105,14 @@
         "EMA",
         "W17",
         "CMA",
-        "IMA"
+        "IMA",
+        "DOM"
       ],
       "rarity": "Rare",
       "subtypes": [
         "Angel"
       ],
-      "text": "Flying (This creature can't be blocked except by creatures with flying or reach.)\nVigilance (Attacking doesn't cause this creature to tap.)",
+      "text": "Flying, vigilance",
       "toughness": "4",
       "type": "Creature — Angel",
       "types": [
@@ -4275,10 +4276,6 @@
       ],
       "rarity": "Uncommon",
       "rulings": [
-        {
-          "date": "2004-10-04",
-          "text": "Damage that is redirected is not dealt to the original creature or player, but it is dealt to the new creature or player."
-        },
         {
           "date": "2004-10-04",
           "text": "You only gain the life when the triggered ability resolves. If you are reduced to zero life before the ability resolves, you will lose before gaining the life."
@@ -5829,7 +5826,7 @@
           "text": "Because the \"search\" requires you to find a card with certain characteristics, you don't have to find the card if you don't want to."
         }
       ],
-      "text": "Search target opponent's library for a creature card and put that card onto the battlefield under your control. Then that player shuffles his or her library.",
+      "text": "Search target opponent's library for a creature card and put that card onto the battlefield under your control. Then that player shuffles their library.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -6512,18 +6509,6 @@
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2007-02-01",
-          "text": "You draw one card each time the enchanted creature damages the opponent. This is not one card per point of damage."
-        },
-        {
-          "date": "2007-02-01",
-          "text": "If put on your opponent's creature, you do not draw a card when that creature damages you. The creature has to damage your opponent in order to have this work."
-        },
-        {
-          "date": "2007-02-01",
-          "text": "Drawing a card is optional."
-        },
-        {
           "date": "2011-09-22",
           "text": "\"You\" refers to the controller of Curiosity, which may be different from the controller of the enchanted creature. \"An opponent\" refers to an opponent of Curiosity's controller."
         },
@@ -6534,6 +6519,14 @@
         {
           "date": "2011-09-22",
           "text": "Curiosity doesn't trigger if the enchanted creature deals damage to a planeswalker controlled by an opponent."
+        },
+        {
+          "date": "2018-03-16",
+          "text": "You draw one card each time the enchanted creature deals damage to an opponent, no matter how much damage it deals or whether it was dealt in combat."
+        },
+        {
+          "date": "2018-03-16",
+          "text": "If this Aura enchants an opponent's creature, you won't draw a card when that creature damages you. The creature has to deal damage to one of your opponents for the ability to trigger."
         }
       ],
       "subtypes": [
@@ -8705,7 +8698,7 @@
         },
         {
           "date": "2017-03-14",
-          "text": "If the spell is an illegal target when Rewind tries to resolve, perhaps because it was countered by another spell or ability, Rewind will be countered and none of its effects will happen. You won't untap any lands."
+          "text": "If the spell is an illegal target when Rewind tries to resolve, perhaps because it was countered by another spell or ability, Rewind won't resolve and none of its effects will happen. You won't untap any lands."
         },
         {
           "date": "2017-03-14",
@@ -8786,7 +8779,8 @@
       "power": "1",
       "printings": [
         "ATQ",
-        "8ED"
+        "8ED",
+        "DOM"
       ],
       "rarity": "Rare",
       "subtypes": [
@@ -10504,7 +10498,7 @@
           "text": "When using Dredge with this, you have two choices. You can immediately replace the draw with Dredge, or you can apply Zur's Weirding's replacement. If the latter, you first resolve Zur's Weirding's ability, then if you're going to draw the card, decide whether or not to replace that draw with Dredge."
         }
       ],
-      "text": "Players play with their hands revealed.\nIf a player would draw a card, he or she reveals it instead. Then any other player may pay 2 life. If a player does, put that card into its owner's graveyard. Otherwise, that player draws a card.",
+      "text": "Players play with their hands revealed.\nIf a player would draw a card, they reveal it instead. Then any other player may pay 2 life. If a player does, put that card into its owner's graveyard. Otherwise, that player draws a card.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -11044,7 +11038,7 @@
         "TPR"
       ],
       "rarity": "Common",
-      "text": "Target opponent reveals his or her hand. You choose a card from it. That player discards that card.",
+      "text": "Target opponent reveals their hand. You choose a card from it. That player discards that card.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -13128,7 +13122,7 @@
         "8ED"
       ],
       "rarity": "Uncommon",
-      "text": "{B}, Sacrifice a creature: Target opponent reveals his or her hand. You choose a card from it. That player discards that card. Activate this ability only any time you could cast a sorcery.",
+      "text": "{B}, Sacrifice a creature: Target opponent reveals their hand. You choose a card from it. That player discards that card. Activate this ability only any time you could cast a sorcery.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -13687,7 +13681,7 @@
           "text": "The color is chosen on resolution."
         }
       ],
-      "text": "Choose a color. Target player reveals his or her hand and discards all cards of that color.",
+      "text": "Choose a color. Target player reveals their hand and discards all cards of that color.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -14222,10 +14216,6 @@
         {
           "date": "2004-10-04",
           "text": "The creature being brought back is chosen on announcement and not on resolution of the spell because it is targeted."
-        },
-        {
-          "date": "2008-04-01",
-          "text": "A \"creature card\" is any card with the type creature, even if it has other types such as artifact, enchantment, or land. Older cards of type summon are also creature cards."
         }
       ],
       "text": "Return target creature card from your graveyard to your hand.",
@@ -14423,7 +14413,7 @@
         },
         {
           "date": "2004-10-04",
-          "text": "If the creature is no longer tapped when the Assassin's ability resolves, then the ability is countered."
+          "text": "If the creature is no longer tapped when the Assassin's ability resolves, then the ability doesn't resolve."
         }
       ],
       "subtypes": [
@@ -15222,7 +15212,7 @@
           "text": "In a multi-player game, it affects all opponents."
         }
       ],
-      "text": "Whenever an opponent draws a card, Underworld Dreams deals 1 damage to him or her.",
+      "text": "Whenever an opponent draws a card, Underworld Dreams deals 1 damage to that player.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -15819,7 +15809,7 @@
         "Minotaur",
         "Shaman"
       ],
-      "text": "{R}, {T}: Anaba Shaman deals 1 damage to target creature or player.",
+      "text": "{R}, {T}: Anaba Shaman deals 1 damage to any target.",
       "toughness": "2",
       "type": "Creature — Minotaur Shaman",
       "types": [
@@ -15991,7 +15981,7 @@
         "DPA"
       ],
       "rarity": "Uncommon",
-      "text": "Blaze deals X damage to target creature or player.",
+      "text": "Blaze deals X damage to any target.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -16075,20 +16065,20 @@
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2017-03-14",
-          "text": "Nonbasic lands will lose any other land types and abilities they had. They will gain the land type Mountain and gain the ability \"{T}: Add {R} to your mana pool.\""
-        },
-        {
-          "date": "2017-03-14",
-          "text": "Blood Moon's effect doesn't affect names or supertypes. It won't turn any land into a basic land or remove the legendary supertype from a legendary land, and the lands won't be named \"Mountain.\""
-        },
-        {
-          "date": "2017-03-14",
-          "text": "If a nonbasic land has an ability that triggers \"when\" it enters the battlefield, it will lose that ability before it triggers."
-        },
-        {
           "date": "2017-09-29",
           "text": "If a nonbasic land has an ability that causes it to enter the battlefield tapped, it will lose that ability before it applies. The same is also true of any other abilities that modify how a land enters the battlefield or apply \"as\" a land enters the battlefield, such as the first ability of Cavern of Souls. This is a change from previous rulings."
+        },
+        {
+          "date": "2018-03-16",
+          "text": "Nonbasic lands will lose any other land types and abilities they had. They will gain the land type Mountain and gain the ability \"{T}: Add {R}.\""
+        },
+        {
+          "date": "2018-03-16",
+          "text": "This effect doesn't affect names or supertypes. It won't turn any land into a basic land or remove the legendary supertype from a legendary land, and the lands won't be named \"Mountain.\""
+        },
+        {
+          "date": "2018-03-16",
+          "text": "If a nonbasic land has an ability that triggers \"when\" it enters the battlefield, it will lose that ability before it triggers."
         }
       ],
       "text": "Nonbasic lands are Mountains.",
@@ -16177,7 +16167,7 @@
         "Cyclops",
         "Giant"
       ],
-      "text": "{T}, Sacrifice a creature: Bloodshot Cyclops deals damage equal to the sacrificed creature's power to target creature or player.",
+      "text": "{T}, Sacrifice a creature: Bloodshot Cyclops deals damage equal to the sacrificed creature's power to any target.",
       "toughness": "4",
       "type": "Creature — Cyclops Giant",
       "types": [
@@ -16905,10 +16895,10 @@
         },
         {
           "date": "2005-08-01",
-          "text": "If multiple effects modify how damage will be dealt, the player who would be dealt damage or the controller of the creature that would be dealt damage chooses the order to apply the effects. For example, Mending Hands says, \"Prevent the next 4 damage that would be dealt to target creature or player this turn.\" Suppose a spell would deal 5 damage to a player who has cast Mending Hands targeting himself or herself. That player can either (a) prevent 4 damage first and then let Furnace of Rath double the remaining 1 damage, taking 2 damage, or (b) double the damage to 10 and then prevent 4 damage, taking 6 damage."
+          "text": "If multiple effects modify how damage will be dealt, the player who would be dealt damage or the controller of the creature that would be dealt damage chooses the order to apply the effects. For example, Mending Hands says, \"Prevent the next 4 damage that would be dealt to any target this turn.\" Suppose a spell would deal 5 damage to a player who has cast Mending Hands targeting themselves. That player can either (a) prevent 4 damage first and then let Furnace of Rath double the remaining 1 damage, taking 2 damage, or (b) double the damage to 10 and then prevent 4 damage, taking 6 damage."
         }
       ],
-      "text": "If a source would deal damage to a creature or player, it deals double that damage to that creature or player instead.",
+      "text": "If a source would deal damage to a permanent or player, it deals double that damage to that permanent or player instead.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -17359,7 +17349,7 @@
           "text": "Discarding as a cost to cast a spell will not trigger the ability. Only discarding as an effect will trigger the ability."
         }
       ],
-      "text": "Guerrilla Tactics deals 2 damage to target creature or player.\nWhen a spell or ability an opponent controls causes you to discard Guerrilla Tactics, Guerrilla Tactics deals 4 damage to target creature or player.",
+      "text": "Guerrilla Tactics deals 2 damage to any target.\nWhen a spell or ability an opponent controls causes you to discard Guerrilla Tactics, Guerrilla Tactics deals 4 damage to any target.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -17441,7 +17431,7 @@
         "PD2"
       ],
       "rarity": "Rare",
-      "text": "Hammer of Bogardan deals 3 damage to target creature or player.\n{2}{R}{R}{R}: Return Hammer of Bogardan from your graveyard to your hand. Activate this ability only during your upkeep.",
+      "text": "Hammer of Bogardan deals 3 damage to any target.\n{2}{R}{R}{R}: Return Hammer of Bogardan from your graveyard to your hand. Activate this ability only during your upkeep.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -17796,7 +17786,7 @@
         "M15"
       ],
       "rarity": "Common",
-      "text": "Lava Axe deals 5 damage to target player.",
+      "text": "Lava Axe deals 5 damage to target player or planeswalker.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -18048,7 +18038,7 @@
         "TPR"
       ],
       "rarity": "Uncommon",
-      "text": "Lightning Blast deals 4 damage to target creature or player.",
+      "text": "Lightning Blast deals 4 damage to any target.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -18222,7 +18212,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "Always affects the player and targets one of his or her opponents."
+          "text": "Always affects the player and targets one of their opponents."
         },
         {
           "date": "2004-10-04",
@@ -18407,7 +18397,7 @@
           "text": "Counterspells can be cast that target it, but when they resolve they simply don't counter it since it can't be countered."
         }
       ],
-      "text": "Obliterate can't be countered.\nDestroy all artifacts, creatures, and lands. They can't be regenerated.",
+      "text": "This spell can't be countered.\nDestroy all artifacts, creatures, and lands. They can't be regenerated.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -18674,14 +18664,14 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "You do not take the 3 points of damage if the ability is countered because the target is illegal."
+          "text": "You do not take the 3 points of damage if the ability doesn't resolve because the target is illegal."
         }
       ],
       "subtypes": [
         "Orc",
         "Warrior"
       ],
-      "text": "{T}: Orcish Artillery deals 2 damage to target creature or player and 3 damage to you.",
+      "text": "{T}: Orcish Artillery deals 2 damage to any target and 3 damage to you.",
       "toughness": "3",
       "type": "Creature — Orc Warrior",
       "types": [
@@ -19038,14 +19028,10 @@
         },
         {
           "date": "2014-11-24",
-          "text": "You can't deal damage to both a player and a planeswalker that player controls using Pyrotechnics. You also can't deal damage to more than one planeswalker controlled by the same player. If you choose to redirect the damage being dealt to a player to a planeswalker, you must redirect all the damage to a single planeswalker."
-        },
-        {
-          "date": "2014-11-24",
           "text": "If an effect creates a copy of Pyrotechnics, the number of targets and division of damage can't be changed. The effect that creates the copy may allow you to change the targets, however."
         }
       ],
-      "text": "Pyrotechnics deals 4 damage divided as you choose among any number of target creatures and/or players.",
+      "text": "Pyrotechnics deals 4 damage divided as you choose among any number of targets.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -19690,7 +19676,7 @@
         "8ED"
       ],
       "rarity": "Rare",
-      "text": "Searing Wind deals 10 damage to target creature or player.",
+      "text": "Searing Wind deals 10 damage to any target.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -19772,7 +19758,7 @@
         "10E"
       ],
       "rarity": "Rare",
-      "text": "Discard a land card: Seismic Assault deals 2 damage to target creature or player.",
+      "text": "Discard a land card: Seismic Assault deals 2 damage to any target.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -19824,6 +19810,10 @@
         },
         {
           "format": "Ice Age Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
           "legality": "Legal"
         },
         {
@@ -20103,7 +20093,7 @@
         "AER"
       ],
       "rarity": "Common",
-      "text": "Shock deals 2 damage to target creature or player.",
+      "text": "Shock deals 2 damage to any target.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -20188,7 +20178,7 @@
         "Human",
         "Soldier"
       ],
-      "text": "Sacrifice Shock Troops: Shock Troops deals 2 damage to target creature or player.",
+      "text": "Sacrifice Shock Troops: It deals 2 damage to any target.",
       "toughness": "2",
       "type": "Creature — Human Soldier",
       "types": [
@@ -20570,7 +20560,7 @@
           "text": "If you choose an Aura, you can put it on any permanent it can legally enchant. If there is nothing it can legally enchant, it remains exiled, and it can still be chosen by you or another player later in the auction. If there comes a point where only Auras and no legal permanents left, they stay exiled permanently."
         }
       ],
-      "text": "Exile all nontoken permanents. Starting with you, each player chooses one of the exiled cards and puts it onto the battlefield tapped under his or her control. Repeat this process until all cards exiled this way have been chosen.",
+      "text": "Exile all nontoken permanents. Starting with you, each player chooses one of the exiled cards and puts it onto the battlefield tapped under their control. Repeat this process until all cards exiled this way have been chosen.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -20921,7 +20911,7 @@
         "9ED"
       ],
       "rarity": "Common",
-      "text": "Volcanic Hammer deals 3 damage to target creature or player.",
+      "text": "Volcanic Hammer deals 3 damage to any target.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -21108,7 +21098,7 @@
       "subtypes": [
         "Bird"
       ],
-      "text": "Flying\n{T}: Add one mana of any color to your mana pool.",
+      "text": "Flying\n{T}: Add one mana of any color.",
       "toughness": "1",
       "type": "Creature — Bird",
       "types": [
@@ -22458,7 +22448,7 @@
       "subtypes": [
         "Aura"
       ],
-      "text": "Enchant land\nWhenever enchanted land is tapped for mana, its controller adds one mana of any color to his or her mana pool (in addition to the mana the land produces).",
+      "text": "Enchant land\nWhenever enchanted land is tapped for mana, its controller adds an additional one mana of any color.",
       "type": "Enchantment — Aura",
       "types": [
         "Enchantment"
@@ -22726,7 +22716,7 @@
         "Elf",
         "Druid"
       ],
-      "text": "{T}: Add {G}{G} to your mana pool.",
+      "text": "{T}: Add {G}{G}.",
       "toughness": "1",
       "type": "Creature — Elf Druid",
       "types": [
@@ -23397,7 +23387,7 @@
       "subtypes": [
         "Beast"
       ],
-      "text": "When Hunted Wumpus enters the battlefield, each other player may put a creature card from his or her hand onto the battlefield.",
+      "text": "When Hunted Wumpus enters the battlefield, each other player may put a creature card from their hand onto the battlefield.",
       "toughness": "6",
       "type": "Creature — Beast",
       "types": [
@@ -23483,12 +23473,6 @@
         "CMD"
       ],
       "rarity": "Rare",
-      "rulings": [
-        {
-          "date": "2008-04-01",
-          "text": "A \"creature card\" is any card with the type creature, even if it has other types such as artifact, enchantment, or land. Older cards of type summon are also creature cards."
-        }
-      ],
       "subtypes": [
         "Lhurgoyf"
       ],
@@ -23584,7 +23568,7 @@
         },
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         }
       ],
       "subtypes": [
@@ -23769,19 +23753,15 @@
       "rarity": "Common",
       "rulings": [
         {
-          "date": "2008-04-01",
-          "text": "If this creature is attacking a planeswalker, assigning its damage as though it weren't blocked means the damage is assigned to the planeswalker, not to the defending player."
-        },
-        {
-          "date": "2008-04-01",
-          "text": "When assigning combat damage, you choose whether you want to assign all damage to blocking creatures, or if you want to assign all of it to the defending player or planeswalker. You can't split the damage assignment between them."
-        },
-        {
-          "date": "2008-04-01",
+          "date": "2018-04-27",
           "text": "You can decide to assign damage to the defending player or planeswalker even if the blocking creature has protection from green or damage preventing effects on it."
         },
         {
-          "date": "2008-04-01",
+          "date": "2018-04-27",
+          "text": "When assigning combat damage, you choose whether you want to assign all damage to blocking creatures, or if you want to assign all of it to the player or planeswalker this creature is attacking. You can't split the damage assignment between them."
+        },
+        {
+          "date": "2018-04-27",
           "text": "If blocked by a creature with banding, the defending player decides whether or not the damage is assigned \"as though it weren't blocked\"."
         }
       ],
@@ -24412,7 +24392,7 @@
       "rulings": [
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         }
       ],
       "text": "All lands become 2/2 creatures until end of turn. They're still lands.",
@@ -24468,6 +24448,10 @@
         },
         {
           "format": "Innistrad Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
           "legality": "Legal"
         },
         {
@@ -24528,7 +24512,8 @@
         "M15",
         "KTK",
         "DTK",
-        "RIX"
+        "RIX",
+        "DDU"
       ],
       "rarity": "Common",
       "text": "Destroy target artifact or enchantment.",
@@ -25156,19 +25141,15 @@
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2008-04-01",
-          "text": "If this creature is attacking a planeswalker, assigning its damage as though it weren't blocked means the damage is assigned to the planeswalker, not to the defending player."
-        },
-        {
-          "date": "2008-04-01",
-          "text": "When assigning combat damage, you choose whether you want to assign all damage to blocking creatures, or if you want to assign all of it to the defending player or planeswalker. You can't split the damage assignment between them."
-        },
-        {
-          "date": "2008-04-01",
+          "date": "2018-04-27",
           "text": "You can decide to assign damage to the defending player or planeswalker even if the blocking creature has protection from green or damage preventing effects on it."
         },
         {
-          "date": "2008-04-01",
+          "date": "2018-04-27",
+          "text": "When assigning combat damage, you choose whether you want to assign all damage to blocking creatures, or if you want to assign all of it to the player or planeswalker this creature is attacking. You can't split the damage assignment between them."
+        },
+        {
+          "date": "2018-04-27",
           "text": "If blocked by a creature with banding, the defending player decides whether or not the damage is assigned \"as though it weren't blocked\"."
         }
       ],
@@ -25692,24 +25673,21 @@
         "UDS",
         "S99",
         "7ED",
-        "8ED"
+        "8ED",
+        "DOM"
       ],
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2008-04-01",
-          "text": "If this creature is attacking a planeswalker, assigning its damage as though it weren't blocked means the damage is assigned to the planeswalker, not to the defending player."
-        },
-        {
-          "date": "2008-04-01",
-          "text": "When assigning combat damage, you choose whether you want to assign all damage to blocking creatures, or if you want to assign all of it to the defending player or planeswalker. You can't split the damage assignment between them."
-        },
-        {
-          "date": "2008-04-01",
+          "date": "2018-04-27",
           "text": "You can decide to assign damage to the defending player or planeswalker even if the blocking creature has protection from green or damage preventing effects on it."
         },
         {
-          "date": "2008-04-01",
+          "date": "2018-04-27",
+          "text": "When assigning combat damage, you choose whether you want to assign all damage to blocking creatures, or if you want to assign all of it to the player or planeswalker this creature is attacking. You can't split the damage assignment between them."
+        },
+        {
+          "date": "2018-04-27",
           "text": "If blocked by a creature with banding, the defending player decides whether or not the damage is assigned \"as though it weren't blocked\"."
         }
       ],
@@ -25984,7 +25962,7 @@
           "text": "This is a triggered mana ability. It does not go on the stack."
         }
       ],
-      "text": "Whenever a Forest is tapped for mana, its controller adds {G} to his or her mana pool (in addition to the mana the land produces).",
+      "text": "Whenever a Forest is tapped for mana, its controller adds an additional {G}.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -26071,7 +26049,7 @@
         "Plant",
         "Wall"
       ],
-      "text": "Defender (This creature can't attack.)\n{T}: Add {G} to your mana pool.",
+      "text": "Defender (This creature can't attack.)\n{T}: Add {G}.",
       "toughness": "4",
       "type": "Creature — Plant Wall",
       "types": [
@@ -26427,7 +26405,7 @@
         "9ED"
       ],
       "rarity": "Rare",
-      "text": "{8}, {T}: Aladdin's Ring deals 4 damage to target creature or player.",
+      "text": "{8}, {T}: Aladdin's Ring deals 4 damage to any target.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -27174,12 +27152,8 @@
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2004-10-04",
-          "text": "All creatures on the battlefield (including yours) are subject to the restriction based on the number of cards in your hand."
-        },
-        {
-          "date": "2004-10-04",
-          "text": "It only checks the cards in your hand when declaring attackers. Once they are declared, changes to your hand size or to the power of the creatures will not remove creatures from the attack."
+          "date": "2018-03-16",
+          "text": "Ensnaring Bridge's effect checks the number of cards in your hand only while a player (including you) is declaring attackers. Once a creature has legally attacked, changing its power or the number of cards in your hand won't remove it from combat."
         }
       ],
       "text": "Creatures with power greater than the number of cards in your hand can't attack.",
@@ -27768,7 +27742,7 @@
           "text": "Since you are putting more than one card in the graveyard at one time, the affected player can choose the order the 2 cards go in."
         }
       ],
-      "text": "{2}, {T}: Target player puts the top two cards of his or her library into his or her graveyard.",
+      "text": "{2}, {T}: Target player puts the top two cards of their library into their graveyard.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -28179,7 +28153,7 @@
         "M14"
       ],
       "rarity": "Uncommon",
-      "text": "{3}, {T}: Rod of Ruin deals 1 damage to target creature or player.",
+      "text": "{3}, {T}: Rod of Ruin deals 1 damage to any target.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -28424,7 +28398,7 @@
           "text": "The colors of mana are white, blue, black, red, and green. Colorless is a type but not a color."
         }
       ],
-      "text": "Star Compass enters the battlefield tapped.\n{T}: Add to your mana pool one mana of any color that a basic land you control could produce.",
+      "text": "Star Compass enters the battlefield tapped.\n{T}: Add one mana of any color that a basic land you control could produce.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -28510,7 +28484,7 @@
           "text": "If you have more than one of these, each effect triggers separately."
         }
       ],
-      "text": "At the beginning of each player's draw step, that player puts the cards in his or her hand on the bottom of his or her library in any order, then draws that many cards.",
+      "text": "At the beginning of each player's draw step, that player puts the cards in their hand on the bottom of their library in any order, then draws that many cards.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -28756,7 +28730,7 @@
           "text": "The target player names a card on resolution."
         }
       ],
-      "text": "{3}, {T}: Target player chooses a card name, then reveals the top card of his or her library. If that card has the chosen name, the player puts it into his or her hand. Otherwise, the player puts it into his or her graveyard and Vexing Arcanix deals 2 damage to him or her.",
+      "text": "{3}, {T}: Target player chooses a card name, then reveals the top card of their library. If that card has the chosen name, that player puts it into their hand. Otherwise, they put it into their graveyard and Vexing Arcanix deals 2 damage to them.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -29005,7 +28979,7 @@
           "text": "On the other hand, you can tap City of Brass, put its triggered ability on the stack, and then respond to that ability by casting an instant or activating an ability using that mana. In that case, the instant spell or activated ability will resolve first."
         }
       ],
-      "text": "Whenever City of Brass becomes tapped, it deals 1 damage to you.\n{T}: Add one mana of any color to your mana pool.",
+      "text": "Whenever City of Brass becomes tapped, it deals 1 damage to you.\n{T}: Add one mana of any color.",
       "type": "Land",
       "types": [
         "Land"
@@ -29082,7 +29056,7 @@
         "8ED"
       ],
       "rarity": "Uncommon",
-      "text": "Coastal Tower enters the battlefield tapped.\n{T}: Add {W} or {U} to your mana pool.",
+      "text": "Coastal Tower enters the battlefield tapped.\n{T}: Add {W} or {U}.",
       "type": "Land",
       "types": [
         "Land"
@@ -29161,7 +29135,7 @@
         "C17"
       ],
       "rarity": "Uncommon",
-      "text": "Elfhame Palace enters the battlefield tapped.\n{T}: Add {G} or {W} to your mana pool.",
+      "text": "Elfhame Palace enters the battlefield tapped.\n{T}: Add {G} or {W}.",
       "type": "Land",
       "types": [
         "Land"
@@ -29238,7 +29212,7 @@
         "8ED"
       ],
       "rarity": "Uncommon",
-      "text": "Salt Marsh enters the battlefield tapped.\n{T}: Add {U} or {B} to your mana pool.",
+      "text": "Salt Marsh enters the battlefield tapped.\n{T}: Add {U} or {B}.",
       "type": "Land",
       "types": [
         "Land"
@@ -29317,7 +29291,7 @@
         "DDE"
       ],
       "rarity": "Uncommon",
-      "text": "Shivan Oasis enters the battlefield tapped.\n{T}: Add {R} or {G} to your mana pool.",
+      "text": "Shivan Oasis enters the battlefield tapped.\n{T}: Add {R} or {G}.",
       "type": "Land",
       "types": [
         "Land"
@@ -29395,7 +29369,7 @@
         "C17"
       ],
       "rarity": "Uncommon",
-      "text": "Urborg Volcano enters the battlefield tapped.\n{T}: Add {B} or {R} to your mana pool.",
+      "text": "Urborg Volcano enters the battlefield tapped.\n{T}: Add {B} or {R}.",
       "type": "Land",
       "types": [
         "Land"
@@ -29477,7 +29451,7 @@
         "Urza’s",
         "Mine"
       ],
-      "text": "{T}: Add {C} to your mana pool. If you control an Urza's Power-Plant and an Urza's Tower, add {C}{C} to your mana pool instead.",
+      "text": "{T}: Add {C}. If you control an Urza's Power-Plant and an Urza's Tower, add {C}{C} instead.",
       "type": "Land — Urza’s Mine",
       "types": [
         "Land"
@@ -29559,7 +29533,7 @@
         "Urza’s",
         "Power-Plant"
       ],
-      "text": "{T}: Add {C} to your mana pool. If you control an Urza's Mine and an Urza's Tower, add {C}{C} to your mana pool instead.",
+      "text": "{T}: Add {C}. If you control an Urza's Mine and an Urza's Tower, add {C}{C} instead.",
       "type": "Land — Urza’s Power-Plant",
       "types": [
         "Land"
@@ -29635,7 +29609,7 @@
         "Urza’s",
         "Tower"
       ],
-      "text": "{T}: Add {C} to your mana pool. If you control an Urza's Mine and an Urza's Power-Plant, add {C}{C}{C} to your mana pool instead.",
+      "text": "{T}: Add {C}. If you control an Urza's Mine and an Urza's Power-Plant, add {C}{C}{C} instead.",
       "type": "Land — Urza’s Tower",
       "types": [
         "Land"
@@ -29986,7 +29960,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -30351,7 +30326,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -30716,7 +30692,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -31081,7 +31058,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -31445,7 +31423,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -31809,7 +31789,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -32173,7 +32155,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -32537,7 +32521,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -32905,7 +32891,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -33273,7 +33260,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -33641,7 +33629,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -34009,7 +33998,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -34379,7 +34369,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -34749,7 +34741,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -35119,7 +35113,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -35489,7 +35485,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -35856,7 +35854,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -36223,7 +36223,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -36590,7 +36592,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -36957,7 +36961,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [

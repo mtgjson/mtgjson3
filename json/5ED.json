@@ -75,7 +75,7 @@
         "9ED"
       ],
       "rarity": "Rare",
-      "text": "{8}, {T}: Aladdin's Ring deals 4 damage to target creature or player.",
+      "text": "{8}, {T}: Aladdin's Ring deals 4 damage to any target.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -115,7 +115,7 @@
         "ME4"
       ],
       "rarity": "Common",
-      "text": "{2}, {T}: Prevent the next 1 damage that would be dealt to target creature or player this turn.",
+      "text": "{2}, {T}: Prevent the next 1 damage that would be dealt to any target this turn.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -214,7 +214,7 @@
         "EMA"
       ],
       "rarity": "Uncommon",
-      "text": "Sacrifice a creature: Add {C}{C} to your mana pool.",
+      "text": "Sacrifice a creature: Add {C}{C}.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -304,7 +304,7 @@
         "ME2"
       ],
       "rarity": "Common",
-      "text": "{1}, {T}, Sacrifice Barbed Sextant: Add one mana of any color to your mana pool. Draw a card at the beginning of the next turn's upkeep.",
+      "text": "{1}, {T}, Sacrifice Barbed Sextant: Add one mana of any color. Draw a card at the beginning of the next turn's upkeep.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -712,7 +712,7 @@
       "subtypes": [
         "Golem"
       ],
-      "text": "Trample (This creature can deal excess combat damage to defending player or planeswalker while attacking.)\nColossus of Sardia doesn't untap during your untap step.\n{9}: Untap Colossus of Sardia. Activate this ability only during your upkeep.",
+      "text": "Trample (This creature can deal excess combat damage to the player or planeswalker it's attacking.)\nColossus of Sardia doesn't untap during your untap step.\n{9}: Untap Colossus of Sardia. Activate this ability only during your upkeep.",
       "toughness": "9",
       "type": "Artifact Creature — Golem",
       "types": [
@@ -1289,7 +1289,7 @@
         },
         {
           "date": "2009-10-01",
-          "text": "Fellwar Stone checks the effects of all mana-producing abilities of lands your opponents control, but it doesn't check their costs. For example, Vivid Crag has the ability \"{T}, Remove a charge counter from Vivid Crag: Add one mana of any color to your mana pool.\" If an opponent controls Vivid Crag and you control Fellwar Stone, you can tap Fellwar Stone for any color of mana. It doesn't matter whether Vivid Crag has a charge counter on it, and it doesn't matter whether it's untapped."
+          "text": "Fellwar Stone checks the effects of all mana-producing abilities of lands your opponents control, but it doesn't check their costs. For example, Vivid Crag has the ability \"{T}, Remove a charge counter from Vivid Crag: Add one mana of any color.\" If an opponent controls Vivid Crag and you control Fellwar Stone, you can tap Fellwar Stone for any color of mana. It doesn't matter whether Vivid Crag has a charge counter on it, and it doesn't matter whether it's untapped."
         },
         {
           "date": "2009-10-01",
@@ -1300,7 +1300,7 @@
           "text": "Fellwar Stone doesn't care about any restrictions or riders your opponents' lands (such as Ancient Ziggurat or Hall of the Bandit Lord) put on the mana they produce. It just cares about colors of mana."
         }
       ],
-      "text": "{T}: Add to your mana pool one mana of any color that a land an opponent controls could produce.",
+      "text": "{T}: Add one mana of any color that a land an opponent controls could produce.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -1483,7 +1483,7 @@
         },
         {
           "date": "2009-10-01",
-          "text": "If one of the targets is illegal by the time the ability resolves (because the wrong player controls it, or it's the wrong card type, or for any other reason), the exchange doesn't happen. The target that's still legal will remain under its controller's control. Since the exchange doesn't happen, no Auras are destroyed. (If both targets are illegal, the ability is countered.)"
+          "text": "If one of the targets is illegal by the time the ability resolves (because the wrong player controls it, or it's the wrong card type, or for any other reason), the exchange doesn't happen. The target that's still legal will remain under its controller's control. Since the exchange doesn't happen, no Auras are destroyed. (If both targets are illegal, the ability doesn't resolve.)"
         }
       ],
       "text": "{5}, Sacrifice Gauntlets of Chaos: Exchange control of target artifact, creature, or land you control and target permanent an opponent controls that shares one of those types with it. If those permanents are exchanged this way, destroy all Auras attached to them.",
@@ -2094,7 +2094,7 @@
           "text": "If the player has less than 3 cards in their library, just exile all the cards that are there."
         }
       ],
-      "text": "{2}, {T}, Sacrifice Jester's Cap: Search target player's library for three cards and exile them. Then that player shuffles his or her library.",
+      "text": "{2}, {T}, Sacrifice Jester's Cap: Search target player's library for three cards and exile them. Then that player shuffles their library.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -2260,7 +2260,7 @@
         "MPS"
       ],
       "rarity": "Rare",
-      "text": "Mana Vault doesn't untap during your untap step.\nAt the beginning of your upkeep, you may pay {4}. If you do, untap Mana Vault.\nAt the beginning of your draw step, if Mana Vault is tapped, it deals 1 damage to you.\n{T}: Add {C}{C}{C} to your mana pool.",
+      "text": "Mana Vault doesn't untap during your untap step.\nAt the beginning of your upkeep, you may pay {4}. If you do, untap Mana Vault.\nAt the beginning of your draw step, if Mana Vault is tapped, it deals 1 damage to you.\n{T}: Add {C}{C}{C}.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -2371,7 +2371,7 @@
           "text": "Since you are putting more than one card in the graveyard at one time, the affected player can choose the order the 2 cards go in."
         }
       ],
-      "text": "{2}, {T}: Target player puts the top two cards of his or her library into his or her graveyard.",
+      "text": "{2}, {T}: Target player puts the top two cards of their library into their graveyard.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -2634,16 +2634,16 @@
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2012-07-01",
-          "text": "In zones other than the battlefield, Primal Clay is 0/0."
+          "date": "2018-03-16",
+          "text": "In zones other than the battlefield, this creature card is 0/0."
         },
         {
-          "date": "2012-07-01",
-          "text": "If another permanent enters the battlefield as a copy of Primal Clay, the controller of that permanent will get to make a new choice. The copy won't necessarily have the same power, toughness, and abilities as the original."
+          "date": "2018-03-16",
+          "text": "If another permanent enters the battlefield as a copy of this creature, the controller of that permanent will get to make a new choice. The copy won't necessarily have the same power, toughness, and abilities as the original."
         },
         {
-          "date": "2012-07-01",
-          "text": "If a creature that's already on the battlefield becomes a copy of Primal Clay, it copies the power, toughness, and abilities that were chosen for Primal Clay when it entered the battlefield."
+          "date": "2018-03-16",
+          "text": "If a creature that's already on the battlefield becomes a copy of this creature, it copies the power, toughness, and abilities that were chosen for this creature as it entered the battlefield."
         }
       ],
       "subtypes": [
@@ -2708,7 +2708,7 @@
         "M14"
       ],
       "rarity": "Uncommon",
-      "text": "{3}, {T}: Rod of Ruin deals 1 damage to target creature or player.",
+      "text": "{3}, {T}: Rod of Ruin deals 1 damage to any target.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -2847,7 +2847,7 @@
         "ME2"
       ],
       "rarity": "Uncommon",
-      "text": "{1}, {T}, Sacrifice a creature: Skull Catapult deals 2 damage to target creature or player.",
+      "text": "{1}, {T}, Sacrifice a creature: Skull Catapult deals 2 damage to any target.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -4251,7 +4251,7 @@
         "A25"
       ],
       "rarity": "Common",
-      "text": "Add {B}{B}{B} to your mana pool.",
+      "text": "Add {B}{B}{B}.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -4419,7 +4419,7 @@
           "text": "You may gain up to the total toughness of the creature even if it was already damaged."
         }
       ],
-      "text": "Spend only black mana on X.\nDrain Life deals X damage to target creature or player. You gain life equal to the damage dealt, but not more life than the player's life total before Drain Life dealt damage or the creature's toughness.",
+      "text": "Spend only black mana on X.\nDrain Life deals X damage to any target. You gain life equal to the damage dealt, but not more life than the player's life total before the damage was dealt, the planeswalker's loyalty before the damage was dealt, or the creature's toughness.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -4536,6 +4536,12 @@
         "A25"
       ],
       "rarity": "Common",
+      "rulings": [
+        {
+          "date": "2018-03-16",
+          "text": "A creature \"comes under your control\" if it enters the battlefield under your control or if you gain control of it while it's already on the battlefield."
+        }
+      ],
       "subtypes": [
         "Human",
         "Warrior"
@@ -4662,7 +4668,7 @@
       "rulings": [
         {
           "date": "2009-10-01",
-          "text": "The enchanted land loses its existing land types and any abilities printed on it. It now has the land type Swamp and has the ability \"{T}: Add {B} to your mana pool.\" Evil Presence doesn't change the enchanted land's name or whether it's legendary, basic, or snow."
+          "text": "The enchanted land loses its existing land types and any abilities printed on it. It now has the land type Swamp and has the ability \"{T}: Add {B}.\" Evil Presence doesn't change the enchanted land's name or whether it's legendary, basic, or snow."
         }
       ],
       "subtypes": [
@@ -5086,7 +5092,7 @@
           "text": "You choose whether to sacrifice creatures or not on resolution. If not, then you sacrifice Hecatomb. You can choose to not sacrifice creatures if you no longer control this card on resolution."
         }
       ],
-      "text": "When Hecatomb enters the battlefield, sacrifice Hecatomb unless you sacrifice four creatures.\nTap an untapped Swamp you control: Hecatomb deals 1 damage to target creature or player.",
+      "text": "When Hecatomb enters the battlefield, sacrifice Hecatomb unless you sacrifice four creatures.\nTap an untapped Swamp you control: Hecatomb deals 1 damage to any target.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -5197,7 +5203,7 @@
       "subtypes": [
         "Cleric"
       ],
-      "text": "{1}: Add {B} to your mana pool. If this ability has been activated four or more times this turn, sacrifice Initiates of the Ebon Hand at the beginning of the next end step.",
+      "text": "{1}: Add {B}. If this ability has been activated four or more times this turn, sacrifice Initiates of the Ebon Hand at the beginning of the next end step.",
       "toughness": "1",
       "type": "Creature — Cleric",
       "types": [
@@ -5372,7 +5378,7 @@
       "rulings": [
         {
           "date": "2005-08-01",
-          "text": "You do not get a card if the target becomes illegal and Krovikan Fetish is countered upon resolution. This is because it never successfully enters the battlefield."
+          "text": "You do not get a card if the target becomes illegal and Krovikan Fetish doesn't resolve. This is because it never successfully enters the battlefield."
         },
         {
           "date": "2005-08-01",
@@ -6221,7 +6227,7 @@
       "subtypes": [
         "Aura"
       ],
-      "text": "Enchant creature\nWhen Paralyze enters the battlefield, tap enchanted creature.\nEnchanted creature doesn't untap during its controller's untap step.\nAt the beginning of the upkeep of enchanted creature's controller, that player may pay {4}. If he or she does, untap the creature.",
+      "text": "Enchant creature\nWhen Paralyze enters the battlefield, tap enchanted creature.\nEnchanted creature doesn't untap during its controller's untap step.\nAt the beginning of the upkeep of enchanted creature's controller, that player may pay {4}. If the player does, untap the creature.",
       "type": "Enchantment — Aura",
       "types": [
         "Enchantment"
@@ -6458,7 +6464,7 @@
           "text": "The number you need to lose, discard, or sacrifice isn't calculated until it's time to perform that part of the effect. For example, if your opponent casts Pox and you discard Dodecapod as part of Pox's discard effect, Dodecapod will be put onto the battlefield instead of into your graveyard. Then, when determining how many creatures you need to sacrifice, the Dodecapod is taken into account."
         }
       ],
-      "text": "Each player loses a third of his or her life, then discards a third of the cards in his or her hand, then sacrifices a third of the creatures he or she controls, then sacrifices a third of the lands he or she controls. Round up each time.",
+      "text": "Each player loses a third of their life, then discards a third of the cards in their hand, then sacrifices a third of the creatures they control, then sacrifices a third of the lands they control. Round up each time.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -6510,7 +6516,7 @@
         "Human",
         "Minion"
       ],
-      "text": "{B}{B}{B}, {T}: Target opponent reveals his or her hand and discards a creature card at random. Activate this ability only during your turn.",
+      "text": "{B}{B}{B}, {T}: Target opponent reveals their hand and discards a creature card at random. Activate this ability only during your turn.",
       "toughness": "1",
       "type": "Creature — Human Minion",
       "types": [
@@ -6587,10 +6593,6 @@
         {
           "date": "2004-10-04",
           "text": "The creature being brought back is chosen on announcement and not on resolution of the spell because it is targeted."
-        },
-        {
-          "date": "2008-04-01",
-          "text": "A \"creature card\" is any card with the type creature, even if it has other types such as artifact, enchantment, or land. Older cards of type summon are also creature cards."
         }
       ],
       "text": "Return target creature card from your graveyard to your hand.",
@@ -7153,7 +7155,7 @@
         "5ED"
       ],
       "rarity": "Common",
-      "text": "Touch of Death deals 1 damage to target player. You gain 1 life.\nDraw a card at the beginning of the next turn's upkeep.",
+      "text": "Touch of Death deals 1 damage to target player or planeswalker. You gain 1 life.\nDraw a card at the beginning of the next turn's upkeep.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -7513,7 +7515,7 @@
         },
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         }
       ],
       "subtypes": [
@@ -7999,7 +8001,7 @@
       "rarity": "Common",
       "rulings": [
         {
-          "date": "2016-06-08",
+          "date": "2018-03-16",
           "text": "You draw three cards and put two cards back all while Brainstorm is resolving. Nothing can happen between the two, and no player may choose to take actions."
         }
       ],
@@ -8141,7 +8143,7 @@
         },
         {
           "date": "2004-10-04",
-          "text": "The ability is targeted and checks the validity of the target when put on the stack and when resolving. If the creature is not still there when the copy ability resolves, the ability is countered and no token is put onto the battlefield. This card remains on the battlefield as an enchantment with no token."
+          "text": "The ability is targeted and checks the validity of the target when put on the stack and when resolving. If the creature is not still there when the copy ability resolves, the ability doesn't resolve and no token is put onto the battlefield. This card remains on the battlefield as an enchantment with no token."
         },
         {
           "date": "2004-10-04",
@@ -8414,7 +8416,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "This card forces the target player to draw mana from lands if they are untapped, but that player can choose how to draw the mana if a land he or she controls has multiple mana abilities, or mana abilities with choices."
+          "text": "This card forces the target player to draw mana from lands if they are untapped, but that player can choose how to draw the mana if a land they control has multiple mana abilities, or mana abilities with choices."
         },
         {
           "date": "2004-10-04",
@@ -8429,7 +8431,7 @@
           "text": "A mana ability is an ability that (1) isn't a loyalty ability, (2) doesn't target, and (3) could put mana into a player's mana pool when it resolves."
         }
       ],
-      "text": "Target player activates a mana ability of each land he or she controls. Then put all mana from that player's mana pool into yours.",
+      "text": "Target player activates a mana ability of each land they control. Then that player loses all unspent mana and you add the mana lost this way.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -8792,7 +8794,7 @@
         "6ED"
       ],
       "rarity": "Rare",
-      "text": "Target player discards two cards, then draws as many cards as he or she discarded this way.",
+      "text": "Target player discards two cards, then draws as many cards as they discarded this way.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -9031,7 +9033,7 @@
           "text": "It only returns artifacts which are on the battlefield."
         }
       ],
-      "text": "Return all artifacts target player owns to his or her hand.",
+      "text": "Return all artifacts target player owns to their hand.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -9786,7 +9788,7 @@
         "5ED"
       ],
       "rarity": "Uncommon",
-      "text": "Each player may discard up to three cards. Mind Bomb deals damage to each player equal to 3 minus the number of cards he or she discarded this way.",
+      "text": "Each player may discard up to three cards. Mind Bomb deals damage to each player equal to 3 minus the number of cards they discarded this way.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -10029,7 +10031,7 @@
         "Human",
         "Pirate"
       ],
-      "text": "Pirate Ship can't attack unless defending player controls an Island.\n{T}: Pirate Ship deals 1 damage to target creature or player.\nWhen you control no Islands, sacrifice Pirate Ship.",
+      "text": "Pirate Ship can't attack unless defending player controls an Island.\n{T}: Pirate Ship deals 1 damage to any target.\nWhen you control no Islands, sacrifice Pirate Ship.",
       "toughness": "3",
       "type": "Creature — Human Pirate",
       "types": [
@@ -10085,7 +10087,7 @@
           "text": "This does not cause a player to lose if they have less than 3 cards in their library. It allows you to look at and reorder or shuffle whatever remaining cards there might be."
         }
       ],
-      "text": "Look at the top three cards of target player's library, then put them back in any order. You may have that player shuffle his or her library.\nDraw a card at the beginning of the next turn's upkeep.",
+      "text": "Look at the top three cards of target player's library, then put them back in any order. You may have that player shuffle their library.\nDraw a card at the beginning of the next turn's upkeep.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -10173,7 +10175,7 @@
           "text": "Only lands that actually have mana abilities will get tapped. This includes basic lands and lands with mana abilities printed on them, as well as lands which have been granted a mana ability by some effect."
         }
       ],
-      "text": "Counter target spell unless its controller pays {X}. If he or she doesn't, that player taps all lands with mana abilities he or she controls and empties his or her mana pool.",
+      "text": "Counter target spell unless its controller pays {X}. If that player doesn't, they tap all lands with mana abilities they control and lose all unspent mana.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -10244,7 +10246,7 @@
         "Human",
         "Wizard"
       ],
-      "text": "{T}: Prodigal Sorcerer deals 1 damage to target creature or player.",
+      "text": "{T}: Prodigal Sorcerer deals 1 damage to any target.",
       "toughness": "1",
       "type": "Creature — Human Wizard",
       "types": [
@@ -10480,7 +10482,7 @@
         "Zombie",
         "Pirate"
       ],
-      "text": "Whenever Reef Pirates deals damage to an opponent, that player puts the top card of his or her library into his or her graveyard.",
+      "text": "Whenever Reef Pirates deals damage to an opponent, that player puts the top card of their library into their graveyard.",
       "toughness": "2",
       "type": "Creature — Zombie Pirate",
       "types": [
@@ -11030,7 +11032,7 @@
           "text": "A \"creature spell\" is any spell with the type Creature, even if it has other types such as Artifact or Enchantment. Older cards of type Summon are also Creature spells."
         }
       ],
-      "text": "Whenever an opponent casts a creature spell, Soul Barrier deals 2 damage to that player unless he or she pays {2}.",
+      "text": "Whenever an opponent casts a creature spell, Soul Barrier deals 2 damage to that player unless they pay {2}.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -11837,7 +11839,7 @@
           "text": "When using Dredge with this, you have two choices. You can immediately replace the draw with Dredge, or you can apply Zur's Weirding's replacement. If the latter, you first resolve Zur's Weirding's ability, then if you're going to draw the card, decide whether or not to replace that draw with Dredge."
         }
       ],
-      "text": "Players play with their hands revealed.\nIf a player would draw a card, he or she reveals it instead. Then any other player may pay 2 life. If a player does, put that card into its owner's graveyard. Otherwise, that player draws a card.",
+      "text": "Players play with their hands revealed.\nIf a player would draw a card, they reveal it instead. Then any other player may pay 2 life. If a player does, put that card into its owner's graveyard. Otherwise, that player draws a card.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -12080,7 +12082,7 @@
       "subtypes": [
         "Bird"
       ],
-      "text": "Flying\n{T}: Add one mana of any color to your mana pool.",
+      "text": "Flying\n{T}: Add one mana of any color.",
       "toughness": "1",
       "type": "Creature — Bird",
       "types": [
@@ -12914,7 +12916,7 @@
       "subtypes": [
         "Elemental"
       ],
-      "text": "Trample (This creature can deal excess combat damage to defending player or planeswalker while attacking.)\nAt the beginning of your upkeep, Force of Nature deals 8 damage to you unless you pay {G}{G}{G}{G}.",
+      "text": "Trample (This creature can deal excess combat damage to the player or planeswalker it's attacking.)\nAt the beginning of your upkeep, Force of Nature deals 8 damage to you unless you pay {G}{G}{G}{G}.",
       "toughness": "8",
       "type": "Creature — Elemental",
       "types": [
@@ -13090,7 +13092,7 @@
         "Elf",
         "Druid"
       ],
-      "text": "{T}: Add {G}{G} to your mana pool.",
+      "text": "{T}: Add {G}{G}.",
       "toughness": "1",
       "type": "Creature — Elf Druid",
       "types": [
@@ -13855,12 +13857,6 @@
         "CMD"
       ],
       "rarity": "Rare",
-      "rulings": [
-        {
-          "date": "2008-04-01",
-          "text": "A \"creature card\" is any card with the type creature, even if it has other types such as artifact, enchantment, or land. Older cards of type summon are also creature cards."
-        }
-      ],
       "subtypes": [
         "Lhurgoyf"
       ],
@@ -14032,7 +14028,7 @@
       "rulings": [
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         }
       ],
       "text": "All Forests are 1/1 creatures that are still lands.",
@@ -14105,14 +14101,15 @@
         "C14",
         "DD3_EVG",
         "EMA",
-        "CMA"
+        "CMA",
+        "DOM"
       ],
       "rarity": "Common",
       "subtypes": [
         "Elf",
         "Druid"
       ],
-      "text": "{T}: Add {G} to your mana pool.",
+      "text": "{T}: Add {G}.",
       "toughness": "1",
       "type": "Creature — Elf Druid",
       "types": [
@@ -14413,7 +14410,7 @@
         "MED"
       ],
       "rarity": "Rare",
-      "text": "At the beginning of each player's upkeep, Primal Order deals damage to that player equal to the number of nonbasic lands he or she controls.",
+      "text": "At the beginning of each player's upkeep, Primal Order deals damage to that player equal to the number of nonbasic lands they control.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -15227,7 +15224,7 @@
       "rulings": [
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         }
       ],
       "text": "Each noncreature artifact loses all abilities and becomes an artifact creature with power and toughness each equal to its converted mana cost. If Titania's Song leaves the battlefield, this effect continues until end of turn.",
@@ -15829,7 +15826,7 @@
       "subtypes": [
         "Aura"
       ],
-      "text": "Enchant land\nWhenever enchanted land is tapped for mana, its controller adds {G} to his or her mana pool (in addition to the mana the land produces).",
+      "text": "Enchant land\nWhenever enchanted land is tapped for mana, its controller adds an additional {G}.",
       "type": "Enchantment — Aura",
       "types": [
         "Enchantment"
@@ -16162,7 +16159,7 @@
       "subtypes": [
         "Elemental"
       ],
-      "text": "Trample (This creature can deal excess combat damage to defending player or planeswalker while attacking.)\nHaste (This creature can attack and {T} as soon as it comes under your control.)\nAt the beginning of the end step, sacrifice Ball Lightning.",
+      "text": "Trample (This creature can deal excess combat damage to the player or planeswalker it's attacking.)\nHaste (This creature can attack and {T} as soon as it comes under your control.)\nAt the beginning of the end step, sacrifice Ball Lightning.",
       "toughness": "1",
       "type": "Creature — Elemental",
       "types": [
@@ -16367,7 +16364,7 @@
         "Human",
         "Shaman"
       ],
-      "text": "{1}{R}{R}: Brothers of Fire deals 1 damage to target creature or player and 1 damage to you.",
+      "text": "{1}{R}{R}: Brothers of Fire deals 1 damage to any target and 1 damage to you.",
       "toughness": "2",
       "type": "Creature — Human Shaman",
       "types": [
@@ -16653,7 +16650,7 @@
           "text": "Disintegrated creatures do not go to the graveyard at all before being exiled. They do not trigger abilities which trigger due to a creature going to the graveyard."
         }
       ],
-      "text": "Disintegrate deals X damage to target creature or player. That creature can't be regenerated this turn. If the creature would die this turn, exile it instead.",
+      "text": "Disintegrate deals X damage to any target. If it's a creature, it can't be regenerated this turn, and if it would die this turn, exile it instead.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -17150,7 +17147,7 @@
           "text": "You can target more than X creatures. However, if the number of legal targets at the time Fireball resolves is greater than X, none of them will be dealt any damage."
         }
       ],
-      "text": "Fireball deals X damage divided evenly, rounded down, among any number of target creatures and/or players.\nFireball costs {1} more to cast for each target beyond the first.",
+      "text": "This spell costs {1} more to cast for each target beyond the first.\nFireball deals X damage divided evenly, rounded down, among any number of targets.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -17337,7 +17334,7 @@
         "5ED"
       ],
       "rarity": "Common",
-      "text": "Flare deals 1 damage to target creature or player.\nDraw a card at the beginning of the next turn's upkeep.",
+      "text": "Flare deals 1 damage to any target.\nDraw a card at the beginning of the next turn's upkeep.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -18029,7 +18026,7 @@
           "text": "Regeneration abilities that would affect that creature can still be activated; they just won't do anything. The creature can't be regenerated for any reason, even if an effect other than Incinerate would deal lethal damage to it or otherwise destroy it."
         }
       ],
-      "text": "Incinerate deals 3 damage to target creature or player. A creature dealt damage this way can't be regenerated this turn.",
+      "text": "Incinerate deals 3 damage to any target. A creature dealt damage this way can't be regenerated this turn.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -18352,7 +18349,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "Always affects the player and targets one of his or her opponents."
+          "text": "Always affects the player and targets one of their opponents."
         },
         {
           "date": "2004-10-04",
@@ -18447,7 +18444,7 @@
           "text": "Produces only one additional mana, regardless of how much was produced by tapping the land."
         }
       ],
-      "text": "Whenever a player taps a land for mana, that player adds one mana to his or her mana pool of any type that land produced.",
+      "text": "Whenever a player taps a land for mana, that player adds one mana of any type that land produced.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -18703,14 +18700,14 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "You do not take the 3 points of damage if the ability is countered because the target is illegal."
+          "text": "You do not take the 3 points of damage if the ability doesn't resolve because the target is illegal."
         }
       ],
       "subtypes": [
         "Orc",
         "Warrior"
       ],
-      "text": "{T}: Orcish Artillery deals 2 damage to target creature or player and 3 damage to you.",
+      "text": "{T}: Orcish Artillery deals 2 damage to any target and 3 damage to you.",
       "toughness": "3",
       "type": "Creature — Orc Warrior",
       "types": [
@@ -18874,7 +18871,7 @@
       "rulings": [
         {
           "date": "2008-10-01",
-          "text": "This ability changes the targeted land's land types. It doesn't affect its name, its supertypes (such as whether or not it's legendary, snow, or basic), or its other types (if it's also a creature, for example). The ability will cause the land to lose all of its printed abilities and gain the ability \"{T}: Add {B} to your mana pool.\""
+          "text": "This ability changes the targeted land's land types. It doesn't affect its name, its supertypes (such as whether or not it's legendary, snow, or basic), or its other types (if it's also a creature, for example). The ability will cause the land to lose all of its printed abilities and gain the ability \"{T}: Add {B}.\""
         }
       ],
       "subtypes": [
@@ -19121,7 +19118,7 @@
           "text": "If a turn has multiple combat phases, this spell can be cast during any of them as long as it's before the beginning of that phase's Declare Blockers Step."
         }
       ],
-      "text": "Cast Panic only during combat before blockers are declared.\nTarget creature can't block this turn.\nDraw a card at the beginning of the next turn's upkeep.",
+      "text": "Cast this spell only during combat before blockers are declared.\nTarget creature can't block this turn.\nDraw a card at the beginning of the next turn's upkeep.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -19308,14 +19305,10 @@
         },
         {
           "date": "2014-11-24",
-          "text": "You can't deal damage to both a player and a planeswalker that player controls using Pyrotechnics. You also can't deal damage to more than one planeswalker controlled by the same player. If you choose to redirect the damage being dealt to a player to a planeswalker, you must redirect all the damage to a single planeswalker."
-        },
-        {
-          "date": "2014-11-24",
           "text": "If an effect creates a copy of Pyrotechnics, the number of targets and division of damage can't be changed. The effect that creates the copy may allow you to change the targets, however."
         }
       ],
-      "text": "Pyrotechnics deals 4 damage divided as you choose among any number of target creatures and/or players.",
+      "text": "Pyrotechnics deals 4 damage divided as you choose among any number of targets.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -19400,6 +19393,10 @@
         },
         {
           "format": "Ice Age Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Ixalan Block",
           "legality": "Legal"
         },
         {
@@ -20103,10 +20100,10 @@
       "rulings": [
         {
           "date": "2007-09-16",
-          "text": "Each player draws a number of cards equal to the number of cards he or she shuffled into his or her own library."
+          "text": "Each player draws a number of cards equal to the number of cards they shuffled into their own library."
         }
       ],
-      "text": "Each player shuffles the cards from his or her hand into his or her library, then draws that many cards.",
+      "text": "Each player shuffles the cards from their hand into their library, then draws that many cards.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -20314,7 +20311,7 @@
         "ME3"
       ],
       "rarity": "Common",
-      "text": "Choose one —\n• Target player gains X life.\n• Prevent the next X damage that would be dealt to target creature or player this turn.",
+      "text": "Choose one —\n• Target player gains X life.\n• Prevent the next X damage that would be dealt to any target this turn.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -22080,7 +22077,7 @@
           "text": "You draw a card at the beginning of the next turn's upkeep after Heal resolves, regardless of whether 1 damage was actually prevented."
         }
       ],
-      "text": "Prevent the next 1 damage that would be dealt to target creature or player this turn.\nDraw a card at the beginning of the next turn's upkeep.",
+      "text": "Prevent the next 1 damage that would be dealt to any target this turn.\nDraw a card at the beginning of the next turn's upkeep.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -22152,7 +22149,7 @@
         "DD3_DVD"
       ],
       "rarity": "Common",
-      "text": "Choose one —\n• Target player gains 3 life.\n• Prevent the next 3 damage that would be dealt to target creature or player this turn.",
+      "text": "Choose one —\n• Target player gains 3 life.\n• Prevent the next 3 damage that would be dealt to any target this turn.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -22681,7 +22678,7 @@
           "text": "Amount of damage is determined when the ability resolves and not when it is placed on the stack."
         }
       ],
-      "text": "At the beginning of each player's upkeep, Karma deals damage to that player equal to the number of Swamps he or she controls.",
+      "text": "At the beginning of each player's upkeep, Karma deals damage to that player equal to the number of Swamps they control.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -23244,7 +23241,7 @@
         "Avatar",
         "Incarnation"
       ],
-      "text": "{0}: The next 1 damage that would be dealt to Personal Incarnation this turn is dealt to its owner instead. Only Personal Incarnation's owner may activate this ability.\nWhen Personal Incarnation dies, its owner loses half his or her life, rounded up.",
+      "text": "{0}: The next 1 damage that would be dealt to Personal Incarnation this turn is dealt to its owner instead. Only Personal Incarnation's owner may activate this ability.\nWhen Personal Incarnation dies, its owner loses half their life, rounded up.",
       "toughness": "6",
       "type": "Creature — Avatar Incarnation",
       "types": [
@@ -23656,7 +23653,7 @@
         "Human",
         "Cleric"
       ],
-      "text": "{T}: Prevent the next 1 damage that would be dealt to target creature or player this turn.",
+      "text": "{T}: Prevent the next 1 damage that would be dealt to any target this turn.",
       "toughness": "1",
       "type": "Creature — Human Cleric",
       "types": [
@@ -23838,7 +23835,7 @@
         "Human",
         "Knight"
       ],
-      "text": "{T}: Prevent the next 1 damage that would be dealt to target creature or player this turn.\n{1}{W}{W}, {T}: Target creature gains vigilance until end of turn.",
+      "text": "{T}: Prevent the next 1 damage that would be dealt to any target this turn.\n{1}{W}{W}, {T}: Target creature gains vigilance until end of turn.",
       "toughness": "2",
       "type": "Creature — Human Knight",
       "types": [
@@ -24013,10 +24010,6 @@
       ],
       "rarity": "Uncommon",
       "rulings": [
-        {
-          "date": "2004-10-04",
-          "text": "Damage that is redirected is not dealt to the original creature or player, but it is dealt to the new creature or player."
-        },
         {
           "date": "2004-10-04",
           "text": "You only gain the life when the triggered ability resolves. If you are reduced to zero life before the ability resolves, you will lose before gaining the life."
@@ -24582,7 +24575,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -24846,7 +24840,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -25110,7 +25105,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -25374,7 +25370,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -25637,7 +25634,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -25900,7 +25899,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -26163,7 +26164,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -26426,7 +26429,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -26491,7 +26496,7 @@
         "10E"
       ],
       "rarity": "Rare",
-      "text": "{T}: Add {C} to your mana pool.\n{T}: Add {W} or {U} to your mana pool. Adarkar Wastes deals 1 damage to you.",
+      "text": "{T}: Add {C}.\n{T}: Add {W} or {U}. Adarkar Wastes deals 1 damage to you.",
       "type": "Land",
       "types": [
         "Land"
@@ -26552,7 +26557,7 @@
           "text": "Whether or not it is tapped is checked at the beginning of upkeep. If it is not tapped, the ability does not trigger. It also checks during resolution and you only get a counter if it is still tapped then."
         }
       ],
-      "text": "Bottomless Vault enters the battlefield tapped.\nYou may choose not to untap Bottomless Vault during your untap step.\nAt the beginning of your upkeep, if Bottomless Vault is tapped, put a storage counter on it.\n{T}, Remove any number of storage counters from Bottomless Vault: Add {B} to your mana pool for each storage counter removed this way.",
+      "text": "Bottomless Vault enters the battlefield tapped.\nYou may choose not to untap Bottomless Vault during your untap step.\nAt the beginning of your upkeep, if Bottomless Vault is tapped, put a storage counter on it.\n{T}, Remove any number of storage counters from Bottomless Vault: Add {B} for each storage counter removed this way.",
       "type": "Land",
       "types": [
         "Land"
@@ -26605,7 +26610,7 @@
         "10E"
       ],
       "rarity": "Rare",
-      "text": "{T}: Add {C} to your mana pool.\n{T}: Add {G} or {W} to your mana pool. Brushland deals 1 damage to you.",
+      "text": "{T}: Add {C}.\n{T}: Add {G} or {W}. Brushland deals 1 damage to you.",
       "type": "Land",
       "types": [
         "Land"
@@ -26667,7 +26672,7 @@
           "text": "On the other hand, you can tap City of Brass, put its triggered ability on the stack, and then respond to that ability by casting an instant or activating an ability using that mana. In that case, the instant spell or activated ability will resolve first."
         }
       ],
-      "text": "Whenever City of Brass becomes tapped, it deals 1 damage to you.\n{T}: Add one mana of any color to your mana pool.",
+      "text": "Whenever City of Brass becomes tapped, it deals 1 damage to you.\n{T}: Add one mana of any color.",
       "type": "Land",
       "types": [
         "Land"
@@ -26728,7 +26733,7 @@
           "text": "Whether or not it is tapped is checked at the beginning of upkeep. If it is not tapped, the ability does not trigger. It also checks during resolution and you only get a counter if it is still tapped then."
         }
       ],
-      "text": "Dwarven Hold enters the battlefield tapped.\nYou may choose not to untap Dwarven Hold during your untap step.\nAt the beginning of your upkeep, if Dwarven Hold is tapped, put a storage counter on it.\n{T}, Remove any number of storage counters from Dwarven Hold: Add {R} to your mana pool for each storage counter removed this way.",
+      "text": "Dwarven Hold enters the battlefield tapped.\nYou may choose not to untap Dwarven Hold during your untap step.\nAt the beginning of your upkeep, if Dwarven Hold is tapped, put a storage counter on it.\n{T}, Remove any number of storage counters from Dwarven Hold: Add {R} for each storage counter removed this way.",
       "type": "Land",
       "types": [
         "Land"
@@ -26770,7 +26775,7 @@
         "ME2"
       ],
       "rarity": "Uncommon",
-      "text": "Dwarven Ruins enters the battlefield tapped.\n{T}: Add {R} to your mana pool.\n{T}, Sacrifice Dwarven Ruins: Add {R}{R} to your mana pool.",
+      "text": "Dwarven Ruins enters the battlefield tapped.\n{T}: Add {R}.\n{T}, Sacrifice Dwarven Ruins: Add {R}{R}.",
       "type": "Land",
       "types": [
         "Land"
@@ -26813,7 +26818,7 @@
         "PD3"
       ],
       "rarity": "Uncommon",
-      "text": "Ebon Stronghold enters the battlefield tapped.\n{T}: Add {B} to your mana pool.\n{T}, Sacrifice Ebon Stronghold: Add {B}{B} to your mana pool.",
+      "text": "Ebon Stronghold enters the battlefield tapped.\n{T}: Add {B}.\n{T}, Sacrifice Ebon Stronghold: Add {B}{B}.",
       "type": "Land",
       "types": [
         "Land"
@@ -26857,7 +26862,7 @@
         "CMA"
       ],
       "rarity": "Uncommon",
-      "text": "Havenwood Battleground enters the battlefield tapped.\n{T}: Add {G} to your mana pool.\n{T}, Sacrifice Havenwood Battleground: Add {G}{G} to your mana pool.",
+      "text": "Havenwood Battleground enters the battlefield tapped.\n{T}: Add {G}.\n{T}, Sacrifice Havenwood Battleground: Add {G}{G}.",
       "type": "Land",
       "types": [
         "Land"
@@ -26918,7 +26923,7 @@
           "text": "Whether or not it is tapped is checked at the beginning of upkeep. If it is not tapped, the ability does not trigger. It also checks during resolution and you only get a counter if it is still tapped then."
         }
       ],
-      "text": "Hollow Trees enters the battlefield tapped.\nYou may choose not to untap Hollow Trees during your untap step.\nAt the beginning of your upkeep, if Hollow Trees is tapped, put a storage counter on it.\n{T}, Remove any number of storage counters from Hollow Trees: Add {G} to your mana pool for each storage counter removed this way.",
+      "text": "Hollow Trees enters the battlefield tapped.\nYou may choose not to untap Hollow Trees during your untap step.\nAt the beginning of your upkeep, if Hollow Trees is tapped, put a storage counter on it.\n{T}, Remove any number of storage counters from Hollow Trees: Add {G} for each storage counter removed this way.",
       "type": "Land",
       "types": [
         "Land"
@@ -26979,7 +26984,7 @@
           "text": "Whether or not it is tapped is checked at the beginning of upkeep. If it is not tapped, the ability does not trigger. It also checks during resolution and you only get a counter if it is still tapped then."
         }
       ],
-      "text": "Icatian Store enters the battlefield tapped.\nYou may choose not to untap Icatian Store during your untap step.\nAt the beginning of your upkeep, if Icatian Store is tapped, put a storage counter on it.\n{T}, Remove any number of storage counters from Icatian Store: Add {W} to your mana pool for each storage counter removed this way.",
+      "text": "Icatian Store enters the battlefield tapped.\nYou may choose not to untap Icatian Store during your untap step.\nAt the beginning of your upkeep, if Icatian Store is tapped, put a storage counter on it.\n{T}, Remove any number of storage counters from Icatian Store: Add {W} for each storage counter removed this way.",
       "type": "Land",
       "types": [
         "Land"
@@ -27100,7 +27105,7 @@
         "C16"
       ],
       "rarity": "Rare",
-      "text": "{T}: Add {C} to your mana pool.\n{T}: Add {R} or {G} to your mana pool. Karplusan Forest deals 1 damage to you.",
+      "text": "{T}: Add {C}.\n{T}: Add {R} or {G}. Karplusan Forest deals 1 damage to you.",
       "type": "Land",
       "types": [
         "Land"
@@ -27141,7 +27146,7 @@
         "ME2"
       ],
       "rarity": "Uncommon",
-      "text": "Ruins of Trokair enters the battlefield tapped.\n{T}: Add {W} to your mana pool.\n{T}, Sacrifice Ruins of Trokair: Add {W}{W} to your mana pool.",
+      "text": "Ruins of Trokair enters the battlefield tapped.\n{T}: Add {W}.\n{T}, Sacrifice Ruins of Trokair: Add {W}{W}.",
       "type": "Land",
       "types": [
         "Land"
@@ -27202,7 +27207,7 @@
           "text": "Whether or not it is tapped is checked at the beginning of upkeep. If it is not tapped, the ability does not trigger. It also checks during resolution and you only get a counter if it is still tapped then."
         }
       ],
-      "text": "Sand Silos enters the battlefield tapped.\nYou may choose not to untap Sand Silos during your untap step.\nAt the beginning of your upkeep, if Sand Silos is tapped, put a storage counter on it.\n{T}, Remove any number of storage counters from Sand Silos: Add {U} to your mana pool for each storage counter removed this way.",
+      "text": "Sand Silos enters the battlefield tapped.\nYou may choose not to untap Sand Silos during your untap step.\nAt the beginning of your upkeep, if Sand Silos is tapped, put a storage counter on it.\n{T}, Remove any number of storage counters from Sand Silos: Add {U} for each storage counter removed this way.",
       "type": "Land",
       "types": [
         "Land"
@@ -27255,7 +27260,7 @@
         "10E"
       ],
       "rarity": "Rare",
-      "text": "{T}: Add {C} to your mana pool.\n{T}: Add {B} or {R} to your mana pool. Sulfurous Springs deals 1 damage to you.",
+      "text": "{T}: Add {C}.\n{T}: Add {B} or {R}. Sulfurous Springs deals 1 damage to you.",
       "type": "Land",
       "types": [
         "Land"
@@ -27297,7 +27302,7 @@
         "ME2"
       ],
       "rarity": "Uncommon",
-      "text": "Svyelunite Temple enters the battlefield tapped.\n{T}: Add {U} to your mana pool.\n{T}, Sacrifice Svyelunite Temple: Add {U}{U} to your mana pool.",
+      "text": "Svyelunite Temple enters the battlefield tapped.\n{T}: Add {U}.\n{T}, Sacrifice Svyelunite Temple: Add {U}{U}.",
       "type": "Land",
       "types": [
         "Land"
@@ -27351,7 +27356,7 @@
         "C16"
       ],
       "rarity": "Rare",
-      "text": "{T}: Add {C} to your mana pool.\n{T}: Add {U} or {B} to your mana pool. Underground River deals 1 damage to you.",
+      "text": "{T}: Add {C}.\n{T}: Add {U} or {B}. Underground River deals 1 damage to you.",
       "type": "Land",
       "types": [
         "Land"
@@ -27406,7 +27411,7 @@
         "Urza’s",
         "Mine"
       ],
-      "text": "{T}: Add {C} to your mana pool. If you control an Urza's Power-Plant and an Urza's Tower, add {C}{C} to your mana pool instead.",
+      "text": "{T}: Add {C}. If you control an Urza's Power-Plant and an Urza's Tower, add {C}{C} instead.",
       "type": "Land — Urza’s Mine",
       "types": [
         "Land"
@@ -27461,7 +27466,7 @@
         "Urza’s",
         "Power-Plant"
       ],
-      "text": "{T}: Add {C} to your mana pool. If you control an Urza's Mine and an Urza's Tower, add {C}{C} to your mana pool instead.",
+      "text": "{T}: Add {C}. If you control an Urza's Mine and an Urza's Tower, add {C}{C} instead.",
       "type": "Land — Urza’s Power-Plant",
       "types": [
         "Land"
@@ -27510,7 +27515,7 @@
         "Urza’s",
         "Tower"
       ],
-      "text": "{T}: Add {C} to your mana pool. If you control an Urza's Mine and an Urza's Power-Plant, add {C}{C}{C} to your mana pool instead.",
+      "text": "{T}: Add {C}. If you control an Urza's Mine and an Urza's Power-Plant, add {C}{C}{C} instead.",
       "type": "Land — Urza’s Tower",
       "types": [
         "Land"
@@ -27763,7 +27768,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -28029,7 +28036,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -28295,7 +28304,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -28561,7 +28572,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -28821,7 +28834,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -29081,7 +29096,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -29341,7 +29358,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -29601,7 +29620,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -29862,7 +29883,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -30123,7 +30145,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -30384,7 +30407,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -30645,7 +30669,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [

@@ -395,7 +395,7 @@
         "Proper",
         "Etiquette"
       ],
-      "text": "Flying, first strike\nAt the beginning of each other player's upkeep, you may compliment that player on his or her game play. If you don't, sacrifice Miss Demeanor.",
+      "text": "Flying, first strike\nAt the beginning of each other player's upkeep, you may compliment that player on their game play. If you don't, sacrifice Miss Demeanor.",
       "toughness": "1",
       "type": "Creature — Lady of Proper Etiquette",
       "types": [
@@ -432,7 +432,7 @@
         "UGL"
       ],
       "rarity": "Rare",
-      "text": "Exile all permanents and all cards from all graveyards. Each player shuffles his or her hand into his or her library, then draws seven cards. Each player's life total becomes 10. Exile Once More with Feeling.\nDCI ruling — A deck can have only one card named Once More with Feeling.",
+      "text": "Exile all permanents and all cards from all graveyards. Each player shuffles their hand into their library, then draws seven cards. Each player's life total becomes 10. Exile Once More with Feeling.\nDCI ruling — A deck can have only one card named Once More with Feeling.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -503,7 +503,7 @@
         "UGL"
       ],
       "rarity": "Common",
-      "text": "Prevent the next 3 damage that would be dealt this turn to any number of target creatures and/or players, divided as you choose. If there are more people in the room of a different gender than you are as you cast this spell, prevent the next 6 damage this way instead.",
+      "text": "Prevent the next 3 damage that would be dealt this turn to any number of targets, divided as you choose. If there are more people in the room of a different gender than you are as you cast this spell, prevent the next 6 damage this way instead.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -538,7 +538,7 @@
         "UGL"
       ],
       "rarity": "Rare",
-      "text": "Pursuant to subsection 3.1(4) of Richard's Rules of Order, at the beginning of the upkeep of each participant in this game of the Magic: The Gathering® trading card game (hereafter known as \"PLAYER\"), that PLAYER performs all actions in the sequence of previously added actions (hereafter known as \"ACTION QUEUE\"), in the order those actions were added, then adds another action to the end of the ACTION QUEUE. All actions must be simple physical or verbal actions that a player can perform while sitting in a chair, without jeopardizing the health and security of said PLAYER.\nWhen any PLAYER does not perform all the prescribed actions in the correct order, sacrifice Bureaucracy and said PLAYER discards his or her complement of cards in hand (hereafter known as \"HAND\").",
+      "text": "Pursuant to subsection 3.1(4) of Richard's Rules of Order, at the beginning of the upkeep of each participant in this game of the Magic: The Gathering® trading card game (hereafter known as \"PLAYER\"), that PLAYER performs all actions in the sequence of previously added actions (hereafter known as \"ACTION QUEUE\"), in the order those actions were added, then adds another action to the end of the ACTION QUEUE. All actions must be simple physical or verbal actions that a player can perform while sitting in a chair, without jeopardizing the health and security of said PLAYER.\nWhen any PLAYER does not perform all the prescribed actions in the correct order, sacrifice Bureaucracy and said PLAYER discards their complement of cards in hand (hereafter known as \"HAND\").",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -609,7 +609,7 @@
         "UGL"
       ],
       "rarity": "Uncommon",
-      "text": "Cast Checks and Balances only if there are three or more players in the game.\nWhenever a player casts a spell, each of that player's opponents may discard a card. If they do, counter that spell.",
+      "text": "Cast this spell only if there are three or more players in the game.\nWhenever a player casts a spell, each of that player's opponents may discard a card. If they do, counter that spell.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -845,7 +845,7 @@
         "UGL"
       ],
       "rarity": "Common",
-      "text": "Choose a card name, then target spell's controller reveals his or her hand. If a card with the chosen name is revealed this way, counter that spell.",
+      "text": "Choose a card name, then target spell's controller reveals their hand. If a card with the chosen name is revealed this way, counter that spell.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -990,7 +990,7 @@
         "UGL"
       ],
       "rarity": "Rare",
-      "text": "Each player plays with the top card of his or her library held against his or her forehead, revealed to each other player.",
+      "text": "Each player plays with the top card of their library held against their forehead, revealed to each other player.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -1025,7 +1025,7 @@
         "UGL"
       ],
       "rarity": "Uncommon",
-      "text": "Before any player casts a spell with the same name as a card in any graveyard, that player may say \"sorry.\" If the player doesn't, any other player may say \"sorry\" as the spell is being cast. When another player says \"sorry\" this way, counter the spell.\nWhenever a player says \"sorry\" at any other time, Sorry deals 2 damage to that player.",
+      "text": "Before any player casts a spell with the same name as a card in any graveyard, that player may say \"sorry.\" If they don't, any other player may say \"sorry\" as the spell is being cast. When another player says \"sorry\" this way, counter the spell.\nWhenever a player says \"sorry\" at any other time, Sorry deals 2 damage to that player.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -1033,7 +1033,13 @@
     },
     {
       "artist": "Douglas Shuler",
-      "cmc": 0,
+      "cmc": 15,
+      "colorIdentity": [
+        "B"
+      ],
+      "colors": [
+        "Black"
+      ],
       "flavor": "\"It was big. Really, really big. No, bigger\nNo, more. Look, we're talking krakens and",
       "id": "293e696af02708e7c1f06263ac6aa0f88619c26b",
       "imageName": "b.f.m. (big furry monster)1",
@@ -1044,6 +1050,7 @@
           "legality": "Legal"
         }
       ],
+      "manaCost": "{B}{B}{B}{B}{B}{B}{B}{B}{B}{B}{B}{B}{B}{B}{B}",
       "multiverseid": 9780,
       "name": "B.F.M. (Big Furry Monster)",
       "names": [
@@ -1053,25 +1060,30 @@
       "number": "28a",
       "originalText": "You must play both B.F.M. cards to put\nleaves play, sacrifice the other.\nB.F.M. can be blocked only by three or",
       "originalType": "Summon — The Biggest, Baddest, Nastiest,",
+      "power": "99",
       "printings": [
         "UGL"
       ],
       "rarity": "Rare",
-      "subtypes": [
-        "The",
-        "Biggest,",
-        "Baddest,",
-        "Nastiest,"
-      ],
-      "text": "You must cast both B.F.M. cards to put\nleaves the battlefield, sacrifice the other.\nB.F.M. can't be blocked except by three or",
-      "type": "Creature — The Biggest, Baddest, Nastiest,",
+      "text": "B.F.M. onto the battlefield. If one B.F.M. card\nmore creatures.",
+      "toughness": "99",
+      "type": "Scariest Creature You’ll Ever See",
       "types": [
-        "Creature"
+        "Scariest",
+        "Creature",
+        "Ever",
+        "See"
       ]
     },
     {
       "artist": "Douglas Shuler",
-      "cmc": 0,
+      "cmc": 15,
+      "colorIdentity": [
+        "B"
+      ],
+      "colors": [
+        "Black"
+      ],
       "flavor": "\"It was big. Really, really big. No, bigger\nNo, more. Look, we're talking krakens and",
       "id": "bfab02632795e6f03465f19a702af12536eedccd",
       "imageName": "b.f.m. (big furry monster)2",
@@ -1082,6 +1094,7 @@
           "legality": "Legal"
         }
       ],
+      "manaCost": "{B}{B}{B}{B}{B}{B}{B}{B}{B}{B}{B}{B}{B}{B}{B}",
       "multiverseid": 9780,
       "name": "B.F.M. (Big Furry Monster)",
       "names": [
@@ -1091,20 +1104,19 @@
       "number": "28a",
       "originalText": "You must play both B.F.M. cards to put\nleaves play, sacrifice the other.\nB.F.M. can be blocked only by three or",
       "originalType": "Summon — The Biggest, Baddest, Nastiest,",
+      "power": "99",
       "printings": [
         "UGL"
       ],
       "rarity": "Rare",
-      "subtypes": [
-        "The",
-        "Biggest,",
-        "Baddest,",
-        "Nastiest,"
-      ],
-      "text": "You must cast both B.F.M. cards to put\nleaves the battlefield, sacrifice the other.\nB.F.M. can't be blocked except by three or",
-      "type": "Creature — The Biggest, Baddest, Nastiest,",
+      "text": "B.F.M. onto the battlefield. If one B.F.M. card\nmore creatures.",
+      "toughness": "99",
+      "type": "Scariest Creature You’ll Ever See",
       "types": [
-        "Creature"
+        "Scariest",
+        "Creature",
+        "Ever",
+        "See"
       ]
     },
     {
@@ -1229,7 +1241,7 @@
       "subtypes": [
         "Zombie"
       ],
-      "text": "{0}: Return Deadhead from your graveyard to the battlefield. Activate this ability only if an opponent isn't touching his or her hand (of cards).",
+      "text": "{0}: Return Deadhead from your graveyard to the battlefield. Activate this ability only if an opponent isn't touching their hand (of cards).",
       "toughness": "3",
       "type": "Creature — Zombie",
       "types": [
@@ -1266,7 +1278,7 @@
         "UGL"
       ],
       "rarity": "Common",
-      "text": "Choose another player. Look at that player's hand and choose a card other than a basic land card from it. That player discards that card. At the beginning of the first upkeep in your next game with that player, look at that player's hand and choose a card other than a basic land card from it. That player discards that card.",
+      "text": "Choose another player. Look at that player's hand and choose a card other than a basic land card from it. They discard that card. At the beginning of the first upkeep in your next game with that player, look at that player's hand and choose a card other than a basic land card from it. They discard that card.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -1341,7 +1353,7 @@
       "subtypes": [
         "Beast"
       ],
-      "text": "Flying, first strike\n{1}{B}, Reveal Infernal Spawn of Evil from your hand, Say \"It's coming\": Infernal Spawn of Evil deals 1 damage to target opponent. Activate this ability only during your upkeep and only once each turn.",
+      "text": "Flying, first strike\n{1}{B}, Reveal Infernal Spawn of Evil from your hand, Say \"It's coming\": Infernal Spawn of Evil deals 1 damage to target opponent or planeswalker. Activate this ability only during your upkeep and only once each turn.",
       "toughness": "7",
       "type": "Creature — Beast",
       "types": [
@@ -1418,7 +1430,7 @@
         "UGL"
       ],
       "rarity": "Common",
-      "text": "Your team may sacrifice any number of creatures. For each creature sacrificed this way, you add {B}{B} to your mana pool.",
+      "text": "Your team may sacrifice any number of creatures. For each creature sacrificed this way, you add {B}{B}.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -1454,7 +1466,7 @@
         "UGL"
       ],
       "rarity": "Rare",
-      "text": "Whenever a creature deals damage to a player, that player may say \"Ow\" once for each permanent named Ow. If the player doesn't, Ow deals 1 damage to him or her.",
+      "text": "Whenever a creature deals damage to a player, that player may say \"Ow\" once for each permanent named Ow. If the player doesn't, Ow deals 1 damage to them.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -1609,7 +1621,7 @@
         "UGL"
       ],
       "rarity": "Rare",
-      "text": "Whenever any player taps a permanent, that player choose one of his or her opponents. The chosen player gains control of that permanent at the beginning of the next end step.\nAt the beginning of each player's end step, if that player didn't tap any nonland permanents that turn, Burning Cinder Fury of Crimson Chaos Fire deals 3 damage to that player.",
+      "text": "Whenever any player taps a permanent, that player choose one of their opponents. The chosen player gains control of that permanent at the beginning of the next end step.\nAt the beginning of each player's end step, if that player didn't tap any nonland permanents that turn, Burning Cinder Fury of Crimson Chaos Fire deals 3 damage to that player.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -1767,7 +1779,7 @@
       "subtypes": [
         "Goblin"
       ],
-      "text": "If Goblin Bowling Team would deal damage to a creature or player, it deals that much damage plus the result of a six-sided die roll to that creature or player instead.",
+      "text": "If Goblin Bowling Team would deal damage to a permanent or player, it deals that much damage plus the result of a six-sided die roll to that permanent or player instead.",
       "toughness": "1",
       "type": "Creature — Goblin",
       "types": [
@@ -1886,7 +1898,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "{1}{R}, {T}: Shuffle Jalum Grifter and two lands you control face down. Target opponent  chooses one of those cards. Turn the cards face up. If the opponent chose Jalum Grifter, sacrifice it. Otherwise, destroy target permanent.",
+      "text": "{1}{R}, {T}: Shuffle Jalum Grifter and two lands you control face down. Target opponent chooses one of those cards. Turn the cards face up. If they chose Jalum Grifter, sacrifice it. Otherwise, destroy target permanent.",
       "toughness": "5",
       "type": "Legendary Creature — Devil",
       "types": [
@@ -2073,7 +2085,7 @@
         "UGL"
       ],
       "rarity": "Rare",
-      "text": "Roll a six-sided die. Strategy, Schmategy has the indicated effect.\n1 — Do nothing.\n2 — Destroy all artifacts.\n3 — Destroy all lands.\n4 — Strategy, Schmategy deals 3 damage to each creature and each player.\n5 — Each player discards his or her hand and draws seven cards.\n6 — Repeat this process two more times.",
+      "text": "Roll a six-sided die. Strategy, Schmategy has the indicated effect.\n1 — Do nothing.\n2 — Destroy all artifacts.\n3 — Destroy all lands.\n4 — Strategy, Schmategy deals 3 damage to each creature and each player.\n5 — Each player discards their hand and draws seven cards.\n6 — Repeat this process two more times.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -2109,7 +2121,7 @@
         "UGL"
       ],
       "rarity": "Uncommon",
-      "text": "The Ultimate Nightmare of Wizards of the Coast® Customer Service deals X damage to each of Y target creatures and Z target players.",
+      "text": "The Ultimate Nightmare of Wizards of the Coast® Customer Service deals X damage to each of Y target creatures and Z target players or planeswalkers.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -2336,7 +2348,7 @@
         "UGL"
       ],
       "rarity": "Uncommon",
-      "text": "Exile all lands. Give each player a number of those cards chosen at random equal to the number of those cards the player controlled. Each player returns those cards to the battlefield under that player's control.",
+      "text": "Exile all lands. Give each player a number of those cards chosen at random equal to the number of those cards the player controlled. Each player returns those cards to the battlefield under their control.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -2452,7 +2464,7 @@
       "subtypes": [
         "Gus"
       ],
-      "text": "Gus enters the battlefield with a +1/+1 counter on it for each Magic game you have lost to one of your opponents since you last won a game against that opponent.",
+      "text": "Gus enters the battlefield with a +1/+1 counter on it for each Magic game you have lost to one of your opponents since you last won a game against them.",
       "toughness": "2",
       "type": "Creature — Gus",
       "types": [
@@ -2529,7 +2541,7 @@
         "UGL"
       ],
       "rarity": "Rare",
-      "text": "Each player searches his or her library for any number of artifact, creature, enchantment, and/or land cards, puts them onto the battlefield, then shuffles his or her library.",
+      "text": "Each player searches their library for any number of artifact, creature, enchantment, and/or land cards, puts them onto the battlefield, then shuffles their library.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -2564,7 +2576,7 @@
         "UGL"
       ],
       "rarity": "Rare",
-      "text": "When Mine, Mine, Mine enters the battlefield, each player puts his or her library into his or her hand.\nPlayers have no maximum hand size and don't lose the game for drawing from an empty library.\nEach player can't cast more than one spell each turn.\nWhen Mine, Mine, Mine leaves the battlefield, each player shuffles his or her hand and graveyard into his or her library.",
+      "text": "When Mine, Mine, Mine enters the battlefield, each player puts their library into their hand.\nPlayers have no maximum hand size and don't lose the game for drawing from an empty library.\nEach player can't cast more than one spell each turn.\nWhen Mine, Mine, Mine leaves the battlefield, each player shuffles their hand and graveyard into their library.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -2600,7 +2612,7 @@
         "UGL"
       ],
       "rarity": "Rare",
-      "text": "{1}{G}: Reveal a card in your hand, covering the artist credit. Target opponent guesses the artist. If that player guesses wrong, create a 1/1 green Squirrel creature token.",
+      "text": "{1}{G}: Reveal a card in your hand, covering the artist credit. Target opponent guesses the artist. If they guess wrong, create a 1/1 green Squirrel creature token.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -2741,7 +2753,7 @@
         "UGL"
       ],
       "rarity": "Rare",
-      "text": "{T}: Tear Blacker Lotus into pieces. Add four mana of any one color to your mana pool. Remove the pieces from the game.",
+      "text": "{T}: Tear Blacker Lotus into pieces. Add four mana of any one color. Remove the pieces from the game.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -2902,7 +2914,7 @@
         "UGL"
       ],
       "rarity": "Rare",
-      "text": "{T}: Roll a six-sided die. This ability has the indicated effect.\n1 — Sacrifice Jack-in-the-Mox and you lose 5 life.\n2 — Add {W} to your mana pool.\n3 — Add {U} to your mana pool.\n4 — Add {B} to your mana pool.\n5 — Add {R} to your mana pool.\n6 — Add {G} to your mana pool.",
+      "text": "{T}: Roll a six-sided die. This ability has the indicated effect.\n1 — Sacrifice Jack-in-the-Mox and you lose 5 life.\n2 — Add {W}.\n3 — Add {U}.\n4 — Add {B}.\n5 — Add {R}.\n6 — Add {G}.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -3414,7 +3426,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -3673,7 +3686,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -3936,7 +3951,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -4201,7 +4217,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -4463,7 +4481,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [

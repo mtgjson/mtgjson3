@@ -452,6 +452,12 @@
         "A25"
       ],
       "rarity": "Rare",
+      "rulings": [
+        {
+          "date": "2018-03-16",
+          "text": "If you're dealt damage that causes your life total to become 0 or less, you lose the game before the tokens can be created."
+        }
+      ],
       "subtypes": [
         "Human",
         "Soldier"
@@ -867,7 +873,7 @@
       "rulings": [
         {
           "date": "2006-07-15",
-          "text": "When paying Jötun Grunt's cumulative upkeep, you may choose a different graveyard for each age counter. For example, if it has three age counters on it, you may put four cards from your graveyard on the bottom of your library and two cards from your opponent's graveyard on the bottom of his or her library. However, you can't put five cards from your graveyard on the bottom of your library and one card from your opponent's graveyard on the bottom of his or her library."
+          "text": "When paying Jötun Grunt's cumulative upkeep, you may choose a different graveyard for each age counter. For example, if it has three age counters on it, you may put four cards from your graveyard on the bottom of your library and two cards from your opponent's graveyard on the bottom of their library. However, you can't put five cards from your graveyard on the bottom of your library and one card from your opponent's graveyard on the bottom of their library."
         }
       ],
       "subtypes": [
@@ -1987,7 +1993,7 @@
           "text": "You can't exile a card from your hand to pay for itself. At the time you would pay costs, that card is on the stack, not in your hand."
         }
       ],
-      "text": "You may exile two white cards from your hand rather than pay Sunscour's mana cost.\nDestroy all creatures.",
+      "text": "You may exile two white cards from your hand rather than pay this spell's mana cost.\nDestroy all creatures.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -2180,7 +2186,7 @@
         "CSP"
       ],
       "rarity": "Common",
-      "text": "Prevent the next 2 damage that would be dealt to target creature or player this turn.\nDraw a card at the beginning of the next turn's upkeep.",
+      "text": "Prevent the next 2 damage that would be dealt to any target this turn.\nDraw a card at the beginning of the next turn's upkeep.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -2813,7 +2819,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "{T}: Target artifact creature's controller sacrifices it. That player may search his or her library for a noncreature artifact card, put it onto the battlefield, then shuffle his or her library.",
+      "text": "{T}: Target artifact creature's controller sacrifices it. That player may search their library for a noncreature artifact card, put it onto the battlefield, then shuffle their library.",
       "toughness": "2",
       "type": "Legendary Creature — Human Artificer",
       "types": [
@@ -2920,7 +2926,7 @@
         },
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         }
       ],
       "subtypes": [
@@ -3028,7 +3034,7 @@
         },
         {
           "date": "2006-07-15",
-          "text": "After Commandeer resolves, you control the targeted spell. Any instance of \"you\" in that spell's text now refers to you, \"an opponent\" refers to one of your opponents, and so on. The change of control happens before new targets are chosen, so any targeting restrictions such as \"target opponent\" or \"target creature you control\" are now made in reference to you, not the spell's original controller. You may either change those targets to be legal in reference to you, or, if those are the spell's only targets, the spell will be countered on resolution for having illegal targets. When the spell resolves, any illegal targets are unaffected by it and you make all decisions the spell's effect calls for."
+          "text": "After Commandeer resolves, you control the targeted spell. Any instance of \"you\" in that spell's text now refers to you, \"an opponent\" refers to one of your opponents, and so on. The change of control happens before new targets are chosen, so any targeting restrictions such as \"target opponent\" or \"target creature you control\" are now made in reference to you, not the spell's original controller. You may either change those targets to be legal in reference to you, or, if those are the spell's only targets, the spell doesn't resolve for having illegal targets. When the spell resolves, any illegal targets are unaffected by it and you make all decisions the spell's effect calls for."
         },
         {
           "date": "2006-07-15",
@@ -3055,7 +3061,7 @@
           "text": "If you Commandeer a spell for which Buyback has been paid, the card returns to its owner's hand."
         }
       ],
-      "text": "You may exile two blue cards from your hand rather than pay Commandeer's mana cost.\nGain control of target noncreature spell. You may choose new targets for it. (If that spell is an artifact, enchantment, or planeswalker, the permanent enters the battlefield under your control.)",
+      "text": "You may exile two blue cards from your hand rather than pay this spell's mana cost.\nGain control of target noncreature spell. You may choose new targets for it. (If that spell is an artifact, enchantment, or planeswalker, the permanent enters the battlefield under your control.)",
       "type": "Instant",
       "types": [
         "Instant"
@@ -6397,7 +6403,7 @@
       "subtypes": [
         "Avatar"
       ],
-      "text": "Flying\nCumulative upkeep—Gain control of a land you don't control. (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)\nHerald of Leshrac gets +1/+1 for each land you control but don't own.\nWhen Herald of Leshrac leaves the battlefield, each player gains control of each land he or she owns that you control.",
+      "text": "Flying\nCumulative upkeep—Gain control of a land you don't control. (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)\nHerald of Leshrac gets +1/+1 for each land you control but don't own.\nWhen Herald of Leshrac leaves the battlefield, each player gains control of each land they own that you control.",
       "toughness": "4",
       "type": "Creature — Avatar",
       "types": [
@@ -7209,7 +7215,7 @@
           "text": "You can't exile a card from your hand to pay for itself. At the time you would pay costs, that card is on the stack, not in your hand."
         }
       ],
-      "text": "You may exile two black cards from your hand rather than pay Soul Spike's mana cost.\nSoul Spike deals 4 damage to target creature or player and you gain 4 life.",
+      "text": "You may exile two black cards from your hand rather than pay this spell's mana cost.\nSoul Spike deals 4 damage to any target and you gain 4 life.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -8048,14 +8054,14 @@
       "rulings": [
         {
           "date": "2009-10-01",
-          "text": "Braid of Fire is a very unusual card. \"Add {R} to your mana pool\" is a cost. This enchantment does nothing but add increasing amounts of mana to your mana pool during your upkeep."
+          "text": "Braid of Fire is a very unusual card. \"Add {R}\" is a cost. This enchantment does nothing but add increasing amounts of mana to your mana pool during your upkeep."
         },
         {
           "date": "2009-10-01",
           "text": "Any of this mana that isn't spent during your upkeep step will be removed before your draw step begins. You cannot save it to be spent on the card you will draw this turn."
         }
       ],
-      "text": "Cumulative upkeep—Add {R} to your mana pool. (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)",
+      "text": "Cumulative upkeep—Add {R}. (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -8371,7 +8377,7 @@
           "text": "You can't exile a card from your hand to pay for itself. At the time you would pay costs, that card is on the stack, not in your hand."
         }
       ],
-      "text": "You may exile two red cards from your hand rather than pay Fury of the Horde's mana cost.\nUntap all creatures that attacked this turn. After this main phase, there is an additional combat phase followed by an additional main phase.",
+      "text": "You may exile two red cards from your hand rather than pay this spell's mana cost.\nUntap all creatures that attacked this turn. After this main phase, there is an additional combat phase followed by an additional main phase.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -8901,7 +8907,7 @@
         "Minotaur",
         "Warrior"
       ],
-      "text": "Cumulative upkeep—Flip a coin. (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)\nWhenever you win a coin flip, Karplusan Minotaur deals 1 damage to target creature or player.\nWhenever you lose a coin flip, Karplusan Minotaur deals 1 damage to target creature or player of an opponent's choice.",
+      "text": "Cumulative upkeep—Flip a coin. (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)\nWhenever you win a coin flip, Karplusan Minotaur deals 1 damage to any target.\nWhenever you lose a coin flip, Karplusan Minotaur deals 1 damage to any target of an opponent's choice.",
       "toughness": "3",
       "type": "Creature — Minotaur Warrior",
       "types": [
@@ -9004,7 +9010,7 @@
       "supertypes": [
         "Snow"
       ],
-      "text": "Whenever Karplusan Wolverine becomes blocked, you may have it deal 1 damage to target creature or player.",
+      "text": "Whenever Karplusan Wolverine becomes blocked, you may have it deal 1 damage to any target.",
       "toughness": "1",
       "type": "Snow Creature — Wolverine Beast",
       "types": [
@@ -9226,7 +9232,7 @@
           "text": "When Lightning Storm leaves the stack, its charge counters go away."
         }
       ],
-      "text": "Lightning Storm deals X damage to target creature or player, where X is 3 plus the number of charge counters on it.\nDiscard a land card: Put two charge counters on Lightning Storm. You may choose a new target for it. Any player may activate this ability but only if Lightning Storm is on the stack.",
+      "text": "Lightning Storm deals X damage to any target, where X is 3 plus the number of charge counters on Lightning Storm.\nDiscard a land card: Put two charge counters on Lightning Storm. You may choose a new target for it. Any player may activate this ability but only if Lightning Storm is on the stack.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -9761,7 +9767,7 @@
         "Orc",
         "Shaman"
       ],
-      "text": "{T}, Sacrifice a creature: Orcish Bloodpainter deals 1 damage to target creature or player.",
+      "text": "{T}, Sacrifice a creature: Orcish Bloodpainter deals 1 damage to any target.",
       "toughness": "1",
       "type": "Creature — Orc Shaman",
       "types": [
@@ -9963,7 +9969,7 @@
         "CSP"
       ],
       "rarity": "Common",
-      "text": "Add {R}{R} to your mana pool, then add {R} to your mana pool for each card named Rite of Flame in each graveyard.",
+      "text": "Add {R}{R}, then add {R} for each card named Rite of Flame in each graveyard.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -10258,7 +10264,7 @@
         "CSP"
       ],
       "rarity": "Common",
-      "text": "Ripple 4 (When you cast this spell, you may reveal the top four cards of your library. You may cast any revealed cards with the same name as this spell without paying their mana costs. Put the rest on the bottom of your library.)\nSurging Flame deals 2 damage to target creature or player.",
+      "text": "Ripple 4 (When you cast this spell, you may reveal the top four cards of your library. You may cast any revealed cards with the same name as this spell without paying their mana costs. Put the rest on the bottom of your library.)\nSurging Flame deals 2 damage to any target.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -10359,7 +10365,7 @@
       "supertypes": [
         "Snow"
       ],
-      "text": "{S}: Thermopod gains haste until end of turn. ({S} can be paid with one mana from a snow permanent.)\nSacrifice a creature: Add {R} to your mana pool.",
+      "text": "{S}: Thermopod gains haste until end of turn. ({S} can be paid with one mana from a snow permanent.)\nSacrifice a creature: Add {R}.",
       "toughness": "3",
       "type": "Snow Creature — Slug",
       "types": [
@@ -10479,7 +10485,7 @@
         "Elf",
         "Warrior"
       ],
-      "text": "You may exile two green cards from your hand rather than pay Allosaurus Rider's mana cost.\nAllosaurus Rider's power and toughness are each equal to 1 plus the number of lands you control.",
+      "text": "You may exile two green cards from your hand rather than pay this spell's mana cost.\nAllosaurus Rider's power and toughness are each equal to 1 plus the number of lands you control.",
       "toughness": "1+*",
       "type": "Creature — Elf Warrior",
       "types": [
@@ -10889,7 +10895,7 @@
       "supertypes": [
         "Snow"
       ],
-      "text": "{T}: Add {C} to your mana pool.",
+      "text": "{T}: Add {C}.",
       "toughness": "1",
       "type": "Snow Creature — Elf Druid",
       "types": [
@@ -10995,7 +11001,7 @@
       "subtypes": [
         "Lizard"
       ],
-      "text": "At the beginning of each end step, each player gains control of all nontoken permanents he or she owns.",
+      "text": "At the beginning of each end step, each player gains control of all nontoken permanents they own.",
       "toughness": "4",
       "type": "Creature — Lizard",
       "types": [
@@ -13080,7 +13086,7 @@
       "supertypes": [
         "Snow"
       ],
-      "text": "Flying\nWhenever Blizzard Specter deals combat damage to a player, choose one —\n• That player returns a permanent he or she controls to its owner's hand.\n• That player discards a card.",
+      "text": "Flying\nWhenever Blizzard Specter deals combat damage to a player, choose one —\n• That player returns a permanent they control to its owner's hand.\n• That player discards a card.",
       "toughness": "3",
       "type": "Snow Creature — Specter",
       "types": [
@@ -14152,7 +14158,7 @@
       "supertypes": [
         "Snow"
       ],
-      "text": "Coldsteel Heart enters the battlefield tapped.\nAs Coldsteel Heart enters the battlefield, choose a color.\n{T}: Add one mana of the chosen color to your mana pool.",
+      "text": "Coldsteel Heart enters the battlefield tapped.\nAs Coldsteel Heart enters the battlefield, choose a color.\n{T}: Add one mana of the chosen color.",
       "type": "Snow Artifact",
       "types": [
         "Artifact"
@@ -14837,7 +14843,7 @@
       "supertypes": [
         "Snow"
       ],
-      "text": "Arctic Flats enters the battlefield tapped.\n{T}: Add {G} or {W} to your mana pool.",
+      "text": "Arctic Flats enters the battlefield tapped.\n{T}: Add {G} or {W}.",
       "type": "Snow Land",
       "types": [
         "Land"
@@ -14931,7 +14937,7 @@
       "supertypes": [
         "Snow"
       ],
-      "text": "Boreal Shelf enters the battlefield tapped.\n{T}: Add {W} or {U} to your mana pool.",
+      "text": "Boreal Shelf enters the battlefield tapped.\n{T}: Add {W} or {U}.",
       "type": "Snow Land",
       "types": [
         "Land"
@@ -15126,7 +15132,7 @@
       "supertypes": [
         "Snow"
       ],
-      "text": "Frost Marsh enters the battlefield tapped.\n{T}: Add {U} or {B} to your mana pool.",
+      "text": "Frost Marsh enters the battlefield tapped.\n{T}: Add {U} or {B}.",
       "type": "Snow Land",
       "types": [
         "Land"
@@ -15220,7 +15226,7 @@
       "supertypes": [
         "Snow"
       ],
-      "text": "Highland Weald enters the battlefield tapped.\n{T}: Add {R} or {G} to your mana pool.",
+      "text": "Highland Weald enters the battlefield tapped.\n{T}: Add {R} or {G}.",
       "type": "Snow Land",
       "types": [
         "Land"
@@ -15309,7 +15315,7 @@
       "supertypes": [
         "Snow"
       ],
-      "text": "{T}: Add {C} to your mana pool.\n{4}{S}, {T}, Sacrifice Mouth of Ronom: Mouth of Ronom deals 4 damage to target creature. ({S} can be paid with one mana from a snow permanent.)",
+      "text": "{T}: Add {C}.\n{4}{S}, {T}, Sacrifice Mouth of Ronom: It deals 4 damage to target creature. ({S} can be paid with one mana from a snow permanent.)",
       "type": "Snow Land",
       "types": [
         "Land"
@@ -15404,7 +15410,7 @@
       "supertypes": [
         "Snow"
       ],
-      "text": "{T}: Add {C} to your mana pool.\n{1}{S}, {T}: Look at the top card of your library. If that card is snow, you may reveal it and put it into your hand. ({S} can be paid with one mana from a snow permanent.)",
+      "text": "{T}: Add {C}.\n{1}{S}, {T}: Look at the top card of your library. If that card is snow, you may reveal it and put it into your hand. ({S} can be paid with one mana from a snow permanent.)",
       "type": "Snow Land",
       "types": [
         "Land"
@@ -15498,7 +15504,7 @@
       "supertypes": [
         "Snow"
       ],
-      "text": "Tresserhorn Sinks enters the battlefield tapped.\n{T}: Add {B} or {R} to your mana pool.",
+      "text": "Tresserhorn Sinks enters the battlefield tapped.\n{T}: Add {B} or {R}.",
       "type": "Snow Land",
       "types": [
         "Land"

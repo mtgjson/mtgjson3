@@ -72,6 +72,16 @@
         "A25"
       ],
       "rarity": "Mythic Rare",
+      "rulings": [
+        {
+          "date": "2018-03-16",
+          "text": "If a spell or ability causes you to draw multiple cards, Niv-Mizzet's ability triggers that many times."
+        },
+        {
+          "date": "2018-03-16",
+          "text": "If dealing 1 damage to a permanent or player causes you to draw a card, perhaps because Niv-Mizzet is enchanted by Curiosity, you'll continue this loop until the loop is interrupted, perhaps by a player losing the game."
+        }
+      ],
       "subtypes": [
         "Dragon",
         "Wizard"
@@ -79,7 +89,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "Flying\nWhenever you draw a card, Niv-Mizzet, the Firemind deals 1 damage to target creature or player.\n{T}: Draw a card.",
+      "text": "Flying\nWhenever you draw a card, Niv-Mizzet, the Firemind deals 1 damage to any target.\n{T}: Draw a card.",
       "toughness": "4",
       "type": "Legendary Creature — Dragon Wizard",
       "types": [
@@ -376,7 +386,7 @@
       "subtypes": [
         "Weird"
       ],
-      "text": "{T}: Gelectrode deals 1 damage to target creature or player.\nWhenever you cast an instant or sorcery spell, you may untap Gelectrode.",
+      "text": "{T}: Gelectrode deals 1 damage to any target.\nWhenever you cast an instant or sorcery spell, you may untap Gelectrode.",
       "toughness": "1",
       "type": "Creature — Weird",
       "types": [
@@ -519,7 +529,7 @@
       "subtypes": [
         "Weird"
       ],
-      "text": "When Steamcore Weird enters the battlefield, if {R} was spent to cast Steamcore Weird, it deals 2 damage to target creature or player.",
+      "text": "When Steamcore Weird enters the battlefield, if {R} was spent to cast Steamcore Weird, it deals 2 damage to any target.",
       "toughness": "3",
       "type": "Creature — Weird",
       "types": [
@@ -979,7 +989,7 @@
       "rarity": "Common",
       "rulings": [
         {
-          "date": "2016-06-08",
+          "date": "2018-03-16",
           "text": "You draw three cards and put two cards back all while Brainstorm is resolving. Nothing can happen between the two, and no player may choose to take actions."
         }
       ],
@@ -1273,7 +1283,7 @@
         "MM3"
       ],
       "rarity": "Common",
-      "text": "{1}, {T}: Add {U}{R} to your mana pool.",
+      "text": "{1}, {T}: Add {U}{R}.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -1340,7 +1350,7 @@
         },
         {
           "date": "2008-10-01",
-          "text": "If the targeted creature becomes an illegal target before Call to Heel resolves, Call to Heel is countered. No one draws a card."
+          "text": "If the targeted creature becomes an illegal target before Call to Heel resolves, Call to Heel doesn't resolve. No one draws a card."
         }
       ],
       "text": "Return target creature to its owner's hand. Its controller draws a card.",
@@ -1462,7 +1472,7 @@
         "DDJ"
       ],
       "rarity": "Common",
-      "text": "Replicate {1}{R} (When you cast this spell, copy it for each time you paid its replicate cost. You may choose new targets for the copies.)\nPyromatics deals 1 damage to target creature or player.",
+      "text": "Replicate {1}{R} (When you cast this spell, copy it for each time you paid its replicate cost. You may choose new targets for the copies.)\nPyromatics deals 1 damage to any target.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -1593,7 +1603,7 @@
           "text": "This card won't be put into your graveyard until after it's finished resolving, which means it won't be shuffled into your library as part of its own effect."
         }
       ],
-      "text": "Target player shuffles his or her graveyard into his or her library.",
+      "text": "Target player shuffles their graveyard into their library.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -1848,10 +1858,16 @@
         "A25"
       ],
       "rarity": "Common",
+      "rulings": [
+        {
+          "date": "2018-03-16",
+          "text": "The enchanted creature is the source of both the damage ability and the resultant damage, not Quicksilver Dagger. For example, if Quicksilver Dagger and Curiosity enchant the same creature, Curiosity's ability will trigger when the damage is dealt."
+        }
+      ],
       "subtypes": [
         "Aura"
       ],
-      "text": "Enchant creature\nEnchanted creature has \"{T}: This creature deals 1 damage to target player. You draw a card.\"",
+      "text": "Enchant creature\nEnchanted creature has \"{T}: This creature deals 1 damage to target player or planeswalker. You draw a card.\"",
       "type": "Enchantment — Aura",
       "types": [
         "Enchantment"
@@ -1911,7 +1927,7 @@
         "C15"
       ],
       "rarity": "Rare",
-      "text": "Prophetic Bolt deals 4 damage to target creature or player. Look at the top four cards of your library. Put one of those cards into your hand and the rest on the bottom of your library in any order.",
+      "text": "Prophetic Bolt deals 4 damage to any target. Look at the top four cards of your library. Put one of those cards into your hand and the rest on the bottom of your library in any order.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -2032,14 +2048,14 @@
         },
         {
           "date": "2010-06-15",
-          "text": "If the targeted creature or player is an illegal target by the time the ability resolves, the ability is countered. You won't put a charge counter on Sphinx-Bone Wand and it won't deal damage."
+          "text": "If the targeted permanent or player is an illegal target by the time the ability resolves, the ability doesn't resolve. You won't put a charge counter on Sphinx-Bone Wand and it won't deal damage."
         },
         {
           "date": "2010-06-15",
           "text": "If Sphinx-Bone Wand leaves the battlefield before its ability resolves, you won't be able to put a charge counter on it. As a result, it won't deal damage."
         }
       ],
-      "text": "Whenever you cast an instant or sorcery spell, you may put a charge counter on Sphinx-Bone Wand. If you do, Sphinx-Bone Wand deals damage equal to the number of charge counters on it to target creature or player.",
+      "text": "Whenever you cast an instant or sorcery spell, you may put a charge counter on Sphinx-Bone Wand. If you do, Sphinx-Bone Wand deals damage equal to the number of charge counters on it to any target.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -2197,7 +2213,7 @@
           "text": "As you cast Invoke the Firemind, first you choose the mode (draw cards or deal damage), then you choose the value of X. You then choose a target, but only if you chose the second mode."
         }
       ],
-      "text": "Choose one —\n• Draw X cards.\n• Invoke the Firemind deals X damage to target creature or player.",
+      "text": "Choose one —\n• Draw X cards.\n• Invoke the Firemind deals X damage to any target.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -2259,7 +2275,7 @@
         "DDJ"
       ],
       "rarity": "Uncommon",
-      "text": "Fire deals 2 damage divided as you choose among one or two target creatures and/or players.",
+      "text": "Fire deals 2 damage divided as you choose among one or two targets.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -2387,7 +2403,7 @@
           "text": "Cycling is an activated ability. Effects that interact with activated abilities (such as Stifle or Rings of Brighthearth) will interact with cycling. Effects that interact with spells (such as Remove Soul or Faerie Tauntings) will not."
         }
       ],
-      "text": "Forgotten Cave enters the battlefield tapped.\n{T}: Add {R} to your mana pool.\nCycling {R} ({R}, Discard this card: Draw a card.)",
+      "text": "Forgotten Cave enters the battlefield tapped.\n{T}: Add {R}.\nCycling {R} ({R}, Discard this card: Draw a card.)",
       "type": "Land",
       "types": [
         "Land"
@@ -2456,7 +2472,7 @@
           "text": "If this land enters the battlefield and you control no other lands, its ability will force you to return it to your hand."
         }
       ],
-      "text": "Izzet Boilerworks enters the battlefield tapped.\nWhen Izzet Boilerworks enters the battlefield, return a land you control to its owner's hand.\n{T}: Add {U}{R} to your mana pool.",
+      "text": "Izzet Boilerworks enters the battlefield tapped.\nWhen Izzet Boilerworks enters the battlefield, return a land you control to its owner's hand.\n{T}: Add {U}{R}.",
       "type": "Land",
       "types": [
         "Land"
@@ -2518,7 +2534,7 @@
           "text": "Cycling is an activated ability. Effects that interact with activated abilities (such as Stifle or Rings of Brighthearth) will interact with cycling. Effects that interact with spells (such as Remove Soul or Faerie Tauntings) will not."
         }
       ],
-      "text": "Lonely Sandbar enters the battlefield tapped.\n{T}: Add {U} to your mana pool.\nCycling {U} ({U}, Discard this card: Draw a card.)",
+      "text": "Lonely Sandbar enters the battlefield tapped.\n{T}: Add {U}.\nCycling {U} ({U}, Discard this card: Draw a card.)",
       "type": "Land",
       "types": [
         "Land"
@@ -2589,7 +2605,7 @@
           "text": "If you don't cast the card, it stays exiled."
         }
       ],
-      "text": "{T}: Add {C} to your mana pool.\n{2}{U}{R}, {T}: Exile the top card of your library. Until your next turn, you may cast that card if it's an instant or sorcery card.",
+      "text": "{T}: Add {C}.\n{2}{U}{R}, {T}: Exile the top card of your library. Until your next turn, you may cast that card if it's an instant or sorcery card.",
       "type": "Land",
       "types": [
         "Land"
@@ -2859,7 +2875,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -3143,7 +3161,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -3427,7 +3447,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -3711,7 +3733,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -4001,7 +4025,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -4291,7 +4317,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -4581,7 +4609,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -4871,7 +4901,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -5111,7 +5143,7 @@
         "Elf",
         "Druid"
       ],
-      "text": "{T}: Add {B} to your mana pool. Elves of Deep Shadow deals 1 damage to you.",
+      "text": "{T}: Add {B}. Elves of Deep Shadow deals 1 damage to you.",
       "toughness": "1",
       "type": "Creature — Elf Druid",
       "types": [
@@ -6499,7 +6531,7 @@
         "CMA"
       ],
       "rarity": "Common",
-      "text": "{1}, {T}: Add {B}{G} to your mana pool.",
+      "text": "{1}, {T}: Add {B}{G}.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -6967,7 +6999,7 @@
           "text": "If you target yourself with this spell, you must reveal your entire hand to the other players just as any other player would."
         }
       ],
-      "text": "Target player reveals his or her hand. You choose a card from it. That player discards that card.\nDredge 2 (If you would draw a card, instead you may put exactly two cards from the top of your library into your graveyard. If you do, return this card from your graveyard to your hand. Otherwise, draw a card.)",
+      "text": "Target player reveals their hand. You choose a card from it. That player discards that card.\nDredge 2 (If you would draw a card, instead you may put exactly two cards from the top of your library into your graveyard. If you do, return this card from your graveyard to your hand. Otherwise, draw a card.)",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -7168,7 +7200,7 @@
           "text": "For purposes of ordering any continuous effects of the creatures, the current player (not the controller of this spell) decides the ordering regardless of which player is putting the creatures onto the battlefield."
         }
       ],
-      "text": "You may cast Twilight's Call as though it had flash if you pay {2} more to cast it. (You may cast it any time you could cast an instant.)\nEach player returns all creature cards from his or her graveyard to the battlefield.",
+      "text": "You may cast Twilight's Call as though it had flash if you pay {2} more to cast it. (You may cast it any time you could cast an instant.)\nEach player returns all creature cards from their graveyard to the battlefield.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -7232,7 +7264,7 @@
       "rulings": [
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         }
       ],
       "text": "All lands you control become 1/1 creatures until end of turn. They're still lands.",
@@ -7362,7 +7394,7 @@
           "text": "Cycling is an activated ability. Effects that interact with activated abilities (such as Stifle or Rings of Brighthearth) will interact with cycling. Effects that interact with spells (such as Remove Soul or Faerie Tauntings) will not."
         }
       ],
-      "text": "Barren Moor enters the battlefield tapped.\n{T}: Add {B} to your mana pool.\nCycling {B} ({B}, Discard this card: Draw a card.)",
+      "text": "Barren Moor enters the battlefield tapped.\n{T}: Add {B}.\nCycling {B} ({B}, Discard this card: Draw a card.)",
       "type": "Land",
       "types": [
         "Land"
@@ -7432,7 +7464,7 @@
           "text": "You can't use dredge unless you're going to draw a card and the card with dredge is already in your graveyard."
         }
       ],
-      "text": "Dakmor Salvage enters the battlefield tapped.\n{T}: Add {B} to your mana pool.\nDredge 2 (If you would draw a card, instead you may put exactly two cards from the top of your library into your graveyard. If you do, return this card from your graveyard to your hand. Otherwise, draw a card.)",
+      "text": "Dakmor Salvage enters the battlefield tapped.\n{T}: Add {B}.\nDredge 2 (If you would draw a card, instead you may put exactly two cards from the top of your library into your graveyard. If you do, return this card from your graveyard to your hand. Otherwise, draw a card.)",
       "type": "Land",
       "types": [
         "Land"
@@ -7501,7 +7533,7 @@
           "text": "If this land enters the battlefield and you control no other lands, its ability will force you to return it to your hand."
         }
       ],
-      "text": "Golgari Rot Farm enters the battlefield tapped.\nWhen Golgari Rot Farm enters the battlefield, return a land you control to its owner's hand.\n{T}: Add {B}{G} to your mana pool.",
+      "text": "Golgari Rot Farm enters the battlefield tapped.\nWhen Golgari Rot Farm enters the battlefield, return a land you control to its owner's hand.\n{T}: Add {B}{G}.",
       "type": "Land",
       "types": [
         "Land"
@@ -7565,14 +7597,14 @@
         },
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         },
         {
           "date": "2009-10-01",
           "text": "Activating the ability that turns it into a creature while it's already a creature will override any effects that set its power and/or toughness to a specific number. However, any effect that raises or lowers power and/or toughness (such as the effect created by Giant Growth, Glorious Anthem, or a +1/+1 counter) will continue to apply."
         }
       ],
-      "text": "{T}: Add {C} to your mana pool.\n{3}{B}{G}: Until end of turn, Svogthos, the Restless Tomb becomes a black and green Plant Zombie creature with \"This creature's power and toughness are each equal to the number of creature cards in your graveyard.\" It's still a land.",
+      "text": "{T}: Add {C}.\n{3}{B}{G}: Until end of turn, Svogthos, the Restless Tomb becomes a black and green Plant Zombie creature with \"This creature's power and toughness are each equal to the number of creature cards in your graveyard.\" It's still a land.",
       "type": "Land",
       "types": [
         "Land"
@@ -7629,7 +7661,8 @@
         "C14",
         "DD3_EVG",
         "CMA",
-        "C17"
+        "C17",
+        "DDU"
       ],
       "rarity": "Common",
       "rulings": [
@@ -7638,7 +7671,7 @@
           "text": "Cycling is an activated ability. Effects that interact with activated abilities (such as Stifle or Rings of Brighthearth) will interact with cycling. Effects that interact with spells (such as Remove Soul or Faerie Tauntings) will not."
         }
       ],
-      "text": "Tranquil Thicket enters the battlefield tapped.\n{T}: Add {G} to your mana pool.\nCycling {G} ({G}, Discard this card: Draw a card.)",
+      "text": "Tranquil Thicket enters the battlefield tapped.\n{T}: Add {G}.\nCycling {G} ({G}, Discard this card: Draw a card.)",
       "type": "Land",
       "types": [
         "Land"
@@ -7912,7 +7945,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -8200,7 +8234,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -8488,7 +8523,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -8776,7 +8812,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -9063,7 +9100,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -9350,7 +9389,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -9637,7 +9678,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -9924,7 +9967,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [

@@ -113,7 +113,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "+1: Until your next turn, whenever a creature an opponent controls attacks, it gets -1/-0 until end of turn.\n−2: Reveal the top three cards of your library. An opponent separates those cards into two piles. Put one pile into your hand and the other on the bottom of your library in any order.\n−8: For each player, search that player's library for a nonland card and exile it, then that player shuffles his or her library. You may cast those cards without paying their mana costs.",
+      "text": "+1: Until your next turn, whenever a creature an opponent controls attacks, it gets -1/-0 until end of turn.\n−2: Reveal the top three cards of your library. An opponent separates those cards into two piles. Put one pile into your hand and the other on the bottom of your library in any order.\n−8: For each player, search that player's library for a nonland card and exile it, then that player shuffles their library. You may cast those cards without paying their mana costs.",
       "type": "Legendary Planeswalker — Jace",
       "types": [
         "Planeswalker"
@@ -234,17 +234,17 @@
         },
         {
           "date": "2017-11-17",
-          "text": "If Jace's Phantasm is dealt lethal damage at the same time as an opponent's creature, and that creature will become that opponent's tenth card in his or her graveyard, Jace's Phantasm will be destroyed before it gets +4/+4. This is because all creatures that have been dealt lethal damage are destroyed at the same time."
+          "text": "If Jace's Phantasm is dealt lethal damage at the same time as an opponent's creature, and that creature will become that opponent's tenth card in their graveyard, Jace's Phantasm will be destroyed before it gets +4/+4. This is because all creatures that have been dealt lethal damage are destroyed at the same time."
         },
         {
           "date": "2017-11-17",
-          "text": "In a multiplayer game, a single opponent must have ten or more cards in his or her graveyard for the bonus to apply, although this opponent may change over the course of the game. You don't have to pick a single opponent; the ability will monitor each opponent's graveyard."
+          "text": "In a multiplayer game, a single opponent must have ten or more cards in their graveyard for the bonus to apply, although this opponent may change over the course of the game. You don't have to pick a single opponent; the ability will monitor each opponent's graveyard."
         }
       ],
       "subtypes": [
         "Illusion"
       ],
-      "text": "Flying\nJace's Phantasm gets +4/+4 as long as an opponent has ten or more cards in his or her graveyard.",
+      "text": "Flying\nJace's Phantasm gets +4/+4 as long as an opponent has ten or more cards in their graveyard.",
       "toughness": "1",
       "type": "Creature — Illusion",
       "types": [
@@ -303,6 +303,12 @@
         "A25"
       ],
       "rarity": "Common",
+      "rulings": [
+        {
+          "date": "2018-03-16",
+          "text": "If Phantasmal Bear becomes the target of a spell or ability, its ability triggers and goes on the stack on top of that spell or ability. The ability will resolve first (causing Phantasmal Bear to be sacrificed). Unless the spell or ability has another target, it will then be countered when it tries to resolve for having no legal targets."
+        }
+      ],
       "subtypes": [
         "Bear",
         "Illusion"
@@ -436,7 +442,7 @@
       "subtypes": [
         "Vedalken"
       ],
-      "text": "Whenever Crosstown Courier deals combat damage to a player, that player puts that many cards from the top of his or her library into his or her graveyard.",
+      "text": "Whenever Crosstown Courier deals combat damage to a player, that player puts that many cards from the top of their library into their graveyard.",
       "toughness": "1",
       "type": "Creature — Vedalken",
       "types": [
@@ -1442,7 +1448,7 @@
         "Fish",
         "Illusion"
       ],
-      "text": "Flying\nWhen Jace's Mindseeker enters the battlefield, target opponent puts the top five cards of his or her library into his or her graveyard. You may cast an instant or sorcery card from among them without paying its mana cost.",
+      "text": "Flying\nWhen Jace's Mindseeker enters the battlefield, target opponent puts the top five cards of their library into their graveyard. You may cast an instant or sorcery card from among them without paying its mana cost.",
       "toughness": "4",
       "type": "Creature — Fish Illusion",
       "types": [
@@ -1616,14 +1622,14 @@
       "rulings": [
         {
           "date": "2011-01-22",
-          "text": "If the target player is an illegal target when Thought Scour tries to resolve, it will be countered and none of its effects will happen. You won't draw a card."
+          "text": "If the target player is an illegal target when Thought Scour tries to resolve, it won't resolve and none of its effects will happen. You won't draw a card."
         },
         {
           "date": "2011-01-22",
           "text": "Follow the instructions in the order listed on the card: if you target yourself, you'll put the top two cards of your library into your graveyard and then draw a card."
         }
       ],
-      "text": "Target player puts the top two cards of his or her library into his or her graveyard.\nDraw a card.",
+      "text": "Target player puts the top two cards of their library into their graveyard.\nDraw a card.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -1765,10 +1771,10 @@
       "rulings": [
         {
           "date": "2009-10-01",
-          "text": "If the targeted permanent is an illegal target by the time Into the Roil resolves, the entire spell is countered. You don't draw a card."
+          "text": "If the targeted permanent is an illegal target by the time Into the Roil resolves, the entire spell doesn't resolve. You don't draw a card."
         }
       ],
-      "text": "Kicker {1}{U} (You may pay an additional {1}{U} as you cast this spell.)\nReturn target nonland permanent to its owner's hand. If Into the Roil was kicked, draw a card.",
+      "text": "Kicker {1}{U} (You may pay an additional {1}{U} as you cast this spell.)\nReturn target nonland permanent to its owner's hand. If this spell was kicked, draw a card.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -1891,7 +1897,7 @@
         "DDM"
       ],
       "rarity": "Common",
-      "text": "Kicker {2} (You may pay an additional {2} as you cast this spell.)\nCounter target spell if its converted mana cost is 2 or less. If Prohibit was kicked, counter that spell if its converted mana cost is 4 or less instead.",
+      "text": "Kicker {2} (You may pay an additional {2} as you cast this spell.)\nCounter target spell if its converted mana cost is 2 or less. If this spell was kicked, counter that spell if its converted mana cost is 4 or less instead.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -2320,7 +2326,7 @@
       "rulings": [
         {
           "date": "2009-10-01",
-          "text": "If the targeted spell is an illegal target by the time Summoner's Bane resolves, the entire spell is countered. You won't get a creature token."
+          "text": "If the targeted spell is an illegal target by the time Summoner's Bane resolves, the entire spell doesn't resolve. You won't get a creature token."
         },
         {
           "date": "2009-10-01",
@@ -2616,7 +2622,7 @@
           "text": "When a land becomes a creature, that doesn't count as having a creature enter the battlefield. The permanent was already on the battlefield; it only changed its types. Abilities that trigger whenever a creature enters the battlefield won't trigger."
         }
       ],
-      "text": "{T}: Add {C} to your mana pool.\n{4}: Dread Statuary becomes a 4/2 Golem artifact creature until end of turn. It's still a land.",
+      "text": "{T}: Add {C}.\n{4}: Dread Statuary becomes a 4/2 Golem artifact creature until end of turn. It's still a land.",
       "type": "Land",
       "types": [
         "Land"
@@ -2671,7 +2677,7 @@
         "DDM"
       ],
       "rarity": "Common",
-      "text": "Halimar Depths enters the battlefield tapped.\nWhen Halimar Depths enters the battlefield, look at the top three cards of your library, then put them back in any order.\n{T}: Add {U} to your mana pool.",
+      "text": "Halimar Depths enters the battlefield tapped.\nWhen Halimar Depths enters the battlefield, look at the top three cards of your library, then put them back in any order.\n{T}: Add {U}.",
       "type": "Land",
       "types": [
         "Land"
@@ -2946,7 +2952,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -3236,7 +3244,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -3526,7 +3536,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -3816,7 +3828,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -4106,7 +4120,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -4894,7 +4910,7 @@
         "Human",
         "Wizard"
       ],
-      "text": "When Sadistic Augermage dies, each player puts a card from his or her hand on top of his or her library.",
+      "text": "When Sadistic Augermage dies, each player puts a card from their hand on top of their library.",
       "toughness": "1",
       "type": "Creature — Human Wizard",
       "types": [
@@ -5325,7 +5341,7 @@
         "Human",
         "Rogue"
       ],
-      "text": "{2}{B}, Sacrifice a creature: Target opponent reveals his or her hand. You choose a card from it. That player discards that card. Activate this ability only any time you could cast a sorcery.",
+      "text": "{2}{B}, Sacrifice a creature: Target opponent reveals their hand. You choose a card from it. That player discards that card. Activate this ability only any time you could cast a sorcery.",
       "toughness": "3",
       "type": "Creature — Human Rogue",
       "types": [
@@ -5690,7 +5706,7 @@
         },
         {
           "date": "2013-09-15",
-          "text": "Scry appears on some spells and abilities with one or more targets. If all of the spell or ability's targets are illegal when it tries to resolve, it will be countered and none of its effects will happen. You won't scry."
+          "text": "Scry appears on some spells and abilities with one or more targets. If all of the spell or ability's targets are illegal when it tries to resolve, it won't resolve and none of its effects will happen. You won't scry."
         }
       ],
       "subtypes": [
@@ -5951,7 +5967,7 @@
         "DDM"
       ],
       "rarity": "Common",
-      "text": "Kicker {4} (You may pay an additional {4} as you cast this spell.)\nTarget player discards a card. If Hypnotic Cloud was kicked, that player discards three cards instead.",
+      "text": "Kicker {4} (You may pay an additional {4} as you cast this spell.)\nTarget player discards a card. If this spell was kicked, that player discards three cards instead.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -6072,7 +6088,7 @@
         "DDP"
       ],
       "rarity": "Uncommon",
-      "text": "Kicker {3} (You may pay an additional {3} as you cast this spell.)\nCreatures target player controls get -1/-1 until end of turn. If Marsh Casualties was kicked, those creatures get -2/-2 until end of turn instead.",
+      "text": "Kicker {3} (You may pay an additional {3} as you cast this spell.)\nCreatures target player controls get -1/-1 until end of turn. If this spell was kicked, those creatures get -2/-2 until end of turn instead.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -6201,7 +6217,7 @@
         },
         {
           "date": "2010-06-15",
-          "text": "If the targeted creature is an illegal target by the time Last Kiss resolves, the spell is countered. You won't gain life."
+          "text": "If the targeted creature is an illegal target by the time Last Kiss resolves, the spell doesn't resolve. You won't gain life."
         }
       ],
       "text": "Last Kiss deals 2 damage to target creature and you gain 2 life.",
@@ -6455,14 +6471,14 @@
       "rulings": [
         {
           "date": "2017-11-17",
-          "text": "Use the creature's power the last time it was on the battlefield to determine how many cards its controller puts into his or her graveyard."
+          "text": "Use the creature's power the last time it was on the battlefield to determine how many cards its controller puts into their graveyard."
         },
         {
           "date": "2017-11-17",
-          "text": "If the creature is an illegal target when Grisly Spectacle tries to resolve, it will be countered and none of its effects will happen. The creature's controller won't put any cards into his or her graveyard."
+          "text": "If the creature is an illegal target when Grisly Spectacle tries to resolve, it won't resolve and none of its effects will happen. The creature's controller won't put any cards into their graveyard."
         }
       ],
-      "text": "Destroy target nonartifact creature. Its controller puts a number of cards equal to that creature's power from the top of his or her library into his or her graveyard.",
+      "text": "Destroy target nonartifact creature. Its controller puts a number of cards equal to that creature's power from the top of their library into their graveyard.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -6537,7 +6553,7 @@
       "subtypes": [
         "Gate"
       ],
-      "text": "Golgari Guildgate enters the battlefield tapped.\n{T}: Add {B} or {G} to your mana pool.",
+      "text": "Golgari Guildgate enters the battlefield tapped.\n{T}: Add {B} or {G}.",
       "type": "Land — Gate",
       "types": [
         "Land"
@@ -6600,7 +6616,7 @@
           "text": "Activating the second ability of Rogue's Passage after a creature has become blocked won't cause it to become unblocked."
         }
       ],
-      "text": "{T}: Add {C} to your mana pool.\n{4}, {T}: Target creature can't be blocked this turn.",
+      "text": "{T}: Add {C}.\n{4}, {T}: Target creature can't be blocked this turn.",
       "type": "Land",
       "types": [
         "Land"
@@ -6654,7 +6670,7 @@
         "CMA"
       ],
       "rarity": "Uncommon",
-      "text": "{T}: Add {C} to your mana pool.\n{T}: Add {B} or {G} to your mana pool. Activate this ability only if you control a Swamp.",
+      "text": "{T}: Add {C}.\n{T}: Add {B} or {G}. Activate this ability only if you control a Swamp.",
       "type": "Land",
       "types": [
         "Land"
@@ -6933,7 +6949,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -7227,7 +7244,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -7521,7 +7539,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -7815,7 +7834,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -8109,7 +8129,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -8402,7 +8423,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -8695,7 +8718,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -8988,7 +9013,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -9281,7 +9308,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -9574,7 +9603,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [

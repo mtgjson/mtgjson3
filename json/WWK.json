@@ -1180,6 +1180,12 @@
         "A25"
       ],
       "rarity": "Uncommon",
+      "rulings": [
+        {
+          "date": "2018-03-16",
+          "text": "Kor Firewalker's triggered ability resolves before the red spell that caused it to trigger."
+        }
+      ],
       "subtypes": [
         "Kor",
         "Soldier"
@@ -1782,7 +1788,7 @@
       "rulings": [
         {
           "date": "2010-03-01",
-          "text": "Refraction Trap's only target is the creature or player it may deal damage to. You choose that target as you cast Refraction Trap, not at the time it prevents damage."
+          "text": "Refraction Trap's only target is the permanent or player it may deal damage to. You choose that target as you cast Refraction Trap, not at the time it prevents damage."
         },
         {
           "date": "2010-03-01",
@@ -1790,7 +1796,7 @@
         },
         {
           "date": "2010-03-01",
-          "text": "If the targeted creature or player is an illegal target by the time Refraction Trap resolves, the entire spell is countered. No damage will be prevented."
+          "text": "If the targeted permanent or player is an illegal target by the time Refraction Trap resolves, the entire spell doesn't resolve. No damage will be prevented."
         },
         {
           "date": "2010-03-01",
@@ -1802,7 +1808,7 @@
         },
         {
           "date": "2010-03-01",
-          "text": "Refraction Trap's effect is not a redirection effect. If it prevents damage, Refraction Trap (not the chosen source) deals damage to the targeted creature or player as part of that prevention effect. Refraction Trap is the source of the new damage, so the characteristics of the original source (such as its color, or whether it had lifelink or deathtouch) don't affect this damage. The new damage is not combat damage, even if the prevented damage was. Since you control the source of the new damage, if you targeted an opponent with Refraction Trap, you may have Refraction Trap deal its damage to a planeswalker that opponent controls."
+          "text": "Refraction Trap's effect is not a redirection effect. If it prevents damage, Refraction Trap (not the chosen source) deals damage to the targeted permanent or player as part of that prevention effect. Refraction Trap is the source of the new damage, so the characteristics of the original source (such as its color, or whether it had lifelink or deathtouch) don't affect this damage. The new damage is not combat damage, even if the prevented damage was."
         },
         {
           "date": "2010-03-01",
@@ -1810,7 +1816,7 @@
         },
         {
           "date": "2010-03-01",
-          "text": "Whether the targeted creature or player is still a legal target is no longer checked after Refraction Trap resolves. For example, if a creature targeted by Refraction Trap gains shroud after Refraction Trap resolves but before it prevents damage, Refraction Trap will still prevent damage and still deal damage to that creature. If Refraction Trap can't deal damage to the targeted creature or player (because the creature has gained protection from white, is no longer on the battlefield, or is no longer a creature, or the player is no longer in the game, for example), it will still prevent damage. It just won't deal any damage itself."
+          "text": "Whether the targeted permanent or player is still a legal target is no longer checked after Refraction Trap resolves. For example, if a creature targeted by Refraction Trap gains shroud after Refraction Trap resolves but before it prevents damage, Refraction Trap will still prevent damage and still deal damage to that creature. If Refraction Trap can't deal damage to the targeted permanent or player (because the creature is no longer on the battlefield, or is no longer a creature, or the player is no longer in the game, for example), it will still prevent damage. It just won't deal any damage itself."
         },
         {
           "date": "2010-03-01",
@@ -1820,7 +1826,7 @@
       "subtypes": [
         "Trap"
       ],
-      "text": "If an opponent cast a red instant or sorcery spell this turn, you may pay {W} rather than pay Refraction Trap's mana cost.\nPrevent the next 3 damage that a source of your choice would deal to you and/or permanents you control this turn. If damage is prevented this way, Refraction Trap deals that much damage to target creature or player.",
+      "text": "If an opponent cast a red instant or sorcery spell this turn, you may pay {W} rather than pay this spell's mana cost.\nPrevent the next 3 damage that a source of your choice would deal to you and/or permanents you control this turn. If damage is prevented this way, Refraction Trap deals that much damage to any target.",
       "type": "Instant — Trap",
       "types": [
         "Instant"
@@ -2564,7 +2570,7 @@
       "rulings": [
         {
           "date": "2016-09-20",
-          "text": "If one target permanent becomes an illegal target, the other will be returned to its owner's hand. If both targets become illegal, Aether Tradewinds will be countered."
+          "text": "If one target permanent becomes an illegal target, the other will be returned to its owner's hand. If both targets become illegal, Aether Tradewinds won't resolve."
         }
       ],
       "text": "Return target permanent you control and target permanent you don't control to their owners' hands.",
@@ -3085,7 +3091,7 @@
         "Wizard",
         "Ally"
       ],
-      "text": "Whenever Halimar Excavator or another Ally enters the battlefield under your control, target player puts the top X cards of his or her library into his or her graveyard, where X is the number of Allies you control.",
+      "text": "Whenever Halimar Excavator or another Ally enters the battlefield under your control, target player puts the top X cards of their library into their graveyard, where X is the number of Allies you control.",
       "toughness": "3",
       "type": "Creature — Human Wizard Ally",
       "types": [
@@ -3262,7 +3268,7 @@
         },
         {
           "format": "Modern",
-          "legality": "Banned"
+          "legality": "Legal"
         },
         {
           "format": "Vintage",
@@ -3291,12 +3297,12 @@
       "rarity": "Mythic Rare",
       "rulings": [
         {
-          "date": "2016-06-08",
+          "date": "2018-03-16",
           "text": "You draw three cards and put two cards back all while Jace's second ability is resolving. Nothing can happen between the two, and no player may choose to take actions."
         },
         {
-          "date": "2016-06-08",
-          "text": "If the targeted player for Jace's last ability has no cards in hand, that player shuffles nothing into his or her library, and that player's library will remain empty. That player won't lose the game until he or she tries to draw from the empty library."
+          "date": "2018-03-16",
+          "text": "If the targeted player for Jace's last ability has no cards in hand, that player shuffles nothing into their library, and that player's library will remain empty. That player won't lose the game until they try to draw from the empty library."
         }
       ],
       "subtypes": [
@@ -3305,7 +3311,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "+2: Look at the top card of target player's library. You may put that card on the bottom of that player's library.\n0: Draw three cards, then put two cards from your hand on top of your library in any order.\n−1: Return target creature to its owner's hand.\n−12: Exile all cards from target player's library, then that player shuffles his or her hand into his or her library.",
+      "text": "+2: Look at the top card of target player's library. You may put that card on the bottom of that player's library.\n0: Draw three cards, then put two cards from your hand on top of your library in any order.\n−1: Return target creature to its owner's hand.\n−12: Exile all cards from target player's library, then that player shuffles their hand into their library.",
       "type": "Legendary Planeswalker — Jace",
       "types": [
         "Planeswalker"
@@ -3653,7 +3659,7 @@
       "subtypes": [
         "Trap"
       ],
-      "text": "If an opponent had a green creature enter the battlefield under his or her control this turn, you may pay {U} rather than pay Permafrost Trap's mana cost.\nTap up to two target creatures. Those creatures don't untap during their controller's next untap step.",
+      "text": "If an opponent had a green creature enter the battlefield under their control this turn, you may pay {U} rather than pay this spell's mana cost.\nTap up to two target creatures. Those creatures don't untap during their controller's next untap step.",
       "type": "Instant — Trap",
       "types": [
         "Instant"
@@ -4049,7 +4055,7 @@
       "rulings": [
         {
           "date": "2010-03-01",
-          "text": "If the targeted spell is an illegal target by the time Spell Contortion resolves, Spell Contortion is countered. You won't draw any cards."
+          "text": "If the targeted spell is an illegal target by the time Spell Contortion resolves, Spell Contortion doesn't resolve. You won't draw any cards."
         },
         {
           "date": "2010-03-01",
@@ -4253,7 +4259,7 @@
       "rulings": [
         {
           "date": "2010-03-01",
-          "text": "When the triggered ability resolves, you must search that player's library (and he or she must shuffle it) even if there are no artifact cards in it or you choose not to find one."
+          "text": "When the triggered ability resolves, you must search that player's library (and they must shuffle it) even if there are no artifact cards in it or you choose not to find one."
         },
         {
           "date": "2010-03-01",
@@ -4271,7 +4277,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "Islandwalk (This creature can't be blocked as long as defending player controls an Island.)\nWhenever Thada Adel, Acquisitor deals combat damage to a player, search that player's library for an artifact card and exile it. Then that player shuffles his or her library. Until end of turn, you may play that card.",
+      "text": "Islandwalk (This creature can't be blocked as long as defending player controls an Island.)\nWhenever Thada Adel, Acquisitor deals combat damage to a player, search that player's library for an artifact card and exile it. Then that player shuffles their library. Until end of turn, you may play that card.",
       "toughness": "2",
       "type": "Legendary Creature — Merfolk Rogue",
       "types": [
@@ -4591,7 +4597,7 @@
       "rulings": [
         {
           "date": "2010-03-01",
-          "text": "If the targeted permanent is an illegal target by the time Twitch resolves, the entire spell is countered. You don't draw a card."
+          "text": "If the targeted permanent is an illegal target by the time Twitch resolves, the entire spell doesn't resolve. You don't draw a card."
         }
       ],
       "text": "You may tap or untap target artifact, creature, or land.\nDraw a card.",
@@ -5010,11 +5016,11 @@
       "rulings": [
         {
           "date": "2017-11-17",
-          "text": "No game effect can cause you to win the game or cause any opponent to lose the game while you control Abyssal Persecutor. It doesn't matter whether an opponent has 0 or less life, an opponent is forced to draw a card while his or her library is empty, an opponent has ten or more poison counters, an opponent is dealt combat damage by Phage the Untouchable, you control Felidar Sovereign and have 40 or more life, or so on. You keep playing."
+          "text": "No game effect can cause you to win the game or cause any opponent to lose the game while you control Abyssal Persecutor. It doesn't matter whether an opponent has 0 or less life, an opponent is forced to draw a card while their library is empty, an opponent has ten or more poison counters, an opponent is dealt combat damage by Phage the Untouchable, you control Felidar Sovereign and have 40 or more life, or so on. You keep playing."
         },
         {
           "date": "2017-11-17",
-          "text": "Other circumstances can still cause an opponent to lose the game, however. An opponent will lose a game if he or she concedes, if that player is penalized with a Game Loss or a Match Loss during a sanctioned tournament due to a DCI rules infraction, or if that player's Magic Online® game clock runs out of time."
+          "text": "Other circumstances can still cause an opponent to lose the game, however. An opponent will lose a game if they concede, if that player is penalized with a Game Loss or a Match Loss during a sanctioned tournament due to a DCI rules infraction, or if that player's Magic Online® game clock runs out of time."
         },
         {
           "date": "2017-11-17",
@@ -5030,7 +5036,7 @@
         },
         {
           "date": "2017-11-17",
-          "text": "Even though your opponents can't lose the game, a player can't pay an amount of life that's greater than his or her life total. If a player's life total is 0 or less, that player can't pay life at all, with one exception: a player may always pay 0 life."
+          "text": "Even though your opponents can't lose the game, a player can't pay an amount of life that's greater than their life total. If a player's life total is 0 or less, that player can't pay life at all, with one exception: a player may always pay 0 life."
         }
       ],
       "subtypes": [
@@ -5679,7 +5685,7 @@
       "rulings": [
         {
           "date": "2010-03-01",
-          "text": "When the triggered ability resolves, first the player whose turn it is (if that player is an opponent) chooses which creature he or she will sacrifice, then each other opponent in turn order does the same, then all chosen creatures are sacrificed at the same time."
+          "text": "When the triggered ability resolves, first the player whose turn it is (if that player is an opponent) chooses which creature they will sacrifice, then each other opponent in turn order does the same, then all chosen creatures are sacrificed at the same time."
         },
         {
           "date": "2010-03-01",
@@ -6370,7 +6376,7 @@
         },
         {
           "date": "2010-03-01",
-          "text": "If the targeted player is an illegal target by the time the ability resolves (for example, if that player has left a multiplayer game), the entire ability is countered. You can't pay {B} and you don't gain life."
+          "text": "If the targeted player is an illegal target by the time the ability resolves (for example, if that player has left a multiplayer game), the entire ability doesn't resolve. You can't pay {B} and you don't gain life."
         }
       ],
       "subtypes": [
@@ -6476,10 +6482,10 @@
       "rulings": [
         {
           "date": "2010-03-01",
-          "text": "If the number of Swamps you control exceeds the number of cards in the targeted player's hand, that player reveals all the cards in his or her hand."
+          "text": "If the number of Swamps you control exceeds the number of cards in the targeted player's hand, that player reveals all the cards in their hand."
         }
       ],
-      "text": "Target player reveals a number of cards from his or her hand equal to the number of Swamps you control. You choose one of them. That player discards that card.",
+      "text": "Target player reveals a number of cards from their hand equal to the number of Swamps you control. You choose one of them. That player discards that card.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -6608,13 +6614,13 @@
         },
         {
           "date": "2010-03-01",
-          "text": "If the targeted creature is an illegal target by the time Nemesis Trap resolves, the entire spell is countered. You won't get a token."
+          "text": "If the targeted creature is an illegal target by the time Nemesis Trap resolves, the entire spell doesn't resolve. You won't get a token."
         }
       ],
       "subtypes": [
         "Trap"
       ],
-      "text": "If a white creature is attacking, you may pay {B}{B} rather than pay Nemesis Trap's mana cost.\nExile target attacking creature. Create a token that's a copy of that creature. Exile it at the beginning of the next end step.",
+      "text": "If a white creature is attacking, you may pay {B}{B} rather than pay this spell's mana cost.\nExile target attacking creature. Create a token that's a copy of that creature. Exile it at the beginning of the next end step.",
       "type": "Instant — Trap",
       "types": [
         "Instant"
@@ -7557,7 +7563,7 @@
         },
         {
           "date": "2010-03-01",
-          "text": "If the targeted creature is an illegal target by the time Urge to Feed resolves, the entire spell is countered. You can't tap any Vampires."
+          "text": "If the targeted creature is an illegal target by the time Urge to Feed resolves, the entire spell doesn't resolve. You can't tap any Vampires."
         }
       ],
       "text": "Target creature gets -3/-3 until end of turn. You may tap any number of untapped Vampire creatures you control. If you do, put a +1/+1 counter on each of those Vampires.",
@@ -8184,7 +8190,7 @@
           "text": "As long as any of its targets are legal at the time Comet Storm resolves, Comet Storm will deal X damage to each of those legal targets."
         }
       ],
-      "text": "Multikicker {1} (You may pay an additional {1} any number of times as you cast this spell.)\nChoose target creature or player, then choose another target creature or player for each time Comet Storm was kicked. Comet Storm deals X damage to each of them.",
+      "text": "Multikicker {1} (You may pay an additional {1} any number of times as you cast this spell.)\nChoose any target, then choose another target for each time this spell was kicked. Comet Storm deals X damage to each of them.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -8293,7 +8299,7 @@
       "subtypes": [
         "Elemental"
       ],
-      "text": "Landfall — Whenever a land enters the battlefield under your control, you may have Cosi's Ravager deal 1 damage to target player.",
+      "text": "Landfall — Whenever a land enters the battlefield under your control, you may have Cosi's Ravager deal 1 damage to target player or planeswalker.",
       "toughness": "2",
       "type": "Creature — Elemental",
       "types": [
@@ -8515,7 +8521,7 @@
         "Human",
         "Shaman"
       ],
-      "text": "Haste\n{T}: Cunning Sparkmage deals 1 damage to target creature or player.",
+      "text": "Haste\n{T}: Cunning Sparkmage deals 1 damage to any target.",
       "toughness": "1",
       "type": "Creature — Human Shaman",
       "types": [
@@ -8615,7 +8621,7 @@
         "Ogre",
         "Shaman"
       ],
-      "text": "Multikicker {R} (You may pay an additional {R} any number of times as you cast this spell.)\nWhen Deathforge Shaman enters the battlefield, it deals damage to target player equal to twice the number of times it was kicked.",
+      "text": "Multikicker {R} (You may pay an additional {R} any number of times as you cast this spell.)\nWhen Deathforge Shaman enters the battlefield, it deals damage to target player or planeswalker equal to twice the number of times it was kicked.",
       "toughness": "3",
       "type": "Creature — Ogre Shaman",
       "types": [
@@ -9362,7 +9368,7 @@
         },
         {
           "date": "2010-03-01",
-          "text": "If you cast Ricochet Trap targeting a spell that targets a spell on the stack (like Cancel does, for example), you can't change that spell's target to itself. You can, however, change that spell's target to Ricochet Trap. If you do, that spell will be countered when it tries to resolve because Ricochet Trap will have left the stack by then."
+          "text": "If you cast Ricochet Trap targeting a spell that targets a spell on the stack (like Cancel does, for example), you can't change that spell's target to itself. You can, however, change that spell's target to Ricochet Trap. If you do, that spell won't resolve when it tries to resolve because Ricochet Trap will have left the stack by then."
         },
         {
           "date": "2010-03-01",
@@ -9376,7 +9382,7 @@
       "subtypes": [
         "Trap"
       ],
-      "text": "If an opponent cast a blue spell this turn, you may pay {R} rather than pay Ricochet Trap's mana cost.\nChange the target of target spell with a single target.",
+      "text": "If an opponent cast a blue spell this turn, you may pay {R} rather than pay this spell's mana cost.\nChange the target of target spell with a single target.",
       "type": "Instant — Trap",
       "types": [
         "Instant"
@@ -9473,7 +9479,7 @@
       "rulings": [
         {
           "date": "2010-03-01",
-          "text": "If the targeted land is an illegal target by the time Roiling Terrain resolves, the entire spell is countered. No damage will be dealt."
+          "text": "If the targeted land is an illegal target by the time Roiling Terrain resolves, the entire spell doesn't resolve. No damage will be dealt."
         },
         {
           "date": "2010-03-01",
@@ -9588,7 +9594,7 @@
           "text": "The ability triggers just once per kicked spell, even if that spell was kicked multiple times."
         }
       ],
-      "text": "Whenever you cast a kicked spell, you may have Rumbling Aftershocks deal damage to target creature or player equal to the number of times that spell was kicked.",
+      "text": "Whenever you cast a kicked spell, you may have Rumbling Aftershocks deal damage to any target equal to the number of times that spell was kicked.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -9713,7 +9719,7 @@
           "text": "If either target is illegal by the time Searing Blaze resolves, it still deals damage to the other target."
         }
       ],
-      "text": "Searing Blaze deals 1 damage to target player and 1 damage to target creature that player controls.\nLandfall — If you had a land enter the battlefield under your control this turn, Searing Blaze deals 3 damage to that player and 3 damage to that creature instead.",
+      "text": "Searing Blaze deals 1 damage to target player or planeswalker and 1 damage to target creature that player or that planeswalker's controller controls.\nLandfall — If you had a land enter the battlefield under your control this turn, Searing Blaze deals 3 damage to that player or planeswalker and 3 damage to that creature instead.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -10031,7 +10037,7 @@
       "subtypes": [
         "Trap"
       ],
-      "text": "Stone Idol Trap costs {1} less to cast for each attacking creature.\nCreate a 6/12 colorless Construct artifact creature token with trample. Exile it at the beginning of your next end step.",
+      "text": "This spell costs {1} less to cast for each attacking creature.\nCreate a 6/12 colorless Construct artifact creature token with trample. Exile it at the beginning of your next end step.",
       "type": "Instant — Trap",
       "types": [
         "Instant"
@@ -11306,7 +11312,7 @@
         "Druid",
         "Ally"
       ],
-      "text": "{T}: Add X mana of any one color to your mana pool, where X is the number of Allies you control.",
+      "text": "{T}: Add X mana of any one color, where X is the number of Allies you control.",
       "toughness": "1",
       "type": "Creature — Human Druid Ally",
       "types": [
@@ -11613,7 +11619,7 @@
       "rulings": [
         {
           "date": "2017-11-17",
-          "text": "If the target artifact or enchantment is an illegal target when Nature's Claim tries to resolve, the entire spell is countered. No one gains any life."
+          "text": "If the target artifact or enchantment is an illegal target when Nature's Claim tries to resolve, the entire spell doesn't resolve. No one gains any life."
         }
       ],
       "text": "Destroy target artifact or enchantment. Its controller gains 4 life.",
@@ -11732,7 +11738,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "Green mana doesn't empty from your mana pool as steps and phases end.\nOmnath, Locus of Mana gets +1/+1 for each green mana in your mana pool.",
+      "text": "You don't lose unspent green mana as steps and phases end.\nOmnath, Locus of Mana gets +1/+1 for each unspent green mana you have.",
       "toughness": "1",
       "type": "Legendary Creature — Elemental",
       "types": [
@@ -11951,7 +11957,7 @@
       "subtypes": [
         "Trap"
       ],
-      "text": "If a black creature with flying is attacking, you may pay {G} rather than pay Slingbow Trap's mana cost.\nDestroy target attacking creature with flying.",
+      "text": "If a black creature with flying is attacking, you may pay {G} rather than pay this spell's mana cost.\nDestroy target attacking creature with flying.",
       "type": "Instant — Trap",
       "types": [
         "Instant"
@@ -12171,7 +12177,7 @@
           "text": "As long as any of its targets are legal at the time Strength of the Tajuru resolves, you'll put X +1/+1 counters on each of those legal targets."
         }
       ],
-      "text": "Multikicker {1} (You may pay an additional {1} any number of times as you cast this spell.)\nChoose target creature, then choose another target creature for each time Strength of the Tajuru was kicked. Put X +1/+1 counters on each of them.",
+      "text": "Multikicker {1} (You may pay an additional {1} any number of times as you cast this spell.)\nChoose target creature, then choose another target creature for each time this spell was kicked. Put X +1/+1 counters on each of them.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -13260,7 +13266,7 @@
           "text": "If Everflowing Chalice has no charge counters on it, you can still activate its last ability. That ability is still a mana ability, even though it produces no mana as it resolves."
         }
       ],
-      "text": "Multikicker {2} (You may pay an additional {2} any number of times as you cast this spell.)\nEverflowing Chalice enters the battlefield with a charge counter on it for each time it was kicked.\n{T}: Add {C} to your mana pool for each charge counter on Everflowing Chalice.",
+      "text": "Multikicker {2} (You may pay an additional {2} any number of times as you cast this spell.)\nEverflowing Chalice enters the battlefield with a charge counter on it for each time it was kicked.\n{T}: Add {C} for each charge counter on Everflowing Chalice.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -13854,7 +13860,7 @@
       "rulings": [
         {
           "date": "2010-03-01",
-          "text": "The source of the damage is Razor Boomerang, not the equipped creature. However, the equipped creature's ability is what targets the creature or player. If Razor Boomerang is equipped to a red creature, for example, the ability couldn't target a creature with protection from red. It could target a creature with protection from artifacts, but all the damage would be prevented."
+          "text": "The source of the damage is Razor Boomerang, not the equipped creature. However, the equipped creature's ability is what targets the permanent or player. If Razor Boomerang is equipped to a red creature, for example, the ability couldn't target a creature with protection from red. It could target a creature with protection from artifacts, but all the damage would be prevented."
         },
         {
           "date": "2010-03-01",
@@ -13866,13 +13872,13 @@
         },
         {
           "date": "2010-03-01",
-          "text": "If the targeted creature is an illegal target by the time the equipped creature's ability resolves, the entire ability is countered. Razor Boomerang remains on the battlefield unattached."
+          "text": "If the targeted creature is an illegal target by the time the equipped creature's ability resolves, the entire ability doesn't resolve. Razor Boomerang remains on the battlefield unattached."
         }
       ],
       "subtypes": [
         "Equipment"
       ],
-      "text": "Equipped creature has \"{T}, Unattach Razor Boomerang: Razor Boomerang deals 1 damage to target creature or player. Return Razor Boomerang to its owner's hand.\"\nEquip {2}",
+      "text": "Equipped creature has \"{T}, Unattach Razor Boomerang: It deals 1 damage to any target. Return Razor Boomerang to its owner's hand.\"\nEquip {2}",
       "type": "Artifact — Equipment",
       "types": [
         "Artifact"
@@ -14177,7 +14183,7 @@
         "C17"
       ],
       "rarity": "Common",
-      "text": "Bojuka Bog enters the battlefield tapped.\nWhen Bojuka Bog enters the battlefield, exile all cards from target player's graveyard.\n{T}: Add {B} to your mana pool.",
+      "text": "Bojuka Bog enters the battlefield tapped.\nWhen Bojuka Bog enters the battlefield, exile all cards from target player's graveyard.\n{T}: Add {B}.",
       "type": "Land",
       "types": [
         "Land"
@@ -14278,7 +14284,7 @@
           "text": "When a land becomes a creature, that doesn't count as having a creature enter the battlefield. The permanent was already on the battlefield; it only changed its types. Abilities that trigger whenever a creature enters the battlefield won't trigger."
         }
       ],
-      "text": "Celestial Colonnade enters the battlefield tapped.\n{T}: Add {W} or {U} to your mana pool.\n{3}{W}{U}: Until end of turn, Celestial Colonnade becomes a 4/4 white and blue Elemental creature with flying and vigilance. It's still a land.",
+      "text": "Celestial Colonnade enters the battlefield tapped.\n{T}: Add {W} or {U}.\n{3}{W}{U}: Until end of turn, Celestial Colonnade becomes a 4/4 white and blue Elemental creature with flying and vigilance. It's still a land.",
       "type": "Land",
       "types": [
         "Land"
@@ -14378,7 +14384,7 @@
           "text": "When a land becomes a creature, that doesn't count as having a creature enter the battlefield. The permanent was already on the battlefield; it only changed its types. Abilities that trigger whenever a creature enters the battlefield won't trigger."
         }
       ],
-      "text": "Creeping Tar Pit enters the battlefield tapped.\n{T}: Add {U} or {B} to your mana pool.\n{1}{U}{B}: Creeping Tar Pit becomes a 3/2 blue and black Elemental creature until end of turn and can't be blocked this turn. It's still a land.",
+      "text": "Creeping Tar Pit enters the battlefield tapped.\n{T}: Add {U} or {B}.\n{1}{U}{B}: Creeping Tar Pit becomes a 3/2 blue and black Elemental creature until end of turn and can't be blocked this turn. It's still a land.",
       "type": "Land",
       "types": [
         "Land"
@@ -14477,7 +14483,7 @@
           "text": "When a land becomes a creature, that doesn't count as having a creature enter the battlefield. The permanent was already on the battlefield; it only changed its types. Abilities that trigger whenever a creature enters the battlefield won't trigger."
         }
       ],
-      "text": "{T}: Add {C} to your mana pool.\n{4}: Dread Statuary becomes a 4/2 Golem artifact creature until end of turn. It's still a land.",
+      "text": "{T}: Add {C}.\n{4}: Dread Statuary becomes a 4/2 Golem artifact creature until end of turn. It's still a land.",
       "type": "Land",
       "types": [
         "Land"
@@ -14673,7 +14679,7 @@
         "DDM"
       ],
       "rarity": "Common",
-      "text": "Halimar Depths enters the battlefield tapped.\nWhen Halimar Depths enters the battlefield, look at the top three cards of your library, then put them back in any order.\n{T}: Add {U} to your mana pool.",
+      "text": "Halimar Depths enters the battlefield tapped.\nWhen Halimar Depths enters the battlefield, look at the top three cards of your library, then put them back in any order.\n{T}: Add {U}.",
       "type": "Land",
       "types": [
         "Land"
@@ -14767,7 +14773,7 @@
         "PCA"
       ],
       "rarity": "Common",
-      "text": "Khalni Garden enters the battlefield tapped.\nWhen Khalni Garden enters the battlefield, create a 0/1 green Plant creature token.\n{T}: Add {G} to your mana pool.",
+      "text": "Khalni Garden enters the battlefield tapped.\nWhen Khalni Garden enters the battlefield, create a 0/1 green Plant creature token.\n{T}: Add {G}.",
       "type": "Land",
       "types": [
         "Land"
@@ -14867,7 +14873,7 @@
           "text": "When a land becomes a creature, that doesn't count as having a creature enter the battlefield. The permanent was already on the battlefield; it only changed its types. Abilities that trigger whenever a creature enters the battlefield won't trigger."
         }
       ],
-      "text": "Lavaclaw Reaches enters the battlefield tapped.\n{T}: Add {B} or {R} to your mana pool.\n{1}{B}{R}: Until end of turn, Lavaclaw Reaches becomes a 2/2 black and red Elemental creature with \"{X}: This creature gets +X/+0 until end of turn.\" It's still a land.",
+      "text": "Lavaclaw Reaches enters the battlefield tapped.\n{T}: Add {B} or {R}.\n{1}{B}{R}: Until end of turn, Lavaclaw Reaches becomes a 2/2 black and red Elemental creature with \"{X}: This creature gets +X/+0 until end of turn.\" It's still a land.",
       "type": "Land",
       "types": [
         "Land"
@@ -14963,7 +14969,7 @@
         "A25"
       ],
       "rarity": "Common",
-      "text": "{T}: Add {C} to your mana pool.\n{T}, Sacrifice Quicksand: Target attacking creature without flying gets -1/-2 until end of turn.",
+      "text": "{T}: Add {C}.\n{T}, Sacrifice Quicksand: Target attacking creature without flying gets -1/-2 until end of turn.",
       "type": "Land",
       "types": [
         "Land"
@@ -15071,7 +15077,7 @@
           "text": "Any +1/+1 counters put on Raging Ravine remain on it even after it stops being a creature. They'll have no effect until it becomes a creature again."
         }
       ],
-      "text": "Raging Ravine enters the battlefield tapped.\n{T}: Add {R} or {G} to your mana pool.\n{2}{R}{G}: Until end of turn, Raging Ravine becomes a 3/3 red and green Elemental creature with \"Whenever this creature attacks, put a +1/+1 counter on it.\" It's still a land.",
+      "text": "Raging Ravine enters the battlefield tapped.\n{T}: Add {R} or {G}.\n{2}{R}{G}: Until end of turn, Raging Ravine becomes a 3/3 red and green Elemental creature with \"Whenever this creature attacks, put a +1/+1 counter on it.\" It's still a land.",
       "type": "Land",
       "types": [
         "Land"
@@ -15161,7 +15167,7 @@
         "DDG"
       ],
       "rarity": "Common",
-      "text": "Sejiri Steppe enters the battlefield tapped.\nWhen Sejiri Steppe enters the battlefield, target creature you control gains protection from the color of your choice until end of turn.\n{T}: Add {W} to your mana pool.",
+      "text": "Sejiri Steppe enters the battlefield tapped.\nWhen Sejiri Steppe enters the battlefield, target creature you control gains protection from the color of your choice until end of turn.\n{T}: Add {W}.",
       "type": "Land",
       "types": [
         "Land"
@@ -15251,7 +15257,7 @@
         "E01"
       ],
       "rarity": "Common",
-      "text": "Smoldering Spires enters the battlefield tapped.\nWhen Smoldering Spires enters the battlefield, target creature can't block this turn.\n{T}: Add {R} to your mana pool.",
+      "text": "Smoldering Spires enters the battlefield tapped.\nWhen Smoldering Spires enters the battlefield, target creature can't block this turn.\n{T}: Add {R}.",
       "type": "Land",
       "types": [
         "Land"
@@ -15353,7 +15359,7 @@
           "text": "When a land becomes a creature, that doesn't count as having a creature enter the battlefield. The permanent was already on the battlefield; it only changed its types. Abilities that trigger whenever a creature enters the battlefield won't trigger."
         }
       ],
-      "text": "Stirring Wildwood enters the battlefield tapped.\n{T}: Add {G} or {W} to your mana pool.\n{1}{G}{W}: Until end of turn, Stirring Wildwood becomes a 3/4 green and white Elemental creature with reach. It's still a land.",
+      "text": "Stirring Wildwood enters the battlefield tapped.\n{T}: Add {G} or {W}.\n{1}{G}{W}: Until end of turn, Stirring Wildwood becomes a 3/4 green and white Elemental creature with reach. It's still a land.",
       "type": "Land",
       "types": [
         "Land"
@@ -15453,7 +15459,7 @@
           "text": "Assuming you can activate Tectonic Edge's second ability, you can target any nonbasic land with it (not just one controlled by an opponent that controls four or more lands)."
         }
       ],
-      "text": "{T}: Add {C} to your mana pool.\n{1}, {T}, Sacrifice Tectonic Edge: Destroy target nonbasic land. Activate this ability only if an opponent controls four or more lands.",
+      "text": "{T}: Add {C}.\n{1}, {T}, Sacrifice Tectonic Edge: Destroy target nonbasic land. Activate this ability only if an opponent controls four or more lands.",
       "type": "Land",
       "types": [
         "Land"

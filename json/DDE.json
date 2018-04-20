@@ -457,7 +457,7 @@
         "Cleric",
         "Minion"
       ],
-      "text": "When Priest of Gix enters the battlefield, add {B}{B}{B} to your mana pool.",
+      "text": "When Priest of Gix enters the battlefield, add {B}{B}{B}.",
       "toughness": "1",
       "type": "Creature — Human Cleric Minion",
       "types": [
@@ -1186,7 +1186,7 @@
         "A25"
       ],
       "rarity": "Common",
-      "text": "Add {B}{B}{B} to your mana pool.",
+      "text": "Add {B}{B}{B}.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -1320,10 +1320,10 @@
         },
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         }
       ],
-      "text": "{T}: Add {B} to your mana pool.\n{2}{B}: Phyrexian Totem becomes a 5/5 black Horror artifact creature with trample until end of turn.\nWhenever Phyrexian Totem is dealt damage, if it's a creature, sacrifice that many permanents.",
+      "text": "{T}: Add {B}.\n{2}{B}: Phyrexian Totem becomes a 5/5 black Horror artifact creature with trample until end of turn.\nWhenever Phyrexian Totem is dealt damage, if it's a creature, sacrifice that many permanents.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -1546,7 +1546,7 @@
         "C17"
       ],
       "rarity": "Uncommon",
-      "text": "Worn Powerstone enters the battlefield tapped.\n{T}: Add {C}{C} to your mana pool.",
+      "text": "Worn Powerstone enters the battlefield tapped.\n{T}: Add {C}{C}.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -1681,7 +1681,7 @@
       "rulings": [
         {
           "date": "2009-10-01",
-          "text": "If the targeted creature is an illegal target by the time Hideous End resolves, the entire spell is countered. No one loses life."
+          "text": "If the targeted creature is an illegal target by the time Hideous End resolves, the entire spell doesn't resolve. No one loses life."
         }
       ],
       "text": "Destroy target nonblack creature. Its controller loses 2 life.",
@@ -1926,7 +1926,7 @@
         },
         {
           "date": "2009-10-01",
-          "text": "If the targeted creature is an illegal target by the time Tendrils of Corruption would resolve, the entire spell is countered. You won't gain any life."
+          "text": "If the targeted creature is an illegal target by the time Tendrils of Corruption would resolve, the entire spell doesn't resolve. You won't gain any life."
         }
       ],
       "text": "Tendrils of Corruption deals X damage to target creature and you gain X life, where X is the number of Swamps you control.",
@@ -1993,19 +1993,15 @@
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2004-10-04",
-          "text": "The creatures which are sacrificed can't be regenerated."
+          "date": "2018-03-16",
+          "text": "As Living Death resolves, all players exile their creature cards from graveyards at the same time. Then all players sacrifice all creatures they control at the same time. Then all players put all creatures they exiled onto the battlefield at the same time."
         },
         {
-          "date": "2004-10-04",
-          "text": "Both players exile their creature cards at once. Then both players sacrifice all creatures they control at once. Then both players put all creatures they exiled onto the battlefield. If there are any choices involved for a given step, the current player makes their choices first, then the other player, and finally you do the action all at once."
-        },
-        {
-          "date": "2013-09-20",
-          "text": "\"All cards he or she exiled this way\" refers only to the cards exiled in the first part of the effect. If a replacement effect (such as Leyline of the Void) exiles any of the sacrificed creatures instead of putting them into the graveyard, those cards aren't returned to the battlefield."
+          "date": "2018-03-16",
+          "text": "Only cards exiled by Living Death's first instruction are put onto the battlefield. If a replacement effect (such as that of Leyline of the Void) causes any of the sacrificed creatures to be exiled instead of put into a graveyard, those cards aren't returned to the battlefield."
         }
       ],
-      "text": "Each player exiles all creature cards from his or her graveyard, then sacrifices all creatures he or she controls, then puts all cards he or she exiled this way onto the battlefield.",
+      "text": "Each player exiles all creature cards from their graveyard, then sacrifices all creatures they control, then puts all cards they exiled this way onto the battlefield.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -2279,7 +2275,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -2567,7 +2564,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -2855,7 +2853,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -3143,7 +3142,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -3228,14 +3228,10 @@
         },
         {
           "date": "2004-10-04",
-          "text": "It can be countered by game rules, such as by having all its targets be illegal. Game rules are neither spells or abilities."
-        },
-        {
-          "date": "2004-10-04",
           "text": "Counterspells can be cast that target it, but when they resolve they simply don't counter it since it can't be countered."
         }
       ],
-      "text": "Kicker {8}{R} (You may pay an additional {8}{R} as you cast this spell.)\nUrza's Rage can't be countered by spells or abilities.\nUrza's Rage deals 3 damage to target creature or player. If Urza's Rage was kicked, instead it deals 10 damage to that creature or player and the damage can't be prevented.",
+      "text": "Kicker {8}{R} (You may pay an additional {8}{R} as you cast this spell.)\nThis spell can't be countered.\nUrza's Rage deals 3 damage to any target. If this spell was kicked, instead it deals 10 damage to that permanent or player and the damage can't be prevented.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -3359,7 +3355,7 @@
         "Elf",
         "Nomad"
       ],
-      "text": "{1}{G}: Add one mana of any color to your mana pool.",
+      "text": "{1}{G}: Add one mana of any color.",
       "toughness": "2",
       "type": "Creature — Elf Nomad",
       "types": [
@@ -3426,7 +3422,7 @@
         "Elf",
         "Druid"
       ],
-      "text": "As Quirion Elves enters the battlefield, choose a color.\n{T}: Add {G} to your mana pool.\n{T}: Add one mana of the chosen color to your mana pool.",
+      "text": "As Quirion Elves enters the battlefield, choose a color.\n{T}: Add {G}.\n{T}: Add one mana of the chosen color.",
       "toughness": "1",
       "type": "Creature — Elf Druid",
       "types": [
@@ -3643,7 +3639,7 @@
         "Elf",
         "Wizard"
       ],
-      "text": "Kicker {R} and/or {W} (You may pay an additional {R} and/or {W} as you cast this spell.)\nWhen Thornscape Battlemage enters the battlefield, if it was kicked with its {R} kicker, it deals 2 damage to target creature or player.\nWhen Thornscape Battlemage enters the battlefield, if it was kicked with its {W} kicker, destroy target artifact.",
+      "text": "Kicker {R} and/or {W} (You may pay an additional {R} and/or {W} as you cast this spell.)\nWhen Thornscape Battlemage enters the battlefield, if it was kicked with its {R} kicker, it deals 2 damage to any target.\nWhen Thornscape Battlemage enters the battlefield, if it was kicked with its {W} kicker, destroy target artifact.",
       "toughness": "2",
       "type": "Creature — Elf Wizard",
       "types": [
@@ -3968,7 +3964,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "Flying\nWhenever Darigaaz, the Igniter deals combat damage to a player, you may pay {2}{R}. If you do, choose a color, then that player reveals his or her hand and Darigaaz deals damage to the player equal to the number of cards of that color revealed this way.",
+      "text": "Flying\nWhenever Darigaaz, the Igniter deals combat damage to a player, you may pay {2}{R}. If you do, choose a color, then that player reveals their hand and Darigaaz deals damage to the player equal to the number of cards of that color revealed this way.",
       "toughness": "6",
       "type": "Legendary Creature — Dragon",
       "types": [
@@ -4268,7 +4264,7 @@
           "text": "A number of nonbasic lands have basic land types. Domain abilities don't count the number of lands you control — they count the number of basic land types among lands you control, even if that means checking the same land twice. For example, if you control a Tundra, an Overgrown Tomb, and a Madblind Mountain, you'll have a Plains, Island, Swamp, Mountain, and Forest among the lands you control. Your domain abilities will be maxed out."
         }
       ],
-      "text": "Domain — Tribal Flames deals X damage to target creature or player, where X is the number of basic land types among lands you control.",
+      "text": "Domain — Tribal Flames deals X damage to any target, where X is the number of basic land types among lands you control.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -4344,7 +4340,7 @@
       "subtypes": [
         "Aura"
       ],
-      "text": "Enchant land\nWhenever enchanted land is tapped for mana, its controller adds one mana of any color to his or her mana pool (in addition to the mana the land produces).",
+      "text": "Enchant land\nWhenever enchanted land is tapped for mana, its controller adds an additional one mana of any color.",
       "type": "Enchantment — Aura",
       "types": [
         "Enchantment"
@@ -4464,15 +4460,15 @@
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2007-05-01",
+          "date": "2018-03-16",
           "text": "If you remove multiple charge counters from Coalition Relic at once, you may add a different color of mana to your mana pool for each one."
         },
         {
-          "date": "2007-05-01",
-          "text": "Only the first main phase each turn is considered a precombat main phase, even if other combat phases are created (with Relentless Assault, for example)."
+          "date": "2018-03-16",
+          "text": "Only the first main phase each turn is considered a precombat main phase, even if other main phases or combat phases are created (with Relentless Assault, for example)."
         }
       ],
-      "text": "{T}: Add one mana of any color to your mana pool.\n{T}: Put a charge counter on Coalition Relic.\nAt the beginning of your precombat main phase, remove all charge counters from Coalition Relic. Add one mana of any color to your mana pool for each charge counter removed this way.",
+      "text": "{T}: Add one mana of any color.\n{T}: Put a charge counter on Coalition Relic.\nAt the beginning of your precombat main phase, remove all charge counters from Coalition Relic. Add one mana of any color for each charge counter removed this way.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -4694,7 +4690,7 @@
           "text": "Because the \"search\" requires you to find a card with certain characteristics, you don't have to find the card if you don't want to."
         }
       ],
-      "text": "As an additional cost to cast Harrow, sacrifice a land.\nSearch your library for up to two basic land cards and put them onto the battlefield. Then shuffle your library.",
+      "text": "As an additional cost to cast this spell, sacrifice a land.\nSearch your library for up to two basic land cards and put them onto the battlefield. Then shuffle your library.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -4828,7 +4824,7 @@
         "DDE"
       ],
       "rarity": "Uncommon",
-      "text": "Choose one —\n• Return target creature card from your graveyard to your hand.\n• Darigaaz's Charm deals 3 damage to target creature or player.\n• Target creature gets +3/+3 until end of turn.",
+      "text": "Choose one —\n• Return target creature card from your graveyard to your hand.\n• Darigaaz's Charm deals 3 damage to any target.\n• Target creature gets +3/+3 until end of turn.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -5084,7 +5080,7 @@
           "text": "A number of nonbasic lands have basic land types. Domain abilities don't count the number of lands you control — they count the number of basic land types among lands you control, even if that means checking the same land twice. For example, if you control a Tundra, an Overgrown Tomb, and a Madblind Mountain, you'll have a Plains, Island, Swamp, Mountain, and Forest among the lands you control. Your domain abilities will be maxed out."
         }
       ],
-      "text": "Domain — Target player draws a card for each basic land type among lands he or she controls.",
+      "text": "Domain — Target player draws a card for each basic land type among lands they control.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -5143,7 +5139,7 @@
         "C17"
       ],
       "rarity": "Uncommon",
-      "text": "Elfhame Palace enters the battlefield tapped.\n{T}: Add {G} or {W} to your mana pool.",
+      "text": "Elfhame Palace enters the battlefield tapped.\n{T}: Add {G} or {W}.",
       "type": "Land",
       "types": [
         "Land"
@@ -5202,7 +5198,7 @@
         "DDE"
       ],
       "rarity": "Uncommon",
-      "text": "Shivan Oasis enters the battlefield tapped.\n{T}: Add {R} or {G} to your mana pool.",
+      "text": "Shivan Oasis enters the battlefield tapped.\n{T}: Add {R} or {G}.",
       "type": "Land",
       "types": [
         "Land"
@@ -5529,7 +5525,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -5794,7 +5791,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -6065,7 +6064,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -6337,7 +6338,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -6612,7 +6615,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [

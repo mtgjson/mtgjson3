@@ -1399,6 +1399,24 @@
         "A25"
       ],
       "rarity": "Common",
+      "rulings": [
+        {
+          "date": "2018-03-16",
+          "text": "Once the exiled permanent returns, it's considered a new object with no relation to the object that it was. Auras attached to the exiled permanent will be put into their owners' graveyards. Equipment attached to the exiled permanent will become unattached and remain on the battlefield. Any counters on the exiled permanent will cease to exist."
+        },
+        {
+          "date": "2018-03-16",
+          "text": "The returned card won't be the target of any spells or abilities that targeted it before. Any spells that don't target, such as Akroma's Vengeance, will still affect it."
+        },
+        {
+          "date": "2018-03-16",
+          "text": "If a token is exiled this way, it will cease to exist and won't return to the battlefield."
+        },
+        {
+          "date": "2018-03-16",
+          "text": "When an effect returns the exiled card \"under your control,\" you control it indefinitely after that. In a multiplayer game, if a player leaves the game, all cards that player owns leave as well. If you leave the game, any creatures you control from Cloudshift's effect are exiled."
+        }
+      ],
       "text": "Exile target creature you control, then return that card to the battlefield under your control.",
       "type": "Instant",
       "types": [
@@ -2065,11 +2083,11 @@
       "rulings": [
         {
           "date": "2012-05-01",
-          "text": "Divine Deflection's only target is the creature or player it may deal damage to. You choose that target as you cast Divine Deflection, not at the time it prevents damage."
+          "text": "Divine Deflection's only target is the permanent or player it may deal damage to. You choose that target as you cast Divine Deflection, not at the time it prevents damage."
         },
         {
           "date": "2012-05-01",
-          "text": "If the targeted creature or player is an illegal target by the time Divine Deflection resolves, the entire spell is countered. No damage will be prevented."
+          "text": "If the targeted permanent or player is an illegal target by the time Divine Deflection resolves, the entire spell doesn't resolve. No damage will be prevented."
         },
         {
           "date": "2012-05-01",
@@ -2085,7 +2103,7 @@
         },
         {
           "date": "2012-05-01",
-          "text": "Divine Deflection's effect is not a redirection effect. If it prevents damage, Divine Deflection (not the original source) deals damage to the targeted creature or player as part of that prevention effect. Divine Deflection is the source of the new damage, so the characteristics of the original source (such as its color, or whether it had lifelink or deathtouch) don't affect this damage. The new damage is not combat damage, even if the prevented damage was. Since you control the source of the new damage, if you targeted an opponent with Divine Deflection, you may have Divine Deflection deal its damage to a planeswalker that opponent controls."
+          "text": "Divine Deflection's effect is not a redirection effect. If it prevents damage, Divine Deflection (not the original source) deals damage to the targeted permanent or player as part of that prevention effect. Divine Deflection is the source of the new damage, so the characteristics of the original source (such as its color, or whether it had lifelink or deathtouch) don't affect this damage. The new damage is not combat damage, even if the prevented damage was."
         },
         {
           "date": "2012-05-01",
@@ -2093,14 +2111,14 @@
         },
         {
           "date": "2012-05-01",
-          "text": "Whether the targeted creature or player is still a legal target is not checked after Divine Deflection resolves. For example, if a creature targeted by Divine Deflection gains shroud after Divine Deflection resolves, Divine Deflection can still deal damage to that creature."
+          "text": "Whether the targeted permanent or player is still a legal target is not checked after Divine Deflection resolves. For example, if a creature targeted by Divine Deflection gains shroud after Divine Deflection resolves, Divine Deflection can still deal damage to that creature."
         },
         {
           "date": "2012-05-01",
-          "text": "If Divine Deflection can't deal damage to the targeted creature or player (because the creature has gained protection from white, is no longer on the battlefield, or is no longer a creature, or the player is no longer in the game, for example), it will still prevent damage. It just won't deal any damage itself."
+          "text": "If Divine Deflection can't deal damage to the targeted permanent or player (because the creature is no longer on the battlefield, or is no longer a creature, or the player is no longer in the game, for example), it will still prevent damage. It just won't deal any damage itself."
         }
       ],
-      "text": "Prevent the next X damage that would be dealt to you and/or permanents you control this turn. If damage is prevented this way, Divine Deflection deals that much damage to target creature or player.",
+      "text": "Prevent the next X damage that would be dealt to you and/or permanents you control this turn. If damage is prevented this way, Divine Deflection deals that much damage to any target.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -4359,7 +4377,7 @@
       "rulings": [
         {
           "date": "2017-03-14",
-          "text": "Each player chooses the order that creatures he or she owns are put onto the bottom of his or her library. This order isn't revealed to other players."
+          "text": "Each player chooses the order that creatures they own are put onto the bottom of their library. This order isn't revealed to other players."
         }
       ],
       "text": "Put all creatures on the bottom of their owners' libraries.\nMiracle {W} (You may cast this card for its miracle cost when you draw it if it's the first card you drew this turn.)",
@@ -5594,7 +5612,7 @@
           "text": "The number of cards put into the graveyard is based on the number of lands you control when Dreadwaters resolves."
         }
       ],
-      "text": "Target player puts the top X cards of his or her library into his or her graveyard, where X is the number of lands you control.",
+      "text": "Target player puts the top X cards of their library into their graveyard, where X is the number of lands you control.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -6046,11 +6064,11 @@
       "rulings": [
         {
           "date": "2010-06-15",
-          "text": "If the targeted creature is an illegal target by the time Fleeting Distraction resolves, the spell is countered. You won't draw a card."
+          "text": "If the targeted creature is an illegal target by the time Fleeting Distraction resolves, the spell doesn't resolve. You won't draw a card."
         },
         {
           "date": "2012-05-01",
-          "text": "If the targeted creature is an illegal target when Fleeting Distraction tries to resolve, it will be countered and none of its effects will happen. You won't draw a card."
+          "text": "If the targeted creature is an illegal target when Fleeting Distraction tries to resolve, it won't resolve and none of its effects will happen. You won't draw a card."
         }
       ],
       "text": "Target creature gets -1/-0 until end of turn.\nDraw a card.",
@@ -6269,7 +6287,7 @@
       "rulings": [
         {
           "date": "2012-05-01",
-          "text": "If the target creature spell is an illegal target when Geist Snatch tries to resolve, Geist Snatch will be countered and none of its effects will happen. You won't put a Spirit token onto the battlefield."
+          "text": "If the target creature spell is an illegal target when Geist Snatch tries to resolve, Geist Snatch won't resolve and none of its effects will happen. You won't put a Spirit token onto the battlefield."
         },
         {
           "date": "2012-05-01",
@@ -8236,7 +8254,7 @@
       "subtypes": [
         "Zombie"
       ],
-      "text": "When Rotcrown Ghoul dies, target player puts the top five cards of his or her library into his or her graveyard.",
+      "text": "When Rotcrown Ghoul dies, target player puts the top five cards of their library into their graveyard.",
       "toughness": "3",
       "type": "Creature — Zombie",
       "types": [
@@ -8788,7 +8806,7 @@
         "Human",
         "Wizard"
       ],
-      "text": "Soulbond (You may pair this creature with another unpaired creature when either enters the battlefield. They remain paired for as long as you control both of them.)\nAs long as Stern Mentor is paired with another creature, each of those creatures has \"{T}: Target player puts the top two cards of his or her library into his or her graveyard.\"",
+      "text": "Soulbond (You may pair this creature with another unpaired creature when either enters the battlefield. They remain paired for as long as you control both of them.)\nAs long as Stern Mentor is paired with another creature, each of those creatures has \"{T}: Target player puts the top two cards of their library into their graveyard.\"",
       "toughness": "2",
       "type": "Creature — Human Wizard",
       "types": [
@@ -8916,10 +8934,10 @@
         },
         {
           "date": "2012-05-01",
-          "text": "If there are no nonland cards left in that library, the opponent will exile all cards from his or her library, and Stolen Goods will finish resolving."
+          "text": "If there are no nonland cards left in that library, the opponent will exile all cards from their library, and Stolen Goods will finish resolving."
         }
       ],
-      "text": "Target opponent exiles cards from the top of his or her library until he or she exiles a nonland card. Until end of turn, you may cast that card without paying its mana cost.",
+      "text": "Target opponent exiles cards from the top of their library until they exile a nonland card. Until end of turn, you may cast that card without paying its mana cost.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -9601,7 +9619,7 @@
           "text": "If a card in a player's hand has {X} in its mana cost, X is 0."
         }
       ],
-      "text": "Target opponent reveals his or her hand. You choose a card from it with converted mana cost 4 or greater and exile that card.",
+      "text": "Target opponent reveals their hand. You choose a card from it with converted mana cost 4 or greater and exile that card.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -10083,10 +10101,10 @@
         },
         {
           "date": "2017-03-14",
-          "text": "You can cast Bone Splinters targeting the creature you intend to sacrifice for its cost. This is because targets are chosen before costs are paid. Bone Splinters will be countered as it tries to resolve in this case."
+          "text": "You can cast Bone Splinters targeting the creature you intend to sacrifice for its cost. This is because targets are chosen before costs are paid. Bone Splinters won't resolve as it tries to resolve in this case."
         }
       ],
-      "text": "As an additional cost to cast Bone Splinters, sacrifice a creature.\nDestroy target creature.",
+      "text": "As an additional cost to cast this spell, sacrifice a creature.\nDestroy target creature.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -10316,7 +10334,7 @@
         "Human",
         "Rogue"
       ],
-      "text": "{2}{B}, Sacrifice a creature: Target opponent reveals his or her hand. You choose a card from it. That player discards that card. Activate this ability only any time you could cast a sorcery.",
+      "text": "{2}{B}, Sacrifice a creature: Target opponent reveals their hand. You choose a card from it. That player discards that card. Activate this ability only any time you could cast a sorcery.",
       "toughness": "3",
       "type": "Creature — Human Rogue",
       "types": [
@@ -11153,7 +11171,7 @@
           "text": "If Descent into Madness isn't on the battlefield when its ability resolves, use the number of counters on it when it left the battlefield to determine how many permanents and/or cards from hands to exile."
         }
       ],
-      "text": "At the beginning of your upkeep, put a despair counter on Descent into Madness, then each player exiles X permanents he or she controls and/or cards from his or her hand, where X is the number of despair counters on Descent into Madness.",
+      "text": "At the beginning of your upkeep, put a despair counter on Descent into Madness, then each player exiles X permanents they control and/or cards from their hand, where X is the number of despair counters on Descent into Madness.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -11509,7 +11527,7 @@
         },
         {
           "date": "2012-05-01",
-          "text": "Essence Harvest targets only the player. It doesn't target any creatures. If that player is an illegal target when Essence Harvest tries to resolve, it will be countered and none of its effects will happen. No life will be lost or gained."
+          "text": "Essence Harvest targets only the player. It doesn't target any creatures. If that player is an illegal target when Essence Harvest tries to resolve, it won't resolve and none of its effects will happen. No life will be lost or gained."
         }
       ],
       "text": "Target player loses X life and you gain X life, where X is the greatest power among creatures you control.",
@@ -12084,7 +12102,7 @@
         },
         {
           "date": "2012-05-01",
-          "text": "If both targets are illegal when Grave Exchange tries to resolve, it will be countered and none of its effects will happen. If only one target is legal, the effect relevant to that target will happen and the other will not."
+          "text": "If both targets are illegal when Grave Exchange tries to resolve, it won't resolve and none of its effects will happen. If only one target is legal, the effect relevant to that target will happen and the other will not."
         }
       ],
       "text": "Return target creature card from your graveyard to your hand. Target player sacrifices a creature.",
@@ -12745,7 +12763,7 @@
       "rulings": [
         {
           "date": "2012-05-01",
-          "text": "First, the active player chooses whether to pay X life for each creature he or she controls. Then each other player in turn order chooses for his or her creatures. Then each player pays life and sacrifices creatures at the same time. Players will know the decisions of players who chose before them."
+          "text": "First, the active player chooses whether to pay X life for each creature they control. Then each other player in turn order chooses for their creatures. Then each player pays life and sacrifices creatures at the same time. Players will know the decisions of players who chose before them."
         },
         {
           "date": "2012-05-01",
@@ -12760,7 +12778,7 @@
           "text": "If you can't sacrifice a creature (perhaps because of Sigarda, Host of Herons), you can choose not to pay life and nothing will happen."
         }
       ],
-      "text": "For each creature, its controller sacrifices it unless he or she pays X life.",
+      "text": "For each creature, its controller sacrifices it unless they pay X life.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -13087,7 +13105,7 @@
       "rulings": [
         {
           "date": "2012-05-01",
-          "text": "If the targeted player has fewer than two cards in his or her hand, that player will still lose 2 life (and discard one card, if applicable)."
+          "text": "If the targeted player has fewer than two cards in their hand, that player will still lose 2 life (and discard one card, if applicable)."
         }
       ],
       "text": "Target player discards two cards and loses 2 life.",
@@ -14640,7 +14658,7 @@
           "text": "Battle Hymn uses the stack and can be responded to. The amount of mana you add to your mana pool is based on the number of creatures you control when Battle Hymn resolves."
         }
       ],
-      "text": "Add {R} to your mana pool for each creature you control.",
+      "text": "Add {R} for each creature you control.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -14759,14 +14777,14 @@
         },
         {
           "date": "2017-03-14",
-          "text": "If the player is an illegal target when Bonfire of the Damned tries to resolve, the spell will be countered and none of its effects will happen. No damage will be dealt to any creature or player."
+          "text": "If the player is an illegal target when Bonfire of the Damned tries to resolve, the spell won't resolve and none of its effects will happen. No damage will be dealt to any permanent or player."
         },
         {
           "date": "2017-03-14",
           "text": "Preventing some or all of the damage dealt to the player won't affect the amount of damage dealt to each creature that player controls. The same is true for any effect that increases or decreases the amount of damage dealt to the player."
         }
       ],
-      "text": "Bonfire of the Damned deals X damage to target player and each creature he or she controls.\nMiracle {X}{R} (You may cast this card for its miracle cost when you draw it if it's the first card you drew this turn.)",
+      "text": "Bonfire of the Damned deals X damage to target player or planeswalker and each creature that player or that planeswalker's controller controls.\nMiracle {X}{R} (You may cast this card for its miracle cost when you draw it if it's the first card you drew this turn.)",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -14883,7 +14901,7 @@
           "text": "All creatures tapped this way become tapped at the same time."
         }
       ],
-      "text": "As an additional cost to cast Burn at the Stake, tap any number of untapped creatures you control.\nBurn at the Stake deals damage to target creature or player equal to three times the number of creatures tapped this way.",
+      "text": "As an additional cost to cast this spell, tap any number of untapped creatures you control.\nBurn at the Stake deals damage to any target equal to three times the number of creatures tapped this way.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -15607,7 +15625,7 @@
       "subtypes": [
         "Devil"
       ],
-      "text": "When Gang of Devils dies, it deals 3 damage divided as you choose among one, two, or three target creatures and/or players.",
+      "text": "When Gang of Devils dies, it deals 3 damage divided as you choose among one, two, or three targets.",
       "toughness": "3",
       "type": "Creature — Devil",
       "types": [
@@ -16277,7 +16295,7 @@
         "Human",
         "Warrior"
       ],
-      "text": "When Kessig Malcontents enters the battlefield, it deals damage to target player equal to the number of Humans you control.",
+      "text": "When Kessig Malcontents enters the battlefield, it deals damage to target player or planeswalker equal to the number of Humans you control.",
       "toughness": "1",
       "type": "Creature — Human Warrior",
       "types": [
@@ -16611,7 +16629,7 @@
       "subtypes": [
         "Aura"
       ],
-      "text": "Enchant creature\nEnchanted creature has haste and \"{T}: This creature deals 1 damage to target creature or player.\"",
+      "text": "Enchant creature\nEnchanted creature has haste and \"{T}: This creature deals 1 damage to any target.\"",
       "type": "Enchantment — Aura",
       "types": [
         "Enchantment"
@@ -17078,7 +17096,7 @@
           "text": "A creature dealt damage by Pillar of Flame will be exiled no matter why the creature would die that turn. It could have its toughness reduced to 0 or less or be destroyed by another spell or ability."
         }
       ],
-      "text": "Pillar of Flame deals 2 damage to target creature or player. If a creature dealt damage this way would die this turn, exile it instead.",
+      "text": "Pillar of Flame deals 2 damage to any target. If a creature dealt damage this way would die this turn, exile it instead.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -17290,7 +17308,7 @@
         "C16"
       ],
       "rarity": "Rare",
-      "text": "Each player discards his or her hand, then draws seven cards.\nMiracle {1}{R} (You may cast this card for its miracle cost when you draw it if it's the first card you drew this turn.)",
+      "text": "Each player discards their hand, then draws seven cards.\nMiracle {1}{R} (You may cast this card for its miracle cost when you draw it if it's the first card you drew this turn.)",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -17507,7 +17525,7 @@
       "rulings": [
         {
           "date": "2012-05-01",
-          "text": "First you choose the order for the card types. Then each player in turn order (starting with the active player) chooses one permanent he or she controls of the first card type. Then those permanents are sacrificed at the same time. Then each player in turn order chooses two permanents he or she controls of the second card type. Then those permanents are sacrificed at the same time. Finally, each player in turn order chooses three permanents of the third card type, then those permanents are sacrificed at the same time."
+          "text": "First you choose the order for the card types. Then each player in turn order (starting with the active player) chooses one permanent they control of the first card type. Then those permanents are sacrificed at the same time. Then each player in turn order chooses two permanents they control of the second card type. Then those permanents are sacrificed at the same time. Finally, each player in turn order chooses three permanents of the third card type, then those permanents are sacrificed at the same time."
         },
         {
           "date": "2012-05-01",
@@ -17515,7 +17533,7 @@
         },
         {
           "date": "2012-05-01",
-          "text": "If any abilities trigger while Rite of Ruin is resolving, those abilities will wait until Rite of Ruin finishes resolving before going on the stack. Starting with the active player, each player puts his or her abilities on the stack in any order."
+          "text": "If any abilities trigger while Rite of Ruin is resolving, those abilities will wait until Rite of Ruin finishes resolving before going on the stack. Starting with the active player, each player puts their abilities on the stack in any order."
         }
       ],
       "text": "Choose an order for artifacts, creatures, and lands. Each player sacrifices one permanent of the first type, sacrifices two of the second type, then sacrifices three of the third type.",
@@ -17736,7 +17754,7 @@
       "subtypes": [
         "Devil"
       ],
-      "text": "{2}{R}: Scalding Devil deals 1 damage to target player.",
+      "text": "{2}{R}: Scalding Devil deals 1 damage to target player or planeswalker.",
       "toughness": "1",
       "type": "Creature — Devil",
       "types": [
@@ -18182,7 +18200,7 @@
         "AVR"
       ],
       "rarity": "Common",
-      "text": "Choose one —\n• Thunderbolt deals 3 damage to target player.\n• Thunderbolt deals 4 damage to target creature with flying.",
+      "text": "Choose one —\n• Thunderbolt deals 3 damage to target player or planeswalker.\n• Thunderbolt deals 4 damage to target creature with flying.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -18286,7 +18304,7 @@
         "MM3"
       ],
       "rarity": "Uncommon",
-      "text": "Thunderous Wrath deals 5 damage to target creature or player.\nMiracle {R} (You may cast this card for its miracle cost when you draw it if it's the first card you drew this turn.)",
+      "text": "Thunderous Wrath deals 5 damage to any target.\nMiracle {R} (You may cast this card for its miracle cost when you draw it if it's the first card you drew this turn.)",
       "type": "Instant",
       "types": [
         "Instant"
@@ -18514,7 +18532,7 @@
       "rulings": [
         {
           "date": "2012-05-01",
-          "text": "Repeating the process includes the instruction to repeat the process. That is, the opponent will keep sacrificing permanents until he or she sacrifices a land."
+          "text": "Repeating the process includes the instruction to repeat the process. That is, the opponent will keep sacrificing permanents until they sacrifice a land."
         },
         {
           "date": "2012-05-01",
@@ -18522,7 +18540,7 @@
         },
         {
           "date": "2012-05-01",
-          "text": "If any abilities trigger while Tyrant of Discord's enters-the-battlefield ability is resolving, those abilities will wait until the enters-the-battlefield ability finishes resolving before going on the stack. Starting with the active player, each player puts his or her abilities on the stack in any order."
+          "text": "If any abilities trigger while Tyrant of Discord's enters-the-battlefield ability is resolving, those abilities will wait until the enters-the-battlefield ability finishes resolving before going on the stack. Starting with the active player, each player puts their abilities on the stack in any order."
         },
         {
           "date": "2012-05-01",
@@ -18532,7 +18550,7 @@
       "subtypes": [
         "Elemental"
       ],
-      "text": "When Tyrant of Discord enters the battlefield, target opponent chooses a permanent he or she controls at random and sacrifices it. If a nonland permanent is sacrificed this way, repeat this process.",
+      "text": "When Tyrant of Discord enters the battlefield, target opponent chooses a permanent they control at random and sacrifices it. If a nonland permanent is sacrificed this way, repeat this process.",
       "toughness": "7",
       "type": "Creature — Elemental",
       "types": [
@@ -18745,13 +18763,13 @@
       "rulings": [
         {
           "date": "2012-05-01",
-          "text": "If a player chooses to have Vexing Devil deal 4 damage to him or her, but some or all of that damage is prevented or redirected, Vexing Devil will still be sacrificed."
+          "text": "If a player chooses to have Vexing Devil deal 4 damage to them, but some or all of that damage is prevented or redirected, Vexing Devil will still be sacrificed."
         }
       ],
       "subtypes": [
         "Devil"
       ],
-      "text": "When Vexing Devil enters the battlefield, any opponent may have it deal 4 damage to him or her. If a player does, sacrifice Vexing Devil.",
+      "text": "When Vexing Devil enters the battlefield, any opponent may have it deal 4 damage to them. If a player does, sacrifice Vexing Devil.",
       "toughness": "3",
       "type": "Creature — Devil",
       "types": [
@@ -18856,7 +18874,7 @@
         "AVR"
       ],
       "rarity": "Uncommon",
-      "text": "Whenever a Human enters the battlefield under your control, Vigilante Justice deals 1 damage to target creature or player.",
+      "text": "Whenever a Human enters the battlefield under your control, Vigilante Justice deals 1 damage to any target.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -19085,7 +19103,7 @@
       "subtypes": [
         "Aura"
       ],
-      "text": "Enchant land\nWhen Abundant Growth enters the battlefield, draw a card.\nEnchanted land has \"{T}: Add one mana of any color to your mana pool.\"",
+      "text": "Enchant land\nWhen Abundant Growth enters the battlefield, draw a card.\nEnchanted land has \"{T}: Add one mana of any color.\"",
       "type": "Enchantment — Aura",
       "types": [
         "Enchantment"
@@ -20123,7 +20141,7 @@
           "text": "You can activate the second ability of Druids' Repository multiple times in the same turn. It's a mana ability, doesn't use the stack, and can't be responded to."
         }
       ],
-      "text": "Whenever a creature you control attacks, put a charge counter on Druids' Repository.\nRemove a charge counter from Druids' Repository: Add one mana of any color to your mana pool.",
+      "text": "Whenever a creature you control attacks, put a charge counter on Druids' Repository.\nRemove a charge counter from Druids' Repository: Add one mana of any color.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -20909,7 +20927,7 @@
       "rulings": [
         {
           "date": "2012-05-01",
-          "text": "Joint Assault targets only one creature. If that creature is an illegal target when Joint Assault tries to resolve, it will be countered and none of its effects will happen. No creature will get +2/+2."
+          "text": "Joint Assault targets only one creature. If that creature is an illegal target when Joint Assault tries to resolve, it won't resolve and none of its effects will happen. No creature will get +2/+2."
         },
         {
           "date": "2012-05-01",
@@ -21127,7 +21145,7 @@
       "rulings": [
         {
           "date": "2012-05-01",
-          "text": "If the artifact or enchantment is an illegal target when Natural End tries to resolve, Natural End will be countered and none of its effects will happen. You won't gain 3 life."
+          "text": "If the artifact or enchantment is an illegal target when Natural End tries to resolve, Natural End won't resolve and none of its effects will happen. You won't gain 3 life."
         }
       ],
       "text": "Destroy target artifact or enchantment. You gain 3 life.",
@@ -21573,7 +21591,7 @@
         },
         {
           "date": "2012-05-01",
-          "text": "If putting any of those permanent cards onto the battlefield causes abilities to trigger, those abilities will wait to go on the stack until Primal Surge has finished resolving. Starting with the active player, each player puts his or her abilities on the stack in any order."
+          "text": "If putting any of those permanent cards onto the battlefield causes abilities to trigger, those abilities will wait to go on the stack until Primal Surge has finished resolving. Starting with the active player, each player puts their abilities on the stack in any order."
         }
       ],
       "text": "Exile the top card of your library. If it's a permanent card, you may put it onto the battlefield. If you do, repeat this process.",
@@ -21897,7 +21915,7 @@
       "rulings": [
         {
           "date": "2012-05-01",
-          "text": "If a creature gains hexproof in response to a spell or ability controlled by an opponent that targets only it, that spell or ability will countered for having an illegal target when it tries to resolve."
+          "text": "If a creature gains hexproof in response to a spell or ability controlled by an opponent that targets only it, that spell or ability doesn't resolve for having an illegal target when it tries to resolve."
         }
       ],
       "text": "Target creature you control gains hexproof until end of turn. You gain life equal to that creature's toughness. (A creature with hexproof can't be the target of spells or abilities your opponents control.)",
@@ -22127,7 +22145,7 @@
         "Human",
         "Druid"
       ],
-      "text": "{T}: Add three mana of any one color to your mana pool. Spend this mana only to cast creature spells.",
+      "text": "{T}: Add three mana of any one color. Spend this mana only to cast creature spells.",
       "toughness": "1",
       "type": "Creature — Human Druid",
       "types": [
@@ -22355,7 +22373,7 @@
       "rulings": [
         {
           "date": "2012-05-01",
-          "text": "Although Terrifying Presence doesn't affect the target creature, if that creature is an illegal target when Terrifying Presence tries to resolve, it will be countered and none of its effects will happen. No damage will be prevented."
+          "text": "Although Terrifying Presence doesn't affect the target creature, if that creature is an illegal target when Terrifying Presence tries to resolve, it won't resolve and none of its effects will happen. No damage will be prevented."
         }
       ],
       "text": "Prevent all combat damage that would be dealt by creatures other than target creature this turn.",
@@ -23833,16 +23851,16 @@
       "rarity": "Mythic Rare",
       "rulings": [
         {
-          "date": "2012-05-01",
+          "date": "2018-03-16",
           "text": "Gisela doubles damage dealt to opponents and permanents your opponents control from any source, including sources controlled by those opponents."
         },
         {
-          "date": "2012-05-01",
+          "date": "2018-03-16",
           "text": "If multiple replacement effects would modify how damage would be dealt, the player being dealt damage (or the controller of the permanent being dealt damage) chooses the order in which to apply those effects."
         },
         {
-          "date": "2012-05-01",
-          "text": "If damage dealt by a source you control is being divided among multiple permanents an opponent controls or among an opponent and one or more permanents he or she controls simultaneously, divide the original amount and double the results. For example, if you attack with a 5/5 creature with trample and your opponent blocks with a 2/2 creature, you can assign 2 damage to the blocker and 3 damage to the defending player. These amounts are then doubled to 4 and 6 damage, respectively. You can't double the damage to 10 first and then assign 2 to the creature and 8 to the player."
+          "date": "2018-03-16",
+          "text": "If damage dealt by a source you control is being divided or assigned among multiple permanents an opponent controls or among an opponent and one or more permanents they control simultaneously, divide the original amount and double the results. For example, if you attack with a 5/5 creature with trample and your opponent blocks with a 2/2 creature, you can assign 2 damage to the blocker and 3 damage to the defending player. These amounts are then doubled to 4 and 6 damage, respectively. You can't double the damage to 10 first and then assign 2 to the creature and 8 to the player."
         }
       ],
       "subtypes": [
@@ -24507,7 +24525,7 @@
         },
         {
           "date": "2012-05-01",
-          "text": "If the targeted creature is an illegal target when the ability tries to resolve, the ability will be countered and none of its effects will happen. The creature's controller won't put a Spirit token onto the battlefield."
+          "text": "If the targeted creature is an illegal target when the ability tries to resolve, the ability won't resolve and none of its effects will happen. The creature's controller won't put a Spirit token onto the battlefield."
         }
       ],
       "text": "{3}, {T}, Tap three untapped Humans you control: Destroy target creature. Its controller creates a 1/1 white Spirit creature token with flying.",
@@ -25441,7 +25459,7 @@
         "AVR"
       ],
       "rarity": "Uncommon",
-      "text": "When Vessel of Endless Rest enters the battlefield, put target card from a graveyard on the bottom of its owner's library.\n{T}: Add one mana of any color to your mana pool.",
+      "text": "When Vessel of Endless Rest enters the battlefield, put target card from a graveyard on the bottom of its owner's library.\n{T}: Add one mana of any color.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -25552,7 +25570,7 @@
           "text": "The last ability applies to nonland cards in any zone, provided something is allowing you to cast them. For example, you could cast a sorcery with flashback as though it had flash."
         }
       ],
-      "text": "{T}: Add {C} to your mana pool.\n{G}{U}, {T}: You may cast spells this turn as though they had flash.",
+      "text": "{T}: Add {C}.\n{G}{U}, {T}: You may cast spells this turn as though they had flash.",
       "type": "Land",
       "types": [
         "Land"
@@ -25659,7 +25677,7 @@
           "text": "The spell can't be countered if the mana produced by Cavern of Souls is spent to cover any cost of the spell, even an additional cost such as a kicker cost. This is true even if you use the mana to pay an additional cost while casting a spell \"without paying its mana cost.\""
         }
       ],
-      "text": "As Cavern of Souls enters the battlefield, choose a creature type.\n{T}: Add {C} to your mana pool.\n{T}: Add one mana of any color to your mana pool. Spend this mana only to cast a creature spell of the chosen type, and that spell can't be countered.",
+      "text": "As Cavern of Souls enters the battlefield, choose a creature type.\n{T}: Add {C}.\n{T}: Add one mana of any color. Spend this mana only to cast a creature spell of the chosen type, and that spell can't be countered.",
       "type": "Land",
       "types": [
         "Land"
@@ -25760,7 +25778,7 @@
         "AVR"
       ],
       "rarity": "Rare",
-      "text": "{T}: Add {C} to your mana pool.\n{1}{U}{R}, {T}: Draw a card, then discard a card.",
+      "text": "{T}: Add {C}.\n{1}{U}{R}, {T}: Draw a card, then discard a card.",
       "type": "Land",
       "types": [
         "Land"
@@ -25857,7 +25875,7 @@
         "DDQ"
       ],
       "rarity": "Common",
-      "text": "When Seraph Sanctuary enters the battlefield, you gain 1 life.\nWhenever an Angel enters the battlefield under your control, you gain 1 life.\n{T}: Add {C} to your mana pool.",
+      "text": "When Seraph Sanctuary enters the battlefield, you gain 1 life.\nWhenever an Angel enters the battlefield under your control, you gain 1 life.\n{T}: Add {C}.",
       "type": "Land",
       "types": [
         "Land"
@@ -25958,7 +25976,7 @@
         "AVR"
       ],
       "rarity": "Rare",
-      "text": "{T}: Add {C} to your mana pool.\n{R}{W}, {T}: Target creature gets +2/+0 and gains vigilance and haste until end of turn.",
+      "text": "{T}: Add {C}.\n{R}{W}, {T}: Target creature gets +2/+0 and gains vigilance and haste until end of turn.",
       "type": "Land",
       "types": [
         "Land"
@@ -26005,6 +26023,16 @@
           "language": "Korean",
           "name": "들",
           "multiverseid": 294970
+        },
+        {
+          "language": "Korean",
+          "name": "들",
+          "multiverseid": 294973
+        },
+        {
+          "language": "Korean",
+          "name": "들",
+          "multiverseid": 294974
         },
         {
           "language": "Chinese Traditional",
@@ -26070,16 +26098,6 @@
           "language": "Italian",
           "name": "Pianura",
           "multiverseid": 296434
-        },
-        {
-          "language": "Italian",
-          "name": "Pianura",
-          "multiverseid": 296437
-        },
-        {
-          "language": "Italian",
-          "name": "Pianura",
-          "multiverseid": 296438
         },
         {
           "language": "German",
@@ -26334,7 +26352,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -26394,6 +26413,16 @@
           "language": "Korean",
           "name": "들",
           "multiverseid": 294970
+        },
+        {
+          "language": "Korean",
+          "name": "들",
+          "multiverseid": 294973
+        },
+        {
+          "language": "Korean",
+          "name": "들",
+          "multiverseid": 294974
         },
         {
           "language": "Chinese Traditional",
@@ -26459,16 +26488,6 @@
           "language": "Italian",
           "name": "Pianura",
           "multiverseid": 296434
-        },
-        {
-          "language": "Italian",
-          "name": "Pianura",
-          "multiverseid": 296437
-        },
-        {
-          "language": "Italian",
-          "name": "Pianura",
-          "multiverseid": 296438
         },
         {
           "language": "German",
@@ -26723,7 +26742,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -26783,6 +26803,16 @@
           "language": "Korean",
           "name": "들",
           "multiverseid": 294970
+        },
+        {
+          "language": "Korean",
+          "name": "들",
+          "multiverseid": 294973
+        },
+        {
+          "language": "Korean",
+          "name": "들",
+          "multiverseid": 294974
         },
         {
           "language": "Chinese Traditional",
@@ -26848,16 +26878,6 @@
           "language": "Italian",
           "name": "Pianura",
           "multiverseid": 296434
-        },
-        {
-          "language": "Italian",
-          "name": "Pianura",
-          "multiverseid": 296437
-        },
-        {
-          "language": "Italian",
-          "name": "Pianura",
-          "multiverseid": 296438
         },
         {
           "language": "German",
@@ -27112,7 +27132,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -27174,16 +27195,6 @@
           "multiverseid": 294963
         },
         {
-          "language": "Korean",
-          "name": "섬",
-          "multiverseid": 294969
-        },
-        {
-          "language": "Korean",
-          "name": "섬",
-          "multiverseid": 294975
-        },
-        {
           "language": "Chinese Traditional",
           "name": "海島",
           "multiverseid": 295207
@@ -27214,11 +27225,6 @@
           "multiverseid": 295463
         },
         {
-          "language": "French",
-          "name": "Île",
-          "multiverseid": 295695
-        },
-        {
           "language": "Russian",
           "name": "Остров",
           "multiverseid": 295939
@@ -27247,6 +27253,21 @@
           "language": "Spanish",
           "name": "Isla",
           "multiverseid": 296195
+        },
+        {
+          "language": "Italian",
+          "name": "Isola",
+          "multiverseid": 296427
+        },
+        {
+          "language": "Italian",
+          "name": "Isola",
+          "multiverseid": 296433
+        },
+        {
+          "language": "Italian",
+          "name": "Isola",
+          "multiverseid": 296439
         },
         {
           "language": "German",
@@ -27500,7 +27521,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -27562,16 +27585,6 @@
           "multiverseid": 294963
         },
         {
-          "language": "Korean",
-          "name": "섬",
-          "multiverseid": 294969
-        },
-        {
-          "language": "Korean",
-          "name": "섬",
-          "multiverseid": 294975
-        },
-        {
           "language": "Chinese Traditional",
           "name": "海島",
           "multiverseid": 295207
@@ -27602,11 +27615,6 @@
           "multiverseid": 295463
         },
         {
-          "language": "French",
-          "name": "Île",
-          "multiverseid": 295695
-        },
-        {
           "language": "Russian",
           "name": "Остров",
           "multiverseid": 295939
@@ -27635,6 +27643,21 @@
           "language": "Spanish",
           "name": "Isla",
           "multiverseid": 296195
+        },
+        {
+          "language": "Italian",
+          "name": "Isola",
+          "multiverseid": 296427
+        },
+        {
+          "language": "Italian",
+          "name": "Isola",
+          "multiverseid": 296433
+        },
+        {
+          "language": "Italian",
+          "name": "Isola",
+          "multiverseid": 296439
         },
         {
           "language": "German",
@@ -27888,7 +27911,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -27950,16 +27975,6 @@
           "multiverseid": 294963
         },
         {
-          "language": "Korean",
-          "name": "섬",
-          "multiverseid": 294969
-        },
-        {
-          "language": "Korean",
-          "name": "섬",
-          "multiverseid": 294975
-        },
-        {
           "language": "Chinese Traditional",
           "name": "海島",
           "multiverseid": 295207
@@ -27990,11 +28005,6 @@
           "multiverseid": 295463
         },
         {
-          "language": "French",
-          "name": "Île",
-          "multiverseid": 295695
-        },
-        {
           "language": "Russian",
           "name": "Остров",
           "multiverseid": 295939
@@ -28023,6 +28033,21 @@
           "language": "Spanish",
           "name": "Isla",
           "multiverseid": 296195
+        },
+        {
+          "language": "Italian",
+          "name": "Isola",
+          "multiverseid": 296427
+        },
+        {
+          "language": "Italian",
+          "name": "Isola",
+          "multiverseid": 296433
+        },
+        {
+          "language": "Italian",
+          "name": "Isola",
+          "multiverseid": 296439
         },
         {
           "language": "German",
@@ -28276,7 +28301,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -28335,17 +28362,7 @@
         {
           "language": "Korean",
           "name": "늪",
-          "multiverseid": 294964
-        },
-        {
-          "language": "Korean",
-          "name": "늪",
           "multiverseid": 294967
-        },
-        {
-          "language": "Korean",
-          "name": "늪",
-          "multiverseid": 294976
         },
         {
           "language": "Chinese Traditional",
@@ -28378,11 +28395,6 @@
           "multiverseid": 295464
         },
         {
-          "language": "French",
-          "name": "Marais",
-          "multiverseid": 295708
-        },
-        {
           "language": "Russian",
           "name": "Болото",
           "multiverseid": 295940
@@ -28411,6 +28423,21 @@
           "language": "Spanish",
           "name": "Pantano",
           "multiverseid": 296196
+        },
+        {
+          "language": "Italian",
+          "name": "Palude",
+          "multiverseid": 296428
+        },
+        {
+          "language": "Italian",
+          "name": "Palude",
+          "multiverseid": 296431
+        },
+        {
+          "language": "Italian",
+          "name": "Palude",
+          "multiverseid": 296440
         },
         {
           "language": "German",
@@ -28668,7 +28695,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -28727,17 +28755,7 @@
         {
           "language": "Korean",
           "name": "늪",
-          "multiverseid": 294964
-        },
-        {
-          "language": "Korean",
-          "name": "늪",
           "multiverseid": 294967
-        },
-        {
-          "language": "Korean",
-          "name": "늪",
-          "multiverseid": 294976
         },
         {
           "language": "Chinese Traditional",
@@ -28770,11 +28788,6 @@
           "multiverseid": 295464
         },
         {
-          "language": "French",
-          "name": "Marais",
-          "multiverseid": 295708
-        },
-        {
           "language": "Russian",
           "name": "Болото",
           "multiverseid": 295940
@@ -28803,6 +28816,21 @@
           "language": "Spanish",
           "name": "Pantano",
           "multiverseid": 296196
+        },
+        {
+          "language": "Italian",
+          "name": "Palude",
+          "multiverseid": 296428
+        },
+        {
+          "language": "Italian",
+          "name": "Palude",
+          "multiverseid": 296431
+        },
+        {
+          "language": "Italian",
+          "name": "Palude",
+          "multiverseid": 296440
         },
         {
           "language": "German",
@@ -29060,7 +29088,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -29119,17 +29148,7 @@
         {
           "language": "Korean",
           "name": "늪",
-          "multiverseid": 294964
-        },
-        {
-          "language": "Korean",
-          "name": "늪",
           "multiverseid": 294967
-        },
-        {
-          "language": "Korean",
-          "name": "늪",
-          "multiverseid": 294976
         },
         {
           "language": "Chinese Traditional",
@@ -29162,11 +29181,6 @@
           "multiverseid": 295464
         },
         {
-          "language": "French",
-          "name": "Marais",
-          "multiverseid": 295708
-        },
-        {
           "language": "Russian",
           "name": "Болото",
           "multiverseid": 295940
@@ -29195,6 +29209,21 @@
           "language": "Spanish",
           "name": "Pantano",
           "multiverseid": 296196
+        },
+        {
+          "language": "Italian",
+          "name": "Palude",
+          "multiverseid": 296428
+        },
+        {
+          "language": "Italian",
+          "name": "Palude",
+          "multiverseid": 296431
+        },
+        {
+          "language": "Italian",
+          "name": "Palude",
+          "multiverseid": 296440
         },
         {
           "language": "German",
@@ -29452,7 +29481,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -29511,7 +29541,17 @@
         {
           "language": "Korean",
           "name": "산",
+          "multiverseid": 294962
+        },
+        {
+          "language": "Korean",
+          "name": "산",
           "multiverseid": 294966
+        },
+        {
+          "language": "Korean",
+          "name": "산",
+          "multiverseid": 294968
         },
         {
           "language": "Chinese Traditional",
@@ -29577,16 +29617,6 @@
           "language": "Italian",
           "name": "Montagna",
           "multiverseid": 296426
-        },
-        {
-          "language": "Italian",
-          "name": "Montagna",
-          "multiverseid": 296430
-        },
-        {
-          "language": "Italian",
-          "name": "Montagna",
-          "multiverseid": 296432
         },
         {
           "language": "German",
@@ -29846,7 +29876,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -29905,7 +29937,17 @@
         {
           "language": "Korean",
           "name": "산",
+          "multiverseid": 294962
+        },
+        {
+          "language": "Korean",
+          "name": "산",
           "multiverseid": 294966
+        },
+        {
+          "language": "Korean",
+          "name": "산",
+          "multiverseid": 294968
         },
         {
           "language": "Chinese Traditional",
@@ -29971,16 +30013,6 @@
           "language": "Italian",
           "name": "Montagna",
           "multiverseid": 296426
-        },
-        {
-          "language": "Italian",
-          "name": "Montagna",
-          "multiverseid": 296430
-        },
-        {
-          "language": "Italian",
-          "name": "Montagna",
-          "multiverseid": 296432
         },
         {
           "language": "German",
@@ -30240,7 +30272,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -30299,7 +30333,17 @@
         {
           "language": "Korean",
           "name": "산",
+          "multiverseid": 294962
+        },
+        {
+          "language": "Korean",
+          "name": "산",
           "multiverseid": 294966
+        },
+        {
+          "language": "Korean",
+          "name": "산",
+          "multiverseid": 294968
         },
         {
           "language": "Chinese Traditional",
@@ -30365,16 +30409,6 @@
           "language": "Italian",
           "name": "Montagna",
           "multiverseid": 296426
-        },
-        {
-          "language": "Italian",
-          "name": "Montagna",
-          "multiverseid": 296430
-        },
-        {
-          "language": "Italian",
-          "name": "Montagna",
-          "multiverseid": 296432
         },
         {
           "language": "German",
@@ -30634,7 +30668,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -31025,7 +31061,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -31416,7 +31454,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -31807,7 +31847,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [

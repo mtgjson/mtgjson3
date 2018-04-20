@@ -96,7 +96,7 @@
         "EMA"
       ],
       "rarity": "Common",
-      "text": "Sacrifice a creature: Add {C}{C} to your mana pool.",
+      "text": "Sacrifice a creature: Add {C}{C}.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -427,7 +427,7 @@
         },
         {
           "date": "2009-10-01",
-          "text": "If one of the targets is illegal by the time the ability resolves (because the wrong player controls it, or it's the wrong card type, or for any other reason), the exchange doesn't happen. The target that's still legal will remain under its controller's control. Since the exchange doesn't happen, no Auras are destroyed. (If both targets are illegal, the ability is countered.)"
+          "text": "If one of the targets is illegal by the time the ability resolves (because the wrong player controls it, or it's the wrong card type, or for any other reason), the exchange doesn't happen. The target that's still legal will remain under its controller's control. Since the exchange doesn't happen, no Auras are destroyed. (If both targets are illegal, the ability doesn't resolve.)"
         }
       ],
       "text": "{5}, Sacrifice Gauntlets of Chaos: Exchange control of target artifact, creature, or land you control and target permanent an opponent controls that shares one of those types with it. If those permanents are exchanged this way, destroy all Auras attached to them.",
@@ -680,13 +680,9 @@
         {
           "date": "2004-10-04",
           "text": "Can be used any number of times during the turn before it leaves the battlefield."
-        },
-        {
-          "date": "2004-10-04",
-          "text": "Can choose a different creature or player for each use."
         }
       ],
-      "text": "{2}: Prevent the next 1 damage that would be dealt to target creature or player this turn. Return Rakalite to its owner's hand at the beginning of the next end step.",
+      "text": "{2}: Prevent the next 1 damage that would be dealt to any target this turn. Return Rakalite to its owner's hand at the beginning of the next end step.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -904,10 +900,6 @@
         {
           "date": "2004-10-04",
           "text": "You can use the sacrifice ability even if it is tapped."
-        },
-        {
-          "date": "2008-04-01",
-          "text": "A \"creature card\" is any card with the type creature, even if it has other types such as artifact, enchantment, or land. Older cards of type summon are also creature cards."
         }
       ],
       "text": "{3}, {T}: Put a hatchling counter on Triassic Egg.\nSacrifice Triassic Egg: Choose one —\n• You may put a creature card from your hand onto the battlefield. Activate this ability only if two or more hatchling counters are on Triassic Egg.\n• Return target creature card from your graveyard to the battlefield. Activate this ability only if two or more hatchling counters are on Triassic Egg.",
@@ -962,7 +954,7 @@
           "text": "Voodoo Doll's second ability causes it to be destroyed regardless of whether it actually deals damage to you or not. Voodoo Doll is destroyed even if all the damage is prevented or redirected."
         }
       ],
-      "text": "At the beginning of your upkeep, put a pin counter on Voodoo Doll.\nAt the beginning of your end step, if Voodoo Doll is untapped, destroy Voodoo Doll and it deals damage to you equal to the number of pin counters on it.\n{X}{X}, {T}: Voodoo Doll deals damage equal to the number of pin counters on it to target creature or player. X is the number of pin counters on Voodoo Doll.",
+      "text": "At the beginning of your upkeep, put a pin counter on Voodoo Doll.\nAt the beginning of your end step, if Voodoo Doll is untapped, destroy Voodoo Doll and it deals damage to you equal to the number of pin counters on it.\n{X}{X}, {T}: Voodoo Doll deals damage equal to the number of pin counters on it to any target. X is the number of pin counters on Voodoo Doll.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -1068,13 +1060,13 @@
       "rulings": [
         {
           "date": "2009-10-01",
-          "text": "If the targeted creature or player is an illegal target by the time Banshee's ability resolves, the ability is countered. You won't be dealt damage."
+          "text": "If the targeted permanent or player is an illegal target by the time Banshee's ability resolves, the ability doesn't resolve. You won't be dealt damage."
         }
       ],
       "subtypes": [
         "Spirit"
       ],
-      "text": "{X}, {T}: Banshee deals half X damage, rounded down, to target creature or player, and half X damage, rounded up, to you.",
+      "text": "{X}, {T}: Banshee deals half X damage, rounded down, to any target, and half X damage, rounded up, to you.",
       "toughness": "1",
       "type": "Creature — Spirit",
       "types": [
@@ -1256,7 +1248,7 @@
         "Human",
         "Wizard"
       ],
-      "text": "{T}: Cuombajj Witches deals 1 damage to target creature or player and 1 damage to target creature or player of an opponent's choice.",
+      "text": "{T}: Cuombajj Witches deals 1 damage to any target and 1 damage to any target of an opponent's choice.",
       "toughness": "3",
       "type": "Creature — Human Wizard",
       "types": [
@@ -1313,7 +1305,7 @@
         },
         {
           "date": "2004-10-04",
-          "text": "The ability is targeted and checks the validity of the target when put on the stack and when resolving. If the creature is not still there when the copy ability resolves, the ability is countered and no token is put onto the battlefield. This card remains on the battlefield as an enchantment with no token."
+          "text": "The ability is targeted and checks the validity of the target when put on the stack and when resolving. If the creature is not still there when the copy ability resolves, the ability doesn't resolve and no token is put onto the battlefield. This card remains on the battlefield as an enchantment with no token."
         },
         {
           "date": "2004-10-04",
@@ -1775,20 +1767,12 @@
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2004-10-04",
-          "text": "Can sacrifice itself."
+          "date": "2018-03-16",
+          "text": "Hell's Caretaker can be the creature sacrificed to activate its ability, but it can't be the target of its own ability."
         },
         {
-          "date": "2005-08-01",
-          "text": "This is not a beginning of upkeep triggered ability; you can activate it any time during your upkeep."
-        },
-        {
-          "date": "2005-08-01",
-          "text": "The ability does not give the returned creature Haste."
-        },
-        {
-          "date": "2008-04-01",
-          "text": "A \"creature card\" is any card with the type creature, even if it has other types such as artifact, enchantment, or land. Older cards of type summon are also creature cards."
+          "date": "2018-03-16",
+          "text": "The upkeep step is before the draw step, after the untap step. Because the turn has already begun, creatures put onto the battlefield during your upkeep won't be able to attack or pay a {T} cost this turn."
         }
       ],
       "subtypes": [
@@ -2140,13 +2124,13 @@
         },
         {
           "date": "2009-10-01",
-          "text": "The player who controlled the creature that went to the graveyard (and caused Takklemaggot's second ability to trigger) chooses what creature Takklemaggot will return to the battlefield attached to. The creature isn't chosen until the ability resolves, so no player can respond between the time the creature is chosen and the time Takklemaggot returns to the battlefield attached to it. The ability doesn't target a creature, so a creature with shroud, for example, can be chosen. However, only a creature that can be legally enchanted by Takklemaggot can be chosen, so a creature with protection from black, for example, can't be chosen. If the player can choose a creature, he or she must do so, no matter who controls it. If the player can't choose a creature, Takklemaggot returns to the battlefield as a non-Aura enchantment, and that player is the player that Takklemaggot will deal damage to."
+          "text": "The player who controlled the creature that went to the graveyard (and caused Takklemaggot's second ability to trigger) chooses what creature Takklemaggot will return to the battlefield attached to. The creature isn't chosen until the ability resolves, so no player can respond between the time the creature is chosen and the time Takklemaggot returns to the battlefield attached to it. The ability doesn't target a creature, so a creature with shroud, for example, can be chosen. However, only a creature that can be legally enchanted by Takklemaggot can be chosen, so a creature with protection from black, for example, can't be chosen. If the player can choose a creature, they must do so, no matter who controls it. If the player can't choose a creature, Takklemaggot returns to the battlefield as a non-Aura enchantment, and that player is the player that Takklemaggot will deal damage to."
         }
       ],
       "subtypes": [
         "Aura"
       ],
-      "text": "Enchant creature\nAt the beginning of the upkeep of enchanted creature's controller, put a -0/-1 counter on that creature.\nWhen enchanted creature dies, that creature's controller chooses a creature that Takklemaggot could enchant. If he or she does, return Takklemaggot to the battlefield under your control attached to that creature. If he or she doesn't, return Takklemaggot to the battlefield under your control as a non-Aura enchantment. It loses \"enchant creature\" and gains \"At the beginning of that player's upkeep, Takklemaggot deals 1 damage to him or her.\"",
+      "text": "Enchant creature\nAt the beginning of the upkeep of enchanted creature's controller, put a -0/-1 counter on that creature.\nWhen enchanted creature dies, that creature's controller chooses a creature that Takklemaggot could enchant. If the player does, return Takklemaggot to the battlefield under your control attached to that creature. If they don't, return Takklemaggot to the battlefield under your control as a non-Aura enchantment. It loses \"enchant creature\" and gains \"At the beginning of that player's upkeep, Takklemaggot deals 1 damage to that player.\"",
       "type": "Enchantment — Aura",
       "types": [
         "Enchantment"
@@ -2189,7 +2173,7 @@
         "CHR"
       ],
       "rarity": "Rare",
-      "text": "Cast Teleport only during the declare attackers step.\nTarget creature can't be blocked this turn.",
+      "text": "Cast this spell only during the declare attackers step.\nTarget creature can't be blocked this turn.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -2256,7 +2240,7 @@
       "subtypes": [
         "Zombie"
       ],
-      "text": "At the beginning of your upkeep, The Fallen deals 1 damage to each opponent it has dealt damage to this game.",
+      "text": "At the beginning of your upkeep, The Fallen deals 1 damage to each opponent and planeswalker it has dealt damage to this game.",
       "toughness": "3",
       "type": "Creature — Zombie",
       "types": [
@@ -3161,7 +3145,7 @@
           "text": "Players can only respond once this spell has been cast and all its costs have been paid. No one can try to destroy the creature you sacrificed to prevent you from casting this spell."
         }
       ],
-      "text": "As an additional cost to cast Metamorphosis, sacrifice a creature.\nAdd X mana of any one color to your mana pool, where X is one plus the sacrificed creature's converted mana cost. Spend this mana only to cast creature spells.",
+      "text": "As an additional cost to cast this spell, sacrifice a creature.\nAdd X mana of any one color, where X is 1 plus the sacrificed creature's converted mana cost. Spend this mana only to cast creature spells.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -3624,20 +3608,20 @@
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2017-03-14",
-          "text": "Nonbasic lands will lose any other land types and abilities they had. They will gain the land type Mountain and gain the ability \"{T}: Add {R} to your mana pool.\""
-        },
-        {
-          "date": "2017-03-14",
-          "text": "Blood Moon's effect doesn't affect names or supertypes. It won't turn any land into a basic land or remove the legendary supertype from a legendary land, and the lands won't be named \"Mountain.\""
-        },
-        {
-          "date": "2017-03-14",
-          "text": "If a nonbasic land has an ability that triggers \"when\" it enters the battlefield, it will lose that ability before it triggers."
-        },
-        {
           "date": "2017-09-29",
           "text": "If a nonbasic land has an ability that causes it to enter the battlefield tapped, it will lose that ability before it applies. The same is also true of any other abilities that modify how a land enters the battlefield or apply \"as\" a land enters the battlefield, such as the first ability of Cavern of Souls. This is a change from previous rulings."
+        },
+        {
+          "date": "2018-03-16",
+          "text": "Nonbasic lands will lose any other land types and abilities they had. They will gain the land type Mountain and gain the ability \"{T}: Add {R}.\""
+        },
+        {
+          "date": "2018-03-16",
+          "text": "This effect doesn't affect names or supertypes. It won't turn any land into a basic land or remove the legendary supertype from a legendary land, and the lands won't be named \"Mountain.\""
+        },
+        {
+          "date": "2018-03-16",
+          "text": "If a nonbasic land has an ability that triggers \"when\" it enters the battlefield, it will lose that ability before it triggers."
         }
       ],
       "text": "Nonbasic lands are Mountains.",
@@ -3952,7 +3936,7 @@
       "supertypes": [
         "World"
       ],
-      "text": "Discard a card: If the discarded card was a land card, Land's Edge deals 2 damage to target player. Any player may activate this ability.",
+      "text": "Discard a card: If the discarded card was a land card, Land's Edge deals 2 damage to target player or planeswalker. Any player may activate this ability.",
       "type": "World Enchantment",
       "types": [
         "Enchantment"
@@ -4647,7 +4631,7 @@
       "subtypes": [
         "Sphinx"
       ],
-      "text": "{T}: Target player chooses a card name, then reveals the top card of his or her library. If that card has the chosen name, that player puts it into his or her hand. If it doesn't, the player puts it into his or her graveyard.",
+      "text": "{T}: Target player chooses a card name, then reveals the top card of their library. If that card has the chosen name, that player puts it into their hand. If it doesn't, the player puts it into their graveyard.",
       "toughness": "4",
       "type": "Creature — Sphinx",
       "types": [
@@ -4867,7 +4851,7 @@
         "Human",
         "Cleric"
       ],
-      "text": "{T}: Witch Hunter deals 1 damage to target player.\n{1}{W}{W}, {T}: Return target creature an opponent controls to its owner's hand.",
+      "text": "{T}: Witch Hunter deals 1 damage to target player or planeswalker.\n{1}{W}{W}, {T}: Return target creature an opponent controls to its owner's hand.",
       "toughness": "1",
       "type": "Creature — Human Cleric",
       "types": [
@@ -4998,7 +4982,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "Trample\nWhenever a creature dealt damage by Axelrod Gunnarson this turn dies, you gain 1 life and Axelrod deals 1 damage to target player.",
+      "text": "Trample\nWhenever a creature dealt damage by Axelrod Gunnarson this turn dies, you gain 1 life and Axelrod deals 1 damage to target player or planeswalker.",
       "toughness": "5",
       "type": "Legendary Creature — Giant",
       "types": [
@@ -5481,7 +5465,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "{X}, {T}: Choose a card name. Target opponent reveals X cards at random from his or her hand. Then that player discards all cards with that name revealed this way. Activate this ability only during your turn.",
+      "text": "{X}, {T}: Choose a card name. Target opponent reveals X cards at random from their hand. Then that player discards all cards with that name revealed this way. Activate this ability only during your turn.",
       "toughness": "3",
       "type": "Legendary Creature — Human Wizard",
       "types": [
@@ -5555,7 +5539,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "Flying\nAt the beginning of your upkeep, sacrifice Nicol Bolas unless you pay {U}{B}{R}.\nWhenever Nicol Bolas deals damage to an opponent, that player discards his or her hand.",
+      "text": "Flying\nAt the beginning of your upkeep, sacrifice Nicol Bolas unless you pay {U}{B}{R}.\nWhenever Nicol Bolas deals damage to an opponent, that player discards their hand.",
       "toughness": "7",
       "type": "Legendary Creature — Elder Dragon",
       "types": [
@@ -5858,12 +5842,8 @@
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2009-10-01",
-          "text": "Stangg's delayed triggered abilities track only the token created by that particular Stangg."
-        },
-        {
-          "date": "2009-10-01",
-          "text": "If Stangg leaves the battlefield before its ability has resolved, that ability will still create a Stangg Twin token, but its delayed triggered abilities will never have a chance to trigger. That token will remain on the battlefield indefinitely (until it's dealt lethal damage, or anything else causes it to leave the battlefield)."
+          "date": "2018-03-16",
+          "text": "If Stangg leaves the battlefield before its ability has resolved, that ability will still create a Stangg Twin token, but its delayed triggered ability that exiles the token will never have a chance to trigger. That token will remain on the battlefield."
         }
       ],
       "subtypes": [
@@ -5873,7 +5853,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "When Stangg enters the battlefield, create a legendary 3/4 red and green Human Warrior creature token named Stangg Twin. When Stangg leaves the battlefield, exile that token. When that token leaves the battlefield, sacrifice Stangg.",
+      "text": "When Stangg enters the battlefield, create a legendary 3/4 red and green Human Warrior creature token named Stangg Twin. Exile that token when Stangg leaves the battlefield. Sacrifice Stangg when that token leaves the battlefield.",
       "toughness": "4",
       "type": "Legendary Creature — Human Warrior",
       "types": [
@@ -6160,7 +6140,7 @@
           "text": "On the other hand, you can tap City of Brass, put its triggered ability on the stack, and then respond to that ability by casting an instant or activating an ability using that mana. In that case, the instant spell or activated ability will resolve first."
         }
       ],
-      "text": "Whenever City of Brass becomes tapped, it deals 1 damage to you.\n{T}: Add one mana of any color to your mana pool.",
+      "text": "Whenever City of Brass becomes tapped, it deals 1 damage to you.\n{T}: Add one mana of any color.",
       "type": "Land",
       "types": [
         "Land"
@@ -6293,7 +6273,7 @@
         "Urza’s",
         "Mine"
       ],
-      "text": "{T}: Add {C} to your mana pool. If you control an Urza's Power-Plant and an Urza's Tower, add {C}{C} to your mana pool instead.",
+      "text": "{T}: Add {C}. If you control an Urza's Power-Plant and an Urza's Tower, add {C}{C} instead.",
       "type": "Land — Urza’s Mine",
       "types": [
         "Land"
@@ -6352,7 +6332,7 @@
         "Urza’s",
         "Mine"
       ],
-      "text": "{T}: Add {C} to your mana pool. If you control an Urza's Power-Plant and an Urza's Tower, add {C}{C} to your mana pool instead.",
+      "text": "{T}: Add {C}. If you control an Urza's Power-Plant and an Urza's Tower, add {C}{C} instead.",
       "type": "Land — Urza’s Mine",
       "types": [
         "Land"
@@ -6411,7 +6391,7 @@
         "Urza’s",
         "Mine"
       ],
-      "text": "{T}: Add {C} to your mana pool. If you control an Urza's Power-Plant and an Urza's Tower, add {C}{C} to your mana pool instead.",
+      "text": "{T}: Add {C}. If you control an Urza's Power-Plant and an Urza's Tower, add {C}{C} instead.",
       "type": "Land — Urza’s Mine",
       "types": [
         "Land"
@@ -6470,7 +6450,7 @@
         "Urza’s",
         "Mine"
       ],
-      "text": "{T}: Add {C} to your mana pool. If you control an Urza's Power-Plant and an Urza's Tower, add {C}{C} to your mana pool instead.",
+      "text": "{T}: Add {C}. If you control an Urza's Power-Plant and an Urza's Tower, add {C}{C} instead.",
       "type": "Land — Urza’s Mine",
       "types": [
         "Land"
@@ -6529,7 +6509,7 @@
         "Urza’s",
         "Power-Plant"
       ],
-      "text": "{T}: Add {C} to your mana pool. If you control an Urza's Mine and an Urza's Tower, add {C}{C} to your mana pool instead.",
+      "text": "{T}: Add {C}. If you control an Urza's Mine and an Urza's Tower, add {C}{C} instead.",
       "type": "Land — Urza’s Power-Plant",
       "types": [
         "Land"
@@ -6588,7 +6568,7 @@
         "Urza’s",
         "Power-Plant"
       ],
-      "text": "{T}: Add {C} to your mana pool. If you control an Urza's Mine and an Urza's Tower, add {C}{C} to your mana pool instead.",
+      "text": "{T}: Add {C}. If you control an Urza's Mine and an Urza's Tower, add {C}{C} instead.",
       "type": "Land — Urza’s Power-Plant",
       "types": [
         "Land"
@@ -6647,7 +6627,7 @@
         "Urza’s",
         "Power-Plant"
       ],
-      "text": "{T}: Add {C} to your mana pool. If you control an Urza's Mine and an Urza's Tower, add {C}{C} to your mana pool instead.",
+      "text": "{T}: Add {C}. If you control an Urza's Mine and an Urza's Tower, add {C}{C} instead.",
       "type": "Land — Urza’s Power-Plant",
       "types": [
         "Land"
@@ -6706,7 +6686,7 @@
         "Urza’s",
         "Power-Plant"
       ],
-      "text": "{T}: Add {C} to your mana pool. If you control an Urza's Mine and an Urza's Tower, add {C}{C} to your mana pool instead.",
+      "text": "{T}: Add {C}. If you control an Urza's Mine and an Urza's Tower, add {C}{C} instead.",
       "type": "Land — Urza’s Power-Plant",
       "types": [
         "Land"
@@ -6759,7 +6739,7 @@
         "Urza’s",
         "Tower"
       ],
-      "text": "{T}: Add {C} to your mana pool. If you control an Urza's Mine and an Urza's Power-Plant, add {C}{C}{C} to your mana pool instead.",
+      "text": "{T}: Add {C}. If you control an Urza's Mine and an Urza's Power-Plant, add {C}{C}{C} instead.",
       "type": "Land — Urza’s Tower",
       "types": [
         "Land"
@@ -6812,7 +6792,7 @@
         "Urza’s",
         "Tower"
       ],
-      "text": "{T}: Add {C} to your mana pool. If you control an Urza's Mine and an Urza's Power-Plant, add {C}{C}{C} to your mana pool instead.",
+      "text": "{T}: Add {C}. If you control an Urza's Mine and an Urza's Power-Plant, add {C}{C}{C} instead.",
       "type": "Land — Urza’s Tower",
       "types": [
         "Land"
@@ -6865,7 +6845,7 @@
         "Urza’s",
         "Tower"
       ],
-      "text": "{T}: Add {C} to your mana pool. If you control an Urza's Mine and an Urza's Power-Plant, add {C}{C}{C} to your mana pool instead.",
+      "text": "{T}: Add {C}. If you control an Urza's Mine and an Urza's Power-Plant, add {C}{C}{C} instead.",
       "type": "Land — Urza’s Tower",
       "types": [
         "Land"
@@ -6918,7 +6898,7 @@
         "Urza’s",
         "Tower"
       ],
-      "text": "{T}: Add {C} to your mana pool. If you control an Urza's Mine and an Urza's Power-Plant, add {C}{C}{C} to your mana pool instead.",
+      "text": "{T}: Add {C}. If you control an Urza's Mine and an Urza's Power-Plant, add {C}{C}{C} instead.",
       "type": "Land — Urza’s Tower",
       "types": [
         "Land"

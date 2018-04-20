@@ -1236,7 +1236,7 @@
           "text": "Starting with the player whose turn it is, each player chooses a creature in turn order. Players will know the choice of each player who chose before them."
         }
       ],
-      "text": "Each player chooses a creature he or she controls. Destroy the rest.\nFlashback {5}{W}{W} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "text": "Each player chooses a creature they control. Destroy the rest.\nFlashback {5}{W}{W} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -1771,8 +1771,16 @@
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2011-09-22",
+          "date": "2018-03-16",
           "text": "If Fiend Hunter leaves the battlefield before its first ability has resolved, its second ability will trigger and do nothing. Then its first ability will resolve and exile the targeted creature indefinitely."
+        },
+        {
+          "date": "2018-03-16",
+          "text": "Once the exiled permanent returns, it's considered a new object with no relation to the object that it was. Auras attached to the exiled permanent will be put into their owners' graveyards. Equipment attached to the exiled permanent will become unattached and remain on the battlefield. Any counters on the exiled permanent will cease to exist."
+        },
+        {
+          "date": "2018-03-16",
+          "text": "If a token is exiled this way, it won't return to the battlefield."
         }
       ],
       "subtypes": [
@@ -4177,114 +4185,6 @@
       "colors": [
         "White"
       ],
-      "flavor": "\"The time for grief is over. The time for retribution has begun.\"",
-      "foreignNames": [
-        {
-          "language": "Chinese Simplified",
-          "name": "瑟班民兵",
-          "multiverseid": 272051
-        },
-        {
-          "language": "Chinese Traditional",
-          "name": "瑟班民兵",
-          "multiverseid": 272335
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Milícia de Thraben",
-          "multiverseid": 272619
-        },
-        {
-          "language": "French",
-          "name": "Milice de Thraben",
-          "multiverseid": 272903
-        },
-        {
-          "language": "Russian",
-          "name": "Трейбенское Ополчение",
-          "multiverseid": 273187
-        },
-        {
-          "language": "German",
-          "name": "Miliz von Thraben",
-          "multiverseid": 273471
-        },
-        {
-          "language": "Spanish",
-          "name": "Milicia de Thraben",
-          "multiverseid": 273755
-        },
-        {
-          "language": "Italian",
-          "name": "Milizia di Thraben",
-          "multiverseid": 274039
-        },
-        {
-          "language": "Japanese",
-          "name": "スレイベンの民兵",
-          "multiverseid": 274323
-        }
-      ],
-      "id": "f978cf419b606fe820fed56c521962a99a7f5606",
-      "imageName": "thraben militia",
-      "layout": "double-faced",
-      "legalities": [
-        {
-          "format": "Commander",
-          "legality": "Legal"
-        },
-        {
-          "format": "Innistrad Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Vintage",
-          "legality": "Legal"
-        }
-      ],
-      "mciNumber": "38b",
-      "multiverseid": 221190,
-      "name": "Thraben Militia",
-      "names": [
-        "Thraben Militia",
-        "Thraben Sentry"
-      ],
-      "number": "38a",
-      "originalText": "Trample",
-      "originalType": "Creature — Human Soldier",
-      "power": "5",
-      "printings": [
-        "ISD"
-      ],
-      "rarity": "Common",
-      "subtypes": [
-        "Human",
-        "Soldier"
-      ],
-      "text": "Trample",
-      "toughness": "4",
-      "type": "Creature — Human Soldier",
-      "types": [
-        "Creature"
-      ]
-    },
-    {
-      "artist": "David Rapoza",
-      "cmc": 4,
-      "colorIdentity": [
-        "W"
-      ],
-      "colors": [
-        "White"
-      ],
       "flavor": "\"Looks like it's going to be a quiet night.\"",
       "foreignNames": [
         {
@@ -4363,10 +4263,10 @@
       "multiverseid": 222016,
       "name": "Thraben Sentry",
       "names": [
-        "Thraben Militia",
-        "Thraben Sentry"
+        "Thraben Sentry",
+        "Thraben Militia"
       ],
-      "number": "38b",
+      "number": "38a",
       "originalText": "Vigilance\nWhenever another creature you control dies, you may transform Thraben Sentry.",
       "originalType": "Creature — Human Soldier",
       "power": "2",
@@ -4390,6 +4290,114 @@
       ],
       "text": "Vigilance\nWhenever another creature you control dies, you may transform Thraben Sentry.",
       "toughness": "2",
+      "type": "Creature — Human Soldier",
+      "types": [
+        "Creature"
+      ]
+    },
+    {
+      "artist": "David Rapoza",
+      "cmc": 4,
+      "colorIdentity": [
+        "W"
+      ],
+      "colors": [
+        "White"
+      ],
+      "flavor": "\"The time for grief is over. The time for retribution has begun.\"",
+      "foreignNames": [
+        {
+          "language": "Chinese Simplified",
+          "name": "瑟班民兵",
+          "multiverseid": 272051
+        },
+        {
+          "language": "Chinese Traditional",
+          "name": "瑟班民兵",
+          "multiverseid": 272335
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Milícia de Thraben",
+          "multiverseid": 272619
+        },
+        {
+          "language": "French",
+          "name": "Milice de Thraben",
+          "multiverseid": 272903
+        },
+        {
+          "language": "Russian",
+          "name": "Трейбенское Ополчение",
+          "multiverseid": 273187
+        },
+        {
+          "language": "German",
+          "name": "Miliz von Thraben",
+          "multiverseid": 273471
+        },
+        {
+          "language": "Spanish",
+          "name": "Milicia de Thraben",
+          "multiverseid": 273755
+        },
+        {
+          "language": "Italian",
+          "name": "Milizia di Thraben",
+          "multiverseid": 274039
+        },
+        {
+          "language": "Japanese",
+          "name": "スレイベンの民兵",
+          "multiverseid": 274323
+        }
+      ],
+      "id": "f978cf419b606fe820fed56c521962a99a7f5606",
+      "imageName": "thraben militia",
+      "layout": "double-faced",
+      "legalities": [
+        {
+          "format": "Commander",
+          "legality": "Legal"
+        },
+        {
+          "format": "Innistrad Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Legacy",
+          "legality": "Legal"
+        },
+        {
+          "format": "Modern",
+          "legality": "Legal"
+        },
+        {
+          "format": "Vintage",
+          "legality": "Legal"
+        }
+      ],
+      "mciNumber": "38b",
+      "multiverseid": 221190,
+      "name": "Thraben Militia",
+      "names": [
+        "Thraben Sentry",
+        "Thraben Militia"
+      ],
+      "number": "38b",
+      "originalText": "Trample",
+      "originalType": "Creature — Human Soldier",
+      "power": "5",
+      "printings": [
+        "ISD"
+      ],
+      "rarity": "Common",
+      "subtypes": [
+        "Human",
+        "Soldier"
+      ],
+      "text": "Trample",
+      "toughness": "4",
       "type": "Creature — Human Soldier",
       "types": [
         "Creature"
@@ -5287,121 +5295,6 @@
         "U"
       ],
       "colors": [
-        "Red"
-      ],
-      "flavor": "For a moment his basest desires run free, unshackled by reason or conscience.",
-      "foreignNames": [
-        {
-          "language": "Chinese Simplified",
-          "name": "嗜杀蛮汉",
-          "multiverseid": 272048
-        },
-        {
-          "language": "Chinese Traditional",
-          "name": "嗜殺蠻漢",
-          "multiverseid": 272332
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Brutamontes Homicida",
-          "multiverseid": 272616
-        },
-        {
-          "language": "French",
-          "name": "Brute homicide",
-          "multiverseid": 272900
-        },
-        {
-          "language": "Russian",
-          "name": "Жестокий Смертоубийца",
-          "multiverseid": 273184
-        },
-        {
-          "language": "German",
-          "name": "Mörderischer Rohling",
-          "multiverseid": 273468
-        },
-        {
-          "language": "Spanish",
-          "name": "Bruto homicida",
-          "multiverseid": 273752
-        },
-        {
-          "language": "Italian",
-          "name": "Bruto Omicida",
-          "multiverseid": 274036
-        },
-        {
-          "language": "Japanese",
-          "name": "人殺しの粗暴者",
-          "multiverseid": 274320
-        }
-      ],
-      "id": "c868eb456cbe9393b0cc6e007ad9d62351faa3ee",
-      "imageName": "homicidal brute",
-      "layout": "double-faced",
-      "legalities": [
-        {
-          "format": "Commander",
-          "legality": "Legal"
-        },
-        {
-          "format": "Innistrad Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Vintage",
-          "legality": "Legal"
-        }
-      ],
-      "mciNumber": "47b",
-      "multiverseid": 221185,
-      "name": "Homicidal Brute",
-      "names": [
-        "Homicidal Brute",
-        "Civilized Scholar"
-      ],
-      "number": "47a",
-      "originalText": "At the beginning of your end step, if Homicidal Brute didn't attack this turn, tap Homicidal Brute, then transform it.",
-      "originalType": "Creature — Human Mutant",
-      "power": "5",
-      "printings": [
-        "ISD"
-      ],
-      "rarity": "Uncommon",
-      "rulings": [
-        {
-          "date": "2011-09-22",
-          "text": "You'll tap and transform Homicidal Brute even if it couldn't attack."
-        }
-      ],
-      "subtypes": [
-        "Human",
-        "Mutant"
-      ],
-      "text": "At the beginning of your end step, if Homicidal Brute didn't attack this turn, tap Homicidal Brute, then transform it.",
-      "toughness": "1",
-      "type": "Creature — Human Mutant",
-      "types": [
-        "Creature"
-      ]
-    },
-    {
-      "artist": "Michael C. Hayes",
-      "cmc": 3,
-      "colorIdentity": [
-        "R",
-        "U"
-      ],
-      "colors": [
         "Blue"
       ],
       "flavor": "\"Me, angry? Of course not. Thanks to my research, I'm above such petty emotions now.\"",
@@ -5482,10 +5375,10 @@
       "multiverseid": 221209,
       "name": "Civilized Scholar",
       "names": [
-        "Homicidal Brute",
-        "Civilized Scholar"
+        "Civilized Scholar",
+        "Homicidal Brute"
       ],
-      "number": "47b",
+      "number": "47a",
       "originalText": "{T}: Draw a card, then discard a card. If a creature card is discarded this way, untap Civilized Scholar, then transform it.",
       "originalType": "Creature — Human Advisor",
       "power": "0",
@@ -5514,6 +5407,121 @@
       "text": "{T}: Draw a card, then discard a card. If a creature card is discarded this way, untap Civilized Scholar, then transform it.",
       "toughness": "1",
       "type": "Creature — Human Advisor",
+      "types": [
+        "Creature"
+      ]
+    },
+    {
+      "artist": "Michael C. Hayes",
+      "cmc": 3,
+      "colorIdentity": [
+        "R",
+        "U"
+      ],
+      "colors": [
+        "Red"
+      ],
+      "flavor": "For a moment his basest desires run free, unshackled by reason or conscience.",
+      "foreignNames": [
+        {
+          "language": "Chinese Simplified",
+          "name": "嗜杀蛮汉",
+          "multiverseid": 272048
+        },
+        {
+          "language": "Chinese Traditional",
+          "name": "嗜殺蠻漢",
+          "multiverseid": 272332
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Brutamontes Homicida",
+          "multiverseid": 272616
+        },
+        {
+          "language": "French",
+          "name": "Brute homicide",
+          "multiverseid": 272900
+        },
+        {
+          "language": "Russian",
+          "name": "Жестокий Смертоубийца",
+          "multiverseid": 273184
+        },
+        {
+          "language": "German",
+          "name": "Mörderischer Rohling",
+          "multiverseid": 273468
+        },
+        {
+          "language": "Spanish",
+          "name": "Bruto homicida",
+          "multiverseid": 273752
+        },
+        {
+          "language": "Italian",
+          "name": "Bruto Omicida",
+          "multiverseid": 274036
+        },
+        {
+          "language": "Japanese",
+          "name": "人殺しの粗暴者",
+          "multiverseid": 274320
+        }
+      ],
+      "id": "c868eb456cbe9393b0cc6e007ad9d62351faa3ee",
+      "imageName": "homicidal brute",
+      "layout": "double-faced",
+      "legalities": [
+        {
+          "format": "Commander",
+          "legality": "Legal"
+        },
+        {
+          "format": "Innistrad Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Legacy",
+          "legality": "Legal"
+        },
+        {
+          "format": "Modern",
+          "legality": "Legal"
+        },
+        {
+          "format": "Vintage",
+          "legality": "Legal"
+        }
+      ],
+      "mciNumber": "47b",
+      "multiverseid": 221185,
+      "name": "Homicidal Brute",
+      "names": [
+        "Civilized Scholar",
+        "Homicidal Brute"
+      ],
+      "number": "47b",
+      "originalText": "At the beginning of your end step, if Homicidal Brute didn't attack this turn, tap Homicidal Brute, then transform it.",
+      "originalType": "Creature — Human Mutant",
+      "power": "5",
+      "printings": [
+        "ISD"
+      ],
+      "rarity": "Uncommon",
+      "rulings": [
+        {
+          "date": "2011-09-22",
+          "text": "You'll tap and transform Homicidal Brute even if it couldn't attack."
+        }
+      ],
+      "subtypes": [
+        "Human",
+        "Mutant"
+      ],
+      "text": "At the beginning of your end step, if Homicidal Brute didn't attack this turn, tap Homicidal Brute, then transform it.",
+      "toughness": "1",
+      "type": "Creature — Human Mutant",
       "types": [
         "Creature"
       ]
@@ -5738,18 +5746,6 @@
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2007-02-01",
-          "text": "You draw one card each time the enchanted creature damages the opponent. This is not one card per point of damage."
-        },
-        {
-          "date": "2007-02-01",
-          "text": "If put on your opponent's creature, you do not draw a card when that creature damages you. The creature has to damage your opponent in order to have this work."
-        },
-        {
-          "date": "2007-02-01",
-          "text": "Drawing a card is optional."
-        },
-        {
           "date": "2011-09-22",
           "text": "\"You\" refers to the controller of Curiosity, which may be different from the controller of the enchanted creature. \"An opponent\" refers to an opponent of Curiosity's controller."
         },
@@ -5760,6 +5756,14 @@
         {
           "date": "2011-09-22",
           "text": "Curiosity doesn't trigger if the enchanted creature deals damage to a planeswalker controlled by an opponent."
+        },
+        {
+          "date": "2018-03-16",
+          "text": "You draw one card each time the enchanted creature deals damage to an opponent, no matter how much damage it deals or whether it was dealt in combat."
+        },
+        {
+          "date": "2018-03-16",
+          "text": "If this Aura enchants an opponent's creature, you won't draw a card when that creature damages you. The creature has to deal damage to one of your opponents for the ability to trigger."
         }
       ],
       "subtypes": [
@@ -5868,14 +5872,14 @@
       "rulings": [
         {
           "date": "2011-09-22",
-          "text": "If the enchanted player has only one card in his or her library, he or she puts that card into his or her graveyard."
+          "text": "If the enchanted player has only one card in their library, they put that card into their graveyard."
         }
       ],
       "subtypes": [
         "Aura",
         "Curse"
       ],
-      "text": "Enchant player\nAt the beginning of enchanted player's upkeep, that player puts the top two cards of his or her library into his or her graveyard.",
+      "text": "Enchant player\nAt the beginning of enchanted player's upkeep, that player puts the top two cards of their library into their graveyard.",
       "type": "Enchantment — Aura Curse",
       "types": [
         "Enchantment"
@@ -6207,7 +6211,7 @@
         "Human",
         "Wizard"
       ],
-      "text": "{T}, Put the top card of your library into your graveyard: Add {C} to your mana pool.",
+      "text": "{T}, Put the top card of your library into your graveyard: Add {C}.",
       "toughness": "1",
       "type": "Creature — Human Wizard",
       "types": [
@@ -6424,7 +6428,7 @@
         "EMA"
       ],
       "rarity": "Common",
-      "text": "Target player puts the top three cards of his or her library into his or her graveyard.\nFlashback {1}{U} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "text": "Target player puts the top three cards of their library into their graveyard.\nFlashback {1}{U} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
       "type": "Instant",
       "types": [
         "Instant"
@@ -6740,7 +6744,7 @@
         },
         {
           "date": "2011-09-22",
-          "text": "The player discards a card even if he or she pays {1}."
+          "text": "The player discards a card even if they pay {1}."
         }
       ],
       "text": "Counter target spell unless its controller pays {1}. That player discards a card.",
@@ -7387,122 +7391,13 @@
         },
         {
           "date": "2011-09-22",
-          "text": "If one of Lost in the Mist's targets is illegal by the time it resolves, Lost in the Mist will still affect the remaining legal target. If both targets are illegal at this time, Lost in the Mist will be countered."
+          "text": "If one of Lost in the Mist's targets is illegal by the time it resolves, Lost in the Mist will still affect the remaining legal target. If both targets are illegal at this time, Lost in the Mist won't resolve."
         }
       ],
       "text": "Counter target spell. Return target permanent to its owner's hand.",
       "type": "Instant",
       "types": [
         "Instant"
-      ]
-    },
-    {
-      "artist": "Nils Hamm",
-      "cmc": 2,
-      "colorIdentity": [
-        "U"
-      ],
-      "colors": [
-        "Blue"
-      ],
-      "flavor": "After several frustrating experiments, the visionary Ludevic realized he needed to create a monster that fed on torch-wielding mobs.",
-      "foreignNames": [
-        {
-          "language": "Chinese Simplified",
-          "name": "卢德维的憎恨兽",
-          "multiverseid": 272046
-        },
-        {
-          "language": "Chinese Traditional",
-          "name": "盧德維的憎恨獸",
-          "multiverseid": 272330
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Abominação de Ludevic",
-          "multiverseid": 272614
-        },
-        {
-          "language": "French",
-          "name": "Abomination de Ludevic",
-          "multiverseid": 272898
-        },
-        {
-          "language": "Russian",
-          "name": "Созданная Людевиком Мерзость",
-          "multiverseid": 273182
-        },
-        {
-          "language": "German",
-          "name": "Ludevics Scheußlichkeit",
-          "multiverseid": 273466
-        },
-        {
-          "language": "Spanish",
-          "name": "Abominación de Ludevic",
-          "multiverseid": 273750
-        },
-        {
-          "language": "Italian",
-          "name": "Abominio di Ludevic",
-          "multiverseid": 274034
-        },
-        {
-          "language": "Japanese",
-          "name": "ルーデヴィックの嫌悪者",
-          "multiverseid": 274318
-        }
-      ],
-      "id": "2655f6ec2263675bbf4708bd94fe39911777aec8",
-      "imageName": "ludevic's abomination",
-      "layout": "double-faced",
-      "legalities": [
-        {
-          "format": "Commander",
-          "legality": "Legal"
-        },
-        {
-          "format": "Innistrad Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Vintage",
-          "legality": "Legal"
-        }
-      ],
-      "mciNumber": "64b",
-      "multiverseid": 221173,
-      "name": "Ludevic's Abomination",
-      "names": [
-        "Ludevic's Abomination",
-        "Ludevic's Test Subject"
-      ],
-      "number": "64a",
-      "originalText": "Trample",
-      "originalType": "Creature — Lizard Horror",
-      "power": "13",
-      "printings": [
-        "pLPA",
-        "ISD"
-      ],
-      "rarity": "Rare",
-      "subtypes": [
-        "Lizard",
-        "Horror"
-      ],
-      "text": "Trample",
-      "toughness": "13",
-      "type": "Creature — Lizard Horror",
-      "types": [
-        "Creature"
       ]
     },
     {
@@ -7591,10 +7486,10 @@
       "multiverseid": 221179,
       "name": "Ludevic's Test Subject",
       "names": [
-        "Ludevic's Abomination",
-        "Ludevic's Test Subject"
+        "Ludevic's Test Subject",
+        "Ludevic's Abomination"
       ],
-      "number": "64b",
+      "number": "64a",
       "originalText": "Defender\n{1}{U}: Put a hatchling counter on Ludevic's Test Subject. Then if there are five or more hatchling counters on it, remove all of them and transform it.",
       "originalType": "Creature — Lizard",
       "power": "0",
@@ -7615,6 +7510,115 @@
       "text": "Defender\n{1}{U}: Put a hatchling counter on Ludevic's Test Subject. Then if there are five or more hatchling counters on it, remove all of them and transform it.",
       "toughness": "3",
       "type": "Creature — Lizard",
+      "types": [
+        "Creature"
+      ]
+    },
+    {
+      "artist": "Nils Hamm",
+      "cmc": 2,
+      "colorIdentity": [
+        "U"
+      ],
+      "colors": [
+        "Blue"
+      ],
+      "flavor": "After several frustrating experiments, the visionary Ludevic realized he needed to create a monster that fed on torch-wielding mobs.",
+      "foreignNames": [
+        {
+          "language": "Chinese Simplified",
+          "name": "卢德维的憎恨兽",
+          "multiverseid": 272046
+        },
+        {
+          "language": "Chinese Traditional",
+          "name": "盧德維的憎恨獸",
+          "multiverseid": 272330
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Abominação de Ludevic",
+          "multiverseid": 272614
+        },
+        {
+          "language": "French",
+          "name": "Abomination de Ludevic",
+          "multiverseid": 272898
+        },
+        {
+          "language": "Russian",
+          "name": "Созданная Людевиком Мерзость",
+          "multiverseid": 273182
+        },
+        {
+          "language": "German",
+          "name": "Ludevics Scheußlichkeit",
+          "multiverseid": 273466
+        },
+        {
+          "language": "Spanish",
+          "name": "Abominación de Ludevic",
+          "multiverseid": 273750
+        },
+        {
+          "language": "Italian",
+          "name": "Abominio di Ludevic",
+          "multiverseid": 274034
+        },
+        {
+          "language": "Japanese",
+          "name": "ルーデヴィックの嫌悪者",
+          "multiverseid": 274318
+        }
+      ],
+      "id": "2655f6ec2263675bbf4708bd94fe39911777aec8",
+      "imageName": "ludevic's abomination",
+      "layout": "double-faced",
+      "legalities": [
+        {
+          "format": "Commander",
+          "legality": "Legal"
+        },
+        {
+          "format": "Innistrad Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Legacy",
+          "legality": "Legal"
+        },
+        {
+          "format": "Modern",
+          "legality": "Legal"
+        },
+        {
+          "format": "Vintage",
+          "legality": "Legal"
+        }
+      ],
+      "mciNumber": "64b",
+      "multiverseid": 221173,
+      "name": "Ludevic's Abomination",
+      "names": [
+        "Ludevic's Test Subject",
+        "Ludevic's Abomination"
+      ],
+      "number": "64b",
+      "originalText": "Trample",
+      "originalType": "Creature — Lizard Horror",
+      "power": "13",
+      "printings": [
+        "pLPA",
+        "ISD"
+      ],
+      "rarity": "Rare",
+      "subtypes": [
+        "Lizard",
+        "Horror"
+      ],
+      "text": "Trample",
+      "toughness": "13",
+      "type": "Creature — Lizard Horror",
       "types": [
         "Creature"
       ]
@@ -7728,7 +7732,7 @@
         "Zombie",
         "Horror"
       ],
-      "text": "As an additional cost to cast Makeshift Mauler, exile a creature card from your graveyard.",
+      "text": "As an additional cost to cast this spell, exile a creature card from your graveyard.",
       "toughness": "5",
       "type": "Creature — Zombie Horror",
       "types": [
@@ -7835,7 +7839,7 @@
         },
         {
           "date": "2011-09-22",
-          "text": "If the player is an illegal target by the time Memory's Journey resolves, the spell will have no effect, even if the cards are still legal targets. This is because a spell can't make an illegal target (the player) perform any actions (such as shuffling his or her library)."
+          "text": "If the player is an illegal target by the time Memory's Journey resolves, the spell will have no effect, even if the cards are still legal targets. This is because a spell can't make an illegal target (the player) perform any actions (such as shuffling their library)."
         },
         {
           "date": "2011-09-22",
@@ -7843,14 +7847,14 @@
         },
         {
           "date": "2011-09-22",
-          "text": "If no cards were targeted by Memory's Journey or if all the targeted cards are illegal targets by the time Memory's Journey resolves, the targeted player will still shuffle his or her library."
+          "text": "If no cards were targeted by Memory's Journey or if all the targeted cards are illegal targets by the time Memory's Journey resolves, the targeted player will still shuffle their library."
         },
         {
           "date": "2011-09-22",
           "text": "If you cast Memory's Journey with flashback, it won't be in the graveyard when you choose targets. It can't target itself."
         }
       ],
-      "text": "Target player shuffles up to three target cards from his or her graveyard into his or her library.\nFlashback {G} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "text": "Target player shuffles up to three target cards from their graveyard into their library.\nFlashback {G} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
       "type": "Instant",
       "types": [
         "Instant"
@@ -7953,7 +7957,7 @@
         "Spirit",
         "Bird"
       ],
-      "text": "Flying\n{2}: Target player puts the top card of his or her library into his or her graveyard. Mindshrieker gets +X/+X until end of turn, where X is that card's converted mana cost.",
+      "text": "Flying\n{2}: Target player puts the top card of their library into their graveyard. Mindshrieker gets +X/+X until end of turn, where X is that card's converted mana cost.",
       "toughness": "1",
       "type": "Creature — Spirit Bird",
       "types": [
@@ -8064,13 +8068,13 @@
         },
         {
           "date": "2011-09-22",
-          "text": "If another creature (such as Necrotic Ooze) gains Mirror-Mad Phantasm's activated ability, its owner reveals cards until he or she reveals a card named Mirror-Mad Phantasm."
+          "text": "If another creature (such as Necrotic Ooze) gains Mirror-Mad Phantasm's activated ability, its owner reveals cards until they reveal a card named Mirror-Mad Phantasm."
         }
       ],
       "subtypes": [
         "Spirit"
       ],
-      "text": "Flying\n{1}{U}: Mirror-Mad Phantasm's owner shuffles it into his or her library. If that player does, he or she reveals cards from the top of that library until a card named Mirror-Mad Phantasm is revealed. The player puts that card onto the battlefield and all other cards revealed this way into his or her graveyard.",
+      "text": "Flying\n{1}{U}: Mirror-Mad Phantasm's owner shuffles it into their library. If that player does, they reveal cards from the top of that library until a card named Mirror-Mad Phantasm is revealed. The player puts that card onto the battlefield and all other cards revealed this way into their graveyard.",
       "toughness": "1",
       "type": "Creature — Spirit",
       "types": [
@@ -8279,12 +8283,12 @@
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2011-09-22",
-          "text": "If you choose to draw a card, and that draw is replaced by another action, you'll still discard a card."
+          "date": "2018-03-16",
+          "text": "If another creature dies at the same time as Murder of Crows, its last ability triggers."
         },
         {
-          "date": "2011-09-22",
-          "text": "You can't do anything in between drawing a card and discarding a card, including casting the card you drew."
+          "date": "2018-03-16",
+          "text": "You can't do anything in between drawing a card and discarding a card, including casting or cycling the card you drew."
         }
       ],
       "subtypes": [
@@ -8617,7 +8621,7 @@
         "Human",
         "Rogue"
       ],
-      "text": "Whenever Selhoff Occultist or another creature dies, target player puts the top card of his or her library into his or her graveyard.",
+      "text": "Whenever Selhoff Occultist or another creature dies, target player puts the top card of their library into their graveyard.",
       "toughness": "3",
       "type": "Creature — Human Rogue",
       "types": [
@@ -8926,7 +8930,7 @@
         "Zombie",
         "Giant"
       ],
-      "text": "As an additional cost to cast Skaab Goliath, exile two creature cards from your graveyard.\nTrample (This creature can deal excess combat damage to defending player or planeswalker while attacking.)",
+      "text": "As an additional cost to cast this spell, exile two creature cards from your graveyard.\nTrample (This creature can deal excess combat damage to the player or planeswalker it's attacking.)",
       "toughness": "9",
       "type": "Creature — Zombie Giant",
       "types": [
@@ -9040,7 +9044,7 @@
         "Zombie",
         "Horror"
       ],
-      "text": "As an additional cost to cast Skaab Ruinator, exile three creature cards from your graveyard.\nFlying\nYou may cast Skaab Ruinator from your graveyard.",
+      "text": "As an additional cost to cast this spell, exile three creature cards from your graveyard.\nFlying\nYou may cast Skaab Ruinator from your graveyard.",
       "toughness": "6",
       "type": "Creature — Zombie Horror",
       "types": [
@@ -9382,7 +9386,7 @@
         "Zombie",
         "Drake"
       ],
-      "text": "As an additional cost to cast Stitched Drake, exile a creature card from your graveyard.\nFlying",
+      "text": "As an additional cost to cast this spell, exile a creature card from your graveyard.\nFlying",
       "toughness": "4",
       "type": "Creature — Zombie Drake",
       "types": [
@@ -9816,13 +9820,13 @@
         },
         {
           "date": "2011-09-22",
-          "text": "Whenever a creature card is put into an opponent's graveyard from his or her library, the triggered ability of each Undead Alchemist you control will trigger. The first such ability to resolve will exile that creature card and create a Zombie token. Subsequent abilities won't exile the creature card, but each will create another Zombie token."
+          "text": "Whenever a creature card is put into an opponent's graveyard from their library, the triggered ability of each Undead Alchemist you control will trigger. The first such ability to resolve will exile that creature card and create a Zombie token. Subsequent abilities won't exile the creature card, but each will create another Zombie token."
         }
       ],
       "subtypes": [
         "Zombie"
       ],
-      "text": "If a Zombie you control would deal combat damage to a player, instead that player puts that many cards from the top of his or her library into his or her graveyard.\nWhenever a creature card is put into an opponent's graveyard from his or her library, exile that card and create a 2/2 black Zombie creature token.",
+      "text": "If a Zombie you control would deal combat damage to a player, instead that player puts that many cards from the top of their library into their graveyard.\nWhenever a creature card is put into an opponent's graveyard from their library, exile that card and create a 2/2 black Zombie creature token.",
       "toughness": "2",
       "type": "Creature — Zombie",
       "types": [
@@ -10054,7 +10058,7 @@
           "text": "Players can only respond once this spell has been cast and all its costs have been paid. No one can try to destroy the creature you sacrificed to prevent you from casting this spell."
         }
       ],
-      "text": "As an additional cost to cast Altar's Reap, sacrifice a creature.\nDraw two cards.",
+      "text": "As an additional cost to cast this spell, sacrifice a creature.\nDraw two cards.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -10910,7 +10914,7 @@
           "text": "Players can only respond once this spell has been cast and all its costs have been paid. No one can try to otherwise remove the creature card you exiled in order to prevent you from casting this spell."
         }
       ],
-      "text": "As an additional cost to cast Corpse Lunge, exile a creature card from your graveyard.\nCorpse Lunge deals damage equal to the exiled card's power to target creature.",
+      "text": "As an additional cost to cast this spell, exile a creature card from your graveyard.\nCorpse Lunge deals damage equal to the exiled card's power to target creature.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -11115,14 +11119,14 @@
       "rulings": [
         {
           "date": "2011-09-22",
-          "text": "If the enchanted player has only one card in his or her graveyard, he or she exiles that card."
+          "text": "If the enchanted player has only one card in their graveyard, they exile that card."
         }
       ],
       "subtypes": [
         "Aura",
         "Curse"
       ],
-      "text": "Enchant player\nAt the beginning of enchanted player's upkeep, that player exiles two cards from his or her graveyard.",
+      "text": "Enchant player\nAt the beginning of enchanted player's upkeep, that player exiles two cards from their graveyard.",
       "type": "Enchantment — Aura Curse",
       "types": [
         "Enchantment"
@@ -12205,7 +12209,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "+1: Each player discards a card.\n−2: Target player sacrifices a creature.\n−6: Separate all permanents target player controls into two piles. That player sacrifices all permanents in the pile of his or her choice.",
+      "text": "+1: Each player discards a card.\n−2: Target player sacrifices a creature.\n−6: Separate all permanents target player controls into two piles. That player sacrifices all permanents in the pile of their choice.",
       "type": "Legendary Planeswalker — Liliana",
       "types": [
         "Planeswalker"
@@ -12515,7 +12519,7 @@
       "rulings": [
         {
           "date": "2011-09-22",
-          "text": "If the targeted land is an illegal target by the time Maw of the Mire resolves, it will be countered and none of its effects will occur. You won't gain 4 life."
+          "text": "If the targeted land is an illegal target by the time Maw of the Mire resolves, it won't resolve and none of its effects will occur. You won't gain 4 life."
         }
       ],
       "text": "Destroy target land. You gain 4 life.",
@@ -12836,7 +12840,7 @@
           "text": "If you target yourself with this spell, you must reveal your entire hand to the other players just as any other player would."
         }
       ],
-      "text": "Target player reveals his or her hand. You choose a nonland card from it. Exile that card.",
+      "text": "Target player reveals their hand. You choose a nonland card from it. Exile that card.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -13380,7 +13384,7 @@
         },
         {
           "date": "2017-03-14",
-          "text": "If the targeted creature is an illegal target by the time Sever the Bloodline resolves, it will be countered and none of its effects will happen. No creatures will be exiled."
+          "text": "If the targeted creature is an illegal target by the time Sever the Bloodline resolves, it won't resolve and none of its effects will happen. No creatures will be exiled."
         },
         {
           "date": "2017-03-14",
@@ -15006,7 +15010,7 @@
           "text": "Although players may respond to Blasphemous Act once it's been cast, once it's announced, they can't respond before the cost is calculated and paid."
         }
       ],
-      "text": "Blasphemous Act costs {1} less to cast for each creature on the battlefield.\nBlasphemous Act deals 13 damage to each creature.",
+      "text": "This spell costs {1} less to cast for each creature on the battlefield.\nBlasphemous Act deals 13 damage to each creature.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -15210,7 +15214,7 @@
         "CNS"
       ],
       "rarity": "Common",
-      "text": "Brimstone Volley deals 3 damage to target creature or player.\nMorbid — Brimstone Volley deals 5 damage to that creature or player instead if a creature died this turn.",
+      "text": "Brimstone Volley deals 3 damage to any target.\nMorbid — Brimstone Volley deals 5 damage to that permanent or player instead if a creature died this turn.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -15324,7 +15328,7 @@
           "text": "Burning Vengeance's triggered ability will resolve before the spell you cast from your graveyard."
         }
       ],
-      "text": "Whenever you cast a spell from your graveyard, Burning Vengeance deals 2 damage to target creature or player.",
+      "text": "Whenever you cast a spell from your graveyard, Burning Vengeance deals 2 damage to any target.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -15761,11 +15765,11 @@
       "rulings": [
         {
           "date": "2011-09-22",
-          "text": "The enchanted player still chooses which player or planeswalker each creature he or she controls attacks."
+          "text": "The enchanted player still chooses which player or planeswalker each creature they control attacks."
         },
         {
           "date": "2011-09-22",
-          "text": "If, during the enchanted player's declare attackers step, a creature he or she controls is tapped, is affected by a spell or ability that says it can't attack, or hasn't been under that player's control continuously since the turn began (and doesn't have haste), then it doesn't attack. If there's a cost associated with having the creature attack, the player isn't forced to pay that cost, so it doesn't have to attack in that case either."
+          "text": "If, during the enchanted player's declare attackers step, a creature they control is tapped, is affected by a spell or ability that says it can't attack, or hasn't been under that player's control continuously since the turn began (and doesn't have haste), then it doesn't attack. If there's a cost associated with having the creature attack, the player isn't forced to pay that cost, so it doesn't have to attack in that case either."
         }
       ],
       "subtypes": [
@@ -15875,7 +15879,7 @@
         "Aura",
         "Curse"
       ],
-      "text": "Enchant player\nAt the beginning of enchanted player's upkeep, Curse of the Pierced Heart deals 1 damage to that player.",
+      "text": "Enchant player\nAt the beginning of enchanted player's upkeep, Curse of the Pierced Heart deals 1 damage to that player or a planeswalker that player controls.",
       "type": "Enchantment — Aura Curse",
       "types": [
         "Enchantment"
@@ -16084,7 +16088,7 @@
         "DDK"
       ],
       "rarity": "Rare",
-      "text": "Devil's Play deals X damage to target creature or player.\nFlashback {X}{R}{R}{R} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "text": "Devil's Play deals X damage to any target.\nFlashback {X}{R}{R}{R} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -16505,7 +16509,7 @@
         "DDK"
       ],
       "rarity": "Common",
-      "text": "Geistflame deals 1 damage to target creature or player.\nFlashback {3}{R} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "text": "Geistflame deals 1 damage to any target.\nFlashback {3}{R} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
       "type": "Instant",
       "types": [
         "Instant"
@@ -16827,7 +16831,7 @@
         "ISD"
       ],
       "rarity": "Common",
-      "text": "As an additional cost to cast Harvest Pyre, exile X cards from your graveyard.\nHarvest Pyre deals X damage to target creature.",
+      "text": "As an additional cost to cast this spell, exile X cards from your graveyard.\nHarvest Pyre deals X damage to target creature.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -16928,7 +16932,7 @@
       "rulings": [
         {
           "date": "2011-09-22",
-          "text": "If the targeted creature or player is an illegal target by the time the ability resolves, the entire ability will be countered. No cards will be put into your graveyard, and no damage will be dealt."
+          "text": "If the targeted permanent or player is an illegal target by the time the ability resolves, the entire ability won't resolve. No cards will be put into your graveyard, and no damage will be dealt."
         },
         {
           "date": "2011-09-22",
@@ -16943,7 +16947,7 @@
           "text": "If all three cards have a converted mana cost of 0, no damage will be dealt."
         }
       ],
-      "text": "{3}{R}: Choose target creature or player, then put the top three cards of your library into your graveyard. Heretic's Punishment deals damage to that creature or player equal to the highest converted mana cost among those cards.",
+      "text": "{3}{R}: Choose any target, then put the top three cards of your library into your graveyard. Heretic's Punishment deals damage to that permanent or player equal to the highest converted mana cost among those cards.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -17052,7 +17056,7 @@
           "text": "Players can only respond once this spell has been cast and all its costs have been paid. No one can try to destroy the creature you sacrificed to prevent you from casting this spell."
         }
       ],
-      "text": "As an additional cost to cast Infernal Plunge, sacrifice a creature.\nAdd {R}{R}{R} to your mana pool.",
+      "text": "As an additional cost to cast this spell, sacrifice a creature.\nAdd {R}{R}{R}.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -17378,7 +17382,7 @@
         },
         {
           "date": "2011-09-22",
-          "text": "If one of Into the Maw of Hell's targets is illegal by the time it resolves, Into the Maw of Hell will still affect the remaining legal target. If both targets are illegal at this time, Into the Maw of Hell will be countered."
+          "text": "If one of Into the Maw of Hell's targets is illegal by the time it resolves, Into the Maw of Hell will still affect the remaining legal target. If both targets are illegal at this time, Into the Maw of Hell won't resolve."
         }
       ],
       "text": "Destroy target land. Into the Maw of Hell deals 13 damage to target creature.",
@@ -18141,7 +18145,7 @@
       "subtypes": [
         "Devil"
       ],
-      "text": "When Pitchburn Devils dies, it deals 3 damage to target creature or player.",
+      "text": "When Pitchburn Devils dies, it deals 3 damage to any target.",
       "toughness": "3",
       "type": "Creature — Devil",
       "types": [
@@ -18252,7 +18256,7 @@
         "Human",
         "Shaman"
       ],
-      "text": "Whenever another creature dies, Rage Thrower deals 2 damage to target player.",
+      "text": "Whenever another creature dies, Rage Thrower deals 2 damage to target player or planeswalker.",
       "toughness": "2",
       "type": "Creature — Human Shaman",
       "types": [
@@ -18992,7 +18996,7 @@
         "Human",
         "Shaman"
       ],
-      "text": "{R}, {T}, Sacrifice a creature: Skirsdag Cultist deals 2 damage to target creature or player.",
+      "text": "{R}, {T}, Sacrifice a creature: Skirsdag Cultist deals 2 damage to any target.",
       "toughness": "2",
       "type": "Creature — Human Shaman",
       "types": [
@@ -19112,113 +19116,6 @@
       "colors": [
         "Red"
       ],
-      "flavor": "\"Just look at him, groveling on all fours! What a pathetic—uh-oh.\"",
-      "foreignNames": [
-        {
-          "language": "Chinese Simplified",
-          "name": "莽闯狼人",
-          "multiverseid": 272073
-        },
-        {
-          "language": "Chinese Traditional",
-          "name": "莽闖狼人",
-          "multiverseid": 272357
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Lobisomem Enfurecido",
-          "multiverseid": 272641
-        },
-        {
-          "language": "French",
-          "name": "Loup-garou déchaîné",
-          "multiverseid": 272925
-        },
-        {
-          "language": "Russian",
-          "name": "Неиствующий Вервольф",
-          "multiverseid": 273209
-        },
-        {
-          "language": "German",
-          "name": "Tobender Werwolf",
-          "multiverseid": 273493
-        },
-        {
-          "language": "Spanish",
-          "name": "Licántropo impetuoso",
-          "multiverseid": 273777
-        },
-        {
-          "language": "Italian",
-          "name": "Lupo Mannaro Scatenato",
-          "multiverseid": 274061
-        },
-        {
-          "language": "Japanese",
-          "name": "猛り狂う狼男",
-          "multiverseid": 274345
-        }
-      ],
-      "id": "391af7be4b536dbbf0d483f9dc085521b5b94d0c",
-      "imageName": "rampaging werewolf",
-      "layout": "double-faced",
-      "legalities": [
-        {
-          "format": "Commander",
-          "legality": "Legal"
-        },
-        {
-          "format": "Innistrad Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Vintage",
-          "legality": "Legal"
-        }
-      ],
-      "mciNumber": "165b",
-      "multiverseid": 222117,
-      "name": "Rampaging Werewolf",
-      "names": [
-        "Rampaging Werewolf",
-        "Tormented Pariah"
-      ],
-      "number": "165a",
-      "originalText": "At the beginning of each upkeep, if a player cast two or more spells last turn, transform Rampaging Werewolf.",
-      "originalType": "Creature — Werewolf",
-      "power": "6",
-      "printings": [
-        "ISD"
-      ],
-      "rarity": "Common",
-      "subtypes": [
-        "Werewolf"
-      ],
-      "text": "At the beginning of each upkeep, if a player cast two or more spells last turn, transform Rampaging Werewolf.",
-      "toughness": "4",
-      "type": "Creature — Werewolf",
-      "types": [
-        "Creature"
-      ]
-    },
-    {
-      "artist": "Bud Cook",
-      "cmc": 4,
-      "colorIdentity": [
-        "R"
-      ],
-      "colors": [
-        "Red"
-      ],
       "flavor": "\"Hey lads, the moon's rising. All the better to watch him beg for mercy.\"",
       "foreignNames": [
         {
@@ -19297,10 +19194,10 @@
       "multiverseid": 222186,
       "name": "Tormented Pariah",
       "names": [
-        "Rampaging Werewolf",
-        "Tormented Pariah"
+        "Tormented Pariah",
+        "Rampaging Werewolf"
       ],
-      "number": "165b",
+      "number": "165a",
       "originalText": "At the beginning of each upkeep, if no spells were cast last turn, transform Tormented Pariah.",
       "originalType": "Creature — Human Warrior Werewolf",
       "power": "3",
@@ -19322,6 +19219,113 @@
       "text": "At the beginning of each upkeep, if no spells were cast last turn, transform Tormented Pariah.",
       "toughness": "2",
       "type": "Creature — Human Warrior Werewolf",
+      "types": [
+        "Creature"
+      ]
+    },
+    {
+      "artist": "Bud Cook",
+      "cmc": 4,
+      "colorIdentity": [
+        "R"
+      ],
+      "colors": [
+        "Red"
+      ],
+      "flavor": "\"Just look at him, groveling on all fours! What a pathetic—uh-oh.\"",
+      "foreignNames": [
+        {
+          "language": "Chinese Simplified",
+          "name": "莽闯狼人",
+          "multiverseid": 272073
+        },
+        {
+          "language": "Chinese Traditional",
+          "name": "莽闖狼人",
+          "multiverseid": 272357
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Lobisomem Enfurecido",
+          "multiverseid": 272641
+        },
+        {
+          "language": "French",
+          "name": "Loup-garou déchaîné",
+          "multiverseid": 272925
+        },
+        {
+          "language": "Russian",
+          "name": "Неиствующий Вервольф",
+          "multiverseid": 273209
+        },
+        {
+          "language": "German",
+          "name": "Tobender Werwolf",
+          "multiverseid": 273493
+        },
+        {
+          "language": "Spanish",
+          "name": "Licántropo impetuoso",
+          "multiverseid": 273777
+        },
+        {
+          "language": "Italian",
+          "name": "Lupo Mannaro Scatenato",
+          "multiverseid": 274061
+        },
+        {
+          "language": "Japanese",
+          "name": "猛り狂う狼男",
+          "multiverseid": 274345
+        }
+      ],
+      "id": "391af7be4b536dbbf0d483f9dc085521b5b94d0c",
+      "imageName": "rampaging werewolf",
+      "layout": "double-faced",
+      "legalities": [
+        {
+          "format": "Commander",
+          "legality": "Legal"
+        },
+        {
+          "format": "Innistrad Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Legacy",
+          "legality": "Legal"
+        },
+        {
+          "format": "Modern",
+          "legality": "Legal"
+        },
+        {
+          "format": "Vintage",
+          "legality": "Legal"
+        }
+      ],
+      "mciNumber": "165b",
+      "multiverseid": 222117,
+      "name": "Rampaging Werewolf",
+      "names": [
+        "Tormented Pariah",
+        "Rampaging Werewolf"
+      ],
+      "number": "165b",
+      "originalText": "At the beginning of each upkeep, if a player cast two or more spells last turn, transform Rampaging Werewolf.",
+      "originalType": "Creature — Werewolf",
+      "power": "6",
+      "printings": [
+        "ISD"
+      ],
+      "rarity": "Common",
+      "subtypes": [
+        "Werewolf"
+      ],
+      "text": "At the beginning of each upkeep, if a player cast two or more spells last turn, transform Rampaging Werewolf.",
+      "toughness": "4",
+      "type": "Creature — Werewolf",
       "types": [
         "Creature"
       ]
@@ -19549,113 +19553,6 @@
       "colors": [
         "Red"
       ],
-      "flavor": "Each morning, he repairs the front door.",
-      "foreignNames": [
-        {
-          "language": "Chinese Simplified",
-          "name": "钢牙狼",
-          "multiverseid": 272067
-        },
-        {
-          "language": "Chinese Traditional",
-          "name": "鋼牙狼",
-          "multiverseid": 272351
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Canino de Ferro",
-          "multiverseid": 272635
-        },
-        {
-          "language": "French",
-          "name": "Crocdefer",
-          "multiverseid": 272919
-        },
-        {
-          "language": "Russian",
-          "name": "Железный Клык",
-          "multiverseid": 273203
-        },
-        {
-          "language": "German",
-          "name": "Eisenfang",
-          "multiverseid": 273487
-        },
-        {
-          "language": "Spanish",
-          "name": "Colmillo de hierro",
-          "multiverseid": 273771
-        },
-        {
-          "language": "Italian",
-          "name": "Zanna di Ferro",
-          "multiverseid": 274055
-        },
-        {
-          "language": "Japanese",
-          "name": "鉄牙",
-          "multiverseid": 274339
-        }
-      ],
-      "id": "158a35c23480f191b24bdfaff1e94f26901ce310",
-      "imageName": "ironfang",
-      "layout": "double-faced",
-      "legalities": [
-        {
-          "format": "Commander",
-          "legality": "Legal"
-        },
-        {
-          "format": "Innistrad Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Vintage",
-          "legality": "Legal"
-        }
-      ],
-      "mciNumber": "168b",
-      "multiverseid": 222107,
-      "name": "Ironfang",
-      "names": [
-        "Ironfang",
-        "Village Ironsmith"
-      ],
-      "number": "168a",
-      "originalText": "First strike\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform Ironfang.",
-      "originalType": "Creature — Werewolf",
-      "power": "3",
-      "printings": [
-        "ISD"
-      ],
-      "rarity": "Common",
-      "subtypes": [
-        "Werewolf"
-      ],
-      "text": "First strike\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform Ironfang.",
-      "toughness": "1",
-      "type": "Creature — Werewolf",
-      "types": [
-        "Creature"
-      ]
-    },
-    {
-      "artist": "Christopher Moeller",
-      "cmc": 2,
-      "colorIdentity": [
-        "R"
-      ],
-      "colors": [
-        "Red"
-      ],
       "flavor": "Each night, he abandons the trappings of civilization.",
       "foreignNames": [
         {
@@ -19734,10 +19631,10 @@
       "multiverseid": 222112,
       "name": "Village Ironsmith",
       "names": [
-        "Ironfang",
-        "Village Ironsmith"
+        "Village Ironsmith",
+        "Ironfang"
       ],
-      "number": "168b",
+      "number": "168a",
       "originalText": "First strike\nAt the beginning of each upkeep, if no spells were cast last turn, transform Village Ironsmith.",
       "originalType": "Creature — Human Werewolf",
       "power": "1",
@@ -19758,6 +19655,113 @@
       "text": "First strike\nAt the beginning of each upkeep, if no spells were cast last turn, transform Village Ironsmith.",
       "toughness": "1",
       "type": "Creature — Human Werewolf",
+      "types": [
+        "Creature"
+      ]
+    },
+    {
+      "artist": "Christopher Moeller",
+      "cmc": 2,
+      "colorIdentity": [
+        "R"
+      ],
+      "colors": [
+        "Red"
+      ],
+      "flavor": "Each morning, he repairs the front door.",
+      "foreignNames": [
+        {
+          "language": "Chinese Simplified",
+          "name": "钢牙狼",
+          "multiverseid": 272067
+        },
+        {
+          "language": "Chinese Traditional",
+          "name": "鋼牙狼",
+          "multiverseid": 272351
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Canino de Ferro",
+          "multiverseid": 272635
+        },
+        {
+          "language": "French",
+          "name": "Crocdefer",
+          "multiverseid": 272919
+        },
+        {
+          "language": "Russian",
+          "name": "Железный Клык",
+          "multiverseid": 273203
+        },
+        {
+          "language": "German",
+          "name": "Eisenfang",
+          "multiverseid": 273487
+        },
+        {
+          "language": "Spanish",
+          "name": "Colmillo de hierro",
+          "multiverseid": 273771
+        },
+        {
+          "language": "Italian",
+          "name": "Zanna di Ferro",
+          "multiverseid": 274055
+        },
+        {
+          "language": "Japanese",
+          "name": "鉄牙",
+          "multiverseid": 274339
+        }
+      ],
+      "id": "158a35c23480f191b24bdfaff1e94f26901ce310",
+      "imageName": "ironfang",
+      "layout": "double-faced",
+      "legalities": [
+        {
+          "format": "Commander",
+          "legality": "Legal"
+        },
+        {
+          "format": "Innistrad Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Legacy",
+          "legality": "Legal"
+        },
+        {
+          "format": "Modern",
+          "legality": "Legal"
+        },
+        {
+          "format": "Vintage",
+          "legality": "Legal"
+        }
+      ],
+      "mciNumber": "168b",
+      "multiverseid": 222107,
+      "name": "Ironfang",
+      "names": [
+        "Village Ironsmith",
+        "Ironfang"
+      ],
+      "number": "168b",
+      "originalText": "First strike\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform Ironfang.",
+      "originalType": "Creature — Werewolf",
+      "power": "3",
+      "printings": [
+        "ISD"
+      ],
+      "rarity": "Common",
+      "subtypes": [
+        "Werewolf"
+      ],
+      "text": "First strike\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform Ironfang.",
+      "toughness": "1",
+      "type": "Creature — Werewolf",
       "types": [
         "Creature"
       ]
@@ -19967,7 +19971,7 @@
         "Human",
         "Monk"
       ],
-      "text": "{T}: Add {W} to your mana pool.",
+      "text": "{T}: Add {W}.",
       "toughness": "1",
       "type": "Creature — Human Monk",
       "types": [
@@ -20511,113 +20515,6 @@
       "foreignNames": [
         {
           "language": "Chinese Simplified",
-          "name": "夜幕掠食者",
-          "multiverseid": 272071
-        },
-        {
-          "language": "Chinese Traditional",
-          "name": "夜幕掠食者",
-          "multiverseid": 272355
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Predador do Anoitecer",
-          "multiverseid": 272639
-        },
-        {
-          "language": "French",
-          "name": "Prédateur du crépuscule",
-          "multiverseid": 272923
-        },
-        {
-          "language": "Russian",
-          "name": "Сумеречная Хищница",
-          "multiverseid": 273207
-        },
-        {
-          "language": "German",
-          "name": "Nachtbeginn-Jäger",
-          "multiverseid": 273491
-        },
-        {
-          "language": "Spanish",
-          "name": "Depredadora del anochecer",
-          "multiverseid": 273775
-        },
-        {
-          "language": "Italian",
-          "name": "Predatrice del Crepuscolo",
-          "multiverseid": 274059
-        },
-        {
-          "language": "Japanese",
-          "name": "黄昏の捕食者",
-          "multiverseid": 274343
-        }
-      ],
-      "id": "e2f785eff004a097625fc007059efc38cf930591",
-      "imageName": "nightfall predator",
-      "layout": "double-faced",
-      "legalities": [
-        {
-          "format": "Commander",
-          "legality": "Legal"
-        },
-        {
-          "format": "Innistrad Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Vintage",
-          "legality": "Legal"
-        }
-      ],
-      "mciNumber": "176b",
-      "multiverseid": 222114,
-      "name": "Nightfall Predator",
-      "names": [
-        "Nightfall Predator",
-        "Daybreak Ranger"
-      ],
-      "number": "176a",
-      "originalText": "{R}, {T}: Nightfall Predator fights target creature. (Each deals damage equal to its power to the other.)\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform Nightfall Predator.",
-      "originalType": "Creature — Werewolf",
-      "power": "4",
-      "printings": [
-        "ISD"
-      ],
-      "rarity": "Rare",
-      "subtypes": [
-        "Werewolf"
-      ],
-      "text": "{R}, {T}: Nightfall Predator fights target creature. (Each deals damage equal to its power to the other.)\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform Nightfall Predator.",
-      "toughness": "4",
-      "type": "Creature — Werewolf",
-      "types": [
-        "Creature"
-      ]
-    },
-    {
-      "artist": "Steve Prescott",
-      "cmc": 3,
-      "colorIdentity": [
-        "G",
-        "R"
-      ],
-      "colors": [
-        "Green"
-      ],
-      "foreignNames": [
-        {
-          "language": "Chinese Simplified",
           "name": "破晓护林人",
           "multiverseid": 272074
         },
@@ -20692,10 +20589,10 @@
       "multiverseid": 222118,
       "name": "Daybreak Ranger",
       "names": [
-        "Nightfall Predator",
-        "Daybreak Ranger"
+        "Daybreak Ranger",
+        "Nightfall Predator"
       ],
-      "number": "176b",
+      "number": "176a",
       "originalText": "{T}: Daybreak Ranger deals 2 damage to target creature with flying.\nAt the beginning of each upkeep, if no spells were cast last turn, transform Daybreak Ranger.",
       "originalType": "Creature — Human Archer Werewolf",
       "power": "2",
@@ -20717,6 +20614,113 @@
       "text": "{T}: Daybreak Ranger deals 2 damage to target creature with flying.\nAt the beginning of each upkeep, if no spells were cast last turn, transform Daybreak Ranger.",
       "toughness": "2",
       "type": "Creature — Human Archer Werewolf",
+      "types": [
+        "Creature"
+      ]
+    },
+    {
+      "artist": "Steve Prescott",
+      "cmc": 3,
+      "colorIdentity": [
+        "G",
+        "R"
+      ],
+      "colors": [
+        "Green"
+      ],
+      "foreignNames": [
+        {
+          "language": "Chinese Simplified",
+          "name": "夜幕掠食者",
+          "multiverseid": 272071
+        },
+        {
+          "language": "Chinese Traditional",
+          "name": "夜幕掠食者",
+          "multiverseid": 272355
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Predador do Anoitecer",
+          "multiverseid": 272639
+        },
+        {
+          "language": "French",
+          "name": "Prédateur du crépuscule",
+          "multiverseid": 272923
+        },
+        {
+          "language": "Russian",
+          "name": "Сумеречная Хищница",
+          "multiverseid": 273207
+        },
+        {
+          "language": "German",
+          "name": "Nachtbeginn-Jäger",
+          "multiverseid": 273491
+        },
+        {
+          "language": "Spanish",
+          "name": "Depredadora del anochecer",
+          "multiverseid": 273775
+        },
+        {
+          "language": "Italian",
+          "name": "Predatrice del Crepuscolo",
+          "multiverseid": 274059
+        },
+        {
+          "language": "Japanese",
+          "name": "黄昏の捕食者",
+          "multiverseid": 274343
+        }
+      ],
+      "id": "e2f785eff004a097625fc007059efc38cf930591",
+      "imageName": "nightfall predator",
+      "layout": "double-faced",
+      "legalities": [
+        {
+          "format": "Commander",
+          "legality": "Legal"
+        },
+        {
+          "format": "Innistrad Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Legacy",
+          "legality": "Legal"
+        },
+        {
+          "format": "Modern",
+          "legality": "Legal"
+        },
+        {
+          "format": "Vintage",
+          "legality": "Legal"
+        }
+      ],
+      "mciNumber": "176b",
+      "multiverseid": 222114,
+      "name": "Nightfall Predator",
+      "names": [
+        "Daybreak Ranger",
+        "Nightfall Predator"
+      ],
+      "number": "176b",
+      "originalText": "{R}, {T}: Nightfall Predator fights target creature. (Each deals damage equal to its power to the other.)\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform Nightfall Predator.",
+      "originalType": "Creature — Werewolf",
+      "power": "4",
+      "printings": [
+        "ISD"
+      ],
+      "rarity": "Rare",
+      "subtypes": [
+        "Werewolf"
+      ],
+      "text": "{R}, {T}: Nightfall Predator fights target creature. (Each deals damage equal to its power to the other.)\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform Nightfall Predator.",
+      "toughness": "4",
+      "type": "Creature — Werewolf",
       "types": [
         "Creature"
       ]
@@ -21446,112 +21450,6 @@
       "colors": [
         "Green"
       ],
-      "foreignNames": [
-        {
-          "language": "Chinese Simplified",
-          "name": "卡兹特嚎狼",
-          "multiverseid": 272132
-        },
-        {
-          "language": "Chinese Traditional",
-          "name": "卡茲特嚎狼",
-          "multiverseid": 272416
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Uivador de Gatstaf",
-          "multiverseid": 272700
-        },
-        {
-          "language": "French",
-          "name": "Hurleur de Gatstaf",
-          "multiverseid": 272984
-        },
-        {
-          "language": "Russian",
-          "name": "Гастафский Завыватель",
-          "multiverseid": 273268
-        },
-        {
-          "language": "German",
-          "name": "Heuler von Gatztow",
-          "multiverseid": 273552
-        },
-        {
-          "language": "Spanish",
-          "name": "Aullador de Gatstaf",
-          "multiverseid": 273836
-        },
-        {
-          "language": "Italian",
-          "name": "Ululatore di Gatstaf",
-          "multiverseid": 274120
-        },
-        {
-          "language": "Japanese",
-          "name": "ガツタフの咆哮者",
-          "multiverseid": 274404
-        }
-      ],
-      "id": "dc89887253d0e0425f2c9ba732561cb285226157",
-      "imageName": "gatstaf howler",
-      "layout": "double-faced",
-      "legalities": [
-        {
-          "format": "Commander",
-          "legality": "Legal"
-        },
-        {
-          "format": "Innistrad Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Vintage",
-          "legality": "Legal"
-        }
-      ],
-      "mciNumber": "182b",
-      "multiverseid": 227290,
-      "name": "Gatstaf Howler",
-      "names": [
-        "Gatstaf Howler",
-        "Gatstaf Shepherd"
-      ],
-      "number": "182a",
-      "originalText": "Intimidate (This creature can't be blocked except by artifact creatures and/or creatures that share a color with it.)\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform Gatstaf Howler.",
-      "originalType": "Creature — Werewolf",
-      "power": "3",
-      "printings": [
-        "ISD"
-      ],
-      "rarity": "Uncommon",
-      "subtypes": [
-        "Werewolf"
-      ],
-      "text": "Intimidate (This creature can't be blocked except by artifact creatures and/or creatures that share a color with it.)\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform Gatstaf Howler.",
-      "toughness": "3",
-      "type": "Creature — Werewolf",
-      "types": [
-        "Creature"
-      ]
-    },
-    {
-      "artist": "Mark Evans",
-      "cmc": 2,
-      "colorIdentity": [
-        "G"
-      ],
-      "colors": [
-        "Green"
-      ],
       "flavor": "\"What is worse than a wolf in sheep's clothing?\"\n—Wolfhunter's riddle",
       "foreignNames": [
         {
@@ -21630,10 +21528,10 @@
       "multiverseid": 227409,
       "name": "Gatstaf Shepherd",
       "names": [
-        "Gatstaf Howler",
-        "Gatstaf Shepherd"
+        "Gatstaf Shepherd",
+        "Gatstaf Howler"
       ],
-      "number": "182b",
+      "number": "182a",
       "originalText": "At the beginning of each upkeep, if no spells were cast last turn, transform Gatstaf Shepherd.",
       "originalType": "Creature — Human Werewolf",
       "power": "2",
@@ -21654,6 +21552,112 @@
       "text": "At the beginning of each upkeep, if no spells were cast last turn, transform Gatstaf Shepherd.",
       "toughness": "2",
       "type": "Creature — Human Werewolf",
+      "types": [
+        "Creature"
+      ]
+    },
+    {
+      "artist": "Mark Evans",
+      "cmc": 2,
+      "colorIdentity": [
+        "G"
+      ],
+      "colors": [
+        "Green"
+      ],
+      "foreignNames": [
+        {
+          "language": "Chinese Simplified",
+          "name": "卡兹特嚎狼",
+          "multiverseid": 272132
+        },
+        {
+          "language": "Chinese Traditional",
+          "name": "卡茲特嚎狼",
+          "multiverseid": 272416
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Uivador de Gatstaf",
+          "multiverseid": 272700
+        },
+        {
+          "language": "French",
+          "name": "Hurleur de Gatstaf",
+          "multiverseid": 272984
+        },
+        {
+          "language": "Russian",
+          "name": "Гастафский Завыватель",
+          "multiverseid": 273268
+        },
+        {
+          "language": "German",
+          "name": "Heuler von Gatztow",
+          "multiverseid": 273552
+        },
+        {
+          "language": "Spanish",
+          "name": "Aullador de Gatstaf",
+          "multiverseid": 273836
+        },
+        {
+          "language": "Italian",
+          "name": "Ululatore di Gatstaf",
+          "multiverseid": 274120
+        },
+        {
+          "language": "Japanese",
+          "name": "ガツタフの咆哮者",
+          "multiverseid": 274404
+        }
+      ],
+      "id": "dc89887253d0e0425f2c9ba732561cb285226157",
+      "imageName": "gatstaf howler",
+      "layout": "double-faced",
+      "legalities": [
+        {
+          "format": "Commander",
+          "legality": "Legal"
+        },
+        {
+          "format": "Innistrad Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Legacy",
+          "legality": "Legal"
+        },
+        {
+          "format": "Modern",
+          "legality": "Legal"
+        },
+        {
+          "format": "Vintage",
+          "legality": "Legal"
+        }
+      ],
+      "mciNumber": "182b",
+      "multiverseid": 227290,
+      "name": "Gatstaf Howler",
+      "names": [
+        "Gatstaf Shepherd",
+        "Gatstaf Howler"
+      ],
+      "number": "182b",
+      "originalText": "Intimidate (This creature can't be blocked except by artifact creatures and/or creatures that share a color with it.)\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform Gatstaf Howler.",
+      "originalType": "Creature — Werewolf",
+      "power": "3",
+      "printings": [
+        "ISD"
+      ],
+      "rarity": "Uncommon",
+      "subtypes": [
+        "Werewolf"
+      ],
+      "text": "Intimidate (This creature can't be blocked except by artifact creatures and/or creatures that share a color with it.)\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform Gatstaf Howler.",
+      "toughness": "3",
+      "type": "Creature — Werewolf",
       "types": [
         "Creature"
       ]
@@ -21869,113 +21873,6 @@
       "colors": [
         "Green"
       ],
-      "flavor": "The boot prints became paw prints, and they led right back into town.",
-      "foreignNames": [
-        {
-          "language": "Chinese Simplified",
-          "name": "展爪妄狼",
-          "multiverseid": 272075
-        },
-        {
-          "language": "Chinese Traditional",
-          "name": "展爪妄狼",
-          "multiverseid": 272359
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Devassos Krallenhorde",
-          "multiverseid": 272643
-        },
-        {
-          "language": "French",
-          "name": "Libertins Krallenhorde",
-          "multiverseid": 272927
-        },
-        {
-          "language": "Russian",
-          "name": "Кралленордские Беспутники",
-          "multiverseid": 273211
-        },
-        {
-          "language": "German",
-          "name": "Krallenhorde-Verruchte",
-          "multiverseid": 273495
-        },
-        {
-          "language": "Spanish",
-          "name": "Salvajes Krallenhorde",
-          "multiverseid": 273779
-        },
-        {
-          "language": "Italian",
-          "name": "Libertini Krallenhorde",
-          "multiverseid": 274063
-        },
-        {
-          "language": "Japanese",
-          "name": "爪の群れののけ者",
-          "multiverseid": 274347
-        }
-      ],
-      "id": "a93c467b9cbd36f852eea3043dd4d86bce5af631",
-      "imageName": "krallenhorde wantons",
-      "layout": "double-faced",
-      "legalities": [
-        {
-          "format": "Commander",
-          "legality": "Legal"
-        },
-        {
-          "format": "Innistrad Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Vintage",
-          "legality": "Legal"
-        }
-      ],
-      "mciNumber": "185b",
-      "multiverseid": 222123,
-      "name": "Krallenhorde Wantons",
-      "names": [
-        "Krallenhorde Wantons",
-        "Grizzled Outcasts"
-      ],
-      "number": "185a",
-      "originalText": "At the beginning of each upkeep, if a player cast two or more spells last turn, transform Krallenhorde Wantons.",
-      "originalType": "Creature — Werewolf",
-      "power": "7",
-      "printings": [
-        "ISD"
-      ],
-      "rarity": "Common",
-      "subtypes": [
-        "Werewolf"
-      ],
-      "text": "At the beginning of each upkeep, if a player cast two or more spells last turn, transform Krallenhorde Wantons.",
-      "toughness": "7",
-      "type": "Creature — Werewolf",
-      "types": [
-        "Creature"
-      ]
-    },
-    {
-      "artist": "Randy Gallegos",
-      "cmc": 5,
-      "colorIdentity": [
-        "G"
-      ],
-      "colors": [
-        "Green"
-      ],
       "flavor": "Seen as unsavory, the hunters were never allowed in town—until one night they vanished.",
       "foreignNames": [
         {
@@ -22054,10 +21951,10 @@
       "multiverseid": 222124,
       "name": "Grizzled Outcasts",
       "names": [
-        "Krallenhorde Wantons",
-        "Grizzled Outcasts"
+        "Grizzled Outcasts",
+        "Krallenhorde Wantons"
       ],
-      "number": "185b",
+      "number": "185a",
       "originalText": "At the beginning of each upkeep, if no spells were cast last turn, transform Grizzled Outcasts.",
       "originalType": "Creature — Human Werewolf",
       "power": "4",
@@ -22078,6 +21975,113 @@
       "text": "At the beginning of each upkeep, if no spells were cast last turn, transform Grizzled Outcasts.",
       "toughness": "4",
       "type": "Creature — Human Werewolf",
+      "types": [
+        "Creature"
+      ]
+    },
+    {
+      "artist": "Randy Gallegos",
+      "cmc": 5,
+      "colorIdentity": [
+        "G"
+      ],
+      "colors": [
+        "Green"
+      ],
+      "flavor": "The boot prints became paw prints, and they led right back into town.",
+      "foreignNames": [
+        {
+          "language": "Chinese Simplified",
+          "name": "展爪妄狼",
+          "multiverseid": 272075
+        },
+        {
+          "language": "Chinese Traditional",
+          "name": "展爪妄狼",
+          "multiverseid": 272359
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Devassos Krallenhorde",
+          "multiverseid": 272643
+        },
+        {
+          "language": "French",
+          "name": "Libertins Krallenhorde",
+          "multiverseid": 272927
+        },
+        {
+          "language": "Russian",
+          "name": "Кралленордские Беспутники",
+          "multiverseid": 273211
+        },
+        {
+          "language": "German",
+          "name": "Krallenhorde-Verruchte",
+          "multiverseid": 273495
+        },
+        {
+          "language": "Spanish",
+          "name": "Salvajes Krallenhorde",
+          "multiverseid": 273779
+        },
+        {
+          "language": "Italian",
+          "name": "Libertini Krallenhorde",
+          "multiverseid": 274063
+        },
+        {
+          "language": "Japanese",
+          "name": "爪の群れののけ者",
+          "multiverseid": 274347
+        }
+      ],
+      "id": "a93c467b9cbd36f852eea3043dd4d86bce5af631",
+      "imageName": "krallenhorde wantons",
+      "layout": "double-faced",
+      "legalities": [
+        {
+          "format": "Commander",
+          "legality": "Legal"
+        },
+        {
+          "format": "Innistrad Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Legacy",
+          "legality": "Legal"
+        },
+        {
+          "format": "Modern",
+          "legality": "Legal"
+        },
+        {
+          "format": "Vintage",
+          "legality": "Legal"
+        }
+      ],
+      "mciNumber": "185b",
+      "multiverseid": 222123,
+      "name": "Krallenhorde Wantons",
+      "names": [
+        "Grizzled Outcasts",
+        "Krallenhorde Wantons"
+      ],
+      "number": "185b",
+      "originalText": "At the beginning of each upkeep, if a player cast two or more spells last turn, transform Krallenhorde Wantons.",
+      "originalType": "Creature — Werewolf",
+      "power": "7",
+      "printings": [
+        "ISD"
+      ],
+      "rarity": "Common",
+      "subtypes": [
+        "Werewolf"
+      ],
+      "text": "At the beginning of each upkeep, if a player cast two or more spells last turn, transform Krallenhorde Wantons.",
+      "toughness": "7",
+      "type": "Creature — Werewolf",
       "types": [
         "Creature"
       ]
@@ -22859,119 +22863,6 @@
       "colors": [
         "Green"
       ],
-      "foreignNames": [
-        {
-          "language": "Chinese Simplified",
-          "name": "嚎群首领",
-          "multiverseid": 272078
-        },
-        {
-          "language": "Chinese Traditional",
-          "name": "嚎群首領",
-          "multiverseid": 272362
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Alfa da Alcateia Uivante",
-          "multiverseid": 272646
-        },
-        {
-          "language": "French",
-          "name": "Alpha hurlemeute",
-          "multiverseid": 272930
-        },
-        {
-          "language": "Russian",
-          "name": "Вожак Воющей Стаи",
-          "multiverseid": 273214
-        },
-        {
-          "language": "German",
-          "name": "Alphatier des Heulerrudels",
-          "multiverseid": 273498
-        },
-        {
-          "language": "Spanish",
-          "name": "Alfa de la jauría aullante",
-          "multiverseid": 273782
-        },
-        {
-          "language": "Italian",
-          "name": "Ulubranco Alfa",
-          "multiverseid": 274066
-        },
-        {
-          "language": "Japanese",
-          "name": "吠え群れの頭目",
-          "multiverseid": 274350
-        }
-      ],
-      "id": "c0f24354fa019da0cc7ac2744022b9e005655cd0",
-      "imageName": "howlpack alpha",
-      "layout": "double-faced",
-      "legalities": [
-        {
-          "format": "Commander",
-          "legality": "Legal"
-        },
-        {
-          "format": "Innistrad Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Vintage",
-          "legality": "Legal"
-        }
-      ],
-      "mciNumber": "193b",
-      "multiverseid": 222183,
-      "name": "Howlpack Alpha",
-      "names": [
-        "Howlpack Alpha",
-        "Mayor of Avabruck"
-      ],
-      "number": "193a",
-      "originalText": "Other Werewolf and Wolf creatures you control get +1/+1.\nAt the beginning of your end step, put a 2/2 green Wolf creature token onto the battlefield.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform Howlpack Alpha.",
-      "originalType": "Creature — Werewolf",
-      "power": "3",
-      "printings": [
-        "pPRE",
-        "ISD"
-      ],
-      "rarity": "Rare",
-      "rulings": [
-        {
-          "date": "2011-09-22",
-          "text": "A creature that is both a Werewolf and a Wolf will only get +1/+1 from Howlpack Alpha."
-        }
-      ],
-      "subtypes": [
-        "Werewolf"
-      ],
-      "text": "Each other creature you control that's a Werewolf or a Wolf gets +1/+1.\nAt the beginning of your end step, create a 2/2 green Wolf creature token.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform Howlpack Alpha.",
-      "toughness": "3",
-      "type": "Creature — Werewolf",
-      "types": [
-        "Creature"
-      ]
-    },
-    {
-      "artist": "Svetlin Velinov",
-      "cmc": 2,
-      "colorIdentity": [
-        "G"
-      ],
-      "colors": [
-        "Green"
-      ],
       "flavor": "He can deny his true nature for only so long.",
       "foreignNames": [
         {
@@ -23050,10 +22941,10 @@
       "multiverseid": 222189,
       "name": "Mayor of Avabruck",
       "names": [
-        "Howlpack Alpha",
-        "Mayor of Avabruck"
+        "Mayor of Avabruck",
+        "Howlpack Alpha"
       ],
-      "number": "193b",
+      "number": "193a",
       "originalText": "Other Human creatures you control get +1/+1.\nAt the beginning of each upkeep, if no spells were cast last turn, transform Mayor of Avabruck.",
       "originalType": "Creature — Human Advisor Werewolf",
       "power": "1",
@@ -23076,6 +22967,119 @@
       "text": "Other Human creatures you control get +1/+1.\nAt the beginning of each upkeep, if no spells were cast last turn, transform Mayor of Avabruck.",
       "toughness": "1",
       "type": "Creature — Human Advisor Werewolf",
+      "types": [
+        "Creature"
+      ]
+    },
+    {
+      "artist": "Svetlin Velinov",
+      "cmc": 2,
+      "colorIdentity": [
+        "G"
+      ],
+      "colors": [
+        "Green"
+      ],
+      "foreignNames": [
+        {
+          "language": "Chinese Simplified",
+          "name": "嚎群首领",
+          "multiverseid": 272078
+        },
+        {
+          "language": "Chinese Traditional",
+          "name": "嚎群首領",
+          "multiverseid": 272362
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Alfa da Alcateia Uivante",
+          "multiverseid": 272646
+        },
+        {
+          "language": "French",
+          "name": "Alpha hurlemeute",
+          "multiverseid": 272930
+        },
+        {
+          "language": "Russian",
+          "name": "Вожак Воющей Стаи",
+          "multiverseid": 273214
+        },
+        {
+          "language": "German",
+          "name": "Alphatier des Heulerrudels",
+          "multiverseid": 273498
+        },
+        {
+          "language": "Spanish",
+          "name": "Alfa de la jauría aullante",
+          "multiverseid": 273782
+        },
+        {
+          "language": "Italian",
+          "name": "Ulubranco Alfa",
+          "multiverseid": 274066
+        },
+        {
+          "language": "Japanese",
+          "name": "吠え群れの頭目",
+          "multiverseid": 274350
+        }
+      ],
+      "id": "c0f24354fa019da0cc7ac2744022b9e005655cd0",
+      "imageName": "howlpack alpha",
+      "layout": "double-faced",
+      "legalities": [
+        {
+          "format": "Commander",
+          "legality": "Legal"
+        },
+        {
+          "format": "Innistrad Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Legacy",
+          "legality": "Legal"
+        },
+        {
+          "format": "Modern",
+          "legality": "Legal"
+        },
+        {
+          "format": "Vintage",
+          "legality": "Legal"
+        }
+      ],
+      "mciNumber": "193b",
+      "multiverseid": 222183,
+      "name": "Howlpack Alpha",
+      "names": [
+        "Mayor of Avabruck",
+        "Howlpack Alpha"
+      ],
+      "number": "193b",
+      "originalText": "Other Werewolf and Wolf creatures you control get +1/+1.\nAt the beginning of your end step, put a 2/2 green Wolf creature token onto the battlefield.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform Howlpack Alpha.",
+      "originalType": "Creature — Werewolf",
+      "power": "3",
+      "printings": [
+        "pPRE",
+        "ISD"
+      ],
+      "rarity": "Rare",
+      "rulings": [
+        {
+          "date": "2011-09-22",
+          "text": "A creature that is both a Werewolf and a Wolf will only get +1/+1 from Howlpack Alpha."
+        }
+      ],
+      "subtypes": [
+        "Werewolf"
+      ],
+      "text": "Each other creature you control that's a Werewolf or a Wolf gets +1/+1.\nAt the beginning of your end step, create a 2/2 green Wolf creature token.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform Howlpack Alpha.",
+      "toughness": "3",
+      "type": "Creature — Werewolf",
       "types": [
         "Creature"
       ]
@@ -23483,6 +23487,10 @@
           "legality": "Legal"
         },
         {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Khans of Tarkir Block",
           "legality": "Legal"
         },
@@ -23540,7 +23548,8 @@
         "M15",
         "KTK",
         "DTK",
-        "RIX"
+        "RIX",
+        "DDU"
       ],
       "rarity": "Common",
       "text": "Destroy target artifact or enchantment.",
@@ -24420,7 +24429,7 @@
         },
         {
           "date": "2011-09-22",
-          "text": "If Splinterfright's controller has only one card in his or her library, he or she puts that card into his or her graveyard."
+          "text": "If Splinterfright's controller has only one card in their library, they put that card into their graveyard."
         }
       ],
       "subtypes": [
@@ -24640,16 +24649,16 @@
       "rarity": "Mythic Rare",
       "rulings": [
         {
-          "date": "2011-09-22",
-          "text": "When the ability resolves, Tree of Redemption's toughness will become your former life total and you will gain or lose an amount of life necessary so that your life total equals Tree of Redemption's former toughness. Other effects that interact with life gain or life loss will interact with this effect accordingly."
+          "date": "2018-03-16",
+          "text": "If Tree of Redemption isn't on the battlefield when its activated ability resolves, the exchange can't happen and the ability will have no effect."
         },
         {
-          "date": "2011-09-22",
-          "text": "Any toughness-modifying effects, counters, Auras, or Equipment will apply after its toughness is set to your former life total. For example, say Tree of Redemption is enchanted with Spectral Flight (which makes it 2/15) and your life total is 7. After the exchange, Tree of Redemption would be a 2/9 creature (its toughness became 7, which was then modified by Spectral Flight) and your life total would be 15."
+          "date": "2018-03-16",
+          "text": "When its activated ability resolves, Tree of Redemption's toughness will become your former life total and you will gain or lose an amount of life necessary so that your life total equals Tree of Redemption's former toughness. Other effects that interact with life gain or life loss will interact with this effect accordingly."
         },
         {
-          "date": "2011-09-22",
-          "text": "If Tree of Redemption isn't on the battlefield when the ability resolves, the exchange can't happen and the ability will have no effect."
+          "date": "2018-03-16",
+          "text": "Any toughness-modifying effects, counters, Auras, or Equipment will apply after its toughness is set to your former life total. For example, say Tree of Redemption is enchanted with Lunarch Mantle (which makes it 2/15) and your life total is 7. After the exchange, Tree of Redemption would be a 2/9 creature (its toughness became 7, which was then modified by Lunarch Mantle) and your life total would be 15."
         }
       ],
       "subtypes": [
@@ -24900,113 +24909,6 @@
       "colors": [
         "Green"
       ],
-      "flavor": "Estwald's citizens don't dislike outsiders—they taste just fine.",
-      "foreignNames": [
-        {
-          "language": "Chinese Simplified",
-          "name": "恩资森嚎群",
-          "multiverseid": 272090
-        },
-        {
-          "language": "Chinese Traditional",
-          "name": "恩資森嚎群",
-          "multiverseid": 272374
-        },
-        {
-          "language": "Portuguese (Brazil)",
-          "name": "Alcateia Uivante de Estwald",
-          "multiverseid": 272658
-        },
-        {
-          "language": "French",
-          "name": "Hurlemeute d'Estwald",
-          "multiverseid": 272942
-        },
-        {
-          "language": "Russian",
-          "name": "Эствальдская Воющая Стая",
-          "multiverseid": 273226
-        },
-        {
-          "language": "German",
-          "name": "Heulerrudel aus Eschwald",
-          "multiverseid": 273510
-        },
-        {
-          "language": "Spanish",
-          "name": "Jauría aullante de Estwald",
-          "multiverseid": 273794
-        },
-        {
-          "language": "Italian",
-          "name": "Ulubranco di Estwald",
-          "multiverseid": 274078
-        },
-        {
-          "language": "Japanese",
-          "name": "エストワルドの吠え群れ",
-          "multiverseid": 274362
-        }
-      ],
-      "id": "934c3e0fec2c53f657060af8742639efffb5e60e",
-      "imageName": "howlpack of estwald",
-      "layout": "double-faced",
-      "legalities": [
-        {
-          "format": "Commander",
-          "legality": "Legal"
-        },
-        {
-          "format": "Innistrad Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Vintage",
-          "legality": "Legal"
-        }
-      ],
-      "mciNumber": "209b",
-      "multiverseid": 222906,
-      "name": "Howlpack of Estwald",
-      "names": [
-        "Howlpack of Estwald",
-        "Villagers of Estwald"
-      ],
-      "number": "209a",
-      "originalText": "At the beginning of each upkeep, if a player cast two or more spells last turn, transform Howlpack of Estwald.",
-      "originalType": "Creature — Werewolf",
-      "power": "4",
-      "printings": [
-        "ISD"
-      ],
-      "rarity": "Common",
-      "subtypes": [
-        "Werewolf"
-      ],
-      "text": "At the beginning of each upkeep, if a player cast two or more spells last turn, transform Howlpack of Estwald.",
-      "toughness": "6",
-      "type": "Creature — Werewolf",
-      "types": [
-        "Creature"
-      ]
-    },
-    {
-      "artist": "Kev Walker",
-      "cmc": 3,
-      "colorIdentity": [
-        "G"
-      ],
-      "colors": [
-        "Green"
-      ],
       "flavor": "You can spot a werewolf-infested town by its lack of butcher shops.",
       "foreignNames": [
         {
@@ -25085,10 +24987,10 @@
       "multiverseid": 222915,
       "name": "Villagers of Estwald",
       "names": [
-        "Howlpack of Estwald",
-        "Villagers of Estwald"
+        "Villagers of Estwald",
+        "Howlpack of Estwald"
       ],
-      "number": "209b",
+      "number": "209a",
       "originalText": "At the beginning of each upkeep, if no spells were cast last turn, transform Villagers of Estwald.",
       "originalType": "Creature — Human Werewolf",
       "power": "2",
@@ -25109,6 +25011,113 @@
       "text": "At the beginning of each upkeep, if no spells were cast last turn, transform Villagers of Estwald.",
       "toughness": "3",
       "type": "Creature — Human Werewolf",
+      "types": [
+        "Creature"
+      ]
+    },
+    {
+      "artist": "Kev Walker",
+      "cmc": 3,
+      "colorIdentity": [
+        "G"
+      ],
+      "colors": [
+        "Green"
+      ],
+      "flavor": "Estwald's citizens don't dislike outsiders—they taste just fine.",
+      "foreignNames": [
+        {
+          "language": "Chinese Simplified",
+          "name": "恩资森嚎群",
+          "multiverseid": 272090
+        },
+        {
+          "language": "Chinese Traditional",
+          "name": "恩資森嚎群",
+          "multiverseid": 272374
+        },
+        {
+          "language": "Portuguese (Brazil)",
+          "name": "Alcateia Uivante de Estwald",
+          "multiverseid": 272658
+        },
+        {
+          "language": "French",
+          "name": "Hurlemeute d'Estwald",
+          "multiverseid": 272942
+        },
+        {
+          "language": "Russian",
+          "name": "Эствальдская Воющая Стая",
+          "multiverseid": 273226
+        },
+        {
+          "language": "German",
+          "name": "Heulerrudel aus Eschwald",
+          "multiverseid": 273510
+        },
+        {
+          "language": "Spanish",
+          "name": "Jauría aullante de Estwald",
+          "multiverseid": 273794
+        },
+        {
+          "language": "Italian",
+          "name": "Ulubranco di Estwald",
+          "multiverseid": 274078
+        },
+        {
+          "language": "Japanese",
+          "name": "エストワルドの吠え群れ",
+          "multiverseid": 274362
+        }
+      ],
+      "id": "934c3e0fec2c53f657060af8742639efffb5e60e",
+      "imageName": "howlpack of estwald",
+      "layout": "double-faced",
+      "legalities": [
+        {
+          "format": "Commander",
+          "legality": "Legal"
+        },
+        {
+          "format": "Innistrad Block",
+          "legality": "Legal"
+        },
+        {
+          "format": "Legacy",
+          "legality": "Legal"
+        },
+        {
+          "format": "Modern",
+          "legality": "Legal"
+        },
+        {
+          "format": "Vintage",
+          "legality": "Legal"
+        }
+      ],
+      "mciNumber": "209b",
+      "multiverseid": 222906,
+      "name": "Howlpack of Estwald",
+      "names": [
+        "Villagers of Estwald",
+        "Howlpack of Estwald"
+      ],
+      "number": "209b",
+      "originalText": "At the beginning of each upkeep, if a player cast two or more spells last turn, transform Howlpack of Estwald.",
+      "originalType": "Creature — Werewolf",
+      "power": "4",
+      "printings": [
+        "ISD"
+      ],
+      "rarity": "Common",
+      "subtypes": [
+        "Werewolf"
+      ],
+      "text": "At the beginning of each upkeep, if a player cast two or more spells last turn, transform Howlpack of Estwald.",
+      "toughness": "6",
+      "type": "Creature — Werewolf",
       "types": [
         "Creature"
       ]
@@ -25700,7 +25709,7 @@
       "rulings": [
         {
           "date": "2011-09-22",
-          "text": "If the targeted creature is an illegal target by the time Grimgrin's last ability resolves, the entire ability is countered and none of its effects will occur. You won't put a +1/+1 counter on Grimgrin."
+          "text": "If the targeted creature is an illegal target by the time Grimgrin's last ability resolves, the entire ability doesn't resolve and none of its effects will occur. You won't put a +1/+1 counter on Grimgrin."
         },
         {
           "date": "2011-09-22",
@@ -25938,17 +25947,17 @@
       "rulings": [
         {
           "date": "2009-10-01",
-          "text": "If a Blazing Torch controlled by one player somehow winds up equipping a creature a different player controls, the damage ability can't be activated by either player. Only the creature's controller may activate the ability — but since that player can't sacrifice Blazing Torch (a permanent he or she doesn't control), the ability's cost can't be paid."
+          "text": "If a Blazing Torch controlled by one player somehow winds up equipping a creature a different player controls, the damage ability can't be activated by either player. Only the creature's controller may activate the ability — but since that player can't sacrifice Blazing Torch (a permanent they don't control), the ability's cost can't be paid."
         },
         {
           "date": "2009-10-01",
-          "text": "The source of the damage is Blazing Torch, not the equipped creature. However, the equipped creature's ability is what targets the creature or player. If Blazing Torch is equipped to a red creature, for example, the ability couldn't target a creature with protection from red. It could target a creature with protection from artifacts, but all the damage would be prevented."
+          "text": "The source of the damage is Blazing Torch, not the equipped creature. However, the equipped creature's ability is what targets the permanent or player. If Blazing Torch is equipped to a red creature, for example, the ability couldn't target a creature with protection from red. It could target a creature with protection from artifacts, but all the damage would be prevented."
         }
       ],
       "subtypes": [
         "Equipment"
       ],
-      "text": "Equipped creature can't be blocked by Vampires or Zombies.\nEquipped creature has \"{T}, Sacrifice Blazing Torch: Blazing Torch deals 2 damage to target creature or player.\"\nEquip {1} ({1}: Attach to target creature you control. Equip only as a sorcery.)",
+      "text": "Equipped creature can't be blocked by Vampires or Zombies.\nEquipped creature has \"{T}, Sacrifice Blazing Torch: Blazing Torch deals 2 damage to any target.\"\nEquip {1} ({1}: Attach to target creature you control. Equip only as a sorcery.)",
       "type": "Artifact — Equipment",
       "types": [
         "Artifact"
@@ -26138,7 +26147,7 @@
         "ISD"
       ],
       "rarity": "Uncommon",
-      "text": "{3}, {T}: Target player puts the bottom card of his or her library into his or her graveyard. If it's a creature card, you create a 2/2 black Zombie creature token.",
+      "text": "{3}, {T}: Target player puts the bottom card of their library into their graveyard. If it's a creature card, you create a 2/2 black Zombie creature token.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -26752,7 +26761,7 @@
         "ISD"
       ],
       "rarity": "Common",
-      "text": "{T}: Each player puts the top card of his or her library into his or her graveyard.",
+      "text": "{T}: Each player puts the top card of their library into their graveyard.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -26851,7 +26860,7 @@
           "text": "The targeted player chooses which card to exile when the ability resolves."
         }
       ],
-      "text": "{2}, {T}: Target player exiles a card from his or her graveyard. If it's a creature card, you gain 2 life.",
+      "text": "{2}, {T}: Target player exiles a card from their graveyard. If it's a creature card, you gain 2 life.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -27732,6 +27741,10 @@
           "legality": "Legal"
         },
         {
+          "format": "Ixalan Block",
+          "legality": "Legal"
+        },
+        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -27866,17 +27879,13 @@
         },
         {
           "date": "2017-11-17",
-          "text": "If the equipped creature is attacking a planeswalker in any game except a Two-Headed Giant game, the controller of the planeswalker is the defending player."
-        },
-        {
-          "date": "2017-11-17",
-          "text": "If the equipped creature is attacking in a Two-Headed Giant game, the controller of the attacking creature chooses one of the two defending players, even if the creature is attacking a planeswalker."
+          "text": "If the equipped creature is attacking a planeswalker, the controller of the planeswalker is the defending player."
         }
       ],
       "subtypes": [
         "Equipment"
       ],
-      "text": "Whenever equipped creature attacks, defending player reveals cards from the top of his or her library until he or she reveals a land card. The creature gets +1/+0 until end of turn for each card revealed this way. That player puts the revealed cards into his or her graveyard.\nEquip {2}",
+      "text": "Whenever equipped creature attacks, defending player reveals cards from the top of their library until they reveal a land card. The creature gets +1/+0 until end of turn for each card revealed this way. That player puts the revealed cards into their graveyard.\nEquip {2}",
       "type": "Artifact — Equipment",
       "types": [
         "Artifact"
@@ -28162,10 +28171,11 @@
       "originalText": "Clifftop Retreat enters the battlefield tapped unless you control a Mountain or a Plains.\n{T}: Add {R} or {W} to your mana pool.",
       "originalType": "Land",
       "printings": [
-        "ISD"
+        "ISD",
+        "DOM"
       ],
       "rarity": "Rare",
-      "text": "Clifftop Retreat enters the battlefield tapped unless you control a Mountain or a Plains.\n{T}: Add {R} or {W} to your mana pool.",
+      "text": "Clifftop Retreat enters the battlefield tapped unless you control a Mountain or a Plains.\n{T}: Add {R} or {W}.",
       "type": "Land",
       "types": [
         "Land"
@@ -28261,7 +28271,7 @@
         "ISD"
       ],
       "rarity": "Rare",
-      "text": "{T}: Add {C} to your mana pool.\n{2}{G}{W}, {T}: Put a +1/+1 counter on each creature you control.",
+      "text": "{T}: Add {C}.\n{2}{G}{W}, {T}: Put a +1/+1 counter on each creature you control.",
       "type": "Land",
       "types": [
         "Land"
@@ -28365,18 +28375,18 @@
       "rulings": [
         {
           "date": "2006-05-01",
-          "text": "If you target Ghost Quarter with its own ability, the ability will be countered because its target is no longer on the battlefield. You won't get to search for a land card."
+          "text": "If you target Ghost Quarter with its own ability, the ability won't resolve because its target is no longer on the battlefield. You won't get to search for a land card."
         },
         {
           "date": "2011-09-22",
-          "text": "If the targeted land is an illegal target by the time Ghost Quarter's ability resolves, it will be countered and none of its effects will happen. The land's controller won't get to search for a basic land card."
+          "text": "If the targeted land is an illegal target by the time Ghost Quarter's ability resolves, it won't resolve and none of its effects will happen. The land's controller won't get to search for a basic land card."
         },
         {
           "date": "2013-07-01",
           "text": "The target land's controller gets to search for a basic land card even if that land wasn't destroyed by Ghost Quarter's ability. This may happen because the land has indestructible or because it was regenerated."
         }
       ],
-      "text": "{T}: Add {C} to your mana pool.\n{T}, Sacrifice Ghost Quarter: Destroy target land. Its controller may search his or her library for a basic land card, put it onto the battlefield, then shuffle his or her library.",
+      "text": "{T}: Add {C}.\n{T}, Sacrifice Ghost Quarter: Destroy target land. Its controller may search their library for a basic land card, put it onto the battlefield, then shuffle their library.",
       "type": "Land",
       "types": [
         "Land"
@@ -28469,10 +28479,11 @@
       "originalText": "Hinterland Harbor enters the battlefield tapped unless you control a Forest or an Island.\n{T}: Add {G} or {U} to your mana pool.",
       "originalType": "Land",
       "printings": [
-        "ISD"
+        "ISD",
+        "DOM"
       ],
       "rarity": "Rare",
-      "text": "Hinterland Harbor enters the battlefield tapped unless you control a Forest or an Island.\n{T}: Add {G} or {U} to your mana pool.",
+      "text": "Hinterland Harbor enters the battlefield tapped unless you control a Forest or an Island.\n{T}: Add {G} or {U}.",
       "type": "Land",
       "types": [
         "Land"
@@ -28566,10 +28577,11 @@
       "originalType": "Land",
       "printings": [
         "ISD",
-        "MD1"
+        "MD1",
+        "DOM"
       ],
       "rarity": "Rare",
-      "text": "Isolated Chapel enters the battlefield tapped unless you control a Plains or a Swamp.\n{T}: Add {W} or {B} to your mana pool.",
+      "text": "Isolated Chapel enters the battlefield tapped unless you control a Plains or a Swamp.\n{T}: Add {W} or {B}.",
       "type": "Land",
       "types": [
         "Land"
@@ -28666,7 +28678,7 @@
         "V13"
       ],
       "rarity": "Rare",
-      "text": "{T}: Add {C} to your mana pool.\n{X}{R}{G}, {T}: Target creature gets +X/+0 and gains trample until end of turn.",
+      "text": "{T}: Add {C}.\n{X}{R}{G}, {T}: Target creature gets +X/+0 and gains trample until end of turn.",
       "type": "Land",
       "types": [
         "Land"
@@ -28761,7 +28773,7 @@
         "ISD"
       ],
       "rarity": "Rare",
-      "text": "{T}: Add {C} to your mana pool.\n{W}{U}, {T}, Exile a creature card from your graveyard: Create a 1/1 white Spirit creature token with flying.",
+      "text": "{T}: Add {C}.\n{W}{U}, {T}, Exile a creature card from your graveyard: Create a 1/1 white Spirit creature token with flying.",
       "type": "Land",
       "types": [
         "Land"
@@ -28857,7 +28869,7 @@
         "ISD"
       ],
       "rarity": "Rare",
-      "text": "{T}: Add {C} to your mana pool.\n{1}{U}{B}, {T}: Target player puts the top three cards of his or her library into his or her graveyard.",
+      "text": "{T}: Add {C}.\n{1}{U}{B}, {T}: Target player puts the top three cards of their library into their graveyard.",
       "type": "Land",
       "types": [
         "Land"
@@ -28960,7 +28972,7 @@
         "IMA"
       ],
       "rarity": "Common",
-      "text": "{T}: Add {C} to your mana pool.\n{1}, {T}: Add one mana of any color to your mana pool.",
+      "text": "{T}: Add {C}.\n{1}, {T}: Add one mana of any color.",
       "type": "Land",
       "types": [
         "Land"
@@ -29062,7 +29074,7 @@
           "text": "Like other lands, Stensia Bloodhall is colorless. The damage it deals is from a colorless source, even though activating its ability requires colored mana."
         }
       ],
-      "text": "{T}: Add {C} to your mana pool.\n{3}{B}{R}, {T}: Stensia Bloodhall deals 2 damage to target player.",
+      "text": "{T}: Add {C}.\n{3}{B}{R}, {T}: Stensia Bloodhall deals 2 damage to target player or planeswalker.",
       "type": "Land",
       "types": [
         "Land"
@@ -29155,10 +29167,11 @@
       "originalText": "Sulfur Falls enters the battlefield tapped unless you control an Island or a Mountain.\n{T}: Add {U} or {R} to your mana pool.",
       "originalType": "Land",
       "printings": [
-        "ISD"
+        "ISD",
+        "DOM"
       ],
       "rarity": "Rare",
-      "text": "Sulfur Falls enters the battlefield tapped unless you control an Island or a Mountain.\n{T}: Add {U} or {R} to your mana pool.",
+      "text": "Sulfur Falls enters the battlefield tapped unless you control an Island or a Mountain.\n{T}: Add {U} or {R}.",
       "type": "Land",
       "types": [
         "Land"
@@ -29251,10 +29264,11 @@
       "originalText": "Woodland Cemetery enters the battlefield tapped unless you control a Swamp or a Forest.\n{T}: Add {B} or {G} to your mana pool.",
       "originalType": "Land",
       "printings": [
-        "ISD"
+        "ISD",
+        "DOM"
       ],
       "rarity": "Rare",
-      "text": "Woodland Cemetery enters the battlefield tapped unless you control a Swamp or a Forest.\n{T}: Add {B} or {G} to your mana pool.",
+      "text": "Woodland Cemetery enters the battlefield tapped unless you control a Swamp or a Forest.\n{T}: Add {B} or {G}.",
       "type": "Land",
       "types": [
         "Land"
@@ -29630,7 +29644,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -30019,7 +30034,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -30408,7 +30424,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -30482,16 +30499,6 @@
         {
           "language": "French",
           "name": "Île",
-          "multiverseid": 273099
-        },
-        {
-          "language": "French",
-          "name": "Île",
-          "multiverseid": 273100
-        },
-        {
-          "language": "French",
-          "name": "Île",
           "multiverseid": 273101
         },
         {
@@ -30543,6 +30550,16 @@
           "language": "Italian",
           "name": "Isola",
           "multiverseid": 274235
+        },
+        {
+          "language": "Italian",
+          "name": "Isola",
+          "multiverseid": 274236
+        },
+        {
+          "language": "Italian",
+          "name": "Isola",
+          "multiverseid": 274237
         },
         {
           "language": "Japanese",
@@ -30796,7 +30813,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -30870,16 +30889,6 @@
         {
           "language": "French",
           "name": "Île",
-          "multiverseid": 273099
-        },
-        {
-          "language": "French",
-          "name": "Île",
-          "multiverseid": 273100
-        },
-        {
-          "language": "French",
-          "name": "Île",
           "multiverseid": 273101
         },
         {
@@ -30931,6 +30940,16 @@
           "language": "Italian",
           "name": "Isola",
           "multiverseid": 274235
+        },
+        {
+          "language": "Italian",
+          "name": "Isola",
+          "multiverseid": 274236
+        },
+        {
+          "language": "Italian",
+          "name": "Isola",
+          "multiverseid": 274237
         },
         {
           "language": "Japanese",
@@ -31184,7 +31203,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -31258,16 +31279,6 @@
         {
           "language": "French",
           "name": "Île",
-          "multiverseid": 273099
-        },
-        {
-          "language": "French",
-          "name": "Île",
-          "multiverseid": 273100
-        },
-        {
-          "language": "French",
-          "name": "Île",
           "multiverseid": 273101
         },
         {
@@ -31319,6 +31330,16 @@
           "language": "Italian",
           "name": "Isola",
           "multiverseid": 274235
+        },
+        {
+          "language": "Italian",
+          "name": "Isola",
+          "multiverseid": 274236
+        },
+        {
+          "language": "Italian",
+          "name": "Isola",
+          "multiverseid": 274237
         },
         {
           "language": "Japanese",
@@ -31572,7 +31593,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -31646,17 +31669,7 @@
         {
           "language": "French",
           "name": "Marais",
-          "multiverseid": 273102
-        },
-        {
-          "language": "French",
-          "name": "Marais",
           "multiverseid": 273103
-        },
-        {
-          "language": "French",
-          "name": "Marais",
-          "multiverseid": 273104
         },
         {
           "language": "Russian",
@@ -31706,7 +31719,17 @@
         {
           "language": "Italian",
           "name": "Palude",
+          "multiverseid": 274238
+        },
+        {
+          "language": "Italian",
+          "name": "Palude",
           "multiverseid": 274239
+        },
+        {
+          "language": "Italian",
+          "name": "Palude",
+          "multiverseid": 274240
         },
         {
           "language": "Japanese",
@@ -31964,7 +31987,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -32038,17 +32062,7 @@
         {
           "language": "French",
           "name": "Marais",
-          "multiverseid": 273102
-        },
-        {
-          "language": "French",
-          "name": "Marais",
           "multiverseid": 273103
-        },
-        {
-          "language": "French",
-          "name": "Marais",
-          "multiverseid": 273104
         },
         {
           "language": "Russian",
@@ -32098,7 +32112,17 @@
         {
           "language": "Italian",
           "name": "Palude",
+          "multiverseid": 274238
+        },
+        {
+          "language": "Italian",
+          "name": "Palude",
           "multiverseid": 274239
+        },
+        {
+          "language": "Italian",
+          "name": "Palude",
+          "multiverseid": 274240
         },
         {
           "language": "Japanese",
@@ -32356,7 +32380,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -32430,17 +32455,7 @@
         {
           "language": "French",
           "name": "Marais",
-          "multiverseid": 273102
-        },
-        {
-          "language": "French",
-          "name": "Marais",
           "multiverseid": 273103
-        },
-        {
-          "language": "French",
-          "name": "Marais",
-          "multiverseid": 273104
         },
         {
           "language": "Russian",
@@ -32490,7 +32505,17 @@
         {
           "language": "Italian",
           "name": "Palude",
+          "multiverseid": 274238
+        },
+        {
+          "language": "Italian",
+          "name": "Palude",
           "multiverseid": 274239
+        },
+        {
+          "language": "Italian",
+          "name": "Palude",
+          "multiverseid": 274240
         },
         {
           "language": "Japanese",
@@ -32748,7 +32773,8 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -33142,7 +33168,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -33536,7 +33564,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -33930,7 +33960,9 @@
         "XLN",
         "DDT",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -34321,7 +34353,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -34712,7 +34746,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -35103,7 +35139,9 @@
         "C17",
         "XLN",
         "UST",
-        "RIX"
+        "RIX",
+        "DDU",
+        "DOM"
       ],
       "rarity": "Basic Land",
       "subtypes": [

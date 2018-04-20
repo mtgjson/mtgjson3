@@ -183,7 +183,7 @@
           "text": "This card won't be put into your graveyard until after it's finished resolving, which means it won't be shuffled into your library as part of its own effect."
         }
       ],
-      "text": "Each player shuffles his or her hand and graveyard into his or her library, then draws seven cards. (Then put Timetwister into its owner's graveyard.)",
+      "text": "Each player shuffles their hand and graveyard into their library, then draws seven cards. (Then put Timetwister into its owner's graveyard.)",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -226,7 +226,7 @@
       ],
       "rarity": "Special",
       "reserved": true,
-      "text": "{T}, Sacrifice Black Lotus: Add three mana of any one color to your mana pool.",
+      "text": "{T}, Sacrifice Black Lotus: Add three mana of any one color.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -272,7 +272,7 @@
       ],
       "rarity": "Special",
       "reserved": true,
-      "text": "{T}: Add {G} to your mana pool.",
+      "text": "{T}: Add {G}.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -318,7 +318,7 @@
       ],
       "rarity": "Special",
       "reserved": true,
-      "text": "{T}: Add {B} to your mana pool.",
+      "text": "{T}: Add {B}.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -364,7 +364,7 @@
       ],
       "rarity": "Special",
       "reserved": true,
-      "text": "{T}: Add {W} to your mana pool.",
+      "text": "{T}: Add {W}.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -410,7 +410,7 @@
       ],
       "rarity": "Special",
       "reserved": true,
-      "text": "{T}: Add {R} to your mana pool.",
+      "text": "{T}: Add {R}.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -456,7 +456,7 @@
       ],
       "rarity": "Special",
       "reserved": true,
-      "text": "{T}: Add {U} to your mana pool.",
+      "text": "{T}: Add {U}.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -757,7 +757,7 @@
           "text": "Each type of object is counted during the corresponding part of the process. Cards in hand are counted after lands have been sacrificed, and creatures on the battlefield are counted after cards have been discarded. Thus, a land creature sacrificed to the first part of the spell would not be counted when determining how many creatures are on the battlefield for the last part."
         }
       ],
-      "text": "Each player chooses a number of lands he or she controls equal to the number of lands controlled by the player who controls the fewest, then sacrifices the rest. Players discard cards and sacrifice creatures the same way.",
+      "text": "Each player chooses a number of lands they control equal to the number of lands controlled by the player who controls the fewest, then sacrifices the rest. Players discard cards and sacrifice creatures the same way.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -1195,18 +1195,6 @@
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2004-10-04",
-          "text": "The two X's in the mana cost mean that you pay 2 mana (above the {2}{W}{W} base cost) for each token you want to create."
-        },
-        {
-          "date": "2004-10-04",
-          "text": "When you cycle this card, the last ability triggers. When that ability resolves, you choose a value of X and pay it during resolution."
-        },
-        {
-          "date": "2004-10-04",
-          "text": "You can cast this with X=0."
-        },
-        {
           "date": "2008-10-01",
           "text": "Cycling is an activated ability. Effects that interact with activated abilities (such as Stifle or Rings of Brighthearth) will interact with cycling. Effects that interact with spells (such as Remove Soul or Faerie Tauntings) will not."
         },
@@ -1216,7 +1204,11 @@
         },
         {
           "date": "2008-10-01",
-          "text": "The cycling ability and the triggered ability are separate. If the triggered ability is countered (with Stifle, for example, or if all its targets have become illegal), the cycling ability will still resolve and you'll draw a card."
+          "text": "The cycling ability and the triggered ability are separate. If the triggered ability doesn't resolve (due to being countered with Stifle, for example, or if all its targets have become illegal), the cycling ability will still resolve and you'll draw a card."
+        },
+        {
+          "date": "2018-03-16",
+          "text": "A mana cost of {X}{X} means that you pay twice X. If you want X to be 3, you pay {8}{W}{W} to cast Decree of Justice."
         }
       ],
       "text": "Create X 4/4 white Angel creature tokens with flying.\nCycling {2}{W} ({2}{W}, Discard this card: Draw a card.)\nWhen you cycle Decree of Justice, you may pay {X}. If you do, create X 1/1 white Soldier creature tokens.",
@@ -1460,7 +1452,7 @@
         "Dragon",
         "Spirit"
       ],
-      "text": "Flying\n{3}{W}{W}: Return Eternal Dragon from your graveyard to your hand. Activate this ability only during your upkeep.\nPlainscycling {2} ({2}, Discard this card: Search your library for a Plains card, reveal it, and put it into your hand. Then shuffle your library.)",
+      "text": "Flying\n{3}{W}{W}: Return Eternal Dragon from your graveyard to your hand. Activate this ability only during your upkeep.\nPlainscycling {2} ({2}, Discard this card: Search your library for a Plains card, reveal it, put it into your hand, then shuffle your library.)",
       "toughness": "5",
       "type": "Creature — Dragon Spirit",
       "types": [
@@ -2044,7 +2036,7 @@
         "Cleric",
         "Soldier"
       ],
-      "text": "Vigilance\nPlainscycling {2} ({2}, Discard this card: Search your library for a Plains card, reveal it, and put it into your hand. Then shuffle your library.)",
+      "text": "Vigilance\nPlainscycling {2} ({2}, Discard this card: Search your library for a Plains card, reveal it, put it into your hand, then shuffle your library.)",
       "toughness": "6",
       "type": "Creature — Human Cleric Soldier",
       "types": [
@@ -2093,7 +2085,7 @@
         "VMA"
       ],
       "rarity": "Rare",
-      "text": "Fading 5 (This enchantment enters the battlefield with five fade counters on it. At the beginning of your upkeep, remove a fade counter from it. If you can't, sacrifice it.)\nRemove a fade counter from Parallax Wave: Exile target creature.\nWhen Parallax Wave leaves the battlefield, each player returns to the battlefield all cards he or she owns exiled with Parallax Wave.",
+      "text": "Fading 5 (This enchantment enters the battlefield with five fade counters on it. At the beginning of your upkeep, remove a fade counter from it. If you can't, sacrifice it.)\nRemove a fade counter from Parallax Wave: Exile target creature.\nWhen Parallax Wave leaves the battlefield, each player returns to the battlefield all cards they own exiled with Parallax Wave.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -2407,7 +2399,7 @@
         },
         {
           "date": "2008-10-01",
-          "text": "The cycling ability and the triggered ability are separate. If the triggered ability is countered (with Stifle, for example, or if all its targets have become illegal), the cycling ability will still resolve and you'll draw a card."
+          "text": "The cycling ability and the triggered ability are separate. If the triggered ability doesn't resolve (due to being countered with Stifle, for example, or if all its targets have become illegal), the cycling ability will still resolve and you'll draw a card."
         },
         {
           "date": "2017-04-18",
@@ -2419,7 +2411,7 @@
         },
         {
           "date": "2017-04-18",
-          "text": "You can cycle a card even if it has a triggered ability from cycling that won't have a legal target. This is because the cycling ability and the triggered ability are separate. This also means that if either ability is countered (with Disallow, for example, or if the triggered ability's targets have become illegal), the other ability will still resolve."
+          "text": "You can cycle a card even if it has a triggered ability from cycling that won't have a legal target. This is because the cycling ability and the triggered ability are separate. This also means that if either ability doesn't resolve (due to being countered with Disallow, for example, or if the triggered ability's targets have become illegal), the other ability will still resolve."
         },
         {
           "date": "2018-01-19",
@@ -2942,11 +2934,11 @@
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2017-11-17",
-          "text": "The amount of life gained is equal to the power of the target creature as it last existed on the battlefield."
+          "date": "2018-03-16",
+          "text": "The amount of life gained is equal to the power of the targeted creature as it last existed on the battlefield."
         },
         {
-          "date": "2017-11-17",
+          "date": "2018-03-16",
           "text": "If the creature's power is negative, its controller doesn't lose or gain life."
         }
       ],
@@ -3117,7 +3109,7 @@
         "Human",
         "Knight"
       ],
-      "text": "Flanking (Whenever a creature without flanking blocks this creature, the blocking creature gets -1/-1 until end of turn.)\n{1}{W}: The next 1 damage that would be dealt to Zhalfirin Crusader this turn is dealt to target creature or player instead.",
+      "text": "Flanking (Whenever a creature without flanking blocks this creature, the blocking creature gets -1/-1 until end of turn.)\n{1}{W}: The next 1 damage that would be dealt to Zhalfirin Crusader this turn is dealt to any target instead.",
       "toughness": "2",
       "type": "Creature — Human Knight",
       "types": [
@@ -3304,7 +3296,7 @@
           "text": "You may choose new targets for any of the copies. You can choose differently for each copy."
         }
       ],
-      "text": "Target player puts the top three cards of his or her library into his or her graveyard.\nStorm (When you cast this spell, copy it for each spell cast before it this turn. You may choose new targets for the copies.)",
+      "text": "Target player puts the top three cards of their library into their graveyard.\nStorm (When you cast this spell, copy it for each spell cast before it this turn. You may choose new targets for the copies.)",
       "type": "Instant",
       "types": [
         "Instant"
@@ -3370,7 +3362,7 @@
       "rarity": "Common",
       "rulings": [
         {
-          "date": "2016-06-08",
+          "date": "2018-03-16",
           "text": "You draw three cards and put two cards back all while Brainstorm is resolving. Nothing can happen between the two, and no player may choose to take actions."
         }
       ],
@@ -3434,7 +3426,7 @@
         },
         {
           "date": "2008-10-01",
-          "text": "The cycling ability and the triggered ability are separate. If the triggered ability is countered (with Stifle, for example, or if all its targets have become illegal), the cycling ability will still resolve and you'll draw a card."
+          "text": "The cycling ability and the triggered ability are separate. If the triggered ability doesn't resolve (due to being countered with Stifle, for example, or if all its targets have become illegal), the cycling ability will still resolve and you'll draw a card."
         },
         {
           "date": "2008-10-01",
@@ -4063,7 +4055,7 @@
           "text": "If another effect causes Force of Will to cost more, you must pay that additional cost even if you pay its alternative cost."
         }
       ],
-      "text": "You may pay 1 life and exile a blue card from your hand rather than pay Force of Will's mana cost.\nCounter target spell.",
+      "text": "You may pay 1 life and exile a blue card from your hand rather than pay this spell's mana cost.\nCounter target spell.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -4241,7 +4233,7 @@
         "DD3_JVC"
       ],
       "rarity": "Uncommon",
-      "text": "You may return two Islands you control to their owner's hand rather than pay Gush's mana cost.\nDraw two cards.",
+      "text": "You may return two Islands you control to their owner's hand rather than pay this spell's mana cost.\nDraw two cards.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -4298,7 +4290,7 @@
           "text": "The effect applies even if the Island in question entered the battlefield after High Tide resolved."
         }
       ],
-      "text": "Until end of turn, whenever a player taps an Island for mana, that player adds {U} to his or her mana pool (in addition to the mana the land produces).",
+      "text": "Until end of turn, whenever a player taps an Island for mana, that player adds an additional {U}.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -4327,7 +4319,7 @@
         },
         {
           "format": "Modern",
-          "legality": "Banned"
+          "legality": "Legal"
         },
         {
           "format": "Vintage",
@@ -4356,12 +4348,12 @@
       "rarity": "Mythic Rare",
       "rulings": [
         {
-          "date": "2016-06-08",
+          "date": "2018-03-16",
           "text": "You draw three cards and put two cards back all while Jace's second ability is resolving. Nothing can happen between the two, and no player may choose to take actions."
         },
         {
-          "date": "2016-06-08",
-          "text": "If the targeted player for Jace's last ability has no cards in hand, that player shuffles nothing into his or her library, and that player's library will remain empty. That player won't lose the game until he or she tries to draw from the empty library."
+          "date": "2018-03-16",
+          "text": "If the targeted player for Jace's last ability has no cards in hand, that player shuffles nothing into their library, and that player's library will remain empty. That player won't lose the game until they try to draw from the empty library."
         }
       ],
       "subtypes": [
@@ -4370,7 +4362,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "+2: Look at the top card of target player's library. You may put that card on the bottom of that player's library.\n0: Draw three cards, then put two cards from your hand on top of your library in any order.\n−1: Return target creature to its owner's hand.\n−12: Exile all cards from target player's library, then that player shuffles his or her hand into his or her library.",
+      "text": "+2: Look at the top card of target player's library. You may put that card on the bottom of that player's library.\n0: Draw three cards, then put two cards from your hand on top of your library in any order.\n−1: Return target creature to its owner's hand.\n−12: Exile all cards from target player's library, then that player shuffles their hand into their library.",
       "type": "Legendary Planeswalker — Jace",
       "types": [
         "Planeswalker"
@@ -4598,14 +4590,14 @@
         },
         {
           "date": "2017-11-17",
-          "text": "If the target spell is an illegal target when Mana Drain tries to resolve, it will be countered and none of its effects will happen. You won't get any mana."
+          "text": "If the target spell is an illegal target when Mana Drain tries to resolve, it won't resolve and none of its effects will happen. You won't get any mana."
         },
         {
           "date": "2017-11-17",
           "text": "Mana Drain's delayed triggered ability will usually trigger at the beginning of your precombat main phase. However, if you cast Mana Drain during your precombat main phase or during your combat phase, its delayed triggered ability will trigger at the beginning of that turn's postcombat main phase."
         }
       ],
-      "text": "Counter target spell. At the beginning of your next main phase, add an amount of {C} to your mana pool equal to that spell's converted mana cost.",
+      "text": "Counter target spell. At the beginning of your next main phase, add an amount of {C} equal to that spell's converted mana cost.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -5246,7 +5238,7 @@
           "text": "Only lands that actually have mana abilities will get tapped. This includes basic lands and lands with mana abilities printed on them, as well as lands which have been granted a mana ability by some effect."
         }
       ],
-      "text": "Counter target spell unless its controller pays {X}. If he or she doesn't, that player taps all lands with mana abilities he or she controls and empties his or her mana pool.",
+      "text": "Counter target spell unless its controller pays {X}. If that player doesn't, they tap all lands with mana abilities they control and lose all unspent mana.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -5459,7 +5451,7 @@
       "rulings": [
         {
           "date": "2008-10-01",
-          "text": "When the ability resolves, if one of the lands has become an illegal target (because it's no longer on the battlefield, for example), you return the other one to your hand. If both of the lands have become illegal targets, the ability is countered. This has no effect on Sea Drake."
+          "text": "When the ability resolves, if one of the lands has become an illegal target (because it's no longer on the battlefield, for example), you return the other one to your hand. If both of the lands have become illegal targets, the ability doesn't resolve. This has no effect on Sea Drake."
         }
       ],
       "subtypes": [
@@ -6104,7 +6096,7 @@
         "VMA"
       ],
       "rarity": "Common",
-      "text": "Choose a color. Target player reveals his or her hand and you choose a card of that color from it. That player discards that card.",
+      "text": "Choose a color. Target player reveals their hand and you choose a card of that color from it. That player discards that card.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -6283,7 +6275,7 @@
         "V16"
       ],
       "rarity": "Uncommon",
-      "text": "Add {B}{B}{B} to your mana pool.\nThreshold — Add {B}{B}{B}{B}{B} to your mana pool instead if seven or more cards are in your graveyard.",
+      "text": "Add {B}{B}{B}.\nThreshold — Add {B}{B}{B}{B}{B} instead if seven or more cards are in your graveyard.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -6703,7 +6695,7 @@
         "A25"
       ],
       "rarity": "Common",
-      "text": "Add {B}{B}{B} to your mana pool.",
+      "text": "Add {B}{B}{B}.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -6810,6 +6802,12 @@
         "A25"
       ],
       "rarity": "Common",
+      "rulings": [
+        {
+          "date": "2018-03-16",
+          "text": "The last ability of Death's-Head Buzzard affects only creatures on the battlefield at the time it resolves. Creatures that enter the battlefield later in the turn won't get -1/-1."
+        }
+      ],
       "subtypes": [
         "Bird"
       ],
@@ -7366,6 +7364,12 @@
         "A25"
       ],
       "rarity": "Rare",
+      "rulings": [
+        {
+          "date": "2018-03-16",
+          "text": "As Laquatus's Champion's second ability resolves, the player who gains 6 life is the player who was the target of the first ability (or, if that ability is still on the stack, the player who is its target)."
+        }
+      ],
       "subtypes": [
         "Nightmare",
         "Horror"
@@ -7428,19 +7432,15 @@
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2004-10-04",
-          "text": "The creatures which are sacrificed can't be regenerated."
+          "date": "2018-03-16",
+          "text": "As Living Death resolves, all players exile their creature cards from graveyards at the same time. Then all players sacrifice all creatures they control at the same time. Then all players put all creatures they exiled onto the battlefield at the same time."
         },
         {
-          "date": "2004-10-04",
-          "text": "Both players exile their creature cards at once. Then both players sacrifice all creatures they control at once. Then both players put all creatures they exiled onto the battlefield. If there are any choices involved for a given step, the current player makes their choices first, then the other player, and finally you do the action all at once."
-        },
-        {
-          "date": "2013-09-20",
-          "text": "\"All cards he or she exiled this way\" refers only to the cards exiled in the first part of the effect. If a replacement effect (such as Leyline of the Void) exiles any of the sacrificed creatures instead of putting them into the graveyard, those cards aren't returned to the battlefield."
+          "date": "2018-03-16",
+          "text": "Only cards exiled by Living Death's first instruction are put onto the battlefield. If a replacement effect (such as that of Leyline of the Void) causes any of the sacrificed creatures to be exiled instead of put into a graveyard, those cards aren't returned to the battlefield."
         }
       ],
-      "text": "Each player exiles all creature cards from his or her graveyard, then sacrifices all creatures he or she controls, then puts all cards he or she exiled this way onto the battlefield.",
+      "text": "Each player exiles all creature cards from their graveyard, then sacrifices all creatures they control, then puts all cards they exiled this way onto the battlefield.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -7500,7 +7500,7 @@
         },
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         }
       ],
       "text": "Pay half your life, rounded up: Lurking Evil becomes a 4/4 Horror creature with flying.",
@@ -7554,11 +7554,17 @@
         "A25"
       ],
       "rarity": "Common",
+      "rulings": [
+        {
+          "date": "2018-03-16",
+          "text": "If Mesmeric Fiend leaves the battlefield before its first ability has resolved, its second ability will trigger and do nothing. Then its first ability will resolve and exile a nonland card from the target opponent's hand indefinitely."
+        }
+      ],
       "subtypes": [
         "Nightmare",
         "Horror"
       ],
-      "text": "When Mesmeric Fiend enters the battlefield, target opponent reveals his or her hand and you choose a nonland card from it. Exile that card.\nWhen Mesmeric Fiend leaves the battlefield, return the exiled card to its owner's hand.",
+      "text": "When Mesmeric Fiend enters the battlefield, target opponent reveals their hand and you choose a nonland card from it. Exile that card.\nWhen Mesmeric Fiend leaves the battlefield, return the exiled card to its owner's hand.",
       "toughness": "1",
       "type": "Creature — Nightmare Horror",
       "types": [
@@ -7836,7 +7842,7 @@
       "subtypes": [
         "Aura"
       ],
-      "text": "Enchant creature\nWhen Paralyze enters the battlefield, tap enchanted creature.\nEnchanted creature doesn't untap during its controller's untap step.\nAt the beginning of the upkeep of enchanted creature's controller, that player may pay {4}. If he or she does, untap the creature.",
+      "text": "Enchant creature\nWhen Paralyze enters the battlefield, tap enchanted creature.\nEnchanted creature doesn't untap during its controller's untap step.\nAt the beginning of the upkeep of enchanted creature's controller, that player may pay {4}. If the player does, untap the creature.",
       "type": "Enchantment — Aura",
       "types": [
         "Enchantment"
@@ -8269,7 +8275,7 @@
       "subtypes": [
         "Imp"
       ],
-      "text": "Flying\nDiscard a card: Add {B} to your mana pool.",
+      "text": "Flying\nDiscard a card: Add {B}.",
       "toughness": "2",
       "type": "Creature — Imp",
       "types": [
@@ -8441,7 +8447,7 @@
       "rulings": [
         {
           "date": "2014-05-29",
-          "text": "If death gets more votes, each opponent chooses and sacrifices a creature he or she controls. None of these creatures are targeted. An opponent could sacrifice a creature with protection from black, for example."
+          "text": "If death gets more votes, each opponent chooses and sacrifices a creature they control. None of these creatures are targeted. An opponent could sacrifice a creature with protection from black, for example."
         },
         {
           "date": "2014-05-29",
@@ -8925,7 +8931,7 @@
       "rulings": [
         {
           "date": "2009-10-01",
-          "text": "Burning of Xinye targets only an opponent. If that player is an illegal target by the time Burning of Xinye resolves, the entire spell is countered."
+          "text": "Burning of Xinye targets only an opponent. If that player is an illegal target by the time Burning of Xinye resolves, the entire spell doesn't resolve."
         },
         {
           "date": "2009-10-01",
@@ -8941,10 +8947,10 @@
         },
         {
           "date": "2013-07-01",
-          "text": "As Burning of Xinye resolves, first you destroy four lands you control (all at the same time), then the targeted opponent destroys four lands he or she controls (all at the same time). That player chooses which of his or her lands to destroy. Neither of you can choose to destroy a land with indestructible."
+          "text": "As Burning of Xinye resolves, first you destroy four lands you control (all at the same time), then the targeted opponent destroys four lands they control (all at the same time). That player chooses which of their lands to destroy. Neither of you can choose to destroy a land with indestructible."
         }
       ],
-      "text": "You destroy four lands you control, then target opponent destroys four lands he or she controls. Then Burning of Xinye deals 4 damage to each creature.",
+      "text": "You destroy four lands you control, then target opponent destroys four lands they control. Then Burning of Xinye deals 4 damage to each creature.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -9096,10 +9102,10 @@
         },
         {
           "date": "2016-06-08",
-          "text": "If the targeted creature or player is an illegal target when Chain Lightning tries to resolve, the spell is countered. It can't be copied."
+          "text": "If the targeted permanent or player is an illegal target when Chain Lightning tries to resolve, the spell doesn't resolve. It can't be copied."
         }
       ],
-      "text": "Chain Lightning deals 3 damage to target creature or player. Then that player or that creature's controller may pay {R}{R}. If the player does, he or she may copy this spell and may choose a new target for that copy.",
+      "text": "Chain Lightning deals 3 damage to any target. Then that player or that permanent's controller may pay {R}{R}. If the player does, they may copy this spell and may choose a new target for that copy.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -9154,7 +9160,7 @@
         },
         {
           "date": "2011-09-22",
-          "text": "If the permanent is an illegal target by the time Chaos Warp tries to resolve, it will be countered and none of its effects will occur. No library will be shuffled and no card will be revealed."
+          "text": "If the permanent is an illegal target by the time Chaos Warp tries to resolve, it won't resolve and none of its effects will occur. No library will be shuffled and no card will be revealed."
         },
         {
           "date": "2011-09-22",
@@ -9169,7 +9175,7 @@
           "text": "If the revealed card is not a permanent card, it remains on top of that library."
         }
       ],
-      "text": "The owner of target permanent shuffles it into his or her library, then reveals the top card of his or her library. If it's a permanent card, he or she puts it onto the battlefield.",
+      "text": "The owner of target permanent shuffles it into their library, then reveals the top card of their library. If it's a permanent card, they put it onto the battlefield.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -9246,7 +9252,7 @@
         "Cat",
         "Beast"
       ],
-      "text": "{R}: Chartooth Cougar gets +1/+0 until end of turn.\nMountaincycling {2} ({2}, Discard this card: Search your library for a Mountain card, reveal it, and put it into your hand. Then shuffle your library.)",
+      "text": "{R}: Chartooth Cougar gets +1/+0 until end of turn.\nMountaincycling {2} ({2}, Discard this card: Search your library for a Mountain card, reveal it, put it into your hand, then shuffle your library.)",
       "toughness": "4",
       "type": "Creature — Cat Beast",
       "types": [
@@ -9462,7 +9468,7 @@
         "DD3_JVC"
       ],
       "rarity": "Uncommon",
-      "text": "You may sacrifice two Mountains rather than pay Fireblast's mana cost.\nFireblast deals 4 damage to target creature or player.",
+      "text": "You may sacrifice two Mountains rather than pay this spell's mana cost.\nFireblast deals 4 damage to any target.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -10273,14 +10279,21 @@
         "EVG",
         "VMA",
         "DDN",
-        "DD3_EVG"
+        "DD3_EVG",
+        "DOM"
       ],
       "rarity": "Uncommon",
+      "rulings": [
+        {
+          "date": "2018-04-27",
+          "text": "Goblin Warchief's effect reduces only generic mana in the cost of Goblin spells you cast. For example, it doesn't reduce the cost of Skirk Prospector below {R}."
+        }
+      ],
       "subtypes": [
         "Goblin",
         "Warrior"
       ],
-      "text": "Goblin spells you cast cost {1} less to cast.\nGoblin creatures you control have haste.",
+      "text": "Goblin spells you cast cost {1} less to cast.\nGoblins you control have haste.",
       "toughness": "2",
       "type": "Creature — Goblin Warrior",
       "types": [
@@ -10381,7 +10394,7 @@
         "VMA"
       ],
       "rarity": "Uncommon",
-      "text": "As long as Kaervek's Torch is on the stack, spells that target it cost {2} more to cast.\nKaervek's Torch deals X damage to target creature or player.",
+      "text": "As long as Kaervek's Torch is on the stack, spells that target it cost {2} more to cast.\nKaervek's Torch deals X damage to any target.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -10434,11 +10447,11 @@
       "rarity": "Common",
       "rulings": [
         {
-          "date": "2004-10-04",
-          "text": "Counts the Kindles in graveyard on resolution."
+          "date": "2018-03-16",
+          "text": "Because Kindle is still on the stack as you perform its instructions, it isn't in your graveyard and won't add to the amount of damage dealt."
         }
       ],
-      "text": "Kindle deals X damage to target creature or player, where X is 2 plus the number of cards named Kindle in all graveyards.",
+      "text": "Kindle deals X damage to any target, where X is 2 plus the number of cards named Kindle in all graveyards.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -10549,7 +10562,7 @@
           "text": "You choose the target when this ability is put on the stack, but you do not decide whether or not to pay the mana until the ability resolves."
         }
       ],
-      "text": "Whenever a player cycles a card, you may pay {1}. If you do, Lightning Rift deals 2 damage to target creature or player.",
+      "text": "Whenever a player cycles a card, you may pay {1}. If you do, Lightning Rift deals 2 damage to any target.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -10606,7 +10619,7 @@
       "subtypes": [
         "Orc"
       ],
-      "text": "{T}, Sacrifice a Forest: Add three mana in any combination of {R} and/or {G} to your mana pool.",
+      "text": "{T}, Sacrifice a Forest: Add three mana in any combination of {R} and/or {G}.",
       "toughness": "1",
       "type": "Creature — Orc",
       "types": [
@@ -10878,7 +10891,7 @@
         },
         {
           "date": "2014-05-29",
-          "text": "In a Two-Headed Giant game, dethrone will trigger if the creature attacks the team with the most life or tied for the most life."
+          "text": "In a Two-Headed Giant game, dethrone will trigger if the creature attacks either player on the team with the most life or tied for the most life."
         }
       ],
       "subtypes": [
@@ -10991,13 +11004,14 @@
         "EVG",
         "DDG",
         "VMA",
-        "DD3_EVG"
+        "DD3_EVG",
+        "DOM"
       ],
       "rarity": "Common",
       "subtypes": [
         "Goblin"
       ],
-      "text": "Sacrifice a Goblin: Add {R} to your mana pool.",
+      "text": "Sacrifice a Goblin: Add {R}.",
       "toughness": "1",
       "type": "Creature — Goblin",
       "types": [
@@ -11057,14 +11071,14 @@
         },
         {
           "date": "2008-10-01",
-          "text": "The cycling ability and the triggered ability are separate. If the triggered ability is countered (with Stifle, for example, or if all its targets have become illegal), the cycling ability will still resolve and you'll draw a card."
+          "text": "The cycling ability and the triggered ability are separate. If the triggered ability doesn't resolve (due to being countered with Stifle, for example, or if all its targets have become illegal), the cycling ability will still resolve and you'll draw a card."
         },
         {
           "date": "2008-10-01",
           "text": "You can cycle this card even if there are no targets for the triggered ability. That's because the cycling ability itself has no targets."
         }
       ],
-      "text": "Solar Blast deals 3 damage to target creature or player.\nCycling {1}{R}{R} ({1}{R}{R}, Discard this card: Draw a card.)\nWhen you cycle Solar Blast, you may have it deal 1 damage to target creature or player.",
+      "text": "Solar Blast deals 3 damage to any target.\nCycling {1}{R}{R} ({1}{R}{R}, Discard this card: Draw a card.)\nWhen you cycle Solar Blast, you may have it deal 1 damage to any target.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -11119,7 +11133,7 @@
           "text": "Cycling is an activated ability. Effects that interact with activated abilities (such as Stifle or Rings of Brighthearth) will interact with cycling. Effects that interact with spells (such as Remove Soul or Faerie Tauntings) will not."
         }
       ],
-      "text": "Spark Spray deals 1 damage to target creature or player.\nCycling {R} ({R}, Discard this card: Draw a card.)",
+      "text": "Spark Spray deals 1 damage to any target.\nCycling {R} ({R}, Discard this card: Draw a card.)",
       "type": "Instant",
       "types": [
         "Instant"
@@ -11334,7 +11348,7 @@
       ],
       "rarity": "Mythic Rare",
       "reserved": true,
-      "text": "Each player discards his or her hand, then draws seven cards.",
+      "text": "Each player discards their hand, then draws seven cards.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -11634,7 +11648,7 @@
           "text": "If the permanent stops being a creature before the end of the turn, it is still destroyed."
         }
       ],
-      "text": "Cast Berserk only before the combat damage step.\nTarget creature gains trample and gets +X/+0 until end of turn, where X is its power. At the beginning of the next end step, destroy that creature if it attacked this turn.",
+      "text": "Cast this spell only before the combat damage step.\nTarget creature gains trample and gets +X/+0 until end of turn, where X is its power. At the beginning of the next end step, destroy that creature if it attacked this turn.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -11800,7 +11814,7 @@
           "text": "Once your life total is 0, you can't pay any more life, even if you've somehow not lost the game yet."
         }
       ],
-      "text": "Until end of turn, any time you could activate a mana ability, you may pay 1 life. If you do, add {C} to your mana pool.",
+      "text": "Until end of turn, any time you could activate a mana ability, you may pay 1 life. If you do, add {C}.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -12147,7 +12161,8 @@
         "CMD",
         "CNS",
         "VMA",
-        "A25"
+        "A25",
+        "DDU"
       ],
       "rarity": "Common",
       "rulings": [
@@ -12172,7 +12187,7 @@
         "Elf",
         "Mutant"
       ],
-      "text": "{T}: Add {G}{G}{G} to your mana pool.\nForestcycling {2} ({2}, Discard this card: Search your library for a Forest card, reveal it, and put it into your hand. Then shuffle your library.)",
+      "text": "{T}: Add {G}{G}{G}.\nForestcycling {2} ({2}, Discard this card: Search your library for a Forest card, reveal it, and put it into your hand, then shuffle your library.)",
       "toughness": "5",
       "type": "Creature — Elf Mutant",
       "types": [
@@ -12298,7 +12313,7 @@
         },
         {
           "date": "2004-10-04",
-          "text": "In a game of N players, the process ends when all N players in sequence (starting with you) choose not to put a card onto the battlefield. It doesn't end the first time a player chooses not to put a card onto the battlefield. If a player chooses not to put a card onto the battlefield but the process continues, that player may put a card onto the battlefield the next time the process gets around to him or her."
+          "text": "In a game of N players, the process ends when all N players in sequence (starting with you) choose not to put a card onto the battlefield. It doesn't end the first time a player chooses not to put a card onto the battlefield. If a player chooses not to put a card onto the battlefield but the process continues, that player may put a card onto the battlefield the next time the process gets around to them."
         },
         {
           "date": "2004-10-04",
@@ -12306,14 +12321,14 @@
         },
         {
           "date": "2006-10-15",
-          "text": "Anything that triggers during the resolution of this will wait to be put on the stack until everything is put onto the battlefield and resolution is complete. The player whose turn it is will put all of his or her triggered abilities on the stack in any order, then each other player in turn order will do the same. (The last ability put on the stack will be the first one that resolves.)"
+          "text": "Anything that triggers during the resolution of this will wait to be put on the stack until everything is put onto the battlefield and resolution is complete. The player whose turn it is will put all of their triggered abilities on the stack in any order, then each other player in turn order will do the same. (The last ability put on the stack will be the first one that resolves.)"
         },
         {
           "date": "2007-09-16",
           "text": "A \"permanent card\" is a card that would be a permanent once it's on the battlefield. Specifically, it's an artifact, creature, enchantment, land, or planeswalker card."
         }
       ],
-      "text": "Starting with you, each player may put a permanent card from his or her hand onto the battlefield. Repeat this process until no one puts a card onto the battlefield.",
+      "text": "Starting with you, each player may put a permanent card from their hand onto the battlefield. Repeat this process until no one puts a card onto the battlefield.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -12431,7 +12446,7 @@
         "Elf",
         "Druid"
       ],
-      "text": "{T}: Add {G} to your mana pool.",
+      "text": "{T}: Add {G}.",
       "toughness": "1",
       "type": "Creature — Elf Druid",
       "types": [
@@ -12880,7 +12895,8 @@
         "C13",
         "VMA",
         "DD3_GVL",
-        "A25"
+        "A25",
+        "DDU"
       ],
       "rarity": "Common",
       "rulings": [
@@ -12894,14 +12910,14 @@
         },
         {
           "date": "2008-10-01",
-          "text": "The cycling ability and the triggered ability are separate. If the triggered ability is countered (with Stifle, for example, or if all its targets have become illegal), the cycling ability will still resolve and you'll draw a card."
+          "text": "The cycling ability and the triggered ability are separate. If the triggered ability doesn't resolve (due to being countered with Stifle, for example, or if all its targets have become illegal), the cycling ability will still resolve and you'll draw a card."
         }
       ],
       "subtypes": [
         "Boar",
         "Beast"
       ],
-      "text": "Cycling {2}{G} ({2}{G}, Discard this card: Draw a card.)\nWhen you cycle Krosan Tusker, you may search your library for a basic land card, reveal that card, put it into your hand, then shuffle your library.",
+      "text": "Cycling {2}{G} ({2}{G}, Discard this card: Draw a card.)\nWhen you cycle Krosan Tusker, you may search your library for a basic land card, reveal that card, put it into your hand, then shuffle your library. (Do this before you draw.)",
       "toughness": "5",
       "type": "Creature — Boar Beast",
       "types": [
@@ -13127,7 +13143,7 @@
         "VMA"
       ],
       "rarity": "Uncommon",
-      "text": "As an additional cost to cast Nostalgic Dreams, discard X cards.\nReturn X target cards from your graveyard to your hand. Exile Nostalgic Dreams.",
+      "text": "As an additional cost to cast this spell, discard X cards.\nReturn X target cards from your graveyard to your hand. Exile Nostalgic Dreams.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -13185,10 +13201,10 @@
         },
         {
           "date": "2009-10-01",
-          "text": "The targeted player controlling more creatures than the current player is a part of the targeting requirement. A player can't be targeted by this ability unless it's true, and the ability will be countered on resolution if it's no longer true at that time."
+          "text": "The targeted player controlling more creatures than the current player is a part of the targeting requirement. A player can't be targeted by this ability unless it's true, and the ability doesn't resolve if it's no longer true at that time."
         }
       ],
-      "text": "At the beginning of each player's upkeep, that player chooses target player who controls more creatures than he or she does and is his or her opponent. The first player may reveal cards from the top of his or her library until he or she reveals a creature card. If he or she does, that player puts that card onto the battlefield and all other cards revealed this way into his or her graveyard.",
+      "text": "At the beginning of each player's upkeep, that player chooses target player who controls more creatures than they do and is their opponent. The first player may reveal cards from the top of their library until they reveal a creature card. If the first player does, that player puts that card onto the battlefield and all other cards revealed this way into their graveyard.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -13520,7 +13536,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "{T}: Add {G} to your mana pool for each Forest you control.",
+      "text": "{T}: Add {G} for each Forest you control.",
       "toughness": "1",
       "type": "Legendary Creature — Elf Druid",
       "types": [
@@ -14701,7 +14717,7 @@
         },
         {
           "date": "2014-05-29",
-          "text": "In a Two-Headed Giant game, dethrone will trigger if the creature attacks the team with the most life or tied for the most life."
+          "text": "In a Two-Headed Giant game, dethrone will trigger if the creature attacks either player on the team with the most life or tied for the most life."
         }
       ],
       "subtypes": [
@@ -14762,7 +14778,7 @@
         "C15"
       ],
       "rarity": "Uncommon",
-      "text": "Death Grasp deals X damage to target creature or player. You gain X life.",
+      "text": "Death Grasp deals X damage to any target. You gain X life.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -15054,11 +15070,11 @@
       "rarity": "Rare",
       "rulings": [
         {
-          "date": "2014-05-29",
-          "text": "Compare Grenzo's power when the ability resolves with the power of the creature card in your graveyard to determine if you put it onto the battlefield. If Grenzo isn't on the battlefield at this time, use its power from when it was last on the battlefield."
+          "date": "2018-03-16",
+          "text": "Compare Grenzo's power when the ability resolves with the power of the creature card in your graveyard to determine if you put it onto the battlefield. If Grenzo isn't on the battlefield at this time, use its last known power from when it was on the battlefield."
         },
         {
-          "date": "2014-05-29",
+          "date": "2018-03-16",
           "text": "If the card you put into your graveyard isn't a creature card or it's a creature card with power greater than Grenzo's power, it stays in your graveyard."
         }
       ],
@@ -15143,7 +15159,7 @@
       "subtypes": [
         "Angel"
       ],
-      "text": "Flying\nWill of the council — When Magister of Worth enters the battlefield, starting with you, each player votes for grace or condemnation. If grace gets more votes, each player returns each creature card from his or her graveyard to the battlefield. If condemnation gets more votes or the vote is tied, destroy all creatures other than Magister of Worth.",
+      "text": "Flying\nWill of the council — When Magister of Worth enters the battlefield, starting with you, each player votes for grace or condemnation. If grace gets more votes, each player returns each creature card from their graveyard to the battlefield. If condemnation gets more votes or the vote is tied, destroy all creatures other than Magister of Worth.",
       "toughness": "4",
       "type": "Creature — Angel",
       "types": [
@@ -15221,7 +15237,7 @@
         },
         {
           "date": "2014-05-29",
-          "text": "In a Two-Headed Giant game, dethrone will trigger if the creature attacks the team with the most life or tied for the most life."
+          "text": "In a Two-Headed Giant game, dethrone will trigger if the creature attacks either player on the team with the most life or tied for the most life."
         }
       ],
       "subtypes": [
@@ -15285,7 +15301,7 @@
         "C15"
       ],
       "rarity": "Uncommon",
-      "text": "Prophetic Bolt deals 4 damage to target creature or player. Look at the top four cards of your library. Put one of those cards into your hand and the rest on the bottom of your library in any order.",
+      "text": "Prophetic Bolt deals 4 damage to any target. Look at the top four cards of your library. Put one of those cards into your hand and the rest on the bottom of your library in any order.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -15451,7 +15467,7 @@
         },
         {
           "date": "2014-05-29",
-          "text": "Except in some very rare cases, the card each player draws will be the card revealed from the top of his or her library."
+          "text": "Except in some very rare cases, the card each player draws will be the card revealed from the top of their library."
         }
       ],
       "subtypes": [
@@ -15461,7 +15477,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "Parley — {T}: Each player reveals the top card of his or her library. For each nonland card revealed this way, add {G} to your mana pool and you gain 1 life. Then each player draws a card.",
+      "text": "Parley — {T}: Each player reveals the top card of their library. For each nonland card revealed this way, add {G} and you gain 1 life. Then each player draws a card.",
       "toughness": "4",
       "type": "Legendary Creature — Elf Scout",
       "types": [
@@ -15689,7 +15705,7 @@
         },
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         }
       ],
       "text": "{0}: Tap all lands you control. Chimeric Idol becomes a 3/3 Turtle artifact creature until end of turn.",
@@ -15851,7 +15867,7 @@
           "text": "If you have no cards in hand, you still have to name a card. Then you fail to reveal one (since there aren't any). Since the named card wasn't revealed, no damage is dealt."
         }
       ],
-      "text": "{3}, {T}: Choose a card name, then reveal a card at random from your hand. If that card has the chosen name, Cursed Scroll deals 2 damage to target creature or player.",
+      "text": "{3}, {T}: Choose a card name, then reveal a card at random from your hand. If that card has the chosen name, Cursed Scroll deals 2 damage to any target.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -16002,7 +16018,7 @@
         },
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of their most recent turn. It doesn't matter how long the permanent has been a creature."
         }
       ],
       "subtypes": [
@@ -16063,7 +16079,7 @@
           "text": "The ability is a mana ability, so it is activated and resolves as a mana ability, but it can only be activated at times when you can cast an instant. Yes, this is a bit weird."
         }
       ],
-      "text": "Discard your hand, Sacrifice Lion's Eye Diamond: Add three mana of any one color to your mana pool. Activate this ability only any time you could cast an instant.",
+      "text": "Discard your hand, Sacrifice Lion's Eye Diamond: Add three mana of any one color. Activate this ability only any time you could cast an instant.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -16111,7 +16127,7 @@
           "text": "No player may choose to take actions between determining the result of the flip and damage being dealt if you lost the flip."
         }
       ],
-      "text": "At the beginning of your upkeep, flip a coin. If you lose the flip, Mana Crypt deals 3 damage to you.\n{T}: Add {C}{C} to your mana pool.",
+      "text": "At the beginning of your upkeep, flip a coin. If you lose the flip, Mana Crypt deals 3 damage to you.\n{T}: Add {C}{C}.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -16154,7 +16170,7 @@
         "VMA"
       ],
       "rarity": "Common",
-      "text": "{T}: Add {C} to your mana pool.\n{1}, {T}: Add one mana of any color to your mana pool.",
+      "text": "{T}: Add {C}.\n{1}, {T}: Add one mana of any color.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -16201,7 +16217,7 @@
         "MPS"
       ],
       "rarity": "Rare",
-      "text": "Mana Vault doesn't untap during your untap step.\nAt the beginning of your upkeep, you may pay {4}. If you do, untap Mana Vault.\nAt the beginning of your draw step, if Mana Vault is tapped, it deals 1 damage to you.\n{T}: Add {C}{C}{C} to your mana pool.",
+      "text": "Mana Vault doesn't untap during your untap step.\nAt the beginning of your upkeep, you may pay {4}. If you do, untap Mana Vault.\nAt the beginning of your draw step, if Mana Vault is tapped, it deals 1 damage to you.\n{T}: Add {C}{C}{C}.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -16301,7 +16317,7 @@
           "text": "You can't look at the cards you exiled until they return to your hand."
         }
       ],
-      "text": "{T}, Sacrifice Memory Jar: Each player exiles all cards from his or her hand face down and draws seven cards. At the beginning of the next end step, each player discards his or her hand and returns to his or her hand each card he or she exiled this way.",
+      "text": "{T}, Sacrifice Memory Jar: Each player exiles all cards from their hand face down and draws seven cards. At the beginning of the next end step, each player discards their hand and returns to their hand each card they exiled this way.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -16678,7 +16694,7 @@
         "C17"
       ],
       "rarity": "Mythic Rare",
-      "text": "{T}: Add {C}{C} to your mana pool.",
+      "text": "{T}: Add {C}{C}.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -16779,7 +16795,7 @@
       "subtypes": [
         "Construct"
       ],
-      "text": "When Su-Chi dies, add {C}{C}{C}{C} to your mana pool.",
+      "text": "When Su-Chi dies, add {C}{C}{C}{C}.",
       "toughness": "4",
       "type": "Artifact Creature — Construct",
       "types": [
@@ -16982,7 +16998,7 @@
         "EXP"
       ],
       "rarity": "Rare",
-      "text": "{T}: Add {C}{C} to your mana pool. Ancient Tomb deals 2 damage to you.",
+      "text": "{T}: Add {C}{C}. Ancient Tomb deals 2 damage to you.",
       "type": "Land",
       "types": [
         "Land"
@@ -17099,7 +17115,7 @@
         "Swamp",
         "Mountain"
       ],
-      "text": "({T}: Add {B} or {R} to your mana pool.)",
+      "text": "({T}: Add {B} or {R}.)",
       "type": "Land — Swamp Mountain",
       "types": [
         "Land"
@@ -17158,7 +17174,7 @@
           "text": "Cycling is an activated ability. Effects that interact with activated abilities (such as Stifle or Rings of Brighthearth) will interact with cycling. Effects that interact with spells (such as Remove Soul or Faerie Tauntings) will not."
         }
       ],
-      "text": "Barren Moor enters the battlefield tapped.\n{T}: Add {B} to your mana pool.\nCycling {B} ({B}, Discard this card: Draw a card.)",
+      "text": "Barren Moor enters the battlefield tapped.\n{T}: Add {B}.\nCycling {B} ({B}, Discard this card: Draw a card.)",
       "type": "Land",
       "types": [
         "Land"
@@ -17220,7 +17236,7 @@
         "Swamp",
         "Forest"
       ],
-      "text": "({T}: Add {B} or {G} to your mana pool.)",
+      "text": "({T}: Add {B} or {G}.)",
       "type": "Land — Swamp Forest",
       "types": [
         "Land"
@@ -17311,7 +17327,7 @@
         "TPR"
       ],
       "rarity": "Uncommon",
-      "text": "Caldera Lake enters the battlefield tapped.\n{T}: Add {C} to your mana pool.\n{T}: Add {U} or {R} to your mana pool. Caldera Lake deals 1 damage to you.",
+      "text": "Caldera Lake enters the battlefield tapped.\n{T}: Add {C}.\n{T}: Add {U} or {R}. Caldera Lake deals 1 damage to you.",
       "type": "Land",
       "types": [
         "Land"
@@ -17418,7 +17434,7 @@
           "text": "Cycling is an activated ability. Effects that interact with activated abilities (such as Stifle or Rings of Brighthearth) will interact with cycling. Effects that interact with spells (such as Remove Soul or Faerie Tauntings) will not."
         }
       ],
-      "text": "Forgotten Cave enters the battlefield tapped.\n{T}: Add {R} to your mana pool.\nCycling {R} ({R}, Discard this card: Draw a card.)",
+      "text": "Forgotten Cave enters the battlefield tapped.\n{T}: Add {R}.\nCycling {R} ({R}, Discard this card: Draw a card.)",
       "type": "Land",
       "types": [
         "Land"
@@ -17460,7 +17476,7 @@
         "C16"
       ],
       "rarity": "Rare",
-      "text": "Grand Coliseum enters the battlefield tapped.\n{T}: Add {C} to your mana pool.\n{T}: Add one mana of any color to your mana pool. Grand Coliseum deals 1 damage to you.",
+      "text": "Grand Coliseum enters the battlefield tapped.\n{T}: Add {C}.\n{T}: Add one mana of any color. Grand Coliseum deals 1 damage to you.",
       "type": "Land",
       "types": [
         "Land"
@@ -17556,7 +17572,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "{T}: Add {C} to your mana pool.\n{4}{R}, {T}, Sacrifice a creature: Keldon Necropolis deals 2 damage to target creature or player.",
+      "text": "{T}: Add {C}.\n{4}{R}, {T}, Sacrifice a creature: Keldon Necropolis deals 2 damage to any target.",
       "type": "Legendary Land",
       "types": [
         "Land"
@@ -17608,7 +17624,7 @@
           "text": "You have to sacrifice a plains before this card is put onto the battlefield. You have to do this no matter how it is put onto the battlefield."
         }
       ],
-      "text": "If Kjeldoran Outpost would enter the battlefield, sacrifice a Plains instead. If you do, put Kjeldoran Outpost onto the battlefield. If you don't, put it into its owner's graveyard.\n{T}: Add {W} to your mana pool.\n{1}{W}, {T}: Create a 1/1 white Soldier creature token.",
+      "text": "If Kjeldoran Outpost would enter the battlefield, sacrifice a Plains instead. If you do, put Kjeldoran Outpost onto the battlefield. If you don't, put it into its owner's graveyard.\n{T}: Add {W}.\n{1}{W}, {T}: Create a 1/1 white Soldier creature token.",
       "type": "Land",
       "types": [
         "Land"
@@ -17664,7 +17680,7 @@
           "text": "You have to sacrifice a swamp before this card is put onto the battlefield. And you have to do this no matter how it is put onto the battlefield."
         }
       ],
-      "text": "If Lake of the Dead would enter the battlefield, sacrifice a Swamp instead. If you do, put Lake of the Dead onto the battlefield. If you don't, put it into its owner's graveyard.\n{T}: Add {B} to your mana pool.\n{T}, Sacrifice a Swamp: Add {B}{B}{B}{B} to your mana pool.",
+      "text": "If Lake of the Dead would enter the battlefield, sacrifice a Swamp instead. If you do, put Lake of the Dead onto the battlefield. If you don't, put it into its owner's graveyard.\n{T}: Add {B}.\n{T}, Sacrifice a Swamp: Add {B}{B}{B}{B}.",
       "type": "Land",
       "types": [
         "Land"
@@ -17709,7 +17725,7 @@
           "text": "You may tap multiples of these in response to each other because the requirement for 7 cards is checked only at the time the ability is announced and not again when it resolves."
         }
       ],
-      "text": "{T}: Add {C} to your mana pool.\n{T}: Draw a card. Activate this ability only if you have exactly seven cards in hand.",
+      "text": "{T}: Add {C}.\n{T}: Draw a card. Activate this ability only if you have exactly seven cards in hand.",
       "type": "Land",
       "types": [
         "Land"
@@ -17764,7 +17780,7 @@
           "text": "Cycling is an activated ability. Effects that interact with activated abilities (such as Stifle or Rings of Brighthearth) will interact with cycling. Effects that interact with spells (such as Remove Soul or Faerie Tauntings) will not."
         }
       ],
-      "text": "Lonely Sandbar enters the battlefield tapped.\n{T}: Add {U} to your mana pool.\nCycling {U} ({U}, Discard this card: Draw a card.)",
+      "text": "Lonely Sandbar enters the battlefield tapped.\n{T}: Add {U}.\nCycling {U} ({U}, Discard this card: Draw a card.)",
       "type": "Land",
       "types": [
         "Land"
@@ -17822,7 +17838,7 @@
           "text": "This mana may be used on additional costs to cast the spell, such as Kicker."
         }
       ],
-      "text": "{T}: Add {C}{C}{C} to your mana pool. Spend this mana only to cast artifact spells.",
+      "text": "{T}: Add {C}{C}{C}. Spend this mana only to cast artifact spells.",
       "type": "Land",
       "types": [
         "Land"
@@ -17915,7 +17931,7 @@
         "TPR"
       ],
       "rarity": "Uncommon",
-      "text": "Pine Barrens enters the battlefield tapped.\n{T}: Add {C} to your mana pool.\n{T}: Add {B} or {G} to your mana pool. Pine Barrens deals 1 damage to you.",
+      "text": "Pine Barrens enters the battlefield tapped.\n{T}: Add {C}.\n{T}: Add {B} or {G}. Pine Barrens deals 1 damage to you.",
       "type": "Land",
       "types": [
         "Land"
@@ -17977,7 +17993,7 @@
         "Mountain",
         "Plains"
       ],
-      "text": "({T}: Add {R} or {W} to your mana pool.)",
+      "text": "({T}: Add {R} or {W}.)",
       "type": "Land — Mountain Plains",
       "types": [
         "Land"
@@ -18071,7 +18087,7 @@
         "TPR"
       ],
       "rarity": "Uncommon",
-      "text": "Salt Flats enters the battlefield tapped.\n{T}: Add {C} to your mana pool.\n{T}: Add {W} or {B} to your mana pool. Salt Flats deals 1 damage to you.",
+      "text": "Salt Flats enters the battlefield tapped.\n{T}: Add {C}.\n{T}: Add {W} or {B}. Salt Flats deals 1 damage to you.",
       "type": "Land",
       "types": [
         "Land"
@@ -18133,7 +18149,7 @@
         "Forest",
         "Plains"
       ],
-      "text": "({T}: Add {G} or {W} to your mana pool.)",
+      "text": "({T}: Add {G} or {W}.)",
       "type": "Land — Forest Plains",
       "types": [
         "Land"
@@ -18179,7 +18195,7 @@
         "TPR"
       ],
       "rarity": "Uncommon",
-      "text": "Scabland enters the battlefield tapped.\n{T}: Add {C} to your mana pool.\n{T}: Add {R} or {W} to your mana pool. Scabland deals 1 damage to you.",
+      "text": "Scabland enters the battlefield tapped.\n{T}: Add {C}.\n{T}: Add {R} or {W}. Scabland deals 1 damage to you.",
       "type": "Land",
       "types": [
         "Land"
@@ -18241,7 +18257,7 @@
         "Plains",
         "Swamp"
       ],
-      "text": "({T}: Add {W} or {B} to your mana pool.)",
+      "text": "({T}: Add {W} or {B}.)",
       "type": "Land — Plains Swamp",
       "types": [
         "Land"
@@ -18301,7 +18317,7 @@
           "text": "Cycling is an activated ability. Effects that interact with activated abilities (such as Stifle or Rings of Brighthearth) will interact with cycling. Effects that interact with spells (such as Remove Soul or Faerie Tauntings) will not."
         }
       ],
-      "text": "Secluded Steppe enters the battlefield tapped.\n{T}: Add {W} to your mana pool.\nCycling {W} ({W}, Discard this card: Draw a card.)",
+      "text": "Secluded Steppe enters the battlefield tapped.\n{T}: Add {W}.\nCycling {W} ({W}, Discard this card: Draw a card.)",
       "type": "Land",
       "types": [
         "Land"
@@ -18347,7 +18363,7 @@
         "TPR"
       ],
       "rarity": "Uncommon",
-      "text": "Skyshroud Forest enters the battlefield tapped.\n{T}: Add {C} to your mana pool.\n{T}: Add {G} or {U} to your mana pool. Skyshroud Forest deals 1 damage to you.",
+      "text": "Skyshroud Forest enters the battlefield tapped.\n{T}: Add {C}.\n{T}: Add {G} or {U}. Skyshroud Forest deals 1 damage to you.",
       "type": "Land",
       "types": [
         "Land"
@@ -18390,7 +18406,7 @@
         "EXP"
       ],
       "rarity": "Rare",
-      "text": "{T}: Add {C} to your mana pool.\n{T}, Sacrifice Strip Mine: Destroy target land.",
+      "text": "{T}: Add {C}.\n{T}, Sacrifice Strip Mine: Destroy target land.",
       "type": "Land",
       "types": [
         "Land"
@@ -18452,7 +18468,7 @@
         "Mountain",
         "Forest"
       ],
-      "text": "({T}: Add {R} or {G} to your mana pool.)",
+      "text": "({T}: Add {R} or {G}.)",
       "type": "Land — Mountain Forest",
       "types": [
         "Land"
@@ -18555,7 +18571,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "{T}: Add {U} to your mana pool for each artifact you control.",
+      "text": "{T}: Add {U} for each artifact you control.",
       "type": "Legendary Land",
       "types": [
         "Land"
@@ -18605,7 +18621,8 @@
         "C14",
         "DD3_EVG",
         "CMA",
-        "C17"
+        "C17",
+        "DDU"
       ],
       "rarity": "Common",
       "rulings": [
@@ -18614,7 +18631,7 @@
           "text": "Cycling is an activated ability. Effects that interact with activated abilities (such as Stifle or Rings of Brighthearth) will interact with cycling. Effects that interact with spells (such as Remove Soul or Faerie Tauntings) will not."
         }
       ],
-      "text": "Tranquil Thicket enters the battlefield tapped.\n{T}: Add {G} to your mana pool.\nCycling {G} ({G}, Discard this card: Draw a card.)",
+      "text": "Tranquil Thicket enters the battlefield tapped.\n{T}: Add {G}.\nCycling {G} ({G}, Discard this card: Draw a card.)",
       "type": "Land",
       "types": [
         "Land"
@@ -18676,7 +18693,7 @@
         "Forest",
         "Island"
       ],
-      "text": "({T}: Add {G} or {U} to your mana pool.)",
+      "text": "({T}: Add {G} or {U}.)",
       "type": "Land — Forest Island",
       "types": [
         "Land"
@@ -18738,7 +18755,7 @@
         "Plains",
         "Island"
       ],
-      "text": "({T}: Add {W} or {U} to your mana pool.)",
+      "text": "({T}: Add {W} or {U}.)",
       "type": "Land — Plains Island",
       "types": [
         "Land"
@@ -18800,7 +18817,7 @@
         "Island",
         "Swamp"
       ],
-      "text": "({T}: Add {U} or {B} to your mana pool.)",
+      "text": "({T}: Add {U} or {B}.)",
       "type": "Land — Island Swamp",
       "types": [
         "Land"
@@ -18861,7 +18878,7 @@
         "Island",
         "Mountain"
       ],
-      "text": "({T}: Add {U} or {R} to your mana pool.)",
+      "text": "({T}: Add {U} or {R}.)",
       "type": "Land — Island Mountain",
       "types": [
         "Land"
@@ -18910,7 +18927,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "{T}: Add {C} to your mana pool.\n{G}, {T}: Regenerate target creature.",
+      "text": "{T}: Add {C}.\n{G}, {T}: Regenerate target creature.",
       "type": "Legendary Land",
       "types": [
         "Land"

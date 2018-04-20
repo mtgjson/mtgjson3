@@ -65,7 +65,7 @@
         },
         {
           "date": "2007-07-15",
-          "text": "If a Beacon is countered, it's put into its owner's graveyard, not shuffled into the library."
+          "text": "If a Beacon is countered or doesn't resolve, it's put into its owner's graveyard, not shuffled into the library."
         }
       ],
       "text": "Double target player's life total. Shuffle Beacon of Immortality into its owner's library.",
@@ -188,14 +188,14 @@
       "rulings": [
         {
           "date": "2017-03-14",
-          "text": "If the targeted creature becomes an illegal target by the time Path to Exile would resolve, the entire spell is countered. The creature's controller won't search for a basic land card."
+          "text": "If the targeted creature becomes an illegal target by the time Path to Exile would resolve, the entire spell doesn't resolve. The creature's controller won't search for a basic land card."
         },
         {
           "date": "2017-03-14",
-          "text": "The controller of the exiled creature isn't required to search his or her library for a basic land. If that player doesn't, the player won't shuffle his or her library."
+          "text": "The controller of the exiled creature isn't required to search their library for a basic land. If that player doesn't, the player won't shuffle their library."
         }
       ],
-      "text": "Exile target creature. Its controller may search his or her library for a basic land card, put that card onto the battlefield tapped, then shuffle his or her library.",
+      "text": "Exile target creature. Its controller may search their library for a basic land card, put that card onto the battlefield tapped, then shuffle their library.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -1271,7 +1271,7 @@
         },
         {
           "date": "2010-03-01",
-          "text": "If the targeted creature is an illegal target by the time Urge to Feed resolves, the entire spell is countered. You can't tap any Vampires."
+          "text": "If the targeted creature is an illegal target by the time Urge to Feed resolves, the entire spell doesn't resolve. You can't tap any Vampires."
         }
       ],
       "text": "Target creature gets -3/-3 until end of turn. You may tap any number of untapped Vampire creatures you control. If you do, put a +1/+1 counter on each of those Vampires.",
@@ -1569,7 +1569,7 @@
         "E02"
       ],
       "rarity": "Rare",
-      "text": "As an additional cost to cast Disaster Radius, reveal a creature card from your hand.\nDisaster Radius deals X damage to each creature your opponents control, where X is the revealed card's converted mana cost.",
+      "text": "As an additional cost to cast this spell, reveal a creature card from your hand.\nDisaster Radius deals X damage to each creature your opponents control, where X is the revealed card's converted mana cost.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -2143,8 +2143,8 @@
       "rarity": "Uncommon",
       "rulings": [
         {
-          "date": "2016-06-08",
-          "text": "If the target of Rancor when it's cast as a spell is an illegal target when Rancor tries to resolve, Rancor will be countered and put into its owner's graveyard. It won't return to its owner's hand."
+          "date": "2018-03-16",
+          "text": "If the creature this Aura would enchant is an illegal target by the time Rancor tries to resolve, the Aura spell doesn't resolve. It won't enter the battlefield, so it won't be put into a graveyard from the battlefield and its ability won't trigger."
         }
       ],
       "subtypes": [
@@ -2387,10 +2387,10 @@
       "rulings": [
         {
           "date": "2017-11-17",
-          "text": "If the chosen target is illegal when Lightning Helix tries to resolve, it will be countered and none of its effects will happen. You won't gain 3 life."
+          "text": "If the chosen target is illegal when Lightning Helix tries to resolve, it won't resolve and none of its effects will happen. You won't gain 3 life."
         }
       ],
-      "text": "Lightning Helix deals 3 damage to target creature or player and you gain 3 life.",
+      "text": "Lightning Helix deals 3 damage to any target and you gain 3 life.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -2626,7 +2626,7 @@
         "E02"
       ],
       "rarity": "Uncommon",
-      "text": "{T}: Add {C} to your mana pool.\n{1}, {T}: Add one mana of any color to your mana pool.",
+      "text": "{T}: Add {C}.\n{1}, {T}: Add one mana of any color.",
       "type": "Artifact",
       "types": [
         "Artifact"
@@ -2682,10 +2682,6 @@
         {
           "date": "2007-05-01",
           "text": "Putting the card onto the battlefield is optional. When the ability resolves, you can choose not to."
-        },
-        {
-          "date": "2008-04-01",
-          "text": "A \"creature card\" is any card with the type creature, even if it has other types such as artifact, enchantment, or land. Older cards of type summon are also creature cards."
         },
         {
           "date": "2011-09-22",
@@ -2749,7 +2745,7 @@
         "E02"
       ],
       "rarity": "Uncommon",
-      "text": "Crumbling Necropolis enters the battlefield tapped.\n{T}: Add {U}, {B}, or {R} to your mana pool.",
+      "text": "Crumbling Necropolis enters the battlefield tapped.\n{T}: Add {U}, {B}, or {R}.",
       "type": "Land",
       "types": [
         "Land"
@@ -2805,7 +2801,7 @@
         "E02"
       ],
       "rarity": "Uncommon",
-      "text": "Jungle Shrine enters the battlefield tapped.\n{T}: Add {R}, {G}, or {W} to your mana pool.",
+      "text": "Jungle Shrine enters the battlefield tapped.\n{T}: Add {R}, {G}, or {W}.",
       "type": "Land",
       "types": [
         "Land"
@@ -2852,7 +2848,7 @@
         "E02"
       ],
       "rarity": "Uncommon",
-      "text": "{T}: Add {C} to your mana pool.\n{T}: Add {W} or {B} to your mana pool. Activate this ability only if you control a Swamp.",
+      "text": "{T}: Add {C}.\n{T}: Add {W} or {B}. Activate this ability only if you control a Swamp.",
       "type": "Land",
       "types": [
         "Land"
