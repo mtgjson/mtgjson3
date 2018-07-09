@@ -14,15 +14,18 @@
   "SET_CORRECTIONS": [{
     "match": {
       "name": "B.F.M. (Big Furry Monster)",
-      "number": "28b"
+      "number": "28a"
     },
     "replace": {
+      "type": "Creature -- The Biggest, Baddest, Nastiest,",
       "imageName": "b.f.m. 1",
-      "number": "28"
-    }
+      "number": "28",
+      "text": "You must cast both B.F.M. cards to put\nleaves the battlefield, sacrifice the other.\nB.F.M. can't be blocked except by three or"
+    },
+    "remove" : ["power","toughness","manaCost"]
   }, {
     "match": {
-      "name": "B.F.M. (Big Furry Monster)",
+      "name": "B.F.M. (Big Furry Monster, Right Side)",
       "number": "29b"
     },
     "replace": {
