@@ -116,7 +116,8 @@ var SYMBOL_CONVERSION_MAP = {
     "500"                : "500",
     "1000000"            : "1000000",
     "infinite"           : "∞",
-    "half a red"         : "hr"
+    "half a red"         : "hr",
+    "half a white"       : "hw"
 };
 
 var TEXT_TO_SYMBOL_MAP = {

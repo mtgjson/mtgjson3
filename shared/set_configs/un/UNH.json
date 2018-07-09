@@ -170,11 +170,28 @@
       }
     }
   }, {
+    "copyCard": "Curse of the Fire Penguin Creature",
+    "replace": {
+      "name": "Curse of the Fire Penguin",
+      "type": "Enchantment -- Aura",
+      "text": "Enchant creature\nCurse of the Fire Penguin consumes and confuses enchanted creature.",
+      "originalText": "Curse of the Fire Penguin consumes and confuses enchanted creature.",
+      "originalType": "Enchant creature"
+    },
+    "remove": ["power","toughness"]
+  }, {
     "match": {
       "name": "Yet Another Æther Vortex"
     },
     "replace": {
       "name": "Yet Another Aether Vortex"
+    }
+  }, {
+    "match": {
+      "name": "Mox Lotus"
+    },
+    "replace": {
+      "text": "{T}: Add {∞}.\n{100}: Add one mana of any color."
     }
   }]
 }
