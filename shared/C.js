@@ -419,12 +419,11 @@
   exports.VALID_COLORS = [ 'W', 'U', 'B', 'R', 'G' ];
 
   exports.STANDARD_SETS = [
-    'KLD',
-    'AER',
-    'AKH',
-    'W17',
-    'HOU',
-    'XLN'
+    'XLN',
+    'RIX',
+    'DOM',
+    'M19',
+    'GRN'
   ];
 
 })(typeof exports==="undefined" ? window.C={} : exports);
